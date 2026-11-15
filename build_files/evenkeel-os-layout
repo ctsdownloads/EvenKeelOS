@@ -1,0 +1,36 @@
+#!/usr/bin/python3 -I
+"""Switch this user's desktop layout.
+
+  evenkeel-os-layout windows   bottom bar and start menu
+  evenkeel-os-layout current   top bar and Logo Menu
+  evenkeel-os-layout           print the layout in use
+"""
+import ast
+import subprocess
+import sys
+
+LAYOUTS = {"current": ["logomenu@aryan_k"],
+           "windows": ["arcmenu@arcmenu.com", "dash-to-panel@jderose9.github.com"]}
+OURS = {uuid for uuids in LAYOUTS.values() for uuid in uuids}
+KEY = ["org.gnome.shell", "enabled-extensions"]
+
+
+def enabled():
+    out = subprocess.run(["gsettings", "get", *KEY], capture_output=True, text=True, check=True).stdout
+    return ast.literal_eval(out.removeprefix("@as ").strip())
+
+
+def main():
+    now = enabled()
+    if len(sys.argv) == 1:
+        print("windows" if set(LAYOUTS["windows"]) <= set(now) else "current")
+        return
+    if len(sys.argv) != 2 or sys.argv[1] not in LAYOUTS:
+        sys.exit(__doc__)
+    # Keep any extensions the user turned on themselves.
+    new = [uuid for uuid in now if uuid not in OURS] + LAYOUTS[sys.argv[1]]
+    subprocess.run(["gsettings", "set", *KEY, str(new)], check=True)
+    print(f"Layout set to {sys.argv[1]}. Log out and back in to finish.")
+
+
+main()

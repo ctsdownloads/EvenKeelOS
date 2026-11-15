@@ -20,6 +20,7 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/evenkeel-os-codecs`, `-setup`, `-admin`, `-lib.sh`, `rpmfusion-*.repo` | **Install Media Codecs** and its helpers |
 | `build_files/*.policy`, `*.rules` | polkit actions and the narrow no-password rules |
 | `build_files/*.gschema.override`, `*.dconf`, `gnome-mimeapps.list`, `xdg-terminals.list`, `60-evenkeel-os-mic.conf` | Desktop defaults |
+| `build_files/evenkeel-os-layout` | Switches a user between the current and the Windows-style layout |
 | `build_files/rebrand.sh`, `initramfs.sh`, `evenkeel-os-boot-label` | EvenKeelOS name and logo, and the boot menu rename |
 | `build_files/check-*.py` | Build tests: packages are read correctly, docs keep up |
 | `iso/` | The live USB and its installer. `iso/build-local-iso.sh` builds a test ISO locally; `iso/verify-image.sh` checks the built images |
@@ -33,6 +34,8 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 - GNOME Software is still there, Bazaar is missing, a tool is missing from
   Utilities, or text files wouldn't open in Text Editor;
 - a default service is off, or RPM Fusion's codecs wouldn't install;
+- Logo Menu, ArcMenu or Dash to Panel is missing or doesn't support the image's
+  GNOME, or the Windows-style layout's defaults or switch don't work;
 - Install Package File misreads four real Fedora packages.
 
 A separate docs check fails when the README's contents table or a link is out of

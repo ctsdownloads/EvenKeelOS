@@ -203,6 +203,24 @@ install -Dm644 /ctx/branding/logo-EvenKeel-mark.svg /usr/share/evenkeel-os/logo-
 install -Dm644 /ctx/evenkeel-os-logo-menu.dconf /etc/dconf/db/distro.d/50-evenkeel-os-logo-menu
 command -v bazaar >/dev/null && command -v ghostty >/dev/null || { echo "ERROR: Logo Menu's software center (bazaar) or terminal (ghostty) is missing"; exit 1; }
 
+# Windows-style layout: Dash to Panel from Fedora, ArcMenu 70.0 sha256-checked, its schemas/ folder moved out.
+dnf5 -y install gnome-shell-extension-dash-to-panel
+curl -fsSL --retry 3 -o /tmp/arcmenu.zip "https://extensions.gnome.org/extension-data/arcmenuarcmenu.com.v74.shell-extension.zip"
+echo "ef414c90dcb5f2b0c6ccb5f8e59fd9963c584789d3d8d26740ddb731100c4b40  /tmp/arcmenu.zip" | sha256sum -c -
+install -d /usr/share/gnome-shell/extensions/arcmenu@arcmenu.com
+python3 -I -m zipfile -e /tmp/arcmenu.zip /usr/share/gnome-shell/extensions/arcmenu@arcmenu.com
+rm /tmp/arcmenu.zip
+chmod -R u=rwX,go=rX /usr/share/gnome-shell/extensions/arcmenu@arcmenu.com
+install -Dm644 /usr/share/gnome-shell/extensions/arcmenu@arcmenu.com/schemas/org.gnome.shell.extensions.arcmenu.gschema.xml \
+  /usr/share/glib-2.0/schemas/org.gnome.shell.extensions.arcmenu.gschema.xml
+rm -r /usr/share/gnome-shell/extensions/arcmenu@arcmenu.com/schemas
+glib-compile-schemas /usr/share/glib-2.0/schemas 2>&1 | { grep -v 'deprecated' || true; }
+for e in arcmenu@arcmenu.com dash-to-panel@jderose9.github.com; do
+  grep -q "\"$gnome_shell\"" "/usr/share/gnome-shell/extensions/$e/metadata.json" || { echo "ERROR: $e does not support GNOME $gnome_shell"; exit 1; }
+done
+install -Dm644 /ctx/evenkeel-os-windows-layout.dconf /etc/dconf/db/distro.d/50-evenkeel-os-windows-layout
+install -Dm755 /ctx/evenkeel-os-layout /usr/bin/evenkeel-os-layout
+
 # Our tools in Show Apps' Utilities folder.
 install -Dm644 /ctx/evenkeel-os-app-folders.dconf /etc/dconf/db/distro.d/50-evenkeel-os-app-folders
 dconf update
@@ -223,6 +241,29 @@ for k in "org.gnome.shell enabled-extensions ['logomenu@aryan_k']" \
   got=$(HOME=/tmp gsettings get "$schema" "$key")
   [ "$got" = "$want" ] || { echo "ERROR: Logo Menu default $schema $key is $got, not $want"; exit 1; }
 done
+
+# Check the Windows-style layout defaults and the switch.
+for k in "org.gnome.shell.extensions.arcmenu menu-layout 'arcmenu'" \
+         "org.gnome.shell.extensions.arcmenu default-menu-view 'Categories_List'" \
+         "org.gnome.shell.extensions.arcmenu menu-button-icon '/usr/share/evenkeel-os/logo-menu-icon.svg'" \
+         "org.gnome.shell.extensions.arcmenu update-notifier-enabled false" \
+         "org.gnome.shell.extensions.dash-to-panel stockgs-keep-top-panel false"; do
+  read -r schema key want <<<"$k"
+  got=$(HOME=/tmp gsettings get "$schema" "$key")
+  [ "$got" = "$want" ] || { echo "ERROR: Windows layout default $schema $key is $got, not $want"; exit 1; }
+done
+HOME=/tmp gsettings get org.gnome.shell.extensions.dash-to-panel panel-element-positions | grep -q '"showAppsButton","visible":false' || { echo "ERROR: the bottom bar would show its own app-grid button"; exit 1; }
+shortcuts=$(HOME=/tmp gsettings get org.gnome.shell.extensions.arcmenu application-shortcuts | grep -o "'[^']*[.]desktop'" | tr -d "'")
+[ "$(wc -w <<<"$shortcuts")" = 3 ] || { echo "ERROR: the start menu does not have its three shortcuts"; exit 1; }
+for a in $shortcuts; do
+  [ -s "/usr/share/applications/$a" ] || { echo "ERROR: the start menu lists $a, which is not installed"; exit 1; }
+done
+t=$(mktemp -d)
+HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout windows
+[ "$(HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout)" = windows ] || { echo "ERROR: evenkeel-os-layout does not switch to the Windows layout"; exit 1; }
+HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout current
+[ "$(HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout)" = current ] || { echo "ERROR: evenkeel-os-layout does not switch back"; exit 1; }
+rm -rf "$t"
 
 # Check fingerprint login is on.
 authselect current | grep -qw with-fingerprint || { echo "ERROR: authselect does not have with-fingerprint, so GNOME would not offer fingerprint login"; exit 1; }

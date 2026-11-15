@@ -68,6 +68,7 @@ can't change, so it stays working.
 | Desktop | Minimize and maximize buttons, no hot corner, battery percentage shown |
 | Dock | Firefox, Calendar, Files, Bazaar and Text Editor |
 | Logo Menu | The [Logo Menu](https://github.com/Aryan20/Logomenu) extension on the top-left logo: About My System, Activities, App Grid, Bazaar, Resources, Ghostty, Extensions |
+| Windows-style layout | Optional, per user: a bottom bar from [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel) and a start menu from [ArcMenu](https://gitlab.com/arcmenu/ArcMenu) on the EvenKeelOS logo, opening to the app categories, with Settings, System Update and System Tools. Turn it on with `evenkeel-os-layout windows`, back with `evenkeel-os-layout current`, then log out and in |
 | Terminal | [Ghostty](https://ghostty.org/), replacing Ptyxis everywhere |
 | System monitor | [Resources](https://apps.gnome.org/Resources/) from Flathub; gnome-system-monitor is kept |
 | Fingerprint | On where the laptop has a supported reader; enroll in Settings, Users. A password is still set at install |
@@ -125,6 +126,8 @@ other projects, under their own licenses, with their source available there:
   source at <https://github.com/ghostty-org/ghostty>.
 - **Logo Menu:** <https://github.com/Aryan20/Logomenu> (GPL-2.0), from
   <https://extensions.gnome.org/extension/4451/logo-menu/>.
+- **ArcMenu:** <https://gitlab.com/arcmenu/ArcMenu> (GPL-2.0), from
+  <https://extensions.gnome.org/extension/3628/arcmenu/>.
 - **Everything else** added is in this repository.
 
 Can't find the source for something? Open an issue at
