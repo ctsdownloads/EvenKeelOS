@@ -22,8 +22,9 @@ Nothing touches the disk until you install.
    Fedora's signed one.
 3. **Welcome window:** **Install EvenKeelOS** or **Try it first**.
 4. **The installer:** it asks for language, keyboards, network, time zone, date
-   and time, disk, encryption, accounts and the computer's name, then shows a
-   **Review**. Click **Install**, then **Restart** when it's done.
+   and time, disk, encryption, accounts, the computer's name and the desktop
+   layout (Standard, or Windows-style with a bottom bar and start menu), then
+   shows a **Review**. Click **Install**, then **Restart** when it's done.
    - If the install stops: **Save the log**, **Show a QR code**, or **Report on
      GitHub**. The log leaves out passwords and names.
 5. Log in. The [setup checklist](#first-login) opens.

@@ -33,7 +33,8 @@ dnf install -y python3-gobject gtk4 libadwaita python3-langtable python3-pwquali
     dosfstools xfsprogs cryptsetup mdadm
 install -d /usr/lib/evenkeel-os-installer
 install -m755 /src/evenkeel-os-installer/evenkeel-os-installer /usr/lib/evenkeel-os-installer/
-install -m644 /src/evenkeel-os-installer/*.py /src/evenkeel-os-installer/*.css /usr/lib/evenkeel-os-installer/
+install -m644 /src/evenkeel-os-installer/*.py /src/evenkeel-os-installer/*.css /src/evenkeel-os-installer/*.png \
+    /usr/lib/evenkeel-os-installer/
 ln -sf ../lib/evenkeel-os-installer/evenkeel-os-installer /usr/bin/evenkeel-os-installer
 install -Dm755 /src/evenkeel-os-install-engine /usr/libexec/evenkeel-os-install-engine
 install -Dm644 /src/io.github.ctsdownloads.evenkeel-os.install.policy \
@@ -117,6 +118,15 @@ done
 [ -s /usr/share/applications/io.github.ctsdownloads.EvenKeelOS.Installer.desktop ] || fail "the installer's launcher is missing"
 [ -s /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.install.policy ] || fail "the installer's polkit action is missing"
 [ -s /usr/share/evenkeel-os-installer/logo-wide.svg ] || fail "the installer's EvenKeelOS logo is missing"
+for k in current windows; do
+  [ -s "/usr/lib/evenkeel-os-installer/layout-$k.png" ] || fail "the installer's $k layout picture is missing"
+done
+# The extensions the installer turns on for the Windows layout are installed.
+windows=$(python3 -I -c 'import runpy; print(*runpy.run_path("/usr/libexec/evenkeel-os-install-engine")["layout_extensions"]("", "windows"))')
+[ -n "$windows" ] || fail "the installer finds no extensions for the Windows layout"
+for x in $windows; do
+  [ -s "/usr/share/gnome-shell/extensions/$x/metadata.json" ] || fail "the installer's Windows layout needs $x, which is not installed"
+done
 [ "$(wc -l < /usr/share/evenkeel-os-installer/anaconda-translations.txt)" -ge 50 ] || fail "the installer's language list is missing"
 command -v qrencode >/dev/null || fail "qrencode is missing (the problem report's QR code)"
 for tool in mdadm dmsetup cryptsetup mkfs.fat mkfs.ext4 mkfs.xfs sfdisk wipefs hwclock; do

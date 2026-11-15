@@ -55,7 +55,7 @@ class InstallingScreen(screens.Screen):
                    "manual_time": c.manual_time.isoformat(), "time_servers": c.time_servers, "clock_24": h24,
                    "hostname": c.hostname, "root_password": c.root_password if c.root_enabled else None,
                    "full_name": c.full_name, "username": c.username, "admin": c.admin,
-                   "user_password": c.user_password}
+                   "user_password": c.user_password, "layout": c.layout}
         try:
             self.engine = Gio.Subprocess.new(["pkexec", ENGINE],
                                              Gio.SubprocessFlags.STDIN_PIPE | Gio.SubprocessFlags.STDOUT_PIPE)

@@ -24,6 +24,8 @@ headerbar.brand windowcontrols button { color: #ffffff; }
 .status { font-weight: 700; color: @accent_color; }
 
 row.chosen { background: alpha(@accent_bg_color, 0.12); }
+button.layout-card { padding: 10px; }
+button.layout-card.chosen { background: alpha(@accent_bg_color, 0.18); box-shadow: inset 0 0 0 3px @accent_color; }
 .chosen-mark { color: @accent_color; }
 
 .erase-warning { color: @destructive_color; }

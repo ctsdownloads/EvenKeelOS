@@ -3,6 +3,7 @@
 
 Reads the choices as JSON on standard input; writes one JSON progress line at a time on standard output.
 """
+import ast
 import datetime
 import glob
 import json
@@ -230,6 +231,10 @@ def configure(c, keymap):
     gnome = f"[org/gnome/desktop/interface]\nclock-format='{'24h' if c['clock_24'] else '12h'}'\n"
     if not c["timezone"]:
         gnome += "\n[org/gnome/desktop/datetime]\nautomatic-timezone=true\n"
+    if c["layout"] == "windows":
+        gnome += f"\n[org/gnome/shell]\nenabled-extensions={layout_extensions(deploy, 'windows')}\n"
+    elif c["layout"] != "current":
+        raise Stop(f"Unknown desktop layout {c['layout']}.")
     with open(f"{etc}/dconf/profile/user") as f:
         if "system-db:local" not in f.read().split():
             raise Stop("The new system's settings database could not be found.")
@@ -260,6 +265,16 @@ def configure(c, keymap):
     finally:
         for _how, _src, dst in reversed(mounts):
             run("umount", "--recursive", "--lazy", f"{deploy}/{dst}", check=False)
+
+
+def layout_extensions(deploy, layout):
+    """The GNOME extensions for a desktop layout, as the new system's own evenkeel-os-layout lists them."""
+    with open(f"{deploy}/usr/bin/evenkeel-os-layout") as f:
+        tree = ast.parse(f.read())
+    for node in tree.body:
+        if isinstance(node, ast.Assign) and [getattr(t, "id", None) for t in node.targets] == ["LAYOUTS"]:
+            return ast.literal_eval(node.value)[layout]
+    raise Stop("The new system's desktop layouts could not be found.")
 
 
 def add_group(deploy, name):

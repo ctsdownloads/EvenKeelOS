@@ -31,6 +31,7 @@ class Choices:
         self.user_password = ""
         self.hostname = ""
         self.hostname_by_hand = False
+        self.layout = "current"                    # or "windows", as evenkeel-os-layout names them
 
 
 class Screen:
