@@ -6,14 +6,17 @@ import subprocess
 from evenkeel_os_packages import boxes, common
 
 
-REPO_DIRS = {"rpm": "/etc/yum.repos.d", "deb": "/etc/apt/sources.list.d"}
-REPO_FILE = re.compile(r"^/etc/(yum\.repos\.d/[^/]+\.repo|apt/sources\.list\.d/[^/]+\.(list|sources))$")
+# Fedora 45 keeps its own sources in /usr/share/dnf5/repos.d.
+REPO_DIRS = {"rpm": ("/etc/yum.repos.d", "/usr/share/dnf5/repos.d"), "deb": ("/etc/apt/sources.list.d",)}
+REPO_FILE = re.compile(r"^/(etc/yum\.repos\.d/[^/]+\.repo|usr/share/dnf5/repos\.d/[^/]+\.repo"
+                       r"|etc/apt/sources\.list\.d/[^/]+\.(list|sources))$")
 
 
 def box_repos(box, kind):
     """Download-source files in a box: name -> contents."""
-    r = subprocess.run(boxes.in_box(box, "sh", "-c", f"cd {REPO_DIRS[kind]} 2>/dev/null && for f in *; do "
-                                               f"[ -f \"$f\" ] && printf '\\n==> %s\\n' \"$f\" && cat \"$f\"; done"),
+    files = " ".join(f"{d}/*" for d in REPO_DIRS[kind])
+    r = subprocess.run(boxes.in_box(box, "sh", "-c", f"for f in {files}; do [ -f \"$f\" ] && "
+                                    f"printf '\\n==> %s\\n' \"${{f##*/}}\" && cat \"$f\"; done"),
                        capture_output=True, text=True)
     out = {}
     for part in r.stdout.split("\n==> ")[1:]:
@@ -22,7 +25,8 @@ def box_repos(box, kind):
     return out
 
 
-SCRIPT_SOURCE = re.compile(r"/etc/yum\.repos\.d/|/etc/zypp/repos\.d/|sources\.list\.d|sourceparts")
+SCRIPT_SOURCE = re.compile(r"/etc/yum\.repos\.d/|/usr/share/dnf5/repos\.d/|/etc/zypp/repos\.d/"
+                           r"|sources\.list\.d|sourceparts")
 
 
 def adds_source(pkg):
