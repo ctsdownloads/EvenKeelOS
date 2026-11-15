@@ -68,7 +68,7 @@ can't change, so it stays working.
 | Desktop | Minimize and maximize buttons, no hot corner, battery percentage shown |
 | Dock | Firefox, Calendar, Files, Bazaar and Text Editor |
 | Logo Menu | The [Logo Menu](https://github.com/Aryan20/Logomenu) extension on the top-left logo: About My System, Activities, App Grid, Bazaar, Resources, Ghostty, Extensions |
-| Windows-style layout | Optional, per user: a bottom bar from [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel) and a start menu from [ArcMenu](https://gitlab.com/arcmenu/ArcMenu) on the EvenKeelOS logo, opening to the app categories, with Settings, System Update and System Tools. Switch in System Tools, Desktop layout (or `evenkeel-os-layout windows` / `current`), then log out and in |
+| Windows-style layout | Optional, per user: a bottom bar from [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel) and a start menu from [ArcMenu](https://gitlab.com/arcmenu/ArcMenu) on the EvenKeelOS logo, opening to the app categories, with Settings, System Update and System Tools. Pick it in the installer, or switch any time in System Tools, Desktop layout (or `evenkeel-os-layout windows` / `current`), then log out and in |
 | Terminal | [Ghostty](https://ghostty.org/), replacing Ptyxis everywhere |
 | System monitor | [Resources](https://apps.gnome.org/Resources/) from Flathub; gnome-system-monitor is kept |
 | Fingerprint | On where the laptop has a supported reader; enroll in Settings, Users. A password is still set at install |

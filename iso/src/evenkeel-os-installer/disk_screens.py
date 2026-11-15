@@ -1,4 +1,4 @@
-"""Installer steps for the disk, encryption, accounts, computer name and the review."""
+"""Installer steps for the disk, encryption, accounts, computer name, desktop layout and the review."""
 import os
 import re
 
@@ -8,6 +8,8 @@ import data
 from widgets import PasswordPair
 import locale_screens
 import screens
+
+HERE = os.path.dirname(os.path.realpath(__file__))
 
 
 class DiskScreen(screens.ListScreen):
@@ -260,7 +262,49 @@ class ComputerNameScreen(screens.Screen):
                                                        " Use letters, digits and -, not at the start or end.")
 
 
-# ---------------------------------------------------------------------------------------------------- 14 Review
+# ---------------------------------------------------------------------------------------------------- 14 Desktop layout
+
+class LayoutScreen(screens.Screen):
+    title = "Desktop layout"
+    step = "Desktop layout"
+    intro = "How should the desktop look? Click one. You can switch later in System Tools."
+    CHOICES = [("current", "Standard", "A top bar, with the logo menu at the top left"),
+               ("windows", "Windows-style", "A bottom bar, with a start menu on the logo")]
+
+    def build(self):
+        row = Gtk.Box(spacing=18, homogeneous=True)
+        self.cards = {}
+        for key, name, about in self.CHOICES:
+            card = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6, margin_top=6, margin_bottom=6)
+            picture = Gtk.Picture.new_for_filename(os.path.join(HERE, f"layout-{key}.png"))
+            picture.set_size_request(320, 213)
+            card.append(picture)
+            card.append(Gtk.Label(label=name, css_classes=["title-4"]))
+            card.append(Gtk.Label(label=about, wrap=True, justify=Gtk.Justification.CENTER, css_classes=["dim-label"]))
+            button = Gtk.Button(child=card, css_classes=["layout-card"])
+            button.connect("clicked", self._clicked, key)
+            row.append(button)
+            self.cards[key] = button
+        self.body.append(row)
+
+    def _clicked(self, _button, key):
+        self.c.layout = key
+        self.refresh()
+        self.changed()
+
+    def refresh(self):
+        for key, button in self.cards.items():
+            (button.add_css_class if key == self.c.layout else button.remove_css_class)("chosen")
+
+    def status(self):
+        return "Chosen: " + layout_name(self.c.layout) + "."
+
+
+def layout_name(key):
+    return next(name for k, name, _a in LayoutScreen.CHOICES if k == key)
+
+
+# ---------------------------------------------------------------------------------------------------- 15 Review
 
 class ReviewScreen(screens.ListScreen):
     title = "Review"
@@ -286,6 +330,7 @@ class ReviewScreen(screens.ListScreen):
             ("Root", "Enabled" if c.root_enabled else "Locked", RootScreen),
             ("Account", user, UserScreen),
             ("Computer name", c.hostname, ComputerNameScreen),
+            ("Desktop layout", layout_name(c.layout), LayoutScreen),
         ]
 
     def items(self):
