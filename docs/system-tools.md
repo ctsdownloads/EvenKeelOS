@@ -16,11 +16,13 @@
 | Undo the last update | Goes back to the version before the last update |
 | Save problem details | Saves recent errors to one file to email your helper |
 | Setup checklist | Codecs, disk unlock and apps. See [First login](install.md#first-login) |
+| Desktop layout | Switches between the standard top bar and the Windows-style bottom bar and start menu. Log out and back in to see it |
 
 **Passwords.** No password for an admin at the computer: automatic updates on,
 disk unlock (it asks the disk password instead) and freeing space. These keep
 the admin password, because a bad program could misuse them: automatic updates
 off, undo, firmware, and adding apps to the system.
+Desktop layout changes only your own desktop, so it never asks.
 
 **Unlock disk automatically.**
 

@@ -64,11 +64,11 @@ can't change, so it stays working.
 | Codecs | Not included (patents). The [setup checklist](docs/install.md#first-login) and **Install Media Codecs** offer them, with no password for an admin. See [Media codecs](docs/building.md#media-codecs) |
 | Apps from .rpm and .deb files | **Install Package File** puts them in a box; **Remove Apps** takes them out. See [Apps from .rpm and .deb files](docs/apps.md#apps-from-rpm-and-deb-files) |
 | Flathub | Added on first boot; Fedora's own Flathub entry is removed |
-| System Tools | Firmware, disk unlock, free space, BIOS settings, automatic updates, undo the last update, problem details, and the setup checklist. See [System Tools](docs/system-tools.md#system-tools) |
+| System Tools | Firmware, disk unlock, free space, BIOS settings, automatic updates, undo the last update, problem details, the setup checklist, and the desktop layout. See [System Tools](docs/system-tools.md#system-tools) |
 | Desktop | Minimize and maximize buttons, no hot corner, battery percentage shown |
 | Dock | Firefox, Calendar, Files, Bazaar and Text Editor |
 | Logo Menu | The [Logo Menu](https://github.com/Aryan20/Logomenu) extension on the top-left logo: About My System, Activities, App Grid, Bazaar, Resources, Ghostty, Extensions |
-| Windows-style layout | Optional, per user: a bottom bar from [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel) and a start menu from [ArcMenu](https://gitlab.com/arcmenu/ArcMenu) on the EvenKeelOS logo, opening to the app categories, with Settings, System Update and System Tools. Turn it on with `evenkeel-os-layout windows`, back with `evenkeel-os-layout current`, then log out and in |
+| Windows-style layout | Optional, per user: a bottom bar from [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel) and a start menu from [ArcMenu](https://gitlab.com/arcmenu/ArcMenu) on the EvenKeelOS logo, opening to the app categories, with Settings, System Update and System Tools. Switch in System Tools, Desktop layout (or `evenkeel-os-layout windows` / `current`), then log out and in |
 | Terminal | [Ghostty](https://ghostty.org/), replacing Ptyxis everywhere |
 | System monitor | [Resources](https://apps.gnome.org/Resources/) from Flathub; gnome-system-monitor is kept |
 | Fingerprint | On where the laptop has a supported reader; enroll in Settings, Users. A password is still set at install |

@@ -9,6 +9,7 @@
   evenkeel-os-tools updates         turn automatic updates on or off
   evenkeel-os-tools undo-update     go back to the system version from before the last update
   evenkeel-os-tools problem-details save the computer's recent error messages to a file, for your helper
+  evenkeel-os-tools layout          switch between the standard and the Windows-style desktop layout
   evenkeel-os-tools setup           the setup checklist: media codecs, disk unlock, getting apps
   evenkeel-os-tools setup --first-login   the same, once, at a new user's first login
 """
@@ -29,6 +30,9 @@ ui.TITLE = TITLE
 ui.ICON = "applications-system-symbolic"
 ADMIN = "/usr/libexec/evenkeel-os-tools-admin"
 SAFE = "/usr/libexec/evenkeel-os-tools-safe"
+LAYOUT = "/usr/bin/evenkeel-os-layout"
+LAYOUTS = {"current": "the standard layout: a top bar and the logo menu",
+           "windows": "the Windows-style layout: a bottom bar and a start menu"}
 CACHE = Path.home() / ".cache" / "evenkeel-os"
 LOG = CACHE / "tools.log"
 DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
@@ -551,6 +555,20 @@ def setup_checklist(first_login=False):
     return 0
 
 
+def layout():
+    w = "Desktop layout"
+    now = subprocess.run([LAYOUT], capture_output=True, text=True, check=True).stdout.strip()
+    new = "current" if now == "windows" else "windows"
+    if ask(f"This desktop uses {LAYOUTS[now]}.\n\nSwitch to {LAYOUTS[new]}? It takes effect after you log out "
+           "and back in.\n\nOr Keep it.", ok="Switch", cancel="Keep it", title=w) != "ok":
+        return 1
+    if run("Switching the desktop layout.", [LAYOUT, new], title=w) != 0:
+        say(f"It didn't work, and nothing was changed.\n\nThe details are in {LOG}", "warning", title=w)
+        return 1
+    say("Done. Log out and back in to see the new layout.", title=w)
+    return 0
+
+
 TOOLS = [("firmware", "Update firmware", "Updates for the computer's own parts, like the BIOS", firmware),
          ("disk-unlock", "Unlock disk automatically", "Skip the disk password at startup", disk_unlock),
          ("free-space", "Free up disk space", "Remove things the computer no longer needs", free_space),
@@ -560,7 +578,8 @@ TOOLS = [("firmware", "Update firmware", "Updates for the computer's own parts, 
          ("problem-details", "Save problem details", "A file of recent errors to email to your helper",
           problem_details),
          ("setup", "Setup checklist", "Media codecs, disk unlock and getting apps, one at a time",
-          setup_checklist)]
+          setup_checklist),
+         ("layout", "Desktop layout", "Windows-style bottom bar or the standard top bar", layout)]
 
 
 def main(argv):
@@ -573,7 +592,7 @@ def main(argv):
         print(__doc__)
         return 2
     i = choose("Which tool do you want?", ["Tool", "What it does"], [[name, about] for _, name, about, _ in TOOLS],
-               width=900, height=460)
+               width=900, height=500)
     return TOOLS[i][3]() if i is not None else 1
 
 

@@ -263,6 +263,8 @@ HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout windows
 [ "$(HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout)" = windows ] || { echo "ERROR: evenkeel-os-layout does not switch to the Windows layout"; exit 1; }
 HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout current
 [ "$(HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout)" = current ] || { echo "ERROR: evenkeel-os-layout does not switch back"; exit 1; }
+echo 1 | HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-tools layout >/dev/null
+[ "$(HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout)" = windows ] || { echo "ERROR: System Tools' Desktop layout does not switch the layout"; exit 1; }
 rm -rf "$t"
 
 # Keep tuned from running bootc on every power-mode switch.
