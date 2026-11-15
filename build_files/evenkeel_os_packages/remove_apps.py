@@ -8,6 +8,11 @@ from evenkeel_os_packages import (
 
 def remove():
     records = app_list.load()
+    # Flathub apps removed another way (Bazaar, the command line) come off the list.
+    gone = [r for r in records if r["where"] == "flathub" and not installed.flatpak_installed(r["package"])]
+    for r in gone:
+        app_list.forget(r)
+    records = [r for r in records if r not in gone]
     if not records:
         say("Nothing has been installed with Install Package File yet.")
         return 0
@@ -21,9 +26,10 @@ def remove():
     if ask(f"Remove {title}?", ok="Remove") != "ok":
         return 1
     where = entry["where"]
+    kind = next((k for k in common.BOXES if common.BOXES[k]["name"] == where), None)
     if where == "flathub":
-        ok = windows.run_steps(f"Removing {title}.",
-                               [["flatpak", "uninstall", "-y", "--noninteractive", entry["package"]]])
+        ok = not installed.flatpak_installed(entry["package"]) or windows.run_steps(
+            f"Removing {title}.", [["flatpak", "uninstall", "-y", "--noninteractive", entry["package"]]])
     elif where == "system":
         ok = windows.run_steps(f"Removing {title} from the system.", [["rpm-ostree", "uninstall", entry["package"]]])
         if not ok and entry.get("nevra"):
@@ -33,10 +39,9 @@ def remove():
     else:
         launchers.unexport(entry)
         ok = True
-        bkind = next((k for k in common.BOXES if common.BOXES[k]["name"] == where), None)
         # An app already gone from its box just comes off the list.
         present = boxes.box_exists(where) and boxes.box_works(where)
-        if present and bkind and installed.box_version(bkind, entry["package"]):
+        if present and kind and installed.box_version(kind, entry["package"]):
             # a download source is purged on Ubuntu, so its source file (a kept setting otherwise) goes too
             purge = ["--purge"] if entry.get("source") else []
             cmd = ["sudo", "dnf", "-y", "remove", entry["package"]] if where == common.BOXES["rpm"]["name"] else \
@@ -53,7 +58,6 @@ def remove():
     if where == "system":
         offer_restart(f"{title} is removed. Restart to finish.")
         return 0
-    kind = next((k for k in common.BOXES if common.BOXES[k]["name"] == where), None)
     if kind and boxes.box_exists(where) and not any(r["where"] == where for r in app_list.load()):
         label = common.BOXES[kind]["label"]
         mb = boxes.box_size(where)

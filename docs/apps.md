@@ -111,7 +111,9 @@ at login. An app's own open-at-login setting (Discord) is pointed at its box.
 **Remove Apps** (or "remove an app") lists what Install Package File installed,
 with each box's size. **Remove** takes out the app, its entry and any rule it
 added. When a box is left empty, it recommends **Delete the box**; **Keep it**
-saves setup time. The record is `~/.local/share/evenkeel-os/apps.json`.
+saves setup time. A Flathub app removed another way (Bazaar, the command line)
+is left off the list, and an app that's already gone just comes off it. The
+record is `~/.local/share/evenkeel-os/apps.json`.
 
 ### Repairing a box
 
