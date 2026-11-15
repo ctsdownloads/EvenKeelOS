@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Install Package File: after restart
+Comment=Says once whether a package added to the system is ready, and offers to add a printer
+Exec=/usr/bin/evenkeel-os-packages after-restart
+NoDisplay=true

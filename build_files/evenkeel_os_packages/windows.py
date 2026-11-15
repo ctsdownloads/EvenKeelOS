@@ -1,0 +1,137 @@
+"""Progress windows, running steps, and explaining failures."""
+import html
+import os
+import re
+import signal
+import subprocess
+import time
+
+import evenkeel_os_ui as ui
+from evenkeel_os_ui import GUI, ask, notify, say
+from evenkeel_os_packages import common
+
+
+CANCELLED = False      # set by run_steps when the person pressed Cancel
+BUSY = common.CACHE / ".busy"   # what this run is doing, for a second window that has to wait for it
+
+
+def mark_busy(text):
+    BUSY.write_text(text)
+
+
+def run_steps(text, steps, cancel=False):
+    """Run (label, command) steps with a progress window; True if all worked. Output goes to the log."""
+    global CANCELLED
+    CANCELLED = False
+    steps = [st if isinstance(st, tuple) else (text, st) for st in steps]
+    common.CACHE.mkdir(parents=True, exist_ok=True)
+    if common.LOG.exists() and common.LOG.stat().st_size > 2_000_000:     # keep the log from growing without end
+        common.LOG.write_bytes(common.LOG.read_bytes()[-500_000:])
+    log = open(common.LOG, "a")
+    log.write(f"\n=== {time.strftime('%Y-%m-%d %H:%M:%S')} {text}\n")
+    mark_busy(text)
+    bar = None
+    if GUI:
+        mode = ["--pulsate"] if len(steps) == 1 else []
+        bar = subprocess.Popen(["zenity", f"--title={ui.TITLE}", "--width=520",
+                                "--progress", *mode, "--auto-close",
+                                *([] if cancel else ["--no-cancel"]), f"--text={html.escape(text)}"],
+                               stdin=subprocess.PIPE, text=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    else:
+        print(text)
+
+    def show(*lines):
+        if bar:
+            ui.feed(bar, *lines)
+
+    ok = True
+    for i, (label, cmd) in enumerate(steps):
+        show(*([str(int(100 * i / len(steps)))] if len(steps) > 1 else []), "# " + html.escape(label))
+        if not bar:
+            print("  " + label)
+        log.write("$ " + " ".join(cmd) + "\n")
+        log.flush()
+        try:
+            proc = subprocess.Popen(cmd, stdout=log, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL,
+                                    start_new_session=True)
+        except OSError as e:
+            log.write(f"{e}\n")
+            ok = False
+            break
+        began, shown = time.time(), 0
+        while proc.poll() is None:
+            time.sleep(1)
+            if bar and bar.poll() is not None:          # the window was closed: Cancel
+                if cancel:
+                    CANCELLED = True
+                    if proc.poll() is None:
+                        os.killpg(proc.pid, signal.SIGTERM)
+                    proc.wait()
+                    break
+                bar = None
+            mins = int(time.time() - began) // 60
+            if mins > shown:
+                shown = mins
+                show("# " + html.escape(f"{label}  ({mins} min so far)"))
+        if CANCELLED or proc.returncode != 0:
+            ok = False
+            break
+    log.close()
+    if bar:
+        ui.finish(bar)
+    return ok
+
+
+def log_tail(n=4000):
+    try:
+        with open(common.LOG, errors="replace") as f:
+            text = f.read()
+        return text[text.rfind("\n=== "):][-n:] if "\n=== " in text else text[-n:]
+    except OSError:
+        return ""
+
+
+def explain(log):
+    """The usual reasons an install fails, in plain words, or ''."""
+    low = log.lower()
+    m = re.search(r"nothing provides ([^\s]+)", low)
+    if m:
+        return (f"It needs {m.group(1)}, which Fedora {common.fedora_version()} does not have. "
+                f"It may be made for a different Fedora version.")
+    m = re.search(r"depends: ([^\s]+)[^\n]*but (it is not installable|it is not going to be installed|[^\n]*is to be "
+                  r"installed)", low)
+    if m or "unmet dependencies" in low:
+        part = f"{m.group(1)}, which" if m else "parts that"
+        return (f"It needs {part} the Ubuntu box (Ubuntu 24.04) does not have. "
+                f"It may be made for a newer or older Ubuntu.")
+    if "no space left on device" in low:
+        return "The disk is full. Free some space, then try again."
+    if re.search(r"could not resolve|temporary failure resolving|name or service not known|network is unreachable|"
+                 r"connection timed out|curl error|failed to download|cannot download|tls handshake", low):
+        return "It could not reach the internet. Check the connection, then try again."
+    if re.search(r"conflicts with file from package|file [^\n]* conflicts", low):
+        return "It would replace a file that belongs to the system, so it was not added."
+    if re.search(r"different architecture|wrong architecture|incompatible architecture", low):
+        return "It is made for a different kind of processor than this computer has."
+    if re.search(r"not authorized|accessdenied|authentication (failed|dismissed)|request dismissed", low):
+        return "The administrator password was not given, so nothing was changed."
+    if re.search(r"no such container|error: container .* does not exist|cannot find container", low):
+        return "The box is missing or broken."
+    return ""
+
+
+def failed(what, offer=None, reason=""):
+    """Say that something did not work, in plain words when the reason is a usual one. offer: (button, action)."""
+    log = log_tail()
+    reason = reason or explain(log)
+    if not reason:
+        lines = [l for l in log.splitlines() if l.strip() and not l.startswith(("===", "$ "))]
+        reason = "The last lines of the log:\n" + "\n".join(lines[-4:]) if lines else ""
+    notify(f"{what} did not work.")
+    text = f"{what} did not work.\n\n{reason}\n\nThe full details are in {common.LOG}"
+    if offer:
+        if ask(text, ok=offer[0], cancel="Close") == "ok":
+            return offer[1]()
+        return 1
+    say(text, "error")
+    return 1

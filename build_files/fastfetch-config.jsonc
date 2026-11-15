@@ -1,0 +1,14 @@
+// fastfetch with the EvenKeelOS logo and its default info.
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "/usr/share/evenkeel-os/fastfetch-logo.txt",
+    "color": { "1": "38;2;43;179;163", "2": "38;2;244;241;234", "3": "38;2;242;193;78" }
+  },
+  "modules": [
+    "title", "separator", "os", "host", "kernel", "uptime", "packages", "shell", "display", "de", "wm",
+    "wmtheme", "theme", "icons", "font", "cursor", "terminal", "terminalfont", "cpu", "gpu", "memory", "swap",
+    "disk", "localip", "battery", "poweradapter", "locale", "break", "colors"
+  ]
+}

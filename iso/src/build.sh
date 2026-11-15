@@ -1,0 +1,166 @@
+#!/usr/bin/bash
+# Live USB image with the installer. Based on titanoboa's Bazzite example (Apache-2.0).
+set -exo pipefail
+
+IMAGE=ghcr.io/ctsdownloads/evenkeel-os:latest
+
+# Directory that /root links to.
+mkdir -p "$(realpath /root)"
+
+# ---------------------------------------------------------------- the live session
+
+# No updates, setup or first-login questions in the live session.
+for s in uupd.timer brew-setup.service podman-auto-update.timer tailscaled.service \
+         evenkeel-os-codecs-setup.service evenkeel-os-disk-unlock-check.service rpm-ostreed-automatic.timer \
+         evenkeel-os-flatpak-apps.service; do
+  if systemctl cat "$s" >/dev/null 2>&1; then systemctl disable "$s"; else echo "note: $s is not in this image"; fi
+done
+rm -f /etc/xdg/autostart/evenkeel-os-setup-checklist.desktop /etc/xdg/autostart/evenkeel-os-packages-after-restart.desktop
+
+# The live user and its automatic login.
+dnf install -y livesys-scripts
+sed -i "s/^livesys_session=.*/livesys_session=gnome/" /etc/sysconfig/livesys
+systemctl enable livesys.service livesys-late.service
+
+# Welcome window: Install EvenKeelOS, or Try it first.
+install -Dm755 /src/evenkeel-os-live-welcome /usr/libexec/evenkeel-os-live-welcome
+install -Dm644 /src/evenkeel-os-live-welcome.desktop /etc/xdg/autostart/evenkeel-os-live-welcome.desktop
+
+# ---------------------------------------------------------------- the installer
+
+# The installer: screens as the live user, disk work as root through pkexec (live USB only).
+dnf install -y python3-gobject gtk4 libadwaita python3-langtable python3-pwquality qrencode xkeyboard-config \
+    dosfstools xfsprogs cryptsetup mdadm
+install -d /usr/lib/evenkeel-os-installer
+install -m755 /src/evenkeel-os-installer/evenkeel-os-installer /usr/lib/evenkeel-os-installer/
+install -m644 /src/evenkeel-os-installer/*.py /src/evenkeel-os-installer/*.css /usr/lib/evenkeel-os-installer/
+ln -sf ../lib/evenkeel-os-installer/evenkeel-os-installer /usr/bin/evenkeel-os-installer
+install -Dm755 /src/evenkeel-os-install-engine /usr/libexec/evenkeel-os-install-engine
+install -Dm644 /src/io.github.ctsdownloads.evenkeel-os.install.policy \
+    /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.install.policy
+install -Dm644 /src/io.github.ctsdownloads.EvenKeelOS.Installer.desktop \
+    /usr/share/applications/io.github.ctsdownloads.EvenKeelOS.Installer.desktop
+install -Dm644 /branding/logo-EvenKeel.svg /usr/share/icons/hicolor/scalable/apps/evenkeel-os-installer.svg
+gtk-update-icon-cache -f /usr/share/icons/hicolor
+install -Dm644 /build-branding/logo-EvenKeel-wide.svg /usr/share/evenkeel-os-installer/logo-wide.svg
+# Languages: the ones Fedora's installer is translated into.
+dnf5 repoquery --quiet --setopt=optional_metadata_types=filelists --list anaconda-core \
+  | sed -n 's|^/usr/share/locale/\([^/]*\)/LC_MESSAGES/anaconda.mo$|\1|p' | sort -u \
+  > /usr/share/evenkeel-os-installer/anaconda-translations.txt
+
+# Dock: installer, Firefox, Files, Bazaar.
+cat > /usr/share/glib-2.0/schemas/zz2-evenkeel-os-live.gschema.override <<'OVR'
+[org.gnome.shell]
+favorite-apps=['io.github.ctsdownloads.EvenKeelOS.Installer.desktop', 'org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'io.github.kolunmi.Bazaar.desktop']
+welcome-dialog-last-shown-version='4294967295'
+
+[org.gnome.desktop.session]
+idle-delay=uint32 0
+
+[org.gnome.settings-daemon.plugins.power]
+ambient-enabled=false
+idle-dim=false
+power-saver-profile-on-low-battery=false
+sleep-inactive-ac-type='nothing'
+sleep-inactive-battery-type='nothing'
+OVR
+
+# No Flatpaks on the live USB: the Logo Menu opens gnome-system-monitor.
+sed -i "s|^menu-button-system-monitor=.*|menu-button-system-monitor='gnome-system-monitor'|" \
+  /etc/dconf/db/distro.d/50-evenkeel-os-logo-menu
+grep -qx "menu-button-system-monitor='gnome-system-monitor'" /etc/dconf/db/distro.d/50-evenkeel-os-logo-menu \
+  || { echo "ERROR: the live USB's Logo Menu system monitor was not set to gnome-system-monitor"; exit 1; }
+dconf update
+glib-compile-schemas /usr/share/glib-2.0/schemas
+
+# Install from the copy on the USB; updates then come from the signed image on GitHub.
+if [ -f /src/payload.oci.tar ]; then
+  loaded=$(podman load -q -i /src/payload.oci.tar | sed -n 's/^Loaded image: //p' | tail -1)
+  [ -n "$loaded" ] || { echo "ERROR: the local copy of EvenKeelOS could not be loaded"; exit 1; }
+  podman tag "$loaded" "$IMAGE"
+  [ "$loaded" = "$IMAGE" ] || podman untag "$IMAGE" "$loaded"
+  echo "payload: the locally built image (test build)"
+else
+  podman pull "$IMAGE"
+fi
+
+# ---------------------------------------------------------------- live boot
+
+dnf install -y dracut-live
+kernel=$(kernel-install list --json pretty | jq -r '.[] | select(.has_kernel == true) | .version')
+DRACUT_NO_XATTR=1 dracut -v --force --zstd --reproducible --no-hostonly \
+    --add "dmsquash-live dmsquash-live-autooverlay" \
+    "/usr/lib/modules/${kernel}/initramfs.img" "${kernel}"
+
+# Our own unsigned grub, no Fedora boot files: Fedora's shim named the USB "Fedora". Needs Secure Boot off.
+dnf install -y grub2-efi-x64-modules grub2-tools
+grub2-mkimage -O x86_64-efi -d /usr/lib/grub/x86_64-efi -p /EFI/EvenKeelOS -o /tmp/evenkeel-os-grub.efi \
+    normal boot linux search part_gpt fat iso9660 gzio all_video chain
+install -Dm644 /tmp/evenkeel-os-grub.efi /boot/efi/EFI/BOOT/BOOTX64.EFI
+install -Dm644 /tmp/evenkeel-os-grub.efi /boot/efi/EFI/EvenKeelOS/grubx64.efi
+rm /tmp/evenkeel-os-grub.efi
+
+# Needed for image-builder's buildroot.
+dnf install -y xorriso isomd5sum squashfs-tools
+
+mkdir -p /usr/lib/bootc-image-builder
+cp /src/iso.yaml /usr/lib/bootc-image-builder/iso.yaml
+
+dnf clean all
+
+# ---------------------------------------------------------------- checks: fail the build, never ship it wrong
+
+fail() { echo "ERROR: $*"; exit 1; }
+rpm -q anaconda-core >/dev/null 2>&1 && fail "Fedora's installer (Anaconda) is still on the USB"
+for f in /usr/bin/evenkeel-os-installer /usr/libexec/evenkeel-os-install-engine; do
+  [ -x "$f" ] || fail "$f is missing"
+done
+[ -s /usr/share/applications/io.github.ctsdownloads.EvenKeelOS.Installer.desktop ] || fail "the installer's launcher is missing"
+[ -s /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.install.policy ] || fail "the installer's polkit action is missing"
+[ -s /usr/share/evenkeel-os-installer/logo-wide.svg ] || fail "the installer's EvenKeelOS logo is missing"
+[ "$(wc -l < /usr/share/evenkeel-os-installer/anaconda-translations.txt)" -ge 50 ] || fail "the installer's language list is missing"
+command -v qrencode >/dev/null || fail "qrencode is missing (the problem report's QR code)"
+for tool in mdadm dmsetup cryptsetup mkfs.fat mkfs.ext4 mkfs.xfs sfdisk wipefs hwclock; do
+  command -v "$tool" >/dev/null || fail "$tool is missing (the install engine uses it)"
+done
+# Live session never dims, locks or suspends (read through the schemas).
+for setting in "org.gnome.desktop.session idle-delay uint32 0" \
+               "org.gnome.settings-daemon.plugins.power ambient-enabled false" \
+               "org.gnome.settings-daemon.plugins.power idle-dim false" \
+               "org.gnome.settings-daemon.plugins.power power-saver-profile-on-low-battery false" \
+               "org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'" \
+               "org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'"; do
+  set -- $setting
+  schema=$1 key=$2
+  shift 2
+  [ "$(gsettings get "$schema" "$key")" = "$*" ] || fail "the live session's $key is not $*, so an install nobody touches could be interrupted"
+done
+# Live Logo Menu opens gnome-system-monitor.
+[ "$(HOME=/tmp gsettings get org.gnome.shell.extensions.logo-menu menu-button-system-monitor)" = "'gnome-system-monitor'" ] \
+  || fail "the live USB's Logo Menu system monitor is not gnome-system-monitor"
+# bootc steps: copy, write settings, then finish.
+bootc install to-filesystem --help | grep -q -- '--skip-finalize' || fail "bootc has no install to-filesystem --skip-finalize"
+bootc install to-filesystem --help | grep -q -- '--bootloader' || fail "bootc has no install to-filesystem --bootloader"
+bootc install finalize --help >/dev/null 2>&1 || fail "bootc has no install finalize"
+# Every language offered must work on the installed system.
+rpm -q glibc-all-langpacks >/dev/null || fail "glibc-all-langpacks is missing: the languages offered would not work"
+# The installer window starts, and its language, keyboard and time zone lists load.
+python3 -I -c '
+import sys; sys.path.insert(0, "/usr/lib/evenkeel-os-installer")
+import gi; gi.require_version("Gtk", "4.0"); gi.require_version("Adw", "1")
+from gi.repository import Adw, Gtk
+import data, pwquality
+assert len(data.languages()) >= 50, "languages"
+assert len(data.keyboards()) >= 500, "keyboards"
+# kbd-misc ships with the image, so the installed system has these keymaps.
+assert data.has_console_keymap("us") and data.has_console_keymap("de(nodeadkeys)"), "keyboards for the disk password"
+assert len(data.timezones()) >= 9, "time zones"
+' || fail "the installer's lists could not be read"
+grep -qi 'fedora' /etc/system-release && fail "/etc/system-release still says Fedora"
+podman image exists "$IMAGE" || fail "the copy of EvenKeelOS for the installer is missing"
+[ "$(ls /boot/efi/EFI | tr '\n' ' ')" = "BOOT EvenKeelOS " ] || fail "the USB's boot partition must hold only EFI/BOOT and EFI/EvenKeelOS (no shim, no EFI/fedora)"
+[ "$(ls /boot/efi/EFI/BOOT)" = BOOTX64.EFI ] && [ "$(ls /boot/efi/EFI/EvenKeelOS)" = grubx64.efi ] || fail "the USB's boot files are not just the EvenKeelOS grub"
+grep -rqi fedora /boot/efi && fail "a file on the USB's boot partition still contains Fedora"
+# Big layers fill the live session's memory during install, so the image must be split into small ones.
+[ "$(podman image inspect "$IMAGE" --format '{{len .RootFS.Layers}}')" -ge 20 ] || fail "the copy of EvenKeelOS for the installer is not split into small layers"
+echo "live image ready: installer in place, payload $IMAGE present"

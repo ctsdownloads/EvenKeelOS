@@ -1,0 +1,8 @@
+# Desktop defaults: no hot corner, battery percentage shown.
+[org.gnome.desktop.interface]
+enable-hot-corners=false
+show-battery-percentage=true
+
+# Dock: GNOME's list with Bazaar for GNOME Software, no Calculator.
+[org.gnome.shell]
+favorite-apps=['org.mozilla.firefox.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Nautilus.desktop', 'io.github.kolunmi.Bazaar.desktop', 'org.gnome.TextEditor.desktop']

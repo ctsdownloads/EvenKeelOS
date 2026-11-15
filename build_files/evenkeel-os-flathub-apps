@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+# Install the default Flathub apps in flathub-apps.txt, from the flathub remote only.
+set -euo pipefail
+mapfile -t apps < <(grep -v '^#' /usr/share/evenkeel-os/flathub-apps.txt | grep -v '^[[:space:]]*$')
+exec /usr/bin/flatpak install --system --noninteractive -y flathub "${apps[@]}"

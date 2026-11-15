@@ -1,0 +1,8 @@
+#!/usr/bin/python3 -I
+"""Install Package File, Remove Apps, Repair App Boxes and Start Apps at Login."""
+import sys
+
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+from evenkeel_os_packages.cli import main  # noqa: E402
+
+sys.exit(main(sys.argv))

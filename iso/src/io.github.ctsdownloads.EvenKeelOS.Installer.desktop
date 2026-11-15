@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Install EvenKeelOS
+Comment=Put EvenKeelOS on this computer
+Exec=/usr/bin/evenkeel-os-installer
+Icon=evenkeel-os-installer
+Terminal=false
+Categories=System;
+StartupNotify=true

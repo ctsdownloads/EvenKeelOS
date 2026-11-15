@@ -1,0 +1,258 @@
+"""Making, sizing, checking and repairing the app boxes."""
+import json
+import platform
+import subprocess
+import tarfile
+import urllib.request
+from pathlib import Path
+
+from evenkeel_os_ui import ask, choose, free_mb, human, notify, say
+from evenkeel_os_packages import app_list, common, launchers, reading, targets, windows
+
+
+def box_exists(name):
+    return subprocess.run(["podman", "container", "exists", name], capture_output=True).returncode == 0
+
+
+def in_box(box, *cmd):
+    return ["distrobox", "enter", "-T", "-n", box, "--", *cmd]
+
+
+def image_size(image):
+    """Download size of a box image in MB: 0 if it is already on this computer, None if it cannot be found out."""
+    if subprocess.run(["podman", "image", "exists", image], capture_output=True).returncode == 0:
+        return 0
+    reg, _, rest = image.partition("/")
+    repo, _, tag = rest.rpartition(":")
+    arch = {"x86_64": "amd64", "aarch64": "arm64"}.get(platform.machine(), platform.machine())
+    lists = "application/vnd.oci.image.index.v1+json,application/vnd.docker.distribution.manifest.list.v2+json"
+    single = "application/vnd.oci.image.manifest.v1+json,application/vnd.docker.distribution.manifest.v2+json"
+    try:
+        headers = {}
+        if reg == "quay.io":
+            url = f"https://quay.io/v2/auth?service=quay.io&scope=repository:{repo}:pull"
+            headers["Authorization"] = "Bearer " + json.load(urllib.request.urlopen(url, timeout=6))["token"]
+
+        def get(ref, accept):
+            req = urllib.request.Request(f"https://{reg}/v2/{repo}/manifests/{ref}",
+                                         headers={**headers, "Accept": accept})
+            return json.load(urllib.request.urlopen(req, timeout=6))
+        man = get(tag, lists + "," + single)
+        if "manifests" in man:
+            digest = next(m["digest"] for m in man["manifests"] if m.get("platform", {}).get("architecture") == arch)
+            man = get(digest, single)
+        return max(1, sum(l["size"] for l in man["layers"]) // 1_000_000)
+    except Exception:
+        return None
+
+
+def box_sizes(names):
+    """MB each box uses, or {} if not known quickly."""
+    names = [n for n in names if box_exists(n)]
+    if not names:
+        return {}
+    try:
+        r = subprocess.run(["podman", "ps", "-a", "--size", "--format", "json",
+                            *[f"--filter=name=^{n}$" for n in names]], capture_output=True, text=True, timeout=20)
+        out = {}
+        for c in json.loads(r.stdout):
+            name = (c.get("Names") or [""])[0]
+            size = c.get("Size") or {}
+            out[name] = max(size.get("rootFsSize", 0), size.get("rwSize", 0)) // 1_000_000
+        return out
+    except (OSError, subprocess.TimeoutExpired, ValueError, AttributeError, TypeError):
+        return {}
+
+
+def box_size(name):
+    return box_sizes([name]).get(name)
+
+
+def sizes_line():
+    """'Space used: Fedora box 1.2 GB, Ubuntu box 650 MB.' for the boxes that exist, or ''."""
+    sizes = box_sizes([common.BOXES[k]["name"] for k in common.BOXES])
+    parts = [f"{common.BOXES[k]['label']} {human(sizes[common.BOXES[k]['name']])}" for k in common.BOXES if sizes.get(common.BOXES[k]["name"])]
+    return "Space used: " + ", ".join(parts) + "." if parts else ""
+
+
+def room_for(need_mb):
+    """Warn before starting when the disk is too full for it. True to go on."""
+    where = common.HOME / ".local/share/containers"
+    free = free_mb(where if where.exists() else common.HOME)
+    if free is None or free >= need_mb:
+        return True
+    return ask(f"Not enough free space. This needs about {human(need_mb)}, and {human(free)} is free.\n\n"
+               f"Recommended: Cancel, then empty the Trash or remove apps you don't use, and try again.\n\n"
+               f"Or Try anyway: if space runs out, it stops safely and nothing is lost.",
+               ok="Try anyway", cancel="Cancel") == "ok"
+
+
+def setup_need(size):
+    """Disk space to set up a box: its download unpacks to about three times its size, plus room to work."""
+    return (size or 400) * 3 + 1500
+
+
+def delete_box(kind):
+    """Delete an app box and its downloaded system, to free the space. Your own files are not touched."""
+    box = common.BOXES[kind]
+    ok = windows.run_steps(f"Deleting the {box['label']}.", [["distrobox", "rm", "--force", box["name"]]])
+    if ok:     # the box's system image too, unless something else still uses it
+        subprocess.run(["podman", "image", "rm", box["image"]], capture_output=True)
+        helpers_mark(kind).unlink(missing_ok=True)
+    return ok
+
+
+def box_words(kind):
+    distro = "Fedora" if kind == "rpm" else "Ubuntu"
+    return distro, ("a" if kind == "rpm" else "an"), common.BOXES[kind]["label"]
+
+
+def first_time(kind):
+    """What setting up the box takes, said before anything is downloaded, and the download size."""
+    size = image_size(common.BOXES[kind]["image"])
+    disk = f"uses about {human(setup_need(size) - 1500)} of disk space"
+    text = f"First time only: sets up the box, which takes a minute or two and {disk}." if size == 0 \
+        else f"First time only: downloads about {size} MB and {disk}." if size else \
+        f"First time only: downloads a few hundred MB and {disk}."
+    return text, size
+
+
+# Desktop helpers .rpm and .deb apps expect (zenity, notify-send); xdg-open already reaches the desktop.
+HELPERS = {"rpm": ["zenity", "libnotify"], "deb": ["zenity", "libnotify-bin"]}
+HELPER_CHECK = "command -v zenity >/dev/null && command -v notify-send >/dev/null"
+
+
+def helpers_mark(kind):
+    return common.STATE.with_name(f"helpers-{common.BOXES[kind]['name']}")
+
+
+def helper_steps(kind):
+    box = common.BOXES[kind]["name"]
+    label = "Adding the desktop parts apps expect (progress windows and notifications)"
+    if kind == "rpm":
+        return [(label, in_box(box, "sudo", "dnf", "-y", "install", *HELPERS[kind]))]
+    return [(label, in_box(box, "sh", "-c", "sudo apt-get update && sudo env DEBIAN_FRONTEND=noninteractive "
+                                           "apt-get install -y " + " ".join(HELPERS[kind])))]
+
+
+def ensure_helpers(kind, quiet=False):
+    """Make sure the box has the desktop helpers. Done once per box; remembered after that."""
+    mark = helpers_mark(kind)
+    box = common.BOXES[kind]["name"]
+    if mark.exists() or not box_exists(box):
+        return True
+    if subprocess.run(in_box(box, "sh", "-c", HELPER_CHECK), capture_output=True).returncode != 0:
+        if quiet:
+            ok = all(subprocess.run(cmd, capture_output=True).returncode == 0 for _, cmd in helper_steps(kind))
+        else:
+            ok = windows.run_steps(f"Preparing the {common.BOXES[kind]['label']}.", helper_steps(kind))
+        if not ok:
+            return False
+    mark.parent.mkdir(parents=True, exist_ok=True)
+    mark.touch()
+    return True
+
+
+def setup_box(kind, size=None, again=False):
+    """Make the box, with plain steps and a Cancel button. Cancel or failure leaves no half-made box."""
+    _, _, label = box_words(kind)
+    box = common.BOXES[kind]
+    steps = []
+    if size != 0:
+        about = f" (about {size} MB)" if size else ""
+        steps.append((f"Downloading the {label}{about}", ["podman", "pull", box["image"]]))
+    steps += [(f"Creating the {label}",
+               ["distrobox", "create", "--yes", "--no-entry", "--name", box["name"], "--image", box["image"]]),
+              (f"Getting the {label} ready. The first time takes a few minutes.", in_box(box["name"], "true"))]
+    steps += helper_steps(kind)
+    helpers_mark(kind).unlink(missing_ok=True)
+    heading = f"Setting up the {label} again." if again else f"Setting up the {label}. This happens only once."
+    # also as a notification, so it is seen even if the progress window opens behind another window
+    notify(f"{heading} It takes a few minutes; a progress window shows each step.")
+    if windows.run_steps(heading, steps, cancel=True):
+        helpers_mark(kind).parent.mkdir(parents=True, exist_ok=True)
+        helpers_mark(kind).touch()
+        return True
+    subprocess.run(["distrobox", "rm", "--force", box["name"]], capture_output=True)
+    if windows.CANCELLED:
+        say(f"Setting up the {label} was stopped. Nothing was installed.")
+    else:
+        windows.failed(f"Setting up the {label}")
+    return False
+
+
+def box_works(name):
+    try:
+        return subprocess.run(in_box(name, "true"), capture_output=True, timeout=300).returncode == 0
+    except subprocess.TimeoutExpired:
+        return False
+
+
+def repair(kind, why="", confirm=True):
+    """Make a broken box again from scratch and put back the apps that were installed in it."""
+    _, _, label = box_words(kind)
+    box = common.BOXES[kind]["name"]
+    inside = [r for r in app_list.load() if r["where"] == box]
+    names = ", ".join(r["title"] for r in inside) or "none"
+    size = image_size(common.BOXES[kind]["image"])
+    sz = "" if size == 0 or size is None else f" (downloads about {size} MB)"
+    if confirm and ask(f"{why or f'The {label} is not working.'}\n\nRepair: rebuilds it{sz} and puts back its apps: "
+                       f"{names}.\n\nYour files are not touched. Anything added to the box another way is not put "
+                       f"back.", ok="Repair") != "ok":
+        return 1
+    for r in inside:
+        launchers.unexport(r)
+    subprocess.run(["distrobox", "rm", "--force", box], capture_output=True)
+    if not setup_box(kind, size, again=True):
+        return 1
+    back, missing = [], []
+    for r in inside:
+        f = r.get("file")
+        if not f or not Path(f).exists():
+            missing.append(r["title"])
+            app_list.forget(r)
+            continue
+        try:
+            pkg = reading.read_package(f)
+        except (OSError, ValueError, tarfile.TarError, EOFError):
+            missing.append(r["title"])
+            app_list.forget(r)
+            continue
+        if targets.box_install(pkg, reading.classify(pkg), r["title"], quiet=True) == 0:
+            if r.get("rules"):          # its hardware rule is still on the system
+                app_list.remember({**next(x for x in app_list.load() if x["package"] == r["package"] and x["where"] == box),
+                          "rules": True})
+            back.append(r["title"])
+        else:
+            missing.append(r["title"])
+    text = f"The {label} is repaired."
+    if back:
+        text += "\n\nPut back: " + ", ".join(back) + "."
+    if missing:
+        text += "\n\nNot put back (open their files again to install them): " + ", ".join(missing) + "."
+    notify(f"The {label} is repaired.")
+    say(text)
+    return 0
+
+
+def repair_command(only_broken=False):
+    """Repair an app box; only_broken (from System Update) repairs only one that doesn't work."""
+    kinds = [k for k in common.BOXES if box_exists(common.BOXES[k]["name"]) or any(r["where"] == common.BOXES[k]["name"] for r in app_list.load())]
+    if not kinds:
+        say("There are no app boxes to repair.")
+        return 0
+    if only_broken:
+        broken = [k for k in kinds if not (box_exists(common.BOXES[k]["name"]) and box_works(common.BOXES[k]["name"]))]
+        if not broken:
+            say("Your app boxes are working. The box that did not update was made outside Install Package File, "
+                "so Repair cannot fix it.")
+            return 0
+        kinds = broken
+    if len(kinds) == 1:
+        i = 0
+    else:
+        i = choose("Which box do you want to repair?", ["Box"], [[common.BOXES[k]["label"]] for k in kinds])
+        if i is None:
+            return 1
+    label = common.BOXES[kinds[i]]["label"]
+    return repair(kinds[i], why=f"Repair the {label}? Use this if apps in it no longer open or update.")

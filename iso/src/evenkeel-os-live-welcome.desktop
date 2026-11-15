@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Welcome to EvenKeelOS
+Comment=Install EvenKeelOS, or try it first
+Exec=/usr/libexec/evenkeel-os-live-welcome
+Terminal=false
+NoDisplay=true
+OnlyShowIn=GNOME;
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=10

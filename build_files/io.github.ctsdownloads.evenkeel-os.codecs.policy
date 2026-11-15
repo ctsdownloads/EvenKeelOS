@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD polkit Policy Configuration 1.0//EN" "http://www.freedesktop.org/software/polkit/policyconfig-1.dtd">
+<policyconfig>
+  <vendor>EvenKeelOS</vendor>
+  <vendor_url>https://github.com/ctsdownloads/evenkeel-os</vendor_url>
+
+  <!-- Adding codecs: 50-evenkeel-os-codecs.rules lets an admin at the computer skip the password. -->
+  <action id="io.github.ctsdownloads.evenkeel-os.codecs.setup">
+    <description>Add the media codecs</description>
+    <message>Add the media codecs</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/libexec/evenkeel-os-codecs-setup</annotate>
+    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+  </action>
+
+  <!-- Taking them out asks for the administrator password, every time. -->
+  <action id="io.github.ctsdownloads.evenkeel-os.codecs.admin">
+    <description>Add or remove media codecs</description>
+    <message>Authentication is required to add or remove media codecs</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/libexec/evenkeel-os-codecs-admin</annotate>
+    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+  </action>
+</policyconfig>

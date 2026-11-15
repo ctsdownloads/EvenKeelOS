@@ -1,0 +1,48 @@
+version = 1
+SPDX-PackageName = "EvenKeelOS"
+SPDX-PackageSupplier = "Matt Hartley <matt@matthartley.com>"
+SPDX-PackageDownloadLocation = "https://github.com/ctsdownloads/evenkeel-os"
+
+# Everything is GPL-3.0-or-later unless a rule below says otherwise.
+[[annotations]]
+path = "**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Matt Hartley"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+# Files from Universal Blue's image template stay Apache-2.0, with this project's changes.
+[[annotations]]
+path = [
+    "Justfile",
+    "Containerfile",
+    "artifacthub-repo.yml",
+    "image-template.env",
+    ".gitignore",
+    "disk_config/**",
+    ".github/dependabot.yml",
+    ".github/renovate.json5",
+    ".github/workflows/build.yml",
+    ".github/workflows/build-disk.yml",
+]
+precedence = "override"
+SPDX-FileCopyrightText = ["Universal Blue contributors", "2026 Matt Hartley"]
+SPDX-License-Identifier = "Apache-2.0"
+
+# The live-ISO build, from Universal Blue's titanoboa, stays Apache-2.0, with this project's changes.
+[[annotations]]
+path = ["iso/Containerfile", "iso/src/**"]
+precedence = "override"
+SPDX-FileCopyrightText = ["Universal Blue contributors", "2026 Matt Hartley"]
+SPDX-License-Identifier = "Apache-2.0"
+
+# The EvenKeelOS installer on the live USB is this project's own work, not from titanoboa: GPL-3.0-or-later.
+[[annotations]]
+path = [
+    "iso/src/evenkeel-os-installer/**",
+    "iso/src/evenkeel-os-install-engine",
+    "iso/src/io.github.ctsdownloads.EvenKeelOS.Installer.desktop",
+    "iso/src/io.github.ctsdownloads.evenkeel-os.install.policy",
+]
+precedence = "override"
+SPDX-FileCopyrightText = "2026 Matt Hartley"
+SPDX-License-Identifier = "GPL-3.0-or-later"
