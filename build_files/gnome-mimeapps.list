@@ -1,0 +1,10 @@
+# Our default apps, read before Fedora's list, which is left as is.
+[Default Applications]
+application/x-rpm=evenkeel-os-install-package.desktop
+application/vnd.debian.binary-package=evenkeel-os-install-package.desktop
+# Flatpak apps, files and links open in Bazaar, the app store.
+application/vnd.flatpak.ref=io.github.kolunmi.Bazaar.desktop
+application/vnd.flatpak=io.github.kolunmi.Bazaar.desktop
+x-scheme-handler/appstream=io.github.kolunmi.Bazaar.desktop
+x-scheme-handler/flatpak=io.github.kolunmi.Bazaar.desktop
+x-scheme-handler/flatpak+https=io.github.kolunmi.Bazaar.desktop

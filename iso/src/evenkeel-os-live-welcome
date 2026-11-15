@@ -1,0 +1,7 @@
+#!/bin/bash
+# Live welcome window: install or try first.
+zenity --question --title="Welcome to EvenKeelOS" --width=560 \
+  --ok-label="Install EvenKeelOS" --cancel-label="Try it first" \
+  --text="Welcome to EvenKeelOS.\n\nThis is a live session: it runs from the USB stick, nothing here is saved, and the computer's disk isn't touched.\n\nRecommended: Install EvenKeelOS, to put it on this computer. Or Try it first: Install EvenKeelOS is also in the dock." \
+  && exec /usr/bin/evenkeel-os-installer
+exit 0

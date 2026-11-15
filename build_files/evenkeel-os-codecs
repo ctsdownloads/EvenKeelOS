@@ -1,0 +1,100 @@
+#!/bin/bash
+# Add or remove the media codecs Fedora leaves out (patents). Run codecs with no option to see the choices.
+set -uo pipefail
+
+. /usr/libexec/evenkeel-os-codecs-lib.sh
+SETUP=/usr/libexec/evenkeel-os-codecs-setup
+ADMIN=/usr/libexec/evenkeel-os-codecs-admin
+USTATE="${XDG_STATE_HOME:-$HOME/.local/state}/evenkeel-os"
+ARGS=("$@")
+NO_RESTART=""   # set by --no-restart: the installed window doesn't offer a restart (the setup checklist does)
+
+say() { printf '%s\n' "$*"; }
+
+run_helper() {   # $1 = web, full, remove or skip
+  if [ "$(id -u)" -eq 0 ]; then "$ADMIN" "$1"; return; fi          # already root, for example via sudo
+  command -v pkexec >/dev/null 2>&1 || { say "pkexec is missing. Run this with sudo instead."; return 1; }
+  case "$1" in
+    web|full) pkexec "$SETUP" "$1" ;;                       # fixed packages: no password (see the rules file)
+    skip)     window_open && pkexec "$SETUP" skip ;;        # closes the first-time window
+    *)        pkexec "$ADMIN" "$1" ;;                       # remove: administrator password
+  esac
+}
+
+explain() {
+  say "Some audio and video formats are covered by patents in some countries."
+  say "Fedora, and this image, leave them out. Installing them is your choice and your"
+  say "responsibility."
+  say
+  say "Two choices:"
+  say "  codecs web   Web video in Firefox only. Replaces Fedora's empty OpenH264 stand-in with"
+  say "               Cisco's OpenH264 from Fedora's Cisco repository, under Cisco's own H.264"
+  say "               patent license."
+  say "  codecs full  Everything. Replaces Fedora's free ffmpeg libraries with the full ffmpeg,"
+  say "               x264 and x265 from RPM Fusion, the source standard Fedora uses."
+  say
+  say "Either choice installs with no password on an administrator account. Taking them out asks for it."
+  say "Restart afterwards. To take them out again: codecs remove"
+}
+
+ask() {   # prints web or full, or nothing for "Not now"
+  local note out rc
+  note="Either choice installs with no password."
+  out=$(zenity --question --title="Install Media Codecs" --width=600 \
+        --ok-label="Web video only" --extra-button="Everything" --cancel-label="Not now" \
+        --text="Some video formats (like most web video) need extra codecs that Fedora, and this system, leave out because of patents in some countries. Installing them is your choice and your responsibility.\n\nWeb video only: lets Firefox play most web video. A small addition to the system.\n\nEverything: plays all common video and audio, in every app. It replaces some parts of the system, so system updates take a little longer.\n\nNot now: you can open Install Media Codecs from Show Apps any time.\n\nPick by what you need. If you only watch video in Firefox, Web video only is enough.\n\n$note" 2>/dev/null); rc=$?
+  if [ "$rc" -eq 0 ]; then say web; elif [ "$out" = "Everything" ]; then say full; fi
+}
+
+install_with_window() {   # $1 = web or full
+  local log pid rc; log=$(mktemp)
+  run_helper "$1" >"$log" 2>&1 &
+  pid=$!
+  ( while kill -0 "$pid" 2>/dev/null; do echo; sleep 1; done; echo 100 ) | \
+    zenity --progress --pulsate --auto-close --no-cancel --title="Install Media Codecs" --text="Installing the codecs. This can take a few minutes."
+  wait "$pid"; rc=$?
+  if [ "$rc" -eq 0 ] && [ -n "$NO_RESTART" ]; then     # the setup checklist offers the restart
+    zenity --info --title="Install Media Codecs" --width=480 \
+      --text="The codecs are installed. They start working after a restart, which the setup checklist offers at its end."
+  elif [ "$rc" -eq 0 ]; then
+    zenity --question --title="Install Media Codecs" --ok-label="Restart now" --cancel-label="Later" \
+      --text="The codecs are installed.\n\nRecommended: Restart now to start using them. Or Later." && systemctl reboot
+  else
+    zenity --error --title="Install Media Codecs" --width=520 \
+      --text="It didn't work, and nothing was changed.\n\n$(sed -n '/^error:/,$p' "$log" | head -n 10 | head -c 900)\n\nTry again later."
+  fi
+  rm -f "$log"
+}
+
+gui() {
+  command -v zenity >/dev/null 2>&1 || { say "zenity is missing. Use the typed commands instead: run  codecs"; exit 1; }
+  local choice; choice=$(ask)
+  if [ -n "$choice" ]; then install_with_window "$choice"
+  elif window_open; then run_helper skip >/dev/null 2>&1; fi      # "Not now" closes the setup window
+  return 0
+}
+
+first_login() {
+  command -v zenity >/dev/null 2>&1 || exit 0
+  window_open || exit 0
+  [ -e "$USTATE/codecs-asked" ] && exit 0
+  mkdir -p "$USTATE" && : > "$USTATE/codecs-asked"
+  gui
+}
+
+mode=explain
+for a in "${ARGS[@]}"; do
+  case "$a" in
+    web|--web) mode=web ;; full|--full) mode=full ;; remove|--remove) mode=remove ;;
+    gui|--gui) mode=gui ;; --first-login) mode=first ;; --no-restart) NO_RESTART=1 ;; --apply) ;; -h|--help|help) mode=explain ;;
+    *) say "Unknown option: $a. Run  codecs  to see the choices."; exit 2 ;;
+  esac
+done
+case "$mode" in
+  explain) explain ;;
+  web)     run_helper web ;;
+  full)    run_helper full ;;
+  remove)  run_helper remove ;;
+  gui)     gui ;;
+  first)   first_login ;;
+esac

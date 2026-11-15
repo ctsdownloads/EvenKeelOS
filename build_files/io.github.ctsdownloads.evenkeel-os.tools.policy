@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD polkit Policy Configuration 1.0//EN" "http://www.freedesktop.org/software/polkit/policyconfig-1.dtd">
+<policyconfig>
+  <vendor>EvenKeelOS</vendor>
+  <vendor_url>https://github.com/ctsdownloads/evenkeel-os</vendor_url>
+
+  <!-- System Tools: automatic updates off or on, and the disk unlock check. Admin password. -->
+  <action id="io.github.ctsdownloads.evenkeel-os.tools">
+    <description>Change automatic updates or automatic disk unlock</description>
+    <message>Authentication is required to change automatic updates or automatic disk unlock</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/libexec/evenkeel-os-tools-admin</annotate>
+  </action>
+
+  <!-- Harmless System Tools jobs: 50-evenkeel-os-tools.rules lets an admin at the computer skip the password. -->
+  <action id="io.github.ctsdownloads.evenkeel-os.tools.safe">
+    <description>Turn on automatic updates or automatic disk unlock, or free up disk space</description>
+    <message>Authentication is required to change a System Tools setting</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/libexec/evenkeel-os-tools-safe</annotate>
+    <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
+  </action>
+</policyconfig>

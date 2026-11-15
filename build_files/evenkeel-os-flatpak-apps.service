@@ -1,0 +1,17 @@
+# Install the Flathub default apps; retries every 15 minutes, then stops for good.
+[Unit]
+Description=Install the EvenKeelOS apps from Flathub
+Wants=network-online.target
+After=network-online.target evenkeel-os-flathub.service
+ConditionPathExists=!/var/lib/evenkeel-os/flathub-apps-installed
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/evenkeel-os-flathub-apps
+ExecStartPost=/usr/bin/mkdir -p /var/lib/evenkeel-os
+ExecStartPost=/usr/bin/touch /var/lib/evenkeel-os/flathub-apps-installed
+Restart=on-failure
+RestartSec=15min
+
+[Install]
+WantedBy=multi-user.target

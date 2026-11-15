@@ -1,0 +1,12 @@
+# Logo Menu defaults for every user (schema path has a capital L); the live USB uses gnome-system-monitor.
+[org/gnome/shell]
+enabled-extensions=['logomenu@aryan_k']
+
+[org/gnome/shell/extensions/Logo-menu]
+use-custom-icon=true
+custom-icon-path='/usr/share/evenkeel-os/logo-menu-icon.svg'
+menu-button-software-center='bazaar'
+menu-button-terminal='ghostty'
+menu-button-system-monitor='flatpak run net.nokyan.Resources'
+show-activities-button=false
+hide-forcequit=true

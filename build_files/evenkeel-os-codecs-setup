@@ -1,0 +1,30 @@
+#!/bin/bash
+# No-password codecs helper for an admin at the computer: web, full or skip only.
+set -uo pipefail
+. /usr/libexec/evenkeel-os-codecs-lib.sh
+need_root
+
+if [ "$#" -ne 1 ]; then echo "usage: evenkeel-os-codecs-setup web|full|skip"; exit 2; fi
+
+case "$1" in
+  --open)   # run by a system service at boot: open the window once, never again
+    if [ ! -e "$DONE" ] && [ ! -e "$OPEN" ]; then mkdir -p "$STATE" && : > "$OPEN"; log "setup window opened"; fi
+    exit 0 ;;
+  web|full|skip) ;;
+  *) echo "usage: evenkeel-os-codecs-setup web|full|skip"; exit 2 ;;
+esac
+
+if [ "$1" = skip ] && ! window_open; then
+  echo "The one-time setup window is already closed."
+  exit 3
+fi
+
+log "setup choice '$1' requested by uid $(caller)"
+rc=0
+case "$1" in
+  web)  do_web  || rc=$? ;;
+  full) do_full || rc=$? ;;
+  skip) ;;
+esac
+if [ "$rc" -eq 0 ] && window_open; then : > "$DONE"; rm -f "$OPEN"; log "setup window closed after '$1'"; fi
+exit "$rc"

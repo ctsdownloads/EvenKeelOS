@@ -1,0 +1,10 @@
+label: "EvenKeelOS-Live"
+grub2:
+  timeout: 10
+  entries:
+    - name: "EvenKeelOS Live"
+      linux: "/images/pxeboot/vmlinuz quiet rhgb root=live:CDLABEL=EvenKeelOS-Live enforcing=0 rd.live.image"
+      initrd: "/images/pxeboot/initrd.img"
+    - name: "EvenKeelOS Live (basic graphics)"
+      linux: "/images/pxeboot/vmlinuz quiet rhgb root=live:CDLABEL=EvenKeelOS-Live enforcing=0 rd.live.image nomodeset"
+      initrd: "/images/pxeboot/initrd.img"

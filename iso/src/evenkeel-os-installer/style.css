@@ -1,0 +1,31 @@
+/* EvenKeelOS's colors: teal #2bb3a3 and #1d7f74, navy #12355b and #0b2340. */
+@define-color accent_bg_color #1d7f74;
+@define-color accent_color #1d7f74;
+@define-color accent_fg_color #ffffff;
+
+headerbar.brand {
+  background: linear-gradient(90deg, #0b2340, #12355b);
+  color: #ffffff;
+  min-height: 56px;
+}
+headerbar.brand .step { font-weight: 600; opacity: 0.9; }
+headerbar.brand windowcontrols button { color: #ffffff; }
+
+.release-stage {
+  background: #e66100;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 0.85em;
+  font-weight: 700;
+}
+
+.intro { font-size: 1.1em; }
+.status { font-weight: 700; color: @accent_color; }
+
+row.chosen { background: alpha(@accent_bg_color, 0.12); }
+.chosen-mark { color: @accent_color; }
+
+.erase-warning { color: @destructive_color; }
+
+button.pill { padding: 8px 22px; font-size: 1.05em; }

@@ -1,0 +1,122 @@
+#!/usr/bin/python3 -I
+"""System Tools jobs that change the system, as root through polkit (administrator password).
+
+  evenkeel-os-tools-admin updates on|off
+  evenkeel-os-tools-admin disk-unlock on|off      (the disk password on standard input)
+  evenkeel-os-tools-admin disk-unlock check
+"""
+import json
+import os
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
+UUID = re.compile(r"^[0-9a-fA-F-]{36}$")
+
+
+def fail(msg, code=1):
+    print(msg)
+    sys.exit(code)
+
+
+def disk():
+    for a in Path("/proc/cmdline").read_text().split():
+        if a.startswith("rd.luks.uuid="):
+            v = a.split("=", 1)[1]
+            v = v[5:] if v.startswith("luks-") else v
+            if UUID.match(v) and Path(f"/dev/disk/by-uuid/{v}").exists():
+                return f"/dev/disk/by-uuid/{v}"
+            fail("The encrypted disk named at startup was not found.")
+    fail("The system disk is not encrypted.")
+
+
+def tpm_enrolled(dev):
+    """Does the disk's LUKS header hold a TPM enrollment? None when the header can't be read."""
+    r = subprocess.run(["cryptsetup", "luksDump", "--dump-json-metadata", dev], capture_output=True, text=True)
+    if r.returncode != 0:
+        return None
+    try:
+        tokens = json.loads(r.stdout).get("tokens", {})
+    except ValueError:
+        return None
+    return any(t.get("type") == "systemd-tpm2" for t in tokens.values())
+
+
+def mark(on):
+    if on:
+        DISK_UNLOCK_ON.parent.mkdir(parents=True, exist_ok=True)
+        DISK_UNLOCK_ON.write_text("TPM2 unlock enrolled (checked against the disk)\n")
+    else:
+        DISK_UNLOCK_ON.unlink(missing_ok=True)
+
+
+def disk_unlock_check():
+    dev = None
+    for a in Path("/proc/cmdline").read_text().split():
+        if a.startswith("rd.luks.uuid="):
+            v = a.split("=", 1)[1]
+            v = v[5:] if v.startswith("luks-") else v
+            if UUID.match(v) and Path(f"/dev/disk/by-uuid/{v}").exists():
+                dev = f"/dev/disk/by-uuid/{v}"
+    if dev is None:             # no encrypted system disk: nothing to unlock
+        mark(False)
+        return
+    on = tpm_enrolled(dev)
+    if on is not None:          # leave the note alone if the header couldn't be read
+        mark(on)
+    print("on" if on else "off" if on is not None else "unknown")
+
+
+def updates(state):
+    cmd = ["systemctl", "enable", "--now", "uupd.timer"] if state == "on" else \
+        ["systemctl", "disable", "--now", "uupd.timer"]
+    sys.exit(subprocess.run(cmd).returncode)
+
+
+def disk_unlock(state):
+    dev = disk()
+    pw = sys.stdin.read(4096)
+    if not pw:
+        fail("No disk password was given.")
+    # A wrong password changes nothing: check it before anything else.
+    if subprocess.run(["cryptsetup", "open", "--test-passphrase", "--key-file=-", dev], input=pw.encode(),
+                      stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode != 0:
+        fail("That is not the disk password.", 3)
+    env = {"PATH": "/usr/sbin:/usr/bin", "PASSWORD": pw}
+    if state == "on":
+        if not Path("/dev/tpmrm0").exists():
+            fail("This computer has no TPM.")
+        # Enrolls the TPM, then wipes any older TPM enrollment (the new one is kept).
+        cmd = ["systemd-cryptenroll", "--wipe-slot=tpm2", "--tpm2-device=auto", "--tpm2-pcrs=7+14", dev]
+    else:
+        cmd = ["systemd-cryptenroll", "--wipe-slot=tpm2", dev]
+    r = subprocess.run(cmd, env=env, stdin=subprocess.DEVNULL)
+    if r.returncode != 0:
+        fail("systemd-cryptenroll did not finish.")
+    # Check the disk itself, not the command's exit code alone, and keep the note in step with it.
+    on = tpm_enrolled(dev)
+    mark(bool(on))
+    if on is None:
+        fail("The disk's settings couldn't be read back to check.")
+    if on != (state == "on"):
+        fail("The disk didn't take the change.")
+    print("done")
+
+
+def main(argv):
+    if os.geteuid() != 0:
+        fail("This helper runs as root, through polkit.")
+    if len(argv) == 3 and argv[1] == "updates" and argv[2] in ("on", "off"):
+        updates(argv[2])
+    elif len(argv) == 3 and argv[1] == "disk-unlock" and argv[2] == "check":
+        disk_unlock_check()
+    elif len(argv) == 3 and argv[1] == "disk-unlock" and argv[2] in ("on", "off"):
+        disk_unlock(argv[2])
+    else:
+        fail(__doc__, 2)
+
+
+if __name__ == "__main__":
+    main(sys.argv)

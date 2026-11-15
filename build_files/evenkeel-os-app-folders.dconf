@@ -1,0 +1,13 @@
+# GNOME's Utilities and System folders, with our tools in Utilities, for every new user.
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'System']
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+name='X-GNOME-Shell-Utilities.directory'
+translate=true
+apps=['evenkeel-os-tools.desktop', 'evenkeel-os-update.desktop', 'evenkeel-os-install-package.desktop', 'evenkeel-os-remove-apps.desktop', 'evenkeel-os-repair-boxes.desktop', 'evenkeel-os-login-apps.desktop', 'evenkeel-os-codecs.desktop', 'org.gnome.Decibels.desktop', 'org.gnome.Connections.desktop', 'org.gnome.Papers.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Seahorse.desktop']
+
+[org/gnome/desktop/app-folders/folders/System]
+name='X-GNOME-Shell-System.directory'
+translate=true
+apps=['nm-connection-editor.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.baobab.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Logs.desktop', 'org.freedesktop.MalcontentControl.desktop', 'org.freedesktop.GnomeAbrt.desktop', 'org.gnome.Sysprof.desktop', 'org.gnome.SystemMonitor.desktop', 'org.gnome.tweaks.desktop']
