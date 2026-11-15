@@ -19,9 +19,9 @@ def source_packages(kind, box, sources):
     if kind == "rpm":
         ids = [i for i, _, on in sources if on]
         r = subprocess.run(boxes.in_box(box, "dnf", "-q", "repoquery", "--repo=" + ",".join(ids), "--latest-limit=1",
-                                  f"--arch={platform.machine()},noarch", "--queryformat=%{name}\t%{summary}\n"),
+                                        f"--arch={platform.machine()},noarch", "--queryformat=%{name}\t%{summary}\n"),
                            capture_output=True, text=True)
-        rows = [l.split("\t", 1) for l in r.stdout.splitlines() if "\t" in l]
+        rows = [line.split("\t", 1) for line in r.stdout.splitlines() if "\t" in line]
     else:
         # Ubuntu keeps each source's package list compressed, named after its address, one per processor type.
         marks = [re.sub(r"^\w+://", "", url).rstrip("/").replace("/", "_") + "_" for url, _, on in sources if on]
@@ -31,8 +31,8 @@ def source_packages(kind, box, sources):
         rows, name = [], None
         if new:
             r = subprocess.run(boxes.in_box(box, "sh", "-c", "for f in " + " ".join(shlex.quote(f) for f in new) +
-                                      "; do /usr/lib/apt/apt-helper cat-file \"$f\"; done | "
-                                      "grep -E '^(Package|Description):'"), capture_output=True, text=True)
+                                            "; do /usr/lib/apt/apt-helper cat-file \"$f\"; done | "
+                                            "grep -E '^(Package|Description):'"), capture_output=True, text=True)
             for line in r.stdout.splitlines():
                 if line.startswith("Package:"):
                     name = line.split(":", 1)[1].strip()
@@ -78,7 +78,7 @@ def install_source(pkg, info):
         return windows.failed(f"Adding the download source {pkg.name}")
     if pkg.kind == "deb":
         if not windows.run_steps("Getting the list of apps from the new download source.",
-                         [boxes.in_box(box["name"], "sudo", "apt-get", "update")]):
+                                 [boxes.in_box(box["name"], "sudo", "apt-get", "update")]):
             return windows.failed(f"Reading the download source {pkg.name}")
     windows.mark_busy("Reading the list of apps from the new download source")
     apps = source_packages(pkg.kind, box["name"], info["sources"])

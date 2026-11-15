@@ -257,7 +257,7 @@ class ComputerNameScreen(screens.Screen):
 
     def status(self):
         return f"Computer name: {self.c.hostname}." + ("" if self.ready() else
-                                                      " Use letters, digits and -, not at the start or end.")
+                                                       " Use letters, digits and -, not at the start or end.")
 
 
 # ---------------------------------------------------------------------------------------------------- 14 Review

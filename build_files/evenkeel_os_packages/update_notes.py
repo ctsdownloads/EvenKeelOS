@@ -6,7 +6,6 @@ import subprocess
 from evenkeel_os_packages import boxes, common
 
 
-
 REPO_DIRS = {"rpm": "/etc/yum.repos.d", "deb": "/etc/apt/sources.list.d"}
 REPO_FILE = re.compile(r"^/etc/(yum\.repos\.d/[^/]+\.repo|apt/sources\.list\.d/[^/]+\.(list|sources))$")
 

@@ -6,7 +6,6 @@ import subprocess
 from evenkeel_os_packages import app_list, boxes, common, login_apps
 
 
-
 BOX_RUN = "/usr/libexec/evenkeel-os-box-run"
 QUIT = "evenkeel-quit"
 
@@ -124,8 +123,9 @@ def unexport(entry):
         (apps_dir / f"{box}-{os.path.basename(path)}").unlink(missing_ok=True)
     for b in entry.get("bins", []):
         if boxes.box_exists(box):
-            subprocess.run(boxes.in_box(box, "distrobox-export", "--bin", b, "--export-path", str(common.HOME / ".local/bin"),
-                                  "--delete"), capture_output=True)
+            subprocess.run(boxes.in_box(box, "distrobox-export", "--bin", b,
+                                        "--export-path", str(common.HOME / ".local/bin"), "--delete"),
+                           capture_output=True)
         (common.HOME / ".local/bin" / os.path.basename(b)).unlink(missing_ok=True)
     if entry.get("apps"):
         icons_changed()

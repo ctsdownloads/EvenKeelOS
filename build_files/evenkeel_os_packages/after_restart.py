@@ -23,6 +23,15 @@ def save_pending(entries):
         PENDING.unlink(missing_ok=True)
 
 
+def drop_pending(package):
+    save_pending([e for e in pending() if e["package"] != package])
+
+
+def add_pending(entry):
+    """Check this package at the next login, in place of any earlier entry for it."""
+    save_pending([e for e in pending() if e["package"] != entry["package"]] + [entry])
+
+
 def boxes_missing_helpers():
     return [k for k in common.BOXES if boxes.box_exists(common.BOXES[k]["name"]) and not boxes.helpers_mark(k).exists()]
 

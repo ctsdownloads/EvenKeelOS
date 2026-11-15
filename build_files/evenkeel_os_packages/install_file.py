@@ -97,7 +97,7 @@ def install(path):
             return 1
         if answer == "ok":
             if windows.run_steps(f"Installing {name} from Flathub.",
-                         [["flatpak", "install", "-y", "--noninteractive", "flathub", app_id]]):
+                                 [["flatpak", "install", "-y", "--noninteractive", "flathub", app_id]]):
                 app_list.remember({"title": name, "package": app_id, "where": "flathub"})
                 notify(f"{name} is installed.")
                 say(f"{name} is installed. Find it in Show Apps.\n\n{update_notes.UPDATES_FLATHUB}")
@@ -137,7 +137,8 @@ def install(path):
         if pkg.kind == "deb":
             say(f"{title} can't be installed from this file. It has:\n{reasons}\n\n"
                 f"These have to go on the system, and the system only takes .rpm files. "
-                f"Look for {title} as an .rpm for Fedora {common.fedora_version()}, or in Bazaar, the app store.", "warning")
+                f"Look for {title} as an .rpm for Fedora {common.fedora_version()}, or in Bazaar, the app store.",
+                "warning")
             return 1
         if ask(f"{title} has to go on the system. It has:\n{reasons}\nThese can't work in a box.\n\n"
                f"Add to the system: everything works. Needs your password and a restart. You can remove it any time "

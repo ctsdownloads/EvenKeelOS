@@ -3,7 +3,6 @@ import json
 from evenkeel_os_packages import common
 
 
-
 def load():
     try:
         return json.loads(common.STATE.read_text())

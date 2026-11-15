@@ -22,7 +22,8 @@ def remove():
         return 1
     where = entry["where"]
     if where == "flathub":
-        ok = windows.run_steps(f"Removing {title}.", [["flatpak", "uninstall", "-y", "--noninteractive", entry["package"]]])
+        ok = windows.run_steps(f"Removing {title}.",
+                               [["flatpak", "uninstall", "-y", "--noninteractive", entry["package"]]])
     elif where == "system":
         ok = windows.run_steps(f"Removing {title} from the system.", [["rpm-ostree", "uninstall", entry["package"]]])
         if not ok and entry.get("nevra"):
@@ -34,7 +35,8 @@ def remove():
         ok = True
         bkind = next((k for k in common.BOXES if common.BOXES[k]["name"] == where), None)
         # An app already gone from its box just comes off the list.
-        if boxes.box_exists(where) and boxes.box_works(where) and bkind and installed.box_version(bkind, entry["package"]):
+        present = boxes.box_exists(where) and boxes.box_works(where)
+        if present and bkind and installed.box_version(bkind, entry["package"]):
             # a download source is purged on Ubuntu, so its source file (a kept setting otherwise) goes too
             purge = ["--purge"] if entry.get("source") else []
             cmd = ["sudo", "dnf", "-y", "remove", entry["package"]] if where == common.BOXES["rpm"]["name"] else \
@@ -46,7 +48,7 @@ def remove():
         windows.failed(f"Removing {title}")
         return 1
     app_list.forget(entry)
-    after_restart.save_pending([e for e in after_restart.pending() if e["package"] != entry["package"]])
+    after_restart.drop_pending(entry["package"])
     notify(f"{title} is removed.")
     if where == "system":
         offer_restart(f"{title} is removed. Restart to finish.")

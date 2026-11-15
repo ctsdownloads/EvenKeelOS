@@ -32,8 +32,8 @@ def languages():
 
 def locales(lang):
     """[(locale, English name, native name)] for a language, most likely first (langtable's order)."""
-    return [(loc, langtable.language_name(languageId=loc, languageIdQuery="en"), langtable.language_name(languageId=loc))
-            for loc in langtable.list_locales(languageId=lang)]
+    return [(loc, langtable.language_name(languageId=loc, languageIdQuery="en"),
+             langtable.language_name(languageId=loc)) for loc in langtable.list_locales(languageId=lang)]
 
 
 def keyboards():
