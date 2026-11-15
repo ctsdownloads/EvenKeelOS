@@ -1,5 +1,5 @@
 """Paths, box kinds and names shared by every part."""
-import subprocess
+import platform
 from pathlib import Path
 
 import evenkeel_os_ui as ui
@@ -15,10 +15,7 @@ ui.ICON = "system-software-install-symbolic"
 
 
 def fedora_version():
-    try:
-        return subprocess.run(["rpm", "-E", "%fedora"], capture_output=True, text=True).stdout.strip() or "44"
-    except OSError:
-        return "44"
+    return platform.freedesktop_os_release()["VERSION_ID"]
 
 
 BOXES = {

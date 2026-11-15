@@ -2,6 +2,7 @@
 # Swap Fedora's branding for generic packages (Fedora trademark rules); fails on anything wrong.
 set -euo pipefail
 
+fedora=$(rpm -E %fedora)
 plan=$(dnf5 install --assumeno --allowerasing generic-logos generic-release 2>&1 || true)
 # dnf5 shows removals as "Removing ..." or "replacing NAME".
 removed=$(printf '%s\n' "$plan" | awk '
@@ -33,13 +34,13 @@ done
 rm -rf "$keep"
 
 # The image's own name; ID_LIKE keeps Fedora-family tools working.
-cat > /usr/lib/os-release <<'OSREL'
+cat > /usr/lib/os-release <<OSREL
 NAME="EvenKeelOS"
 ID=evenkeel-os
 ID_LIKE="fedora"
-VERSION_ID=44
-VERSION="44"
-PLATFORM_ID="platform:f44"
+VERSION_ID=$fedora
+VERSION="$fedora"
+PLATFORM_ID="platform:f$fedora"
 PRETTY_NAME="EvenKeelOS"
 ANSI_COLOR="0;36"
 HOME_URL="https://github.com/ctsdownloads/evenkeel-os"
@@ -49,6 +50,6 @@ BUG_REPORT_URL="https://github.com/ctsdownloads/evenkeel-os/issues"
 OSREL
 ln -sf ../usr/lib/os-release /etc/os-release
 # The boot menu entry is named from /etc/system-release.
-printf 'EvenKeelOS release 44\n' > /usr/lib/fedora-release
+printf 'EvenKeelOS release %s\n' "$fedora" > /usr/lib/fedora-release
 [ "$(sed 's/ *release.*//' /etc/system-release)" = EvenKeelOS ] || { echo "ERROR: /etc/system-release does not name EvenKeelOS"; exit 1; }
 echo "rebranded: $(. /usr/lib/os-release; echo "$PRETTY_NAME")"

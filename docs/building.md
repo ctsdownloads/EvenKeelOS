@@ -6,11 +6,11 @@
 
 [GitHub Actions](../.github/workflows/build.yml) builds and signs the image on
 every push (except writing-only changes) and daily at 10:05 UTC, from the latest
-Fedora Silverblue 44, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
+Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 
 | Path | Purpose |
 |------|---------|
-| `Containerfile`, `build_files/build.sh` | Start from `silverblue:44`, install everything, run the checks |
+| `Containerfile`, `build_files/build.sh` | Start from `silverblue:45`, install everything, run the checks |
 | `build_files/bluefin-packages.txt` | Fedora packages carried over from Bluefin |
 | `build_files/default-apps.txt`, `flathub-apps.txt`, `evenkeel-os-flathub-apps`, `evenkeel-os-flatpak-apps.service`, `evenkeel-os-flathub.service`, `flathub.flatpakrepo` | Default apps, and the Flathub ones installed at the first start with internet |
 | `build_files/evenkeel_os_ui.py` | Windows, notices and disk sizes shared by System Tools and Install Package File |
@@ -32,8 +32,7 @@ Fedora Silverblue 44, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
   disk;
 - GNOME Software is still there, Bazaar is missing, a tool is missing from
   Utilities, or text files wouldn't open in Text Editor;
-- a default service is off, tuned isn't Bluefin's version, or RPM Fusion's codecs
-  wouldn't install;
+- a default service is off, or RPM Fusion's codecs wouldn't install;
 - Install Package File misreads four real Fedora packages.
 
 A separate docs check fails when the README's contents table or a link is out of
