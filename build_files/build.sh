@@ -70,6 +70,9 @@ rm -f /etc/xdg/autostart/evenkeel-os-codecs-prompt.desktop
 # Change list for System Update (empty in local builds).
 install -Dm644 /dev/null /usr/share/evenkeel-os/changes.txt
 [ -f /ctx/changes.txt ] && install -Dm644 /ctx/changes.txt /usr/share/evenkeel-os/changes.txt
+# Microphones start at 50%; fail if WirePlumber drops the setting.
+install -Dm644 /ctx/60-evenkeel-os-mic.conf /usr/share/wireplumber/wireplumber.conf.d/60-evenkeel-os-mic.conf
+grep -q 'device.routes.default-source-volume' /usr/share/wireplumber/wireplumber.conf || { echo "ERROR: WirePlumber no longer has device.routes.default-source-volume"; exit 1; }
 for c in fwupdmgr systemd-cryptenroll cryptsetup flatpak podman gnome-control-center; do command -v "$c" >/dev/null || { echo "ERROR: System Tools needs $c"; exit 1; }; done
 install -Dm644 /ctx/evenkeel-os-install-package.desktop /usr/share/applications/evenkeel-os-install-package.desktop
 install -Dm644 /ctx/evenkeel-os-remove-apps.desktop /usr/share/applications/evenkeel-os-remove-apps.desktop
