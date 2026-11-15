@@ -5,7 +5,7 @@ import shlex
 import subprocess
 
 from evenkeel_os_ui import ask, say
-from evenkeel_os_packages import app_list, boxes, common
+from evenkeel_os_packages import app_list, boxes, common, update_notes
 
 
 def box_version(kind, name):
@@ -135,8 +135,8 @@ def already_installed(pkg, info, title):
     for r in records:
         if r["where"] == "flathub" and (norm_name(r["title"]) in want) and flatpak_installed(r["package"]):
             a = ask(f"{r['title']} is already installed from Bazaar, the app store.\n\nRecommended: Open it.\n\n"
-                    f"Or Install the file too: adds a second copy, which never updates. You would have two of the "
-                    f"same app.", ok="Open it", extra="Install the file too")
+                    f"{update_notes.second_copy(pkg, info, 'Install the file too')}",
+                    ok="Open it", extra="Install the file too")
             if a == "ok":
                 open_app(r)
                 return False, "", 0
@@ -145,8 +145,8 @@ def already_installed(pkg, info, title):
                 norm_name(r["title"]) in want:
             other = common.WHERE.get(r["where"], r["where"])
             a = ask(f"{r['title']} is already installed from {'an .rpm' if 'Fedora' in other else 'a .deb'} file.\n\n"
-                    f"Recommended: Open it.\n\nOr Install it here too: adds a second copy, which never updates. You "
-                    f"would have two of the same app.", ok="Open it", extra="Install it here too")
+                    f"Recommended: Open it.\n\n{update_notes.second_copy(pkg, info, 'Install it here too')}",
+                    ok="Open it", extra="Install it here too")
             if a == "ok":
                 open_app(r)
                 return False, "", 0

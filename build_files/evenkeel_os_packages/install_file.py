@@ -79,8 +79,8 @@ def install(path):
     if match and installed.flatpak_installed(match[0]):
         app_id, name = match
         a = ask(f"{name} is already installed from Bazaar, the app store.\n\nRecommended: Open it.\n\n"
-                f"Or Install the file too: adds a second copy, which never updates. You would have two of the same "
-                f"app.", ok="Open it", extra="Install the file too")
+                f"{update_notes.second_copy(pkg, info, 'Install the file too')}",
+                ok="Open it", extra="Install the file too")
         if a == "ok":
             installed.open_app({"where": "flathub", "package": app_id})
             return 0
@@ -90,8 +90,8 @@ def install(path):
     if match:
         app_id, name = match
         answer = ask(f"{name} is in Bazaar, the app store (Flathub).\n\nRecommended: Use Flathub. It updates by itself "
-                     f"and is made for this kind of system.\n\nOr Use the file: installs your download. It never "
-                     f"updates.",
+                     f"and is made for this kind of system.\n\nOr Use the file: installs your download. "
+                     f"{update_notes.file_note(pkg, info)}",
                      ok="Use Flathub", cancel="Cancel", extra="Use the file")
         if answer is None:
             return 1

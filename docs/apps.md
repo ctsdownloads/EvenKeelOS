@@ -67,6 +67,10 @@ a message says whether it's ready.
 | Updates: automatic. | From Bazaar (Flathub) |
 | Updates: none, because it came from a file. To update, install a newer file. | From a plain file |
 
+Before installing, **Use the file**, **Install the file too** and **Install it
+here too** say the same. The package's install script is read first, so
+Chrome and VS Code show that they update.
+
 ### Already installed
 
 | Already there | Buttons |
