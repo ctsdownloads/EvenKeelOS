@@ -45,7 +45,7 @@ live_checks='
 ok()  { if eval "$2" >/dev/null 2>&1; then echo "PASS: $1"; else echo "FAIL: $1"; fi; }
 i=/usr/lib/evenkeel-os-installer
 e=/usr/libexec/evenkeel-os-install-engine
-ok "system name is EvenKeelOS (no dash)"          "grep -qx \"PRETTY_NAME=\\\"EvenKeelOS\\\"\" /usr/lib/os-release && grep -qx \"EvenKeelOS release 44\" /etc/system-release"
+ok "system name is EvenKeelOS (no dash)"          "grep -qx \"PRETTY_NAME=\\\"EvenKeelOS\\\"\" /usr/lib/os-release && grep -qxE \"EvenKeelOS release [0-9]+\" /etc/system-release"
 ok "no Fedora installer (Anaconda) on the USB"     "! rpm -q anaconda-core"
 ok "installer launcher: Install EvenKeelOS"       "grep -qx \"Name=Install EvenKeelOS\" /usr/share/applications/io.github.ctsdownloads.EvenKeelOS.Installer.desktop"
 ok "welcome window: Install EvenKeelOS / Try it first" "grep -qF \"Install EvenKeelOS\" /usr/libexec/evenkeel-os-live-welcome && grep -qF \"Try it first\" /usr/libexec/evenkeel-os-live-welcome && grep -qF /usr/bin/evenkeel-os-installer /usr/libexec/evenkeel-os-live-welcome"

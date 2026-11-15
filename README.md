@@ -1,12 +1,12 @@
 # EvenKeelOS
 
 A desktop that just works. It is a derivative of **Fedora®**, built on Fedora
-Silverblue 44, with packages, the updater and Homebrew setup from
+Silverblue 45, with packages, the updater and Homebrew setup from
 [Bluefin](https://projectbluefin.io/).
 
 [![Build](https://github.com/ctsdownloads/evenkeel-os/actions/workflows/build.yml/badge.svg)](https://github.com/ctsdownloads/evenkeel-os/actions/workflows/build.yml)
 [![Status](https://img.shields.io/badge/status-alpha-orange.svg)](#status)
-[![Base](https://img.shields.io/badge/base-Fedora%20Silverblue%2044-1f6feb.svg)](https://fedoraproject.org/atomic-desktops/silverblue/)
+[![Base](https://img.shields.io/badge/base-Fedora%20Silverblue%2045-1f6feb.svg)](https://fedoraproject.org/atomic-desktops/silverblue/)
 [![Desktop](https://img.shields.io/badge/desktop-GNOME%20%7C%20Wayland-green.svg)](https://www.gnome.org/)
 [![Signed](https://img.shields.io/badge/images-signed%20with%20cosign-lightgrey.svg)](docs/install.md#checking-that-updates-are-real)
 [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
@@ -56,12 +56,11 @@ can't change, so it stays working.
 
 | Part | Details |
 |------|---------|
-| Base | [Fedora Silverblue 44](https://fedoraproject.org/atomic-desktops/silverblue/), with Fedora's logos and release packages replaced by the generic ones |
+| Base | [Fedora Silverblue 45](https://fedoraproject.org/atomic-desktops/silverblue/), with Fedora's logos and release packages replaced by the generic ones |
 | Packages | firefox, v4l-utils, xdg-terminal-exec, and the Bluefin packages in [`build_files/bluefin-packages.txt`](build_files/bluefin-packages.txt) |
 | Updates | Automatic with `uupd`: system, Flatpaks, app boxes and Homebrew. See [Updating and rolling back](docs/install.md#updating-and-rolling-back) |
 | Homebrew and ujust | As on Bluefin, for terminal users |
 | Services on by default | Fedora's defaults, plus Tailscale (idle until you sign in) and Podman's container auto-updates, as on Bluefin |
-| Power management | tuned 2.27.0, Bluefin's version. See [Known limitations](#known-limitations) |
 | Codecs | Not included (patents). The [setup checklist](docs/install.md#first-login) and **Install Media Codecs** offer them, with no password for an admin. See [Media codecs](docs/building.md#media-codecs) |
 | Apps from .rpm and .deb files | **Install Package File** puts them in a box; **Remove Apps** takes them out. See [Apps from .rpm and .deb files](docs/apps.md#apps-from-rpm-and-deb-files) |
 | Flathub | Added on first boot; Fedora's own Flathub entry is removed |
@@ -99,8 +98,6 @@ can't change, so it stays working.
 ## Known limitations
 
 - Needs GNOME Shell 47 or newer on Wayland.
-- tuned is held at 2.27.0: Fedora's 2.28.0 froze the power-mode switch. Move up
-  in `build_files/build.sh` once Bluefin does.
 - If Universal Blue's package repository goes away, builds fail and machines
   stay on the last good image.
 - If RPM Fusion falls behind a new Fedora, builds fail until it catches up.
@@ -120,7 +117,7 @@ other projects, under their own licenses, with their source available there:
   `dnf download --source <source package>` gets it.
 - **Optional codecs** are not in the image. The full ffmpeg set comes from
   [RPM Fusion](https://rpmfusion.org/), source at
-  <https://download1.rpmfusion.org/free/fedora/updates/44/SRPMS/>. OpenH264
+  <https://download1.rpmfusion.org/free/fedora/updates/45/SRPMS/>. OpenH264
   comes from Cisco through Fedora's Cisco repository.
 - **The updater and Homebrew setup:** <https://github.com/ublue-os/uupd>, built in
   <https://copr.fedorainfracloud.org/coprs/ublue-os/packages/>.
