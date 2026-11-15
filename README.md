@@ -74,6 +74,7 @@ can't change, so it stays working.
 | Fingerprint | On where the laptop has a supported reader; enroll in Settings, Users. A password is still set at install |
 | Firefox | Mozilla's own home page, no Fedora tile |
 | Microphone | Starts at 50% volume; a volume you set is kept |
+| Power modes | tuned, as on Fedora, set so a power-mode switch never waits on a running update |
 | Default apps | Fedora packages in [`build_files/default-apps.txt`](build_files/default-apps.txt), plus four from Flathub on the first start with internet ([`build_files/flathub-apps.txt`](build_files/flathub-apps.txt)). No email app |
 | App store | [Bazaar](https://github.com/kolunmi/bazaar), replacing GNOME Software |
 | Utilities folder | Every EvenKeelOS tool, in Show Apps |
