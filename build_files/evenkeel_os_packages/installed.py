@@ -45,7 +45,8 @@ def compare(kind, a, b):
             return 0
     box = common.BOXES["deb"]["name"]
     for op, res in (("lt", -1), ("gt", 1)):
-        if subprocess.run(boxes.in_box(box, "dpkg", "--compare-versions", a, op, b), capture_output=True).returncode == 0:
+        cmp = boxes.in_box(box, "dpkg", "--compare-versions", a, op, b)
+        if subprocess.run(cmp, capture_output=True).returncode == 0:
             return res
     return 0
 

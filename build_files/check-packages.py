@@ -1,13 +1,18 @@
 """Build test for Install Package File: read four real Fedora packages and check what it says they need."""
-import json, subprocess, sys
+import json
+import subprocess
+import sys
 from pathlib import Path
 
 folder = Path(sys.argv[1])
+
+
 def check(name):
     f = next(folder.glob(f"{name}-[0-9]*.rpm"))
     out = subprocess.run(["python3", "-I", "/usr/bin/evenkeel-os-packages", "check", str(f)],
                          capture_output=True, text=True, check=True).stdout
     return json.loads(out)
+
 
 mines = check("gnome-mines")
 assert mines["apps"] and not mines["needs_system"], f"gnome-mines should go in a box: {mines}"

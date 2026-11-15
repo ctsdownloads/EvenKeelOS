@@ -41,7 +41,7 @@ def image_size(image):
         if "manifests" in man:
             digest = next(m["digest"] for m in man["manifests"] if m.get("platform", {}).get("architecture") == arch)
             man = get(digest, single)
-        return max(1, sum(l["size"] for l in man["layers"]) // 1_000_000)
+        return max(1, sum(layer["size"] for layer in man["layers"]) // 1_000_000)
     except Exception:
         return None
 
@@ -71,7 +71,7 @@ def box_size(name):
 def sizes_line():
     """'Space used: Fedora box 1.2 GB, Ubuntu box 650 MB.' for the boxes that exist, or ''."""
     sizes = box_sizes([common.BOXES[k]["name"] for k in common.BOXES])
-    parts = [f"{common.BOXES[k]['label']} {human(sizes[common.BOXES[k]['name']])}" for k in common.BOXES if sizes.get(common.BOXES[k]["name"])]
+    parts = [f"{b['label']} {human(sizes[b['name']])}" for b in common.BOXES.values() if sizes.get(b["name"])]
     return "Space used: " + ", ".join(parts) + "." if parts else ""
 
 
@@ -132,7 +132,7 @@ def helper_steps(kind):
     if kind == "rpm":
         return [(label, in_box(box, "sudo", "dnf", "-y", "install", *HELPERS[kind]))]
     return [(label, in_box(box, "sh", "-c", "sudo apt-get update && sudo env DEBIAN_FRONTEND=noninteractive "
-                                           "apt-get install -y " + " ".join(HELPERS[kind])))]
+                           "apt-get install -y " + " ".join(HELPERS[kind])))]
 
 
 def ensure_helpers(kind, quiet=False):
@@ -220,8 +220,8 @@ def repair(kind, why="", confirm=True):
             continue
         if targets.box_install(pkg, reading.classify(pkg), r["title"], quiet=True) == 0:
             if r.get("rules"):          # its hardware rule is still on the system
-                app_list.remember({**next(x for x in app_list.load() if x["package"] == r["package"] and x["where"] == box),
-                          "rules": True})
+                entry = next(x for x in app_list.load() if x["package"] == r["package"] and x["where"] == box)
+                app_list.remember({**entry, "rules": True})
             back.append(r["title"])
         else:
             missing.append(r["title"])
@@ -237,7 +237,8 @@ def repair(kind, why="", confirm=True):
 
 def repair_command(only_broken=False):
     """Repair an app box; only_broken (from System Update) repairs only one that doesn't work."""
-    kinds = [k for k in common.BOXES if box_exists(common.BOXES[k]["name"]) or any(r["where"] == common.BOXES[k]["name"] for r in app_list.load())]
+    used = {r["where"] for r in app_list.load()}
+    kinds = [k for k, b in common.BOXES.items() if box_exists(b["name"]) or b["name"] in used]
     if not kinds:
         say("There are no app boxes to repair.")
         return 0

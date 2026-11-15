@@ -129,7 +129,7 @@ def updates_on():
 def firmware():
     w = "Update firmware"
     if run("Checking for firmware updates.", ["fwupdmgr", "refresh", "--force", "--no-remote-check",
-                                               "--no-metadata-check", "--no-unreported-check"], title=w) not in (0, 2):
+                                              "--no-metadata-check", "--no-unreported-check"], title=w) not in (0, 2):
         say("Couldn't check for firmware updates. Check your internet connection and try again.", "warning", title=w)
         return 1
     r = output(["fwupdmgr", "get-updates", "--json", "--no-unreported-check", "--no-metadata-check"])
@@ -501,7 +501,8 @@ def apps_step(w):
                 "your helper.\n\nRecommended: Open Bazaar, to see it. Or Open Install Package File. "
                 "Or Next.", ok="Open Bazaar", cancel="Next", extra="Open Install Package File", title=w)
         if a == "ok":
-            subprocess.Popen(["gtk-launch", "io.github.kolunmi.Bazaar"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.Popen(["gtk-launch", "io.github.kolunmi.Bazaar"], stdout=subprocess.DEVNULL,
+                             stderr=subprocess.DEVNULL)
             opened = "Bazaar is open. Close it when you're done looking.\n\n"
         elif a == "extra":
             subprocess.Popen(["/usr/bin/evenkeel-os-packages", "install"], stdout=subprocess.DEVNULL,

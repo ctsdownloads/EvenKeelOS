@@ -125,7 +125,7 @@ def failed(what, offer=None, reason=""):
     log = log_tail()
     reason = reason or explain(log)
     if not reason:
-        lines = [l for l in log.splitlines() if l.strip() and not l.startswith(("===", "$ "))]
+        lines = [line for line in log.splitlines() if line.strip() and not line.startswith(("===", "$ "))]
         reason = "The last lines of the log:\n" + "\n".join(lines[-4:]) if lines else ""
     notify(f"{what} did not work.")
     text = f"{what} did not work.\n\n{reason}\n\nThe full details are in {common.LOG}"

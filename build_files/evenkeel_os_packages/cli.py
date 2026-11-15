@@ -18,17 +18,18 @@ def check(path):
     info = reading.classify(pkg)
     print(json.dumps({"kind": pkg.kind, "name": pkg.name, "version": pkg.version, "title": info["title"],
                       "apps": list(info["apps"]), "bins": info["bins"], "rules": list(info["safe_rules"]),
-                      "rules_only": info["rules_only"], "source_only": info["source_only"], "needs_root": info["needs_root"],
+                      "rules_only": info["rules_only"], "source_only": info["source_only"],
+                      "needs_root": info["needs_root"],
                       "sources": [n for _, n, on in info["sources"] if on], "needs_system": info["blocking"],
                       "wont_work_in_box": info["notes"]}, indent=1))
     return 0
+
 
 USAGE = """  evenkeel-os-packages install [FILE]   install an .rpm or .deb (no FILE: pick one from Downloads)
   evenkeel-os-packages remove           remove an app installed this way
   evenkeel-os-packages check FILE       say what a package needs, without installing anything
   evenkeel-os-packages repair           set a broken app box up again (--if-broken: only if one does not work)
   evenkeel-os-packages login            choose box apps that start when you log in"""
-
 
 
 def try_lock(lock):
@@ -87,17 +88,19 @@ def main(argv):
         return 2
     if argv[1] == "check":
         return check(argv[2])
-    if argv[1] == "after-restart" and not after_restart.pending() and not after_restart.boxes_missing_helpers() and not launchers.launchers_to_fix() \
-            and not login_apps.app_login_files_to_fix():
+    if argv[1] == "after-restart" and not after_restart.pending() and not after_restart.boxes_missing_helpers() \
+            and not launchers.launchers_to_fix() and not login_apps.app_login_files_to_fix():
         return 0
     # each window carries the name of what it is part of
-    ui.TITLE = {"remove": "Remove Apps", "repair": "Repair App Boxes", "login": "Start Apps at Login"}.get(argv[1], ui.TITLE)
+    ui.TITLE = {"remove": "Remove Apps", "repair": "Repair App Boxes",
+                "login": "Start Apps at Login"}.get(argv[1], ui.TITLE)
     common.CACHE.mkdir(parents=True, exist_ok=True)
     lock = open(common.CACHE / ".lock", "w")
     if not take_lock(lock, quiet=argv[1] == "after-restart"):
         return 1
     windows.mark_busy({"install": "Install Package File is open", "remove": "Remove Apps is open",
-          "repair": "Repair App Boxes is open", "login": "Start Apps at Login is open"}.get(argv[1], "Starting"))
+                       "repair": "Repair App Boxes is open",
+                       "login": "Start Apps at Login is open"}.get(argv[1], "Starting"))
     if argv[1] == "after-restart":
         return after_restart.after_restart()
     if argv[1] == "repair":

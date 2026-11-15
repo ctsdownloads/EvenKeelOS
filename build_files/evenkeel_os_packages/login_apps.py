@@ -63,7 +63,7 @@ def login():
     on = not starts_at_login(entry)
     if not set_login(entry, on):
         windows.failed(f"Changing {entry['title']}", reason=f"{entry['title']} is missing from Show Apps. "
-                                                    f"Install it again to put it back.")
+                       f"Install it again to put it back.")
         return 1
     say(f"{entry['title']} will start when you log in." if on else
         f"{entry['title']} will no longer start when you log in.")

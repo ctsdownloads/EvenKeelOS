@@ -49,7 +49,7 @@ def add(pkg, files):
             fail(f"{name} is too large for a hardware rule.")
         text = Path(f).read_text(encoding="utf-8")
         joined = re.sub(r"\\\n", " ", text)
-        if any(RUNS_PROGRAM.search(l) for l in joined.splitlines() if not l.lstrip().startswith("#")):
+        if any(RUNS_PROGRAM.search(line) for line in joined.splitlines() if not line.lstrip().startswith("#")):
             fail(f"{name} runs a program, so it is not added.")
         target = RULES / name
         if target.exists() and not ours(target, pkg):

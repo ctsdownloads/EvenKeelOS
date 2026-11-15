@@ -9,7 +9,6 @@ from pathlib import Path
 from evenkeel_os_packages import common, update_notes
 
 
-
 class Package:
     def __init__(self, path):
         self.path = Path(path)
@@ -34,7 +33,8 @@ def norm(p):
 
 def wanted_text(p):
     base = os.path.basename(p)
-    return (p.endswith(".rules") and "/udev/rules.d/" in p) or p.endswith(".desktop") or bool(update_notes.REPO_FILE.match(p)) \
+    return (p.endswith(".rules") and "/udev/rules.d/" in p) or p.endswith(".desktop") \
+        or bool(update_notes.REPO_FILE.match(p)) \
         or p.endswith((".metainfo.xml", ".appdata.xml")) or base in ("Makefile", "Kbuild") or \
         p.startswith(("/usr/lib/systemd/system-preset/", "/usr/lib/systemd/user-preset/")) or \
         (p.startswith("/usr/share/polkit-1/actions/") and p.endswith(".policy"))
@@ -160,7 +160,7 @@ RUNS_PROGRAM = re.compile(r"\bRUN\b(?!\{builtin\})|\bPROGRAM\b|IMPORT\{program\}
 
 def rule_runs_program(text):
     joined = re.sub(r"\\\n", " ", text)
-    return any(RUNS_PROGRAM.search(l) for l in joined.splitlines() if not l.lstrip().startswith("#"))
+    return any(RUNS_PROGRAM.search(line) for line in joined.splitlines() if not line.lstrip().startswith("#"))
 
 
 def starts(p, *prefixes):
@@ -181,13 +181,14 @@ def classify(pkg):
     program_rules = [p for p in rules if p not in safe_rules]
 
     found = {}
+
     def flag(key, test):
         if any(test(p) for p in files):
             found[key] = True
 
     flag("driver", lambda p: starts(p, "/usr/lib/modules/", "/usr/src/akmods/", "/etc/modprobe.d/",
-                                   "/usr/lib/modprobe.d/", "/etc/modules-load.d/", "/usr/lib/modules-load.d/",
-                                   "/etc/dkms/")
+                                    "/usr/lib/modprobe.d/", "/etc/modules-load.d/", "/usr/lib/modules-load.d/",
+                                    "/etc/dkms/")
          or re.search(r"\.ko(\.(xz|zst|gz))?$", p) or (p.startswith("/usr/src/") and p.endswith("/dkms.conf")))
     if re.search(r"(^|[\s,(])(dkms|akmods|kernel-devel|linux-headers[\w.-]*)([\s,()]|$)", pkg.depends):
         found["driver"] = True
@@ -198,13 +199,13 @@ def classify(pkg):
         found["driver"] = True
     flag("firmware", lambda p: p.startswith("/usr/lib/firmware/"))
     flag("printer", lambda p: starts(p, "/usr/lib/cups/", "/usr/share/cups/model/", "/usr/share/cups/drv/",
-                                    "/usr/share/ppd/"))
+                                     "/usr/share/ppd/"))
     flag("scanner", lambda p: starts(p, "/etc/sane.d/") or re.match(r"/usr/lib(64)?/(x86_64-linux-gnu/)?sane/", p))
     flag("login", lambda p: starts(p, "/etc/pam.d/", "/usr/lib/pam.d/", "/etc/security/", "/etc/sudoers.d/",
-                                  "/etc/selinux/", "/usr/share/selinux/")
+                                   "/etc/selinux/", "/usr/share/selinux/")
          or re.match(r"/usr/lib(64)?/(x86_64-linux-gnu/)?security/", p))
     flag("network", lambda p: starts(p, "/usr/lib/NetworkManager/", "/usr/lib64/NetworkManager/",
-                                    "/etc/NetworkManager/", "/usr/lib/firewalld/", "/etc/firewalld/"))
+                                     "/etc/NetworkManager/", "/usr/lib/firewalld/", "/etc/firewalld/"))
     flag("service", lambda p: (starts(p, "/usr/lib/systemd/system/", "/etc/systemd/system/")
                                and re.search(r"\.(service|socket|timer|path)$", p))
          or starts(p, "/etc/init.d/", "/usr/share/dbus-1/system-services/", "/usr/share/dbus-1/system.d/",
@@ -212,7 +213,8 @@ def classify(pkg):
     # Services the package's install script turns on are needed; preset ones are optional.
     units = [os.path.basename(p) for p in files if (starts(p, "/usr/lib/systemd/system/", "/etc/systemd/system/")
              and re.search(r"\.(service|socket|timer|path)$", p)) or p.startswith("/etc/init.d/")]
-    user_units = [os.path.basename(p) for p in files if p.startswith("/usr/lib/systemd/user/") and p.endswith(".service")]
+    user_units = [os.path.basename(p) for p in files
+                  if p.startswith("/usr/lib/systemd/user/") and p.endswith(".service")]
     presets = "\n".join(t for p, t in pkg.texts.items() if "/systemd/system-preset/" in p)
     turned_on = False
     for line in pkg.scripts.splitlines():
@@ -232,14 +234,14 @@ def classify(pkg):
     root_programs = [m for p, t in pkg.texts.items() if p.startswith("/usr/share/polkit-1/actions/")
                      for m in re.findall(r"org\.freedesktop\.policykit\.exec\.path\">\s*([^<\s]+)", t)
                      if norm(m) in own]
-    root_launch = any(re.search(r"(?m)^Exec=\s*(\S*/)?(pkexec|sudo|gksu|gksudo|kdesu|su-to-root)\b", pkg.texts.get(p, ""))
-                      for p in apps)
+    root_exec = re.compile(r"(?m)^Exec=\s*(\S*/)?(pkexec|sudo|gksu|gksudo|kdesu|su-to-root)\b")
+    root_launch = any(root_exec.search(pkg.texts.get(p, "")) for p in apps)
     if turned_on:
         found["needed_service"] = True
     elif user_units:
         found["user_service"] = True
     flag("settings", lambda p: starts(p, "/usr/lib/sysctl.d/", "/etc/sysctl.d/", "/usr/lib/udev/hwdb.d/",
-                                     "/etc/udev/hwdb.d/"))
+                                      "/etc/udev/hwdb.d/"))
     flag("admin", lambda p: starts(p, "/usr/share/polkit-1/", "/etc/polkit-1/"))
 
     words = {
@@ -285,7 +287,9 @@ def classify(pkg):
     # One app: its own name; several: the package name.
     title = next(iter(apps.values())) if len(apps) == 1 else pkg.name.capitalize() if apps else pkg.name
     return {"apps": apps, "bins": bins, "safe_rules": safe_rules, "blocking": blocking, "notes": notes,
-            "rules_only": rules_only, "source_only": source_only, "needs_root": bool(apps) and bool(root_programs or root_launch), "sources": source_names(repo_files, pkg.kind),
+            "rules_only": rules_only, "source_only": source_only,
+            "needs_root": bool(apps) and bool(root_programs or root_launch),
+            "sources": source_names(repo_files, pkg.kind),
             "title": title}
 
 

@@ -67,11 +67,13 @@ def received():
         return None
     return total
 
+
 def nbytes(size):
     m = re.match(r"([0-9.]+)\s*([kMGT]?B)", size.replace(" ", " "))
     if not m:
         return None
     return float(m.group(1)) * {"B": 1, "kB": 1e3, "MB": 1e6, "GB": 1e9, "TB": 1e12}[m.group(2)]
+
 
 def added_to_system():
     """Does the running system have apps added to it (layered packages)? Then the install has a stage for them."""
@@ -83,9 +85,11 @@ def added_to_system():
     return any(d.get(k) for k in ("requested-packages", "requested-local-packages", "requested-base-removals",
                                   "requested-base-local-replacements"))
 
+
 STAGES = {"unpack": "unpacking the new version",
           "apps": "adding the apps you put on the system to the new version",
           "save": "saving the new version so it starts at your next restart"}
+
 
 def ago(secs):
     return "%d seconds so far" % secs if secs < 60 else "about %d min so far" % round(secs / 60)
@@ -193,7 +197,7 @@ def whats_new():
         new = next(d for d in ds if d.get("staged"))
         now = next(d for d in ds if d.get("booted"))
         f = Path("/ostree/deploy/%s/deploy/%s.%s/usr/share/evenkeel-os/changes.txt" % (new["osname"], new["checksum"],
-                                                                                         new["serial"]))
+                                                                                       new["serial"]))
         lines = f.read_text().splitlines()
     except (ValueError, KeyError, StopIteration, OSError):
         sys.exit()

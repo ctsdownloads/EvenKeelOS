@@ -55,7 +55,8 @@ class ChoiceList(Gtk.ScrolledWindow):
         row = self.box.get_row_at_index(picked) if picked is not None else None
         if row:
             ok, bounds = row.compute_bounds(self.box)
-            if ok and not (kept <= bounds.get_y() and bounds.get_y() + bounds.get_height() <= kept + adj.get_page_size()):
+            top, bottom = bounds.get_y(), bounds.get_y() + bounds.get_height()
+            if ok and not (kept <= top and bottom <= kept + adj.get_page_size()):
                 self._scroll_to(row)
         return False
 

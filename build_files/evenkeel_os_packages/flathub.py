@@ -7,7 +7,6 @@ import urllib.request
 from evenkeel_os_packages import installed
 
 
-
 GENERIC = re.compile(r"(^|\s)(web browser|browser|desktop|for linux|client|launcher|app|stable|beta|bin)$")
 
 
@@ -35,7 +34,8 @@ def app_ids(pkg):
 
 
 def flathub_get(url, data=None):
-    req = urllib.request.Request(url, method="POST" if data else "GET", data=json.dumps(data).encode() if data else None,
+    body = json.dumps(data).encode() if data else None
+    req = urllib.request.Request(url, method="POST" if data else "GET", data=body,
                                  headers={"Content-Type": "application/json"})
     return json.load(urllib.request.urlopen(req, timeout=8))
 

@@ -37,7 +37,8 @@ def box_install(pkg, info, title, quiet=False, mode="install"):
         extra = {"reinstall": ["--reinstall"], "older": ["--allow-downgrades"]}.get(mode, [])
         steps = [("Getting Ubuntu's list of packages", boxes.in_box(box, "sudo", "apt-get", "update")),
                  (f"{doing} {title}",
-                  boxes.in_box(box, "sudo", "env", "DEBIAN_FRONTEND=noninteractive", "apt-get", "install", "-y", *extra, f))]
+                  boxes.in_box(box, "sudo", "env", "DEBIAN_FRONTEND=noninteractive", "apt-get", "install", "-y",
+                               *extra, f))]
     if not windows.run_steps(f"{doing} {title} in the {label}.", steps):
         if quiet:
             return 1
@@ -47,8 +48,8 @@ def box_install(pkg, info, title, quiet=False, mode="install"):
                     return 1
                 return box_install(pkg, info, title)
             return windows.failed(f"Installing {title}", offer=("Repair the box", repair_then_install),
-                          reason=f"The {label} isn't working.\n\nRecommended: Repair the box. It rebuilds the box, "
-                                 f"puts your apps back, then installs {title}. Your files aren't touched.")
+                                  reason=f"The {label} isn't working.\n\nRecommended: Repair the box. It rebuilds "
+                                  f"the box, puts your apps back, then installs {title}. Your files aren't touched.")
         return windows.failed(f"Installing {title}")
     apps, bins = launchers.export(box, info)
     hwrules.new_box_rules(box, rules_before, info)
@@ -108,7 +109,7 @@ def fedora_package_version(name):
     if not windows.run_steps(f"Checking whether Fedora has {name}.", [["timeout", "180", "sh", "-c", query]]):
         return ""
     try:
-        return next((l.strip() for l in out.read_text().splitlines() if l.strip()), "")
+        return next((line.strip() for line in out.read_text().splitlines() if line.strip()), "")
     except OSError:
         return ""
 
@@ -121,13 +122,13 @@ def install_from_fedora(pkg, title, printer, version):
         windows.failed(f"Adding {title} to the system")
         return 1
     app_list.remember({"title": title, "package": pkg.name, "where": "system", "from_fedora": True,
-              "version": version})
-    after_restart.save_pending([e for e in after_restart.pending() if e["package"] != pkg.name] + [{"title": title, "package": pkg.name,
-                                                                  "printer": printer}])
+                       "version": version})
+    after_restart.add_pending({"title": title, "package": pkg.name, "printer": printer})
     after = "After the restart, you will be asked to add your printer." if printer else \
         "After the restart, you'll get a message when it's ready."
     notify(f"{title} is installed. Restart to use it.")
-    offer_restart(f"{title} is installed. Restart to start using it.", f"{after}\n\nUpdates: {update_notes.UPDATES_FEDORA}")
+    offer_restart(f"{title} is installed. Restart to start using it.",
+                  f"{after}\n\nUpdates: {update_notes.UPDATES_FEDORA}")
     return 0
 
 
@@ -158,9 +159,8 @@ def install_system(pkg, title, printer=False, update=False):
         return 1
     app_list.remember({"title": title, "package": pkg.name, "nevra": pkg.nevra, "where": "system", "version": pkg.evr})
     # checked once at the next login: is it really there, and for a printer driver, add the printer
-    after_restart.save_pending([e for e in after_restart.pending() if e["package"] != pkg.name] + [{"title": title, "package": pkg.name,
-                                                                  "printer": printer and not update,
-                                                                  "version": pkg.evr}])
+    after_restart.add_pending({"title": title, "package": pkg.name, "printer": printer and not update,
+                               "version": pkg.evr})
     after = "After the restart, you will be asked to add your printer." if printer and not update else \
         "After the restart, you'll get a message when it's ready."
     if update:
@@ -168,5 +168,6 @@ def install_system(pkg, title, printer=False, update=False):
         offer_restart(f"{title} is updated. Restart to use the new version.")
     else:
         notify(f"{title} is installed. Restart to use it.")
-        offer_restart(f"{title} is installed. Restart to start using it.", f"{after}\n\nUpdates: {update_notes.UPDATES_SYSTEM}")
+        offer_restart(f"{title} is installed. Restart to start using it.",
+                      f"{after}\n\nUpdates: {update_notes.UPDATES_SYSTEM}")
     return 0
