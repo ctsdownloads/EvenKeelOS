@@ -54,7 +54,7 @@ ok "installer: problem reports go to GitHub"       "grep -qF github.com/ctsdownl
 ok "installer: disk changes only through its polkit action" "[ -x \$e ] && grep -qF \"<annotate key=\\\"org.freedesktop.policykit.exec.path\\\">\$e<\" /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.install.policy"
 ok "installer installs EvenKeelOS from the USB, with signed updates" "grep -qF \"IMAGE = \\\"ghcr.io/ctsdownloads/evenkeel-os:latest\\\"\" \$e && grep -qF containers-storage: \$e && grep -qF ostree-image-signed:docker:// \$e"
 ok "live session does not install Flathub apps" "[ \"\$(systemctl is-enabled evenkeel-os-flatpak-apps.service 2>/dev/null)\" != enabled ]"
-ok "USB boots the EvenKeelOS grub without shim, from EFI/BOOT and EFI/EvenKeelOS only, no Fedora" "! grep -rqi fedora /boot/efi && [ \"\$(ls /boot/efi/EFI | tr \"\\n\" \" \")\" = \"BOOT EvenKeelOS \" ] && [ \"\$(ls /boot/efi/EFI/BOOT)\" = BOOTX64.EFI ] && [ \"\$(ls /boot/efi/EFI/EvenKeelOS)\" = grubx64.efi ]"
+ok "USB boots Fedora signed shim and grub (Secure Boot on)" "cd /boot/efi/EFI && cmp -s BOOT/BOOTX64.EFI fedora/shimx64.efi && cmp -s BOOT/fbx64.efi fedora/grubx64.efi && grep -aq \"Microsoft Corporation UEFI CA\" BOOT/BOOTX64.EFI && grep -aq \"Fedora Secure Boot\" fedora/grubx64.efi"
 ok "copy to install is on the USB"                 "grep -qF ghcr.io/ctsdownloads/evenkeel-os:latest /var/lib/containers/storage/overlay-images/images.json"
 '
 

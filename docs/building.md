@@ -78,7 +78,7 @@ Restart afterwards. `rpm-ostree rollback` undoes it.
 ## Boot menu name
 
 New installs from the live USB show EvenKeelOS in the boot menu. The live USB
-has no Fedora boot files, so it needs Secure Boot off (see
+boots Fedora's signed shim and grub, so it works with Secure Boot on (see
 [From the live USB](install.md#from-the-live-usb)). Older installs keep their
 old name ("Fedora", "Generic", "bluefin"), which lives in the firmware. To
 rename it:

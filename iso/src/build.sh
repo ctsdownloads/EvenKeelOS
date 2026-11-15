@@ -92,13 +92,12 @@ DRACUT_NO_XATTR=1 dracut -v --force --zstd --reproducible --no-hostonly \
     --add "dmsquash-live dmsquash-live-autooverlay" \
     "/usr/lib/modules/${kernel}/initramfs.img" "${kernel}"
 
-# Our own unsigned grub, no Fedora boot files: Fedora's shim named the USB "Fedora". Needs Secure Boot off.
-dnf install -y grub2-efi-x64-modules grub2-tools
-grub2-mkimage -O x86_64-efi -d /usr/lib/grub/x86_64-efi -p /EFI/EvenKeelOS -o /tmp/evenkeel-os-grub.efi \
-    normal boot linux search part_gpt fat iso9660 gzio all_video chain
-install -Dm644 /tmp/evenkeel-os-grub.efi /boot/efi/EFI/BOOT/BOOTX64.EFI
-install -Dm644 /tmp/evenkeel-os-grub.efi /boot/efi/EFI/EvenKeelOS/grubx64.efi
-rm /tmp/evenkeel-os-grub.efi
+# Fedora's signed shim and grub, as on Bazzite's USB, so it starts with Secure Boot on.
+dnf install -y grub2-efi-x64-cdboot
+mkdir -p /boot/efi
+cp -av /usr/lib/efi/*/*/EFI /boot/efi/
+# grub in place of shim's fallback, which would add a "Fedora" entry to the PC's boot list.
+cp -v /boot/efi/EFI/fedora/grubx64.efi /boot/efi/EFI/BOOT/fbx64.efi
 
 # Needed for image-builder's buildroot.
 dnf install -y xorriso isomd5sum squashfs-tools
@@ -158,9 +157,14 @@ assert len(data.timezones()) >= 9, "time zones"
 ' || fail "the installer's lists could not be read"
 grep -qi 'fedora' /etc/system-release && fail "/etc/system-release still says Fedora"
 podman image exists "$IMAGE" || fail "the copy of EvenKeelOS for the installer is missing"
-[ "$(ls /boot/efi/EFI | tr '\n' ' ')" = "BOOT EvenKeelOS " ] || fail "the USB's boot partition must hold only EFI/BOOT and EFI/EvenKeelOS (no shim, no EFI/fedora)"
-[ "$(ls /boot/efi/EFI/BOOT)" = BOOTX64.EFI ] && [ "$(ls /boot/efi/EFI/EvenKeelOS)" = grubx64.efi ] || fail "the USB's boot files are not just the EvenKeelOS grub"
-grep -rqi fedora /boot/efi && fail "a file on the USB's boot partition still contains Fedora"
+# Secure Boot: the USB starts Fedora's shim and grub, exactly as Fedora ships them.
+efi=/boot/efi/EFI
+cmp -s "$efi/BOOT/BOOTX64.EFI" "$(rpm -ql shim-x64 | grep '^/usr/lib/efi/.*/EFI/fedora/shimx64.efi$')" || fail "the USB does not start from Fedora's shim"
+cmp -s "$efi/fedora/grubx64.efi" "$(rpm -ql grub2-efi-x64 | grep '^/usr/lib/efi/.*/EFI/fedora/grubx64.efi$')" || fail "the USB's grub is not Fedora's"
+cmp -s "$efi/BOOT/fbx64.efi" "$efi/fedora/grubx64.efi" || fail "shim's fallback would add a boot entry to the PC"
+cmp -s "$efi/fedora/BOOTX64.CSV" "$(rpm -ql shim-x64 | grep '^/usr/lib/efi/.*/EFI/fedora/BOOTX64.CSV$')" || fail "shim's BOOTX64.CSV was changed"
+grep -aq 'Microsoft Corporation UEFI CA' "$efi/BOOT/BOOTX64.EFI" || fail "the USB's shim is not signed for Secure Boot"
+grep -aq 'Fedora Secure Boot' "$efi/fedora/grubx64.efi" || fail "the USB's grub is not signed by Fedora"
 # Big layers fill the live session's memory during install, so the image must be split into small ones.
 [ "$(podman image inspect "$IMAGE" --format '{{len .RootFS.Layers}}')" -ge 20 ] || fail "the copy of EvenKeelOS for the installer is not split into small layers"
 echo "live image ready: installer in place, payload $IMAGE present"
