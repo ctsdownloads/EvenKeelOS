@@ -22,9 +22,25 @@ def box_repos(box, kind):
     return out
 
 
+SCRIPT_SOURCE = re.compile(r"/etc/yum\.repos\.d/|/etc/zypp/repos\.d/|sources\.list\.d|sourceparts")
+
+
 def adds_source(pkg):
-    """Does the package itself carry a download source (a repository) for updates?"""
-    return any(REPO_FILE.match(p) for p in pkg.files)
+    """Does the package, or its install script (Chrome, VS Code), add a download source for updates?"""
+    return any(REPO_FILE.match(p) for p in pkg.files) or bool(SCRIPT_SOURCE.search(pkg.scripts))
+
+
+def file_note(pkg, info):
+    """What using the downloaded file means for updates, said before installing."""
+    if not adds_source(pkg) or info["blocking"]:
+        return "It never updates."
+    if info["notes"] and pkg.kind == "rpm":
+        return "In a box it updates with System Update; added to the system it never updates."
+    return "It adds its maker's download source, so it updates with System Update."
+
+
+def second_copy(pkg, info, button):
+    return f"Or {button}: adds a second copy. {file_note(pkg, info)} You would have two of the same app."
 
 
 UPDATES_YES = "Updates: automatic, with System Update."
