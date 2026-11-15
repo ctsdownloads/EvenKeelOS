@@ -16,12 +16,14 @@ fi
 bad=$(printf '%s\n' "$removed" | grep -vE '^(fedora-logos|fedora-release(-[a-z0-9-]+)?)$' || true)
 if [ -n "$bad" ]; then echo "ERROR: rebranding would also remove: $(echo $bad)"; exit 1; fi
 
-# Keep Fedora's service presets: copy them out before the swap.
+# Keep Fedora's service presets: copy out the ones fedora-release packages own.
+presets=$(ls /usr/lib/systemd/system-preset/*.preset /usr/lib/systemd/user-preset/*.preset)
+grep -qx /usr/lib/systemd/system-preset/90-default.preset <<<"$presets" || { echo "ERROR: Fedora's preset files were not found"; exit 1; }
 keep=$(mktemp -d)
-for f in $(rpm -ql fedora-release-common fedora-release-identity-silverblue fedora-release-silverblue 2>/dev/null | grep -E '^/usr/lib/systemd/(system|user)-preset/[^/]+[.]preset$'); do
+for f in $presets; do
+  rpm -qf --qf '%{NAME}\n' "$f" 2>/dev/null | grep -q '^fedora-release' || continue
   mkdir -p "$keep$(dirname "$f")"; cp -a "$f" "$keep$f"
 done
-[ -f "$keep/usr/lib/systemd/system-preset/90-default.preset" ] || { echo "ERROR: Fedora's preset files were not found"; exit 1; }
 
 dnf5 -y install --allowerasing generic-logos generic-release
 rpm -q generic-logos generic-release
@@ -32,6 +34,9 @@ for f in $(cd "$keep" && find usr -name '*.preset'); do
   install -Dm644 "$keep/$f" "/$(dirname "$f")/$(basename "$f" .preset)-fedora.preset"
 done
 rm -rf "$keep"
+for f in $presets; do
+  [ -f "$f" ] || [ -f "${f%.preset}-fedora.preset" ] || { echo "ERROR: rebranding lost $f"; exit 1; }
+done
 
 # The image's own name; ID_LIKE keeps Fedora-family tools working.
 cat > /usr/lib/os-release <<OSREL

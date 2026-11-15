@@ -250,7 +250,8 @@ printf '%s' "$out" | grep -qF '_____________________' && printf '%s' "$out" | gr
 install -Dm644 /ctx/$NAME.pub /etc/pki/containers/$NAME.pub
 mkdir -p /etc/containers/registries.d
 printf 'docker:\n  ghcr.io/ctsdownloads/%s:\n    use-sigstore-attachments: true\n' "$NAME" > /etc/containers/registries.d/$NAME.yaml
-[ -f /etc/containers/policy.json ] || cp /usr/etc/containers/policy.json /etc/containers/policy.json
+# Fedora 45 ships the default policy in /usr/share/containers; /etc overrides it.
+[ -f /etc/containers/policy.json ] || cp /usr/share/containers/policy.json /etc/containers/policy.json
 # Require our signature for our image; rpm-ostree refuses an accept-anything default.
 jq --arg n "ghcr.io/ctsdownloads/$NAME" --arg k "/etc/pki/containers/$NAME.pub" '
   .default = [{"type":"reject"}]
