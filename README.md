@@ -78,7 +78,7 @@ can't change, so it stays working.
 | App store | [Bazaar](https://github.com/kolunmi/bazaar), replacing GNOME Software |
 | Utilities folder | Every EvenKeelOS tool, in Show Apps |
 | File types | Text files open in Text Editor, .rpm and .deb in Install Package File, Flatpak files in Bazaar |
-| Login screen and boot menu | EvenKeelOS logo and name. The live USB needs Secure Boot off; the installed system works with it on |
+| Login screen and boot menu | EvenKeelOS logo and name. The live USB and the installed system both work with Secure Boot on |
 | fastfetch | Shows the EvenKeelOS logo |
 
 ## System requirements

@@ -17,16 +17,16 @@ Nothing touches the disk until you install.
    the ISO with Fedora Media Writer or GNOME Disks (**Restore Disk Image**). Or
    build it locally: `iso/build-local-iso.sh` from a normal terminal (sudo, about
    70 GB free; the ISO lands in `~/Downloads/evenkeel-os-iso/`).
-2. **Turn Secure Boot off** (the USB has no Fedora boot loader), start from the
-   stick and pick **EvenKeelOS Live**.
+2. Start from the stick and pick **EvenKeelOS Live**. Secure Boot can stay on.
+   The computer's boot list may name the stick "Fedora": its boot loader is
+   Fedora's signed one.
 3. **Welcome window:** **Install EvenKeelOS** or **Try it first**.
 4. **The installer:** it asks for language, keyboards, network, time zone, date
    and time, disk, encryption, accounts and the computer's name, then shows a
    **Review**. Click **Install**, then **Restart** when it's done.
    - If the install stops: **Save the log**, **Show a QR code**, or **Report on
      GitHub**. The log leaves out passwords and names.
-5. **Turn Secure Boot back on** and log in. The [setup checklist](#first-login)
-   opens.
+5. Log in. The [setup checklist](#first-login) opens.
 
 The installed system takes its updates from the signed image on GitHub.
 
