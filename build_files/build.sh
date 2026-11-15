@@ -265,6 +265,11 @@ HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout current
 [ "$(HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout)" = current ] || { echo "ERROR: evenkeel-os-layout does not switch back"; exit 1; }
 rm -rf "$t"
 
+# Keep tuned from running bootc on every power-mode switch.
+install -Dm644 /ctx/evenkeel-os-no-bootc.tuned.conf /usr/lib/tuned/profiles/evenkeel-os-no-bootc/tuned.conf
+printf '%s\n' evenkeel-os-no-bootc > /etc/tuned/post_loaded_profile
+python3 -I /ctx/check-tuned.py
+
 # Check fingerprint login is on.
 authselect current | grep -qw with-fingerprint || { echo "ERROR: authselect does not have with-fingerprint, so GNOME would not offer fingerprint login"; exit 1; }
 grep -qw pam_fprintd.so /etc/pam.d/system-auth || { echo "ERROR: pam_fprintd is not in the PAM stack, so fingerprint would not be used"; exit 1; }
