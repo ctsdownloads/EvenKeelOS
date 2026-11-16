@@ -2,7 +2,10 @@
 # While a new version is on trial, a login has to reach a working desktop. A login with no desktop after a minute,
 # or two logins that end within a minute (a login loop), fail the start. No verdict within 15 minutes passes.
 # greenboot names the version on trial from when it's installed until it passes.
-grub2-editenv /boot/grub2/grubenv list | grep -q '^greenboot_next_deployment_id=' || exit 0
+vars=$(grub2-editenv /boot/grub2/grubenv list)
+grep -q '^greenboot_next_deployment_id=' <<<"$vars" || exit 0
+# The boot menu fell back to the previous version, which is known to work.
+grep -qx 'boot_counter=-1' <<<"$vars" && exit 0
 declare -A first_seen judged
 fails=0
 end=$((SECONDS + 900))

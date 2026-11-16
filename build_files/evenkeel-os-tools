@@ -634,24 +634,25 @@ def layout():
 
 # What each test breaks, and what you see. Kinds match TEST_KINDS in evenkeel-os-tools-admin, in order; the
 # breaking is in build_files/greenboot (check-rollback-tests.py checks both at build time).
-# In every test the computer fails 4 starts in a row (the counter starts at 3), then goes back by itself.
+# In every test the computer has 2 bad starts in a row, and the 3rd start is back on this version.
 ROLLBACK_TESTS = [
     ("quick", "Quick test", "A start-up check fails on purpose. The computer restarts by itself within seconds, "
-                            "4 times in a row, then comes back to this version."),
+                            "twice, and the third start is back on this version."),
     ("no-login-screen", "No login screen", "The login screen fails to start, so you never see it. The computer "
-                                           "restarts by itself within seconds, 4 times in a row, then comes back."),
+                                           "restarts by itself within seconds, twice, and the third start is back "
+                                           "on this version."),
     ("no-networking", "No networking", "Networking fails to start. The computer restarts by itself within "
-                                       "seconds, usually before the login screen shows, 4 times in a row, then "
-                                       "comes back."),
+                                       "seconds, usually before the login screen shows, twice, and the third start "
+                                       "is back on this version."),
     ("stuck", "Stuck while starting", "Starting hangs on the startup screen and the login screen never shows. "
-                                      "After 3 minutes the computer restarts by itself. That happens 4 times "
-                                      "(about 13 minutes), then it comes back."),
+                                      "After 3 minutes the computer restarts by itself. That happens twice (about "
+                                      "7 minutes), and the third start is back on this version."),
     ("login-loop", "Login loop", "The login screen works, but logging in drops you back to it. Log in a second "
-                                 "time; after the second drop the computer restarts by itself. Do that on each of "
-                                 "4 starts, then it comes back."),
+                                 "time; after the second drop the computer restarts by itself. Do that on 2 "
+                                 "starts, and the third start is back on this version."),
     ("freeze", "Freeze", "About 20 seconds after the login screen shows, the computer locks up. Hold the power "
-                         "button until it turns off, then turn it on. After the 4th freeze it comes back by "
-                         "itself."),
+                         "button until it turns off, then turn it on. After the second freeze, the next start is "
+                         "back on this version."),
 ]
 
 
