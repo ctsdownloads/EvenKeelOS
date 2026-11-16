@@ -632,17 +632,37 @@ def layout():
     return 0
 
 
+# What each test breaks, and what you see; the breaking is in build_files/greenboot.
+ROLLBACK_TESTS = [
+    ("quick", "Quick test", "A start-up check fails. It restarts by itself 3 times, then comes back."),
+    ("no-login-screen", "No login screen", "The login screen fails. After about 3 minutes of no login screen it "
+                                           "restarts by itself, 3 times, then comes back."),
+    ("no-networking", "No networking", "Networking fails. After about 3 minutes it restarts by itself, 3 times, "
+                                       "then comes back."),
+    ("stuck", "Stuck while starting", "Starting hangs before the login screen. After about 3 minutes it restarts "
+                                      "by itself, 3 times, then comes back."),
+    ("login-loop", "Login loop", "Logging in drops you back at the login screen. Log in again; after the second "
+                                 "try it restarts by itself. After 3 rounds of that it comes back."),
+    ("freeze", "Freeze", "The computer locks up about 20 seconds after the login screen shows. Hold the power "
+                         "button until it turns off, then turn it on. After the third freeze it comes back."),
+]
+
+
 def test_rollback():
     w = "Test automatic rollback"
-    if ask("This checks that your computer goes back by itself when a new version doesn't start properly.\n\n"
-           "It makes a test copy of the version you're using now, set up to fail. At the restart, the test copy "
-           "starts and fails, and the computer restarts by itself a few times. Then it goes back to the version "
-           "you're using now and tells you. Don't turn the computer off while it does. It takes a few minutes.\n\n"
-           "The test copy takes the place of the earlier version kept for Undo the last update, so Undo has nothing "
-           "to go back to until the next update.\n\nRecommended: Cancel, unless your helper asked you to test it.",
+    i = choose("Pick the problem to test. A test copy of this version is made with that problem, and starts at "
+               "your next restart. Your computer should then go back to the version you're using now by itself.",
+               ["Problem", "What you'll see"], [(t, see) for _, t, see in ROLLBACK_TESTS], width=760, height=460)
+    if i is None:
+        return 1
+    kind, name, see = ROLLBACK_TESTS[i]
+    if ask(f"{name}: {see}\n\nWhen it comes back, a message says the test worked, and the test copy is "
+           "removed. Don't turn the computer off during the test unless the steps say to. Save your work first: "
+           "the test restarts the computer without asking.\n\nThe test copy takes the place of the earlier "
+           "version kept for Undo the last update, so Undo has nothing to go back to until the next update.",
            ok="Start the test", title=w) != "ok":
         return 1
-    rc = run("Making the test copy.", ["pkexec", ADMIN, "test-rollback"], title=w)
+    rc = run("Making the test copy.", ["pkexec", ADMIN, "test-rollback", kind], title=w)
     if rc == 4:
         say("This computer can't go back by itself: it was installed before automatic rollback was added. "
             "Computers installed from a newer USB have it.", "warning", title=w)
@@ -654,14 +674,19 @@ def test_rollback():
         say("The administrator password wasn't given, so nothing was changed." if rc in (126, 127) else
             f"It didn't work, and nothing was changed.\n\nThe details are in {LOG}", "warning", title=w)
         return 1
-    offer_restart("The test copy is ready. It starts at your next restart.",
-                  "The computer then restarts by itself a few times and comes back to this version.")
+    offer_restart(f"The test copy ({name}) is ready. It starts at your next restart.", see)
     return 0
 
 
 def rolled_back_note():
     """Say once, at login, that the computer went back to the previous version by itself."""
     w = "Automatic rollback"
+    # greenboot may still be checking this start (it waits for a login); the note is written when it's done.
+    for _ in range(240):
+        r = subprocess.run(["systemctl", "is-active", "greenboot-healthcheck.service"], capture_output=True, text=True)
+        if r.stdout.strip() != "activating":
+            break
+        time.sleep(5)
     try:
         kind, stamp = ROLLED_BACK.read_text().split()
     except (OSError, ValueError):

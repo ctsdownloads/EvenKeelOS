@@ -42,13 +42,17 @@ bad update doesn't come straight back; they turn back on by themselves. System
 Update still works by hand. If the problem returns after the pause, turn off
 Automatic updates and tell your helper.
 
-**Test automatic rollback.** Makes a test copy of the running version that
-fails the start-up checks on purpose (`rpm-ostree kargs
---append=evenkeel_os.test_rollback=1`). At the restart the computer restarts by
-itself a few times, goes back to the version it had, removes the test copy and
-says the test worked. The test copy takes the place of the earlier version kept
-for Undo, so Undo has nothing to go back to until the next update. Needs the
-admin password, and a computer installed from a newer live USB (see
+**Test automatic rollback.** Pick a real problem to test: **Quick test** (a
+start-up check fails), **No login screen**, **No networking**, **Stuck while
+starting**, **Login loop**, or **Freeze** (a kernel crash at the login screen;
+you turn it off and on). It makes a test copy of the running version with that
+problem (`rpm-ostree kargs --append=evenkeel_os.test_rollback=KIND`; nothing
+breaks without that kernel argument). At the restart the test copy really
+breaks, the computer restarts (or you do, for the freeze) until it goes back to
+the version it had, removes the test copy and says the test worked. The test
+copy takes the place of the earlier version kept for Undo, so Undo has nothing
+to go back to until the next update. Needs the admin password, and a computer
+installed from a newer live USB (see
 [Automatic rollback](install.md#updating-and-rolling-back)). Stuck test copy:
 pick the other entry in the boot menu, then `rpm-ostree cleanup -r`.
 

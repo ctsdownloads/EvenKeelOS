@@ -1,0 +1,12 @@
+[Unit]
+Description=Test automatic rollback: hang while starting
+ConditionKernelCommandLine=evenkeel_os.test_rollback=stuck
+Before=display-manager.service gdm.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/sleep infinity
+TimeoutStartSec=infinity
+
+[Install]
+WantedBy=multi-user.target

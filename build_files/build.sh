@@ -117,10 +117,29 @@ bash /ctx/rebrand.sh
 # Automatic rollback: greenboot with our own checks. Fedora's default checks fail offline, so they stay out.
 dnf5 -y install greenboot
 ! rpm -q greenboot-default-health-checks >/dev/null || { echo "ERROR: Fedora's default greenboot checks are installed; they fail offline"; exit 1; }
-install -Dm755 -t /usr/lib/greenboot/check/required.d /ctx/greenboot/00-evenkeel-os-test-rollback.sh \
-  /ctx/greenboot/10-evenkeel-os-login-screen.sh /ctx/greenboot/20-evenkeel-os-networking.sh
+install -Dm755 -t /usr/lib/greenboot/check/required.d /ctx/greenboot/00-evenkeel-os-test-quick.sh \
+  /ctx/greenboot/10-evenkeel-os-login-screen.sh /ctx/greenboot/20-evenkeel-os-networking.sh \
+  /ctx/greenboot/30-evenkeel-os-desktop.sh
 install -Dm755 -t /usr/lib/greenboot/green.d /ctx/greenboot/90-evenkeel-os-rolled-back.sh
-for f in /usr/lib/greenboot/check/required.d/*-evenkeel-os-*.sh /usr/lib/greenboot/green.d/*-evenkeel-os-*.sh; do
+install -Dm644 /ctx/greenboot/50-evenkeel-os-greenboot.conf /usr/lib/systemd/system/greenboot-healthcheck.service.d/50-evenkeel-os.conf
+# Test automatic rollback: each test copy breaks one real thing, switched on by its kernel argument only.
+install -Dm755 /ctx/greenboot/evenkeel-os-test-fail /usr/libexec/evenkeel-os-test-fail
+install -Dm644 /ctx/greenboot/50-evenkeel-os-test-gdm.conf /usr/lib/systemd/system/gdm.service.d/50-evenkeel-os-test.conf
+install -Dm644 /ctx/greenboot/50-evenkeel-os-test-networkmanager.conf \
+  /usr/lib/systemd/system/NetworkManager.service.d/50-evenkeel-os-test.conf
+install -Dm644 /ctx/greenboot/50-evenkeel-os-test-shell.conf /usr/lib/systemd/user/org.gnome.Shell@user.service.d/50-evenkeel-os-test.conf
+install -Dm644 -t /usr/lib/systemd/system /ctx/greenboot/evenkeel-os-test-stuck.service /ctx/greenboot/evenkeel-os-test-freeze.service
+systemctl enable evenkeel-os-test-stuck.service evenkeel-os-test-freeze.service
+for u in gdm.service NetworkManager.service evenkeel-os-test-stuck.service evenkeel-os-test-freeze.service greenboot-healthcheck.service; do
+  systemd-analyze verify "$u" 2>&1 | grep -iE "evenkeel|greenboot" && { echo "ERROR: $u has a unit problem"; exit 1; }
+done
+# The login-loop test needs the user desktop's own shell unit (the login screen uses org.gnome.Shell@gdm).
+grep -qx 'Requires=org.gnome.Shell@user.service' /usr/lib/systemd/user/gnome-session@gnome.target.d/gnome.session.conf \
+  || { echo "ERROR: GNOME's desktop no longer starts org.gnome.Shell@user.service; update the login-loop test"; exit 1; }
+# Normal starts never trip a test: with no test kernel argument every test step passes.
+for k in no-login-screen no-networking login-loop; do /usr/libexec/evenkeel-os-test-fail "$k" >/dev/null || { echo "ERROR: test $k fails without its kernel argument"; exit 1; }; done
+for f in /usr/lib/greenboot/check/required.d/*-evenkeel-os-*.sh /usr/lib/greenboot/green.d/*-evenkeel-os-*.sh \
+         /usr/libexec/evenkeel-os-test-fail; do
   bash -n "$f" || { echo "ERROR: $f has a syntax error"; exit 1; }
 done
 systemctl enable greenboot-healthcheck.service

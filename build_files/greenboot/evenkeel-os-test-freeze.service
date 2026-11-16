@@ -1,0 +1,14 @@
+[Unit]
+Description=Test automatic rollback: freeze the computer at the login screen
+ConditionKernelCommandLine=evenkeel_os.test_rollback=freeze
+After=display-manager.service
+Before=greenboot-healthcheck.service
+
+[Service]
+Type=oneshot
+# A kernel crash; the kernel stays frozen (no automatic restart) until the power button.
+ExecStart=/usr/bin/bash -c 'sleep 20; echo c > /proc/sysrq-trigger'
+TimeoutStartSec=infinity
+
+[Install]
+WantedBy=multi-user.target
