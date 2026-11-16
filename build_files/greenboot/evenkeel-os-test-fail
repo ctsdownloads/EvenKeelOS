@@ -1,7 +1,8 @@
 #!/usr/bin/bash
 # Fails a service on purpose in a test copy made by System Tools' Test automatic rollback.
 # Usage: evenkeel-os-test-fail no-login-screen|no-networking|login-loop
+# Exit code 3: GNOME Shell's unit counts exit code 1 as success (SuccessExitStatus=1).
 if tr ' ' '\n' </proc/cmdline | grep -qx "evenkeel_os.test_rollback=$1"; then
   echo "Test of automatic rollback ($1): failing on purpose."
-  exit 1
+  exit 3
 fi

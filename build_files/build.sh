@@ -122,6 +122,12 @@ install -Dm755 -t /usr/lib/greenboot/check/required.d /ctx/greenboot/00-evenkeel
   /ctx/greenboot/30-evenkeel-os-desktop.sh
 install -Dm755 -t /usr/lib/greenboot/green.d /ctx/greenboot/90-evenkeel-os-rolled-back.sh
 install -Dm644 /ctx/greenboot/50-evenkeel-os-greenboot.conf /usr/lib/systemd/system/greenboot-healthcheck.service.d/50-evenkeel-os.conf
+install -Dm755 /ctx/greenboot/evenkeel-os-greenboot-arm /usr/libexec/evenkeel-os-greenboot-arm
+install -Dm644 /ctx/greenboot/50-evenkeel-os-arm.conf /usr/lib/systemd/system/greenboot-set-rollback-trigger.service.d/50-evenkeel-os.conf
+# The arming step must run after greenboot's own (it reads greenboot's trial marker).
+[ "$(systemctl cat greenboot-set-rollback-trigger.service | sed -n 's/^ExecStop=\([^ ]*\).*/\1/p' | tr '\n' ' ')" \
+  = "/usr/libexec/greenboot/greenboot /usr/libexec/evenkeel-os-greenboot-arm " ] \
+  || { echo "ERROR: greenboot-set-rollback-trigger's stop steps aren't greenboot then evenkeel-os-greenboot-arm"; exit 1; }
 # Test automatic rollback: each test copy breaks one real thing, switched on by its kernel argument only.
 install -Dm755 /ctx/greenboot/evenkeel-os-test-fail /usr/libexec/evenkeel-os-test-fail
 install -Dm644 /ctx/greenboot/50-evenkeel-os-test-gdm.conf /usr/lib/systemd/system/gdm.service.d/50-evenkeel-os-test.conf
@@ -137,9 +143,9 @@ done
 grep -qx 'Requires=org.gnome.Shell@user.service' /usr/lib/systemd/user/gnome-session@gnome.target.d/gnome.session.conf \
   || { echo "ERROR: GNOME's desktop no longer starts org.gnome.Shell@user.service; update the login-loop test"; exit 1; }
 # Normal starts never trip a test: with no test kernel argument every test step passes.
-for k in no-login-screen no-networking login-loop; do /usr/libexec/evenkeel-os-test-fail "$k" >/dev/null || { echo "ERROR: test $k fails without its kernel argument"; exit 1; }; done
+python3 -I /ctx/check-rollback-tests.py
 for f in /usr/lib/greenboot/check/required.d/*-evenkeel-os-*.sh /usr/lib/greenboot/green.d/*-evenkeel-os-*.sh \
-         /usr/libexec/evenkeel-os-test-fail; do
+         /usr/libexec/evenkeel-os-test-fail /usr/libexec/evenkeel-os-greenboot-arm; do
   bash -n "$f" || { echo "ERROR: $f has a syntax error"; exit 1; }
 done
 systemctl enable greenboot-healthcheck.service
