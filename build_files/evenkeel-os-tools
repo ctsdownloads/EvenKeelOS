@@ -10,6 +10,8 @@
   evenkeel-os-tools undo-update     go back to the system version from before the last update
   evenkeel-os-tools problem-details save the computer's recent error messages to a file, for your helper
   evenkeel-os-tools layout          switch between the standard and the Windows-style desktop layout
+  evenkeel-os-tools test-rollback   check that the computer goes back by itself when a new version won't start
+  evenkeel-os-tools rolled-back --at-login   say once that the computer went back by itself
   evenkeel-os-tools setup           the setup checklist: media codecs, disk unlock, getting apps
   evenkeel-os-tools setup --first-login   the same, once, at a new user's first login
 """
@@ -37,9 +39,11 @@ CACHE = Path.home() / ".cache" / "evenkeel-os"
 LOG = CACHE / "tools.log"
 DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
 PAUSE = Path("/var/lib/evenkeel-os/updates-paused-until")      # set by evenkeel-os-tools-safe after an undo
+ROLLED_BACK = Path("/var/lib/evenkeel-os/rolled-back")          # "update|test <time>", written by greenboot's green.d
 STATE = Path(os.environ.get("XDG_STATE_HOME") or Path.home() / ".local" / "state") / "evenkeel-os"
 SETUP_SHOWN = STATE / "setup-shown"      # the setup checklist has opened at login once
 CODECS_ASKED = STATE / "codecs-asked"    # from the old codecs first-login question
+ROLLED_BACK_SHOWN = STATE / "rolled-back-shown"     # the automatic rollback note this user has seen
 
 
 # ---------------------------------------------------------------- windows
@@ -628,6 +632,66 @@ def layout():
     return 0
 
 
+def test_rollback():
+    w = "Test automatic rollback"
+    if ask("This checks that your computer goes back by itself when a new version doesn't start properly.\n\n"
+           "It makes a test copy of the version you're using now, set up to fail. At the restart, the test copy "
+           "starts and fails, and the computer restarts by itself a few times. Then it goes back to the version "
+           "you're using now and tells you. Don't turn the computer off while it does. It takes a few minutes.\n\n"
+           "The test copy takes the place of the earlier version kept for Undo the last update, so Undo has nothing "
+           "to go back to until the next update.\n\nRecommended: Cancel, unless your helper asked you to test it.",
+           ok="Start the test", title=w) != "ok":
+        return 1
+    rc = run("Making the test copy.", ["pkexec", ADMIN, "test-rollback"], title=w)
+    if rc == 4:
+        say("This computer can't go back by itself: it was installed before automatic rollback was added. "
+            "Computers installed from a newer USB have it.", "warning", title=w)
+        return 1
+    if rc == 5:
+        say("An update is waiting for a restart. Restart first, then run the test.", title=w)
+        return 1
+    if rc != 0:
+        say("The administrator password wasn't given, so nothing was changed." if rc in (126, 127) else
+            f"It didn't work, and nothing was changed.\n\nThe details are in {LOG}", "warning", title=w)
+        return 1
+    offer_restart("The test copy is ready. It starts at your next restart.",
+                  "The computer then restarts by itself a few times and comes back to this version.")
+    return 0
+
+
+def rolled_back_note():
+    """Say once, at login, that the computer went back to the previous version by itself."""
+    w = "Automatic rollback"
+    try:
+        kind, stamp = ROLLED_BACK.read_text().split()
+    except (OSError, ValueError):
+        return 0
+    try:
+        if ROLLED_BACK_SHOWN.read_text().strip() == stamp:
+            return 0
+    except OSError:
+        pass
+    ds = deployments() or []
+    booted = next((d for d in ds if d.get("booted")), None)
+    since = when(booted) if booted else "before the update"
+    if kind == "test":
+        notify("The automatic rollback test worked.")
+        say(f"The test worked. Your computer went back by itself to the version from {since}, and the test copy is "
+            f"removed.", title=w)
+    else:
+        until = paused_until()
+        pause = (f"Automatic updates are paused until {day(until)}, so the same update doesn't come straight back. "
+                 "They turn back on by themselves." if until else "")
+        notify("Your computer went back to the previous version.")
+        say(f"Your computer went back to the version from {since}, because the newer version didn't start "
+            f"properly. Your files and your apps aren't touched." + (f"\n\n{pause}" if pause else "") +
+            "\n\nIf it happens again, tell your helper. Save problem details in System Tools makes a file to send "
+            "them.", "warning", title=w)
+    STATE.mkdir(parents=True, exist_ok=True)
+    ROLLED_BACK_SHOWN.write_text(stamp)
+    return 0
+
+
 TOOLS = [("firmware", "Update firmware", "Updates for the computer's own parts, like the BIOS", firmware),
          ("disk-unlock", "Unlock disk automatically", "Skip the disk password at startup", disk_unlock),
          ("free-space", "Free up disk space", "Remove things the computer no longer needs", free_space),
@@ -638,13 +702,17 @@ TOOLS = [("firmware", "Update firmware", "Updates for the computer's own parts, 
           problem_details),
          ("setup", "Setup checklist", "Media codecs, disk unlock and getting apps, one at a time",
           setup_checklist),
-         ("layout", "Desktop layout", "Windows-style bottom bar or the standard top bar", layout)]
+         ("layout", "Desktop layout", "Windows-style bottom bar or the standard top bar", layout),
+         ("test-rollback", "Test automatic rollback",
+          "Check that the computer goes back by itself when a new version won't start", test_rollback)]
 
 
 def main(argv):
     if len(argv) > 1:
         if argv[1:] == ["setup", "--first-login"]:
             return setup_checklist(first_login=True)
+        if argv[1:] == ["rolled-back", "--at-login"]:
+            return rolled_back_note()
         for key, _, _, fn in TOOLS:
             if argv[1] == key and len(argv) == 2:
                 return fn()

@@ -9,13 +9,14 @@ mkdir -p "$(realpath /root)"
 
 # ---------------------------------------------------------------- the live session
 
-# No updates, setup or first-login questions in the live session.
+# No updates, setup, first-login questions or rollback checks in the live session.
 for s in uupd.timer brew-setup.service podman-auto-update.timer tailscaled.service \
          evenkeel-os-codecs-setup.service evenkeel-os-disk-unlock-check.service rpm-ostreed-automatic.timer \
-         evenkeel-os-flatpak-apps.service; do
+         evenkeel-os-flatpak-apps.service greenboot-healthcheck.service; do
   if systemctl cat "$s" >/dev/null 2>&1; then systemctl disable "$s"; else echo "note: $s is not in this image"; fi
 done
-rm -f /etc/xdg/autostart/evenkeel-os-setup-checklist.desktop /etc/xdg/autostart/evenkeel-os-packages-after-restart.desktop
+rm -f /etc/xdg/autostart/evenkeel-os-setup-checklist.desktop /etc/xdg/autostart/evenkeel-os-packages-after-restart.desktop \
+  /etc/xdg/autostart/evenkeel-os-rolled-back.desktop
 
 # The live user and its automatic login.
 dnf install -y livesys-scripts
@@ -167,6 +168,8 @@ assert len(data.timezones()) >= 9, "time zones"
 ' || fail "the installer's lists could not be read"
 grep -qi 'fedora' /etc/system-release && fail "/etc/system-release still says Fedora"
 podman image exists "$IMAGE" || fail "the copy of EvenKeelOS for the installer is missing"
+# The install writes greenboot's counter into the boot menu; without it, installs get no automatic rollback.
+grep -q boot_counter /usr/lib/bootupd/grub2-static/configs.d/08_greenboot.cfg || fail "this EvenKeelOS has no automatic rollback counter for the boot menu"
 # Secure Boot: the USB starts Fedora's shim and grub, exactly as Fedora ships them.
 efi=/boot/efi/EFI
 cmp -s "$efi/BOOT/BOOTX64.EFI" "$(rpm -ql shim-x64 | grep '^/usr/lib/efi/.*/EFI/fedora/shimx64.efi$')" || fail "the USB does not start from Fedora's shim"

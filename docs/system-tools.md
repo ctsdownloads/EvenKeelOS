@@ -16,13 +16,14 @@
 | Undo the last update | Goes back to the version before the last update |
 | Save problem details | Saves recent errors to one file to email your helper |
 | Setup checklist | Codecs, disk unlock and apps. See [First login](install.md#first-login) |
+| Test automatic rollback | Checks that the computer goes back by itself when a new version doesn't start. See below |
 | Desktop layout | Switches between the standard top bar and the Windows-style bottom bar and start menu, which opens on the desktop at login. Log out and back in to see it |
 
 **Passwords.** No password for an admin at the computer: automatic updates on,
 the pause after an undo and resuming it, disk unlock (it asks the disk password
 instead) and freeing space. These keep the admin password, because a bad
-program could misuse them: automatic updates off, undo, firmware, and adding
-apps to the system.
+program could misuse them: automatic updates off, undo, firmware, the rollback
+test, and adding apps to the system.
 Desktop layout changes only your own desktop, so it never asks.
 
 **Unlock disk automatically.**
@@ -40,6 +41,16 @@ again. An undo (or **Don't use it**) pauses automatic updates for 3 days, so the
 bad update doesn't come straight back; they turn back on by themselves. System
 Update still works by hand. If the problem returns after the pause, turn off
 Automatic updates and tell your helper.
+
+**Test automatic rollback.** Makes a test copy of the running version that
+fails the start-up checks on purpose (`rpm-ostree kargs
+--append=evenkeel_os.test_rollback=1`). At the restart the computer restarts by
+itself a few times, goes back to the version it had, removes the test copy and
+says the test worked. The test copy takes the place of the earlier version kept
+for Undo, so Undo has nothing to go back to until the next update. Needs the
+admin password, and a computer installed from a newer live USB (see
+[Automatic rollback](install.md#updating-and-rolling-back)). Stuck test copy:
+pick the other entry in the boot menu, then `rpm-ostree cleanup -r`.
 
 **Save problem details.** Saves `problem-details-<date>.txt` to Documents:
 system version and hardware, recent warnings and errors, the last 3 days of

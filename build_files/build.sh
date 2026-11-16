@@ -78,6 +78,7 @@ systemctl enable evenkeel-os-disk-unlock-check.service
 install -Dm644 /ctx/evenkeel-os-tools.desktop /usr/share/applications/evenkeel-os-tools.desktop
 # The setup checklist opens once at a new user's first login.
 install -Dm644 /ctx/evenkeel-os-setup-checklist.desktop /etc/xdg/autostart/evenkeel-os-setup-checklist.desktop
+install -Dm644 /ctx/evenkeel-os-rolled-back.desktop /etc/xdg/autostart/evenkeel-os-rolled-back.desktop
 rm -f /etc/xdg/autostart/evenkeel-os-codecs-prompt.desktop
 # Change list for System Update (empty in local builds).
 install -Dm644 /dev/null /usr/share/evenkeel-os/changes.txt
@@ -109,10 +110,29 @@ mkdir -p /tmp/pkgtest && (cd /tmp/pkgtest && dnf5 -q download gnome-mines openvp
 python3 -I /ctx/check-packages.py /tmp/pkgtest || { echo 'ERROR: Install Package File does not read packages correctly'; exit 1; }
 rm -rf /tmp/pkgtest
 # Services on by default, including after the first boot.
-printf 'enable brew-setup.service\nenable evenkeel-os-codecs-setup.service\nenable evenkeel-os-flathub.service\nenable evenkeel-os-flatpak-apps.service\ndisable flatpak-add-fedora-repos.service\nenable evenkeel-os-disk-unlock-check.service\nenable tailscaled.service\nenable podman-auto-update.timer\nenable uupd.timer\n' > /usr/lib/systemd/system-preset/80-evenkeel-os.preset
+printf 'enable brew-setup.service\nenable evenkeel-os-codecs-setup.service\nenable evenkeel-os-flathub.service\nenable evenkeel-os-flatpak-apps.service\ndisable flatpak-add-fedora-repos.service\nenable evenkeel-os-disk-unlock-check.service\nenable tailscaled.service\nenable podman-auto-update.timer\nenable uupd.timer\nenable greenboot-healthcheck.service\nenable greenboot-set-rollback-trigger.service\n' > /usr/lib/systemd/system-preset/80-evenkeel-os.preset
 systemctl enable tailscaled.service podman-auto-update.timer uupd.timer brew-setup.service
 for u in tailscaled.service uupd.timer brew-setup.service; do [ "$(systemctl is-enabled "$u")" = enabled ] || { echo "ERROR: $u is not enabled"; exit 1; }; done
 bash /ctx/rebrand.sh
+# Automatic rollback: greenboot with our own checks. Fedora's default checks fail offline, so they stay out.
+dnf5 -y install greenboot
+! rpm -q greenboot-default-health-checks >/dev/null || { echo "ERROR: Fedora's default greenboot checks are installed; they fail offline"; exit 1; }
+install -Dm755 -t /usr/lib/greenboot/check/required.d /ctx/greenboot/00-evenkeel-os-test-rollback.sh \
+  /ctx/greenboot/10-evenkeel-os-login-screen.sh /ctx/greenboot/20-evenkeel-os-networking.sh
+install -Dm755 -t /usr/lib/greenboot/green.d /ctx/greenboot/90-evenkeel-os-rolled-back.sh
+for f in /usr/lib/greenboot/check/required.d/*-evenkeel-os-*.sh /usr/lib/greenboot/green.d/*-evenkeel-os-*.sh; do
+  bash -n "$f" || { echo "ERROR: $f has a syntax error"; exit 1; }
+done
+systemctl enable greenboot-healthcheck.service
+for u in greenboot-healthcheck.service greenboot-set-rollback-trigger.service; do
+  [ "$(systemctl is-enabled "$u")" = enabled ] || { echo "ERROR: $u is not enabled"; exit 1; }
+done
+# bootupd copies this into the boot menu at install; without it nothing counts failed starts.
+grep -q boot_counter /usr/lib/bootupd/grub2-static/configs.d/08_greenboot.cfg || { echo "ERROR: greenboot's boot menu counter is missing"; exit 1; }
+# The rollback note looks for these lines in greenboot's log.
+for t in 'Rollback successful' 'Rollback to previous deployment completed' 'deployment has been rolled back'; do
+  grep -aqF "$t" /usr/libexec/greenboot/greenboot || { echo "ERROR: greenboot no longer logs \"$t\"; update 90-evenkeel-os-rolled-back.sh"; exit 1; }
+done
 # TPM support in the boot image, for automatic disk unlock.
 dnf5 -y install tpm2-tss
 printf 'add_dracutmodules+=" tpm2-tss "\n' > /usr/lib/dracut/dracut.conf.d/90-evenkeel-os-tpm.conf
