@@ -6,7 +6,7 @@ pause=/var/lib/evenkeel-os/updates-paused-until
 journalctl -b -u greenboot-healthcheck.service -o cat --no-pager \
   | grep -qE 'deployment has been rolled back|Rollback successful|Rollback to previous deployment completed' || exit 0
 mkdir -p "${note%/*}"
-if grep -qs 'evenkeel_os.test_rollback=1' /boot/loader/entries/*.conf; then
+if grep -qs 'evenkeel_os.test_rollback=' /boot/loader/entries/*.conf; then
   rpm-ostree cleanup -r || echo "The test copy could not be removed."
   echo "test $(date +%s)" >"$note"
 else

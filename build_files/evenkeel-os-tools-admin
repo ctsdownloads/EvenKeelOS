@@ -4,7 +4,8 @@
   evenkeel-os-tools-admin updates on|off
   evenkeel-os-tools-admin disk-unlock on|off      (the disk password on standard input)
   evenkeel-os-tools-admin disk-unlock check
-  evenkeel-os-tools-admin test-rollback           (exit 4: installed before greenboot, 5: an update is waiting)
+  evenkeel-os-tools-admin test-rollback KIND      KIND: quick, no-login-screen, no-networking, stuck, login-loop, freeze
+                                                  (exit 4: installed before greenboot, 5: an update is waiting)
 """
 import json
 import os
@@ -106,8 +107,11 @@ def disk_unlock(state):
     print("done")
 
 
-def test_rollback():
-    """A copy of the running version that fails greenboot's checks on purpose; it starts at the next restart."""
+TEST_KINDS = ("quick", "no-login-screen", "no-networking", "stuck", "login-loop", "freeze")
+
+
+def test_rollback(kind):
+    """A copy of the running version that breaks on purpose (see build_files/greenboot), for the next restart."""
     if subprocess.run(["systemctl", "-q", "is-enabled", "greenboot-healthcheck.service"]).returncode != 0:
         fail("Automatic rollback is not turned on in this version.", 4)
     try:
@@ -123,7 +127,7 @@ def test_rollback():
         fail(f"The system versions couldn't be read: {e}")
     if any(d.get("staged") for d in ds):
         fail("An update is waiting for a restart.", 5)
-    sys.exit(subprocess.run(["rpm-ostree", "kargs", "--append=evenkeel_os.test_rollback=1"]).returncode)
+    sys.exit(subprocess.run(["rpm-ostree", "kargs", f"--append=evenkeel_os.test_rollback={kind}"]).returncode)
 
 
 def main(argv):
@@ -135,8 +139,8 @@ def main(argv):
         disk_unlock_check()
     elif len(argv) == 3 and argv[1] == "disk-unlock" and argv[2] in ("on", "off"):
         disk_unlock(argv[2])
-    elif argv[1:] == ["test-rollback"]:
-        test_rollback()
+    elif len(argv) == 3 and argv[1] == "test-rollback" and argv[2] in TEST_KINDS:
+        test_rollback(argv[2])
     else:
         fail(__doc__, 2)
 
