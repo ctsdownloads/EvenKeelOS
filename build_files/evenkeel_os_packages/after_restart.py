@@ -1,5 +1,6 @@
 """Work left for the first login after a restart."""
 import json
+import subprocess
 
 from evenkeel_os_ui import ask, notify, say
 from evenkeel_os_packages import boxes, common, installed, launchers, login_apps, printers, targets
@@ -32,6 +33,17 @@ def add_pending(entry):
     save_pending([e for e in pending() if e["package"] != entry["package"]] + [entry])
 
 
+def where_line(package):
+    """Where to find a package added to the system, from the files it installed."""
+    r = subprocess.run(["rpm", "-ql", package], capture_output=True, text=True)
+    files = r.stdout.splitlines() if r.returncode == 0 else []
+    if any(f.startswith("/usr/share/applications/") and f.endswith(".desktop") for f in files):
+        return "Find it in Show Apps."
+    if any(f.startswith(("/usr/bin/", "/usr/sbin/")) for f in files):
+        return "It is a command-line tool, so it has no window in Show Apps."
+    return "It has no window of its own in Show Apps."
+
+
 def boxes_missing_helpers():
     return [k for k in common.BOXES if boxes.box_exists(common.BOXES[k]["name"]) and not boxes.helpers_mark(k).exists()]
 
@@ -54,7 +66,7 @@ def after_restart():
                     printers.open_printers()
             else:
                 notify(f"{e['title']} is ready.")
-                say(f"{e['title']} is ready. Find it in Show Apps.")
+                say(f"{e['title']} is ready. {where_line(e['package'])}")
         elif targets.staged_system():
             left.append(e)          # added, but this computer has not restarted into it yet
         else:

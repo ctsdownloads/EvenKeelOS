@@ -18,6 +18,7 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/evenkeel-os-packages`, `evenkeel_os_packages/`, `evenkeel-os-box-run`, `evenkeel-os-hwrules` | **Install Package File**, **Remove Apps**, **Repair App Boxes**, **Start Apps at Login**, and their helpers |
 | `build_files/evenkeel-os-tools`, `-admin`, `-safe` | **System Tools** and its two root helpers |
 | `build_files/evenkeel-os-updates-pause-check`, `50-evenkeel-os-pause.conf` | Skips automatic updates during the pause after an undo |
+| `build_files/greenboot/`, `evenkeel-os-rolled-back.desktop` | Automatic rollback: greenboot's start-up checks (login screen, networking, the rollback test), and the note and update pause after a rollback |
 | `build_files/evenkeel-os-codecs`, `-setup`, `-admin`, `-lib.sh`, `rpmfusion-*.repo` | **Install Media Codecs** and its helpers |
 | `build_files/*.policy`, `*.rules` | polkit actions and the narrow no-password rules |
 | `build_files/*.gschema.override`, `*.dconf`, `gnome-mimeapps.list`, `xdg-terminals.list`, `60-evenkeel-os-mic.conf` | Desktop defaults |

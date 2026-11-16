@@ -59,6 +59,14 @@ To go back to the previous version, use **Undo the last update** in
 `rpm-ostree rollback` and restart. Undo in System Tools also pauses automatic
 updates for 3 days; `rpm-ostree rollback` and the boot menu don't.
 
+**Automatic rollback.** If a new version doesn't start properly 3 times in a
+row (the login screen or networking doesn't start), the computer goes back to
+the previous version by itself, says so at the next login, and pauses
+automatic updates for 3 days. Being offline never counts as a failure. It works
+on computers installed from a live USB made after it was added (November 2026):
+the boot menu's counter is set up only at install. **Test automatic rollback**
+in [System Tools](system-tools.md#system-tools) checks it.
+
 Next automatic update: `systemctl list-timers uupd.timer`.
 
 ### Checking that updates are real

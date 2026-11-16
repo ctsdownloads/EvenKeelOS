@@ -27,6 +27,8 @@ ok "Firefox: About says Mozilla Firefox"          "grep -qx \"about=Mozilla Fire
 ok "fastfetch logo is the approved one"           "[ \"\$(sha256sum /usr/share/evenkeel-os/fastfetch-logo.txt | cut -d\" \" -f1)\" = \"\$LOGO_SUM\" ]"
 ok "fastfetch shows the EvenKeelOS logo"         "out=\$(fastfetch --pipe false -s OS 2>&1); printf %s \"\$out\" | grep -qF _____________________ && printf %s \"\$out\" | grep -qF EvenKeelOS"
 ok "no Fedora logo package"                       "! rpm -q fedora-logos"
+ok "automatic rollback (greenboot) on"            "systemctl -q is-enabled greenboot-healthcheck.service && grep -q boot_counter /usr/lib/bootupd/grub2-static/configs.d/08_greenboot.cfg"
+ok "no greenboot check that fails offline"        "! rpm -q greenboot-default-health-checks"
 for a in $APPS; do ok "default app installed: $a" "rpm -q $a"; done
 ok "Flathub apps listed: Errands, Shortwave, Podcasts, Pika Backup (no Secrets)" "( for i in io.github.mrvladus.List de.haeckerfelix.Shortwave org.gnome.Podcasts org.gnome.World.PikaBackup; do grep -qx \$i /usr/share/evenkeel-os/flathub-apps.txt || exit 1; done; ! grep -qi secrets /usr/share/evenkeel-os/flathub-apps.txt )"
 ok "Flathub apps install at first start (service on)" "[ \"\$(systemctl is-enabled evenkeel-os-flatpak-apps.service)\" = enabled ]"

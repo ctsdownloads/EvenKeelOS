@@ -59,12 +59,13 @@ can't change, so it stays working.
 | Base | [Fedora Silverblue 45](https://fedoraproject.org/atomic-desktops/silverblue/), with Fedora's logos and release packages replaced by the generic ones |
 | Packages | firefox, v4l-utils, xdg-terminal-exec, and the Bluefin packages in [`build_files/bluefin-packages.txt`](build_files/bluefin-packages.txt) |
 | Updates | Automatic with `uupd`: system, Flatpaks, app boxes and Homebrew, paused for 3 days after an undo. See [Updating and rolling back](docs/install.md#updating-and-rolling-back) |
+| Automatic rollback | [greenboot](https://github.com/fedora-iot/greenboot-rs): if a new version doesn't start properly 3 times (login screen or networking), the computer goes back to the previous one by itself and says so. Offline never counts. New installs only. Test it in System Tools |
 | Homebrew and ujust | As on Bluefin, for terminal users |
 | Services on by default | Fedora's defaults, plus Tailscale (idle until you sign in) and Podman's container auto-updates, as on Bluefin |
 | Codecs | Not included (patents). The [setup checklist](docs/install.md#first-login) and **Install Media Codecs** offer them, with no password for an admin. See [Media codecs](docs/building.md#media-codecs) |
 | Apps from .rpm and .deb files | **Install Package File** puts them in a box; **Remove Apps** takes them out. See [Apps from .rpm and .deb files](docs/apps.md#apps-from-rpm-and-deb-files) |
 | Flathub | Added on first boot; Fedora's own Flathub entry is removed |
-| System Tools | Firmware, disk unlock, free space, BIOS settings, automatic updates, undo the last update, problem details, the setup checklist, and the desktop layout. See [System Tools](docs/system-tools.md#system-tools) |
+| System Tools | Firmware, disk unlock, free space, BIOS settings, automatic updates, undo the last update, problem details, the setup checklist, the desktop layout, and the automatic rollback test. See [System Tools](docs/system-tools.md#system-tools) |
 | Desktop | Minimize and maximize buttons, no hot corner, battery percentage shown |
 | Dock | Firefox, Calendar, Files, Bazaar and Text Editor |
 | Logo Menu | The [Logo Menu](https://github.com/Aryan20/Logomenu) extension on the top-left logo: About My System, Activities, App Grid, Bazaar, Resources, Ghostty, Extensions |

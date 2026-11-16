@@ -168,6 +168,15 @@ def install(c):
         *[f"--karg={k}" for k in kargs], f"--boot-mount-spec=UUID={boot_uuid}",
         f"--source-imgref=containers-storage:{IMAGE}", f"--target-imgref={IMAGE}", TARGET,
         problem="Copying EvenKeelOS to the disk failed.")
+    # greenboot's counter reaches the boot menu only here, at install; without it there's no automatic rollback.
+    try:
+        with open(f"{TARGET}/boot/grub2/grub.cfg") as f:
+            counting = "boot_counter" in f.read()
+    except OSError as e:
+        counting = False
+        log(f"the boot menu couldn't be read: {e}")
+    log("boot menu has the rollback counter" if counting else "WARNING: boot menu has no rollback counter; "
+        "automatic rollback won't work on this install")
 
     say(progress=0.85, step="Setting up the new system")
     configure(c, keymap)
