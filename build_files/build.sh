@@ -56,6 +56,18 @@ install -Dm755 /ctx/evenkeel-os-tools-admin /usr/libexec/evenkeel-os-tools-admin
 install -Dm644 /ctx/io.github.ctsdownloads.evenkeel-os.tools.policy /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.tools.policy
 # Harmless System Tools jobs need no password for an admin at the computer.
 install -Dm755 /ctx/evenkeel-os-tools-safe /usr/libexec/evenkeel-os-tools-safe
+# Automatic updates pause for 3 days after an undo; System Update itself is never paused.
+install -Dm755 /ctx/evenkeel-os-updates-pause-check /usr/libexec/evenkeel-os-updates-pause-check
+install -Dm644 /ctx/50-evenkeel-os-pause.conf /usr/lib/systemd/system/uupd.service.d/50-evenkeel-os-pause.conf
+grep -qx 'ExecCondition=/usr/libexec/evenkeel-os-updates-pause-check' /usr/lib/systemd/system/uupd.service.d/50-evenkeel-os-pause.conf || { echo "ERROR: automatic updates do not check for a pause"; exit 1; }
+[ ! -e /usr/lib/systemd/system/uupd-manual.service.d ] || { echo "ERROR: System Update's own run has a drop-in; check it is not paused"; exit 1; }
+pause=/var/lib/evenkeel-os/updates-paused-until
+mkdir -p "${pause%/*}"
+echo $(( $(date +%s) + 3600 )) > "$pause"
+! /usr/libexec/evenkeel-os-updates-pause-check || { echo "ERROR: a pause does not stop automatic updates"; exit 1; }
+echo $(( $(date +%s) - 1 )) > "$pause"
+/usr/libexec/evenkeel-os-updates-pause-check && [ ! -e "$pause" ] || { echo "ERROR: an ended pause is not cleared"; exit 1; }
+rmdir --ignore-fail-on-non-empty "${pause%/*}"
 install -Dm644 /ctx/50-evenkeel-os-tools.rules /usr/share/polkit-1/rules.d/50-evenkeel-os-tools.rules
 python3 -c 'import xml.dom.minidom,sys; [xml.dom.minidom.parse(f) for f in sys.argv[1:]]' \
   /ctx/io.github.ctsdownloads.evenkeel-os.tools.policy /ctx/io.github.ctsdownloads.evenkeel-os.codecs.policy \

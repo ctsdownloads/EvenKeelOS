@@ -36,6 +36,7 @@ LAYOUTS = {"current": "the standard layout: a top bar and the logo menu",
 CACHE = Path.home() / ".cache" / "evenkeel-os"
 LOG = CACHE / "tools.log"
 DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
+PAUSE = Path("/var/lib/evenkeel-os/updates-paused-until")      # set by evenkeel-os-tools-safe after an undo
 STATE = Path(os.environ.get("XDG_STATE_HOME") or Path.home() / ".local" / "state") / "evenkeel-os"
 SETUP_SHOWN = STATE / "setup-shown"      # the setup checklist has opened at login once
 CODECS_ASKED = STATE / "codecs-asked"    # from the old codecs first-login question
@@ -126,6 +127,32 @@ def secure_boot_on():
 def updates_on():
     r = output(["systemctl", "is-enabled", "uupd.timer"])
     return bool(r) and r.stdout.strip() == "enabled"
+
+
+def paused_until():
+    """When an undo's pause on automatic updates ends, or None when there is none."""
+    try:
+        until = int(PAUSE.read_text())
+    except (OSError, ValueError):
+        return None
+    return until if until > time.time() else None
+
+
+def day(t):
+    return time.strftime("%A, %B %-d", time.localtime(t))
+
+
+def pause_updates(w):
+    """After an undo: pause automatic updates, so the next one doesn't bring the update straight back."""
+    if not updates_on():
+        return ""
+    run("Pausing automatic updates.", ["pkexec", SAFE, "updates", "pause"], title=w)
+    until = paused_until()
+    if not until:
+        return ("Automatic updates could not be paused, so the next one may bring the update back. If it does, turn "
+                "off Automatic updates in System Tools and tell your helper.")
+    return (f"Automatic updates are paused until {day(until)}, so the bad update doesn't come back. They turn back on "
+            "by themselves.")
 
 
 # ---------------------------------------------------------------- tools
@@ -283,20 +310,35 @@ def bios():
 
 def updates():
     w = "Automatic updates"
-    if updates_on():
+    off = ("Turning off automatic updates.", ["pkexec", ADMIN, "updates", "off"],
+           "Automatic updates are off. Run System Update yourself to update.")
+    until = paused_until() if updates_on() else None
+    if until:
+        answer = ask(f"Automatic updates are paused until {day(until)}, after an undo, so the bad update doesn't "
+                     "come back. They turn back on by themselves.\n\nRecommended: Keep the pause.\n\nOr Resume now: "
+                     "the next daily update runs as normal. Or Turn off: nothing updates until you run System Update "
+                     "yourself.", ok="Resume now", cancel="Keep the pause", extra="Turn off", title=w)
+        if answer == "ok":
+            step, cmd, text = ("Turning automatic updates back on.", ["pkexec", SAFE, "updates", "resume"],
+                               "Automatic updates are back on. The next daily update runs as normal.")
+        elif answer == "extra":
+            step, cmd, text = off
+        else:
+            return 1
+    elif updates_on():
         if ask("Automatic updates are on: everything updates by itself every day at 4 am.\n\nRecommended: Keep them "
                "on. Updates fix security problems.\n\nOr Turn off: nothing updates until you run System Update "
                "yourself.", ok="Turn off", cancel="Keep them on", title=w) != "ok":
             return 1
-        rc = run("Turning off automatic updates.", ["pkexec", ADMIN, "updates", "off"], title=w)
-        text = "Automatic updates are off. Run System Update yourself to update."
+        step, cmd, text = off
     else:
         if ask("Automatic updates are off: nothing updates until you run System Update yourself.\n\nRecommended: "
                "Turn on. Everything then updates by itself every day at 4 am, and updates fix security problems.",
                ok="Turn on", cancel="Keep them off", title=w) != "ok":
             return 1
-        rc = run("Turning on automatic updates.", ["pkexec", SAFE, "updates", "on"], title=w)
-        text = "Automatic updates are on."
+        step, cmd, text = ("Turning on automatic updates.", ["pkexec", SAFE, "updates", "on"],
+                           "Automatic updates are on.")
+    rc = run(step, cmd, title=w)
     if rc == 0:
         say(text, title=w)
         return 0
@@ -332,8 +374,9 @@ def undo_update():
         return 1
     booted = next((d for d in ds if d.get("booted")), None)
     staged = next((d for d in ds if d.get("staged")), None)
-    later = ("\n\nThe next automatic update puts the newest version back. If the problem comes back, turn off "
-             "Automatic updates in System Tools and tell your helper.")
+    later = ("\n\nAutomatic updates then pause for 3 days, so the bad update doesn't come straight back. If the "
+             "problem returns after that, turn off Automatic updates in System Tools and tell your helper."
+             if updates_on() else "")
     if staged:
         # An update is downloaded but not in use yet: the version running now is not the new one.
         if ask(f"An update from {when(staged)} is waiting. It starts at your next restart. The version you're using "
@@ -345,7 +388,8 @@ def undo_update():
         if rc != 0:
             say(f"It didn't work, and nothing was changed.\n\nThe details are in {LOG}", "warning", title=w)
             return 1
-        say("Done. Your computer keeps the version it has now.", title=w)
+        note = pause_updates(w)
+        say("Done. Your computer keeps the version it has now." + (f"\n\n{note}" if note else ""), title=w)
         return 0
     if booted is not None and ds and ds[0] is not booted:
         if int(ds[0].get("timestamp", 0)) <= int(booted.get("timestamp", 0)):
@@ -366,15 +410,20 @@ def undo_update():
         # After an undo: the other version on disk is the newer one.
         if ask(f"You're using an earlier version, from {when(booted)}, after an undo. The newer one, from "
                f"{when(older)}, is still on this computer.\n\nIf the problem is fixed or you want it back: Use the "
-               f"newer version. It starts at your next restart.\n\nOr Cancel: the next update brings back the "
-               f"newest version anyway.", ok="Use the newer version", title=w) != "ok":
+               f"newer version. It starts at your next restart.\n\nOr Cancel: the newer version comes back with "
+               f"the next update after the pause.", ok="Use the newer version", title=w) != "ok":
             return 1
         rc = run("Setting the newer version to start next time.", ["rpm-ostree", "rollback"], title=w)
         if rc != 0:
             say("The administrator password wasn't given, so nothing was changed." if rc in (126, 127) else
                 f"It didn't work, and nothing was changed.\n\nThe details are in {LOG}", "warning", title=w)
             return 1
-        offer_restart(f"Done. The version from {when(older)} starts at your next restart.")
+        back = ""
+        if paused_until():
+            run("Turning automatic updates back on.", ["pkexec", SAFE, "updates", "resume"], title=w)
+            back = ("Automatic updates are still paused after the undo. Resume them in Automatic updates."
+                    if paused_until() else "Automatic updates are back on.")
+        offer_restart(f"Done. The version from {when(older)} starts at your next restart.", back)
         return 0
     if ask(f"The version you're using now is from {when(booted) if booted else 'the last update'}. The one from "
            f"before it, from {when(older)}, is still on this computer.\n\nIf something stopped working after the last "
@@ -386,7 +435,7 @@ def undo_update():
         say("The administrator password wasn't given, so nothing was changed." if rc in (126, 127) else
             f"It didn't work, and nothing was changed.\n\nThe details are in {LOG}", "warning", title=w)
         return 1
-    offer_restart(f"Done. The version from {when(older)} starts at your next restart.")
+    offer_restart(f"Done. The version from {when(older)} starts at your next restart.", pause_updates(w))
     return 0
 
 
