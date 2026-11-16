@@ -8,6 +8,8 @@ application-shortcuts=[{'id': 'org.gnome.Settings.desktop'}, {'id': 'evenkeel-os
 update-notifier-enabled=false
 
 [org/gnome/shell/extensions/dash-to-panel]
+# Start on the desktop, not the overview, like Windows.
+hide-overview-on-startup=true
 # The first four screens; the bar's own app-grid button is hidden.
 stockgs-keep-top-panel=false
 show-favorites=true

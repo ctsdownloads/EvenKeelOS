@@ -111,8 +111,8 @@ open-at-login setting (Discord) is pointed at its box.
 **Remove Apps** lists what Install Package File installed, with each box's size.
 **Remove** takes out the app, its entry and any rule it added. When a box is
 left empty, it recommends **Delete the box**; **Keep it** saves setup time. A
-Flathub app removed another way (Bazaar, the command line) is left off the list,
-and an app that's already gone just comes off it. The record is
+Flathub app or system app removed another way (Bazaar, `rpm-ostree uninstall`)
+is left off the list, and an app that's already gone just comes off it. The record is
 `~/.local/share/evenkeel-os/apps.json`.
 
 ### Repairing a box
