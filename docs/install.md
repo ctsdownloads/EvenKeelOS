@@ -59,11 +59,12 @@ To go back to the previous version, use **Undo the last update** in
 `rpm-ostree rollback` and restart. Undo in System Tools also pauses automatic
 updates for 3 days; `rpm-ostree rollback` and the boot menu don't.
 
-**Automatic rollback.** If a new version doesn't start properly 3 times in a
-row, the computer goes back to the previous version by itself, says so at the
-next login, and pauses automatic updates for 3 days. A start counts as bad when
-the login screen or networking doesn't start within 3 minutes, when it freezes
-or hangs before the checks finish (turning it off and on counts), or, for a new
+**Automatic rollback.** If a new version fails 4 starts in a row, the computer
+goes back to the previous version by itself, says so at the next login, and
+pauses automatic updates for 3 days. A start counts as bad when the login
+screen or networking fails or doesn't start within 3 minutes, when it freezes
+or hangs before the checks finish (turning it off and on counts, from the first
+start of a new version), or, for a new
 version, when a login doesn't reach a working desktop (no desktop after a
 minute, or two logins that end within a minute: a login loop). Being offline,
 or nobody logging in, never counts as a failure. Not caught: a freeze long

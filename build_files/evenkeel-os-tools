@@ -632,24 +632,53 @@ def layout():
     return 0
 
 
-# What each test breaks, and what you see; the breaking is in build_files/greenboot.
+# What each test breaks, and what you see. Kinds match TEST_KINDS in evenkeel-os-tools-admin, in order; the
+# breaking is in build_files/greenboot (check-rollback-tests.py checks both at build time).
+# In every test the computer fails 4 starts in a row (the counter starts at 3), then goes back by itself.
 ROLLBACK_TESTS = [
-    ("quick", "Quick test", "A start-up check fails. It restarts by itself 3 times, then comes back."),
-    ("no-login-screen", "No login screen", "The login screen fails. After about 3 minutes of no login screen it "
-                                           "restarts by itself, 3 times, then comes back."),
-    ("no-networking", "No networking", "Networking fails. After about 3 minutes it restarts by itself, 3 times, "
-                                       "then comes back."),
-    ("stuck", "Stuck while starting", "Starting hangs before the login screen. After about 3 minutes it restarts "
-                                      "by itself, 3 times, then comes back."),
-    ("login-loop", "Login loop", "Logging in drops you back at the login screen. Log in again; after the second "
-                                 "try it restarts by itself. After 3 rounds of that it comes back."),
-    ("freeze", "Freeze", "The computer locks up about 20 seconds after the login screen shows. Hold the power "
-                         "button until it turns off, then turn it on. After the third freeze it comes back."),
+    ("quick", "Quick test", "A start-up check fails on purpose. The computer restarts by itself within seconds, "
+                            "4 times in a row, then comes back to this version."),
+    ("no-login-screen", "No login screen", "The login screen fails to start, so you never see it. The computer "
+                                           "restarts by itself within seconds, 4 times in a row, then comes back."),
+    ("no-networking", "No networking", "Networking fails to start. The computer restarts by itself within "
+                                       "seconds, usually before the login screen shows, 4 times in a row, then "
+                                       "comes back."),
+    ("stuck", "Stuck while starting", "Starting hangs on the startup screen and the login screen never shows. "
+                                      "After 3 minutes the computer restarts by itself. That happens 4 times "
+                                      "(about 13 minutes), then it comes back."),
+    ("login-loop", "Login loop", "The login screen works, but logging in drops you back to it. Log in a second "
+                                 "time; after the second drop the computer restarts by itself. Do that on each of "
+                                 "4 starts, then it comes back."),
+    ("freeze", "Freeze", "About 20 seconds after the login screen shows, the computer locks up. Hold the power "
+                         "button until it turns off, then turn it on. After the 4th freeze it comes back by "
+                         "itself."),
 ]
+
+
+def running_test():
+    """The test this start is running (its kernel argument), or None."""
+    for arg in Path("/proc/cmdline").read_text().split():
+        if arg.startswith("evenkeel_os.test_rollback="):
+            return arg.split("=", 1)[1]
+    return None
 
 
 def test_rollback():
     w = "Test automatic rollback"
+    kind = running_test()
+    if kind:
+        name = next((t for k, t, _ in ROLLBACK_TESTS if k == kind), kind)
+        if ask(f"This computer is running a test copy ({name}) as its normal version, so a new test can't start "
+               "from it.\n\nRecommended: Remove the test marker. The version without it starts at your next "
+               "restart. Needs your password.", ok="Remove the test marker", title=w) != "ok":
+            return 1
+        rc = run("Removing the test marker.", ["pkexec", ADMIN, "test-rollback", "clear"], title=w)
+        if rc != 0:
+            say("The administrator password wasn't given, so nothing was changed." if rc in (126, 127) else
+                f"It didn't work, and nothing was changed.\n\nThe details are in {LOG}", "warning", title=w)
+            return 1
+        offer_restart("The test marker is removed. The version without it starts at your next restart.")
+        return 0
     i = choose("Pick the problem to test. A test copy of this version is made with that problem, and starts at "
                "your next restart. Your computer should then go back to the version you're using now by itself.",
                ["Problem", "What you'll see"], [(t, see) for _, t, see in ROLLBACK_TESTS], width=760, height=460)
@@ -669,6 +698,10 @@ def test_rollback():
         return 1
     if rc == 5:
         say("An update is waiting for a restart. Restart first, then run the test.", title=w)
+        return 1
+    if rc == 6:
+        say("This computer is running a test copy. Open Test automatic rollback again to remove its marker.",
+            "warning", title=w)
         return 1
     if rc != 0:
         say("The administrator password wasn't given, so nothing was changed." if rc in (126, 127) else

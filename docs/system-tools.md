@@ -48,13 +48,14 @@ starting**, **Login loop**, or **Freeze** (a kernel crash at the login screen;
 you turn it off and on). It makes a test copy of the running version with that
 problem (`rpm-ostree kargs --append=evenkeel_os.test_rollback=KIND`; nothing
 breaks without that kernel argument). At the restart the test copy really
-breaks, the computer restarts (or you do, for the freeze) until it goes back to
-the version it had, removes the test copy and says the test worked. The test
-copy takes the place of the earlier version kept for Undo, so Undo has nothing
-to go back to until the next update. Needs the admin password, and a computer
-installed from a newer live USB (see
-[Automatic rollback](install.md#updating-and-rolling-back)). Stuck test copy:
-pick the other entry in the boot menu, then `rpm-ostree cleanup -r`.
+breaks: 4 bad starts in a row (each picked test says what you'll see), then the
+computer goes back to the version it had, removes the test copy and says the
+test worked. The test copy takes the place of the earlier version kept for
+Undo, so Undo has nothing to go back to until the next update. Needs the admin
+password, and a computer installed from a newer live USB (see
+[Automatic rollback](install.md#updating-and-rolling-back)). If the computer is
+still running a test copy, the tool offers to remove its marker instead
+(`rpm-ostree kargs --delete=evenkeel_os.test_rollback=KIND`).
 
 **Save problem details.** Saves `problem-details-<date>.txt` to Documents:
 system version and hardware, recent warnings and errors, the last 3 days of

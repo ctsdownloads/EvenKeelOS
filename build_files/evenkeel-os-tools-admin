@@ -5,7 +5,9 @@
   evenkeel-os-tools-admin disk-unlock on|off      (the disk password on standard input)
   evenkeel-os-tools-admin disk-unlock check
   evenkeel-os-tools-admin test-rollback KIND      KIND: quick, no-login-screen, no-networking, stuck, login-loop, freeze
-                                                  (exit 4: installed before greenboot, 5: an update is waiting)
+                                                  (exit 4: installed before greenboot, 5: an update is waiting,
+                                                  6: this start is a test copy)
+  evenkeel-os-tools-admin test-rollback clear     take the test marker off the version running now
 """
 import json
 import os
@@ -110,6 +112,21 @@ def disk_unlock(state):
 TEST_KINDS = ("quick", "no-login-screen", "no-networking", "stuck", "login-loop", "freeze")
 
 
+def running_test():
+    """The test this start is running (its kernel argument), or None."""
+    for arg in Path("/proc/cmdline").read_text().split():
+        if arg.startswith("evenkeel_os.test_rollback="):
+            return arg.split("=", 1)[1]
+    return None
+
+
+def test_rollback_clear():
+    kind = running_test()
+    if kind is None:
+        fail("This start isn't a test copy.")
+    sys.exit(subprocess.run(["rpm-ostree", "kargs", f"--delete=evenkeel_os.test_rollback={kind}"]).returncode)
+
+
 def test_rollback(kind):
     """A copy of the running version that breaks on purpose (see build_files/greenboot), for the next restart."""
     if subprocess.run(["systemctl", "-q", "is-enabled", "greenboot-healthcheck.service"]).returncode != 0:
@@ -120,6 +137,8 @@ def test_rollback(kind):
         counting = False
     if not counting:
         fail("The boot menu has no rollback counter: this computer was installed before automatic rollback.", 4)
+    if running_test():
+        fail("This start is a test copy; take its test marker off first.", 6)
     try:
         ds = json.loads(subprocess.run(["rpm-ostree", "status", "--json"], capture_output=True, text=True,
                                        check=True).stdout)["deployments"]
@@ -139,6 +158,8 @@ def main(argv):
         disk_unlock_check()
     elif len(argv) == 3 and argv[1] == "disk-unlock" and argv[2] in ("on", "off"):
         disk_unlock(argv[2])
+    elif argv[1:] == ["test-rollback", "clear"]:
+        test_rollback_clear()
     elif len(argv) == 3 and argv[1] == "test-rollback" and argv[2] in TEST_KINDS:
         test_rollback(argv[2])
     else:
