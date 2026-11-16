@@ -50,9 +50,10 @@ problem (`rpm-ostree kargs --append=evenkeel_os.test_rollback=KIND`; nothing
 breaks without that kernel argument). At the restart the test copy really
 breaks: 2 bad starts in a row (each picked test says what you'll see), then the
 computer goes back to the version it had, removes the test copy and says the
-test worked. The test copy takes the place of the earlier version kept for
-Undo, so Undo has nothing to go back to until the next update. Needs the admin
-password, and a computer installed from a newer live USB (see
+test worked at the next login (after every rollback, not just the first). The
+test copy takes the place of the earlier version kept for Undo, so Undo has
+nothing to go back to until the next update. Needs the admin password, and a
+computer installed from a newer live USB (see
 [Automatic rollback](install.md#updating-and-rolling-back)). If the computer is
 still running a test copy, the tool offers to remove its marker instead
 (`rpm-ostree kargs --delete=evenkeel_os.test_rollback=KIND`).

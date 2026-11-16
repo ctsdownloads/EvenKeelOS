@@ -15,11 +15,12 @@ if grub2-editenv /boot/grub2/grubenv list | grep -qx 'boot_counter=-1' \
 fi
 [ "$rolled" = 1 ] || exit 0
 mkdir -p "${note%/*}"
+# >| replaces an earlier note: greenboot runs this with noclobber, so > fails once a note exists.
 if grep -qs 'evenkeel_os.test_rollback=' /boot/loader/entries/*.conf; then
   rpm-ostree cleanup -r || echo "The test copy could not be removed."
-  echo "test $(date +%s)" >"$note"
+  echo "test $(date +%s)" >|"$note"
 else
-  systemctl -q is-enabled uupd.timer && echo $(( $(date +%s) + 3 * 86400 )) >"$pause"
-  echo "update $(date +%s)" >"$note"
+  systemctl -q is-enabled uupd.timer && echo $(( $(date +%s) + 3 * 86400 )) >|"$pause"
+  echo "update $(date +%s)" >|"$note"
 fi
 chmod 644 "$note"

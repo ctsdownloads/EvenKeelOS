@@ -4,7 +4,10 @@
 The list in evenkeel-os-tools must name the same tests, in the same order, as evenkeel-os-tools-admin accepts, each
 under its own name; each test's breaking piece must be in the image; and evenkeel-os-test-fail must fail only for its
 own test.
+Also: a later rollback's note replaces an earlier one, no test piece makes greenboot wait for the login screen, and
+the login-loop check reads the logind records it depends on.
 """
+import re
 import ast
 import subprocess
 import sys
@@ -33,6 +36,37 @@ def assigned(path, name):
         if isinstance(node, ast.Assign) and any(getattr(t, "id", None) == name for t in node.targets):
             return ast.literal_eval(node.value)
     sys.exit(f"ERROR: {name} not found in {path}")
+
+
+def later_checks():
+    # greenboot runs green.d scripts with noclobber: a plain > can't replace the note of an earlier rollback.
+    rolled = Path("/usr/lib/greenboot/green.d/90-evenkeel-os-rolled-back.sh").read_text()
+    if re.search(r'(?<!>)>"\$(note|pause)"', rolled):
+        sys.exit("ERROR: 90-evenkeel-os-rolled-back.sh writes its note with > instead of >|, so only the first "
+                 "rollback ever gets a message")
+    with tempfile.TemporaryDirectory() as d:
+        old = Path(d, "note")
+        old.write_text("test 1\n")
+        rc = subprocess.run(["bash", "-C", "-c", f'echo "test 2" >|"{old}"']).returncode
+        if rc != 0 or old.read_text() != "test 2\n":
+            sys.exit("ERROR: >| doesn't replace a file under noclobber")
+    # greenboot must never wait for the login screen: the Stuck test holds the login screen forever.
+    for unit in Path("/usr/lib/systemd/system").glob("evenkeel-os-*.service"):
+        for line in unit.read_text().splitlines():
+            if line.startswith("Before=") and "greenboot-healthcheck.service" in line.split("=", 1)[1].split():
+                sys.exit(f"ERROR: {unit} makes greenboot wait for it, so a stuck start never rolls back")
+    gb = Path("/usr/lib/systemd/system/greenboot-healthcheck.service").read_text()
+    if re.search(r"^After=.*\b(display-manager|gdm)\.service", gb, re.M):
+        sys.exit("ERROR: greenboot-healthcheck waits for the login screen, so a stuck start never rolls back")
+    # The login-loop check counts logins from these logind records; a login that ends in under a second counts.
+    logind = Path("/usr/lib/systemd/systemd-logind").read_bytes()
+    desktop = Path(f"{GB}/30-evenkeel-os-desktop.sh").read_text()
+    for need in (b"MESSAGE_ID=8d45620c1a4348dbb17410da57c60c66", b"MESSAGE_ID=3354939424b4456d9802ca8333ed424a",
+                 b"CLASS=%s", b"TYPE=%s", b"SESSION_ID=%s", b"USER_ID=%s"):
+        if need not in logind:
+            sys.exit(f"ERROR: systemd-logind no longer logs {need.decode()}; update 30-evenkeel-os-desktop.sh")
+        if need.startswith(b"MESSAGE_ID") and need.split(b"=")[1].decode() not in desktop:
+            sys.exit(f"ERROR: 30-evenkeel-os-desktop.sh doesn't read the logind record {need.decode()}")
 
 
 def main():
@@ -64,7 +98,9 @@ def main():
                 want = 3 if kind == running else 0
                 if rc != want:
                     sys.exit(f"ERROR: evenkeel-os-test-fail {kind} exits {rc} while running {running}, not {want}")
-    print(f"Rollback tests: {len(listed)} listed, each reaches its breaking piece; test-fail exits 3 only for its own")
+    later_checks()
+    print(f"Rollback tests: {len(listed)} listed, each reaches its breaking piece; test-fail exits 3 only for its own; "
+          "note, start order and login records OK")
 
 
 if __name__ == "__main__":
