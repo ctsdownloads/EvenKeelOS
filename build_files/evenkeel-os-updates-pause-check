@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+# Run before each automatic update: skip it while an undo's pause is on, and drop the pause once it has ended.
+pause=/var/lib/evenkeel-os/updates-paused-until
+[ -f "$pause" ] || exit 0
+until=$(<"$pause")
+if [[ $until =~ ^[0-9]+$ ]] && [ "$(date +%s)" -lt "$until" ]; then
+  echo "Automatic updates are paused until $(date -d "@$until" '+%A, %B %-d') after an undo."
+  exit 1
+fi
+rm -f "$pause"

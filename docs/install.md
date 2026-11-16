@@ -56,7 +56,8 @@ terminal: `sudo uupd`.
 
 To go back to the previous version, use **Undo the last update** in
 [System Tools](system-tools.md#system-tools), pick it in the boot menu, or run
-`rpm-ostree rollback` and restart.
+`rpm-ostree rollback` and restart. Undo in System Tools also pauses automatic
+updates for 3 days; `rpm-ostree rollback` and the boot menu don't.
 
 Next automatic update: `systemctl list-timers uupd.timer`.
 
