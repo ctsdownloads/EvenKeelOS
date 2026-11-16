@@ -68,14 +68,14 @@ can't change, so it stays working.
 | Desktop | Minimize and maximize buttons, no hot corner, battery percentage shown |
 | Dock | Firefox, Calendar, Files, Bazaar and Text Editor |
 | Logo Menu | The [Logo Menu](https://github.com/Aryan20/Logomenu) extension on the top-left logo: About My System, Activities, App Grid, Bazaar, Resources, Ghostty, Extensions |
-| Windows-style layout | Optional, per user: a bottom bar from [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel) and a start menu from [ArcMenu](https://gitlab.com/arcmenu/ArcMenu) on the EvenKeelOS logo, opening to the app categories, with Settings, System Update and System Tools. Pick it in the installer, or switch any time in System Tools, Desktop layout (or `evenkeel-os-layout windows` / `current`), then log out and in |
+| Windows-style layout | Optional, per user: a bottom bar from [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel) and a start menu from [ArcMenu](https://gitlab.com/arcmenu/ArcMenu) on the EvenKeelOS logo, opening to the app categories, with Settings, System Update and System Tools. It opens on the desktop at login, with no overview. Pick it in the installer, or switch any time in System Tools, Desktop layout (or `evenkeel-os-layout windows` / `current`), then log out and in |
 | Terminal | [Ghostty](https://ghostty.org/), replacing Ptyxis everywhere |
 | System monitor | [Resources](https://apps.gnome.org/Resources/) from Flathub; gnome-system-monitor is kept |
 | Fingerprint | On where the laptop has a supported reader; enroll in Settings, Users. A password is still set at install |
 | Firefox | Mozilla's own home page, no Fedora tile |
 | Microphone | Starts at 50% volume; a volume you set is kept |
 | Power modes | tuned, as on Fedora, set so a power-mode switch never waits on a running update |
-| Default apps | Fedora packages in [`build_files/default-apps.txt`](build_files/default-apps.txt), plus four from Flathub on the first start with internet ([`build_files/flathub-apps.txt`](build_files/flathub-apps.txt)). No email app |
+| Default apps | Fedora packages in [`build_files/default-apps.txt`](build_files/default-apps.txt), plus five from Flathub on the first start with internet ([`build_files/flathub-apps.txt`](build_files/flathub-apps.txt)). No email app |
 | App store | [Bazaar](https://github.com/kolunmi/bazaar), replacing GNOME Software |
 | Utilities folder | Every EvenKeelOS tool, in Show Apps |
 | File types | Text files open in Text Editor, .rpm and .deb in Install Package File, Flatpak files in Bazaar |
@@ -99,7 +99,6 @@ can't change, so it stays working.
 
 ## Known limitations
 
-- Needs GNOME Shell 47 or newer on Wayland.
 - If Universal Blue's package repository goes away, builds fail and machines
   stay on the last good image.
 - If RPM Fusion falls behind a new Fedora, builds fail until it catches up.

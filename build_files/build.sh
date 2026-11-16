@@ -259,7 +259,8 @@ for k in "org.gnome.shell.extensions.arcmenu menu-layout 'arcmenu'" \
          "org.gnome.shell.extensions.arcmenu default-menu-view 'Categories_List'" \
          "org.gnome.shell.extensions.arcmenu menu-button-icon '/usr/share/evenkeel-os/logo-menu-icon.svg'" \
          "org.gnome.shell.extensions.arcmenu update-notifier-enabled false" \
-         "org.gnome.shell.extensions.dash-to-panel stockgs-keep-top-panel false"; do
+         "org.gnome.shell.extensions.dash-to-panel stockgs-keep-top-panel false" \
+         "org.gnome.shell.extensions.dash-to-panel hide-overview-on-startup true"; do
   read -r schema key want <<<"$k"
   got=$(HOME=/tmp gsettings get "$schema" "$key")
   [ "$got" = "$want" ] || { echo "ERROR: Windows layout default $schema $key is $got, not $want"; exit 1; }

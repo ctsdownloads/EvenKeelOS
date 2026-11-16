@@ -1,4 +1,5 @@
 """Spotting an app that is already installed."""
+import json
 import os
 import re
 import shlex
@@ -54,6 +55,17 @@ def compare(kind, a, b):
 def plain_version(v):
     """Version without the leading epoch and release noise people do not need to see ('0:1.2-3' -> '1.2-3')."""
     return re.sub(r"^\d+:", "", v)
+
+
+def system_requested():
+    """Package names added to the version that starts next, or None if rpm-ostree can't say."""
+    r = subprocess.run(["rpm-ostree", "status", "--json"], capture_output=True, text=True)
+    try:
+        d = json.loads(r.stdout)["deployments"][0]
+    except (ValueError, KeyError, IndexError):
+        return None
+    # local packages are listed as name-version-release.arch
+    return set(d.get("requested-packages", [])) | {n.rsplit("-", 2)[0] for n in d.get("requested-local-packages", [])}
 
 
 def flatpak_installed(app_id):

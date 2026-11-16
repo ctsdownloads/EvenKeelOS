@@ -358,12 +358,21 @@ def deployments():
         return None
 
 
-def when(d):
-    """A version's date in plain words ("Oct 14"), from its build time."""
+def built(d):
     try:
-        return time.strftime("%b %-d", time.localtime(int(d["timestamp"])))
+        return time.localtime(int(d["timestamp"]))
     except (KeyError, ValueError, TypeError):
+        return None
+
+
+def when(d, other=None):
+    """A version's date in plain words ("Oct 14"), with the time ("Oct 14, 1:03 AM") if `other` is from that day too."""
+    t = built(d)
+    if t is None:
         return "an earlier date"
+    o = built(other) if other is not None else None
+    same_day = o is not None and t[:3] == o[:3]
+    return time.strftime("%b %-d, %-I:%M %p" if same_day else "%b %-d", t)
 
 
 def undo_update():
@@ -379,9 +388,9 @@ def undo_update():
              if updates_on() else "")
     if staged:
         # An update is downloaded but not in use yet: the version running now is not the new one.
-        if ask(f"An update from {when(staged)} is waiting. It starts at your next restart. The version you're using "
-               f"now is from {when(booted) if booted else 'before it'}.\n\nIf you don't want it: Don't use it. Your "
-               f"computer keeps the version it has now.\n\nOr Keep it." + later,
+        if ask(f"An update from {when(staged, booted)} is waiting. It starts at your next restart. The version you're "
+               f"using now is from {when(booted, staged) if booted else 'before it'}.\n\nIf you don't want it: Don't "
+               f"use it. Your computer keeps the version it has now." + later + "\n\nOr Keep it.",
                ok="Don't use it", cancel="Keep it", title=w) != "ok":
             return 1
         rc = run("Removing the waiting update.", ["rpm-ostree", "cleanup", "-p"], title=w)
@@ -394,12 +403,12 @@ def undo_update():
     if booted is not None and ds and ds[0] is not booted:
         if int(ds[0].get("timestamp", 0)) <= int(booted.get("timestamp", 0)):
             # An earlier undo: the older version is set to start next time.
-            offer_restart(f"It's already set: the version from {when(ds[0])} starts at your next restart.")
+            offer_restart(f"It's already set: the version from {when(ds[0], booted)} starts at your next restart.")
         else:
             # Started from the boot menu on the older version: the newer one is still the one that starts.
-            say(f"You're using the version from {when(booted)}, picked when the computer started. At your next "
-                f"restart the newer version, from {when(ds[0])}, starts again.\n\nTo stay on this one, pick it again "
-                f"when the computer starts, and tell your helper.", title=w)
+            say(f"You're using the version from {when(booted, ds[0])}, picked when the computer started. At your "
+                f"next restart the newer version, from {when(ds[0], booted)}, starts again.\n\nTo stay on this one, "
+                f"pick it again when the computer starts, and tell your helper.", title=w)
         return 0
     older = next((d for d in ds if not d.get("booted") and not d.get("staged")), None)
     if older is None:
@@ -408,10 +417,10 @@ def undo_update():
         return 0
     if booted is not None and int(older.get("timestamp", 0)) > int(booted.get("timestamp", 0)):
         # After an undo: the other version on disk is the newer one.
-        if ask(f"You're using an earlier version, from {when(booted)}, after an undo. The newer one, from "
-               f"{when(older)}, is still on this computer.\n\nIf the problem is fixed or you want it back: Use the "
-               f"newer version. It starts at your next restart.\n\nOr Cancel: the newer version comes back with "
-               f"the next update after the pause.", ok="Use the newer version", title=w) != "ok":
+        if ask(f"You're using an earlier version, from {when(booted, older)}, after an undo. The newer one, from "
+               f"{when(older, booted)}, is still on this computer.\n\nIf the problem is fixed or you want it back: "
+               f"Use the newer version. It starts at your next restart.\n\nOr Cancel: the newer version comes back "
+               f"with the next update after the pause.", ok="Use the newer version", title=w) != "ok":
             return 1
         rc = run("Setting the newer version to start next time.", ["rpm-ostree", "rollback"], title=w)
         if rc != 0:
@@ -423,19 +432,20 @@ def undo_update():
             run("Turning automatic updates back on.", ["pkexec", SAFE, "updates", "resume"], title=w)
             back = ("Automatic updates are still paused after the undo. Resume them in Automatic updates."
                     if paused_until() else "Automatic updates are back on.")
-        offer_restart(f"Done. The version from {when(older)} starts at your next restart.", back)
+        offer_restart(f"Done. The version from {when(older, booted)} starts at your next restart.", back)
         return 0
-    if ask(f"The version you're using now is from {when(booted) if booted else 'the last update'}. The one from "
-           f"before it, from {when(older)}, is still on this computer.\n\nIf something stopped working after the last "
-           f"update: Undo the update. The version from {when(older)} starts at your next restart. Your files and "
-           f"your apps aren't touched.\n\nOr Cancel." + later, ok="Undo the update", title=w) != "ok":
+    if ask(f"The version you're using now is from {when(booted, older) if booted else 'the last update'}. The one "
+           f"from before it, from {when(older, booted)}, is still on this computer.\n\nIf something stopped working "
+           f"after the last update: Undo the update. The version from {when(older, booted)} starts at your next "
+           f"restart. Your files and your apps aren't touched." + later + "\n\nOr Cancel.",
+           ok="Undo the update", title=w) != "ok":
         return 1
     rc = run("Setting the earlier version to start next time.", ["rpm-ostree", "rollback"], title=w)
     if rc != 0:
         say("The administrator password wasn't given, so nothing was changed." if rc in (126, 127) else
             f"It didn't work, and nothing was changed.\n\nThe details are in {LOG}", "warning", title=w)
         return 1
-    offer_restart(f"Done. The version from {when(older)} starts at your next restart.", pause_updates(w))
+    offer_restart(f"Done. The version from {when(older, booted)} starts at your next restart.", pause_updates(w))
     return 0
 
 

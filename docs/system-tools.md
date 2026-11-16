@@ -16,7 +16,7 @@
 | Undo the last update | Goes back to the version before the last update |
 | Save problem details | Saves recent errors to one file to email your helper |
 | Setup checklist | Codecs, disk unlock and apps. See [First login](install.md#first-login) |
-| Desktop layout | Switches between the standard top bar and the Windows-style bottom bar and start menu. Log out and back in to see it |
+| Desktop layout | Switches between the standard top bar and the Windows-style bottom bar and start menu, which opens on the desktop at login. Log out and back in to see it |
 
 **Passwords.** No password for an admin at the computer: automatic updates on,
 the pause after an undo and resuming it, disk unlock (it asks the disk password
@@ -34,8 +34,8 @@ Desktop layout changes only your own desktop, so it never asks.
   the disk password is asked again. Turn it back on in System Tools.
 
 **Undo the last update.** Sets the previous version to start next time (like
-`rpm-ostree rollback`). A downloaded update waiting for a restart can be dropped
-with **Don't use it**. After an undo, **Use the newer version** goes forward
+`rpm-ostree rollback`). Versions from the same day show the time too. A
+downloaded update waiting for a restart can be dropped with **Don't use it**. After an undo, **Use the newer version** goes forward
 again. An undo (or **Don't use it**) pauses automatic updates for 3 days, so the
 bad update doesn't come straight back; they turn back on by themselves. System
 Update still works by hand. If the problem returns after the pause, turn off

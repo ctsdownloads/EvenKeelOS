@@ -8,10 +8,14 @@ from evenkeel_os_packages import (
 
 def remove():
     records = app_list.load()
-    # Flathub apps removed another way (Bazaar, the command line) come off the list.
-    gone = [r for r in records if r["where"] == "flathub" and not installed.flatpak_installed(r["package"])]
+    # Apps removed another way (Bazaar, the command line) come off the list.
+    asked = installed.system_requested()
+    gone = [r for r in records
+            if (r["where"] == "flathub" and not installed.flatpak_installed(r["package"]))
+            or (r["where"] == "system" and asked is not None and r["package"] not in asked)]
     for r in gone:
         app_list.forget(r)
+        after_restart.drop_pending(r["package"])
     records = [r for r in records if r not in gone]
     if not records:
         say("Nothing has been installed with Install Package File yet.")
