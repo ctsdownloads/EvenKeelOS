@@ -116,6 +116,23 @@ for u in tailscaled.service uupd.timer brew-setup.service; do [ "$(systemctl is-
 bash /ctx/rebrand.sh
 # Automatic rollback: greenboot with our own checks. Fedora's default checks fail offline, so they stay out.
 dnf5 -y install greenboot
+# 2 bad starts in a row, then back to the previous version (greenboot's default is 4).
+sed -i 's/^GREENBOOT_MAX_BOOT_ATTEMPTS=.*/GREENBOOT_MAX_BOOT_ATTEMPTS=1/' /etc/greenboot/greenboot.conf
+grep -qx 'GREENBOOT_MAX_BOOT_ATTEMPTS=1' /etc/greenboot/greenboot.conf || { echo "ERROR: greenboot's retry count isn't 1"; exit 1; }
+# greenboot's boot menu file has no final line break, and bootupd joins the files without one, so its last command
+# ran into the next line and the counter never counted; give it the line break.
+gbcfg=/usr/lib/bootupd/grub2-static/configs.d/08_greenboot.cfg
+[ -z "$(tail -c1 "$gbcfg")" ] || echo >>"$gbcfg"
+# Build the boot menu the way bootupd does at install, and check it.
+menu=$(mktemp)
+{ cat /usr/lib/bootupd/grub2-static/grub-static-pre.cfg
+  for f in /usr/lib/bootupd/grub2-static/configs.d/*.cfg; do
+    printf '\n### BEGIN %s ###\n' "${f##*/}"; cat "$f"; printf '### END %s ###\n' "${f##*/}"
+  done; } >"$menu"
+grep -q '[^[:space:]]### END' "$menu" && { echo "ERROR: a boot menu file runs into the next one"; exit 1; }
+grep -qx 'save_env boot_success' "$menu" || { echo "ERROR: the boot menu doesn't save boot_success"; exit 1; }
+grub2-script-check "$menu" || { echo "ERROR: the boot menu bootupd would write fails GRUB's syntax check"; exit 1; }
+rm -f "$menu"
 ! rpm -q greenboot-default-health-checks >/dev/null || { echo "ERROR: Fedora's default greenboot checks are installed; they fail offline"; exit 1; }
 install -Dm755 -t /usr/lib/greenboot/check/required.d /ctx/greenboot/00-evenkeel-os-test-quick.sh \
   /ctx/greenboot/10-evenkeel-os-login-screen.sh /ctx/greenboot/20-evenkeel-os-networking.sh \
@@ -123,6 +140,10 @@ install -Dm755 -t /usr/lib/greenboot/check/required.d /ctx/greenboot/00-evenkeel
 install -Dm755 -t /usr/lib/greenboot/green.d /ctx/greenboot/90-evenkeel-os-rolled-back.sh
 install -Dm644 /ctx/greenboot/50-evenkeel-os-greenboot.conf /usr/lib/systemd/system/greenboot-healthcheck.service.d/50-evenkeel-os.conf
 install -Dm755 /ctx/greenboot/evenkeel-os-greenboot-arm /usr/libexec/evenkeel-os-greenboot-arm
+# Boot menus written before the fix above get the line break once, at the next start.
+install -Dm755 /ctx/greenboot/evenkeel-os-boot-menu-repair /usr/libexec/evenkeel-os-boot-menu-repair
+install -Dm644 /ctx/greenboot/evenkeel-os-boot-menu-repair.service /usr/lib/systemd/system/evenkeel-os-boot-menu-repair.service
+systemctl enable evenkeel-os-boot-menu-repair.service
 install -Dm644 /ctx/greenboot/50-evenkeel-os-arm.conf /usr/lib/systemd/system/greenboot-set-rollback-trigger.service.d/50-evenkeel-os.conf
 # The arming step must run after greenboot's own (it reads greenboot's trial marker).
 [ "$(systemctl cat greenboot-set-rollback-trigger.service | sed -n 's/^ExecStop=\([^ ]*\).*/\1/p' | tr '\n' ' ')" \
@@ -145,7 +166,7 @@ grep -qx 'Requires=org.gnome.Shell@user.service' /usr/lib/systemd/user/gnome-ses
 # Normal starts never trip a test: with no test kernel argument every test step passes.
 python3 -I /ctx/check-rollback-tests.py
 for f in /usr/lib/greenboot/check/required.d/*-evenkeel-os-*.sh /usr/lib/greenboot/green.d/*-evenkeel-os-*.sh \
-         /usr/libexec/evenkeel-os-test-fail /usr/libexec/evenkeel-os-greenboot-arm; do
+         /usr/libexec/evenkeel-os-test-fail /usr/libexec/evenkeel-os-greenboot-arm /usr/libexec/evenkeel-os-boot-menu-repair; do
   bash -n "$f" || { echo "ERROR: $f has a syntax error"; exit 1; }
 done
 systemctl enable greenboot-healthcheck.service

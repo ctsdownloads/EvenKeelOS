@@ -48,7 +48,7 @@ starting**, **Login loop**, or **Freeze** (a kernel crash at the login screen;
 you turn it off and on). It makes a test copy of the running version with that
 problem (`rpm-ostree kargs --append=evenkeel_os.test_rollback=KIND`; nothing
 breaks without that kernel argument). At the restart the test copy really
-breaks: 4 bad starts in a row (each picked test says what you'll see), then the
+breaks: 2 bad starts in a row (each picked test says what you'll see), then the
 computer goes back to the version it had, removes the test copy and says the
 test worked. The test copy takes the place of the earlier version kept for
 Undo, so Undo has nothing to go back to until the next update. Needs the admin

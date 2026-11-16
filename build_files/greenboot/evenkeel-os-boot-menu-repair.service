@@ -1,0 +1,12 @@
+[Unit]
+Description=Repair the boot menu's automatic rollback counter (one time)
+ConditionPathExists=/run/ostree-booted
+RequiresMountsFor=/boot
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/evenkeel-os-boot-menu-repair
+PrivateMounts=yes
+
+[Install]
+WantedBy=multi-user.target
