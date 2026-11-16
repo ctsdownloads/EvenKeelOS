@@ -59,7 +59,7 @@ can't change, so it stays working.
 | Base | [Fedora Silverblue 45](https://fedoraproject.org/atomic-desktops/silverblue/), with Fedora's logos and release packages replaced by the generic ones |
 | Packages | firefox, v4l-utils, xdg-terminal-exec, and the Bluefin packages in [`build_files/bluefin-packages.txt`](build_files/bluefin-packages.txt) |
 | Updates | Automatic with `uupd`: system, Flatpaks, app boxes and Homebrew, paused for 3 days after an undo. See [Updating and rolling back](docs/install.md#updating-and-rolling-back) |
-| Automatic rollback | [greenboot](https://github.com/fedora-iot/greenboot-rs): if a new version fails 2 starts in a row (no login screen, no networking, a freeze or hang while starting, or a login loop), the computer goes back to the previous one by itself and says so. Offline never counts. New installs only. Test each of those for real in System Tools |
+| Automatic rollback | [greenboot](https://github.com/fedora-iot/greenboot-rs): if a new version fails 2 starts in a row (no login screen, no networking, a freeze or hang while starting, or a login loop), the computer goes back to the previous one by itself and says so at the next login, every time. Offline never counts. New installs only. Test each of those for real in System Tools |
 | Homebrew and ujust | As on Bluefin, for terminal users |
 | Services on by default | Fedora's defaults, plus Tailscale (idle until you sign in) and Podman's container auto-updates, as on Bluefin |
 | Codecs | Not included (patents). The [setup checklist](docs/install.md#first-login) and **Install Media Codecs** offer them, with no password for an admin. See [Media codecs](docs/building.md#media-codecs) |
