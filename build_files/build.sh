@@ -236,9 +236,23 @@ install -Dm644 /ctx/rpmfusion-free-updates.repo /usr/share/evenkeel-os/rpmfusion
 install -Dm644 /ctx/RPM-GPG-KEY-negativo17 /usr/share/evenkeel-os/RPM-GPG-KEY-negativo17
 install -Dm644 /ctx/evenkeel-os-codecs-setup.service /usr/lib/systemd/system/evenkeel-os-codecs-setup.service
 systemctl enable evenkeel-os-flathub.service evenkeel-os-flatpak-apps.service evenkeel-os-codecs-setup.service
-# Default wallpaper (sorts after Fedora's overrides).
+# Wallpapers: 7 in Settings, Appearance, each with a day picture for light mode and a night one for dark mode;
+# the default is Main (sorts after Fedora's overrides). The old one stays for anyone who picked it.
 install -Dm644 /ctx/branding/wallpaper.png /usr/share/backgrounds/evenkeel-os/wallpaper.png
+install -Dm644 -t /usr/share/backgrounds/evenkeel-os /ctx/branding/wallpapers/*.jpg
 install -Dm644 /ctx/branding/evenkeel-os.xml /usr/share/gnome-background-properties/evenkeel-os.xml
+for f in $(grep -o '/usr/share/backgrounds/[^<]*' /usr/share/gnome-background-properties/evenkeel-os.xml); do
+  [ -s "$f" ] || { echo "ERROR: Settings lists the wallpaper $f, which is missing"; exit 1; }
+done
+[ "$(grep -c '<filename-dark>' /usr/share/gnome-background-properties/evenkeel-os.xml)" = 7 ] \
+  || { echo "ERROR: not every wallpaper has a night picture for dark mode"; exit 1; }
+# New users' picture: the logo (AccountsService uses ~/.face); also offered in Settings, Users.
+install -Dm644 /ctx/branding/evenkeel-os-user-picture.png /etc/skel/.face
+install -Dm644 /ctx/branding/evenkeel-os-user-picture.png /usr/share/pixmaps/faces/evenkeel-os.png
+# Lock screen password box in the accent color (one added rule; the tools are only needed while building).
+dnf5 -y install glib2-devel
+bash /ctx/evenkeel-os-shell-theme.sh
+dnf5 -y remove glib2-devel
 install -Dm644 /ctx/branding/zz-evenkeel-os-background.gschema.override /usr/share/glib-2.0/schemas/zz-evenkeel-os-background.gschema.override
 install -Dm644 /ctx/zz-evenkeel-os-windows.gschema.override /usr/share/glib-2.0/schemas/zz-evenkeel-os-windows.gschema.override
 install -Dm644 /ctx/zz-evenkeel-os-no-tour.gschema.override /usr/share/glib-2.0/schemas/zz-evenkeel-os-no-tour.gschema.override
@@ -247,7 +261,9 @@ install -Dm644 /ctx/zz-evenkeel-os-login.gschema.override /usr/share/glib-2.0/sc
 install -Dm644 /ctx/branding/evenkeel-os-gdm-logo.png /usr/share/pixmaps/evenkeel-os-gdm-logo.png
 glib-compile-schemas /usr/share/glib-2.0/schemas 2>&1 | { grep -v 'deprecated' || true; }
 got=$(GSETTINGS_BACKEND=memory gsettings get org.gnome.desktop.background picture-uri)
-[ "$got" = "'file:///usr/share/backgrounds/evenkeel-os/wallpaper.png'" ] || { echo "ERROR: the default wallpaper is $got, not the EvenKeelOS one"; exit 1; }
+[ "$got" = "'file:///usr/share/backgrounds/evenkeel-os/main-day.jpg'" ] || { echo "ERROR: the default wallpaper is $got, not the EvenKeelOS one"; exit 1; }
+got=$(GSETTINGS_BACKEND=memory gsettings get org.gnome.desktop.background picture-uri-dark)
+[ "$got" = "'file:///usr/share/backgrounds/evenkeel-os/main-night.jpg'" ] || { echo "ERROR: the default dark-mode wallpaper is $got, not the EvenKeelOS one"; exit 1; }
 got=$(GSETTINGS_BACKEND=memory gsettings get org.gnome.desktop.wm.preferences button-layout)
 [ "$got" = "'appmenu:minimize,maximize,close'" ] || { echo "ERROR: windows have no minimize button by default ($got)"; exit 1; }
 got=$(GSETTINGS_BACKEND=memory gsettings get org.gnome.shell welcome-dialog-last-shown-version)
@@ -265,6 +281,19 @@ got=$(GSETTINGS_BACKEND=memory gsettings get org.gnome.desktop.interface show-ba
 [ "$got" = "true" ] || { echo "ERROR: the battery percentage is not shown by default ($got)"; exit 1; }
 got=$(GSETTINGS_BACKEND=memory gsettings get org.gnome.login-screen logo)
 [ "$got" = "'/usr/share/pixmaps/evenkeel-os-gdm-logo.png'" ] && [ -s /usr/share/pixmaps/evenkeel-os-gdm-logo.png ] || { echo "ERROR: the login screen does not show the EvenKeelOS logo ($got)"; exit 1; }
+
+# Folder icons in the accent color (teal by default): Adwaita Colors at a pinned commit, built from Fedora's own
+# Adwaita icons; the helper switches sets when the accent color changes in Settings, Appearance.
+git clone --quiet https://github.com/dpejoh/Adwaita-colors /tmp/adwaita-colors
+git -C /tmp/adwaita-colors -c advice.detachedHead=false checkout --quiet 7d838af258da4ca05040760301d05140aa858145
+[ "$(git -C /tmp/adwaita-colors rev-parse HEAD)" = 7d838af258da4ca05040760301d05140aa858145 ] \
+  || { echo "ERROR: Adwaita Colors is not at the pinned commit"; exit 1; }
+/tmp/adwaita-colors/setup -i -p /usr/share/icons blue teal green yellow orange red pink purple slate
+install -Dm644 /tmp/adwaita-colors/LICENSE /usr/share/licenses/adwaita-colors/LICENSE
+rm -rf /tmp/adwaita-colors
+install -Dm755 /ctx/evenkeel-os-accent-icons /usr/libexec/evenkeel-os-accent-icons
+install -Dm644 /ctx/evenkeel-os-accent-icons.desktop /etc/xdg/autostart/evenkeel-os-accent-icons.desktop
+bash /ctx/check-accent-icons.sh
 
 # Logo Menu 25.2, sha256-checked; its own schemas/ folder must go or it fails to load.
 curl -fsSL --retry 3 -o /tmp/logomenu.zip "https://extensions.gnome.org/extension-data/logomenuaryan_k.v45.shell-extension.zip"

@@ -1,6 +1,7 @@
-# Desktop defaults: teal accent color (also on the login screen), no hot corner, battery percentage shown.
+# Desktop defaults: teal accent color (also on the login screen) and folder icons, no hot corner, battery percentage shown.
 [org.gnome.desktop.interface]
 accent-color='teal'
+icon-theme='Adwaita-teal'
 enable-hot-corners=false
 show-battery-percentage=true
 
