@@ -259,6 +259,8 @@ rpm -q gnome-tour >/dev/null 2>&1 && { echo "ERROR: GNOME's tour app is still in
 [ "$(. /usr/lib/os-release; echo "$PRETTY_NAME")" = "EvenKeelOS" ] || { echo "ERROR: the system's display name is not EvenKeelOS"; exit 1; }
 got=$(GSETTINGS_BACKEND=memory gsettings get org.gnome.desktop.interface enable-hot-corners)
 [ "$got" = "false" ] || { echo "ERROR: the hot corner is still on by default ($got)"; exit 1; }
+got=$(GSETTINGS_BACKEND=memory gsettings get org.gnome.desktop.interface accent-color)
+[ "$got" = "'teal'" ] || { echo "ERROR: the default accent color is $got, not teal"; exit 1; }
 got=$(GSETTINGS_BACKEND=memory gsettings get org.gnome.desktop.interface show-battery-percentage)
 [ "$got" = "true" ] || { echo "ERROR: the battery percentage is not shown by default ($got)"; exit 1; }
 got=$(GSETTINGS_BACKEND=memory gsettings get org.gnome.login-screen logo)
@@ -305,6 +307,9 @@ dconf update
 for a in evenkeel-os-tools evenkeel-os-update evenkeel-os-install-package evenkeel-os-remove-apps evenkeel-os-repair-boxes evenkeel-os-login-apps evenkeel-os-codecs; do
   HOME=/tmp dconf read /org/gnome/desktop/app-folders/folders/Utilities/apps | grep -q "'$a.desktop'" || { echo "ERROR: $a is not in the Utilities folder"; exit 1; }
 done
+# The login screen reads its settings through the gdm profile; nothing there may undo the teal accent.
+got=$(HOME=/tmp DCONF_PROFILE=gdm gsettings get org.gnome.desktop.interface accent-color)
+[ "$got" = "'teal'" ] || { echo "ERROR: the login screen's accent color is $got, not teal"; exit 1; }
 # Check Logo Menu's defaults through its schema (path has a capital L).
 [ ! -e /usr/share/gnome-shell/extensions/logomenu@aryan_k/schemas ] || { echo "ERROR: Logo Menu still has its own schemas/ folder, so it would fail to start"; exit 1; }
 for k in "org.gnome.shell enabled-extensions ['logomenu@aryan_k']" \
