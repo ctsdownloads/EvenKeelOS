@@ -66,7 +66,7 @@ can't change, so it stays working.
 | Apps from .rpm and .deb files | **Install Package File** puts them in a box; **Remove Apps** takes them out. See [Apps from .rpm and .deb files](docs/apps.md#apps-from-rpm-and-deb-files) |
 | Flathub | Added on first boot; Fedora's own Flathub entry is removed |
 | System Tools | Firmware, disk unlock, free space, BIOS settings, automatic updates, undo the last update, problem details, the setup checklist, the desktop layout, and the automatic rollback test. See [System Tools](docs/system-tools.md#system-tools) |
-| Desktop | Minimize and maximize buttons, no hot corner, battery percentage shown |
+| Desktop | Teal accent color (change it in Settings, Appearance), minimize and maximize buttons, no hot corner, battery percentage shown |
 | Dock | Firefox, Calendar, Files, Bazaar and Text Editor |
 | Logo Menu | The [Logo Menu](https://github.com/Aryan20/Logomenu) extension on the top-left logo: About My System, Activities, App Grid, Bazaar, Resources, Ghostty, Extensions |
 | Windows-style layout | Optional, per user: a bottom bar from [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel) and a start menu from [ArcMenu](https://gitlab.com/arcmenu/ArcMenu) on the EvenKeelOS logo, opening to the app categories, with Settings, System Update and System Tools. It opens on the desktop at login, with no overview. Pick it in the installer, or switch any time in System Tools, Desktop layout (or `evenkeel-os-layout windows` / `current`), then log out and in |
@@ -80,7 +80,7 @@ can't change, so it stays working.
 | App store | [Bazaar](https://github.com/kolunmi/bazaar), replacing GNOME Software |
 | Utilities folder | Every EvenKeelOS tool, in Show Apps |
 | File types | Text files open in Text Editor, .rpm and .deb in Install Package File, Flatpak files in Bazaar |
-| Login screen and boot menu | EvenKeelOS logo and name. The live USB and the installed system both work with Secure Boot on |
+| Login screen and boot menu | EvenKeelOS logo and name, and the teal accent on the login screen. The live USB and the installed system both work with Secure Boot on |
 | fastfetch | Shows the EvenKeelOS logo |
 
 ## System requirements
