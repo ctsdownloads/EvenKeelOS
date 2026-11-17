@@ -23,7 +23,10 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/*.policy`, `*.rules` | polkit actions and the narrow no-password rules |
 | `build_files/*.gschema.override`, `*.dconf`, `gnome-mimeapps.list`, `xdg-terminals.list`, `60-evenkeel-os-mic.conf` | Desktop defaults |
 | `build_files/evenkeel-os-layout` | Switches a user between the current and the Windows-style layout |
+| `build_files/evenkeel-os-accent-icons`, `evenkeel-os-accent-icons.desktop`, `check-accent-icons.sh` | Folder icons in the accent color: the colored sets are built from Fedora's Adwaita at a pinned [Adwaita Colors](https://github.com/dpejoh/Adwaita-colors) commit; the helper switches sets when the accent color changes and leaves any other icon theme alone |
 | `build_files/rebrand.sh`, `initramfs.sh`, `evenkeel-os-boot-label` | EvenKeelOS name and logo, and the boot menu rename |
+| `build_files/branding/` | Logos, the user picture, and the wallpapers (`wallpapers/`, a day and a night picture each, listed for Settings in `evenkeel-os.xml`) |
+| `build_files/evenkeel-os-shell-theme.sh` | Adds one rule to GNOME Shell's own style file at build time so the lock screen's password box uses the accent color; fails the build if GNOME renames that part |
 | `build_files/evenkeel-os-no-bootc.tuned.conf` | Keeps tuned from running bootc, and waiting on updates, at every power-mode switch |
 | `build_files/check-*.py` | Build tests: packages are read correctly, power modes skip bootc, docs keep up |
 | `iso/` | The live USB and its installer. `iso/build-local-iso.sh` builds a test ISO locally; `iso/verify-image.sh` checks the built images |
