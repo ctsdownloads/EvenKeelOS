@@ -38,7 +38,8 @@ def disk():
 
 def tpm_enrolled(dev):
     """Does the disk's LUKS header hold a TPM enrollment? None when the header can't be read."""
-    r = subprocess.run(["cryptsetup", "luksDump", "--dump-json-metadata", dev], capture_output=True, text=True)
+    r = subprocess.run(["/usr/sbin/cryptsetup", "luksDump", "--dump-json-metadata", dev],
+                       capture_output=True, text=True)
     if r.returncode != 0:
         return None
     try:
@@ -74,8 +75,8 @@ def disk_unlock_check():
 
 
 def updates(state):
-    cmd = ["systemctl", "enable", "--now", "uupd.timer"] if state == "on" else \
-        ["systemctl", "disable", "--now", "uupd.timer"]
+    cmd = ["/usr/bin/systemctl", "enable", "--now", "uupd.timer"] if state == "on" else \
+        ["/usr/bin/systemctl", "disable", "--now", "uupd.timer"]
     sys.exit(subprocess.run(cmd).returncode)
 
 
@@ -85,7 +86,7 @@ def disk_unlock(state):
     if not pw:
         fail("No disk password was given.")
     # A wrong password changes nothing: check it before anything else.
-    if subprocess.run(["cryptsetup", "open", "--test-passphrase", "--key-file=-", dev], input=pw.encode(),
+    if subprocess.run(["/usr/sbin/cryptsetup", "open", "--test-passphrase", "--key-file=-", dev], input=pw.encode(),
                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode != 0:
         fail("That is not the disk password.", 3)
     env = {"PATH": "/usr/sbin:/usr/bin", "PASSWORD": pw}
@@ -93,9 +94,9 @@ def disk_unlock(state):
         if not Path("/dev/tpmrm0").exists():
             fail("This computer has no TPM.")
         # Enrolls the TPM, then wipes any older TPM enrollment (the new one is kept).
-        cmd = ["systemd-cryptenroll", "--wipe-slot=tpm2", "--tpm2-device=auto", "--tpm2-pcrs=7+14", dev]
+        cmd = ["/usr/bin/systemd-cryptenroll", "--wipe-slot=tpm2", "--tpm2-device=auto", "--tpm2-pcrs=7+14", dev]
     else:
-        cmd = ["systemd-cryptenroll", "--wipe-slot=tpm2", dev]
+        cmd = ["/usr/bin/systemd-cryptenroll", "--wipe-slot=tpm2", dev]
     r = subprocess.run(cmd, env=env, stdin=subprocess.DEVNULL)
     if r.returncode != 0:
         fail("systemd-cryptenroll did not finish.")
@@ -124,12 +125,12 @@ def test_rollback_clear():
     kind = running_test()
     if kind is None:
         fail("This start isn't a test copy.")
-    sys.exit(subprocess.run(["rpm-ostree", "kargs", f"--delete=evenkeel_os.test_rollback={kind}"]).returncode)
+    sys.exit(subprocess.run(["/usr/bin/rpm-ostree", "kargs", f"--delete=evenkeel_os.test_rollback={kind}"]).returncode)
 
 
 def test_rollback(kind):
     """A copy of the running version that breaks on purpose (see build_files/greenboot), for the next restart."""
-    if subprocess.run(["systemctl", "-q", "is-enabled", "greenboot-healthcheck.service"]).returncode != 0:
+    if subprocess.run(["/usr/bin/systemctl", "-q", "is-enabled", "greenboot-healthcheck.service"]).returncode != 0:
         fail("Automatic rollback is not turned on in this version.", 4)
     try:
         counting = "boot_counter" in Path("/boot/grub2/grub.cfg").read_text()
@@ -140,13 +141,13 @@ def test_rollback(kind):
     if running_test():
         fail("This start is a test copy; take its test marker off first.", 6)
     try:
-        ds = json.loads(subprocess.run(["rpm-ostree", "status", "--json"], capture_output=True, text=True,
+        ds = json.loads(subprocess.run(["/usr/bin/rpm-ostree", "status", "--json"], capture_output=True, text=True,
                                        check=True).stdout)["deployments"]
     except (subprocess.CalledProcessError, ValueError, KeyError) as e:
         fail(f"The system versions couldn't be read: {e}")
     if any(d.get("staged") for d in ds):
         fail("An update is waiting for a restart.", 5)
-    sys.exit(subprocess.run(["rpm-ostree", "kargs", f"--append=evenkeel_os.test_rollback={kind}"]).returncode)
+    sys.exit(subprocess.run(["/usr/bin/rpm-ostree", "kargs", f"--append=evenkeel_os.test_rollback={kind}"]).returncode)
 
 
 def main(argv):

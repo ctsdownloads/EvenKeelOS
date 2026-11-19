@@ -41,6 +41,7 @@ Updates take a little longer after that. Remove Apps takes it off again.
 | An app, tools, a browser, most closed-source apps | Box |
 | A device rule that only sets permissions | App in the box, rule on the system (password). A rule-only package offers **Add it** |
 | A device rule that runs a program | Rule not added; the app still goes in the box |
+| A device rule that could open disks or other system devices, every device at once, or every keyboard and mouse (one that doesn't name the device's maker) | Rule not added; the app still goes in the box |
 | An optional background service | .rpm: **Add to the system** recommended. .deb: box, without it |
 | A service the app turns on itself (Docker Desktop) | Has to go on the system |
 | An app that runs as root (Timeshift) | Not installed |

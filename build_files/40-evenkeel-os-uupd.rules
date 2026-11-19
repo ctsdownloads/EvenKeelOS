@@ -1,0 +1,17 @@
+// System Update without a password, but only for the person at the computer and only to start or stop it.
+// Sorts before uupd's own rule (uupd.rules), which allows any account, even a background one, to start, stop
+// or restart it; an account not at the computer is asked for the admin password instead.
+polkit.addRule(function(action, subject) {
+    if (action.id != "org.freedesktop.systemd1.manage-units") {
+        return polkit.Result.NOT_HANDLED;
+    }
+    var unit = action.lookup("unit");
+    if (unit != "uupd.service" && unit != "uupd-manual.service") {
+        return polkit.Result.NOT_HANDLED;
+    }
+    var verb = action.lookup("verb");
+    if (subject.local && subject.active && (verb == "start" || verb == "stop")) {
+        return polkit.Result.NOT_HANDLED;
+    }
+    return polkit.Result.AUTH_ADMIN;
+});

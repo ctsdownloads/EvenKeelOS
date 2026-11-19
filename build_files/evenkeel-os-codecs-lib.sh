@@ -31,7 +31,7 @@ need_root() { [ "$(id -u)" -eq 0 ] || { echo "This helper must run as root, thro
 # Names in rpm-ostree's request ($1) that are also in the list given.
 requested() {
   local field=$1; shift
-  rpm-ostree status --json | python3 -c '
+  rpm-ostree status --json | python3 -I -c '
 import json, sys
 d = json.load(sys.stdin)["deployments"][0]
 want = set(sys.argv[2:])
@@ -60,7 +60,7 @@ do_web() {
   if [ -n "$(requested requested-base-removals $STAND_IN)" ]; then   # already chosen, booted or pending
     echo "Web video is already installed. Restart if you have not yet."; return 0
   fi
-  local cmd=(override remove $STAND_IN) p
+  local cmd=(override remove "$STAND_IN") p
   for p in $WEB; do cmd+=(--install "$p"); done
   run_logged rpm-ostree "${cmd[@]}"
 }
@@ -91,7 +91,9 @@ do_remove() {
   resets=$(requested requested-base-removals $FREE $STAND_IN)
   [ "$(rpm -q --qf '%{EPOCH}' xevd-libs 2>/dev/null)" = 1 ] && old_replaced="$OLD_REPLACE"
   if [ -n "$resets$old_replaced" ]; then
-    cmd=(override reset $resets $old_replaced)
+    local -a reset_list
+    read -ra reset_list <<<"$resets $old_replaced"
+    cmd=(override reset "${reset_list[@]}")
     for p in $uninstall; do cmd+=(--uninstall "$p"); done
     run_logged rpm-ostree "${cmd[@]}" || return 1
   elif [ -n "$uninstall" ]; then

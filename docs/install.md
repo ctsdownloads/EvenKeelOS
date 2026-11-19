@@ -49,8 +49,9 @@ Updates are automatic: `uupd` runs daily at 4 am (or at the next start) for the
 system, Flatpaks, app boxes and Homebrew. A new system is used from the next
 restart.
 
-**System Update** in Show Apps updates now, with no password. It shows the
-download and install steps, lists what's new, and warns first on a low battery.
+**System Update** in Show Apps updates now, with no password for the person at
+the computer (from anywhere else, it asks). It shows the download and install
+steps, lists what's new, and warns first on a low battery.
 If the automatic update is already running, it follows that one. From a
 terminal: `sudo uupd`.
 
