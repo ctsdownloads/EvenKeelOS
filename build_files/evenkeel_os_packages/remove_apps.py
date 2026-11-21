@@ -33,9 +33,9 @@ def remove():
     where = entry["where"]
     kind = next((k for k in common.BOXES if common.BOXES[k]["name"] == where), None)
     if where in common.FLATPAK_PLACES:
-        user = ["--user"] if where == "artcraft" else []
         ok = not installed.flatpak_installed(entry["package"]) or windows.run_steps(
-            f"Removing {title}.", [["flatpak", "uninstall", *user, "-y", "--noninteractive", entry["package"]]])
+            f"Removing {title}.", [["flatpak", "uninstall", "--user" if where == "artcraft" else "--system", "-y",
+                                    "--noninteractive", entry["package"]]])
         if ok and where == "artcraft":      # the sandbox setting made at install goes too
             subprocess.run(["flatpak", "override", "--user", "--reset", entry["package"]], capture_output=True)
     elif where == "system":

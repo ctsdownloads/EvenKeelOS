@@ -119,6 +119,8 @@ grep -qF ':ro${rslave:+,rslave}"' /usr/bin/distrobox-create && ! grep -qF ':ro${
   || { echo "ERROR: distrobox-create changed; check whether the ro,rslave fix is still needed"; exit 1; }
 mkdir -p /tmp/pkgtest && (cd /tmp/pkgtest && dnf5 -q download gnome-mines openvpn solaar-udev fedora-repos-archive)
 python3 -I /ctx/check-packages.py /tmp/pkgtest || { echo 'ERROR: Install Package File does not read packages correctly'; exit 1; }
+python3 -I /ctx/check-flatpak-places.py /usr/lib/evenkeel-os/evenkeel_os_packages /usr/bin /usr/libexec \
+  || { echo 'ERROR: a flatpak install or uninstall does not say where it goes'; exit 1; }
 rm -rf /tmp/pkgtest
 # Windows Program: an .exe or .msi offers its Linux version or a Linux app that does its job, from a list made
 # fresh each build out of winget's program index (Microsoft), the app lists of Flathub, Fedora and Ubuntu, and
