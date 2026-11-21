@@ -66,6 +66,7 @@ a message says whether it's ready.
 |--------------|-------|
 | Updates: automatic, with System Update. | From Fedora, or the package added its maker's source (Chrome, VS Code) |
 | Updates: automatic. | From Bazaar (Flathub) |
+| Updates: checked once a day, straight from ArtCraft. | An ArtCraft app; checked at login, signature checked |
 | Updates: none, because it came from a file. To update, install a newer file. | From a plain file |
 
 Before installing, **Use the file**, **Install the file too** and **Install it
@@ -153,20 +154,35 @@ needs: `evenkeel-os-packages check FILE`.
 ## Windows programs (.exe and .msi)
 
 Windows programs can't run here. Opening an .exe or .msi file starts
-**Windows Program**, which reads the file's own name, maker and product code
-and looks it up in a list of Windows programs whose maker also has a Linux
-version on Flathub, in Fedora or in Ubuntu. The list is made fresh at every
-build from [winget](https://github.com/microsoft/winget-pkgs)'s program index
-and the app lists of [Flathub](https://flathub.org/), Fedora and Ubuntu, and
-takes sure matches only: the same name from the same maker.
+**Windows Program**, which reads the file's own name, maker, product code and
+description (nothing in it is ever run) and offers a Linux app, first match
+wins:
 
-| What the file is | Window |
+| What the file is | What's offered |
 | --- | --- |
-| A program with a Linux version on Flathub | **Install the Linux version**, Cancel |
-| Not on Flathub, but in Fedora (or else Ubuntu) | **Install the Linux version**: into the Fedora box (or Ubuntu box), updated with System Update |
-| The same, already installed | **Open it**, Close |
-| Anything else | Windows programs can't run here, with where to look; OK only |
+| Zoom | Opens Zoom in the web browser: nothing to install |
+| A program whose maker has a Linux version | That version: from Flathub, or else from Fedora or Ubuntu into the Fedora box (or Ubuntu box) |
+| An Adobe program | The matching ArtCraft app (Photoshop: PhotoCraft, Illustrator: VectorCraft, Premiere: FilmCraft, Acrobat: PdfCraft, and so on) |
+| A known program with no Linux version (Office, iTunes, Skype, MSN Messenger, Publisher) | The Linux app picked for it, from the replacements list |
+| Any other program winget knows | A Linux app of the same kind, from its winget tags |
+| A program nobody lists | A Linux app for the job its installer describes ("Digital Media Player") |
+| Nothing fits | Windows programs can't run here, with where to look |
 
-Nothing in the file is ever run. An app installed this way is listed in
-**Remove Apps**. To see what a file is without any window:
+The window says why ("For video calls, Zoom does the same job") and offers
+**Install**, or **Open** when the app is already installed. Apps installed this
+way are listed in **Remove Apps**.
+
+The list is made fresh at every build from
+[winget](https://github.com/microsoft/winget-pkgs)'s program index, the app
+lists of [Flathub](https://flathub.org/), Fedora and Ubuntu, and
+`build_files/windows-replacements.json`. Same-program matches are sure ones
+only: the same name from the same maker.
+
+ArtCraft apps come straight from [ArtCraft](https://getartcraft.com/)'s
+releases on GitHub and are installed only when ArtCraft's signature checks out
+against its release key, which the image pins. They stay in their sandbox: the
+permission ArtCraft's apps ask for to run programs outside it is turned off.
+Once a day at login they are updated the same way.
+
+To see what a file is without any window:
 `evenkeel-os-packages check-windows FILE`.

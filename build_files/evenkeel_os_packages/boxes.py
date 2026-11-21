@@ -135,6 +135,16 @@ def helper_steps(kind):
                            "apt-get install -y " + " ".join(HELPERS[kind])))]
 
 
+def install_steps(kind, title, target, doing="Installing", dnf_verb="install", apt_extra=()):
+    """Steps that install a package file or a package name into its box."""
+    box = common.BOXES[kind]["name"]
+    if kind == "rpm":
+        return [(f"{doing} {title}", in_box(box, "sudo", "dnf", "-y", dnf_verb, target))]
+    return [("Getting Ubuntu's list of packages", in_box(box, "sudo", "apt-get", "update")),
+            (f"{doing} {title}", in_box(box, "sudo", "env", "DEBIAN_FRONTEND=noninteractive", "apt-get", "install",
+                                        "-y", *apt_extra, target))]
+
+
 def ensure_helpers(kind, quiet=False):
     """Make sure the box has the desktop helpers. Done once per box; remembered after that."""
     mark = helpers_mark(kind)

@@ -1,4 +1,5 @@
 """Remove Apps."""
+import subprocess
 
 from evenkeel_os_ui import ask, choose, human, notify, offer_restart, say
 from evenkeel_os_packages import (
@@ -11,7 +12,7 @@ def remove():
     # Apps removed another way (Bazaar, the command line) come off the list.
     asked = installed.system_requested()
     gone = [r for r in records
-            if (r["where"] == "flathub" and not installed.flatpak_installed(r["package"]))
+            if (r["where"] in common.FLATPAK_PLACES and not installed.flatpak_installed(r["package"]))
             or (r["where"] == "system" and asked is not None and r["package"] not in asked)]
     for r in gone:
         app_list.forget(r)
@@ -31,9 +32,12 @@ def remove():
         return 1
     where = entry["where"]
     kind = next((k for k in common.BOXES if common.BOXES[k]["name"] == where), None)
-    if where == "flathub":
+    if where in common.FLATPAK_PLACES:
+        user = ["--user"] if where == "artcraft" else []
         ok = not installed.flatpak_installed(entry["package"]) or windows.run_steps(
-            f"Removing {title}.", [["flatpak", "uninstall", "-y", "--noninteractive", entry["package"]]])
+            f"Removing {title}.", [["flatpak", "uninstall", *user, "-y", "--noninteractive", entry["package"]]])
+        if ok and where == "artcraft":      # the sandbox setting made at install goes too
+            subprocess.run(["flatpak", "override", "--user", "--reset", entry["package"]], capture_output=True)
     elif where == "system":
         ok = windows.run_steps(f"Removing {title} from the system.", [["rpm-ostree", "uninstall", entry["package"]]])
         if not ok and entry.get("nevra"):

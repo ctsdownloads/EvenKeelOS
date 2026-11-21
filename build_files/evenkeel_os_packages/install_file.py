@@ -6,7 +6,6 @@ import tarfile
 from evenkeel_os_ui import GUI, ask, choose, notify, say, zenity
 from evenkeel_os_packages import (
     app_list, boxes, common, flathub, installed, printers, reading, sources, targets, update_notes,
-    windows,
 )
 
 
@@ -96,14 +95,7 @@ def install(path):
         if answer is None:
             return 1
         if answer == "ok":
-            if windows.run_steps(f"Installing {name} from Flathub.",
-                                 [["flatpak", "install", "-y", "--noninteractive", "flathub", app_id]]):
-                app_list.remember({"title": name, "package": app_id, "where": "flathub"})
-                notify(f"{name} is installed.")
-                say(f"{name} is installed. Find it in Show Apps.\n\n{update_notes.UPDATES_FLATHUB}")
-                return 0
-            windows.failed(f"Installing {name}")
-            return 1
+            return flathub.install(app_id, name)
 
     if info["rules_only"]:
         if ask(f"{title} only lets your account use a device.\n\nAdd it: needs your password.", ok="Add it") != "ok":

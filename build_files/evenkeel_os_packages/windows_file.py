@@ -1,11 +1,11 @@
-"""Windows Program: an .exe or .msi opened here; offers its Linux version from Flathub, Fedora or Ubuntu."""
+"""Windows Program: an .exe or .msi opened here; offers its Linux version, or a Linux app that does its job."""
 import json
 import os
 import re
 import subprocess
 
-from evenkeel_os_ui import ask, notify, say
-from evenkeel_os_packages import app_list, boxes, common, installed, repo_apps, windows
+from evenkeel_os_ui import ask, say
+from evenkeel_os_packages import app_list, artcraft, boxes, common, flathub, installed, repo_apps
 
 LIST = "/usr/share/evenkeel-os/windows-apps.json"
 JUNK = ("the", "team", "software", "inc", "llc", "ltd", "limited", "corporation", "corp", "gmbh", "project",
@@ -56,7 +56,7 @@ def read_msi(path):
     r = subprocess.run(["msiinfo", "export", path, "Property"], capture_output=True, text=True, timeout=60)
     props = dict(line.split("\t", 1) for line in r.stdout.splitlines() if "\t" in line)
     return {"name": props.get("ProductName", "").strip(), "maker": props.get("Manufacturer", "").strip(),
-            "code": props.get("ProductCode", "").strip().lower()}
+            "code": props.get("ProductCode", "").strip().lower(), "about": props.get("ARPCOMMENTS", "").strip()}
 
 
 def read_exe(path):
@@ -71,12 +71,12 @@ def read_exe(path):
                     info[k.decode(errors="ignore")] = v.decode(errors="ignore").strip()
     pe.close()
     return {"name": info.get("ProductName") or info.get("FileDescription", ""), "maker": info.get("CompanyName", ""),
-            "code": ""}
+            "code": "", "about": f"{info.get('FileDescription', '')} {info.get('Comments', '')}".strip()}
 
 
 def read_installer(path):
     """Name, maker and MSI product code the installer gives itself; empty when it can't be read."""
-    empty = {"name": "", "maker": "", "code": ""}
+    empty = {"name": "", "maker": "", "code": "", "about": ""}
     try:
         with open(path, "rb") as f:
             head = f.read(8)
@@ -90,105 +90,131 @@ def read_installer(path):
 def load_list():
     try:
         with open(LIST) as f:
-            return json.load(f)
-    except (OSError, ValueError):
-        return {"matches": {}, "packages": {}}
+            data = json.load(f)
+        return data["programs"], data["kinds"]
+    except (OSError, ValueError, KeyError):
+        return {}, []
 
 
-def same_maker(maker, pkg):
-    m = norm_maker(maker)
-    return len(m) >= 3 and any(len(p) >= 3 and (m in p or p in m) for p in pkg["pub"])
+def makers_overlap(ours, theirs, least=3):
+    """True when two lists of maker keys name the same maker: 'gimp' and 'gimpteam'."""
+    return any(len(a) >= least and len(b) >= least and (a in b or b in a) for a in ours for b in theirs)
 
 
-def identify(path, data):
-    """(winget id, how) of the program, or (None, '')."""
-    info = read_installer(path)
-    pkgs = data["packages"]
-    if info["code"]:
-        for pid, p in pkgs.items():
-            if info["code"] in p["codes"]:
-                return pid, "product code"
-    name = norm(re.sub(r"\s+-\s+https?://\S+", "", info["name"]))
-    if len(name) >= 3:
-        hits = [pid for pid, p in pkgs.items() if norm(p["name"]) == name]
-        good = [pid for pid in hits if same_maker(info["maker"], pkgs[pid])] if info["maker"] else hits
-        if good:
-            return min(good, key=len), "name and maker"
+def same_maker(maker, prog):
+    return makers_overlap([norm_maker(maker)], prog["pub"])
+
+
+def rank(prog):
+    """In the browser (chosen over its app), its own Linux version, a hand-picked replacement, an app of its kind."""
+    offer = prog["offer"]
+    return -1 if offer.get("web") else 2 if offer.get("kind") else 1 if offer.get("job") else 0
+
+
+def identify(path, programs, info):
+    """(key, how) of the program in the list, or (None, '')."""
     stem = file_stem(path)
-    if len(stem) >= 3:
-        hits = [pid for pid, p in pkgs.items() if stem in (norm(p["name"]), norm(p["moniker"]))]
-        good = [pid for pid in hits if same_maker(info["maker"], pkgs[pid])] if info["maker"] else hits
-        if good:
-            return min(good, key=len), "file name"
-        # the file name starts with the program's name: 'inkscape-1.4.4_2026-05-05_dcaf3e7-x64.signed.msi'
-        hits = [pid for pid, p in pkgs.items() if len(norm(p["name"])) >= 4 and stem.startswith(norm(p["name"]))]
-        good = [pid for pid in hits if same_maker(info["maker"], pkgs[pid])] if info["maker"] else hits
-        if good:
-            return max(good, key=lambda pid: (len(norm(pkgs[pid]["name"])), -len(pid))), "file name"
-    return None, ""
+    name = norm(re.sub(r"\s+-\s+https?://\S+", "", info["name"]))
+    steps = [("product code", lambda p: info["code"] and info["code"] in p["codes"]),
+             ("name and maker", lambda p: len(name) >= 3 and name in p["names"]),
+             ("file name", lambda p: len(stem) >= 3 and (stem in p["names"] or stem in p["aliases"])),
+             # the file name starts with the program's name: 'inkscape-1.4.4_2026-05-05_dcaf3e7-x64.signed.msi'
+             ("file name", lambda p: any(len(n) >= 4 and stem.startswith(n) for n in p["names"]))]
+    # every step is tried, so a hand-picked replacement beats an app of the same kind found by product code
+    found = [(rank(p), i, -max(map(len, p["names"] or [""])), len(k), k, how)
+             for i, (how, test) in enumerate(steps) for k, p in programs.items()
+             if test(p) and (how == "product code" or not info["maker"] or same_maker(info["maker"], p))]
+    return min(found)[4:] if found else (None, "")
 
 
-def offer(m):
-    """Where the Linux version comes from: ('flathub' | 'rpm' | 'deb', package), Flathub first."""
-    for key, where in (("flatpak", "flathub"), ("fedora", "rpm"), ("ubuntu", "deb")):
-        if m.get(key):
-            return where, m[key]
+def kind_from_words(info, kinds):
+    """For a program no list knows: its job, from how the installer describes itself ('Digital Media Player')."""
+    text = f" {re.sub(r'[^a-z0-9+]+', ' ', (info['name'] + ' ' + info['about']).lower())} "
+    return next((k["offer"] for k in kinds if any(f" {w} " in text for w in k["words"])), None)
+
+
+def choose(path):
+    """(offer, how, info) for a Windows installer: what to offer, how it was worked out, what the file says."""
+    programs, kinds = load_list()
+    info = read_installer(path)
+    key, how = identify(path, programs, info)
+    if key:
+        return programs[key]["offer"], how, info
+    o = kind_from_words(info, kinds)
+    return (o, "description", info) if o else (None, "", info)
+
+
+def offer(o):
+    """Where the Linux app comes from: ('web' | 'flathub' | 'rpm' | 'deb' | 'artcraft', package or address)."""
+    for key, where in (("web", "web"), ("flatpak", "flathub"), ("fedora", "rpm"), ("ubuntu", "deb"),
+                       ("artcraft", "artcraft")):
+        if o.get(key):
+            return where, o[key]
     return None, None
 
 
 def check(path):
     """For build tests: what a file is and what would be offered, without any window."""
-    data = load_list()
-    pid, how = identify(path, data)
-    where, package = offer(data["matches"].get(pid, {})) if pid else (None, None)
-    info = read_installer(path)
-    print(json.dumps({"file": os.path.basename(path), "name": info["name"], "maker": info["maker"],
-                      "program": pid, "how": how, "where": where, "package": package}))
+    o, how, info = choose(path)
+    where, package = offer(o or {})
+    print(json.dumps({"file": os.path.basename(path), "name": info["name"], "maker": info["maker"], "how": how,
+                      "where": where, "package": package, "kind": None if not o else "browser" if o.get("web")
+                      else "same kind" if o.get("kind") else "replacement" if o.get("job") else "same app"}))
     return 0
 
 
 def installed_record(where, package):
-    box = "flathub" if where == "flathub" else common.BOXES[where]["name"]
-    if where == "flathub" and installed.flatpak_installed(package):
-        return {"where": "flathub", "package": package}
+    """How to open the Linux app if it is already installed, or None."""
+    if where in common.FLATPAK_PLACES:
+        app_id = package if where == "flathub" else artcraft.app_id(package)
+        return {"where": where, "package": app_id} if installed.flatpak_installed(app_id) else None
+    box = common.BOXES[where]["name"]
     return next((r for r in app_list.load() if r["where"] == box and r["package"] == package), None)
 
 
 def open_file(path):
-    data = load_list()
-    pid, _ = identify(path, data)
-    m = data["matches"].get(pid) if pid else None
+    o, _, _ = choose(path)
     shown = os.path.basename(path)
-    if not m:
+    if not o:
         say(f"{shown} is a Windows program. Windows programs can't run here.\n\n"
             f"Look for a Linux version on the maker's website, or search Bazaar, the app store.")
         return 1
-    name = m["title"]
-    where, package = offer(m)
+    name = o["title"]
+    where, package = offer(o)
+    if where == "web":
+        if ask(f"{shown} is the Windows version of {name}. Here, {name} runs in the web browser, so there is "
+               f"nothing to install.\n\nRecommended: Open {name} in the browser.", ok=f"Open {name}",
+               cancel="Close") == "ok":
+            subprocess.Popen(["gio", "open", package], start_new_session=True,
+                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            return 0
+        return 1
+    if "job" not in o:
+        intro = f"{shown} is the Windows version of {name}. Windows programs can't run here, but {name} has a " \
+                f"Linux version"
+    else:
+        intro = f"{shown} is a Windows program, and Windows programs can't run here. For {o['job']}, {name} does " \
+                f"the same job on Linux"
     record = installed_record(where, package)
     if record:
-        if ask(f"{shown} is the Windows version of {name}. The Linux version is already installed.\n\n"
-               f"Recommended: Open it.", ok="Open it", cancel="Close") == "ok":
+        if ask(f"{intro}, and it is already installed.\n\nRecommended: Open it.", ok=f"Open {name}",
+               cancel="Close") == "ok":
             installed.open_app({**record, "title": name})
             return 0
         return 1
     if where == "flathub":
-        source, how = "in Bazaar, the app store (Flathub)", "It updates by itself."
+        source, how = "Bazaar, the app store (Flathub)", "It updates by itself."
+    elif where == "artcraft":
+        source, how = "ArtCraft", "ArtCraft's signature is checked first, and it updates once a day."
     else:
         distro, _, label = boxes.box_words(where)
         first = "" if boxes.box_exists(common.BOXES[where]["name"]) else " " + boxes.first_time(where)[0]
-        source, how = f"from {distro}", f"It goes in the {label} and updates with System Update.{first}"
-    if ask(f"{shown} is the Windows version of {name}. Windows programs can't run here, but {name} has a Linux "
-           f"version {source}.\n\nRecommended: Install the Linux version. {how}",
-           ok="Install the Linux version", cancel="Cancel") != "ok":
+        source, how = distro, f"It goes in the {label} and updates with System Update.{first}"
+    if ask(f"{intro}. It comes from {source}.\n\nRecommended: Install {name}. {how}", ok=f"Install {name}",
+           cancel="Cancel") != "ok":
         return 1
+    if where == "artcraft":
+        return artcraft.install(package)
     if where != "flathub":
         return repo_apps.install(where, package, name)
-    if windows.run_steps(f"Installing {name} from Flathub.",
-                         [["flatpak", "install", "-y", "--noninteractive", "flathub", package]]):
-        app_list.remember({"title": name, "package": package, "where": "flathub"})
-        notify(f"{name} is installed.")
-        say(f"{name} is installed. Find it in Show Apps.")
-        return 0
-    windows.failed(f"Installing {name}")
-    return 1
+    return flathub.install(package, name)

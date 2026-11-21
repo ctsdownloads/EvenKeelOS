@@ -24,5 +24,6 @@ BOXES = {
     "deb": {"name": "evenkeel-ubuntu", "label": "Ubuntu box",
             "image": "quay.io/toolbx/ubuntu-toolbox:24.04"},
 }
+FLATPAK_PLACES = ("flathub", "artcraft")     # apps installed as Flatpaks: from Flathub, or ArtCraft's own
 WHERE = {"evenkeel-fedora": "Fedora box", "evenkeel-ubuntu": "Ubuntu box", "system": "System",
-         "flathub": "Flathub", "rules": "Hardware rule"}
+         "flathub": "Flathub", "artcraft": "ArtCraft", "rules": "Hardware rule"}
