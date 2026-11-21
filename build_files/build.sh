@@ -112,6 +112,11 @@ for t in application/vnd.microsoft.portable-executable application/x-msi; do
   [[ "$first" == *evenkeel-os-windows-program.desktop* ]] || { echo "ERROR: $t files do not open in Windows Program"; exit 1; }
 done
 for c in distrobox podman flatpak rpm2archive pkexec zenity dnf5; do command -v "$c" >/dev/null || { echo "ERROR: Install Package File needs $c"; exit 1; }; done
+# distrobox 1.8.2.5 mounts read-only folders as "ro:rslave", which podman rejects, so no box can be made;
+# podman wants "ro,rslave". Fixed here until distrobox fixes it; the check fails when that line changes.
+sed -i 's/:ro${rslave}"/:ro${rslave:+,rslave}"/' /usr/bin/distrobox-create
+grep -qF ':ro${rslave:+,rslave}"' /usr/bin/distrobox-create && ! grep -qF ':ro${rslave}"' /usr/bin/distrobox-create \
+  || { echo "ERROR: distrobox-create changed; check whether the ro,rslave fix is still needed"; exit 1; }
 mkdir -p /tmp/pkgtest && (cd /tmp/pkgtest && dnf5 -q download gnome-mines openvpn solaar-udev fedora-repos-archive)
 python3 -I /ctx/check-packages.py /tmp/pkgtest || { echo 'ERROR: Install Package File does not read packages correctly'; exit 1; }
 rm -rf /tmp/pkgtest
