@@ -9,7 +9,7 @@ import time
 import evenkeel_os_ui as ui
 from evenkeel_os_ui import GUI
 from evenkeel_os_packages import (
-    after_restart, boxes, common, install_file, launchers, login_apps, reading, remove_apps, windows,
+    after_restart, boxes, common, install_file, launchers, login_apps, reading, remove_apps, windows, windows_file,
 )
 
 
@@ -29,7 +29,9 @@ USAGE = """  evenkeel-os-packages install [FILE]   install an .rpm or .deb (no F
   evenkeel-os-packages remove           remove an app installed this way
   evenkeel-os-packages check FILE       say what a package needs, without installing anything
   evenkeel-os-packages repair           set a broken app box up again (--if-broken: only if one does not work)
-  evenkeel-os-packages login            choose box apps that start when you log in"""
+  evenkeel-os-packages login            choose box apps that start when you log in
+  evenkeel-os-packages windows FILE     a Windows .exe or .msi: offer its Linux version from Flathub
+  evenkeel-os-packages check-windows FILE  say which program a Windows file is, without any window"""
 
 
 def try_lock(lock):
@@ -82,25 +84,29 @@ def doing_now():
 
 
 def main(argv):
-    if len(argv) < 2 or argv[1] not in ("install", "remove", "check", "after-restart", "repair", "login") or \
-            (argv[1] == "check" and len(argv) < 3):
+    if len(argv) < 2 or argv[1] not in ("install", "remove", "check", "after-restart", "repair", "login", "windows",
+                                        "check-windows") or \
+            (argv[1] in ("check", "windows", "check-windows") and len(argv) < 3):
         print(USAGE)
         return 2
     if argv[1] == "check":
         return check(argv[2])
+    if argv[1] == "check-windows":
+        return windows_file.check(argv[2])
     if argv[1] == "after-restart" and not after_restart.pending() and not after_restart.boxes_missing_helpers() \
             and not launchers.launchers_to_fix() and not login_apps.app_login_files_to_fix():
         return 0
     # each window carries the name of what it is part of
-    ui.TITLE = {"remove": "Remove Apps", "repair": "Repair App Boxes",
-                "login": "Start Apps at Login"}.get(argv[1], ui.TITLE)
+    ui.TITLE = {"remove": "Remove Apps", "repair": "Repair App Boxes", "login": "Start Apps at Login",
+                "windows": "Windows Program"}.get(argv[1], ui.TITLE)
     common.CACHE.mkdir(parents=True, exist_ok=True)
     lock = open(common.CACHE / ".lock", "w")
     if not take_lock(lock, quiet=argv[1] == "after-restart"):
         return 1
     windows.mark_busy({"install": "Install Package File is open", "remove": "Remove Apps is open",
                        "repair": "Repair App Boxes is open",
-                       "login": "Start Apps at Login is open"}.get(argv[1], "Starting"))
+                       "login": "Start Apps at Login is open",
+                       "windows": "Windows Program is open"}.get(argv[1], "Starting"))
     if argv[1] == "after-restart":
         return after_restart.after_restart()
     if argv[1] == "repair":
@@ -109,6 +115,8 @@ def main(argv):
         return install_file.install(argv[2] if len(argv) > 2 else None)
     if argv[1] == "login":
         return login_apps.login()
+    if argv[1] == "windows":
+        return windows_file.open_file(argv[2])
     return remove_apps.remove()
 
 

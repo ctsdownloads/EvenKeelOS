@@ -149,3 +149,23 @@ GNOME's plain **Quit** only closes its windows.
 The window says what failed in plain words, or shows the end of the log. The
 full log is `~/.cache/evenkeel-os/packages/last.log`. To see what a package
 needs: `evenkeel-os-packages check FILE`.
+
+## Windows programs (.exe and .msi)
+
+Windows programs can't run here. Opening an .exe or .msi file starts
+**Windows Program**, which reads the file's own name, maker and product code
+and looks it up in a list of Windows programs whose maker also has a Linux
+version on Flathub. The list is made fresh at every build from
+[winget](https://github.com/microsoft/winget-pkgs)'s program index and
+[Flathub](https://flathub.org/)'s app list, and takes sure matches only: the
+same name from the same maker.
+
+| What the file is | Window |
+| --- | --- |
+| A program with a Linux version on Flathub | **Install the Linux version**, Cancel |
+| The same, already installed | **Open it**, Close |
+| Anything else | Windows programs can't run here, with where to look; OK only |
+
+Nothing in the file is ever run. An app installed this way is listed in
+**Remove Apps**. To see what a file is without any window:
+`evenkeel-os-packages check-windows FILE`.
