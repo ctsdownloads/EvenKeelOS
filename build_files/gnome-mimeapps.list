@@ -2,6 +2,11 @@
 [Default Applications]
 application/x-rpm=evenkeel-os-install-package.desktop
 application/vnd.debian.binary-package=evenkeel-os-install-package.desktop
+# Windows .exe and .msi files offer their Linux version.
+application/vnd.microsoft.portable-executable=evenkeel-os-windows-program.desktop
+application/x-msdownload=evenkeel-os-windows-program.desktop
+application/x-ms-dos-executable=evenkeel-os-windows-program.desktop
+application/x-msi=evenkeel-os-windows-program.desktop
 # Flatpak apps, files and links open in Bazaar, the app store.
 application/vnd.flatpak.ref=io.github.kolunmi.Bazaar.desktop
 application/vnd.flatpak=io.github.kolunmi.Bazaar.desktop

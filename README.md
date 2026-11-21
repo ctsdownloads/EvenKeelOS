@@ -64,6 +64,7 @@ can't change, so it stays working.
 | Services on by default | Fedora's defaults, plus Tailscale (idle until you sign in) and Podman's container auto-updates, as on Bluefin |
 | Codecs | Not included (patents). The [setup checklist](docs/install.md#first-login) and **Install Media Codecs** offer them, with no password for an admin. See [Media codecs](docs/building.md#media-codecs) |
 | Apps from .rpm and .deb files | **Install Package File** puts them in a box; **Remove Apps** takes them out. See [Apps from .rpm and .deb files](docs/apps.md#apps-from-rpm-and-deb-files) |
+| Windows programs (.exe and .msi) | Opening one offers its Linux version from Flathub, from the same maker, when there is one (over 600 programs, refreshed every build); otherwise it says Windows programs can't run here. See [Windows programs](docs/apps.md#windows-programs-exe-and-msi) |
 | Flathub | Added on first boot; Fedora's own Flathub entry is removed |
 | System Tools | Firmware, disk unlock, free space, BIOS settings, automatic updates, undo the last update, problem details, the setup checklist, the desktop layout, and the automatic rollback test. See [System Tools](docs/system-tools.md#system-tools) |
 | Desktop | Teal accent color, with folder icons that follow whatever accent color you pick in Settings, Appearance; 7 EvenKeelOS wallpapers, each with a day picture for light mode and a night one for dark mode; minimize and maximize buttons, no hot corner, battery percentage shown |
@@ -80,7 +81,7 @@ can't change, so it stays working.
 | Default apps | Fedora packages in [`build_files/default-apps.txt`](build_files/default-apps.txt), plus five from Flathub on the first start with internet ([`build_files/flathub-apps.txt`](build_files/flathub-apps.txt)). No email app |
 | App store | [Bazaar](https://github.com/kolunmi/bazaar), replacing GNOME Software |
 | Utilities folder | Every EvenKeelOS tool, in Show Apps |
-| File types | Text files open in Text Editor, .rpm and .deb in Install Package File, Flatpak files in Bazaar |
+| File types | Text files open in Text Editor, .rpm and .deb in Install Package File, .exe and .msi in Windows Program, Flatpak files in Bazaar |
 | Login screen and boot menu | EvenKeelOS logo and name, and the teal accent on the login and lock screens. New users get the EvenKeelOS logo as their picture. The live USB and the installed system both work with Secure Boot on, with one shim on the disk, so the firmware adds no extra "Fedora" boot entry |
 | fastfetch | Shows the EvenKeelOS logo |
 
@@ -94,7 +95,7 @@ can't change, so it stays working.
 - **[Install](docs/install.md)** - live USB, switching from Silverblue or
   Bluefin, updates, rollback and first login.
 - **[Apps from .rpm and .deb files](docs/apps.md)** - installing, removing and
-  repairing apps.
+  repairing apps, and Windows programs.
 - **[System Tools](docs/system-tools.md)** - the system jobs, in windows.
 - **[How it's built](docs/building.md)** - the build, media codecs and the boot
   menu name.
@@ -149,6 +150,9 @@ Can't find the source for something? Open an issue at
   [Tailscale](https://tailscale.com/) and [RPM Fusion](https://rpmfusion.org/).
 - [GNOME](https://www.gnome.org/), [Firefox](https://www.mozilla.org/firefox/)
   and [v4l-utils](https://linuxtv.org/wiki/index.php/V4l-utils).
+- [winget](https://github.com/microsoft/winget-pkgs)'s program index,
+  [Flathub](https://flathub.org/)'s app list, [msitools](https://gitlab.gnome.org/GNOME/msitools)
+  and [pefile](https://github.com/erocarrera/pefile), for Windows Program.
 
 ## License
 

@@ -89,6 +89,7 @@ install -Dm644 /ctx/60-evenkeel-os-mic.conf /usr/share/wireplumber/wireplumber.c
 grep -q 'device.routes.default-source-volume' /usr/share/wireplumber/wireplumber.conf || { echo "ERROR: WirePlumber no longer has device.routes.default-source-volume"; exit 1; }
 for c in fwupdmgr systemd-cryptenroll cryptsetup flatpak podman gnome-control-center; do command -v "$c" >/dev/null || { echo "ERROR: System Tools needs $c"; exit 1; }; done
 install -Dm644 /ctx/evenkeel-os-install-package.desktop /usr/share/applications/evenkeel-os-install-package.desktop
+install -Dm644 /ctx/evenkeel-os-windows-program.desktop /usr/share/applications/evenkeel-os-windows-program.desktop
 install -Dm644 /ctx/evenkeel-os-remove-apps.desktop /usr/share/applications/evenkeel-os-remove-apps.desktop
 install -Dm644 /ctx/evenkeel-os-repair-boxes.desktop /usr/share/applications/evenkeel-os-repair-boxes.desktop
 install -Dm644 /ctx/evenkeel-os-login-apps.desktop /usr/share/applications/evenkeel-os-login-apps.desktop
@@ -106,10 +107,35 @@ for t in application/x-rpm application/vnd.debian.binary-package; do
   first=$(XDG_CURRENT_DESKTOP=GNOME gio mime "$t" | sed -n 1p)
   [[ "$first" == *evenkeel-os-install-package.desktop* ]] || { echo "ERROR: $t files do not open in Install Package File"; exit 1; }
 done
+for t in application/vnd.microsoft.portable-executable application/x-msi; do
+  first=$(XDG_CURRENT_DESKTOP=GNOME gio mime "$t" | sed -n 1p)
+  [[ "$first" == *evenkeel-os-windows-program.desktop* ]] || { echo "ERROR: $t files do not open in Windows Program"; exit 1; }
+done
 for c in distrobox podman flatpak rpm2archive pkexec zenity dnf5; do command -v "$c" >/dev/null || { echo "ERROR: Install Package File needs $c"; exit 1; }; done
 mkdir -p /tmp/pkgtest && (cd /tmp/pkgtest && dnf5 -q download gnome-mines openvpn solaar-udev fedora-repos-archive)
 python3 -I /ctx/check-packages.py /tmp/pkgtest || { echo 'ERROR: Install Package File does not read packages correctly'; exit 1; }
 rm -rf /tmp/pkgtest
+# Windows Program: an .exe or .msi offers its Linux version from Flathub, from a list made fresh each build
+# out of winget's program index (Microsoft) and Flathub's app list.
+dnf5 -y install msitools python3-pefile
+mkdir -p /tmp/winlist /usr/share/evenkeel-os
+curl -fsSL --retry 3 https://cdn.winget.microsoft.com/cache/source.msix -o /tmp/winlist/source.msix
+python3 -I -m zipfile -e /tmp/winlist/source.msix /tmp/winlist/msix
+curl -fsSL --retry 3 https://dl.flathub.org/repo/appstream/x86_64/appstream.xml.gz -o /tmp/winlist/flathub.xml.gz
+python3 -I /ctx/make-windows-list.py /tmp/winlist/msix/Public/index.db /tmp/winlist/flathub.xml.gz /usr/share/evenkeel-os/windows-apps.json
+# Four small real installers, pinned by checksum, to test reading .exe and .msi files.
+(cd /tmp/winlist && curl -fsSL --retry 3 -O https://www.7-zip.org/a/7z2606-x64.exe \
+  -O https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.9.1/npp.8.9.9.1.Installer.x64.exe \
+  -O https://the.earth.li/~sgtatham/putty/0.85/w64/putty-64bit-0.85-installer.msi \
+  -O https://github.com/bitwarden/clients/releases/download/desktop-v2026.11.0/bit-Bitwarden-Installer-2026.11.0.exe)
+(cd /tmp/winlist && sha256sum -c --quiet) <<'SUMS' || { echo "ERROR: a test installer for Windows Program has changed"; exit 1; }
+9b697f65ecc2d9b0152f5ee96d72dde522a7827690349d9307935dacf40f42ec  7z2606-x64.exe
+ce3267f5c4e7e42f847e00f4b20234da6150647203033cdde34a69593efc3152  npp.8.9.9.1.Installer.x64.exe
+2213ebacf962b709411d654a40087508a694756bc4e41c5a1c24ad86596b2511  putty-64bit-0.85-installer.msi
+c8e7ee33b43b9fd6baada11b4355a684bb8944ea58173423fa108d244bcbdf0a  bit-Bitwarden-Installer-2026.11.0.exe
+SUMS
+python3 -I /ctx/check-windows-programs.py /tmp/winlist || { echo 'ERROR: Windows Program does not read installers correctly'; exit 1; }
+rm -rf /tmp/winlist
 # Services on by default, including after the first boot.
 printf 'enable brew-setup.service\nenable evenkeel-os-codecs-setup.service\nenable evenkeel-os-flathub.service\nenable evenkeel-os-flatpak-apps.service\ndisable flatpak-add-fedora-repos.service\nenable evenkeel-os-disk-unlock-check.service\nenable tailscaled.service\nenable podman-auto-update.timer\nenable uupd.timer\nenable greenboot-healthcheck.service\nenable greenboot-set-rollback-trigger.service\n' > /usr/lib/systemd/system-preset/80-evenkeel-os.preset
 systemctl enable tailscaled.service podman-auto-update.timer uupd.timer brew-setup.service

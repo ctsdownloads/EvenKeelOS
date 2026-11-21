@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Windows Program
+Comment=Find the Linux version of a Windows .exe or .msi
+Icon=application-x-executable
+Exec=/usr/bin/evenkeel-os-packages windows %f
+MimeType=application/vnd.microsoft.portable-executable;application/x-msdownload;application/x-ms-dos-executable;application/x-msi;
+NoDisplay=true
+Terminal=false
