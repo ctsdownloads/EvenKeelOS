@@ -160,7 +160,7 @@ wins:
 
 | What the file is | What's offered |
 | --- | --- |
-| Zoom | Opens Zoom's web version, in Chrome (see [Zoom meetings](#zoom-meetings)) |
+| Zoom | Opens Zoom's web version, in Chrome (see [Zoom meetings](zoom.md)) |
 | A program whose maker has a Linux version | That version: from Flathub, or else from Fedora or Ubuntu into the Fedora box (or Ubuntu box) |
 | An Adobe program | The matching ArtCraft app (Photoshop: PhotoCraft, Illustrator: VectorCraft, Premiere: FilmCraft, Acrobat: PdfCraft, and so on) |
 | A known program with no Linux version (Office, iTunes, Skype, MSN Messenger, Publisher) | The Linux app picked for it, from the replacements list |
@@ -186,24 +186,3 @@ Once a day at login they are updated the same way.
 
 To see what a file is without any window:
 `evenkeel-os-packages check-windows FILE`.
-
-## Zoom meetings
-
-Zoom runs in the browser here; the Zoom app isn't needed. When a Zoom invite
-link opens Zoom's page and it tries to start the Zoom app, the same meeting
-opens in Zoom's web version instead, with its passcode, in **Google Chrome**.
-Chrome can share a browser tab with its sound in a meeting; Firefox can't. On
-Linux no browser can share the whole computer's sound, only a tab's.
-
-The first time, if Chrome isn't installed, one window asks:
-
-| Button | What happens |
-| --- | --- |
-| **Install Chrome** | Installs Chrome from Flathub (it updates by itself), then opens the meeting in it. If Chrome can't be installed, the meeting opens in the usual browser |
-| **Use the usual browser** | Opens the meeting there, now and from then on |
-| Cancel | Opens nothing |
-
-If another app tool is busy installing, the meeting opens in the usual browser
-without asking. If the Zoom app itself is installed from Flathub, Zoom links
-open in the app instead. To be asked about Chrome again, delete
-`~/.local/share/evenkeel-os/zoom-browser`.

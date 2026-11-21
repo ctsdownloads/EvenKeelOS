@@ -65,7 +65,7 @@ can't change, so it stays working.
 | Codecs | Not included (patents). The [setup checklist](docs/install.md#first-login) and **Install Media Codecs** offer them, with no password for an admin. See [Media codecs](docs/building.md#media-codecs) |
 | Apps from .rpm and .deb files | **Install Package File** puts them in a box; **Remove Apps** takes them out. See [Apps from .rpm and .deb files](docs/apps.md#apps-from-rpm-and-deb-files) |
 | Windows programs (.exe and .msi) | Opening one offers a Linux app: the same program's Linux version (Flathub, Fedora or Ubuntu), ArtCraft for Adobe programs, a hand-picked replacement for programs with no Linux version (Office, iTunes, Skype), or an app of the same kind. See [Windows programs](docs/apps.md#windows-programs-exe-and-msi) |
-| Zoom meetings | Joining from a Zoom invite opens the meeting in Zoom's web version in Google Chrome; the first time, it offers to install Chrome from Flathub (or use the usual browser). See [Zoom meetings](docs/apps.md#zoom-meetings) |
+| Zoom meetings | Joining from a Zoom invite opens the meeting in Zoom's web version in Google Chrome; the first time, it offers to install Chrome from Flathub (or use the usual browser). See [Zoom meetings](docs/zoom.md) |
 | Flathub | Added on first boot; Fedora's own Flathub entry is removed |
 | System Tools | Firmware, disk unlock, free space, BIOS settings, automatic updates, undo the last update, problem details, the setup checklist, the desktop layout, and the automatic rollback test. See [System Tools](docs/system-tools.md#system-tools) |
 | Desktop | Teal accent color, with folder icons that follow whatever accent color you pick in Settings, Appearance; 7 EvenKeelOS wallpapers, each with a day picture for light mode and a night one for dark mode; minimize and maximize buttons, no hot corner, battery percentage shown |
@@ -97,6 +97,8 @@ can't change, so it stays working.
   Bluefin, updates, rollback and first login.
 - **[Apps from .rpm and .deb files](docs/apps.md)** - installing, removing and
   repairing apps, and Windows programs.
+- **[Zoom meetings](docs/zoom.md)** - joining Zoom meetings in the browser, and
+  why Chrome.
 - **[System Tools](docs/system-tools.md)** - the system jobs, in windows.
 - **[How it's built](docs/building.md)** - the build, media codecs and the boot
   menu name.
