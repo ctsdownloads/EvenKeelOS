@@ -94,3 +94,8 @@ rename it:
 
     sudo evenkeel-os-boot-label          # shows what would change
     sudo evenkeel-os-boot-label --apply  # makes the change
+
+The disk gets one copy of Fedora's signed shim (`shimx64.efi`). Fedora also
+ships it as `shim.efi`, and some PCs' firmware (Framework laptops, for one)
+turns that copy into an extra "Fedora" boot entry, so the image leaves it out.
+Installs from before this change keep it until they are installed fresh.

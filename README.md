@@ -81,7 +81,7 @@ can't change, so it stays working.
 | App store | [Bazaar](https://github.com/kolunmi/bazaar), replacing GNOME Software |
 | Utilities folder | Every EvenKeelOS tool, in Show Apps |
 | File types | Text files open in Text Editor, .rpm and .deb in Install Package File, Flatpak files in Bazaar |
-| Login screen and boot menu | EvenKeelOS logo and name, and the teal accent on the login and lock screens. New users get the EvenKeelOS logo as their picture. The live USB and the installed system both work with Secure Boot on |
+| Login screen and boot menu | EvenKeelOS logo and name, and the teal accent on the login and lock screens. New users get the EvenKeelOS logo as their picture. The live USB and the installed system both work with Secure Boot on, with one shim on the disk, so the firmware adds no extra "Fedora" boot entry |
 | fastfetch | Shows the EvenKeelOS logo |
 
 ## System requirements
