@@ -20,7 +20,6 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/evenkeel-os-updates-pause-check`, `50-evenkeel-os-pause.conf` | Skips automatic updates during the pause after an undo |
 | `build_files/greenboot/`, `evenkeel-os-rolled-back.desktop` | Automatic rollback: greenboot's start-up checks (login screen, networking, a working desktop after a login), the retry counter (2 bad starts) started as soon as an update is installed, a one-time repair of boot menus where greenboot's file ran into the next one, the rollback tests (each breaks one real thing, only with its kernel argument; `check-rollback-tests.py` checks each listed test reaches its piece), and the note and update pause after a rollback |
 | `build_files/evenkeel-os-codecs`, `-setup`, `-admin`, `-lib.sh`, `rpmfusion-*.repo` | **Install Media Codecs** and its helpers |
-| `build_files/EvenKeelOS.xml` | The default firewall zone: Fedora Workstation's without its open ports 1025 to 65535. A machine whose zone was changed keeps its own |
 | `build_files/*.policy`, `*.rules` | polkit actions and the narrow no-password rules, all for the person at the computer only. `40-evenkeel-os-uupd.rules` narrows uupd's own rule, which let any account start, stop or restart updates, to starting and stopping them from the computer |
 | `build_files/*.gschema.override`, `*.dconf`, `gnome-mimeapps.list`, `xdg-terminals.list`, `60-evenkeel-os-mic.conf` | Desktop defaults |
 | `build_files/evenkeel-os-layout` | Switches a user between the current and the Windows-style layout |
