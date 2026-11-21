@@ -423,5 +423,11 @@ jq --arg n "ghcr.io/ctsdownloads/$NAME" --arg k "/etc/pki/containers/$NAME.pub" 
 mv /tmp/policy.json /etc/containers/policy.json
 jq -e --arg n "ghcr.io/ctsdownloads/$NAME" '(.default | length == 1 and .[0].type == "reject") and (.transports.docker[$n][0].type == "sigstoreSigned") and (.transports.docker[""][0].type == "insecureAcceptAnything")' /etc/containers/policy.json > /dev/null || { echo "ERROR: the container policy is not what the signed rebase needs"; exit 1; }
 
+# One shim on the disk: Fedora ships shimx64.efi twice (also as shim.efi), and some PCs' firmware turns the copy into
+# an extra "Fedora" boot entry. bootupd and the USB boot from shimx64.efi only.
+rm -f /usr/lib/efi/shim/*/EFI/fedora/shim.efi
+ls /usr/lib/efi/shim/*/EFI/fedora/shimx64.efi >/dev/null || { echo "ERROR: Fedora's signed shim is missing"; exit 1; }
+[ -z "$(ls /usr/lib/efi/shim/*/EFI/fedora/shim.efi 2>/dev/null)" ] || { echo "ERROR: the second shim (shim.efi) is still there"; exit 1; }
+
 # Root helpers refuse hostile input, and no-password permissions stay with the person at the computer.
 python3 -I /ctx/check-root-helpers.py
