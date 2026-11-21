@@ -75,13 +75,14 @@ def flathub_match(pkg, info):
     return None
 
 
-def install(app_id, name):
-    """Install an app from Flathub and list it in Remove Apps."""
+def install(app_id, name, announce=True):
+    """Install an app from Flathub and list it in Remove Apps; announce says so in a window when done."""
     if not windows.run_steps(f"Installing {name} from Flathub.",
                              [["flatpak", "install", "--system", "-y", "--noninteractive", "flathub", app_id]]):
         windows.failed(f"Installing {name}")
         return 1
     app_list.remember({"title": name, "package": app_id, "where": "flathub"})
     notify(f"{name} is installed.")
-    say(f"{name} is installed. Find it in Show Apps.\n\n{update_notes.UPDATES_FLATHUB}")
+    if announce:
+        say(f"{name} is installed. Find it in Show Apps.\n\n{update_notes.UPDATES_FLATHUB}")
     return 0

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Zoom meeting in the browser
+Comment=Opens a Zoom meeting in Zoom's web version, in Chrome
+Icon=web-browser
+Exec=/usr/bin/evenkeel-os-packages zoom %u
+MimeType=x-scheme-handler/zoommtg;x-scheme-handler/zoomus;
+NoDisplay=true
+Terminal=false
