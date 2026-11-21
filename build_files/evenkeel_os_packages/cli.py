@@ -10,7 +10,7 @@ import evenkeel_os_ui as ui
 from evenkeel_os_ui import GUI
 from evenkeel_os_packages import (
     after_restart, artcraft, boxes, common, install_file, launchers, login_apps, reading, remove_apps, windows,
-    windows_file,
+    windows_file, zoom,
 )
 
 
@@ -32,7 +32,8 @@ USAGE = """  evenkeel-os-packages install [FILE]   install an .rpm or .deb (no F
   evenkeel-os-packages repair           set a broken app box up again (--if-broken: only if one does not work)
   evenkeel-os-packages login            choose box apps that start when you log in
   evenkeel-os-packages windows FILE     a Windows .exe or .msi: offer a Linux app that does its job
-  evenkeel-os-packages check-windows FILE  say what a Windows file is and what would be offered, without any window"""
+  evenkeel-os-packages check-windows FILE  say what a Windows file is and what would be offered, without any window
+  evenkeel-os-packages zoom LINK        a Zoom "open the app" link: open the meeting in Zoom's web version, in Chrome"""
 
 
 def try_lock(lock):
@@ -86,14 +87,19 @@ def doing_now():
 
 def main(argv):
     if len(argv) < 2 or argv[1] not in ("install", "remove", "check", "after-restart", "repair", "login", "windows",
-                                        "check-windows") or \
-            (argv[1] in ("check", "windows", "check-windows") and len(argv) < 3):
+                                        "check-windows", "zoom") or \
+            (argv[1] in ("check", "windows", "check-windows", "zoom") and len(argv) < 3):
         print(USAGE)
         return 2
     if argv[1] == "check":
         return check(argv[2])
     if argv[1] == "check-windows":
         return windows_file.check(argv[2])
+    if argv[1] == "zoom":       # a meeting opens at once; Chrome is offered only while no other tool is installing
+        ui.TITLE = "Zoom"
+        common.CACHE.mkdir(parents=True, exist_ok=True)
+        lock = open(common.CACHE / ".lock", "w")
+        return zoom.open_link(argv[2], may_install=try_lock(lock))
     if argv[1] == "after-restart" and not after_restart.pending() and not after_restart.boxes_missing_helpers() \
             and not launchers.launchers_to_fix() and not login_apps.app_login_files_to_fix() \
             and not artcraft.update_due():

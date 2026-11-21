@@ -3,9 +3,10 @@ import json
 import os
 import re
 import subprocess
+from urllib.parse import urlsplit
 
 from evenkeel_os_ui import ask, say
-from evenkeel_os_packages import app_list, artcraft, boxes, common, flathub, installed, repo_apps
+from evenkeel_os_packages import app_list, artcraft, boxes, common, flathub, installed, repo_apps, zoom
 
 LIST = "/usr/share/evenkeel-os/windows-apps.json"
 JUNK = ("the", "team", "software", "inc", "llc", "ltd", "limited", "corporation", "corp", "gmbh", "project",
@@ -183,13 +184,14 @@ def open_file(path):
     name = o["title"]
     where, package = offer(o)
     if where == "web":
-        if ask(f"{shown} is the Windows version of {name}. Here, {name} runs in the web browser, so there is "
-               f"nothing to install.\n\nRecommended: Open {name} in the browser.", ok=f"Open {name}",
-               cancel="Close") == "ok":
-            subprocess.Popen(["gio", "open", package], start_new_session=True,
-                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            return 0
-        return 1
+        if ask(f"{shown} is the Windows version of {name}. Here, {name} runs in the web browser instead of its "
+               f"own app.\n\nRecommended: Open {name} in the browser.", ok=f"Open {name}", cancel="Close") != "ok":
+            return 1
+        if zoom.zoom_host(urlsplit(package).hostname or ""):
+            return zoom.open_page(package)
+        subprocess.Popen(["gio", "open", package], start_new_session=True,
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return 0
     if "job" not in o:
         intro = f"{shown} is the Windows version of {name}. Windows programs can't run here, but {name} has a " \
                 f"Linux version"

@@ -7,6 +7,9 @@ application/vnd.microsoft.portable-executable=evenkeel-os-windows-program.deskto
 application/x-msdownload=evenkeel-os-windows-program.desktop
 application/x-ms-dos-executable=evenkeel-os-windows-program.desktop
 application/x-msi=evenkeel-os-windows-program.desktop
+# Zoom's "open the Zoom app" links open the meeting in Zoom's web version instead.
+x-scheme-handler/zoommtg=evenkeel-os-zoom-link.desktop
+x-scheme-handler/zoomus=evenkeel-os-zoom-link.desktop
 # Flatpak apps, files and links open in Bazaar, the app store.
 application/vnd.flatpak.ref=io.github.kolunmi.Bazaar.desktop
 application/vnd.flatpak=io.github.kolunmi.Bazaar.desktop

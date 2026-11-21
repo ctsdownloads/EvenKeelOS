@@ -90,6 +90,7 @@ grep -q 'device.routes.default-source-volume' /usr/share/wireplumber/wireplumber
 for c in fwupdmgr systemd-cryptenroll cryptsetup flatpak podman gnome-control-center; do command -v "$c" >/dev/null || { echo "ERROR: System Tools needs $c"; exit 1; }; done
 install -Dm644 /ctx/evenkeel-os-install-package.desktop /usr/share/applications/evenkeel-os-install-package.desktop
 install -Dm644 /ctx/evenkeel-os-windows-program.desktop /usr/share/applications/evenkeel-os-windows-program.desktop
+install -Dm644 /ctx/evenkeel-os-zoom-link.desktop /usr/share/applications/evenkeel-os-zoom-link.desktop
 install -Dm644 /ctx/evenkeel-os-remove-apps.desktop /usr/share/applications/evenkeel-os-remove-apps.desktop
 install -Dm644 /ctx/evenkeel-os-repair-boxes.desktop /usr/share/applications/evenkeel-os-repair-boxes.desktop
 install -Dm644 /ctx/evenkeel-os-login-apps.desktop /usr/share/applications/evenkeel-os-login-apps.desktop
@@ -111,6 +112,12 @@ for t in application/vnd.microsoft.portable-executable application/x-msi; do
   first=$(XDG_CURRENT_DESKTOP=GNOME gio mime "$t" | sed -n 1p)
   [[ "$first" == *evenkeel-os-windows-program.desktop* ]] || { echo "ERROR: $t files do not open in Windows Program"; exit 1; }
 done
+for t in x-scheme-handler/zoommtg x-scheme-handler/zoomus; do
+  first=$(XDG_CURRENT_DESKTOP=GNOME gio mime "$t" | sed -n 1p)
+  [[ "$first" == *evenkeel-os-zoom-link.desktop* ]] \
+    || { echo "ERROR: $t links do not open the Zoom web version"; exit 1; }
+done
+python3 -I /ctx/check-zoom-links.py || { echo 'ERROR: Zoom links do not turn into the right web addresses'; exit 1; }
 for c in distrobox podman flatpak rpm2archive pkexec zenity dnf5; do command -v "$c" >/dev/null || { echo "ERROR: Install Package File needs $c"; exit 1; }; done
 # distrobox 1.8.2.5 mounts read-only folders as "ro:rslave", which podman rejects, so no box can be made;
 # podman wants "ro,rslave". Fixed here until distrobox fixes it; the check fails when that line changes.
