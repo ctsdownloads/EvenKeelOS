@@ -64,10 +64,16 @@ def fetch_and_install(app, version, quiet=False):
             return "failed"
         if not signed_by_artcraft(signature, bundle):
             return "unsigned"
-        # ArtCraft's apps ask to run programs outside their sandbox (talking to org.freedesktop.Flatpak); not here
+        found = re.search(rb"^runtime=([\w.-]+/\w+/[\w.-]+)$", bundle.read_bytes()[:1_000_000], re.M)
+        if not found:
+            return "failed"
+        # the runtime comes from the system's Flathub, so the bundle (--no-deps) adds no second Flathub of its own
         if not run(f"Installing {title}.", [
-                (f"Installing {title}", ["flatpak", "install", "--user", "--reinstall", "-y", "--noninteractive",
-                                         "--bundle", str(bundle)]),
+                ("Getting what it runs on from Flathub", ["flatpak", "install", "--system", "-y", "--noninteractive",
+                                                          "flathub", f"runtime/{found.group(1).decode()}"]),
+                (f"Installing {title}", ["flatpak", "install", "--user", "--reinstall", "--no-deps", "-y",
+                                         "--noninteractive", "--bundle", str(bundle)]),
+                # ArtCraft's apps ask to run programs outside their sandbox (talking to org.freedesktop.Flatpak)
                 ("Keeping it in its sandbox", ["flatpak", "override", "--user",
                                                "--no-talk-name=org.freedesktop.Flatpak", app_id(app)])], quiet):
             return "failed"

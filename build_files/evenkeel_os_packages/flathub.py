@@ -78,7 +78,7 @@ def flathub_match(pkg, info):
 def install(app_id, name):
     """Install an app from Flathub and list it in Remove Apps."""
     if not windows.run_steps(f"Installing {name} from Flathub.",
-                             [["flatpak", "install", "-y", "--noninteractive", "flathub", app_id]]):
+                             [["flatpak", "install", "--system", "-y", "--noninteractive", "flathub", app_id]]):
         windows.failed(f"Installing {name}")
         return 1
     app_list.remember({"title": name, "package": app_id, "where": "flathub"})
