@@ -22,13 +22,7 @@ def install(kind, name, title):
     elif not boxes.room_for(1000):
         return 1
     boxes.ensure_helpers(kind)
-    if kind == "rpm":
-        steps = [(f"Installing {title}", boxes.in_box(box, "sudo", "dnf", "-y", "install", name))]
-    else:
-        steps = [("Getting Ubuntu's list of packages", boxes.in_box(box, "sudo", "apt-get", "update")),
-                 (f"Installing {title}", boxes.in_box(box, "sudo", "env", "DEBIAN_FRONTEND=noninteractive",
-                                                     "apt-get", "install", "-y", name))]
-    if not windows.run_steps(f"Installing {title} in the {label}.", steps):
+    if not windows.run_steps(f"Installing {title} in the {label}.", boxes.install_steps(kind, title, name)):
         windows.failed(f"Installing {title}")
         return 1
     files = package_files(box, kind, name)

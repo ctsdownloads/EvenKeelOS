@@ -1,10 +1,11 @@
-"""Finding the same app on Flathub."""
+"""Finding the same app on Flathub, and installing from it."""
 import json
 import os
 import re
 import shutil
 import urllib.request
-from evenkeel_os_packages import installed
+from evenkeel_os_ui import notify, say
+from evenkeel_os_packages import app_list, installed, update_notes, windows
 
 
 GENERIC = re.compile(r"(^|\s)(web browser|browser|desktop|for linux|client|launcher|app|stable|beta|bin)$")
@@ -72,3 +73,15 @@ def flathub_match(pkg, info):
                                                base_name(app_id.rsplit(".", 1)[-1]) in loose):
             return app_id, name
     return None
+
+
+def install(app_id, name):
+    """Install an app from Flathub and list it in Remove Apps."""
+    if not windows.run_steps(f"Installing {name} from Flathub.",
+                             [["flatpak", "install", "-y", "--noninteractive", "flathub", app_id]]):
+        windows.failed(f"Installing {name}")
+        return 1
+    app_list.remember({"title": name, "package": app_id, "where": "flathub"})
+    notify(f"{name} is installed.")
+    say(f"{name} is installed. Find it in Show Apps.\n\n{update_notes.UPDATES_FLATHUB}")
+    return 0

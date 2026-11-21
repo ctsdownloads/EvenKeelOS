@@ -78,7 +78,7 @@ def norm_name(s):
 
 def open_app(entry):
     """Start an installed app the way its app grid entry does. False when it has no window to open."""
-    if entry["where"] == "flathub":
+    if entry["where"] in common.FLATPAK_PLACES:
         cmd = ["flatpak", "run", entry["package"]]
     else:
         files = [common.HOME / ".local/share/applications" / f"{entry['where']}-{os.path.basename(a)}"

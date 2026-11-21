@@ -30,15 +30,9 @@ def box_install(pkg, info, title, quiet=False, mode="install"):
     repos_before = update_notes.box_repos(box, pkg.kind)
     doing = {"reinstall": "Reinstalling", "update": "Updating", "older": "Installing the older version of"
              }.get(mode, "Installing")
-    if pkg.kind == "rpm":
-        verb = {"reinstall": "reinstall", "older": "downgrade"}.get(mode, "install")
-        steps = [(f"{doing} {title}", boxes.in_box(box, "sudo", "dnf", "-y", verb, f))]
-    else:
-        extra = {"reinstall": ["--reinstall"], "older": ["--allow-downgrades"]}.get(mode, [])
-        steps = [("Getting Ubuntu's list of packages", boxes.in_box(box, "sudo", "apt-get", "update")),
-                 (f"{doing} {title}",
-                  boxes.in_box(box, "sudo", "env", "DEBIAN_FRONTEND=noninteractive", "apt-get", "install", "-y",
-                               *extra, f))]
+    steps = boxes.install_steps(pkg.kind, title, f, doing,
+                                dnf_verb={"reinstall": "reinstall", "older": "downgrade"}.get(mode, "install"),
+                                apt_extra={"reinstall": ["--reinstall"], "older": ["--allow-downgrades"]}.get(mode, []))
     if not windows.run_steps(f"{doing} {title} in the {label}.", steps):
         if quiet:
             return 1

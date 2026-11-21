@@ -120,35 +120,29 @@ grep -qF ':ro${rslave:+,rslave}"' /usr/bin/distrobox-create && ! grep -qF ':ro${
 mkdir -p /tmp/pkgtest && (cd /tmp/pkgtest && dnf5 -q download gnome-mines openvpn solaar-udev fedora-repos-archive)
 python3 -I /ctx/check-packages.py /tmp/pkgtest || { echo 'ERROR: Install Package File does not read packages correctly'; exit 1; }
 rm -rf /tmp/pkgtest
-# Windows Program: an .exe or .msi offers its Linux version from Flathub, from a list made fresh each build
-# out of winget's program index (Microsoft) and the app lists of Flathub, Fedora and Ubuntu.
+# Windows Program: an .exe or .msi offers its Linux version or a Linux app that does its job, from a list made
+# fresh each build out of winget's program index (Microsoft), the app lists of Flathub, Fedora and Ubuntu, and
+# the hand-picked replacements.
 dnf5 -y install msitools python3-pefile
 mkdir -p /tmp/winlist /usr/share/evenkeel-os
-curl -fsSL --retry 3 https://cdn.winget.microsoft.com/cache/source.msix -o /tmp/winlist/source.msix
-python3 -I -m zipfile -e /tmp/winlist/source.msix /tmp/winlist/msix
-curl -fsSL --retry 3 https://dl.flathub.org/repo/appstream/x86_64/appstream.xml.gz -o /tmp/winlist/flathub.xml.gz
-# Ubuntu's lists are for the Ubuntu box's version (24.04); Fedora's is the image's own.
-for c in main universe; do
-  curl -fsSL --retry 3 -o "/tmp/winlist/ubuntu-$c.yml.gz" \
-    "https://archive.ubuntu.com/ubuntu/dists/noble/$c/dep11/Components-amd64.yml.gz"
-done
-python3 -I /ctx/make-windows-list.py /tmp/winlist/msix/Public/index.db /tmp/winlist/flathub.xml.gz \
-  /usr/share/swcatalog/xml/fedora.xml.gz /tmp/winlist/ubuntu-main.yml.gz /tmp/winlist/ubuntu-universe.yml.gz \
-  /usr/share/evenkeel-os/windows-apps.json
-# Five real installers, pinned by checksum, to test reading .exe and .msi files.
-(cd /tmp/winlist && curl -fsSL --retry 3 -O https://www.7-zip.org/a/7z2606-x64.exe \
-  -O https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.9.1/npp.8.9.9.1.Installer.x64.exe \
-  -O https://the.earth.li/~sgtatham/putty/0.85/w64/putty-64bit-0.85-installer.msi \
-  -O https://github.com/bitwarden/clients/releases/download/desktop-v2026.11.0/bit-Bitwarden-Installer-2026.11.0.exe \
-  -O https://github.com/qutebrowser/qutebrowser/releases/download/v3.7.0/qutebrowser-3.7.0-amd64.exe)
-(cd /tmp/winlist && sha256sum -c --quiet) <<'SUMS' || { echo "ERROR: a test installer for Windows Program has changed"; exit 1; }
-9b697f65ecc2d9b0152f5ee96d72dde522a7827690349d9307935dacf40f42ec  7z2606-x64.exe
-ce3267f5c4e7e42f847e00f4b20234da6150647203033cdde34a69593efc3152  npp.8.9.9.1.Installer.x64.exe
-2213ebacf962b709411d654a40087508a694756bc4e41c5a1c24ad86596b2511  putty-64bit-0.85-installer.msi
-c8e7ee33b43b9fd6baada11b4355a684bb8944ea58173423fa108d244bcbdf0a  bit-Bitwarden-Installer-2026.11.0.exe
-8956c0614fcea863730559109e9787ccce37034d72a7faf954945361e58ec48d  qutebrowser-3.7.0-amd64.exe
-SUMS
-python3 -I /ctx/check-windows-programs.py /tmp/winlist || { echo 'ERROR: Windows Program does not read installers correctly'; exit 1; }
+# ArtCraft apps install only when signed by ArtCraft's release key, pinned here by its fingerprint.
+GNUPGHOME=$(mktemp -d)
+export GNUPGHOME
+gpg --batch --quiet --dearmor -o /usr/share/evenkeel-os/artcraft-keyring.gpg /ctx/artcraft-release-key.asc
+gpg --batch --show-keys --with-colons /usr/share/evenkeel-os/artcraft-keyring.gpg \
+  | grep -qx 'fpr:::::::::2B76741B414AAD6CD33E631213A005C0B9D7C3ED:' \
+  || { echo "ERROR: the ArtCraft release key is not the pinned one"; exit 1; }
+rm -rf "$GNUPGHOME"
+unset GNUPGHOME
+# The workflow downloads these (keeping the last copy if a site is down); a local build downloads them here.
+data=/ctx/windows-data
+[ -d "$data" ] || { data=/tmp/winlist/data; /ctx/fetch-windows-data.sh "$data"; }
+python3 -I -m zipfile -e "$data/source.msix" /tmp/winlist/msix
+python3 -I /ctx/make-windows-list.py /tmp/winlist/msix/Public/index.db "$data/flathub.xml.gz" \
+  /usr/share/swcatalog/xml/fedora.xml.gz /ctx/windows-replacements.json \
+  "$data/ubuntu-main.yml.gz" "$data/ubuntu-universe.yml.gz" /usr/share/evenkeel-os/windows-apps.json
+python3 -I /ctx/check-windows-programs.py "$data" \
+  || { echo 'ERROR: Windows Program does not read installers correctly'; exit 1; }
 rm -rf /tmp/winlist
 # Services on by default, including after the first boot.
 printf 'enable brew-setup.service\nenable evenkeel-os-codecs-setup.service\nenable evenkeel-os-flathub.service\nenable evenkeel-os-flatpak-apps.service\ndisable flatpak-add-fedora-repos.service\nenable evenkeel-os-disk-unlock-check.service\nenable tailscaled.service\nenable podman-auto-update.timer\nenable uupd.timer\nenable greenboot-healthcheck.service\nenable greenboot-set-rollback-trigger.service\n' > /usr/lib/systemd/system-preset/80-evenkeel-os.preset

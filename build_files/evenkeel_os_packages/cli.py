@@ -9,7 +9,8 @@ import time
 import evenkeel_os_ui as ui
 from evenkeel_os_ui import GUI
 from evenkeel_os_packages import (
-    after_restart, boxes, common, install_file, launchers, login_apps, reading, remove_apps, windows, windows_file,
+    after_restart, artcraft, boxes, common, install_file, launchers, login_apps, reading, remove_apps, windows,
+    windows_file,
 )
 
 
@@ -30,8 +31,8 @@ USAGE = """  evenkeel-os-packages install [FILE]   install an .rpm or .deb (no F
   evenkeel-os-packages check FILE       say what a package needs, without installing anything
   evenkeel-os-packages repair           set a broken app box up again (--if-broken: only if one does not work)
   evenkeel-os-packages login            choose box apps that start when you log in
-  evenkeel-os-packages windows FILE     a Windows .exe or .msi: offer its Linux version from Flathub
-  evenkeel-os-packages check-windows FILE  say which program a Windows file is, without any window"""
+  evenkeel-os-packages windows FILE     a Windows .exe or .msi: offer a Linux app that does its job
+  evenkeel-os-packages check-windows FILE  say what a Windows file is and what would be offered, without any window"""
 
 
 def try_lock(lock):
@@ -94,7 +95,8 @@ def main(argv):
     if argv[1] == "check-windows":
         return windows_file.check(argv[2])
     if argv[1] == "after-restart" and not after_restart.pending() and not after_restart.boxes_missing_helpers() \
-            and not launchers.launchers_to_fix() and not login_apps.app_login_files_to_fix():
+            and not launchers.launchers_to_fix() and not login_apps.app_login_files_to_fix() \
+            and not artcraft.update_due():
         return 0
     # each window carries the name of what it is part of
     ui.TITLE = {"remove": "Remove Apps", "repair": "Repair App Boxes", "login": "Start Apps at Login",
@@ -108,7 +110,8 @@ def main(argv):
                        "login": "Start Apps at Login is open",
                        "windows": "Windows Program is open"}.get(argv[1], "Starting"))
     if argv[1] == "after-restart":
-        return after_restart.after_restart()
+        after_restart.after_restart()
+        return artcraft.update(artcraft.update_due())
     if argv[1] == "repair":
         return boxes.repair_command(only_broken="--if-broken" in argv)
     if argv[1] == "install":

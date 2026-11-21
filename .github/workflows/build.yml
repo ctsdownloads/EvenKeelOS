@@ -66,6 +66,23 @@ jobs:
       - name: List of changes
         run: git log -60 --format='%cs%x09%s' > build_files/changes.txt
 
+      # Windows Program's downloads; a site that is down falls back to the copy saved by the last build.
+      - name: Restore saved Windows Program downloads
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: build_files/windows-data
+          key: windows-data-${{ github.run_id }}
+          restore-keys: windows-data-
+
+      - name: Download Windows Program data
+        run: build_files/fetch-windows-data.sh build_files/windows-data
+
+      - name: Save Windows Program downloads
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: build_files/windows-data
+          key: windows-data-${{ github.run_id }}
+
       - name: Image Name
         id: image-name
         run: |
