@@ -155,14 +155,15 @@ needs: `evenkeel-os-packages check FILE`.
 Windows programs can't run here. Opening an .exe or .msi file starts
 **Windows Program**, which reads the file's own name, maker and product code
 and looks it up in a list of Windows programs whose maker also has a Linux
-version on Flathub. The list is made fresh at every build from
-[winget](https://github.com/microsoft/winget-pkgs)'s program index and
-[Flathub](https://flathub.org/)'s app list, and takes sure matches only: the
-same name from the same maker.
+version on Flathub, in Fedora or in Ubuntu. The list is made fresh at every
+build from [winget](https://github.com/microsoft/winget-pkgs)'s program index
+and the app lists of [Flathub](https://flathub.org/), Fedora and Ubuntu, and
+takes sure matches only: the same name from the same maker.
 
 | What the file is | Window |
 | --- | --- |
 | A program with a Linux version on Flathub | **Install the Linux version**, Cancel |
+| Not on Flathub, but in Fedora (or else Ubuntu) | **Install the Linux version**: into the Fedora box (or Ubuntu box), updated with System Update |
 | The same, already installed | **Open it**, Close |
 | Anything else | Windows programs can't run here, with where to look; OK only |
 

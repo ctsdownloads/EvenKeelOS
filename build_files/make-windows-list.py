@@ -1,8 +1,8 @@
 #!/usr/bin/python3 -I
-"""Build step: the list of Windows programs whose own maker has a Linux version on Flathub.
+"""Build step: the list of Windows programs whose own maker has a Linux version on Flathub, Fedora or Ubuntu.
 
-Usage: make-windows-list.py WINGET-INDEX.DB FLATHUB-APPSTREAM.XML.GZ OUT.JSON
-Sure matches only: the same name from the same maker, or a Flathub app named inside the Windows name.
+Usage: make-windows-list.py WINGET.DB FLATHUB.XML.GZ FEDORA.XML.GZ UBUNTU.YML.GZ... OUT.JSON
+Sure matches only: the same name from the same maker, or a Linux app named inside the Windows name.
 """
 import collections
 import gzip
@@ -53,21 +53,48 @@ def winget(path):
     return out
 
 
-def flathub(path):
-    """Flathub apps: id, untranslated name, maker, and whether Flathub verified the maker."""
+def untranslated(comp, path):
+    return next((e.text for e in comp.findall(path) if not e.get(LANG) and e.text), "")
+
+
+def appstream_xml(path, flatpak):
+    """Apps in an AppStream file: id, package (Flatpak id or Fedora package), untranslated name, maker."""
     apps = []
     for comp in ET.parse(gzip.open(path)).getroot().findall("component"):
         if comp.get("type") not in ("desktop-application", "desktop"):
             continue
-        bundle = [b.text for b in comp.findall("bundle") if b.get("type") == "flatpak" and
-                  (b.text or "").startswith("app/")]
-        names = [n.text for n in comp.findall("name") if not n.get(LANG) and n.text]
-        if not bundle or not names:
+        name = untranslated(comp, "name")
+        if flatpak:
+            bundle = [b.text for b in comp.findall("bundle") if b.get("type") == "flatpak" and
+                      (b.text or "").startswith("app/")]
+            package = bundle[0].split("/")[1] if bundle else ""
+        else:
+            package = comp.findtext("pkgname") or ""
+        if not package or not name:
             continue
         verified = any(v.get("key") == "flathub::verification::verified" and (v.text or "").strip() == "true"
                        for v in comp.iter("value"))
-        apps.append({"id": bundle[0].split("/")[1], "name": names[0], "verified": verified,
-                     "dev": comp.findtext("developer/name") or comp.findtext("developer_name") or ""})
+        apps.append({"id": package if flatpak else re.sub(r"\.desktop$", "", comp.findtext("id") or ""),
+                     "package": package, "name": name, "verified": verified,
+                     "dev": untranslated(comp, "developer/name") or untranslated(comp, "developer_name")})
+    return apps
+
+
+def ubuntu_yaml(path):
+    """Apps in Ubuntu's AppStream file (YAML): only the fields used here, read line by line."""
+    apps, doc, key = [], {}, None
+    for line in gzip.open(path, "rt", encoding="utf-8"):
+        if line.startswith("---"):
+            if doc.get("Type") in ("desktop-application", "desktop") and doc.get("Package") and doc.get("Name"):
+                apps.append({"id": re.sub(r"\.desktop$", "", doc.get("ID", "")), "package": doc["Package"],
+                             "name": doc["Name"], "dev": doc.get("DeveloperName", ""), "verified": False})
+            doc, key = {}, None
+        elif line[:1] not in (" ", "\n") and ":" in line:
+            key, value = line.split(":", 1)
+            if value.strip():
+                doc[key] = value.strip().strip("'\"")
+        elif key in ("Name", "DeveloperName") and line.startswith("  C: "):
+            doc[key] = line[5:].strip().strip("'\"")
     return apps
 
 
@@ -76,8 +103,8 @@ def maker_keys(app):
     return {norm_maker(app["dev"])} | ({parts[1]} if len(parts) >= 3 else set())
 
 
-def main(db_path, xml_path, out_path):
-    pkgs, apps = winget(db_path), flathub(xml_path)
+def find(pkgs, apps):
+    """{winget id: app} for the Windows programs whose maker has this app."""
     by_name, by_maker = collections.defaultdict(list), collections.defaultdict(list)
     for a in apps:
         if len(norm(a["name"])) >= 3:
@@ -89,7 +116,7 @@ def main(db_path, xml_path, out_path):
     def same_maker(p, a):
         return any(len(k) >= 4 and len(x) >= 4 and (k in x or x in k) for x in p["pub"] for k in maker_keys(a))
 
-    matches = {}
+    found = {}
     for pid, p in pkgs.items():
         n = norm(p["name"])
         hit = next((a for a in by_name.get(n, []) if same_maker(p, a)), None)
@@ -106,13 +133,29 @@ def main(db_path, xml_path, out_path):
                     hit = a
                     break
         if hit:
-            matches[pid] = {"flatpak": hit["id"], "title": hit["name"], "verified": hit["verified"]}
+            found[pid] = hit
+    return found
+
+
+def main(db_path, flathub_path, fedora_path, *ubuntu_paths_and_out):
+    *ubuntu_paths, out_path = ubuntu_paths_and_out
+    pkgs = winget(db_path)
+    sources = {"flatpak": appstream_xml(flathub_path, flatpak=True),
+               "fedora": appstream_xml(fedora_path, flatpak=False),
+               "ubuntu": [a for p in ubuntu_paths for a in ubuntu_yaml(p)]}
+    matches = collections.defaultdict(dict)
+    for where, apps in sources.items():
+        for pid, a in find(pkgs, apps).items():
+            matches[pid][where] = a["package"]
+            matches[pid].setdefault("title", a["name"])
     out = {"matches": matches, "packages": {pid: pkgs[pid] for pid in matches}}
     with open(out_path, "w") as f:
         json.dump(out, f, separators=(",", ":"), sort_keys=True)
-    print(f"Windows programs with a Linux version on Flathub: {len({norm(pkgs[p]['name']) for p in matches})} "
-          f"({len(matches)} winget entries)")
+    for where in sources:
+        got = {norm(pkgs[p]["name"]) for p, m in matches.items() if where in m}
+        print(f"Windows programs with a Linux version, {where}: {len(got)}")
+    print(f"In all: {len({norm(pkgs[p]['name']) for p in matches})} ({len(matches)} winget entries)")
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:4])
+    main(*sys.argv[1:])
