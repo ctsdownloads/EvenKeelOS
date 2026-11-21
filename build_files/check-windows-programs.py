@@ -30,7 +30,7 @@ def check(path):
     return json.loads(out)
 
 
-def made_up_msi(name, maker, where):
+def made_up_msi(name, maker, where, file_name="setup.msi"):
     """A tiny .msi that only says its name and maker, like an old installer would."""
     wxs = where / "p.wxs"
     wxs.write_text(f'<?xml version="1.0"?><Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><Product Id="*" '
@@ -38,7 +38,7 @@ def made_up_msi(name, maker, where):
                    f'UpgradeCode="11111111-2222-3333-4444-555555555555"><Package InstallerVersion="200" '
                    f'Compressed="yes"/><Directory Id="TARGETDIR" Name="SourceDir"/><Feature Id="F" Level="1"/>'
                    f'</Product></Wix>')
-    msi = where / "setup.msi"
+    msi = where / file_name
     subprocess.run(["wixl", "-o", str(msi), str(wxs)], check=True, capture_output=True)
     return check(msi)
 
@@ -62,6 +62,10 @@ with tempfile.TemporaryDirectory() as tmp:
         f"Photoshop should offer ArtCraft's PhotoCraft: {photoshop}"
     zoom = made_up_msi("Zoom Workplace", "Zoom Video Communications, Inc.", Path(tmp))
     assert zoom["where"] == "web", f"Zoom should open in the browser, not install the app: {zoom}"
+    reader = made_up_msi("Adobe Self Extractor", "Adobe Systems Incorporated", Path(tmp),
+                         "AcroRdrDCx642600322110_en_US.msi")
+    assert reader["where"] == "artcraft" and reader["package"] == "pdfcraft", \
+        f"Acrobat Reader's installer (named only 'Adobe Self Extractor') should offer PdfCraft: {reader}"
     msn = made_up_msi("Windows Live Messenger", "Microsoft Corporation", Path(tmp))
     assert msn["kind"] == "replacement", f"Windows Live Messenger should get a hand-picked replacement: {msn}"
     player = made_up_msi("Zyxwv Digital Media Player", "Nobody Software", Path(tmp))
