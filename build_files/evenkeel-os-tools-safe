@@ -61,7 +61,7 @@ def main(argv):
         return 1
     if argv[1:] == ["updates", "on"]:
         PAUSE.unlink(missing_ok=True)
-        return subprocess.run(["systemctl", "enable", "--now", "uupd.timer"]).returncode
+        return subprocess.run(["/usr/bin/systemctl", "enable", "--now", "uupd.timer"]).returncode
     if argv[1:] == ["updates", "pause"]:
         PAUSE.parent.mkdir(parents=True, exist_ok=True)
         PAUSE.write_text(f"{int(time.time()) + PAUSE_DAYS * 86400}\n")
@@ -72,8 +72,8 @@ def main(argv):
     if len(argv) == 3 and argv[1] == "disk-unlock" and argv[2] in ("on", "off"):
         return disk_unlock(argv[2])
     if argv[1:] == ["free-space"]:
-        rc = subprocess.run(["rpm-ostree", "cleanup", "-bm"]).returncode
-        subprocess.run(["flatpak", "uninstall", "--system", "--unused", "-y", "--noninteractive"])
+        rc = subprocess.run(["/usr/bin/rpm-ostree", "cleanup", "-bm"]).returncode
+        subprocess.run(["/usr/bin/flatpak", "uninstall", "--system", "--unused", "-y", "--noninteractive"])
         return rc
     print(__doc__)
     return 2

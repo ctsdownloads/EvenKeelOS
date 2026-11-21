@@ -33,7 +33,8 @@ command -v ujust >/dev/null || { echo 'ERROR: ujust is missing'; exit 1; }
 install -Dm644 /ctx/evenkeel_os_ui.py /usr/lib/evenkeel-os/evenkeel_os_ui.py
 python3 -I -c 'import sys; sys.path.insert(0, "/usr/lib/evenkeel-os"); import evenkeel_os_ui' \
   || { echo "ERROR: the shared windows module does not load"; exit 1; }
-# System Update: uupd with a progress window, no password (uupd's polkit rule).
+# System Update: uupd with a progress window, no password (uupd's polkit rule, narrowed to the person at the computer).
+install -Dm644 /ctx/40-evenkeel-os-uupd.rules /usr/share/polkit-1/rules.d/40-evenkeel-os-uupd.rules
 install -Dm755 /ctx/evenkeel-os-update /usr/bin/evenkeel-os-update
 install -Dm755 /ctx/evenkeel-os-update-helper /usr/libexec/evenkeel-os-update-helper
 echo '{"deployments": [{"staged": true}]}' | /usr/libexec/evenkeel-os-update-helper staged \
@@ -421,3 +422,13 @@ jq --arg n "ghcr.io/ctsdownloads/$NAME" --arg k "/etc/pki/containers/$NAME.pub" 
 ' /etc/containers/policy.json > /tmp/policy.json
 mv /tmp/policy.json /etc/containers/policy.json
 jq -e --arg n "ghcr.io/ctsdownloads/$NAME" '(.default | length == 1 and .[0].type == "reject") and (.transports.docker[$n][0].type == "sigstoreSigned") and (.transports.docker[""][0].type == "insecureAcceptAnything")' /etc/containers/policy.json > /dev/null || { echo "ERROR: the container policy is not what the signed rebase needs"; exit 1; }
+
+# Firewall: Fedora Workstation's zone without its open ports 1025 to 65535 (a machine whose zone was changed keeps it).
+install -Dm644 /ctx/EvenKeelOS.xml /usr/lib/firewalld/zones/EvenKeelOS.xml
+sed -i 's/^DefaultZone=.*/DefaultZone=EvenKeelOS/' /etc/firewalld/firewalld-workstation.conf
+[ "$(firewall-offline-cmd --get-default-zone)" = EvenKeelOS ] || { echo "ERROR: EvenKeelOS is not the firewall's zone"; exit 1; }
+[ -z "$(firewall-offline-cmd --zone=EvenKeelOS --list-ports)" ] || { echo "ERROR: the firewall zone opens ports"; exit 1; }
+firewall-offline-cmd --zone=EvenKeelOS --list-services | grep -qw gsconnect || { echo "ERROR: phone pairing is blocked"; exit 1; }
+
+# Root helpers refuse hostile input, and no-password permissions stay with the person at the computer.
+python3 -I /ctx/check-root-helpers.py
