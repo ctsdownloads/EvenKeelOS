@@ -64,7 +64,7 @@ can't change, so it stays working.
 | Services on by default | Fedora's defaults, plus Tailscale (idle until you sign in) and Podman's container auto-updates, as on Bluefin |
 | Codecs | Not included (patents). The [setup checklist](docs/install.md#first-login) and **Install Media Codecs** offer them, with no password for an admin. See [Media codecs](docs/building.md#media-codecs) |
 | Apps from .rpm and .deb files | **Install Package File** puts them in a box; **Remove Apps** takes them out. See [Apps from .rpm and .deb files](docs/apps.md#apps-from-rpm-and-deb-files) |
-| Windows programs (.exe and .msi) | Opening one offers its Linux version from Flathub, from the same maker, when there is one (over 600 programs, refreshed every build); otherwise it says Windows programs can't run here. See [Windows programs](docs/apps.md#windows-programs-exe-and-msi) |
+| Windows programs (.exe and .msi) | Opening one offers its Linux version from the same maker, when there is one: from Flathub, or else from Fedora or Ubuntu into a box (over 650 programs, refreshed every build). Otherwise it says Windows programs can't run here. See [Windows programs](docs/apps.md#windows-programs-exe-and-msi) |
 | Flathub | Added on first boot; Fedora's own Flathub entry is removed |
 | System Tools | Firmware, disk unlock, free space, BIOS settings, automatic updates, undo the last update, problem details, the setup checklist, the desktop layout, and the automatic rollback test. See [System Tools](docs/system-tools.md#system-tools) |
 | Desktop | Teal accent color, with folder icons that follow whatever accent color you pick in Settings, Appearance; 7 EvenKeelOS wallpapers, each with a day picture for light mode and a night one for dark mode; minimize and maximize buttons, no hot corner, battery percentage shown |
@@ -150,8 +150,8 @@ Can't find the source for something? Open an issue at
   [Tailscale](https://tailscale.com/) and [RPM Fusion](https://rpmfusion.org/).
 - [GNOME](https://www.gnome.org/), [Firefox](https://www.mozilla.org/firefox/)
   and [v4l-utils](https://linuxtv.org/wiki/index.php/V4l-utils).
-- [winget](https://github.com/microsoft/winget-pkgs)'s program index,
-  [Flathub](https://flathub.org/)'s app list, [msitools](https://gitlab.gnome.org/GNOME/msitools)
+- [winget](https://github.com/microsoft/winget-pkgs)'s program index, the app lists of
+  [Flathub](https://flathub.org/), Fedora and Ubuntu, [msitools](https://gitlab.gnome.org/GNOME/msitools)
   and [pefile](https://github.com/erocarrera/pefile), for Windows Program.
 
 ## License

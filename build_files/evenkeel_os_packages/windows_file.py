@@ -1,11 +1,11 @@
-"""Windows Program: an .exe or .msi opened here; offers the Linux version from Flathub when there is one."""
+"""Windows Program: an .exe or .msi opened here; offers its Linux version from Flathub, Fedora or Ubuntu."""
 import json
 import os
 import re
 import subprocess
 
 from evenkeel_os_ui import ask, notify, say
-from evenkeel_os_packages import app_list, installed, windows
+from evenkeel_os_packages import app_list, boxes, common, installed, repo_apps, windows
 
 LIST = "/usr/share/evenkeel-os/windows-apps.json"
 JUNK = ("the", "team", "software", "inc", "llc", "ltd", "limited", "corporation", "corp", "gmbh", "project",
@@ -128,16 +128,30 @@ def identify(path, data):
     return None, ""
 
 
+def offer(m):
+    """Where the Linux version comes from: ('flathub' | 'rpm' | 'deb', package), Flathub first."""
+    for key, where in (("flatpak", "flathub"), ("fedora", "rpm"), ("ubuntu", "deb")):
+        if m.get(key):
+            return where, m[key]
+    return None, None
+
+
 def check(path):
     """For build tests: what a file is and what would be offered, without any window."""
     data = load_list()
     pid, how = identify(path, data)
-    m = data["matches"].get(pid) if pid else None
+    where, package = offer(data["matches"].get(pid, {})) if pid else (None, None)
     info = read_installer(path)
     print(json.dumps({"file": os.path.basename(path), "name": info["name"], "maker": info["maker"],
-                      "program": pid, "how": how,
-                      "flatpak": m["flatpak"] if m else None}))
+                      "program": pid, "how": how, "where": where, "package": package}))
     return 0
+
+
+def installed_record(where, package):
+    box = "flathub" if where == "flathub" else common.BOXES[where]["name"]
+    if where == "flathub" and installed.flatpak_installed(package):
+        return {"where": "flathub", "package": package}
+    return next((r for r in app_list.load() if r["where"] == box and r["package"] == package), None)
 
 
 def open_file(path):
@@ -149,20 +163,30 @@ def open_file(path):
         say(f"{shown} is a Windows program. Windows programs can't run here.\n\n"
             f"Look for a Linux version on the maker's website, or search Bazaar, the app store.")
         return 1
-    app_id, name = m["flatpak"], m["title"]
-    if installed.flatpak_installed(app_id):
+    name = m["title"]
+    where, package = offer(m)
+    record = installed_record(where, package)
+    if record:
         if ask(f"{shown} is the Windows version of {name}. The Linux version is already installed.\n\n"
                f"Recommended: Open it.", ok="Open it", cancel="Close") == "ok":
-            installed.open_app({"where": "flathub", "package": app_id, "title": name})
+            installed.open_app({**record, "title": name})
             return 0
         return 1
+    if where == "flathub":
+        source, how = "in Bazaar, the app store (Flathub)", "It updates by itself."
+    else:
+        distro, _, label = boxes.box_words(where)
+        first = "" if boxes.box_exists(common.BOXES[where]["name"]) else " " + boxes.first_time(where)[0]
+        source, how = f"from {distro}", f"It goes in the {label} and updates with System Update.{first}"
     if ask(f"{shown} is the Windows version of {name}. Windows programs can't run here, but {name} has a Linux "
-           f"version in Bazaar, the app store (Flathub).\n\nRecommended: Install the Linux version. It updates by "
-           f"itself.", ok="Install the Linux version", cancel="Cancel") != "ok":
+           f"version {source}.\n\nRecommended: Install the Linux version. {how}",
+           ok="Install the Linux version", cancel="Cancel") != "ok":
         return 1
+    if where != "flathub":
+        return repo_apps.install(where, package, name)
     if windows.run_steps(f"Installing {name} from Flathub.",
-                         [["flatpak", "install", "-y", "--noninteractive", "flathub", app_id]]):
-        app_list.remember({"title": name, "package": app_id, "where": "flathub"})
+                         [["flatpak", "install", "-y", "--noninteractive", "flathub", package]]):
+        app_list.remember({"title": name, "package": package, "where": "flathub"})
         notify(f"{name} is installed.")
         say(f"{name} is installed. Find it in Show Apps.")
         return 0

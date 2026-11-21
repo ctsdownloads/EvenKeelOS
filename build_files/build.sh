@@ -116,23 +116,32 @@ mkdir -p /tmp/pkgtest && (cd /tmp/pkgtest && dnf5 -q download gnome-mines openvp
 python3 -I /ctx/check-packages.py /tmp/pkgtest || { echo 'ERROR: Install Package File does not read packages correctly'; exit 1; }
 rm -rf /tmp/pkgtest
 # Windows Program: an .exe or .msi offers its Linux version from Flathub, from a list made fresh each build
-# out of winget's program index (Microsoft) and Flathub's app list.
+# out of winget's program index (Microsoft) and the app lists of Flathub, Fedora and Ubuntu.
 dnf5 -y install msitools python3-pefile
 mkdir -p /tmp/winlist /usr/share/evenkeel-os
 curl -fsSL --retry 3 https://cdn.winget.microsoft.com/cache/source.msix -o /tmp/winlist/source.msix
 python3 -I -m zipfile -e /tmp/winlist/source.msix /tmp/winlist/msix
 curl -fsSL --retry 3 https://dl.flathub.org/repo/appstream/x86_64/appstream.xml.gz -o /tmp/winlist/flathub.xml.gz
-python3 -I /ctx/make-windows-list.py /tmp/winlist/msix/Public/index.db /tmp/winlist/flathub.xml.gz /usr/share/evenkeel-os/windows-apps.json
-# Four small real installers, pinned by checksum, to test reading .exe and .msi files.
+# Ubuntu's lists are for the Ubuntu box's version (24.04); Fedora's is the image's own.
+for c in main universe; do
+  curl -fsSL --retry 3 -o "/tmp/winlist/ubuntu-$c.yml.gz" \
+    "https://archive.ubuntu.com/ubuntu/dists/noble/$c/dep11/Components-amd64.yml.gz"
+done
+python3 -I /ctx/make-windows-list.py /tmp/winlist/msix/Public/index.db /tmp/winlist/flathub.xml.gz \
+  /usr/share/swcatalog/xml/fedora.xml.gz /tmp/winlist/ubuntu-main.yml.gz /tmp/winlist/ubuntu-universe.yml.gz \
+  /usr/share/evenkeel-os/windows-apps.json
+# Five real installers, pinned by checksum, to test reading .exe and .msi files.
 (cd /tmp/winlist && curl -fsSL --retry 3 -O https://www.7-zip.org/a/7z2606-x64.exe \
   -O https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.9.1/npp.8.9.9.1.Installer.x64.exe \
   -O https://the.earth.li/~sgtatham/putty/0.85/w64/putty-64bit-0.85-installer.msi \
-  -O https://github.com/bitwarden/clients/releases/download/desktop-v2026.11.0/bit-Bitwarden-Installer-2026.11.0.exe)
+  -O https://github.com/bitwarden/clients/releases/download/desktop-v2026.11.0/bit-Bitwarden-Installer-2026.11.0.exe \
+  -O https://github.com/qutebrowser/qutebrowser/releases/download/v3.7.0/qutebrowser-3.7.0-amd64.exe)
 (cd /tmp/winlist && sha256sum -c --quiet) <<'SUMS' || { echo "ERROR: a test installer for Windows Program has changed"; exit 1; }
 9b697f65ecc2d9b0152f5ee96d72dde522a7827690349d9307935dacf40f42ec  7z2606-x64.exe
 ce3267f5c4e7e42f847e00f4b20234da6150647203033cdde34a69593efc3152  npp.8.9.9.1.Installer.x64.exe
 2213ebacf962b709411d654a40087508a694756bc4e41c5a1c24ad86596b2511  putty-64bit-0.85-installer.msi
 c8e7ee33b43b9fd6baada11b4355a684bb8944ea58173423fa108d244bcbdf0a  bit-Bitwarden-Installer-2026.11.0.exe
+8956c0614fcea863730559109e9787ccce37034d72a7faf954945361e58ec48d  qutebrowser-3.7.0-amd64.exe
 SUMS
 python3 -I /ctx/check-windows-programs.py /tmp/winlist || { echo 'ERROR: Windows Program does not read installers correctly'; exit 1; }
 rm -rf /tmp/winlist
