@@ -118,8 +118,9 @@ def identify(path, programs, info):
     steps = [("product code", lambda p: info["code"] and info["code"] in p["codes"]),
              ("name and maker", lambda p: len(name) >= 3 and name in p["names"]),
              ("file name", lambda p: len(stem) >= 3 and (stem in p["names"] or stem in p["aliases"])),
-             # the file name starts with the program's name: 'inkscape-1.4.4_2026-05-05_dcaf3e7-x64.signed.msi'
-             ("file name", lambda p: any(len(n) >= 4 and stem.startswith(n) for n in p["names"]))]
+             # the file name starts with its name or usual file name: 'AcroRdrDCx642600322110_en_US.exe'
+             ("file name", lambda p: any(len(n) >= 4 and stem.startswith(n) for n in p["names"]) or
+              any(len(a) >= 5 and stem.startswith(a) for a in p["aliases"]))]
     # every step is tried, so a hand-picked replacement beats an app of the same kind found by product code
     found = [(rank(p), i, -max(map(len, p["names"] or [""])), len(k), k, how)
              for i, (how, test) in enumerate(steps) for k, p in programs.items()
