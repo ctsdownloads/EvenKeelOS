@@ -33,7 +33,7 @@ def run_steps(text, steps, cancel=False):
     bar = None
     if GUI:
         mode = ["--pulsate"] if len(steps) == 1 else []
-        bar = subprocess.Popen(["zenity", f"--title={ui.TITLE}", "--width=520",
+        bar = subprocess.Popen([ui.DIALOGS, f"--title={ui.TITLE}", "--width=520",
                                 "--progress", *mode, "--auto-close",
                                 *([] if cancel else ["--no-cancel"]), f"--text={html.escape(text)}"],
                                stdin=subprocess.PIPE, text=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)

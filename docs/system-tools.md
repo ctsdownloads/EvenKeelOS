@@ -10,8 +10,11 @@ Start Apps at Login, Repair App Boxes, Install Media Codecs and System Update no
 they are inside it. Double-clicking an .rpm, .deb, .exe or .msi file still opens the right tool. The Windows-style
 start menu's System Update entry opens System Tools on its Updates page.
 
-For now, the tools still open their own small windows on top of System Tools while they work, each named after its
-tool (for example **Test automatic rollback**). Moving them inside the window comes in a later update.
+A tool's questions, lists, password box and progress show inside the System Tools window, under the tool's name,
+with a Back arrow at the top left. Back leaves the tool open: a bar at the top of every page says it is waiting for
+an answer or still working, and its **Show** button goes back to it. One tool runs at a time: picking another while
+one is open says to finish it first, and System Tools stays open until the open tool is done. The admin password box is GNOME's own, and picking a file opens GNOME's file window. Run from a
+terminal, or at login, the same tools still open their own small windows.
 
 ### Overview
 

@@ -5,7 +5,7 @@ import re
 import shlex
 import subprocess
 
-from evenkeel_os_ui import ask, say
+from evenkeel_os_ui import LAUNCH_ENV, ask, say
 from evenkeel_os_packages import app_list, boxes, common, update_notes
 
 
@@ -88,7 +88,8 @@ def open_app(entry):
             return False
         cmd = ["gio", "launch", str(f)]
     try:
-        subprocess.Popen(cmd, start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.Popen(cmd, start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                         env=LAUNCH_ENV)
     except OSError:
         say(f"{entry['title']} didn't open.", kind="error")
     return True

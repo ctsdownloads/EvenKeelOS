@@ -38,6 +38,9 @@ command -v ujust >/dev/null || { echo 'ERROR: ujust is missing'; exit 1; }
 install -Dm644 /ctx/evenkeel_os_ui.py /usr/lib/evenkeel-os/evenkeel_os_ui.py
 python3 -I -c 'import sys; sys.path.insert(0, "/usr/lib/evenkeel-os"); import evenkeel_os_ui' \
   || { echo "ERROR: the shared windows module does not load"; exit 1; }
+# Started from System Tools, a tool's windows show inside it through evenkeel-os-dialog.
+install -Dm755 /ctx/evenkeel-os-dialog /usr/libexec/evenkeel-os-dialog
+python3 -I /ctx/check-dialogs.py /ctx /usr/libexec/evenkeel-os-dialog
 # System Update: uupd with a progress window, no password (uupd's polkit rule, narrowed to the person at the computer).
 install -Dm644 /ctx/40-evenkeel-os-uupd.rules /usr/share/polkit-1/rules.d/40-evenkeel-os-uupd.rules
 install -Dm755 /ctx/evenkeel-os-update /usr/bin/evenkeel-os-update
@@ -451,6 +454,7 @@ for a in evenkeel-os-update evenkeel-os-install-package evenkeel-os-remove-apps 
   grep -qx 'NoDisplay=true' "/usr/share/applications/$a.desktop" \
     || { echo "ERROR: $a still shows in Show Apps; it belongs inside System Tools"; exit 1; }
 done
+install -Dm644 /ctx/evenkeel_os_dialogs.py /usr/lib/evenkeel-os/evenkeel_os_dialogs.py
 install -Dm644 /ctx/evenkeel_os_panel.py /usr/lib/evenkeel-os/evenkeel_os_panel.py
 python3 -I /ctx/check-panel.py \
   || { echo 'ERROR: the System Tools window is missing a tool, an icon or a command'; exit 1; }

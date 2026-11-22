@@ -9,11 +9,13 @@ import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk  # noqa: E402
+from evenkeel_os_dialogs import Dialogs  # noqa: E402
 from evenkeel_os_packages import zoom  # noqa: E402
 
 APP_ID = "io.github.ctsdownloads.evenkeel-os.Tools"
 TOOLS = "/usr/bin/evenkeel-os-tools"
 PACKAGES = "/usr/bin/evenkeel-os-packages"
+OURS = (TOOLS, PACKAGES, "/usr/bin/evenkeel-os-update", "/usr/bin/evenkeel-os-codecs")   # their windows show here
 PACKAGE_TYPES = (".rpm", ".deb")
 WINDOWS_TYPES = (".exe", ".msi")
 CSS = b"""
@@ -36,10 +38,13 @@ PAGES = [("overview", "Overview", "go-home-symbolic"),
          ("help", "Get help", "help-about-symbolic")]
 
 
-def spawn(argv, done=None):
-    """Start a tool in its own windows; done(exit code) runs in the window once it has closed."""
+def spawn(argv, done=None, panel=None):
+    """Start a program; done(exit code) runs in the window once it has ended. panel: the socket for its windows."""
+    launcher = Gio.SubprocessLauncher.new(Gio.SubprocessFlags.NONE)
+    if panel:
+        launcher.setenv("EVENKEEL_OS_PANEL", panel, True)
     try:
-        proc = Gio.Subprocess.new(argv, Gio.SubprocessFlags.NONE)
+        proc = launcher.spawnv(argv)
     except GLib.Error:
         return False
     if done:
@@ -150,7 +155,10 @@ class Window(Adw.ApplicationWindow):
         self.tools = tool_list()
         self.toasts = Adw.ToastOverlay()
         self.subtitles = {}          # Tool -> its row, for rows whose text shows the current state
-        self.running = set()         # tools whose windows are open, so a second click doesn't start another
+        self.current = None          # the tool running now: one at a time, its windows on the "tool" page
+        self.current_argv = None
+        self.before = "overview"     # the page to go back to from the tool page
+        self.dialogs = Dialogs(self, self.on_dialogs)
         self.banner = None
         self.stack = Gtk.Stack(transition_type=Gtk.StackTransitionType.CROSSFADE)
         for key, name, _ in PAGES:
@@ -159,11 +167,18 @@ class Window(Adw.ApplicationWindow):
         search_page = Adw.PreferencesPage()
         search_page.add(self.results)
         self.stack.add_named(search_page, "search")
+        self.stack.add_named(self.dialogs.widget, "tool")
 
         self.content_title = Adw.WindowTitle(title="Overview")
         content_bar = Adw.HeaderBar(title_widget=self.content_title)
+        self.back = Gtk.Button(icon_name="go-previous-symbolic", tooltip_text="Back", visible=False)
+        self.back.connect("clicked", lambda *_: self.go_back())
+        content_bar.pack_start(self.back)
         content = Adw.ToolbarView(content=self.stack)
         content.add_top_bar(content_bar)
+        self.waiting = Adw.Banner(button_label="Show")     # a tool is open while another page is shown
+        self.waiting.connect("button-clicked", lambda *_: self.show_tool())
+        content.add_top_bar(self.waiting)
 
         self.search = Gtk.SearchEntry(placeholder_text="Search tools", margin_start=10, margin_end=10,
                                       margin_bottom=6)
@@ -194,6 +209,7 @@ class Window(Adw.ApplicationWindow):
         bp = Adw.Breakpoint.new(Adw.BreakpointCondition.parse("max-width: 640sp"))
         bp.add_setter(split, "collapsed", True)
         self.add_breakpoint(bp)
+        self.connect("close-request", self.on_close)
         self.refresh()
 
     # ------------------------------------------------------------ pages
@@ -403,16 +419,80 @@ class Window(Adw.ApplicationWindow):
             self.show("yours")
         elif tool.run == "codecs-remove":
             self.remove_codecs()
-        elif tool.title in self.running:
-            self.toast(f"{tool.title} is already open.")
-        elif spawn(tool.run, lambda rc, t=tool.title: self.finished(t)):
-            self.running.add(tool.title)
-        else:
+        elif tool.run[0] in OURS:
+            self.run_tool(tool.title, tool.run)
+        elif not spawn(tool.run):
             self.toast(f"{tool.title} didn't start.")
 
-    def finished(self, title):
-        self.running.discard(title)
+    def busy(self):
+        """The tool that is open: the one started here, or one it started that is still asking something."""
+        if self.current:
+            return self.current
+        return (self.dialogs.open[-1].req.get("title") or "A tool") if self.dialogs.open else None
+
+    def run_tool(self, title, argv, after=None):
+        """Run one of our tools with its windows on the tool page; after(exit code) once it has ended."""
+        busy = self.busy()
+        if busy:
+            if argv != self.current_argv:
+                self.toast(f"{busy} is still open. Finish it first.")
+            self.show_tool()
+            return
+        if not spawn(argv, lambda rc: self.tool_done(rc, after), self.dialogs.path):
+            self.toast(f"{title} didn't start.")
+            return
+        self.current, self.current_argv = title, argv
+        self.show_tool()
+
+    def tool_done(self, rc, after):
+        self.current = self.current_argv = None
+        self.on_dialogs()
+        if after:
+            after(rc)
         self.refresh()
+
+    def show_tool(self):
+        if self.stack.get_visible_child_name() != "tool":
+            self.before = self.stack.get_visible_child_name()
+        self.dialogs.show(self.busy())
+        self.stack.set_visible_child_name("tool")
+        self.content_title.set_title(self.busy() or "System Tools")
+        self.back.set_visible(True)
+        self.waiting.set_revealed(False)
+        self.split.set_show_content(True)
+
+    def on_dialogs(self):
+        """A tool asked something: show it. Nothing left open and no tool running: back to the page."""
+        if self.dialogs.open:
+            self.show_tool()
+        elif not self.current and self.stack.get_visible_child_name() == "tool":
+            self.go_back()
+        elif self.stack.get_visible_child_name() != "tool":
+            self.show_waiting()
+
+    def show_waiting(self):
+        """On another page while a tool is open: a bar at the top says so, with a button back to it."""
+        busy = self.busy()
+        if busy:
+            self.waiting.set_title(f"{busy} is waiting for an answer." if self.dialogs.open else
+                                   f"{busy} is still working.")
+        self.waiting.set_revealed(bool(busy))
+
+    def go_back(self):
+        """Leave the tool page; a tool that is open stays open, behind the bar at the top."""
+        self.back.set_visible(False)
+        self.stack.set_visible_child_name(self.before)
+        self.content_title.set_title(dict((k, n) for k, n, _ in PAGES).get(self.before, "Search"))
+        self.show_waiting()
+
+    def on_close(self, _window):
+        busy = self.busy()
+        if busy:
+            self.toast(f"{busy} is still open. Close System Tools once it's done.")
+            self.show_tool()
+            return True
+        self.dialogs.close()
+        return False
 
     def remove_codecs(self):
         d = Adw.AlertDialog(heading="Remove the media codecs?",
@@ -423,9 +503,9 @@ class Window(Adw.ApplicationWindow):
 
         def answered(dialog, response):
             if response == "remove":
-                spawn(["/usr/bin/evenkeel-os-codecs", "remove"],
-                      lambda rc: self.toast("The codecs are removed. Restart to finish." if rc == 0 else
-                                            "The codecs weren't removed."))
+                self.run_tool("Remove media codecs", ["/usr/bin/evenkeel-os-codecs", "remove"],
+                              lambda rc: self.toast("The codecs are removed. Restart to finish." if rc == 0 else
+                                                    "The codecs weren't removed."))
         d.connect("response", answered)
         d.present(self)
 
@@ -434,9 +514,9 @@ class Window(Adw.ApplicationWindow):
         if label == "Restart now":
             spawn(["gnome-session-quit", "--reboot"])
         elif label in ("Resume now", "Turn on"):
-            spawn([TOOLS, "updates"], self.refresh)
+            self.run_tool("Automatic updates", [TOOLS, "updates"])
         elif label == "Details":
-            spawn([TOOLS, "certificates"], self.refresh)
+            self.run_tool("Certificate alerts", [TOOLS, "certificates"])
         else:
             self.activate_tool(next(t for t in self.tools if t.title == "System Update"))
 
@@ -444,7 +524,9 @@ class Window(Adw.ApplicationWindow):
         if row is None:
             return
         self.search.set_text("")
+        self.back.set_visible(False)
         self.stack.set_visible_child_name(row.key)
+        self.show_waiting()
         self.content_title.set_title(dict((k, n) for k, n, _ in PAGES)[row.key])
         self.split.set_show_content(True)
 
@@ -452,7 +534,9 @@ class Window(Adw.ApplicationWindow):
         words = entry.get_text().lower().split()
         if not words:
             row = self.sidebar.get_selected_row()
+            self.back.set_visible(False)
             self.stack.set_visible_child_name(row.key if row else "overview")
+            self.show_waiting()
             return
         page = self.stack.get_child_by_name("search")
         page.remove(self.results)
@@ -466,12 +550,14 @@ class Window(Adw.ApplicationWindow):
         if not shown:
             self.results.set_description("No tool matches. Try another word.")
         page.add(self.results)
+        self.back.set_visible(False)
         self.stack.set_visible_child_name("search")
+        self.show_waiting()
         self.content_title.set_title("Search")
         if not self.split.get_collapsed():      # narrow window: the results show on Enter, keeping the box in view
             self.split.set_show_content(True)
 
-    def on_drop(self, target, value, x, y, box):
+    def on_drop(self, _target, value, _x, _y, box):
         box.remove_css_class("ek-over")
         files = [f.get_path() for f in value.get_files() if f.get_path()]
         if not files:
@@ -482,9 +568,9 @@ class Window(Adw.ApplicationWindow):
         for f in files[:1]:
             low = f.lower()
             if low.endswith(PACKAGE_TYPES):
-                spawn([PACKAGES, "install", f], self.refresh)
+                self.run_tool("Install a package file", [PACKAGES, "install", f])
             elif low.endswith(WINDOWS_TYPES):
-                spawn([PACKAGES, "windows", f], self.refresh)
+                self.run_tool("Windows programs", [PACKAGES, "windows", f])
             else:
                 self.toast("Drop an .rpm, .deb, .exe or .msi file.")
                 return False
@@ -506,7 +592,7 @@ class Window(Adw.ApplicationWindow):
                 path = d.open_finish(result).get_path()
             except GLib.Error:
                 return
-            spawn([PACKAGES, "windows", path], self.refresh)
+            self.run_tool("Windows programs", [PACKAGES, "windows", path])
         dialog.open(self, None, picked)
 
     def zoom_choice(self):

@@ -2,7 +2,7 @@
 import re
 import subprocess
 
-from evenkeel_os_ui import ask, say
+from evenkeel_os_ui import LAUNCH_ENV, ask, say
 
 
 MAKERS = ["Brother", "Canon", "Epson", "HP", "Samsung", "Xerox", "Lexmark", "Ricoh", "Kyocera", "Konica Minolta",
@@ -23,7 +23,8 @@ def maker(pkg):
 def open_printers():
     """True when Printers opened."""
     try:
-        subprocess.Popen(["gnome-control-center", "printers"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.Popen(["gnome-control-center", "printers"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                         env=LAUNCH_ENV)
         return True
     except OSError:
         say("Printers didn't open. Open Settings, then Printers.", kind="error")

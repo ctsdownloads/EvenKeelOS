@@ -7,13 +7,18 @@ import subprocess
 from pathlib import Path
 
 GUI = bool(shutil.which("zenity")) and bool(os.environ.get("WAYLAND_DISPLAY") or os.environ.get("DISPLAY"))
+# Started from System Tools: windows show inside it, through the same options and answers as zenity's.
+IN_PANEL = bool(os.environ.get("EVENKEEL_OS_PANEL"))
+DIALOGS = "/usr/libexec/evenkeel-os-dialog" if IN_PANEL else "zenity"
+# For apps and file windows a tool opens: what they start later opens its own windows, not System Tools'.
+LAUNCH_ENV = {k: v for k, v in os.environ.items() if k != "EVENKEEL_OS_PANEL"}
 
 TITLE = ""      # set by each program
 ICON = ""
 
 
 def zenity(*args, stdin=None, title=None, width=520):
-    return subprocess.run(["zenity", f"--title={title or TITLE}", f"--width={width}", *args], input=stdin,
+    return subprocess.run([DIALOGS, f"--title={title or TITLE}", f"--width={width}", *args], input=stdin,
                           capture_output=True, text=True)
 
 

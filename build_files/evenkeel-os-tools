@@ -65,7 +65,7 @@ CERT_ALERTS = STATE / "cert-alerts.json"      # written by evenkeel-os-certs
 def password(text):
     """The disk password, typed. None when cancelled."""
     if GUI:
-        r = subprocess.run(["zenity", f"--title={ui.TITLE}", "--password", f"--text={text}"],
+        r = subprocess.run([ui.DIALOGS, f"--title={ui.TITLE}", "--password", f"--text={text}"],
                            capture_output=True, text=True)
         return r.stdout.rstrip("\n") if r.returncode == 0 and r.stdout.strip() else None
     import getpass
@@ -80,7 +80,7 @@ def busy(text, title=None):
     if not GUI:
         print(text)
         return None
-    return subprocess.Popen(["zenity", f"--title={title or ui.TITLE}", "--progress", "--pulsate", "--auto-close",
+    return subprocess.Popen([ui.DIALOGS, f"--title={title or ui.TITLE}", "--progress", "--pulsate", "--auto-close",
                              "--no-cancel", "--width=480", f"--text={text}"], stdin=subprocess.PIPE, text=True)
 
 
@@ -533,9 +533,11 @@ def problem_details():
            f"Recommended: Show the file, to see where it is. Or Close.", ok="Show the file", cancel="Close",
            title=w) == "ok":
         if shutil.which("nautilus"):
-            subprocess.Popen(["nautilus", "--select", str(path)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.Popen(["nautilus", "--select", str(path)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                             env=ui.LAUNCH_ENV)
         else:
-            subprocess.Popen(["xdg-open", str(folder)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.Popen(["xdg-open", str(folder)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                             env=ui.LAUNCH_ENV)
     return 0
 
 
@@ -583,12 +585,15 @@ def apps_step(w):
                 "Or Next.", ok="Open Bazaar", cancel="Next", extra="Open Install Package File", title=w)
         if a == "ok":
             subprocess.Popen(["gtk-launch", "io.github.kolunmi.Bazaar"], stdout=subprocess.DEVNULL,
-                             stderr=subprocess.DEVNULL)
+                             stderr=subprocess.DEVNULL, env=ui.LAUNCH_ENV)
             opened = "Bazaar is open. Close it when you're done looking.\n\n"
         elif a == "extra":
-            subprocess.Popen(["/usr/bin/evenkeel-os-packages", "install"], stdout=subprocess.DEVNULL,
-                             stderr=subprocess.DEVNULL)
+            p = subprocess.Popen(["/usr/bin/evenkeel-os-packages", "install"], stdout=subprocess.DEVNULL,
+                                 stderr=subprocess.DEVNULL)
             opened = "Install Package File is open. Cancel it when you're done looking.\n\n"
+            if ui.IN_PANEL:     # one tool on screen at a time: the checklist goes on once it's closed
+                p.wait()
+                opened = ""
         else:
             return
 

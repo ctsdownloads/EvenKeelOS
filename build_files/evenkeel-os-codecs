@@ -6,6 +6,8 @@ set -uo pipefail
 SETUP=/usr/libexec/evenkeel-os-codecs-setup
 ADMIN=/usr/libexec/evenkeel-os-codecs-admin
 USTATE="${XDG_STATE_HOME:-$HOME/.local/state}/evenkeel-os"
+# Started from System Tools: windows show inside it, through the same options and answers as zenity's.
+zenity=zenity; [ -n "${EVENKEEL_OS_PANEL:-}" ] && zenity=/usr/libexec/evenkeel-os-dialog
 ARGS=("$@")
 NO_RESTART=""   # set by --no-restart: the installed window doesn't offer a restart (the setup checklist does)
 
@@ -40,7 +42,7 @@ explain() {
 ask() {   # prints web or full, or nothing for "Not now"
   local note out rc
   note="Either choice installs with no password."
-  out=$(zenity --question --title="Install Media Codecs" --width=600 \
+  out=$("$zenity" --question --title="Install Media Codecs" --width=600 \
         --ok-label="Web video only" --extra-button="Everything" --cancel-label="Not now" \
         --text="Some video formats (like most web video) need extra codecs that Fedora, and this system, leave out because of patents in some countries. Installing them is your choice and your responsibility.\n\nWeb video only: lets Firefox play most web video. A small addition to the system.\n\nEverything: plays all common video and audio, in every app. It replaces some parts of the system, so system updates take a little longer.\n\nNot now: they're in System Tools, Apps, Media codecs, any time.\n\nPick by what you need. If you only watch video in Firefox, Web video only is enough.\n\n$note" 2>/dev/null); rc=$?
   if [ "$rc" -eq 0 ]; then say web; elif [ "$out" = "Everything" ]; then say full; fi
@@ -51,16 +53,16 @@ install_with_window() {   # $1 = web or full
   run_helper "$1" >"$log" 2>&1 &
   pid=$!
   ( while kill -0 "$pid" 2>/dev/null; do echo; sleep 1; done; echo 100 ) | \
-    zenity --progress --pulsate --auto-close --no-cancel --title="Install Media Codecs" --text="Installing the codecs. This can take a few minutes."
+    "$zenity" --progress --pulsate --auto-close --no-cancel --title="Install Media Codecs" --text="Installing the codecs. This can take a few minutes."
   wait "$pid"; rc=$?
   if [ "$rc" -eq 0 ] && [ -n "$NO_RESTART" ]; then     # the setup checklist offers the restart
-    zenity --info --title="Install Media Codecs" --width=480 \
+    "$zenity" --info --title="Install Media Codecs" --width=480 \
       --text="The codecs are installed. They start working after a restart, which the setup checklist offers at its end."
   elif [ "$rc" -eq 0 ]; then
-    zenity --question --title="Install Media Codecs" --ok-label="Restart now" --cancel-label="Later" \
+    "$zenity" --question --title="Install Media Codecs" --ok-label="Restart now" --cancel-label="Later" \
       --text="The codecs are installed.\n\nRecommended: Restart now to start using them. Or Later." && systemctl reboot
   else
-    zenity --error --title="Install Media Codecs" --width=520 \
+    "$zenity" --error --title="Install Media Codecs" --width=520 \
       --text="It didn't work, and nothing was changed.\n\n$(sed -n '/^error:/,$p' "$log" | head -n 10 | head -c 900)\n\nTry again later."
   fi
   rm -f "$log"
