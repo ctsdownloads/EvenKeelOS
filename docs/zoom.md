@@ -24,7 +24,8 @@ The first time, if Chrome isn't installed, one window asks:
 | **Use the usual browser** | Opens the meeting there, now and from then on |
 | Cancel | Opens nothing |
 
-To be asked about Chrome again, delete `~/.local/share/evenkeel-os/zoom-browser`.
+To be asked about Chrome again, open System Tools, Apps, **Zoom meetings**. Or delete
+`~/.local/share/evenkeel-os/zoom-browser`.
 
 ### Why Chrome
 

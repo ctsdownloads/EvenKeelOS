@@ -387,12 +387,20 @@ done
 install -Dm644 /ctx/evenkeel-os-windows-layout.dconf /etc/dconf/db/distro.d/50-evenkeel-os-windows-layout
 install -Dm755 /ctx/evenkeel-os-layout /usr/bin/evenkeel-os-layout
 
-# Our tools in Show Apps' Utilities folder.
+# System Tools in Show Apps' Utilities folder; the other tools live inside it, so their launchers are hidden
+# (they still open .rpm, .deb, .exe and .msi files).
 install -Dm644 /ctx/evenkeel-os-app-folders.dconf /etc/dconf/db/distro.d/50-evenkeel-os-app-folders
 dconf update
-for a in evenkeel-os-tools evenkeel-os-update evenkeel-os-install-package evenkeel-os-remove-apps evenkeel-os-repair-boxes evenkeel-os-login-apps evenkeel-os-codecs; do
-  HOME=/tmp dconf read /org/gnome/desktop/app-folders/folders/Utilities/apps | grep -q "'$a.desktop'" || { echo "ERROR: $a is not in the Utilities folder"; exit 1; }
+HOME=/tmp dconf read /org/gnome/desktop/app-folders/folders/Utilities/apps | grep -q "'evenkeel-os-tools.desktop'" \
+  || { echo "ERROR: System Tools is not in the Utilities folder"; exit 1; }
+for a in evenkeel-os-update evenkeel-os-install-package evenkeel-os-remove-apps evenkeel-os-repair-boxes \
+         evenkeel-os-login-apps evenkeel-os-codecs; do
+  grep -qx 'NoDisplay=true' "/usr/share/applications/$a.desktop" \
+    || { echo "ERROR: $a still shows in Show Apps; it belongs inside System Tools"; exit 1; }
 done
+install -Dm644 /ctx/evenkeel_os_panel.py /usr/lib/evenkeel-os/evenkeel_os_panel.py
+python3 -I /ctx/check-panel.py \
+  || { echo 'ERROR: the System Tools window is missing a tool, an icon or a command'; exit 1; }
 # The login screen reads its settings through the gdm profile; nothing there may undo the teal accent.
 got=$(HOME=/tmp DCONF_PROFILE=gdm gsettings get org.gnome.desktop.interface accent-color)
 [ "$got" = "'teal'" ] || { echo "ERROR: the login screen's accent color is $got, not teal"; exit 1; }

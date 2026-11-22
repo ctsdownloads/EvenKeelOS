@@ -4,7 +4,7 @@
 
 ## Apps from .rpm and .deb files
 
-The system is an image, so **Install Package File** puts apps from .rpm and .deb
+The system is an image, so **Install a package file** (in System Tools, Apps) puts apps from .rpm and .deb
 files in a **box**: a small, separate Linux system just for those apps. That
 keeps the system clean and apps easy to remove. Every window says which choice
 is recommended and why.
@@ -14,7 +14,7 @@ containers, kept apart from your own). System Update keeps the boxes current.
 
 ### Installing an app
 
-1. Double-click the file, or open **Install Package File** and pick it.
+1. Double-click the file, or open System Tools, Apps, **Install a package file** and pick it.
 2. It checks the file without installing anything. A file it can't use stops
    here (see [Files that cannot be installed](#files-that-cannot-be-installed)).
 3. If the app is already there, it asks what to do (see
@@ -34,7 +34,7 @@ containers, kept apart from your own). System Update keeps the boxes current.
 ### Apps that go on the system
 
 **Add to the system** puts the app on top of the image, from the next restart.
-Updates take a little longer after that. Remove Apps takes it off again.
+Updates take a little longer after that. Remove apps takes it off again.
 
 | The package has | What happens |
 |-----------------|--------------|
@@ -117,14 +117,14 @@ Most printers need no driver, so it recommends **Open Printers** first.
 it. A .deb driver can't go on the system; the window says how to get the .rpm
 from the maker.
 
-### Start Apps at Login
+### Start apps at login
 
-**Start Apps at Login** switches box apps on or off at login. An app's own
+**Start apps at login** (System Tools, Apps) switches box apps on or off at login. An app's own
 open-at-login setting (Discord) is pointed at its box.
 
 ### Removing apps
 
-**Remove Apps** lists what Install Package File installed, with each box's size.
+**Remove apps** (System Tools, Apps) lists what Install a package file installed, with each box's size.
 **Remove** takes out the app, its entry and any rule it added. When a box is
 left empty, it recommends **Delete the box**; **Keep it** saves setup time. A
 Flathub app or system app removed another way (Bazaar, `rpm-ostree uninstall`)
@@ -134,7 +134,7 @@ is left off the list, and an app that's already gone just comes off it. The reco
 ### Repairing a box
 
 If a box stops working, **Repair the box** rebuilds it and puts its apps back.
-**Repair App Boxes** does it any time. Your files aren't touched.
+**Repair app boxes** (System Tools, Apps) does it any time. Your files aren't touched.
 
 ### Disk space
 
@@ -185,7 +185,7 @@ wins:
 
 The window says why ("For video calls, Zoom does the same job") and offers
 **Install**, or **Open** when the app is already installed. Apps installed this
-way are listed in **Remove Apps**.
+way are listed in **Remove apps**.
 
 The list is made fresh at every build from
 [winget](https://github.com/microsoft/winget-pkgs)'s program index, the app

@@ -8,3 +8,4 @@ Exec=/usr/bin/evenkeel-os-packages install %f
 MimeType=application/x-rpm;application/vnd.debian.binary-package;
 Categories=System;
 Terminal=false
+NoDisplay=true

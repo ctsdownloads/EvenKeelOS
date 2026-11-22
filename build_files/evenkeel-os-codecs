@@ -42,7 +42,7 @@ ask() {   # prints web or full, or nothing for "Not now"
   note="Either choice installs with no password."
   out=$(zenity --question --title="Install Media Codecs" --width=600 \
         --ok-label="Web video only" --extra-button="Everything" --cancel-label="Not now" \
-        --text="Some video formats (like most web video) need extra codecs that Fedora, and this system, leave out because of patents in some countries. Installing them is your choice and your responsibility.\n\nWeb video only: lets Firefox play most web video. A small addition to the system.\n\nEverything: plays all common video and audio, in every app. It replaces some parts of the system, so system updates take a little longer.\n\nNot now: you can open Install Media Codecs from Show Apps any time.\n\nPick by what you need. If you only watch video in Firefox, Web video only is enough.\n\n$note" 2>/dev/null); rc=$?
+        --text="Some video formats (like most web video) need extra codecs that Fedora, and this system, leave out because of patents in some countries. Installing them is your choice and your responsibility.\n\nWeb video only: lets Firefox play most web video. A small addition to the system.\n\nEverything: plays all common video and audio, in every app. It replaces some parts of the system, so system updates take a little longer.\n\nNot now: they're in System Tools, Apps, Media codecs, any time.\n\nPick by what you need. If you only watch video in Firefox, Web video only is enough.\n\n$note" 2>/dev/null); rc=$?
   if [ "$rc" -eq 0 ]; then say web; elif [ "$out" = "Everything" ]; then say full; fi
 }
 

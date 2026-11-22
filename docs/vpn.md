@@ -9,7 +9,7 @@ download source, so it keeps updating. Nothing is installed until someone picks 
 
 ### Getting a VPN
 
-1. Open **System Tools** in Show Apps and pick **Get a VPN**.
+1. Open **System Tools**, go to Apps and pick **Get a VPN**.
 2. Pick Mullvad, Proton, IVPN or NordVPN.
 3. Confirm, then type the password.
 4. It adds that company's download source to the system, and adds the app to the system (not a box).
@@ -35,7 +35,7 @@ If you choose **Later**, it asks again at the next login.
 
 ### From a downloaded file or a Windows installer
 
-Opening a downloaded VPN file with **Install Package File** installs that VPN from its company's own download source
+Opening a downloaded VPN file with **Install a package file** installs that VPN from its company's own download source
 instead of the file, so it keeps updating. This covers:
 
 - Mullvad's or IVPN's .rpm.
@@ -66,9 +66,9 @@ source was picked up by the system upgrade with no new EvenKeelOS build.
 
 ### Removing a VPN
 
-Open **Remove Apps** and remove it. That turns off its background service, removes the app and removes its download
-source. For NordVPN it also removes the group it added for your account, and its log folder. Then restart. Nothing
-is left behind. See [Removing apps](apps.md#removing-apps).
+Open System Tools, Apps, **Remove apps** and remove it. That turns off its background service, removes the app and
+removes its download source. For NordVPN it also removes the group it added for your account, and its log folder.
+Then restart. Nothing is left behind. See [Removing apps](apps.md#removing-apps).
 
 ### Good to know
 

@@ -16,7 +16,7 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/evenkeel_os_ui.py` | Windows, notices and disk sizes shared by System Tools and Install Package File |
 | `build_files/evenkeel-os-update`, `evenkeel-os-update-helper` | **System Update**, and its Python helper for progress text and what's new |
 | `build_files/evenkeel-os-packages`, `evenkeel_os_packages/`, `evenkeel-os-box-run`, `evenkeel-os-hwrules` | **Install Package File**, **Remove Apps**, **Repair App Boxes**, **Start Apps at Login**, and their helpers |
-| `build_files/evenkeel-os-tools`, `-admin`, `-safe` | **System Tools** and its two root helpers |
+| `build_files/evenkeel-os-tools`, `-admin`, `-safe`, `evenkeel_os_panel.py`, `check-panel.py` | **System Tools**: the window, every job, its two root helpers, and the build check that every tool has a row |
 | `build_files/evenkeel-os-updates-pause-check`, `50-evenkeel-os-pause.conf` | Skips automatic updates during the pause after an undo |
 | `build_files/greenboot/`, `evenkeel-os-rolled-back.desktop` | Automatic rollback: greenboot's start-up checks (login screen, networking, a working desktop after a login), the retry counter (2 bad starts) started as soon as an update is installed, a one-time repair of boot menus where greenboot's file ran into the next one, the rollback tests (each breaks one real thing, only with its kernel argument; `check-rollback-tests.py` checks each listed test reaches its piece), and the note and update pause after a rollback |
 | `build_files/evenkeel-os-codecs`, `-setup`, `-admin`, `-lib.sh`, `rpmfusion-*.repo` | **Install Media Codecs** and its helpers |
@@ -37,8 +37,10 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 
 - Fedora's logos or release packages remain, or the boot image can't unlock a
   disk;
-- GNOME Software is still there, Bazaar is missing, a tool is missing from
-  Utilities, or text files wouldn't open in Text Editor;
+- GNOME Software is still there, Bazaar is missing, System Tools is missing from
+  Utilities, another EvenKeelOS tool still has its own icon, the System Tools
+  window is missing a tool, an icon or a command, or text files wouldn't open in
+  Text Editor;
 - a default service is off, or RPM Fusion's codecs wouldn't install;
 - Logo Menu, ArcMenu or Dash to Panel is missing or doesn't support the image's
   GNOME, or the Windows-style layout's defaults or switch don't work;
@@ -60,7 +62,7 @@ and this image leave them out. Adding them is your choice and your
 responsibility.
 
 The [setup checklist](install.md#first-login) offers **Web video only**,
-**Everything** or **Not now**. **Install Media Codecs** in Show Apps opens the
+**Everything** or **Not now**. **Media codecs** in System Tools, Apps opens the
 same window any time, or in a terminal:
 
     codecs          # explains the options, changes nothing

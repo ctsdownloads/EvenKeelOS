@@ -5,7 +5,7 @@ folder-children=['Utilities', 'System']
 [org/gnome/desktop/app-folders/folders/Utilities]
 name='X-GNOME-Shell-Utilities.directory'
 translate=true
-apps=['evenkeel-os-tools.desktop', 'evenkeel-os-update.desktop', 'evenkeel-os-install-package.desktop', 'evenkeel-os-remove-apps.desktop', 'evenkeel-os-repair-boxes.desktop', 'evenkeel-os-login-apps.desktop', 'evenkeel-os-codecs.desktop', 'org.gnome.Decibels.desktop', 'org.gnome.Connections.desktop', 'org.gnome.Papers.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Seahorse.desktop']
+apps=['evenkeel-os-tools.desktop', 'org.gnome.Decibels.desktop', 'org.gnome.Connections.desktop', 'org.gnome.Papers.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Seahorse.desktop']
 
 [org/gnome/desktop/app-folders/folders/System]
 name='X-GNOME-Shell-System.directory'
