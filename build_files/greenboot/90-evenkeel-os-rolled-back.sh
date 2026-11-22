@@ -20,6 +20,9 @@ if grub2-editenv /boot/grub2/grubenv list | grep -qx 'boot_counter=-1' \
   fellback=1
 fi
 [ "$rolled" = 1 ] || exit 0
+status=$(rpm-ostree status --json)
+booted_sum=$(jq -r '.deployments[] | select(.booted) | .checksum' <<<"$status")
+other_sum=$(jq -r '[.deployments[] | select(.booted | not)][0].checksum // empty' <<<"$status")
 mkdir -p "${note%/*}"
 # >| replaces an earlier note: greenboot runs this with noclobber, so > fails once a note exists.
 # The settings test, or a real repair with the boot menu falling back by itself, didn't fix the start: no pause.
@@ -32,6 +35,9 @@ elif [ "$fellback" = 1 ] && [ -n "$used" ] && [ "$used" = "$latest" ]; then
 elif grep -qs 'evenkeel_os.test_rollback=' /boot/loader/entries/*.conf; then
   rpm-ostree cleanup -r || echo "The test copy could not be removed."
   echo "test $(date +%s)" >|"$note"
+elif [ -n "$booted_sum" ] && [ "$booted_sum" = "$other_sum" ]; then
+  # The same system with other boot options (System Tools, Boot options): the update wasn't the cause, no pause.
+  echo "boot-options $(date +%s)" >|"$note"
 else
   systemctl -q is-enabled uupd.timer && echo $(( $(date +%s) + 3 * 86400 )) >|"$pause"
   echo "update $(date +%s)" >|"$note"

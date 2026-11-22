@@ -80,6 +80,15 @@ for args in (["sharing"], ["sharing", "on", "x"], ["sharing", "add", "/root"], [
     refuses("evenkeel-os-tools-admin", args)
 refuses("evenkeel-os-tools-admin", ["sharing", "on"], codes=(1,))              # no caller, or not set up: refused
 refuses("evenkeel-os-tools-admin", ["sharing", "password"], codes=(1,))
+for bad_setting in ("root=/dev/sda1", "ostree=/x", "rw", "rd.luks.uuid=x", "evenkeel_os.test_rollback=quick",
+                    "init=/bin/sh", "rdinit=/x", "systemd.run=/x", "--source=x", "-x", "a b",
+                    "a;id", "$(id)", "\nid", "é=1", "", "x" * 65, 'a="b c"'):
+    refuses("evenkeel-os-boot-options", ["set", "amdgpu.abmlevel=0", bad_setting], codes=(3,))
+refuses("evenkeel-os-boot-options", ["set", "a=1", "a=2"], codes=(3,))       # one name, two values
+refuses("evenkeel-os-boot-options", ["set", "a-b=1", "a_b=2"], codes=(3,))   # the same name to the kernel
+refuses("evenkeel-os-boot-options", ["set", *[f"a{n}=1" for n in range(21)]], codes=(3,))
+for args in ([], ["add", "x"], ["--help"], ["set;id"]):
+    refuses("evenkeel-os-boot-options", args)
 for args in (["sharing", "password"], ["sharing", "add", "/root", "rw"], ["sharing", "on"]):    # root can't share
     r = subprocess.run([str(LIBEXEC / "evenkeel-os-tools-admin"), *args], capture_output=True, text=True,
                        stdin=subprocess.DEVNULL, env={**os.environ, "PKEXEC_UID": "0"}, timeout=60)
@@ -248,9 +257,11 @@ for f in sorted(ACTIONS.glob("io.github.ctsdownloads.evenkeel-os.*.policy")):
         if v not in ("auth_admin", "auth_admin_keep"):
             bad(f"{f.name}: allow_active is {v}; a no-password action needs a rule limited to the computer")
 
-# The settings test and certificate removal: each its own action, the password every time, no rule may skip it.
+# The settings test, certificate removal and boot options: each its own action, the password every time, no rule
+# may skip it.
 policy = (ACTIONS / "io.github.ctsdownloads.evenkeel-os.tools.policy").read_text()
-for name, helper in (("settings-test", "evenkeel-os-settings-test"), ("cert-remove", "evenkeel-os-cert-remove")):
+for name, helper in (("settings-test", "evenkeel-os-settings-test"), ("cert-remove", "evenkeel-os-cert-remove"),
+                     ("boot-options", "evenkeel-os-boot-options")):
     m = re.search(rf'<action id="io\.github\.ctsdownloads\.evenkeel-os\.{name}">(.*?)</action>', policy, re.S)
     if not m or f"/usr/libexec/{helper}</annotate>" not in m.group(1):
         bad(f"{helper} has no polkit action of its own")
@@ -261,8 +272,8 @@ for f in RULE_FILES:
     t = f.read_text()
     # Our actions may only be named whole (action.id == "..."); any other use could match several at once.
     rest = re.sub(r'action\.id\s*===?\s*"io\.github\.ctsdownloads\.evenkeel-os\.[a-z0-9.-]+"', "", t)
-    if "settings-test" in t or "cert-remove" in t or "ctsdownloads" in rest:
-        bad(f"{f} could cover the settings test's or certificate removal's polkit action")
+    if "settings-test" in t or "cert-remove" in t or "boot-options" in t or "ctsdownloads" in rest:
+        bad(f"{f} could cover the settings test's, certificate removal's or boot options' polkit action")
     # A rule that says yes without naming any action says yes to everything, ours included.
     if "Result.YES" in t and "action.id" not in t and f.name != "empower.rules":
         bad(f"{f} says yes to every action")

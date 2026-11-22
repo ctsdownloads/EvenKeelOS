@@ -161,6 +161,10 @@ for f in /usr/bin/smbpasswd /usr/bin/smbcontrol /usr/bin/testparm /usr/sbin/sets
   [ -e "$f" ] || { echo "ERROR: Shared folders needs $f"; exit 1; }
 done
 python3 -I /ctx/check-sharing.py
+# Boot options: kernel settings changed in System Tools, through rpm-ostree.
+install -Dm644 /ctx/evenkeel_os_bootopts.py /usr/lib/evenkeel-os/evenkeel_os_bootopts.py
+install -Dm755 /ctx/evenkeel-os-boot-options /usr/libexec/evenkeel-os-boot-options
+python3 -I /ctx/check-boot-options.py
 # GNOME never runs autostart entries that name a startup phase; fail if ours do.
 if grep -l '^X-GNOME-Autostart-Phase=' /etc/xdg/autostart/evenkeel-os-*.desktop 2>/dev/null; then
   echo "ERROR: the autostart entries above name a GNOME startup phase, so they would never run at login"; exit 1

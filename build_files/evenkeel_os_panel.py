@@ -10,6 +10,7 @@ import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk  # noqa: E402
+import evenkeel_os_bootopts as bootopts  # noqa: E402
 import evenkeel_os_network as net  # noqa: E402
 import evenkeel_os_sharing as sharing  # noqa: E402
 from evenkeel_os_dialogs import Dialogs  # noqa: E402
@@ -18,6 +19,7 @@ from evenkeel_os_packages import zoom  # noqa: E402
 APP_ID = "io.github.ctsdownloads.evenkeel-os.Tools"
 TOOLS = "/usr/bin/evenkeel-os-tools"
 ADMIN = ["pkexec", "/usr/libexec/evenkeel-os-tools-admin"]
+BOOT_OPTIONS = ["pkexec", "/usr/libexec/evenkeel-os-boot-options"]
 PACKAGES = "/usr/bin/evenkeel-os-packages"
 OURS = (TOOLS, PACKAGES, "/usr/bin/evenkeel-os-update", "/usr/bin/evenkeel-os-codecs")   # their windows show here
 PACKAGE_TYPES = (".rpm", ".deb")
@@ -138,6 +140,10 @@ def tool_list():
         Tool("disk", "Starting the computer", "Unlock disk automatically",
              "Skip the disk password at startup. Uses the computer's security chip.", "channel-secure-symbolic",
              t + ["disk-unlock"], "evenkeel-os-tools disk-unlock", "tpm luks encryption"),
+        Tool("disk", "Boot options", "Boot options",
+             "Fixes for screen flicker and drive freezes, or your own kernel settings", "preferences-other-symbolic",
+             "bootopts", "pkexec /usr/libexec/evenkeel-os-boot-options set SETTING... (the full list)",
+             "kernel arguments karg kargs grub flicker psr panel replay amdgpu i915 xe nvme freeze"),
         Tool("disk", "Starting the computer", "Restart into BIOS settings", "Open the computer's own settings screen",
              "system-reboot-symbolic", t + ["bios"], "evenkeel-os-tools bios", "uefi firmware setup"),
         Tool("yours", "Desktop layout", "Desktop layout",
@@ -246,7 +252,7 @@ class Window(Adw.ApplicationWindow):
         if key == "sharing":
             self.sharing_page(page)
         for tool in self.tools:
-            if tool.page != key or tool.run in ("layout", "network", "sharing"):    # these pages are the tool
+            if tool.page != key or tool.run in ("layout", "network", "sharing", "bootopts"):  # shown as a section
                 continue
             if tool.group not in groups:
                 groups[tool.group] = Adw.PreferencesGroup(title=tool.group)
@@ -259,6 +265,8 @@ class Window(Adw.ApplicationWindow):
                                          "New versions start at the next restart.",
                                 icon_name="view-refresh-symbolic"))
             page.add(g)
+        if key == "disk":
+            self.boot_section(page)
         if key == "help":
             page.add(self.terminal_list())
         return page
@@ -535,7 +543,7 @@ class Window(Adw.ApplicationWindow):
             remove = Gtk.Button(icon_name="user-trash-symbolic", tooltip_text="Stop sharing it",
                                 valign=Gtk.Align.CENTER, css_classes=["flat"])
             remove.update_property([Gtk.AccessibleProperty.LABEL], [f"Stop sharing {f['name']}"])
-            remove.connect("clicked", lambda *_, f=f: self.share_admin(["sharing", "remove", f["path"]],
+            remove.connect("clicked", lambda *_, f=f: self.admin_reply(["sharing", "remove", f["path"]],
                                                                        f"{f['name']} isn't shared now."))
             row.add_suffix(remove)
             self.share_list.add(row)
@@ -582,14 +590,14 @@ class Window(Adw.ApplicationWindow):
             self.share_updating = False
             self.ask_share_password(True)
             return
-        self.share_admin(["sharing", "on" if row.get_active() else "off"],
+        self.admin_reply(["sharing", "on" if row.get_active() else "off"],
                          "Sharing is on." if row.get_active() else "Sharing is off.")
 
     def on_share_mode(self, drop, _param, folder):
         if self.share_updating:
             return
         mode = list(sharing.MODES)[drop.get_selected()]
-        self.share_admin(["sharing", "mode", folder["path"], mode], f"{folder['name']}: {sharing.MODES[mode]}.")
+        self.admin_reply(["sharing", "mode", folder["path"], mode], f"{folder['name']}: {sharing.MODES[mode]}.")
 
     def pick_share_folder(self):
         dialog = Gtk.FileDialog(title="Pick a folder to share", initial_folder=Gio.File.new_for_path(
@@ -601,7 +609,7 @@ class Window(Adw.ApplicationWindow):
             except GLib.Error:
                 return
             if path:
-                self.share_admin(["sharing", "add", path, "ro"],
+                self.admin_reply(["sharing", "add", path, "ro"],
                                  f"{os.path.basename(path)} is shared, read only. Change it in the list.")
         dialog.select_folder(self, None, picked)
 
@@ -630,20 +638,22 @@ class Window(Adw.ApplicationWindow):
         def answered(_dialog, response):
             if response != "save":
                 return
-            after = (lambda: self.share_admin(["sharing", "on"], "Sharing is on.")) if then_on else None
-            self.share_admin(["sharing", "password"], "Sharing password saved.", first.get_text(), after)
+            after = (lambda: self.admin_reply(["sharing", "on"], "Sharing is on.")) if then_on else None
+            self.admin_reply(["sharing", "password"], "Sharing password saved.", first.get_text(), after)
         d.connect("response", answered)
         d.present(self)
 
-    def share_admin(self, args, done_text, text=None, after=None):
-        """A Shared folders change as administrator; the helper's own words when it refuses."""
+    def admin_reply(self, args, done_text, text=None, after=None, program=ADMIN, after_any=None):
+        """A change as administrator (Shared folders, Boot options); the helper's own words when it refuses."""
         flags = Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_SILENCE
         if text is not None:
             flags |= Gio.SubprocessFlags.STDIN_PIPE
         try:
-            proc = Gio.Subprocess.new(ADMIN + args, flags)
+            proc = Gio.Subprocess.new(program + args, flags)
         except GLib.Error:
             self.toast("Nothing changed.")
+            if after_any:
+                after_any()
             return
 
         def finished(p, result):
@@ -653,12 +663,140 @@ class Window(Adw.ApplicationWindow):
                 out = ""
             rc = p.get_exit_status() if p.get_if_exited() else 1
             lines = (out or "").strip().splitlines()
-            self.toast(done_text if rc == 0 else lines[-1] if rc in (1, 3) and lines else "Nothing changed.")
+            self.toast(done_text if rc == 0 else lines[-1] if rc in (1, 3, 4) and lines else "Nothing changed.")
             if rc == 0 and after:
                 after()
+            if after_any:
+                after_any()
             self.refresh()
             GLib.timeout_add_seconds(4, self.refresh)        # Samba starts in the background: look again
         proc.communicate_utf8_async(text, None, finished)
+
+    def boot_section(self, page):
+        """Common fixes as switches, your own settings, and whether a restart is needed."""
+        g = Adw.PreferencesGroup(title="Boot options", description="Settings the computer starts with. Each change "
+                                 "makes a new version, and the one before stays as the fallback. Changes ask for an "
+                                 "administrator password and start at the next restart.")
+        self.boot_status = Adw.ActionRow(title="Checking…")
+        self.boot_button = Gtk.Button(label="Restart now", valign=Gtk.Align.CENTER, visible=False)
+        self.boot_button.connect("clicked", self.on_boot_button)
+        self.boot_status.add_suffix(self.boot_button)
+        g.add(self.boot_status)
+        page.add(g)
+        g = Adw.PreferencesGroup(title="Common fixes", description="Fixes many people use. Each one can cost a "
+                                 "little battery, so turn one on only for a problem you have.")
+        self.boot_switches = []
+        for settings, title, about in bootopts.COMMON:
+            row = Adw.SwitchRow(title=title, subtitle=f"{about}. {' '.join(settings)}", sensitive=False)
+            row.connect("notify::active", self.on_boot_switch, settings)
+            self.boot_switches.append((row, settings))
+            g.add(row)
+        page.add(g)
+        self.boot_own = Adw.PreferencesGroup(title="Your own settings")
+        self.boot_entry = Adw.EntryRow(title="Add a setting, like amdgpu.abmlevel=0", show_apply_button=True)
+        self.boot_entry.connect("apply", self.on_boot_add)
+        self.boot_own.add(self.boot_entry)
+        page.add(self.boot_own)
+        self.boot_rows = []
+        self.boot_on = []
+        self.boot_busy = False
+        self.boot_updating = False
+
+    def show_boot(self, upcoming, running):
+        """upcoming: the settings the next start uses (None: unreadable); running: the ones this start used."""
+        self.boot_updating = True
+        readable = upcoming is not None
+        upcoming = upcoming or []
+        common = [s for s in upcoming if s in bootopts.COMMON_SETTINGS]
+        self.boot_on = bootopts.merged(common, [s for s in bootopts.added() if s in upcoming])   # typed ones win
+        for row, settings in self.boot_switches:
+            row.set_sensitive(readable and not self.boot_busy)
+            row.set_active(all(s in upcoming for s in settings))
+        self.boot_entry.set_sensitive(readable and not self.boot_busy)
+        for row in self.boot_rows:
+            self.boot_own.remove(row)
+        self.boot_rows = []
+        for s in (s for s in self.boot_on if s not in bootopts.COMMON_SETTINGS):
+            row = Adw.ActionRow(title=s, subtitle=bootopts.risk(s) or "Added by you")
+            remove = Gtk.Button(icon_name="user-trash-symbolic", tooltip_text="Take it out", valign=Gtk.Align.CENTER,
+                                css_classes=["flat"], sensitive=not self.boot_busy)
+            remove.update_property([Gtk.AccessibleProperty.LABEL], [f"Take out {s}"])
+            remove.connect("clicked", lambda *_, s=s: self.boot_apply([x for x in self.boot_on if x != s],
+                                                                      f"{s} is taken out from the next restart."))
+            row.add_suffix(remove)
+            self.boot_own.add(row)
+            self.boot_rows.append(row)
+        self.boot_button.set_visible(False)
+        if not readable:
+            self.boot_status.set_title("The boot options can't be read right now")
+            self.boot_status.set_subtitle("Try again in a minute. If this stays, use Save problem details in Get help.")
+        elif bootopts.same(upcoming, running):
+            self.boot_status.set_title("In use" if self.boot_on else "No boot options added")
+            self.boot_status.set_subtitle(" ".join(self.boot_on) or "The computer starts with the usual settings.")
+        else:
+            self.boot_status.set_title("Restart to use the changes")
+            self.boot_status.set_subtitle("The next start uses: " + (" ".join(self.boot_on) or "no boot options"))
+            self.boot_button.set_label("Restart now")
+            self.boot_button.set_visible(True)
+        self.boot_updating = False
+
+    def on_boot_button(self, _button):
+        spawn(["gnome-session-quit", "--reboot"])
+
+    def on_boot_switch(self, row, _param, settings):
+        if self.boot_updating or self.boot_busy:
+            return
+        if row.get_active():
+            self.boot_apply(bootopts.merged(self.boot_on, list(settings)), f"{row.get_title()}: on from the next "
+                            "restart.")
+        else:
+            self.boot_apply([s for s in self.boot_on if s not in settings],
+                            f"{row.get_title()}: off from the next restart.")
+
+    def on_boot_add(self, entry):
+        if self.boot_busy:
+            return
+        settings = entry.get_text().split()
+        problems = [bootopts.problem(s) for s in settings if bootopts.problem(s)]
+        if not settings or problems:
+            self.toast(problems[0] if problems else "Type a setting first.")
+            return
+        risky = [(s, bootopts.risk(s)) for s in settings if bootopts.risk(s)]
+        new = bootopts.merged(self.boot_on, settings)
+        done = f"{' '.join(settings)} is added from the next restart."
+        if not risky:
+            entry.set_text("")
+            self.boot_apply(new, done)
+            return
+        d = Adw.AlertDialog(heading="This setting is risky",
+                            body="\n\n".join(f"{s}: {why}" for s, why in risky) + "\n\nAdd it only if you know you "
+                            "need it. If the computer then won't start, automatic rollback goes back to the version "
+                            "before.")
+        d.add_response("cancel", "Cancel")
+        d.add_response("add", "Add anyway")
+        d.set_response_appearance("add", Adw.ResponseAppearance.DESTRUCTIVE)
+        d.set_default_response("cancel")
+        d.set_close_response("cancel")
+
+        def answered(_dialog, response):
+            if response == "add":
+                entry.set_text("")
+                self.boot_apply(new, done)
+        d.connect("response", answered)
+        d.present(self)
+
+    def boot_apply(self, settings, done_text):
+        """One change at a time: the section waits until the helper has finished."""
+        self.boot_busy = True
+        for row, _ in self.boot_switches:
+            row.set_sensitive(False)
+        self.boot_entry.set_sensitive(False)
+        for row in self.boot_rows:
+            row.set_sensitive(False)
+        self.admin_reply(["set", *settings], done_text, program=BOOT_OPTIONS, after_any=self.boot_done)
+
+    def boot_done(self):
+        self.boot_busy = False
 
     def terminal_list(self):
         g = Adw.PreferencesGroup(title="Prefer the terminal?", description="Every tool here has a command. The copy "
@@ -686,6 +824,7 @@ class Window(Adw.ApplicationWindow):
     def refresh(self, *_):
         threading.Thread(target=self.read_state, daemon=True).start()
         threading.Thread(target=self.read_network, daemon=True).start()
+        threading.Thread(target=self.read_boot, daemon=True).start()
         return False
 
     def read_network(self):
@@ -695,6 +834,9 @@ class Window(Adw.ApplicationWindow):
         nets = net.networks()
         GLib.idle_add(self.show_network, nets, net.default_zone(), services)
         GLib.idle_add(self.show_sharing, sharing.load(), nets, sharing.set_up(), sharing.running())
+
+    def read_boot(self):
+        GLib.idle_add(self.show_boot, bootopts.next_start(), bootopts.running())
 
     def read_state(self):
         on = self.t.updates_on()
@@ -767,6 +909,8 @@ class Window(Adw.ApplicationWindow):
             self.show("yours")
         elif tool.run in ("network", "sharing"):
             self.show(tool.run)
+        elif tool.run == "bootopts":
+            self.show("disk")
         elif tool.run == "codecs-remove":
             self.remove_codecs()
         elif tool.run[0] in OURS:
