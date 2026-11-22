@@ -1,0 +1,105 @@
+#!/usr/bin/python3 -I
+"""Asks once, for each password Wi-Fi network, whether it is Home, Work or a Public place.
+
+  evenkeel-os-network-ask --watch     at login: watch NetworkManager and ask about each new network once
+  evenkeel-os-network-ask UUID        the question for one network
+Open Wi-Fi is never asked: it stays a Public place. Neither are wired networks: one wired profile matches every
+cable, so it stays a Public place unless changed in System Tools, Network safety.
+"""
+import select
+import subprocess
+import sys
+import time
+
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_network as net  # noqa: E402
+
+
+def watch():
+    asked, windows = set(), []
+    while True:
+        try:
+            monitor = subprocess.Popen(["nmcli", "monitor"], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+                                       text=True)
+        except OSError:
+            return
+        while True:
+            for n in net.networks():
+                if n.needs_asking and n.uuid not in asked:
+                    asked.add(n.uuid)
+                    windows.append(subprocess.Popen([sys.argv[0], n.uuid]))
+            windows = [w for w in windows if w.poll() is None]
+            if not monitor.stdout.readline():          # NetworkManager restarted: start watching again
+                break
+            while select.select([monitor.stdout], [], [], 2)[0]:     # let a burst of changes settle first
+                if not monitor.stdout.readline():
+                    break
+        monitor.wait()
+        time.sleep(10)
+
+
+def ask(uuid):
+    n = next((n for n in net.networks() if n.uuid == uuid), None)
+    if not n or not n.needs_asking:
+        return 0
+    import gi       # only here: the watcher that runs all session long doesn't load GTK
+    gi.require_version("Gtk", "4.0")
+    gi.require_version("Adw", "1")
+    from gi.repository import Adw, Gio, Gtk
+
+    def build(app):
+        win = Adw.ApplicationWindow(application=app, title="Network safety", default_width=480, resizable=False)
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=18, margin_top=24, margin_bottom=24,
+                      margin_start=24, margin_end=24)
+        box.append(Gtk.Image(icon_name="security-high-symbolic", pixel_size=48))
+        box.append(Gtk.Label(label=f"Where is {n.name}?", wrap=True, css_classes=["title-2"]))
+        box.append(Gtk.Label(label="This sets what other devices on this network can reach. Pick Public place "
+                                   "anywhere you're not sure. You can change it later in System Tools, Network "
+                                   "safety.", wrap=True, justify=Gtk.Justification.CENTER))
+        rows = Gtk.ListBox(css_classes=["boxed-list"], selection_mode=Gtk.SelectionMode.NONE)
+        group, checks = None, {}
+        for zone, about in ((net.HOME, "Your own home network"), (net.WORK, "An office you trust"),
+                            (net.PUBLIC, "A café, hotel, airport, or anywhere else. Nothing gets in.")):
+            check = Gtk.CheckButton(group=group, active=zone == net.PUBLIC, valign=Gtk.Align.CENTER)
+            group = group or check
+            row = Adw.ActionRow(title=net.PLACES[zone], subtitle=about, activatable_widget=check)
+            row.add_prefix(check)
+            rows.append(row)
+            checks[zone] = check
+        box.append(rows)
+        save = Gtk.Button(label="Save", halign=Gtk.Align.END, css_classes=["pill", "suggested-action"])
+        error = Gtk.Label(wrap=True, visible=False, css_classes=["error"])
+
+        def on_save(_button):
+            zone = next(z for z, c in checks.items() if c.get_active())
+            if net.set_place(n, zone):      # "later": saved, in effect the next time it connects
+                win.close()
+            else:
+                error.set_label("That didn't save. Try again in System Tools, Network safety.")
+                error.set_visible(True)
+        save.connect("clicked", on_save)
+        box.append(error)
+        box.append(save)
+        win.set_content(Adw.ToolbarView(content=box, top_bar_style=Adw.ToolbarStyle.FLAT))
+        win.get_content().add_top_bar(Adw.HeaderBar(show_title=False))
+        win.set_default_widget(save)
+        win.present()
+
+    app = Adw.Application(application_id="io.github.ctsdownloads.EvenKeelOS.NetworkAsk",
+                          flags=Gio.ApplicationFlags.NON_UNIQUE)     # one window per network
+    app.connect("activate", build)
+    return app.run([])
+
+
+def main(argv):
+    if argv[1:] == ["--watch"]:
+        watch()
+        return 0
+    if len(argv) == 2 and len(argv[1]) == 36:
+        return ask(argv[1])
+    print(__doc__, file=sys.stderr)
+    return 2
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))

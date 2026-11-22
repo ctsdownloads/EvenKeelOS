@@ -132,6 +132,17 @@ install -Dm644 /ctx/evenkeel-os-repair-boxes.desktop /usr/share/applications/eve
 install -Dm644 /ctx/evenkeel-os-login-apps.desktop /usr/share/applications/evenkeel-os-login-apps.desktop
 # At login, once: say when a package added to the system is ready.
 install -Dm644 /ctx/evenkeel-os-packages-after-restart.desktop /etc/xdg/autostart/evenkeel-os-packages-after-restart.desktop
+# Network safety: each network is Home, Work or a Public place (its firewall zone); a new one is a Public place.
+for z in home work public; do install -Dm644 "/ctx/firewall/evenkeel-$z.xml" "/usr/lib/firewalld/zones/evenkeel-$z.xml"; done
+firewall-offline-cmd --set-default-zone=evenkeel-public
+install -Dm644 /ctx/evenkeel_os_network.py /usr/lib/evenkeel-os/evenkeel_os_network.py
+install -Dm755 /ctx/evenkeel-os-network-ask /usr/libexec/evenkeel-os-network-ask
+install -Dm644 /ctx/evenkeel-os-network-ask.desktop /etc/xdg/autostart/evenkeel-os-network-ask.desktop
+python3 -I /ctx/check-network.py
+# The Network safety switches run these.
+for f in /usr/bin/firewall-cmd /usr/bin/cupsctl /usr/lib/systemd/system/sshd.service; do
+  [ -e "$f" ] || { echo "ERROR: Network safety needs $f"; exit 1; }
+done
 # GNOME never runs autostart entries that name a startup phase; fail if ours do.
 if grep -l '^X-GNOME-Autostart-Phase=' /etc/xdg/autostart/evenkeel-os-*.desktop 2>/dev/null; then
   echo "ERROR: the autostart entries above name a GNOME startup phase, so they would never run at login"; exit 1

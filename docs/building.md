@@ -14,6 +14,10 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/bluefin-packages.txt` | Fedora packages carried over from Bluefin |
 | `build_files/default-apps.txt`, `flathub-apps.txt`, `evenkeel-os-flathub-apps`, `evenkeel-os-flatpak-apps.service`, `evenkeel-os-flathub.service`, `flathub.flatpakrepo` | Default apps, and the Flathub ones installed at the first start with internet |
 | `build_files/evenkeel_os_ui.py` | Windows, notices and disk sizes shared by System Tools and Install Package File |
+| `build_files/firewall/evenkeel-home.xml`, `evenkeel-work.xml`, `evenkeel-public.xml` | The three firewall zones for Network safety: Home, Work and Public place |
+| `build_files/evenkeel_os_network.py` | Each network's place, shared by System Tools, the question and the installer |
+| `build_files/evenkeel-os-network-ask`, `evenkeel-os-network-ask.desktop` | The once-per-network question, started at login |
+| `build_files/check-network.py` | Build check: the default zone is Public place, Public lets nothing in, Home and Work keep 1025-65535 and have no SSH, open Wi-Fi can't be made Home, and the question is asked only for joined password Wi-Fi networks with no place |
 | `build_files/evenkeel-os-update`, `evenkeel-os-update-helper` | **System Update**, and its Python helper for progress text and what's new |
 | `build_files/evenkeel-os-packages`, `evenkeel_os_packages/`, `evenkeel-os-box-run`, `evenkeel-os-hwrules` | **Install Package File**, **Remove Apps**, **Repair App Boxes**, **Start Apps at Login**, and their helpers |
 | `build_files/evenkeel-os-tools`, `-admin`, `-safe`, `evenkeel_os_panel.py`, `check-panel.py` | **System Tools**: the window, every job, its two root helpers, and the build check that every tool has a row |
@@ -51,7 +55,8 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 - an outside package is not at its locked version or is not on the list (see
   [Locked versions](#locked-versions));
 - Install Package File misreads four real Fedora packages;
-- a tool would open its windows outside System Tools, or answer differently there.
+- a tool would open its windows outside System Tools, or answer differently there;
+- Network safety isn't set up right (a new network isn't a Public place, or Home and Work let in SSH).
 
 A separate docs check fails when the README's contents table or a link is out of
 date.

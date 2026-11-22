@@ -25,6 +25,9 @@ Nothing touches the disk until you install.
    and time, disk, encryption, accounts, the computer's name and the desktop
    layout (Standard, or Windows-style with a bottom bar and start menu), then
    shows a **Review**. Click **Install**, then **Restart** when it's done.
+   - After you join a password Wi-Fi on the Network step, the installer asks "Where is NETWORK-NAME?" with **Home**,
+     **Work** or **Public place**. The answer is saved with that network and carried over to the installed system.
+     **Next** waits for an answer; **Back** skips the question, and the installed system asks at the first login.
    - If the install stops: **Save the log**, **Show a QR code**, or **Report on
      GitHub**. The log leaves out passwords and names.
 5. Log in. The [setup checklist](#first-login) opens.
@@ -167,6 +170,9 @@ can be skipped:
 2. **Disk password at startup:** **Unlock disk automatically**, if the disk is
    encrypted and has a security chip.
 3. **How to get apps:** opens Bazaar and Install a package file to show them.
+
+The computer also asks once about each password Wi-Fi network: Home, Work or Public place (see
+[Network safety](system-tools.md#network-safety)).
 
 One restart at the end, if needed. **Later** shows it at the next login;
 **Don't show again** stops it. It's in [System Tools](system-tools.md#system-tools)

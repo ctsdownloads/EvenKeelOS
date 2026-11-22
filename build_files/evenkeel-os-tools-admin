@@ -8,6 +8,8 @@
                                                   (exit 4: installed before greenboot, 5: an update is waiting,
                                                   6: this start is a test copy)
   evenkeel-os-tools-admin test-rollback clear     take the test marker off the version running now
+  evenkeel-os-tools-admin firewall SERVICE on|off  SERVICE: ssh, ipp; on Home and Work networks only, never Public
+  evenkeel-os-tools-admin firewall default        a network with no place set is a Public place
 """
 import json
 import os
@@ -20,6 +22,8 @@ DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
 # Switched on from /usr (build.sh), so deleting /etc can't switch it off; systemctl is-enabled only reads /etc.
 GREENBOOT_ON = Path("/usr/lib/systemd/system/multi-user.target.wants/greenboot-healthcheck.service")
 UUID = re.compile(r"^[0-9a-fA-F-]{36}$")
+FIREWALL_SERVICES = ("ssh", "ipp")             # the Network safety switches: SSH, Share my printer
+SWITCHED_ZONES = ("evenkeel-home", "evenkeel-work")
 
 
 def fail(msg, code=1):
@@ -154,6 +158,40 @@ def test_rollback(kind):
     sys.exit(subprocess.run(["/usr/bin/rpm-ostree", "kargs", f"--append=evenkeel_os.test_rollback={kind}"]).returncode)
 
 
+def let_in(service, state):
+    """Home and Work networks let the service in (on) or keep it out (off); saved and reloaded. "" when it worked."""
+    for zone in SWITCHED_ZONES:
+        flag = f"--{'add' if state == 'on' else 'remove'}-service={service}"
+        r = subprocess.run(["/usr/bin/firewall-cmd", "--permanent", f"--zone={zone}", flag],
+                           capture_output=True, text=True)
+        if r.returncode != 0 and "ALREADY_ENABLED" not in r.stderr and "NOT_ENABLED" not in r.stderr:
+            return f"The firewall didn't take the change: {r.stderr.strip()}"
+    if subprocess.run(["/usr/bin/firewall-cmd", "--reload"], capture_output=True).returncode != 0:
+        return "The firewall didn't reload."
+    return ""
+
+
+def firewall(service, state):
+    """Switch a service on (it runs, and Home and Work networks let it in) or off; both or neither."""
+    problem = let_in(service, state)
+    if problem:
+        fail(problem)
+    if service == "ssh":        # the SSH server, off in Fedora until switched on
+        run = ["/usr/bin/systemctl", "enable" if state == "on" else "disable", "--now", "sshd.service"]
+    else:                       # printers plugged into this computer, shared with the network or not
+        run = ["/usr/bin/cupsctl", "--share-printers" if state == "on" else "--no-share-printers"]
+    r = subprocess.run(run, capture_output=True, text=True)
+    if r.returncode != 0:
+        let_in(service, "off" if state == "on" else "on")       # put the firewall back as it was
+        fail(f"{service} didn't change, so the firewall was left as it was: {(r.stderr or r.stdout).strip()}")
+
+
+def firewall_default():
+    r = subprocess.run(["/usr/bin/firewall-cmd", "--set-default-zone=evenkeel-public"], capture_output=True, text=True)
+    if r.returncode != 0:
+        fail(f"The firewall didn't take the change: {r.stderr.strip()}")
+
+
 def main(argv):
     if os.geteuid() != 0:
         fail("This helper runs as root, through polkit.")
@@ -167,6 +205,10 @@ def main(argv):
         test_rollback_clear()
     elif len(argv) == 3 and argv[1] == "test-rollback" and argv[2] in TEST_KINDS:
         test_rollback(argv[2])
+    elif len(argv) == 4 and argv[1] == "firewall" and argv[2] in FIREWALL_SERVICES and argv[3] in ("on", "off"):
+        firewall(argv[2], argv[3])
+    elif argv[1:] == ["firewall", "default"]:
+        firewall_default()
     else:
         fail(__doc__, 2)
 
