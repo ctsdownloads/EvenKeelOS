@@ -67,7 +67,8 @@ source was picked up by the system upgrade with no new EvenKeelOS build.
 ### Removing a VPN
 
 Open **Remove Apps** and remove it. That turns off its background service, removes the app and removes its download
-source. Then restart. See [Removing apps](apps.md#removing-apps).
+source. For NordVPN it also removes the group it added for your account, and its log folder. Then restart. Nothing
+is left behind. See [Removing apps](apps.md#removing-apps).
 
 ### Good to know
 

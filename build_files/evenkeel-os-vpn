@@ -12,6 +12,7 @@ import os
 import platform
 import pwd
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -21,6 +22,8 @@ KEYS = Path("/usr/share/evenkeel-os/vpn-keys")
 REPOS = Path("/etc/yum.repos.d")
 UNITS = Path("/etc/systemd/system")
 GROUPS = Path("/etc/group")
+GSHADOW = Path("/etc/gshadow")
+ADDED = Path("/var/lib/evenkeel-os/vpn-added.json")     # groups and folders this helper made, so removal undoes them
 PKG = re.compile(r"^[A-Za-z0-9][A-Za-z0-9.+_-]{0,127}$")
 UNIT_DIRS = ("/usr/lib/systemd/system/", "/etc/systemd/system/")
 UNIT = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._@-]{0,127}\.(service|socket|timer|path)$")
@@ -88,6 +91,22 @@ def systemctl(*args):
     return subprocess.run(["/usr/bin/systemctl", *args]).returncode == 0
 
 
+def added():
+    try:
+        return json.loads(ADDED.read_text())
+    except (OSError, ValueError):
+        return {"groups": [], "folders": []}
+
+
+def note_added(kind, item, keep=True):
+    a = added()
+    a[kind] = sorted(set(a.get(kind, [])) - {item} | ({item} if keep else set()))
+    ADDED.parent.mkdir(parents=True, exist_ok=True)
+    tmp = ADDED.with_name(f".{ADDED.name}.tmp")
+    tmp.write_text(json.dumps(a))
+    tmp.replace(ADDED)
+
+
 def install(name, v):
     key = key_for(v)
     if not key:
@@ -126,6 +145,8 @@ def turn_on(name, v):
             gid = grp.getgrnam(d["group"]).gr_gid
         except KeyError:
             gid = 0
+        if not os.path.exists(d["path"]):
+            note_added("folders", d["path"])
         os.makedirs(d["path"], exist_ok=True)
         os.chown(d["path"], 0, gid)
         os.chmod(d["path"], int(d["mode"], 8))
@@ -147,12 +168,18 @@ def add_to_group(group):
         return False
     with open(GROUPS) as f:
         here = any(line.split(":", 1)[0] == group for line in f)
-    if not here:
-        ends = GROUPS.read_bytes().endswith(b"\n")
-        with open(GROUPS, "a") as f:
-            f.write(("" if ends else "\n") + f"{group}:x:{g.gr_gid}:\n")
-        subprocess.run(["/usr/sbin/grpconv"], check=False)
+    if not here:        # appended, so each file keeps its locks and security label
+        append_line(GROUPS, f"{group}:x:{g.gr_gid}:")
+        if GSHADOW.exists():
+            append_line(GSHADOW, f"{group}:!::")
+        note_added("groups", group)
     return subprocess.run(["/usr/sbin/usermod", "-aG", group, user]).returncode == 0
+
+
+def append_line(path, line):
+    ends = path.read_bytes().endswith(b"\n")
+    with open(path, "a") as f:
+        f.write(("" if ends else "\n") + line + "\n")
 
 
 def remove(name, v):
@@ -170,6 +197,29 @@ def remove(name, v):
     if ours(repo_file(name), name):
         repo_file(name).unlink()
         print(f"Removed {repo_file(name)}")
+    if v.get("group"):
+        remove_group(v["group"])
+    for d in v.get("folders", []):
+        if d["path"] in added().get("folders", []):
+            shutil.rmtree(d["path"], ignore_errors=True)
+            note_added("folders", d["path"], keep=False)
+
+
+def remove_group(group):
+    """Take the group line out of /etc/group if this helper put it there; else only take the person out of it."""
+    if group not in added().get("groups", []):
+        try:
+            user = pwd.getpwuid(int(os.environ["PKEXEC_UID"])).pw_name
+        except (KeyError, ValueError):
+            return
+        subprocess.run(["/usr/bin/gpasswd", "-d", user, group], capture_output=True)
+        return
+    # groupdel keeps the file's locks and security label, which a rewrite here would lose
+    if subprocess.run(["/usr/sbin/groupdel", group]).returncode != 0:
+        print(f"The {group} group was not removed.")
+        return
+    note_added("groups", group, keep=False)
+    print(f"Removed the {group} group")
 
 
 def asked_for(script, units):
