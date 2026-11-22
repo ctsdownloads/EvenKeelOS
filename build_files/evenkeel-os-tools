@@ -65,7 +65,7 @@ CERT_ALERTS = STATE / "cert-alerts.json"      # written by evenkeel-os-certs
 def password(text):
     """The disk password, typed. None when cancelled."""
     if GUI:
-        r = subprocess.run(["zenity", f"--title={TITLE}", "--password", f"--text={text}"],
+        r = subprocess.run(["zenity", f"--title={ui.TITLE}", "--password", f"--text={text}"],
                            capture_output=True, text=True)
         return r.stdout.rstrip("\n") if r.returncode == 0 and r.stdout.strip() else None
     import getpass
@@ -75,13 +75,13 @@ def password(text):
         return None
 
 
-def busy(text, title=TITLE):
+def busy(text, title=None):
     """Show a moving progress window with this text (or print it without a desktop). Close it with done(bar)."""
     if not GUI:
         print(text)
         return None
-    return subprocess.Popen(["zenity", f"--title={title}", "--progress", "--pulsate", "--auto-close", "--no-cancel",
-                             "--width=480", f"--text={text}"], stdin=subprocess.PIPE, text=True)
+    return subprocess.Popen(["zenity", f"--title={title or ui.TITLE}", "--progress", "--pulsate", "--auto-close",
+                             "--no-cancel", "--width=480", f"--text={text}"], stdin=subprocess.PIPE, text=True)
 
 
 def done(bar):
@@ -89,7 +89,7 @@ def done(bar):
         ui.finish(bar)
 
 
-def run(text, cmd, stdin=None, title=TITLE):
+def run(text, cmd, stdin=None, title=None):
     """Run one command with a progress window; its exit code. Its output goes to the log, not the window."""
     CACHE.mkdir(parents=True, exist_ok=True)
     with open(LOG, "a") as log:
@@ -671,6 +671,11 @@ ROLLBACK_TESTS = [
 
 
 # Not a test copy: really deletes settings in /etc (evenkeel-os-settings-test).
+# What each test does, short enough for the list; the full story comes when one is picked.
+TEST_SHORT = {"quick": "A start-up check fails", "no-login-screen": "The login screen doesn't start",
+              "no-networking": "Networking doesn't start", "stuck": "Starting hangs (about 7 minutes)",
+              "login-loop": "Logging in drops you back", "freeze": "The computer locks up",
+              "settings": "Settings are really deleted"}
 SETTINGS_TEST_ROW = ("Important settings deleted", "Important system settings are really deleted, and the computer "
                  "restarts right away. The next start finds them missing, puts them back from the copy it saved, "
                  "and restarts once more by itself. A message at login then lists what was put back.")
@@ -706,11 +711,9 @@ def test_rollback():
             return 1
         offer_restart("The test marker is removed. The version without it starts at your next restart.")
         return 0
-    i = choose("Pick the problem to test. For most, a test copy of this version is made with that problem, and "
-               "starts at your next restart. Your computer should then go back to the version you're using now by "
-               "itself. The last one really deletes important settings, and the computer should put them back.",
-               ["Problem", "What you'll see"], [(t, see) for _, t, see in ROLLBACK_TESTS] + [SETTINGS_TEST_ROW],
-               width=760, height=520)
+    i = choose("Pick a problem to test. Your computer should fix it by itself.", ["Problem", "What happens"],
+               [(t, TEST_SHORT[k]) for k, t, _ in ROLLBACK_TESTS] + [(SETTINGS_TEST_ROW[0], TEST_SHORT["settings"])],
+               width=560, height=420)
     if i is None:
         return 1
     if i == len(ROLLBACK_TESTS):
@@ -975,8 +978,9 @@ def main(argv):
             return setup_checklist(first_login=True)
         if argv[1:] == ["rolled-back", "--at-login"]:
             return max(rolled_back_note(), settings_note())
-        for key, _, _, fn in TOOLS:
+        for key, name, _, fn in TOOLS:
             if argv[1] == key and len(argv) == 2:
+                ui.TITLE = name     # its windows carry its own name, not System Tools'
                 return fn()
         print(__doc__)
         return 2
