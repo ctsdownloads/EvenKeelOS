@@ -9,11 +9,13 @@ import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk  # noqa: E402
+import evenkeel_os_network as net  # noqa: E402
 from evenkeel_os_dialogs import Dialogs  # noqa: E402
 from evenkeel_os_packages import zoom  # noqa: E402
 
 APP_ID = "io.github.ctsdownloads.evenkeel-os.Tools"
 TOOLS = "/usr/bin/evenkeel-os-tools"
+ADMIN = ["pkexec", "/usr/libexec/evenkeel-os-tools-admin"]
 PACKAGES = "/usr/bin/evenkeel-os-packages"
 OURS = (TOOLS, PACKAGES, "/usr/bin/evenkeel-os-update", "/usr/bin/evenkeel-os-codecs")   # their windows show here
 PACKAGE_TYPES = (".rpm", ".deb")
@@ -33,6 +35,7 @@ CSS = b"""
 PAGES = [("overview", "Overview", "go-home-symbolic"),
          ("updates", "Updates", "software-update-available-symbolic"),
          ("apps", "Apps", "view-app-grid-symbolic"),
+         ("network", "Network safety", "security-high-symbolic"),
          ("disk", "Disk and startup", "drive-harddisk-symbolic"),
          ("yours", "Make it yours", "applications-graphics-symbolic"),
          ("help", "Get help", "help-about-symbolic")]
@@ -118,6 +121,10 @@ def tool_list():
         Tool("apps", "More ways to get apps", "Windows programs", "Pick an .exe or .msi to get its Linux version",
              "application-x-executable-symbolic", "windows", "evenkeel-os-packages windows FILE", "exe msi"),
         Tool("apps", "More ways to get apps", "Zoom meetings", "", "camera-video-symbolic", "zoom", "", "chrome"),
+        Tool("network", "This network", "Network safety", "Home, Work or Public place, and what each lets in",
+             "security-high-symbolic", "network",
+             "nmcli connection modify NETWORK connection.zone evenkeel-home (or evenkeel-work, evenkeel-public)",
+             "firewall wifi wi-fi wired zone home work public ssh printer ports"),
         Tool("disk", "Disk space", "Free up disk space", "Remove old system versions and unused app parts",
              "user-trash-symbolic", t + ["free-space"], "evenkeel-os-tools free-space", "clean storage"),
         Tool("disk", "Starting the computer", "Unlock disk automatically",
@@ -226,8 +233,10 @@ class Window(Adw.ApplicationWindow):
             page.add(groups["Disk space"])
         if key == "yours":
             page.add(self.layout_picker())
+        if key == "network":
+            self.network_page(page)
         for tool in self.tools:
-            if tool.page != key or tool.run == "layout":      # the layout row is the picker; search finds it
+            if tool.page != key or tool.run in ("layout", "network"):     # these pages are the tool; search finds it
                 continue
             if tool.group not in groups:
                 groups[tool.group] = Adw.PreferencesGroup(title=tool.group)
@@ -322,6 +331,131 @@ class Window(Adw.ApplicationWindow):
         g.add(box)
         return g
 
+    def network_page(self, page):
+        """Which place the network you're on is, every saved network's place, and what Home and Work let in."""
+        box = Gtk.Box(spacing=20, css_classes=["ek-banner"])
+        box.append(Gtk.Image(icon_name="security-high-symbolic", pixel_size=40))
+        text = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6, hexpand=True, valign=Gtk.Align.CENTER)
+        self.net_title = Gtk.Label(xalign=0, wrap=True, css_classes=["title-2"], label="Checking the network…")
+        self.net_sub = Gtk.Label(xalign=0, wrap=True, css_classes=["ek-sub"])
+        text.append(self.net_title)
+        text.append(self.net_sub)
+        box.append(text)
+        self.net_fix = Gtk.Button(label="Fix", valign=Gtk.Align.CENTER, css_classes=["pill"], visible=False)
+        self.net_fix.connect("clicked", lambda *_: self.admin(["firewall", "default"],
+                                                              "New networks are a Public place now."))
+        box.append(self.net_fix)
+        self.net_banner = box
+        g = Adw.PreferencesGroup()
+        g.add(box)
+        page.add(g)
+        self.net_list = Adw.PreferencesGroup(title="Your networks",
+                                             description="Home and Work let in phones, file sharing and apps you "
+                                                         "run. A Public place lets nothing in.")
+        page.add(self.net_list)
+        self.net_rows = []
+        g = Adw.PreferencesGroup(title="Also let in, on Home and Work",
+                                 description="Never on a Public place. Each change asks for your password.")
+        self.net_switches = {}
+        for service, title, about in (("ssh", "Log in from another computer (SSH)", "Off unless you need it"),
+                                      ("ipp", "Share my printer", "Other computers print to a printer plugged "
+                                                                  "into this one")):
+            row = Adw.SwitchRow(title=title, subtitle=about, sensitive=False)
+            row.connect("notify::active", self.on_net_switch, service)
+            self.net_switches[service] = row
+            g.add(row)
+        page.add(g)
+        self.net_updating = False
+
+    def show_network(self, nets, default, services):
+        self.net_updating = True
+        on = next((n for n in nets if n.device), None)
+        public = default == net.PUBLIC
+        if default is None:
+            self.net_title.set_label("The firewall isn't answering")
+            self.net_sub.set_label("Network safety can't check or change it right now. Restart the computer. If "
+                                   "this stays, use Save problem details in Get help.")
+        elif on:
+            zone = on.zone or default or net.PUBLIC
+            what = {net.HOME: "your home network", net.WORK: "your work network", net.PUBLIC: "a public place"}
+            self.net_title.set_label(f"{on.name} is {what[zone]}" if zone in what else
+                                     f"{on.name} uses another firewall setting: {zone}")
+            self.net_sub.set_label(net.LETS_IN.get(zone, "Pick Home, Work or Public place for it below."))
+        else:
+            self.net_title.set_label("Not connected")
+            self.net_sub.set_label("The next network you join starts as a Public place.")
+        self.net_banner.remove_css_class("ek-warn")
+        self.net_fix.set_visible(not public and default is not None)
+        if not public:
+            self.net_banner.add_css_class("ek-warn")
+        if default is not None and not public:
+            self.net_sub.set_label("New networks on this computer aren't a Public place yet. Fix sets that.")
+        for row in self.net_rows:
+            self.net_list.remove(row)
+        self.net_rows = []
+        names = list(net.PLACES.values())
+        for n in nets:
+            zone = n.zone or default or net.PUBLIC
+            about = n.kind + (", connected now" if n.device else "")
+            if n.fixed_public:
+                if zone == net.PUBLIC:
+                    row = Adw.ActionRow(title=n.name, subtitle=f"{about}. Open Wi-Fi is always a Public place.")
+                    row.add_suffix(Gtk.Label(label=net.PLACES[net.PUBLIC], css_classes=["dim-label"]))
+                else:       # set another way (a terminal); open Wi-Fi shouldn't let anything in
+                    row = Adw.ActionRow(title=n.name, subtitle=f"{about}. Open Wi-Fi, but set to "
+                                        f"{net.PLACES.get(zone, zone)}. Anyone can make a network with its name.")
+                    fix = Gtk.Button(label="Make it a Public place", valign=Gtk.Align.CENTER)
+                    fix.connect("clicked", lambda *_, n=n: self.save_place(n, net.PUBLIC))
+                    row.add_suffix(fix)
+                self.net_list.add(row)
+                self.net_rows.append(row)
+                continue
+            if n.kind == "Wired":
+                about += ". Applies to every cable you plug in, not only this one"
+            choices = names + ([] if zone in net.PLACES else [f"Other ({zone})"])
+            row = Adw.ComboRow(title=n.name, model=Gtk.StringList.new(choices), subtitle=about)
+            row.set_selected(list(net.PLACES).index(zone) if zone in net.PLACES else len(names))
+            row.connect("notify::selected", self.on_place, n)
+            self.net_list.add(row)
+            self.net_rows.append(row)
+        if not nets:
+            row = Adw.ActionRow(title="No saved networks yet")
+            self.net_list.add(row)
+            self.net_rows.append(row)
+        for service, row in self.net_switches.items():
+            row.set_sensitive(services is not None)
+            row.set_active(bool(services) and service in services)
+        self.net_updating = False
+
+    def on_place(self, row, _param, network):
+        zones = list(net.PLACES)
+        if self.net_updating or row.get_selected() >= len(zones):
+            return
+        self.save_place(network, zones[row.get_selected()])
+
+    def save_place(self, network, zone):
+        def save():
+            done = net.set_place(network, zone)
+            GLib.idle_add(self.toast, {"now": f"{network.name} is {net.PLACES[zone]} now.",
+                                       "later": f"{network.name} is {net.PLACES[zone]} from the next time it "
+                                                "connects."}.get(done, f"{network.name} didn't change. Try again."))
+            GLib.idle_add(self.refresh)
+        threading.Thread(target=save, daemon=True).start()
+
+    def on_net_switch(self, row, _param, service):
+        if not self.net_updating:
+            self.admin(["firewall", service, "on" if row.get_active() else "off"],
+                       f"{row.get_title()}: {'on' if row.get_active() else 'off'}.")
+
+    def admin(self, args, done_text):
+        """A firewall change as administrator (asks for the password); the page shows what really happened."""
+        def done(rc):
+            self.toast(done_text if rc == 0 else "Nothing changed.")
+            self.refresh()
+        if not spawn(ADMIN + args, done):
+            self.toast("Nothing changed.")
+            self.refresh()
+
     def terminal_list(self):
         g = Adw.PreferencesGroup(title="Prefer the terminal?", description="Every tool here has a command. The copy "
                                  "button puts it on the clipboard, to paste in a terminal.")
@@ -347,6 +481,13 @@ class Window(Adw.ApplicationWindow):
 
     def refresh(self, *_):
         threading.Thread(target=self.read_state, daemon=True).start()
+        threading.Thread(target=self.read_network, daemon=True).start()
+
+    def read_network(self):
+        services = net.let_in(net.HOME)
+        if services is not None:      # a switch is on only when the service runs and the firewall lets it in
+            services = {s for s in self.net_switches if s in services and net.running(s)}
+        GLib.idle_add(self.show_network, net.networks(), net.default_zone(), services)
 
     def read_state(self):
         on = self.t.updates_on()
@@ -417,6 +558,8 @@ class Window(Adw.ApplicationWindow):
             self.zoom_choice()
         elif tool.run == "layout":
             self.show("yours")
+        elif tool.run == "network":
+            self.show("network")
         elif tool.run == "codecs-remove":
             self.remove_codecs()
         elif tool.run[0] in OURS:

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone>
+  <short>Public place</short>
+  <description>EvenKeelOS: a coffee shop, hotel, airport or any network you don't know. Nothing gets in; finding printers and getting an address still work.</description>
+  <service name="mdns"/>
+  <service name="dhcpv6-client"/>
+</zone>

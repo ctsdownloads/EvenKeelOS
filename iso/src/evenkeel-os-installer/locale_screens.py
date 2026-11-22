@@ -1,11 +1,15 @@
 """Installer steps for language, keyboards, network, time zone, date and clock."""
 import calendar
 import re
+import sys
 
 from gi.repository import Adw, Gio, GLib, Gtk
 
 import data
 import screens
+
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_network as net  # noqa: E402
 
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
           "November", "December"]
@@ -144,6 +148,10 @@ class BootKeyboardScreen(screens.ListScreen):
 
 # ---------------------------------------------------------------------------------------------------- 4 Network
 
+PLACE_CHOICES = [(net.HOME, "Your own home network"), (net.WORK, "An office you trust"),
+                 (net.PUBLIC, "A café, hotel, airport, or anywhere else. Nothing gets in.")]
+
+
 class NetworkScreen(screens.ListScreen):
     title = "Network"
     step = "Network"
@@ -157,9 +165,13 @@ class NetworkScreen(screens.ListScreen):
         self.password_box.append(self.password)
         self.body.append(self.password_box)
         self.wired, self.wifi, self.chosen, self.busy = False, [], None, ""
+        self.placing = None      # the password Wi-Fi just joined: Home, Work or a Public place?
 
     @property
     def intro(self):
+        if self.placing:
+            return (f"Where is {self.placing.name}? This sets what other devices on it can reach once EvenKeelOS "
+                    "is installed. Pick Public place anywhere you're not sure.")
         if self.chosen and self.chosen["secured"]:
             return f"Type the password for {self.chosen['ssid']}, then click Connect. Back goes to the list."
         return ("A network is only needed for automatic time and time zone. To use Wi-Fi, click a network. "
@@ -170,6 +182,8 @@ class NetworkScreen(screens.ListScreen):
         super().enter()
 
     def items(self):
+        if self.placing:
+            return [(net.PLACES[z], about, z == net.PUBLIC) for z, about in PLACE_CHOICES]
         if self.chosen and self.chosen["secured"]:
             return []
         return [(w["ssid"], f"Signal {w['signal']}%" + (", password needed" if w["secured"] else ""),
@@ -182,6 +196,15 @@ class NetworkScreen(screens.ListScreen):
         self.password_box.set_visible(asking)
 
     def pick(self, i):
+        if self.placing:
+            zone, network = PLACE_CHOICES[i][0], self.placing
+            saved = net.set_place(network, zone)
+            self.busy = (f"{network.name} is saved as {net.PLACES[zone]}." if saved else
+                         f"{network.name} couldn't be saved as {net.PLACES[zone]}. EvenKeelOS asks again at the "
+                         "first login.")
+            self.placing = None
+            self.choose()
+            return
         self.chosen = self.wifi[i]
         if self.chosen["secured"]:
             self.password.set_text("")
@@ -191,6 +214,8 @@ class NetworkScreen(screens.ListScreen):
             self.connect_wifi()
 
     def actions(self):
+        if self.placing:
+            return []
         if self.chosen and self.chosen["secured"]:
             return [("Connect", self.connect_wifi)]
         return [("Refresh", self.enter)]
@@ -212,11 +237,21 @@ class NetworkScreen(screens.ListScreen):
             ok = False
         self.busy = f"Connected to {ssid}." if ok else f"Could not connect to {ssid}. Check the password."
         if ok:
+            if self.chosen["secured"]:
+                joined = [n for n in net.networks() if n.needs_asking]
+                self.placing = next((n for n in joined if n.name == ssid), joined[0] if joined else None)
             self.chosen = None
         self.wired, self.wifi = data.network()
         self.choose()
 
+    def ready(self):
+        return not self.placing      # pick a place, or Back to leave it for the first login
+
     def go_back(self):
+        if self.placing:       # not answered here: the installed system asks at the first login
+            self.placing = None
+            self.choose()
+            return True
         if self.chosen:
             self.chosen, self.busy = None, ""
             self.choose()

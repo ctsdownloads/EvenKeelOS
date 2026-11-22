@@ -43,6 +43,8 @@ for h in HOSTILE:
     refuses("evenkeel-os-tools-admin", ["updates", h])
     refuses("evenkeel-os-tools-admin", ["test-rollback", h])
     refuses("evenkeel-os-tools-admin", ["disk-unlock", h])
+    refuses("evenkeel-os-tools-admin", ["firewall", h, "on"])
+    refuses("evenkeel-os-tools-admin", ["firewall", "ssh", h])
     refuses("evenkeel-os-tools-admin", ["test-settings"])
     refuses("evenkeel-os-settings-test", [h])
     refuses("evenkeel-os-cert-remove", [h, "a" * 64], codes=(1, 2))    # names that pass are files that don't exist
@@ -64,6 +66,10 @@ for h in BAD_NAMES:
 refuses("evenkeel-os-hwrules", ["add", "pkg", "/dev/null"], codes=(1,))
 refuses("evenkeel-os-tools-admin", ["updates", "on", "extra"])
 refuses("evenkeel-os-tools-admin", ["test-rollback", "quick", "extra"])
+for args in (["firewall", "samba", "on"], ["firewall", "ssh", "maybe"], ["firewall", "ssh"],
+             ["firewall", "ssh", "on", "x"], ["firewall", "--zone=public", "on"], ["firewall", "ssh;id", "on"],
+             ["firewall", "default", "x"]):
+    refuses("evenkeel-os-tools-admin", args)
 refuses("evenkeel-os-settings", ["check", "--own-namespace"])
 refuses("evenkeel-os-settings", ["test-delete", "extra"])
 refuses("evenkeel-os-cert-remove", ["no-such-certificate.pem", "a" * 64], codes=(1,))

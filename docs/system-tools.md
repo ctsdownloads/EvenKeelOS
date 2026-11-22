@@ -53,6 +53,63 @@ While automatic updates are on, VPNs, codecs and apps added to the system are ch
 | Windows programs | Pick an .exe or .msi to get its Linux version |
 | Zoom meetings | If you chose your usual browser for Zoom, this lets you be asked about Chrome again. See [Zoom meetings](zoom.md) |
 
+### Network safety
+
+Every network is one of three places: **Home**, **Work** or **Public place**. The place is saved with that one
+network (its firewall zone, `connection.zone`, in the network's own NetworkManager profile), so it follows that
+network. A network with no place set is a Public place.
+
+- **Public place** (`evenkeel-public`): nothing gets in. Only finding printers and devices (mdns) and getting an
+  address (dhcpv6-client) work. SSH is off.
+- **Home** (`evenkeel-home`) and **Work** (`evenkeel-work`): like Fedora Workstation's own setting, apps you run can
+  be reached on ports 1025 to 65535 (for example phones, file sharing, web development test servers). System services
+  below 1025 stay closed. Unlike Fedora, SSH is off.
+
+Before this, every network used Fedora's FedoraWorkstation zone, which leaves ports 1025 to 65535 open on every
+network, including public Wi-Fi. That is now only on Home and Work.
+
+**The question.** Once per network, after you join a password-protected Wi-Fi that has no place yet, a small
+window asks "Where is NETWORK-NAME?" with **Home**, **Work** and **Public place** (Public place picked). It shows at
+login and when you join a new network. Closing the window without saving means it asks again at the next login. The
+installer asks the same question after you join a password Wi-Fi (see [From the live USB](install.md#from-the-live-usb)).
+
+Never asked:
+
+- **Open Wi-Fi** (no password, including Enhanced Open): a Public place, since anyone can make a network with the
+  same name. The page doesn't offer Home or Work for it; if one was set another way (in a terminal), the page says
+  so and offers **Make it a Public place**.
+- **Wired networks**: the computer keeps one wired setting for every cable you plug in, so a Home setting would also
+  apply to a hotel's or an office's cable. They stay a Public place unless you change them on this page.
+- **A hotspot this computer makes**: it keeps NetworkManager's own sharing setting, so devices on it still get an
+  address. It isn't listed.
+
+**The page.** **Network safety** (shield icon, after Apps) shows:
+
+| Item | What it does |
+|------|--------------|
+| Banner | Says which network you're on and what it lets in. If the firewall isn't running, it turns amber and says so |
+| Your networks | Lists every saved Wi-Fi and wired network with a **Home** / **Work** / **Public place** picker for each (open Wi-Fi just shows Public place). A change takes effect at once for a connected network, or the next time it connects if that can't be done at once |
+| Log in from another computer (SSH) | Under **Also let in, on Home and Work**. Off to start. On starts the SSH server and lets it in on Home and Work, never on a Public place. Shows on only when both are true. Asks for the administrator password |
+| Share my printer | Under **Also let in, on Home and Work**. Off to start. On shares printers plugged into this computer and lets them be reached on Home and Work, never on a Public place. Shows on only when both are true. Asks for the administrator password |
+
+Changing a network's place doesn't ask for a password for an administrator user (Fedora's NetworkManager rule for
+the wheel group). Other users are asked by NetworkManager.
+
+If a computer updated from an older EvenKeelOS still has another default zone (for example Fedora's
+FedoraWorkstation), the banner turns amber and says new networks aren't a Public place yet. Its **Fix** button
+(asks for the password) makes Public place the default.
+
+GNOME's own Public folder sharing (Settings, Sharing, File Sharing) uses a random port, so it only works on a Home
+or Work network.
+
+In a terminal:
+
+    nmcli connection modify NETWORK connection.zone evenkeel-home    # or evenkeel-work, evenkeel-public
+    pkexec /usr/libexec/evenkeel-os-tools-admin firewall ssh on      # or off; same for ipp
+    pkexec /usr/libexec/evenkeel-os-tools-admin firewall default
+
+The last two ask for the administrator password.
+
 ### Disk and startup
 
 | Item | What it does |
