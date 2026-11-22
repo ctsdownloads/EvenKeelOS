@@ -33,6 +33,9 @@ Silverblue 45, with packages, the updater and Homebrew setup from
 > ⚠️ **Alpha.** Something can break on any day, there's no warranty or
 > support, and you can roll back with `rpm-ostree rollback`.
 
+A failed image build doesn't update installed computers: they keep the last good build,
+and the failure opens an issue in this repository ([how it's built](docs/building.md#how-its-built)).
+
 Not an official Universal Blue or Bluefin product.
 
 ## Who it's for

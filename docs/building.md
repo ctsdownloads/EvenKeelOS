@@ -56,6 +56,11 @@ date.
 
 A failed signing step leaves an unsigned image that a signed rebase rejects.
 
+When a build of `main` fails (a merge, the daily build or a run by hand), the build workflow opens an issue named
+"The image build failed", assigned to `ctsdownloads`, with a link to the failed run. Another failure adds a comment
+to that issue instead of a new one, and the next good build closes it. Pull request builds and cancelled builds don't
+open an issue.
+
 Fedora's service presets are kept through the rebrand. Universal Blue's package
 repository is used only during the build.
 
