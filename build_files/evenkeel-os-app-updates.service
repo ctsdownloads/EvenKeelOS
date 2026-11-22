@@ -1,0 +1,14 @@
+[Unit]
+Description=Check apps added to the system for newer versions
+Documentation=https://github.com/ctsdownloads/evenkeel-os/blob/main/docs/apps.md#updates
+Wants=network-online.target
+After=network-online.target uupd.service uupd-manual.service
+
+[Service]
+Type=oneshot
+# Only while automatic updates are on, and not during the pause after an undo.
+ExecCondition=/usr/bin/systemctl is-enabled --quiet uupd.timer
+ExecCondition=/usr/libexec/evenkeel-os-updates-pause-check
+ExecStart=/usr/libexec/evenkeel-os-app-updates
+Nice=19
+IOSchedulingClass=idle

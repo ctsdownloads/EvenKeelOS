@@ -1,0 +1,49 @@
+{
+ "mullvad": {
+  "title": "Mullvad VPN",
+  "maker": "Mullvad",
+  "packages": ["mullvad-vpn"],
+  "files": ["mullvad-vpn"],
+  "keys": {"any": {"file": "mullvad.asc", "fingerprint": "A1198702FC3E0A09A9AE5B75D5A1D4F266DE8DDF"}},
+  "repos": [{"id": "mullvad-stable", "baseurl": "https://repository.mullvad.net/rpm/stable/$basearch"}],
+  "enable": ["mullvad-daemon.service", "mullvad-early-boot-blocking.service"],
+  "start": ["mullvad-daemon.service"]
+ },
+ "proton": {
+  "title": "Proton VPN",
+  "maker": "Proton",
+  "packages": ["proton-vpn-gnome-desktop"],
+  "files": ["protonvpn-stable-release", "proton-vpn-gnome-desktop", "proton-vpn-gtk-app"],
+  "keys": {"45": {"file": "proton-fedora-45.asc", "fingerprint": "D3AA11B3B1BFB96DF3CA26A2D59CE240EB3EE0B0"}},
+  "key_name": "proton-fedora-$releasever.asc",
+  "repos": [{"id": "protonvpn-fedora-stable", "baseurl": "https://repo.protonvpn.com/fedora-$releasever-stable"}],
+  "enable": ["me.proton.vpn.split_tunneling.service"],
+  "start": ["me.proton.vpn.split_tunneling.service"]
+ },
+ "ivpn": {
+  "title": "IVPN",
+  "maker": "IVPN",
+  "packages": ["ivpn-ui"],
+  "files": ["ivpn", "ivpn-ui"],
+  "keys": {"any": {"file": "ivpn.asc", "fingerprint": "F52691AB05F2FCDF67CD6516D437F3E150DB096C"}},
+  "repos": [{"id": "ivpn-stable", "baseurl": "https://repo.ivpn.net/stable/fedora/generic/$basearch",
+             "repo_gpgcheck": true}],
+  "copy_units": {"ivpn-service.service":
+                 "/usr/share/pleaserun/ivpn-service/systemd/default/files/etc/systemd/system/ivpn-service.service"},
+  "enable": ["ivpn-service.service"],
+  "start": ["ivpn-service.service"]
+ },
+ "nordvpn": {
+  "title": "NordVPN",
+  "maker": "NordVPN",
+  "packages": ["nordvpn-gui"],
+  "files": ["nordvpn", "nordvpn-gui", "nordvpn-release"],
+  "keys": {"any": {"file": "nordvpn.asc", "fingerprint": "BC5480EFEC5C081CE5BCFBE26B219E535C964CA1"}},
+  "repos": [{"id": "nordvpn", "baseurl": "https://repo.nordvpn.com/yum/nordvpn/centos/$basearch"},
+            {"id": "nordvpn-noarch", "baseurl": "https://repo.nordvpn.com/yum/nordvpn/centos/noarch"}],
+  "enable": ["nordvpnd.socket", "nordvpnd.service", "nordvpnd-killswitch.service"],
+  "start": ["nordvpnd.socket", "nordvpnd.service"],
+  "group": "nordvpn",
+  "folders": [{"path": "/var/log/nordvpn", "mode": "0750", "group": "nordvpn"}]
+ }
+}

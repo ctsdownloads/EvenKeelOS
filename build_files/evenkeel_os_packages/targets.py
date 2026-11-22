@@ -108,7 +108,7 @@ def fedora_package_version(name):
         return ""
 
 
-def install_from_fedora(pkg, title, printer, version):
+def install_from_fedora(pkg, title, printer, version, services=False):
     """Add the package to the system from Fedora's repos by name, so System Update keeps it up to date."""
     what = f"Adding {title} to the system from Fedora. This can take a few minutes."
     notify(f"Adding {title} to the system from Fedora. A progress window shows it.")
@@ -117,7 +117,7 @@ def install_from_fedora(pkg, title, printer, version):
         return 1
     app_list.remember({"title": title, "package": pkg.name, "where": "system", "from_fedora": True,
                        "version": version})
-    after_restart.add_pending({"title": title, "package": pkg.name, "printer": printer})
+    after_restart.add_pending({"title": title, "package": pkg.name, "printer": printer, "services": services})
     after = "After the restart, you will be asked to add your printer." if printer else \
         "After the restart, you'll get a message when it's ready."
     notify(f"{title} is installed. Restart to use it.")
@@ -126,7 +126,7 @@ def install_from_fedora(pkg, title, printer, version):
     return 0
 
 
-def install_system(pkg, title, printer=False, update=False):
+def install_system(pkg, title, printer=False, update=False, services=False):
     if not update and pkg.kind == "rpm":
         version = fedora_package_version(pkg.name)
         if version:
@@ -136,7 +136,7 @@ def install_system(pkg, title, printer=False, update=False):
                          f"date.\n\nOr Use the file: installs your download. It never updates.{newer}",
                          ok="Install from Fedora", cancel="Cancel", extra="Use the file")
             if answer == "ok":
-                return install_from_fedora(pkg, title, printer, version)
+                return install_from_fedora(pkg, title, printer, version, services)
             if answer != "extra":
                 return 1
     f = str(staged_copy(pkg))
@@ -153,8 +153,9 @@ def install_system(pkg, title, printer=False, update=False):
         return 1
     app_list.remember({"title": title, "package": pkg.name, "nevra": pkg.nevra, "where": "system", "version": pkg.evr})
     # checked once at the next login: is it really there, and for a printer driver, add the printer
+    # this system ignores an install script turning on a service, so it is done after the restart
     after_restart.add_pending({"title": title, "package": pkg.name, "printer": printer and not update,
-                               "version": pkg.evr})
+                               "version": pkg.evr, "services": services and not update})
     after = "After the restart, you will be asked to add your printer." if printer and not update else \
         "After the restart, you'll get a message when it's ready."
     if update:

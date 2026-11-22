@@ -1,0 +1,82 @@
+#!/usr/bin/python3 -I
+"""Daily: stage newer versions of apps added to the system, from their own download sources.
+
+System Update looks for a new EvenKeelOS version, so an app from a company's own download source (a VPN) would
+otherwise wait for the next one. This asks the download sources directly, and runs the upgrade only when an app
+has a newer version. Like any system update, the new version starts at the next restart.
+"""
+import json
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+
+def busy():
+    return any(subprocess.run(["systemctl", "is-active", "--quiet", u]).returncode == 0
+               for u in ("uupd.service", "uupd-manual.service"))
+
+
+def status():
+    """(packages added by name to the running system, whether a new version waits for a restart)"""
+    r = subprocess.run(["rpm-ostree", "status", "--json"], capture_output=True, text=True)
+    ds = json.loads(r.stdout)["deployments"]
+    booted = next(d for d in ds if d.get("booted"))
+    return booted.get("requested-packages", []), any(d.get("staged") for d in ds)
+
+
+def vpn_sources():
+    """Download sources added by Get a VPN: their own packages (an app's helpers too) are checked as well."""
+    ids = []
+    for f in Path("/etc/yum.repos.d").glob("evenkeel-os-vpn-*.repo"):
+        ids += re.findall(r"^\[([^\]]+)\]", f.read_text(), re.M)
+    return ids
+
+
+def newer(names=(), repos=()):
+    # -y: a source that signs its list (IVPN's) needs its pinned key taken in, with no one to answer
+    cmd = ["dnf5", "-q", "-y", "--refresh", "repoquery", "--upgrades", "--queryformat=%{name}\n"]
+    if repos:
+        cmd.append("--repo=" + ",".join(repos))
+    try:
+        r = subprocess.run(cmd + list(names), capture_output=True, text=True, timeout=1800)
+    except subprocess.TimeoutExpired:
+        print("The download sources didn't answer in time.")
+        return None
+    if r.returncode != 0:
+        print(r.stderr.strip())
+        return None
+    return set(r.stdout.split())
+
+
+def main():
+    if busy():
+        print("System Update is running; checking again tomorrow.")
+        return 0
+    try:
+        names, staged = status()
+    except (ValueError, KeyError, StopIteration):
+        print("Couldn't read what was added to the system.")
+        return 1
+    if staged:          # what's found today is checked again after the restart
+        print("A new version is waiting for a restart; checking again after it.")
+        return 0
+    repos = vpn_sources()
+    if not names and not repos:
+        return 0
+    found = set()
+    for got in (newer(names) if names else set(), newer(repos=repos) if repos else set()):
+        if got is None:
+            return 1
+        found |= got
+    if not found:
+        print("Every app added to the system is up to date.")
+        return 0
+    print("Newer versions: " + ", ".join(sorted(found)), flush=True)
+    if busy():
+        return 0
+    return subprocess.run(["rpm-ostree", "upgrade"]).returncode
+
+
+if __name__ == "__main__":
+    sys.exit(main())

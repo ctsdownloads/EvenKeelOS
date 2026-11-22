@@ -48,7 +48,11 @@ for h in HOSTILE:
     refuses("evenkeel-os-tools-safe", ["disk-unlock", h])
     refuses("evenkeel-os-codecs-setup", [h])
     refuses("evenkeel-os-codecs-admin", [h])
+    for verb in ("install", "turn-on", "remove"):
+        refuses("evenkeel-os-vpn", [verb, h])
+    refuses("evenkeel-os-vpn", [h])
 for h in BAD_NAMES:
+    refuses("evenkeel-os-vpn", ["services", h])
     refuses("evenkeel-os-hwrules", ["remove", h])
     refuses("evenkeel-os-hwrules", ["add", h, "/dev/null"])
 refuses("evenkeel-os-hwrules", ["add", "pkg", "/dev/null"], codes=(1,))
@@ -56,6 +60,9 @@ refuses("evenkeel-os-tools-admin", ["updates", "on", "extra"])
 refuses("evenkeel-os-tools-admin", ["test-rollback", "quick", "extra"])
 refuses("evenkeel-os-codecs-setup", ["web", "full"])
 refuses("evenkeel-os-hwrules", ["add", "pkg"])
+refuses("evenkeel-os-vpn", ["install", "mullvad", "extra"])
+refuses("evenkeel-os-vpn", ["services", "pkg", "extra"])
+refuses("evenkeel-os-vpn", ["services", "not-added-to-the-system"], codes=(1,))
 
 # The hardware-rules helper, loaded as a module with its rule folder pointed at a scratch folder.
 loader = importlib.machinery.SourceFileLoader("hwrules", str(LIBEXEC / "evenkeel-os-hwrules"))

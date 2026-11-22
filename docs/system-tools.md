@@ -15,6 +15,7 @@
 | Automatic updates | Turns daily updates on or off. On is recommended. After an undo it shows the pause, with **Resume now** |
 | Undo the last update | Goes back to the version before the last update |
 | Save problem details | Saves recent errors to one file to email your helper |
+| Get a VPN | Mullvad, Proton, IVPN or NordVPN, kept up to date. See below |
 | Setup checklist | Codecs, disk unlock and apps. See [First login](install.md#first-login) |
 | Test automatic rollback | Checks that the computer goes back by itself when a new version doesn't start. See below |
 | Desktop layout | Switches between the standard top bar and the Windows-style bottom bar and start menu, which opens on the desktop at login. Log out and back in to see it |
@@ -23,7 +24,7 @@
 the pause after an undo and resuming it, disk unlock (it asks the disk password
 instead) and freeing space. These keep the admin password, because a bad
 program could misuse them: automatic updates off, undo, firmware, the rollback
-test, and adding apps to the system.
+test, adding apps to the system, and getting a VPN.
 Desktop layout changes only your own desktop, so it never asks.
 
 **Unlock disk automatically.**
@@ -57,6 +58,11 @@ computer installed from a newer live USB (see
 [Automatic rollback](install.md#updating-and-rolling-back)). If the computer is
 still running a test copy, the tool offers to remove its marker instead
 (`rpm-ostree kargs --delete=evenkeel_os.test_rollback=KIND`).
+
+**Get a VPN.** Pick Mullvad, Proton, IVPN or NordVPN. It asks you to confirm, then the password. It adds that
+company's own download source and the app to the system (not a box), then offers a restart. Nothing is installed until
+you pick one. After the restart it asks **Turn it on** at login. Also `evenkeel-os-tools vpn` and
+`evenkeel-os-packages vpn`. See [VPNs](vpn.md).
 
 **Save problem details.** Saves `problem-details-<date>.txt` to Documents:
 system version and hardware, recent warnings and errors, the last 3 days of

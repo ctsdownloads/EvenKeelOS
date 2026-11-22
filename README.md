@@ -58,7 +58,7 @@ can't change, so it stays working.
 |------|---------|
 | Base | [Fedora Silverblue 45](https://fedoraproject.org/atomic-desktops/silverblue/), with Fedora's logos and release packages replaced by the generic ones |
 | Packages | firefox, v4l-utils, xdg-terminal-exec, and the Bluefin packages in [`build_files/bluefin-packages.txt`](build_files/bluefin-packages.txt) |
-| Updates | Automatic with `uupd`: system, Flatpaks, app boxes and Homebrew, paused for 3 days after an undo. See [Updating and rolling back](docs/install.md#updating-and-rolling-back) |
+| Updates | Automatic with `uupd`: system, Flatpaks, app boxes and Homebrew, paused for 3 days after an undo. Apps added to the system by name (VPNs, codecs) are also checked daily in their own download sources. See [Updating and rolling back](docs/install.md#updating-and-rolling-back) |
 | Automatic rollback | [greenboot](https://github.com/fedora-iot/greenboot-rs): if a new version fails 2 starts in a row (no login screen, no networking, a freeze or hang while starting, or a login loop), the computer goes back to the previous one by itself and says so at the next login, every time. Offline never counts. New installs only. Test each of those for real in System Tools |
 | Homebrew and ujust | As on Bluefin, for terminal users |
 | Services on by default | Fedora's defaults, plus Tailscale (idle until you sign in) and Podman's container auto-updates, as on Bluefin |
@@ -66,15 +66,16 @@ can't change, so it stays working.
 | Apps from .rpm and .deb files | **Install Package File** puts them in a box; **Remove Apps** takes them out. See [Apps from .rpm and .deb files](docs/apps.md#apps-from-rpm-and-deb-files) |
 | Windows programs (.exe and .msi) | Opening one offers a Linux app: the same program's Linux version (Flathub, Fedora or Ubuntu), ArtCraft for Adobe programs, a hand-picked replacement for programs with no Linux version (Office, iTunes, Skype), or an app of the same kind. See [Windows programs](docs/apps.md#windows-programs-exe-and-msi) |
 | Zoom meetings | Joining from a Zoom invite opens the meeting in Zoom's web version in Google Chrome; the first time, it offers to install Chrome from Flathub (or use the usual browser). See [Zoom meetings](docs/zoom.md) |
+| VPNs | Get a VPN in System Tools adds Mullvad, Proton, IVPN or NordVPN from that company's own download source, which is locked to its signing key and checked at every build. Nothing is installed until you pick one. Downloaded VPN files and Windows VPN installers install it the same way, and it is checked daily for updates. See [VPNs](docs/vpn.md) |
 | Flathub | Added on first boot; Fedora's own Flathub entry is removed |
-| System Tools | Firmware, disk unlock, free space, BIOS settings, automatic updates, undo the last update, problem details, the setup checklist, the desktop layout, and the automatic rollback test. See [System Tools](docs/system-tools.md#system-tools) |
+| System Tools | Firmware, disk unlock, free space, BIOS settings, automatic updates, undo the last update, problem details, the setup checklist, the desktop layout, getting a VPN, and the automatic rollback test. See [System Tools](docs/system-tools.md#system-tools) |
 | Desktop | Teal accent color, with folder icons that follow whatever accent color you pick in Settings, Appearance; 7 EvenKeelOS wallpapers, each with a day picture for light mode and a night one for dark mode; minimize and maximize buttons, no hot corner, battery percentage shown |
 | Dock | Firefox, Calendar, Files, Bazaar and Text Editor |
 | Logo Menu | The [Logo Menu](https://github.com/Aryan20/Logomenu) extension on the top-left logo: About My System, Activities, App Grid, Bazaar, Resources, Ghostty, Extensions |
 | Windows-style layout | Optional, per user: a bottom bar from [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel) and a start menu from [ArcMenu](https://gitlab.com/arcmenu/ArcMenu) on the EvenKeelOS logo, opening to the app categories, with Settings, System Update and System Tools. It opens on the desktop at login, with no overview. Pick it in the installer, or switch any time in System Tools, Desktop layout (or `evenkeel-os-layout windows` / `current`), then log out and in |
 | Terminal | [Ghostty](https://ghostty.org/), replacing Ptyxis everywhere |
 | System monitor | [Resources](https://apps.gnome.org/Resources/) from Flathub; gnome-system-monitor is kept |
-| Security | The few helpers that run as root take a fixed set of commands and refuse anything else; every build tests them with hostile input. No-password actions are for the person at the computer only, not a remote login or a program running outside the desktop session. Device rules from apps can't open the computer's own disks, or every keyboard and mouse at once (a rule must name the device's maker). See [Apps from .rpm and .deb files](docs/apps.md#apps-from-rpm-and-deb-files) |
+| Security | The few helpers that run as root take a fixed set of commands and refuse anything else; every build tests them with hostile input, and the VPN helper takes only the four VPN names, or an app already added to the system. No-password actions are for the person at the computer only, not a remote login or a program running outside the desktop session. Device rules from apps can't open the computer's own disks, or every keyboard and mouse at once (a rule must name the device's maker). See [Apps from .rpm and .deb files](docs/apps.md#apps-from-rpm-and-deb-files) |
 | Fingerprint | On where the laptop has a supported reader; enroll in Settings, Users. A password is still set at install |
 | Firefox | Mozilla's own home page, no Fedora tile |
 | Microphone | Starts at 50% volume; a volume you set is kept |
@@ -99,6 +100,8 @@ can't change, so it stays working.
   repairing apps, and Windows programs.
 - **[Zoom meetings](docs/zoom.md)** - joining Zoom meetings in the browser, and
   why Chrome.
+- **[VPNs](docs/vpn.md)** - getting Mullvad, Proton, IVPN or NordVPN, and how they
+  update.
 - **[System Tools](docs/system-tools.md)** - the system jobs, in windows.
 - **[How it's built](docs/building.md)** - the build, media codecs and the boot
   menu name.

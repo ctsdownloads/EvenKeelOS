@@ -51,6 +51,18 @@ install -Dm755 /ctx/evenkeel-os-hwrules /usr/libexec/evenkeel-os-hwrules
 # Starts box apps from Show Apps and stops them on Quit.
 install -Dm755 /ctx/evenkeel-os-box-run /usr/libexec/evenkeel-os-box-run
 install -Dm644 /ctx/io.github.ctsdownloads.evenkeel-os.hwrules.policy /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.hwrules.policy
+# Get a VPN: Mullvad, Proton, IVPN and NordVPN from their companies' own download sources, signed by pinned keys.
+install -Dm644 /ctx/vpns.json /usr/share/evenkeel-os/vpns.json
+install -Dm644 -t /usr/share/evenkeel-os/vpn-keys /ctx/vpn-keys/*.asc
+install -Dm755 /ctx/evenkeel-os-vpn /usr/libexec/evenkeel-os-vpn
+install -Dm644 /ctx/io.github.ctsdownloads.evenkeel-os.vpn.policy \
+  /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.vpn.policy
+(GNUPGHOME=$(mktemp -d); export GNUPGHOME; python3 -I /ctx/check-vpns.py; rc=$?; rm -rf "$GNUPGHOME"; exit $rc) \
+  || { echo 'ERROR: Get a VPN is not set up right'; exit 1; }
+# Apps added to the system by name (VPNs, codecs) are checked daily for newer versions in their download sources.
+install -Dm755 /ctx/evenkeel-os-app-updates /usr/libexec/evenkeel-os-app-updates
+install -Dm644 /ctx/evenkeel-os-app-updates.service /usr/lib/systemd/system/evenkeel-os-app-updates.service
+install -Dm644 /ctx/evenkeel-os-app-updates.timer /usr/lib/systemd/system/evenkeel-os-app-updates.timer
 # System Tools, with a root helper for the jobs that change the system.
 install -Dm755 /ctx/evenkeel-os-tools /usr/bin/evenkeel-os-tools
 install -Dm755 /ctx/evenkeel-os-tools-admin /usr/libexec/evenkeel-os-tools-admin
@@ -72,7 +84,8 @@ rmdir --ignore-fail-on-non-empty "${pause%/*}"
 install -Dm644 /ctx/50-evenkeel-os-tools.rules /usr/share/polkit-1/rules.d/50-evenkeel-os-tools.rules
 python3 -c 'import xml.dom.minidom,sys; [xml.dom.minidom.parse(f) for f in sys.argv[1:]]' \
   /ctx/io.github.ctsdownloads.evenkeel-os.tools.policy /ctx/io.github.ctsdownloads.evenkeel-os.codecs.policy \
-  || { echo "ERROR: a System Tools or codecs polkit policy is not valid XML"; exit 1; }
+  /ctx/io.github.ctsdownloads.evenkeel-os.vpn.policy \
+  || { echo "ERROR: a System Tools, codecs or VPN polkit policy is not valid XML"; exit 1; }
 # Keep the disk unlock note in step with the disk at every start.
 install -Dm644 /ctx/evenkeel-os-disk-unlock-check.service /usr/lib/systemd/system/evenkeel-os-disk-unlock-check.service
 systemctl enable evenkeel-os-disk-unlock-check.service
@@ -154,9 +167,9 @@ python3 -I /ctx/check-windows-programs.py "$data" \
   || { echo 'ERROR: Windows Program does not read installers correctly'; exit 1; }
 rm -rf /tmp/winlist
 # Services on by default, including after the first boot.
-printf 'enable brew-setup.service\nenable evenkeel-os-codecs-setup.service\nenable evenkeel-os-flathub.service\nenable evenkeel-os-flatpak-apps.service\ndisable flatpak-add-fedora-repos.service\nenable evenkeel-os-disk-unlock-check.service\nenable tailscaled.service\nenable podman-auto-update.timer\nenable uupd.timer\nenable greenboot-healthcheck.service\nenable greenboot-set-rollback-trigger.service\n' > /usr/lib/systemd/system-preset/80-evenkeel-os.preset
-systemctl enable tailscaled.service podman-auto-update.timer uupd.timer brew-setup.service
-for u in tailscaled.service uupd.timer brew-setup.service; do [ "$(systemctl is-enabled "$u")" = enabled ] || { echo "ERROR: $u is not enabled"; exit 1; }; done
+printf 'enable brew-setup.service\nenable evenkeel-os-codecs-setup.service\nenable evenkeel-os-flathub.service\nenable evenkeel-os-flatpak-apps.service\ndisable flatpak-add-fedora-repos.service\nenable evenkeel-os-disk-unlock-check.service\nenable tailscaled.service\nenable podman-auto-update.timer\nenable uupd.timer\nenable greenboot-healthcheck.service\nenable greenboot-set-rollback-trigger.service\nenable evenkeel-os-app-updates.timer\n' > /usr/lib/systemd/system-preset/80-evenkeel-os.preset
+systemctl enable tailscaled.service podman-auto-update.timer uupd.timer brew-setup.service evenkeel-os-app-updates.timer
+for u in tailscaled.service uupd.timer brew-setup.service evenkeel-os-app-updates.timer; do [ "$(systemctl is-enabled "$u")" = enabled ] || { echo "ERROR: $u is not enabled"; exit 1; }; done
 bash /ctx/rebrand.sh
 # Automatic rollback: greenboot with our own checks. Fedora's default checks fail offline, so they stay out.
 dnf5 -y install greenboot

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD polkit Policy Configuration 1.0//EN" "http://www.freedesktop.org/software/polkit/policyconfig-1.dtd">
+<policyconfig>
+  <vendor>EvenKeelOS</vendor>
+  <vendor_url>https://github.com/ctsdownloads/evenkeel-os</vendor_url>
+
+  <!-- Get a VPN, and services for apps added to the system. Password every time. -->
+  <action id="io.github.ctsdownloads.evenkeel-os.vpn">
+    <description>Add, turn on or remove a VPN or an app's background service</description>
+    <message>Authentication is required to add, turn on or remove a VPN or an app's background service</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/libexec/evenkeel-os-vpn</annotate>
+  </action>
+</policyconfig>

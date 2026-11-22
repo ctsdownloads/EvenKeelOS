@@ -66,6 +66,9 @@ with tempfile.TemporaryDirectory() as tmp:
                          "AcroRdrDCx642600322110_en_US.msi")
     assert reader["where"] == "artcraft" and reader["package"] == "pdfcraft", \
         f"Acrobat Reader's installer (named only 'Adobe Self Extractor') should offer PdfCraft: {reader}"
+    nord = made_up_msi("NordVPN", "Nord Security", Path(tmp), "NordVPNSetup.msi")
+    assert nord["where"] == "vpn" and nord["package"] == "nordvpn", \
+        f"NordVPN's installer should offer NordVPN from its own download source: {nord}"
     msn = made_up_msi("Windows Live Messenger", "Microsoft Corporation", Path(tmp))
     assert msn["kind"] == "replacement", f"Windows Live Messenger should get a hand-picked replacement: {msn}"
     player = made_up_msi("Zyxwv Digital Media Player", "Nobody Software", Path(tmp))

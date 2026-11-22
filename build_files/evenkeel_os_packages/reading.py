@@ -216,7 +216,7 @@ def classify(pkg):
     user_units = [os.path.basename(p) for p in files
                   if p.startswith("/usr/lib/systemd/user/") and p.endswith(".service")]
     presets = "\n".join(t for p, t in pkg.texts.items() if "/systemd/system-preset/" in p)
-    turned_on = False
+    turned_on = script_on = False      # script_on: the script itself does it, which this system ignores
     for line in pkg.scripts.splitlines():
         line = line.strip()
         if line.startswith("#"):
@@ -225,6 +225,7 @@ def classify(pkg):
         if re.search(r"\bsystemctl\b.*\b(enable|start|restart|reenable)\b", line):
             if (units and not user) or (user_units and user):
                 turned_on = True
+                script_on = script_on or (not user and bool(re.search(r"\b(enable|reenable)\b", line)))
         elif user and user_units and re.search(r"\bsystemctl\b.*\bdaemon-reload\b", line):
             turned_on = True        # reload so its own service can start (Docker Desktop)
     if re.search(r"^\s*enable\s", presets, re.M):
@@ -288,7 +289,7 @@ def classify(pkg):
     title = next(iter(apps.values())) if len(apps) == 1 else pkg.name.capitalize() if apps else pkg.name
     return {"apps": apps, "bins": bins, "safe_rules": safe_rules, "blocking": blocking, "notes": notes,
             "rules_only": rules_only, "source_only": source_only,
-            "needs_root": bool(apps) and bool(root_programs or root_launch),
+            "needs_root": bool(apps) and bool(root_programs or root_launch), "turns_on": script_on,
             "sources": source_names(repo_files, pkg.kind),
             "title": title}
 

@@ -9,7 +9,7 @@ import time
 import evenkeel_os_ui as ui
 from evenkeel_os_ui import GUI
 from evenkeel_os_packages import (
-    after_restart, artcraft, boxes, common, install_file, launchers, login_apps, reading, remove_apps, windows,
+    after_restart, artcraft, boxes, common, install_file, launchers, login_apps, reading, remove_apps, vpn, windows,
     windows_file, zoom,
 )
 
@@ -33,7 +33,9 @@ USAGE = """  evenkeel-os-packages install [FILE]   install an .rpm or .deb (no F
   evenkeel-os-packages login            choose box apps that start when you log in
   evenkeel-os-packages windows FILE     a Windows .exe or .msi: offer a Linux app that does its job
   evenkeel-os-packages check-windows FILE  say what a Windows file is and what would be offered, without any window
-  evenkeel-os-packages zoom LINK        a Zoom "open the app" link: open the meeting in Zoom's web version, in Chrome"""
+  evenkeel-os-packages zoom LINK        a Zoom "open the app" link: open the meeting in Zoom's web version, in Chrome
+  evenkeel-os-packages vpn [NAME]       add a VPN from its company's own download source (mullvad, proton, ivpn,
+                                        nordvpn; no NAME: pick one)"""
 
 
 def try_lock(lock):
@@ -87,7 +89,7 @@ def doing_now():
 
 def main(argv):
     if len(argv) < 2 or argv[1] not in ("install", "remove", "check", "after-restart", "repair", "login", "windows",
-                                        "check-windows", "zoom") or \
+                                        "check-windows", "zoom", "vpn") or \
             (argv[1] in ("check", "windows", "check-windows", "zoom") and len(argv) < 3):
         print(USAGE)
         return 2
@@ -106,7 +108,7 @@ def main(argv):
         return 0
     # each window carries the name of what it is part of
     ui.TITLE = {"remove": "Remove Apps", "repair": "Repair App Boxes", "login": "Start Apps at Login",
-                "windows": "Windows Program"}.get(argv[1], ui.TITLE)
+                "windows": "Windows Program", "vpn": "Get a VPN"}.get(argv[1], ui.TITLE)
     common.CACHE.mkdir(parents=True, exist_ok=True)
     lock = open(common.CACHE / ".lock", "w")
     if not take_lock(lock, quiet=argv[1] == "after-restart"):
@@ -114,7 +116,8 @@ def main(argv):
     windows.mark_busy({"install": "Install Package File is open", "remove": "Remove Apps is open",
                        "repair": "Repair App Boxes is open",
                        "login": "Start Apps at Login is open",
-                       "windows": "Windows Program is open"}.get(argv[1], "Starting"))
+                       "windows": "Windows Program is open",
+                       "vpn": "Get a VPN is open"}.get(argv[1], "Starting"))
     if argv[1] == "after-restart":
         after_restart.after_restart()
         return artcraft.update(artcraft.update_due())
@@ -126,6 +129,11 @@ def main(argv):
         return login_apps.login()
     if argv[1] == "windows":
         return windows_file.open_file(argv[2])
+    if argv[1] == "vpn":
+        if len(argv) > 2 and argv[2] not in vpn.load():
+            print(USAGE)
+            return 2
+        return vpn.install(argv[2]) if len(argv) > 2 else vpn.pick()
     return remove_apps.remove()
 
 

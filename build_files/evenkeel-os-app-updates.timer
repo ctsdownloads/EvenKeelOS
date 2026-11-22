@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily check of apps added to the system for newer versions
+
+[Timer]
+OnCalendar=*-*-* 13:00
+RandomizedDelaySec=4h
+Persistent=true
+
+[Install]
+WantedBy=timers.target

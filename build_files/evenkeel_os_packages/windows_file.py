@@ -6,7 +6,7 @@ import subprocess
 from urllib.parse import urlsplit
 
 from evenkeel_os_ui import ask, say
-from evenkeel_os_packages import app_list, artcraft, boxes, common, flathub, installed, repo_apps, zoom
+from evenkeel_os_packages import app_list, artcraft, boxes, common, flathub, installed, repo_apps, vpn, zoom
 
 LIST = "/usr/share/evenkeel-os/windows-apps.json"
 JUNK = ("the", "team", "software", "inc", "llc", "ltd", "limited", "corporation", "corp", "gmbh", "project",
@@ -107,9 +107,10 @@ def same_maker(maker, prog):
 
 
 def rank(prog):
-    """In the browser (chosen over its app), its own Linux version, a hand-picked replacement, an app of its kind."""
+    """In the browser (chosen over its app) or its company's own Linux version, then its own Linux version from
+    Flathub, Fedora or Ubuntu, a hand-picked replacement, an app of its kind."""
     offer = prog["offer"]
-    return -1 if offer.get("web") else 2 if offer.get("kind") else 1 if offer.get("job") else 0
+    return -1 if offer.get("web") or offer.get("vpn") else 2 if offer.get("kind") else 1 if offer.get("job") else 0
 
 
 def identify(path, programs, info):
@@ -147,8 +148,8 @@ def choose(path):
 
 
 def offer(o):
-    """Where the Linux app comes from: ('web' | 'flathub' | 'rpm' | 'deb' | 'artcraft', package or address)."""
-    for key, where in (("web", "web"), ("flatpak", "flathub"), ("fedora", "rpm"), ("ubuntu", "deb"),
+    """Where the Linux app comes from: ('web' | 'vpn' | 'flathub' | 'rpm' | 'deb' | 'artcraft', package or address)."""
+    for key, where in (("web", "web"), ("vpn", "vpn"), ("flatpak", "flathub"), ("fedora", "rpm"), ("ubuntu", "deb"),
                        ("artcraft", "artcraft")):
         if o.get(key):
             return where, o[key]
@@ -167,6 +168,9 @@ def check(path):
 
 def installed_record(where, package):
     """How to open the Linux app if it is already installed, or None."""
+    if where == "vpn":
+        v = vpn.load().get(package)
+        return {"where": "system", "package": v["packages"][0]} if v and vpn.is_installed(package) else None
     if where in common.FLATPAK_PLACES:
         app_id = package if where == "flathub" else artcraft.app_id(package)
         return {"where": where, "package": app_id} if installed.flatpak_installed(app_id) else None
@@ -192,6 +196,13 @@ def open_file(path):
         subprocess.Popen(["gio", "open", package], start_new_session=True,
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         return 0
+    if where == "vpn":
+        if installed_record(where, package):
+            say(f"{shown} is the Windows version of {name}. Its Linux version is already installed. Find it in Show "
+                f"Apps.")
+            return 0
+        return vpn.install(package, intro=f"{shown} is the Windows version of {name}. Windows programs can't run "
+                                          f"here, but {name} has a Linux version.\n\n")
     if "job" not in o:
         intro = f"{shown} is the Windows version of {name}. Windows programs can't run here, but {name} has a " \
                 f"Linux version"

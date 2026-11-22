@@ -3,7 +3,7 @@ import json
 import subprocess
 
 from evenkeel_os_ui import ask, notify, say
-from evenkeel_os_packages import boxes, common, installed, launchers, login_apps, printers, targets
+from evenkeel_os_packages import boxes, common, installed, launchers, login_apps, printers, targets, vpn
 
 
 PENDING = common.STATE.with_name("pending.json")
@@ -59,6 +59,13 @@ def after_restart():
     for e in pending():
         have = installed.host_version(e["package"])
         if have and (not e.get("version") or have == e["version"]):
+            if e.get("vpn"):
+                if not vpn.turn_on(e):
+                    left.append(e)      # asked again at the next login
+                continue
+            if e.get("services") and not vpn.turn_on_services(e):
+                left.append(e)
+                continue
             if e.get("printer"):
                 notify(f"The printer driver {e['title']} is ready.")
                 if ask(f"The printer driver {e['title']} is ready.\n\nOpen Printers: choose Add Printer, then "
@@ -70,8 +77,9 @@ def after_restart():
         elif targets.staged_system():
             left.append(e)          # added, but this computer has not restarted into it yet
         else:
+            again = "Pick it again in Get a VPN." if e.get("vpn") else "Open the file again to install it."
             notify(f"{e['title']} did not get installed.")
             say(f"{e['title']} did not get installed. The computer may have started an older version of the system. "
-                f"Open the file again to install it.", "warning")
+                f"{again}", "warning")
     save_pending(left)
     return 0
