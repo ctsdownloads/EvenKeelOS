@@ -1,0 +1,85 @@
+#!/usr/bin/python3 -I
+"""Take a certificate someone added to this computer out of its trusted list, as root through polkit (the admin
+password every time). Only a plain file in /etc/pki/ca-trust/source/anchors holding exactly the one certificate that
+was confirmed (its SHA-256 fingerprint), never a link.
+
+  evenkeel-os-cert-remove FILE FINGERPRINT
+      (exit 2: refused name or fingerprint, 3: the file holds more than one certificate, or isn't the one confirmed)
+"""
+import base64
+import binascii
+import hashlib
+import os
+import re
+import stat
+import subprocess
+import sys
+from pathlib import Path
+
+ANCHORS = Path("/etc/pki/ca-trust/source/anchors")
+# Starts with a letter or digit (never "." or ".."), no "/"; the same as CERT_FILE in evenkeel-os-tools.
+NAME = re.compile(r"[A-Za-z0-9][^/\x00-\x1f\x7f]{0,254}")
+FINGERPRINT = re.compile(r"[0-9a-f]{64}")
+PEM = re.compile(rb"-----BEGIN CERTIFICATE-----(.+?)-----END CERTIFICATE-----", re.S)
+TRUSTED_PEM = re.compile(rb"-----BEGIN TRUSTED CERTIFICATE-----")
+REMOVED = Path("/var/lib/evenkeel-os/certs-removed")   # removed here: no "removed" alert for anyone
+LARGEST = 1_000_000
+
+
+def fail(msg, code=1):
+    print(msg)
+    sys.exit(code)
+
+
+def fingerprints(data):
+    """SHA-256 of each certificate in a PEM or DER file (the same as evenkeel-os-certs)."""
+    blocks = PEM.findall(data)
+    if TRUSTED_PEM.search(data):
+        return None             # OpenSSL's own form: not checked here
+    try:
+        ders = [base64.b64decode(b"".join(b.split()), validate=True) for b in blocks] if blocks else [data]
+    except binascii.Error:
+        return None
+    return [hashlib.sha256(d).hexdigest() for d in ders]
+
+
+def main(argv):
+    if len(argv) != 3 or not NAME.fullmatch(argv[1]) or not FINGERPRINT.fullmatch(argv[2]):
+        fail(__doc__, 2)
+    if os.geteuid() != 0:
+        fail("This helper runs as root, through polkit.", 2)
+    p = ANCHORS / argv[1]
+    try:
+        before = os.lstat(p)    # the type first: a device or pipe is never opened
+    except FileNotFoundError:
+        fail("That certificate isn't among the added ones.")
+    if not stat.S_ISREG(before.st_mode) or before.st_size > LARGEST:
+        fail("That isn't a certificate file.")
+    try:
+        fd = os.open(p, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
+    except OSError as e:
+        fail(f"That isn't a certificate file ({e.strerror}).")
+    with os.fdopen(fd, "rb") as f:
+        opened = os.fstat(f.fileno())
+        if (opened.st_dev, opened.st_ino) != (before.st_dev, before.st_ino) or not stat.S_ISREG(opened.st_mode):
+            fail("The file changed while it was checked; nothing was removed.")
+        data = f.read(LARGEST + 1)
+    found = fingerprints(data)
+    # Several certificates in one file all go with it, the good ones too: that's for a person to decide.
+    if found is None or len(found) != 1:
+        fail("That file holds more than one certificate, or one System Tools can't check.", 3)
+    if found[0] != argv[2]:
+        fail("That file no longer holds the certificate you confirmed; nothing was removed.", 3)
+    now = os.lstat(p)
+    if (now.st_dev, now.st_ino) != (before.st_dev, before.st_ino):
+        fail("The file changed while it was checked; nothing was removed.")
+    p.unlink()
+    REMOVED.parent.mkdir(parents=True, exist_ok=True)
+    with open(REMOVED, "a") as f:
+        f.write(argv[2] + "\n")
+    REMOVED.chmod(0o644)
+    sys.exit(subprocess.run(["/usr/bin/update-ca-trust", "extract"]).returncode)
+
+
+if __name__ == "__main__":
+    main(sys.argv)

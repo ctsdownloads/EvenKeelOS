@@ -16,7 +16,8 @@ tools = panel.tool_list()
 pages = {k for k, _, _ in panel.PAGES}
 icons = {t.icon for t in tools} | {i for _, _, i in panel.PAGES} | {"object-select-symbolic",
                                                                     "emblem-important-symbolic", "go-next-symbolic",
-                                                                    "document-send-symbolic", "view-refresh-symbolic"}
+                                                                    "document-send-symbolic", "view-refresh-symbolic",
+                                                                    "edit-copy-symbolic"}
 for i in sorted(icons):
     if not any(next(d.rglob(f"{i}.svg"), None) for d in ICONS):
         problems.append(f"icon {i} is not in this image")

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Automatic rollback note
-Comment=Says once at login that the computer went back to the previous version by itself
+Comment=Says once at login that the computer went back to the previous version or put back settings by itself
 Exec=/usr/bin/evenkeel-os-tools rolled-back --at-login
 Terminal=false
 NoDisplay=true

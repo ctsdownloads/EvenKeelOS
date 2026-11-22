@@ -17,6 +17,8 @@ import sys
 from pathlib import Path
 
 DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
+# Switched on from /usr (build.sh), so deleting /etc can't switch it off; systemctl is-enabled only reads /etc.
+GREENBOOT_ON = Path("/usr/lib/systemd/system/multi-user.target.wants/greenboot-healthcheck.service")
 UUID = re.compile(r"^[0-9a-fA-F-]{36}$")
 
 
@@ -130,8 +132,10 @@ def test_rollback_clear():
 
 def test_rollback(kind):
     """A copy of the running version that breaks on purpose (see build_files/greenboot), for the next restart."""
-    if subprocess.run(["/usr/bin/systemctl", "-q", "is-enabled", "greenboot-healthcheck.service"]).returncode != 0:
-        fail("Automatic rollback is not turned on in this version.", 4)
+    masked = subprocess.run(["/usr/bin/systemctl", "is-enabled", "greenboot-healthcheck.service"],
+                            capture_output=True, text=True).stdout.strip().startswith("masked")
+    if not GREENBOOT_ON.exists() or masked:
+        fail("Automatic rollback is not turned on in this version, or it was switched off (masked).", 4)
     try:
         counting = "boot_counter" in Path("/boot/grub2/grub.cfg").read_text()
     except OSError:

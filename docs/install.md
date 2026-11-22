@@ -74,6 +74,79 @@ on computers installed from a live USB made after it was added (November 2026):
 the boot menu's counter is set up only at install. **Test automatic rollback**
 in [System Tools](system-tools.md#system-tools) checks it.
 
+**Settings repair.** After each good start, a copy of the system settings
+folder `/etc` is saved in `/sysroot/evenkeel-os/settings`. `/sysroot` stays
+read-only for everything else (the copy is written in a private mount
+namespace), and only root can read the copy. At every start, a check fails the
+start when an important setting is broken. The important settings are the
+account files (`passwd`, `shadow`, `group`, `gshadow`, `subuid`, `subgid`),
+`fstab` (the list of disks), `sudoers`, `nsswitch.conf`,
+`selinux/config`, `greenboot.conf`, `locale.conf`, `vconsole.conf`,
+`containers/policy.json`, and, in the `pam.d`, `authselect` and `security`
+folders, only the files the system itself comes with. Files you add in those
+folders are yours: removing them is fine and they're never put back. The `pki`,
+`ostree` and `containers/registries.d` folders aren't checked: removing a
+certificate authority, an update source or a registry setting is a deliberate
+change and stays. `sudoers.d` is never put back, so a removed admin grant stays
+removed. Wi-Fi networks and other settings outside this list are never put
+back. The one exception is the SELinux policy folder `/etc/selinux/targeted`:
+when it's missing, it's put back whole, because without it an enforcing start
+would freeze.
+
+Broken means missing, or replaced by systemd's generic copy. At every start,
+before the check, systemd puts its own generic `pam.d`, `nsswitch.conf`,
+`locale.conf` and `vconsole.conf` in place when they're missing. Its generic
+`pam.d` lets programs without their own login rules use the normal password
+check, where Fedora's denies them.
+
+`machine-id` isn't checked or put back: systemd makes a new one when it's
+missing. A start without `/etc/machine-id` counts as a first start for systemd,
+and Fedora's first-start setup would stop at a text question on the screen and
+wait. EvenKeelOS stops it from asking questions (the installer already set
+language, keyboard, time zone and accounts), so startup isn't held up before
+the checks.
+
+Not checked yet, only on real hardware: whether a start without
+`/etc/machine-id` also switches services back on from their default settings
+(for example automatic updates turned off in System Tools), as a first start
+can.
+
+After a failed start, the repair puts back only the broken important settings
+from the copy, replacing systemd's generic copies. It changes nothing else. The
+account files are put back only when they're missing. Removing accounts on
+purpose (even all of them) stays: old accounts and passwords don't come back.
+Then greenboot restarts the computer, and the next login shows a message
+listing what was put back (a folder counts as one). The message shows only once
+that start passed its start-up checks, and only within 3 days.
+
+If `/etc/fstab` was missing, `/boot` isn't mounted and greenboot can't count
+bad starts or restart. The repair then mounts `/boot` read-only (from the saved
+`fstab`'s `/boot` line, only inside greenboot's own mount namespace) so
+greenboot can. If it still can't, the repair restarts the computer itself after
+putting things back. After a repair that put something back, it sets the retry
+counter to 1 when it isn't set or has reached 0, so greenboot restarts into the
+repaired version instead of stopping (greenboot's own default is 3, which
+matters if `greenboot.conf` was deleted). This extra try happens only once per
+saved copy. To write the counter, the repair
+unlocks `/boot` only in its own private mount namespace and locks it again only
+there, as greenboot does, so an update writing to `/boot` at the same time isn't
+affected. The boot menu repair and the retry-counter step after an update work
+the same way.
+
+The repair doesn't run on a rollback test copy or on a new version on trial:
+going back to the earlier version is the fix there. If the repair doesn't fix
+the start, then after the second bad start (not after an update) greenboot
+doesn't restart by itself. Turn the computer off and on, and that start is the
+earlier version, which has its own settings. When the repair put things back
+but the start still fails and the computer goes back to the earlier version (no
+update involved, and no good start since the repair), the next login says the
+settings couldn't be put back and the computer went back. Automatic updates are
+not paused. A rollback after an update is still reported as an update rollback,
+with the 3-day pause, even if a repair worked earlier. greenboot is switched on
+from `/usr/lib/systemd/system` as well as `/etc`, so deleting `/etc` can't
+switch it off. greenboot stops before any check when `/etc/motd.d` is missing, so that
+folder is made before it starts.
+
 Next automatic update: `systemctl list-timers uupd.timer`.
 
 ### Checking that updates are real

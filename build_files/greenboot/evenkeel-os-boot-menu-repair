@@ -20,6 +20,7 @@ fi
 cp -p "$cfg" "$cfg.before-evenkeel-os-repair" && cat "$tmp" >"$cfg.new" && sync "$cfg.new" && mv "$cfg.new" "$cfg"
 rc=$?
 rm -f "$tmp"
-[ "$remount" = 1 ] && mount -o remount,ro /boot
+# bind: read-only again for this service only, as greenboot does (not the whole /boot file system).
+[ "$remount" = 1 ] && mount -o remount,bind,ro /boot
 [ "$rc" = 0 ] && echo "Boot menu repaired: the automatic rollback counter now counts."
 exit "$rc"
