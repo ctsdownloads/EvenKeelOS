@@ -1,0 +1,10 @@
+# Outside software, locked to exact versions. check-versions.yml opens a PR when a newer one is out.
+# copr <project> <package> <version-release>: build.sh installs it; check-locked-versions.py fails on a mismatch.
+copr ublue-os/packages uupd 1.5.7-1.fc45
+copr ublue-os/packages bazaar 0.10.0-6.fc45
+copr ublue-os/packages ublue-brew 0.1.13-1.fc44
+copr ublue-os/packages ublue-os-just 0.57-3.fc45
+copr ublue-os/packages ublue-os-luks 0.3-1.fc44
+copr scottames/ghostty ghostty 1.4.0-2.fc45
+# git <repository> <branch> <commit>, the ISO build tool used by build-iso.yml and iso/build-local-iso.sh.
+git ublue-os/titanoboa main 5c457c3d0518bd17e754be0fd98a60d29d26abb4

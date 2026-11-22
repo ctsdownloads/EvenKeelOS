@@ -19,9 +19,24 @@ jobs:
       - name: Build the live variant of the image
         run: sudo podman build --cap-add sys_admin --security-opt label=disable --squash -t localhost/evenkeel-os-live -f iso/Containerfile .
 
+      - name: Find the locked ISO build tool
+        id: titanoboa
+        run: |
+          sha=$(awk '$1 == "git" && $2 == "ublue-os/titanoboa" {print $4}' build_files/locked-versions.txt)
+          [[ $sha =~ ^[0-9a-f]{40}$ ]] || { echo "ERROR: no locked titanoboa commit in locked-versions.txt"; exit 1; }
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+
+      - name: Get the ISO build tool at its locked commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: ublue-os/titanoboa
+          ref: ${{ steps.titanoboa.outputs.sha }}
+          path: titanoboa
+          persist-credentials: false
+
       - name: Build the ISO
         id: build
-        uses: ublue-os/titanoboa@main   # not pinned: an experiment, per the project's README
+        uses: ./titanoboa
         with:
           image-ref: localhost/evenkeel-os-live
 
@@ -32,7 +47,7 @@ jobs:
           (cd output && sha256sum evenkeel-os-live.iso | tee evenkeel-os-live.iso.sha256)
 
       - name: Upload the ISO
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: evenkeel-os-live-iso
           path: output/

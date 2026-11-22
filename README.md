@@ -134,6 +134,9 @@ other projects, under their own licenses, with their source available there:
   <https://copr.fedorainfracloud.org/coprs/ublue-os/packages/>.
 - **Ghostty:** built in <https://copr.fedorainfracloud.org/coprs/scottames/ghostty/>,
   source at <https://github.com/ghostty-org/ghostty>.
+- **Locked versions:** the Universal Blue and Ghostty packages and the ISO build
+  tool are locked to exact versions and checked daily for newer ones. See
+  [Locked versions](docs/building.md#locked-versions).
 - **Logo Menu:** <https://github.com/Aryan20/Logomenu> (GPL-2.0), from
   <https://extensions.gnome.org/extension/4451/logo-menu/>.
 - **ArcMenu:** <https://gitlab.com/arcmenu/ArcMenu> (GPL-2.0), from

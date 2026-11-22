@@ -9,7 +9,11 @@ xargs -a /ctx/bluefin-packages.txt dnf5 -y install
 grep -v '^#' /ctx/default-apps.txt | xargs dnf5 -y install
 # Ghostty (scottames/ghostty COPR) replaces Ptyxis as the default terminal.
 curl -fsSL --retry 3 "https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-$(rpm -E %fedora)/scottames-ghostty-fedora-$(rpm -E %fedora).repo" -o /etc/yum.repos.d/ghostty.repo
-dnf5 -y install ghostty
+# Outside packages install at the exact versions in locked-versions.txt.
+locked() { awk -v p="$1" '$1 == "copr" && $2 == p {print $3 "-" $4}' /ctx/locked-versions.txt; }
+locked_failed() { echo "ERROR: $1 did not install at its locked version (see docs/building.md)"; exit 1; }
+mapfile -t pkgs < <(locked scottames/ghostty)
+dnf5 -y install "${pkgs[@]}" || locked_failed Ghostty
 rm -f /etc/yum.repos.d/ghostty.repo
 dnf5 -y remove ptyxis
 rpm -q ptyxis >/dev/null 2>&1 && { echo "ERROR: Ptyxis is still installed"; exit 1; }
@@ -20,7 +24,8 @@ for p in $(grep -v '^#' /ctx/default-apps.txt) firefox nautilus ghostty nautilus
 done
 # uupd, Homebrew and Bazaar from Universal Blue; Bazaar replaces GNOME Software.
 curl -fsSL --retry 3 "https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-$(rpm -E %fedora)/ublue-os-packages-fedora-$(rpm -E %fedora).repo" -o /etc/yum.repos.d/ublue-os-packages.repo
-dnf5 -y install uupd ublue-brew ublue-os-just bazaar
+mapfile -t pkgs < <(locked ublue-os/packages)
+dnf5 -y install "${pkgs[@]}" || locked_failed "uupd, Homebrew, ujust or Bazaar"
 rm -f /etc/yum.repos.d/ublue-os-packages.repo
 dnf5 -y remove gnome-software gnome-software-rpm-ostree
 # No GNOME tour: its Welcome popup would cover the setup checklist.
@@ -540,6 +545,10 @@ jq -e --arg n "ghcr.io/ctsdownloads/$NAME" '(.default | length == 1 and .[0].typ
 rm -f /usr/lib/efi/shim/*/EFI/fedora/shim.efi
 ls /usr/lib/efi/shim/*/EFI/fedora/shimx64.efi >/dev/null || { echo "ERROR: Fedora's signed shim is missing"; exit 1; }
 [ -z "$(ls /usr/lib/efi/shim/*/EFI/fedora/shim.efi 2>/dev/null)" ] || { echo "ERROR: the second shim (shim.efi) is still there"; exit 1; }
+
+# Every package not signed by Fedora's key is on the locked list, at exactly that version.
+python3 -I /ctx/check-locked-versions.py /ctx/locked-versions.txt \
+  "/usr/share/pki/rpm-gpg/RPM-GPG-KEY-fedora-$(rpm -E %fedora)-primary"
 
 # Root helpers refuse hostile input, and no-password permissions stay with the person at the computer.
 python3 -I /ctx/check-root-helpers.py
