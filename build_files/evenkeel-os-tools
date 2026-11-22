@@ -54,6 +54,7 @@ ROLLED_BACK = Path("/var/lib/evenkeel-os/rolled-back")
 STATE = Path(os.environ.get("XDG_STATE_HOME") or Path.home() / ".local" / "state") / "evenkeel-os"
 SETUP_SHOWN = STATE / "setup-shown"      # the setup checklist has opened at login once
 CODECS_ASKED = STATE / "codecs-asked"    # from the old codecs first-login question
+GUIDE_HIDDEN = STATE / "guide-hidden"     # "Don't show this again" ticked in the New to Linux guide
 ROLLED_BACK_SHOWN = STATE / "rolled-back-shown"     # the automatic rollback note this user has seen
 # "repair|test <time> <saved time>", then the paths put back; written by evenkeel-os-settings in greenboot's red.d
 SETTINGS_REPAIRED = Path("/var/lib/evenkeel-os/settings-repaired")
@@ -1006,6 +1007,29 @@ TOOLS = [("firmware", "Update firmware", "Updates for the computer's own parts, 
           "settings", test_rollback)]
 
 
+def checklist_open():
+    """Whether this user's setup checklist from login is still open."""
+    want = b"/usr/bin/evenkeel-os-tools\0setup\0--first-login\0"
+    for d in Path("/proc").glob("[0-9]*"):
+        try:
+            if d.stat().st_uid == os.getuid() and want in (d / "cmdline").read_bytes():
+                return True
+        except OSError:
+            continue
+    return False
+
+
+def guide_at_login():
+    """The New to Linux guide, after the setup checklist, until "Don't show this again" is ticked."""
+    if not GUI or GUIDE_HIDDEN.exists():
+        return 0
+    time.sleep(5)               # the checklist starts a few seconds earlier
+    while checklist_open():
+        time.sleep(5)
+    import evenkeel_os_panel
+    return evenkeel_os_panel.run(sys.modules[__name__], "guide", first_login=True)
+
+
 def main(argv):
     page = next((a.split("=", 1)[1] for a in argv[1:2] if a.startswith("--page=")), None)
     if GUI and (len(argv) == 1 or page):
@@ -1014,6 +1038,8 @@ def main(argv):
     if len(argv) > 1:
         if argv[1:] == ["setup", "--first-login"]:
             return setup_checklist(first_login=True)
+        if argv[1:] == ["guide", "--first-login"]:
+            return guide_at_login()
         if argv[1:] == ["rolled-back", "--at-login"]:
             return max(rolled_back_note(), settings_note())
         for key, name, _, fn in TOOLS:

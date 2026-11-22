@@ -490,6 +490,9 @@ for a in evenkeel-os-update evenkeel-os-install-package evenkeel-os-remove-apps 
 done
 install -Dm644 /ctx/evenkeel_os_dialogs.py /usr/lib/evenkeel-os/evenkeel_os_dialogs.py
 install -Dm644 /ctx/evenkeel_os_panel.py /usr/lib/evenkeel-os/evenkeel_os_panel.py
+# New to Linux: in System Tools, Get help, and at login after the setup checklist until it's ticked off.
+install -Dm644 /ctx/evenkeel_os_guide.py /usr/lib/evenkeel-os/evenkeel_os_guide.py
+install -Dm644 /ctx/evenkeel-os-guide.desktop /etc/xdg/autostart/evenkeel-os-guide.desktop
 python3 -I /ctx/check-panel.py \
   || { echo 'ERROR: the System Tools window is missing a tool, an icon or a command'; exit 1; }
 # The login screen reads its settings through the gdm profile; nothing there may undo the teal accent.
