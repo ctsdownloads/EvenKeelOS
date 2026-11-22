@@ -18,6 +18,12 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/evenkeel_os_network.py` | Each network's place, shared by System Tools, the question and the installer |
 | `build_files/evenkeel-os-network-ask`, `evenkeel-os-network-ask.desktop` | The once-per-network question, started at login |
 | `build_files/check-network.py` | Build check: the default zone is Public place, Public lets nothing in, Home and Work keep 1025-65535 and have no SSH, open Wi-Fi can't be made Home, and the question is asked only for joined password Wi-Fi networks with no place |
+| `build_files/evenkeel_os_sharing.py` | Shared folders: the shared folders list, which folders may be shared, and the Samba settings written for them |
+| `build_files/samba/smb.conf` | EvenKeelOS's Samba settings: no guest access, no printers, no NetBIOS, Mac-friendly settings, the computer's own name for Macs and Linux. It includes the list System Tools writes |
+| `build_files/samba/wsdd-evenkeel-os.conf` | Holds wsdd to Home networks and restarts it with Samba |
+| `build_files/samba/50-evenkeel-os-sharing` | NetworkManager hook: checks again whenever a network comes or goes |
+| `build_files/firewall/evenkeel-sharing.xml` | Firewall service: port 445 (wsdd's ports are already open on Home), added to Home only while sharing is on |
+| `build_files/check-sharing.py` | Build check for Shared folders: no guest access, nothing shared until picked, and only your own, non-hidden folders can be shared |
 | `build_files/evenkeel-os-update`, `evenkeel-os-update-helper` | **System Update**, and its Python helper for progress text and what's new |
 | `build_files/evenkeel-os-packages`, `evenkeel_os_packages/`, `evenkeel-os-box-run`, `evenkeel-os-hwrules` | **Install Package File**, **Remove Apps**, **Repair App Boxes**, **Start Apps at Login**, and their helpers |
 | `build_files/evenkeel-os-tools`, `-admin`, `-safe`, `evenkeel_os_panel.py`, `check-panel.py` | **System Tools**: the window, every job, its two root helpers, and the build check that every tool has a row |
@@ -57,6 +63,9 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 - Install Package File misreads four real Fedora packages;
 - a tool would open its windows outside System Tools, or answer differently there;
 - Network safety isn't set up right (a new network isn't a Public place, or Home and Work let in SSH).
+- Shared folders isn't set up right (guest access is on, Samba or wsdd starts on its own, the firewall service is wrong,
+  a hidden folder or another user's folder is accepted, or the shares written don't match the list), or Samba,
+  smbpasswd, testparm, setsebool, avahi-daemon or wsdd is missing.
 
 A separate docs check fails when the README's contents table or a link is out of
 date.

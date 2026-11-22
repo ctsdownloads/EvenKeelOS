@@ -45,6 +45,10 @@ for h in HOSTILE:
     refuses("evenkeel-os-tools-admin", ["disk-unlock", h])
     refuses("evenkeel-os-tools-admin", ["firewall", h, "on"])
     refuses("evenkeel-os-tools-admin", ["firewall", "ssh", h])
+    refuses("evenkeel-os-tools-admin", ["sharing", h])
+    refuses("evenkeel-os-tools-admin", ["sharing", "add", "/root", h])
+    refuses("evenkeel-os-tools-admin", ["sharing", "add", h, "ro"], codes=(1,))     # no caller: refused first
+    refuses("evenkeel-os-tools-admin", ["sharing", "remove", h], codes=(1,))
     refuses("evenkeel-os-tools-admin", ["test-settings"])
     refuses("evenkeel-os-settings-test", [h])
     refuses("evenkeel-os-cert-remove", [h, "a" * 64], codes=(1, 2))    # names that pass are files that don't exist
@@ -70,6 +74,17 @@ for args in (["firewall", "samba", "on"], ["firewall", "ssh", "maybe"], ["firewa
              ["firewall", "ssh", "on", "x"], ["firewall", "--zone=public", "on"], ["firewall", "ssh;id", "on"],
              ["firewall", "default", "x"]):
     refuses("evenkeel-os-tools-admin", args)
+for args in (["sharing"], ["sharing", "on", "x"], ["sharing", "add", "/root"], ["sharing", "mode", "/root"],
+             ["sharing", "remove"], ["sharing", "password", "x"], ["sharing", "sync", "x"],
+             ["sharing", "add", "/root", "ro", "x"]):
+    refuses("evenkeel-os-tools-admin", args)
+refuses("evenkeel-os-tools-admin", ["sharing", "on"], codes=(1,))              # no caller, or not set up: refused
+refuses("evenkeel-os-tools-admin", ["sharing", "password"], codes=(1,))
+for args in (["sharing", "password"], ["sharing", "add", "/root", "rw"], ["sharing", "on"]):    # root can't share
+    r = subprocess.run([str(LIBEXEC / "evenkeel-os-tools-admin"), *args], capture_output=True, text=True,
+                       stdin=subprocess.DEVNULL, env={**os.environ, "PKEXEC_UID": "0"}, timeout=60)
+    if r.returncode != 1:
+        bad(f"evenkeel-os-tools-admin {args!r} as root exited {r.returncode}: root could share folders")
 refuses("evenkeel-os-settings", ["check", "--own-namespace"])
 refuses("evenkeel-os-settings", ["test-delete", "extra"])
 refuses("evenkeel-os-cert-remove", ["no-such-certificate.pem", "a" * 64], codes=(1,))

@@ -1,0 +1,5 @@
+#!/bin/sh
+# Shared folders run only while a Home network is connected: check again whenever a network comes or goes.
+case "$2" in
+    up|down|reapply) exec /usr/libexec/evenkeel-os-tools-admin sharing sync ;;
+esac
