@@ -10,8 +10,8 @@ Start Apps at Login, Repair App Boxes, Install Media Codecs and System Update no
 they are inside it. Double-clicking an .rpm, .deb, .exe or .msi file still opens the right tool. The Windows-style
 start menu's System Update entry opens System Tools on its Updates page.
 
-For now, the tools still open their own small windows on top of System Tools while they work. Moving them inside the
-window comes in a later update.
+For now, the tools still open their own small windows on top of System Tools while they work, each named after its
+tool (for example **Test automatic rollback**). Moving them inside the window comes in a later update.
 
 ### Overview
 

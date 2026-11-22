@@ -87,6 +87,10 @@ def main():
     for unit in ("evenkeel-os-test-stuck.service", "evenkeel-os-test-freeze.service"):
         if not Path(f"/usr/lib/systemd/system/multi-user.target.wants/{unit}").is_file():
             sys.exit(f"ERROR: {unit} isn't switched on from /usr/lib/systemd/system/multi-user.target.wants")
+    # Every test has its short line for the list.
+    short = assigned("/usr/bin/evenkeel-os-tools", "TEST_SHORT")
+    if set(short) != set(listed) | {"settings"}:
+        sys.exit(f"ERROR: the test list's short lines {sorted(short)} don't match the tests {sorted(listed)}")
     # Every setting the settings test deletes has a plain-word name in its message.
     names = set(assigned("/usr/bin/evenkeel-os-tools", "SETTINGS_NAMES"))
     deletes = {f"/etc/{n}" for n in assigned("/usr/libexec/evenkeel-os-settings", "TEST_DELETE")}
