@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 from pathlib import Path
+from types import SimpleNamespace
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
 import evenkeel_os_sharing as sharing  # noqa: E402
@@ -61,8 +62,14 @@ if not st or st.st_uid != 0 or st.st_mode & 0o022 or not st.st_mode & stat.S_IXU
 if not any(b"samba_enable_home_dirs" in f.read_bytes() for f in Path("/etc/selinux/targeted/policy").glob("policy.*")):
     bad("SELinux has no samba_enable_home_dirs switch")
 
-with tempfile.TemporaryDirectory(dir="/root") as d:
-    home = os.path.realpath("/root")
+real_getpwnam = sharing.pwd.getpwnam
+with tempfile.TemporaryDirectory() as scratch:
+    # A made-up person whose home is a scratch folder: the image's own home folders don't exist while it's built.
+    home = os.path.join(os.path.realpath(scratch), "home")
+    d = os.path.join(home, "work")
+    os.makedirs(d)
+    sharing.pwd.getpwnam = lambda name: (real_getpwnam(name) if name != "tester" else
+                                         SimpleNamespace(pw_dir=home, pw_uid=os.getuid()))
     pics = os.path.join(d, "Pictures")
     os.mkdir(pics)
     Path(d, "file.txt").write_text("x")
@@ -70,12 +77,16 @@ with tempfile.TemporaryDirectory(dir="/root") as d:
     os.symlink(pics, os.path.join(d, "link"))
     latin = os.path.join(d, "caf\udce9")
     os.mkdir(latin)
+    theirs = os.path.join(d, "Theirs")
+    os.mkdir(theirs)
+    os.chown(theirs, 65534, 65534)
     cases = {pics: True, latin: False, home: False, os.path.join(d, ".ssh"): False, "/etc": False,
              os.path.join(d, "file.txt"): False, os.path.join(d, "link"): False, os.path.join(d, "nothing"): False,
-             d + "/../" + os.path.basename(d): False}
+             d + "/../" + os.path.basename(d): False, scratch: False, theirs: False}
     for path, ok in cases.items():
-        if (sharing.folder_problem(path, "root") == "") != ok:
+        if (sharing.folder_problem(path, "tester") == "") != ok:
             bad(f"{path} {'can' if not ok else 'can not'} be shared")
+    sharing.pwd.getpwnam = real_getpwnam
     names = {"Pictures": "Pictures", "a[b]:c": "a b c", "homes": "homes folder", "%U": "U", "": "Shared folder"}
     for base, want in names.items():
         if sharing.share_name("/x/" + base, []) != want:
