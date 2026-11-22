@@ -4,21 +4,84 @@
 
 ## System Tools
 
-**System Tools** (in Show Apps) puts useful `ujust` jobs in plain windows.
+**System Tools** is one window with a sidebar. A search box at the top of the sidebar finds any tool by its name,
+what it does, or its command. Show Apps has only System Tools for these tools: Install Package File, Remove Apps,
+Start Apps at Login, Repair App Boxes, Install Media Codecs and System Update no longer have their own icons, because
+they are inside it. Double-clicking an .rpm, .deb, .exe or .msi file still opens the right tool. The Windows-style
+start menu's System Update entry opens System Tools on its Updates page.
 
-| Tool | What it does |
+For now, the tools still open their own small windows on top of System Tools while they work. Moving them inside the
+window comes in a later update.
+
+### Overview
+
+| Item | What it does |
 |------|--------------|
-| Update firmware | Installs BIOS and device firmware updates. Keep it plugged in |
-| Unlock disk automatically | Lets the security chip (TPM) unlock an encrypted disk at startup |
+| Status banner | Says **Your computer is in good shape** with **Update now**, or that a new version is ready with **Restart now**, or that automatic updates are paused until a day with **Resume now**, or that automatic updates are off with **Turn on** |
+| Undo the last update | Goes back to the version before the last update |
 | Free up disk space | Removes unused app parts, old update files and container images. Your files aren't touched |
+| Save problem details | Saves recent errors to one file to email your helper |
+| Setup checklist | Codecs, disk unlock and apps. See [First login](install.md#first-login) |
+
+### Updates
+
+| Item | What it does |
+|------|--------------|
+| System Update | Updates now |
+| Automatic updates | Turns daily updates on or off. On is recommended. Shows On, Paused or Off. After an undo it shows the pause, with **Resume now** |
+| Update firmware | Installs BIOS and device firmware updates. Keep it plugged in |
+| Undo the last update | Goes back to the version before the last update |
+
+While automatic updates are on, VPNs, codecs and apps added to the system are checked every day too.
+
+### Apps
+
+| Item | What it does |
+|------|--------------|
+| Drop zone | Drop an .rpm or .deb to install it, or an .exe or .msi to get its Linux version |
+| Get apps | Opens Bazaar |
+| Install a package file | Installs an .rpm or .deb. See [Apps](apps.md) |
+| Remove apps | Removes apps you added from package files |
+| Start apps at login | Switches apps on or off at login |
+| Repair app boxes | Rebuilds an app box that stopped working |
+| Media codecs | Adds video and audio formats. See [Media codecs](building.md#media-codecs) |
+| Remove media codecs | Takes them out again, after asking. Needs your password and a restart |
+| Get a VPN | Mullvad, Proton, IVPN or NordVPN, kept up to date. See below |
+| Windows programs | Pick an .exe or .msi to get its Linux version |
+| Zoom meetings | If you chose your usual browser for Zoom, this lets you be asked about Chrome again. See [Zoom meetings](zoom.md) |
+
+### Disk and startup
+
+| Item | What it does |
+|------|--------------|
+| Disk space | Shows how much is free, with a bar, and updates after Free up disk space |
+| Free up disk space | Removes unused app parts, old update files and container images. Your files aren't touched |
+| Unlock disk automatically | Lets the security chip (TPM) unlock an encrypted disk at startup. Shows On or Off |
 | Restart into BIOS settings | Restarts straight into the BIOS screen |
-| Automatic updates | Turns daily updates on or off. On is recommended. After an undo it shows the pause, with **Resume now** |
+
+### Make it yours
+
+| Item | What it does |
+|------|--------------|
+| Desktop layout | Pick Standard (the top bar) or Windows-style (the bottom bar and start menu, which opens on the desktop at login). It takes effect after you log out and back in |
+| Accent color and wallpaper | Opens Settings, Appearance. Folder icons follow the accent color |
+
+### Get help
+
+| Item | What it does |
+|------|--------------|
 | Undo the last update | Goes back to the version before the last update |
 | Save problem details | Saves recent errors to one file to email your helper |
-| Get a VPN | Mullvad, Proton, IVPN or NordVPN, kept up to date. See below |
-| Setup checklist | Codecs, disk unlock and apps. See [First login](install.md#first-login) |
 | Test automatic rollback | Checks that the computer goes back by itself when a new version doesn't start. See below |
-| Desktop layout | Switches between the standard top bar and the Windows-style bottom bar and start menu, which opens on the desktop at login. Log out and back in to see it |
+| Prefer the terminal? | Shows every tool's command |
+
+### Commands
+
+`evenkeel-os-tools` opens the window. `evenkeel-os-tools --page=updates` (or `apps`, `disk`, `yours`, `help`) opens it
+on that page. All the old commands still work, such as `evenkeel-os-tools firmware`,
+`evenkeel-os-packages install`, `evenkeel-os-update` and `evenkeel-os-codecs`.
+
+### Details
 
 **Passwords.** No password for an admin at the computer: automatic updates on,
 the pause after an undo and resuming it, disk unlock (it asks the disk password
@@ -66,5 +129,5 @@ you pick one. After the restart it asks **Turn it on** at login. Also `evenkeel-
 
 **Save problem details.** Saves `problem-details-<date>.txt` to Documents:
 system version and hardware, recent warnings and errors, the last 3 days of
-updates, Flatpaks and boxes, and the logs of Install Package File and System
+updates, Flatpaks and boxes, and the logs of Install a package file and System
 Tools. Box apps' own logs stay out. Nothing is sent anywhere.

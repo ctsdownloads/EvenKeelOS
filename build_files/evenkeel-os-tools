@@ -1,7 +1,7 @@
 #!/usr/bin/python3 -I
-"""System Tools: a few system jobs in plain windows, from Show Apps.
+"""System Tools: every EvenKeelOS tool in one window, from Show Apps; each job also runs on its own.
 
-  evenkeel-os-tools                 the list of tools
+  evenkeel-os-tools                 the System Tools window (--page=updates, apps, disk, yours or help)
   evenkeel-os-tools firmware        update firmware
   evenkeel-os-tools disk-unlock     unlock the disk automatically at startup (TPM)
   evenkeel-os-tools free-space      free up disk space
@@ -537,8 +537,8 @@ def codecs_step(w):
     if codecs_added():
         return
     if ask("Some video formats, like most web video, need media codecs that aren't part of the system. The next "
-           "window explains the choices.\n\nRecommended: Next. Or Skip: Install Media Codecs is in Show Apps any "
-           "time.", ok="Next", cancel="Skip", title=w) != "ok":
+           "window explains the choices.\n\nRecommended: Next. Or Skip: they're in System Tools, Apps, Media "
+           "codecs, any time.", ok="Next", cancel="Skip", title=w) != "ok":
         return
     STATE.mkdir(parents=True, exist_ok=True)
     CODECS_ASKED.touch()
@@ -563,8 +563,8 @@ def apps_step(w):
         a = ask(f"{opened}Getting apps:\n\n"
                 "- Most apps: Bazaar, the app store. Find the app there and install it.\n"
                 "- An app that comes as a file (.rpm or .deb): open the file, or open Install Package File, which "
-                "lists the files in your Downloads folder.\n"
-                "- Removing those apps: Remove Apps, in Show Apps.\n\n"
+                "lists the files in your Downloads folder. It's in System Tools, Apps.\n"
+                "- Removing those apps: System Tools, Apps, Remove apps.\n\n"
                 "System Tools has the rest: updates, disk space, undoing an update, and saving problem details for "
                 "your helper.\n\nRecommended: Open Bazaar, to see it. Or Open Install Package File. "
                 "Or Next.", ok="Open Bazaar", cancel="Next", extra="Open Install Package File", title=w)
@@ -773,6 +773,10 @@ TOOLS = [("firmware", "Update firmware", "Updates for the computer's own parts, 
 
 
 def main(argv):
+    page = next((a.split("=", 1)[1] for a in argv[1:2] if a.startswith("--page=")), None)
+    if GUI and (len(argv) == 1 or page):
+        import evenkeel_os_panel
+        return evenkeel_os_panel.run(sys.modules[__name__], page or "overview")
     if len(argv) > 1:
         if argv[1:] == ["setup", "--first-login"]:
             return setup_checklist(first_login=True)

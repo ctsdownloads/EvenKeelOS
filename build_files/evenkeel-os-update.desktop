@@ -1,9 +1,10 @@
 [Desktop Entry]
 Type=Application
 Name=System Update
-Comment=Update the system, Flatpak apps, Distrobox containers and Homebrew
+Comment=Open System Tools on its Updates page
 Icon=software-update-available-symbolic
 Categories=System;
 Keywords=update;upgrade;uupd;
-Exec=/usr/bin/evenkeel-os-update
+Exec=/usr/bin/evenkeel-os-tools --page=updates
 Terminal=false
+NoDisplay=true

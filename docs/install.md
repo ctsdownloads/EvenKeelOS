@@ -49,7 +49,7 @@ Updates are automatic: `uupd` runs daily at 4 am (or at the next start) for the
 system, Flatpaks, app boxes and Homebrew. A new system is used from the next
 restart.
 
-**System Update** in Show Apps updates now, with no password for the person at
+**System Update** in System Tools, Updates updates now, with no password for the person at
 the computer (from anywhere else, it asks). It shows the download and install
 steps, lists what's new, and warns first on a low battery.
 If the automatic update is already running, it follows that one. From a
@@ -93,7 +93,7 @@ can be skipped:
 1. **Media codecs:** see [Media codecs](building.md#media-codecs).
 2. **Disk password at startup:** **Unlock disk automatically**, if the disk is
    encrypted and has a security chip.
-3. **How to get apps:** opens Bazaar and Install Package File to show them.
+3. **How to get apps:** opens Bazaar and Install a package file to show them.
 
 One restart at the end, if needed. **Later** shows it at the next login;
 **Don't show again** stops it. It's in [System Tools](system-tools.md#system-tools)

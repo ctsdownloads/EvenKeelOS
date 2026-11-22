@@ -62,13 +62,13 @@ can't change, so it stays working.
 | Automatic rollback | [greenboot](https://github.com/fedora-iot/greenboot-rs): if a new version fails 2 starts in a row (no login screen, no networking, a freeze or hang while starting, or a login loop), the computer goes back to the previous one by itself and says so at the next login, every time. Offline never counts. New installs only. Test each of those for real in System Tools |
 | Homebrew and ujust | As on Bluefin, for terminal users |
 | Services on by default | Fedora's defaults, plus Tailscale (idle until you sign in) and Podman's container auto-updates, as on Bluefin |
-| Codecs | Not included (patents). The [setup checklist](docs/install.md#first-login) and **Install Media Codecs** offer them, with no password for an admin. See [Media codecs](docs/building.md#media-codecs) |
-| Apps from .rpm and .deb files | **Install Package File** puts them in a box; **Remove Apps** takes them out. See [Apps from .rpm and .deb files](docs/apps.md#apps-from-rpm-and-deb-files) |
+| Codecs | Not included (patents). The [setup checklist](docs/install.md#first-login) and **Media codecs** in System Tools, Apps offer them, with no password for an admin. See [Media codecs](docs/building.md#media-codecs) |
+| Apps from .rpm and .deb files | **Install a package file** in System Tools, Apps puts them in a box; **Remove apps** there takes them out. See [Apps from .rpm and .deb files](docs/apps.md#apps-from-rpm-and-deb-files) |
 | Windows programs (.exe and .msi) | Opening one offers a Linux app: the same program's Linux version (Flathub, Fedora or Ubuntu), ArtCraft for Adobe programs, a hand-picked replacement for programs with no Linux version (Office, iTunes, Skype), or an app of the same kind. See [Windows programs](docs/apps.md#windows-programs-exe-and-msi) |
 | Zoom meetings | Joining from a Zoom invite opens the meeting in Zoom's web version in Google Chrome; the first time, it offers to install Chrome from Flathub (or use the usual browser). See [Zoom meetings](docs/zoom.md) |
 | VPNs | Get a VPN in System Tools adds Mullvad, Proton, IVPN or NordVPN from that company's own download source, which is locked to its signing key and checked at every build. Nothing is installed until you pick one. Downloaded VPN files and Windows VPN installers install it the same way, and it is checked daily for updates. See [VPNs](docs/vpn.md) |
 | Flathub | Added on first boot; Fedora's own Flathub entry is removed |
-| System Tools | Firmware, disk unlock, free space, BIOS settings, automatic updates, undo the last update, problem details, the setup checklist, the desktop layout, getting a VPN, and the automatic rollback test. See [System Tools](docs/system-tools.md#system-tools) |
+| System Tools | One window with a sidebar (Overview, Updates, Apps, Disk and startup, Make it yours, Get help) and a search box that finds any tool by name, what it does or its command. It has system updates, automatic updates, firmware, undo the last update, installing and removing apps, media codecs, getting a VPN, disk space and unlock, BIOS settings, the desktop layout, problem details, the setup checklist and the automatic rollback test. See [System Tools](docs/system-tools.md#system-tools) |
 | Desktop | Teal accent color, with folder icons that follow whatever accent color you pick in Settings, Appearance; 7 EvenKeelOS wallpapers, each with a day picture for light mode and a night one for dark mode; minimize and maximize buttons, no hot corner, battery percentage shown |
 | Dock | Firefox, Calendar, Files, Bazaar and Text Editor |
 | Logo Menu | The [Logo Menu](https://github.com/Aryan20/Logomenu) extension on the top-left logo: About My System, Activities, App Grid, Bazaar, Resources, Ghostty, Extensions |
@@ -82,7 +82,7 @@ can't change, so it stays working.
 | Power modes | tuned, as on Fedora, set so a power-mode switch never waits on a running update |
 | Default apps | Fedora packages in [`build_files/default-apps.txt`](build_files/default-apps.txt), plus five from Flathub on the first start with internet ([`build_files/flathub-apps.txt`](build_files/flathub-apps.txt)). No email app |
 | App store | [Bazaar](https://github.com/kolunmi/bazaar), replacing GNOME Software |
-| Utilities folder | Every EvenKeelOS tool, in Show Apps |
+| Utilities folder | Holds System Tools, with every EvenKeelOS tool inside it. Show Apps has no separate icons for them |
 | File types | Text files open in Text Editor, .rpm and .deb in Install Package File, .exe and .msi in Windows Program, Flatpak files in Bazaar |
 | Login screen and boot menu | EvenKeelOS logo and name, and the teal accent on the login and lock screens. New users get the EvenKeelOS logo as their picture. The live USB and the installed system both work with Secure Boot on, with one shim on the disk, so the firmware adds no extra "Fedora" boot entry |
 | fastfetch | Shows the EvenKeelOS logo |
@@ -102,7 +102,7 @@ can't change, so it stays working.
   why Chrome.
 - **[VPNs](docs/vpn.md)** - getting Mullvad, Proton, IVPN or NordVPN, and how they
   update.
-- **[System Tools](docs/system-tools.md)** - the system jobs, in windows.
+- **[System Tools](docs/system-tools.md)** - the one window for updates, apps, disk and startup, and help.
 - **[How it's built](docs/building.md)** - the build, media codecs and the boot
   menu name.
 
