@@ -24,6 +24,8 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/samba/50-evenkeel-os-sharing` | NetworkManager hook: checks again whenever a network comes or goes |
 | `build_files/firewall/evenkeel-sharing.xml` | Firewall service: port 445 (wsdd's ports are already open on Home), added to Home only while sharing is on |
 | `build_files/check-sharing.py` | Build check for Shared folders: no guest access, nothing shared until picked, and only your own, non-hidden folders can be shared |
+| `build_files/evenkeel_os_bootopts.py`, `evenkeel-os-boot-options` | Boot options: the common fixes, the risky and refused settings, reading what the next start uses, and the root helper that changes them with `rpm-ostree kargs` (its own polkit action, the password every time) |
+| `build_files/check-boot-options.py` | Build check for Boot options: rpm-ostree can make the changes, every common fix is allowed without a warning, risky settings are warned about however they're written, and settings the system sets itself, settings that run a program while starting, and text that isn't a setting are refused |
 | `build_files/evenkeel-os-update`, `evenkeel-os-update-helper` | **System Update**, and its Python helper for progress text and what's new |
 | `build_files/evenkeel-os-packages`, `evenkeel_os_packages/`, `evenkeel-os-box-run`, `evenkeel-os-hwrules` | **Install Package File**, **Remove Apps**, **Repair App Boxes**, **Start Apps at Login**, and their helpers |
 | `build_files/evenkeel-os-tools`, `-admin`, `-safe`, `evenkeel_os_panel.py`, `check-panel.py` | **System Tools**: the window, every job, its two root helpers, and the build check that every tool has a row |
@@ -66,6 +68,9 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 - Shared folders isn't set up right (guest access is on, Samba or wsdd starts on its own, the firewall service is wrong,
   a hidden folder or another user's folder is accepted, or the shares written don't match the list), or Samba,
   smbpasswd, testparm, setsebool, avahi-daemon or wsdd is missing.
+- Boot options isn't set up right (rpm-ostree can't make the changes, a common fix is refused or warned about, a
+  risky setting isn't warned about, or a setting the system sets itself, one that runs a program while starting, or
+  text that isn't a setting, is accepted).
 
 A separate docs check fails when the README's contents table or a link is out of
 date.

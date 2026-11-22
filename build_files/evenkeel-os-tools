@@ -48,7 +48,8 @@ CACHE = Path.home() / ".cache" / "evenkeel-os"
 LOG = CACHE / "tools.log"
 DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
 PAUSE = Path("/var/lib/evenkeel-os/updates-paused-until")      # set by evenkeel-os-tools-safe after an undo
-# "update|test|settings-test|settings-failed <time>", written by greenboot's green.d (90-evenkeel-os-rolled-back.sh)
+# "update|test|boot-options|settings-test|settings-failed <time>", written by greenboot's green.d
+# (90-evenkeel-os-rolled-back.sh)
 ROLLED_BACK = Path("/var/lib/evenkeel-os/rolled-back")
 STATE = Path(os.environ.get("XDG_STATE_HOME") or Path.home() / ".local" / "state") / "evenkeel-os"
 SETUP_SHOWN = STATE / "setup-shown"      # the setup checklist has opened at login once
@@ -404,11 +405,26 @@ def undo_update():
     later = ("\n\nAutomatic updates then pause for 3 days, so the bad update doesn't come straight back. If the "
              "problem returns after that, turn off Automatic updates in System Tools and tell your helper."
              if updates_on() else "")
+    nxt = ds[0] if ds and not ds[0].get("booted") else None
+    if nxt and booted and nxt.get("checksum") == booted.get("checksum") and \
+            int(nxt.get("serial", 0)) > int(booted.get("serial", 0)):
+        # The same system with other boot options (System Tools, Boot options), not an update.
+        if ask("A change to the boot options is waiting. It starts at your next restart. It isn't an update.\n\nIf "
+               "you don't want it: Don't use it. The computer starts with the boot options it has now, and automatic "
+               "updates aren't paused.\n\nOr Keep it.", ok="Don't use it", cancel="Keep it", title=w) != "ok":
+            return 1
+        drop = ["rpm-ostree", "cleanup", "-p"] if nxt.get("staged") else ["rpm-ostree", "rollback"]
+        if run("Removing the waiting change.", drop, title=w) != 0:
+            say(f"It didn't work, and nothing was changed.\n\nThe details are in {LOG}", "warning", title=w)
+            return 1
+        say("Done. The computer starts with the boot options it has now.", title=w)
+        return 0
     if staged:
         # An update is downloaded but not in use yet: the version running now is not the new one.
         if ask(f"An update from {when(staged, booted)} is waiting. It starts at your next restart. The version you're "
                f"using now is from {when(booted, staged) if booted else 'before it'}.\n\nIf you don't want it: Don't "
-               f"use it. Your computer keeps the version it has now." + later + "\n\nOr Keep it.",
+               f"use it. Your computer keeps the version it has now. A boot options change made since the update "
+               f"came is dropped with it." + later + "\n\nOr Keep it.",
                ok="Don't use it", cancel="Keep it", title=w) != "ok":
             return 1
         rc = run("Removing the waiting update.", ["rpm-ostree", "cleanup", "-p"], title=w)
@@ -451,6 +467,17 @@ def undo_update():
             back = ("Automatic updates are still paused after the undo. Resume them in Automatic updates."
                     if paused_until() else "Automatic updates are back on.")
         offer_restart(f"Done. The version from {when(older, booted)} starts at your next restart.", back)
+        return 0
+    if booted and older.get("checksum") == booted.get("checksum"):
+        # The version running now differs from the one before only in its boot options.
+        if ask("The version you're using now is the one before it with boot options changed in System Tools.\n\n"
+               "Undo the change: the computer starts with the boot options it had before, at your next restart. "
+               "Automatic updates aren't paused.\n\nOr Cancel.", ok="Undo the change", title=w) != "ok":
+            return 1
+        if run("Setting the earlier boot options to start next time.", ["rpm-ostree", "rollback"], title=w) != 0:
+            say(f"It didn't work, and nothing was changed.\n\nThe details are in {LOG}", "warning", title=w)
+            return 1
+        offer_restart("Done. The earlier boot options start at your next restart.")
         return 0
     if ask(f"The version you're using now is from {when(booted, older) if booted else 'the last update'}. The one "
            f"from before it, from {when(older, booted)}, is still on this computer.\n\nIf something stopped working "
@@ -859,6 +886,12 @@ def rolled_back_note():
             f"computer went back to the version from {since}, which has its own settings. Your files and apps aren't "
             "touched, and automatic updates aren't paused.\n\nTell your helper. Save problem details in System Tools "
             "makes a file to send them.", "warning", title=w)
+    elif kind == "boot-options":
+        notify("Your computer went back to the previous version.")
+        say(f"The computer didn't start properly with the boot options changed in System Tools, so it went back to "
+            f"the version from {since}, with the boot options it had before. Your files and apps aren't touched, and "
+            "automatic updates aren't paused.\n\nThe setting that caused it isn't in use. Disk and startup, Boot "
+            "options in System Tools shows what's in use now.", "warning", title=w)
     elif kind == "test":
         notify("The automatic rollback test worked.")
         say(f"The test worked. Your computer went back by itself to the version from {since}, and the test copy is "

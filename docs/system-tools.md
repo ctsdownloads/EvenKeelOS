@@ -175,6 +175,91 @@ These ask for the administrator password. Root and system accounts can't share f
 | Unlock disk automatically | Lets the security chip (TPM) unlock an encrypted disk at startup. Shows On or Off |
 | Restart into BIOS settings | Restarts straight into the BIOS screen |
 
+Below that are three more groups: **Boot options**, **Common fixes** and **Your own settings**. See [Boot options](#boot-options).
+
+### Boot options
+
+Boot options are settings the computer starts with (kernel settings). Some fix screen flicker or a drive that freezes.
+You can turn on a common fix, or type your own setting.
+
+Each change asks for the administrator password, every time, and makes a new system version. The old version stays
+as the fallback, and **Undo the last update** or automatic rollback can go back to it. A change starts at the next
+restart. If an update is already waiting, it keeps the change, and updates after it carry the settings forward.
+
+If the computer doesn't start properly with a new setting, automatic rollback goes back to the version before. The
+note at the next login says the boot options caused it, and automatic updates aren't paused. **Undo the last update**
+also knows a boot options change isn't an update: it offers to drop a waiting change, or to go back to the boot
+options from before, and automatic updates aren't paused. When an update is waiting too, the change is part of the
+waiting version, so dropping the update drops the change with it.
+
+A setting the computer already had (like `quiet`) isn't counted as added, so taking out your settings never takes out
+the system's own.
+
+**The page.** **Disk and startup**, after **Starting the computer**, shows three groups:
+
+| Item | What it does |
+|------|--------------|
+| Boot options | A status row. It says **In use**, **No boot options added**, or **Restart to use the changes** with a **Restart now** button. It shows what the next start really uses, so after a rollback a setting that caused it isn't shown |
+| Common fixes | One switch for each fix in the list below. A switch is on when the next start uses that fix |
+| Your own settings | An entry, **Add a setting, like amdgpu.abmlevel=0**, and a row with a trash button for each setting you added. Risky ones say why under their name |
+
+While a change is being made, the section waits until it's done.
+
+**Common fixes.** These are fixes people commonly report. Each one can cost a little battery, so turn one on only for a
+problem you have.
+
+| Fix | Setting | For |
+|-----|---------|-----|
+| AMD: white flickering | `amdgpu.sg_display=0` | The screen flashes white, often with an outside display |
+| AMD: flicker, turn off Panel Self Refresh | `amdgpu.dcdebugmask=0x10` | Flicker or glitches when the picture is still |
+| AMD: flicker, turn off Panel Replay | `amdgpu.dcdebugmask=0x400` | Glitches on newer AMD chips |
+| AMD: flicker, turn off both | `amdgpu.dcdebugmask=0x410` | When neither of the two above is enough |
+| AMD: screen dims or shifts colors on its own | `amdgpu.abmlevel=0` | Turns off adaptive backlight |
+| Intel (older chips): flicker or freezes | `i915.enable_psr=0` | Turns off Panel Self Refresh |
+| Intel (newest chips): flicker or black flashes | `xe.enable_psr=0` and `xe.enable_panel_replay=0` | Turns off Panel Self Refresh and Panel Replay |
+| Drive freezes or disappears | `nvme_core.default_ps_max_latency_us=0` | Keeps the drive out of its deepest power saving |
+
+The three `amdgpu.dcdebugmask` choices replace each other: turning one on replaces the one that was on.
+
+**Typing your own.** Type one or more settings and press the apply button. Names are read the way the kernel reads
+them: `-` and `_` are the same, and `0x0` or `00` is the same as `0`.
+
+- Risky settings show **This setting is risky**, with the reason, and **Cancel** or **Add anyway**:
+  - security turned off or weakened: `selinux=0`, `enforcing=0`, `security=`, `lsm=`, `lockdown=`,
+    `module.sig_enforce=0`, `mitigations=off`, `nopti`, `pti=off`, `spectre_v2=off`, `nospectre_v1`, `nospectre_v2`,
+    `nokaslr`, `iommu=off`, `intel_iommu=off`, `amd_iommu=off`, `audit=0`, `sysrq_always_enabled`,
+    `spectre_v2_user=off`, `spec_store_bypass_disable=off`, `nospec_store_bypass_disable`, `l1tf=off`, `mds=off`,
+    `retbleed=off`, `tsx=on`, `nosmap`, `nosmep`, `kvm.nx_huge_pages=off`;
+  - starting without the desktop or into a shell: `rd.break`, `rd.shell`, `single`, `emergency`, `rescue`,
+    `rd.rescue`, `rd.emergency`, `1` to `4`, `s`, `systemd.unit=` (anything but `graphical.target`),
+    `rd.systemd.unit=`, `systemd.mask=`, and `rd.shell`, `systemd.debug_shell` or `rd.systemd.debug_shell` with any
+    value but off (like `0` or `no`);
+  - no picture: `nomodeset`, `amdgpu.dc=0`, and any `.modeset=0`;
+  - may not start, or loses hardware: `acpi=off`, `acpi=noirq`, `noapic`, `nolapic`, `nosmp`, `noefi`, `mem=`,
+    `memmap=`, `maxcpus=`, `nr_cpus=`, `efi=noruntime`, and anything with `blacklist` in its name.
+
+  Settings that only make the computer stricter aren't warned about, like `selinux=1`, `enforcing=1`,
+  `module.sig_enforce=1`, `rd.shell=0` or `mitigations=auto,nosmt`.
+- Refused, because the system sets them itself and changing them stops it starting: `root`, `rootflags`,
+  `rootfstype`, `ostree`, `rw`, `ro`, `BOOT_IMAGE`, `initrd`, `fstab`, `rd.fstab`, `rd.auto`, `systemd.volatile`,
+  `luks`, and anything starting with `rd.luks`, `luks.`, `rd.lvm`, `rd.md`, `rd.dm`, `ostree.`, `composefs` or
+  `mount.usr`.
+- Refused, because they run a program with full control while the computer starts: `init=`, `rdinit=` and anything
+  starting with `systemd.run`.
+- Anything starting with `evenkeel_os.` is for **Test automatic rollback** and is refused. Changes are refused while a
+  rollback test copy is running.
+- Text that isn't a setting is refused, and so are values with quotes or spaces. Letters, numbers and `. _ - , : / +
+  = @ !` work, like `video=eDP-1:1920x1080@60` or `acpi_osi=!`.
+- You can add up to 20 settings, and each name only once.
+
+In a terminal:
+
+    pkexec /usr/libexec/evenkeel-os-boot-options set SETTING...
+
+Give it the full list of settings you want added. With no settings, it takes them all out, and common fixes left out
+are taken out too. It asks for the administrator password every time. It refuses what System Tools refuses, but
+doesn't warn about risky settings. Only System Tools does.
+
 ### Make it yours
 
 | Item | What it does |
