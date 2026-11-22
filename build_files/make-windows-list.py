@@ -8,6 +8,7 @@ app of the same kind for any other program winget knows.
 import collections
 import gzip
 import json
+import os
 import re
 import sqlite3
 import sys
@@ -16,6 +17,9 @@ import xml.etree.ElementTree as ET
 sys.path.insert(0, "/usr/lib/evenkeel-os")
 from evenkeel_os_packages.artcraft import APPS as ARTCRAFT  # noqa: E402
 from evenkeel_os_packages.windows_file import makers_overlap, norm, norm_maker, trim  # noqa: E402
+
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "vpns.json")) as f:
+    VPNS = json.load(f)
 
 FILL = {"for", "windows", "desktop", "app", "client", "x64", "x86", "64", "bit", "32", "portable", "setup",
         "installer", "edition", "the", "beta", "stable", "lts", "esr", "msix", "exe", "msi"}
@@ -149,6 +153,11 @@ def replacement_offer(use, job, titles):
     """The Linux app a list entry points to, with its name; None if it isn't on Flathub any more."""
     if use.startswith("web:"):      # used in the browser instead of an app (Zoom)
         return {"web": use.split(":", 1)[1], "job": job}
+    if use.startswith("vpn:"):      # its company's Linux version, from that company's own download source
+        name = use.split(":", 1)[1]
+        if name not in VPNS:
+            sys.exit(f"ERROR: {use} is not in vpns.json")
+        return {"vpn": name, "title": VPNS[name]["title"]}
     if use.startswith("artcraft:"):
         app = use.split(":", 1)[1]
         if app not in ARTCRAFT:

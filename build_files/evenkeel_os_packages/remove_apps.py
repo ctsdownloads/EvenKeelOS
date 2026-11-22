@@ -3,7 +3,7 @@ import subprocess
 
 from evenkeel_os_ui import ask, choose, human, notify, offer_restart, say
 from evenkeel_os_packages import (
-    after_restart, app_list, boxes, common, installed, launchers, update_notes, windows,
+    after_restart, app_list, boxes, common, installed, launchers, update_notes, vpn, windows,
 )
 
 
@@ -38,6 +38,8 @@ def remove():
                                     "--noninteractive", entry["package"]]])
         if ok and where == "artcraft":      # the sandbox setting made at install goes too
             subprocess.run(["flatpak", "override", "--user", "--reset", entry["package"]], capture_output=True)
+    elif where == "system" and entry.get("vpn"):     # its services and download source go too
+        ok = windows.run_steps(f"Removing {title} from the system.", vpn.remove_steps(entry))
     elif where == "system":
         ok = windows.run_steps(f"Removing {title} from the system.", [["rpm-ostree", "uninstall", entry["package"]]])
         if not ok and entry.get("nevra"):

@@ -5,7 +5,7 @@ import tarfile
 
 from evenkeel_os_ui import GUI, ask, choose, notify, say, zenity
 from evenkeel_os_packages import (
-    app_list, boxes, common, flathub, installed, printers, reading, sources, targets, update_notes,
+    app_list, boxes, common, flathub, installed, printers, reading, sources, targets, update_notes, vpn,
 )
 
 
@@ -56,6 +56,10 @@ def install(path):
             say(f"This {title} file is for a different kind of computer. Download the version for this one "
                 f"(often called {'amd64 or x86_64' if machine == 'x86_64' else machine}).", "warning")
         return 1
+
+    company = vpn.for_package(pkg.name)
+    if company:         # a VPN: from its company's own download source, so it keeps updating
+        return vpn.offer_for_file(company, pkg)
 
     if info["needs_root"]:
         say(f"{title} can't be installed. It needs full control of the system to run, which downloaded apps don't "
@@ -137,7 +141,7 @@ def install(path):
                f"with Remove Apps.",
                ok="Add to the system") != "ok":
             return 1
-        return targets.install_system(pkg, title, printer)
+        return targets.install_system(pkg, title, printer, services=info["turns_on"])
 
     box = common.BOXES[pkg.kind]
     new_box = not boxes.box_exists(box["name"])
@@ -155,7 +159,7 @@ def install(path):
                      f"restart.\n\nOr {setup}: puts it in a separate box. It's easier to remove, but those parts won't "
                      f"work.{first}{rule}", ok="Add to the system", extra=setup)
         if answer == "ok":
-            return targets.install_system(pkg, title)
+            return targets.install_system(pkg, title, services=info["turns_on"])
         if answer != "extra":
             return 1
     elif info["notes"]:

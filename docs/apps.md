@@ -60,6 +60,10 @@ Fedora**, which System Update keeps current. **Use the file** never updates.
 Added apps work after a restart: **Restart now** or **Later**. At the next login
 a message says whether it's ready.
 
+If an app added from an .rpm file has an installer that turns on a background service, at login it asks **Turn it on**
+(the password, once). Only services that belong to that app, and that its own installer asks for, are turned on. See
+[VPNs](vpn.md#after-the-restart).
+
 ### Updates
 
 | Updates line | Means |
@@ -68,6 +72,13 @@ a message says whether it's ready.
 | Updates: automatic. | From Bazaar (Flathub) |
 | Updates: checked once a day, straight from ArtCraft. | An ArtCraft app; checked at login, signature checked |
 | Updates: none, because it came from a file. To update, install a newer file. | From a plain file |
+
+Apps added to the system by name (VPNs, apps added from Fedora, and media codecs) are also checked once a day
+(`evenkeel-os-app-updates.timer`) in their own download sources. If a newer version is there, it runs the system
+upgrade, and the new version starts at the next restart. It only runs while automatic updates are on, not during the
+3-day pause after **Undo the last update**, and it skips if System Update is running or a new version is already
+waiting for a restart. See
+[VPNs](vpn.md#updates).
 
 Before installing, **Use the file**, **Install the file too** and **Install it
 here too** say the same. The package's install script is read first, so
@@ -95,6 +106,9 @@ the system (with where to look instead).
 A file with only a download source (RPM Fusion's setup file,
 `packages-microsoft-prod.deb`) offers **Add it**, then lists the apps it has. The
 one you pick updates from that source.
+
+VPN setup files (Proton's or NordVPN's) are handled by **Get a VPN** instead. See
+[VPNs](vpn.md#from-a-downloaded-file-or-a-windows-installer).
 
 ### Printer drivers
 
@@ -161,6 +175,7 @@ wins:
 | What the file is | What's offered |
 | --- | --- |
 | Zoom | Opens Zoom's web version, in Chrome (see [Zoom meetings](zoom.md)) |
+| Mullvad VPN, Proton VPN, IVPN or NordVPN | That VPN's Linux version, from the company's own source (see [VPNs](vpn.md)) |
 | A program whose maker has a Linux version | That version: from Flathub, or else from Fedora or Ubuntu into the Fedora box (or Ubuntu box) |
 | An Adobe program | The matching ArtCraft app (Photoshop: PhotoCraft, Illustrator: VectorCraft, Premiere: FilmCraft, Acrobat: PdfCraft, and so on) |
 | A known program with no Linux version (Office, iTunes, Skype, MSN Messenger, Publisher) | The Linux app picked for it, from the replacements list |

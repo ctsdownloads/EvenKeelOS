@@ -1,0 +1,225 @@
+#!/usr/bin/python3 -I
+"""Add or remove a VPN app from its company's own download source, as root through polkit.
+
+  evenkeel-os-vpn install VPN        add its download source to the system, then the app (needs a restart)
+  evenkeel-os-vpn turn-on VPN        after that restart: turn on its background services
+  evenkeel-os-vpn remove VPN         turn off its services, then remove the app and its download source
+  evenkeel-os-vpn services PACKAGE   turn on the services an app added from a file asks its installer for
+"""
+import grp
+import json
+import os
+import platform
+import pwd
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+LIST = Path("/usr/share/evenkeel-os/vpns.json")
+KEYS = Path("/usr/share/evenkeel-os/vpn-keys")
+REPOS = Path("/etc/yum.repos.d")
+UNITS = Path("/etc/systemd/system")
+GROUPS = Path("/etc/group")
+PKG = re.compile(r"^[A-Za-z0-9][A-Za-z0-9.+_-]{0,127}$")
+UNIT_DIRS = ("/usr/lib/systemd/system/", "/etc/systemd/system/")
+UNIT = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._@-]{0,127}\.(service|socket|timer|path)$")
+
+
+def fail(msg, code=1):
+    print(msg)
+    sys.exit(code)
+
+
+def load():
+    with open(LIST) as f:
+        return json.load(f)
+
+
+def key_for(v):
+    """The pinned signing key for this Fedora version, or None (Proton has one per Fedora version)."""
+    return v["keys"].get(platform.freedesktop_os_release()["VERSION_ID"]) or v["keys"].get("any")
+
+
+def marker(name):
+    return f"# EvenKeelOS: {name}\n"
+
+
+def repo_file(name):
+    return REPOS / f"evenkeel-os-vpn-{name}.repo"
+
+
+def repo_text(name, v, key):
+    out = [marker(name) + f"# {v['maker']}'s own download source, added by Get a VPN. Remove it with Remove Apps.\n"]
+    for r in v["repos"]:
+        out.append(f"[evenkeel-os-vpn-{r['id']}]\nname={v['title']}\nbaseurl={r['baseurl']}\nenabled=1\n"
+                   f"gpgcheck=1\nrepo_gpgcheck={1 if r.get('repo_gpgcheck') else 0}\n"
+                   f"gpgkey=file://{KEYS / v.get('key_name', key['file'])}\n")
+    return "\n".join(out)
+
+
+def ours(path, name):
+    try:
+        with open(path, encoding="utf-8", errors="replace") as f:
+            return f.readline() == marker(name)
+    except OSError:
+        return False
+
+
+def requested(booted=True):
+    """Package names added to the running system (or, booted=False, to the version that starts next)."""
+    r = subprocess.run(["rpm-ostree", "status", "--json", *(["--booted"] if booted else [])], capture_output=True,
+                       text=True)
+    try:
+        d = json.loads(r.stdout)["deployments"][0]
+    except (ValueError, KeyError, IndexError):
+        fail("Couldn't read the system's state.")
+    names = set(d.get("requested-packages", []))
+    for nevra in d.get("requested-local-packages", []):
+        names.add(re.sub(r"-[^-]+-[^-]+$", "", nevra))
+    return names
+
+
+def installed(package):
+    return subprocess.run(["rpm", "-q", package], capture_output=True).returncode == 0
+
+
+def systemctl(*args):
+    return subprocess.run(["/usr/bin/systemctl", *args]).returncode == 0
+
+
+def install(name, v):
+    key = key_for(v)
+    if not key:
+        fail(f"{v['title']} has no signing key for Fedora {platform.freedesktop_os_release()['VERSION_ID']} yet.", 3)
+    path = repo_file(name)
+    if path.exists() and not ours(path, name):
+        fail(f"{path} already exists and belongs to something else.")
+    tmp = path.with_name(f".{path.name}.tmp")
+    tmp.write_text(repo_text(name, v, key))
+    os.chmod(tmp, 0o644)
+    tmp.replace(path)
+    print(f"Added {path}", flush=True)
+    if subprocess.run(["rpm-ostree", "install", "--idempotent", *v["packages"]]).returncode != 0:
+        path.unlink(missing_ok=True)        # nothing was added, so its download source goes too
+        fail(f"{v['title']} was not added, so its download source was taken out again.")
+
+
+def turn_on(name, v):
+    if not installed(v["packages"][0]):
+        fail(f"{v['title']} isn't installed yet. Restart first.")
+    # IVPN's installer writes its service file at install time; if this system dropped it, it comes from here.
+    for unit, src in v.get("copy_units", {}).items():
+        if any(Path(d, unit).exists() for d in UNIT_DIRS):
+            continue
+        if subprocess.run(["rpm", "-qf", src], capture_output=True).returncode != 0:
+            fail(f"{src} doesn't belong to an installed package.")
+        (UNITS / unit).write_text(marker(name) + Path(src).read_text())
+        os.chmod(UNITS / unit, 0o644)
+    systemctl("daemon-reload")
+    units = [u for u in v["enable"] if any(Path(d, u).exists() for d in UNIT_DIRS)]
+    if units != v["enable"]:
+        fail(f"{v['title']} is missing parts of its background service: "
+             f"{', '.join(sorted(set(v['enable']) - set(units)))}")
+    for d in v.get("folders", []):     # made by its installer in /var, which this system leaves out
+        try:
+            gid = grp.getgrnam(d["group"]).gr_gid
+        except KeyError:
+            gid = 0
+        os.makedirs(d["path"], exist_ok=True)
+        os.chown(d["path"], 0, gid)
+        os.chmod(d["path"], int(d["mode"], 8))
+    ok = systemctl("enable", *units) and all(systemctl("start", u) for u in v.get("start", []))
+    if v.get("group"):
+        ok = add_to_group(v["group"]) and ok
+    if not ok:
+        fail(f"{v['title']}'s background service didn't turn on.")
+
+
+def add_to_group(group):
+    """The person who asked joins the app's group. The app's group lives in the system image, where the
+    group-changing tools can't see it, so it is copied to /etc/group first."""
+    try:
+        user = pwd.getpwuid(int(os.environ["PKEXEC_UID"])).pw_name
+        g = grp.getgrnam(group)
+    except (KeyError, ValueError):
+        print(f"No group {group}, or no user to add to it.")
+        return False
+    with open(GROUPS) as f:
+        here = any(line.split(":", 1)[0] == group for line in f)
+    if not here:
+        ends = GROUPS.read_bytes().endswith(b"\n")
+        with open(GROUPS, "a") as f:
+            f.write(("" if ends else "\n") + f"{group}:x:{g.gr_gid}:\n")
+        subprocess.run(["/usr/sbin/grpconv"], check=False)
+    return subprocess.run(["/usr/sbin/usermod", "-aG", group, user]).returncode == 0
+
+
+def remove(name, v):
+    units = [u for u in v["enable"] if any(Path(d, u).exists() for d in UNIT_DIRS)]
+    if units:
+        systemctl("disable", "--now", *units)
+    for unit in v.get("copy_units", {}):
+        if ours(UNITS / unit, name):
+            (UNITS / unit).unlink()
+    systemctl("daemon-reload")
+    # the version that starts next: an app installed and removed before a restart is only there
+    added = [p for p in v["packages"] if p in requested(booted=False)]
+    if added and subprocess.run(["rpm-ostree", "uninstall", *added]).returncode != 0:
+        fail(f"{v['title']} was not removed.")
+    if ours(repo_file(name), name):
+        repo_file(name).unlink()
+        print(f"Removed {repo_file(name)}")
+
+
+def asked_for(script, units):
+    """(enable, start): the package's own services its install script turns on, leaving out per-user ones."""
+    enable, start = [], []
+    for line in script.splitlines():
+        line = line.strip()
+        if line.startswith("#") or not re.search(r"\bsystemctl\b", line) or re.search(r"--user\b|--global\b", line):
+            continue
+        words = re.findall(r"[A-Za-z0-9._@/-]+", line)
+        for u in units:
+            bare = u.endswith(".service") and u[:-8]      # 'systemctl enable foo' means foo.service only
+            if not any(w == u or w.endswith("/" + u) or (bare and w == bare) for w in words):
+                continue
+            if re.search(r"\b(enable|reenable)\b", line) and u not in enable:
+                enable.append(u)
+            if re.search(r"\b(start|restart)\b", line) and u not in start:
+                start.append(u)
+    return enable, start
+
+
+def services(package):
+    if package not in requested() or not installed(package):
+        fail(f"{package} wasn't added to the system.")
+    files = subprocess.run(["rpm", "-ql", package], capture_output=True, text=True).stdout.split()
+    units = [os.path.basename(f) for f in files if f.startswith(UNIT_DIRS) and UNIT.match(os.path.basename(f))]
+    script = subprocess.run(["rpm", "-q", "--scripts", package], capture_output=True, text=True).stdout
+    enable, start = asked_for(script, units)
+    if not enable:
+        print(f"{package} asks for no background services.")
+        return
+    systemctl("daemon-reload")
+    if not (systemctl("enable", *enable) and all(systemctl("start", u) for u in start if u in enable)):
+        fail(f"{package}'s background service didn't turn on.")
+
+
+def main(argv):
+    if os.geteuid() != 0:
+        fail("This helper runs through polkit (pkexec).")
+    if len(argv) == 3 and argv[1] == "services" and PKG.match(argv[2]):
+        services(argv[2])
+        return 0
+    if len(argv) == 3 and argv[1] in ("install", "turn-on", "remove"):
+        vpns = load()
+        if argv[2] in vpns:
+            {"install": install, "turn-on": turn_on, "remove": remove}[argv[1]](argv[2], vpns[argv[2]])
+            return 0
+    print(__doc__.split("\n\n")[1])
+    return 2
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))

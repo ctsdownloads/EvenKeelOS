@@ -10,6 +10,7 @@
   evenkeel-os-tools undo-update     go back to the system version from before the last update
   evenkeel-os-tools problem-details save the computer's recent error messages to a file, for your helper
   evenkeel-os-tools layout          switch between the standard and the Windows-style desktop layout
+  evenkeel-os-tools vpn             get a VPN app (Mullvad, Proton, IVPN or NordVPN) that keeps updating
   evenkeel-os-tools test-rollback   check that the computer goes back by itself when a new version won't start
   evenkeel-os-tools rolled-back --at-login   say once that the computer went back by itself
   evenkeel-os-tools setup           the setup checklist: media codecs, disk unlock, getting apps
@@ -751,6 +752,10 @@ def rolled_back_note():
     return 0
 
 
+def get_vpn():
+    return subprocess.run(["/usr/bin/evenkeel-os-packages", "vpn"]).returncode
+
+
 TOOLS = [("firmware", "Update firmware", "Updates for the computer's own parts, like the BIOS", firmware),
          ("disk-unlock", "Unlock disk automatically", "Skip the disk password at startup", disk_unlock),
          ("free-space", "Free up disk space", "Remove things the computer no longer needs", free_space),
@@ -762,6 +767,7 @@ TOOLS = [("firmware", "Update firmware", "Updates for the computer's own parts, 
          ("setup", "Setup checklist", "Media codecs, disk unlock and getting apps, one at a time",
           setup_checklist),
          ("layout", "Desktop layout", "Windows-style bottom bar or the standard top bar", layout),
+         ("vpn", "Get a VPN", "Mullvad, Proton, IVPN or NordVPN, kept up to date", get_vpn),
          ("test-rollback", "Test automatic rollback",
           "Check that the computer goes back by itself when a new version won't start", test_rollback)]
 
