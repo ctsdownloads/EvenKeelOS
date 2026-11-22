@@ -1,6 +1,7 @@
 """The System Tools window: every EvenKeelOS tool, on pages in one window."""
 import os
 import shutil
+import socket
 import subprocess
 import threading
 from pathlib import Path
@@ -10,6 +11,7 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk  # noqa: E402
 import evenkeel_os_network as net  # noqa: E402
+import evenkeel_os_sharing as sharing  # noqa: E402
 from evenkeel_os_dialogs import Dialogs  # noqa: E402
 from evenkeel_os_packages import zoom  # noqa: E402
 
@@ -36,6 +38,7 @@ PAGES = [("overview", "Overview", "go-home-symbolic"),
          ("updates", "Updates", "software-update-available-symbolic"),
          ("apps", "Apps", "view-app-grid-symbolic"),
          ("network", "Network safety", "security-high-symbolic"),
+         ("sharing", "Shared folders", "folder-remote-symbolic"),
          ("disk", "Disk and startup", "drive-harddisk-symbolic"),
          ("yours", "Make it yours", "applications-graphics-symbolic"),
          ("help", "Get help", "help-about-symbolic")]
@@ -125,6 +128,11 @@ def tool_list():
              "security-high-symbolic", "network",
              "nmcli connection modify NETWORK connection.zone evenkeel-home (or evenkeel-work, evenkeel-public)",
              "firewall wifi wi-fi wired zone home work public ssh printer ports"),
+        Tool("sharing", "Shared folders", "Shared folders",
+             "Let computers on your Home network open folders you pick, with a password",
+             "folder-remote-symbolic", "sharing",
+             "pkexec /usr/libexec/evenkeel-os-tools-admin sharing add FOLDER ro (or rw)",
+             "samba smb share sharing windows mac network folder files nas"),
         Tool("disk", "Disk space", "Free up disk space", "Remove old system versions and unused app parts",
              "user-trash-symbolic", t + ["free-space"], "evenkeel-os-tools free-space", "clean storage"),
         Tool("disk", "Starting the computer", "Unlock disk automatically",
@@ -235,8 +243,10 @@ class Window(Adw.ApplicationWindow):
             page.add(self.layout_picker())
         if key == "network":
             self.network_page(page)
+        if key == "sharing":
+            self.sharing_page(page)
         for tool in self.tools:
-            if tool.page != key or tool.run in ("layout", "network"):     # these pages are the tool; search finds it
+            if tool.page != key or tool.run in ("layout", "network", "sharing"):    # these pages are the tool
                 continue
             if tool.group not in groups:
                 groups[tool.group] = Adw.PreferencesGroup(title=tool.group)
@@ -456,6 +466,200 @@ class Window(Adw.ApplicationWindow):
             self.toast("Nothing changed.")
             self.refresh()
 
+    def sharing_page(self, page):
+        """Whether sharing is on and working here, the sharing password, and the folders shared."""
+        box = Gtk.Box(spacing=20, css_classes=["ek-banner"])
+        box.append(Gtk.Image(icon_name="folder-remote-symbolic", pixel_size=40))
+        text = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6, hexpand=True, valign=Gtk.Align.CENTER)
+        self.share_title = Gtk.Label(xalign=0, wrap=True, css_classes=["title-2"], label="Checking sharing…")
+        self.share_sub = Gtk.Label(xalign=0, wrap=True, css_classes=["ek-sub"])
+        text.append(self.share_title)
+        text.append(self.share_sub)
+        box.append(text)
+        self.share_banner = box
+        g = Adw.PreferencesGroup()
+        g.add(box)
+        page.add(g)
+        g = Adw.PreferencesGroup(title="Sharing", description="For everyone on this computer, on Home networks "
+                                 "only, never on Work or a Public place. Changes ask for an administrator password.")
+        self.share_switch = Adw.SwitchRow(title="Share folders on Home networks", sensitive=False)
+        self.share_switch.connect("notify::active", self.on_share_switch)
+        g.add(self.share_switch)
+        self.share_pw = Adw.ActionRow(title="Sharing password")
+        self.share_pw_button = Gtk.Button(label="Set", valign=Gtk.Align.CENTER)
+        self.share_pw_button.connect("clicked", lambda *_: self.ask_share_password(False))
+        self.share_pw.add_suffix(self.share_pw_button)
+        g.add(self.share_pw)
+        page.add(g)
+        self.share_list = Adw.PreferencesGroup(title="Folders", description="Other computers open these as you, "
+                                               "so whatever they save belongs to you.")
+        add = Gtk.Button(label="Add a folder", valign=Gtk.Align.CENTER)
+        add.connect("clicked", lambda *_: self.pick_share_folder())
+        self.share_list.set_header_suffix(add)
+        page.add(self.share_list)
+        self.share_rows = []
+        self.share_state = sharing.load()
+        self.share_updating = False
+
+    def show_sharing(self, state, nets, ready, running):
+        self.share_updating = True
+        self.share_state = state
+        user = GLib.get_user_name()
+        has_pw = user in state["passwords"]
+        home = [n for n in nets if n.device and n.zone == net.HOME]
+        shared = any(f["owner"] in state["passwords"] for f in state["folders"])
+        title, sub, warn = self.sharing_banner(state, nets, ready, running, home, shared)
+        self.share_title.set_label(title)
+        self.share_sub.set_label(sub)
+        self.share_banner.remove_css_class("ek-warn")
+        if warn:
+            self.share_banner.add_css_class("ek-warn")
+        self.share_switch.set_sensitive(ready or state["on"])      # off works even where smb.conf was replaced
+        self.share_switch.set_active(state["on"])
+        self.share_pw.set_subtitle(f"Other computers ask for your user name, {user}, and this password. It isn't "
+                                   "your login password." + ("" if has_pw else " Not set yet."))
+        self.share_pw_button.set_label("Change" if has_pw else "Set")
+        for row in self.share_rows:
+            self.share_list.remove(row)
+        self.share_rows = []
+        home_dir = GLib.get_home_dir()
+        for f in (f for f in state["folders"] if f["owner"] == user):
+            where = "~" + f["path"][len(home_dir):] if f["path"].startswith(home_dir + "/") else f["path"]
+            row = Adw.ActionRow(title=f["name"], subtitle=where if os.path.isdir(f["path"]) else
+                                f"{where}. Folder not found: it was moved or deleted.")
+            mode = Gtk.DropDown.new_from_strings(list(sharing.MODES.values()))
+            mode.set_valign(Gtk.Align.CENTER)
+            mode.set_selected(list(sharing.MODES).index(f["mode"]))
+            mode.connect("notify::selected", self.on_share_mode, f)
+            row.add_suffix(mode)
+            remove = Gtk.Button(icon_name="user-trash-symbolic", tooltip_text="Stop sharing it",
+                                valign=Gtk.Align.CENTER, css_classes=["flat"])
+            remove.update_property([Gtk.AccessibleProperty.LABEL], [f"Stop sharing {f['name']}"])
+            remove.connect("clicked", lambda *_, f=f: self.share_admin(["sharing", "remove", f["path"]],
+                                                                       f"{f['name']} isn't shared now."))
+            row.add_suffix(remove)
+            self.share_list.add(row)
+            self.share_rows.append(row)
+        if not self.share_rows:
+            row = Adw.ActionRow(title="No folders shared yet", subtitle="Add a folder from your home folder.")
+            self.share_list.add(row)
+            self.share_rows.append(row)
+        self.share_updating = False
+
+    @staticmethod
+    def sharing_banner(state, nets, ready, running, home, shared):
+        """The banner's title, its line, and whether it needs attention."""
+        if not ready:
+            return ("Shared folders can't start", f"{sharing.SMB_CONF} was changed on this computer. Put back the "
+                    "EvenKeelOS version to use Shared folders.", True)
+        if not state["on"]:
+            return ("Sharing is off", "Turn it on below, and computers on your Home network can open the folders "
+                    "you pick.", False)
+        if not home:
+            on = next((n for n in nets if n.device), None)
+            place = {net.PUBLIC: "a Public place", net.WORK: "a Work network"}.get(on.zone or net.PUBLIC,
+                                                                              "not a Home network") if on else ""
+            return ("Sharing waits for a Home network", (f"{on.name} is {place}, so nothing is shared here. " if on
+                    else "Not connected. ") + "Sharing starts by itself on a Home network.", False)
+        if not shared:
+            return ("Nothing is shared yet", "Add a folder and set the sharing password below.", False)
+        if not running:
+            return ("Sharing didn't start", "Turn sharing off and on again. If this stays, use Save problem details "
+                    "in Get help.", True)
+        wired = any(n.kind == "Wired" for n in home)
+        return (f"Sharing on {', '.join(n.name for n in home)}",
+                f"Other computers find this one as {socket.gethostname()}: in Files under Other Locations on Linux, "
+                "in Finder under Network on a Mac, and under Network in File Explorer on Windows." +
+                (" A wired network is set to Home, so this happens on any cable you plug in." if wired else ""),
+                wired)
+
+    def on_share_switch(self, row, _param):
+        if self.share_updating:
+            return
+        if row.get_active() and GLib.get_user_name() not in self.share_state["passwords"]:
+            self.share_updating = True
+            row.set_active(False)
+            self.share_updating = False
+            self.ask_share_password(True)
+            return
+        self.share_admin(["sharing", "on" if row.get_active() else "off"],
+                         "Sharing is on." if row.get_active() else "Sharing is off.")
+
+    def on_share_mode(self, drop, _param, folder):
+        if self.share_updating:
+            return
+        mode = list(sharing.MODES)[drop.get_selected()]
+        self.share_admin(["sharing", "mode", folder["path"], mode], f"{folder['name']}: {sharing.MODES[mode]}.")
+
+    def pick_share_folder(self):
+        dialog = Gtk.FileDialog(title="Pick a folder to share", initial_folder=Gio.File.new_for_path(
+            GLib.get_home_dir()))
+
+        def picked(d, result):
+            try:
+                path = d.select_folder_finish(result).get_path()
+            except GLib.Error:
+                return
+            if path:
+                self.share_admin(["sharing", "add", path, "ro"],
+                                 f"{os.path.basename(path)} is shared, read only. Change it in the list.")
+        dialog.select_folder(self, None, picked)
+
+    def ask_share_password(self, then_on):
+        user = GLib.get_user_name()
+        d = Adw.AlertDialog(heading="Sharing password",
+                            body=f"Other computers ask for your user name, {user}, and this password. Use at least "
+                                 f"{sharing.MIN_PASSWORD} characters. Your login password doesn't change.")
+        rows = Gtk.ListBox(css_classes=["boxed-list"], selection_mode=Gtk.SelectionMode.NONE)
+        first, again = Adw.PasswordEntryRow(title="Password"), Adw.PasswordEntryRow(title="Type it again")
+        rows.append(first)
+        rows.append(again)
+        d.set_extra_child(rows)
+        d.add_response("cancel", "Cancel")
+        d.add_response("save", "Save")
+        d.set_response_appearance("save", Adw.ResponseAppearance.SUGGESTED)
+        d.set_response_enabled("save", False)
+
+        def typed(*_):
+            pw = first.get_text()
+            d.set_response_enabled("save", pw == again.get_text() and
+                                   sharing.MIN_PASSWORD <= len(pw) <= 127 and sharing.clean(pw))
+        first.connect("changed", typed)
+        again.connect("changed", typed)
+
+        def answered(_dialog, response):
+            if response != "save":
+                return
+            after = (lambda: self.share_admin(["sharing", "on"], "Sharing is on.")) if then_on else None
+            self.share_admin(["sharing", "password"], "Sharing password saved.", first.get_text(), after)
+        d.connect("response", answered)
+        d.present(self)
+
+    def share_admin(self, args, done_text, text=None, after=None):
+        """A Shared folders change as administrator; the helper's own words when it refuses."""
+        flags = Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_SILENCE
+        if text is not None:
+            flags |= Gio.SubprocessFlags.STDIN_PIPE
+        try:
+            proc = Gio.Subprocess.new(ADMIN + args, flags)
+        except GLib.Error:
+            self.toast("Nothing changed.")
+            return
+
+        def finished(p, result):
+            try:
+                _ok, out, _err = p.communicate_utf8_finish(result)
+            except GLib.Error:
+                out = ""
+            rc = p.get_exit_status() if p.get_if_exited() else 1
+            lines = (out or "").strip().splitlines()
+            self.toast(done_text if rc == 0 else lines[-1] if rc in (1, 3) and lines else "Nothing changed.")
+            if rc == 0 and after:
+                after()
+            self.refresh()
+            GLib.timeout_add_seconds(4, self.refresh)        # Samba starts in the background: look again
+        proc.communicate_utf8_async(text, None, finished)
+
     def terminal_list(self):
         g = Adw.PreferencesGroup(title="Prefer the terminal?", description="Every tool here has a command. The copy "
                                  "button puts it on the clipboard, to paste in a terminal.")
@@ -482,12 +686,15 @@ class Window(Adw.ApplicationWindow):
     def refresh(self, *_):
         threading.Thread(target=self.read_state, daemon=True).start()
         threading.Thread(target=self.read_network, daemon=True).start()
+        return False
 
     def read_network(self):
         services = net.let_in(net.HOME)
         if services is not None:      # a switch is on only when the service runs and the firewall lets it in
             services = {s for s in self.net_switches if s in services and net.running(s)}
-        GLib.idle_add(self.show_network, net.networks(), net.default_zone(), services)
+        nets = net.networks()
+        GLib.idle_add(self.show_network, nets, net.default_zone(), services)
+        GLib.idle_add(self.show_sharing, sharing.load(), nets, sharing.set_up(), sharing.running())
 
     def read_state(self):
         on = self.t.updates_on()
@@ -558,8 +765,8 @@ class Window(Adw.ApplicationWindow):
             self.zoom_choice()
         elif tool.run == "layout":
             self.show("yours")
-        elif tool.run == "network":
-            self.show("network")
+        elif tool.run in ("network", "sharing"):
+            self.show(tool.run)
         elif tool.run == "codecs-remove":
             self.remove_codecs()
         elif tool.run[0] in OURS:

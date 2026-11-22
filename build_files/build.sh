@@ -143,6 +143,24 @@ python3 -I /ctx/check-network.py
 for f in /usr/bin/firewall-cmd /usr/bin/cupsctl /usr/lib/systemd/system/sshd.service; do
   [ -e "$f" ] || { echo "ERROR: Network safety needs $f"; exit 1; }
 done
+# Shared folders: Samba serves only the folders picked in System Tools, on Home networks only; Macs and Linux find
+# it through Avahi, Windows through wsdd. Off until turned on there.
+dnf5 -y install samba avahi wsdd policycoreutils
+install -Dm644 /ctx/samba/smb.conf /etc/samba/smb.conf
+install -Dm644 /dev/null /etc/samba/evenkeel-shares.conf
+install -Dm644 /ctx/firewall/evenkeel-sharing.xml /usr/lib/firewalld/services/evenkeel-sharing.xml
+install -Dm644 /ctx/samba/wsdd-evenkeel-os.conf /usr/lib/systemd/system/wsdd.service.d/50-evenkeel-os.conf
+install -Dm755 /ctx/samba/50-evenkeel-os-sharing /usr/lib/NetworkManager/dispatcher.d/50-evenkeel-os-sharing
+install -Dm644 /ctx/evenkeel_os_sharing.py /usr/lib/evenkeel-os/evenkeel_os_sharing.py
+for u in smb nmb wsdd; do
+  state=$(systemctl is-enabled "$u.service" 2>/dev/null || true)
+  [ "$state" = disabled ] || { echo "ERROR: $u.service must start off, not $state"; exit 1; }
+done
+for f in /usr/bin/smbpasswd /usr/bin/smbcontrol /usr/bin/testparm /usr/sbin/setsebool /usr/sbin/avahi-daemon \
+         /usr/lib/systemd/system/smb.service /usr/lib/systemd/system/wsdd.service; do
+  [ -e "$f" ] || { echo "ERROR: Shared folders needs $f"; exit 1; }
+done
+python3 -I /ctx/check-sharing.py
 # GNOME never runs autostart entries that name a startup phase; fail if ours do.
 if grep -l '^X-GNOME-Autostart-Phase=' /etc/xdg/autostart/evenkeel-os-*.desktop 2>/dev/null; then
   echo "ERROR: the autostart entries above name a GNOME startup phase, so they would never run at login"; exit 1

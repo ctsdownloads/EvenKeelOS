@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Shared folders</short>
+  <description>System Tools, Shared folders: Windows-style file sharing, and Windows finding it.</description>
+  <port protocol="tcp" port="445"/>
+  <include service="wsdd"/>
+</service>

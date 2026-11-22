@@ -10,13 +10,25 @@
   evenkeel-os-tools-admin test-rollback clear     take the test marker off the version running now
   evenkeel-os-tools-admin firewall SERVICE on|off  SERVICE: ssh, ipp; on Home and Work networks only, never Public
   evenkeel-os-tools-admin firewall default        a network with no place set is a Public place
+  evenkeel-os-tools-admin sharing on|off          Shared folders, on Home networks only (exit 3: no password yet)
+  evenkeel-os-tools-admin sharing add FOLDER ro|rw
+  evenkeel-os-tools-admin sharing mode FOLDER ro|rw
+  evenkeel-os-tools-admin sharing remove FOLDER
+  evenkeel-os-tools-admin sharing password        the sharing password on standard input
+  evenkeel-os-tools-admin sharing sync            run it if a Home network is connected, stop it if not
 """
+import fcntl
 import json
 import os
+import pwd
 import re
 import subprocess
 import sys
 from pathlib import Path
+
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_network as net  # noqa: E402
+import evenkeel_os_sharing as sharing  # noqa: E402
 
 DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
 # Switched on from /usr (build.sh), so deleting /etc can't switch it off; systemctl is-enabled only reads /etc.
@@ -192,6 +204,161 @@ def firewall_default():
         fail(f"The firewall didn't take the change: {r.stderr.strip()}")
 
 
+USER = re.compile(r"^[a-z_][a-z0-9_.-]{0,31}$")
+PEOPLE = range(1000, 60000)                    # people's accounts; root, system accounts and nobody can't share
+WSDD_OPTIONS = Path("/run/evenkeel-os/wsdd")   # also the sign that Shared folders started Samba
+IFACE = re.compile(r"^[A-Za-z0-9_.-]{1,15}$")
+SHARING_LOCK = Path("/run/evenkeel-os/sharing.lock")
+
+
+def caller():
+    """The person who asked, through pkexec."""
+    try:
+        user = pwd.getpwuid(int(os.environ.get("PKEXEC_UID", "")))
+    except (ValueError, KeyError):
+        fail("Run this through pkexec, as yourself.")
+    if user.pw_uid not in PEOPLE or not USER.match(user.pw_name):
+        fail("This account can't share folders.")
+    return user.pw_name
+
+
+def save_sharing(state):
+    tmp = sharing.STATE.with_suffix(".tmp")
+    tmp.parent.mkdir(parents=True, exist_ok=True)
+    tmp.write_text(json.dumps(state, indent=1) + "\n")
+    tmp.chmod(0o644)
+    os.replace(tmp, sharing.STATE)
+
+
+def systemctl(*args):
+    return subprocess.run(["/usr/bin/systemctl", *args], capture_output=True, text=True).returncode == 0
+
+
+def home_devices():
+    return sorted({n.device for n in net.networks() if n.device and n.zone == net.HOME and IFACE.match(n.device)})
+
+
+def sharing_stop():
+    """Stop what Shared folders started; a Samba set up by hand (not started here) is left alone."""
+    if WSDD_OPTIONS.exists():
+        systemctl("stop", "--no-block", "wsdd.service", "smb.service")
+        subprocess.run(["/usr/sbin/setsebool", "samba_enable_home_dirs", "off"], capture_output=True)
+        WSDD_OPTIONS.unlink()
+
+
+def sharing_sync(close=None):
+    """Samba gets the folder list and runs only while a Home network is connected; Windows finds it only there.
+    close: a share taken out or changed, so connections already open to it are dropped."""
+    if not sharing.set_up():          # smb.conf was replaced: stop only what Shared folders started
+        sharing_stop()
+        return
+    state = sharing.load()
+    home = home_devices()
+    shared = any(f["owner"] in state["passwords"] for f in state["folders"])
+    sharing.SHARES.write_text(sharing.shares_conf(state))
+    sharing.SHARES.chmod(0o644)
+    if not (state["on"] and shared and home):
+        sharing_stop()
+        return
+    options = "OPTIONS=" + " ".join(f"-i {i}" for i in home) + "\n"
+    moved = not WSDD_OPTIONS.exists() or WSDD_OPTIONS.read_text() != options
+    WSDD_OPTIONS.parent.mkdir(parents=True, exist_ok=True)
+    WSDD_OPTIONS.write_text(options)
+    subprocess.run(["/usr/sbin/setsebool", "samba_enable_home_dirs", "on"], capture_output=True)   # until restart
+    systemctl("start", "--no-block", "avahi-daemon.service")
+    if sharing.running():
+        subprocess.run(["/usr/bin/smbcontrol", "smbd", "reload-config"], capture_output=True)
+        if close:
+            subprocess.run(["/usr/bin/smbcontrol", "smbd", "close-share", close], capture_output=True)
+    else:                              # first start, or it stopped: start it again
+        systemctl("start", "--no-block", "smb.service")
+    systemctl("restart" if moved else "start", "--no-block", "wsdd.service")      # wsdd on the Home network only
+
+
+def sharing_switch(want):
+    """On: Home networks let sharing in (port 445). Off: taken back out, Samba stopped. For the whole computer."""
+    state = sharing.load()
+    on = want == "on"
+    if on and not sharing.set_up():
+        fail(f"{sharing.SMB_CONF} was changed on this computer and no longer reads the shared folders list.")
+    if on and caller() not in state["passwords"]:
+        fail("Set a sharing password first.", 3)
+    flag = f"--{'add' if on else 'remove'}-service={sharing.FIREWALL_SERVICE}"
+    r = subprocess.run(["/usr/bin/firewall-cmd", "--permanent", f"--zone={net.HOME}", flag],
+                       capture_output=True, text=True)
+    if r.returncode != 0 and "ALREADY_ENABLED" not in r.stderr and "NOT_ENABLED" not in r.stderr:
+        fail(f"The firewall didn't take the change: {r.stderr.strip()}")
+    if subprocess.run(["/usr/bin/firewall-cmd", "--reload"], capture_output=True).returncode != 0:
+        fail("The firewall didn't reload.")
+    state["on"] = on
+    save_sharing(state)
+    if on:
+        sharing_sync()
+    else:                              # off works even where smb.conf was replaced
+        sharing_stop()
+
+
+def real_folder(path, user):
+    real = os.path.realpath(path) if path.startswith("/") else ""
+    problem = sharing.folder_problem(real, user) if real else "That folder wasn't found."
+    if problem:
+        fail(problem, 3)
+    return real
+
+
+def sharing_folder(verb, path, mode=None):
+    user = caller()
+    state = sharing.load()
+    real = real_folder(path, user) if verb == "add" else path      # remove and mode take the path as listed
+    mine = next((f for f in state["folders"] if f["path"] == real and f["owner"] == user), None)
+    if verb == "add":
+        if mine:
+            fail(f"That folder is already shared, as {mine['name']}.", 3)
+        name = sharing.share_name(real, [f["name"] for f in state["folders"]])
+        state["folders"].append({"path": real, "owner": user, "mode": mode, "name": name})
+    elif mine is None:
+        fail("That folder isn't shared.", 3)
+    elif verb == "mode":
+        mine["mode"] = mode
+    else:
+        state["folders"].remove(mine)
+    save_sharing(state)
+    sharing_sync(close=None if verb == "add" else mine["name"])
+
+
+def sharing_password():
+    user = caller()
+    pw = sys.stdin.read(1024)
+    pw = pw[:-1] if pw.endswith("\n") else pw          # echo adds one
+    if not sharing.clean(pw) or not sharing.MIN_PASSWORD <= len(pw) <= 127:
+        fail(f"Use {sharing.MIN_PASSWORD} to 127 characters, on one line.", 3)
+    r = subprocess.run(["/usr/bin/smbpasswd", "-s", "-a", user], input=f"{pw}\n{pw}\n", capture_output=True,
+                       text=True)
+    if r.returncode != 0:
+        fail(f"The password wasn't saved: {(r.stderr or r.stdout).strip()}")
+    state = sharing.load()
+    if user not in state["passwords"]:
+        state["passwords"].append(user)
+    save_sharing(state)
+    sharing_sync()
+
+
+def sharing_command(args):
+    SHARING_LOCK.parent.mkdir(parents=True, exist_ok=True)
+    with open(SHARING_LOCK, "w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        if len(args) == 1 and args[0] in ("on", "off"):
+            sharing_switch(args[0])
+        elif len(args) == 3 and args[0] in ("add", "mode") and args[2] in sharing.MODES:
+            sharing_folder(args[0], args[1], args[2])
+        elif len(args) == 2 and args[0] == "remove":
+            sharing_folder("remove", args[1])
+        elif args == ["password"]:
+            sharing_password()
+        elif args == ["sync"]:
+            sharing_sync()
+
+
 def main(argv):
     if os.geteuid() != 0:
         fail("This helper runs as root, through polkit.")
@@ -209,6 +376,10 @@ def main(argv):
         firewall(argv[2], argv[3])
     elif argv[1:] == ["firewall", "default"]:
         firewall_default()
+    elif argv[1:2] == ["sharing"] and (argv[2:] in (["on"], ["off"], ["password"], ["sync"]) or
+                                       (len(argv) == 5 and argv[2] in ("add", "mode") and argv[4] in sharing.MODES)
+                                       or (len(argv) == 4 and argv[2] == "remove")):
+        sharing_command(argv[2:])
     else:
         fail(__doc__, 2)
 

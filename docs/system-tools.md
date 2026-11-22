@@ -63,7 +63,8 @@ network. A network with no place set is a Public place.
   address (dhcpv6-client) work. SSH is off.
 - **Home** (`evenkeel-home`) and **Work** (`evenkeel-work`): like Fedora Workstation's own setting, apps you run can
   be reached on ports 1025 to 65535 (for example phones, file sharing, web development test servers). System services
-  below 1025 stay closed. Unlike Fedora, SSH is off.
+  below 1025 stay closed. Unlike Fedora, SSH is off. Turning on [Shared folders](#shared-folders) also lets file
+  sharing in on Home.
 
 Before this, every network used Fedora's FedoraWorkstation zone, which leaves ports 1025 to 65535 open on every
 network, including public Wi-Fi. That is now only on Home and Work.
@@ -109,6 +110,61 @@ In a terminal:
     pkexec /usr/libexec/evenkeel-os-tools-admin firewall default
 
 The last two ask for the administrator password.
+
+### Shared folders
+
+Lets other computers on a Home network open folders you pick, like Windows file sharing (it uses Samba). Nobody types
+an address. A Mac finds this computer in Finder under Network, a Linux computer in Files under Other Locations, and a
+Windows PC under Network in File Explorer. Macs and Linux find it through Avahi (the computer announces itself).
+Windows finds it through wsdd. A Windows PC lists other computers only when its own network is set to Private (in
+Settings, Network and internet); on a Public network Windows turns network discovery off.
+
+Sharing works only on networks set to **Home** in [Network safety](#network-safety). Never on Work or a Public place.
+Samba and wsdd run only while a Home network is connected and at least one folder is shared by someone with a sharing
+password, and stop by themselves when you leave it. Windows finds the computer only on the Home network. Macs and
+Linux computers on another network connected at the same time may still see its name, but can't open it: turning
+sharing on lets file sharing (port 445) into the Home firewall zone only, and turning it off takes it back out. The ports Windows
+uses to find the computer are already open on Home. The switch is for everyone on this computer.
+
+A wired network set to Home counts as Home on any cable you plug in, so the banner turns orange as a reminder when
+sharing runs over a wired Home network.
+
+**Passwords.** Other computers ask for your user name (your login name on this computer) and the sharing password.
+The sharing password is separate from your login password, and has at least 8 characters. Each computer can remember
+it. Nothing is ever shared as a guest (no password). Turning sharing on the first time asks you to set the sharing
+password first. Changes ask for an administrator password (not again for a few minutes after).
+
+**Folders.** Only folders inside your own home folder can be shared. Not the home folder itself, not hidden folders
+(names starting with a dot, which hold settings and keys), and not folders that belong to someone else. A folder is
+shared under its own name. A new folder starts as **Read only**. Change it in the list. Changing or removing a folder
+drops only the connections open to that folder. A folder whose name isn't readable text (from an old zip file, say)
+can't be shared: rename it first.
+
+Everything another computer does in a shared folder is done as you. Files saved from other computers belong to you
+(no permission errors), and other computers can't reach anything you couldn't. Shortcuts (symlinks) inside a shared
+folder that point outside it don't open.
+
+**The page.** **Shared folders** (folder icon, after Network safety) shows:
+
+| Item | What it does |
+|------|--------------|
+| Banner | Says whether sharing is off, on (**Sharing on NETWORK**, and the name other computers see), waiting (**Sharing waits for a Home network**, on a Work network, a Public place or not connected), or **Nothing is shared yet** (no folder, or no sharing password). It turns orange for **Sharing didn't start**, for sharing over a wired Home network, and for **Shared folders can't start**, when `/etc/samba/smb.conf` was changed on the computer so it no longer includes the shared folders list (the switch can still turn sharing off) |
+| Share folders on Home networks | A switch in the **Sharing** group. Turns sharing on or off |
+| Sharing password | A row in the **Sharing** group with a **Set** or **Change** button |
+| Add a folder | In the **Folders** group. Pick a folder in your home folder to share |
+| Each shared folder | A row with its name, its place in the home folder, a **Read only** / **Read and write** choice, and a trash button to stop sharing it. A folder that was moved or deleted says **Folder not found** |
+
+GNOME's own Settings, Sharing, File Sharing (the Public folder, WebDAV) is a separate thing and is left as it is.
+
+In a terminal:
+
+    pkexec /usr/libexec/evenkeel-os-tools-admin sharing on             # or off
+    pkexec /usr/libexec/evenkeel-os-tools-admin sharing add FOLDER ro  # or rw
+    pkexec /usr/libexec/evenkeel-os-tools-admin sharing mode FOLDER ro # or rw
+    pkexec /usr/libexec/evenkeel-os-tools-admin sharing remove FOLDER
+    pkexec /usr/libexec/evenkeel-os-tools-admin sharing password       # reads the password from standard input
+
+These ask for the administrator password. Root and system accounts can't share folders.
 
 ### Disk and startup
 
