@@ -1,0 +1,342 @@
+#!/usr/bin/python3 -I
+"""Important system settings (in /etc): a copy saved after each good start, a check at each start, and a repair.
+
+  evenkeel-os-settings save         after a good start (greenboot's green.d): copy /etc to /sysroot/evenkeel-os
+  evenkeel-os-settings check        at each start (greenboot's required.d): fail when important settings are broken
+  evenkeel-os-settings repair       after a failed start (greenboot's red.d): put the broken ones back from the copy
+  evenkeel-os-settings fresh        exit 0 when the saved copy is from this start, 7 when it isn't
+  evenkeel-os-settings test-delete  System Tools' test: delete the test's settings for real (the caller restarts;
+                                    exit 10: stopped partway)
+"""
+import os
+import re
+import shutil
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+ETC = Path("/etc")
+USR_ETC = Path("/usr/etc")     # this version's own default settings (ostree)
+FACTORY = Path("/usr/share/factory/etc")    # systemd-tmpfiles copies these in at boot when they're missing
+BASE = Path("/sysroot/evenkeel-os")
+SAVED = BASE / "settings"      # etc/, usr-etc.list (USR_ETC's paths then), saved ("<boot id> <time>")
+NOTE = Path("/var/lib/evenkeel-os/settings-repaired")    # "repair|test <time> <saved time>", then the paths put back
+TEST_MARK = Path("/var/lib/evenkeel-os/settings-test")   # System Tools' test is running (cleared by a good start)
+RETRIED = Path("/var/lib/evenkeel-os/settings-retried")   # the saved copy's time when a repair last added a retry
+GRUBENV = Path("/boot/grub2/grubenv")
+# Broken when missing, or when systemd's generic copy replaced a different saved one.
+CORE_FILES = ("passwd", "shadow", "group", "gshadow", "subuid", "subgid", "fstab", "sudoers",
+              "nsswitch.conf", "selinux/config", "greenboot/greenboot.conf", "locale.conf", "vconsole.conf",
+              "containers/policy.json")
+# In these folders, only what this version itself ships (in USR_ETC) counts; files people add stay theirs.
+CORE_DIRS = ("pam.d", "authselect", "security")
+# Put back whole when the folder itself is gone: the SELinux policy (without it an enforcing start freezes).
+CORE_TREES = ("selinux/targeted",)
+TEST_DELETE = ("fstab", "passwd", "shadow", "group", "gshadow", "pam.d", "sudoers")
+RSYNC = ["/usr/bin/rsync", "-aAXH", "--numeric-ids"]
+BOOT_ID = Path("/proc/sys/kernel/random/boot_id")
+FSTAB_BOOT = re.compile(r"^(UUID=[0-9A-Fa-f-]+)\s+/boot\s")
+
+
+def tree(root, rel):
+    """rel and, for a folder, everything in it, as paths relative to root."""
+    p = root / rel
+    if not os.path.lexists(p):
+        return []
+    out = [rel]
+    if p.is_dir() and not p.is_symlink():
+        for d, dirs, files in os.walk(p):
+            out += [os.path.relpath(os.path.join(d, n), root) for n in dirs + files]
+    return out
+
+
+def all_paths(root):
+    return {p for p in tree(Path(root), ".") if p != "."}
+
+
+def saved_at(saved):
+    """(boot id, time) of the saved copy, or None."""
+    try:
+        boot, stamp = (saved / "saved").read_text().split()
+        return boot, int(stamp)
+    except (OSError, ValueError):
+        return None
+
+
+def gone_upstream(saved, usr_etc):
+    """Default settings that this version no longer has: ostree dropped them on purpose at the update."""
+    try:
+        before = set((saved / "usr-etc.list").read_text().splitlines())
+    except OSError:
+        return set()
+    return before - all_paths(usr_etc)
+
+
+def same(a, b):
+    """Two paths are the same link, or regular files with the same bytes."""
+    try:
+        if os.path.islink(a) or os.path.islink(b):
+            return os.path.islink(a) and os.path.islink(b) and os.readlink(a) == os.readlink(b)
+        if not (os.path.isfile(a) and os.path.isfile(b)):
+            return False
+        return Path(a).read_bytes() == Path(b).read_bytes()
+    except OSError:
+        return False
+
+
+def core(saved, usr_etc):
+    """The important paths in the saved copy, parents first."""
+    ships = all_paths(usr_etc)
+    dropped = gone_upstream(saved, usr_etc)
+    out = {}
+    for rel in CORE_FILES:
+        if os.path.lexists(saved / "etc" / rel) and rel not in dropped:
+            out[rel] = None
+    for rel in CORE_DIRS:
+        for p in tree(saved / "etc", rel):
+            if p in ships:
+                out[p] = None
+    for rel in CORE_TREES:
+        if (saved / "etc" / rel).is_dir() and rel in ships:
+            out[rel] = None
+    return list(out)
+
+
+def broken(saved, etc, usr_etc, factory):
+    """Important paths that are missing, or replaced by systemd's generic copy."""
+    out = []
+    for p in core(saved, usr_etc):
+        have, keep = etc / p, saved / "etc" / p
+        if not os.path.lexists(have):
+            out.append(p)
+        elif os.path.lexists(factory / p) and same(have, factory / p) and not same(keep, factory / p):
+            out.append(p)
+    return out
+
+
+def restore(saved, etc, usr_etc, factory):
+    """Put back every broken important path. Returns (put, errors)."""
+    put, errors = [], []
+    todo = broken(saved, etc, usr_etc, factory)
+    trees = [p for p in todo if p in CORE_TREES]
+    todo = [p for p in todo if p not in CORE_TREES]
+    if todo:
+        # --ignore-times: a replaced file can have the same size and time as the saved one.
+        r = subprocess.run([*RSYNC, "--ignore-times", "--from0", "--files-from=-", "--out-format=%n",
+                            f"{saved / 'etc'}/", f"{etc}/"], input="".join(p + "\0" for p in todo),
+                           capture_output=True, text=True)
+        done = {n.rstrip("/") for n in r.stdout.splitlines()}
+        put = [p for p in todo if p in done]
+        if r.returncode != 0:
+            errors.append(f"rsync {r.returncode}: {r.stderr.strip()}")
+    for rel in trees:
+        r = subprocess.run([*RSYNC, "--mkpath", f"{saved / 'etc' / rel}/", f"{etc / rel}/"], capture_output=True,
+                           text=True)
+        if r.returncode != 0:
+            errors.append(f"rsync {r.returncode} on {rel}: {r.stderr.strip()}")
+        else:
+            put.append(rel)
+    return put, errors
+
+
+def shown(paths):
+    """Paths, with everything in an important folder counted as that folder, once."""
+    out = {}
+    for p in paths:
+        out[next((d for d in CORE_DIRS + CORE_TREES if p == d or p.startswith(d + "/")), p)] = None
+    return list(out)
+
+
+def listed(paths, most=15):
+    paths = shown(paths)
+    text = ", ".join(f"/etc/{p}" for p in paths[:most])
+    return text + (f" and {len(paths) - most} more" if len(paths) > most else "")
+
+
+def check(saved=SAVED, etc=ETC, usr_etc=USR_ETC, factory=FACTORY):
+    if saved_at(saved) is None:
+        print("No saved copy of the settings yet, so there's nothing to compare.")
+        return 0
+    bad = broken(saved, etc, usr_etc, factory)
+    if bad:
+        print(f"Important settings are missing or replaced: {listed(bad)}.")
+        return 1
+    print("The important settings are all there.")
+    return 0
+
+
+def own_namespace():
+    """True in a mount namespace of our own (greenboot's service has one), never in the system's."""
+    try:
+        return os.readlink("/proc/self/ns/mnt") != os.readlink("/proc/1/ns/mnt")
+    except OSError:
+        return False
+
+
+def mount_boot():
+    """Without /etc/fstab, /boot isn't mounted and greenboot can't count or restart: mount it read-only, here only."""
+    if os.path.ismount("/boot") or not own_namespace():
+        return
+    try:
+        src = next(m.group(1) for line in (SAVED / "etc" / "fstab").read_text().splitlines()
+                   if (m := FSTAB_BOOT.match(line)))
+    except (OSError, StopIteration):
+        print("/boot isn't mounted, and the saved disk list has no /boot line.")
+        return
+    if subprocess.run(["/usr/bin/mount", "-o", "ro", src, "/boot"]).returncode == 0:
+        print(f"/boot wasn't mounted; mounted {src} read-only for greenboot.")
+
+
+def grubenv():
+    try:
+        r = subprocess.run(["/usr/bin/grub2-editenv", str(GRUBENV), "list"], capture_output=True, text=True)
+    except OSError:
+        return None
+    return r.stdout.splitlines() if r.returncode == 0 else None
+
+
+def start_counter(saved_time):
+    """One retry after a repair (boot_counter 1 when unset or 0), once per saved copy so the fallback still comes."""
+    env = grubenv()
+    if env is None or not own_namespace():
+        return
+    try:
+        if RETRIED.read_text().strip() == str(saved_time):
+            print("A repair already added a retry since the last good start: no more.")
+            return
+    except OSError:
+        pass
+    counter = next((v.split("=", 1)[1] for v in env if v.startswith("boot_counter=")), None)
+    if counter not in (None, "0"):
+        return
+    ro = "ro" in subprocess.run(["/usr/bin/findmnt", "-no", "OPTIONS", "/boot"], capture_output=True,
+                                text=True).stdout.strip().split(",")
+    if ro and subprocess.run(["/usr/bin/mount", "-o", "remount,rw", "/boot"]).returncode != 0:
+        return
+    if subprocess.run(["/usr/bin/grub2-editenv", str(GRUBENV), "set", "boot_counter=1"]).returncode == 0:
+        RETRIED.parent.mkdir(parents=True, exist_ok=True)
+        RETRIED.write_text(f"{saved_time}\n")
+    # bind: read-only again here only, as greenboot does; a plain remount,ro would lock /boot under an update.
+    if ro:
+        subprocess.run(["/usr/bin/mount", "-o", "remount,bind,ro", "/boot"])
+
+
+def write_note(kind, saved_time, put):
+    NOTE.parent.mkdir(parents=True, exist_ok=True)
+    tmp = NOTE.with_name(NOTE.name + ".new")
+    tmp.write_text(f"{kind} {int(time.time())} {saved_time}\n" + "".join(f"/etc/{p}\n" for p in shown(put)))
+    tmp.chmod(0o644)
+    os.replace(tmp, NOTE)
+
+
+def repair():
+    mount_boot()
+    if any(a.startswith("evenkeel_os.test_rollback=") for a in Path("/proc/cmdline").read_text().split()):
+        print("This start is a rollback test copy: going back to the earlier version is the fix, not a repair.")
+        return 0
+    env = grubenv() or []
+    if any(v.startswith("greenboot_next_deployment_id=") for v in env):
+        print("This is a new version on trial: going back to the earlier version is the fix, not a repair.")
+        return 0
+    at = saved_at(SAVED)
+    if at is None:
+        print("No saved copy of the settings, so nothing can be put back.")
+        return 0
+    put, errors = restore(SAVED, ETC, USR_ETC, FACTORY)
+    for e in errors:
+        print(f"Not everything could be put back: {e}")
+    if put:
+        write_note("test" if TEST_MARK.exists() else "repair", at[1], put)
+        print(f"Put back {len(shown(put))} settings from the copy saved at {time.ctime(at[1])}: {listed(put)}.")
+        start_counter(at[1])
+        if not os.path.ismount("/boot"):
+            print("/boot isn't mounted, so greenboot can't restart the computer: restarting now.", flush=True)
+            subprocess.run(["/usr/bin/systemctl", "reboot", "--no-block"])
+    else:
+        print("No important settings needed putting back.")
+    return 1 if errors else 0
+
+
+def save():
+    """Copy /etc into /sysroot, which is read-only: writable only in this program's own mount namespace."""
+    TEST_MARK.unlink(missing_ok=True)     # a good start ends System Tools' test (90-...-rolled-back.sh reads it first)
+    if sys.argv[2:] != ["--own-namespace"]:
+        os.execv("/usr/bin/unshare", ["unshare", "--mount", "--propagation", "private", sys.executable, "-I",
+                                      str(Path(__file__).resolve()), "save", "--own-namespace"])
+    if not own_namespace():
+        print("Not in a separate mount namespace (or it couldn't be checked); nothing was saved.")
+        return 1
+    if os.statvfs("/sysroot").f_flag & os.ST_RDONLY:
+        if subprocess.run(["/usr/bin/mount", "-o", "remount,rw", "/sysroot"]).returncode != 0:
+            print("/sysroot couldn't be made writable; nothing was saved.")
+            return 1
+    BASE.mkdir(mode=0o700, exist_ok=True)
+    BASE.chmod(0o700)
+    new, old = BASE / "settings.new", BASE / "settings.old"
+    shutil.rmtree(new, ignore_errors=True)
+    new.mkdir(mode=0o700)
+    link = ["--link-dest", str(SAVED / "etc")] if (SAVED / "etc").is_dir() else []
+    r = subprocess.run([*RSYNC, "--delete", *link, f"{ETC}/", f"{new / 'etc'}/"], capture_output=True, text=True)
+    if r.returncode not in (0, 24):     # 24: a file went away while copying
+        print(f"The settings couldn't be saved (rsync {r.returncode}): {r.stderr.strip()}")
+        shutil.rmtree(new, ignore_errors=True)
+        return 1
+    (new / "usr-etc.list").write_text("".join(p + "\n" for p in sorted(all_paths(USR_ETC))))
+    (new / "saved").write_text(f"{BOOT_ID.read_text().strip()} {int(time.time())}\n")
+    shutil.rmtree(old, ignore_errors=True)
+    if SAVED.exists():
+        os.rename(SAVED, old)
+    os.rename(new, SAVED)
+    shutil.rmtree(old, ignore_errors=True)
+    os.sync()
+    print("The settings are saved.")
+    return 0
+
+
+def fresh():
+    at = saved_at(SAVED)
+    if at is None or at[0] != BOOT_ID.read_text().strip():
+        print("The settings haven't been saved since this start.")
+        return 7
+    if not all(os.path.lexists(SAVED / "etc" / n) for n in TEST_DELETE):
+        print("The saved copy doesn't have every setting the test deletes.")
+        return 7
+    return 0
+
+
+def test_delete():
+    rc = fresh()
+    if rc != 0:
+        return rc
+    TEST_MARK.parent.mkdir(parents=True, exist_ok=True)
+    TEST_MARK.write_text(f"{int(time.time())}\n")
+    try:
+        for n in TEST_DELETE:
+            p = ETC / n
+            if p.is_dir() and not p.is_symlink():
+                shutil.rmtree(p)
+            else:
+                p.unlink(missing_ok=True)
+    except OSError as e:
+        print(f"Deleting stopped partway ({e}); some settings are already deleted.")
+        return 10
+    os.sync()
+    print("Deleted: " + ", ".join(f"/etc/{n}" for n in TEST_DELETE))
+    return 0
+
+
+def main(argv):
+    jobs = {"save": save, "check": check, "repair": repair, "fresh": fresh, "test-delete": test_delete}
+    if len(argv) < 2 or argv[1] not in jobs or argv[2:] not in ([], ["--own-namespace"]) \
+            or (argv[2:] and argv[1] != "save"):
+        print(__doc__)
+        return 2
+    if os.geteuid() != 0:
+        print("This helper runs as root.")
+        return 2
+    return jobs[argv[1]]()
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))

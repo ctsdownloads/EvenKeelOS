@@ -4,8 +4,8 @@
 The list in evenkeel-os-tools must name the same tests, in the same order, as evenkeel-os-tools-admin accepts, each
 under its own name; each test's breaking piece must be in the image; and evenkeel-os-test-fail must fail only for its
 own test.
-Also: a later rollback's note replaces an earlier one, no test piece makes greenboot wait for the login screen, and
-the login-loop check reads the logind records it depends on.
+Also: the settings test's names cover what it deletes, a later rollback's note replaces an earlier one, no test
+piece makes greenboot wait for the login screen, and the login-loop check reads the logind records it depends on.
 """
 import re
 import ast
@@ -83,9 +83,15 @@ def main():
     for kind, (_, path, text) in PIECES.items():
         if text not in Path(path).read_text():
             sys.exit(f"ERROR: test {kind}: {path} doesn't contain {text!r}")
+    # Switched on from /usr, which systemctl is-enabled doesn't read: deleting /etc can't switch them off.
     for unit in ("evenkeel-os-test-stuck.service", "evenkeel-os-test-freeze.service"):
-        if subprocess.run(["systemctl", "is-enabled", "-q", unit]).returncode != 0:
-            sys.exit(f"ERROR: {unit} isn't enabled")
+        if not Path(f"/usr/lib/systemd/system/multi-user.target.wants/{unit}").is_file():
+            sys.exit(f"ERROR: {unit} isn't switched on from /usr/lib/systemd/system/multi-user.target.wants")
+    # Every setting the settings test deletes has a plain-word name in its message.
+    names = set(assigned("/usr/bin/evenkeel-os-tools", "SETTINGS_NAMES"))
+    deletes = {f"/etc/{n}" for n in assigned("/usr/libexec/evenkeel-os-settings", "TEST_DELETE")}
+    if deletes - names:
+        sys.exit(f"ERROR: the settings test deletes {sorted(deletes - names)}, which have no plain-word name")
     # evenkeel-os-test-fail, run against a made-up kernel command line for each test
     script = Path("/usr/libexec/evenkeel-os-test-fail").read_text()
     with tempfile.TemporaryDirectory() as d:

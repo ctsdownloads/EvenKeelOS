@@ -17,7 +17,7 @@ window comes in a later update.
 
 | Item | What it does |
 |------|--------------|
-| Status banner | Says **Your computer is in good shape** with **Update now**, or that a new version is ready with **Restart now**, or that automatic updates are paused until a day with **Resume now**, or that automatic updates are off with **Turn on** |
+| Status banner | Says **Your computer is in good shape** with **Update now**, or that a new version is ready with **Restart now**, or that automatic updates are paused until a day with **Resume now**, or that automatic updates are off with **Turn on**. The paused and off warnings show before a certificate warning |
 | Undo the last update | Goes back to the version before the last update |
 | Free up disk space | Removes unused app parts, old update files and container images. Your files aren't touched |
 | Save problem details | Saves recent errors to one file to email your helper |
@@ -72,8 +72,9 @@ While automatic updates are on, VPNs, codecs and apps added to the system are ch
 |------|--------------|
 | Undo the last update | Goes back to the version before the last update |
 | Save problem details | Saves recent errors to one file to email your helper |
-| Test automatic rollback | Checks that the computer goes back by itself when a new version doesn't start. See below |
-| Prefer the terminal? | Shows every tool's command |
+| Test automatic rollback | Checks that the computer goes back by itself when a new version doesn't start, and that important settings are put back when they're deleted. See below |
+| Certificate alerts | Lists trusted certificates that expired, expire within 30 days, or were removed, with **Remove it** for an expired one you added. Also `evenkeel-os-tools certificates`. See below |
+| Prefer the terminal? | Shows every tool's command, each with a copy button |
 
 ### Commands
 
@@ -121,6 +122,62 @@ computer installed from a newer live USB (see
 [Automatic rollback](install.md#updating-and-rolling-back)). If the computer is
 still running a test copy, the tool offers to remove its marker instead
 (`rpm-ostree kargs --delete=evenkeel_os.test_rollback=KIND`).
+
+The other test is **Important settings deleted**. It is not a test copy (no
+kernel argument): it really deletes `/etc/passwd`, `/etc/shadow`, `/etc/group`,
+`/etc/gshadow`, `/etc/fstab`, `/etc/pam.d` and `/etc/sudoers`, then restarts
+right away, so save your work first. The command behind it is
+`/usr/libexec/evenkeel-os-settings-test`. It has its own permission and asks
+for the admin password every time (a password typed a few minutes before isn't
+reused). Before deleting, it starts greenboot's retry counter. The next start
+finds them broken, puts them back and restarts. A message at login says the
+test worked and lists what was put back. If the repair doesn't work and the
+computer goes back to the earlier version, the message says the test didn't
+work (no pause of automatic updates). It refuses, and says why, when the
+computer was installed before automatic rollback, an update is waiting for a
+restart, a test copy is running, no copy of the settings has been saved since
+this start (wait a few minutes), there's no earlier version to fall back to
+(run it after the next update), the earlier version doesn't have the settings
+repair yet (run it after the next update), or another version is set to start next (after
+Undo the last update or picking a version in the boot menu; restart first). It
+also refuses when greenboot was switched off with `systemctl mask`. If deleting
+stops partway or the restart doesn't start, it says the settings are already
+deleted and to restart now. The test's marker is cleared at any good start.
+
+**Certificate alerts.** The certificates the computer trusts for secure
+websites and connections are checked: Fedora's list and the certificate files
+added to the computer (in `/etc/pki/ca-trust/source/anchors`). The check runs 3
+minutes after the session starts and once a day, as the person logged in, with
+no admin rights. It changes nothing in the system. The trusted list is rebuilt
+at every start from Fedora's current list plus the added files (Fedora's own
+`update-ca-trust extract`, run by `evenkeel-os-ca-trust.service`), so
+certificates Fedora updates replace or drop are replaced or dropped here too,
+even after a certificate was added. An alert (a desktop notification, and a warning at the
+top of System Tools, Overview, with a **Details** button) shows when a
+certificate has expired, expires within 30 days, or (one added to the computer)
+was removed. **Certificate alerts** in Get help lists them (also
+`evenkeel-os-tools certificates`). For an expired certificate that was added to
+the computer, it offers **Remove it**; nothing is removed without you. It has
+its own permission ("remove a trusted certificate") and asks for the admin
+password every time. The helper is `/usr/libexec/evenkeel-os-cert-remove`. It
+refuses a file that holds more than one certificate (it would remove the good
+ones too: tell your helper), never follows a link, and accepts file names with
+spaces or brackets. Before removing, it checks, as root, that the file still
+holds exactly the one certificate you confirmed (by its fingerprint). If the
+file changed, nothing is removed. It never opens a link, pipe or device. Files
+whose names System Tools can't handle show "tell your helper" instead of
+**Remove it**. After removing, System Tools checks that the certificate
+is really no longer trusted and says so if it still is. For an expiring added one, it says to ask whoever gave it for a
+new one. For built-in ones, it says Fedora's updates replace them, so keep
+automatic updates on. A removed certificate is no longer trusted. The alert
+goes away once read. A certificate removed in System Tools raises no "removed"
+alert for any account on the computer (the removal is recorded in
+`/var/lib/evenkeel-os/certs-removed`). An expired certificate is never put back
+or extended.
+
+Rebuilding the trusted list at every start also recreates the links in
+`/etc/pki/tls/certs`, so a link someone added there by hand is gone after a
+restart. Add certificates in `/etc/pki/ca-trust/source/anchors` instead.
 
 **Get a VPN.** Pick Mullvad, Proton, IVPN or NordVPN. It asks you to confirm, then the password. It adds that
 company's own download source and the app to the system (not a box), then offers a restart. Nothing is installed until

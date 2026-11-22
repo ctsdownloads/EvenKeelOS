@@ -1,0 +1,8 @@
+[Unit]
+Description=Check for expired, soon-expiring or removed security certificates
+# Not for the login screen's own account.
+ConditionUser=!@system
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/evenkeel-os-certs check --notify

@@ -1,0 +1,13 @@
+[Unit]
+Description=Rebuild the trusted certificate list from Fedora's current list and the ones added here
+# Once a certificate is added, updates stop replacing the built list, so certificates Fedora drops would stay trusted.
+ConditionPathExists=/run/ostree-booted
+After=local-fs.target
+Before=NetworkManager.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/update-ca-trust extract
+
+[Install]
+WantedBy=multi-user.target

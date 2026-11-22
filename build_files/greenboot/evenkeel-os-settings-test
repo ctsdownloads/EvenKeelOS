@@ -1,0 +1,91 @@
+#!/usr/bin/python3 -I
+"""System Tools' settings repair test, as root through polkit (admin password every time). Takes no arguments.
+
+  evenkeel-os-settings-test     delete important settings for real and restart; the next start puts them back
+                                (exit 4: installed before automatic rollback, 5: an update is waiting, 6: this start
+                                is a test copy, 7: no saved copy from this start, 8: no earlier version to fall back
+                                to, 9: another version is set to start next, 10: settings were deleted but the
+                                restart didn't happen: restart now, 11: the earlier version has no settings repair)
+"""
+import json
+import os
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+# Switched on from /usr (build.sh), so deleting /etc can't switch it off; systemctl is-enabled only reads /etc.
+GREENBOOT_ON = Path("/usr/lib/systemd/system/multi-user.target.wants/greenboot-healthcheck.service")
+SETTINGS = "/usr/libexec/evenkeel-os-settings"
+# Starts greenboot's retry counter, so a start that hangs before the checks still counts (see start_counter).
+ARM = ('ro=0; findmnt -no OPTIONS /boot | tr , "\\n" | grep -qx ro && ro=1; '
+       '[ "$ro" = 0 ] || mount -o remount,rw /boot || exit 1; '
+       'grub2-editenv /boot/grub2/grubenv set boot_counter=1; rc=$?; '
+       '[ "$ro" = 0 ] || mount -o remount,bind,ro /boot; exit "$rc"')
+
+
+def fail(msg, code=1):
+    print(msg)
+    sys.exit(code)
+
+
+def check_ready():
+    """Refuse when greenboot can't catch the test, or while a test copy or an update is waiting."""
+    masked = subprocess.run(["/usr/bin/systemctl", "is-enabled", "greenboot-healthcheck.service"],
+                            capture_output=True, text=True).stdout.strip().startswith("masked")
+    if not GREENBOOT_ON.exists() or masked:
+        fail("Automatic rollback is not turned on in this version, or it was switched off (masked).", 4)
+    try:
+        counting = "boot_counter" in Path("/boot/grub2/grub.cfg").read_text()
+    except OSError:
+        counting = False
+    if not counting:
+        fail("The boot menu has no rollback counter: this computer was installed before automatic rollback.", 4)
+    if any(a.startswith("evenkeel_os.test_rollback=") for a in Path("/proc/cmdline").read_text().split()):
+        fail("This start is a test copy; take its test marker off first.", 6)
+    try:
+        ds = json.loads(subprocess.run(["/usr/bin/rpm-ostree", "status", "--json"], capture_output=True, text=True,
+                                       check=True).stdout)["deployments"]
+    except (subprocess.CalledProcessError, ValueError, KeyError) as e:
+        fail(f"The system versions couldn't be read: {e}")
+    if any(d.get("staged") for d in ds):
+        fail("An update is waiting for a restart.", 5)
+    if len(ds) < 2:
+        fail("There's no earlier version to fall back to.", 8)
+    # After Undo or a boot menu pick, the restart starts another version, so nothing would be tested.
+    if not ds[0].get("booted"):
+        fail("Another version is set to start at the next restart.", 9)
+    # If the repair fails, the start falls back to the earlier version: its own steps must know about this test.
+    fallback = ds[1].get("checksum", "")
+    if not re.fullmatch(r"[0-9a-f]{64}", fallback) or subprocess.run(
+            ["/usr/bin/ostree", "ls", "--repo=/ostree/repo", fallback, "/usr/libexec/evenkeel-os-settings"],
+            capture_output=True).returncode != 0:
+        fail("The earlier version doesn't have the settings repair.", 11)
+    if not os.path.ismount("/boot"):
+        fail("/boot isn't mounted.")
+
+
+def main(argv):
+    if len(argv) != 1:
+        fail(__doc__, 2)
+    if os.geteuid() != 0:
+        fail("This helper runs as root, through polkit.", 2)
+    check_ready()
+    rc = subprocess.run([SETTINGS, "fresh"]).returncode
+    if rc != 0:
+        sys.exit(7 if rc == 7 else 1)
+    if subprocess.run(["/usr/bin/unshare", "--mount", "--propagation", "private", "/usr/bin/bash", "-c",
+                       ARM]).returncode != 0:
+        fail("The retry counter couldn't be started; nothing was deleted.")
+    rc = subprocess.run([SETTINGS, "test-delete"]).returncode
+    if rc == 10:
+        fail("Deleting stopped partway: some settings are already deleted. Restart now.", 10)
+    if rc != 0:
+        fail("The settings weren't deleted.", 7 if rc == 7 else 1)
+    if subprocess.run(["/usr/bin/systemctl", "reboot"]).returncode != 0:
+        fail("The settings are deleted, but the restart didn't start. Restart now.", 10)
+    sys.exit(0)
+
+
+if __name__ == "__main__":
+    main(sys.argv)

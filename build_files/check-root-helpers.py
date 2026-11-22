@@ -43,6 +43,12 @@ for h in HOSTILE:
     refuses("evenkeel-os-tools-admin", ["updates", h])
     refuses("evenkeel-os-tools-admin", ["test-rollback", h])
     refuses("evenkeel-os-tools-admin", ["disk-unlock", h])
+    refuses("evenkeel-os-tools-admin", ["test-settings"])
+    refuses("evenkeel-os-settings-test", [h])
+    refuses("evenkeel-os-cert-remove", [h, "a" * 64], codes=(1, 2))    # names that pass are files that don't exist
+    refuses("evenkeel-os-cert-remove", ["a.pem", h])
+    refuses("evenkeel-os-settings", [h])
+    refuses("evenkeel-os-settings", ["save", h])
     refuses("evenkeel-os-tools-safe", [h])
     refuses("evenkeel-os-tools-safe", ["updates", h])
     refuses("evenkeel-os-tools-safe", ["disk-unlock", h])
@@ -58,6 +64,59 @@ for h in BAD_NAMES:
 refuses("evenkeel-os-hwrules", ["add", "pkg", "/dev/null"], codes=(1,))
 refuses("evenkeel-os-tools-admin", ["updates", "on", "extra"])
 refuses("evenkeel-os-tools-admin", ["test-rollback", "quick", "extra"])
+refuses("evenkeel-os-settings", ["check", "--own-namespace"])
+refuses("evenkeel-os-settings", ["test-delete", "extra"])
+refuses("evenkeel-os-cert-remove", ["no-such-certificate.pem", "a" * 64], codes=(1,))
+refuses("evenkeel-os-cert-remove", ["..", "a" * 64])
+refuses("evenkeel-os-cert-remove", ["../../shadow", "a" * 64])
+refuses("evenkeel-os-cert-remove", ["a.pem"])
+refuses("evenkeel-os-cert-remove", ["a.pem", "a" * 64 + "\n"])
+
+
+def cert_remove_refusals():
+    """What evenkeel-os-cert-remove must leave alone, set up in the real anchors folder and taken out again."""
+    import datetime
+    import hashlib
+    from cryptography import x509
+    from cryptography.hazmat.primitives import hashes
+    from cryptography.hazmat.primitives.asymmetric import ec
+    from cryptography.hazmat.primitives.serialization import Encoding
+
+    def make(n):
+        key = ec.generate_private_key(ec.SECP256R1())
+        name = x509.Name([x509.NameAttribute(x509.NameOID.COMMON_NAME, n)])
+        now = datetime.datetime.now(datetime.timezone.utc)
+        return (x509.CertificateBuilder().subject_name(name).issuer_name(name).public_key(key.public_key())
+                .serial_number(1).not_valid_before(now).not_valid_after(now + datetime.timedelta(days=1))
+                .sign(key, hashes.SHA256()))
+    one, two = make("Check one"), make("Check two")
+    fp = hashlib.sha256(one.public_bytes(Encoding.DER)).hexdigest()
+    anchors = Path("/etc/pki/ca-trust/source/anchors")
+    made = {"evenkeel-check-two.pem": one.public_bytes(Encoding.PEM) + two.public_bytes(Encoding.PEM),
+            "evenkeel-check-other.pem": two.public_bytes(Encoding.PEM)}
+    try:
+        for name, data in made.items():
+            (anchors / name).write_bytes(data)
+        os.symlink("/etc/shadow", anchors / "evenkeel-check-link.pem")
+        os.mkfifo(anchors / "evenkeel-check-pipe.pem")
+        refuses("evenkeel-os-cert-remove", ["evenkeel-check-two.pem", fp], codes=(3,))
+        refuses("evenkeel-os-cert-remove", ["evenkeel-check-other.pem", fp], codes=(3,))
+        refuses("evenkeel-os-cert-remove", ["evenkeel-check-link.pem", fp], codes=(1,))
+        refuses("evenkeel-os-cert-remove", ["evenkeel-check-pipe.pem", fp], codes=(1,))
+        if not all((anchors / n).exists() for n in made) or not (anchors / "evenkeel-check-link.pem").is_symlink():
+            bad("evenkeel-os-cert-remove removed a file it should have left alone")
+    finally:
+        for n in (*made, "evenkeel-check-link.pem", "evenkeel-check-pipe.pem"):
+            (anchors / n).unlink(missing_ok=True)
+
+
+cert_remove_refusals()
+# System Tools offers "Remove it" only for names the helper takes.
+patterns = [re.search(r'(?m)^(?:CERT_FILE|NAME) = re\.compile\((r".*?")\)', Path(f).read_text())
+            for f in ("/usr/bin/evenkeel-os-tools", "/usr/libexec/evenkeel-os-cert-remove")]
+if not all(patterns) or patterns[0].group(1) != patterns[1].group(1):
+    bad("System Tools and evenkeel-os-cert-remove don't take the same certificate file names")
+refuses("evenkeel-os-tools-admin", ["cert-remove", "a.pem"])
 refuses("evenkeel-os-codecs-setup", ["web", "full"])
 refuses("evenkeel-os-hwrules", ["add", "pkg"])
 refuses("evenkeel-os-vpn", ["install", "mullvad", "extra"])
@@ -167,6 +226,30 @@ for f in sorted(ACTIONS.glob("io.github.ctsdownloads.evenkeel-os.*.policy")):
     for v in re.findall(r"<allow_active>([^<]*)</allow_active>", t):
         if v not in ("auth_admin", "auth_admin_keep"):
             bad(f"{f.name}: allow_active is {v}; a no-password action needs a rule limited to the computer")
+
+# The settings test and certificate removal: each its own action, the password every time, no rule may skip it.
+policy = (ACTIONS / "io.github.ctsdownloads.evenkeel-os.tools.policy").read_text()
+for name, helper in (("settings-test", "evenkeel-os-settings-test"), ("cert-remove", "evenkeel-os-cert-remove")):
+    m = re.search(rf'<action id="io\.github\.ctsdownloads\.evenkeel-os\.{name}">(.*?)</action>', policy, re.S)
+    if not m or f"/usr/libexec/{helper}</annotate>" not in m.group(1):
+        bad(f"{helper} has no polkit action of its own")
+    elif sorted(re.findall(r"<allow_\w+>([^<]*)</allow_\w+>", m.group(1))) != ["auth_admin"] * 3:
+        bad(f"{helper}'s polkit action doesn't ask for the admin password every time")
+RULE_FILES = sorted([*RULES_D.glob("*.rules"), *Path("/etc/polkit-1/rules.d").glob("*.rules")])
+for f in RULE_FILES:
+    t = f.read_text()
+    # Our actions may only be named whole (action.id == "..."); any other use could match several at once.
+    rest = re.sub(r'action\.id\s*===?\s*"io\.github\.ctsdownloads\.evenkeel-os\.[a-z0-9.-]+"', "", t)
+    if "settings-test" in t or "cert-remove" in t or "ctsdownloads" in rest:
+        bad(f"{f} could cover the settings test's or certificate removal's polkit action")
+    # A rule that says yes without naming any action says yes to everything, ours included.
+    if "Result.YES" in t and "action.id" not in t and f.name != "empower.rules":
+        bad(f"{f} says yes to every action")
+# systemd's empower.rules says yes to everything for its "empower" group (run0 --empower): nobody may be in it.
+for line in [*Path("/etc/group").read_text().splitlines(), *Path("/usr/lib/group").read_text().splitlines()]:
+    f = line.split(":")
+    if f[0] == "empower" and len(f) > 3 and f[3].strip():
+        bad(f"the empower group has members ({f[3]}): they could do anything without a password")
 
 if problems:
     print("ERROR: root helper or permission check failed:")

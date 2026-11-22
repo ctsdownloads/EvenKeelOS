@@ -11,13 +11,16 @@
   evenkeel-os-tools problem-details save the computer's recent error messages to a file, for your helper
   evenkeel-os-tools layout          switch between the standard and the Windows-style desktop layout
   evenkeel-os-tools vpn             get a VPN app (Mullvad, Proton, IVPN or NordVPN) that keeps updating
-  evenkeel-os-tools test-rollback   check that the computer goes back by itself when a new version won't start
-  evenkeel-os-tools rolled-back --at-login   say once that the computer went back by itself
+  evenkeel-os-tools test-rollback   check that the computer goes back by itself when a new version won't start, and
+                                    puts back deleted settings
+  evenkeel-os-tools rolled-back --at-login   say once that the computer went back or put back settings by itself
+  evenkeel-os-tools certificates    security certificates that expired, expire within 30 days or were removed
   evenkeel-os-tools setup           the setup checklist: media codecs, disk unlock, getting apps
   evenkeel-os-tools setup --first-login   the same, once, at a new user's first login
 """
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -32,6 +35,11 @@ TITLE = "System Tools"
 ui.TITLE = TITLE
 ui.ICON = "applications-system-symbolic"
 ADMIN = "/usr/libexec/evenkeel-os-tools-admin"
+SETTINGS_TEST = "/usr/libexec/evenkeel-os-settings-test"   # its own polkit action: the password every time
+CERTS = "/usr/libexec/evenkeel-os-certs"      # the certificate check; runs as you, writes CERT_ALERTS
+CERT_REMOVE = "/usr/libexec/evenkeel-os-cert-remove"    # its own polkit action: the password every time
+# The file names CERT_REMOVE takes (its NAME; check-root-helpers.py checks they match).
+CERT_FILE = re.compile(r"[A-Za-z0-9][^/\x00-\x1f\x7f]{0,254}")
 SAFE = "/usr/libexec/evenkeel-os-tools-safe"
 LAYOUT = "/usr/bin/evenkeel-os-layout"
 LAYOUTS = {"current": "the standard layout: a top bar and the logo menu",
@@ -40,11 +48,16 @@ CACHE = Path.home() / ".cache" / "evenkeel-os"
 LOG = CACHE / "tools.log"
 DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
 PAUSE = Path("/var/lib/evenkeel-os/updates-paused-until")      # set by evenkeel-os-tools-safe after an undo
-ROLLED_BACK = Path("/var/lib/evenkeel-os/rolled-back")          # "update|test <time>", written by greenboot's green.d
+# "update|test|settings-test|settings-failed <time>", written by greenboot's green.d (90-evenkeel-os-rolled-back.sh)
+ROLLED_BACK = Path("/var/lib/evenkeel-os/rolled-back")
 STATE = Path(os.environ.get("XDG_STATE_HOME") or Path.home() / ".local" / "state") / "evenkeel-os"
 SETUP_SHOWN = STATE / "setup-shown"      # the setup checklist has opened at login once
 CODECS_ASKED = STATE / "codecs-asked"    # from the old codecs first-login question
 ROLLED_BACK_SHOWN = STATE / "rolled-back-shown"     # the automatic rollback note this user has seen
+# "repair|test <time> <saved time>", then the paths put back; written by evenkeel-os-settings in greenboot's red.d
+SETTINGS_REPAIRED = Path("/var/lib/evenkeel-os/settings-repaired")
+SETTINGS_SHOWN = STATE / "settings-repaired-shown"   # the settings repair note this user has seen
+CERT_ALERTS = STATE / "cert-alerts.json"      # written by evenkeel-os-certs
 
 
 # ---------------------------------------------------------------- windows
@@ -657,6 +670,18 @@ ROLLBACK_TESTS = [
 ]
 
 
+# Not a test copy: really deletes settings in /etc (evenkeel-os-settings-test).
+SETTINGS_TEST_ROW = ("Important settings deleted", "Important system settings are really deleted, and the computer "
+                 "restarts right away. The next start finds them missing, puts them back from the copy it saved, "
+                 "and restarts once more by itself. A message at login then lists what was put back.")
+# Important settings in plain words: every one the test deletes (TEST_DELETE in evenkeel-os-settings), and more.
+SETTINGS_NAMES = {"/etc/passwd": "user accounts", "/etc/shadow": "passwords", "/etc/group": "groups",
+                  "/etc/gshadow": "group passwords", "/etc/fstab": "the list of disks", "/etc/pam.d": "login rules",
+                  "/etc/sudoers": "administrator rules", "/etc/machine-id": "the computer's ID",
+                  "/etc/authselect": "login setup", "/etc/security": "login limits",
+                  "/etc/selinux/targeted": "the SELinux security policy", "/etc/nsswitch.conf": "account lookup"}
+
+
 def running_test():
     """The test this start is running (its kernel argument), or None."""
     for arg in Path("/proc/cmdline").read_text().split():
@@ -681,11 +706,15 @@ def test_rollback():
             return 1
         offer_restart("The test marker is removed. The version without it starts at your next restart.")
         return 0
-    i = choose("Pick the problem to test. A test copy of this version is made with that problem, and starts at "
-               "your next restart. Your computer should then go back to the version you're using now by itself.",
-               ["Problem", "What you'll see"], [(t, see) for _, t, see in ROLLBACK_TESTS], width=760, height=460)
+    i = choose("Pick the problem to test. For most, a test copy of this version is made with that problem, and "
+               "starts at your next restart. Your computer should then go back to the version you're using now by "
+               "itself. The last one really deletes important settings, and the computer should put them back.",
+               ["Problem", "What you'll see"], [(t, see) for _, t, see in ROLLBACK_TESTS] + [SETTINGS_TEST_ROW],
+               width=760, height=520)
     if i is None:
         return 1
+    if i == len(ROLLBACK_TESTS):
+        return test_settings(w)
     kind, name, see = ROLLBACK_TESTS[i]
     if ask(f"{name}: {see}\n\nWhen it comes back, a message says the test worked, and the test copy is "
            "removed. Don't turn the computer off during the test unless the steps say to. Save your work first: "
@@ -695,8 +724,8 @@ def test_rollback():
         return 1
     rc = run("Making the test copy.", ["pkexec", ADMIN, "test-rollback", kind], title=w)
     if rc == 4:
-        say("This computer can't go back by itself: it was installed before automatic rollback was added. "
-            "Computers installed from a newer USB have it.", "warning", title=w)
+        say("This computer can't go back by itself: it was installed before automatic rollback was added, or "
+            "automatic rollback was switched off. Computers installed from a newer USB have it.", "warning", title=w)
         return 1
     if rc == 5:
         say("An update is waiting for a restart. Restart first, then run the test.", title=w)
@@ -710,6 +739,82 @@ def test_rollback():
             f"It didn't work, and nothing was changed.\n\nThe details are in {LOG}", "warning", title=w)
         return 1
     offer_restart(f"The test copy ({name}) is ready. It starts at your next restart.", see)
+    return 0
+
+
+def test_settings(w):
+    name, see = SETTINGS_TEST_ROW
+    if ask(f"{name}: {see}\n\nThis really deletes these files from this computer: the user accounts and passwords "
+           "(/etc/passwd, /etc/shadow, /etc/group, /etc/gshadow), the list of disks (/etc/fstab), the login rules "
+           "(/etc/pam.d) and the administrator rules (/etc/sudoers). Your own files and apps aren't touched.\n\n"
+           "Save your work and close your apps first: the computer restarts as soon as they're deleted.\n\n"
+           "If putting them back doesn't work: when a start hangs or stays broken, hold the power button until the "
+           "computer turns off, then turn it on. After 2 bad starts, the next start is the earlier version kept for "
+           "Undo the last update, which has its own copy of these settings.", ok="Delete and restart",
+           title=w) != "ok":
+        return 1
+    rc = run("Deleting the settings.", ["pkexec", SETTINGS_TEST], title=w)
+    problems = {
+        4: "This computer can't go back by itself: it was installed before automatic rollback was added, or "
+           "automatic rollback was switched off. Computers installed from a newer USB have it.",
+        5: "An update is waiting for a restart. Restart first, then run the test.",
+        6: "This computer is running a test copy. Open Test automatic rollback again to remove its marker.",
+        7: "The computer hasn't saved a copy of its settings since this start yet. Wait a few minutes and try "
+           "again. If it keeps saying this, tell your helper: the copy isn't being saved.",
+        8: "There's no earlier version to fall back to if putting the settings back doesn't work, so the test "
+           "doesn't run. Try it after the next update.",
+        10: "The settings are deleted, but the computer didn't restart. Restart it now: the next start puts them back.",
+        11: "The earlier version doesn't have the settings repair yet, so if the repair didn't work, going back to it "
+            "would give a wrong message. Run the test after the next update.",
+        9: "Another version is set to start at your next restart (after Undo the last update, or picking a "
+           "version in the boot menu), so the test wouldn't test anything. Restart first, then run the test."}
+    if rc in problems:
+        say(problems[rc], "warning", title=w)
+        return 1
+    if rc != 0:
+        say("The administrator password wasn't given, so nothing was changed." if rc in (126, 127) else
+            f"It didn't work.\n\nThe details are in {LOG}", "warning", title=w)
+        return 1
+    return 0
+
+
+def settings_note():
+    """Say once, at login, that missing settings were put back (only once this start passed its checks)."""
+    w = "Settings put back"
+    r = subprocess.run(["systemctl", "is-active", "greenboot-healthcheck.service"], capture_output=True, text=True)
+    if r.stdout.strip() != "active":
+        return 0
+    try:
+        lines = SETTINGS_REPAIRED.read_text().splitlines()
+        kind, stamp, saved = lines[0].split()
+        saved = time.strftime("%A, %B %-d at %-I:%M %p", time.localtime(int(saved)))
+    except (OSError, ValueError, IndexError):
+        return 0
+    # Only soon after: an account made later doesn't get an old message.
+    if time.time() - int(stamp) > 3 * 86400:
+        return 0
+    try:
+        if SETTINGS_SHOWN.read_text().strip() == stamp:
+            return 0
+    except OSError:
+        pass
+    paths = lines[1:]
+    named = [SETTINGS_NAMES[p] for p in paths if p in SETTINGS_NAMES]
+    rest = [p for p in paths if p not in SETTINGS_NAMES]
+    what = ", ".join(named + rest[:10]) + (f" and {len(rest) - 10} more" if len(rest) > 10 else "")
+    if kind == "test":
+        notify("The settings repair test worked.")
+        say(f"The test worked. At the next start your computer found important settings missing, put back "
+            f"{len(paths)} settings from the copy it saved {saved}, and restarted by itself.\n\nPut back: {what}.",
+            title=w)
+    else:
+        notify("Your computer put back missing system settings.")
+        say(f"The last start failed its start-up checks, and some system settings were missing or replaced. Your "
+            f"computer put back {len(paths)} from the copy it saved {saved}, then restarted. Your files and apps "
+            f"aren't touched.\n\nPut back: {what}.\n\nIf it happens again, tell your helper. Save problem details in "
+            "System Tools makes a file to send them.", "warning", title=w)
+    STATE.mkdir(parents=True, exist_ok=True)
+    SETTINGS_SHOWN.write_text(stamp)
     return 0
 
 
@@ -734,7 +839,19 @@ def rolled_back_note():
     ds = deployments() or []
     booted = next((d for d in ds if d.get("booted")), None)
     since = when(booted) if booted else "before the update"
-    if kind == "test":
+    if kind == "settings-test":
+        notify("The settings repair test didn't work.")
+        say(f"The settings repair test didn't work: your computer couldn't put the deleted settings back, so it went "
+            f"back to the version from {since}, which has its own settings. Your files and apps aren't touched, and "
+            "automatic updates aren't paused.\n\nTell your helper. Save problem details in System Tools makes a "
+            "file to send them.", "warning", title=w)
+    elif kind == "settings-failed":
+        notify("Your computer went back to the previous version.")
+        say(f"Some important system settings were broken, and putting them back didn't fix the start, so your "
+            f"computer went back to the version from {since}, which has its own settings. Your files and apps aren't "
+            "touched, and automatic updates aren't paused.\n\nTell your helper. Save problem details in System Tools "
+            "makes a file to send them.", "warning", title=w)
+    elif kind == "test":
         notify("The automatic rollback test worked.")
         say(f"The test worked. Your computer went back by itself to the version from {since}, and the test copy is "
             f"removed.", title=w)
@@ -749,6 +866,79 @@ def rolled_back_note():
             "them.", "warning", title=w)
     STATE.mkdir(parents=True, exist_ok=True)
     ROLLED_BACK_SHOWN.write_text(stamp)
+    return 0
+
+
+def cert_alerts(check=True):
+    """The certificate alerts (see evenkeel-os-certs), checked now; None when they can't be read."""
+    if check:
+        subprocess.run([CERTS, "check"], capture_output=True)
+    try:
+        return json.loads(CERT_ALERTS.read_text())
+    except (OSError, ValueError):
+        return None
+
+
+def certificates():
+    w = "Certificate alerts"
+    alerts = cert_alerts()
+    if alerts is None:
+        say("The certificates couldn't be checked.", "warning", title=w)
+        return 1
+    if not alerts:
+        say("No alerts: no security certificate this computer trusts has expired, expires within 30 days, or was "
+            "removed.", title=w)
+        return 0
+    problem = {"expired": lambda a: f"Expired {a['ends'][:10]}", "expiring": lambda a: f"Expires {a['ends'][:10]}",
+               "removed": lambda a: "Removed"}
+    rows = [(a["name"], problem[a["kind"]](a), "Added to this computer" if a["added"] else "Comes with the system")
+            for a in alerts]
+    i = choose("These security certificates need attention. Pick one to see what to do.",
+               ["Certificate", "Problem", "Where it's from"], rows, width=760, height=420)
+    if i is None:
+        return 0
+    a = alerts[i]
+    name = a["name"]
+    if a["kind"] == "removed":
+        say(f"The certificate \"{name}\" was added to this computer and has been removed, so it's no longer "
+            "trusted. If you didn't remove it, tell your helper.", "warning", title=w)
+        subprocess.run([CERTS, "seen", a["fingerprint"]], capture_output=True)
+        return 0
+    if not a["added"]:
+        say(f"\"{name}\" comes with Fedora. The trusted list is rebuilt from Fedora's current list at every start, "
+            "so an update replaces or drops it; keep automatic updates on. If this alert stays after updating and "
+            "restarting, tell your helper.", "warning", title=w)
+        return 0
+    if a["kind"] == "expiring":
+        say(f"\"{name}\" was added to this computer and expires on {a['ends'][:10]}. Ask whoever gave it to you "
+            "for a new one before then.", "warning", title=w)
+        return 0
+    if not a["file"] or not CERT_FILE.fullmatch(a["file"]):
+        say(f"\"{name}\" has expired. It was added in a way System Tools can't remove; tell your helper.",
+            "warning", title=w)
+        return 0
+    if a.get("in_file", 1) > 1:
+        say(f"\"{name}\" has expired, but its file ({a['file']}) holds {a['in_file']} certificates, and removing "
+            "it would remove them all, the good ones too. Tell your helper.", "warning", title=w)
+        return 0
+    if ask(f"\"{name}\" was added to this computer and expired on {a['ends'][:10]}. An expired certificate "
+           "shouldn't be relied on. Remove it if you no longer need it; if you do, ask whoever gave it to you for a "
+           "new one. Removing it needs your password.", ok="Remove it", cancel="Keep it", title=w) != "ok":
+        return 0
+    rc = run("Removing the certificate.", ["pkexec", CERT_REMOVE, a["file"], a["fingerprint"]], title=w)
+    if rc != 0:
+        problem = ("The administrator password wasn't given, so nothing was changed." if rc in (126, 127) else
+                   "Its file changed or holds more than one certificate, so nothing was removed. Tell your helper."
+                   if rc == 3 else f"It didn't work.\n\nThe details are in {LOG}")
+        say(problem, "warning", title=w)
+        return 1
+    cert_alerts()
+    subprocess.run([CERTS, "seen", a["fingerprint"]], capture_output=True)    # removed here: no "removed" alert
+    if subprocess.run([CERTS, "trusted", a["fingerprint"]], capture_output=True).returncode == 0:
+        say(f"Its file is removed, but \"{name}\" is still trusted: it was added somewhere else too. Tell your "
+            "helper.", "warning", title=w)
+        return 1
+    say(f"\"{name}\" is removed and no longer trusted.", title=w)
     return 0
 
 
@@ -768,8 +958,11 @@ TOOLS = [("firmware", "Update firmware", "Updates for the computer's own parts, 
           setup_checklist),
          ("layout", "Desktop layout", "Windows-style bottom bar or the standard top bar", layout),
          ("vpn", "Get a VPN", "Mullvad, Proton, IVPN or NordVPN, kept up to date", get_vpn),
+         ("certificates", "Certificate alerts", "Security certificates that expired, expire soon or were removed",
+          certificates),
          ("test-rollback", "Test automatic rollback",
-          "Check that the computer goes back by itself when a new version won't start", test_rollback)]
+          "Check that the computer goes back by itself when a new version won't start, and puts back deleted "
+          "settings", test_rollback)]
 
 
 def main(argv):
@@ -781,7 +974,7 @@ def main(argv):
         if argv[1:] == ["setup", "--first-login"]:
             return setup_checklist(first_login=True)
         if argv[1:] == ["rolled-back", "--at-login"]:
-            return rolled_back_note()
+            return max(rolled_back_note(), settings_note())
         for key, _, _, fn in TOOLS:
             if argv[1] == key and len(argv) == 2:
                 return fn()

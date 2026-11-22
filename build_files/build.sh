@@ -67,6 +67,21 @@ install -Dm644 /ctx/evenkeel-os-app-updates.timer /usr/lib/systemd/system/evenke
 install -Dm755 /ctx/evenkeel-os-tools /usr/bin/evenkeel-os-tools
 install -Dm755 /ctx/evenkeel-os-tools-admin /usr/libexec/evenkeel-os-tools-admin
 install -Dm644 /ctx/io.github.ctsdownloads.evenkeel-os.tools.policy /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.tools.policy
+# Certificate alerts: each person's own daily check (no admin rights), switched on from /usr for every account.
+install -Dm755 /ctx/evenkeel-os-certs /usr/libexec/evenkeel-os-certs
+install -Dm644 -t /usr/lib/systemd/user /ctx/evenkeel-os-certs.service /ctx/evenkeel-os-certs.timer
+mkdir -p /usr/lib/systemd/user/timers.target.wants
+ln -sfn ../evenkeel-os-certs.timer /usr/lib/systemd/user/timers.target.wants/evenkeel-os-certs.timer
+[ -f /usr/lib/systemd/user/timers.target.wants/evenkeel-os-certs.timer ] \
+  || { echo "ERROR: the certificate check's timer isn't switched on"; exit 1; }
+# Removing an added certificate: its own polkit action (in the tools policy), with the password every time.
+install -Dm755 /ctx/evenkeel-os-cert-remove /usr/libexec/evenkeel-os-cert-remove
+# The trusted list follows Fedora's at every start, even after a certificate was added.
+install -Dm644 /ctx/evenkeel-os-ca-trust.service /usr/lib/systemd/system/evenkeel-os-ca-trust.service
+ln -sfn ../evenkeel-os-ca-trust.service /usr/lib/systemd/system/multi-user.target.wants/evenkeel-os-ca-trust.service
+[ -f /usr/lib/systemd/system/multi-user.target.wants/evenkeel-os-ca-trust.service ] && [ -x /usr/bin/update-ca-trust ] \
+  || { echo "ERROR: the trusted certificate list isn't rebuilt at every start"; exit 1; }
+python3 -I /ctx/check-certs.py
 # Harmless System Tools jobs need no password for an admin at the computer.
 install -Dm755 /ctx/evenkeel-os-tools-safe /usr/libexec/evenkeel-os-tools-safe
 # Automatic updates pause for 3 days after an undo; System Update itself is never paused.
@@ -192,9 +207,26 @@ grub2-script-check "$menu" || { echo "ERROR: the boot menu bootupd would write f
 rm -f "$menu"
 ! rpm -q greenboot-default-health-checks >/dev/null || { echo "ERROR: Fedora's default greenboot checks are installed; they fail offline"; exit 1; }
 install -Dm755 -t /usr/lib/greenboot/check/required.d /ctx/greenboot/00-evenkeel-os-test-quick.sh \
-  /ctx/greenboot/10-evenkeel-os-login-screen.sh /ctx/greenboot/20-evenkeel-os-networking.sh \
-  /ctx/greenboot/30-evenkeel-os-desktop.sh
-install -Dm755 -t /usr/lib/greenboot/green.d /ctx/greenboot/90-evenkeel-os-rolled-back.sh
+  /ctx/greenboot/05-evenkeel-os-settings.sh /ctx/greenboot/10-evenkeel-os-login-screen.sh \
+  /ctx/greenboot/20-evenkeel-os-networking.sh /ctx/greenboot/30-evenkeel-os-desktop.sh
+# The save runs last: the rollback note (90) reads the settings test's marker, which the save clears.
+install -Dm755 -t /usr/lib/greenboot/green.d /ctx/greenboot/90-evenkeel-os-rolled-back.sh \
+  /ctx/greenboot/95-evenkeel-os-settings-save.sh
+# Settings repair: a copy of /etc saved after each good start, put back from when important settings go missing.
+install -Dm755 -t /usr/lib/greenboot/red.d /ctx/greenboot/50-evenkeel-os-settings-repair.sh
+install -Dm755 /ctx/greenboot/evenkeel-os-settings /usr/libexec/evenkeel-os-settings
+fb=/usr/lib/systemd/system/systemd-firstboot.service.d/50-evenkeel-os.conf
+install -Dm644 /ctx/50-evenkeel-os-firstboot.conf "$fb"
+[ "$(sed -n 's/^ExecStart=//p' "$fb" | tail -1)" = /usr/bin/systemd-firstboot ] \
+  || { echo "ERROR: the first-start setup can still stop startup to ask questions"; exit 1; }
+# System Tools' settings test runs as its own polkit action (in the tools policy), with the password every time.
+install -Dm755 /ctx/greenboot/evenkeel-os-settings-test /usr/libexec/evenkeel-os-settings-test
+for c in rsync unshare findmnt; do
+  command -v "$c" >/dev/null || { echo "ERROR: the settings repair needs $c"; exit 1; }
+done
+# greenboot writes its status file before any check, so a missing /etc/motd.d stops it (our drop-in makes it).
+grep -aqF /etc/motd.d/boot-status /usr/libexec/greenboot/greenboot \
+  || { echo "ERROR: greenboot no longer writes /etc/motd.d/boot-status; check 50-evenkeel-os-greenboot.conf"; exit 1; }
 install -Dm644 /ctx/greenboot/50-evenkeel-os-greenboot.conf /usr/lib/systemd/system/greenboot-healthcheck.service.d/50-evenkeel-os.conf
 install -Dm755 /ctx/greenboot/evenkeel-os-greenboot-arm /usr/libexec/evenkeel-os-greenboot-arm
 # Boot menus written before the fix above get the line break once, at the next start.
@@ -220,9 +252,25 @@ done
 # The login-loop test needs the user desktop's own shell unit (the login screen uses org.gnome.Shell@gdm).
 grep -qx 'Requires=org.gnome.Shell@user.service' /usr/lib/systemd/user/gnome-session@gnome.target.d/gnome.session.conf \
   || { echo "ERROR: GNOME's desktop no longer starts org.gnome.Shell@user.service; update the login-loop test"; exit 1; }
+# Also switched on from /usr, as their [Install] lines say, so deleting /etc can't switch them off.
+for l in multi-user.target.wants/greenboot-healthcheck.service \
+         greenboot-success.target.requires/greenboot-healthcheck.service \
+         ostree-finalize-staged.service.requires/greenboot-set-rollback-trigger.service \
+         multi-user.target.wants/evenkeel-os-boot-menu-repair.service \
+         multi-user.target.wants/evenkeel-os-test-stuck.service \
+         multi-user.target.wants/evenkeel-os-test-freeze.service; do
+  mkdir -p "/usr/lib/systemd/system/${l%/*}"
+  ln -sfn "../${l##*/}" "/usr/lib/systemd/system/$l"
+  [ -f "/usr/lib/systemd/system/$l" ] || { echo "ERROR: /usr/lib/systemd/system/$l doesn't lead to its unit"; exit 1; }
+  u=${l##*/}; t=${l%/*}; t=${t%.*}; kind=${l%/*}; kind=${kind##*.}
+  want=$([ "$kind" = wants ] && echo WantedBy || echo RequiredBy)
+  grep -qx "$want=${t}" "/usr/lib/systemd/system/$u" || { echo "ERROR: $u's [Install] has no $want=$t"; exit 1; }
+done
+python3 -I /ctx/check-settings-repair.py
 # Normal starts never trip a test: with no test kernel argument every test step passes.
 python3 -I /ctx/check-rollback-tests.py
 for f in /usr/lib/greenboot/check/required.d/*-evenkeel-os-*.sh /usr/lib/greenboot/green.d/*-evenkeel-os-*.sh \
+         /usr/lib/greenboot/red.d/*-evenkeel-os-*.sh \
          /usr/libexec/evenkeel-os-test-fail /usr/libexec/evenkeel-os-greenboot-arm /usr/libexec/evenkeel-os-boot-menu-repair; do
   bash -n "$f" || { echo "ERROR: $f has a syntax error"; exit 1; }
 done

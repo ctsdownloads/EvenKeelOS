@@ -1,0 +1,10 @@
+[Unit]
+Description=Check security certificates a few minutes after login and every day
+
+[Timer]
+OnStartupSec=3min
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target

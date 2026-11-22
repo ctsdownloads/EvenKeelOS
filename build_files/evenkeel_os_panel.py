@@ -134,8 +134,12 @@ def tool_list():
              "Makes one file of recent errors. Email it to your helper.", "document-save-symbolic",
              t + ["problem-details"], "evenkeel-os-tools problem-details", "logs report error"),
         Tool("help", "Check that it can't break", "Test automatic rollback",
-             "Check that the computer goes back by itself when a new version won't start", "view-refresh-symbolic",
-             t + ["test-rollback"], "evenkeel-os-tools test-rollback", "greenboot"),
+             "Check that the computer goes back by itself when a new version won't start, and puts back deleted "
+             "settings", "view-refresh-symbolic", t + ["test-rollback"], "evenkeel-os-tools test-rollback",
+             "greenboot repair settings"),
+        Tool("help", "Check that it can't break", "Certificate alerts",
+             "Security certificates that expired, expire within 30 days or were removed", "security-high-symbolic",
+             t + ["certificates"], "evenkeel-os-tools certificates", "certificate ssl tls https trust expire"),
     ]
 
 
@@ -303,15 +307,25 @@ class Window(Adw.ApplicationWindow):
         return g
 
     def terminal_list(self):
-        g = Adw.PreferencesGroup(title="Prefer the terminal?", description="Every tool here has a command.")
+        g = Adw.PreferencesGroup(title="Prefer the terminal?", description="Every tool here has a command. The copy "
+                                 "button puts it on the clipboard, to paste in a terminal.")
         seen = set()
         for tool in self.tools:
             if tool.command and tool.command not in seen:
                 seen.add(tool.command)
                 r = Adw.ActionRow(title=tool.command, subtitle=tool.title, css_classes=["property"])
                 r.set_subtitle_selectable(True)
+                copy = Gtk.Button(icon_name="edit-copy-symbolic", tooltip_text="Copy the command",
+                                  valign=Gtk.Align.CENTER, css_classes=["flat"])
+                copy.update_property([Gtk.AccessibleProperty.LABEL], [f"Copy {tool.command}"])
+                copy.connect("clicked", self.copy_command, tool.command)
+                r.add_suffix(copy)
                 g.add(r)
         return g
+
+    def copy_command(self, _button, command):
+        self.get_clipboard().set(command)
+        self.toast(f"Copied: {command}")
 
     # ------------------------------------------------------------ state
 
@@ -327,6 +341,7 @@ class Window(Adw.ApplicationWindow):
         state["staged"] = next((d for d in ds if d.get("staged")), None)
         booted = next((d for d in ds if d.get("booted")), None)
         state["since"] = self.t.when(booted) if booted else ""
+        state["certs"] = len(self.t.cert_alerts() or [])
         GLib.idle_add(self.show_state, state)
 
     def show_state(self, s):
@@ -340,6 +355,12 @@ class Window(Adw.ApplicationWindow):
         elif not s["on"]:
             title, sub, button, warn = ("Automatic updates are off", "Nothing updates until you run System Update.",
                                         "Turn on", True)
+        elif s["certs"]:
+            n = s["certs"]
+            title, sub, button, warn = ("A certificate needs attention" if n == 1 else
+                                        f"{n} certificates need attention",
+                                        "A security certificate expired, expires within 30 days, or was removed.",
+                                        "Details", True)
         else:
             title, sub, button, warn = ("Your computer is in good shape", "Automatic updates are on.", "Update now",
                                         False)
@@ -414,6 +435,8 @@ class Window(Adw.ApplicationWindow):
             spawn(["gnome-session-quit", "--reboot"])
         elif label in ("Resume now", "Turn on"):
             spawn([TOOLS, "updates"], self.refresh)
+        elif label == "Details":
+            spawn([TOOLS, "certificates"], self.refresh)
         else:
             self.activate_tool(next(t for t in self.tools if t.title == "System Update"))
 

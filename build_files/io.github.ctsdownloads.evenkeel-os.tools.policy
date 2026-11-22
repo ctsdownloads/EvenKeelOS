@@ -4,16 +4,40 @@
   <vendor>EvenKeelOS</vendor>
   <vendor_url>https://github.com/ctsdownloads/evenkeel-os</vendor_url>
 
-  <!-- System Tools: automatic updates off or on, and the disk unlock check. Admin password. -->
+  <!-- System Tools: automatic updates, disk unlock and the rollback tests. Admin password. -->
   <action id="io.github.ctsdownloads.evenkeel-os.tools">
-    <description>Change automatic updates or automatic disk unlock</description>
-    <message>Authentication is required to change automatic updates or automatic disk unlock</message>
+    <description>Change a System Tools setting</description>
+    <message>Authentication is required to change a System Tools setting</message>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>
       <allow_active>auth_admin_keep</allow_active>
     </defaults>
     <annotate key="org.freedesktop.policykit.exec.path">/usr/libexec/evenkeel-os-tools-admin</annotate>
+  </action>
+
+  <!-- System Tools' settings repair test really deletes important settings: the admin password every time. -->
+  <action id="io.github.ctsdownloads.evenkeel-os.settings-test">
+    <description>Delete important settings to test the settings repair</description>
+    <message>Authentication is required to delete important settings for the repair test</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/libexec/evenkeel-os-settings-test</annotate>
+  </action>
+
+  <!-- Certificate alerts: removing a certificate added to this computer. The admin password every time. -->
+  <action id="io.github.ctsdownloads.evenkeel-os.cert-remove">
+    <description>Remove a certificate added to this computer from its trusted list</description>
+    <message>Authentication is required to remove a trusted certificate</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/libexec/evenkeel-os-cert-remove</annotate>
   </action>
 
   <!-- Harmless System Tools jobs: 50-evenkeel-os-tools.rules lets an admin at the computer skip the password. -->
