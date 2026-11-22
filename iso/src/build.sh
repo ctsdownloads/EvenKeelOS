@@ -16,7 +16,8 @@ for s in uupd.timer brew-setup.service podman-auto-update.timer tailscaled.servi
   if systemctl cat "$s" >/dev/null 2>&1; then systemctl disable "$s"; else echo "note: $s is not in this image"; fi
 done
 rm -f /etc/xdg/autostart/evenkeel-os-setup-checklist.desktop /etc/xdg/autostart/evenkeel-os-packages-after-restart.desktop \
-  /etc/xdg/autostart/evenkeel-os-rolled-back.desktop /etc/xdg/autostart/evenkeel-os-network-ask.desktop
+  /etc/xdg/autostart/evenkeel-os-rolled-back.desktop /etc/xdg/autostart/evenkeel-os-network-ask.desktop \
+  /etc/xdg/autostart/evenkeel-os-guide.desktop
 
 # The live user and its automatic login.
 dnf install -y livesys-scripts

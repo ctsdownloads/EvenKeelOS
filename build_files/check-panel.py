@@ -9,6 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
 import evenkeel_os_dialogs as dialogs  # noqa: E402
+import evenkeel_os_guide as guide  # noqa: E402
 import evenkeel_os_panel as panel  # noqa: E402
 
 ICONS = [Path("/usr/share/icons/Adwaita"), Path("/usr/share/icons/hicolor")]
@@ -19,10 +20,14 @@ icons = {t.icon for t in tools} | {i for _, _, i in panel.PAGES} | {"object-sele
                                                                     "emblem-important-symbolic", "go-next-symbolic",
                                                                     "document-send-symbolic", "view-refresh-symbolic",
                                                                     "edit-copy-symbolic", "go-previous-symbolic"}
-icons |= set(dialogs.ICONS.values())
+icons |= set(dialogs.ICONS.values()) | {icon for _, icon, _ in guide.SECTIONS} | {"dialog-information-symbolic"}
 for i in sorted(icons):
     if not any(next(d.rglob(f"{i}.svg"), None) for d in ICONS):
         problems.append(f"icon {i} is not in this image")
+for title, _, lines in guide.SECTIONS:
+    for line, target in lines:
+        if target and target not in pages:
+            problems.append(f"New to Linux, {title}: {line[:40]!r} opens a page that doesn't exist: {target}")
 for t in tools:
     if t.page not in pages:
         problems.append(f"{t.title} is on a page that doesn't exist: {t.page}")

@@ -11,6 +11,7 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk  # noqa: E402
 import evenkeel_os_bootopts as bootopts  # noqa: E402
+import evenkeel_os_guide as guide  # noqa: E402
 import evenkeel_os_network as net  # noqa: E402
 import evenkeel_os_sharing as sharing  # noqa: E402
 from evenkeel_os_dialogs import Dialogs  # noqa: E402
@@ -153,6 +154,9 @@ def tool_list():
         Tool("yours", "Colors and wallpaper", "Accent color and wallpaper",
              "Teal to start. Folder icons follow whatever color you pick.", "applications-graphics-symbolic",
              ["gnome-control-center", "background"], "", "theme folder appearance background"),
+        Tool("help", "New here?", "New to Linux?",
+             "Where things are and what's different, for people coming from Windows", "dialog-information-symbolic",
+             "guide", "evenkeel-os-tools --page=guide", "windows guide start help beginner tour switch"),
         Tool("help", "Something not right?", "Undo the last update",
              "If it started after an update, go back to the version from before it", "edit-undo-symbolic",
              t + ["undo-update"], "evenkeel-os-tools undo-update", "rollback revert"),
@@ -189,6 +193,7 @@ class Window(Adw.ApplicationWindow):
         search_page.add(self.results)
         self.stack.add_named(search_page, "search")
         self.stack.add_named(self.dialogs.widget, "tool")
+        self.stack.add_named(self.guide_page(), "guide")
 
         self.content_title = Adw.WindowTitle(title="Overview")
         content_bar = Adw.HeaderBar(title_widget=self.content_title)
@@ -348,6 +353,58 @@ class Window(Adw.ApplicationWindow):
             box.append(b)
         g.add(box)
         return g
+
+    def guide_page(self):
+        """New to Linux: where things are and what's different. Lines that name a page open it."""
+        page = Adw.PreferencesPage()
+        g = Adw.PreferencesGroup()
+        box = Gtk.Box(spacing=20, css_classes=["ek-banner"])
+        box.append(Gtk.Image(icon_name="dialog-information-symbolic", pixel_size=40))
+        text = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6, hexpand=True, valign=Gtk.Align.CENTER)
+        text.append(Gtk.Label(label=guide.TITLE, xalign=0, wrap=True, css_classes=["title-2"]))
+        text.append(Gtk.Label(label=guide.INTRO, xalign=0, wrap=True, css_classes=["ek-sub"]))
+        box.append(text)
+        g.add(box)
+        page.add(g)
+        names = dict((k, n) for k, n, _ in PAGES)
+        for title, icon, lines in guide.SECTIONS:
+            g = Adw.PreferencesGroup(title=title)
+            for line, target in lines:
+                row = Adw.ActionRow(title=line, title_lines=0, activatable=bool(target))
+                if target:
+                    row.set_subtitle(f"Open {names[target]}")
+                    row.add_suffix(Gtk.Image.new_from_icon_name("go-next-symbolic"))
+                    row.connect("activated", lambda *_, t=target: self.show(t))
+                g.add(row)
+            g.set_header_suffix(Gtk.Image.new_from_icon_name(icon))
+            page.add(g)
+        g = Adw.PreferencesGroup()
+        self.guide_hide = Gtk.CheckButton(label="Don't show this again at login", visible=False)
+        self.guide_hide.connect("toggled", self.on_guide_hide)
+        g.add(self.guide_hide)
+        page.add(g)
+        return page
+
+    def open_guide(self, at_login=False):
+        if self.stack.get_visible_child_name() not in ("tool", "guide"):
+            self.before = self.stack.get_visible_child_name()
+        self.guide_hide.set_visible(at_login or self.guide_hide.get_visible())
+        self.stack.set_visible_child_name("guide")
+        self.content_title.set_title(guide.TITLE)
+        self.back.set_visible(True)
+        self.waiting.set_revealed(False)
+        self.split.set_show_content(True)
+        self.present()
+
+    def on_guide_hide(self, button):
+        try:
+            if button.get_active():
+                self.t.STATE.mkdir(parents=True, exist_ok=True)
+                self.t.GUIDE_HIDDEN.touch()
+            else:
+                self.t.GUIDE_HIDDEN.unlink(missing_ok=True)
+        except OSError:
+            self.toast("That couldn't be saved.")
 
     def network_page(self, page):
         """Which place the network you're on is, every saved network's place, and what Home and Work let in."""
@@ -911,6 +968,8 @@ class Window(Adw.ApplicationWindow):
             self.show(tool.run)
         elif tool.run == "bootopts":
             self.show("disk")
+        elif tool.run == "guide":
+            self.open_guide()
         elif tool.run == "codecs-remove":
             self.remove_codecs()
         elif tool.run[0] in OURS:
@@ -1114,15 +1173,19 @@ class Window(Adw.ApplicationWindow):
     def toast(self, text):
         self.toasts.add_toast(Adw.Toast(title=text, timeout=6))
 
-    def show(self, page):
+    def show(self, page, at_login=False):
+        if page == "guide":
+            self.open_guide(at_login)
+            return
         keys = [k for k, _, _ in PAGES]
         self.sidebar.select_row(self.sidebar.get_row_at_index(keys.index(page) if page in keys else 0))
         self.present()
         self.sidebar.get_selected_row().grab_focus()      # not the search box, so its hint stays readable
 
 
-def run(tools_module, page="overview"):
-    """Open the window (or bring it to the front, on the page asked for)."""
+def run(tools_module, page="overview", first_login=False):
+    """Open the window (or bring it to the front, on the page asked for). first_login: the guide at login, with
+    its "Don't show this again" box."""
     app = Adw.Application(application_id=APP_ID, flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
     provider = Gtk.CssProvider()
     provider.load_from_data(CSS)
@@ -1130,12 +1193,13 @@ def run(tools_module, page="overview"):
     def command_line(a, cl):
         args = cl.get_arguments()[1:]
         want = next((x.split("=", 1)[1] for x in args if x.startswith("--page=")), page)
+        at_login = "--first-login" in args
         win = a.get_active_window()
         if win is None:
             Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), provider,
                                                       Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
             win = Window(a, tools_module)
-        win.show(want)
+        win.show(want, at_login)
         return 0
     app.connect("command-line", command_line)
-    return app.run([TOOLS, f"--page={page}"])
+    return app.run([TOOLS, f"--page={page}"] + (["--first-login"] if first_login else []))

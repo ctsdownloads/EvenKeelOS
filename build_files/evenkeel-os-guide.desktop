@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=New to Linux guide at login
+Comment=Opens the New to Linux guide at login, after the setup checklist, until its Don't show this again box is ticked
+Exec=/usr/bin/evenkeel-os-tools guide --first-login
+Terminal=false
+NoDisplay=true
+OnlyShowIn=GNOME;
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=25
