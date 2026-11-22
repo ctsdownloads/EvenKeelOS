@@ -117,6 +117,14 @@ Most printers need no driver, so it recommends **Open Printers** first.
 it. A .deb driver can't go on the system; the window says how to get the .rpm
 from the maker.
 
+A package counts as a printer driver when it has printer description files
+(`.ppd`), a printing filter (in a `cups`, `lpd` or `cupswrapper` folder, or a
+`printfilter`), or an install step that adds a printer. Makers' own drivers,
+like Epson's, Lexmark's and Brother's, often keep these under `/opt` or
+`/usr/local`, so they are recognized there too. Example files in a package's
+docs don't count. If the system can't take a driver, the add step says it didn't
+work and nothing changes.
+
 ### Start apps at login
 
 **Start apps at login** (System Tools, Apps) switches box apps on or off at login. An app's own
