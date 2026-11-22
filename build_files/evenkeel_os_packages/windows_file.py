@@ -5,7 +5,7 @@ import re
 import subprocess
 from urllib.parse import urlsplit
 
-from evenkeel_os_ui import ask, say
+from evenkeel_os_ui import LAUNCH_ENV, ask, say
 from evenkeel_os_packages import app_list, artcraft, boxes, common, flathub, installed, repo_apps, vpn, zoom
 
 LIST = "/usr/share/evenkeel-os/windows-apps.json"
@@ -194,7 +194,7 @@ def open_file(path):
         if zoom.zoom_host(urlsplit(package).hostname or ""):
             return zoom.open_page(package)
         subprocess.Popen(["gio", "open", package], start_new_session=True,
-                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, env=LAUNCH_ENV)
         return 0
     if where == "vpn":
         if installed_record(where, package):

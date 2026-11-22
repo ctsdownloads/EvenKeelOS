@@ -1,0 +1,90 @@
+#!/usr/bin/python3 -I
+"""Shows a tool's question, message, list, password box or progress inside the System Tools window.
+
+Takes the same options as the zenity calls in EvenKeelOS's tools and answers the same way (exit code and output),
+so a tool started from System Tools runs unchanged. EVENKEEL_OS_PANEL names the window's socket.
+"""
+import json
+import os
+import re
+import socket
+import sys
+import threading
+
+KINDS = ("question", "info", "warning", "error", "list", "password", "progress", "file-selection")
+FLAGS = {"no-markup", "pulsate", "auto-close", "no-cancel"}
+VALUES = {"title", "text", "width", "height", "ok-label", "cancel-label", "extra-button", "print-column",
+          "hide-column", "icon", "file-filter"}
+
+
+def parse(args):
+    """The request for the window, or None for an option this program doesn't know."""
+    req = {"kind": None, "columns": [], "flags": []}
+    for a in args:
+        name, _, value = a[2:].partition("=") if a.startswith("--") else ("", "", "")
+        if name in KINDS and not value and req["kind"] is None:
+            req["kind"] = name
+        elif name in FLAGS and not value:
+            req["flags"].append(name)
+        elif name == "column":
+            req["columns"].append(value)
+        elif name in VALUES and "=" in a:
+            req[name] = value
+        else:
+            return None
+    return req if req["kind"] else None
+
+
+def unescape(text):
+    """zenity reads \\n, \\t and \\\\ in a --text that may hold markup as a new line, a tab and a backslash."""
+    return re.sub(r"\\([nt\\])", lambda m: {"n": "\n", "t": "\t", "\\": "\\"}[m.group(1)], text)
+
+
+def send(f, message):
+    f.write(json.dumps(message) + "\n")
+    f.flush()
+
+
+def main(argv):
+    req = parse(argv[1:])
+    if req is None:
+        print(f"evenkeel-os-dialog: unknown options: {' '.join(argv[1:])}", file=sys.stderr)
+        return 2
+    try:
+        sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+        sock.connect(os.environ["EVENKEEL_OS_PANEL"])
+    except (KeyError, OSError):
+        os.execvp("zenity", ["zenity", *argv[1:]])      # System Tools has closed: a window of its own, as before
+    if "no-markup" not in req["flags"]:
+        req["text"] = unescape(req.get("text", ""))
+    n = max(len(req["columns"]), 1)
+    if req["kind"] == "list":
+        cells = sys.stdin.read().split("\n")[:-1]
+        req["rows"] = [cells[i:i + n] for i in range(0, len(cells) - len(cells) % n, n)]
+    with sock, sock.makefile("rw", encoding="utf-8") as f:
+        send(f, req)
+        if req["kind"] == "progress":
+            threading.Thread(target=feed, args=(f,), daemon=True).start()
+        line = f.readline()
+    answer = json.loads(line) if line else {"button": "cancel"}
+    if answer.get("value") is not None:
+        print(answer["value"])
+    if answer.get("button") == "ok" and isinstance(answer.get("row"), int) and 0 <= answer["row"] < len(req["rows"]):
+        print(req["rows"][answer["row"]][int(req.get("print-column", "1")) - 1])
+    if answer.get("button") == "extra":
+        print(req.get("extra-button", ""))
+    return 0 if answer.get("button") == "ok" else 1
+
+
+def feed(f):
+    """Pass the tool's progress lines (a number, or "# text") on to the window; tell it when they end."""
+    try:
+        for line in sys.stdin:
+            send(f, {"line": line.rstrip("\n")})
+        send(f, {"end": True})
+    except (OSError, ValueError):
+        pass        # the window closed the progress view
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))

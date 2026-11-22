@@ -5,7 +5,7 @@ import subprocess
 from pathlib import Path
 from urllib.parse import parse_qs, urlencode, urlsplit
 
-from evenkeel_os_ui import ask
+from evenkeel_os_ui import LAUNCH_ENV, ask
 from evenkeel_os_packages import common, flathub, installed
 
 CHROME = "com.google.Chrome"
@@ -48,7 +48,8 @@ def chrome_command():
 
 
 def start(command):
-    subprocess.Popen(command, start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.Popen(command, start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                     env=LAUNCH_ENV)
 
 
 def open_page(address, may_install=True):

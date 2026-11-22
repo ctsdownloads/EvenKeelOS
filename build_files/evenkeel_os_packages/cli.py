@@ -58,7 +58,7 @@ def take_lock(lock, quiet=False):
         fcntl.flock(lock, fcntl.LOCK_EX)
         return True
     text = waiting_text(doing_now())
-    bar = subprocess.Popen(["zenity", f"--title={ui.TITLE}", "--width=520", "--progress", "--pulsate", "--auto-close",
+    bar = subprocess.Popen([ui.DIALOGS, f"--title={ui.TITLE}", "--width=520", "--progress", "--pulsate", "--auto-close",
                             f"--text={html.escape(text)}"], stdin=subprocess.PIPE, text=True,
                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     shown = None

@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_dialogs as dialogs  # noqa: E402
 import evenkeel_os_panel as panel  # noqa: E402
 
 ICONS = [Path("/usr/share/icons/Adwaita"), Path("/usr/share/icons/hicolor")]
@@ -17,7 +18,8 @@ pages = {k for k, _, _ in panel.PAGES}
 icons = {t.icon for t in tools} | {i for _, _, i in panel.PAGES} | {"object-select-symbolic",
                                                                     "emblem-important-symbolic", "go-next-symbolic",
                                                                     "document-send-symbolic", "view-refresh-symbolic",
-                                                                    "edit-copy-symbolic"}
+                                                                    "edit-copy-symbolic", "go-previous-symbolic"}
+icons |= set(dialogs.ICONS.values())
 for i in sorted(icons):
     if not any(next(d.rglob(f"{i}.svg"), None) for d in ICONS):
         problems.append(f"icon {i} is not in this image")
