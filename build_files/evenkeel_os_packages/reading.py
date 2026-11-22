@@ -163,6 +163,14 @@ def rule_runs_program(text):
     return any(RUNS_PROGRAM.search(line) for line in joined.splitlines() if not line.lstrip().startswith("#"))
 
 
+# A printer description file, a printing filter (cups filter or backend, lpd filter, cupswrapper, printfilter) or a
+# cups driver file; docs and examples don't count. An install script line (not a comment) that adds a printer.
+PRINTER_FILE = re.compile(r"\.ppd(\.gz|\.bz2)?$|/cups/(lib/)?(filter|backend)/[^/]+$|/lpd/[^/]*filter[^/]*$|"
+                          r"/cupswrapper/[^/]+$|/[^/]*printfilter[^/]*$|/(cups|ppds?)/.*\.drv(\.gz)?$", re.I)
+NOT_PRINTER = re.compile(r"/(doc|docs|examples?|samples?)/", re.I)
+ADDS_PRINTER = re.compile(r"^\s*(?!#)(.*[\s;|&(/])?lpadmin\s(.*\s)?-p\s", re.M)
+
+
 def starts(p, *prefixes):
     return any(p.startswith(x) for x in prefixes)
 
@@ -198,8 +206,11 @@ def classify(pkg):
     if re.search(r"(^|[\s;|&(])(modprobe|insmod|depmod|dkms)\s", pkg.scripts):
         found["driver"] = True
     flag("firmware", lambda p: p.startswith("/usr/lib/firmware/"))
+    # Printer drivers by what they hold, in any folder: makers like Epson and Lexmark use /opt or /usr/local.
     flag("printer", lambda p: starts(p, "/usr/lib/cups/", "/usr/share/cups/model/", "/usr/share/cups/drv/",
-                                     "/usr/share/ppd/"))
+                                     "/usr/share/ppd/") or (PRINTER_FILE.search(p) and not NOT_PRINTER.search(p)))
+    if ADDS_PRINTER.search(pkg.scripts):
+        found["printer"] = True
     flag("scanner", lambda p: starts(p, "/etc/sane.d/") or re.match(r"/usr/lib(64)?/(x86_64-linux-gnu/)?sane/", p))
     flag("login", lambda p: starts(p, "/etc/pam.d/", "/usr/lib/pam.d/", "/etc/security/", "/etc/sudoers.d/",
                                    "/etc/selinux/", "/usr/share/selinux/")
