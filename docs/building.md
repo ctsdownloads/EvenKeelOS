@@ -30,6 +30,7 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/evenkeel-os-shell-theme.sh` | Adds one rule to GNOME Shell's own style file at build time so the lock screen's password box uses the accent color; fails the build if GNOME renames that part |
 | `build_files/evenkeel-os-no-bootc.tuned.conf` | Keeps tuned from running bootc, and waiting on updates, at every power-mode switch |
 | `build_files/check-*.py` | Build tests: packages are read correctly, power modes skip bootc, docs keep up, and (`check-root-helpers.py`) every root helper refuses hostile input, bad device rules are refused and no-password rules stay at the computer. The build workflow also runs shellcheck and bandit on the root helpers |
+| `build_files/locked-versions.txt`, `check-locked-versions.py`, `update-locked-versions.sh`, `.github/workflows/check-versions.yml` | The exact versions of the outside packages and the ISO build tool, the build check that they match, and the daily check for newer ones (see [Locked versions](#locked-versions)) |
 | `iso/` | The live USB and its installer. `iso/build-local-iso.sh` builds a test ISO locally; `iso/verify-image.sh` checks the built images |
 | `system_files/` | Files copied into the image |
 | `cosign.pub` | Public key for verifying the image |
@@ -46,6 +47,8 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 - Logo Menu, ArcMenu or Dash to Panel is missing or doesn't support the image's
   GNOME, or the Windows-style layout's defaults or switch don't work;
 - a power mode would still run bootc on every switch;
+- an outside package is not at its locked version or is not on the list (see
+  [Locked versions](#locked-versions));
 - Install Package File misreads four real Fedora packages.
 
 A separate docs check fails when the README's contents table or a link is out of
@@ -55,6 +58,78 @@ A failed signing step leaves an unsigned image that a signed rebase rejects.
 
 Fedora's service presets are kept through the rebrand. Universal Blue's package
 repository is used only during the build.
+
+## Locked versions
+
+These are locked to exact versions in
+[`build_files/locked-versions.txt`](../build_files/locked-versions.txt):
+
+- the Universal Blue packages (uupd, Bazaar, Homebrew setup, ujust and its
+  disk-encryption helper) and Ghostty, from Copr;
+- Titanoboa, the ISO build tool, at one exact commit.
+
+`build_files/build.sh` installs the Copr packages at exactly those versions. At
+the end of the build, `build_files/check-locked-versions.py` fails the build if a
+package not signed by Fedora's key is missing from the list or is at a different
+version, or if a listed package isn't installed. The ISO build
+(`.github/workflows/build-iso.yml` and `iso/build-local-iso.sh`) uses Titanoboa at
+the locked commit, and its upload step is pinned to a commit like the other
+GitHub actions.
+
+### The daily check
+
+[`check-versions.yml`](../.github/workflows/check-versions.yml) runs every day at
+9:35 UTC, before the 10:05 UTC image build. You can also run it by hand from the
+Actions tab. It runs `build_files/update-locked-versions.sh`, which asks Copr for
+the newest version of each locked package (with Fedora's own package tool, dnf5,
+in a Fedora container) and asks GitHub for Titanoboa's newest `main` commit.
+
+If anything is newer, it opens a pull request named "Update locked versions" on
+the branch `update-locked-versions`. The pull request is assigned to
+`ctsdownloads` and mentions him, and lists each change with a link (the Copr
+package page, or the Titanoboa compare page). If that pull request is already
+open, the check adds a new commit on top of its branch and a comment listing the
+change, so anything you changed on that branch is kept. If the branch changes
+while the check runs, it stops and tries again the next day.
+
+Nothing changes in the image until that pull request is merged. Review it and
+merge it. Pull requests opened by a workflow don't start the image build checks
+(a GitHub rule). The build and its checks run after the merge, and a failed
+build publishes nothing. To run every check before merging: Actions tab, **Build
+container image**, **Run workflow**, pick the branch `update-locked-versions`,
+**Run workflow**. A build from any branch but `main` publishes nothing.
+
+### Things to know
+
+- **Merge in time.** Copr keeps the newest build of a package and deletes older
+  builds about 14 days after a newer one is out (from Copr's documentation, as
+  quoted in [this bug report](https://bugzilla.redhat.com/show_bug.cgi?id=1630257)).
+  If the pull request isn't merged in time, the locked version can disappear and
+  the daily build stops (`build.sh` says the locked version did not install)
+  until it is merged.
+- **Closing without merging.** The pull request opens again the next day while a
+  newer version is still out.
+- **A new extra package.** If a newer version needs another Universal Blue
+  package that isn't on the list, the build stops and names it. Add that package
+  to the list by hand on the pull request's branch (the build run above shows
+  it), or on `main` if it shows up after the merge.
+- **One-time setting.** In the GitHub repository, go to Settings, Actions,
+  General, Workflow permissions, tick **Allow GitHub Actions to create and
+  approve pull requests**, and Save. Without it, the pull request step fails.
+
+### Not locked
+
+- The Fedora base image (`quay.io/fedora-ostree-desktops/silverblue:45`) and
+  its packages, taken by the tag and rebuilt daily.
+- Titanoboa itself builds inside Fedora's own `quay.io/fedora/fedora:latest`
+  container.
+- The Flathub apps installed at the first start with internet, and Flathub apps
+  added later.
+- Software added after install: the optional codecs from RPM Fusion and Cisco,
+  and VPN apps from each company's own download source.
+
+Locked elsewhere: the GNOME extensions Logo Menu and ArcMenu by sha256 checksum,
+and the folder icons by an Adwaita Colors commit, both in `build_files/build.sh`.
 
 ## Media codecs
 

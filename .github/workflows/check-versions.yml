@@ -1,0 +1,107 @@
+---
+# Daily: when a locked outside package or the ISO build tool has a newer version, opens a PR assigned to the owner.
+# Nothing changes until that PR is merged. Versions are in build_files/locked-versions.txt.
+name: Check for newer versions
+on:
+  schedule:
+    - cron: '35 9 * * *'  # 9:35am UTC everyday, before the daily build
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+env:
+  BRANCH: update-locked-versions
+  OWNER: ctsdownloads
+
+jobs:
+  look:
+    name: Look up the newest versions
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      base: ${{ steps.base.outputs.ref }}
+      commit: ${{ steps.newest.outputs.commit }}
+      lock: ${{ steps.newest.outputs.lock }}
+      notes: ${{ steps.newest.outputs.notes }}
+    steps:
+      # An open PR is checked from its own branch, so changes made there are kept.
+      - name: Find an open PR
+        id: base
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          open=$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$BRANCH" --state open --json number -q length)
+          case $open in
+            0) echo "ref=main" >> "$GITHUB_OUTPUT" ;;
+            1) echo "ref=$BRANCH" >> "$GITHUB_OUTPUT" ;;
+            *) echo "ERROR: expected 0 or 1 open PRs from $BRANCH, found: $open"; exit 1 ;;
+          esac
+
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ steps.base.outputs.ref }}
+          persist-credentials: false
+
+      - name: Look up the newest versions
+        id: newest
+        run: |
+          bash build_files/update-locked-versions.sh "$RUNNER_TEMP/notes.md"
+          echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          if ! git diff --quiet; then
+            echo "lock=$(base64 -w0 build_files/locked-versions.txt)" >> "$GITHUB_OUTPUT"
+            echo "notes=$(base64 -w0 "$RUNNER_TEMP/notes.md")" >> "$GITHUB_OUTPUT"
+          fi
+
+  pr:
+    name: Open or update the PR
+    needs: look
+    if: needs.look.outputs.lock != ''
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ needs.look.outputs.commit }}
+
+      - name: Open or update the PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BASE: ${{ needs.look.outputs.base }}
+          LOCK: ${{ needs.look.outputs.lock }}
+          NOTES: ${{ needs.look.outputs.notes }}
+        run: |
+          base64 -d <<< "$LOCK" > build_files/locked-versions.txt
+          {
+            echo "@$OWNER newer versions are out. Nothing changes until you merge this PR."
+            echo
+            base64 -d <<< "$NOTES"
+            echo
+            echo "The image build runs after the merge. If a check fails, nothing is published."
+            echo "Copr deletes an old version about 14 days after a newer one is out."
+            echo "If a locked version is gone, the daily build stops until this PR is merged."
+          } > "$RUNNER_TEMP/body.md"
+          git -c user.name="$OWNER" -c user.email="$OWNER@users.noreply.github.com" \
+            commit -q -m "Update locked versions" -- build_files/locked-versions.txt
+          open=$(gh pr list --head "$BRANCH" --state open --json number -q length)
+          if [ "$BASE" = main ] && [ "$open" = 0 ]; then
+            # No PR is open, so a branch of this name is left over from a merged or closed one.
+            git push -q --force origin HEAD:"refs/heads/$BRANCH"
+            gh pr create --base main --head "$BRANCH" --title "Update locked versions" \
+              --body-file "$RUNNER_TEMP/body.md" --assignee "$OWNER"
+          elif [ "$BASE" = "$BRANCH" ] && [ "$open" = 1 ]; then
+            # Fails if the branch changed since it was checked, so nothing on it is lost.
+            git push -q origin HEAD:"refs/heads/$BRANCH"
+            gh pr comment "$BRANCH" --body-file "$RUNNER_TEMP/body.md"
+          else
+            echo "ERROR: the PR was opened or closed during this check; the next run tries again"; exit 1
+          fi

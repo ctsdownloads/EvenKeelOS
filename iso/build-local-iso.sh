@@ -62,7 +62,12 @@ echo "== Checking every change inside the built system and the USB system"
 iso/verify-image.sh localhost/evenkeel-os localhost/evenkeel-os-live
 
 echo "== 3 of 3: the ISO"
-[ -d "$HOME/titanoboa" ] || git clone --depth 1 https://github.com/ublue-os/titanoboa.git "$HOME/titanoboa"
+# titanoboa at the commit locked in build_files/locked-versions.txt.
+tb=$(awk '$1 == "git" && $2 == "ublue-os/titanoboa" {print $4}' build_files/locked-versions.txt)
+[[ $tb =~ ^[0-9a-f]{40}$ ]] || { echo "No titanoboa commit in build_files/locked-versions.txt. Stopping."; exit 1; }
+[ -d "$HOME/titanoboa" ] || git clone --quiet https://github.com/ublue-os/titanoboa.git "$HOME/titanoboa"
+git -C "$HOME/titanoboa" fetch --quiet origin "$tb"
+git -C "$HOME/titanoboa" checkout --quiet --detach "$tb"
 mkdir -p "$out"
 (cd "$HOME/titanoboa" && sudo TITANOBOA_CTR_IMAGE=localhost/evenkeel-os-live TITANOBOA_OUTPUT_DIR="$out" ./main.sh)
 ls -lh "$out"

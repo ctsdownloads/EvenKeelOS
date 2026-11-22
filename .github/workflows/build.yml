@@ -47,10 +47,11 @@ jobs:
         run: |
           shellcheck -s bash -S warning evenkeel-os-codecs-setup evenkeel-os-codecs-admin evenkeel-os-codecs-lib.sh \
             evenkeel-os-updates-pause-check evenkeel-os-flathub-apps greenboot/*.sh greenboot/evenkeel-os-boot-menu-repair \
-            greenboot/evenkeel-os-greenboot-arm greenboot/evenkeel-os-test-fail
+            greenboot/evenkeel-os-greenboot-arm greenboot/evenkeel-os-test-fail update-locked-versions.sh
           pipx run --spec bandit==1.9.4 bandit -q -ll evenkeel-os-tools-admin evenkeel-os-tools-safe evenkeel-os-hwrules \
             evenkeel-os-vpn evenkeel-os-app-updates check-root-helpers.py check-vpns.py greenboot/evenkeel-os-settings \
-            check-settings-repair.py greenboot/evenkeel-os-settings-test evenkeel-os-cert-remove evenkeel-os-certs
+            check-settings-repair.py greenboot/evenkeel-os-settings-test evenkeel-os-cert-remove evenkeel-os-certs \
+            check-locked-versions.py
 
       - name: Maximize build space
         uses: ublue-os/remove-unwanted-software@695eb75bc387dbcd9685a8e72d23439d8686cba6
