@@ -183,3 +183,37 @@ jobs:
           # old bundle format: rpm-ostree can't read the new one (container-libs#388, rpm-ostree#5509)
           cosign sign -y --new-bundle-format=false --use-signing-config=false --key env://COSIGN_PRIVATE_KEY ${IMAGE_REGISTRY}/${IMAGE_NAME}@${DIGEST}
 
+
+  # A failed main or daily build opens an issue assigned to the owner; the next good build closes it.
+  alert:
+    name: Alert on a failed build
+    needs: build_push
+    if: >-
+      always() && github.event_name != 'pull_request'
+      && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+      && contains(fromJSON('["success", "failure"]'), needs.build_push.result)
+    runs-on: ubuntu-24.04
+    permissions:
+      issues: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RESULT: ${{ needs.build_push.result }}
+      RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      TITLE: The image build failed
+      OWNER: ctsdownloads
+    steps:
+      - name: Open, update or close the issue
+        run: |
+          issue=$(gh issue list --state open --search "in:title \"$TITLE\"" --limit 100 --json number,title \
+            -q "[.[] | select(.title == \"$TITLE\")][0].number // empty")
+          if [ "$RESULT" = failure ]; then
+            body="@$OWNER the image build failed. Installed computers keep the last good build until it is fixed. $RUN"
+            if [ -n "$issue" ]; then
+              gh issue comment "$issue" --body "Failed again. $body"
+            else
+              gh issue create --title "$TITLE" --assignee "$OWNER" --body "$body"
+            fi
+          elif [ -n "$issue" ]; then
+            gh issue close "$issue" --comment "The image build works again. $RUN"
+          fi
