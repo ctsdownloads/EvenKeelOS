@@ -145,6 +145,10 @@ other projects, under their own licenses, with their source available there:
 - **Locked versions:** the Universal Blue and Ghostty packages and the ISO build
   tool are locked to exact versions and checked daily for newer ones. See
   [Locked versions](docs/building.md#locked-versions).
+- **Boot test:** every build starts in a virtual machine and must reach the desktop
+  before it's published, with its disk made by
+  [bootc-image-builder](https://github.com/osbuild/image-builder), locked to
+  one version. See [Boot test](docs/building.md#boot-test).
 - **Logo Menu:** <https://github.com/Aryan20/Logomenu> (GPL-2.0), from
   <https://extensions.gnome.org/extension/4451/logo-menu/>. Changed by the build: its menu gets a
   System Tools entry (`build_files/build.sh`).

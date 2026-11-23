@@ -1,0 +1,59 @@
+#!/usr/bin/bash
+# Boot test checks, run as the test user over SSH inside the test copy. One PASS or FAIL line each.
+set -uo pipefail
+
+failed=0
+pass() { echo "PASS: $1"; }
+fail() { echo "FAIL: $1"; failed=1; }
+wait_for() {
+  local seconds=$1
+  shift
+  for _ in $(seq "$seconds"); do
+    "$@" && return 0
+    sleep 1
+  done
+  return 1
+}
+
+uid=$(id -u)
+export XDG_RUNTIME_DIR="/run/user/$uid" DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$uid/bus"
+export WAYLAND_DISPLAY=wayland-0
+
+state() {
+  gdbus call --session --dest org.gnome.Shell.Extensions --object-path /org/gnome/Shell/Extensions \
+    --method org.gnome.Shell.Extensions.GetExtensionInfo "$1" 2>/dev/null \
+    | grep -o "'state': <[0-9.]*>" | grep -o '[0-9.]*'
+}
+running() { [ "$(state "$1")" = "1.0" ]; }     # 1 is ACTIVE in GNOME Shell's extension states
+desktop_up() { pgrep -u "$uid" -x gnome-shell >/dev/null; }
+
+if wait_for 300 systemctl is-active -q graphical.target; then pass "the computer finished starting"
+else fail "the computer didn't finish starting"; fi
+if systemctl is-active -q gdm.service; then pass "the login screen is running"
+else fail "the login screen isn't running"; fi
+if wait_for 180 desktop_up; then pass "the test user reached the desktop"
+else fail "the test user didn't reach the desktop"; fi
+
+if wait_for 60 running logomenu@aryan_k; then pass "Logo Menu is running (standard layout)"
+else fail "Logo Menu isn't running (standard layout)"; fi
+
+if evenkeel-os-layout windows >/dev/null; then pass "the layout switched to Windows-style"
+else fail "the layout didn't switch to Windows-style"; fi
+for ext in arcmenu@arcmenu.com dash-to-panel@jderose9.github.com; do
+  if wait_for 60 running "$ext"; then pass "$ext is running (Windows-style layout)"
+  else fail "$ext isn't running (Windows-style layout)"; fi
+done
+
+# Running System Tools owns its app name on the session bus, whichever copy of it opened the window.
+tools_up() {
+  gdbus call --session --dest org.freedesktop.DBus --object-path /org/freedesktop/DBus \
+    --method org.freedesktop.DBus.NameHasOwner io.github.ctsdownloads.evenkeel-os.Tools 2>/dev/null | grep -q true
+}
+setsid evenkeel-os-tools >/tmp/system-tools.log 2>&1 &
+if wait_for 30 tools_up && ! grep -q Traceback /tmp/system-tools.log; then pass "System Tools opened"
+else
+  fail "System Tools didn't open"
+  sed 's/^/  /' /tmp/system-tools.log
+fi
+
+exit "$failed"

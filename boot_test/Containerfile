@@ -1,0 +1,10 @@
+# Test-only copy of the new image for the boot test on GitHub; never published.
+ARG BASE
+FROM ${BASE}
+COPY boot_test/boot-check /usr/libexec/evenkeel-os-boot-check
+# Test copy only: the test user logs in by itself, SSH lets the runner check it, no Flathub downloads.
+RUN printf '[daemon]\nAutomaticLoginEnable=True\nAutomaticLogin=tester\n' > /etc/gdm/custom.conf && \
+    systemctl enable sshd.service && \
+    systemctl mask evenkeel-os-flatpak-apps.service && \
+    firewall-offline-cmd --zone=evenkeel-public --add-service=ssh && \
+    chmod 755 /usr/libexec/evenkeel-os-boot-check

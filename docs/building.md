@@ -14,6 +14,7 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/bluefin-packages.txt` | Fedora packages carried over from Bluefin |
 | `build_files/default-apps.txt`, `flathub-apps.txt`, `evenkeel-os-flathub-apps`, `evenkeel-os-flatpak-apps.service`, `evenkeel-os-flathub.service`, `flathub.flatpakrepo` | Default apps, and the Flathub ones installed at the first start with internet |
 | `build_files/evenkeel_os_ui.py` | Windows, notices and disk sizes shared by System Tools and Install Package File |
+| `boot_test/run-boot-test.sh`, `boot_test/boot-check`, `boot_test/Containerfile` | The [boot test](#boot-test): starts each new build in a virtual machine before it's published |
 | `build_files/firewall/evenkeel-home.xml`, `evenkeel-work.xml`, `evenkeel-public.xml` | The three firewall zones for Network safety: Home, Work and Public place |
 | `build_files/evenkeel_os_network.py` | Each network's place, shared by System Tools, the question and the installer |
 | `build_files/evenkeel-os-network-ask`, `evenkeel-os-network-ask.desktop` | The once-per-network question, started at login |
@@ -76,6 +77,34 @@ A separate docs check fails when the README's contents table or a link is out of
 date.
 
 A failed signing step leaves an unsigned image that a signed rebase rejects.
+
+### Boot test
+
+Before anything is published, the build starts the new image in a virtual machine on the same free GitHub machine
+(`boot_test/run-boot-test.sh`) and checks, one line each (`boot_test/boot-check`):
+
+- the computer finishes starting and the login screen runs;
+- a test user logs in by itself and reaches the desktop;
+- Logo Menu runs with the standard layout, then ArcMenu and Dash to Panel run after switching to Windows-style;
+- System Tools opens.
+
+The virtual machine runs a test-only copy (`boot_test/Containerfile`): the new image plus the automatic test login,
+SSH for the checks, and the check script, without the Flathub app downloads of a first start (so a slow Flathub can't
+fail the test). That copy is never published. Its disk is made with bootc-image-builder,
+locked to one version in `run-boot-test.sh`. The test user's key and password are made for each run and thrown away.
+
+If the start or a check fails, it tries once more from a clean start. If that fails too, the build stops: nothing is
+published, everyone keeps the last good version, and "The image build failed" issue opens. Pull request builds run
+the same test, so a change that breaks starting shows up before it's merged.
+
+Each run's results are under **Artifacts** at the bottom of the run's page, as **boot-test**: `report.txt` (each
+check, PASS or FAIL), `desktop-1.png` (a screenshot of the desktop at the end of the checks; `desktop-2.png` after a
+second try), the start messages (`serial-1.log`), the warnings of that start (`warnings-1.txt`) and the build
+machine's free disk space (`disk-space.txt`). If the test stops before the checks, the report says where, and the
+build log has the details.
+
+The disk is made with the old `quay.io/centos-bootc/bootc-image-builder` container, which its makers keep as a
+stand-in for their newer `image-builder`. When they retire it, the boot test moves to `image-builder`.
 
 When a build of `main` fails (a merge, the daily build or a run by hand), the build workflow opens an issue named
 "The image build failed", assigned to `ctsdownloads`, with a link to the failed run. Another failure adds a comment
