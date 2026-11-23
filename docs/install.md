@@ -22,9 +22,13 @@ Nothing touches the disk until you install.
    Fedora's signed one.
 3. **Welcome window:** **Install EvenKeelOS** or **Try it first**.
 4. **The installer:** it asks for language, keyboards, network, time zone, date
-   and time, disk, encryption, accounts, the computer's name and the desktop
-   layout (Standard, or Windows-style with a bottom bar and start menu), then
-   shows a **Review**. Click **Install**, then **Restart** when it's done.
+   and time, disk, encryption, accounts, the computer's name, **Coming from
+   Windows** or **I already use Linux**, and the desktop layout (Standard, or
+   Windows-style with a bottom bar and start menu), then shows a **Review**.
+   Click **Install**, then **Restart** when it's done.
+   - **Coming from Windows** picks the Windows-style layout and opens **New to EvenKeelOS?** at login. **I already
+     use Linux** picks the Standard layout and doesn't open it (it's still in System Tools, Get help). The layout
+     step after it can still pick the other layout. Both get the setup checklist.
    - After you join a password Wi-Fi on the Network step, the installer asks "Where is NETWORK-NAME?" with **Home**,
      **Work** or **Public place**. The answer is saved with that network and carried over to the installed system.
      **Next** waits for an answer; **Back** skips the question, and the installed system asks at the first login.
@@ -180,4 +184,5 @@ any time.
 
 **New to EvenKeelOS?** opens in System Tools after the setup checklist closes: where things are, coming from Windows,
 and what's different. It's the first page of the [EvenKeelOS guide](guide.md). It opens at every login until **Don't
-show this again at login** at its end is ticked. The guide is in System Tools, Get help, any time.
+show this again at login** at its end is ticked, or never, after **I already use Linux** in the installer. The guide
+is in System Tools, Get help, any time.

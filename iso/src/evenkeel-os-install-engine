@@ -24,6 +24,8 @@ TARGET = "/run/evenkeel-os-install/target"
 NETWORKS = "etc/NetworkManager/system-connections"   # NetworkManager's saved networks
 OPENED = []                  # the encrypted volume this install opened, to close again at the end
 PRIVATE = []                 # what was typed (names), kept out of the log
+# In the new user's home: New to EvenKeelOS? stays closed at login (evenkeel-os-tools' GUIDE_HIDDEN).
+GUIDE_HIDDEN = ".local/state/evenkeel-os/guide-hidden"
 
 
 class Stop(Exception):
@@ -109,6 +111,8 @@ def write(path, text):
 
 
 def install(c):
+    if c.get("experience") not in ("windows", "linux"):
+        raise Stop(f"Unknown experience {c.get('experience')}.")
     disk = chosen_disk(c)
     keymap = console_keymap(c["boot_layout"])
     if not c["time_automatic"]:
@@ -268,6 +272,9 @@ def configure(c, keymap):
         if c["root_password"]:
             run(*chroot, "chpasswd", secret=f"root:{c['root_password']}\n",
                 problem="The root password could not be set.")
+        if c["experience"] == "linux":
+            hide_guide(deploy, run(*chroot, "getent", "passwd", c["username"],
+                                   problem="Your account could not be found.").stdout)
         run(*chroot, "dconf", "update", problem="The clock and time zone settings could not be saved.")
         # Files written from here have no SELinux labels yet; label them as the new system's policy says.
         run(*chroot, "restorecon", "-RF", "/etc", "/var/home", problem="The new files could not be labelled.")
@@ -284,6 +291,27 @@ def layout_extensions(deploy, layout):
         if isinstance(node, ast.Assign) and [getattr(t, "id", None) for t in node.targets] == ["LAYOUTS"]:
             return ast.literal_eval(node.value)[layout]
     raise Stop("The new system's desktop layouts could not be found.")
+
+
+def hide_guide(deploy, passwd_line):
+    """Make the new user's GUIDE_HIDDEN file, owned by them; restorecon labels it after."""
+    fields = passwd_line.strip().split(":")
+    uid, gid, home = int(fields[2]), int(fields[3]), fields[5]
+    if not home.startswith("/") or ".." in home.split("/"):
+        raise Stop("Your account's home folder could not be found.")
+    path = f"{deploy}{home}"
+    for part in GUIDE_HIDDEN.split("/")[:-1]:
+        path = f"{path}/{part}"
+        if not os.path.isdir(path):
+            os.mkdir(path, 0o700)
+            os.chown(path, uid, gid, follow_symlinks=False)
+        elif os.path.islink(path):
+            raise Stop("Your account's home folder could not be set up.")
+    path = f"{path}/{GUIDE_HIDDEN.split('/')[-1]}"
+    fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o644)
+    os.fchown(fd, uid, gid)
+    os.close(fd)
+    log("New to EvenKeelOS? won't open at login")
 
 
 def add_group(deploy, name):
