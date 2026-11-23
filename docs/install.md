@@ -20,7 +20,21 @@ Nothing touches the disk until you install.
 2. Start from the stick and pick **EvenKeelOS Live**. Secure Boot can stay on.
    The computer's boot list may name the stick "Fedora": its boot loader is
    Fedora's signed one.
-3. **Welcome window:** **Install EvenKeelOS** or **Try it first**.
+3. **Welcome window:** it checks the computer first, under **Will this computer work?**. Each part gets a green
+   tick (fine), an amber warning (works with limits) or a red mark (won't work), with what to do:
+   - **Start mode:** the stick must start in UEFI mode, not old BIOS (legacy) mode. Secure Boot on or off is fine.
+   - **Disk:** a disk inside the computer, 20 GB or more. If the BIOS's RAID setting (Intel RST) hides it, it says
+     to set the storage mode to AHCI in the BIOS. The installer's Disk step says the same.
+   - **Wi-Fi:** a wireless chip with no driver, or a Broadcom chip whose driver or firmware can't be included, is
+     red: use a network cable or a USB Wi-Fi adapter.
+   - **Graphics:** Intel and AMD are fine. NVIDIA isn't supported. Started with **basic graphics**, it can't check
+     them.
+   - **Memory:** under 8 GB is a warning (it may be slow).
+   - **Sound, camera, Bluetooth and touchpad:** found or not. The newer kind of built-in laptop camera may not work
+     yet, and when it does, only in Firefox and the Camera app.
+
+   **Save the results** puts them, with the list of the computer's parts, on a second USB stick. Then
+   **Install EvenKeelOS** or **Try it first**.
 4. **The installer:** it asks for language, keyboards, network, time zone, date
    and time, disk, encryption, accounts, the computer's name, **Coming from
    Windows** or **I already use Linux**, and the desktop layout (Standard, or

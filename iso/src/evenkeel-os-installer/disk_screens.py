@@ -5,6 +5,7 @@ import re
 from gi.repository import Adw, Gtk
 
 import data
+import fitcheck
 from widgets import PasswordPair
 import locale_screens
 import screens
@@ -20,6 +21,7 @@ class DiskScreen(screens.ListScreen):
 
     def enter(self):
         self.disks = data.disks()
+        self.raid = fitcheck.raid_hidden()
         if self.c.disk not in self.disks:            # gone, or another disk now has its name
             self.c.disk = None
         super().enter()
@@ -40,9 +42,12 @@ class DiskScreen(screens.ListScreen):
         return self.c.disk is not None
 
     def status(self):
+        advice = f" {fitcheck.RAID_ADVICE}" if self.raid else ""
         if not self.disks:
-            return "No disk was found. Connect one and click Refresh."
-        return f"Chosen: {self.c.disk['model']}, {self.c.disk['size']}." if self.c.disk else "No disk chosen yet."
+            return ("No disk was found. Connect one and click Refresh." if not advice else
+                    "A disk is hidden." + advice)
+        return (f"Chosen: {self.c.disk['model']}, {self.c.disk['size']}." if self.c.disk else
+                "No disk chosen yet.") + advice
 
 
 # ---------------------------------------------------------------------------------------------------- 9 Erase warning

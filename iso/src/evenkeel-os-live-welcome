@@ -1,7 +1,146 @@
-#!/bin/bash
-# Live welcome window: install or try first.
-zenity --question --title="Welcome to EvenKeelOS" --width=560 \
-  --ok-label="Install EvenKeelOS" --cancel-label="Try it first" \
-  --text="Welcome to EvenKeelOS.\n\nThis is a live session: it runs from the USB stick, nothing here is saved, and the computer's disk isn't touched.\n\nRecommended: Install EvenKeelOS, to put it on this computer. Or Try it first: Install EvenKeelOS is also in the dock." \
-  && exec /usr/bin/evenkeel-os-installer
-exit 0
+#!/usr/bin/python3
+"""Live welcome window: the fit check for this computer, then Install EvenKeelOS or Try it first."""
+import datetime
+import os
+import subprocess
+import sys
+import tempfile
+import threading
+
+sys.path.insert(0, "/usr/lib/evenkeel-os-installer")
+
+import gi
+
+gi.require_version("Gtk", "4.0")
+gi.require_version("Adw", "1")
+from gi.repository import Adw, Gio, GLib, Gtk  # noqa: E402
+
+import data  # noqa: E402
+import fitcheck  # noqa: E402
+
+INSTALLER = "/usr/bin/evenkeel-os-installer"
+ICONS = {fitcheck.GOOD: ("object-select-symbolic", "success"),
+         fitcheck.LIMITED: ("dialog-warning-symbolic", "warning"),
+         fitcheck.BAD: ("dialog-error-symbolic", "error")}
+INTRO = ("This is a live session: it runs from the USB stick, nothing here is saved, and the computer's disk isn't "
+         "touched.")
+
+
+class Welcome(Adw.ApplicationWindow):
+    def __init__(self, app):
+        super().__init__(application=app, title="Welcome to EvenKeelOS", default_width=640, default_height=720)
+        self.results = []
+        self.toasts = Adw.ToastOverlay()
+        view = Adw.ToolbarView()
+        view.add_top_bar(Adw.HeaderBar())
+        page = Adw.PreferencesPage()
+        page.add(Adw.PreferencesGroup(title="Welcome to EvenKeelOS", description=INTRO))
+        self.group = Adw.PreferencesGroup(title="Will this computer work?",
+                                          description="Checking this computer's parts...")
+        self.spinner = Adw.Spinner(halign=Gtk.Align.CENTER, height_request=32)
+        self.group.add(self.spinner)
+        page.add(self.group)
+        view.set_content(page)
+        bar = Gtk.Box(spacing=12, halign=Gtk.Align.END, margin_top=12, margin_bottom=12, margin_end=12)
+        self.save = Gtk.Button(label="Save the results", sensitive=False)
+        self.save.connect("clicked", self.on_save)
+        later = Gtk.Button(label="Try it first")
+        later.connect("clicked", lambda _b: self.close())
+        install = Gtk.Button(label="Install EvenKeelOS", css_classes=["suggested-action"])
+        install.connect("clicked", self.on_install)
+        for b in (self.save, later, install):
+            bar.append(b)
+        view.add_bottom_bar(bar)
+        self.toasts.set_child(view)
+        self.set_content(self.toasts)
+        threading.Thread(target=self.run_check, daemon=True).start()
+
+    def run_check(self):
+        try:
+            results = fitcheck.check()
+        except Exception as e:          # the window still offers Install and Try it first
+            results = [(fitcheck.LIMITED, "Fit check", "The check couldn't finish.", str(e))]
+        GLib.idle_add(self.show_results, results)
+
+    def show_results(self, results):
+        self.results = results
+        self.group.remove(self.spinner)
+        bad = any(level == fitcheck.BAD for level, *_ in results)
+        self.group.set_description("Something here won't work. Read it before installing." if bad else
+                                   "Install EvenKeelOS puts it on this computer. Or Try it first: Install EvenKeelOS "
+                                   "is also in the dock.")
+        for level, part, found, todo in results:
+            icon, style = ICONS[level]
+            row = Adw.ActionRow(title=part, subtitle=" ".join(x for x in (found, todo) if x), use_markup=False)
+            row.set_subtitle_selectable(True)
+            row.add_prefix(Gtk.Image(icon_name=icon, css_classes=[style], valign=Gtk.Align.CENTER))
+            self.group.add(row)
+        self.save.set_sensitive(True)
+        return False
+
+    def on_install(self, _button):
+        try:
+            Gio.Subprocess.new([INSTALLER], Gio.SubprocessFlags.NONE)
+        except GLib.Error:
+            self.toasts.add_toast(Adw.Toast(title="The installer couldn't open. Use Install EvenKeelOS in the dock."))
+            return
+        self.close()
+
+    def on_save(self, _button):
+        self.save.set_sensitive(False)
+        threading.Thread(target=self.find_sticks, daemon=True).start()
+
+    def find_sticks(self):
+        try:
+            sticks = data.sticks()
+        except (OSError, ValueError, subprocess.SubprocessError):
+            sticks = []
+        GLib.idle_add(self.pick_stick, sticks)
+
+    def pick_stick(self, sticks):
+        self.save.set_sensitive(True)
+        if not sticks:
+            self.toasts.add_toast(Adw.Toast(title="Plug in a second USB stick, then click Save the results again."))
+            return False
+        dialog = Adw.AlertDialog(heading="Save the results", body="Click the USB stick to save them on.")
+        dialog.add_response("cancel", "Cancel")
+        dialog.set_close_response("cancel")
+        for i, s in enumerate(sticks[:4]):
+            dialog.add_response(str(i), f"{s['name']}, {s['size']}")
+        dialog.connect("response", self.on_stick, sticks)
+        dialog.present(self)
+        return False
+
+    def on_stick(self, _dialog, response, sticks):
+        if response == "cancel":
+            return
+        self.save.set_sensitive(False)
+        threading.Thread(target=self.write, args=(sticks[int(response)],), daemon=True).start()
+
+    def write(self, stick):
+        name = f"evenkeel-os-fit-check-{datetime.datetime.now():%Y%m%d-%H%M}.txt"
+        with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False) as f:
+            f.write(fitcheck.report(self.results))
+        try:
+            problem = data.save_to_stick(stick["path"], f.name, name)
+        finally:
+            os.unlink(f.name)
+        GLib.idle_add(self.saved, f"Saved on {stick['name']} as {name}." if not problem else f"Not saved: {problem}")
+
+    def saved(self, text):
+        self.save.set_sensitive(True)
+        self.toasts.add_toast(Adw.Toast(title=text))
+        return False
+
+
+class App(Adw.Application):
+    def __init__(self):
+        super().__init__(application_id="io.github.ctsdownloads.EvenKeelOS.Welcome",
+                         flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
+
+    def do_activate(self):
+        (self.get_active_window() or Welcome(self)).present()
+
+
+if __name__ == "__main__":
+    sys.exit(App().run(sys.argv))

@@ -169,7 +169,7 @@ def save_to_stick(path, source, name):
             dst.flush()
             os.fsync(dst.fileno())
     except OSError as e:
-        return f"The log could not be written: {e.strerror}."
+        return f"The file could not be written: {e.strerror}."
     subprocess.run(["udisksctl", "unmount", "--no-user-interaction", "-b", path], capture_output=True)
     return ""
 
