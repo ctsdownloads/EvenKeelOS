@@ -1,11 +1,6 @@
-"""What works on this computer: saved after each good start, and checked while a new version is on trial.
+"""What works on this computer, saved after each good start; a new version on trial must keep all of it working.
 
-Each item has a key, plain words for the rollback note, and what must still be there for its loss to count: a device
-that's unplugged, switched off in the BIOS or cut off by a privacy switch is gone, not broken, so it never counts.
-Only USB devices in ports the computer calls fixed are listed. Something switched off by its owner (Shared folders,
-disk unlock, a service) isn't asked for, and a start that only changed boot options checks programs, not hardware.
-greenboot's check (40-evenkeel-os-still-works.sh) runs compare on a trial start; System Tools' rollback tests read the
-record to see what this computer can test.
+Each item lists what must still be there for its loss to count, so unplugged or switched-off hardware never counts.
 """
 import json
 import os
@@ -61,14 +56,26 @@ def run(cmd, timeout=30):
     return r.returncode, r.stdout
 
 
+def link_name(p):
+    """The name a sysfs link points to (a driver, a module, a bus), or empty."""
+    p = Path(p)
+    return os.path.basename(os.readlink(p)) if p.is_symlink() else ""
+
+
+def attr(d, name):
+    """A sysfs attribute of a device folder."""
+    try:
+        return (Path(d) / name).read_text().strip()
+    except (OSError, UnicodeDecodeError):
+        return ""
+
+
 def subsystem(d):
-    link = Path(d) / "subsystem"
-    return os.path.basename(os.readlink(link)) if link.is_symlink() else ""
+    return link_name(Path(d) / "subsystem")
 
 
 def anchor(dev):
-    """The hardware a device hangs off: its PCI or USB device (whose sysfs entry stays when its driver fails), else
-    the outermost platform or ACPI device (made by the firmware tables, so it stays too), else its bus device."""
+    """The hardware a device hangs off, which stays when its driver fails: PCI or USB, else firmware-made, else bus."""
     try:
         dev = Path(dev).resolve(strict=True)
     except OSError:
@@ -91,12 +98,12 @@ def anchor(dev):
 
 
 def usb_id(d):
-    return f"{read(Path(rel(d)) / 'idVendor')}:{read(Path(rel(d)) / 'idProduct')}"
+    return f"{attr(d, 'idVendor')}:{attr(d, 'idProduct')}"
 
 
 def removable(a):
     """A USB device in a port the computer doesn't call fixed: plug-ins, and anything on a hub or dock."""
-    return subsystem(a) == "usb" and read(Path(rel(a)) / "removable") != "fixed"
+    return subsystem(a) == "usb" and attr(a, "removable") != "fixed"
 
 
 def akey(a):
@@ -110,17 +117,14 @@ def need(a):
     if subsystem(a) == "usb":
         return {"usb": usb_id(a)}
     if subsystem(a) == "pci":
-        return {"path": rel(a), "id": f"{read(Path(rel(a)) / 'vendor')}:{read(Path(rel(a)) / 'device')}"}
+        return {"path": rel(a), "id": f"{attr(a, 'vendor')}:{attr(a, 'device')}"}
     return {"path": rel(a)}
 
 
 def module(dev):
     """The driver module of a device (empty when it has no driver)."""
     drv = Path(dev) / "driver"
-    if not drv.exists():
-        return ""
-    mod = drv / "module"
-    return os.path.basename(os.readlink(mod)) if mod.is_symlink() else ""
+    return link_name(drv / "module") if drv.exists() else ""
 
 
 def listed(folder, pattern):
@@ -160,7 +164,7 @@ def networks():
             continue
         if (n / "phy80211").exists() or (n / "wireless").exists():
             wifi.append(n / "device")
-        elif read(Path(rel(n)) / "type") == "1":
+        elif attr(n, "type") == "1":
             wired.append(n / "device")
     return {**hardware("wifi", "Wi-Fi", wifi), **hardware("wired", "Wired network", wired)}
 
@@ -180,7 +184,7 @@ def graphics():
 def cameras():
     items = {}
     for v in listed("/sys/class/video4linux", r"video[0-9]+"):
-        items.update({k: i for k, i in hardware("camera", f"The camera ({read(rel(v / 'name')) or v.name})",
+        items.update({k: i for k, i in hardware("camera", f"The camera ({attr(v, 'name') or v.name})",
                                                 [v / "device"]).items() if k not in items})
     return items
 
@@ -193,7 +197,7 @@ def inputs():
             continue
         kind = ("touchpad" if "ID_INPUT_TOUCHPAD=1" in props.split() else
                 "keyboard" if "ID_INPUT_KEYBOARD=1" in props.split() else None)
-        bus = read(Path(rel(i)) / "id/bustype")
+        bus = attr(i, "id/bustype")
         if kind is None or bus in ("0005", "0006"):        # Bluetooth and made-up (virtual) devices come and go
             continue
         a = anchor(i / "device")
@@ -203,17 +207,15 @@ def inputs():
         if n is None:
             continue
         # A kernel may move a touchpad to a better driver (another bus and name), so any touchpad will do.
-        key = "touchpad" if kind == "touchpad" else f"keyboard:{bus}:{read(Path(rel(i)) / 'id/vendor')}:" \
-                                                    f"{read(Path(rel(i)) / 'id/product')}"
-        item = items.setdefault(key, {"name": f"The {kind} ({read(rel(i / 'name')) or 'built in'})", "needs": []})
+        key = "touchpad" if kind == "touchpad" else f"keyboard:{bus}:{attr(i, 'id/vendor')}:{attr(i, 'id/product')}"
+        item = items.setdefault(key, {"name": f"The {kind} ({attr(i, 'name') or 'built in'})", "needs": []})
         if n not in item["needs"]:
             item["needs"].append(n)
     return items
 
 
 def input_need(dev):
-    """What a built-in keyboard or touchpad needs: its own firmware (ACPI) entry, which the BIOS takes away or marks
-    absent when it switches the device off; else the port it's on."""
+    """A built-in keyboard's or touchpad's firmware entry (gone or marked absent when the BIOS switches it off)."""
     try:
         dev = Path(dev).resolve(strict=True)
     except OSError:
@@ -230,7 +232,7 @@ def input_need(dev):
 def batteries():
     items = {}
     for b in listed("/sys/class/power_supply", r".+"):
-        if read(Path(rel(b)) / "type") != "Battery" or read(Path(rel(b)) / "scope") == "Device":
+        if attr(b, "type") != "Battery" or attr(b, "scope") == "Device":
             continue
         try:
             a = (b / "device").resolve(strict=True)
@@ -245,7 +247,7 @@ def batteries():
 
 def backlight():
     for b in listed("/sys/class/backlight", r".+"):
-        if not b.name.startswith("ddcci") and read(Path(rel(b)) / "type") in ("raw", "platform", "firmware"):
+        if not b.name.startswith("ddcci") and attr(b, "type") in ("raw", "platform", "firmware"):
             return {"backlight": {"name": "Screen brightness control", "needs": [{"lid": "open"}]}}
     return {}
 
@@ -332,8 +334,7 @@ def software():
 
 
 def pcrs():
-    """The TPM measurements automatic disk unlock depends on: when they change (a firmware or Secure Boot
-    change), a failed unlock is that change's, not the new version's."""
+    """The TPM measurements disk unlock depends on; after a firmware change, a failed unlock isn't the version's."""
     return {n: read(f"/sys/class/tpm/tpm0/pcr-sha256/{n}") for n in TPM_PCRS}
 
 
@@ -361,28 +362,23 @@ def drivers():
     """Every PCI device, and every USB device in a fixed port, that has a driver."""
     items = {}
     for d in listed("/sys/bus/pci/devices", r".+"):
-        drv = d / "driver"
-        if drv.exists() and os.path.basename(os.readlink(drv)) not in VM_DRIVERS:
-            a = d.resolve()
-            items[f"driver:pci:{d.name}"] = {"name": f"A device lost its driver ({os.path.basename(os.readlink(drv))})",
-                                              "needs": [need(a)]}
+        drv = link_name(d / "driver")
+        if drv and drv not in VM_DRIVERS:
+            items[f"driver:pci:{d.name}"] = {"name": f"A device lost its driver ({drv})", "needs": [need(d.resolve())]}
     for d in listed("/sys/bus/usb/devices", r"[0-9]+-[0-9.]+:[0-9]+\.[0-9]+"):
-        drv = d / "driver"
-        if not drv.exists() or os.path.basename(os.readlink(drv)) == "usbfs":   # usbfs: claimed by a program
-            continue
+        drv = link_name(d / "driver")
         dev = d.resolve().parent
-        if removable(dev):
+        if drv in ("", "usbfs") or removable(dev):        # usbfs: claimed by a program while it runs
             continue
-        name = os.path.basename(os.readlink(drv))
         items[f"driver:usb:{usb_id(dev)}:{d.name.split(':')[1]}"] = {
-            "name": f"A device lost its driver ({name})", "needs": [need(dev)]}
+            "name": f"A device lost its driver ({drv})", "needs": [need(dev)]}
     return items
 
 
 def services():
     """Services running now (long-running ones: a one-time job may fail offline, which never counts)."""
-    rc, out = run(["systemctl", "list-units", "--type=service", "--state=running", "--plain", "--no-legend",
-                   "--no-pager"])
+    _, out = run(["systemctl", "list-units", "--type=service", "--state=running", "--plain", "--no-legend",
+                  "--no-pager"])
     items = {}
     for line in out.splitlines():
         f = line.lstrip("\u25cf* ").split(None, 4)      # a failed unit can start with a dot
@@ -393,13 +389,13 @@ def services():
 
 
 def failed_services():
-    rc, out = run(["systemctl", "list-units", "--type=service", "--state=failed", "--plain", "--no-legend",
-                   "--no-pager"])
+    _, out = run(["systemctl", "list-units", "--type=service", "--state=failed", "--plain", "--no-legend",
+                  "--no-pager"])
     return {w for line in out.splitlines() for w in line.split()[:2] if w.endswith(".service")}
 
 
 def crashes():
-    rc, out = run(["journalctl", "-k", "-b", "-o", "cat", "--no-pager"], 60)
+    _, out = run(["journalctl", "-k", "-b", "-o", "cat", "--no-pager"], 60)
     found = {}
     for line in out.splitlines():
         for kind, pattern in CRASHES.items():
@@ -428,31 +424,28 @@ def gather():
 def holds(n):
     """Whether what a lost item needs is still there."""
     if "usb" in n:
-        return n["usb"] in usb_devices() and not removable(usb_devices()[n["usb"]])
+        dev = usb_devices().get(n["usb"])
+        return dev is not None and not removable(dev)
     if "enabled" in n:
         return any(run(["systemctl", "is-enabled", u])[1].strip() in ("enabled", "static") for u in n["enabled"])
     if "file" in n:
         return P(n["file"]).exists()
     if "lid" in n:                         # a closed lid can leave the screen's brightness control out
-        return not any("closed" in read(rel(d / "state")) for d in listed("/proc/acpi/button/lid", r".+"))
+        return not any("closed" in attr(d, "state") for d in listed("/proc/acpi/button/lid", r".+"))
     if "pcrs" in n:
         return n["pcrs"] == pcrs()
     if "config" in n:
         return bool(boot_options() if n["config"] == "boot-options" else shared_folders())
-    if not P(n["path"]).exists():
+    d = P(n["path"])
+    if not d.exists() or link_name(d / "driver") in VM_DRIVERS:     # a device given to a virtual machine
         return False
-    if "id" in n and f"{read(Path(n['path']) / 'vendor')}:{read(Path(n['path']) / 'device')}" != n["id"]:
+    if "id" in n and f"{attr(d, 'vendor')}:{attr(d, 'device')}" != n["id"]:
         return False
-    drv = P(n["path"]) / "driver"
-    if drv.is_symlink() and os.path.basename(os.readlink(drv)) in VM_DRIVERS:     # handed to a virtual machine
-        return False
-    if n.get("acpi"):
-        status = read(Path(n["path"]) / "status")
-        return not status.isdigit() or bool(int(status) & 0x01)    # ACPI's "device present" bit
-    if n.get("battery"):
-        status = read(Path(n["path"]) / "status")
-        return not status.isdigit() or bool(int(status) & 0x10)    # ACPI's "battery present" bit
-    return True
+    if not (n.get("battery") or n.get("acpi")):
+        return True
+    status = attr(d, "status")
+    present = 0x10 if n.get("battery") else 0x01           # ACPI's "battery present" and "device present" bits
+    return not status.isdigit() or bool(int(status) & present)
 
 
 # What a start that only changed boot options (System Tools, Boot options) still checks: those may switch hardware or
@@ -573,7 +566,7 @@ def record(settle=240):
     return len(rec["items"])
 
 
-def compare(wait=WAIT, path=RECORD):
+def compare(wait=None, path=RECORD, note=False):
     """Exit code 1 when something that worked at the last good start is broken now (after waiting for it)."""
     rec = load(path)
     if rec is None:
@@ -582,7 +575,7 @@ def compare(wait=WAIT, path=RECORD):
     if rec.get("machine") != machine():
         print("The saved list is from another computer, so there's nothing to compare.")
         return 0
-    end = time.monotonic() + wait
+    end = time.monotonic() + (WAIT if wait is None else wait)
     try:
         while True:
             gone = lost(rec)
@@ -598,24 +591,38 @@ def compare(wait=WAIT, path=RECORD):
         return 0
     for key, name in gone:
         print(f"Stopped working: {name} [{key}]")
-    if wait:                               # the trial check (a check run by hand leaves no list for the note)
+    if note:                               # the trial's list, for the rollback note
         write(LOST, f"{int(time.time())}\n" + "".join(f"{name}\n" for _, name in gone))
     return 1
 
 
+USAGE = "Usage: evenkeel-os-health trial | record [--now] | compare [--no-wait] [--record=FILE]"
+
+
+def on_trial():
+    """A new version greenboot is trying (named in the boot menu's settings), not a fallback to the previous one."""
+    env = run(["grub2-editenv", "/boot/grub2/grubenv", "list"])[1].split()
+    return any(v.startswith("greenboot_next_deployment_id=") for v in env) and "boot_counter=-1" not in env
+
+
 def main(argv):
+    if argv[1:] == ["trial"]:
+        if not on_trial():
+            print("This start isn't a new version on trial, so there's nothing to compare.")
+            return 0
+        return compare(note=True)
     if argv[1:] in (["record"], ["record", "--now"]):
         print(f"Saved {record(0 if '--now' in argv else 240)} things that work.")
     elif argv[1:2] == ["compare"] and len(argv) <= 4:
         args = argv[2:]
-        wait = 0 if "--no-wait" in args else WAIT
+        wait = 0 if "--no-wait" in args else None
         path = next((a.split("=", 1)[1] for a in args if a.startswith("--record=")), RECORD)
         if any(a != "--no-wait" and not a.startswith("--record=") for a in args):
-            print("Usage: evenkeel-os-health record [--now] | compare [--no-wait] [--record=FILE]")
+            print(USAGE)
             return 2
         return compare(wait, path)
     else:
-        print("Usage: evenkeel-os-health record [--now] | compare [--no-wait] [--record=FILE]")
+        print(USAGE)
         return 2
     return 0
 

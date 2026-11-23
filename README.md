@@ -148,7 +148,9 @@ other projects, under their own licenses, with their source available there:
 - **Boot test:** every build starts in a virtual machine and must reach the desktop
   before it's published, with its disk made by
   [bootc-image-builder](https://github.com/osbuild/image-builder), locked to
-  one version. See [Boot test](docs/building.md#boot-test).
+  one version. See [Boot test](docs/building.md#boot-test). Every Test automatic
+  rollback test can also run for real in that virtual machine when a build is
+  started by hand. See [Rollback tests](docs/building.md#rollback-tests).
 - **Logo Menu:** <https://github.com/Aryan20/Logomenu> (GPL-2.0), from
   <https://extensions.gnome.org/extension/4451/logo-menu/>. Changed by the build: its menu gets a
   System Tools entry (`build_files/build.sh`).

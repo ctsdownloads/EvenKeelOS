@@ -15,6 +15,7 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/default-apps.txt`, `flathub-apps.txt`, `evenkeel-os-flathub-apps`, `evenkeel-os-flatpak-apps.service`, `evenkeel-os-flathub.service`, `flathub.flatpakrepo` | Default apps, and the Flathub ones installed at the first start with internet |
 | `build_files/evenkeel_os_ui.py` | Windows, notices and disk sizes shared by System Tools and Install Package File |
 | `boot_test/run-boot-test.sh`, `boot_test/boot-check`, `boot_test/boot-check-root`, `boot_test/Containerfile` | The [boot test](#boot-test): starts each new build in a virtual machine before it's published |
+| `boot_test/run-rollback-tests.sh`, `boot_test/rollback-step` | The [rollback tests](#rollback-tests), when asked for |
 | `build_files/evenkeel_os_health.py`, `greenboot/evenkeel-os-health`, `greenboot/40-evenkeel-os-still-works.sh`, `greenboot/93-evenkeel-os-health-record.sh`, `greenboot/evenkeel-os-health-record.service` | The trial check: after each good start (4 minutes in) a list of what works is saved to `/var/lib/evenkeel-os/health-record.json`; while a new version is on trial, after a login, anything on that list that's broken now fails the start (it waits 2 minutes for slow devices first). Hardware counts only if it's still there (unplugged, switched off in the BIOS or by a privacy switch doesn't count); only USB devices in fixed ports are listed; things switched off by their owner aren't asked for; a start that only changed boot options checks programs only; a mistake in the check itself never fails a start. What broke goes to `/var/lib/evenkeel-os/health-lost`, and to `rolled-back-why` with the next rollback's note. `sudo /usr/libexec/evenkeel-os-health compare --no-wait` runs the comparison by hand |
 | `build_files/check-health.py` | Build check: the trial check against a made-up computer, with each of 58 changes counted as broken, or not, as it should be, and the driver each rollback test copy blocks |
 | `build_files/firewall/evenkeel-home.xml`, `evenkeel-work.xml`, `evenkeel-public.xml` | The three firewall zones for Network safety: Home, Work and Public place |
@@ -95,10 +96,11 @@ Before anything is published, the build starts the new image in a virtual machin
   and printing stopped (`boot_test/boot-check-root`, which the test user may run with `sudo` in the test copy only).
 
 The virtual machine runs a test-only copy (`boot_test/Containerfile`): the new image plus the automatic test login,
-SSH for the checks, the check scripts and `sudo` for the one root check script,
+SSH for the checks, the check scripts and `sudo` for the two root test scripts,
 without the Flathub app downloads of a first start (so a slow Flathub can't
 fail the test). That copy is never published. Its disk is made with bootc-image-builder,
-locked to one version in `run-boot-test.sh`. The test user's key and password are made for each run and thrown away.
+locked to one version in `run-boot-test.sh`. The test user's key and password are made for each run, kept for the
+rollback tests, and thrown away with the run.
 
 If the start or a check fails, it tries once more from a clean start. If that fails too, the build stops: nothing is
 published, everyone keeps the last good version, and "The image build failed" issue opens. Pull request builds run
@@ -112,6 +114,35 @@ build log has the details.
 
 The disk is made with the old `quay.io/centos-bootc/bootc-image-builder` container, which its makers keep as a
 stand-in for their newer `image-builder`. When they retire it, the boot test moves to `image-builder`.
+
+### Rollback tests
+
+A build of a branch started by hand with **Also run every Test automatic rollback test** ticked
+(`gh workflow run build.yml --ref BRANCH -f rollback_tests=true`) then runs the rollback tests
+(`boot_test/run-rollback-tests.sh`, sharing `boot_test/vm.sh` with the boot test) on the boot test's disk. It never
+runs on `main`, so it can't hold up a published build. It takes about 4 hours:
+
+- stages a real update with bootc, as automatic updates do on an install with no added packages: a second version
+  of the image, made in the virtual machine; it must be marked for trial;
+- adds a package the way Install Package File does, as on most computers in use (only then does greenboot ask
+  rpm-ostree's service which version is new; on an untouched install it asks bootc);
+- shows the failure this image fixes: with rpm-ostree's service quitting after 60 idle seconds, a new version
+  restarted 90 seconds later isn't marked for trial; then that the fix marks it;
+- runs every Test automatic rollback test for real, as a person would: make the test copy, wait 90 seconds, restart,
+  and let it fail and go back by itself. A crash turns the virtual machine off and it's turned on again, like the
+  power button; one that stops answering for 20 minutes gets a reset; for Login loop it logs in again every 2
+  minutes, like a person trying again; Important settings deleted deletes them for real and must put them back by
+  itself. Wi-Fi and Bluetooth driver blocked are left for real hardware: a virtual machine has no Wi-Fi or Bluetooth
+  chip.
+
+The results (`rollback-test` download) have one PASS or FAIL line per step with what each test copy found broken,
+and greenboot's messages for each test.
+
+greenboot marks a new version for trial at shutdown, and on a computer with added packages it asks rpm-ostree's
+service, which can't be started during a shutdown. Staging there goes through that service, so it now keeps running
+once started (`IdleExitTimeout=0` in `/etc/rpm-ostreed.conf`); before, it quit after a minute and a later restart marked
+nothing. The first update that brings this change is staged by the version before it, so that one update isn't
+checked yet.
 
 When a build of `main` fails (a merge, the daily build or a run by hand), the build workflow opens an issue named
 "The image build failed", assigned to `ctsdownloads`, with a link to the failed run. Another failure adds a comment

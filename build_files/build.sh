@@ -303,6 +303,9 @@ install -Dm644 /ctx/greenboot/50-evenkeel-os-arm.conf /usr/lib/systemd/system/gr
 [ "$(systemctl cat greenboot-set-rollback-trigger.service | sed -n 's/^ExecStop=\([^ ]*\).*/\1/p' | tr '\n' ' ')" \
   = "/usr/libexec/greenboot/greenboot /usr/libexec/evenkeel-os-greenboot-arm " ] \
   || { echo "ERROR: greenboot-set-rollback-trigger's stop steps aren't greenboot then evenkeel-os-greenboot-arm"; exit 1; }
+# rpm-ostreed stays running once started (it quits after 60 idle seconds otherwise), so greenboot can mark a trial.
+sed -i 's/^#\?IdleExitTimeout=.*/IdleExitTimeout=0/' /etc/rpm-ostreed.conf
+grep -qx "IdleExitTimeout=0" /etc/rpm-ostreed.conf || { echo "ERROR: rpm-ostreed.conf has no IdleExitTimeout"; exit 1; }
 # Test automatic rollback: each test copy breaks one real thing, switched on by its kernel argument only.
 install -Dm755 /ctx/greenboot/evenkeel-os-test-fail /usr/libexec/evenkeel-os-test-fail
 install -Dm644 /ctx/greenboot/50-evenkeel-os-test-gdm.conf /usr/lib/systemd/system/gdm.service.d/50-evenkeel-os-test.conf

@@ -248,7 +248,15 @@ def main():
     c.remove("sys/class/sound/card0")
     if health.compare(0) != 1 or (c.root / "var/lib/evenkeel-os/health-lost").exists():
         sys.exit("ERROR: trial check: lost sound doesn't fail a check by hand, or that leaves a list for the note")
-    if health.compare(1) != 1 or "Sound" not in (c.root / "var/lib/evenkeel-os/health-lost").read_text():
+    c.answers["grub2-editenv"] = (0, "boot_success=0\n")
+    if health.main(["", "trial"]) != 0:
+        sys.exit("ERROR: trial check: a start that isn't on trial is compared")
+    c.answers["grub2-editenv"] = (0, "greenboot_next_deployment_id=abc\nboot_counter=-1\n")
+    if health.main(["", "trial"]) != 0:
+        sys.exit("ERROR: trial check: a fallback to the previous version is compared")
+    health.WAIT = 0
+    c.answers["grub2-editenv"] = (0, "greenboot_next_deployment_id=abc\nboot_counter=0\n")
+    if health.main(["", "trial"]) != 1 or "Sound" not in (c.root / "var/lib/evenkeel-os/health-lost").read_text():
         sys.exit("ERROR: trial check: lost sound doesn't fail the trial, or isn't in the note")
     if health.compare(0, "/var/lib/evenkeel-os/none.json") != 0:
         sys.exit("ERROR: trial check: no saved list fails compare")
