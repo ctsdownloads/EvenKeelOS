@@ -24,7 +24,7 @@ dnf install -y livesys-scripts
 sed -i "s/^livesys_session=.*/livesys_session=gnome/" /etc/sysconfig/livesys
 systemctl enable livesys.service livesys-late.service
 
-# Welcome window: Install EvenKeelOS, or Try it first.
+# Welcome window: the fit check for this computer, then Install EvenKeelOS or Try it first.
 install -Dm755 /src/evenkeel-os-live-welcome /usr/libexec/evenkeel-os-live-welcome
 install -Dm644 /src/evenkeel-os-live-welcome.desktop /etc/xdg/autostart/evenkeel-os-live-welcome.desktop
 
@@ -141,6 +141,23 @@ engine = runpy.run_path("/usr/libexec/evenkeel-os-install-engine")["GUIDE_HIDDEN
 sys.exit(str(tools.GUIDE_HIDDEN) != "/h/" + engine)
 PY
 [ "$(wc -l < /usr/share/evenkeel-os-installer/anaconda-translations.txt)" -ge 50 ] || fail "the installer's language list is missing"
+# The fit check runs, and knows the kernel's message for a disk hidden by the BIOS's RAID setting.
+python3 -I - <<'PY' || fail "the live USB's fit check doesn't work"
+import sys
+sys.path.insert(0, "/usr/lib/evenkeel-os-installer")
+import fitcheck
+results = fitcheck.check()
+assert results and all(r[0] in (fitcheck.GOOD, fitcheck.LIMITED, fitcheck.BAD) for r in results)
+assert fitcheck.raid_hidden("ahci 0000:00:17.0: Found 1 remapped NVMe devices.")
+assert not fitcheck.raid_hidden("ahci 0000:00:17.0: AHCI 0001.0301 32 slots")
+fitcheck.report(results)
+PY
+python3 -I -c 'import ast, sys; ast.parse(open(sys.argv[1]).read())' /usr/libexec/evenkeel-os-live-welcome \
+  || fail "the live welcome window has a syntax error"
+for icon in object-select-symbolic dialog-warning-symbolic dialog-error-symbolic; do
+  found=$(find /usr/share/icons/Adwaita -name "$icon.svg" -print -quit)
+  [ -n "$found" ] || fail "the fit check's $icon icon is missing"
+done
 command -v qrencode >/dev/null || fail "qrencode is missing (the problem report's QR code)"
 for tool in mdadm dmsetup cryptsetup mkfs.fat mkfs.ext4 mkfs.xfs sfdisk wipefs hwclock; do
   command -v "$tool" >/dev/null || fail "$tool is missing (the install engine uses it)"
