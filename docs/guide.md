@@ -165,3 +165,184 @@ Getting apps, Windows programs, package files, removing apps, default apps, Zoom
 
 1. Some apps from .rpm or .deb files run in an app box. If one stops starting, open System Tools, Apps, Repair app boxes.
 2. Pick the box. It's set up again, with its apps. Your files aren't touched.
+
+## Internet and networks
+
+Wi-Fi, how safe each network is, and Bluetooth.
+
+### Join a Wi-Fi network
+
+1. Click the icons at the end of the bar, then the arrow next to Wi-Fi. Or open Settings, Wi-Fi.
+2. Click the network's name, type its password, and press Enter.
+3. For a network with a password, a small window then asks where it is: Home, Work or Public place. Not sure? Keep Public place.
+
+### Home, Work or Public place
+
+1. Open System Tools, Network safety. Your networks lists every network this computer has joined.
+2. Public place: nothing on the network can reach your computer. Pick it for cafes, hotels and airports.
+3. Home or Work: your phone and other computers can reach apps that ask for it, like file sharing.
+4. Pick the place next to a network. It changes at once.
+5. Open Wi-Fi, with no password, is always a Public place, because anyone can make one with the same name.
+
+### Let other computers in
+
+1. Open System Tools, Network safety. Under Also let in, on Home and Work, there are two switches.
+2. Log in from another computer (SSH): for people who use a terminal. Leave it off if you don't know it.
+3. Share my printer: lets other computers use a printer plugged into this one.
+4. Both ask for your password, and never work on a Public place.
+
+### Connect a Bluetooth device
+
+1. Open Settings, Bluetooth, and turn on the switch at the top.
+2. Put the device in pairing mode. Its instructions say how, often by holding its power button.
+3. Click the device's name when it shows in the list.
+
+## Printing
+
+Adding a printer, and printer driver files from the maker.
+
+### Add a printer
+
+1. Turn the printer on. Plug it in with its cable, or join it to the same Wi-Fi.
+2. Open Settings, Printers, and click Add Printer.
+3. Click the printer when it shows, then Add. Most printers need nothing else.
+4. To print, press Ctrl+P in any app.
+
+### A driver file from the maker
+
+1. Most printers don't need one. Try Add a printer first.
+2. If yours does, download the maker's .rpm file and open it from Downloads. System Tools sees that it's a printer driver.
+3. Click Install the driver, type your password, and restart. Then add the printer.
+4. A .deb driver can't be installed. The window says how to get the .rpm from the maker.
+
+## Updates and safety
+
+Automatic updates, undoing an update, firmware and certificate alerts.
+
+### Updates happen on their own
+
+1. Every day at 4 am, or at the next start, the system, your apps and app boxes update.
+2. A new system version is used from the next restart. Keep working, and restart when it suits you.
+3. To update now: open System Tools, Updates, System Update.
+
+### Turn automatic updates off or on
+
+1. Open System Tools, Updates, Automatic updates. On is recommended.
+2. Click Turn off or Turn on. Turning them off asks for your password.
+
+### Undo the last update
+
+1. If something stopped working after an update, open System Tools, Updates, Undo the last update.
+2. Click Undo the update, type your password, and restart. Your files and apps aren't touched.
+3. Automatic updates pause for 3 days, so the same update doesn't come straight back. They turn back on by themselves.
+4. Changed your mind? Open Undo the last update again and click Use the newer version.
+
+### If the computer won't start properly
+
+1. You don't need to do anything. If a new version fails to start twice in a row, the computer goes back to the version before by itself.
+2. A note at the next login says so, and automatic updates pause for 3 days.
+3. To check that this works on your computer, see Getting help.
+
+### Update firmware
+
+1. Firmware is the software built into the computer's own parts, like the BIOS.
+2. Plug the computer in. Open System Tools, Updates, Update firmware.
+3. If updates are listed, click Update and type your password. Some finish while the computer restarts.
+
+### Certificate alerts
+
+1. Certificates are how the computer knows a secure website is real. An alert shows when one has expired, expires soon, or was removed.
+2. Open System Tools, Get help, Certificate alerts to see them.
+3. For an expired one that was added to this computer, it offers Remove it. Fedora's own ones are replaced by updates, so keep automatic updates on.
+
+## Making it yours
+
+The layout, colors, wallpaper, screen size, night light, sound and accounts.
+
+### Layout
+
+1. Open System Tools, Make it yours, Desktop layout.
+2. Pick Windows-style or Standard, click Switch, then log out and back in.
+
+### Colors and wallpaper
+
+1. Open Settings, Appearance.
+2. Style: Default (light) or Dark. Accent Color: the color of buttons and folder icons.
+3. Background: click a picture. To use your own photo, click Add Picture.
+
+### Make everything bigger or smaller
+
+1. Open Settings, Displays.
+2. Change Scale. A bigger number makes everything bigger.
+3. Click Apply, then Keep Changes if it looks right.
+
+### Night light
+
+1. Night light makes the screen warmer in the evening, which is easier on the eyes.
+2. Open Settings, Displays, Night Light, and turn it on. It follows sunset and sunrise, or set your own times.
+
+### Sound
+
+1. Open Settings, Sound.
+2. Pick the speakers or headphones under Output Device, and the microphone under Input Device.
+3. Click Test to hear each speaker.
+
+### Your password and other people's accounts
+
+1. Open Settings, System, Users.
+2. To change your password, click Password.
+3. To give someone their own account, click Add User. Leave Administrator off for children and guests.
+
+## Disk and startup
+
+Freeing space, the disk password, boot options and BIOS settings.
+
+### Free up disk space
+
+1. Open System Tools, Disk and startup. The bar shows how much is free.
+2. Click Free up disk space, then Free up space. Your files and apps aren't touched.
+
+### Skip the disk password at startup
+
+1. If you type a disk password every time the computer starts, it can unlock by itself with the computer's security chip.
+2. Open System Tools, Disk and startup, Unlock disk automatically.
+3. Click Turn on, type the disk password once, and restart.
+4. After a BIOS update, it may ask for the disk password again. Turn it on again here.
+
+### Fix screen flicker or a drive that freezes
+
+1. Open System Tools, Disk and startup. Under Common fixes, turn on the one that matches the problem.
+2. Type your password, then restart. The fix starts at the restart.
+3. Didn't help? Turn it off again, and restart.
+4. Told to add a setting by a helper? Type it under Your own settings. Risky ones are explained first.
+
+### BIOS settings
+
+1. Open System Tools, Disk and startup, Restart into BIOS settings.
+2. Save your work, then click Restart now.
+3. The BIOS screen uses the keyboard. When you're done, choose Save and Exit, or Exit.
+
+## Getting help
+
+Sending details to your helper, checking rollback, and terminal commands.
+
+### Send details to your helper
+
+1. Open System Tools, Get help, Save problem details.
+2. Click Save details. It makes one file of recent errors, in Documents. Nothing is sent anywhere.
+3. Click Show the file, then attach it to an email to your helper.
+
+### Something stopped working after an update
+
+1. Undo it. See Updates and safety.
+
+### Check that automatic rollback works
+
+1. Open System Tools, Get help, Test automatic rollback. Save your work first.
+2. Pick a test, click Start the test, and type your password.
+3. The computer restarts, fails on purpose, then goes back by itself. A note at login says the test worked.
+
+### Prefer the terminal?
+
+1. Open System Tools, Get help, and scroll to the end. Every tool has its command there.
+2. Click the copy button next to a command, then paste it in Terminal.

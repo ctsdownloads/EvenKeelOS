@@ -172,6 +172,176 @@ TOPICS = [
              ("Pick the box. It's set up again, with its apps. Your files aren't touched.", ""),
          ]),
      ]),
+    ("internet", "Internet and networks", "network-wireless-symbolic",
+     "Wi-Fi, how safe each network is, and Bluetooth", [
+         ("Join a Wi-Fi network", [
+             ("Click the icons at the end of the bar, then the arrow next to Wi-Fi. Or open Settings, Wi-Fi.",
+              "settings:wifi"),
+             ("Click the network's name, type its password, and press Enter.", ""),
+             ("For a network with a password, a small window then asks where it is: Home, Work or Public place. "
+              "Not sure? Keep Public place.", "page:network"),
+         ]),
+         ("Home, Work or Public place", [
+             ("Open System Tools, Network safety. Your networks lists every network this computer has joined.",
+              "page:network"),
+             ("Public place: nothing on the network can reach your computer. Pick it for cafes, hotels and airports.",
+              ""),
+             ("Home or Work: your phone and other computers can reach apps that ask for it, like file sharing.", ""),
+             ("Pick the place next to a network. It changes at once.", ""),
+             ("Open Wi-Fi, with no password, is always a Public place, because anyone can make one with the same "
+              "name.", ""),
+         ]),
+         ("Let other computers in", [
+             ("Open System Tools, Network safety. Under Also let in, on Home and Work, there are two switches.",
+              "page:network"),
+             ("Log in from another computer (SSH): for people who use a terminal. Leave it off if you don't know it.",
+              ""),
+             ("Share my printer: lets other computers use a printer plugged into this one.", ""),
+             ("Both ask for your password, and never work on a Public place.", ""),
+         ]),
+         ("Connect a Bluetooth device", [
+             ("Open Settings, Bluetooth, and turn on the switch at the top.", "settings:bluetooth"),
+             ("Put the device in pairing mode. Its instructions say how, often by holding its power button.", ""),
+             ("Click the device's name when it shows in the list.", ""),
+         ]),
+     ]),
+    ("printing", "Printing", "printer-symbolic",
+     "Adding a printer, and printer driver files from the maker", [
+         ("Add a printer", [
+             ("Turn the printer on. Plug it in with its cable, or join it to the same Wi-Fi.", ""),
+             ("Open Settings, Printers, and click Add Printer.", "settings:printers"),
+             ("Click the printer when it shows, then Add. Most printers need nothing else.", ""),
+             ("To print, press Ctrl+P in any app.", ""),
+         ]),
+         ("A driver file from the maker", [
+             ("Most printers don't need one. Try Add a printer first.", ""),
+             ("If yours does, download the maker's .rpm file and open it from Downloads. System Tools sees that "
+              "it's a printer driver.", ""),
+             ("Click Install the driver, type your password, and restart. Then add the printer.", ""),
+             ("A .deb driver can't be installed. The window says how to get the .rpm from the maker.", ""),
+         ]),
+     ]),
+    ("updates", "Updates and safety", "software-update-available-symbolic",
+     "Automatic updates, undoing an update, firmware and certificate alerts", [
+         ("Updates happen on their own", [
+             ("Every day at 4 am, or at the next start, the system, your apps and app boxes update.", ""),
+             ("A new system version is used from the next restart. Keep working, and restart when it suits you.",
+              ""),
+             ("To update now: open System Tools, Updates, System Update.", "page:updates"),
+         ]),
+         ("Turn automatic updates off or on", [
+             ("Open System Tools, Updates, Automatic updates. On is recommended.", "page:updates"),
+             ("Click Turn off or Turn on. Turning them off asks for your password.", ""),
+         ]),
+         ("Undo the last update", [
+             ("If something stopped working after an update, open System Tools, Updates, Undo the last update.",
+              "page:updates"),
+             ("Click Undo the update, type your password, and restart. Your files and apps aren't touched.", ""),
+             ("Automatic updates pause for 3 days, so the same update doesn't come straight back. They turn back on "
+              "by themselves.", ""),
+             ("Changed your mind? Open Undo the last update again and click Use the newer version.", ""),
+         ]),
+         ("If the computer won't start properly", [
+             ("You don't need to do anything. If a new version fails to start twice in a row, the computer goes back "
+              "to the version before by itself.", ""),
+             ("A note at the next login says so, and automatic updates pause for 3 days.", ""),
+             ("To check that this works on your computer, see Getting help.", "topic:help"),
+         ]),
+         ("Update firmware", [
+             ("Firmware is the software built into the computer's own parts, like the BIOS.", ""),
+             ("Plug the computer in. Open System Tools, Updates, Update firmware.", "page:updates"),
+             ("If updates are listed, click Update and type your password. Some finish while the computer restarts.",
+              ""),
+         ]),
+         ("Certificate alerts", [
+             ("Certificates are how the computer knows a secure website is real. An alert shows when one has expired, "
+              "expires soon, or was removed.", ""),
+             ("Open System Tools, Get help, Certificate alerts to see them.", "page:help"),
+             ("For an expired one that was added to this computer, it offers Remove it. Fedora's own ones are "
+              "replaced by updates, so keep automatic updates on.", ""),
+         ]),
+     ]),
+    ("yours", "Making it yours", "applications-graphics-symbolic",
+     "The layout, colors, wallpaper, screen size, night light, sound and accounts", [
+         ("Layout", [
+             ("Open System Tools, Make it yours, Desktop layout.", "page:yours"),
+             ("Pick Windows-style or Standard, click Switch, then log out and back in.", ""),
+         ]),
+         ("Colors and wallpaper", [
+             ("Open Settings, Appearance.", "settings:background"),
+             ("Style: Default (light) or Dark. Accent Color: the color of buttons and folder icons.", ""),
+             ("Background: click a picture. To use your own photo, click Add Picture.", ""),
+         ]),
+         ("Make everything bigger or smaller", [
+             ("Open Settings, Displays.", "settings:display"),
+             ("Change Scale. A bigger number makes everything bigger.", ""),
+             ("Click Apply, then Keep Changes if it looks right.", ""),
+         ]),
+         ("Night light", [
+             ("Night light makes the screen warmer in the evening, which is easier on the eyes.", ""),
+             ("Open Settings, Displays, Night Light, and turn it on. It follows sunset and sunrise, or set your own "
+              "times.", "settings:display"),
+         ]),
+         ("Sound", [
+             ("Open Settings, Sound.", "settings:sound"),
+             ("Pick the speakers or headphones under Output Device, and the microphone under Input Device.", ""),
+             ("Click Test to hear each speaker.", ""),
+         ]),
+         ("Your password and other people's accounts", [
+             ("Open Settings, System, Users.", "settings:users"),
+             ("To change your password, click Password.", ""),
+             ("To give someone their own account, click Add User. Leave Administrator off for children and guests.",
+              ""),
+         ]),
+     ]),
+    ("startup", "Disk and startup", "drive-harddisk-symbolic",
+     "Freeing space, the disk password, boot options and BIOS settings", [
+         ("Free up disk space", [
+             ("Open System Tools, Disk and startup. The bar shows how much is free.", "page:disk"),
+             ("Click Free up disk space, then Free up space. Your files and apps aren't touched.", ""),
+         ]),
+         ("Skip the disk password at startup", [
+             ("If you type a disk password every time the computer starts, it can unlock by itself with the "
+              "computer's security chip.", ""),
+             ("Open System Tools, Disk and startup, Unlock disk automatically.", "page:disk"),
+             ("Click Turn on, type the disk password once, and restart.", ""),
+             ("After a BIOS update, it may ask for the disk password again. Turn it on again here.", ""),
+         ]),
+         ("Fix screen flicker or a drive that freezes", [
+             ("Open System Tools, Disk and startup. Under Common fixes, turn on the one that matches the problem.",
+              "page:disk"),
+             ("Type your password, then restart. The fix starts at the restart.", ""),
+             ("Didn't help? Turn it off again, and restart.", ""),
+             ("Told to add a setting by a helper? Type it under Your own settings. Risky ones are explained first.",
+              ""),
+         ]),
+         ("BIOS settings", [
+             ("Open System Tools, Disk and startup, Restart into BIOS settings.", "page:disk"),
+             ("Save your work, then click Restart now.", ""),
+             ("The BIOS screen uses the keyboard. When you're done, choose Save and Exit, or Exit.", ""),
+         ]),
+     ]),
+    ("help", "Getting help", "help-about-symbolic",
+     "Sending details to your helper, checking rollback, and terminal commands", [
+         ("Send details to your helper", [
+             ("Open System Tools, Get help, Save problem details.", "page:help"),
+             ("Click Save details. It makes one file of recent errors, in Documents. Nothing is sent anywhere.", ""),
+             ("Click Show the file, then attach it to an email to your helper.", ""),
+         ]),
+         ("Something stopped working after an update", [
+             ("Undo it. See Updates and safety.", "topic:updates"),
+         ]),
+         ("Check that automatic rollback works", [
+             ("Open System Tools, Get help, Test automatic rollback. Save your work first.", "page:help"),
+             ("Pick a test, click Start the test, and type your password.", ""),
+             ("The computer restarts, fails on purpose, then goes back by itself. A note at login says the test "
+              "worked.", ""),
+         ]),
+         ("Prefer the terminal?", [
+             ("Open System Tools, Get help, and scroll to the end. Every tool has its command there.", "page:help"),
+             ("Click the copy button next to a command, then paste it in Terminal.", ""),
+         ]),
+     ]),
 ]
 
 
