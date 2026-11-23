@@ -40,6 +40,10 @@ TOPICS = [
              ("With the standard layout: press the Windows key, start typing the app's name, and press Enter. Or "
               "press Windows key + A to see every app.", ""),
          ]),
+         ("Open System Tools", [
+             ("With the Windows-style layout: click the sailboat button at the bottom left, then System Tools.", ""),
+             ("With the standard layout: click the logo at the top left, then System Tools.", ""),
+         ]),
          ("Change the layout", [
              ("Open System Tools, Make it yours.", "page:yours"),
              ("Pick Windows-style (a bar at the bottom and a start menu) or Standard (a bar at the top and a dock).",

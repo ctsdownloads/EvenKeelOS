@@ -31,6 +31,11 @@ The start menu, windows, the menu at the end of the bar, notifications, screensh
 1. With the Windows-style layout: click the sailboat button at the bottom left, then click the app, or start typing its name and press Enter.
 2. With the standard layout: press the Windows key, start typing the app's name, and press Enter. Or press Windows key + A to see every app.
 
+### Open System Tools
+
+1. With the Windows-style layout: click the sailboat button at the bottom left, then System Tools.
+2. With the standard layout: click the logo at the top left, then System Tools.
+
 ### Change the layout
 
 1. Open System Tools, Make it yours.

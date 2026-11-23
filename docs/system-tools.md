@@ -8,7 +8,8 @@
 what it does, or its command. Show Apps has only System Tools for these tools: Install Package File, Remove Apps,
 Start Apps at Login, Repair App Boxes, Install Media Codecs and System Update no longer have their own icons, because
 they are inside it. Double-clicking an .rpm, .deb, .exe or .msi file still opens the right tool. The Windows-style
-start menu's System Update entry opens System Tools on its Updates page.
+start menu's System Update entry opens System Tools on its Updates page. With the standard layout, the logo menu at
+the top left has a System Tools entry, under Extensions.
 
 A tool's questions, lists, password box and progress show inside the System Tools window, under the tool's name,
 with a Back arrow at the top left. Back leaves the tool open: a bar at the top of every page says it is waiting for

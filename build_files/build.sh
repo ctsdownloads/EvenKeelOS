@@ -452,6 +452,21 @@ chmod -R u=rwX,go=rX /usr/share/gnome-shell/extensions/logomenu@aryan_k
 install -Dm644 /usr/share/gnome-shell/extensions/logomenu@aryan_k/schemas/org.gnome.shell.extensions.logo-menu.gschema.xml \
   /usr/share/glib-2.0/schemas/org.gnome.shell.extensions.logo-menu.gschema.xml
 rm -r /usr/share/gnome-shell/extensions/logomenu@aryan_k/schemas
+# A System Tools entry under Extensions; Logo Menu has no setting for extra entries. Fails if its menu code changes.
+python3 -I - /usr/share/gnome-shell/extensions/logomenu@aryan_k/extension.js <<'PY'
+import sys
+path = sys.argv[1]
+after = "        this._addItem(new MenuItem(_('Extensions'), () => this._openExtensionsApp()));\n"
+entry = "        this._addItem(new MenuItem('System Tools', () => Util.spawn(['/usr/bin/evenkeel-os-tools'])));\n"
+with open(path) as f:
+    js = f.read()
+if js.count(after) != 1 or entry in js:
+    sys.exit("ERROR: Logo Menu's menu code changed, so System Tools can't be added to it")
+with open(path, "w") as f:
+    f.write(js.replace(after, after + entry))
+PY
+grep -qF "new MenuItem('System Tools'" /usr/share/gnome-shell/extensions/logomenu@aryan_k/extension.js \
+  || { echo 'ERROR: the Logo Menu has no System Tools entry'; exit 1; }
 glib-compile-schemas /usr/share/glib-2.0/schemas 2>&1 | { grep -v 'deprecated' || true; }
 gnome_shell=$(rpm -q --qf '%{VERSION}' gnome-shell | cut -d. -f1)
 grep -q "\"$gnome_shell\"" /usr/share/gnome-shell/extensions/logomenu@aryan_k/metadata.json || { echo "ERROR: Logo Menu 25.2 does not support GNOME $gnome_shell"; exit 1; }
