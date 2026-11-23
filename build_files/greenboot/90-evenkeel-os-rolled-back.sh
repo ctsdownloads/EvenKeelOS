@@ -20,6 +20,10 @@ if grub2-editenv /boot/grub2/grubenv list | grep -qx 'boot_counter=-1' \
   fellback=1
 fi
 [ "$rolled" = 1 ] || exit 0
+# What the trial check found broken goes with this rollback's note only (an older list is dropped).
+why=/var/lib/evenkeel-os/rolled-back-why
+rm -f "$why"
+[ -e /var/lib/evenkeel-os/health-lost ] && mv -f /var/lib/evenkeel-os/health-lost "$why" && chmod 644 "$why"
 status=$(rpm-ostree status --json)
 booted_sum=$(jq -r '.deployments[] | select(.booted) | .checksum' <<<"$status")
 other_sum=$(jq -r '[.deployments[] | select(.booted | not)][0].checksum // empty' <<<"$status")
@@ -34,6 +38,7 @@ elif [ "$fellback" = 1 ] && [ -n "$used" ] && [ "$used" = "$latest" ]; then
   echo "settings-failed $(date +%s)" >|"$note"
 elif grep -qs 'evenkeel_os.test_rollback=' /boot/loader/entries/*.conf; then
   rpm-ostree cleanup -r || echo "The test copy could not be removed."
+  rm -f /var/lib/evenkeel-os/test-rollback-args
   echo "test $(date +%s)" >|"$note"
 elif [ -n "$booted_sum" ] && [ "$booted_sum" = "$other_sum" ]; then
   # The same system with other boot options (System Tools, Boot options): the update wasn't the cause, no pause.

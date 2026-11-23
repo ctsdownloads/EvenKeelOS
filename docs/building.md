@@ -14,7 +14,9 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/bluefin-packages.txt` | Fedora packages carried over from Bluefin |
 | `build_files/default-apps.txt`, `flathub-apps.txt`, `evenkeel-os-flathub-apps`, `evenkeel-os-flatpak-apps.service`, `evenkeel-os-flathub.service`, `flathub.flatpakrepo` | Default apps, and the Flathub ones installed at the first start with internet |
 | `build_files/evenkeel_os_ui.py` | Windows, notices and disk sizes shared by System Tools and Install Package File |
-| `boot_test/run-boot-test.sh`, `boot_test/boot-check`, `boot_test/Containerfile` | The [boot test](#boot-test): starts each new build in a virtual machine before it's published |
+| `boot_test/run-boot-test.sh`, `boot_test/boot-check`, `boot_test/boot-check-root`, `boot_test/Containerfile` | The [boot test](#boot-test): starts each new build in a virtual machine before it's published |
+| `build_files/evenkeel_os_health.py`, `greenboot/evenkeel-os-health`, `greenboot/40-evenkeel-os-still-works.sh`, `greenboot/93-evenkeel-os-health-record.sh`, `greenboot/evenkeel-os-health-record.service` | The trial check: after each good start (4 minutes in) a list of what works is saved to `/var/lib/evenkeel-os/health-record.json`; while a new version is on trial, after a login, anything on that list that's broken now fails the start (it waits 2 minutes for slow devices first). Hardware counts only if it's still there (unplugged, switched off in the BIOS or by a privacy switch doesn't count); only USB devices in fixed ports are listed; things switched off by their owner aren't asked for; a start that only changed boot options checks programs only; a mistake in the check itself never fails a start. What broke goes to `/var/lib/evenkeel-os/health-lost`, and to `rolled-back-why` with the next rollback's note. `sudo /usr/libexec/evenkeel-os-health compare --no-wait` runs the comparison by hand |
+| `build_files/check-health.py` | Build check: the trial check against a made-up computer, with each of 58 changes counted as broken, or not, as it should be, and the driver each rollback test copy blocks |
 | `build_files/firewall/evenkeel-home.xml`, `evenkeel-work.xml`, `evenkeel-public.xml` | The three firewall zones for Network safety: Home, Work and Public place |
 | `build_files/evenkeel_os_network.py` | Each network's place, shared by System Tools, the question and the installer |
 | `build_files/evenkeel-os-network-ask`, `evenkeel-os-network-ask.desktop` | The once-per-network question, started at login |
@@ -86,10 +88,15 @@ Before anything is published, the build starts the new image in a virtual machin
 - the computer finishes starting and the login screen runs;
 - a test user logs in by itself and reaches the desktop;
 - Logo Menu runs with the standard layout, then ArcMenu and Dash to Panel run after switching to Windows-style;
-- System Tools opens.
+- System Tools opens;
+- greenboot started saving the list of what works, a list saved then passes the trial check, a doctored list fails
+  it, and three real breaks are caught (checked in a private mount space, as greenboot runs it) and then put back:
+  the update program swapped for one that fails (the same bind mount the rollback test uses), the firewall stopped,
+  and printing stopped (`boot_test/boot-check-root`, which the test user may run with `sudo` in the test copy only).
 
 The virtual machine runs a test-only copy (`boot_test/Containerfile`): the new image plus the automatic test login,
-SSH for the checks, and the check script, without the Flathub app downloads of a first start (so a slow Flathub can't
+SSH for the checks, the check scripts and `sudo` for the one root check script,
+without the Flathub app downloads of a first start (so a slow Flathub can't
 fail the test). That copy is never published. Its disk is made with bootc-image-builder,
 locked to one version in `run-boot-test.sh`. The test user's key and password are made for each run and thrown away.
 

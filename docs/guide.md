@@ -245,8 +245,9 @@ Automatic updates, undoing an update, firmware and certificate alerts.
 ### If the computer won't start properly
 
 1. You don't need to do anything. If a new version fails to start twice in a row, the computer goes back to the version before by itself.
-2. A note at the next login says so, and automatic updates pause for 3 days.
-3. To check that this works on your computer, see Getting help.
+2. A new version also goes back if something that worked before is broken after you log in, like sound, Wi-Fi, Bluetooth, the camera or printing. Unplugged or switched-off things don't count.
+3. A note at the next login says so and names what broke, and automatic updates pause for 3 days.
+4. To check that this works on your computer, see Getting help.
 
 ### Update firmware
 
@@ -345,7 +346,8 @@ Sending details to your helper, checking rollback, and terminal commands.
 
 1. Open System Tools, Get help, Test automatic rollback. Save your work first.
 2. Pick a test, click Start the test, and type your password.
-3. The computer restarts, fails on purpose, then goes back by itself. A note at login says the test worked.
+3. For the tests that break one thing, like Sound driver blocked, log in when the login screen shows.
+4. The computer restarts, fails on purpose, then goes back by itself. A note at login says the test worked and what the test copy found broken.
 
 ### Prefer the terminal?
 

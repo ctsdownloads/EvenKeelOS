@@ -313,7 +313,18 @@ Automatic updates and tell your helper.
 **Test automatic rollback.** Pick a real problem to test: **Quick test** (a
 start-up check fails), **No login screen**, **No networking**, **Stuck while
 starting**, **Login loop**, or **Freeze** (a kernel crash at the login screen;
-you turn it off and on). It makes a test copy of the running version with that
+you turn it off and on), or one that breaks something that worked: **Sound
+driver blocked**, **Wi-Fi driver blocked**, **Bluetooth driver blocked**,
+**Graphics driver blocked** (each blocks the driver this computer uses with
+`module_blacklist=`), **Printing service off**, **Firewall off**, **Update
+program broken** (a bind mount over `uupd` until the restart) or **A system
+service fails** (ModemManager, or switcheroo-control). Those wait for a login
+and restart about 3 minutes after it (15 minutes first if nobody logs in), and
+the note names what broke. A driver test keeps any driver blocks you set in
+Boot options. They refuse, and say why, when this computer
+doesn't have that thing or it wasn't working, when the driver is built into
+the system, or when no list of what works has been saved yet (4 minutes after
+a good start). It makes a test copy of the running version with that
 problem (`rpm-ostree kargs --append=evenkeel_os.test_rollback=KIND`; nothing
 breaks without that kernel argument). At the restart the test copy really
 breaks: 2 bad starts in a row (each picked test says what you'll see), then the
@@ -324,7 +335,7 @@ nothing to go back to until the next update. Needs the admin password, and a
 computer installed from a newer live USB (see
 [Automatic rollback](install.md#updating-and-rolling-back)). If the computer is
 still running a test copy, the tool offers to remove its marker instead
-(`rpm-ostree kargs --delete=evenkeel_os.test_rollback=KIND`).
+(`rpm-ostree kargs --delete=evenkeel_os.test_rollback=KIND`, plus its driver block).
 
 The other test is **Important settings deleted**. It is not a test copy (no
 kernel argument): it really deletes `/etc/passwd`, `/etc/shadow`, `/etc/group`,

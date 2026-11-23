@@ -56,4 +56,7 @@ else
   sed 's/^/  /' /tmp/system-tools.log
 fi
 
+# The trial check's own tests need root (boot-check-root, allowed for the test user in the test copy only).
+sudo -n /usr/libexec/evenkeel-os-boot-check-root || failed=1
+
 exit "$failed"

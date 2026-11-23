@@ -2,9 +2,14 @@
 ARG BASE
 FROM ${BASE}
 COPY boot_test/boot-check /usr/libexec/evenkeel-os-boot-check
-# Test copy only: the test user logs in by itself, SSH lets the runner check it, no Flathub downloads.
+COPY boot_test/boot-check-root /usr/libexec/evenkeel-os-boot-check-root
+# Test copy only: the test user logs in by itself, SSH lets the runner check it, no Flathub downloads,
+# and the test user may run the root checks (that one program only).
 RUN printf '[daemon]\nAutomaticLoginEnable=True\nAutomaticLogin=tester\n' > /etc/gdm/custom.conf && \
     systemctl enable sshd.service && \
     systemctl mask evenkeel-os-flatpak-apps.service && \
     firewall-offline-cmd --zone=evenkeel-public --add-service=ssh && \
-    chmod 755 /usr/libexec/evenkeel-os-boot-check
+    chmod 755 /usr/libexec/evenkeel-os-boot-check /usr/libexec/evenkeel-os-boot-check-root && \
+    echo 'tester ALL=(root) NOPASSWD: /usr/libexec/evenkeel-os-boot-check-root' > /etc/sudoers.d/boot-test && \
+    chmod 440 /etc/sudoers.d/boot-test && \
+    visudo -cf /etc/sudoers.d/boot-test

@@ -1,0 +1,66 @@
+#!/usr/bin/bash
+# Root checks of the trial check, run by boot-check through sudo in the test copy only; each break is put back.
+set -uo pipefail
+
+failed=0
+pass() { echo "PASS: $1"; }
+fail() { echo "FAIL: $1"; failed=1; }
+H=/usr/libexec/evenkeel-os-health
+REC=/var/lib/evenkeel-os/health-record.json
+started() {
+  [ "$(systemctl show -p ActiveState --value evenkeel-os-health-record.service)" = activating ] \
+    || [ "$(systemctl show -p Result --value evenkeel-os-health-record.service)$(test -s "$REC" && echo y)" = successy ]
+}
+# After one real break ($1), checked from a private mount space made before it, as greenboot's is; must name $2.
+broken() {
+  local out rc
+  out=$(nsenter -t "$ns" -m "$H" compare --no-wait 2>&1)
+  rc=$?
+  if [ "$rc" -eq 1 ] && grep -qF "Stopped working: $2" <<<"$out"; then pass "the trial check catches $1"
+  else
+    fail "the trial check doesn't catch $1"
+    sed 's/^/  /' <<<"$out"
+  fi
+}
+
+for _ in $(seq 120); do started && break; sleep 1; done
+if started; then pass "greenboot started saving the list of what works after the good start"
+else fail "greenboot didn't start saving the list of what works after the good start"; fi
+# Saved now instead of 4 minutes in, and not again while things are broken on purpose below.
+systemctl stop evenkeel-os-health-record.service
+if out=$("$H" record --now 2>&1); then pass "the list of what works was saved: $out"
+else fail "the list of what works wasn't saved: $out"; fi
+if out=$("$H" compare --no-wait 2>&1); then pass "a working computer passes the trial check"
+else
+  fail "a working computer fails the trial check"
+  sed 's/^/  /' <<<"$out"
+fi
+
+# A made-up item that's missing must count as broken.
+doctored=$(mktemp)
+jq '.items["thunderbolt:pci:0000:ff:00.0"] = {"name": "Made-up ports", "needs": []}' "$REC" >"$doctored"
+out=$("$H" compare --no-wait --record="$doctored" 2>&1)
+rc=$?
+if [ "$rc" -eq 1 ] && grep -qF "Stopped working: Made-up ports" <<<"$out"; then pass "a doctored list counts as broken"
+else fail "a doctored list doesn't count as broken (exit $rc): $out"; fi
+rm -f "$doctored"
+
+# Real breaks as the rollback tests make them: uupd swapped by a bind mount from systemd, firewall and printing off.
+systemd-run -q -p PrivateMounts=yes --unit=evenkeel-os-boot-test-ns /usr/bin/sleep 900
+ns=$(systemctl show -p MainPID --value evenkeel-os-boot-test-ns.service)
+systemd-run --wait -q /usr/bin/mount --bind /usr/bin/false /usr/bin/uupd
+broken "a broken update program" "The update program"
+umount /usr/bin/uupd
+systemctl stop firewalld.service
+broken "the firewall off" "The firewall"
+systemctl start firewalld.service
+systemctl stop cups.socket cups.path cups.service
+broken "printing off" "Printing"
+systemctl start cups.socket cups.path
+if out=$("$H" compare --no-wait 2>&1); then pass "everything put back passes the trial check again"
+else
+  fail "the computer still fails the trial check after putting things back"
+  sed 's/^/  /' <<<"$out"
+fi
+systemctl stop evenkeel-os-boot-test-ns.service
+exit "$failed"

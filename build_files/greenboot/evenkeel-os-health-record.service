@@ -1,0 +1,8 @@
+[Unit]
+Description=Save what works on this computer, for checking the next new version
+# Started by 93-evenkeel-os-health-record.sh after a good start.
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/evenkeel-os-health record
+TimeoutStartSec=15min

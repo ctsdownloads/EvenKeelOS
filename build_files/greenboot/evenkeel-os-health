@@ -1,0 +1,8 @@
+#!/usr/bin/python3 -I
+"""What works on this computer (evenkeel_os_health): record saves it, compare lists what broke since."""
+import sys
+
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_health as health  # noqa: E402
+
+sys.exit(health.main(sys.argv))
