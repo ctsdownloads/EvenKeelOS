@@ -79,7 +79,7 @@ can't change, so it stays working.
 | Boot options | In System Tools, Disk and startup. Switches for common fixes to screen flicker (AMD and Intel), screens that dim on their own, and drive freezes, and a box to add your own kernel settings, like `amdgpu.abmlevel=0`. A setting that could stop the computer starting or weaken its security asks first, and settings the system sets itself are refused. Each change asks for the administrator password every time, makes a new system version (the old one stays as the fallback) and starts at the next restart. See [Boot options](docs/system-tools.md#boot-options) |
 | Desktop | Teal accent color, with folder icons that follow whatever accent color you pick in Settings, Appearance; 7 EvenKeelOS wallpapers, each with a day picture for light mode and a night one for dark mode; minimize and maximize buttons, no hot corner, battery percentage shown |
 | Dock | Firefox, Calendar, Files, Bazaar and Text Editor |
-| Logo Menu | The [Logo Menu](https://github.com/Aryan20/Logomenu) extension on the top-left logo: About My System, Activities, App Grid, Bazaar, Resources, Ghostty, Extensions |
+| Logo Menu | The [Logo Menu](https://github.com/Aryan20/Logomenu) extension on the top-left logo: About My System, Activities, App Grid, Bazaar, Resources, Ghostty, Extensions, and System Tools, which the build adds |
 | Windows-style layout | Optional, per user: a bottom bar from [Dash to Panel](https://github.com/home-sweet-gnome/dash-to-panel) and a start menu from [ArcMenu](https://gitlab.com/arcmenu/ArcMenu) on the EvenKeelOS logo, opening to the app categories, with Settings, System Update and System Tools. It opens on the desktop at login, with no overview. Pick it in the installer, or switch any time in System Tools, Desktop layout (or `evenkeel-os-layout windows` / `current`), then log out and in |
 | Terminal | [Ghostty](https://ghostty.org/), replacing Ptyxis everywhere |
 | System monitor | [Resources](https://apps.gnome.org/Resources/) from Flathub; gnome-system-monitor is kept |
@@ -146,7 +146,8 @@ other projects, under their own licenses, with their source available there:
   tool are locked to exact versions and checked daily for newer ones. See
   [Locked versions](docs/building.md#locked-versions).
 - **Logo Menu:** <https://github.com/Aryan20/Logomenu> (GPL-2.0), from
-  <https://extensions.gnome.org/extension/4451/logo-menu/>.
+  <https://extensions.gnome.org/extension/4451/logo-menu/>. Changed by the build: its menu gets a
+  System Tools entry (`build_files/build.sh`).
 - **ArcMenu:** <https://gitlab.com/arcmenu/ArcMenu> (GPL-2.0), from
   <https://extensions.gnome.org/extension/3628/arcmenu/>.
 - **Folder icons in the accent color:** <https://github.com/dpejoh/Adwaita-colors>
