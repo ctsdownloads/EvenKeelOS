@@ -54,7 +54,7 @@ ROLLED_BACK = Path("/var/lib/evenkeel-os/rolled-back")
 STATE = Path(os.environ.get("XDG_STATE_HOME") or Path.home() / ".local" / "state") / "evenkeel-os"
 SETUP_SHOWN = STATE / "setup-shown"      # the setup checklist has opened at login once
 CODECS_ASKED = STATE / "codecs-asked"    # from the old codecs first-login question
-GUIDE_HIDDEN = STATE / "guide-hidden"     # "Don't show this again" ticked in the New to Linux guide
+GUIDE_HIDDEN = STATE / "guide-hidden"     # "Don't show this again" ticked in New to EvenKeelOS?
 ROLLED_BACK_SHOWN = STATE / "rolled-back-shown"     # the automatic rollback note this user has seen
 # "repair|test <time> <saved time>", then the paths put back; written by evenkeel-os-settings in greenboot's red.d
 SETTINGS_REPAIRED = Path("/var/lib/evenkeel-os/settings-repaired")
@@ -1020,7 +1020,7 @@ def checklist_open():
 
 
 def guide_at_login():
-    """The New to Linux guide, after the setup checklist, until "Don't show this again" is ticked."""
+    """New to EvenKeelOS? in System Tools, after the setup checklist, until "Don't show this again" is ticked."""
     if not GUI or GUIDE_HIDDEN.exists():
         return 0
     time.sleep(5)               # the checklist starts a few seconds earlier

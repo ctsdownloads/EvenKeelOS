@@ -178,6 +178,6 @@ One restart at the end, if needed. **Later** shows it at the next login;
 **Don't show again** stops it. It's in [System Tools](system-tools.md#system-tools)
 any time.
 
-**New to Linux?** opens in System Tools after the setup checklist closes: where things are, coming from Windows, and
-what's different ([the guide](new-to-linux.md)). It opens at every login until **Don't show this again at login** at
-its end is ticked. It's in System Tools, Get help, any time.
+**New to EvenKeelOS?** opens in System Tools after the setup checklist closes: where things are, coming from Windows,
+and what's different. It's the first page of the [EvenKeelOS guide](guide.md). It opens at every login until **Don't
+show this again at login** at its end is ticked. The guide is in System Tools, Get help, any time.

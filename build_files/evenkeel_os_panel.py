@@ -154,9 +154,12 @@ def tool_list():
         Tool("yours", "Colors and wallpaper", "Accent color and wallpaper",
              "Teal to start. Folder icons follow whatever color you pick.", "applications-graphics-symbolic",
              ["gnome-control-center", "background"], "", "theme folder appearance background"),
-        Tool("help", "New here?", "New to Linux?",
-             "Where things are and what's different, for people coming from Windows", "dialog-information-symbolic",
-             "guide", "evenkeel-os-tools --page=guide", "windows guide start help beginner tour switch"),
+        Tool("help", "How to do things", "EvenKeelOS guide",
+             "How to do things, step by step: the desktop, files, apps and more", "help-about-symbolic",
+             "guide", "evenkeel-os-tools --page=guide", "guide manual help how to tutorial windows beginner"),
+        *[Tool("help", "How to do things", title, about, icon, f"guide-{key}", "",
+               "guide how to " + " ".join(h for h, _ in articles))
+          for key, title, icon, about, articles in guide.TOPICS],
         Tool("help", "Something not right?", "Undo the last update",
              "If it started after an update, go back to the version from before it", "edit-undo-symbolic",
              t + ["undo-update"], "evenkeel-os-tools undo-update", "rollback revert"),
@@ -193,7 +196,8 @@ class Window(Adw.ApplicationWindow):
         search_page.add(self.results)
         self.stack.add_named(search_page, "search")
         self.stack.add_named(self.dialogs.widget, "tool")
-        self.stack.add_named(self.guide_page(), "guide")
+        self.trail = []              # pages the back arrow returns to, newest last
+        self.guide_pages()
 
         self.content_title = Adw.WindowTitle(title="Overview")
         content_bar = Adw.HeaderBar(title_widget=self.content_title)
@@ -354,46 +358,99 @@ class Window(Adw.ApplicationWindow):
         g.add(box)
         return g
 
-    def guide_page(self):
-        """New to Linux: where things are and what's different. Lines that name a page open it."""
-        page = Adw.PreferencesPage()
+    def guide_pages(self):
+        """The guide: a list of topics, and a page of numbered steps for each. Show me opens what a step names."""
+        home = Adw.PreferencesPage()
+        home.add(self.guide_banner(guide.TITLE, guide.INTRO))
+        g = Adw.PreferencesGroup()
+        for key, title, icon, about, _ in guide.TOPICS:
+            row = Adw.ActionRow(title=title, subtitle=about, activatable=True)
+            row.add_prefix(Gtk.Image.new_from_icon_name(icon))
+            row.add_suffix(Gtk.Image.new_from_icon_name("go-next-symbolic"))
+            row.connect("activated", lambda *_, k=key: self.go(f"guide-{k}"))
+            g.add(row)
+        home.add(g)
+        self.stack.add_named(home, "guide")
+        for key, title, _icon, about, articles in guide.TOPICS:
+            page = Adw.PreferencesPage()
+            page.add(self.guide_banner(title, about + "."))
+            for heading, steps in articles:
+                g = Adw.PreferencesGroup(title=heading)
+                for n, (text, show) in enumerate(steps, 1):
+                    row = Adw.ActionRow(title=text, title_lines=0)
+                    row.add_prefix(Gtk.Label(label=f"{n}", width_chars=2, css_classes=["heading", "dim-label"]))
+                    if show:
+                        b = Gtk.Button(label="Show me", valign=Gtk.Align.CENTER)
+                        b.update_property([Gtk.AccessibleProperty.LABEL], [f"Show me: {self.guide_target(show)}"])
+                        b.connect("clicked", lambda *_, s=show: self.on_show_me(s))
+                        row.add_suffix(b)
+                    g.add(row)
+                page.add(g)
+            if key == guide.WELCOME:
+                g = Adw.PreferencesGroup()
+                more = Adw.ActionRow(title="The full guide", subtitle="How to do things, step by step",
+                                     activatable=True)
+                more.add_suffix(Gtk.Image.new_from_icon_name("go-next-symbolic"))
+                more.connect("activated", lambda *_: self.go("guide"))
+                g.add(more)
+                self.guide_hide = Gtk.CheckButton(label="Don't show this again at login", visible=False,
+                                                  margin_top=12)
+                self.guide_hide.connect("toggled", self.on_guide_hide)
+                g.add(self.guide_hide)
+                page.add(g)
+            self.stack.add_named(page, f"guide-{key}")
+
+    @staticmethod
+    def guide_banner(title, text):
         g = Adw.PreferencesGroup()
         box = Gtk.Box(spacing=20, css_classes=["ek-banner"])
-        box.append(Gtk.Image(icon_name="dialog-information-symbolic", pixel_size=40))
-        text = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6, hexpand=True, valign=Gtk.Align.CENTER)
-        text.append(Gtk.Label(label=guide.TITLE, xalign=0, wrap=True, css_classes=["title-2"]))
-        text.append(Gtk.Label(label=guide.INTRO, xalign=0, wrap=True, css_classes=["ek-sub"]))
-        box.append(text)
+        box.append(Gtk.Image(icon_name="help-about-symbolic", pixel_size=40))
+        words = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6, hexpand=True, valign=Gtk.Align.CENTER)
+        words.append(Gtk.Label(label=title, xalign=0, wrap=True, css_classes=["title-2"]))
+        words.append(Gtk.Label(label=text, xalign=0, wrap=True, css_classes=["ek-sub"]))
+        box.append(words)
         g.add(box)
-        page.add(g)
-        names = dict((k, n) for k, n, _ in PAGES)
-        for title, icon, lines in guide.SECTIONS:
-            g = Adw.PreferencesGroup(title=title)
-            for line, target in lines:
-                row = Adw.ActionRow(title=line, title_lines=0, activatable=bool(target))
-                if target:
-                    row.set_subtitle(f"Open {names[target]}")
-                    row.add_suffix(Gtk.Image.new_from_icon_name("go-next-symbolic"))
-                    row.connect("activated", lambda *_, t=target: self.show(t))
-                g.add(row)
-            g.set_header_suffix(Gtk.Image.new_from_icon_name(icon))
-            page.add(g)
-        g = Adw.PreferencesGroup()
-        self.guide_hide = Gtk.CheckButton(label="Don't show this again at login", visible=False)
-        self.guide_hide.connect("toggled", self.on_guide_hide)
-        g.add(self.guide_hide)
-        page.add(g)
-        return page
+        return g
+
+    @staticmethod
+    def guide_target(show):
+        kind, _, key = show.partition(":")
+        if kind == "page":
+            return dict((k, n) for k, n, _ in PAGES)[key]
+        if kind == "topic":
+            return guide.topic(key)[1]
+        return "Settings"
+
+    def on_show_me(self, show):
+        kind, _, key = show.partition(":")
+        if kind == "settings":
+            if not spawn(["gnome-control-center", key]):
+                self.toast("Settings didn't open.")
+        else:
+            self.go(key if kind == "page" else f"guide-{key}")
+
+    def page_title(self, name):
+        if name == "guide":
+            return guide.TITLE
+        if name.startswith("guide-"):
+            return guide.topic(name[len("guide-"):])[1]
+        return dict((k, n) for k, n, _ in PAGES).get(name, "Search")
+
+    def go(self, name):
+        """Open a page from inside another; the back arrow returns, one page at a time."""
+        here = self.stack.get_visible_child_name()
+        if here != name:
+            self.trail.append(self.before if here == "tool" else here)
+        self.stack.set_visible_child_name(name)
+        self.content_title.set_title(self.page_title(name))
+        self.back.set_visible(True)
+        self.show_waiting()
+        self.split.set_show_content(True)
 
     def open_guide(self, at_login=False):
-        if self.stack.get_visible_child_name() not in ("tool", "guide"):
-            self.before = self.stack.get_visible_child_name()
-        self.guide_hide.set_visible(at_login or self.guide_hide.get_visible())
-        self.stack.set_visible_child_name("guide")
-        self.content_title.set_title(guide.TITLE)
-        self.back.set_visible(True)
-        self.waiting.set_revealed(False)
-        self.split.set_show_content(True)
+        if at_login:
+            self.guide_hide.set_visible(True)
+        self.go(f"guide-{guide.WELCOME}" if at_login else "guide")
         self.present()
 
     def on_guide_hide(self, button):
@@ -970,6 +1027,8 @@ class Window(Adw.ApplicationWindow):
             self.show("disk")
         elif tool.run == "guide":
             self.open_guide()
+        elif isinstance(tool.run, str) and tool.run.startswith("guide-"):
+            self.go(tool.run)
         elif tool.run == "codecs-remove":
             self.remove_codecs()
         elif tool.run[0] in OURS:
@@ -1032,10 +1091,12 @@ class Window(Adw.ApplicationWindow):
         self.waiting.set_revealed(bool(busy))
 
     def go_back(self):
-        """Leave the tool page; a tool that is open stays open, behind the bar at the top."""
-        self.back.set_visible(False)
-        self.stack.set_visible_child_name(self.before)
-        self.content_title.set_title(dict((k, n) for k, n, _ in PAGES).get(self.before, "Search"))
+        """Back one page. From the tool page, a tool that is open stays open, behind the bar at the top."""
+        name = self.before if self.stack.get_visible_child_name() == "tool" else \
+            self.trail.pop() if self.trail else self.before
+        self.stack.set_visible_child_name(name)
+        self.content_title.set_title(self.page_title(name))
+        self.back.set_visible(bool(self.trail))
         self.show_waiting()
 
     def on_close(self, _window):
@@ -1077,6 +1138,7 @@ class Window(Adw.ApplicationWindow):
         if row is None:
             return
         self.search.set_text("")
+        self.trail.clear()
         self.back.set_visible(False)
         self.stack.set_visible_child_name(row.key)
         self.show_waiting()

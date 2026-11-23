@@ -271,7 +271,7 @@ doesn't warn about risky settings. Only System Tools does.
 
 | Item | What it does |
 |------|--------------|
-| New to Linux? | A short guide for people coming from Windows: where things are, getting apps, updates, files, networks and printers, and what's different. Lines that name a page open it. The same text is in [New to Linux?](new-to-linux.md). At login it opens after the setup checklist, until **Don't show this again at login** is ticked |
+| EvenKeelOS guide | How to do things, step by step. It opens on a list of topics: **New to EvenKeelOS?**, **The desktop**, **Files** and **Apps**, each also listed on Get help. A topic is a page of numbered steps. **Show me** next to a step opens the System Tools page, Settings page or topic it names, and the back arrow at the top left goes back one page at a time, to the guide. The same text is in [EvenKeelOS guide](guide.md). At login, **New to EvenKeelOS?** opens after the setup checklist, until **Don't show this again at login** at its end is ticked |
 | Undo the last update | Goes back to the version before the last update |
 | Save problem details | Saves recent errors to one file to email your helper |
 | Test automatic rollback | Checks that the computer goes back by itself when a new version doesn't start, and that important settings are put back when they're deleted. See below |
@@ -281,7 +281,7 @@ doesn't warn about risky settings. Only System Tools does.
 ### Commands
 
 `evenkeel-os-tools` opens the window. `evenkeel-os-tools --page=updates` (or `apps`, `disk`, `yours`, `help`, or
-`guide` for New to Linux?) opens it on that page. All the old commands still work, such as `evenkeel-os-tools firmware`,
+`guide` for the EvenKeelOS guide) opens it on that page. All the old commands still work, such as `evenkeel-os-tools firmware`,
 `evenkeel-os-packages install`, `evenkeel-os-update` and `evenkeel-os-codecs`.
 
 ### Details

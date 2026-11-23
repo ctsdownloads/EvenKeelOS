@@ -102,8 +102,8 @@ for page in PAGES[1:]:
 # ---------------------------------------------------------------- the guide matches System Tools' own text
 sys.path.insert(0, str(ROOT / "build_files"))
 import evenkeel_os_guide  # noqa: E402
-if (ROOT / "docs" / "new-to-linux.md").read_text() != evenkeel_os_guide.markdown():
-    errors.append("docs/new-to-linux.md isn't the guide System Tools shows: write it from "
+if (ROOT / "docs" / "guide.md").read_text() != evenkeel_os_guide.markdown():
+    errors.append("docs/guide.md isn't the guide System Tools shows: write it from "
                   "build_files/evenkeel_os_guide.py")
 
 if errors:
