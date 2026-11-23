@@ -18,7 +18,7 @@ NO_FIRMWARE = ("b43", "b43legacy")           # Broadcom drivers whose firmware F
 RAID_HIDDEN = re.compile(r"remapped NVMe devices|Switch your BIOS from RAID to AHCI")
 EFI_GLOBAL = "8be4df61-93ca-11d2-aa0d-00e098032b8c"
 MIN_DISK = 20 * 10 ** 9                      # Fedora Workstation's minimum disk
-MIN_MEMORY_GB = 8                            # the README's minimum
+MIN_MEMORY_GB = 8                            # the README's recommended amount
 TOUCHPADS = ("touchpad", "trackpad", "glidepoint", "synaptics", "bcm5974")
 
 
@@ -199,7 +199,7 @@ def memory():
     gb = int(kb.group(1)) / 1024 ** 2
     shown = f"{math.ceil(gb)} GB of memory."
     if gb < MIN_MEMORY_GB - 1:          # firmware and built-in graphics keep some back
-        return (LIMITED, "Memory", shown, "EvenKeelOS asks for at least 8 GB, so it may be slow.")
+        return (LIMITED, "Memory", shown, "EvenKeelOS works best with 8 GB or more, so it may be slow.")
     return (GOOD, "Memory", shown, "")
 
 
