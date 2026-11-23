@@ -1,4 +1,4 @@
-"""Installer steps for the disk, encryption, accounts, computer name, desktop layout and the review."""
+"""Installer steps for the disk, encryption, accounts, computer name, experience, desktop layout and the review."""
 import os
 import re
 
@@ -262,7 +262,37 @@ class ComputerNameScreen(screens.Screen):
                                                        " Use letters, digits and -, not at the start or end.")
 
 
-# ---------------------------------------------------------------------------------------------------- 14 Desktop layout
+# ---------------------------------------------------------------------------------------------------- 14 Experience
+
+class ExperienceScreen(screens.ListScreen):
+    title = "Coming from Windows?"
+    step = "Experience"
+    intro = ("This sets what you see at first. The next step suggests a desktop layout to match, and the guide is in "
+             "System Tools, Get help, either way.")
+    CHOICES = [("windows", "Coming from Windows", "New to EvenKeelOS? opens at login, with the Windows-style desktop"),
+               ("linux", "I already use Linux", "No guide at login, with the Standard desktop")]
+
+    def items(self):
+        return [(name, about, key == self.c.experience) for key, name, about in self.CHOICES]
+
+    def pick(self, i):
+        self.c.experience = self.CHOICES[i][0]
+        if not self.c.layout_chosen_by_hand:
+            self.c.layout = "windows" if self.c.experience == "windows" else "current"
+        self.choose()
+
+    def ready(self):
+        return self.c.experience is not None
+
+    def status(self):
+        return "Chosen: " + experience_name(self.c.experience) + "." if self.c.experience else "Pick one."
+
+
+def experience_name(key):
+    return next(name for k, name, _a in ExperienceScreen.CHOICES if k == key)
+
+
+# ---------------------------------------------------------------------------------------------------- 15 Desktop layout
 
 class LayoutScreen(screens.Screen):
     title = "Desktop layout"
@@ -289,6 +319,7 @@ class LayoutScreen(screens.Screen):
 
     def _clicked(self, _button, key):
         self.c.layout = key
+        self.c.layout_chosen_by_hand = True
         self.refresh()
         self.changed()
 
@@ -304,7 +335,7 @@ def layout_name(key):
     return next(name for k, name, _a in LayoutScreen.CHOICES if k == key)
 
 
-# ---------------------------------------------------------------------------------------------------- 15 Review
+# ---------------------------------------------------------------------------------------------------- 16 Review
 
 class ReviewScreen(screens.ListScreen):
     title = "Review"
@@ -330,6 +361,7 @@ class ReviewScreen(screens.ListScreen):
             ("Root", "Enabled" if c.root_enabled else "Locked", RootScreen),
             ("Account", user, UserScreen),
             ("Computer name", c.hostname, ComputerNameScreen),
+            ("Experience", experience_name(c.experience), ExperienceScreen),
             ("Desktop layout", layout_name(c.layout), LayoutScreen),
         ]
 

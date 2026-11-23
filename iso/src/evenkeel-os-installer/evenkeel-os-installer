@@ -27,8 +27,8 @@ LOGO = "/usr/share/evenkeel-os-installer/logo-wide.svg"     # build_files/brandi
 STEPS = [locale_screens.LanguageScreen, locale_screens.KeyboardScreen, locale_screens.BootKeyboardScreen,
          locale_screens.NetworkScreen, locale_screens.TimeZoneScreen, locale_screens.DateTimeScreen,
          locale_screens.ClockScreen, disk_screens.DiskScreen, disk_screens.EraseScreen, disk_screens.EncryptionScreen,
-         disk_screens.RootScreen, disk_screens.UserScreen, disk_screens.ComputerNameScreen, disk_screens.LayoutScreen,
-         disk_screens.ReviewScreen]
+         disk_screens.RootScreen, disk_screens.UserScreen, disk_screens.ComputerNameScreen,
+         disk_screens.ExperienceScreen, disk_screens.LayoutScreen, disk_screens.ReviewScreen]
 
 
 class InstallerWindow(Adw.ApplicationWindow):

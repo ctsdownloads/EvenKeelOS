@@ -31,7 +31,9 @@ class Choices:
         self.user_password = ""
         self.hostname = ""
         self.hostname_by_hand = False
+        self.experience = None                     # "windows" or "linux"; None: not picked yet
         self.layout = "current"                    # or "windows", as evenkeel-os-layout names them
+        self.layout_chosen_by_hand = False
 
 
 class Screen:

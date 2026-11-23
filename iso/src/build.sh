@@ -129,6 +129,17 @@ windows=$(python3 -I -c 'import runpy; print(*runpy.run_path("/usr/libexec/evenk
 for x in $windows; do
   [ -s "/usr/share/gnome-shell/extensions/$x/metadata.json" ] || fail "the installer's Windows layout needs $x, which is not installed"
 done
+# "I already use Linux" writes the file that keeps New to EvenKeelOS? closed at login, where System Tools looks for it.
+linux_choice="the installer's Linux choice wouldn't stop New to EvenKeelOS? at login"
+env -u XDG_STATE_HOME HOME=/h python3 -I - <<'PY' || fail "$linux_choice"
+import importlib.machinery, importlib.util, runpy, sys
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+loader = importlib.machinery.SourceFileLoader("tools", "/usr/bin/evenkeel-os-tools")
+tools = importlib.util.module_from_spec(importlib.util.spec_from_loader("tools", loader))
+loader.exec_module(tools)
+engine = runpy.run_path("/usr/libexec/evenkeel-os-install-engine")["GUIDE_HIDDEN"]
+sys.exit(str(tools.GUIDE_HIDDEN) != "/h/" + engine)
+PY
 [ "$(wc -l < /usr/share/evenkeel-os-installer/anaconda-translations.txt)" -ge 50 ] || fail "the installer's language list is missing"
 command -v qrencode >/dev/null || fail "qrencode is missing (the problem report's QR code)"
 for tool in mdadm dmsetup cryptsetup mkfs.fat mkfs.ext4 mkfs.xfs sfdisk wipefs hwclock; do
