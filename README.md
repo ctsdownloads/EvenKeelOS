@@ -98,8 +98,7 @@ can't change, so it stays working.
 
 ## System requirements
 
-- **Minimum:** 8 GB RAM.
-- **Recommended:** 16 GB RAM, especially with apps in boxes.
+- **Recommended:** 8 GB RAM.
 
 ## Documentation
 
