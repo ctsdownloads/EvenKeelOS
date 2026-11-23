@@ -51,6 +51,7 @@ PAUSE = Path("/var/lib/evenkeel-os/updates-paused-until")      # set by evenkeel
 # "update|test|boot-options|settings-test|settings-failed <time>", written by greenboot's green.d
 # (90-evenkeel-os-rolled-back.sh)
 ROLLED_BACK = Path("/var/lib/evenkeel-os/rolled-back")
+ROLLED_BACK_WHY = Path("/var/lib/evenkeel-os/rolled-back-why")   # what the trial check found broken, for this note
 STATE = Path(os.environ.get("XDG_STATE_HOME") or Path.home() / ".local" / "state") / "evenkeel-os"
 SETUP_SHOWN = STATE / "setup-shown"      # the setup checklist has opened at login once
 CODECS_ASKED = STATE / "codecs-asked"    # from the old codecs first-login question
@@ -682,6 +683,11 @@ def layout():
 # What each test breaks, and what you see. Kinds match TEST_KINDS in evenkeel-os-tools-admin, in order; the
 # breaking is in build_files/greenboot (check-rollback-tests.py checks both at build time).
 # In every test the computer has 2 bad starts in a row, and the 3rd start is back on this version.
+# The tests from Sound on break something that worked, checked after a login (their story gets AFTER_LOGIN).
+AFTER_LOGIN_TESTS = ("sound", "wifi", "bluetooth", "graphics", "printing", "firewall", "update-program", "service")
+AFTER_LOGIN = ("Log in when the login screen shows. About 3 minutes after you log in, the computer restarts by "
+               "itself. That happens on 2 starts, and the third start is back on this version. If nobody logs in, "
+               "each start waits 15 minutes first.")
 ROLLBACK_TESTS = [
     ("quick", "Quick test", "A start-up check fails on purpose. The computer restarts by itself within seconds, "
                             "twice, and the third start is back on this version."),
@@ -700,6 +706,17 @@ ROLLBACK_TESTS = [
     ("freeze", "Freeze", "About 20 seconds after the login screen shows, the computer locks up. Hold the power "
                          "button until it turns off, then turn it on. After the second freeze, the next start is "
                          "back on this version."),
+    ("sound", "Sound driver blocked", "The sound chip's driver is blocked, so there's no sound."),
+    ("wifi", "Wi-Fi driver blocked", "The Wi-Fi card's driver is blocked, so there's no Wi-Fi."),
+    ("bluetooth", "Bluetooth driver blocked", "The Bluetooth driver is blocked, so there's no Bluetooth."),
+    ("graphics", "Graphics driver blocked", "The graphics driver is blocked, so the screen runs in a basic mode: it "
+                                            "may look blurry or slow, or stay black (then just wait)."),
+    ("printing", "Printing service off", "The printing service fails to start."),
+    ("firewall", "Firewall off", "The firewall fails to start, so during the test the computer has no firewall."),
+    ("update-program", "Update program broken", "The update program is swapped for one that always fails (until "
+                                                "the next restart; nothing on the disk changes)."),
+    ("service", "A system service fails", "A background service that runs on this computer fails to start (the "
+                                          "mobile broadband service, or the graphics switching service)."),
 ]
 
 
@@ -708,6 +725,9 @@ ROLLBACK_TESTS = [
 TEST_SHORT = {"quick": "A start-up check fails", "no-login-screen": "The login screen doesn't start",
               "no-networking": "Networking doesn't start", "stuck": "Starting hangs (about 7 minutes)",
               "login-loop": "Logging in drops you back", "freeze": "The computer locks up",
+              "sound": "No sound", "wifi": "No Wi-Fi", "bluetooth": "No Bluetooth", "graphics": "Basic graphics only",
+              "printing": "Printing doesn't start", "firewall": "The firewall doesn't start",
+              "update-program": "Updates can't run", "service": "A background service fails",
               "settings": "Settings are really deleted"}
 SETTINGS_TEST_ROW = ("Important settings deleted", "Important system settings are really deleted, and the computer "
                  "restarts right away. The next start finds them missing, puts them back from the copy it saved, "
@@ -746,12 +766,14 @@ def test_rollback():
         return 0
     i = choose("Pick a problem to test. Your computer should fix it by itself.", ["Problem", "What happens"],
                [(t, TEST_SHORT[k]) for k, t, _ in ROLLBACK_TESTS] + [(SETTINGS_TEST_ROW[0], TEST_SHORT["settings"])],
-               width=560, height=420)
+               width=560, height=620)
     if i is None:
         return 1
     if i == len(ROLLBACK_TESTS):
         return test_settings(w)
     kind, name, see = ROLLBACK_TESTS[i]
+    if kind in AFTER_LOGIN_TESTS:
+        see = f"{see} {AFTER_LOGIN}"
     if ask(f"{name}: {see}\n\nWhen it comes back, a message says the test worked, and the test copy is "
            "removed. Don't turn the computer off during the test unless the steps say to. Save your work first: "
            "the test restarts the computer without asking.\n\nThe test copy takes the place of the earlier "
@@ -769,6 +791,15 @@ def test_rollback():
     if rc == 6:
         say("This computer is running a test copy. Open Test automatic rollback again to remove its marker.",
             "warning", title=w)
+        return 1
+    problems = {
+        7: "Your computer saves its list of what works 4 minutes after a good start, and it hasn't saved one yet. "
+           "Wait a few minutes and try again.",
+        8: f"{name} can't run here: this computer doesn't have it, or it wasn't working at this start, so there's "
+           "nothing for the test to break.",
+        9: f"{name} can't run here: the driver is built into the system, so it can't be blocked."}
+    if rc in problems:
+        say(problems[rc], "warning", title=w)
         return 1
     if rc != 0:
         say("The administrator password wasn't given, so nothing was changed." if rc in (126, 127) else
@@ -854,6 +885,21 @@ def settings_note():
     return 0
 
 
+def what_broke(stamp):
+    """What the trial check found broken on the newer version, in plain words, if it was this rollback's cause."""
+    try:
+        lines = ROLLED_BACK_WHY.read_text().splitlines()
+        found = int(lines[0])
+    except (OSError, ValueError, IndexError):
+        return ""
+    # Written by the failed start, shortly before the rollback's note.
+    if not 0 <= int(stamp) - found <= 86400 or len(lines) < 2:
+        return ""
+    names = list(dict.fromkeys(n for n in lines[1:] if n))
+    more = f"\n  and {len(names) - 12} more" if len(names) > 12 else ""
+    return "\n".join(f"  \u2022 {n}" for n in names[:12]) + more
+
+
 def rolled_back_note():
     """Say once, at login, that the computer went back to the previous version by itself."""
     w = "Automatic rollback"
@@ -889,21 +935,28 @@ def rolled_back_note():
             "makes a file to send them.", "warning", title=w)
     elif kind == "boot-options":
         notify("Your computer went back to the previous version.")
+        broke = what_broke(stamp)
         say(f"The computer didn't start properly with the boot options changed in System Tools, so it went back to "
-            f"the version from {since}, with the boot options it had before. Your files and apps aren't touched, and "
-            "automatic updates aren't paused.\n\nThe setting that caused it isn't in use. Disk and startup, Boot "
-            "options in System Tools shows what's in use now.", "warning", title=w)
+            f"the version from {since}, with the boot options it had before." +
+            (f"\n\nWhat stopped working with them:\n{broke}\n\n" if broke else " ") +
+            "Your files and apps aren't touched, and automatic updates aren't paused.\n\nThe setting that caused "
+            "it isn't in use. Disk and startup, Boot options in System Tools shows what's in use now.", "warning",
+            title=w)
     elif kind == "test":
         notify("The automatic rollback test worked.")
+        broke = what_broke(stamp)
         say(f"The test worked. Your computer went back by itself to the version from {since}, and the test copy is "
-            f"removed.", title=w)
+            f"removed." + (f"\n\nWhat the test copy found broken:\n{broke}" if broke else ""), title=w)
     else:
         until = paused_until()
         pause = (f"Automatic updates are paused until {day(until)}, so the same update doesn't come straight back. "
                  "They turn back on by themselves." if until else "")
         notify("Your computer went back to the previous version.")
-        say(f"Your computer went back to the version from {since}, because the newer version didn't start "
-            f"properly. Your files and your apps aren't touched." + (f"\n\n{pause}" if pause else "") +
+        broke = what_broke(stamp)
+        why = (f"because these stopped working on the newer version:\n{broke}\n\n" if broke else
+               "because the newer version didn't start properly. ")
+        say(f"Your computer went back to the version from {since}, {why}Your files and your apps aren't touched." +
+            (f"\n\n{pause}" if pause else "") +
             "\n\nIf it happens again, tell your helper. Save problem details in System Tools makes a file to send "
             "them.", "warning", title=w)
     STATE.mkdir(parents=True, exist_ok=True)

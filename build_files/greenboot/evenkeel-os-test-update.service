@@ -1,0 +1,13 @@
+[Unit]
+Description=Test automatic rollback: the update program always fails
+ConditionKernelCommandLine=evenkeel_os.test_rollback=update-program
+After=local-fs.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+# A bind mount lasts until restart and changes no file.
+ExecStart=/usr/bin/mount --bind /usr/bin/false /usr/bin/uupd
+
+[Install]
+WantedBy=multi-user.target

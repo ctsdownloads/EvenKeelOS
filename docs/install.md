@@ -89,8 +89,27 @@ or hangs before the checks finish (turning it off and on counts, from the first
 start of a new version), or, for a new
 version, when a login doesn't reach a working desktop (no desktop after a
 minute, or two logins that end within a minute: a login loop). Being offline,
-or nobody logging in, never counts as a failure. Not caught: a freeze long
-after login, and problems in apps; use Undo for those. It works
+or nobody logging in, never counts as a failure.
+
+For a new version, after a login, it also checks that what worked at the last
+good start still works: sound, Wi-Fi, wired network, Bluetooth, graphics, the
+built-in keyboard and touchpad, the camera, battery status, screen brightness,
+the fingerprint reader, Thunderbolt or USB4 ports, printing, power modes, the
+update program, Flatpak, the firmware updater, the firewall and network places,
+SELinux, automatic disk unlock, clock sync, looking up website names (DNS),
+your Boot options settings and Shared folders' settings, plus every device
+keeping its driver, no running service failing, and no new crash of the system
+core. The note at login names what broke. Limits: it checks only a new version
+on trial, not every start; hardware that's unplugged, switched off in the BIOS
+or by a privacy switch never counts, and only USB devices in ports the computer
+calls fixed are checked (nothing on a hub or dock); a start that only changed
+boot options (System Tools, Boot options) checks programs, not hardware, since
+those settings may switch hardware off on purpose; disk unlock doesn't count
+after a firmware or Secure Boot change; what's checked is that each thing is
+there and its program answers, not that sound plays, Wi-Fi connects or a page
+prints. Not caught: suspend and resume, external monitors, VPNs, print quality,
+sound or the camera inside one app, app crashes, graphics chip hangs, Secure
+Boot switched off, and a freeze long after login; use Undo for those. It works
 on computers installed from a live USB made after it was added (November 2026):
 the boot menu's counter is set up only at install. **Test automatic rollback**
 in [System Tools](system-tools.md#system-tools) checks it.

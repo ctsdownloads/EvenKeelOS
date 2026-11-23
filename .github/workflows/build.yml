@@ -51,8 +51,10 @@ jobs:
           pipx run --spec bandit==1.9.4 bandit -q -ll evenkeel-os-tools-admin evenkeel-os-tools-safe evenkeel-os-hwrules \
             evenkeel-os-vpn evenkeel-os-app-updates check-root-helpers.py check-vpns.py greenboot/evenkeel-os-settings \
             check-settings-repair.py greenboot/evenkeel-os-settings-test evenkeel-os-cert-remove evenkeel-os-certs \
-            check-locked-versions.py evenkeel-os-boot-options
-          shellcheck -s bash -S warning ../boot_test/run-boot-test.sh ../boot_test/boot-check
+            check-locked-versions.py evenkeel-os-boot-options evenkeel_os_health.py greenboot/evenkeel-os-health \
+            check-health.py
+          shellcheck -s bash -S warning ../boot_test/run-boot-test.sh ../boot_test/boot-check \
+            ../boot_test/boot-check-root
 
       - name: Maximize build space
         uses: ublue-os/remove-unwanted-software@695eb75bc387dbcd9685a8e72d23439d8686cba6

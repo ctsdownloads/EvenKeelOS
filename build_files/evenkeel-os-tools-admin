@@ -4,9 +4,12 @@
   evenkeel-os-tools-admin updates on|off
   evenkeel-os-tools-admin disk-unlock on|off      (the disk password on standard input)
   evenkeel-os-tools-admin disk-unlock check
-  evenkeel-os-tools-admin test-rollback KIND      KIND: quick, no-login-screen, no-networking, stuck, login-loop, freeze
+  evenkeel-os-tools-admin test-rollback KIND      KIND: quick, no-login-screen, no-networking, stuck, login-loop,
+                                                  freeze, sound, wifi, bluetooth, graphics, printing, firewall,
+                                                  update-program, service
                                                   (exit 4: installed before greenboot, 5: an update is waiting,
-                                                  6: this start is a test copy)
+                                                  6: this start is a test copy, 7: no list of what works yet,
+                                                  8: nothing here to break, 9: the driver is built in)
   evenkeel-os-tools-admin test-rollback clear     take the test marker off the version running now
   evenkeel-os-tools-admin firewall SERVICE on|off  SERVICE: ssh, ipp; on Home and Work networks only, never Public
   evenkeel-os-tools-admin firewall default        a network with no place set is a Public place
@@ -27,12 +30,15 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_health as health  # noqa: E402
 import evenkeel_os_network as net  # noqa: E402
 import evenkeel_os_sharing as sharing  # noqa: E402
 
 DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
 # Switched on from /usr (build.sh), so deleting /etc can't switch it off; systemctl is-enabled only reads /etc.
 GREENBOOT_ON = Path("/usr/lib/systemd/system/multi-user.target.wants/greenboot-healthcheck.service")
+# Extra kernel arguments the running test copy was made with (a driver block), taken off with its marker.
+TEST_ARGS = Path("/var/lib/evenkeel-os/test-rollback-args")
 UUID = re.compile(r"^[0-9a-fA-F-]{36}$")
 FIREWALL_SERVICES = ("ssh", "ipp")             # the Network safety switches: SSH, Share my printer
 SWITCHED_ZONES = ("evenkeel-home", "evenkeel-work")
@@ -128,7 +134,8 @@ def disk_unlock(state):
     print("done")
 
 
-TEST_KINDS = ("quick", "no-login-screen", "no-networking", "stuck", "login-loop", "freeze")
+TEST_KINDS = ("quick", "no-login-screen", "no-networking", "stuck", "login-loop", "freeze", "sound", "wifi",
+              "bluetooth", "graphics", "printing", "firewall", "update-program", "service")
 
 
 def running_test():
@@ -143,7 +150,17 @@ def test_rollback_clear():
     kind = running_test()
     if kind is None:
         fail("This start isn't a test copy.")
-    sys.exit(subprocess.run(["/usr/bin/rpm-ostree", "kargs", f"--delete=evenkeel_os.test_rollback={kind}"]).returncode)
+    try:
+        extra = [a for a in json.loads(TEST_ARGS.read_text()) if isinstance(a, str)]
+    except (OSError, ValueError, TypeError):
+        extra = []
+    running = Path("/proc/cmdline").read_text().split()
+    cmd = ["/usr/bin/rpm-ostree", "kargs", f"--delete=evenkeel_os.test_rollback={kind}"]
+    cmd += [f"--delete={a}" for a in extra if a in running]
+    rc = subprocess.run(cmd).returncode
+    if rc == 0:
+        TEST_ARGS.unlink(missing_ok=True)
+    sys.exit(rc)
 
 
 def test_rollback(kind):
@@ -167,7 +184,18 @@ def test_rollback(kind):
         fail(f"The system versions couldn't be read: {e}")
     if any(d.get("staged") for d in ds):
         fail("An update is waiting for a restart.", 5)
-    sys.exit(subprocess.run(["/usr/bin/rpm-ostree", "kargs", f"--append=evenkeel_os.test_rollback={kind}"]).returncode)
+    extra = health.test_args(kind)
+    if extra == 7:
+        fail("No list of what works has been saved yet: it is saved 4 minutes after a good start.", 7)
+    if extra == 8:
+        fail("This computer doesn't have what this test breaks, or it wasn't working at this start.", 8)
+    if extra == 9:
+        fail("The driver is built into the system, so it can't be blocked.", 9)
+    TEST_ARGS.parent.mkdir(parents=True, exist_ok=True)
+    TEST_ARGS.write_text(json.dumps(extra) + "\n")
+    Path(health.LOST).unlink(missing_ok=True)
+    cmd = ["/usr/bin/rpm-ostree", "kargs", f"--append=evenkeel_os.test_rollback={kind}"]
+    sys.exit(subprocess.run(cmd + [f"--append={a}" for a in extra]).returncode)
 
 
 def let_in(service, state):

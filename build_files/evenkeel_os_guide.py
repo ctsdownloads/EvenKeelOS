@@ -248,7 +248,9 @@ TOPICS = [
          ("If the computer won't start properly", [
              ("You don't need to do anything. If a new version fails to start twice in a row, the computer goes back "
               "to the version before by itself.", ""),
-             ("A note at the next login says so, and automatic updates pause for 3 days.", ""),
+             ("A new version also goes back if something that worked before is broken after you log in, like "
+              "sound, Wi-Fi, Bluetooth, the camera or printing. Unplugged or switched-off things don't count.", ""),
+             ("A note at the next login says so and names what broke, and automatic updates pause for 3 days.", ""),
              ("To check that this works on your computer, see Getting help.", "topic:help"),
          ]),
          ("Update firmware", [
@@ -338,8 +340,9 @@ TOPICS = [
          ("Check that automatic rollback works", [
              ("Open System Tools, Get help, Test automatic rollback. Save your work first.", "page:help"),
              ("Pick a test, click Start the test, and type your password.", ""),
+             ("For the tests that break one thing, like Sound driver blocked, log in when the login screen shows.", ""),
              ("The computer restarts, fails on purpose, then goes back by itself. A note at login says the test "
-              "worked.", ""),
+              "worked and what the test copy found broken.", ""),
          ]),
          ("Prefer the terminal?", [
              ("Open System Tools, Get help, and scroll to the end. Every tool has its command there.", "page:help"),

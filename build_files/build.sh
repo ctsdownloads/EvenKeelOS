@@ -250,10 +250,33 @@ rm -f "$menu"
 ! rpm -q greenboot-default-health-checks >/dev/null || { echo "ERROR: Fedora's default greenboot checks are installed; they fail offline"; exit 1; }
 install -Dm755 -t /usr/lib/greenboot/check/required.d /ctx/greenboot/00-evenkeel-os-test-quick.sh \
   /ctx/greenboot/05-evenkeel-os-settings.sh /ctx/greenboot/10-evenkeel-os-login-screen.sh \
-  /ctx/greenboot/20-evenkeel-os-networking.sh /ctx/greenboot/30-evenkeel-os-desktop.sh
+  /ctx/greenboot/20-evenkeel-os-networking.sh /ctx/greenboot/30-evenkeel-os-desktop.sh \
+  /ctx/greenboot/40-evenkeel-os-still-works.sh
 # The save runs last: the rollback note (90) reads the settings test's marker, which the save clears.
+# 93 starts saving the list of what works, 4 minutes into the start, for the next new version's trial (40).
 install -Dm755 -t /usr/lib/greenboot/green.d /ctx/greenboot/90-evenkeel-os-rolled-back.sh \
-  /ctx/greenboot/95-evenkeel-os-settings-save.sh
+  /ctx/greenboot/93-evenkeel-os-health-record.sh /ctx/greenboot/95-evenkeel-os-settings-save.sh
+install -Dm644 /ctx/evenkeel_os_health.py /usr/lib/evenkeel-os/evenkeel_os_health.py
+install -Dm755 /ctx/greenboot/evenkeel-os-health /usr/libexec/evenkeel-os-health
+install -Dm644 -t /usr/lib/systemd/system /ctx/greenboot/evenkeel-os-health-record.service
+# The trial check against a made-up computer: what must count as broken, and what (unplugged, switched off) mustn't.
+python3 -I /ctx/check-health.py /usr/lib/evenkeel-os
+# What the trial check asks must be in the image, under the names it uses.
+for c in lpstat busctl uupd rpm-ostree flatpak firewall-cmd resolvectl testparm udevadm journalctl mount; do
+  command -v "$c" >/dev/null || { echo "ERROR: the trial check needs $c"; exit 1; }
+done
+grep -qx 'BusName=org.freedesktop.UPower.PowerProfiles' /usr/lib/systemd/system/tuned-ppd.service \
+  || { echo "ERROR: tuned-ppd has a new bus name; update evenkeel_os_health.py"; exit 1; }
+for f in org.freedesktop.fwupd net.reactivated.Fprint; do
+  [ -f "/usr/share/dbus-1/system-services/$f.service" ] \
+    || { echo "ERROR: the trial check asks $f, which isn't in the image"; exit 1; }
+done
+python3 -I -c 'import sys; sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_health as h, evenkeel_os_network as n
+ids = h.fprint_ids()
+sys.exit(0 if len(ids) > 50 and set(h.PLACES) == {n.PUBLIC, n.HOME, n.WORK} else
+         f"ERROR: the trial check finds {len(ids)} fingerprint readers in the udev lists, or its places {h.PLACES} "
+         "are not the Network safety places")'
 # Settings repair: a copy of /etc saved after each good start, put back from when important settings go missing.
 install -Dm755 -t /usr/lib/greenboot/red.d /ctx/greenboot/50-evenkeel-os-settings-repair.sh
 install -Dm755 /ctx/greenboot/evenkeel-os-settings /usr/libexec/evenkeel-os-settings
@@ -286,9 +309,24 @@ install -Dm644 /ctx/greenboot/50-evenkeel-os-test-gdm.conf /usr/lib/systemd/syst
 install -Dm644 /ctx/greenboot/50-evenkeel-os-test-networkmanager.conf \
   /usr/lib/systemd/system/NetworkManager.service.d/50-evenkeel-os-test.conf
 install -Dm644 /ctx/greenboot/50-evenkeel-os-test-shell.conf /usr/lib/systemd/user/org.gnome.Shell@user.service.d/50-evenkeel-os-test.conf
-install -Dm644 -t /usr/lib/systemd/system /ctx/greenboot/evenkeel-os-test-stuck.service /ctx/greenboot/evenkeel-os-test-freeze.service
-systemctl enable evenkeel-os-test-stuck.service evenkeel-os-test-freeze.service
-for u in gdm.service NetworkManager.service evenkeel-os-test-stuck.service evenkeel-os-test-freeze.service greenboot-healthcheck.service; do
+install -Dm644 /ctx/greenboot/50-evenkeel-os-test-cups.conf \
+  /usr/lib/systemd/system/cups.service.d/50-evenkeel-os-test.conf
+install -Dm644 /ctx/greenboot/50-evenkeel-os-test-firewalld.conf \
+  /usr/lib/systemd/system/firewalld.service.d/50-evenkeel-os-test.conf
+for u in ModemManager.service switcheroo-control.service; do
+  install -Dm644 /ctx/greenboot/50-evenkeel-os-test-service.conf "/usr/lib/systemd/system/$u.d/50-evenkeel-os-test.conf"
+done
+# The "A system service fails" test breaks one of these, whichever runs; one must be switched on.
+systemctl -q is-enabled ModemManager.service || systemctl -q is-enabled switcheroo-control.service \
+  || { echo "ERROR: neither ModemManager nor switcheroo-control is switched on; pick another test service"; exit 1; }
+install -Dm644 -t /usr/lib/systemd/system /ctx/greenboot/evenkeel-os-test-stuck.service \
+  /ctx/greenboot/evenkeel-os-test-freeze.service /ctx/greenboot/evenkeel-os-test-update.service
+systemctl enable evenkeel-os-test-stuck.service evenkeel-os-test-freeze.service evenkeel-os-test-update.service
+[ -x /usr/bin/false ] && [ -x /usr/bin/uupd ] \
+  || { echo "ERROR: the update program test needs /usr/bin/false and /usr/bin/uupd"; exit 1; }
+for u in gdm.service NetworkManager.service evenkeel-os-test-stuck.service evenkeel-os-test-freeze.service \
+         greenboot-healthcheck.service cups.service firewalld.service ModemManager.service switcheroo-control.service \
+         evenkeel-os-test-update.service evenkeel-os-health-record.service; do
   systemd-analyze verify "$u" 2>&1 | grep -iE "evenkeel|greenboot" && { echo "ERROR: $u has a unit problem"; exit 1; }
 done
 # The login-loop test needs the user desktop's own shell unit (the login screen uses org.gnome.Shell@gdm).
@@ -300,7 +338,8 @@ for l in multi-user.target.wants/greenboot-healthcheck.service \
          ostree-finalize-staged.service.requires/greenboot-set-rollback-trigger.service \
          multi-user.target.wants/evenkeel-os-boot-menu-repair.service \
          multi-user.target.wants/evenkeel-os-test-stuck.service \
-         multi-user.target.wants/evenkeel-os-test-freeze.service; do
+         multi-user.target.wants/evenkeel-os-test-freeze.service \
+         multi-user.target.wants/evenkeel-os-test-update.service; do
   mkdir -p "/usr/lib/systemd/system/${l%/*}"
   ln -sfn "../${l##*/}" "/usr/lib/systemd/system/$l"
   [ -f "/usr/lib/systemd/system/$l" ] || { echo "ERROR: /usr/lib/systemd/system/$l doesn't lead to its unit"; exit 1; }
