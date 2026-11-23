@@ -94,7 +94,7 @@ ready || { fail "the computer didn't start."; exit 1; }
 say "A real update staged by bootc, as automatic updates do on an install with no added packages:"
 step bootc-update > "$OUT/bootc-update.txt" 2>&1 || { fail "the update wasn't staged (see bootc-update.txt)."; exit 1; }
 next_start
-free_vm=$(on df -h --output=avail / | tail -1)
+free_vm=$(on df -h --output=avail /var | tail -1)
 say "  Free space: here $(df -h --output=avail / | tail -1), in the virtual machine $free_vm"
 if ! on 'test -e /usr/share/evenkeel-os-boot-test/next'; then fail "the update didn't start."
 elif marked bootc; then say "PASS: the update was marked for trial and passed its checks."
@@ -151,7 +151,13 @@ for kind in "${TESTS[@]}"; do
   ready || { fail "$kind: the computer wasn't ready within 15 minutes."; break; }
   since=$(on date +%s) || since=""
   [ -n "$since" ] || { fail "$kind: the computer didn't answer."; continue; }
-  if ! out=$(step start "$kind" 2>&1); then fail "$kind: the test copy wasn't made: $out"; continue; fi
+  if ! out=$(step start "$kind" 2>&1); then
+    fail "$kind: the test copy wasn't made: $out"
+    on 'for d in /sys/class/drm/card[0-9]* /sys/class/sound/card[0-9]*; do
+          echo "$d: $(readlink -f "$d/device/driver") module $(readlink "$d/device/driver/module")"; done' \
+      | sed 's/^/  driver: /' | tee -a "$OUT/report.txt"
+    continue
+  fi
   restart_after_wait || { fail "$kind: $why"; continue; }
   end=$((SECONDS + TEST_TIME))
   result=timeout

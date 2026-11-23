@@ -383,6 +383,7 @@ def main():
         case(*args)
     crash_seen_before()
     own_mistake()
+    service_name()
     test_args()
     print(f"Trial check: {len(want)} kinds of things recorded; {len(cases)} changes, each counted or not as it "
           "should be; test copies get the right driver blocks")
@@ -435,6 +436,16 @@ def move_bluetooth(c):
     c.link(f"{bt}/bluetooth/hci0/device", bt)
 
 
+def service_name():
+    """A service named "... service" isn't called "... service service" in the note."""
+    c = setup()
+    c.answers["running"] = (0, "switcheroo-control.service loaded active running Switcheroo Control Proxy service\n")
+    name = health.services()["service:switcheroo-control.service"]["name"]
+    if name != "The Switcheroo Control Proxy service (switcheroo-control.service)":
+        sys.exit(f"ERROR: trial check: a service's note reads {name!r}")
+    shutil.rmtree(c.root)
+
+
 def own_mistake():
     """A mistake in the check itself must not fail the start."""
     c = setup()
@@ -483,9 +494,21 @@ def test_args():
     cmdline(c)
     if health.test_args("graphics") != ["module_blacklist=nouveau,i915"]:
         sys.exit(f"ERROR: trial check: the owner's own driver block is dropped: {health.test_args('graphics')}")
-    c.remove("sys/module/i915/initstate")         # built into the system: can't be blocked
+    # A basic startup screen with a built-in driver next to the real one: only the real one is blocked.
+    simple = "sys/devices/platform/simple-framebuffer.0"
+    c.device(simple, "platform")
+    c.link("sys/class/drm/card0", f"{simple}/drm/card0")
+    c.link(f"{simple}/drm/card0/device", simple)
+    c.driver(simple, "platform", "simpledrm", builtin=True)
+    health.record(0)
+    if health.test_args("graphics") != ["module_blacklist=nouveau,i915"]:
+        sys.exit(f"ERROR: trial check: a startup screen stops the graphics test: {health.test_args('graphics')}")
+    c.remove("sys/bus/pci/drivers/i915/module")   # a driver without a module link is found by its name
+    if health.test_args("graphics") != ["module_blacklist=nouveau,i915"]:
+        sys.exit(f"ERROR: trial check: a driver without a module link isn't found: {health.test_args('graphics')}")
+    c.remove("sys/module/i915/initstate")         # now every graphics driver is built in: can't be blocked
     if health.test_args("graphics") != 9:
-        sys.exit("ERROR: trial check: a built-in graphics driver isn't refused")
+        sys.exit("ERROR: trial check: built-in graphics drivers aren't refused")
     c.answers["running"] = (0, "")
     c.answers["lpstat -r"] = (1, "scheduler is not running\n")
     c.remove("sys/class/net/wlp1s0")

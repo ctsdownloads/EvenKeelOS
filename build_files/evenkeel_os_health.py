@@ -122,9 +122,12 @@ def need(a):
 
 
 def module(dev):
-    """The driver module of a device (empty when it has no driver)."""
+    """The driver module of a device (empty when it has no driver); without a module link, the driver's own name."""
     drv = Path(dev) / "driver"
-    return link_name(drv / "module") if drv.exists() else ""
+    if not drv.exists():
+        return ""
+    name = link_name(drv / "module") or link_name(drv).replace("-", "_")
+    return name if P(f"/sys/module/{name}").exists() else ""
 
 
 def listed(folder, pattern):
@@ -384,7 +387,8 @@ def services():
         f = line.lstrip("\u25cf* ").split(None, 4)      # a failed unit can start with a dot
         if len(f) >= 4 and f[0].endswith(".service"):
             desc = f[4] if len(f) > 4 else f[0]
-            items[f"service:{f[0]}"] = {"name": f"The {desc} service ({f[0]})", "needs": []}
+            name = desc if desc.lower().endswith("service") else f"{desc} service"
+            items[f"service:{f[0]}"] = {"name": f"The {name} ({f[0]})", "needs": []}
     return items
 
 
@@ -510,7 +514,7 @@ def loadable(mod):
 
 def test_args(kind):
     """The extra kernel arguments a rollback test needs here, or an exit code: 7 no list of what works saved yet,
-    8 this computer doesn't have the thing the test breaks, 9 its driver is built in and can't be blocked."""
+    8 this computer doesn't have the thing the test breaks, 9 none of its drivers can be blocked (built in)."""
     if kind not in DRIVER_TESTS and kind not in SOFTWARE_TESTS and kind != "service":
         return []
     rec = load()
@@ -519,10 +523,12 @@ def test_args(kind):
     if kind in DRIVER_TESTS:
         probe, prefix = DRIVER_TESTS[kind]
         now = probe()
-        mods = {m for k, i in now.items() if k.startswith(prefix) and k in rec["items"] for m in i["modules"]}
-        if not mods:
+        working = [i for k, i in now.items() if k.startswith(prefix) and k in rec["items"]]
+        if not working:
             return 8
-        if not all(loadable(m) for m in mods):
+        # Devices whose drivers can all be blocked (a built-in one, like a basic startup screen, stays working).
+        mods = {m for i in working if all(loadable(m) for m in i["modules"]) for m in i["modules"]}
+        if not mods:
             return 9
         # One module_blacklist= counts (the last), so the owner's own blocks stay in it.
         own = [m for a in read("/proc/cmdline").split() if a.startswith("module_blacklist=")
