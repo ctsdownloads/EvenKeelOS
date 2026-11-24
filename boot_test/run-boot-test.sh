@@ -8,12 +8,13 @@ IMAGE=$1
 BIB=quay.io/centos-bootc/bootc-image-builder@sha256:dab86ee6b46dcade411b37f4e70b07d93b6a06da0dbfec6fe89247a220e0d9f8
 TEST_IMAGE=localhost/evenkeel-os-boot-test:latest
 OUT=${RUNNER_TEMP:-/tmp}/boot-test-results
-WORK=$(mktemp -d)
 SSH_WAIT=600                 # seconds a start may take before it counts as failed
-mkdir -p "$OUT"
+. "$(dirname "$0")/vm.sh"
+# The disk and key are kept in $VM for the rollback tests.
+sudo rm -rf "$VM"
+mkdir -p "$OUT" "$VM"
 : > "$OUT/report.txt"
 
-say() { echo "$1" | tee -a "$OUT/report.txt"; }
 summary() { [ -n "${GITHUB_STEP_SUMMARY:-}" ] && echo "$1" >> "$GITHUB_STEP_SUMMARY"; return 0; }
 
 # The virtual machine runs as root, so its screenshots and logs are handed back for the upload step.
@@ -36,45 +37,38 @@ podman rmi "$TEST_IMAGE"
 df -h / | tee -a "$OUT/disk-space.txt"
 
 # The test user's key and password exist only for this run.
-ssh-keygen -q -t ed25519 -N '' -C boot-test -f "$WORK/key"
+ssh-keygen -q -t ed25519 -N '' -C boot-test -f "$VM/key"
 hash=$(openssl passwd -6 "$(openssl rand -hex 16)")
-cat > "$WORK/config.toml" <<TOML
+cat > "$VM/config.toml" <<TOML
 [[customizations.user]]
 name = "tester"
 password = "$hash"
-key = "$(cat "$WORK/key.pub")"
+key = "$(cat "$VM/key.pub")"
 groups = ["wheel"]
+
+# Room for the rollback tests' second version of the image.
+[[customizations.filesystem]]
+mountpoint = "/"
+minsize = "40 GiB"
 TOML
 
-mkdir -p "$WORK/output"
+mkdir -p "$VM/output"
 sudo podman run --rm --privileged --pull=missing --security-opt label=type:unconfined_t \
-  -v "$WORK/config.toml:/config.toml:ro" -v "$WORK/output:/output" \
+  -v "$VM/config.toml:/config.toml:ro" -v "$VM/output:/output" \
   -v /var/lib/containers/storage:/var/lib/containers/storage \
   "$BIB" --type qcow2 --rootfs xfs "$TEST_IMAGE"
 sudo podman rmi "$TEST_IMAGE"
 df -h / | tee -a "$OUT/disk-space.txt"
-disk=$WORK/output/qcow2/disk.qcow2
-if ! sudo test -s "$disk"; then
+if ! sudo test -s "$DISK"; then
   say "FAIL: the test disk wasn't made."
   summary "Boot test: the test disk wasn't made."
   exit 1
 fi
 
-SSH=(ssh -i "$WORK/key" -p 2222 -o BatchMode=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
-     -o ConnectTimeout=5 -o LogLevel=ERROR tester@127.0.0.1)
-
 attempt() {
   local n=$1 rc
-  cp /usr/share/OVMF/OVMF_VARS_4M.fd "$WORK/vars.fd"
-  sudo rm -f "$WORK/monitor.sock"
   # -snapshot: every start begins from the freshly made disk, so a second try is a clean first start.
-  sudo qemu-system-x86_64 -name evenkeel-os-boot-test -machine q35,accel=kvm -cpu host -smp 4 -m 6144 \
-    -drive if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE_4M.fd \
-    -drive if=pflash,format=raw,file="$WORK/vars.fd" \
-    -drive file="$disk",if=virtio,format=qcow2 -snapshot \
-    -netdev user,id=net0,hostfwd=tcp:127.0.0.1:2222-:22 -device virtio-net-pci,netdev=net0 \
-    -device virtio-vga -display none -monitor "unix:$WORK/monitor.sock,server,nowait" \
-    -serial "file:$OUT/serial-$n.log" -pidfile "$WORK/qemu.pid" -daemonize
+  vm_start "$OUT/serial-$n.log" -snapshot
   say "Start $n:"
   rc=1
   local deadline=$((SECONDS + SSH_WAIT))
@@ -85,15 +79,14 @@ attempt() {
   if [ "$rc" -ne 0 ]; then
     say "FAIL: the computer didn't start far enough to be checked within $((SSH_WAIT / 60)) minutes."
   else
-    "${SSH[@]}" /usr/libexec/evenkeel-os-boot-check > "$WORK/checks.txt" 2>&1 && rc=0 || rc=1
-    tee -a "$OUT/report.txt" < "$WORK/checks.txt"
+    "${SSH[@]}" /usr/libexec/evenkeel-os-boot-check > "$VM/checks.txt" 2>&1 && rc=0 || rc=1
+    tee -a "$OUT/report.txt" < "$VM/checks.txt"
     "${SSH[@]}" journalctl -b -p warning --no-pager > "$OUT/warnings-$n.txt" 2>&1 || true
   fi
-  echo "screendump $OUT/desktop-$n.png -f png" | sudo socat -t 5 - "UNIX-CONNECT:$WORK/monitor.sock" >/dev/null || true
+  vm_monitor "screendump $OUT/desktop-$n.png -f png" || true
   sleep 2
   [ -s "$OUT/desktop-$n.png" ] || say "Note: the screenshot of start $n couldn't be taken."
-  sudo kill "$(sudo cat "$WORK/qemu.pid")" || true
-  sleep 5
+  vm_stop || true
   return "$rc"
 }
 

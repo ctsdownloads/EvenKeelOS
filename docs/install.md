@@ -89,7 +89,8 @@ or hangs before the checks finish (turning it off and on counts, from the first
 start of a new version), or, for a new
 version, when a login doesn't reach a working desktop (no desktop after a
 minute, or two logins that end within a minute: a login loop). Being offline,
-or nobody logging in, never counts as a failure.
+or nobody logging in, never counts as a failure. It works however long after an
+update you restart (from the update after the one that brought this).
 
 For a new version, after a login, it also checks that what worked at the last
 good start still works: sound, Wi-Fi, wired network, Bluetooth, graphics, the

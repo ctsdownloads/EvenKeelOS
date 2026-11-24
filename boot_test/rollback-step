@@ -1,0 +1,34 @@
+#!/usr/bin/bash
+# Root steps of the rollback tests (run-rollback-tests.sh), allowed for the test user in the test copy only.
+set -euo pipefail
+case "${1:-}" in
+  start) exec /usr/libexec/evenkeel-os-tools-admin test-rollback "${2:?}" ;;
+  restart) exec systemctl reboot ;;
+  # The login screen again, which logs the test user in again (a second login, as a person would).
+  log-in-again) exec systemctl restart gdm.service ;;
+  # Important settings deleted: deletes them for real and restarts, as System Tools does.
+  settings-test) exec /usr/libexec/evenkeel-os-settings-test ;;
+  # A real update staged by bootc, as automatic updates stage it on an install with no added packages: this image
+  # plus one file, made here.
+  bootc-update)
+    bootc image copy-to-storage
+    dir=$(mktemp -d)
+    trap 'rm -rf "$dir"' EXIT
+    printf 'FROM localhost/bootc\nRUN echo next > /usr/share/evenkeel-os-boot-test/next\n' > "$dir/Containerfile"
+    podman build -q -t localhost/evenkeel-os-next "$dir"
+    bootc switch --transport containers-storage localhost/evenkeel-os-next ;;
+  # A package added the way Install Package File does it, as on most computers in use.
+  add-package) exec rpm-ostree install --idempotent /usr/share/evenkeel-os-boot-test/*.rpm ;;
+  # rpm-ostreed's idle exit, put back to its old 60 seconds (or 0) to show the failure the image fixes.
+  idle-exit)
+    [[ ${2:-} =~ ^[0-9]+$ ]] || exit 2
+    sed -i "s/^IdleExitTimeout=.*/IdleExitTimeout=$2/" /etc/rpm-ostreed.conf
+    exec systemctl restart rpm-ostreed.service ;;
+  # A new version that differs only by a harmless boot option, for checking it's marked for trial.
+  mark-test)
+    [[ ${2:-} =~ ^(append|delete)$ ]] || exit 2
+    exec rpm-ostree kargs "--$2=evenkeel_os.boot_test=1" ;;
+  *) echo "Usage: evenkeel-os-rollback-step start KIND | restart | log-in-again | settings-test | bootc-update |"
+     echo "       add-package | idle-exit N | mark-test append|delete"
+     exit 2 ;;
+esac
