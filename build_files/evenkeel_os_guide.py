@@ -341,6 +341,8 @@ TOPICS = [
              ("Open System Tools, Get help, Test automatic rollback. Save your work first.", "page:help"),
              ("Pick a test, click Start the test, and type your password.", ""),
              ("For the tests that break one thing, like Sound driver blocked, log in when the login screen shows.", ""),
+             ("For those, a window asks before each restart. Click Restart now, or Not yet to save your work "
+              "first.", ""),
              ("The computer restarts, fails on purpose, then goes back by itself. A note at login says the test "
               "worked and what the test copy found broken.", ""),
          ]),

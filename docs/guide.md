@@ -347,7 +347,8 @@ Sending details to your helper, checking rollback, and terminal commands.
 1. Open System Tools, Get help, Test automatic rollback. Save your work first.
 2. Pick a test, click Start the test, and type your password.
 3. For the tests that break one thing, like Sound driver blocked, log in when the login screen shows.
-4. The computer restarts, fails on purpose, then goes back by itself. A note at login says the test worked and what the test copy found broken.
+4. For those, a window asks before each restart. Click Restart now, or Not yet to save your work first.
+5. The computer restarts, fails on purpose, then goes back by itself. A note at login says the test worked and what the test copy found broken.
 
 ### Prefer the terminal?
 

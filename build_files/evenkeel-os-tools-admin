@@ -11,6 +11,7 @@
                                                   6: this start is a test copy, 7: no list of what works yet,
                                                   8: nothing here to break, 9: the driver is built in)
   evenkeel-os-tools-admin test-rollback clear     take the test marker off the version running now
+  evenkeel-os-tools-admin keep-update             keep the new version a failed startup check is asking about
   evenkeel-os-tools-admin firewall SERVICE on|off  SERVICE: ssh, ipp; on Home and Work networks only, never Public
   evenkeel-os-tools-admin firewall default        a network with no place set is a Public place
   evenkeel-os-tools-admin sharing on|off          Shared folders, on Home networks only (exit 3: no password yet)
@@ -196,6 +197,19 @@ def test_rollback(kind):
     Path(health.LOST).unlink(missing_ok=True)
     cmd = ["/usr/bin/rpm-ostree", "kargs", f"--append=evenkeel_os.test_rollback={kind}"]
     sys.exit(subprocess.run(cmd + [f"--append={a}" for a in extra]).returncode)
+
+
+def keep_update():
+    """Answers the startup check that's asking before a restart (evenkeel_os_health.ask_first): this start passes."""
+    boot = Path("/proc/sys/kernel/random/boot_id").read_text().strip()
+    try:
+        asked = Path(health.QUESTION).read_text().split("\n", 1)[0]
+    except OSError:
+        asked = ""
+    if asked != boot:
+        fail("No startup check is asking about a restart.")
+    Path(health.KEEP).write_text(boot + "\n")
+    print("done")
 
 
 def let_in(service, state):
@@ -400,6 +414,8 @@ def main(argv):
         test_rollback_clear()
     elif len(argv) == 3 and argv[1] == "test-rollback" and argv[2] in TEST_KINDS:
         test_rollback(argv[2])
+    elif argv[1:] == ["keep-update"]:
+        keep_update()
     elif len(argv) == 4 and argv[1] == "firewall" and argv[2] in FIREWALL_SERVICES and argv[3] in ("on", "off"):
         firewall(argv[2], argv[3])
     elif argv[1:] == ["firewall", "default"]:

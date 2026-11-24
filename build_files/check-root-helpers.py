@@ -70,6 +70,8 @@ for h in BAD_NAMES:
 refuses("evenkeel-os-hwrules", ["add", "pkg", "/dev/null"], codes=(1,))
 refuses("evenkeel-os-tools-admin", ["updates", "on", "extra"])
 refuses("evenkeel-os-tools-admin", ["test-rollback", "quick", "extra"])
+refuses("evenkeel-os-tools-admin", ["keep-update", "extra"])
+refuses("evenkeel-os-tools-admin", ["keep-update"], codes=(1,))     # no startup check is asking
 for args in (["firewall", "samba", "on"], ["firewall", "ssh", "maybe"], ["firewall", "ssh"],
              ["firewall", "ssh", "on", "x"], ["firewall", "--zone=public", "on"], ["firewall", "ssh;id", "on"],
              ["firewall", "default", "x"]):

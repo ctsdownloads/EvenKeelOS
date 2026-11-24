@@ -318,9 +318,12 @@ driver blocked**, **Wi-Fi driver blocked**, **Bluetooth driver blocked**,
 **Graphics driver blocked** (each blocks the driver this computer uses with
 `module_blacklist=`), **Printing service off**, **Firewall off**, **Update
 program broken** (a bind mount over `uupd` until the restart) or **A system
-service fails** (ModemManager, or switcheroo-control). Those wait for a login
-and restart about 3 minutes after it (15 minutes first if nobody logs in), and
-the note names what broke. A driver test keeps any driver blocks you set in
+service fails** (ModemManager, or switcheroo-control). Those wait for a login;
+about 3 minutes after it, a window asks before each restart: **Restart now**,
+or **Not yet** to save your work first (nothing restarts until Restart now).
+Graphics driver blocked restarts by itself after 2 minutes with no answer,
+because the screen may stay black. With nobody logged in, each start waits 15
+minutes, then restarts without asking. The note names what broke. A driver test keeps any driver blocks you set in
 Boot options. They refuse, and say why, when this computer
 doesn't have that thing or it wasn't working, when the driver is built into
 the system, or when no list of what works has been saved yet (4 minutes after
@@ -330,6 +333,8 @@ breaks without that kernel argument). At the restart the test copy really
 breaks: 2 bad starts in a row (each picked test says what you'll see), then the
 computer goes back to the version it had, removes the test copy and says the
 test worked at the next login (after every rollback, not just the first). The
+other tests break the start before there's a desktop, so they restart without
+asking, and can't be stopped once started; their start question says so. The
 test copy takes the place of the earlier version kept for Undo, so Undo has
 nothing to go back to until the next update. Needs the admin password, and a
 computer installed from a newer live USB (see

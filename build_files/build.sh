@@ -261,8 +261,11 @@ install -Dm755 /ctx/greenboot/evenkeel-os-health /usr/libexec/evenkeel-os-health
 install -Dm644 -t /usr/lib/systemd/system /ctx/greenboot/evenkeel-os-health-record.service
 # The trial check against a made-up computer: what must count as broken, and what (unplugged, switched off) mustn't.
 python3 -I /ctx/check-health.py /usr/lib/evenkeel-os
+# The window it opens before a restart: the answers, the countdown and the password, with a made-up zenity.
+python3 -I /ctx/check-restart-question.py /usr/bin/evenkeel-os-tools /usr/lib/evenkeel-os
 # What the trial check asks must be in the image, under the names it uses.
-for c in lpstat busctl uupd rpm-ostree flatpak firewall-cmd resolvectl testparm udevadm journalctl mount; do
+for c in lpstat busctl uupd rpm-ostree flatpak firewall-cmd resolvectl testparm udevadm journalctl mount loginctl \
+         systemd-run; do
   command -v "$c" >/dev/null || { echo "ERROR: the trial check needs $c"; exit 1; }
 done
 grep -qx 'BusName=org.freedesktop.UPower.PowerProfiles' /usr/lib/systemd/system/tuned-ppd.service \
