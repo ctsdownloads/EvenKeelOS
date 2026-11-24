@@ -38,7 +38,10 @@ df -h / | tee -a "$OUT/disk-space.txt"
 
 # The test user's key and password exist only for this run.
 ssh-keygen -q -t ed25519 -N '' -C boot-test -f "$VM/key"
-hash=$(openssl passwd -6 "$(openssl rand -hex 16)")
+password=$(openssl rand -hex 16)
+hash=$(openssl passwd -6 "$password")
+# Typed into the password window by the rollback tests' Keep test.
+(umask 077 && printf '%s' "$password" > "$VM/password")
 cat > "$VM/config.toml" <<TOML
 [[customizations.user]]
 name = "tester"

@@ -10,6 +10,7 @@ import os
 import shutil
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 sys.path.insert(0, sys.argv[1] if len(sys.argv) > 1 else "/usr/lib/evenkeel-os")
@@ -225,6 +226,115 @@ def case(title, change, broken, must=None):
     return names
 
 
+def ask_first(c):
+    """A failed trial asks the person on the screen first (with lost sound from main): who, what and the answers."""
+    plain, real_question = c.run, health.question
+    seen, stopped = [], []
+    status = {"deployments": [{"booted": True, "checksum": "new"}, {"booted": False, "checksum": "old"}]}
+    session = "Name=root\nUser=0\nType=wayland\nClass=user\nState=active\n"
+
+    def run(cmd, timeout=30):
+        if cmd[:2] == ["loginctl", "show-seat"]:
+            return (0, "3\n") if session else (0, "\n")
+        if cmd[:2] == ["loginctl", "show-session"]:
+            return 0, session
+        if cmd[0] == "rpm-ostree":
+            return 0, json.dumps(status)
+        if cmd[0] == "systemctl" and "stop" in cmd:
+            stopped.append(cmd)
+            return 0, ""
+        return plain(cmd, timeout)
+
+    def window(rc, keep=None):
+        def question(cmd, name, cap):
+            q = c.root / "run/evenkeel-os/restart-question"
+            seen.append((cmd, q.read_text() if q.exists() else None, cap))
+            if keep is not None:
+                c.file("run/evenkeel-os/restart-keep", keep)
+            return rc
+        health.question = question
+
+    def trial(want, what):
+        before = len(seen)
+        c.file("var/lib/evenkeel-os/health-lost", "1\nSound (snd_hda_intel)\n")
+        if health.ask_first() != want:
+            sys.exit(f"ERROR: trial check, asking first: {what} doesn't give {want}")
+        if (c.root / "run/evenkeel-os/restart-question").exists() or (c.root / "run/evenkeel-os/restart-keep").exists():
+            sys.exit(f"ERROR: trial check, asking first: {what} leaves the question or the answer behind")
+        return seen[before:]
+
+    health.run = run
+    c.file("proc/sys/kernel/random/boot_id", "b00t\n")
+    c.file("run/user/0/wayland-0.lock", "")
+    c.file("run/user/0/wayland-0", "")
+    c.cmdline = "root=x rhgb quiet evenkeel_os.test_rollback=sound"
+    cmdline(c)
+    window(0)
+    asked = trial(1, "a test's Restart now")
+    cmd, q, cap = asked[0]
+    if cap is not None:
+        sys.exit("ERROR: trial check, asking first: a test's window has a time limit, so Not yet can't hold")
+    if cmd[:3] != ["systemd-run", "--machine=root@.host", "--user"] or cmd[-2:] != ["sound", "last"]:
+        sys.exit(f"ERROR: trial check, asking first: the window runs as {cmd}")
+    if "--setenv=WAYLAND_DISPLAY=wayland-0" not in cmd or "--wait" not in cmd or q != "b00t\nSound (snd_hda_intel)\n":
+        sys.exit(f"ERROR: trial check, asking first: display, waiting or question wrong: {asked}")
+    if any(a.startswith("--property=RuntimeMaxSec") for a in cmd):
+        sys.exit("ERROR: trial check, asking first: a test's window has a time limit, so Not yet can't hold")
+    c.answers["grub2-editenv"] = (0, "greenboot_next_deployment_id=abc\n")
+    c.cmdline = "root=x evenkeel_os.test_rollback=graphics"
+    cmdline(c)
+    if trial(1, "the Graphics test")[0][0][-1] != "first":
+        sys.exit("ERROR: trial check, asking first: a first bad start isn't asked as one")
+    c.cmdline = "root=x"
+    cmdline(c)
+    window(3, "b00t\n")
+    kept = trial(0, "Keep with the password")
+    if kept[0][0][-2] != "update" or (c.root / "var/lib/evenkeel-os/health-lost").exists():
+        sys.exit("ERROR: trial check, asking first: Keep on an update leaves the list for a rollback note")
+    if f"--property=RuntimeMaxSec={health.COUNTDOWN + 120}" not in kept[0][0] or kept[0][2] != health.COUNTDOWN + 180:
+        sys.exit("ERROR: trial check, asking first: a real problem's window has no time limit behind its countdown")
+    window(3)
+    trial(1, "Keep without the answer from the admin helper")
+    window(3, "other-start\n")
+    trial(1, "Keep from another start")
+    window(0, "b00t\n")
+    trial(1, "Restart now with a leftover answer")
+    status["deployments"][1]["checksum"] = "new"
+    window(0)
+    if trial(1, "Boot options")[0][0][-2] != "boot-options":
+        sys.exit("ERROR: trial check, asking first: the same system with other boot options isn't Boot options")
+    c.remove("run/user/0/wayland-0")
+    if trial(1, "no Wayland display"):
+        sys.exit("ERROR: trial check, asking first: a session with no Wayland display still opens a window")
+    c.file("run/user/0/wayland-0", "")
+    good = session
+    session = good.replace("Type=wayland", "Type=x11")
+    if trial(1, "an X11 session"):
+        sys.exit("ERROR: trial check, asking first: an X11 session still opens a window")
+    session = ""
+    if trial(1, "nobody on the screen"):
+        sys.exit("ERROR: trial check, asking first: nobody on the screen still opens a window")
+    session = good
+
+    def broken(*_):
+        raise RuntimeError("made up")
+    health.question = broken
+    trial(1, "a mistake while asking")
+    # The real waiting: a window still open when the person logs out, or past its time limit, counts as no answer.
+    health.question = real_question
+    session = ""
+    started = time.monotonic()
+    if health.question(["sleep", "60"], "root", None) != 1 or time.monotonic() - started > 30:
+        sys.exit("ERROR: trial check, asking first: a window left open at logout keeps the start waiting")
+    if stopped[-1:] != [["systemctl", "--machine=root@.host", "--user", "stop",
+                         "evenkeel-os-restart-question.service"]]:
+        sys.exit(f"ERROR: trial check, asking first: a window given up on isn't closed: {stopped}")
+    session = good
+    if health.question(["sleep", "60"], "root", 6) != 1 or health.question(["sh", "-c", "exit 3"], "root", 6) != 3:
+        sys.exit("ERROR: trial check, asking first: the time limit or the window's answer is lost")
+    health.run = plain
+
+
 def main():
     c = setup()
     cmdline(c)
@@ -256,8 +366,10 @@ def main():
         sys.exit("ERROR: trial check: a fallback to the previous version is compared")
     health.WAIT = 0
     c.answers["grub2-editenv"] = (0, "greenboot_next_deployment_id=abc\nboot_counter=0\n")
+    c.answers["loginctl"] = (1, "")      # nobody on the screen: it restarts without asking, as before
     if health.main(["", "trial"]) != 1 or "Sound" not in (c.root / "var/lib/evenkeel-os/health-lost").read_text():
         sys.exit("ERROR: trial check: lost sound doesn't fail the trial, or isn't in the note")
+    ask_first(c)
     if health.compare(0, "/var/lib/evenkeel-os/none.json") != 0:
         sys.exit("ERROR: trial check: no saved list fails compare")
     c.file("sys/class/dmi/id/product_uuid", "other-computer")

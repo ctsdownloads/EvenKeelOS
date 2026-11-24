@@ -24,6 +24,10 @@ TEST_SERVICES = ("ModemManager.service", "switcheroo-control.service")
 FORMAT = 2
 VM_DRIVERS = ("vfio-pci", "pci-stub")   # a device given to a virtual machine on purpose (Boot options)
 WAIT = 120                              # seconds a trial start waits for slow devices before counting them lost
+# While a failed trial asks the person on the screen first; the admin helper's keep-update answers with KEEP.
+QUESTION = "/run/evenkeel-os/restart-question"
+KEEP = "/run/evenkeel-os/restart-keep"
+COUNTDOWN = 120                         # seconds a real problem waits for an answer (evenkeel-os-tools too)
 # Crash messages of the system core itself: a kind seen now but not at the last good start counts. An app's own
 # fault ("traps: app[pid] general protection fault"), GPU hangs (often one app's) and firmware restarts don't.
 CRASHES = {"kernel-bug": re.compile(r"\bBUG: |kernel BUG at "), "oops": re.compile(r"\bOops: "),
@@ -505,6 +509,7 @@ def lost(record):
 DRIVER_TESTS = {"sound": (sound, "sound:"), "wifi": (networks, "wifi:"), "bluetooth": (bluetooth, "bluetooth:"),
                 "graphics": (graphics, "graphics:")}
 SOFTWARE_TESTS = {"printing": "printing", "firewall": "firewall", "update-program": "update-program"}
+TRIAL_TESTS = (*DRIVER_TESTS, *SOFTWARE_TESTS, "service")    # the tests this check fails
 
 
 def loadable(mod):
@@ -611,12 +616,109 @@ def on_trial():
     return any(v.startswith("greenboot_next_deployment_id=") for v in env) and "boot_counter=-1" not in env
 
 
+def last_start():
+    """Whether greenboot goes back after this failure (its retries are used up) instead of trying again."""
+    for v in run(["grub2-editenv", "/boot/grub2/grubenv", "list"])[1].split():
+        if v.startswith("boot_counter="):
+            try:
+                return int(v.split("=", 1)[1]) <= 0
+            except ValueError:
+                return False
+    return False
+
+
+def trial_kind():
+    """The test this start runs, "boot-options" for the same system with other boot options, or "update"."""
+    for a in read("/proc/cmdline").split():
+        if a.startswith("evenkeel_os.test_rollback="):
+            return a.split("=", 1)[1]
+    # As 90-evenkeel-os-rolled-back.sh tells them apart: the running version and the other one on disk.
+    try:
+        ds = json.loads(run(["rpm-ostree", "status", "--json"], 60)[1])["deployments"]
+        sums = [d["checksum"] for d in ds if d.get("booted")] + [d["checksum"] for d in ds if not d.get("booted")][:1]
+    except (ValueError, KeyError, TypeError):
+        return "update"
+    return "boot-options" if len(sums) == 2 and sums[0] == sums[1] else "update"
+
+
+def desktop_user():
+    """(name, user ID, Wayland display) of the person on the screen now, or None."""
+    rc, sid = run(["loginctl", "show-seat", "seat0", "--property=ActiveSession", "--value"])
+    if rc != 0 or not sid.strip():
+        return None
+    rc, out = run(["loginctl", "show-session", sid.strip(), "--property=Name", "--property=User", "--property=Type",
+                   "--property=Class", "--property=State"])
+    p = dict(line.split("=", 1) for line in out.splitlines() if "=" in line)
+    if rc != 0 or (p.get("Class"), p.get("Type"), p.get("State")) != ("user", "wayland", "active"):
+        return None
+    if not p.get("Name") or not p.get("User", "").isdigit():
+        return None
+    sockets = sorted(s.name for s in P(f"/run/user/{p['User']}").glob("wayland-*") if not s.name.endswith(".lock"))
+    return (p["Name"], p["User"], sockets[0]) if sockets else None
+
+
+def question(cmd, name, cap):
+    """Runs the window and waits for it: its exit code (0 restart now, 3 keep), or 1 when it can't start, the person
+    logs out or it runs past cap seconds (None: no limit)."""
+    try:
+        p = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except OSError:
+        return 1
+    end = None if cap is None else time.monotonic() + cap
+    while p.poll() is None:
+        time.sleep(5)
+        if p.poll() is None and (desktop_user() is None or (end and time.monotonic() > end)):
+            p.kill()
+            p.wait()
+            run(["systemctl", f"--machine={name}@.host", "--user", "stop", "evenkeel-os-restart-question.service"])
+            return 1
+    return p.returncode
+
+
+def ask_first():
+    """Before greenboot restarts a failed trial, the person on the screen answers; 0 keeps this version running."""
+    try:
+        who = desktop_user()
+        if who is None:
+            print("Nobody is on the screen to ask, so it restarts now.")
+            return 1
+        name, _, display = who
+        kind = trial_kind()
+        start = "last" if last_start() else "first"
+        bid = read("/proc/sys/kernel/random/boot_id").strip()
+        P(KEEP).unlink(missing_ok=True)
+        # The boot ID, then what broke, for the window (evenkeel-os-tools reads it) and the admin helper.
+        write(QUESTION, "".join(f"{line}\n" for line in [bid, *read(LOST).splitlines()[1:]]))
+        # In the person's own session, so the password window works; a time limit backs up a real problem's countdown.
+        cmd = ["systemd-run", f"--machine={name}@.host", "--user", "--wait", "--quiet", "--collect",
+               "--unit=evenkeel-os-restart-question", f"--setenv=WAYLAND_DISPLAY={display}"]
+        if kind not in TRIAL_TESTS:
+            cmd.append(f"--property=RuntimeMaxSec={COUNTDOWN + 120}")
+        cmd += ["/usr/bin/evenkeel-os-tools", "restart-question", kind, start]
+        print(f"Asking {name} on the screen before restarting ({kind}, {start} bad start).")
+        rc = question(cmd, name, None if kind in TRIAL_TESTS else COUNTDOWN + 180)
+        k = P(KEEP)
+        kept = rc == 3 and k.is_file() and k.stat().st_uid == 0 and k.read_text().strip() == bid
+    except Exception as e:     # noqa: BLE001  a mistake here must never stop a restart
+        print(f"Asking first failed ({e!r}), so it restarts now.")
+        return 1
+    finally:
+        P(QUESTION).unlink(missing_ok=True)
+        P(KEEP).unlink(missing_ok=True)
+    if kept:
+        P(LOST).unlink(missing_ok=True)
+        print("Keep was picked, with the administrator password, so this start passes.")
+        return 0
+    print("Restart now was picked, or no answer came, so it restarts now.")
+    return 1
+
+
 def main(argv):
     if argv[1:] == ["trial"]:
         if not on_trial():
             print("This start isn't a new version on trial, so there's nothing to compare.")
             return 0
-        return compare(note=True)
+        return compare(note=True) and ask_first()
     if argv[1:] in (["record"], ["record", "--now"]):
         print(f"Saved {record(0 if '--now' in argv else 240)} things that work.")
     elif argv[1:2] == ["compare"] and len(argv) <= 4:

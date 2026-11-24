@@ -28,7 +28,11 @@ case "${1:-}" in
   mark-test)
     [[ ${2:-} =~ ^(append|delete)$ ]] || exit 2
     exec rpm-ostree kargs "--$2=evenkeel_os.boot_test=1" ;;
+  # A Boot options change that breaks printing, for the Keep answer in the window before a restart.
+  break-printing)
+    [[ ${2:-} =~ ^(append|delete)$ ]] || exit 2
+    exec rpm-ostree kargs "--$2=systemd.mask=cups.service" ;;
   *) echo "Usage: evenkeel-os-rollback-step start KIND | restart | log-in-again | settings-test | bootc-update |"
-     echo "       add-package | idle-exit N | mark-test append|delete"
+     echo "       add-package | idle-exit N | mark-test append|delete | break-printing append|delete"
      exit 2 ;;
 esac

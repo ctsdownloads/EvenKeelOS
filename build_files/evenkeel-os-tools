@@ -14,6 +14,7 @@
   evenkeel-os-tools test-rollback   check that the computer goes back by itself when a new version won't start, and
                                     puts back deleted settings
   evenkeel-os-tools rolled-back --at-login   say once that the computer went back or put back settings by itself
+  evenkeel-os-tools restart-question KIND first|last   ask before an automatic restart (the startup check runs it)
   evenkeel-os-tools certificates    security certificates that expired, expire within 30 days or were removed
   evenkeel-os-tools setup           the setup checklist: media codecs, disk unlock, getting apps
   evenkeel-os-tools setup --first-login   the same, once, at a new user's first login
@@ -685,9 +686,9 @@ def layout():
 # In every test the computer has 2 bad starts in a row, and the 3rd start is back on this version.
 # The tests from Sound on break something that worked, checked after a login (their story gets AFTER_LOGIN).
 AFTER_LOGIN_TESTS = ("sound", "wifi", "bluetooth", "graphics", "printing", "firewall", "update-program", "service")
-AFTER_LOGIN = ("Log in when the login screen shows. About 3 minutes after you log in, the computer restarts by "
-               "itself. That happens on 2 starts, and the third start is back on this version. If nobody logs in, "
-               "each start waits 15 minutes first.")
+AFTER_LOGIN = ("Log in when the login screen shows. About 3 minutes after you log in, a window asks before the "
+               "computer restarts. That happens on 2 starts, and the third start is back on this version. If "
+               "nobody logs in, each start waits 15 minutes first, then restarts by itself.")
 ROLLBACK_TESTS = [
     ("quick", "Quick test", "A start-up check fails on purpose. The computer restarts by itself within seconds, "
                             "twice, and the third start is back on this version."),
@@ -774,10 +775,14 @@ def test_rollback():
     kind, name, see = ROLLBACK_TESTS[i]
     if kind in AFTER_LOGIN_TESTS:
         see = f"{see} {AFTER_LOGIN}"
+    # Tests that break the start before the desktop have no window to ask on.
+    first = ("Save your work first." if kind in AFTER_LOGIN_TESTS else
+             "Save your work first: once it starts, it can't be stopped. It breaks the start before there's a "
+             "desktop to ask on, so it restarts without asking and ends by itself.")
     if ask(f"{name}: {see}\n\nWhen it comes back, a message says the test worked, and the test copy is "
-           "removed. Don't turn the computer off during the test unless the steps say to. Save your work first: "
-           "the test restarts the computer without asking.\n\nThe test copy takes the place of the earlier "
-           "version kept for Undo the last update, so Undo has nothing to go back to until the next update.",
+           f"removed. Don't turn the computer off during the test unless the steps say to. {first}"
+           "\n\nThe test copy takes the place of the earlier version kept for Undo the last update, so Undo has "
+           "nothing to go back to until the next update.",
            ok="Start the test", title=w) != "ok":
         return 1
     rc = run("Making the test copy.", ["pkexec", ADMIN, "test-rollback", kind], title=w)
@@ -964,6 +969,95 @@ def rolled_back_note():
     return 0
 
 
+RESTART_WAIT = 120      # seconds a real problem waits for an answer (evenkeel_os_health.COUNTDOWN)
+RESTART_QUESTION = Path("/run/evenkeel-os/restart-question")   # the boot ID, then what broke (evenkeel_os_health)
+
+
+def restart_question(kind, start):
+    """The window before an automatic restart, opened by the startup check (evenkeel_os_health.ask_first): 0 restart
+    now, 3 keep (the password was given), 1 the window couldn't show."""
+    try:
+        names = [n[:200] for n in RESTART_QUESTION.read_text().splitlines()[1:] if n]
+    except OSError:
+        return 1
+    broke = "\n".join(f"  • {n}" for n in names[:12]) + (f"\n  and {len(names) - 12} more" if len(names) > 12
+                                                               else "")
+    test = next((t for k, t, _ in ROLLBACK_TESTS if k == kind and k in AFTER_LOGIN_TESTS), None)
+    last = start == "last"
+    if test:
+        found = "still broken, as the test expects" if last else "broken, as the test expects"
+        then = ("Restart now: the computer restarts back on this version, and the test copy is removed. At login, a "
+                "note says the test worked." if last else
+                "Restart now: the computer restarts and tries the test copy once more. About 3 minutes after you log "
+                "in, this window shows once more, and the start after that is back on this version, with the test "
+                "copy removed.")
+        text = (f"{test}: the test is working.\n\nThis start found these {found}:\n{broke}\n\n{then}\n\nNot yet: "
+                "nothing restarts until you click Restart now, so you can save your work first.")
+        if kind == "graphics":
+            text += "\n\nNo answer in 2 minutes: it restarts by itself, because this test can leave the screen black."
+        ok, other, timed = "Restart now", "Not yet", kind == "graphics"
+    elif kind in ("update", "boot-options"):
+        what = "the update" if kind == "update" else "the Boot options change"
+        if last:
+            head = f"Still not working after a restart.\n\nThese still don't work since {what}:\n{broke}"
+            go = ("Recommended: Go back now. The computer restarts on the version that worked before. Your files and "
+                  "apps aren't touched. If automatic updates are on, they pause for 3 days, so the same update "
+                  "doesn't come straight back." if kind == "update" else
+                  "Recommended: Go back now. The computer restarts with the boot options you had before.")
+            ok = "Go back now"
+        else:
+            head = f"Something stopped working after {what}.\n\nThese worked before {what} and don't now:\n{broke}"
+            go = ("Recommended: Restart now. The computer restarts and tries once more. If it's still broken, this "
+                  "window asks once more about 3 minutes after you log in, and then it can go back.")
+            ok = "Restart now"
+        other = "Keep this update" if kind == "update" else "Keep these options"
+        later = ("Undo the last update in System Tools can still take you back later." if kind == "update" else
+                 "Boot options in System Tools can change them back later.")
+        text = (f"{head}\n\n{go}\n\n{other}: no more automatic restarts, and what broke stays broken. Needs an "
+                f"administrator to approve it. {later}\n\nNo answer in 2 minutes: it "
+                f"{'goes back' if last else 'restarts'} by itself.")
+        timed = True
+    else:
+        return 1
+    if not GUI:
+        return 1
+    # zenity's own exit code 1 is a window that couldn't open or lost the screen; Esc opens it again.
+    os.environ.update(ZENITY_CANCEL="4", ZENITY_ESC="9")
+    notify("Your computer needs an answer before it restarts.")
+    end = time.monotonic() + RESTART_WAIT if timed else None
+    quick = 0
+    while True:
+        left = int(end - time.monotonic()) if end else 0
+        if end and left <= 0:
+            return 0
+        opened = time.monotonic()
+        r = ui.zenity("--question", "--no-markup", f"--text={text}", f"--ok-label={ok}", f"--cancel-label={other}",
+                      *([f"--timeout={left}"] if end else []), title="Automatic rollback")
+        if r.returncode in (0, 5):      # Restart now (or Go back now), or no answer in time
+            return 0
+        if r.returncode == 9:
+            quick = quick + 1 if time.monotonic() - opened < 1 else 0
+            if quick >= 3:              # it closes as soon as it opens: it can't show
+                return 1
+            continue
+        if r.returncode != 4:
+            return 1
+        if test:
+            if not text.startswith("Restart now is waiting"):
+                text = "Restart now is waiting: click it once your work is saved.\n\n" + text
+            end = None                  # Not yet: no restart until Restart now
+            continue
+        # The password window gets what's left of the countdown, and at least a minute to type in.
+        try:
+            rc = subprocess.run(["pkexec", ADMIN, "keep-update"], capture_output=True,
+                                timeout=max(int(end - time.monotonic()), 60)).returncode
+        except subprocess.TimeoutExpired:
+            return 0
+        if rc == 0:
+            return 3
+        # The password wasn't given: the same question again, and the countdown carries on.
+
+
 def cert_alerts(check=True):
     """The certificate alerts (see evenkeel-os-certs), checked now; None when they can't be read."""
     if check:
@@ -1095,6 +1189,8 @@ def main(argv):
             return guide_at_login()
         if argv[1:] == ["rolled-back", "--at-login"]:
             return max(rolled_back_note(), settings_note())
+        if argv[1:2] == ["restart-question"] and len(argv) == 4 and argv[3] in ("first", "last"):
+            return restart_question(argv[2], argv[3])
         for key, name, _, fn in TOOLS:
             if argv[1] == key and len(argv) == 2:
                 ui.TITLE = name     # its windows carry its own name, not System Tools'

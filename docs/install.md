@@ -92,6 +92,16 @@ minute, or two logins that end within a minute: a login loop). Being offline,
 or nobody logging in, never counts as a failure. It works however long after an
 update you restart (from the update after the one that brought this).
 
+**Asked first.** When the problem is found after a login, a window opens on
+the desktop by itself before each automatic restart, saying what broke and
+what restarting does. **Restart now** (on the second bad start, **Go back
+now**) restarts; **Keep this update** (or **Keep these options**, after a
+Boot options change) asks for the admin password, then stops the automatic
+restarts and keeps what broke as it is. With no answer in 2 minutes it
+restarts by itself. Esc doesn't count as an answer: the window opens again.
+With nobody logged in, or a start that breaks before the desktop, it
+restarts without asking, as before.
+
 For a new version, after a login, it also checks that what worked at the last
 good start still works: sound, Wi-Fi, wired network, Bluetooth, graphics, the
 built-in keyboard and touchpad, the camera, battery status, screen brightness,

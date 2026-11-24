@@ -17,7 +17,8 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `boot_test/run-boot-test.sh`, `boot_test/boot-check`, `boot_test/boot-check-root`, `boot_test/Containerfile` | The [boot test](#boot-test): starts each new build in a virtual machine before it's published |
 | `boot_test/run-rollback-tests.sh`, `boot_test/rollback-step` | The [rollback tests](#rollback-tests), when asked for |
 | `build_files/evenkeel_os_health.py`, `greenboot/evenkeel-os-health`, `greenboot/40-evenkeel-os-still-works.sh`, `greenboot/93-evenkeel-os-health-record.sh`, `greenboot/evenkeel-os-health-record.service` | The trial check: after each good start (4 minutes in) a list of what works is saved to `/var/lib/evenkeel-os/health-record.json`; while a new version is on trial, after a login, anything on that list that's broken now fails the start (it waits 2 minutes for slow devices first). Hardware counts only if it's still there (unplugged, switched off in the BIOS or by a privacy switch doesn't count); only USB devices in fixed ports are listed; things switched off by their owner aren't asked for; a start that only changed boot options checks programs only; a mistake in the check itself never fails a start. What broke goes to `/var/lib/evenkeel-os/health-lost`, and to `rolled-back-why` with the next rollback's note. `sudo /usr/libexec/evenkeel-os-health compare --no-wait` runs the comparison by hand |
-| `build_files/check-health.py` | Build check: the trial check against a made-up computer, with each of 58 changes counted as broken, or not, as it should be, and the driver each rollback test copy blocks |
+| `build_files/check-health.py` | Build check: the trial check against a made-up computer, with each of 58 changes counted as broken, or not, as it should be, and the driver each rollback test copy blocks; and who it asks before a restart, with what, and which answers keep the version |
+| `build_files/check-restart-question.py` | Build check: the window before an automatic restart, with a made-up zenity: each test's and real problem's words and buttons, Not yet, Esc, the 2-minute countdown and Keep's password |
 | `build_files/firewall/evenkeel-home.xml`, `evenkeel-work.xml`, `evenkeel-public.xml` | The three firewall zones for Network safety: Home, Work and Public place |
 | `build_files/evenkeel_os_network.py` | Each network's place, shared by System Tools, the question and the installer |
 | `build_files/evenkeel-os-network-ask`, `evenkeel-os-network-ask.desktop` | The once-per-network question, started at login |
@@ -133,10 +134,14 @@ runs on `main`, so it can't hold up a published build. It takes about 4 hours:
   power button; one that stops answering for 20 minutes gets a reset; for Login loop it logs in again every 2
   minutes, like a person trying again; Important settings deleted deletes them for real and must put them back by
   itself. Wi-Fi and Bluetooth driver blocked are left for real hardware: a virtual machine has no Wi-Fi or Bluetooth
-  chip.
+  chip, and a test whose driver is built into the virtual machine (Graphics) is skipped. Each test checked after
+  a login must ask first on both of its bad starts, with the right words; Enter answers Restart now, through the
+  virtual machine's keyboard;
+- the Keep answer: a Boot options change that breaks printing; at its window, Esc must open the window again, then
+  Keep these options and the test user's password, typed in; that start must pass with the change kept.
 
 The results (`rollback-test` download) have one PASS or FAIL line per step with what each test copy found broken,
-and greenboot's messages for each test.
+greenboot's messages for each test, and each window's words (`window-*.txt`).
 
 greenboot marks a new version for trial at shutdown, and on a computer with added packages it asks rpm-ostree's
 service, which can't be started during a shutdown. Staging there goes through that service, so it now keeps running
