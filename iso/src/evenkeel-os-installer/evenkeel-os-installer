@@ -16,6 +16,7 @@ gi.require_version("Adw", "1")
 from gi.repository import Adw, Gdk, GdkPixbuf, Gio, GLib, Gtk  # noqa: E402
 
 import disk_screens  # noqa: E402
+from i18n import _  # noqa: E402
 import finish_screens  # noqa: E402
 import locale_screens  # noqa: E402
 import screens  # noqa: E402
@@ -33,7 +34,7 @@ STEPS = [locale_screens.LanguageScreen, locale_screens.KeyboardScreen, locale_sc
 
 class InstallerWindow(Adw.ApplicationWindow):
     def __init__(self, app):
-        super().__init__(application=app, title="Install EvenKeelOS", default_width=980, default_height=760)
+        super().__init__(application=app, default_width=980, default_height=760)
         self.choices = screens.Choices()
         self.returning = False                 # changing one thing from Review: Next goes back there
 
@@ -45,7 +46,8 @@ class InstallerWindow(Adw.ApplicationWindow):
         picture = Gtk.Picture.new_for_paintable(Gdk.Texture.new_for_pixbuf(logo))
         picture.set_size_request(logo.get_width() // scale, 34)
         brand.append(picture)
-        brand.append(Gtk.Label(label="Alpha", css_classes=["release-stage"], valign=Gtk.Align.CENTER))
+        self.badge = Gtk.Label(css_classes=["release-stage"], valign=Gtk.Align.CENTER)
+        brand.append(self.badge)
         header.pack_start(brand)
         header.set_title_widget(Gtk.Label())
         self.step = Gtk.Label(css_classes=["step"])
@@ -121,9 +123,10 @@ class InstallerWindow(Adw.ApplicationWindow):
         self.installing = False
         self.show_screen(finish_screens.DoneScreen)
 
-    def install_failed(self, problem, log):
+    def install_failed(self, problem, log, english=None):
+        """problem is shown; english (the same words in English) goes into the GitHub report."""
         self.installing = False
-        self.screen(finish_screens.ErrorScreen).failed(problem, log)
+        self.screen(finish_screens.ErrorScreen).failed(problem, log, english)
         self.show_screen(finish_screens.ErrorScreen)
 
     def restart(self):
@@ -137,13 +140,15 @@ class InstallerWindow(Adw.ApplicationWindow):
         _ok, out, _err = proc.communicate_utf8_finish(result)
         if proc.get_if_exited() and proc.get_exit_status() == 0:
             return                          # the computer is restarting
-        code = proc.get_exit_status() if proc.get_if_exited() else f"signal {proc.get_term_sig()}"
+        code = (proc.get_exit_status() if proc.get_if_exited() else
+                _("signal {number}").format(number=proc.get_term_sig()))
         self.set_visible(True)
         self.update()
-        message = (out or "").strip() or "(nothing was printed)"
-        dialog = Adw.AlertDialog(heading="The restart didn't start",
-                                 body=f"The restart said:\n\n{message}\n\nExit code: {code}")
-        dialog.add_response("ok", "OK")
+        message = (out or "").strip() or _("(nothing was printed)")
+        dialog = Adw.AlertDialog(heading=_("The restart didn't start"),
+                                 body=_("The restart said:\n\n{message}\n\nExit code: {code}").format(
+                                     message=message, code=code))
+        dialog.add_response("ok", _("OK"))
         dialog.present(self)
 
     def closing(self, *_):
@@ -157,11 +162,15 @@ class InstallerWindow(Adw.ApplicationWindow):
     def update(self):
         s = self.current
         cls = type(s)
+        self.set_title(_("Install EvenKeelOS"))
+        self.badge.set_text(_("Alpha"))
+        s.relabel()
         if cls in STEPS:
-            self.step.set_text(f"Step {STEPS.index(cls) + 1} of {len(STEPS)}: {s.step}")
+            self.step.set_text(_("Step {number} of {total}: {name}").format(number=STEPS.index(cls) + 1,
+                                                                             total=len(STEPS), name=_(s.step)))
         else:
             self.step.set_text("")
-        self.heading.set_text(s.title)
+        self.heading.set_text(_(s.title))
         self.intro.set_text(s.intro)
         status = s.status()
         self.status.set_text(status)
@@ -173,12 +182,13 @@ class InstallerWindow(Adw.ApplicationWindow):
             self.buttons.remove(child)
             child = self.buttons.get_first_child()
         if s.back or self.returning:
-            self._button("Back", self.go_back)
+            self._button(_("Back"), self.go_back)
+        danger, main = (_(x) if x else None for x in (s.danger, s.main))
         for name, do in s.actions():
-            css = "destructive-action" if name == s.danger else "suggested-action" if name == s.main else None
+            css = "destructive-action" if name == danger else "suggested-action" if name == main else None
             self._button(name, do, css)
         if s.next_label:
-            self._button(s.next_label, self.go_next, "suggested-action").set_sensitive(s.ready())
+            self._button(_(s.next_label), self.go_next, "suggested-action").set_sensitive(s.ready())
 
     def _button(self, name, do, css=None):
         b = Gtk.Button(label=name, css_classes=["pill"] + ([css] if css else []))

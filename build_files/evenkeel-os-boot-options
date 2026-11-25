@@ -14,6 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
 import evenkeel_os_bootopts as bootopts  # noqa: E402
+from evenkeel_os_ui import _  # noqa: E402
 
 LOCK = Path("/run/evenkeel-os/boot-options.lock")
 
@@ -28,12 +29,12 @@ def change(settings):
         if bootopts.problem(s):
             fail(bootopts.problem(s), 3)
     if len(settings) > bootopts.MAX or len({bootopts.name(s) for s in settings}) != len(settings):
-        fail(f"Up to {bootopts.MAX} settings, each name once.", 3)
+        fail(_("Up to {max} settings, each name once.").format(max=bootopts.MAX), 3)
     if any(a.startswith("evenkeel_os.test_rollback=") for a in bootopts.running()):
-        fail("A rollback test copy is running. Restart first, so the computer goes back to the usual version.", 4)
+        fail(_("A rollback test copy is running. Restart first, so the computer goes back to the usual version."), 4)
     before = bootopts.next_start()
     if before is None:
-        fail("The boot options the computer starts with couldn't be read.")
+        fail(_("The boot options the computer starts with couldn't be read."))
     # Out: what Wheelhouse added before and any common fix not wanted now; in: everything wanted, if missing.
     # A setting the computer already had (like quiet) isn't recorded as added, so it's never taken out.
     out = [s for s in dict.fromkeys(bootopts.added() + sorted(bootopts.COMMON_SETTINGS)) if s not in settings]
@@ -42,7 +43,7 @@ def change(settings):
     cmd += [f"--delete-if-present={s}" for s in out] + [f"--append-if-missing={s}" for s in settings]
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode not in (0, 77):
-        fail("The boot options didn't change: " + " ".join((r.stderr or r.stdout).split()))
+        fail(_("The boot options didn't change: {reason}").format(reason=" ".join((r.stderr or r.stdout).split())))
     tmp = bootopts.STATE.with_suffix(".tmp")
     tmp.parent.mkdir(parents=True, exist_ok=True)
     tmp.write_text(json.dumps({"options": mine}) + "\n")

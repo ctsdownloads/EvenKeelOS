@@ -3,6 +3,7 @@ import platform
 from pathlib import Path
 
 import evenkeel_os_ui as ui
+from evenkeel_os_ui import _, N_
 
 
 HOME = Path.home()
@@ -10,7 +11,7 @@ STATE = HOME / ".local/share/evenkeel-os/apps.json"
 CACHE = HOME / ".cache/evenkeel-os/packages"
 LOG = CACHE / "last.log"
 HWRULES = "/usr/libexec/evenkeel-os-hwrules"
-ui.TITLE = "Install Package File"
+ui.TITLE = _("Install Package File")
 ui.ICON = "system-software-install-symbolic"
 
 
@@ -19,11 +20,11 @@ def fedora_version():
 
 
 BOXES = {
-    "rpm": {"name": "evenkeel-fedora", "label": "Fedora box",
+    "rpm": {"name": "evenkeel-fedora", "label": N_("Fedora box"),
             "image": f"registry.fedoraproject.org/fedora-toolbox:{fedora_version()}"},
-    "deb": {"name": "evenkeel-ubuntu", "label": "Ubuntu box",
+    "deb": {"name": "evenkeel-ubuntu", "label": N_("Ubuntu box"),
             "image": "quay.io/toolbx/ubuntu-toolbox:24.04"},
 }
 FLATPAK_PLACES = ("flathub", "artcraft")     # apps installed as Flatpaks: from Flathub, or ArtCraft's own
-WHERE = {"evenkeel-fedora": "Fedora box", "evenkeel-ubuntu": "Ubuntu box", "system": "System",
-         "flathub": "Flathub", "artcraft": "ArtCraft", "rules": "Hardware rule"}
+WHERE = {"evenkeel-fedora": N_("Fedora box"), "evenkeel-ubuntu": N_("Ubuntu box"), "system": N_("System"),
+         "flathub": "Flathub", "artcraft": "ArtCraft", "rules": N_("Hardware rule")}

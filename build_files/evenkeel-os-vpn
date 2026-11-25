@@ -17,6 +17,9 @@ import subprocess
 import sys
 from pathlib import Path
 
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+from evenkeel_os_ui import _  # noqa: E402
+
 LIST = Path("/usr/share/evenkeel-os/vpns.json")
 KEYS = Path("/usr/share/evenkeel-os/vpn-keys")
 REPOS = Path("/etc/yum.repos.d")
@@ -76,7 +79,7 @@ def requested(booted=True):
     try:
         d = json.loads(r.stdout)["deployments"][0]
     except (ValueError, KeyError, IndexError):
-        fail("Couldn't read the system's state.")
+        fail(_("Couldn't read the system's state."))
     names = set(d.get("requested-packages", []))
     for nevra in d.get("requested-local-packages", []):
         names.add(re.sub(r"-[^-]+-[^-]+$", "", nevra))
@@ -126,20 +129,20 @@ def install(name, v):
 
 def turn_on(name, v):
     if not installed(v["packages"][0]):
-        fail(f"{v['title']} isn't installed yet. Restart first.")
+        fail(_("{title} isn't installed yet. Restart first.").format(title=v["title"]))
     # IVPN's installer writes its service file at install time; if this system dropped it, it comes from here.
     for unit, src in v.get("copy_units", {}).items():
         if any(Path(d, unit).exists() for d in UNIT_DIRS):
             continue
         if subprocess.run(["rpm", "-qf", src], capture_output=True).returncode != 0:
-            fail(f"{src} doesn't belong to an installed package.")
+            fail(_("{path} doesn't belong to an installed package.").format(path=src))
         (UNITS / unit).write_text(marker(name) + Path(src).read_text())
         os.chmod(UNITS / unit, 0o644)
     systemctl("daemon-reload")
     units = [u for u in v["enable"] if any(Path(d, u).exists() for d in UNIT_DIRS)]
     if units != v["enable"]:
-        fail(f"{v['title']} is missing parts of its background service: "
-             f"{', '.join(sorted(set(v['enable']) - set(units)))}")
+        fail(_("{title} is missing parts of its background service: {parts}").format(
+            title=v["title"], parts=", ".join(sorted(set(v["enable"]) - set(units)))))
     for d in v.get("folders", []):     # made by its installer in /var, which this system leaves out
         try:
             gid = grp.getgrnam(d["group"]).gr_gid
@@ -154,7 +157,7 @@ def turn_on(name, v):
     if v.get("group"):
         ok = add_to_group(v["group"]) and ok
     if not ok:
-        fail(f"{v['title']}'s background service didn't turn on.")
+        fail(_("{title}'s background service didn't turn on.").format(title=v["title"]))
 
 
 def add_to_group(group):
@@ -164,7 +167,7 @@ def add_to_group(group):
         user = pwd.getpwuid(int(os.environ["PKEXEC_UID"])).pw_name
         g = grp.getgrnam(group)
     except (KeyError, ValueError):
-        print(f"No group {group}, or no user to add to it.")
+        print(_("No group {group}, or no user to add to it.").format(group=group))
         return False
     with open(GROUPS) as f:
         here = any(line.split(":", 1)[0] == group for line in f)
@@ -243,7 +246,7 @@ def asked_for(script, units):
 
 def services(package):
     if package not in requested() or not installed(package):
-        fail(f"{package} wasn't added to the system.")
+        fail(_("{package} wasn't added to the system.").format(package=package))
     files = subprocess.run(["rpm", "-ql", package], capture_output=True, text=True).stdout.split()
     units = [os.path.basename(f) for f in files if f.startswith(UNIT_DIRS) and UNIT.match(os.path.basename(f))]
     script = subprocess.run(["rpm", "-q", "--scripts", package], capture_output=True, text=True).stdout
@@ -253,7 +256,7 @@ def services(package):
         return
     systemctl("daemon-reload")
     if not (systemctl("enable", *enable) and all(systemctl("start", u) for u in start if u in enable)):
-        fail(f"{package}'s background service didn't turn on.")
+        fail(_("{package}'s background service didn't turn on.").format(package=package))
 
 
 def main(argv):

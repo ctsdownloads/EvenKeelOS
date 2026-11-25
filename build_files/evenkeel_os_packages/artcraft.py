@@ -4,7 +4,7 @@ import re
 import subprocess
 import time
 
-from evenkeel_os_ui import notify, say
+from evenkeel_os_ui import _, notify, say
 from evenkeel_os_packages import app_list, boxes, common, windows
 
 KEYRING = "/usr/share/evenkeel-os/artcraft-keyring.gpg"
@@ -44,7 +44,7 @@ def signed_by_artcraft(signature, path):
 
 def run(text, steps, quiet):
     if quiet:
-        return all(subprocess.run(cmd, capture_output=True).returncode == 0 for _, cmd in steps)
+        return all(subprocess.run(cmd, capture_output=True).returncode == 0 for label, cmd in steps)
     return windows.run_steps(text, steps)
 
 
@@ -57,10 +57,11 @@ def fetch_and_install(app, version, quiet=False):
     bundle, signature = folder / name, folder / f"{name}.asc"
     url = f"https://github.com/storytold/{app}/releases/download/v{version}/{name}"
     try:
-        if not run(f"Downloading {title} from ArtCraft.",
-                   [(f"Downloading {title}", ["curl", "-fsSL", "--retry", "3", "-o", str(bundle), url]),
-                    ("Downloading its signature", ["curl", "-fsSL", "--retry", "3", "-o", str(signature),
-                                                   f"{url}.asc"])], quiet):
+        if not run(_("Downloading {title} from ArtCraft.").format(title=title),
+                   [(_("Downloading {title}").format(title=title),
+                     ["curl", "-fsSL", "--retry", "3", "-o", str(bundle), url]),
+                    (_("Downloading its signature"), ["curl", "-fsSL", "--retry", "3", "-o", str(signature),
+                                                      f"{url}.asc"])], quiet):
             return "failed"
         if not signed_by_artcraft(signature, bundle):
             return "unsigned"
@@ -68,14 +69,15 @@ def fetch_and_install(app, version, quiet=False):
         if not found:
             return "failed"
         # the runtime comes from the system's Flathub, so the bundle (--no-deps) adds no second Flathub of its own
-        if not run(f"Installing {title}.", [
-                ("Getting what it runs on from Flathub", ["flatpak", "install", "--system", "-y", "--noninteractive",
-                                                          "flathub", f"runtime/{found.group(1).decode()}"]),
-                (f"Installing {title}", ["flatpak", "install", "--user", "--reinstall", "--no-deps", "-y",
-                                         "--noninteractive", "--bundle", str(bundle)]),
+        if not run(_("Installing {title}.").format(title=title), [
+                (_("Getting what it runs on from Flathub"), ["flatpak", "install", "--system", "-y", "--noninteractive",
+                                                             "flathub", f"runtime/{found.group(1).decode()}"]),
+                (_("Installing {title}").format(title=title),
+                 ["flatpak", "install", "--user", "--reinstall", "--no-deps", "-y", "--noninteractive", "--bundle",
+                  str(bundle)]),
                 # ArtCraft's apps ask to run programs outside their sandbox (talking to org.freedesktop.Flatpak)
-                ("Keeping it in its sandbox", ["flatpak", "override", "--user",
-                                               "--no-talk-name=org.freedesktop.Flatpak", app_id(app)])], quiet):
+                (_("Keeping it in its sandbox"), ["flatpak", "override", "--user",
+                                                  "--no-talk-name=org.freedesktop.Flatpak", app_id(app)])], quiet):
             return "failed"
     finally:
         bundle.unlink(missing_ok=True)
@@ -88,19 +90,21 @@ def install(app):
     title = APPS[app]
     version = latest(app)
     if not version:
-        say("ArtCraft's downloads can't be reached right now. Check the internet connection and try again.", "error")
+        say(_("ArtCraft's downloads can't be reached right now. Check the internet connection and try again."),
+            "error")
         return 1
     if not boxes.room_for(1000):
         return 1
     result = fetch_and_install(app, version)
     if result == "unsigned":
-        say(f"The {title} download isn't signed by ArtCraft, so it was not installed.", "error")
+        say(_("The {title} download isn't signed by ArtCraft, so it was not installed.").format(title=title), "error")
         return 1
     if result == "failed":
-        windows.failed(f"Installing {title}")
+        windows.failed(_("Installing {title}").format(title=title))
         return 1
-    notify(f"{title} is installed.")
-    say(f"{title} is installed. Find it in Show Apps.\n\nUpdates: checked once a day, straight from ArtCraft.")
+    notify(_("{title} is installed.").format(title=title))
+    say(_("{title} is installed. Find it in Show Apps.\n\nUpdates: checked once a day, straight from ArtCraft.")
+        .format(title=title))
     return 0
 
 
@@ -119,7 +123,7 @@ def update(ours):
         reached = reached and bool(version)
         if version and version_key(version) > version_key(r.get("version") or "0") and \
                 fetch_and_install(app, version, quiet=True) == "ok":
-            notify(f"{r['title']} is updated to version {version}.")
+            notify(_("{title} is updated to version {version}.").format(title=r["title"], version=version))
     if reached:     # when GitHub couldn't be reached, the next login tries again
         CHECKED.parent.mkdir(parents=True, exist_ok=True)
         CHECKED.touch()

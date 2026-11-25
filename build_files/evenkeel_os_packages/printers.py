@@ -2,7 +2,7 @@
 import re
 import subprocess
 
-from evenkeel_os_ui import LAUNCH_ENV, ask, say
+from evenkeel_os_ui import LAUNCH_ENV, _, ask, say
 
 
 MAKERS = ["Brother", "Canon", "Epson", "HP", "Samsung", "Xerox", "Lexmark", "Ricoh", "Kyocera", "Konica Minolta",
@@ -27,21 +27,24 @@ def open_printers():
                          env=LAUNCH_ENV)
         return True
     except OSError:
-        say("Printers didn't open. Open Settings, then Printers.", kind="error")
+        say(_("Printers didn't open. Open Settings, then Printers."), kind="error")
         return False
 
 
 def try_driverless(title, kind):
     """Most printers need no driver. Offer to add the printer first. Returns 'printers', 'driver' or None."""
-    extra = "Install the driver" if kind == "rpm" else "About this driver"
-    answer = ask(f"{title} is a printer driver. Most printers work without one.\n\n"
-                 f"Recommended: Open Printers, and add your printer there first.\n\n"
-                 f"Or {extra}: only if your printer doesn't work without it.",
-                 ok="Open Printers", extra=extra)
+    extra = _("Install the driver") if kind == "rpm" else _("About this driver")
+    answer = ask(_("{title} is a printer driver. Most printers work without one.\n\n"
+                   "Recommended: Open Printers, and add your printer there first.\n\n"
+                   "Or {extra}: only if your printer doesn't work without it.").format(title=title, extra=extra),
+                 ok=_("Open Printers"), extra=extra)
     if answer == "ok":
         if open_printers():
-            later = "open this file again and choose Install the driver." if kind == "rpm" else \
-                "open this file again to see how to get the driver."
-            say(f"Printers is open. Choose Add Printer.\n\nIf your printer isn't there or doesn't print right, {later}")
+            if kind == "rpm":
+                say(_("Printers is open. Choose Add Printer.\n\nIf your printer isn't there or doesn't print right, "
+                      "open this file again and choose Install the driver."))
+            else:
+                say(_("Printers is open. Choose Add Printer.\n\nIf your printer isn't there or doesn't print right, "
+                      "open this file again to see how to get the driver."))
         return "printers"
     return "driver" if answer == "extra" else None

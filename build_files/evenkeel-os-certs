@@ -20,6 +20,9 @@ from pathlib import Path
 from cryptography import x509
 from cryptography.hazmat.primitives.serialization import Encoding
 
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+from evenkeel_os_ui import _, ngettext  # noqa: E402
+
 TRUSTED = Path("/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem")    # what secure connections trust now
 BUILT_IN = Path("/usr/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem")    # this version's own list (ostree)
 ADDED = Path("/etc/pki/ca-trust/source/anchors")    # certificates added to this computer
@@ -134,10 +137,12 @@ def check(notify):
             save(NOTIFIED, keys)
         elif keys != load(NOTIFIED, []) and os.path.exists(NOTIFY):
             n = len(alerts)
+            text = ngettext("{n} security certificate expired, expire within 30 days or were removed. "
+                            "Open Wheelhouse to see which.",
+                            "{n} security certificates expired, expire within 30 days or were removed. "
+                            "Open Wheelhouse to see which.", n).format(n=n)
             r = subprocess.run([NOTIFY, "--app-name=Wheelhouse", "--icon=security-high-symbolic",
-                                "Certificate alert", f"{n} security certificate{'s' if n > 1 else ''} expired, "
-                                "expire within 30 days or were removed. Open Wheelhouse to see which."],
-                               capture_output=True, text=True)
+                                _("Certificate alert"), text], capture_output=True, text=True)
             if r.returncode == 0:       # marked as shown only once it was: tried again at the next check otherwise
                 save(NOTIFIED, keys)
             else:

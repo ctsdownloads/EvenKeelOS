@@ -2,7 +2,7 @@
 import json
 import subprocess
 
-from evenkeel_os_ui import ask, notify, say
+from evenkeel_os_ui import _, ask, notify, say
 from evenkeel_os_packages import boxes, common, installed, launchers, login_apps, printers, targets, vpn
 
 
@@ -38,10 +38,10 @@ def where_line(package):
     r = subprocess.run(["rpm", "-ql", package], capture_output=True, text=True)
     files = r.stdout.splitlines() if r.returncode == 0 else []
     if any(f.startswith("/usr/share/applications/") and f.endswith(".desktop") for f in files):
-        return "Find it in Show Apps."
+        return _("Find it in Show Apps.")
     if any(f.startswith(("/usr/bin/", "/usr/sbin/")) for f in files):
-        return "It is a command-line tool, so it has no window in Show Apps."
-    return "It has no window of its own in Show Apps."
+        return _("It is a command-line tool, so it has no window in Show Apps.")
+    return _("It has no window of its own in Show Apps.")
 
 
 def boxes_missing_helpers():
@@ -67,19 +67,19 @@ def after_restart():
                 left.append(e)
                 continue
             if e.get("printer"):
-                notify(f"The printer driver {e['title']} is ready.")
-                if ask(f"The printer driver {e['title']} is ready.\n\nOpen Printers: choose Add Printer, then "
-                       f"your printer.", ok="Open Printers", cancel="Later") == "ok":
+                notify(_("The printer driver {title} is ready.").format(title=e["title"]))
+                if ask(_("The printer driver {title} is ready.\n\nOpen Printers: choose Add Printer, then your "
+                         "printer.").format(title=e["title"]), ok=_("Open Printers"), cancel=_("Later")) == "ok":
                     printers.open_printers()
             else:
-                notify(f"{e['title']} is ready.")
-                say(f"{e['title']} is ready. {where_line(e['package'])}")
+                notify(_("{title} is ready.").format(title=e["title"]))
+                say(_("{title} is ready.").format(title=e["title"]) + " " + where_line(e["package"]))
         elif targets.staged_system():
             left.append(e)          # added, but this computer has not restarted into it yet
         else:
-            again = "Pick it again in Get a VPN." if e.get("vpn") else "Open the file again to install it."
-            notify(f"{e['title']} did not get installed.")
-            say(f"{e['title']} did not get installed. The computer may have started an older version of the system. "
-                f"{again}", "warning")
+            again = _("Pick it again in Get a VPN.") if e.get("vpn") else _("Open the file again to install it.")
+            notify(_("{title} did not get installed.").format(title=e["title"]))
+            say(_("{title} did not get installed. The computer may have started an older version of the system.")
+                .format(title=e["title"]) + " " + again, "warning")
     save_pending(left)
     return 0

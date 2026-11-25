@@ -34,6 +34,9 @@ for p in gnome-software gnome-software-rpm-ostree; do rpm -q "$p" >/dev/null 2>&
 rpm -q bazaar >/dev/null || { echo "ERROR: Bazaar is not installed"; exit 1; }
 [ -f /usr/share/gnome-shell/search-providers/io.github.kolunmi.Bazaar.search-provider.ini ] && [ -f /usr/share/dbus-1/services/io.github.kolunmi.Bazaar.SearchProvider.service ] || { echo "ERROR: Bazaar's Super-search provider is missing"; exit 1; }
 command -v ujust >/dev/null || { echo 'ERROR: ujust is missing'; exit 1; }
+# The shell tools show their words through gettext, in the person's language (domain evenkeel-os).
+dnf5 -y install /usr/bin/gettext
+command -v gettext >/dev/null || { echo "ERROR: gettext is missing: the shell tools can't show their words"; exit 1; }
 # Shared windows module for Wheelhouse and Install Package File.
 install -Dm644 /ctx/evenkeel_os_ui.py /usr/lib/evenkeel-os/evenkeel_os_ui.py
 python3 -I -c 'import sys; sys.path.insert(0, "/usr/lib/evenkeel-os"); import evenkeel_os_ui' \

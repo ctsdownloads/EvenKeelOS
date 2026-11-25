@@ -39,6 +39,7 @@ import evenkeel_os_health as health  # noqa: E402
 import evenkeel_os_letin as letin  # noqa: E402
 import evenkeel_os_network as net  # noqa: E402
 import evenkeel_os_sharing as sharing  # noqa: E402
+from evenkeel_os_ui import _  # noqa: E402
 
 DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
 # Switched on from /usr (build.sh), so deleting /etc can't switch it off; systemctl is-enabled only reads /etc.
@@ -265,7 +266,7 @@ def caller():
     except (ValueError, KeyError):
         fail("Run this through pkexec, as yourself.")
     if user.pw_uid not in PEOPLE or not USER.match(user.pw_name):
-        fail("This account can't share folders.")
+        fail(_("This account can't share folders."))
     return user.pw_name
 
 
@@ -327,16 +328,17 @@ def sharing_switch(want):
     state = sharing.load()
     on = want == "on"
     if on and not sharing.set_up():
-        fail(f"{sharing.SMB_CONF} was changed on this computer and no longer reads the shared folders list.")
+        fail(_("{path} was changed on this computer and no longer reads the shared folders list.").format(
+            path=sharing.SMB_CONF))
     if on and caller() not in state["passwords"]:
-        fail("Set a sharing password first.", 3)
+        fail(_("Set a sharing password first."), 3)
     flag = f"--{'add' if on else 'remove'}-service={sharing.FIREWALL_SERVICE}"
     r = subprocess.run(["/usr/bin/firewall-cmd", "--permanent", f"--zone={net.HOME}", flag],
                        capture_output=True, text=True)
     if r.returncode != 0 and "ALREADY_ENABLED" not in r.stderr and "NOT_ENABLED" not in r.stderr:
-        fail(f"The firewall didn't take the change: {r.stderr.strip()}")
+        fail(_("The firewall didn't take the change: {reason}").format(reason=r.stderr.strip()))
     if subprocess.run(["/usr/bin/firewall-cmd", "--reload"], capture_output=True).returncode != 0:
-        fail("The firewall didn't reload.")
+        fail(_("The firewall didn't reload."))
     state["on"] = on
     save_sharing(state)
     if on:
@@ -347,7 +349,7 @@ def sharing_switch(want):
 
 def real_folder(path, user):
     real = os.path.realpath(path) if path.startswith("/") else ""
-    problem = sharing.folder_problem(real, user) if real else "That folder wasn't found."
+    problem = sharing.folder_problem(real, user) if real else _("That folder wasn't found.")
     if problem:
         fail(problem, 3)
     return real
@@ -360,11 +362,11 @@ def sharing_folder(verb, path, mode=None):
     mine = next((f for f in state["folders"] if f["path"] == real and f["owner"] == user), None)
     if verb == "add":
         if mine:
-            fail(f"That folder is already shared, as {mine['name']}.", 3)
+            fail(_("That folder is already shared, as {name}.").format(name=mine["name"]), 3)
         name = sharing.share_name(real, [f["name"] for f in state["folders"]])
         state["folders"].append({"path": real, "owner": user, "mode": mode, "name": name})
     elif mine is None:
-        fail("That folder isn't shared.", 3)
+        fail(_("That folder isn't shared."), 3)
     elif verb == "mode":
         mine["mode"] = mode
     else:
@@ -378,11 +380,11 @@ def sharing_password():
     pw = sys.stdin.read(1024)
     pw = pw[:-1] if pw.endswith("\n") else pw          # echo adds one
     if not sharing.clean(pw) or not sharing.MIN_PASSWORD <= len(pw) <= 127:
-        fail(f"Use {sharing.MIN_PASSWORD} to 127 characters, on one line.", 3)
+        fail(_("Use {min} to 127 characters, on one line.").format(min=sharing.MIN_PASSWORD), 3)
     r = subprocess.run(["/usr/bin/smbpasswd", "-s", "-a", user], input=f"{pw}\n{pw}\n", capture_output=True,
                        text=True)
     if r.returncode != 0:
-        fail(f"The password wasn't saved: {(r.stderr or r.stdout).strip()}")
+        fail(_("The password wasn't saved: {reason}").format(reason=(r.stderr or r.stdout).strip()))
     state = sharing.load()
     if user not in state["passwords"]:
         state["passwords"].append(user)
@@ -424,9 +426,9 @@ def firewall_change(zone, flags, mend=()):
         r = subprocess.run(["/usr/bin/firewall-cmd", "--permanent", f"--zone={zone}", flag],
                            capture_output=True, text=True)
         if r.returncode != 0 and not any(w in r.stderr for w in ("ALREADY_ENABLED", "NOT_ENABLED")):
-            problem = problem or f"The firewall didn't take the change: {r.stderr.strip()}"
+            problem = problem or _("The firewall didn't take the change: {reason}").format(reason=r.stderr.strip())
     if subprocess.run(["/usr/bin/firewall-cmd", "--reload"], capture_output=True).returncode != 0:
-        problem = problem or "The firewall didn't reload."
+        problem = problem or _("The firewall didn't reload.")
     return problem
 
 
@@ -441,7 +443,7 @@ def save_let_in(state):
 def still_open(zone, entries):
     """Adds back every port the place itself and these entries use. firewalld merges and splits port ranges, so taking
     a port out can cut a hole in a range something else needs; adding them all back mends it."""
-    _, base_ports = letin.zone_base(zone)
+    unused, base_ports = letin.zone_base(zone)
     return [f"--add-port={p}" for p in sorted(base_ports | {p for e in entries for p in e["ports"]})]
 
 
@@ -449,7 +451,7 @@ def let_in_add(zone, entry, flags):
     state = letin.load()
     entries = state.setdefault(zone, [])
     if any(e["id"] == entry["id"] for e in entries):
-        fail(f"{entry['label']} is already let in here.", 3)
+        fail(_("{label} is already let in here.").format(label=entry["label"]), 3)
     problem = firewall_change(zone, flags)
     if problem:         # take back whatever got in before the firewall refused
         firewall_change(zone, [f.replace("--add-", "--remove-", 1) for f in flags], still_open(zone, entries))
@@ -485,15 +487,15 @@ def service_ports(service, seen=()):
 def let_in_app(zone, service):
     """A firewalld service from the image's own list; the SSH and printer switches cover those two on Home."""
     path = letin.SERVICES / f"{service}.xml"
-    base, _ = letin.zone_base(zone)
+    base, unused = letin.zone_base(zone)
     if not letin.SERVICE_NAME.match(service) or not path.is_file() or service.startswith("evenkeel-"):
-        fail(f"{service} isn't an app on this computer's list.", 3)
+        fail(_("{service} isn't an app on this computer's list.").format(service=service), 3)
     if service in base:
-        fail(f"{service} is always let in here.", 3)
+        fail(_("{service} is always let in here.").format(service=service), 3)
     if zone == net.HOME and service in FIREWALL_SERVICES:
-        fail("On Home, use the switch for it above.", 3)
+        fail(_("On Home, use the switch for it above."), 3)
     if shares_folders(zone, service_ports(service)):
-        fail("It opens file sharing ports: folders are shared only on Home networks, in Shared folders.", 3)
+        fail(_("It opens file sharing ports: folders are shared only on Home networks, in Shared folders."), 3)
     short = re.search(r"<short>([^<]*)</short>", path.read_text())
     let_in_add(zone, {"id": service, "label": letin.label(short[1] if short else "") or service,
                       "service": service, "ports": []}, [f"--add-service={service}"])
@@ -502,11 +504,12 @@ def let_in_app(zone, service):
 def let_in_ports(zone, name, specs):
     tidy, ports = letin.label(name), letin.ports(specs)
     if not tidy:
-        fail(f"Give it a name of 1 to {letin.MAX_LABEL} characters.", 3)
+        fail(_("Give it a name of 1 to {max} characters.").format(max=letin.MAX_LABEL), 3)
     if ports is None:
-        fail(f"Use 1 to {letin.MAX_PORTS} ports from 1 to 65535, each as 8096/tcp or 2456-2458/udp.", 3)
+        fail(_("Use 1 to {max} ports from 1 to 65535, each as 8096/tcp or 2456-2458/udp.").format(
+            max=letin.MAX_PORTS), 3)
     if shares_folders(zone, ports):
-        fail("Those are file sharing ports: folders are shared only on Home networks, in Shared folders.", 3)
+        fail(_("Those are file sharing ports: folders are shared only on Home networks, in Shared folders."), 3)
     entry_id = "ports:" + ",".join(ports)
     let_in_add(zone, {"id": entry_id, "label": tidy, "service": "", "ports": ports},
                [f"--add-port={p}" for p in ports])
@@ -518,9 +521,9 @@ def let_in_remove(zone, entry_id):
     entries = state.get(zone, [])
     entry = next((e for e in entries if e["id"] == entry_id), None)
     if entry is None:
-        fail("That isn't let in here.", 3)
+        fail(_("That isn't let in here."), 3)
     rest = [e for e in entries if e is not entry]
-    base_services, _ = letin.zone_base(zone)
+    base_services, unused = letin.zone_base(zone)
     flags = [f"--remove-port={p}" for p in entry["ports"]]
     if entry["service"] and entry["service"] not in base_services:
         flags.append(f"--remove-service={entry['service']}")

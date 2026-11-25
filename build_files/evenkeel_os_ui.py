@@ -1,5 +1,6 @@
 """Windows, notices and disk sizes shared by Wheelhouse and Install Package File."""
 
+import gettext
 import math
 import os
 import shutil
@@ -12,6 +13,16 @@ IN_PANEL = bool(os.environ.get("EVENKEEL_OS_PANEL"))
 DIALOGS = "/usr/libexec/evenkeel-os-dialog" if IN_PANEL else "zenity"
 # For apps and file windows a tool opens: what they start later opens its own windows, not Wheelhouse's.
 LAUNCH_ENV = {k: v for k, v in os.environ.items() if k != "EVENKEEL_OS_PANEL"}
+
+_translation = gettext.translation("evenkeel-os", fallback=True)
+_ = _translation.gettext
+ngettext = _translation.ngettext
+
+
+def N_(text):
+    """Marks text to translate where it is written down; _() translates it where it is shown."""
+    return text
+
 
 TITLE = ""      # set by each program
 ICON = ""
@@ -34,8 +45,9 @@ def say(text, kind="info", title=None):
         print(text)
 
 
-def ask(text, ok="Yes", cancel="Cancel", extra=None, title=None):
+def ask(text, ok=None, cancel=None, extra=None, title=None):
     """'ok', 'extra' or None."""
+    ok, cancel = ok or _("Yes"), cancel or _("Cancel")
     if GUI:
         args = ["--question", "--no-markup", f"--text={text}", f"--ok-label={ok}", f"--cancel-label={cancel}"]
         if extra:
@@ -95,10 +107,10 @@ def choose(text, columns, rows, width=520, height=420):
 
 def offer_restart(text, rest=""):
     """text: what happened; rest: what comes after the restart."""
-    text += "\n\nRecommended: Restart now. Or Later, if you're in the middle of something."
+    text += "\n\n" + _("Recommended: Restart now. Or Later, if you're in the middle of something.")
     if rest:
         text += "\n\n" + rest
-    if ask(text, ok="Restart now", cancel="Later") == "ok":
+    if ask(text, ok=_("Restart now"), cancel=_("Later")) == "ok":
         subprocess.run(["systemctl", "reboot"])
 
 

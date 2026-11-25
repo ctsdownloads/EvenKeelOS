@@ -9,7 +9,9 @@ import zoneinfo
 
 import langtable
 
-TRANSLATIONS = "/usr/share/evenkeel-os-installer/anaconda-translations.txt"
+import i18n
+from i18n import _
+
 EVDEV = "/usr/share/X11/xkb/rules/evdev.xml"
 LOG = "/tmp/evenkeel-os-install.log"                     # the install engine's log
 LIVE_LABEL = "EvenKeelOS-Live"                           # the USB stick's label (iso/src/iso.yaml)
@@ -18,12 +20,12 @@ TZ_REGIONS = ["Africa", "America", "Antarctica", "Arctic", "Asia", "Atlantic", "
 
 
 def languages():
-    """[(language id, English name, native name)], by English name."""
-    with open(TRANSLATIONS) as f:
-        ids = {langtable.parse_locale(line.strip()).language for line in f if line.strip()} | {"en"}
+    """[(language id, English name, native name)], by English name: English and the ones EvenKeelOS is
+    translated into."""
+    ids = {langtable.parse_locale(name).language for name in i18n.translations()} | {"en"}
     found = []
     for lang in ids:
-        if not langtable.list_locales(languageId=lang):
+        if not locales(lang):
             continue
         found.append((lang, langtable.language_name(languageId=lang, languageIdQuery="en"),
                       langtable.language_name(languageId=lang)))
@@ -31,9 +33,11 @@ def languages():
 
 
 def locales(lang):
-    """[(locale, English name, native name)] for a language, most likely first (langtable's order)."""
+    """[(locale, English name, native name)] for a language, most likely first (langtable's order); only
+    the ones EvenKeelOS is translated into."""
     return [(loc, langtable.language_name(languageId=loc, languageIdQuery="en"),
-             langtable.language_name(languageId=loc)) for loc in langtable.list_locales(languageId=lang)]
+             langtable.language_name(languageId=loc)) for loc in langtable.list_locales(languageId=lang)
+            if i18n.translated(loc)]
 
 
 def keyboards():
@@ -134,7 +138,7 @@ def disks():
     def has_luks(dev):
         return dev.get("fstype") == "crypto_LUKS" or any(has_luks(c) for c in dev.get("children") or [])
 
-    return [{"path": d["path"], "model": (d.get("model") or "Disk").strip(), "size": size_text(int(d["size"])),
+    return [{"path": d["path"], "model": (d.get("model") or _("Disk")).strip(), "size": size_text(int(d["size"])),
              "encrypted": has_luks(d), "identity": identity(d)} for d in other_disks()]
 
 
@@ -146,8 +150,8 @@ def sticks():
             continue
         for part in [d, *(d.get("children") or [])]:
             if part.get("fstype") in STICK_FILESYSTEMS:
-                out.append({"path": part["path"], "name": (part.get("label") or d.get("model") or "USB stick").strip(),
-                            "size": size_text(int(d["size"]))})
+                name = (part.get("label") or d.get("model") or _("USB stick")).strip()
+                out.append({"path": part["path"], "name": name, "size": size_text(int(d["size"]))})
     return out
 
 
@@ -159,7 +163,7 @@ def save_to_stick(path, source, name):
     if not where:
         already = subprocess.run(["findmnt", "-no", "TARGET", path], capture_output=True, text=True).stdout.strip()
         if not already:
-            return (mounted.stderr or mounted.stdout).strip() or "The USB stick could not be opened."
+            return (mounted.stderr or mounted.stdout).strip() or _("The USB stick could not be opened.")
         target = already.splitlines()[0]
     else:
         target = where.group(1)
@@ -169,7 +173,7 @@ def save_to_stick(path, source, name):
             dst.flush()
             os.fsync(dst.fileno())
     except OSError as e:
-        return f"The file could not be written: {e.strerror}."
+        return _("The file could not be written: {error}.").format(error=e.strerror)
     subprocess.run(["udisksctl", "unmount", "--no-user-interaction", "-b", path], capture_output=True)
     return ""
 

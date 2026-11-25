@@ -3,6 +3,7 @@ import os
 import re
 import subprocess
 from pathlib import Path
+from evenkeel_os_ui import N_
 from evenkeel_os_packages import boxes, reading
 
 
@@ -25,6 +26,6 @@ def new_box_rules(box, before, info):
             continue
         if reading.rule_runs_program(r.stdout):
             if "a hardware rule that runs a program" not in info["notes"]:
-                info["notes"].append("a hardware rule that runs a program")
+                info["notes"].append(N_("a hardware rule that runs a program"))
         else:
             info["safe_rules"]["/usr/lib/udev/rules.d/" + name] = r.stdout

@@ -5,7 +5,7 @@ import re
 import subprocess
 from urllib.parse import urlsplit
 
-from evenkeel_os_ui import LAUNCH_ENV, ask, say
+from evenkeel_os_ui import LAUNCH_ENV, _, ask, say
 from evenkeel_os_packages import app_list, artcraft, boxes, common, flathub, installed, repo_apps, vpn, zoom
 
 LIST = "/usr/share/evenkeel-os/windows-apps.json"
@@ -179,17 +179,19 @@ def installed_record(where, package):
 
 
 def open_file(path):
-    o, _, _ = choose(path)
+    o = choose(path)[0]
     shown = os.path.basename(path)
     if not o:
-        say(f"{shown} is a Windows program. Windows programs can't run here.\n\n"
-            f"Look for a Linux version on the maker's website, or search Bazaar, the app store.")
+        say(_("{filename} is a Windows program. Windows programs can't run here.\n\n"
+              "Look for a Linux version on the maker's website, or search Bazaar, the app store.")
+            .format(filename=shown))
         return 1
     name = o["title"]
     where, package = offer(o)
     if where == "web":
-        if ask(f"{shown} is the Windows version of {name}. Here, {name} runs in the web browser instead of its "
-               f"own app.\n\nRecommended: Open {name} in the browser.", ok=f"Open {name}", cancel="Close") != "ok":
+        if ask(_("{filename} is the Windows version of {name}. Here, {name} runs in the web browser instead of its "
+                 "own app.\n\nRecommended: Open {name} in the browser.").format(filename=shown, name=name),
+               ok=_("Open {name}").format(name=name), cancel=_("Close")) != "ok":
             return 1
         if zoom.zoom_host(urlsplit(package).hostname or ""):
             return zoom.open_page(package)
@@ -198,34 +200,42 @@ def open_file(path):
         return 0
     if where == "vpn":
         if installed_record(where, package):
-            say(f"{shown} is the Windows version of {name}. Its Linux version is already installed. Find it in Show "
-                f"Apps.")
+            say(_("{filename} is the Windows version of {name}. Its Linux version is already installed. Find it in "
+                  "Show Apps.").format(filename=shown, name=name))
             return 0
-        return vpn.install(package, intro=f"{shown} is the Windows version of {name}. Windows programs can't run "
-                                          f"here, but {name} has a Linux version.\n\n")
+        return vpn.install(package, intro=_("{filename} is the Windows version of {name}. Windows programs can't run "
+                                            "here, but {name} has a Linux version.").format(filename=shown, name=name)
+                           + "\n\n")
+    # job: what the Windows program does, from windows-replacements.json (make-pot.sh collects those for translators)
+    shows = {"filename": shown, "name": name, "job": _(o["job"]) if o.get("job") else ""}
     if "job" not in o:
-        intro = f"{shown} is the Windows version of {name}. Windows programs can't run here, but {name} has a " \
-                f"Linux version"
+        have = _("{filename} is the Windows version of {name}. Windows programs can't run here, but {name} has a "
+                 "Linux version, and it is already installed.")
+        new = _("{filename} is the Windows version of {name}. Windows programs can't run here, but {name} has a "
+                "Linux version. It comes from {source}.")
     else:
-        intro = f"{shown} is a Windows program, and Windows programs can't run here. For {o['job']}, {name} does " \
-                f"the same job on Linux"
+        have = _("{filename} is a Windows program, and Windows programs can't run here. For {job}, {name} does the "
+                 "same job on Linux, and it is already installed.")
+        new = _("{filename} is a Windows program, and Windows programs can't run here. For {job}, {name} does the "
+                "same job on Linux. It comes from {source}.")
     record = installed_record(where, package)
     if record:
-        if ask(f"{intro}, and it is already installed.\n\nRecommended: Open it.", ok=f"Open {name}",
-               cancel="Close") == "ok":
+        if ask(have.format(**shows) + "\n\n" + _("Recommended: Open it."), ok=_("Open {name}").format(name=name),
+               cancel=_("Close")) == "ok":
             installed.open_app({**record, "title": name})
             return 0
         return 1
     if where == "flathub":
-        source, how = "Bazaar, the app store (Flathub)", "It updates by itself."
+        source, how = _("Bazaar, the app store (Flathub)"), _("It updates by itself.")
     elif where == "artcraft":
-        source, how = "ArtCraft", "ArtCraft's signature is checked first, and it updates once a day."
+        source, how = "ArtCraft", _("ArtCraft's signature is checked first, and it updates once a day.")
     else:
-        distro, _, label = boxes.box_words(where)
+        distro, label = boxes.box_words(where)[0], _(boxes.box_words(where)[2])
         first = "" if boxes.box_exists(common.BOXES[where]["name"]) else " " + boxes.first_time(where)[0]
-        source, how = distro, f"It goes in the {label} and updates with System Update.{first}"
-    if ask(f"{intro}. It comes from {source}.\n\nRecommended: Install {name}. {how}", ok=f"Install {name}",
-           cancel="Cancel") != "ok":
+        source = distro
+        how = _("It goes in the {label} and updates with System Update.").format(label=label) + first
+    if ask(new.format(source=source, **shows) + "\n\n" + _("Recommended: Install {name}.").format(name=name) + " " +
+           how, ok=_("Install {name}").format(name=name), cancel=_("Cancel")) != "ok":
         return 1
     if where == "artcraft":
         return artcraft.install(package)

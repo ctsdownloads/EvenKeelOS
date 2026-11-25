@@ -17,36 +17,38 @@ from gi.repository import Adw, Gio, GLib, Gtk  # noqa: E402
 
 import data  # noqa: E402
 import fitcheck  # noqa: E402
+import i18n  # noqa: E402
+from i18n import _, N_  # noqa: E402
 
 INSTALLER = "/usr/bin/evenkeel-os-installer"
 ICONS = {fitcheck.GOOD: ("object-select-symbolic", "success"),
          fitcheck.LIMITED: ("dialog-warning-symbolic", "warning"),
          fitcheck.BAD: ("dialog-error-symbolic", "error")}
-INTRO = ("This is a live session: it runs from the USB stick, nothing here is saved, and the computer's disk isn't "
-         "touched.")
+INTRO = N_("This is a live session: it runs from the USB stick, nothing here is saved, and the computer's disk isn't "
+           "touched.")
 
 
 class Welcome(Adw.ApplicationWindow):
     def __init__(self, app):
-        super().__init__(application=app, title="Welcome to EvenKeelOS", default_width=640, default_height=720)
+        super().__init__(application=app, title=_("Welcome to EvenKeelOS"), default_width=640, default_height=720)
         self.results = []
         self.toasts = Adw.ToastOverlay()
         view = Adw.ToolbarView()
         view.add_top_bar(Adw.HeaderBar())
         page = Adw.PreferencesPage()
-        page.add(Adw.PreferencesGroup(title="Welcome to EvenKeelOS", description=INTRO))
-        self.group = Adw.PreferencesGroup(title="Will this computer work?",
-                                          description="Checking this computer's parts...")
+        page.add(Adw.PreferencesGroup(title=_("Welcome to EvenKeelOS"), description=_(INTRO)))
+        self.group = Adw.PreferencesGroup(title=_("Will this computer work?"),
+                                          description=_("Checking this computer's parts..."))
         self.spinner = Adw.Spinner(halign=Gtk.Align.CENTER, height_request=32)
         self.group.add(self.spinner)
         page.add(self.group)
         view.set_content(page)
         bar = Gtk.Box(spacing=12, halign=Gtk.Align.END, margin_top=12, margin_bottom=12, margin_end=12)
-        self.save = Gtk.Button(label="Save the results", sensitive=False)
+        self.save = Gtk.Button(label=_("Save the results"), sensitive=False)
         self.save.connect("clicked", self.on_save)
-        later = Gtk.Button(label="Try it first")
+        later = Gtk.Button(label=_("Try it first"))
         later.connect("clicked", lambda _b: self.close())
-        install = Gtk.Button(label="Install EvenKeelOS", css_classes=["suggested-action"])
+        install = Gtk.Button(label=_("Install EvenKeelOS"), css_classes=["suggested-action"])
         install.connect("clicked", self.on_install)
         for b in (self.save, later, install):
             bar.append(b)
@@ -59,16 +61,17 @@ class Welcome(Adw.ApplicationWindow):
         try:
             results = fitcheck.check()
         except Exception as e:          # the window still offers Install and Try it first
-            results = [(fitcheck.LIMITED, "Fit check", "The check couldn't finish.", str(e))]
+            results = [(fitcheck.LIMITED, fitcheck.words(N_("Fit check")),
+                        fitcheck.words(N_("The check couldn't finish.")), str(e))]
         GLib.idle_add(self.show_results, results)
 
     def show_results(self, results):
         self.results = results
         self.group.remove(self.spinner)
         bad = any(level == fitcheck.BAD for level, *_ in results)
-        self.group.set_description("Something here won't work. Read it before installing." if bad else
-                                   "Install EvenKeelOS puts it on this computer. Or Try it first: Install EvenKeelOS "
-                                   "is also in the dock.")
+        self.group.set_description(_("Something here won't work. Read it before installing.") if bad else
+                                   _("Install EvenKeelOS puts it on this computer. Or Try it first: Install "
+                                     "EvenKeelOS is also in the dock."))
         for level, part, found, todo in results:
             icon, style = ICONS[level]
             row = Adw.ActionRow(title=part, subtitle=" ".join(x for x in (found, todo) if x), use_markup=False)
@@ -82,7 +85,8 @@ class Welcome(Adw.ApplicationWindow):
         try:
             Gio.Subprocess.new([INSTALLER], Gio.SubprocessFlags.NONE)
         except GLib.Error:
-            self.toasts.add_toast(Adw.Toast(title="The installer couldn't open. Use Install EvenKeelOS in the dock."))
+            self.toasts.add_toast(Adw.Toast(title=_("The installer couldn't open. "
+                                                    "Use Install EvenKeelOS in the dock.")))
             return
         self.close()
 
@@ -100,13 +104,14 @@ class Welcome(Adw.ApplicationWindow):
     def pick_stick(self, sticks):
         self.save.set_sensitive(True)
         if not sticks:
-            self.toasts.add_toast(Adw.Toast(title="Plug in a second USB stick, then click Save the results again."))
+            self.toasts.add_toast(Adw.Toast(title=_("Plug in a second USB stick, then click Save the results "
+                                                    "again.")))
             return False
-        dialog = Adw.AlertDialog(heading="Save the results", body="Click the USB stick to save them on.")
-        dialog.add_response("cancel", "Cancel")
+        dialog = Adw.AlertDialog(heading=_("Save the results"), body=_("Click the USB stick to save them on."))
+        dialog.add_response("cancel", _("Cancel"))
         dialog.set_close_response("cancel")
         for i, s in enumerate(sticks[:4]):
-            dialog.add_response(str(i), f"{s['name']}, {s['size']}")
+            dialog.add_response(str(i), _("{name}, {size}").format(name=s["name"], size=s["size"]))
         dialog.connect("response", self.on_stick, sticks)
         dialog.present(self)
         return False
@@ -125,7 +130,8 @@ class Welcome(Adw.ApplicationWindow):
             problem = data.save_to_stick(stick["path"], f.name, name)
         finally:
             os.unlink(f.name)
-        GLib.idle_add(self.saved, f"Saved on {stick['name']} as {name}." if not problem else f"Not saved: {problem}")
+        GLib.idle_add(self.saved, _("Saved on {stick} as {name}.").format(stick=stick["name"], name=name)
+                      if not problem else _("Not saved: {problem}").format(problem=problem))
 
     def saved(self, text):
         self.save.set_sensitive(True)
@@ -143,4 +149,6 @@ class App(Adw.Application):
 
 
 if __name__ == "__main__":
+    # The live session's own language: the first of these that is set
+    i18n.use(next((os.environ[v] for v in ("LC_ALL", "LC_MESSAGES", "LANG") if os.environ.get(v)), "C"))
     sys.exit(App().run(sys.argv))

@@ -1,0 +1,31 @@
+# The list of words to translate is up to date, and no screen text skips it. Builds nothing.
+name: Check the translatable text
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  translations:
+    name: Check the translatable text
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Install gettext
+        run: sudo apt-get update -q && sudo apt-get install -y --no-install-recommends gettext
+
+      - name: Screen text goes through translation
+        run: python3 build_files/check-translatable.py
+
+      - name: The list of words to translate is up to date
+        run: build_files/make-pot.sh --check

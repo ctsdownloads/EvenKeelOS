@@ -3,6 +3,7 @@ import os
 import re
 import shutil
 import subprocess
+from evenkeel_os_ui import _, N_
 from evenkeel_os_packages import boxes, common
 
 
@@ -37,23 +38,24 @@ def adds_source(pkg):
 def file_note(pkg, info):
     """What using the downloaded file means for updates, said before installing."""
     if not adds_source(pkg) or info["blocking"]:
-        return "It never updates."
+        return _("It never updates.")
     if info["notes"] and pkg.kind == "rpm":
-        return "In a box it updates with System Update; added to the system it never updates."
-    return "It adds its maker's download source, so it updates with System Update."
+        return _("In a box it updates with System Update; added to the system it never updates.")
+    return _("It adds its maker's download source, so it updates with System Update.")
 
 
 def second_copy(pkg, info, button):
-    return f"Or {button}: adds a second copy. {file_note(pkg, info)} You would have two of the same app."
+    return _("Or {button}: adds a second copy. {note} You would have two of the same app.").format(
+        button=button, note=file_note(pkg, info))
 
 
-UPDATES_YES = "Updates: automatic, with System Update."
-UPDATES_NO = ("Updates: none, because it came from a file. To update, install a newer file. (Some apps, like "
-              "Discord, update themselves.)")
-UPDATES_FLATHUB = "Updates: automatic."
+UPDATES_YES = N_("Updates: automatic, with System Update.")
+UPDATES_NO = N_("Updates: none, because it came from a file. To update, install a newer file. (Some apps, like "
+                "Discord, update themselves.)")
+UPDATES_FLATHUB = N_("Updates: automatic.")
 # A package added from a file stays at that file's version, even with a download source.
-UPDATES_FEDORA = "automatic, with System Update."
-UPDATES_SYSTEM = "none, because it came from a file. To update, install a newer file."
+UPDATES_FEDORA = N_("automatic, with System Update.")
+UPDATES_SYSTEM = N_("none, because it came from a file. To update, install a newer file.")
 
 
 def add_rules(pkg, info):

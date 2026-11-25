@@ -4,6 +4,7 @@ import re
 import shlex
 import subprocess
 from evenkeel_os_packages import app_list, boxes, common, login_apps
+from evenkeel_os_ui import _
 
 
 BOX_RUN = "/usr/libexec/evenkeel-os-box-run"
@@ -38,8 +39,13 @@ def fix_launcher(path, box):
             rest = re.sub(r"(?m)^(Actions=[^\n]*?);?[ \t]*$", lambda m: f"{m.group(1)};{QUIT};", rest, count=1)
         else:
             rest = f"Actions={QUIT};\n" + rest
+        app = name.group(1) if name else key
+        # The file keeps English; the person's language is added as Name[de_DE]= and the like.
+        here = _("Quit {app}").format(app=app)
+        lang = re.sub(r"\.[^@]*", "", os.environ.get("LANG", ""))
+        local = f"Name[{lang}]={here}\n" if lang and here != f"Quit {app}" else ""
         text = head + sep + rest.rstrip("\n") + (
-            f"\n\n[Desktop Action {QUIT}]\nName=Quit {name.group(1) if name else key}\n"
+            f"\n\n[Desktop Action {QUIT}]\nName=Quit {app}\n{local}"
             f"Exec={BOX_RUN} --stop {key}\n")
     if not wm_class_ok(text, path, box):
         text = re.sub(r"(?m)^StartupWMClass=.*\n?", "", text)

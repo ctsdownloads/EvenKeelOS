@@ -17,6 +17,8 @@ import zoneinfo
 
 sys.path.insert(0, "/usr/lib/evenkeel-os-installer")
 import data  # noqa: E402  (the installer's own helpers: which disk is which, the console keymaps, the log)
+import i18n  # noqa: E402
+from i18n import _, N_  # noqa: E402
 
 IMAGE = "ghcr.io/ctsdownloads/evenkeel-os:latest"
 SIGNED = f"ostree-image-signed:docker://{IMAGE}"
@@ -29,7 +31,12 @@ GUIDE_HIDDEN = ".local/state/evenkeel-os/guide-hidden"
 
 
 class Stop(Exception):
-    """A step failed; the message is what the person is shown."""
+    """A step failed. Built from an English template (marked N_) and its values: str() is what the person is
+    shown, in their language; english is the same in English, for the log and the report."""
+
+    def __init__(self, template, **values):
+        super().__init__(_(template).format(**values))
+        self.english = template.format(**values)
 
 
 def say(**what):
@@ -44,7 +51,7 @@ def log(text):
 
 
 def run(*args, feed=None, secret=None, check=True, problem=None):
-    """Run and log a command; feed is logged, secret is not."""
+    """Run and log a command; feed is logged, secret is not. problem is the Stop to raise if it fails."""
     log(f"$ {shlex.join(args)}" + ("   (with a password on standard input)" if secret is not None else "")
         + (f"   <<<\n{feed}" if feed is not None else ""))
     r = subprocess.run(args, input=secret if secret is not None else feed, capture_output=True, text=True)
@@ -52,7 +59,11 @@ def run(*args, feed=None, secret=None, check=True, problem=None):
         log((r.stdout + r.stderr).rstrip())
     if check and r.returncode != 0:
         said = (r.stderr or r.stdout).strip().splitlines()
-        raise Stop(problem or f"{args[0]} did not finish" + (f": {said[-1]}" if said else "."))
+        if problem:
+            raise problem
+        if said:
+            raise Stop(N_("{command} did not finish: {reason}"), command=args[0], reason=said[-1])
+        raise Stop(N_("{command} did not finish."), command=args[0])
     return r
 
 
@@ -60,9 +71,10 @@ def chosen_disk(c):
     """The chosen disk, checked again: still offered and still the same disk."""
     disk = next((d for d in data.other_disks() if d["path"] == c["disk"]), None)
     if disk is None:
-        raise Stop(f"The disk {c['disk']} was not found, or can't be written to.")
+        raise Stop(N_("The disk {disk} was not found, or can't be written to."), disk=c["disk"])
     if data.identity(disk) != c["disk_identity"]:
-        raise Stop(f"{c['disk']} is not the disk that was chosen any more. Go back and choose the disk again.")
+        raise Stop(N_("{disk} is not the disk that was chosen any more. Go back and choose the disk again."),
+                   disk=c["disk"])
     return disk["path"]
 
 
@@ -85,21 +97,25 @@ def free_disk(disk):
         done.add(dev["path"])
         for mp in filter(None, dev.get("mountpoints") or []):
             if mp == "[SWAP]":
-                run("swapoff", dev["path"], problem=f"{dev['path']} is in use as swap and could not be freed.")
+                run("swapoff", dev["path"],
+                    problem=Stop(N_("{path} is in use as swap and could not be freed."), path=dev["path"]))
             else:
-                run("umount", mp, problem=f"{mp} on this disk is in use and could not be freed.")
+                run("umount", mp, problem=Stop(N_("{path} on this disk is in use and could not be freed."), path=mp))
         if dev["type"] == "crypt":
-            run("cryptsetup", "close", dev["path"], problem=f"{dev['path']} is open and could not be closed.")
+            run("cryptsetup", "close", dev["path"],
+                problem=Stop(N_("{path} is open and could not be closed."), path=dev["path"]))
         elif dev["type"] == "lvm":
-            run("dmsetup", "remove", dev["path"], problem=f"{dev['path']} is in use and could not be closed.")
+            run("dmsetup", "remove", dev["path"],
+                problem=Stop(N_("{path} is in use and could not be closed."), path=dev["path"]))
         elif dev["type"].startswith("raid"):
-            run("mdadm", "--stop", dev["path"], problem=f"{dev['path']} is in use and could not be stopped.")
+            run("mdadm", "--stop", dev["path"],
+                problem=Stop(N_("{path} is in use and could not be stopped."), path=dev["path"]))
 
 
 def console_keymap(layout):
     name = data.keymap_name(layout)
     if not os.path.exists(f"{data.KEYMAPS}/{name}.map.gz"):
-        raise Stop(f"There is no start-up keyboard layout for {layout}.")
+        raise Stop(N_("There is no start-up keyboard layout for {layout}."), layout=layout)
     return name
 
 
@@ -112,33 +128,33 @@ def write(path, text):
 
 def install(c):
     if c.get("experience") not in ("windows", "linux"):
-        raise Stop(f"Unknown experience {c.get('experience')}.")
+        raise Stop(N_("Unknown experience {experience}."), experience=c.get("experience"))
     disk = chosen_disk(c)
     keymap = console_keymap(c["boot_layout"])
     if not c["time_automatic"]:
         set_clock(c)                     # first, so the new system's files are dated by the clock as set
     # Loaded before the disk is touched: some computers start the USB stick without them.
     for fs in ("xfs", "ext4", "vfat"):
-        run("modprobe", fs, problem=f"The {fs} file system could not be loaded, so the disk can't be "
-                                    "prepared.")
+        run("modprobe", fs, problem=Stop(N_("The {fs} file system could not be loaded, so the disk can't be "
+                                            "prepared."), fs=fs))
 
-    say(progress=0.02, step="Freeing the disk")
+    say(progress=0.02, step=_("Freeing the disk"))
     free_disk(disk)
-    say(progress=0.05, step="Erasing the disk")
+    say(progress=0.05, step=_("Erasing the disk"))
     for part in partitions(disk):
         run("wipefs", "--all", "--force", part)
     run("wipefs", "--all", "--force", disk)
-    say(progress=0.08, step="Making the partitions")
+    say(progress=0.08, step=_("Making the partitions"))
     run("sfdisk", "--wipe", "always", "--wipe-partitions", "always", disk,
         feed="label: gpt\nsize=600MiB, type=U, name=\"EFI System\"\nsize=1GiB, type=L, name=boot\n"
              "type=L, name=root\n")
     run("udevadm", "settle")
     parts = partitions(disk)
     if len(parts) != 3:
-        raise Stop("The new partitions did not show up.")
+        raise Stop(N_("The new partitions did not show up."))
     esp, boot, root = parts
 
-    say(progress=0.12, step="Formatting")
+    say(progress=0.12, step=_("Formatting"))
     run("mkfs.fat", "-F", "32", "-n", "EFI", esp)
     run("mkfs.ext4", "-q", "-F", "-L", "boot", boot)
     # Kernel arguments as Anaconda sets them, keeping nomodeset if the USB used it.
@@ -148,7 +164,7 @@ def install(c):
             kargs.append("nomodeset")
     root_fs = root
     if c["encrypt"]:
-        say(progress=0.15, step="Encrypting the disk")
+        say(progress=0.15, step=_("Encrypting the disk"))
         run("cryptsetup", "luksFormat", "--type", "luks2", "--batch-mode", "--key-file=-", root,
             secret=c["disk_password"])
         uuid = run("cryptsetup", "luksUUID", root).stdout.strip()
@@ -170,12 +186,12 @@ def install(c):
     if not os.path.exists("/etc/ostree/prepare-root.conf"):
         write("/etc/ostree/prepare-root.conf", "[ostree]\nsysroot=/sysroot\n")
 
-    say(pulse=True, step="Copying EvenKeelOS to the disk")
+    say(pulse=True, step=_("Copying EvenKeelOS to the disk"))
     # grub as Anaconda passes it (bootc issue 1778); --skip-finalize keeps it writable for the settings.
     run("bootc", "install", "to-filesystem", "--bootloader=grub", "--skip-finalize",
         *[f"--karg={k}" for k in kargs], f"--boot-mount-spec=UUID={boot_uuid}",
         f"--source-imgref=containers-storage:{IMAGE}", f"--target-imgref={IMAGE}", TARGET,
-        problem="Copying EvenKeelOS to the disk failed.")
+        problem=Stop(N_("Copying EvenKeelOS to the disk failed.")))
     # greenboot's counter reaches the boot menu only here, at install; without it there's no automatic rollback.
     try:
         with open(f"{TARGET}/boot/grub2/grub.cfg") as f:
@@ -186,10 +202,10 @@ def install(c):
     log("boot menu has the rollback counter" if counting else "WARNING: boot menu has no rollback counter; "
         "automatic rollback won't work on this install")
 
-    say(progress=0.85, step="Setting up the new system")
+    say(progress=0.85, step=_("Setting up the new system"))
     configure(c, keymap)
-    say(progress=0.95, step="Finishing")
-    run("bootc", "install", "finalize", TARGET, problem="The install could not be finished.")
+    say(progress=0.95, step=_("Finishing"))
+    run("bootc", "install", "finalize", TARGET, problem=Stop(N_("The install could not be finished.")))
 
 
 def configure(c, keymap):
@@ -206,7 +222,7 @@ def configure(c, keymap):
             text = f.read()
         text, found = re.subn(r"(?m)^container-image-reference=.*$", f"container-image-reference={SIGNED}", text)
         if found != 1:
-            raise Stop("The new system could not be set to take signed updates.")
+            raise Stop(N_("The new system could not be set to take signed updates."))
         write(origin, text)
 
     write(f"{etc}/locale.conf", f"LANG={c['locale']}\n")
@@ -230,7 +246,7 @@ def configure(c, keymap):
 
     if c["timezone"]:
         if c["timezone"] not in zoneinfo.available_timezones():
-            raise Stop(f"Unknown time zone {c['timezone']}.")
+            raise Stop(N_("Unknown time zone {timezone}."), timezone=c["timezone"])
         if os.path.lexists(f"{etc}/localtime"):
             os.remove(f"{etc}/localtime")
         os.symlink(f"../usr/share/zoneinfo/{c['timezone']}", f"{etc}/localtime")
@@ -251,16 +267,16 @@ def configure(c, keymap):
     if c["layout"] == "windows":
         gnome += f"\n[org/gnome/shell]\nenabled-extensions={layout_extensions(deploy, 'windows')}\n"
     elif c["layout"] != "current":
-        raise Stop(f"Unknown desktop layout {c['layout']}.")
+        raise Stop(N_("Unknown desktop layout {layout}."), layout=c["layout"])
     with open(f"{etc}/dconf/profile/user") as f:
         if "system-db:local" not in f.read().split():
-            raise Stop("The new system's settings database could not be found.")
+            raise Stop(N_("The new system's settings database could not be found."))
     write(f"{etc}/dconf/db/local.d/00-evenkeel-os-install", gnome)
 
     if c["admin"]:
         add_group(deploy, "wheel")
 
-    say(progress=0.9, step="Creating your account")
+    say(progress=0.9, step=_("Creating your account"))
     var = f"{TARGET}/ostree/deploy/{stateroot}/var"
     os.makedirs(f"{var}/home", exist_ok=True)
     mounts = [("--bind", var, "var"), ("--bind", "/proc", "proc"), ("--rbind", "/sys", "sys"),
@@ -270,18 +286,19 @@ def configure(c, keymap):
             run("mount", how, src, f"{deploy}/{dst}")
         chroot = ("chroot", deploy)
         run(*chroot, "useradd", "--create-home", "--comment", c["full_name"],
-            *(["--groups", "wheel"] if c["admin"] else []), c["username"], problem="Your account could not be made.")
+            *(["--groups", "wheel"] if c["admin"] else []), c["username"],
+            problem=Stop(N_("Your account could not be made.")))
         run(*chroot, "chpasswd", secret=f"{c['username']}:{c['user_password']}\n",
-            problem="Your account's password could not be set.")
+            problem=Stop(N_("Your account's password could not be set.")))
         if c["root_password"]:
             run(*chroot, "chpasswd", secret=f"root:{c['root_password']}\n",
-                problem="The root password could not be set.")
+                problem=Stop(N_("The root password could not be set.")))
         if c["experience"] == "linux":
             hide_guide(deploy, run(*chroot, "getent", "passwd", c["username"],
-                                   problem="Your account could not be found.").stdout)
-        run(*chroot, "dconf", "update", problem="The clock and time zone settings could not be saved.")
+                                   problem=Stop(N_("Your account could not be found."))).stdout)
+        run(*chroot, "dconf", "update", problem=Stop(N_("The clock and time zone settings could not be saved.")))
         # Files written from here have no SELinux labels yet; label them as the new system's policy says.
-        run(*chroot, "restorecon", "-RF", "/etc", "/var/home", problem="The new files could not be labelled.")
+        run(*chroot, "restorecon", "-RF", "/etc", "/var/home", problem=Stop(N_("The new files could not be labelled.")))
     finally:
         for _how, _src, dst in reversed(mounts):
             run("umount", "--recursive", "--lazy", f"{deploy}/{dst}", check=False)
@@ -294,7 +311,7 @@ def layout_extensions(deploy, layout):
     for node in tree.body:
         if isinstance(node, ast.Assign) and [getattr(t, "id", None) for t in node.targets] == ["LAYOUTS"]:
             return ast.literal_eval(node.value)[layout]
-    raise Stop("The new system's desktop layouts could not be found.")
+    raise Stop(N_("The new system's desktop layouts could not be found."))
 
 
 def hide_guide(deploy, passwd_line):
@@ -302,7 +319,7 @@ def hide_guide(deploy, passwd_line):
     fields = passwd_line.strip().split(":")
     uid, gid, home = int(fields[2]), int(fields[3]), fields[5]
     if not home.startswith("/") or ".." in home.split("/"):
-        raise Stop("Your account's home folder could not be found.")
+        raise Stop(N_("Your account's home folder could not be found."))
     path = f"{deploy}{home}"
     for part in GUIDE_HIDDEN.split("/")[:-1]:
         path = f"{path}/{part}"
@@ -310,7 +327,7 @@ def hide_guide(deploy, passwd_line):
             os.mkdir(path, 0o700)
             os.chown(path, uid, gid, follow_symlinks=False)
         elif os.path.islink(path):
-            raise Stop("Your account's home folder could not be set up.")
+            raise Stop(N_("Your account's home folder could not be set up."))
     path = f"{path}/{GUIDE_HIDDEN.split('/')[-1]}"
     fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o644)
     os.fchown(fd, uid, gid)
@@ -326,7 +343,7 @@ def add_group(deploy, name):
     with open(f"{deploy}/usr/lib/group") as f:
         line = next((line for line in f if line.split(":")[0] == name), None)
     if line is None:
-        raise Stop(f"The new system has no {name} group.")
+        raise Stop(N_("The new system has no {name} group."), name=name)
     with open(f"{deploy}/etc/group", "a") as f:
         f.write(line if line.endswith("\n") else line + "\n")
     log(f"copied the {name} group into /etc/group")
@@ -348,6 +365,7 @@ def unmount():
 
 def main():
     c = json.loads(sys.stdin.read())
+    i18n.use(c["locale"])
     PRIVATE.extend(v for v in (c["full_name"], c["username"], c["hostname"]) if v)
     with open(data.LOG, "w") as f:
         f.write(f"EvenKeelOS install, {datetime.datetime.now():%Y-%m-%d %H:%M}\n")
@@ -358,18 +376,19 @@ def main():
     try:
         install(c)
     except Stop as e:
-        log(f"STOPPED: {e}")
+        log(f"STOPPED: {e.english}")
         unmount()
-        say(error=str(e), log=data.LOG)
+        say(error=str(e), error_en=e.english, log=data.LOG)
         return 1
     except Exception as e:                 # anything unforeseen still ends on the error screen
         log(f"STOPPED: {type(e).__name__}: {e}")
         unmount()
-        say(error=f"Something unexpected went wrong: {e}", log=data.LOG)
+        say(error=_("Something unexpected went wrong: {error}").format(error=e),
+            error_en=f"Something unexpected went wrong: {e}", log=data.LOG)
         return 1
     unmount()
     log("done")
-    say(progress=1.0, step="Done")
+    say(progress=1.0, step=_("Done"))
     say(done=True)
     return 0
 

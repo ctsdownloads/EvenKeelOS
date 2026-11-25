@@ -4,7 +4,7 @@ import os
 import re
 import shutil
 import urllib.request
-from evenkeel_os_ui import notify, say
+from evenkeel_os_ui import _, notify, say
 from evenkeel_os_packages import app_list, installed, update_notes, windows
 
 
@@ -14,7 +14,7 @@ GENERIC = re.compile(r"(^|\s)(web browser|browser|desktop|for linux|client|launc
 def base_name(s):
     """A name without the generic words packages add: 'Brave Web Browser' and 'brave-browser' -> 'brave'."""
     s = re.sub(r"[^a-z0-9 ]", " ", (s or "").lower()).strip()
-    for _ in range(3):
+    for _n in range(3):
         s = GENERIC.sub("", s).strip()
     return s.replace(" ", "")
 
@@ -77,12 +77,13 @@ def flathub_match(pkg, info):
 
 def install(app_id, name, announce=True):
     """Install an app from Flathub and list it in Remove Apps; announce says so in a window when done."""
-    if not windows.run_steps(f"Installing {name} from Flathub.",
+    if not windows.run_steps(_("Installing {name} from Flathub.").format(name=name),
                              [["flatpak", "install", "--system", "-y", "--noninteractive", "flathub", app_id]]):
-        windows.failed(f"Installing {name}")
+        windows.failed(_("Installing {name}").format(name=name))
         return 1
     app_list.remember({"title": name, "package": app_id, "where": "flathub"})
-    notify(f"{name} is installed.")
+    notify(_("{title} is installed.").format(title=name))
     if announce:
-        say(f"{name} is installed. Find it in Show Apps.\n\n{update_notes.UPDATES_FLATHUB}")
+        say(_("{title} is installed. Find it in Show Apps.").format(title=name) + "\n\n" +
+            _(update_notes.UPDATES_FLATHUB))
     return 0

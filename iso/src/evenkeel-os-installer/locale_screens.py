@@ -6,18 +6,26 @@ import sys
 from gi.repository import Adw, Gio, GLib, Gtk
 
 import data
+import i18n
 import screens
+from i18n import _, N_
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
 import evenkeel_os_network as net  # noqa: E402
 
-MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
-          "November", "December"]
+MONTHS = [N_("January"), N_("February"), N_("March"), N_("April"), N_("May"), N_("June"), N_("July"),
+          N_("August"), N_("September"), N_("October"), N_("November"), N_("December")]
+
+
+def time_text(t):
+    """A date and time as "5 March 2027, 14:30", the month in the installer's language."""
+    return _("{day} {month} {year}, {time}").format(day=t.day, month=_(MONTHS[t.month - 1]), year=t.year,
+                                                    time=t.strftime("%H:%M"))
 
 
 class LanguageScreen(screens.ListScreen):
-    title = "Language"
-    step = "Language"
+    title = N_("Language")
+    step = N_("Language")
     first_stage = "language"
 
     @property
@@ -33,15 +41,16 @@ class LanguageScreen(screens.ListScreen):
     @property
     def intro(self):
         if self.stage == "language":
-            return "Which language should EvenKeelOS use?"
-        return "Which one? Back goes to the list of languages."
+            return _("Which language should EvenKeelOS use?")
+        return _("Which one? Back goes to the list of languages.")
 
     def items(self):
         if self.stage == "language":
-            return [(eng, native if native != eng else "", lang == self.lang)
-                    for lang, eng, native in self.langs]
-        return [(eng, native if native != eng else "", loc == self.c.locale)
-                for loc, eng, native in data.locales(self.lang)]
+            self.langs.sort(key=lambda x: i18n.language(x[0]).lower())
+            rows = [(i18n.language(lang), native, lang == self.lang) for lang, _eng, native in self.langs]
+        else:
+            rows = [(i18n.language(loc), native, loc == self.c.locale) for loc, _eng, native in data.locales(self.lang)]
+        return [(name, native if native != name else "", chosen) for name, native, chosen in rows]
 
     def pick(self, i):
         if self.stage == "language":
@@ -53,27 +62,32 @@ class LanguageScreen(screens.ListScreen):
                 self.stage = "locale"
                 if not self.c.locale.startswith(self.lang + "_"):
                     self.c.locale = options[0][0]
+                i18n.use(self.c.locale)
                 self.choose(to_chosen=True)
                 return
         else:
             self.c.locale = data.locales(self.lang)[i][0]
+        i18n.use(self.c.locale)
         self.choose()
 
     def status(self):
-        return f"Chosen: {language_name(self.c.locale)}."
+        return _("Chosen: {name}.").format(name=language_name(self.c.locale))
 
 
 def language_name(loc):
-    return next((eng for code, eng, _n in data.locales(loc.split("_")[0].split(".")[0]) if code == loc), loc)
+    return i18n.language(loc)
 
 
 # ---------------------------------------------------------------------------------------------------- 2 Keyboard
 
 class KeyboardScreen(screens.ListScreen):
-    title = "Keyboard layout"
-    step = "Keyboard"
-    intro = ("Which keyboard layouts do you use? Click one to add it, or click it again to take it off. "
-             "The first one is used unless you switch.")
+    title = N_("Keyboard layout")
+    step = N_("Keyboard")
+
+    @property
+    def intro(self):
+        return _("Which keyboard layouts do you use? Click one to add it, or click it again to take it off. "
+                 "The first one is used unless you switch.")
 
     def build(self):
         super().build()
@@ -83,13 +97,16 @@ class KeyboardScreen(screens.ListScreen):
         self.suggested = [k for k in data.suggested_keyboards(self.c.locale) if k in self.all]
         if not self.c.layouts_chosen_by_hand:
             self.c.layouts = self.suggested[:1]
-        rest = sorted((k for k in self.all if k not in self.suggested), key=lambda k: self.all[k].lower())
+        rest = sorted((k for k in self.all if k not in self.suggested), key=lambda k: self.name(k).lower())
         self.order = self.suggested + rest
         super().enter()
 
     def items(self):
-        return [(self.all[k], "Suggested" if k in self.suggested else "", k in self.c.layouts)
+        return [(self.name(k), _("Suggested") if k in self.suggested else "", k in self.c.layouts)
                 for k in self.order]
+
+    def name(self, k):
+        return i18n.keyboard(self.all[k])
 
     def pick(self, i):
         k = self.order[i]
@@ -102,35 +119,42 @@ class KeyboardScreen(screens.ListScreen):
         self.choose()
 
     def status(self):
-        return "Chosen: " + ", ".join(self.all[k] for k in self.c.layouts) + "."
+        return _("Chosen: {names}.").format(names=", ".join(self.name(k) for k in self.c.layouts))
 
 
 # ------------------------------------------------------------------------------------- 3 Keyboard at start
 
 class BootKeyboardScreen(screens.ListScreen):
     """Layouts the text console has, for typing the disk password."""
-    title = "Keyboard for the disk password"
-    step = "Keyboard at start"
-    intro = ("If the disk is encrypted, its password is typed when the computer starts, before EvenKeelOS loads. "
-             "Which keyboard layout is used then?")
+    title = N_("Keyboard for the disk password")
+    step = N_("Keyboard at start")
+
+    @property
+    def intro(self):
+        return _("If the disk is encrypted, its password is typed when the computer starts, before EvenKeelOS "
+                 "loads. Which keyboard layout is used then?")
 
     def build(self):
         super().build()
         self.all = data.keyboards()
-        self.order = sorted((k for k in self.all if data.has_console_keymap(k)), key=lambda k: self.all[k].lower())
+        self.offered = [k for k in self.all if data.has_console_keymap(k)]
+
+    def name(self, k):
+        return i18n.keyboard(self.all[k])
 
     def same_offered(self):
-        return self.c.layouts[0] in self.order
+        return self.c.layouts[0] in self.offered
 
     def enter(self):
         if self.c.boot_layout is None and not self.same_offered():
             self.c.boot_layout = "us"
+        self.order = sorted(self.offered, key=lambda k: self.name(k).lower())
         super().enter()
 
     def items(self):
-        first = self.all[self.c.layouts[0]]
-        same = [("Same as above", first, self.c.boot_layout is None)] if self.same_offered() else []
-        return same + [(self.all[k], "", self.c.boot_layout == k) for k in self.order]
+        first = self.name(self.c.layouts[0])
+        same = [(_("Same as above"), first, self.c.boot_layout is None)] if self.same_offered() else []
+        return same + [(self.name(k), "", self.c.boot_layout == k) for k in self.order]
 
     def pick(self, i):
         if self.same_offered():
@@ -141,25 +165,26 @@ class BootKeyboardScreen(screens.ListScreen):
 
     def status(self):
         k = self.c.boot_layout or self.c.layouts[0]
-        first = self.all[self.c.layouts[0]]
-        missing = "" if self.same_offered() else f"{first} can't be used before EvenKeelOS loads. "
-        return f"{missing}Chosen: {self.all[k]}."
+        first = self.name(self.c.layouts[0])
+        missing = "" if self.same_offered() else _("{layout} can't be used before EvenKeelOS loads.").format(
+            layout=first) + " "
+        return missing + _("Chosen: {name}.").format(name=self.name(k))
 
 
 # ---------------------------------------------------------------------------------------------------- 4 Network
 
-PLACE_CHOICES = [(net.HOME, "Your own home network"),
-                 (net.WORK, "An office. Nothing gets in, and your folders aren't shared."),
-                 (net.PUBLIC, "A café, hotel, airport, or anywhere else. Nothing gets in.")]
+PLACE_CHOICES = [(net.HOME, N_("Your own home network")),
+                 (net.WORK, N_("An office. Nothing gets in, and your folders aren't shared.")),
+                 (net.PUBLIC, N_("A café, hotel, airport, or anywhere else. Nothing gets in."))]
 
 
 class NetworkScreen(screens.ListScreen):
-    title = "Network"
-    step = "Network"
+    title = N_("Network")
+    step = N_("Network")
 
     def build(self):
         super().build()
-        self.password = Adw.PasswordEntryRow(title="Wi-Fi password")
+        self.password = Adw.PasswordEntryRow()
         self.password.connect("entry-activated", lambda *_: self.connect_wifi())
         self.password_box = Gtk.ListBox(selection_mode=Gtk.SelectionMode.NONE, css_classes=["boxed-list"],
                                         visible=False)
@@ -168,15 +193,19 @@ class NetworkScreen(screens.ListScreen):
         self.wired, self.wifi, self.chosen, self.busy = False, [], None, ""
         self.placing = None      # the password Wi-Fi just joined: Home, Work or a Public place?
 
+    def relabel(self):
+        self.password.set_title(_("Wi-Fi password"))
+
     @property
     def intro(self):
         if self.placing:
-            return (f"Where is {self.placing.name}? This sets what other devices on it can reach once EvenKeelOS "
-                    "is installed. Pick Public place anywhere you're not sure.")
+            return _("Where is {network}? This sets what other devices on it can reach once EvenKeelOS "
+                     "is installed. Pick Public place anywhere you're not sure.").format(network=self.placing.name)
         if self.chosen and self.chosen["secured"]:
-            return f"Type the password for {self.chosen['ssid']}, then click Connect. Back goes to the list."
-        return ("A network is only needed for automatic time and time zone. To use Wi-Fi, click a network. "
-                "Or click Next to go on without it.")
+            return _("Type the password for {network}, then click Connect. Back goes to the list.").format(
+                network=self.chosen["ssid"])
+        return _("A network is only needed for automatic time and time zone. To use Wi-Fi, click a network. "
+                 "Or click Next to go on without it.")
 
     def enter(self):
         self.wired, self.wifi = data.network()
@@ -184,11 +213,11 @@ class NetworkScreen(screens.ListScreen):
 
     def items(self):
         if self.placing:
-            return [(net.PLACES[z], about, z == net.PUBLIC) for z, about in PLACE_CHOICES]
+            return [(_(net.PLACES[z]), _(about), z == net.PUBLIC) for z, about in PLACE_CHOICES]
         if self.chosen and self.chosen["secured"]:
             return []
-        return [(w["ssid"], f"Signal {w['signal']}%" + (", password needed" if w["secured"] else ""),
-                 False) for w in self.wifi]
+        return [(w["ssid"], (_("Signal {percent}%, password needed") if w["secured"] else
+                             _("Signal {percent}%")).format(percent=w["signal"]), False) for w in self.wifi]
 
     def refresh(self, to_chosen=True):
         super().refresh(to_chosen)
@@ -200,9 +229,10 @@ class NetworkScreen(screens.ListScreen):
         if self.placing:
             zone, network = PLACE_CHOICES[i][0], self.placing
             saved = net.set_place(network, zone)
-            self.busy = (f"{network.name} is saved as {net.PLACES[zone]}." if saved else
-                         f"{network.name} couldn't be saved as {net.PLACES[zone]}. EvenKeelOS asks again at the "
-                         "first login.")
+            place = _(net.PLACES[zone])
+            self.busy = (_("{network} is saved as {place}.").format(network=network.name, place=place) if saved else
+                         _("{network} couldn't be saved as {place}. EvenKeelOS asks again at the "
+                           "first login.").format(network=network.name, place=place))
             self.placing = None
             self.choose()
             return
@@ -218,15 +248,15 @@ class NetworkScreen(screens.ListScreen):
         if self.placing:
             return []
         if self.chosen and self.chosen["secured"]:
-            return [("Connect", self.connect_wifi)]
-        return [("Refresh", self.enter)]
+            return [(_("Connect"), self.connect_wifi)]
+        return [(_("Refresh"), self.enter)]
 
     def connect_wifi(self):
         ssid = self.chosen["ssid"]
         args = ["nmcli", "device", "wifi", "connect", ssid]
         if self.chosen["secured"]:
             args += ["password", self.password.get_text()]
-        self.busy = f"Connecting to {ssid}..."
+        self.busy = _("Connecting to {network}...").format(network=ssid)
         self.choose()
         proc = Gio.Subprocess.new(args, Gio.SubprocessFlags.STDOUT_SILENCE | Gio.SubprocessFlags.STDERR_SILENCE)
         proc.wait_check_async(None, self._connected, ssid)
@@ -236,7 +266,8 @@ class NetworkScreen(screens.ListScreen):
             ok = proc.wait_check_finish(result)
         except GLib.Error:
             ok = False
-        self.busy = f"Connected to {ssid}." if ok else f"Could not connect to {ssid}. Check the password."
+        self.busy = (_("Connected to {network}.") if ok else
+                     _("Could not connect to {network}. Check the password.")).format(network=ssid)
         if ok:
             if self.chosen["secured"]:
                 joined = [n for n in net.networks() if n.needs_asking]
@@ -260,15 +291,18 @@ class NetworkScreen(screens.ListScreen):
         return False
 
     def status(self):
-        return self.busy or ("Wired network: connected." if self.wired else
-                             "Wired network: not connected." + ("" if self.wifi else " No Wi-Fi networks found."))
+        if self.busy:
+            return self.busy
+        if self.wired:
+            return _("Wired network: connected.")
+        return _("Wired network: not connected.") + ("" if self.wifi else " " + _("No Wi-Fi networks found."))
 
 
 # ---------------------------------------------------------------------------------------------------- 5 Time zone
 
 class TimeZoneScreen(screens.ListScreen):
-    title = "Time zone"
-    step = "Time zone"
+    title = N_("Time zone")
+    step = N_("Time zone")
 
     def build(self):
         super().build()
@@ -279,18 +313,29 @@ class TimeZoneScreen(screens.ListScreen):
     @property
     def intro(self):
         if self.region:
-            return f"Which city in {self.region} has your time? Back goes to the regions."
-        return "Set the time zone automatically, or pick a region, then a city."
+            return _("Which city in {region} has your time? Back goes to the regions.").format(
+                region=i18n.place(self.region))
+        return _("Set the time zone automatically, or pick a region, then a city.")
 
     def items(self):
         if self.region:
-            return [(city, "", tz == self.c.timezone) for tz, city in self.zones[self.region]]
-        return ([("Automatic", "From the computer's location (recommended)", self.c.timezone is None)] +
-                [(r, "", bool(self.c.timezone) and self.c.timezone.startswith(r + "/")) for r in self.regions])
+            return [(self.city(tz), "", tz == self.c.timezone) for tz in self.cities()]
+        self.regions.sort(key=lambda r: i18n.place(r).lower())
+        return ([(_("Automatic"), _("From the computer's location (recommended)"), self.c.timezone is None)] +
+                [(i18n.place(r), "", bool(self.c.timezone) and self.c.timezone.startswith(r + "/"))
+                 for r in self.regions])
+
+    @staticmethod
+    def city(tz):
+        """ "America/Argentina/Buenos_Aires" as "Argentina, Buenos Aires", in the installer's language."""
+        return ", ".join(i18n.place(tz).split("/")[1:]) or tz
+
+    def cities(self):
+        return sorted((tz for tz, _city in self.zones[self.region]), key=self.city)
 
     def pick(self, i):
         if self.region:
-            self.c.timezone = self.zones[self.region][i][0]
+            self.c.timezone = self.cities()[i]
         elif i == 0:
             self.c.timezone = None
         else:
@@ -307,19 +352,27 @@ class TimeZoneScreen(screens.ListScreen):
         return False
 
     def status(self):
-        return f"Chosen: {self.c.timezone.replace('_', ' ') if self.c.timezone else 'Automatic'}."
+        return _("Chosen: {name}.").format(name=i18n.place(self.c.timezone) if self.c.timezone else
+                                           _("Automatic"))
 
 
 # ---------------------------------------------------------------------------------------------------- 6 Date and time
 
 class DateTimeScreen(screens.ListScreen):
-    title = "Date and time"
-    step = "Date and time"
+    title = N_("Date and time")
+    step = N_("Date and time")
     first_stage = "main"
-    FIELDS = ["Year", "Month", "Day", "Hour", "Minute"]
+    FIELDS = ["Year", "Month", "Day", "Hour", "Minute"]         # also the stage names; shown through FIELD_NAMES
+    FIELD_NAMES = {"Year": N_("Year"), "Month": N_("Month"), "Day": N_("Day"), "Hour": N_("Hour"),
+                   "Minute": N_("Minute")}
+    FIELD_INTROS = {"Year": N_("Pick the year. Back keeps it as it is."),
+                    "Month": N_("Pick the month. Back keeps it as it is."),
+                    "Day": N_("Pick the day. Back keeps it as it is."),
+                    "Hour": N_("Pick the hour. Back keeps it as it is."),
+                    "Minute": N_("Pick the minute. Back keeps it as it is.")}
 
     def build(self):
-        self.server = Adw.EntryRow(title="Time server name")
+        self.server = Adw.EntryRow()
         self.server.connect("entry-activated", lambda *_: self.add_server())
         self.server_box = Gtk.ListBox(selection_mode=Gtk.SelectionMode.NONE, css_classes=["boxed-list"],
                                       visible=False)
@@ -328,14 +381,17 @@ class DateTimeScreen(screens.ListScreen):
         super().build()
         self.stage = "main"                 # main, a field name, or servers
 
+    def relabel(self):
+        self.server.set_title(_("Time server name"))
+
     @property
     def intro(self):
         if self.stage == "servers":
-            return ("Time servers to use instead of Fedora's. Type a name and click Add. Click a server to take it "
-                    "off. Click Back when done.")
+            return _("Time servers to use instead of Fedora's. Type a name and click Add. Click a server to take it "
+                     "off. Click Back when done.")
         if self.stage in self.FIELDS:
-            return f"Pick the {self.stage.lower()}. Back keeps it as it is."
-        return "Keep the clock right automatically, or set the date and time yourself."
+            return _(self.FIELD_INTROS[self.stage])
+        return _("Keep the clock right automatically, or set the date and time yourself.")
 
     def values(self):
         t = self.c.manual_time
@@ -356,13 +412,15 @@ class DateTimeScreen(screens.ListScreen):
         if self.stage in self.FIELDS:
             now = {"Year": str(t.year), "Month": MONTHS[t.month - 1], "Day": str(t.day), "Hour": f"{t.hour:02d}",
                    "Minute": f"{t.minute:02d}"}[self.stage]
-            return [(v, "", v == now) for v in self.values()]
-        out = [("Automatic", "From time servers on the internet (recommended)", self.c.time_automatic),
-               ("Set it myself", "", not self.c.time_automatic)]
+            return [(_(v) if self.stage == "Month" else v, "", v == now) for v in self.values()]
+        out = [(_("Automatic"), _("From time servers on the internet (recommended)"), self.c.time_automatic),
+               (_("Set it myself"), "", not self.c.time_automatic)]
         if not self.c.time_automatic:
-            out += [("Year", str(t.year), False), ("Month", MONTHS[t.month - 1], False),
-                    ("Day", str(t.day), False), ("Hour", f"{t.hour:02d}", False),
-                    ("Minute", f"{t.minute:02d}", False)]
+            out += [(_(self.FIELD_NAMES["Year"]), str(t.year), False),
+                    (_(self.FIELD_NAMES["Month"]), _(MONTHS[t.month - 1]), False),
+                    (_(self.FIELD_NAMES["Day"]), str(t.day), False),
+                    (_(self.FIELD_NAMES["Hour"]), f"{t.hour:02d}", False),
+                    (_(self.FIELD_NAMES["Minute"]), f"{t.minute:02d}", False)]
         return out
 
     def refresh(self, to_chosen=True):
@@ -394,9 +452,9 @@ class DateTimeScreen(screens.ListScreen):
 
     def actions(self):
         if self.stage == "servers":
-            return [("Add", self.add_server)]
+            return [(_("Add"), self.add_server)]
         if self.stage == "main" and self.c.time_automatic:
-            return [("Time servers", self.open_servers)]
+            return [(_("Time servers"), self.open_servers)]
         return []
 
     def open_servers(self):
@@ -416,25 +474,28 @@ class DateTimeScreen(screens.ListScreen):
 
     def status(self):
         if self.c.time_automatic:
-            servers = ", ".join(self.c.time_servers) or "Fedora's time servers"
-            return f"Chosen: automatic, from {servers}."
-        return f"Chosen: {self.c.manual_time.strftime('%-d %B %Y, %H:%M')}."
+            servers = ", ".join(self.c.time_servers) or _("Fedora's time servers")
+            return _("Chosen: automatic, from {servers}.").format(servers=servers)
+        return _("Chosen: {time}.").format(time=time_text(self.c.manual_time))
 
 
 # ---------------------------------------------------------------------------------------------------- 7 Clock
 
 class ClockScreen(screens.ListScreen):
-    title = "Clock"
-    step = "Clock"
-    intro = "How should the clock show the time?"
+    title = N_("Clock")
+    step = N_("Clock")
+
+    @property
+    def intro(self):
+        return _("How should the clock show the time?")
 
     def items(self):
         h24 = self.c.clock_24 if self.c.clock_24 is not None else not data.uses_12_hour(self.c.locale)
-        return [("12 hour", "3:30 PM", not h24), ("24 hour", "15:30", h24)]
+        return [(_("12 hour"), "3:30 PM", not h24), (_("24 hour"), "15:30", h24)]
 
     def pick(self, i):
         self.c.clock_24 = i == 1
         self.choose()
 
     def status(self):
-        return "Chosen: " + next(t for t, _x, chosen in self.items() if chosen) + "."
+        return _("Chosen: {name}.").format(name=next(t for t, _x, chosen in self.items() if chosen))

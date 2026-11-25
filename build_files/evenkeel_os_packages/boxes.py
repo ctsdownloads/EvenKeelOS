@@ -6,7 +6,7 @@ import tarfile
 import urllib.request
 from pathlib import Path
 
-from evenkeel_os_ui import ask, choose, free_mb, human, notify, say
+from evenkeel_os_ui import _, N_, ask, choose, free_mb, human, notify, say
 from evenkeel_os_packages import app_list, common, launchers, reading, targets, windows
 
 
@@ -71,8 +71,8 @@ def box_size(name):
 def sizes_line():
     """'Space used: Fedora box 1.2 GB, Ubuntu box 650 MB.' for the boxes that exist, or ''."""
     sizes = box_sizes([common.BOXES[k]["name"] for k in common.BOXES])
-    parts = [f"{b['label']} {human(sizes[b['name']])}" for b in common.BOXES.values() if sizes.get(b["name"])]
-    return "Space used: " + ", ".join(parts) + "." if parts else ""
+    parts = [f"{_(b['label'])} {human(sizes[b['name']])}" for b in common.BOXES.values() if sizes.get(b["name"])]
+    return _("Space used: {sizes}.").format(sizes=", ".join(parts)) if parts else ""
 
 
 def room_for(need_mb):
@@ -81,10 +81,10 @@ def room_for(need_mb):
     free = free_mb(where if where.exists() else common.HOME)
     if free is None or free >= need_mb:
         return True
-    return ask(f"Not enough free space. This needs about {human(need_mb)}, and {human(free)} is free.\n\n"
-               f"Recommended: Cancel, then empty the Trash or remove apps you don't use, and try again.\n\n"
-               f"Or Try anyway: if space runs out, it stops safely and nothing is lost.",
-               ok="Try anyway", cancel="Cancel") == "ok"
+    return ask(_("Not enough free space. This needs about {needed}, and {free} is free.\n\n"
+                 "Recommended: Cancel, then empty the Trash or remove apps you don't use, and try again.\n\n"
+                 "Or Try anyway: if space runs out, it stops safely and nothing is lost.")
+               .format(needed=human(need_mb), free=human(free)), ok=_("Try anyway"), cancel=_("Cancel")) == "ok"
 
 
 def setup_need(size):
@@ -95,7 +95,8 @@ def setup_need(size):
 def delete_box(kind):
     """Delete an app box and its downloaded system, to free the space. Your own files are not touched."""
     box = common.BOXES[kind]
-    ok = windows.run_steps(f"Deleting the {box['label']}.", [["distrobox", "rm", "--force", box["name"]]])
+    ok = windows.run_steps(_("Deleting the {label}.").format(label=_(box["label"])),
+                           [["distrobox", "rm", "--force", box["name"]]])
     if ok:     # the box's system image too, unless something else still uses it
         subprocess.run(["podman", "image", "rm", box["image"]], capture_output=True)
         helpers_mark(kind).unlink(missing_ok=True)
@@ -110,11 +111,14 @@ def box_words(kind):
 def first_time(kind):
     """What setting up the box takes, said before anything is downloaded, and the download size."""
     size = image_size(common.BOXES[kind]["image"])
-    disk = f"uses about {human(setup_need(size) - 1500)} of disk space"
-    text = f"First time only: sets up the box, which takes a minute or two and {disk}." if size == 0 \
-        else f"First time only: downloads about {size} MB and {disk}." if size else \
-        f"First time only: downloads a few hundred MB and {disk}."
-    return text, size
+    disk = human(setup_need(size) - 1500)
+    if size == 0:
+        text = _("First time only: sets up the box, which takes a minute or two and uses about {disk} of disk space.")
+    elif size:
+        text = _("First time only: downloads about {size} MB and uses about {disk} of disk space.")
+    else:
+        text = _("First time only: downloads a few hundred MB and uses about {disk} of disk space.")
+    return text.format(disk=disk, size=size), size
 
 
 # Desktop helpers .rpm and .deb apps expect (zenity, notify-send); xdg-open already reaches the desktop.
@@ -128,21 +132,22 @@ def helpers_mark(kind):
 
 def helper_steps(kind):
     box = common.BOXES[kind]["name"]
-    label = "Adding the desktop parts apps expect (progress windows and notifications)"
+    label = _("Adding the desktop parts apps expect (progress windows and notifications)")
     if kind == "rpm":
         return [(label, in_box(box, "sudo", "dnf", "-y", "install", *HELPERS[kind]))]
     return [(label, in_box(box, "sh", "-c", "sudo apt-get update && sudo env DEBIAN_FRONTEND=noninteractive "
                            "apt-get install -y " + " ".join(HELPERS[kind])))]
 
 
-def install_steps(kind, title, target, doing="Installing", dnf_verb="install", apt_extra=()):
-    """Steps that install a package file or a package name into its box."""
+def install_steps(kind, title, target, doing=N_("Installing {title}"), dnf_verb="install", apt_extra=()):
+    """Steps that install a package file or a package name into its box; doing is the step's name, with {title}."""
     box = common.BOXES[kind]["name"]
+    step = _(doing).format(title=title)
     if kind == "rpm":
-        return [(f"{doing} {title}", in_box(box, "sudo", "dnf", "-y", dnf_verb, target))]
-    return [("Getting Ubuntu's list of packages", in_box(box, "sudo", "apt-get", "update")),
-            (f"{doing} {title}", in_box(box, "sudo", "env", "DEBIAN_FRONTEND=noninteractive", "apt-get", "install",
-                                        "-y", *apt_extra, target))]
+        return [(step, in_box(box, "sudo", "dnf", "-y", dnf_verb, target))]
+    return [(_("Getting Ubuntu's list of packages"), in_box(box, "sudo", "apt-get", "update")),
+            (step, in_box(box, "sudo", "env", "DEBIAN_FRONTEND=noninteractive", "apt-get", "install",
+                          "-y", *apt_extra, target))]
 
 
 def ensure_helpers(kind, quiet=False):
@@ -153,9 +158,10 @@ def ensure_helpers(kind, quiet=False):
         return True
     if subprocess.run(in_box(box, "sh", "-c", HELPER_CHECK), capture_output=True).returncode != 0:
         if quiet:
-            ok = all(subprocess.run(cmd, capture_output=True).returncode == 0 for _, cmd in helper_steps(kind))
+            ok = all(subprocess.run(cmd, capture_output=True).returncode == 0 for label, cmd in helper_steps(kind))
         else:
-            ok = windows.run_steps(f"Preparing the {common.BOXES[kind]['label']}.", helper_steps(kind))
+            ok = windows.run_steps(_("Preparing the {label}.").format(label=_(common.BOXES[kind]["label"])),
+                                   helper_steps(kind))
         if not ok:
             return False
     mark.parent.mkdir(parents=True, exist_ok=True)
@@ -165,29 +171,33 @@ def ensure_helpers(kind, quiet=False):
 
 def setup_box(kind, size=None, again=False):
     """Make the box, with plain steps and a Cancel button. Cancel or failure leaves no half-made box."""
-    _, _, label = box_words(kind)
+    label = _(box_words(kind)[2])
     box = common.BOXES[kind]
     steps = []
     if size != 0:
-        about = f" (about {size} MB)" if size else ""
-        steps.append((f"Downloading the {label}{about}", ["podman", "pull", box["image"]]))
-    steps += [(f"Creating the {label}",
+        pull = _("Downloading the {label} (about {size} MB)") if size else _("Downloading the {label}")
+        steps.append((pull.format(label=label, size=size), ["podman", "pull", box["image"]]))
+    steps += [(_("Creating the {label}").format(label=label),
                ["distrobox", "create", "--yes", "--no-entry", "--name", box["name"], "--image", box["image"]]),
-              (f"Getting the {label} ready. The first time takes a few minutes.", in_box(box["name"], "true"))]
+              (_("Getting the {label} ready. The first time takes a few minutes.").format(label=label),
+               in_box(box["name"], "true"))]
     steps += helper_steps(kind)
     helpers_mark(kind).unlink(missing_ok=True)
-    heading = f"Setting up the {label} again." if again else f"Setting up the {label}. This happens only once."
+    if again:
+        heading = _("Setting up the {label} again.").format(label=label)
+    else:
+        heading = _("Setting up the {label}. This happens only once.").format(label=label)
     # also as a notification, so it is seen even if the progress window opens behind another window
-    notify(f"{heading} It takes a few minutes; a progress window shows each step.")
+    notify(_("{heading} It takes a few minutes; a progress window shows each step.").format(heading=heading))
     if windows.run_steps(heading, steps, cancel=True):
         helpers_mark(kind).parent.mkdir(parents=True, exist_ok=True)
         helpers_mark(kind).touch()
         return True
     subprocess.run(["distrobox", "rm", "--force", box["name"]], capture_output=True)
     if windows.CANCELLED:
-        say(f"Setting up the {label} was stopped. Nothing was installed.")
+        say(_("Setting up the {label} was stopped. Nothing was installed.").format(label=label))
     else:
-        windows.failed(f"Setting up the {label}")
+        windows.failed(_("Setting up the {label}").format(label=label))
     return False
 
 
@@ -200,15 +210,19 @@ def box_works(name):
 
 def repair(kind, why="", confirm=True):
     """Make a broken box again from scratch and put back the apps that were installed in it."""
-    _, _, label = box_words(kind)
+    label = _(box_words(kind)[2])
     box = common.BOXES[kind]["name"]
     inside = [r for r in app_list.load() if r["where"] == box]
-    names = ", ".join(r["title"] for r in inside) or "none"
+    names = ", ".join(r["title"] for r in inside) or _("none")
     size = image_size(common.BOXES[kind]["image"])
-    sz = "" if size == 0 or size is None else f" (downloads about {size} MB)"
-    if confirm and ask(f"{why or f'The {label} is not working.'}\n\nRepair: rebuilds it{sz} and puts back its apps: "
-                       f"{names}.\n\nYour files are not touched. Anything added to the box another way is not put "
-                       f"back.", ok="Repair") != "ok":
+    if size == 0 or size is None:
+        rebuild = _("Repair: rebuilds it and puts back its apps: {names}.")
+    else:
+        rebuild = _("Repair: rebuilds it (downloads about {size} MB) and puts back its apps: {names}.")
+    if confirm and ask((why or _("The {label} is not working.").format(label=label)) + "\n\n" +
+                       rebuild.format(names=names, size=size) + "\n\n" +
+                       _("Your files are not touched. Anything added to the box another way is not put back."),
+                       ok=_("Repair")) != "ok":
         return 1
     for r in inside:
         launchers.unexport(r)
@@ -235,12 +249,13 @@ def repair(kind, why="", confirm=True):
             back.append(r["title"])
         else:
             missing.append(r["title"])
-    text = f"The {label} is repaired."
+    text = _("The {label} is repaired.").format(label=label)
     if back:
-        text += "\n\nPut back: " + ", ".join(back) + "."
+        text += "\n\n" + _("Put back: {apps}.").format(apps=", ".join(back))
     if missing:
-        text += "\n\nNot put back (open their files again to install them): " + ", ".join(missing) + "."
-    notify(f"The {label} is repaired.")
+        text += "\n\n" + _("Not put back (open their files again to install them): {apps}.").format(
+            apps=", ".join(missing))
+    notify(_("The {label} is repaired.").format(label=label))
     say(text)
     return 0
 
@@ -250,20 +265,21 @@ def repair_command(only_broken=False):
     used = {r["where"] for r in app_list.load()}
     kinds = [k for k, b in common.BOXES.items() if box_exists(b["name"]) or b["name"] in used]
     if not kinds:
-        say("There are no app boxes to repair.")
+        say(_("There are no app boxes to repair."))
         return 0
     if only_broken:
         broken = [k for k in kinds if not (box_exists(common.BOXES[k]["name"]) and box_works(common.BOXES[k]["name"]))]
         if not broken:
-            say("Your app boxes are working. The box that did not update was made outside Install Package File, "
-                "so Repair cannot fix it.")
+            say(_("Your app boxes are working. The box that did not update was made outside Install Package File, "
+                  "so Repair cannot fix it."))
             return 0
         kinds = broken
     if len(kinds) == 1:
         i = 0
     else:
-        i = choose("Which box do you want to repair?", ["Box"], [[common.BOXES[k]["label"]] for k in kinds])
+        i = choose(_("Which box do you want to repair?"), [_("Box")], [[_(common.BOXES[k]["label"])] for k in kinds])
         if i is None:
             return 1
-    label = common.BOXES[kinds[i]]["label"]
-    return repair(kinds[i], why=f"Repair the {label}? Use this if apps in it no longer open or update.")
+    label = _(common.BOXES[kinds[i]]["label"])
+    return repair(kinds[i], why=_("Repair the {label}? Use this if apps in it no longer open or update.")
+                  .format(label=label))

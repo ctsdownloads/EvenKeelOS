@@ -3,6 +3,7 @@ import datetime
 
 from gi.repository import Gtk
 
+from i18n import N_
 from widgets import ChoiceList, PasswordPair
 
 
@@ -37,11 +38,11 @@ class Choices:
 
 
 class Screen:
-    title = ""
+    title = ""                     # title, step, next_label, main, danger: N_() here, the window uses _()
     step = ""                      # the name in the step line ("Step 3 of 14: Keyboard"); empty: not a step
     intro = ""
     back = True
-    next_label = "Next"            # None: no Next button
+    next_label = N_("Next")        # None: no Next button
     main = None                    # the action button shown as the main one
     danger = None                  # the action button shown in red
 
@@ -60,6 +61,9 @@ class Screen:
 
     def refresh(self):
         pass
+
+    def relabel(self):
+        """Called each time the window shows this screen: set again any text built into its widgets."""
 
     def pick(self, i):
         pass
@@ -119,6 +123,9 @@ class PasswordChoiceScreen(ListScreen):
         self.list.set_propagate_natural_height(True)
         self.pair = PasswordPair(self.what, self._typed)
         self.body.append(self.pair)
+
+    def relabel(self):
+        self.pair.refresh()
 
     def _typed(self):
         self.keep(self.pair.text() if self.pair.ready() else "")

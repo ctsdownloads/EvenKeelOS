@@ -46,10 +46,6 @@ install -Dm644 /src/io.github.ctsdownloads.EvenKeelOS.Installer.desktop \
 install -Dm644 /branding/logo-EvenKeel.svg /usr/share/icons/hicolor/scalable/apps/evenkeel-os-installer.svg
 gtk-update-icon-cache -f /usr/share/icons/hicolor
 install -Dm644 /build-branding/logo-EvenKeel-wide.svg /usr/share/evenkeel-os-installer/logo-wide.svg
-# Languages: the ones Fedora's installer is translated into.
-dnf5 repoquery --quiet --setopt=optional_metadata_types=filelists --list anaconda-core \
-  | sed -n 's|^/usr/share/locale/\([^/]*\)/LC_MESSAGES/anaconda.mo$|\1|p' | sort -u \
-  > /usr/share/evenkeel-os-installer/anaconda-translations.txt
 
 # Dock: installer, Firefox, Files, Bazaar.
 cat > /usr/share/glib-2.0/schemas/zz2-evenkeel-os-live.gschema.override <<'OVR'
@@ -144,7 +140,10 @@ loader.exec_module(tools)
 engine = runpy.run_path("/usr/libexec/evenkeel-os-install-engine")["GUIDE_HIDDEN"]
 sys.exit(str(tools.GUIDE_HIDDEN) != "/h/" + engine)
 PY
-[ "$(wc -l < /usr/share/evenkeel-os-installer/anaconda-translations.txt)" -ge 50 ] || fail "the installer's language list is missing"
+# The installer lists only languages EvenKeelOS is translated into (from the image's evenkeel-os.mo files).
+mo=(/usr/share/locale/*/LC_MESSAGES/evenkeel-os.mo)
+[ -f "${mo[0]}" ] && [ "${#mo[@]}" -ge 66 ] || fail "EvenKeelOS's translations are missing"
+[ -f /usr/share/locale/de/LC_MESSAGES/xkeyboard-config.mo ] || fail "keyboard names have no translations"
 # The fit check runs, and knows the kernel's message for a disk hidden by the BIOS's RAID setting.
 python3 -I - <<'PY' || fail "the live USB's fit check doesn't work"
 import sys
@@ -199,7 +198,9 @@ import sys; sys.path.insert(0, "/usr/lib/evenkeel-os-installer")
 import gi; gi.require_version("Gtk", "4.0"); gi.require_version("Adw", "1")
 from gi.repository import Adw, Gtk
 import data, pwquality
-assert len(data.languages()) >= 50, "languages"
+import i18n, langtable
+translated = {langtable.parse_locale(t).language for t in i18n.translations()} | {"en"}
+assert {lang for lang, *_ in data.languages()} == translated, "languages"
 assert len(data.keyboards()) >= 500, "keyboards"
 # kbd-misc ships with the image, so the installed system has these keymaps.
 assert data.has_console_keymap("us") and data.has_console_keymap("de(nodeadkeys)"), "keyboards for the disk password"

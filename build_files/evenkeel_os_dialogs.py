@@ -15,6 +15,7 @@ import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gio, GLib, Gtk, Pango  # noqa: E402
+from evenkeel_os_ui import _  # noqa: E402
 
 ICONS = {"question": "dialog-question-symbolic", "info": "dialog-information-symbolic",
          "warning": "dialog-warning-symbolic", "error": "dialog-error-symbolic", "list": "view-list-symbolic",
@@ -117,7 +118,7 @@ class Request:
             self.ok.set_sensitive(row is not None)
 
     def password_box(self):
-        self.entry = Adw.PasswordEntryRow(title="Password")
+        self.entry = Adw.PasswordEntryRow(title=_("Password"))
         self.entry.connect("entry-activated", lambda *_: self.reply("ok", value=self.entry.get_text()))
         box = Gtk.ListBox(css_classes=["boxed-list"], selection_mode=Gtk.SelectionMode.NONE)
         box.append(self.entry)
@@ -126,16 +127,16 @@ class Request:
     def buttons(self):
         r, kind = self.req, self.kind
         if kind == "question":
-            labels = [("cancel", r.get("cancel-label") or "No"), ("extra", r.get("extra-button")),
-                      ("ok", r.get("ok-label") or "Yes")]
+            labels = [("cancel", r.get("cancel-label") or _("No")), ("extra", r.get("extra-button")),
+                      ("ok", r.get("ok-label") or _("Yes"))]
         elif kind in ("list", "password"):
-            labels = [("cancel", r.get("cancel-label") or "Cancel"), ("ok", r.get("ok-label") or "OK")]
+            labels = [("cancel", r.get("cancel-label") or _("Cancel")), ("ok", r.get("ok-label") or _("OK"))]
         elif kind == "progress":
-            labels = [] if "no-cancel" in self.flags else [("cancel", "Cancel")]
+            labels = [] if "no-cancel" in self.flags else [("cancel", _("Cancel"))]
         elif kind == "file-selection":
             labels = []
         else:
-            labels = [("ok", r.get("ok-label") or "OK")]
+            labels = [("ok", r.get("ok-label") or _("OK"))]
         row = Gtk.Box(spacing=12, halign=Gtk.Align.END, margin_top=6)
         for button, text in labels:
             if not text:
@@ -191,9 +192,9 @@ class Request:
             self.reply("ok")
 
     def pick_file(self, window):
-        name, _, patterns = self.req.get("file-filter", "").partition("|")
+        name, _sep, patterns = self.req.get("file-filter", "").partition("|")
         filters = Gio.ListStore.new(Gtk.FileFilter)
-        dialog = Gtk.FileDialog(title=self.req.get("title") or "Pick a file")
+        dialog = Gtk.FileDialog(title=self.req.get("title") or _("Pick a file"))
         if patterns.strip():
             f = Gtk.FileFilter(name=name.strip())
             for p in patterns.split():
@@ -236,7 +237,7 @@ class Dialogs:
     def accept(self):
         while True:
             try:
-                conn, _ = self.server.accept()
+                conn, _addr = self.server.accept()
             except OSError:
                 return
             threading.Thread(target=self.serve, args=(conn,), daemon=True).start()
@@ -285,6 +286,7 @@ class Dialogs:
             return
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=18, margin_top=72, valign=Gtk.Align.START)
         box.append(Adw.Spinner(width_request=32, height_request=32))
-        box.append(Gtk.Label(label=f"{self.title}: working…" if self.title else "Working…", wrap=True,
+        box.append(Gtk.Label(label=_("{title}: working…").format(title=self.title) if self.title else _("Working…"),
+                             wrap=True,
                              css_classes=["title-4"]))
         self.view.set_child(box)

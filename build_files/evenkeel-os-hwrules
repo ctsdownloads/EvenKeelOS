@@ -11,6 +11,9 @@ import subprocess
 import sys
 from pathlib import Path
 
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+from evenkeel_os_ui import _  # noqa: E402
+
 RULES = Path("/etc/udev/rules.d")
 PKG = re.compile(r"^[A-Za-z0-9][A-Za-z0-9.+_-]{0,127}$")
 FILE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._+-]{0,127}\.rules$")
@@ -104,32 +107,33 @@ def add(pkg, files):
     for f in files:
         name = os.path.basename(f)
         if not FILE.match(name):
-            fail(f"Not a rule file name: {name}")
+            fail(_("Not a rule file name: {name}").format(name=name))
         try:            # never through a shortcut (symlink): read only the plain file itself
             fd = os.open(f, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
         except OSError:
-            fail(f"{name} can't be read, or is a shortcut to another file.")
+            fail(_("{name} can't be read, or is a shortcut to another file.").format(name=name))
         with os.fdopen(fd, "rb") as fh:
             st = os.fstat(fh.fileno())
             if not stat.S_ISREG(st.st_mode):
-                fail(f"{name} is not a plain file.")
+                fail(_("{name} is not a plain file.").format(name=name))
             if st.st_size > 64 * 1024:
-                fail(f"{name} is too large for a hardware rule.")
+                fail(_("{name} is too large for a hardware rule.").format(name=name))
             try:
                 text = fh.read(64 * 1024 + 1).decode("utf-8")
             except UnicodeDecodeError:
-                fail(f"{name} is not a text file.")
+                fail(_("{name} is not a text file.").format(name=name))
         joined = re.sub(r"\\\n", " ", text)
         if any(RUNS_PROGRAM.search(line) for line in joined.splitlines() if not line.lstrip().startswith("#")):
-            fail(f"{name} runs a program, so it is not added.")
+            fail(_("{name} runs a program, so it is not added.").format(name=name))
         if grants_storage(joined):
-            fail(f"{name} could give access to disks, other system devices or every keyboard, so it is not added.")
+            fail(_("{name} could give access to disks, other system devices or every keyboard, "
+                   "so it is not added.").format(name=name))
         target = RULES / name
         if target.exists() and not ours(target, pkg):
-            fail(f"{target} already exists and belongs to something else.")
+            fail(_("{path} already exists and belongs to something else.").format(path=target))
         texts[name] = text
     if not texts:
-        fail("No rule files given.")
+        fail(_("No rule files given."))
     RULES.mkdir(parents=True, exist_ok=True)
     for name, text in texts.items():
         tmp = RULES / f".{name}.tmp"

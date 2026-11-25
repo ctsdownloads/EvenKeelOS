@@ -2,6 +2,8 @@
 import pwquality
 from gi.repository import Adw, GLib, Gtk
 
+from i18n import _, N_
+
 
 class ChoiceList(Gtk.ScrolledWindow):
     """A scrolling list; clicking a line picks it."""
@@ -71,14 +73,16 @@ class ChoiceList(Gtk.ScrolledWindow):
 class PasswordPair(Gtk.Box):
     """A password typed twice, with a strength meter. ready() when both match and it isn't empty."""
 
-    WORDS = ["Too weak", "Weak", "Fair", "Good", "Strong"]
+    # Translators: how strong a typed password is, from worst to best
+    WORDS = [N_("Too weak"), N_("Weak"), N_("Fair"), N_("Good"), N_("Strong")]
 
     def __init__(self, what, on_change):
         super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=8)
         self.on_change = on_change
+        self.what = what
         rows = Gtk.ListBox(selection_mode=Gtk.SelectionMode.NONE, css_classes=["boxed-list"])
-        self.first = Adw.PasswordEntryRow(title=what)
-        self.second = Adw.PasswordEntryRow(title=f"{what}, again")
+        self.first = Adw.PasswordEntryRow()
+        self.second = Adw.PasswordEntryRow()
         for entry in (self.first, self.second):
             entry.connect("changed", self._changed)
             rows.append(entry)
@@ -87,7 +91,7 @@ class PasswordPair(Gtk.Box):
         self.note = Gtk.Label(xalign=0, css_classes=["dim-label"], wrap=True)
         self.append(self.meter)
         self.append(self.note)
-        self._show()
+        self.refresh()
 
     def text(self):
         return self.first.get_text()
@@ -109,16 +113,19 @@ class PasswordPair(Gtk.Box):
             return 0, e.args[1] if len(e.args) > 1 else ""
 
     def _changed(self, *_):
-        self._show()
+        self.refresh()
         self.on_change()
 
-    def _show(self):
-        """The meter and the note under it, for what is typed now."""
+    def refresh(self):
+        """The titles, the meter and the note under it, for what is typed now and the language now."""
+        self.first.set_title(_(self.what))
+        self.second.set_title(_("{password}, again").format(password=_(self.what)))
         level, problem = self.strength()
         self.meter.set_value(level)
         if not self.text():
-            self.note.set_text("Type it, then type it again below.")
+            self.note.set_text(_("Type it, then type it again below."))
         elif self.second.get_text() and self.second.get_text() != self.text():
-            self.note.set_text("The two don't match yet.")
+            self.note.set_text(_("The two don't match yet."))
         else:
-            self.note.set_text(f"Strength: {self.WORDS[level]}." + (f" {problem}." if problem else ""))
+            self.note.set_text(_("Strength: {strength}.").format(strength=_(self.WORDS[level]))
+                               + (f" {problem}." if problem else ""))

@@ -7,7 +7,7 @@ import sys
 import time
 
 import evenkeel_os_ui as ui
-from evenkeel_os_ui import GUI
+from evenkeel_os_ui import GUI, _, N_
 from evenkeel_os_packages import (
     after_restart, artcraft, boxes, common, install_file, launchers, login_apps, reading, remove_apps, vpn, windows,
     windows_file, zoom,
@@ -26,7 +26,7 @@ def check(path):
     return 0
 
 
-USAGE = """  evenkeel-os-packages install [FILE]   install an .rpm or .deb (no FILE: pick one from Downloads)
+USAGE = N_("""  evenkeel-os-packages install [FILE]   install an .rpm or .deb (no FILE: pick one from Downloads)
   evenkeel-os-packages remove           remove an app installed this way
   evenkeel-os-packages check FILE       say what a package needs, without installing anything
   evenkeel-os-packages repair           set a broken app box up again (--if-broken: only if one does not work)
@@ -35,7 +35,7 @@ USAGE = """  evenkeel-os-packages install [FILE]   install an .rpm or .deb (no F
   evenkeel-os-packages check-windows FILE  say what a Windows file is and what would be offered, without any window
   evenkeel-os-packages zoom LINK        a Zoom "open the app" link: open the meeting in Zoom's web version, in Chrome
   evenkeel-os-packages vpn [NAME]       add a VPN from its company's own download source (mullvad, proton, ivpn,
-                                        nordvpn; no NAME: pick one)"""
+                                        nordvpn; no NAME: pick one)""")
 
 
 def try_lock(lock):
@@ -54,7 +54,7 @@ def take_lock(lock, quiet=False):
     if quiet:           # the login task: leave it for the next login rather than wait in the background
         return False
     if not GUI:
-        print(f"Waiting for the other install or removal to finish ({doing_now()}).")
+        print(_("Waiting for the other install or removal to finish ({doing}).").format(doing=doing_now()))
         fcntl.flock(lock, fcntl.LOCK_EX)
         return True
     text = waiting_text(doing_now())
@@ -77,21 +77,22 @@ def take_lock(lock, quiet=False):
 
 def waiting_text(now):
     """One line: a progress window's text update ends at the line's end, so a second line would be dropped."""
-    return f"Another install or removal is running ({now.rstrip('.')}). This waits for it to finish, then goes on."
+    return _("Another install or removal is running ({doing}). This waits for it to finish, then goes on.").format(
+        doing=now.rstrip("."))
 
 
 def doing_now():
     try:
-        return windows.BUSY.read_text().strip() or "Install Package File"
+        return windows.BUSY.read_text().strip() or _("Install Package File")
     except OSError:
-        return "Install Package File"
+        return _("Install Package File")
 
 
 def main(argv):
     if len(argv) < 2 or argv[1] not in ("install", "remove", "check", "after-restart", "repair", "login", "windows",
                                         "check-windows", "zoom", "vpn") or \
             (argv[1] in ("check", "windows", "check-windows", "zoom") and len(argv) < 3):
-        print(USAGE)
+        print(_(USAGE))
         return 2
     if argv[1] == "check":
         return check(argv[2])
@@ -107,17 +108,18 @@ def main(argv):
             and not artcraft.update_due():
         return 0
     # each window carries the name of what it is part of
-    ui.TITLE = {"remove": "Remove Apps", "repair": "Repair App Boxes", "login": "Start Apps at Login",
-                "windows": "Windows Program", "vpn": "Get a VPN"}.get(argv[1], ui.TITLE)
+    titles = {"remove": N_("Remove Apps"), "repair": N_("Repair App Boxes"), "login": N_("Start Apps at Login"),
+              "windows": N_("Windows Program"), "vpn": N_("Get a VPN")}
+    if argv[1] in titles:
+        ui.TITLE = _(titles[argv[1]])
     common.CACHE.mkdir(parents=True, exist_ok=True)
     lock = open(common.CACHE / ".lock", "w")
     if not take_lock(lock, quiet=argv[1] == "after-restart"):
         return 1
-    windows.mark_busy({"install": "Install Package File is open", "remove": "Remove Apps is open",
-                       "repair": "Repair App Boxes is open",
-                       "login": "Start Apps at Login is open",
-                       "windows": "Windows Program is open",
-                       "vpn": "Get a VPN is open"}.get(argv[1], "Starting"))
+    busy = {"install": N_("Install Package File is open"), "remove": N_("Remove Apps is open"),
+            "repair": N_("Repair App Boxes is open"), "login": N_("Start Apps at Login is open"),
+            "windows": N_("Windows Program is open"), "vpn": N_("Get a VPN is open")}
+    windows.mark_busy(_(busy.get(argv[1], N_("Starting"))))
     if argv[1] == "after-restart":
         after_restart.after_restart()
         return artcraft.update(artcraft.update_due())
@@ -131,7 +133,7 @@ def main(argv):
         return windows_file.open_file(argv[2])
     if argv[1] == "vpn":
         if len(argv) > 2 and argv[2] not in vpn.load():
-            print(USAGE)
+            print(_(USAGE))
             return 2
         return vpn.install(argv[2]) if len(argv) > 2 else vpn.pick()
     return remove_apps.remove()

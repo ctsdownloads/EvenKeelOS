@@ -11,7 +11,7 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
-from evenkeel_os_ui import human
+from evenkeel_os_ui import N_, _, human, ngettext
 
 
 def staged():
@@ -86,13 +86,15 @@ def added_to_system():
                                   "requested-base-local-replacements"))
 
 
-STAGES = {"unpack": "unpacking the new version",
-          "apps": "adding the apps you put on the system to the new version",
-          "save": "saving the new version so it starts at your next restart"}
+STAGES = {"unpack": N_("unpacking the new version"),
+          "apps": N_("adding the apps you put on the system to the new version"),
+          "save": N_("saving the new version so it starts at your next restart")}
 
 
 def ago(secs):
-    return "%d seconds so far" % secs if secs < 60 else "about %d min so far" % round(secs / 60)
+    if secs < 60:
+        return ngettext("{n} second so far", "{n} seconds so far", secs).format(n=secs)
+    return ngettext("about {n} min so far", "about {n} min so far", round(secs / 60)).format(n=round(secs / 60))
 
 
 def progress():
@@ -113,10 +115,12 @@ def progress():
         stage, began, said = name, time.time(), time.time()
         k = order.index(name)
         bar(0.7 + 0.3 * k / len(order))
-        print("# Updating the system: step %d of %d, %s." % (k + 1, len(order), STAGES[name]))
+        # Translators: {stage} is a phrase that ends the sentence, such as "unpacking the new version"
+        print("# " + _("Updating the system: step {step} of {total}, {stage}.").format(
+            step=k + 1, total=len(order), stage=_(STAGES[name])))
 
     while True:
-        ready, _, _ = select.select([sys.stdin], [], [], 5)
+        ready, _w, _x = select.select([sys.stdin], [], [], 5)
         if ready:
             chunk = os.read(sys.stdin.fileno(), 65536)
             if not chunk:
@@ -130,7 +134,9 @@ def progress():
                     continue
                 msg = str(d.get("msg", ""))
                 if msg == "Updating" and "title" in d:
-                    step, since, shown = "Updating " + d["title"] + ": " + d.get("description", ""), time.time(), 0
+                    step = _("Updating {title}: {description}").format(title=d["title"],
+                                                                        description=d.get("description", ""))
+                    since, shown = time.time(), 0
                     parts = done = 0
                     stage = ""
                     low, width = float(d.get("overall", 0)), 0.0
@@ -146,16 +152,19 @@ def progress():
                     parts += int(m.group(1))
                     size_text = m.group(2).replace(" ", " ")
                     size, base = nbytes(size_text), received()
-                    text = "Updating the system: downloading the new version, %s in %d parts." % (size_text, parts)
+                    text = ngettext("Updating the system: downloading the new version, {size} in {n} parts.",
+                                    "Updating the system: downloading the new version, {size} in {n} parts.",
+                                    parts).format(size=size_text, n=parts)
                 elif re.match(r"\[(\d+)/(\d+)\]", msg) and msg.endswith("done"):
                     done, parts = map(int, re.match(r"\[(\d+)/(\d+)\]", msg).groups())
                     if done < parts:
-                        text = "Updating the system: downloaded part %d of %d." % (done, parts)
+                        text = _("Updating the system: downloaded part {done} of {total}.").format(
+                            done=done, total=parts)
                         bar(0.7 * done / parts)
                     elif order:
                         install("unpack")
                 elif msg.startswith("Pulling manifest"):
-                    text = "Updating the system: checking for a new version."
+                    text = _("Updating the system: checking for a new version.")
                 elif msg.startswith("Checking out tree") and order:
                     install(order[1])
                 elif msg.startswith("Writing OSTree commit") and stage == "apps":
@@ -163,9 +172,9 @@ def progress():
                 elif msg.startswith("Staging deployment") and msg.endswith("done"):
                     stage = ""
                     bar(1.0)
-                    text = "Updating the system: the new version is installed. It starts at your next restart."
+                    text = _("Updating the system: the new version is installed. It starts at your next restart.")
                 elif msg.startswith("No upgrade available"):
-                    text = "Updating the system: it is already up to date."
+                    text = _("Updating the system: it is already up to date.")
                 if text:
                     since, shown, said = time.time(), 0, time.time()
                     print("# " + text)
@@ -173,21 +182,23 @@ def progress():
             if time.time() - said >= 10:
                 said = time.time()
                 k = order.index(stage)
-                print("# Updating the system: step %d of %d, %s (%s)." %
-                      (k + 1, len(order), STAGES[stage], ago(int(time.time() - began))))
+                # Translators: {stage} is a phrase such as "unpacking the new version"; {elapsed} is the time so far
+                print("# " + _("Updating the system: step {step} of {total}, {stage} ({elapsed}).").format(
+                    step=k + 1, total=len(order), stage=_(STAGES[stage]), elapsed=ago(int(time.time() - began))))
         elif parts and done < parts and size and base is not None and time.time() - said >= 10:
             now = received()
             if now is not None:
                 got = min(max(now - base, 0), size)
                 said = time.time()
                 bar(0.7 * got / size)
-                print("# Updating the system: downloading part %d of %d, about %s of %s so far." %
-                      (min(done + 1, parts), parts, human(got / 1e6), size_text))
+                print("# " + _("Updating the system: downloading part {part} of {total}, "
+                                "about {got} of {size} so far.").format(
+                    part=min(done + 1, parts), total=parts, got=human(got / 1e6), size=size_text))
         elif step:
             mins = int(time.time() - since) // 60
             if mins > shown:
                 shown = mins
-                print("# %s  (still working, %d min so far)" % (step, mins))
+                print("# " + _("{step}  (still working, {n} min so far)").format(step=step, n=mins))
 
 
 def whats_new():
@@ -208,14 +219,15 @@ def whats_new():
     since = time.strftime("%Y-%m-%d", time.gmtime(int(now.get("timestamp", 0))))
     out = []
     for line in lines:
-        date, _, title = line.partition("\t")
+        date, _tab, title = line.partition("\t")
         if line in have or date < since or re.match(r"(README|Build)\b", title):
             continue
         title = re.sub(r"\s*\(#\d+\)$", "", title)
         out.append("- " + title.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
     if out:
         more = len(out) - 8
-        print("What is new:\n" + "\n".join(out[:8]) + ("\n- and %d more" % more if more > 0 else ""))
+        rest = ngettext("- and {n} more", "- and {n} more", more).format(n=more) if more > 0 else ""
+        print(_("What is new:") + "\n" + "\n".join(out[:8]) + ("\n" + rest if rest else ""))
 
 
 COMMANDS = {"staged": staged, "failed-parts": failed_parts, "low-battery": low_battery, "progress": progress,
