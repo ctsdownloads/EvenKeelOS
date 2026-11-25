@@ -12,7 +12,7 @@
                                                   8: nothing here to break, 9: the driver is built in)
   evenkeel-os-tools-admin test-rollback clear     take the test marker off the version running now
   evenkeel-os-tools-admin keep-update             keep the new version a failed startup check is asking about
-  evenkeel-os-tools-admin firewall SERVICE on|off  SERVICE: ssh, ipp; on Home and Work networks only, never Public
+  evenkeel-os-tools-admin firewall SERVICE on|off  SERVICE: ssh, ipp; on Home networks only
   evenkeel-os-tools-admin firewall default        a network with no place set is a Public place
   evenkeel-os-tools-admin sharing on|off          Shared folders, on Home networks only (exit 3: no password yet)
   evenkeel-os-tools-admin sharing add FOLDER ro|rw
@@ -20,6 +20,10 @@
   evenkeel-os-tools-admin sharing remove FOLDER
   evenkeel-os-tools-admin sharing password        the sharing password on standard input
   evenkeel-os-tools-admin sharing sync            run it if a Home network is connected, stop it if not
+  evenkeel-os-tools-admin let-in PLACE app SERVICE        PLACE: home, work, public; SERVICE: a firewalld service
+  evenkeel-os-tools-admin let-in PLACE ports LABEL PORT...  PORT: 8096/tcp or 2456-2458/udp, up to 20
+  evenkeel-os-tools-admin let-in PLACE remove ID         take an app or ports back out (exit 3: refused)
+  evenkeel-os-tools-admin let-in update          once, after the update: Work lets nothing in, like Public
 """
 import fcntl
 import json
@@ -32,6 +36,7 @@ from pathlib import Path
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
 import evenkeel_os_health as health  # noqa: E402
+import evenkeel_os_letin as letin  # noqa: E402
 import evenkeel_os_network as net  # noqa: E402
 import evenkeel_os_sharing as sharing  # noqa: E402
 
@@ -42,7 +47,7 @@ GREENBOOT_ON = Path("/usr/lib/systemd/system/multi-user.target.wants/greenboot-h
 TEST_ARGS = Path("/var/lib/evenkeel-os/test-rollback-args")
 UUID = re.compile(r"^[0-9a-fA-F-]{36}$")
 FIREWALL_SERVICES = ("ssh", "ipp")             # the Network safety switches: SSH, Share my printer
-SWITCHED_ZONES = ("evenkeel-home", "evenkeel-work")
+SWITCHED_ZONES = ("evenkeel-home",)
 
 
 def fail(msg, code=1):
@@ -213,7 +218,7 @@ def keep_update():
 
 
 def let_in(service, state):
-    """Home and Work networks let the service in (on) or keep it out (off); saved and reloaded. "" when it worked."""
+    """Home networks let the service in (on) or keep it out (off); saved and reloaded. "" when it worked."""
     for zone in SWITCHED_ZONES:
         flag = f"--{'add' if state == 'on' else 'remove'}-service={service}"
         r = subprocess.run(["/usr/bin/firewall-cmd", "--permanent", f"--zone={zone}", flag],
@@ -226,7 +231,7 @@ def let_in(service, state):
 
 
 def firewall(service, state):
-    """Switch a service on (it runs, and Home and Work networks let it in) or off; both or neither."""
+    """Switch a service on (it runs, and Home networks let it in) or off; both or neither."""
     problem = let_in(service, state)
     if problem:
         fail(problem)
@@ -401,6 +406,159 @@ def sharing_command(args):
             sharing_sync()
 
 
+LET_IN_LOCK = Path("/run/evenkeel-os/let-in.lock")
+LET_IN_ZONES = {"home": net.HOME, "work": net.WORK, "public": net.PUBLIC}
+# Done once: before this, Work let in ports 1025 to 65535 and the SSH and printer switches, like Home.
+WORK_UPDATED = Path("/var/lib/evenkeel-os/work-lets-nothing-in")
+OLD_WORK = (["--remove-port=1025-65535/tcp", "--remove-port=1025-65535/udp", "--remove-service=ssh",
+             "--remove-service=ipp"])
+
+
+def firewall_change(zone, flags, mend=()):
+    """Saved changes to one zone, then reloaded; "" when it worked. Already there, or already gone, is fine.
+    mend: changes made even when one of flags failed, so the saved settings never keep a hole."""
+    problem = ""
+    for flag in [*flags, *mend]:
+        if problem and flag not in mend:
+            continue
+        r = subprocess.run(["/usr/bin/firewall-cmd", "--permanent", f"--zone={zone}", flag],
+                           capture_output=True, text=True)
+        if r.returncode != 0 and not any(w in r.stderr for w in ("ALREADY_ENABLED", "NOT_ENABLED")):
+            problem = problem or f"The firewall didn't take the change: {r.stderr.strip()}"
+    if subprocess.run(["/usr/bin/firewall-cmd", "--reload"], capture_output=True).returncode != 0:
+        problem = problem or "The firewall didn't reload."
+    return problem
+
+
+def save_let_in(state):
+    tmp = letin.STATE.with_suffix(".tmp")
+    tmp.parent.mkdir(parents=True, exist_ok=True)
+    tmp.write_text(json.dumps(state, indent=1) + "\n")
+    tmp.chmod(0o644)
+    os.replace(tmp, letin.STATE)
+
+
+def still_open(zone, entries):
+    """Adds back every port the place itself and these entries use. firewalld merges and splits port ranges, so taking
+    a port out can cut a hole in a range something else needs; adding them all back mends it."""
+    _, base_ports = letin.zone_base(zone)
+    return [f"--add-port={p}" for p in sorted(base_ports | {p for e in entries for p in e["ports"]})]
+
+
+def let_in_add(zone, entry, flags):
+    state = letin.load()
+    entries = state.setdefault(zone, [])
+    if any(e["id"] == entry["id"] for e in entries):
+        fail(f"{entry['label']} is already let in here.", 3)
+    problem = firewall_change(zone, flags)
+    if problem:         # take back whatever got in before the firewall refused
+        firewall_change(zone, [f.replace("--add-", "--remove-", 1) for f in flags], still_open(zone, entries))
+        fail(problem)
+    entries.append(entry)
+    save_let_in(state)
+
+
+SHARING_PORTS = ("445/tcp", "139/tcp", "137/udp", "138/udp", "3702/udp", "3702/tcp", "5357/tcp")    # Samba, wsdd
+
+
+def shares_folders(zone, ports):
+    """Folders are shared only on Home (Shared folders): Samba's and wsdd's ports can't be let in anywhere else."""
+    def inside(p, q):
+        (lo, hi), (qlo, qhi) = (tuple(map(int, (x.split("/")[0].split("-") * 2)[:2])) for x in (p, q))
+        return p.split("/")[1] == q.split("/")[1] and lo <= qhi and qlo <= hi
+    return zone != net.HOME and any(inside(p, q) for p in ports for q in SHARING_PORTS)
+
+
+def service_ports(service, seen=()):
+    """A firewalld service's ports, with those of the services it includes; [] for one that isn't there."""
+    path = letin.SERVICES / f"{service}.xml"
+    if service in seen or not letin.SERVICE_NAME.match(service) or not path.is_file():
+        return []
+    text = path.read_text()
+    found = [letin.port(f"{p}/{proto}") for p, proto in
+             re.findall(r'<port\b(?=[^>]*\bport="([0-9-]+)")(?=[^>]*\bprotocol="(tcp|udp)")[^>]*>', text)]
+    for inc in re.findall(r'<include\s+service="([^"]+)"', text):
+        found += service_ports(inc, (*seen, service))
+    return [p for p in found if p]
+
+
+def let_in_app(zone, service):
+    """A firewalld service from the image's own list; the SSH and printer switches cover those two on Home."""
+    path = letin.SERVICES / f"{service}.xml"
+    base, _ = letin.zone_base(zone)
+    if not letin.SERVICE_NAME.match(service) or not path.is_file() or service.startswith("evenkeel-"):
+        fail(f"{service} isn't an app on this computer's list.", 3)
+    if service in base:
+        fail(f"{service} is always let in here.", 3)
+    if zone == net.HOME and service in FIREWALL_SERVICES:
+        fail("On Home, use the switch for it above.", 3)
+    if shares_folders(zone, service_ports(service)):
+        fail("It opens file sharing ports: folders are shared only on Home networks, in Shared folders.", 3)
+    short = re.search(r"<short>([^<]*)</short>", path.read_text())
+    let_in_add(zone, {"id": service, "label": letin.label(short[1] if short else "") or service,
+                      "service": service, "ports": []}, [f"--add-service={service}"])
+
+
+def let_in_ports(zone, name, specs):
+    tidy, ports = letin.label(name), letin.ports(specs)
+    if not tidy:
+        fail(f"Give it a name of 1 to {letin.MAX_LABEL} characters.", 3)
+    if ports is None:
+        fail(f"Use 1 to {letin.MAX_PORTS} ports from 1 to 65535, each as 8096/tcp or 2456-2458/udp.", 3)
+    if shares_folders(zone, ports):
+        fail("Those are file sharing ports: folders are shared only on Home networks, in Shared folders.", 3)
+    entry_id = "ports:" + ",".join(ports)
+    let_in_add(zone, {"id": entry_id, "label": tidy, "service": "", "ports": ports},
+               [f"--add-port={p}" for p in ports])
+
+
+def let_in_remove(zone, entry_id):
+    """Out of the list and the zone; a port another entry or the place itself still uses stays open."""
+    state = letin.load()
+    entries = state.get(zone, [])
+    entry = next((e for e in entries if e["id"] == entry_id), None)
+    if entry is None:
+        fail("That isn't let in here.", 3)
+    rest = [e for e in entries if e is not entry]
+    base_services, _ = letin.zone_base(zone)
+    flags = [f"--remove-port={p}" for p in entry["ports"]]
+    if entry["service"] and entry["service"] not in base_services:
+        flags.append(f"--remove-service={entry['service']}")
+    problem = firewall_change(zone, flags, still_open(zone, rest) if entry["ports"] else ())
+    if problem:
+        fail(problem)
+    state[zone] = rest
+    save_let_in(state)
+
+
+def let_in_update():
+    """Once: Work becomes like Public. Only a Work zone changed on this computer (in /etc) holds the old rules."""
+    if WORK_UPDATED.exists():
+        return
+    if Path(f"/etc/firewalld/zones/{net.WORK}.xml").exists():
+        problem = firewall_change(net.WORK, OLD_WORK)
+        if problem:
+            fail(problem)
+    WORK_UPDATED.parent.mkdir(parents=True, exist_ok=True)
+    WORK_UPDATED.touch()
+
+
+def let_in_command(args):
+    LET_IN_LOCK.parent.mkdir(parents=True, exist_ok=True)
+    with open(LET_IN_LOCK, "w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        if args == ["update"]:
+            let_in_update()
+            return
+        zone = LET_IN_ZONES[args[0]]
+        if args[1] == "app":
+            let_in_app(zone, args[2])
+        elif args[1] == "ports":
+            let_in_ports(zone, args[2], args[3:])
+        else:
+            let_in_remove(zone, args[2])
+
+
 def main(argv):
     if os.geteuid() != 0:
         fail("This helper runs as root, through polkit.")
@@ -424,6 +582,10 @@ def main(argv):
                                        (len(argv) == 5 and argv[2] in ("add", "mode") and argv[4] in sharing.MODES)
                                        or (len(argv) == 4 and argv[2] == "remove")):
         sharing_command(argv[2:])
+    elif argv[1:] == ["let-in", "update"] or (len(argv) >= 5 and argv[1] == "let-in" and argv[2] in LET_IN_ZONES and
+                                               ((argv[3] in ("app", "remove") and len(argv) == 5) or
+                                                (argv[3] == "ports" and len(argv) >= 6))):
+        let_in_command(argv[2:])
     else:
         fail(__doc__, 2)
 

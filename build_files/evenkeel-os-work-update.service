@@ -1,0 +1,13 @@
+[Unit]
+Description=Make Work networks let nothing in, once, on a computer installed before that change
+# Only a Work zone changed on this computer (in /etc) still holds the old rules; the helper checks and marks it done.
+ConditionPathExists=!/var/lib/evenkeel-os/work-lets-nothing-in
+After=firewalld.service
+Requires=firewalld.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/evenkeel-os-tools-admin let-in update
+
+[Install]
+WantedBy=multi-user.target

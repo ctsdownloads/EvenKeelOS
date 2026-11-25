@@ -22,7 +22,10 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/firewall/evenkeel-home.xml`, `evenkeel-work.xml`, `evenkeel-public.xml` | The three firewall zones for Network safety: Home, Work and Public place |
 | `build_files/evenkeel_os_network.py` | Each network's place, shared by Wheelhouse, the question and the installer |
 | `build_files/evenkeel-os-network-ask`, `evenkeel-os-network-ask.desktop` | The once-per-network question, started at login |
-| `build_files/check-network.py` | Build check: the default zone is Public place, Public lets nothing in, Home and Work keep 1025-65535 and have no SSH, open Wi-Fi can't be made Home, and the question is asked only for joined password Wi-Fi networks with no place |
+| `build_files/evenkeel_os_letin.py`, `evenkeel_os_letin_page.py` | Network safety's Let an app in and Open a port: the list of what each place lets in (`/etc/evenkeel-os/let-in.json`), port and name checks, and the page section |
+| `build_files/make-let-in-apps.py`, `let-in-checked.txt` | Builds the app list to pick from (`/usr/share/evenkeel-os/let-in-apps.json`) from the hand-checked apps (each with its source link), firewalld's services and IANA's `/etc/services`; fails the build if a source is missing |
+| `build_files/evenkeel-os-work-update.service` | Once, on a computer installed earlier: takes ports 1025-65535, SSH and printer sharing out of a Work zone changed on that computer |
+| `build_files/check-network.py` | Build check: the default zone is Public place, Public and Work let nothing in, Home keeps 1025-65535 and has no SSH, open Wi-Fi can't be made Home, the question is asked only for joined password Wi-Fi networks with no place, Let in reads ports and names right, never removes a place's own settings, and finds apps by name |
 | `build_files/evenkeel_os_sharing.py` | Shared folders: the shared folders list, which folders may be shared, and the Samba settings written for them |
 | `build_files/samba/smb.conf` | EvenKeelOS's Samba settings: no guest access, no printers, no NetBIOS, Mac-friendly settings, the computer's own name for Macs and Linux. It includes the list Wheelhouse writes |
 | `build_files/samba/wsdd-evenkeel-os.conf` | Holds wsdd to Home networks and restarts it with Samba |
@@ -72,7 +75,7 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
   [Locked versions](#locked-versions));
 - Install Package File misreads four real Fedora packages;
 - a tool would open its windows outside Wheelhouse, or answer differently there;
-- Network safety isn't set up right (a new network isn't a Public place, or Home and Work let in SSH).
+- Network safety isn't set up right (a new network isn't a Public place, Work lets anything in, or Home lets in SSH), or the app list for Let an app in can't be made.
 - Shared folders isn't set up right (guest access is on, Samba or wsdd starts on its own, the firewall service is wrong,
   a hidden folder or another user's folder is accepted, or the shares written don't match the list), or Samba,
   smbpasswd, testparm, setsebool, avahi-daemon or wsdd is missing.

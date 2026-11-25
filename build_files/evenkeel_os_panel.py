@@ -12,6 +12,8 @@ gi.require_version("Adw", "1")
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk  # noqa: E402
 import evenkeel_os_bootopts as bootopts  # noqa: E402
 import evenkeel_os_guide as guide  # noqa: E402
+import evenkeel_os_letin as letin  # noqa: E402
+import evenkeel_os_letin_page as letin_page  # noqa: E402
 import evenkeel_os_network as net  # noqa: E402
 import evenkeel_os_sharing as sharing  # noqa: E402
 import evenkeel_os_yours as yours  # noqa: E402
@@ -31,6 +33,9 @@ CSS = b"""
 .ek-banner .ek-sub { color: #c9d4e2; }
 .ek-banner image { color: #2bb3a3; }
 .ek-banner button { background: #f4f1ea; color: #12355b; font-weight: bold; }
+.ek-banner.ek-home { background: #1f6f68; }
+.ek-banner.ek-public { background: #6b3f00; }
+.ek-banner.ek-home image, .ek-banner.ek-public image { color: #f4f1ea; }
 .ek-banner.ek-warn { background: #7a5600; }
 .ek-drop { border: 2px dashed alpha(currentColor, 0.3); border-radius: 18px; padding: 22px; }
 .ek-drop.ek-over { border-color: @accent_color; background: alpha(@accent_color, 0.08); }
@@ -38,6 +43,7 @@ CSS = b"""
 .ek-layout:checked { border-color: @accent_bg_color; background: alpha(@accent_bg_color, 0.15); }
 """
 
+PLACE_WORDS = {net.WORK: "a Work network", net.PUBLIC: "a Public place"}
 PAGES = [("overview", "Overview", "go-home-symbolic"),
          ("updates", "Updates", "software-update-available-symbolic"),
          ("apps", "Apps", "view-app-grid-symbolic"),
@@ -132,6 +138,14 @@ def tool_list():
              "security-high-symbolic", "network",
              "nmcli connection modify NETWORK connection.zone evenkeel-home (or evenkeel-work, evenkeel-public)",
              "firewall wifi wi-fi wired zone home work public ssh printer ports"),
+        Tool("network", "This network", "Let an app in", "Pick an app or game so other computers can reach it",
+             "network-transmit-receive-symbolic", "network",
+             "pkexec /usr/libexec/evenkeel-os-tools-admin let-in home app SERVICE (or work, public)",
+             "allow open firewall game server steam minecraft jellyfin plex syncthing localsend"),
+        Tool("network", "This network", "Open a port", "Let in a port by its number, with a name for it",
+             "list-add-symbolic", "network",
+             "pkexec /usr/libexec/evenkeel-os-tools-admin let-in home ports NAME 8080/tcp (or work, public)",
+             "port number tcp udp allow open firewall forward"),
         Tool("sharing", "Shared folders", "Shared folders",
              "Let computers on your Home network open folders you pick, with a password",
              "folder-remote-symbolic", "sharing",
@@ -475,7 +489,7 @@ class Window(Adw.ApplicationWindow):
             self.toast("That couldn't be saved.")
 
     def network_page(self, page):
-        """Which place the network you're on is, every saved network's place, and what Home and Work let in."""
+        """Which place the network you're on is, every saved network's place, and what each place lets in."""
         box = Gtk.Box(spacing=20, css_classes=["ek-banner"])
         box.append(Gtk.Image(icon_name="security-high-symbolic", pixel_size=40))
         text = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6, hexpand=True, valign=Gtk.Align.CENTER)
@@ -493,12 +507,12 @@ class Window(Adw.ApplicationWindow):
         g.add(box)
         page.add(g)
         self.net_list = Adw.PreferencesGroup(title="Your networks",
-                                             description="Home and Work let in phones, file sharing and apps you "
-                                                         "run. A Public place lets nothing in.")
+                                             description="Home lets in phones, file sharing and apps you run. Work "
+                                                         "and a Public place let nothing in.")
         page.add(self.net_list)
         self.net_rows = []
-        g = Adw.PreferencesGroup(title="Also let in, on Home and Work",
-                                 description="Never on a Public place. Each change asks for your password.")
+        g = Adw.PreferencesGroup(title="Also let in, on Home",
+                                 description="Not on Work or a Public place. Each change asks for your password.")
         self.net_switches = {}
         for service, title, about in (("ssh", "Log in from another computer (SSH)", "Off unless you need it"),
                                       ("ipp", "Share my printer", "Other computers print to a printer plugged "
@@ -508,11 +522,14 @@ class Window(Adw.ApplicationWindow):
             self.net_switches[service] = row
             g.add(row)
         page.add(g)
+        self.let_in = letin_page.LetIn(self)
+        page.add(self.let_in.group)
         self.net_updating = False
 
-    def show_network(self, nets, default, services):
+    def show_network(self, nets, default, services, let_in):
         self.net_updating = True
         on = next((n for n in nets if n.device), None)
+        here = (on.zone or default or net.PUBLIC) if on else None
         public = default == net.PUBLIC
         if default is None:
             self.net_title.set_label("The firewall isn't answering")
@@ -527,7 +544,10 @@ class Window(Adw.ApplicationWindow):
         else:
             self.net_title.set_label("Not connected")
             self.net_sub.set_label("The next network you join starts as a Public place.")
-        self.net_banner.remove_css_class("ek-warn")
+        for css in ("ek-warn", "ek-home", "ek-public"):
+            self.net_banner.remove_css_class(css)
+        if here in (net.HOME, net.PUBLIC):         # Work keeps the navy every banner has
+            self.net_banner.add_css_class("ek-home" if here == net.HOME else "ek-public")
         self.net_fix.set_visible(not public and default is not None)
         if not public:
             self.net_banner.add_css_class("ek-warn")
@@ -542,11 +562,13 @@ class Window(Adw.ApplicationWindow):
             about = n.kind + (", connected now" if n.device else "")
             if n.fixed_public:
                 if zone == net.PUBLIC:
-                    row = Adw.ActionRow(title=n.name, subtitle=f"{about}. Open Wi-Fi is always a Public place.")
+                    row = Adw.ActionRow(title=n.name, subtitle=f"{about}. Open Wi-Fi is always a Public place.",
+                                        use_markup=False)
                     row.add_suffix(Gtk.Label(label=net.PLACES[net.PUBLIC], css_classes=["dim-label"]))
                 else:       # set another way (a terminal); open Wi-Fi shouldn't let anything in
                     row = Adw.ActionRow(title=n.name, subtitle=f"{about}. Open Wi-Fi, but set to "
-                                        f"{net.PLACES.get(zone, zone)}. Anyone can make a network with its name.")
+                                        f"{net.PLACES.get(zone, zone)}. Anyone can make a network with its name.",
+                                        use_markup=False)
                     fix = Gtk.Button(label="Make it a Public place", valign=Gtk.Align.CENTER)
                     fix.connect("clicked", lambda *_, n=n: self.save_place(n, net.PUBLIC))
                     row.add_suffix(fix)
@@ -556,7 +578,7 @@ class Window(Adw.ApplicationWindow):
             if n.kind == "Wired":
                 about += ". Applies to every cable you plug in, not only this one"
             choices = names + ([] if zone in net.PLACES else [f"Other ({zone})"])
-            row = Adw.ComboRow(title=n.name, model=Gtk.StringList.new(choices), subtitle=about)
+            row = Adw.ComboRow(title=n.name, model=Gtk.StringList.new(choices), subtitle=about, use_markup=False)
             row.set_selected(list(net.PLACES).index(zone) if zone in net.PLACES else len(names))
             row.connect("notify::selected", self.on_place, n)
             self.net_list.add(row)
@@ -568,6 +590,7 @@ class Window(Adw.ApplicationWindow):
         for service, row in self.net_switches.items():
             row.set_sensitive(services is not None)
             row.set_active(bool(services) and service in services)
+        self.let_in.show(let_in, here)
         self.net_updating = False
 
     def on_place(self, row, _param, network):
@@ -615,7 +638,7 @@ class Window(Adw.ApplicationWindow):
         page.add(g)
         g = Adw.PreferencesGroup(title="Sharing", description="For everyone on this computer, on Home networks "
                                  "only, never on Work or a Public place. Changes ask for an administrator password.")
-        self.share_switch = Adw.SwitchRow(title="Share folders on Home networks", sensitive=False)
+        self.share_switch = Adw.SwitchRow(title="Share folders on Home networks", sensitive=False, use_markup=False)
         self.share_switch.connect("notify::active", self.on_share_switch)
         g.add(self.share_switch)
         self.share_pw = Adw.ActionRow(title="Sharing password")
@@ -647,8 +670,14 @@ class Window(Adw.ApplicationWindow):
         self.share_banner.remove_css_class("ek-warn")
         if warn:
             self.share_banner.add_css_class("ek-warn")
-        self.share_switch.set_sensitive(ready or state["on"])      # off works even where smb.conf was replaced
-        self.share_switch.set_active(state["on"])
+        on = next((n for n in nets if n.device), None)
+        away = on is not None and not home
+        self.share_switch.set_sensitive(not away and (ready or state["on"]))   # off works where smb.conf was replaced
+        self.share_switch.set_active(state["on"] and not away)
+        self.share_switch.set_subtitle(
+            f"Off here: {on.name} is {PLACE_WORDS.get(on.zone or net.PUBLIC, 'not a Home network')}. "
+            + ("It comes back on by itself on a Home network." if state["on"] else "Turn it on from a Home network.")
+            if away else "")
         self.share_pw.set_subtitle(f"Other computers ask for your user name, {user}, and this password. It isn't "
                                    "your login password." + ("" if has_pw else " Not set yet."))
         self.share_pw_button.set_label("Change" if has_pw else "Set")
@@ -659,7 +688,7 @@ class Window(Adw.ApplicationWindow):
         for f in (f for f in state["folders"] if f["owner"] == user):
             where = "~" + f["path"][len(home_dir):] if f["path"].startswith(home_dir + "/") else f["path"]
             row = Adw.ActionRow(title=f["name"], subtitle=where if os.path.isdir(f["path"]) else
-                                f"{where}. Folder not found: it was moved or deleted.")
+                                f"{where}. Folder not found: it was moved or deleted.", use_markup=False)
             mode = Gtk.DropDown.new_from_strings(list(sharing.MODES.values()))
             mode.set_valign(Gtk.Align.CENTER)
             mode.set_selected(list(sharing.MODES).index(f["mode"]))
@@ -690,8 +719,7 @@ class Window(Adw.ApplicationWindow):
                     "you pick.", False)
         if not home:
             on = next((n for n in nets if n.device), None)
-            place = {net.PUBLIC: "a Public place", net.WORK: "a Work network"}.get(on.zone or net.PUBLIC,
-                                                                              "not a Home network") if on else ""
+            place = PLACE_WORDS.get(on.zone or net.PUBLIC, "not a Home network") if on else ""
             return ("Sharing waits for a Home network", (f"{on.name} is {place}, so nothing is shared here. " if on
                     else "Not connected. ") + "Sharing starts by itself on a Home network.", False)
         if not shared:
@@ -957,7 +985,7 @@ class Window(Adw.ApplicationWindow):
         if services is not None:      # a switch is on only when the service runs and the firewall lets it in
             services = {s for s in self.net_switches if s in services and net.running(s)}
         nets = net.networks()
-        GLib.idle_add(self.show_network, nets, net.default_zone(), services)
+        GLib.idle_add(self.show_network, nets, net.default_zone(), services, letin.load())
         GLib.idle_add(self.show_sharing, sharing.load(), nets, sharing.set_up(), sharing.running())
 
     def read_boot(self):
@@ -1244,7 +1272,7 @@ class Window(Adw.ApplicationWindow):
                 b.set_active(True)
 
     def toast(self, text):
-        self.toasts.add_toast(Adw.Toast(title=text, timeout=6))
+        self.toasts.add_toast(Adw.Toast(title=text, timeout=6, use_markup=False))
 
     def show(self, page, at_login=False):
         if page == "guide":

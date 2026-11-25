@@ -12,8 +12,8 @@ LETS_IN = {
     PUBLIC: "Nothing can reach this computer from the network. Finding printers still works.",
     HOME: "Phones, file sharing and apps you run can reach this computer. System services stay closed unless "
           "switched on below.",
-    WORK: "Phones, file sharing and apps you run can reach this computer. System services stay closed unless "
-          "switched on below.",
+    WORK: "Nothing can reach this computer from the network, and your folders aren't shared. Office shared drives "
+          "and printers still work.",
 }
 
 

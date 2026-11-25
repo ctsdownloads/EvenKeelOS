@@ -63,13 +63,30 @@ network. A network with no place set is a Public place.
 
 - **Public place** (`evenkeel-public`): nothing gets in. Only finding printers and devices (mdns) and getting an
   address (dhcpv6-client) work. SSH is off.
-- **Home** (`evenkeel-home`) and **Work** (`evenkeel-work`): like Fedora Workstation's own setting, apps you run can
-  be reached on ports 1025 to 65535 (for example phones, file sharing, web development test servers). System services
-  below 1025 stay closed. Unlike Fedora, SSH is off. Turning on [Shared folders](#shared-folders) also lets file
-  sharing in on Home.
+- **Work** (`evenkeel-work`): like a Public place, nothing gets in and your folders are never shared. You can
+  still open the office's own shared drives (samba-client), find printers and get an address.
+- **Home** (`evenkeel-home`): like Fedora Workstation's own setting, apps you run can be reached on ports 1025 to
+  65535 (for example phones, file sharing, web development test servers). System services below 1025 stay closed.
+  Unlike Fedora, SSH is off. Turning on [Shared folders](#shared-folders) also lets file sharing in on Home.
 
 Before this, every network used Fedora's FedoraWorkstation zone, which leaves ports 1025 to 65535 open on every
-network, including public Wi-Fi. That is now only on Home and Work.
+network, including public Wi-Fi. That is now only on Home. Work let them in too until it was made like a Public
+place; a computer installed before that is changed once, at its next start (`evenkeel-os-work-update.service`).
+
+**Let in, by app or port.** Each place can let in more than its own settings, one app or port at a time:
+
+- **Let an app in** opens a list to search by name or port number. It starts with apps checked by hand against
+  their own documentation (Jellyfin, LocalSend, Sunshine, Home Assistant, Foundry Virtual Tabletop, Barotrauma, each
+  with the link that states its ports, in `build_files/let-in-checked.txt`) and Fedora's own firewall list (264 apps
+  and games, such as Minecraft, Plex, Syncthing, Steam In-Home Streaming and KDE Connect). Typing also searches IANA's
+  official list of ports (`/etc/services`). Each entry shows its ports and where they come from.
+- **Open a port** lets in one port or a range (like 8080 or 2456-2458) for TCP, UDP or both, with a name you give it.
+- On a **Public place**, both ask first: strangers on the same network could reach it too.
+- File sharing (Samba, and the ports Windows uses to find a computer) can't be let in on Work or a Public place:
+  folders are shared only on Home, in [Shared folders](#shared-folders).
+
+What's let in is listed under the place, with a button to close it again. Closing never closes a port another entry
+or the place itself still uses. On Home, SSH and printers have their own switches instead.
 
 **The question.** Once per network, after you join a password-protected Wi-Fi that has no place yet, a small
 window asks "Where is NETWORK-NAME?" with **Home**, **Work** and **Public place** (Public place picked). It shows at
@@ -90,10 +107,11 @@ Never asked:
 
 | Item | What it does |
 |------|--------------|
-| Banner | Says which network you're on and what it lets in. If the firewall isn't running, it turns amber and says so |
+| Banner | Says which network you're on and what it lets in. Its color follows the place: teal for Home, navy for Work, dark amber for a Public place. If the firewall isn't running, or new networks aren't a Public place, it turns amber and says so |
 | Your networks | Lists every saved Wi-Fi and wired network with a **Home** / **Work** / **Public place** picker for each (open Wi-Fi just shows Public place). A change takes effect at once for a connected network, or the next time it connects if that can't be done at once |
-| Log in from another computer (SSH) | Under **Also let in, on Home and Work**. Off to start. On starts the SSH server and lets it in on Home and Work, never on a Public place. Shows on only when both are true. Asks for the administrator password |
-| Share my printer | Under **Also let in, on Home and Work**. Off to start. On shares printers plugged into this computer and lets them be reached on Home and Work, never on a Public place. Shows on only when both are true. Asks for the administrator password |
+| Log in from another computer (SSH) | Under **Also let in, on Home**. Off to start. On starts the SSH server and lets it in on Home, never on Work or a Public place. Shows on only when both are true. Asks for the administrator password |
+| Share my printer | Under **Also let in, on Home**. Off to start. On shares printers plugged into this computer and lets them be reached on Home, never on Work or a Public place. Shows on only when both are true. Asks for the administrator password |
+| Apps and ports let in | Pick a place (it starts on the place of the network you're on) to see what it lets in beyond its own settings. **Let an app in** and **Open a port** add to it, and each entry's bin closes it again. Each change asks for the administrator password |
 
 Changing a network's place doesn't ask for a password for an administrator user (Fedora's NetworkManager rule for
 the wheel group). Other users are asked by NetworkManager.
@@ -103,15 +121,18 @@ FedoraWorkstation), the banner turns amber and says new networks aren't a Public
 (asks for the password) makes Public place the default.
 
 GNOME's own Public folder sharing (Settings, Sharing, File Sharing) uses a random port, so it only works on a Home
-or Work network.
+network.
 
 In a terminal:
 
     nmcli connection modify NETWORK connection.zone evenkeel-home    # or evenkeel-work, evenkeel-public
     pkexec /usr/libexec/evenkeel-os-tools-admin firewall ssh on      # or off; same for ipp
     pkexec /usr/libexec/evenkeel-os-tools-admin firewall default
+    pkexec /usr/libexec/evenkeel-os-tools-admin let-in work app minecraft          # home, work or public
+    pkexec /usr/libexec/evenkeel-os-tools-admin let-in home ports "My game" 2456-2458/udp
+    pkexec /usr/libexec/evenkeel-os-tools-admin let-in home remove "ports:2456-2458/udp"
 
-The last two ask for the administrator password.
+All but the first ask for the administrator password. What's let in is listed in `/etc/evenkeel-os/let-in.json`.
 
 ### Shared folders
 
@@ -151,7 +172,7 @@ folder that point outside it don't open.
 | Item | What it does |
 |------|--------------|
 | Banner | Says whether sharing is off, on (**Sharing on NETWORK**, and the name other computers see), waiting (**Sharing waits for a Home network**, on a Work network, a Public place or not connected), or **Nothing is shared yet** (no folder, or no sharing password). It turns orange for **Sharing didn't start**, for sharing over a wired Home network, and for **Shared folders can't start**, when `/etc/samba/smb.conf` was changed on the computer so it no longer includes the shared folders list (the switch can still turn sharing off) |
-| Share folders on Home networks | A switch in the **Sharing** group. Turns sharing on or off |
+| Share folders on Home networks | A switch in the **Sharing** group. Turns sharing on or off. On a Work network or a Public place it shows off and greyed out, with **Off here:** and the network's name: sharing never runs there. If you turned it on, it comes back on by itself on a Home network; change it from a Home network |
 | Sharing password | A row in the **Sharing** group with a **Set** or **Change** button |
 | Add a folder | In the **Folders** group. Pick a folder in your home folder to share |
 | Each shared folder | A row with its name, its place in the home folder, a **Read only** / **Read and write** choice, and a trash button to stop sharing it. A folder that was moved or deleted says **Folder not found** |

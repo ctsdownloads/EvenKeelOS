@@ -148,7 +148,8 @@ class BootKeyboardScreen(screens.ListScreen):
 
 # ---------------------------------------------------------------------------------------------------- 4 Network
 
-PLACE_CHOICES = [(net.HOME, "Your own home network"), (net.WORK, "An office you trust"),
+PLACE_CHOICES = [(net.HOME, "Your own home network"),
+                 (net.WORK, "An office. Nothing gets in, and your folders aren't shared."),
                  (net.PUBLIC, "A café, hotel, airport, or anywhere else. Nothing gets in.")]
 
 

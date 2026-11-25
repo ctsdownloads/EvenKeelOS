@@ -142,6 +142,13 @@ install -Dm644 /ctx/evenkeel-os-packages-after-restart.desktop /etc/xdg/autostar
 for z in home work public; do install -Dm644 "/ctx/firewall/evenkeel-$z.xml" "/usr/lib/firewalld/zones/evenkeel-$z.xml"; done
 firewall-offline-cmd --set-default-zone=evenkeel-public
 install -Dm644 /ctx/evenkeel_os_network.py /usr/lib/evenkeel-os/evenkeel_os_network.py
+# Let an app in, Open a port: what each place lets in beyond its own settings, and the list of apps to pick from.
+install -Dm644 -t /usr/lib/evenkeel-os /ctx/evenkeel_os_letin.py /ctx/evenkeel_os_letin_page.py
+python3 -I /ctx/make-let-in-apps.py /usr/lib/evenkeel-os /ctx/let-in-checked.txt
+# Once, on computers installed earlier: Work lets nothing in, like a Public place.
+install -Dm644 /ctx/evenkeel-os-work-update.service /usr/lib/systemd/system/evenkeel-os-work-update.service
+ln -sfn ../evenkeel-os-work-update.service \
+  /usr/lib/systemd/system/multi-user.target.wants/evenkeel-os-work-update.service
 # Make it yours: light and dark on a schedule and the wallpaper slideshow, applied at login and every 5 minutes.
 install -Dm644 -t /usr/lib/evenkeel-os /ctx/evenkeel_os_appearance.py /ctx/evenkeel_os_yours.py
 install -Dm755 /ctx/evenkeel-os-appearance /usr/bin/evenkeel-os-appearance
