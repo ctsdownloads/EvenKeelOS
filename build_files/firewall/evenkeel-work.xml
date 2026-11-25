@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <zone>
   <short>Work</short>
-  <description>EvenKeelOS: your work network. Apps you run can be reached on ports 1025 to 65535, as on Fedora Workstation; system services below 1025 stay closed unless switched on in Wheelhouse, Network safety.</description>
+  <description>EvenKeelOS: your work network. Nothing gets in and your folders aren't shared; office shared drives, finding printers and getting an address still work. Apps let in from Wheelhouse, Network safety are the only exceptions.</description>
   <service name="mdns"/>
   <service name="samba-client"/>
   <service name="dhcpv6-client"/>
-  <port protocol="tcp" port="1025-65535"/>
-  <port protocol="udp" port="1025-65535"/>
 </zone>

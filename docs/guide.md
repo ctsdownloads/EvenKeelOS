@@ -111,6 +111,7 @@ Your folders, USB drives, the trash, searching, zip files and sharing with other
 4. On a Windows PC: File Explorer, Network. The Windows PC's own network must be set to Private.
 5. On a Mac: Finder, Network. On another Linux computer: Files, Other Locations.
 6. Open this computer, type your user name and the sharing password, and the folders are there.
+7. Away from home, the switch shows off: sharing only runs on a Home network, and comes back by itself there.
 
 ## Apps
 
@@ -185,16 +186,24 @@ Wi-Fi, how safe each network is, and Bluetooth.
 
 1. Open Wheelhouse, Network safety. Your networks lists every network this computer has joined.
 2. Public place: nothing on the network can reach your computer. Pick it for cafes, hotels and airports.
-3. Home or Work: your phone and other computers can reach apps that ask for it, like file sharing.
-4. Pick the place next to a network. It changes at once.
-5. Open Wi-Fi, with no password, is always a Public place, because anyone can make one with the same name.
+3. Home: your phone and other computers can reach apps that ask for it, like file sharing.
+4. Work: like a Public place, nothing gets in and your folders aren't shared. The office's own shared drives still open.
+5. Pick the place next to a network. It changes at once.
+6. Open Wi-Fi, with no password, is always a Public place, because anyone can make one with the same name.
 
 ### Let other computers in
 
-1. Open Wheelhouse, Network safety. Under Also let in, on Home and Work, there are two switches.
+1. Open Wheelhouse, Network safety. Under Also let in, on Home, there are two switches.
 2. Log in from another computer (SSH): for people who use a terminal. Leave it off if you don't know it.
 3. Share my printer: lets other computers use a printer plugged into this one.
-4. Both ask for your password, and never work on a Public place.
+4. Both ask for your password, and work only on Home.
+
+### Let an app or game in
+
+1. Open Wheelhouse, Network safety. Under Apps and ports let in, pick the place.
+2. Click Let an app in, type its name, like Minecraft or Jellyfin, and click it.
+3. Not in the list? Click Open a port and type the number the app's own instructions give.
+4. On a Public place it asks first, because strangers could reach it too. The bin next to it closes it again.
 
 ### Connect a Bluetooth device
 

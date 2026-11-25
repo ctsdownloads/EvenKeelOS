@@ -80,6 +80,22 @@ for args in (["sharing"], ["sharing", "on", "x"], ["sharing", "add", "/root"], [
              ["sharing", "remove"], ["sharing", "password", "x"], ["sharing", "sync", "x"],
              ["sharing", "add", "/root", "ro", "x"]):
     refuses("evenkeel-os-tools-admin", args)
+for args in (["let-in"], ["let-in", "home"], ["let-in", "office", "app", "ssh"], ["let-in", "home", "app"],
+             ["let-in", "home", "open", "ssh"], ["let-in", "home", "app", "ssh", "x"], ["let-in", "home", "ports", "A"],
+             ["let-in", "update", "x"], ["let-in", "--zone=trusted", "app", "ssh"]):
+    refuses("evenkeel-os-tools-admin", args)
+# Refused before the firewall is touched: not on the list, always let in, a switch's job, a bad name or port.
+for args in (["let-in", "home", "app", "../../etc/x"], ["let-in", "home", "app", "no-such-app"],
+             ["let-in", "work", "app", "evenkeel-sharing"], ["let-in", "public", "app", "mdns"],
+             ["let-in", "home", "app", "ssh"], ["let-in", "home", "app", "ipp"],
+             ["let-in", "work", "ports", "", "80/tcp"], ["let-in", "work", "ports", "x" * 61, "80/tcp"],
+             ["let-in", "work", "ports", "Game", "0/tcp"], ["let-in", "work", "ports", "Game", "80/sctp"],
+             ["let-in", "work", "ports", "Game", "80/tcp", "80/tcp"], ["let-in", "work", "ports", "Game", "80/tcp;id"],
+             ["let-in", "home", "remove", "ssh"], ["let-in", "home", "remove", "ports:1/tcp"],
+             ["let-in", "work", "app", "samba"], ["let-in", "public", "app", "ws-discovery"],
+             ["let-in", "work", "app", "freeipa-trust"], ["let-in", "public", "app", "samba-client"],
+             ["let-in", "work", "ports", "Files", "445/tcp"], ["let-in", "public", "ports", "All", "1-65535/udp"]):
+    refuses("evenkeel-os-tools-admin", args, codes=(3,))
 refuses("evenkeel-os-tools-admin", ["sharing", "on"], codes=(1,))              # no caller, or not set up: refused
 refuses("evenkeel-os-tools-admin", ["sharing", "password"], codes=(1,))
 for bad_setting in ("root=/dev/sda1", "ostree=/x", "rw", "rd.luks.uuid=x", "evenkeel_os.test_rollback=quick",

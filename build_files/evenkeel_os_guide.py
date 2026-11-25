@@ -122,6 +122,8 @@ TOPICS = [
              ("On a Windows PC: File Explorer, Network. The Windows PC's own network must be set to Private.", ""),
              ("On a Mac: Finder, Network. On another Linux computer: Files, Other Locations.", ""),
              ("Open this computer, type your user name and the sharing password, and the folders are there.", ""),
+             ("Away from home, the switch shows off: sharing only runs on a Home network, and comes back by itself "
+              "there.", ""),
          ]),
      ]),
     ("apps", "Apps", "system-software-install-symbolic",
@@ -190,18 +192,27 @@ TOPICS = [
               "page:network"),
              ("Public place: nothing on the network can reach your computer. Pick it for cafes, hotels and airports.",
               ""),
-             ("Home or Work: your phone and other computers can reach apps that ask for it, like file sharing.", ""),
+             ("Home: your phone and other computers can reach apps that ask for it, like file sharing.", ""),
+             ("Work: like a Public place, nothing gets in and your folders aren't shared. The office's own shared "
+              "drives still open.", ""),
              ("Pick the place next to a network. It changes at once.", ""),
              ("Open Wi-Fi, with no password, is always a Public place, because anyone can make one with the same "
               "name.", ""),
          ]),
          ("Let other computers in", [
-             ("Open Wheelhouse, Network safety. Under Also let in, on Home and Work, there are two switches.",
+             ("Open Wheelhouse, Network safety. Under Also let in, on Home, there are two switches.",
               "page:network"),
              ("Log in from another computer (SSH): for people who use a terminal. Leave it off if you don't know it.",
               ""),
              ("Share my printer: lets other computers use a printer plugged into this one.", ""),
-             ("Both ask for your password, and never work on a Public place.", ""),
+             ("Both ask for your password, and work only on Home.", ""),
+         ]),
+         ("Let an app or game in", [
+             ("Open Wheelhouse, Network safety. Under Apps and ports let in, pick the place.", "page:network"),
+             ("Click Let an app in, type its name, like Minecraft or Jellyfin, and click it.", ""),
+             ("Not in the list? Click Open a port and type the number the app's own instructions give.", ""),
+             ("On a Public place it asks first, because strangers could reach it too. The bin next to it closes it "
+              "again.", ""),
          ]),
          ("Connect a Bluetooth device", [
              ("Open Settings, Bluetooth, and turn on the switch at the top.", "settings:bluetooth"),
