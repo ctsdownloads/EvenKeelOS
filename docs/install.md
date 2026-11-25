@@ -47,7 +47,8 @@ Nothing touches the disk until you install.
      **Work** or **Public place**. The answer is saved with that network and carried over to the installed system.
      **Next** waits for an answer; **Back** skips the question, and the installed system asks at the first login.
    - If the install stops: **Save the log**, **Show a QR code**, or **Report on
-     GitHub**. The log leaves out passwords and names.
+     GitHub**. The log leaves out passwords and names. Sending a report, from the QR code or
+     Firefox, needs a free GitHub account.
 5. Log in. The [setup checklist](#first-login) opens.
 
 The installed system takes its updates from the signed image on GitHub.

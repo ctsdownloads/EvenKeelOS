@@ -120,6 +120,10 @@ done
 [ -s /usr/share/applications/io.github.ctsdownloads.EvenKeelOS.Installer.desktop ] || fail "the installer's launcher is missing"
 [ -s /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.install.policy ] || fail "the installer's polkit action is missing"
 [ -s /usr/share/evenkeel-os-installer/logo-wide.svg ] || fail "the installer's EvenKeelOS logo is missing"
+# The file systems the install engine loads and mounts are in the USB's kernel.
+for fs in xfs ext4 vfat; do
+  modinfo -k "$kernel" "$fs" >/dev/null 2>&1 || fail "kernel $kernel has no $fs, which the installer needs"
+done
 for k in current windows; do
   [ -s "/usr/lib/evenkeel-os-installer/layout-$k.png" ] || fail "the installer's $k layout picture is missing"
 done
