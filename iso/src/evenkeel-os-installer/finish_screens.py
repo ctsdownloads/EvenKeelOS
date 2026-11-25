@@ -183,12 +183,12 @@ class ErrorScreen(LogScreen):
             return ("Plug in a USB stick, then click it to save the log on it. Click Refresh if it isn't listed, "
                     "or Back.")
         if self.stage == "code":
-            return ("Point your phone's camera at the code. It opens the report on GitHub with the details filled in, "
-                    "ready to send. It carries the end of the log; the whole log can go on a USB stick. Click "
-                    "Back when done.")
+            return ("Point your phone's camera at the code. It opens the report on GitHub with the details filled in. "
+                    "To send it, sign in to GitHub, or make a free account if you don't have one. It carries the end "
+                    "of the log; the whole log can go on a USB stick. Click Back when done.")
         return ("Nothing more was changed on the disk. Save the log puts the details on a USB stick for your "
-                "helper; no account is needed. Show a QR code sends a report from your phone. Report on GitHub "
-                "sends it from Firefox, with a free GitHub account. Or click Restart.")
+                "helper; no account is needed. Show a QR code sends a report from your phone, and Report on "
+                "GitHub sends it from Firefox; both need a free GitHub account. Or click Restart.")
 
     def refresh(self, to_chosen=True):
         super().refresh(to_chosen)

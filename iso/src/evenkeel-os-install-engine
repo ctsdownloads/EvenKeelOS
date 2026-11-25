@@ -117,6 +117,10 @@ def install(c):
     keymap = console_keymap(c["boot_layout"])
     if not c["time_automatic"]:
         set_clock(c)                     # first, so the new system's files are dated by the clock as set
+    # Loaded before the disk is touched: some computers start the USB stick without them.
+    for fs in ("xfs", "ext4", "vfat"):
+        run("modprobe", fs, problem=f"The {fs} file system could not be loaded, so the disk can't be "
+                                    "prepared.")
 
     say(progress=0.02, step="Freeing the disk")
     free_disk(disk)
@@ -155,11 +159,11 @@ def install(c):
     run("mkfs.xfs", "-q", "-f", "-L", "root", root_fs)
 
     os.makedirs(TARGET, exist_ok=True)
-    run("mount", root_fs, TARGET)
+    run("mount", "-t", "xfs", root_fs, TARGET)
     os.makedirs(f"{TARGET}/boot")
-    run("mount", boot, f"{TARGET}/boot")
+    run("mount", "-t", "ext4", boot, f"{TARGET}/boot")
     os.makedirs(f"{TARGET}/boot/efi")
-    run("mount", esp, f"{TARGET}/boot/efi")
+    run("mount", "-t", "vfat", esp, f"{TARGET}/boot/efi")
     boot_uuid = run("blkid", "-s", "UUID", "-o", "value", boot).stdout.strip()
 
     # bootc expects this file on the system it runs from (bootc issues 1400, 1410).
