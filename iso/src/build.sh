@@ -155,6 +155,12 @@ assert results and all(r[0] in (fitcheck.GOOD, fitcheck.LIMITED, fitcheck.BAD) f
 assert fitcheck.raid_hidden("ahci 0000:00:17.0: Found 1 remapped NVMe devices.")
 assert not fitcheck.raid_hidden("ahci 0000:00:17.0: AHCI 0001.0301 32 slots")
 fitcheck.report(results)
+# NVIDIA with its open-source driver is fine; any graphics chip with no driver is a problem.
+card = lambda vendor, driver: {"class": "0x030000", "vendor": vendor, "driver": driver, "slot": "0000:01:00.0"}
+fitcheck.read = lambda path: ""
+assert fitcheck.graphics([card("0x10de", "nouveau")])[0] == fitcheck.GOOD
+assert "AMD graphics drive the screen" in fitcheck.graphics([card("0x1002", "amdgpu"), card("0x10de", "nouveau")])[3]
+assert fitcheck.graphics([card("0x10de", "")])[0] == fitcheck.BAD
 PY
 python3 -I -c 'import ast, sys; ast.parse(open(sys.argv[1]).read())' /usr/libexec/evenkeel-os-live-welcome \
   || fail "the live welcome window has a syntax error"
