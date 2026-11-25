@@ -1,0 +1,7 @@
+[Unit]
+Description=Apply the light and dark schedule and the wallpaper slideshow
+ConditionUser=!@system
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/evenkeel-os-appearance apply
