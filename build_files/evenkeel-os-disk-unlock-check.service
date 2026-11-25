@@ -1,5 +1,5 @@
 [Unit]
-Description=Check whether the disk is set to unlock automatically, for System Tools
+Description=Check whether the disk is set to unlock automatically, for Wheelhouse
 After=local-fs.target
 
 [Service]

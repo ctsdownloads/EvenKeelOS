@@ -5,7 +5,7 @@
   evenkeel-os-settings check        at each start (greenboot's required.d): fail when important settings are broken
   evenkeel-os-settings repair       after a failed start (greenboot's red.d): put the broken ones back from the copy
   evenkeel-os-settings fresh        exit 0 when the saved copy is from this start, 7 when it isn't
-  evenkeel-os-settings test-delete  System Tools' test: delete the test's settings for real (the caller restarts;
+  evenkeel-os-settings test-delete  Wheelhouse's test: delete the test's settings for real (the caller restarts;
                                     exit 10: stopped partway)
 """
 import os
@@ -22,7 +22,7 @@ FACTORY = Path("/usr/share/factory/etc")    # systemd-tmpfiles copies these in a
 BASE = Path("/sysroot/evenkeel-os")
 SAVED = BASE / "settings"      # etc/, usr-etc.list (USR_ETC's paths then), saved ("<boot id> <time>")
 NOTE = Path("/var/lib/evenkeel-os/settings-repaired")    # "repair|test <time> <saved time>", then the paths put back
-TEST_MARK = Path("/var/lib/evenkeel-os/settings-test")   # System Tools' test is running (cleared by a good start)
+TEST_MARK = Path("/var/lib/evenkeel-os/settings-test")   # Wheelhouse's test is running (cleared by a good start)
 RETRIED = Path("/var/lib/evenkeel-os/settings-retried")   # the saved copy's time when a repair last added a retry
 GRUBENV = Path("/boot/grub2/grubenv")
 # Broken when missing, or when systemd's generic copy replaced a different saved one.
@@ -260,7 +260,7 @@ def repair():
 
 def save():
     """Copy /etc into /sysroot, which is read-only: writable only in this program's own mount namespace."""
-    TEST_MARK.unlink(missing_ok=True)     # a good start ends System Tools' test (90-...-rolled-back.sh reads it first)
+    TEST_MARK.unlink(missing_ok=True)     # a good start ends Wheelhouse's test (90-...-rolled-back.sh reads it first)
     if sys.argv[2:] != ["--own-namespace"]:
         os.execv("/usr/bin/unshare", ["unshare", "--mount", "--propagation", "private", sys.executable, "-I",
                                       str(Path(__file__).resolve()), "save", "--own-namespace"])

@@ -1,7 +1,7 @@
 #!/usr/bin/python3 -I
-"""System Tools, Boot options, as root through polkit (the administrator password every time).
+"""Wheelhouse, Boot options, as root through polkit (the administrator password every time).
 
-  evenkeel-os-boot-options set [SETTING...]   the full list of settings System Tools adds (none: take them all out);
+  evenkeel-os-boot-options set [SETTING...]   the full list of settings Wheelhouse adds (none: take them all out);
                                               common fixes left out are taken out too
                                               (exit 3: refused; 4: a rollback test copy is running)
 """
@@ -34,7 +34,7 @@ def change(settings):
     before = bootopts.next_start()
     if before is None:
         fail("The boot options the computer starts with couldn't be read.")
-    # Out: what System Tools added before and any common fix not wanted now; in: everything wanted, if missing.
+    # Out: what Wheelhouse added before and any common fix not wanted now; in: everything wanted, if missing.
     # A setting the computer already had (like quiet) isn't recorded as added, so it's never taken out.
     out = [s for s in dict.fromkeys(bootopts.added() + sorted(bootopts.COMMON_SETTINGS)) if s not in settings]
     mine = [s for s in settings if s not in before or s in bootopts.added()]

@@ -1,20 +1,21 @@
-# System Tools
+# Wheelhouse
 
 [Back to the EvenKeelOS README](../README.md)
 
-## System Tools
+## Wheelhouse
 
-**System Tools** is one window with a sidebar. A search box at the top of the sidebar finds any tool by its name,
-what it does, or its command. Show Apps has only System Tools for these tools: Install Package File, Remove Apps,
+**EvenKeelOS Wheelhouse** (just **Wheelhouse** under its icon) is one window with a sidebar. A ship is
+steered from its wheelhouse; this is where you steer your computer. It used to be called System Tools.
+A search box at the top of the sidebar finds any tool by its name, what it does, or its command. Show Apps has only Wheelhouse for these tools: Install Package File, Remove Apps,
 Start Apps at Login, Repair App Boxes, Install Media Codecs and System Update no longer have their own icons, because
 they are inside it. Double-clicking an .rpm, .deb, .exe or .msi file still opens the right tool. The Windows-style
-start menu's System Update entry opens System Tools on its Updates page. With the standard layout, the logo menu at
-the top left has a System Tools entry, under Extensions.
+start menu's System Update entry opens Wheelhouse on its Updates page. With the standard layout, the logo menu at
+the top left has a Wheelhouse entry, under Extensions.
 
-A tool's questions, lists, password box and progress show inside the System Tools window, under the tool's name,
+A tool's questions, lists, password box and progress show inside the Wheelhouse window, under the tool's name,
 with a Back arrow at the top left. Back leaves the tool open: a bar at the top of every page says it is waiting for
 an answer or still working, and its **Show** button goes back to it. One tool runs at a time: picking another while
-one is open says to finish it first, and System Tools stays open until the open tool is done. The admin password box is GNOME's own, and picking a file opens GNOME's file window. Run from a
+one is open says to finish it first, and Wheelhouse stays open until the open tool is done. The admin password box is GNOME's own, and picking a file opens GNOME's file window. Run from a
 terminal, or at login, the same tools still open their own small windows.
 
 ### Overview
@@ -258,8 +259,8 @@ In a terminal:
     pkexec /usr/libexec/evenkeel-os-boot-options set SETTING...
 
 Give it the full list of settings you want added. With no settings, it takes them all out, and common fixes left out
-are taken out too. It asks for the administrator password every time. It refuses what System Tools refuses, but
-doesn't warn about risky settings. Only System Tools does.
+are taken out too. It asks for the administrator password every time. It refuses what Wheelhouse refuses, but
+doesn't warn about risky settings. Only Wheelhouse does.
 
 ### Make it yours
 
@@ -272,7 +273,7 @@ doesn't warn about risky settings. Only System Tools does.
 
 | Item | What it does |
 |------|--------------|
-| EvenKeelOS guide | How to do things, step by step. It opens on a list of topics: **New to EvenKeelOS?**, **The desktop**, **Files**, **Apps**, **Internet and networks**, **Printing**, **Updates and safety**, **Making it yours**, **Disk and startup** and **Getting help**, each also listed on Get help. A topic is a page of numbered steps. **Show me** next to a step opens the System Tools page, Settings page or topic it names, and the back arrow at the top left goes back one page at a time, to the guide. The same text is in [EvenKeelOS guide](guide.md). At login, **New to EvenKeelOS?** opens after the setup checklist, until **Don't show this again at login** at its end is ticked, and never after **I already use Linux** in the installer |
+| EvenKeelOS guide | How to do things, step by step. It opens on a list of topics: **New to EvenKeelOS?**, **The desktop**, **Files**, **Apps**, **Internet and networks**, **Printing**, **Updates and safety**, **Making it yours**, **Disk and startup** and **Getting help**, each also listed on Get help. A topic is a page of numbered steps. **Show me** next to a step opens the Wheelhouse page, Settings page or topic it names, and the back arrow at the top left goes back one page at a time, to the guide. The same text is in [EvenKeelOS guide](guide.md). At login, **New to EvenKeelOS?** opens after the setup checklist, until **Don't show this again at login** at its end is ticked, and never after **I already use Linux** in the installer |
 | Undo the last update | Goes back to the version before the last update |
 | Save problem details | Saves recent errors to one file to email your helper |
 | Test automatic rollback | Checks that the computer goes back by itself when a new version doesn't start, and that important settings are put back when they're deleted. See below |
@@ -300,7 +301,7 @@ Desktop layout changes only your own desktop, so it never asks.
 - Asks for the disk password once, then a restart. Five wrong passwords lock it
   for an hour.
 - If the disk moves or startup settings change (a BIOS update, Secure Boot off),
-  the disk password is asked again. Turn it back on in System Tools.
+  the disk password is asked again. Turn it back on in Wheelhouse.
 
 **Undo the last update.** Sets the previous version to start next time (like
 `rpm-ostree rollback`). Versions from the same day show the time too. A
@@ -372,7 +373,7 @@ at every start from Fedora's current list plus the added files (Fedora's own
 `update-ca-trust extract`, run by `evenkeel-os-ca-trust.service`), so
 certificates Fedora updates replace or drop are replaced or dropped here too,
 even after a certificate was added. An alert (a desktop notification, and a warning at the
-top of System Tools, Overview, with a **Details** button) shows when a
+top of Wheelhouse, Overview, with a **Details** button) shows when a
 certificate has expired, expires within 30 days, or (one added to the computer)
 was removed. **Certificate alerts** in Get help lists them (also
 `evenkeel-os-tools certificates`). For an expired certificate that was added to
@@ -384,12 +385,12 @@ ones too: tell your helper), never follows a link, and accepts file names with
 spaces or brackets. Before removing, it checks, as root, that the file still
 holds exactly the one certificate you confirmed (by its fingerprint). If the
 file changed, nothing is removed. It never opens a link, pipe or device. Files
-whose names System Tools can't handle show "tell your helper" instead of
-**Remove it**. After removing, System Tools checks that the certificate
+whose names Wheelhouse can't handle show "tell your helper" instead of
+**Remove it**. After removing, Wheelhouse checks that the certificate
 is really no longer trusted and says so if it still is. For an expiring added one, it says to ask whoever gave it for a
 new one. For built-in ones, it says Fedora's updates replace them, so keep
 automatic updates on. A removed certificate is no longer trusted. The alert
-goes away once read. A certificate removed in System Tools raises no "removed"
+goes away once read. A certificate removed in Wheelhouse raises no "removed"
 alert for any account on the computer (the removal is recorded in
 `/var/lib/evenkeel-os/certs-removed`). An expired certificate is never put back
 or extended.

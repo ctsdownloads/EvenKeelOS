@@ -1,10 +1,11 @@
 [Desktop Entry]
 Type=Application
-Name=System Tools
+Name=Wheelhouse
+X-GNOME-FullName=EvenKeelOS Wheelhouse
 Comment=Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, layout, and help
-Icon=applications-system-symbolic
+Icon=evenkeel-os-wheelhouse
 Categories=System;Settings;
-Keywords=firmware;bios;uefi;tpm;disk;unlock;space;clean;updates;update;upgrade;ujust;rollback;undo;logs;problem;report;rpm;deb;install;remove;apps;codecs;vpn;layout;control;panel;settings;
+Keywords=firmware;bios;uefi;tpm;disk;unlock;space;clean;updates;update;upgrade;ujust;rollback;undo;logs;problem;report;rpm;deb;install;remove;apps;codecs;vpn;layout;control;panel;settings;system;tools;wheelhouse;evenkeelos;
 Exec=/usr/bin/evenkeel-os-tools
 Terminal=false
 StartupWMClass=io.github.ctsdownloads.evenkeel-os.Tools

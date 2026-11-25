@@ -78,7 +78,7 @@ def share_name(path, taken):
 
 def shares_conf(state):
     """SHARES for the saved list; folders whose owner has no sharing password are left out."""
-    out = ["# Written by System Tools, Shared folders. Changes here are replaced.\n"]
+    out = ["# Written by Wheelhouse, Shared folders. Changes here are replaced.\n"]
     for f in state["folders"]:
         if f["owner"] not in state["passwords"]:
             continue

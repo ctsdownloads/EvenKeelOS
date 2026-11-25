@@ -4,7 +4,7 @@
 
 ## Apps from .rpm and .deb files
 
-The system is an image, so **Install a package file** (in System Tools, Apps) puts apps from .rpm and .deb
+The system is an image, so **Install a package file** (in Wheelhouse, Apps) puts apps from .rpm and .deb
 files in a **box**: a small, separate Linux system just for those apps. That
 keeps the system clean and apps easy to remove. Every window says which choice
 is recommended and why.
@@ -14,7 +14,7 @@ containers, kept apart from your own). System Update keeps the boxes current.
 
 ### Installing an app
 
-1. Double-click the file, or open System Tools, Apps, **Install a package file** and pick it.
+1. Double-click the file, or open Wheelhouse, Apps, **Install a package file** and pick it.
 2. It checks the file without installing anything. A file it can't use stops
    here (see [Files that cannot be installed](#files-that-cannot-be-installed)).
 3. If the app is already there, it asks what to do (see
@@ -127,12 +127,12 @@ work and nothing changes.
 
 ### Start apps at login
 
-**Start apps at login** (System Tools, Apps) switches box apps on or off at login. An app's own
+**Start apps at login** (Wheelhouse, Apps) switches box apps on or off at login. An app's own
 open-at-login setting (Discord) is pointed at its box.
 
 ### Removing apps
 
-**Remove apps** (System Tools, Apps) lists what Install a package file installed, with each box's size.
+**Remove apps** (Wheelhouse, Apps) lists what Install a package file installed, with each box's size.
 **Remove** takes out the app, its entry and any rule it added. When a box is
 left empty, it recommends **Delete the box**; **Keep it** saves setup time. A
 Flathub app or system app removed another way (Bazaar, `rpm-ostree uninstall`)
@@ -142,7 +142,7 @@ is left off the list, and an app that's already gone just comes off it. The reco
 ### Repairing a box
 
 If a box stops working, **Repair the box** rebuilds it and puts its apps back.
-**Repair app boxes** (System Tools, Apps) does it any time. Your files aren't touched.
+**Repair app boxes** (Wheelhouse, Apps) does it any time. Your files aren't touched.
 
 ### Disk space
 

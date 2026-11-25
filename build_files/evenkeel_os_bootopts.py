@@ -1,4 +1,4 @@
-"""Boot options: kernel settings the computer starts with, changed in System Tools.
+"""Boot options: kernel settings the computer starts with, changed in Wheelhouse.
 
 rpm-ostree changes them on the version that starts next (a waiting update keeps them), and every update after
 carries them forward. Each change makes a new version, so the one before stays as the fallback.
@@ -8,7 +8,7 @@ import re
 import subprocess
 from pathlib import Path
 
-# The settings System Tools added, so it can take them out; in /var, the same for every version.
+# The settings Wheelhouse added, so it can take them out; in /var, the same for every version.
 STATE = Path("/var/lib/evenkeel-os/boot-options.json")
 MAX = 20
 SETTING = re.compile(r"^[A-Za-z0-9_][A-Za-z0-9_.-]{0,63}(=[A-Za-z0-9_.,:/+=@!-]{1,128})?$")
@@ -91,7 +91,7 @@ def problem(setting):
         return f"{setting!r} isn't a kernel setting. Use letters, numbers and . _ - like amdgpu.abmlevel=0."
     key = name(setting)
     if key.startswith("evenkeel_os."):
-        return f"{key} is for System Tools' own tests (Test automatic rollback)."
+        return f"{key} is for Wheelhouse's own tests (Test automatic rollback)."
     if key in SYSTEM or key.startswith(SYSTEM_PREFIXES):
         return f"{key} is set by the system itself. Changing it would stop the computer starting."
     if key in RUNS_PROGRAM or key.startswith("systemd.run"):
@@ -128,7 +128,7 @@ def merged(current, adding):
 
 
 def added():
-    """The settings System Tools added (and may take out)."""
+    """The settings Wheelhouse added (and may take out)."""
     try:
         options = json.loads(STATE.read_text()).get("options", [])
     except (OSError, ValueError, AttributeError):

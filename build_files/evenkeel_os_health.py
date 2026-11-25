@@ -346,7 +346,7 @@ def pcrs():
 
 
 def boot_options():
-    """The settings System Tools' Boot options added."""
+    """The settings Wheelhouse's Boot options added."""
     try:
         opts = json.loads(read(BOOT_OPTIONS, "{}")).get("options", [])
     except (ValueError, AttributeError):
@@ -456,7 +456,7 @@ def holds(n):
     return not status.isdigit() or bool(int(status) & present)
 
 
-# What a start that only changed boot options (System Tools, Boot options) still checks: those may switch hardware or
+# What a start that only changed boot options (Wheelhouse, Boot options) still checks: those may switch hardware or
 # SELinux off on purpose (nomodeset, module_blacklist=, selinux=0), so hardware items are left to that choice.
 SOFTWARE_KEYS = {"service", "printing", "power-modes", "update-program", "flatpak", "firmware-updater", "firewall",
                  "network-places", "clock-sync", "dns", "boot-options", "shared-folders"}
@@ -469,7 +469,7 @@ def own_kargs():
 
 
 def options_only(record=None):
-    """Whether this start's boot options differ from the last good start's (System Tools, Boot options, also with an
+    """Whether this start's boot options differ from the last good start's (Wheelhouse, Boot options, also with an
     update waiting), or it's the previous version with other boot options; never for a rollback test copy."""
     if "evenkeel_os.test_rollback=" in read("/proc/cmdline"):
         return False

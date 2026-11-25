@@ -1,8 +1,8 @@
 #!/usr/bin/python3 -I
-"""Shows a tool's question, message, list, password box or progress inside the System Tools window.
+"""Shows a tool's question, message, list, password box or progress inside the Wheelhouse window.
 
 Takes the same options as the zenity calls in EvenKeelOS's tools and answers the same way (exit code and output),
-so a tool started from System Tools runs unchanged. EVENKEEL_OS_PANEL names the window's socket.
+so a tool started from Wheelhouse runs unchanged. EVENKEEL_OS_PANEL names the window's socket.
 """
 import json
 import os
@@ -54,7 +54,7 @@ def main(argv):
         sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         sock.connect(os.environ["EVENKEEL_OS_PANEL"])
     except (KeyError, OSError):
-        os.execvp("zenity", ["zenity", *argv[1:]])      # System Tools has closed: a window of its own, as before
+        os.execvp("zenity", ["zenity", *argv[1:]])      # Wheelhouse has closed: a window of its own, as before
     if "no-markup" not in req["flags"]:
         req["text"] = unescape(req.get("text", ""))
     n = max(len(req["columns"]), 1)

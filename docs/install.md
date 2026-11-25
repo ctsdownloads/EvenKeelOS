@@ -42,7 +42,7 @@ Nothing touches the disk until you install.
    Windows-style with a bottom bar and start menu), then shows a **Review**.
    Click **Install**, then **Restart** when it's done.
    - **Coming from Windows** picks the Windows-style layout and opens **New to EvenKeelOS?** at login. **I already
-     use Linux** picks the Standard layout and doesn't open it (it's still in System Tools, Get help). The layout
+     use Linux** picks the Standard layout and doesn't open it (it's still in Wheelhouse, Get help). The layout
      step after it can still pick the other layout. Both get the setup checklist.
    - After you join a password Wi-Fi on the Network step, the installer asks "Where is NETWORK-NAME?" with **Home**,
      **Work** or **Public place**. The answer is saved with that network and carried over to the installed system.
@@ -72,15 +72,15 @@ Updates are automatic: `uupd` runs daily at 4 am (or at the next start) for the
 system, Flatpaks, app boxes and Homebrew. A new system is used from the next
 restart.
 
-**System Update** in System Tools, Updates updates now, with no password for the person at
+**System Update** in Wheelhouse, Updates updates now, with no password for the person at
 the computer (from anywhere else, it asks). It shows the download and install
 steps, lists what's new, and warns first on a low battery.
 If the automatic update is already running, it follows that one. From a
 terminal: `sudo uupd`.
 
 To go back to the previous version, use **Undo the last update** in
-[System Tools](system-tools.md#system-tools), pick it in the boot menu, or run
-`rpm-ostree rollback` and restart. Undo in System Tools also pauses automatic
+[Wheelhouse](wheelhouse.md#wheelhouse), pick it in the boot menu, or run
+`rpm-ostree rollback` and restart. Undo in Wheelhouse also pauses automatic
 updates for 3 days; `rpm-ostree rollback` and the boot menu don't.
 
 **Automatic rollback.** If a new version fails 2 starts in a row, the computer
@@ -116,7 +116,7 @@ core. The note at login names what broke. Limits: it checks only a new version
 on trial, not every start; hardware that's unplugged, switched off in the BIOS
 or by a privacy switch never counts, and only USB devices in ports the computer
 calls fixed are checked (nothing on a hub or dock); a start that only changed
-boot options (System Tools, Boot options) checks programs, not hardware, since
+boot options (Wheelhouse, Boot options) checks programs, not hardware, since
 those settings may switch hardware off on purpose; disk unlock doesn't count
 after a firmware or Secure Boot change; what's checked is that each thing is
 there and its program answers, not that sound plays, Wi-Fi connects or a page
@@ -125,7 +125,7 @@ sound or the camera inside one app, app crashes, graphics chip hangs, Secure
 Boot switched off, and a freeze long after login; use Undo for those. It works
 on computers installed from a live USB made after it was added (November 2026):
 the boot menu's counter is set up only at install. **Test automatic rollback**
-in [System Tools](system-tools.md#system-tools) checks it.
+in [Wheelhouse](wheelhouse.md#wheelhouse) checks it.
 
 **Settings repair.** After each good start, a copy of the system settings
 folder `/etc` is saved in `/sysroot/evenkeel-os/settings`. `/sysroot` stays
@@ -161,7 +161,7 @@ the checks.
 
 Not checked yet, only on real hardware: whether a start without
 `/etc/machine-id` also switches services back on from their default settings
-(for example automatic updates turned off in System Tools), as a first start
+(for example automatic updates turned off in Wheelhouse), as a first start
 can.
 
 After a failed start, the repair puts back only the broken important settings
@@ -222,13 +222,13 @@ can be skipped:
 3. **How to get apps:** opens Bazaar and Install a package file to show them.
 
 The computer also asks once about each password Wi-Fi network: Home, Work or Public place (see
-[Network safety](system-tools.md#network-safety)).
+[Network safety](wheelhouse.md#network-safety)).
 
 One restart at the end, if needed. **Later** shows it at the next login;
-**Don't show again** stops it. It's in [System Tools](system-tools.md#system-tools)
+**Don't show again** stops it. It's in [Wheelhouse](wheelhouse.md#wheelhouse)
 any time.
 
-**New to EvenKeelOS?** opens in System Tools after the setup checklist closes: where things are, coming from Windows,
+**New to EvenKeelOS?** opens in Wheelhouse after the setup checklist closes: where things are, coming from Windows,
 and what's different. It's the first page of the [EvenKeelOS guide](guide.md). It opens at every login until **Don't
 show this again at login** at its end is ticked, or never, after **I already use Linux** in the installer. The guide
-is in System Tools, Get help, any time.
+is in Wheelhouse, Get help, any time.

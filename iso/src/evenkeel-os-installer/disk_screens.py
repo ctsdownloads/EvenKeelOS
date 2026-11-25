@@ -86,7 +86,7 @@ class EncryptionScreen(screens.PasswordChoiceScreen):
     @property
     def intro(self):
         return ("Encrypting keeps the files on this disk private if the computer is lost or stolen. "
-                "The disk password is typed at every start, until automatic unlock is turned on in System Tools.")
+                "The disk password is typed at every start, until automatic unlock is turned on in Wheelhouse.")
 
     def items(self):
         return [("Encrypt the disk", "Recommended", self.c.encrypt),
@@ -273,7 +273,7 @@ class ExperienceScreen(screens.ListScreen):
     title = "Coming from Windows?"
     step = "Experience"
     intro = ("This sets what you see at first. The next step suggests a desktop layout to match, and the guide is in "
-             "System Tools, Get help, either way.")
+             "Wheelhouse, Get help, either way.")
     CHOICES = [("windows", "Coming from Windows", "New to EvenKeelOS? opens at login, with the Windows-style desktop"),
                ("linux", "I already use Linux", "No guide at login, with the Standard desktop")]
 
@@ -302,7 +302,7 @@ def experience_name(key):
 class LayoutScreen(screens.Screen):
     title = "Desktop layout"
     step = "Desktop layout"
-    intro = "How should the desktop look? Click one. You can switch later in System Tools."
+    intro = "How should the desktop look? Click one. You can switch later in Wheelhouse."
     CHOICES = [("current", "Standard", "A top bar, with the logo menu at the top left"),
                ("windows", "Windows-style", "A bottom bar, with a start menu on the logo")]
 

@@ -1,4 +1,4 @@
-"""The System Tools window: every EvenKeelOS tool, on pages in one window."""
+"""The EvenKeelOS Wheelhouse window: every EvenKeelOS tool, on pages in one window."""
 import os
 import shutil
 import socket
@@ -178,7 +178,7 @@ def tool_list():
 
 class Window(Adw.ApplicationWindow):
     def __init__(self, app, tools_module):
-        super().__init__(application=app, title="System Tools", default_width=1040, default_height=760)
+        super().__init__(application=app, title="EvenKeelOS Wheelhouse", default_width=1040, default_height=760)
         self.t = tools_module
         self.tools = tool_list()
         self.toasts = Adw.ToastOverlay()
@@ -228,9 +228,9 @@ class Window(Adw.ApplicationWindow):
         side.append(self.search)
         side.append(Gtk.ScrolledWindow(child=self.sidebar, vexpand=True))
         side_view = Adw.ToolbarView(content=side)
-        side_view.add_top_bar(Adw.HeaderBar(title_widget=Adw.WindowTitle(title="System Tools")))
+        side_view.add_top_bar(Adw.HeaderBar(title_widget=Adw.WindowTitle(title="EvenKeelOS Wheelhouse")))
 
-        split = Adw.NavigationSplitView(sidebar=Adw.NavigationPage(child=side_view, title="System Tools"),
+        split = Adw.NavigationSplitView(sidebar=Adw.NavigationPage(child=side_view, title="Wheelhouse"),
                                         content=Adw.NavigationPage(child=content, title="Overview"),
                                         min_sidebar_width=230, max_sidebar_width=260)
         self.split = split
@@ -1068,7 +1068,7 @@ class Window(Adw.ApplicationWindow):
             self.before = self.stack.get_visible_child_name()
         self.dialogs.show(self.busy())
         self.stack.set_visible_child_name("tool")
-        self.content_title.set_title(self.busy() or "System Tools")
+        self.content_title.set_title(self.busy() or "Wheelhouse")
         self.back.set_visible(True)
         self.waiting.set_revealed(False)
         self.split.set_show_content(True)
@@ -1102,7 +1102,7 @@ class Window(Adw.ApplicationWindow):
     def on_close(self, _window):
         busy = self.busy()
         if busy:
-            self.toast(f"{busy} is still open. Close System Tools once it's done.")
+            self.toast(f"{busy} is still open. Close Wheelhouse once it's done.")
             self.show_tool()
             return True
         self.dialogs.close()

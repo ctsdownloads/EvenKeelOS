@@ -44,16 +44,16 @@ for ext in arcmenu@arcmenu.com dash-to-panel@jderose9.github.com; do
   else fail "$ext isn't running (Windows-style layout)"; fi
 done
 
-# Running System Tools owns its app name on the session bus, whichever copy of it opened the window.
+# Running Wheelhouse owns its app name on the session bus, whichever copy of it opened the window.
 tools_up() {
   gdbus call --session --dest org.freedesktop.DBus --object-path /org/freedesktop/DBus \
     --method org.freedesktop.DBus.NameHasOwner io.github.ctsdownloads.evenkeel-os.Tools 2>/dev/null | grep -q true
 }
-setsid evenkeel-os-tools >/tmp/system-tools.log 2>&1 &
-if wait_for 30 tools_up && ! grep -q Traceback /tmp/system-tools.log; then pass "System Tools opened"
+setsid evenkeel-os-tools >/tmp/wheelhouse.log 2>&1 &
+if wait_for 30 tools_up && ! grep -q Traceback /tmp/wheelhouse.log; then pass "Wheelhouse opened"
 else
-  fail "System Tools didn't open"
-  sed 's/^/  /' /tmp/system-tools.log
+  fail "Wheelhouse didn't open"
+  sed 's/^/  /' /tmp/wheelhouse.log
 fi
 
 # The trial check's own tests need root (boot-check-root, allowed for the test user in the test copy only).

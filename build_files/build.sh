@@ -34,11 +34,11 @@ for p in gnome-software gnome-software-rpm-ostree; do rpm -q "$p" >/dev/null 2>&
 rpm -q bazaar >/dev/null || { echo "ERROR: Bazaar is not installed"; exit 1; }
 [ -f /usr/share/gnome-shell/search-providers/io.github.kolunmi.Bazaar.search-provider.ini ] && [ -f /usr/share/dbus-1/services/io.github.kolunmi.Bazaar.SearchProvider.service ] || { echo "ERROR: Bazaar's Super-search provider is missing"; exit 1; }
 command -v ujust >/dev/null || { echo 'ERROR: ujust is missing'; exit 1; }
-# Shared windows module for System Tools and Install Package File.
+# Shared windows module for Wheelhouse and Install Package File.
 install -Dm644 /ctx/evenkeel_os_ui.py /usr/lib/evenkeel-os/evenkeel_os_ui.py
 python3 -I -c 'import sys; sys.path.insert(0, "/usr/lib/evenkeel-os"); import evenkeel_os_ui' \
   || { echo "ERROR: the shared windows module does not load"; exit 1; }
-# Started from System Tools, a tool's windows show inside it through evenkeel-os-dialog.
+# Started from Wheelhouse, a tool's windows show inside it through evenkeel-os-dialog.
 install -Dm755 /ctx/evenkeel-os-dialog /usr/libexec/evenkeel-os-dialog
 python3 -I /ctx/check-dialogs.py /ctx /usr/libexec/evenkeel-os-dialog
 # System Update: uupd with a progress window, no password (uupd's polkit rule, narrowed to the person at the computer).
@@ -71,7 +71,7 @@ install -Dm644 /ctx/io.github.ctsdownloads.evenkeel-os.vpn.policy \
 install -Dm755 /ctx/evenkeel-os-app-updates /usr/libexec/evenkeel-os-app-updates
 install -Dm644 /ctx/evenkeel-os-app-updates.service /usr/lib/systemd/system/evenkeel-os-app-updates.service
 install -Dm644 /ctx/evenkeel-os-app-updates.timer /usr/lib/systemd/system/evenkeel-os-app-updates.timer
-# System Tools, with a root helper for the jobs that change the system.
+# Wheelhouse, with a root helper for the jobs that change the system.
 install -Dm755 /ctx/evenkeel-os-tools /usr/bin/evenkeel-os-tools
 install -Dm755 /ctx/evenkeel-os-tools-admin /usr/libexec/evenkeel-os-tools-admin
 install -Dm644 /ctx/io.github.ctsdownloads.evenkeel-os.tools.policy /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.tools.policy
@@ -90,7 +90,7 @@ ln -sfn ../evenkeel-os-ca-trust.service /usr/lib/systemd/system/multi-user.targe
 [ -f /usr/lib/systemd/system/multi-user.target.wants/evenkeel-os-ca-trust.service ] && [ -x /usr/bin/update-ca-trust ] \
   || { echo "ERROR: the trusted certificate list isn't rebuilt at every start"; exit 1; }
 python3 -I /ctx/check-certs.py
-# Harmless System Tools jobs need no password for an admin at the computer.
+# Harmless Wheelhouse jobs need no password for an admin at the computer.
 install -Dm755 /ctx/evenkeel-os-tools-safe /usr/libexec/evenkeel-os-tools-safe
 # Automatic updates pause for 3 days after an undo; System Update itself is never paused.
 install -Dm755 /ctx/evenkeel-os-updates-pause-check /usr/libexec/evenkeel-os-updates-pause-check
@@ -108,11 +108,17 @@ install -Dm644 /ctx/50-evenkeel-os-tools.rules /usr/share/polkit-1/rules.d/50-ev
 python3 -c 'import xml.dom.minidom,sys; [xml.dom.minidom.parse(f) for f in sys.argv[1:]]' \
   /ctx/io.github.ctsdownloads.evenkeel-os.tools.policy /ctx/io.github.ctsdownloads.evenkeel-os.codecs.policy \
   /ctx/io.github.ctsdownloads.evenkeel-os.vpn.policy \
-  || { echo "ERROR: a System Tools, codecs or VPN polkit policy is not valid XML"; exit 1; }
+  || { echo "ERROR: a Wheelhouse, codecs or VPN polkit policy is not valid XML"; exit 1; }
 # Keep the disk unlock note in step with the disk at every start.
 install -Dm644 /ctx/evenkeel-os-disk-unlock-check.service /usr/lib/systemd/system/evenkeel-os-disk-unlock-check.service
 systemctl enable evenkeel-os-disk-unlock-check.service
 install -Dm644 /ctx/evenkeel-os-tools.desktop /usr/share/applications/evenkeel-os-tools.desktop
+install -Dm644 -t /usr/share/icons/hicolor/scalable/apps /ctx/branding/evenkeel-os-wheelhouse.svg
+gtk-update-icon-cache -f /usr/share/icons/hicolor
+grep -qa evenkeel-os-wheelhouse /usr/share/icons/hicolor/icon-theme.cache \
+  || { echo "ERROR: Wheelhouse's icon isn't in the icon cache"; exit 1; }
+grep -qx "Icon=evenkeel-os-wheelhouse" /usr/share/applications/evenkeel-os-tools.desktop && grep -qx "Name=Wheelhouse" \
+  /usr/share/applications/evenkeel-os-tools.desktop || { echo "ERROR: Wheelhouse's launcher has the wrong name or icon"; exit 1; }
 # The setup checklist opens once at a new user's first login.
 install -Dm644 /ctx/evenkeel-os-setup-checklist.desktop /etc/xdg/autostart/evenkeel-os-setup-checklist.desktop
 install -Dm644 /ctx/evenkeel-os-rolled-back.desktop /etc/xdg/autostart/evenkeel-os-rolled-back.desktop
@@ -123,7 +129,7 @@ install -Dm644 /dev/null /usr/share/evenkeel-os/changes.txt
 # Microphones start at 50%; fail if WirePlumber drops the setting.
 install -Dm644 /ctx/60-evenkeel-os-mic.conf /usr/share/wireplumber/wireplumber.conf.d/60-evenkeel-os-mic.conf
 grep -q 'device.routes.default-source-volume' /usr/share/wireplumber/wireplumber.conf || { echo "ERROR: WirePlumber no longer has device.routes.default-source-volume"; exit 1; }
-for c in fwupdmgr systemd-cryptenroll cryptsetup flatpak podman gnome-control-center; do command -v "$c" >/dev/null || { echo "ERROR: System Tools needs $c"; exit 1; }; done
+for c in fwupdmgr systemd-cryptenroll cryptsetup flatpak podman gnome-control-center; do command -v "$c" >/dev/null || { echo "ERROR: Wheelhouse needs $c"; exit 1; }; done
 install -Dm644 /ctx/evenkeel-os-install-package.desktop /usr/share/applications/evenkeel-os-install-package.desktop
 install -Dm644 /ctx/evenkeel-os-windows-program.desktop /usr/share/applications/evenkeel-os-windows-program.desktop
 install -Dm644 /ctx/evenkeel-os-zoom-link.desktop /usr/share/applications/evenkeel-os-zoom-link.desktop
@@ -143,7 +149,7 @@ python3 -I /ctx/check-network.py
 for f in /usr/bin/firewall-cmd /usr/bin/cupsctl /usr/lib/systemd/system/sshd.service; do
   [ -e "$f" ] || { echo "ERROR: Network safety needs $f"; exit 1; }
 done
-# Shared folders: Samba serves only the folders picked in System Tools, on Home networks only; Macs and Linux find
+# Shared folders: Samba serves only the folders picked in Wheelhouse, on Home networks only; Macs and Linux find
 # it through Avahi, Windows through wsdd. Off until turned on there.
 dnf5 -y install samba avahi wsdd policycoreutils
 install -Dm644 /ctx/samba/smb.conf /etc/samba/smb.conf
@@ -161,7 +167,7 @@ for f in /usr/bin/smbpasswd /usr/bin/smbcontrol /usr/bin/testparm /usr/sbin/sets
   [ -e "$f" ] || { echo "ERROR: Shared folders needs $f"; exit 1; }
 done
 python3 -I /ctx/check-sharing.py
-# Boot options: kernel settings changed in System Tools, through rpm-ostree.
+# Boot options: kernel settings changed in Wheelhouse, through rpm-ostree.
 install -Dm644 /ctx/evenkeel_os_bootopts.py /usr/lib/evenkeel-os/evenkeel_os_bootopts.py
 install -Dm755 /ctx/evenkeel-os-boot-options /usr/libexec/evenkeel-os-boot-options
 python3 -I /ctx/check-boot-options.py
@@ -287,7 +293,7 @@ fb=/usr/lib/systemd/system/systemd-firstboot.service.d/50-evenkeel-os.conf
 install -Dm644 /ctx/50-evenkeel-os-firstboot.conf "$fb"
 [ "$(sed -n 's/^ExecStart=//p' "$fb" | tail -1)" = /usr/bin/systemd-firstboot ] \
   || { echo "ERROR: the first-start setup can still stop startup to ask questions"; exit 1; }
-# System Tools' settings test runs as its own polkit action (in the tools policy), with the password every time.
+# Wheelhouse's settings test runs as its own polkit action (in the tools policy), with the password every time.
 install -Dm755 /ctx/greenboot/evenkeel-os-settings-test /usr/libexec/evenkeel-os-settings-test
 for c in rsync unshare findmnt; do
   command -v "$c" >/dev/null || { echo "ERROR: the settings repair needs $c"; exit 1; }
@@ -497,21 +503,21 @@ chmod -R u=rwX,go=rX /usr/share/gnome-shell/extensions/logomenu@aryan_k
 install -Dm644 /usr/share/gnome-shell/extensions/logomenu@aryan_k/schemas/org.gnome.shell.extensions.logo-menu.gschema.xml \
   /usr/share/glib-2.0/schemas/org.gnome.shell.extensions.logo-menu.gschema.xml
 rm -r /usr/share/gnome-shell/extensions/logomenu@aryan_k/schemas
-# A System Tools entry under Extensions; Logo Menu has no setting for extra entries. Fails if its menu code changes.
+# A Wheelhouse entry under Extensions; Logo Menu has no setting for extra entries. Fails if its menu code changes.
 python3 -I - /usr/share/gnome-shell/extensions/logomenu@aryan_k/extension.js <<'PY'
 import sys
 path = sys.argv[1]
 after = "        this._addItem(new MenuItem(_('Extensions'), () => this._openExtensionsApp()));\n"
-entry = "        this._addItem(new MenuItem('System Tools', () => Util.spawn(['/usr/bin/evenkeel-os-tools'])));\n"
+entry = "        this._addItem(new MenuItem('Wheelhouse', () => Util.spawn(['/usr/bin/evenkeel-os-tools'])));\n"
 with open(path) as f:
     js = f.read()
 if js.count(after) != 1 or entry in js:
-    sys.exit("ERROR: Logo Menu's menu code changed, so System Tools can't be added to it")
+    sys.exit("ERROR: Logo Menu's menu code changed, so Wheelhouse can't be added to it")
 with open(path, "w") as f:
     f.write(js.replace(after, after + entry))
 PY
-grep -qF "new MenuItem('System Tools'" /usr/share/gnome-shell/extensions/logomenu@aryan_k/extension.js \
-  || { echo 'ERROR: the Logo Menu has no System Tools entry'; exit 1; }
+grep -qF "new MenuItem('Wheelhouse'," /usr/share/gnome-shell/extensions/logomenu@aryan_k/extension.js \
+  || { echo 'ERROR: the Logo Menu has no Wheelhouse entry'; exit 1; }
 glib-compile-schemas /usr/share/glib-2.0/schemas 2>&1 | { grep -v 'deprecated' || true; }
 gnome_shell=$(rpm -q --qf '%{VERSION}' gnome-shell | cut -d. -f1)
 grep -q "\"$gnome_shell\"" /usr/share/gnome-shell/extensions/logomenu@aryan_k/metadata.json || { echo "ERROR: Logo Menu 25.2 does not support GNOME $gnome_shell"; exit 1; }
@@ -537,24 +543,24 @@ done
 install -Dm644 /ctx/evenkeel-os-windows-layout.dconf /etc/dconf/db/distro.d/50-evenkeel-os-windows-layout
 install -Dm755 /ctx/evenkeel-os-layout /usr/bin/evenkeel-os-layout
 
-# System Tools in Show Apps' Utilities folder; the other tools live inside it, so their launchers are hidden
+# Wheelhouse in Show Apps' Utilities folder; the other tools live inside it, so their launchers are hidden
 # (they still open .rpm, .deb, .exe and .msi files).
 install -Dm644 /ctx/evenkeel-os-app-folders.dconf /etc/dconf/db/distro.d/50-evenkeel-os-app-folders
 dconf update
 HOME=/tmp dconf read /org/gnome/desktop/app-folders/folders/Utilities/apps | grep -q "'evenkeel-os-tools.desktop'" \
-  || { echo "ERROR: System Tools is not in the Utilities folder"; exit 1; }
+  || { echo "ERROR: Wheelhouse is not in the Utilities folder"; exit 1; }
 for a in evenkeel-os-update evenkeel-os-install-package evenkeel-os-remove-apps evenkeel-os-repair-boxes \
          evenkeel-os-login-apps evenkeel-os-codecs; do
   grep -qx 'NoDisplay=true' "/usr/share/applications/$a.desktop" \
-    || { echo "ERROR: $a still shows in Show Apps; it belongs inside System Tools"; exit 1; }
+    || { echo "ERROR: $a still shows in Show Apps; it belongs inside Wheelhouse"; exit 1; }
 done
 install -Dm644 /ctx/evenkeel_os_dialogs.py /usr/lib/evenkeel-os/evenkeel_os_dialogs.py
 install -Dm644 /ctx/evenkeel_os_panel.py /usr/lib/evenkeel-os/evenkeel_os_panel.py
-# The EvenKeelOS guide in System Tools, Get help; New to EvenKeelOS? at login after the setup checklist until ticked.
+# The EvenKeelOS guide in Wheelhouse, Get help; New to EvenKeelOS? at login after the setup checklist until ticked.
 install -Dm644 /ctx/evenkeel_os_guide.py /usr/lib/evenkeel-os/evenkeel_os_guide.py
 install -Dm644 /ctx/evenkeel-os-guide.desktop /etc/xdg/autostart/evenkeel-os-guide.desktop
 python3 -I /ctx/check-panel.py \
-  || { echo 'ERROR: the System Tools window is missing a tool, an icon or a command'; exit 1; }
+  || { echo 'ERROR: the Wheelhouse window is missing a tool, an icon or a command'; exit 1; }
 # The login screen reads its settings through the gdm profile; nothing there may undo the teal accent.
 got=$(HOME=/tmp DCONF_PROFILE=gdm gsettings get org.gnome.desktop.interface accent-color)
 [ "$got" = "'teal'" ] || { echo "ERROR: the login screen's accent color is $got, not teal"; exit 1; }
@@ -596,7 +602,7 @@ HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout windows
 HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout current
 [ "$(HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout)" = current ] || { echo "ERROR: evenkeel-os-layout does not switch back"; exit 1; }
 echo 1 | HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-tools layout >/dev/null
-[ "$(HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout)" = windows ] || { echo "ERROR: System Tools' Desktop layout does not switch the layout"; exit 1; }
+[ "$(HOME=$t GSETTINGS_BACKEND=keyfile evenkeel-os-layout)" = windows ] || { echo "ERROR: Wheelhouse's Desktop layout does not switch the layout"; exit 1; }
 rm -rf "$t"
 
 # Keep tuned from running bootc on every power-mode switch.

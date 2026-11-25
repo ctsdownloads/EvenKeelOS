@@ -1,5 +1,5 @@
 #!/usr/bin/python3 -I
-"""System Tools jobs an administrator at the computer runs without a password, as root through polkit.
+"""Wheelhouse jobs an administrator at the computer runs without a password, as root through polkit.
 
   evenkeel-os-tools-safe updates on|pause|resume   (pause: 3 days, after an undo)
   evenkeel-os-tools-safe disk-unlock on|off      (the disk password on standard input)

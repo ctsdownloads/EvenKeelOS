@@ -1,5 +1,5 @@
 #!/usr/bin/python3 -I
-"""System Tools' settings repair test, as root through polkit (admin password every time). Takes no arguments.
+"""Wheelhouse's settings repair test, as root through polkit (admin password every time). Takes no arguments.
 
   evenkeel-os-settings-test     delete important settings for real and restart; the next start puts them back
                                 (exit 4: installed before automatic rollback, 5: an update is waiting, 6: this start

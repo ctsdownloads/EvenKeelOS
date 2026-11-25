@@ -155,7 +155,7 @@ def install(c):
         run("cryptsetup", "open", "--key-file=-", root, f"luks-{uuid}", secret=c["disk_password"])
         OPENED.append(f"luks-{uuid}")
         root_fs = f"/dev/mapper/luks-{uuid}"
-        kargs.append(f"rd.luks.uuid=luks-{uuid}")      # the form System Tools' automatic unlock looks for
+        kargs.append(f"rd.luks.uuid=luks-{uuid}")      # the form Wheelhouse's automatic unlock looks for
     run("mkfs.xfs", "-q", "-f", "-L", "root", root_fs)
 
     os.makedirs(TARGET, exist_ok=True)

@@ -99,11 +99,11 @@ for page in PAGES[1:]:
     if page not in linked:
         errors.append(f"{page} is not linked from README.md, so nobody will find it")
 
-# ---------------------------------------------------------------- the guide matches System Tools' own text
+# ---------------------------------------------------------------- the guide matches Wheelhouse's own text
 sys.path.insert(0, str(ROOT / "build_files"))
 import evenkeel_os_guide  # noqa: E402
 if (ROOT / "docs" / "guide.md").read_text() != evenkeel_os_guide.markdown():
-    errors.append("docs/guide.md isn't the guide System Tools shows: write it from "
+    errors.append("docs/guide.md isn't the guide Wheelhouse shows: write it from "
                   "build_files/evenkeel_os_guide.py")
 
 if errors:

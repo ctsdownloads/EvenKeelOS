@@ -1,10 +1,10 @@
 #!/usr/bin/python3 -I
-"""Build check: tools started from System Tools show their windows inside it.
+"""Build check: tools started from Wheelhouse show their windows inside it.
 
 1. No tool runs zenity itself: every window goes through evenkeel_os_ui.DIALOGS or the scripts' $zenity, which
-   become evenkeel-os-dialog when System Tools starts the tool.
+   become evenkeel-os-dialog when Wheelhouse starts the tool.
 2. evenkeel-os-dialog answers like zenity (exit code and output) for each kind of window, against a stand-in for the
-   System Tools window.
+   Wheelhouse window.
 
 Usage: check-dialogs.py BUILD_FILES_FOLDER DIALOG_PROGRAM
 """
@@ -29,7 +29,7 @@ files = [folder / "evenkeel_os_ui.py", folder / "evenkeel-os-tools", folder / "e
 for f in files:
     for n, line in enumerate(f.read_text().splitlines(), 1):
         if re.search(r'(?<![\w$"-])zenity(?![\w=(\'])|"zenity"', line) and not ALLOWED.search(line):
-            problems.append(f"{f.name}:{n} runs zenity directly, so its window would open outside System Tools")
+            problems.append(f"{f.name}:{n} runs zenity directly, so its window would open outside Wheelhouse")
 
 # 2. answers, with a stand-in window that answers each request as told
 answers = []
@@ -93,13 +93,13 @@ with tempfile.TemporaryDirectory() as tmp:
         ("unknown option", ask(["--question", "--timeout=5"], {"button": "ok"}), (2, "")),
     ]
     answers.clear()
-    # System Tools closed: the tool gets a window of its own from zenity, as before
+    # Wheelhouse closed: the tool gets a window of its own from zenity, as before
     Path(tmp, "zenity").write_text('#!/bin/sh\necho "zenity $*"\n')
     Path(tmp, "zenity").chmod(0o755)
     r = subprocess.run([program, "--info", "--text=x"], capture_output=True, text=True, timeout=20,
                        env={**os.environ, "EVENKEEL_OS_PANEL": os.path.join(tmp, "gone"),
                             "PATH": f"{tmp}:{os.environ.get('PATH', '')}"})
-    checks.append(("System Tools closed", (r.returncode, r.stdout), (0, "zenity --info --text=x\n")))
+    checks.append(("Wheelhouse closed", (r.returncode, r.stdout), (0, "zenity --info --text=x\n")))
     for name, got, want in checks:
         if got != want:
             problems.append(f"evenkeel-os-dialog, {name}: exit code and output {got}, not {want}")
@@ -108,6 +108,6 @@ with tempfile.TemporaryDirectory() as tmp:
     server.close()
 
 if problems:
-    print("ERROR: tool windows would not show inside System Tools:", *problems, sep="\n  ")
+    print("ERROR: tool windows would not show inside Wheelhouse:", *problems, sep="\n  ")
     sys.exit(1)
-print(f"Tool windows show inside System Tools: {len(files)} files checked, {len(checks)} answers right")
+print(f"Tool windows show inside Wheelhouse: {len(files)} files checked, {len(checks)} answers right")

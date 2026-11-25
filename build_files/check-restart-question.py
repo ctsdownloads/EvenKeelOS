@@ -1,7 +1,7 @@
 #!/usr/bin/python3 -I
 """Build check: the window before an automatic restart gives each answer the startup check expects.
 
-Runs System Tools' restart-question against a made-up zenity and pkexec: no window opens and nothing restarts.
+Runs Wheelhouse's restart-question against a made-up zenity and pkexec: no window opens and nothing restarts.
 """
 import importlib.machinery
 import importlib.util
@@ -78,7 +78,7 @@ def die(msg):
 if tools.RESTART_WAIT != health.COUNTDOWN:
     die(f"the window counts down {tools.RESTART_WAIT} seconds, the startup check {health.COUNTDOWN}")
 if set(tools.AFTER_LOGIN_TESTS) != set(health.TRIAL_TESTS):
-    die(f"System Tools' after-login tests {tools.AFTER_LOGIN_TESTS} aren't the trial's {health.TRIAL_TESTS}")
+    die(f"Wheelhouse's after-login tests {tools.AFTER_LOGIN_TESTS} aren't the trial's {health.TRIAL_TESTS}")
 # Every after-login test: its own name, what broke, Restart now or Not yet, no countdown but for Graphics.
 for kind, name, _ in tools.ROLLBACK_TESTS:
     if kind not in tools.AFTER_LOGIN_TESTS:

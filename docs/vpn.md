@@ -4,12 +4,12 @@
 
 ## VPNs
 
-**Get a VPN** (in System Tools) adds a VPN app: Mullvad, Proton, IVPN or NordVPN. It comes from that company's own
+**Get a VPN** (in Wheelhouse) adds a VPN app: Mullvad, Proton, IVPN or NordVPN. It comes from that company's own
 download source, so it keeps updating. Nothing is installed until someone picks one.
 
 ### Getting a VPN
 
-1. Open **System Tools**, go to Apps and pick **Get a VPN**.
+1. Open **Wheelhouse**, go to Apps and pick **Get a VPN**.
 2. Pick Mullvad, Proton, IVPN or NordVPN.
 3. Confirm, then type the password.
 4. It adds that company's download source to the system, and adds the app to the system (not a box).
@@ -66,7 +66,7 @@ source was picked up by the system upgrade with no new EvenKeelOS build.
 
 ### Removing a VPN
 
-Open System Tools, Apps, **Remove apps** and remove it. That turns off its background service, removes the app and
+Open Wheelhouse, Apps, **Remove apps** and remove it. That turns off its background service, removes the app and
 removes its download source. For NordVPN it also removes the group it added for your account, and its log folder.
 Then restart. Nothing is left behind. See [Removing apps](apps.md#removing-apps).
 

@@ -6,7 +6,7 @@ set -uo pipefail
 OUT=${RUNNER_TEMP:-/tmp}/rollback-test-results
 HERE=$(dirname "$0")
 . "$HERE/vm.sh"
-# System Tools' tests, less the two a virtual machine has no chip for: Wi-Fi and Bluetooth.
+# Wheelhouse's tests, less the two a virtual machine has no chip for: Wi-Fi and Bluetooth.
 mapfile -t TESTS < <(python3 -I - "$HERE/../build_files/evenkeel-os-tools-admin" <<'PY'
 import ast, sys
 for n in ast.parse(open(sys.argv[1]).read()).body:

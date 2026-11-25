@@ -150,7 +150,7 @@ class Computer:
             self.file(f"sys/class/tpm/tpm0/pcr-sha256/{n}", f"PCR{n}VALUE")
         # A USB webcam on a dock: the dock's ports aren't marked, so it's a plug-in, not listed
         self.usb("3-2.1", "046d", "085e", "unknown", "uvcvideo")
-        self.file("etc/samba/evenkeel-shares.conf", "# Written by System Tools\n\n[Music]\n\tpath = /x\n")
+        self.file("etc/samba/evenkeel-shares.conf", "# Written by Wheelhouse\n\n[Music]\n\tpath = /x\n")
         self.file("var/lib/evenkeel-os/disk-unlock-on", "TPM2 unlock enrolled\n")
         self.cmdline += " rd.luks.uuid=luks-0000 amdgpu.abmlevel=0"
         self.file("var/lib/evenkeel-os/boot-options.json", json.dumps({"options": ["amdgpu.abmlevel=0"]}))
@@ -502,7 +502,7 @@ def main():
 
 
 def options_change(c):
-    """The same version with other boot options (System Tools, Boot options): nomodeset and selinux=0."""
+    """The same version with other boot options (Wheelhouse, Boot options): nomodeset and selinux=0."""
     c.answers["rpm-ostree"] = (0, json.dumps({"deployments": [{"booted": True, "checksum": "aaa"},
                                                                   {"booted": False, "checksum": "aaa"}]}))
     c.remove("sys/class/drm/card1")

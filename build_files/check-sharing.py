@@ -1,5 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check for Shared folders: Samba shares nothing as a guest and only what System Tools lists, it starts
+"""Build check for Shared folders: Samba shares nothing as a guest and only what Wheelhouse lists, it starts
 off, Windows and Macs can find it once it runs, and only folders inside your own home folder can be shared.
 
 Usage: check-sharing.py   (in the image, after build.sh has set Shared folders up)
@@ -100,7 +100,7 @@ with tempfile.TemporaryDirectory() as scratch:
     conf.write_text("[global]\n\tmap to guest = Never\n" + sharing.shares_conf(state))
     shares = subprocess.run(["testparm", "-s", str(conf)], capture_output=True, text=True).stdout
     if "[Pictures]" not in shares or "valid users = root" not in shares or "[Other]" in shares:
-        bad(f"the shares written for System Tools' list aren't what it says:\n{shares}")
+        bad(f"the shares written for Wheelhouse's list aren't what it says:\n{shares}")
     if "read only = No" in shares:
         bad("a read-only folder was shared for writing")
 

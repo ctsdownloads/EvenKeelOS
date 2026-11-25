@@ -1,4 +1,4 @@
-"""A tool's questions, messages, lists, password box and progress, shown inside the System Tools window.
+"""A tool's questions, messages, lists, password box and progress, shown inside the Wheelhouse window.
 
 Tools started from the window get EVENKEEL_OS_PANEL, the path of a socket here; evenkeel-os-dialog connects to it
 with one request per question and waits for the answer.
@@ -70,7 +70,7 @@ class Request:
                       margin_start=12, margin_end=12)
         head = Gtk.Box(spacing=14)
         head.append(Gtk.Image(icon_name=ICONS[kind], pixel_size=32, valign=Gtk.Align.START))
-        head.append(Gtk.Label(label=r.get("title") or "System Tools", wrap=True, xalign=0, hexpand=True,
+        head.append(Gtk.Label(label=r.get("title") or "EvenKeelOS Wheelhouse", wrap=True, xalign=0, hexpand=True,
                               css_classes=["title-2"]))
         box.append(head)
         self.label = Gtk.Label(wrap=True, wrap_mode=Pango.WrapMode.WORD_CHAR, xalign=0, selectable=True,
