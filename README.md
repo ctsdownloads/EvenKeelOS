@@ -93,7 +93,7 @@ can't change, so it stays working.
 | Utilities folder | Holds System Tools, with every EvenKeelOS tool inside it. Show Apps has no separate icons for them |
 | File types | Text files open in Text Editor, .rpm and .deb in Install Package File, .exe and .msi in Windows Program, Flatpak files in Bazaar |
 | Login screen and boot menu | EvenKeelOS logo and name, and the teal accent on the login and lock screens. New users get the EvenKeelOS logo as their picture. The live USB and the installed system both work with Secure Boot on, with one shim on the disk, so the firmware adds no extra "Fedora" boot entry |
-| Live USB fit check | The live USB's Welcome window checks the computer before you install: start mode and Secure Boot, the disk (including a disk hidden by the BIOS's RAID setting), Wi-Fi (including Broadcom chips with no driver), graphics (NVIDIA isn't supported), sound, memory, camera, Bluetooth and touchpad, each marked fine, limited or a problem, with plain advice. **Save the results** puts them on a second USB stick. See [Install](docs/install.md#from-the-live-usb) |
+| Live USB fit check | The live USB's Welcome window checks the computer before you install: start mode and Secure Boot, the disk (including a disk hidden by the BIOS's RAID setting), Wi-Fi (including Broadcom chips with no driver), graphics (NVIDIA runs on the open-source driver; the proprietary one isn't used), sound, memory, camera, Bluetooth and touchpad, each marked fine, limited or a problem, with plain advice. **Save the results** puts them on a second USB stick. See [Install](docs/install.md#from-the-live-usb) |
 | fastfetch | Shows the EvenKeelOS logo |
 
 ## System requirements

@@ -14,6 +14,9 @@ GOOD, LIMITED, BAD = "good", "limited", "bad"
 VENDORS = {"0x8086": "Intel", "0x1002": "AMD", "0x10de": "NVIDIA", "0x14e4": "Broadcom", "0x10ec": "Realtek",
            "0x14c3": "MediaTek", "0x168c": "Qualcomm Atheros", "0x17cb": "Qualcomm"}
 BROADCOM = "0x14e4"
+NVIDIA = ("The NVIDIA card runs on the open-source driver built into EvenKeelOS. The proprietary NVIDIA driver "
+          "isn't used: it breaks too often to keep the promise that EvenKeelOS just works. If you need it, use "
+          "Bazzite or Bluefin's NVIDIA editions instead.")
 NO_FIRMWARE = ("b43", "b43legacy")           # Broadcom drivers whose firmware Fedora can't include
 RAID_HIDDEN = re.compile(r"remapped NVMe devices|Switch your BIOS from RAID to AHCI")
 EFI_GLOBAL = "8be4df61-93ca-11d2-aa0d-00e098032b8c"
@@ -131,13 +134,12 @@ def graphics(devices):
     if not shown:
         return (BAD, "Graphics", "No graphics chip found.", "Save the results for your helper.")
     names = sorted({vendor(d) or "Unknown" for d in shown})
-    if "NVIDIA" in names:
-        others = [n for n in names if n != "NVIDIA"]
-        return (LIMITED, "Graphics", f"{' and '.join(['NVIDIA'] + others)} graphics found.",
-                "NVIDIA graphics aren't supported by EvenKeelOS." +
-                (f" The {others[0]} graphics are used for the screen." if others else ""))
     if any(not d["driver"] for d in shown):
         return (BAD, "Graphics", "A graphics chip has no driver.", "Save the results for your helper.")
+    if "NVIDIA" in names:
+        others = [n for n in names if n != "NVIDIA"]
+        return (GOOD, "Graphics", f"{' and '.join(['NVIDIA'] + others)} graphics found.",
+                (f"The {others[0]} graphics drive the screen. " if others else "") + NVIDIA)
     return (GOOD, "Graphics", f"{' and '.join(names)} graphics found.", "")
 
 

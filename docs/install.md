@@ -27,8 +27,9 @@ Nothing touches the disk until you install.
      to set the storage mode to AHCI in the BIOS. The installer's Disk step says the same.
    - **Wi-Fi:** a wireless chip with no driver, or a Broadcom chip whose driver or firmware can't be included, is
      red: use a network cable or a USB Wi-Fi adapter.
-   - **Graphics:** Intel and AMD are fine. NVIDIA isn't supported. Started with **basic graphics**, it can't check
-     them.
+   - **Graphics:** Intel, AMD and NVIDIA are fine. NVIDIA cards run on the open-source driver built into
+     EvenKeelOS; the proprietary NVIDIA driver isn't used, since it breaks too often. If you need it, use Bazzite
+     or Bluefin's NVIDIA editions. Started with **basic graphics**, it can't check them.
    - **Memory:** less than the recommended 8 GB is a warning (it may be slow).
    - **Sound, camera, Bluetooth and touchpad:** found or not. The newer kind of built-in laptop camera may not work
      yet, and when it does, only in Firefox and the Camera app.
