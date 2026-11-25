@@ -1,0 +1,22 @@
+#!/usr/bin/python3 -I
+"""Make it yours: applies light and dark on a schedule and the wallpaper slideshow (evenkeel_os_appearance)."""
+import sys
+
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_appearance as appearance  # noqa: E402
+
+USAGE = "usage: evenkeel-os-appearance apply [--login]"
+
+
+def main(argv):
+    if argv[1:] not in (["apply"], ["apply", "--login"]):
+        print(USAGE, file=sys.stderr)
+        return 2
+    state = appearance.load()
+    if appearance.apply(state, login=argv[2:] == ["--login"]):
+        appearance.save(state)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))

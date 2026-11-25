@@ -14,6 +14,7 @@ import evenkeel_os_bootopts as bootopts  # noqa: E402
 import evenkeel_os_guide as guide  # noqa: E402
 import evenkeel_os_network as net  # noqa: E402
 import evenkeel_os_sharing as sharing  # noqa: E402
+import evenkeel_os_yours as yours  # noqa: E402
 from evenkeel_os_dialogs import Dialogs  # noqa: E402
 from evenkeel_os_packages import zoom  # noqa: E402
 
@@ -154,6 +155,13 @@ def tool_list():
         Tool("yours", "Colors and wallpaper", "Accent color and wallpaper",
              "Teal to start. Folder icons follow whatever color you pick.", "applications-graphics-symbolic",
              ["gnome-control-center", "background"], "", "theme folder appearance background"),
+        Tool("yours", "Light and dark", "Light and dark", "Switch to the dark style at sunset, or at times you pick",
+             "weather-clear-night-symbolic", "yours", "", "dark mode light mode schedule night sunset sunrise theme"),
+        Tool("yours", "Wallpaper slideshow", "Wallpaper slideshow",
+             "Change the wallpaper to the next picture in a folder",
+             "image-x-generic-symbolic", "yours", "", "background pictures photos rotate change"),
+        Tool("yours", "Fonts and text", "Fonts and text size", "Pick the fonts for menus, documents and code",
+             "font-x-generic-symbolic", "yours", "", "font typeface bigger smaller text scaling large text"),
         Tool("help", "How to do things", "EvenKeelOS guide",
              "How to do things, step by step: the desktop, files, apps and more", "help-about-symbolic",
              "guide", "evenkeel-os-tools --page=guide", "guide manual help how to tutorial windows beginner"),
@@ -261,7 +269,7 @@ class Window(Adw.ApplicationWindow):
         if key == "sharing":
             self.sharing_page(page)
         for tool in self.tools:
-            if tool.page != key or tool.run in ("layout", "network", "sharing", "bootopts"):  # shown as a section
+            if tool.page != key or tool.run in ("layout", "yours", "network", "sharing", "bootopts"):  # a section
                 continue
             if tool.group not in groups:
                 groups[tool.group] = Adw.PreferencesGroup(title=tool.group)
@@ -276,6 +284,9 @@ class Window(Adw.ApplicationWindow):
             page.add(g)
         if key == "disk":
             self.boot_section(page)
+        if key == "yours":
+            for g in yours.Yours(self).groups():
+                page.add(g)
         if key == "help":
             page.add(self.terminal_list())
         return page
@@ -1019,7 +1030,7 @@ class Window(Adw.ApplicationWindow):
             self.pick_windows_file()
         elif tool.run == "zoom":
             self.zoom_choice()
-        elif tool.run == "layout":
+        elif tool.run in ("layout", "yours"):
             self.show("yours")
         elif tool.run in ("network", "sharing"):
             self.show(tool.run)

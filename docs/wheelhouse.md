@@ -268,6 +268,9 @@ doesn't warn about risky settings. Only Wheelhouse does.
 |------|--------------|
 | Desktop layout | Pick Standard (the top bar) or Windows-style (the bottom bar and start menu, which opens on the desktop at login). It takes effect after you log out and back in |
 | Accent color and wallpaper | Opens Settings, Appearance. Folder icons follow the accent color |
+| Light and dark | **Dark style**: Off, Sunset to sunrise, or Custom times (Dark from, Light from). Sunset and sunrise are worked out each day for your time zone's city, with no location service. It switches only at the change, so if you switch it yourself it stays that way until the next change. Night Light in Settings only warms the colors; this switches the whole style |
+| Wallpaper slideshow | Pick a folder of your pictures (JPEG, PNG or WebP). The wallpaper changes to the next one, in name order, every hour, every day or at each login. Turn **Slideshow** off to keep the picture you have |
+| Fonts and text | The fonts for menus and windows, documents, and code and the terminal, and **Text size** (1.00 is normal; Large text in Settings, Accessibility is 1.25). **Back to the original** puts all four back. GNOME's own Settings has none of these |
 
 ### Get help
 

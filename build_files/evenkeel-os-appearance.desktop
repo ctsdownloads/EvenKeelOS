@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Light and dark schedule and wallpaper slideshow
+Comment=Applies them at login: the next slide for "at each login", and dark or light for the time of day
+Exec=/usr/bin/evenkeel-os-appearance apply --login
+Terminal=false
+NoDisplay=true
+OnlyShowIn=GNOME;
+X-GNOME-Autostart-enabled=true

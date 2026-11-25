@@ -263,7 +263,7 @@ Automatic updates, undoing an update, firmware and certificate alerts.
 
 ## Making it yours
 
-The layout, colors, wallpaper, screen size, night light, sound and accounts.
+The layout, colors, wallpaper, dark at night, fonts, screen size, night light, sound and accounts.
 
 ### Layout
 
@@ -275,6 +275,24 @@ The layout, colors, wallpaper, screen size, night light, sound and accounts.
 1. Open Settings, Appearance.
 2. Style: Default (light) or Dark. Accent Color: the color of buttons and folder icons.
 3. Background: click a picture. To use your own photo, click Add Picture.
+
+### Dark at night, light in the day
+
+1. Open Wheelhouse, Make it yours, Light and dark.
+2. Pick Sunset to sunrise, or Custom times and pick when dark starts and ends.
+3. You can still switch it yourself. It stays that way until the next change.
+
+### A slideshow of your own pictures
+
+1. Put the pictures in one folder, for example in Pictures.
+2. Open Wheelhouse, Make it yours, Wallpaper slideshow, and click Choose.
+3. Pick the folder, then how often it changes: every hour, every day or at each login.
+
+### Fonts and text size
+
+1. Open Wheelhouse, Make it yours, Fonts and text.
+2. Click a font to pick another, or change Text size. 1.00 is the normal size.
+3. Click Back to the original to undo all of it.
 
 ### Make everything bigger or smaller
 

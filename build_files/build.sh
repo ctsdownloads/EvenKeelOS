@@ -142,6 +142,14 @@ install -Dm644 /ctx/evenkeel-os-packages-after-restart.desktop /etc/xdg/autostar
 for z in home work public; do install -Dm644 "/ctx/firewall/evenkeel-$z.xml" "/usr/lib/firewalld/zones/evenkeel-$z.xml"; done
 firewall-offline-cmd --set-default-zone=evenkeel-public
 install -Dm644 /ctx/evenkeel_os_network.py /usr/lib/evenkeel-os/evenkeel_os_network.py
+# Make it yours: light and dark on a schedule and the wallpaper slideshow, applied at login and every 5 minutes.
+install -Dm644 -t /usr/lib/evenkeel-os /ctx/evenkeel_os_appearance.py /ctx/evenkeel_os_yours.py
+install -Dm755 /ctx/evenkeel-os-appearance /usr/bin/evenkeel-os-appearance
+install -Dm644 -t /usr/lib/systemd/user /ctx/evenkeel-os-appearance.service /ctx/evenkeel-os-appearance.timer
+mkdir -p /usr/lib/systemd/user/timers.target.wants
+ln -sfn ../evenkeel-os-appearance.timer /usr/lib/systemd/user/timers.target.wants/evenkeel-os-appearance.timer
+install -Dm644 /ctx/evenkeel-os-appearance.desktop /etc/xdg/autostart/evenkeel-os-appearance.desktop
+python3 -I /ctx/check-appearance.py /usr/lib/evenkeel-os
 install -Dm755 /ctx/evenkeel-os-network-ask /usr/libexec/evenkeel-os-network-ask
 install -Dm644 /ctx/evenkeel-os-network-ask.desktop /etc/xdg/autostart/evenkeel-os-network-ask.desktop
 python3 -I /ctx/check-network.py

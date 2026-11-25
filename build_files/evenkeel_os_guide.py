@@ -268,7 +268,7 @@ TOPICS = [
          ]),
      ]),
     ("yours", "Making it yours", "applications-graphics-symbolic",
-     "The layout, colors, wallpaper, screen size, night light, sound and accounts", [
+     "The layout, colors, wallpaper, dark at night, fonts, screen size, night light, sound and accounts", [
          ("Layout", [
              ("Open Wheelhouse, Make it yours, Desktop layout.", "page:yours"),
              ("Pick Windows-style or Standard, click Switch, then log out and back in.", ""),
@@ -277,6 +277,21 @@ TOPICS = [
              ("Open Settings, Appearance.", "settings:background"),
              ("Style: Default (light) or Dark. Accent Color: the color of buttons and folder icons.", ""),
              ("Background: click a picture. To use your own photo, click Add Picture.", ""),
+         ]),
+         ("Dark at night, light in the day", [
+             ("Open Wheelhouse, Make it yours, Light and dark.", "page:yours"),
+             ("Pick Sunset to sunrise, or Custom times and pick when dark starts and ends.", ""),
+             ("You can still switch it yourself. It stays that way until the next change.", ""),
+         ]),
+         ("A slideshow of your own pictures", [
+             ("Put the pictures in one folder, for example in Pictures.", ""),
+             ("Open Wheelhouse, Make it yours, Wallpaper slideshow, and click Choose.", "page:yours"),
+             ("Pick the folder, then how often it changes: every hour, every day or at each login.", ""),
+         ]),
+         ("Fonts and text size", [
+             ("Open Wheelhouse, Make it yours, Fonts and text.", "page:yours"),
+             ("Click a font to pick another, or change Text size. 1.00 is the normal size.", ""),
+             ("Click Back to the original to undo all of it.", ""),
          ]),
          ("Make everything bigger or smaller", [
              ("Open Settings, Displays.", "settings:display"),
