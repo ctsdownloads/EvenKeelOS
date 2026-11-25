@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 # After going back to the previous version: keep it, a note for the next login, and a 3-day pause on automatic updates.
-# After System Tools' test, the test copy is removed instead of pausing.
+# After Wheelhouse's test, the test copy is removed instead of pausing.
 # The saved copy the last repair used, and the latest one: the same means no good start since that repair.
 repaired=/var/lib/evenkeel-os/settings-repaired
 used=$(awk 'NR == 1 {print $3}' "$repaired" 2>/dev/null)
@@ -41,7 +41,7 @@ elif grep -qs 'evenkeel_os.test_rollback=' /boot/loader/entries/*.conf; then
   rm -f /var/lib/evenkeel-os/test-rollback-args
   echo "test $(date +%s)" >|"$note"
 elif [ -n "$booted_sum" ] && [ "$booted_sum" = "$other_sum" ]; then
-  # The same system with other boot options (System Tools, Boot options): the update wasn't the cause, no pause.
+  # The same system with other boot options (Wheelhouse, Boot options): the update wasn't the cause, no pause.
   echo "boot-options $(date +%s)" >|"$note"
 else
   systemctl -q is-enabled uupd.timer && echo $(( $(date +%s) + 3 * 86400 )) >|"$pause"

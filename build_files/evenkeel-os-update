@@ -4,7 +4,7 @@ set -u
 SERVICE=uupd-manual.service
 AUTO=uupd.service
 HELPER=/usr/libexec/evenkeel-os-update-helper
-# Started from System Tools: windows show inside it, through the same options and answers as zenity's.
+# Started from Wheelhouse: windows show inside it, through the same options and answers as zenity's.
 zenity=zenity; [ -n "${EVENKEEL_OS_PANEL:-}" ] && zenity=/usr/libexec/evenkeel-os-dialog
 
 staged() {   # is a new system image waiting for a restart?

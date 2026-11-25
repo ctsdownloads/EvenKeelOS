@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Build check: every test in System Tools' Test automatic rollback list reaches the piece that breaks that thing.
+"""Build check: every test in Wheelhouse's Test automatic rollback list reaches the piece that breaks that thing.
 
 The list in evenkeel-os-tools must name the same tests, in the same order, as evenkeel-os-tools-admin accepts, each
 under its own name; each test's breaking piece must be in the image; and evenkeel-os-test-fail must fail only for its
@@ -16,7 +16,7 @@ from pathlib import Path
 
 GB = "/usr/lib/greenboot/check/required.d"
 HEALTH = "/usr/lib/evenkeel-os/evenkeel_os_health.py"
-# test: (the name shown in System Tools, file that breaks it, text that file must contain)
+# test: (the name shown in Wheelhouse, file that breaks it, text that file must contain)
 PIECES = {
     "quick": ("Quick test", f"{GB}/00-evenkeel-os-test-quick.sh", "evenkeel_os.test_rollback=quick"),
     "no-login-screen": ("No login screen", "/usr/lib/systemd/system/gdm.service.d/50-evenkeel-os-test.conf",
@@ -88,7 +88,7 @@ def main():
     listed = [kind for kind, _, _ in tests]
     accepted = list(assigned("/usr/libexec/evenkeel-os-tools-admin", "TEST_KINDS"))
     if listed != accepted:
-        sys.exit(f"ERROR: the System Tools list {listed} doesn't match what the admin helper accepts {accepted}")
+        sys.exit(f"ERROR: the Wheelhouse list {listed} doesn't match what the admin helper accepts {accepted}")
     if sorted(listed) != sorted(PIECES):
         sys.exit(f"ERROR: tests without a breaking piece checked here: {sorted(set(listed) ^ set(PIECES))}")
     for kind, name, _ in tests:

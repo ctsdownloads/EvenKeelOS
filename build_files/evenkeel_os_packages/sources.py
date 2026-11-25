@@ -88,7 +88,7 @@ def install_source(pkg, info):
         return 0
     i = choose("Which app do you want? Start typing its name.", ["App", "About it"], [list(a) for a in apps])
     if i is None:
-        say(f"The download source stays. Open {pkg.path.name} again to pick an app, or remove it in System Tools, "
+        say(f"The download source stays. Open {pkg.path.name} again to pick an app, or remove it in Wheelhouse, "
             f"Apps, Remove apps.")
         return 0
     name = apps[i][0]

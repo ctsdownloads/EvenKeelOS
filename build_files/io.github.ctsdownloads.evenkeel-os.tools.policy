@@ -4,10 +4,10 @@
   <vendor>EvenKeelOS</vendor>
   <vendor_url>https://github.com/ctsdownloads/evenkeel-os</vendor_url>
 
-  <!-- System Tools: automatic updates, disk unlock and the rollback tests. Admin password. -->
+  <!-- Wheelhouse: automatic updates, disk unlock and the rollback tests. Admin password. -->
   <action id="io.github.ctsdownloads.evenkeel-os.tools">
-    <description>Change a System Tools setting</description>
-    <message>Authentication is required to change a System Tools setting</message>
+    <description>Change a Wheelhouse setting</description>
+    <message>Authentication is required to change a Wheelhouse setting</message>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>
@@ -16,7 +16,7 @@
     <annotate key="org.freedesktop.policykit.exec.path">/usr/libexec/evenkeel-os-tools-admin</annotate>
   </action>
 
-  <!-- System Tools' settings repair test really deletes important settings: the admin password every time. -->
+  <!-- Wheelhouse's settings repair test really deletes important settings: the admin password every time. -->
   <action id="io.github.ctsdownloads.evenkeel-os.settings-test">
     <description>Delete important settings to test the settings repair</description>
     <message>Authentication is required to delete important settings for the repair test</message>
@@ -52,10 +52,10 @@
     <annotate key="org.freedesktop.policykit.exec.path">/usr/libexec/evenkeel-os-boot-options</annotate>
   </action>
 
-  <!-- Harmless System Tools jobs: 50-evenkeel-os-tools.rules lets an admin at the computer skip the password. -->
+  <!-- Harmless Wheelhouse jobs: 50-evenkeel-os-tools.rules lets an admin at the computer skip the password. -->
   <action id="io.github.ctsdownloads.evenkeel-os.tools.safe">
     <description>Turn on automatic updates or automatic disk unlock, or free up disk space</description>
-    <message>Authentication is required to change a System Tools setting</message>
+    <message>Authentication is required to change a Wheelhouse setting</message>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>

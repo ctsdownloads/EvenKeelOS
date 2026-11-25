@@ -13,18 +13,18 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `Containerfile`, `build_files/build.sh` | Start from `silverblue:45`, install everything, run the checks |
 | `build_files/bluefin-packages.txt` | Fedora packages carried over from Bluefin |
 | `build_files/default-apps.txt`, `flathub-apps.txt`, `evenkeel-os-flathub-apps`, `evenkeel-os-flatpak-apps.service`, `evenkeel-os-flathub.service`, `flathub.flatpakrepo` | Default apps, and the Flathub ones installed at the first start with internet |
-| `build_files/evenkeel_os_ui.py` | Windows, notices and disk sizes shared by System Tools and Install Package File |
+| `build_files/evenkeel_os_ui.py` | Windows, notices and disk sizes shared by Wheelhouse and Install Package File |
 | `boot_test/run-boot-test.sh`, `boot_test/boot-check`, `boot_test/boot-check-root`, `boot_test/Containerfile` | The [boot test](#boot-test): starts each new build in a virtual machine before it's published |
 | `boot_test/run-rollback-tests.sh`, `boot_test/rollback-step` | The [rollback tests](#rollback-tests), when asked for |
 | `build_files/evenkeel_os_health.py`, `greenboot/evenkeel-os-health`, `greenboot/40-evenkeel-os-still-works.sh`, `greenboot/93-evenkeel-os-health-record.sh`, `greenboot/evenkeel-os-health-record.service` | The trial check: after each good start (4 minutes in) a list of what works is saved to `/var/lib/evenkeel-os/health-record.json`; while a new version is on trial, after a login, anything on that list that's broken now fails the start (it waits 2 minutes for slow devices first). Hardware counts only if it's still there (unplugged, switched off in the BIOS or by a privacy switch doesn't count); only USB devices in fixed ports are listed; things switched off by their owner aren't asked for; a start that only changed boot options checks programs only; a mistake in the check itself never fails a start. What broke goes to `/var/lib/evenkeel-os/health-lost`, and to `rolled-back-why` with the next rollback's note. `sudo /usr/libexec/evenkeel-os-health compare --no-wait` runs the comparison by hand |
 | `build_files/check-health.py` | Build check: the trial check against a made-up computer, with each of 58 changes counted as broken, or not, as it should be, and the driver each rollback test copy blocks; and who it asks before a restart, with what, and which answers keep the version |
 | `build_files/check-restart-question.py` | Build check: the window before an automatic restart, with a made-up zenity: each test's and real problem's words and buttons, Not yet, Esc, the 2-minute countdown and Keep's password |
 | `build_files/firewall/evenkeel-home.xml`, `evenkeel-work.xml`, `evenkeel-public.xml` | The three firewall zones for Network safety: Home, Work and Public place |
-| `build_files/evenkeel_os_network.py` | Each network's place, shared by System Tools, the question and the installer |
+| `build_files/evenkeel_os_network.py` | Each network's place, shared by Wheelhouse, the question and the installer |
 | `build_files/evenkeel-os-network-ask`, `evenkeel-os-network-ask.desktop` | The once-per-network question, started at login |
 | `build_files/check-network.py` | Build check: the default zone is Public place, Public lets nothing in, Home and Work keep 1025-65535 and have no SSH, open Wi-Fi can't be made Home, and the question is asked only for joined password Wi-Fi networks with no place |
 | `build_files/evenkeel_os_sharing.py` | Shared folders: the shared folders list, which folders may be shared, and the Samba settings written for them |
-| `build_files/samba/smb.conf` | EvenKeelOS's Samba settings: no guest access, no printers, no NetBIOS, Mac-friendly settings, the computer's own name for Macs and Linux. It includes the list System Tools writes |
+| `build_files/samba/smb.conf` | EvenKeelOS's Samba settings: no guest access, no printers, no NetBIOS, Mac-friendly settings, the computer's own name for Macs and Linux. It includes the list Wheelhouse writes |
 | `build_files/samba/wsdd-evenkeel-os.conf` | Holds wsdd to Home networks and restarts it with Samba |
 | `build_files/samba/50-evenkeel-os-sharing` | NetworkManager hook: checks again whenever a network comes or goes |
 | `build_files/firewall/evenkeel-sharing.xml` | Firewall service: port 445 (wsdd's ports are already open on Home), added to Home only while sharing is on |
@@ -33,11 +33,11 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/check-boot-options.py` | Build check for Boot options: rpm-ostree can make the changes, every common fix is allowed without a warning, risky settings are warned about however they're written, and settings the system sets itself, settings that run a program while starting, and text that isn't a setting are refused |
 | `build_files/evenkeel-os-update`, `evenkeel-os-update-helper` | **System Update**, and its Python helper for progress text and what's new |
 | `build_files/evenkeel-os-packages`, `evenkeel_os_packages/`, `evenkeel-os-box-run`, `evenkeel-os-hwrules` | **Install Package File**, **Remove Apps**, **Repair App Boxes**, **Start Apps at Login**, and their helpers |
-| `build_files/evenkeel-os-tools`, `-admin`, `-safe`, `evenkeel_os_panel.py`, `check-panel.py` | **System Tools**: the window, every job, its two root helpers, and the build check that every tool has a row |
-| `build_files/evenkeel_os_dialogs.py`, `evenkeel-os-dialog`, `check-dialogs.py` | A tool's questions, lists, password box and progress inside the System Tools window: the window's side, the program tools started from it use in place of zenity (same options and answers), and the build check that no tool runs zenity itself and that the answers match |
+| `build_files/evenkeel-os-tools`, `-admin`, `-safe`, `evenkeel_os_panel.py`, `check-panel.py` | **Wheelhouse**: the window, every job, its two root helpers, and the build check that every tool has a row |
+| `build_files/evenkeel_os_dialogs.py`, `evenkeel-os-dialog`, `check-dialogs.py` | A tool's questions, lists, password box and progress inside the Wheelhouse window: the window's side, the program tools started from it use in place of zenity (same options and answers), and the build check that no tool runs zenity itself and that the answers match |
 | `build_files/evenkeel-os-updates-pause-check`, `50-evenkeel-os-pause.conf` | Skips automatic updates during the pause after an undo |
-| `build_files/greenboot/`, `evenkeel-os-rolled-back.desktop` | Automatic rollback: greenboot's start-up checks (login screen, networking, a working desktop after a login), the retry counter (2 bad starts) started as soon as an update is installed, a one-time repair of boot menus where greenboot's file ran into the next one (it and the retry-counter step unlock `/boot` only in their own private mount namespace, so an update writing to `/boot` isn't affected), the rollback tests (each breaks one real thing, only with its kernel argument; `check-rollback-tests.py` checks each listed test reaches its piece), the note and update pause after a rollback, and the settings repair (`build_files/greenboot/evenkeel-os-settings` saves, checks and repairs and does the test's delete step; `build_files/greenboot/evenkeel-os-settings-test` is the test, with its own polkit action in the System Tools policy and the admin password every time; the greenboot steps `05-evenkeel-os-settings.sh` (start-up check), `50-evenkeel-os-settings-repair.sh` (after a failed start) and `95-evenkeel-os-settings-save.sh` (after a good start, last); `build_files/check-settings-repair.py` runs the check and repair on a made-up `/etc`, including systemd's generic copies; `build_files/50-evenkeel-os-firstboot.conf` makes the first-start setup ask no questions, so a start without `machine-id` isn't held up before the checks) |
-| `build_files/evenkeel-os-certs`, `evenkeel-os-certs.service`, `evenkeel-os-certs.timer`, `evenkeel-os-cert-remove`, `evenkeel-os-ca-trust.service`, `check-certs.py` | Certificate alerts: the check (as the person logged in, 3 minutes after the session starts and once a day; a per-user timer switched on for every account from `/usr/lib/systemd/user`), and the build check with made-up certificates (it prints this image's own expired or expiring certificates as warnings). `build_files/evenkeel-os-cert-remove` is the removal helper for an added certificate (`/usr/libexec/evenkeel-os-cert-remove`, its own polkit action; only for a plain file in the anchors folder, never a link, and it refuses a file with more than one certificate; `evenkeel-os-cert-remove FILE FINGERPRINT`; `check-root-helpers.py` tests its refusals in the real anchors folder (a file with two certificates, a different certificate, a link, a pipe) and that System Tools and the helper take the same file names), and `build_files/evenkeel-os-ca-trust.service` rebuilds the trusted list at every start (`update-ca-trust extract`) |
+| `build_files/greenboot/`, `evenkeel-os-rolled-back.desktop` | Automatic rollback: greenboot's start-up checks (login screen, networking, a working desktop after a login), the retry counter (2 bad starts) started as soon as an update is installed, a one-time repair of boot menus where greenboot's file ran into the next one (it and the retry-counter step unlock `/boot` only in their own private mount namespace, so an update writing to `/boot` isn't affected), the rollback tests (each breaks one real thing, only with its kernel argument; `check-rollback-tests.py` checks each listed test reaches its piece), the note and update pause after a rollback, and the settings repair (`build_files/greenboot/evenkeel-os-settings` saves, checks and repairs and does the test's delete step; `build_files/greenboot/evenkeel-os-settings-test` is the test, with its own polkit action in the Wheelhouse policy and the admin password every time; the greenboot steps `05-evenkeel-os-settings.sh` (start-up check), `50-evenkeel-os-settings-repair.sh` (after a failed start) and `95-evenkeel-os-settings-save.sh` (after a good start, last); `build_files/check-settings-repair.py` runs the check and repair on a made-up `/etc`, including systemd's generic copies; `build_files/50-evenkeel-os-firstboot.conf` makes the first-start setup ask no questions, so a start without `machine-id` isn't held up before the checks) |
+| `build_files/evenkeel-os-certs`, `evenkeel-os-certs.service`, `evenkeel-os-certs.timer`, `evenkeel-os-cert-remove`, `evenkeel-os-ca-trust.service`, `check-certs.py` | Certificate alerts: the check (as the person logged in, 3 minutes after the session starts and once a day; a per-user timer switched on for every account from `/usr/lib/systemd/user`), and the build check with made-up certificates (it prints this image's own expired or expiring certificates as warnings). `build_files/evenkeel-os-cert-remove` is the removal helper for an added certificate (`/usr/libexec/evenkeel-os-cert-remove`, its own polkit action; only for a plain file in the anchors folder, never a link, and it refuses a file with more than one certificate; `evenkeel-os-cert-remove FILE FINGERPRINT`; `check-root-helpers.py` tests its refusals in the real anchors folder (a file with two certificates, a different certificate, a link, a pipe) and that Wheelhouse and the helper take the same file names), and `build_files/evenkeel-os-ca-trust.service` rebuilds the trusted list at every start (`update-ca-trust extract`) |
 | `build_files/evenkeel-os-codecs`, `-setup`, `-admin`, `-lib.sh`, `rpmfusion-*.repo` | **Install Media Codecs** and its helpers |
 | `build_files/*.policy`, `*.rules` | polkit actions and the narrow no-password rules, all for the person at the computer only. `40-evenkeel-os-uupd.rules` narrows uupd's own rule, which let any account start, stop or restart updates, to starting and stopping them from the computer |
 | `build_files/*.gschema.override`, `*.dconf`, `gnome-mimeapps.list`, `xdg-terminals.list`, `60-evenkeel-os-mic.conf` | Desktop defaults |
@@ -57,8 +57,8 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 
 - Fedora's logos or release packages remain, or the boot image can't unlock a
   disk;
-- GNOME Software is still there, Bazaar is missing, System Tools is missing from
-  Utilities, another EvenKeelOS tool still has its own icon, the System Tools
+- GNOME Software is still there, Bazaar is missing, Wheelhouse is missing from
+  Utilities, another EvenKeelOS tool still has its own icon, the Wheelhouse
   window is missing a tool, an icon or a command, or text files wouldn't open in
   Text Editor;
 - a default service is off, or RPM Fusion's codecs wouldn't install;
@@ -68,7 +68,7 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 - an outside package is not at its locked version or is not on the list (see
   [Locked versions](#locked-versions));
 - Install Package File misreads four real Fedora packages;
-- a tool would open its windows outside System Tools, or answer differently there;
+- a tool would open its windows outside Wheelhouse, or answer differently there;
 - Network safety isn't set up right (a new network isn't a Public place, or Home and Work let in SSH).
 - Shared folders isn't set up right (guest access is on, Samba or wsdd starts on its own, the firewall service is wrong,
   a hidden folder or another user's folder is accepted, or the shares written don't match the list), or Samba,
@@ -90,7 +90,7 @@ Before anything is published, the build starts the new image in a virtual machin
 - the computer finishes starting and the login screen runs;
 - a test user logs in by itself and reaches the desktop;
 - Logo Menu runs with the standard layout, then ArcMenu and Dash to Panel run after switching to Windows-style;
-- System Tools opens;
+- Wheelhouse opens;
 - greenboot started saving the list of what works, a list saved then passes the trial check, a doctored list fails
   it, and three real breaks are caught (checked in a private mount space, as greenboot runs it) and then put back:
   the update program swapped for one that fails (the same bind mount the rollback test uses), the firewall stopped,
@@ -236,7 +236,7 @@ and this image leave them out. Adding them is your choice and your
 responsibility.
 
 The [setup checklist](install.md#first-login) offers **Web video only**,
-**Everything** or **Not now**. **Media codecs** in System Tools, Apps opens the
+**Everything** or **Not now**. **Media codecs** in Wheelhouse, Apps opens the
 same window any time, or in a terminal:
 
     codecs          # explains the options, changes nothing

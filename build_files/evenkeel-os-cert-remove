@@ -67,7 +67,7 @@ def main(argv):
     found = fingerprints(data)
     # Several certificates in one file all go with it, the good ones too: that's for a person to decide.
     if found is None or len(found) != 1:
-        fail("That file holds more than one certificate, or one System Tools can't check.", 3)
+        fail("That file holds more than one certificate, or one Wheelhouse can't check.", 3)
     if found[0] != argv[2]:
         fail("That file no longer holds the certificate you confirmed; nothing was removed.", 3)
     now = os.lstat(p)

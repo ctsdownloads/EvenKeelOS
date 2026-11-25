@@ -96,7 +96,7 @@ attempt() {
 if attempt 1 || { say "Trying once more from a clean start."; attempt 2; }; then
   say "Boot test passed."
   summary "Boot test passed: the new version started and reached the desktop, and Logo Menu, ArcMenu, Dash to \
-Panel and System Tools work. The screenshot is in the boot-test download."
+Panel and Wheelhouse work. The screenshot is in the boot-test download."
   exit 0
 fi
 say "Boot test failed. Nothing is published."

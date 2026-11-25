@@ -9,7 +9,7 @@ Coming from Windows: where things are, and what's different.
 ### Where things are
 
 1. Start menu: with the Windows-style layout, the sailboat button at the bottom left. With the standard layout, press the Windows key.
-2. Control Panel: Settings, for Wi-Fi, screens, sound, printers and accounts. System Tools, for updates, apps and fixes.
+2. Control Panel: Settings, for Wi-Fi, screens, sound, printers and accounts. Wheelhouse, for updates, apps and fixes. A ship is steered from its wheelhouse; this is where you steer your computer.
 3. File Explorer: Files.
 4. Task Manager: Resources. Find it in the start menu.
 5. Word, Excel and PowerPoint: LibreOffice Writer, Calc and Impress. They open and save Office files.
@@ -17,7 +17,7 @@ Coming from Windows: where things are, and what's different.
 
 ### What's different
 
-1. Windows programs (.exe and .msi) don't run here. Open one anyway: System Tools tells you the version for EvenKeelOS, or a replacement when there is one, and installs it.
+1. Windows programs (.exe and .msi) don't run here. Open one anyway: Wheelhouse tells you the version for EvenKeelOS, or a replacement when there is one, and installs it.
 2. Updates install on their own. If one stops the computer starting properly, it goes back to the version before by itself and tells you.
 3. The system itself can't be changed by apps or by mistake. Each update replaces it whole.
 4. Every network is Home, Work or a Public place. A new one is a Public place, where nothing can reach your computer.
@@ -31,14 +31,14 @@ The start menu, windows, the menu at the end of the bar, notifications, screensh
 1. With the Windows-style layout: click the sailboat button at the bottom left, then click the app, or start typing its name and press Enter.
 2. With the standard layout: press the Windows key, start typing the app's name, and press Enter. Or press Windows key + A to see every app.
 
-### Open System Tools
+### Open Wheelhouse
 
-1. With the Windows-style layout: click the sailboat button at the bottom left, then System Tools.
-2. With the standard layout: click the logo at the top left, then System Tools.
+1. With the Windows-style layout: click the sailboat button at the bottom left, then Wheelhouse.
+2. With the standard layout: click the logo at the top left, then Wheelhouse.
 
 ### Change the layout
 
-1. Open System Tools, Make it yours.
+1. Open Wheelhouse, Make it yours.
 2. Pick Windows-style (a bar at the bottom and a start menu) or Standard (a bar at the top and a dock).
 3. Log out and back in to see it.
 
@@ -105,7 +105,7 @@ Your folders, USB drives, the trash, searching, zip files and sharing with other
 
 ### Open your folders from another computer at home
 
-1. Open System Tools, Shared folders.
+1. Open Wheelhouse, Shared folders.
 2. Set a sharing password, then turn on Share folders on Home networks.
 3. Click Add a folder and pick it. It starts as Read only: change it to Read and write if the other computer should save there too.
 4. On a Windows PC: File Explorer, Network. The Windows PC's own network must be set to Private.
@@ -124,25 +124,25 @@ Getting apps, Windows programs, package files, removing apps, default apps, Zoom
 
 ### A Windows program you downloaded (.exe or .msi)
 
-1. Open the file, or drop it on System Tools, Apps.
+1. Open the file, or drop it on Wheelhouse, Apps.
 2. It tells you whether there's a version for EvenKeelOS, or a replacement that does the same job.
 3. Click Install, and it installs that instead.
 
 ### An app that comes as a .rpm or .deb file
 
-1. Open the file, or use Install a package file in System Tools, Apps.
+1. Open the file, or use Install a package file in Wheelhouse, Apps.
 2. It says first whether the app keeps itself updated, then installs it.
 3. Some, like printer drivers, are added to the system: they're ready after the next restart.
 
 ### Remove an app
 
 1. Apps from Bazaar: open Bazaar and remove it there.
-2. Apps from a file, Get a VPN or a Windows program: System Tools, Apps, Remove apps.
+2. Apps from a file, Get a VPN or a Windows program: Wheelhouse, Apps, Remove apps.
 
 ### Start an app when you log in
 
 1. Apps from Bazaar have this setting inside the app.
-2. Apps from a file: open System Tools, Apps, Start apps at login, and pick the app. Picking it again stops it.
+2. Apps from a file: open Wheelhouse, Apps, Start apps at login, and pick the app. Picking it again stops it.
 
 ### Default apps
 
@@ -153,22 +153,22 @@ Getting apps, Windows programs, package files, removing apps, default apps, Zoom
 
 1. Click the meeting link you were sent.
 2. The first time, choose Install Chrome or Use the usual browser. The meeting opens in Zoom's web version.
-3. To be asked again: System Tools, Apps, Zoom meetings.
+3. To be asked again: Wheelhouse, Apps, Zoom meetings.
 
 ### A VPN
 
-1. Open System Tools, Apps, Get a VPN.
+1. Open Wheelhouse, Apps, Get a VPN.
 2. Pick Mullvad, Proton, IVPN or NordVPN. It's added from that company's own download source, and kept up to date.
 3. Restart, then sign in with your account from that company.
 
 ### Media codecs, for some videos
 
-1. Open System Tools, Apps, Media codecs.
+1. Open Wheelhouse, Apps, Media codecs.
 2. Pick what you need. It explains each choice.
 
 ### A broken app box
 
-1. Some apps from .rpm or .deb files run in an app box. If one stops starting, open System Tools, Apps, Repair app boxes.
+1. Some apps from .rpm or .deb files run in an app box. If one stops starting, open Wheelhouse, Apps, Repair app boxes.
 2. Pick the box. It's set up again, with its apps. Your files aren't touched.
 
 ## Internet and networks
@@ -183,7 +183,7 @@ Wi-Fi, how safe each network is, and Bluetooth.
 
 ### Home, Work or Public place
 
-1. Open System Tools, Network safety. Your networks lists every network this computer has joined.
+1. Open Wheelhouse, Network safety. Your networks lists every network this computer has joined.
 2. Public place: nothing on the network can reach your computer. Pick it for cafes, hotels and airports.
 3. Home or Work: your phone and other computers can reach apps that ask for it, like file sharing.
 4. Pick the place next to a network. It changes at once.
@@ -191,7 +191,7 @@ Wi-Fi, how safe each network is, and Bluetooth.
 
 ### Let other computers in
 
-1. Open System Tools, Network safety. Under Also let in, on Home and Work, there are two switches.
+1. Open Wheelhouse, Network safety. Under Also let in, on Home and Work, there are two switches.
 2. Log in from another computer (SSH): for people who use a terminal. Leave it off if you don't know it.
 3. Share my printer: lets other computers use a printer plugged into this one.
 4. Both ask for your password, and never work on a Public place.
@@ -216,7 +216,7 @@ Adding a printer, and printer driver files from the maker.
 ### A driver file from the maker
 
 1. Most printers don't need one. Try Add a printer first.
-2. If yours does, download the maker's .rpm file and open it from Downloads. System Tools sees that it's a printer driver.
+2. If yours does, download the maker's .rpm file and open it from Downloads. Wheelhouse sees that it's a printer driver.
 3. Click Install the driver, type your password, and restart. Then add the printer.
 4. A .deb driver can't be installed. The window says how to get the .rpm from the maker.
 
@@ -228,16 +228,16 @@ Automatic updates, undoing an update, firmware and certificate alerts.
 
 1. Every day at 4 am, or at the next start, the system, your apps and app boxes update.
 2. A new system version is used from the next restart. Keep working, and restart when it suits you.
-3. To update now: open System Tools, Updates, System Update.
+3. To update now: open Wheelhouse, Updates, System Update.
 
 ### Turn automatic updates off or on
 
-1. Open System Tools, Updates, Automatic updates. On is recommended.
+1. Open Wheelhouse, Updates, Automatic updates. On is recommended.
 2. Click Turn off or Turn on. Turning them off asks for your password.
 
 ### Undo the last update
 
-1. If something stopped working after an update, open System Tools, Updates, Undo the last update.
+1. If something stopped working after an update, open Wheelhouse, Updates, Undo the last update.
 2. Click Undo the update, type your password, and restart. Your files and apps aren't touched.
 3. Automatic updates pause for 3 days, so the same update doesn't come straight back. They turn back on by themselves.
 4. Changed your mind? Open Undo the last update again and click Use the newer version.
@@ -252,13 +252,13 @@ Automatic updates, undoing an update, firmware and certificate alerts.
 ### Update firmware
 
 1. Firmware is the software built into the computer's own parts, like the BIOS.
-2. Plug the computer in. Open System Tools, Updates, Update firmware.
+2. Plug the computer in. Open Wheelhouse, Updates, Update firmware.
 3. If updates are listed, click Update and type your password. Some finish while the computer restarts.
 
 ### Certificate alerts
 
 1. Certificates are how the computer knows a secure website is real. An alert shows when one has expired, expires soon, or was removed.
-2. Open System Tools, Get help, Certificate alerts to see them.
+2. Open Wheelhouse, Get help, Certificate alerts to see them.
 3. For an expired one that was added to this computer, it offers Remove it. Fedora's own ones are replaced by updates, so keep automatic updates on.
 
 ## Making it yours
@@ -267,7 +267,7 @@ The layout, colors, wallpaper, screen size, night light, sound and accounts.
 
 ### Layout
 
-1. Open System Tools, Make it yours, Desktop layout.
+1. Open Wheelhouse, Make it yours, Desktop layout.
 2. Pick Windows-style or Standard, click Switch, then log out and back in.
 
 ### Colors and wallpaper
@@ -305,26 +305,26 @@ Freeing space, the disk password, boot options and BIOS settings.
 
 ### Free up disk space
 
-1. Open System Tools, Disk and startup. The bar shows how much is free.
+1. Open Wheelhouse, Disk and startup. The bar shows how much is free.
 2. Click Free up disk space, then Free up space. Your files and apps aren't touched.
 
 ### Skip the disk password at startup
 
 1. If you type a disk password every time the computer starts, it can unlock by itself with the computer's security chip.
-2. Open System Tools, Disk and startup, Unlock disk automatically.
+2. Open Wheelhouse, Disk and startup, Unlock disk automatically.
 3. Click Turn on, type the disk password once, and restart.
 4. After a BIOS update, it may ask for the disk password again. Turn it on again here.
 
 ### Fix screen flicker or a drive that freezes
 
-1. Open System Tools, Disk and startup. Under Common fixes, turn on the one that matches the problem.
+1. Open Wheelhouse, Disk and startup. Under Common fixes, turn on the one that matches the problem.
 2. Type your password, then restart. The fix starts at the restart.
 3. Didn't help? Turn it off again, and restart.
 4. Told to add a setting by a helper? Type it under Your own settings. Risky ones are explained first.
 
 ### BIOS settings
 
-1. Open System Tools, Disk and startup, Restart into BIOS settings.
+1. Open Wheelhouse, Disk and startup, Restart into BIOS settings.
 2. Save your work, then click Restart now.
 3. The BIOS screen uses the keyboard. When you're done, choose Save and Exit, or Exit.
 
@@ -334,7 +334,7 @@ Sending details to your helper, checking rollback, and terminal commands.
 
 ### Send details to your helper
 
-1. Open System Tools, Get help, Save problem details.
+1. Open Wheelhouse, Get help, Save problem details.
 2. Click Save details. It makes one file of recent errors, in Documents. Nothing is sent anywhere.
 3. Click Show the file, then attach it to an email to your helper.
 
@@ -344,7 +344,7 @@ Sending details to your helper, checking rollback, and terminal commands.
 
 ### Check that automatic rollback works
 
-1. Open System Tools, Get help, Test automatic rollback. Save your work first.
+1. Open Wheelhouse, Get help, Test automatic rollback. Save your work first.
 2. Pick a test, click Start the test, and type your password.
 3. For the tests that break one thing, like Sound driver blocked, log in when the login screen shows.
 4. For those, a window asks before each restart. Click Restart now, or Not yet to save your work first.
@@ -352,5 +352,5 @@ Sending details to your helper, checking rollback, and terminal commands.
 
 ### Prefer the terminal?
 
-1. Open System Tools, Get help, and scroll to the end. Every tool has its command there.
+1. Open Wheelhouse, Get help, and scroll to the end. Every tool has its command there.
 2. Click the copy button next to a command, then paste it in Terminal.

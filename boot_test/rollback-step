@@ -6,7 +6,7 @@ case "${1:-}" in
   restart) exec systemctl reboot ;;
   # The login screen again, which logs the test user in again (a second login, as a person would).
   log-in-again) exec systemctl restart gdm.service ;;
-  # Important settings deleted: deletes them for real and restarts, as System Tools does.
+  # Important settings deleted: deletes them for real and restarts, as Wheelhouse does.
   settings-test) exec /usr/libexec/evenkeel-os-settings-test ;;
   # A real update staged by bootc, as automatic updates stage it on an install with no added packages: this image
   # plus one file, made here.

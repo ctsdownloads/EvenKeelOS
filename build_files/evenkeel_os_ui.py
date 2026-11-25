@@ -1,4 +1,4 @@
-"""Windows, notices and disk sizes shared by System Tools and Install Package File."""
+"""Windows, notices and disk sizes shared by Wheelhouse and Install Package File."""
 
 import math
 import os
@@ -7,10 +7,10 @@ import subprocess
 from pathlib import Path
 
 GUI = bool(shutil.which("zenity")) and bool(os.environ.get("WAYLAND_DISPLAY") or os.environ.get("DISPLAY"))
-# Started from System Tools: windows show inside it, through the same options and answers as zenity's.
+# Started from Wheelhouse: windows show inside it, through the same options and answers as zenity's.
 IN_PANEL = bool(os.environ.get("EVENKEEL_OS_PANEL"))
 DIALOGS = "/usr/libexec/evenkeel-os-dialog" if IN_PANEL else "zenity"
-# For apps and file windows a tool opens: what they start later opens its own windows, not System Tools'.
+# For apps and file windows a tool opens: what they start later opens its own windows, not Wheelhouse's.
 LAUNCH_ENV = {k: v for k, v in os.environ.items() if k != "EVENKEEL_OS_PANEL"}
 
 TITLE = ""      # set by each program

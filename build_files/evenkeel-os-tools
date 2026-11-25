@@ -1,7 +1,7 @@
 #!/usr/bin/python3 -I
-"""System Tools: every EvenKeelOS tool in one window, from Show Apps; each job also runs on its own.
+"""Wheelhouse: every EvenKeelOS tool in one window, from Show Apps; each job also runs on its own.
 
-  evenkeel-os-tools                 the System Tools window (--page=updates, apps, disk, yours or help)
+  evenkeel-os-tools                 the Wheelhouse window (--page=updates, apps, disk, yours or help)
   evenkeel-os-tools firmware        update firmware
   evenkeel-os-tools disk-unlock     unlock the disk automatically at startup (TPM)
   evenkeel-os-tools free-space      free up disk space
@@ -32,7 +32,7 @@ sys.path.insert(0, "/usr/lib/evenkeel-os")
 import evenkeel_os_ui as ui
 from evenkeel_os_ui import GUI, ask, choose, free_mb, human, notify, offer_restart, say
 
-TITLE = "System Tools"
+TITLE = "EvenKeelOS Wheelhouse"
 ui.TITLE = TITLE
 ui.ICON = "applications-system-symbolic"
 ADMIN = "/usr/libexec/evenkeel-os-tools-admin"
@@ -172,7 +172,7 @@ def pause_updates(w):
     until = paused_until()
     if not until:
         return ("Automatic updates could not be paused, so the next one may bring the update back. If it does, turn "
-                "off Automatic updates in System Tools and tell your helper.")
+                "off Automatic updates in Wheelhouse and tell your helper.")
     return (f"Automatic updates are paused until {day(until)}, so the bad update doesn't come back. They turn back on "
             "by themselves.")
 
@@ -203,7 +203,7 @@ def firmware():
     note = ""
     if DISK_UNLOCK_ON.exists():
         note = ("\n\nUnlock disk automatically is on. After some firmware updates, the computer asks for the disk "
-                "password once. Then turn Unlock disk automatically on again in System Tools.")
+                "password once. Then turn Unlock disk automatically on again in Wheelhouse.")
     if ask("Firmware updates are available for:\n" + "\n".join(devices) + "\n\nFirmware is the software built into "
            "the computer's own parts, like the BIOS.\n\nRecommended: Update. Keep the computer plugged in. Some "
            "updates finish while the computer restarts." + note, ok="Update", title=w) != "ok":
@@ -246,7 +246,7 @@ def disk_unlock(in_checklist=False):
         a = ask("Right now you type the disk password every time the computer starts.\n\nSecure Boot is off on this "
                 "computer, so this would be less safe: someone could change how the computer starts and still get the "
                 "disk unlocked.\n\nRecommended: Cancel, then turn Secure Boot on in the BIOS settings first (Restart "
-                "into BIOS settings, in System Tools).\n\nOr Turn on anyway.", ok="Turn on anyway", title=w)
+                "into BIOS settings, in Wheelhouse).\n\nOr Turn on anyway.", ok="Turn on anyway", title=w)
     else:
         a = ask("Right now you type the disk password every time the computer starts.\n\nRecommended: Turn on. The "
                 "computer's security chip unlocks the disk for you. If the disk is ever taken out of this computer, or "
@@ -406,12 +406,12 @@ def undo_update():
     booted = next((d for d in ds if d.get("booted")), None)
     staged = next((d for d in ds if d.get("staged")), None)
     later = ("\n\nAutomatic updates then pause for 3 days, so the bad update doesn't come straight back. If the "
-             "problem returns after that, turn off Automatic updates in System Tools and tell your helper."
+             "problem returns after that, turn off Automatic updates in Wheelhouse and tell your helper."
              if updates_on() else "")
     nxt = ds[0] if ds and not ds[0].get("booted") else None
     if nxt and booted and nxt.get("checksum") == booted.get("checksum") and \
             int(nxt.get("serial", 0)) > int(booted.get("serial", 0)):
-        # The same system with other boot options (System Tools, Boot options), not an update.
+        # The same system with other boot options (Wheelhouse, Boot options), not an update.
         if ask("A change to the boot options is waiting. It starts at your next restart. It isn't an update.\n\nIf "
                "you don't want it: Don't use it. The computer starts with the boot options it has now, and automatic "
                "updates aren't paused.\n\nOr Keep it.", ok="Don't use it", cancel="Keep it", title=w) != "ok":
@@ -473,7 +473,7 @@ def undo_update():
         return 0
     if booted and older.get("checksum") == booted.get("checksum"):
         # The version running now differs from the one before only in its boot options.
-        if ask("The version you're using now is the one before it with boot options changed in System Tools.\n\n"
+        if ask("The version you're using now is the one before it with boot options changed in Wheelhouse.\n\n"
                "Undo the change: the computer starts with the boot options it had before, at your next restart. "
                "Automatic updates aren't paused.\n\nOr Cancel.", ok="Undo the change", title=w) != "ok":
             return 1
@@ -582,7 +582,7 @@ def codecs_step(w):
     if codecs_added():
         return
     if ask("Some video formats, like most web video, need media codecs that aren't part of the system. The next "
-           "window explains the choices.\n\nRecommended: Next. Or Skip: they're in System Tools, Apps, Media "
+           "window explains the choices.\n\nRecommended: Next. Or Skip: they're in Wheelhouse, Apps, Media "
            "codecs, any time.", ok="Next", cancel="Skip", title=w) != "ok":
         return
     STATE.mkdir(parents=True, exist_ok=True)
@@ -596,7 +596,7 @@ def disk_step(w):
         return          # nothing to unlock, nothing to unlock it with, or already on
     if ask("This computer asks for the disk password every time it starts. The computer's security chip can unlock "
            "the disk instead.\n\nThis needs the disk password, so it's one for "
-           "your helper.\n\nRecommended: Set it up. Or Skip: it's in System Tools any time.",
+           "your helper.\n\nRecommended: Set it up. Or Skip: it's in Wheelhouse any time.",
            ok="Set it up", cancel="Skip", title=w) == "ok":
         disk_unlock(in_checklist=True)
 
@@ -608,9 +608,9 @@ def apps_step(w):
         a = ask(f"{opened}Getting apps:\n\n"
                 "- Most apps: Bazaar, the app store. Find the app there and install it.\n"
                 "- An app that comes as a file (.rpm or .deb): open the file, or open Install Package File, which "
-                "lists the files in your Downloads folder. It's in System Tools, Apps.\n"
-                "- Removing those apps: System Tools, Apps, Remove apps.\n\n"
-                "System Tools has the rest: updates, disk space, undoing an update, and saving problem details for "
+                "lists the files in your Downloads folder. It's in Wheelhouse, Apps.\n"
+                "- Removing those apps: Wheelhouse, Apps, Remove apps.\n\n"
+                "Wheelhouse has the rest: updates, disk space, undoing an update, and saving problem details for "
                 "your helper.\n\nRecommended: Open Bazaar, to see it. Or Open Install Package File. "
                 "Or Next.", ok="Open Bazaar", cancel="Next", extra="Open Install Package File", title=w)
         if a == "ok":
@@ -637,7 +637,7 @@ def setup_checklist(first_login=False):
     a = ask("Welcome. A few things to set up, one at a time.\n\n"
             "1. Media codecs, for web video\n2. Skip the disk password at startup\n3. How to get apps\n\n"
             "Each can be skipped.\n\nRecommended: Start. Or Later: this opens again at the next login. Or Don't "
-            "show again: it's in System Tools any time.",
+            "show again: it's in Wheelhouse any time.",
             ok="Start", cancel="Later", extra="Don't show again" if first_login else None, title=w)
     if first_login and a in ("ok", "extra"):
         STATE.mkdir(parents=True, exist_ok=True)
@@ -659,7 +659,7 @@ def setup_checklist(first_login=False):
     if disk_now:
         later.append("From your next restart, the disk unlocks by itself.")
     text = "Setup is done. " + " ".join(later) + ("\n\n" if later else "") + \
-        "It's in System Tools if you want it again."
+        "It's in Wheelhouse if you want it again."
     if waiting:
         offer_restart(text)
     else:
@@ -884,7 +884,7 @@ def settings_note():
         say(f"The last start failed its start-up checks, and some system settings were missing or replaced. Your "
             f"computer put back {len(paths)} from the copy it saved {saved}, then restarted. Your files and apps "
             f"aren't touched.\n\nPut back: {what}.\n\nIf it happens again, tell your helper. Save problem details in "
-            "System Tools makes a file to send them.", "warning", title=w)
+            "Wheelhouse makes a file to send them.", "warning", title=w)
     STATE.mkdir(parents=True, exist_ok=True)
     SETTINGS_SHOWN.write_text(stamp)
     return 0
@@ -930,22 +930,22 @@ def rolled_back_note():
         notify("The settings repair test didn't work.")
         say(f"The settings repair test didn't work: your computer couldn't put the deleted settings back, so it went "
             f"back to the version from {since}, which has its own settings. Your files and apps aren't touched, and "
-            "automatic updates aren't paused.\n\nTell your helper. Save problem details in System Tools makes a "
+            "automatic updates aren't paused.\n\nTell your helper. Save problem details in Wheelhouse makes a "
             "file to send them.", "warning", title=w)
     elif kind == "settings-failed":
         notify("Your computer went back to the previous version.")
         say(f"Some important system settings were broken, and putting them back didn't fix the start, so your "
             f"computer went back to the version from {since}, which has its own settings. Your files and apps aren't "
-            "touched, and automatic updates aren't paused.\n\nTell your helper. Save problem details in System Tools "
+            "touched, and automatic updates aren't paused.\n\nTell your helper. Save problem details in Wheelhouse "
             "makes a file to send them.", "warning", title=w)
     elif kind == "boot-options":
         notify("Your computer went back to the previous version.")
         broke = what_broke(stamp)
-        say(f"The computer didn't start properly with the boot options changed in System Tools, so it went back to "
+        say(f"The computer didn't start properly with the boot options changed in Wheelhouse, so it went back to "
             f"the version from {since}, with the boot options it had before." +
             (f"\n\nWhat stopped working with them:\n{broke}\n\n" if broke else " ") +
             "Your files and apps aren't touched, and automatic updates aren't paused.\n\nThe setting that caused "
-            "it isn't in use. Disk and startup, Boot options in System Tools shows what's in use now.", "warning",
+            "it isn't in use. Disk and startup, Boot options in Wheelhouse shows what's in use now.", "warning",
             title=w)
     elif kind == "test":
         notify("The automatic rollback test worked.")
@@ -962,7 +962,7 @@ def rolled_back_note():
                "because the newer version didn't start properly. ")
         say(f"Your computer went back to the version from {since}, {why}Your files and your apps aren't touched." +
             (f"\n\n{pause}" if pause else "") +
-            "\n\nIf it happens again, tell your helper. Save problem details in System Tools makes a file to send "
+            "\n\nIf it happens again, tell your helper. Save problem details in Wheelhouse makes a file to send "
             "them.", "warning", title=w)
     STATE.mkdir(parents=True, exist_ok=True)
     ROLLED_BACK_SHOWN.write_text(stamp)
@@ -1011,8 +1011,8 @@ def restart_question(kind, start):
                   "window asks once more about 3 minutes after you log in, and then it can go back.")
             ok = "Restart now"
         other = "Keep this update" if kind == "update" else "Keep these options"
-        later = ("Undo the last update in System Tools can still take you back later." if kind == "update" else
-                 "Boot options in System Tools can change them back later.")
+        later = ("Undo the last update in Wheelhouse can still take you back later." if kind == "update" else
+                 "Boot options in Wheelhouse can change them back later.")
         text = (f"{head}\n\n{go}\n\n{other}: no more automatic restarts, and what broke stays broken. Needs an "
                 f"administrator to approve it. {later}\n\nNo answer in 2 minutes: it "
                 f"{'goes back' if last else 'restarts'} by itself.")
@@ -1103,7 +1103,7 @@ def certificates():
             "for a new one before then.", "warning", title=w)
         return 0
     if not a["file"] or not CERT_FILE.fullmatch(a["file"]):
-        say(f"\"{name}\" has expired. It was added in a way System Tools can't remove; tell your helper.",
+        say(f"\"{name}\" has expired. It was added in a way Wheelhouse can't remove; tell your helper.",
             "warning", title=w)
         return 0
     if a.get("in_file", 1) > 1:
@@ -1167,7 +1167,7 @@ def checklist_open():
 
 
 def guide_at_login():
-    """New to EvenKeelOS? in System Tools, after the setup checklist, until "Don't show this again" is ticked."""
+    """New to EvenKeelOS? in Wheelhouse, after the setup checklist, until "Don't show this again" is ticked."""
     if not GUI or GUIDE_HIDDEN.exists():
         return 0
     time.sleep(5)               # the checklist starts a few seconds earlier
@@ -1193,7 +1193,7 @@ def main(argv):
             return restart_question(argv[2], argv[3])
         for key, name, _, fn in TOOLS:
             if argv[1] == key and len(argv) == 2:
-                ui.TITLE = name     # its windows carry its own name, not System Tools'
+                ui.TITLE = name     # its windows carry its own name, not Wheelhouse's
                 return fn()
         print(__doc__)
         return 2

@@ -143,11 +143,11 @@ def cert_remove_refusals():
 
 
 cert_remove_refusals()
-# System Tools offers "Remove it" only for names the helper takes.
+# Wheelhouse offers "Remove it" only for names the helper takes.
 patterns = [re.search(r'(?m)^(?:CERT_FILE|NAME) = re\.compile\((r".*?")\)', Path(f).read_text())
             for f in ("/usr/bin/evenkeel-os-tools", "/usr/libexec/evenkeel-os-cert-remove")]
 if not all(patterns) or patterns[0].group(1) != patterns[1].group(1):
-    bad("System Tools and evenkeel-os-cert-remove don't take the same certificate file names")
+    bad("Wheelhouse and evenkeel-os-cert-remove don't take the same certificate file names")
 refuses("evenkeel-os-tools-admin", ["cert-remove", "a.pem"])
 refuses("evenkeel-os-codecs-setup", ["web", "full"])
 refuses("evenkeel-os-hwrules", ["add", "pkg"])

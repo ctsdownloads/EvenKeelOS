@@ -58,7 +58,7 @@ class Network:
     @property
     def needs_asking(self):
         """Joined (password accepted), a password Wi-Fi, and never asked. A wired profile isn't asked: it
-        matches every cable you plug in, so it stays a Public place unless set in System Tools."""
+        matches every cable you plug in, so it stays a Public place unless set in Wheelhouse."""
         return bool(self.device) and not self.zone and self.kind == "Wi-Fi" and self.secured
 
 

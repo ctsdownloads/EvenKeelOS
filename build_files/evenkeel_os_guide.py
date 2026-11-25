@@ -1,7 +1,7 @@
-"""The EvenKeelOS guide: how to do things, step by step, in System Tools and in docs/guide.md.
+"""The EvenKeelOS guide: how to do things, step by step, in Wheelhouse and in docs/guide.md.
 
 A topic is (key, title, icon, what it covers, articles); an article is (title, steps); a step is (text, show), where
-show is "" or what its Show me button opens: "page:KEY" (a System Tools page), "settings:PANEL" (a Settings page),
+show is "" or what its Show me button opens: "page:KEY" (a Wheelhouse page), "settings:PANEL" (a Settings page),
 or "topic:KEY" (another topic of this guide).
 """
 
@@ -15,15 +15,15 @@ TOPICS = [
          ("Where things are", [
              ("Start menu: with the Windows-style layout, the sailboat button at the bottom left. With the standard "
               "layout, press the Windows key.", "topic:desktop"),
-             ("Control Panel: Settings, for Wi-Fi, screens, sound, printers and accounts. System Tools, for updates, "
-              "apps and fixes.", ""),
+             ("Control Panel: Settings, for Wi-Fi, screens, sound, printers and accounts. Wheelhouse, for updates, "
+              "apps and fixes. A ship is steered from its wheelhouse; this is where you steer your computer.", ""),
              ("File Explorer: Files.", "topic:files"),
              ("Task Manager: Resources. Find it in the start menu.", ""),
              ("Word, Excel and PowerPoint: LibreOffice Writer, Calc and Impress. They open and save Office files.", ""),
              ("Notepad: Text Editor. Photos: Image Viewer. Videos: Celluloid. Music: Lollypop. PDFs: Papers.", ""),
          ]),
          ("What's different", [
-             ("Windows programs (.exe and .msi) don't run here. Open one anyway: System Tools tells you the version "
+             ("Windows programs (.exe and .msi) don't run here. Open one anyway: Wheelhouse tells you the version "
               "for EvenKeelOS, or a replacement when there is one, and installs it.", "topic:apps"),
              ("Updates install on their own. If one stops the computer starting properly, it goes back to the version "
               "before by itself and tells you.", "page:updates"),
@@ -40,12 +40,12 @@ TOPICS = [
              ("With the standard layout: press the Windows key, start typing the app's name, and press Enter. Or "
               "press Windows key + A to see every app.", ""),
          ]),
-         ("Open System Tools", [
-             ("With the Windows-style layout: click the sailboat button at the bottom left, then System Tools.", ""),
-             ("With the standard layout: click the logo at the top left, then System Tools.", ""),
+         ("Open Wheelhouse", [
+             ("With the Windows-style layout: click the sailboat button at the bottom left, then Wheelhouse.", ""),
+             ("With the standard layout: click the logo at the top left, then Wheelhouse.", ""),
          ]),
          ("Change the layout", [
-             ("Open System Tools, Make it yours.", "page:yours"),
+             ("Open Wheelhouse, Make it yours.", "page:yours"),
              ("Pick Windows-style (a bar at the bottom and a start menu) or Standard (a bar at the top and a dock).",
               ""),
              ("Log out and back in to see it.", ""),
@@ -115,7 +115,7 @@ TOPICS = [
               "settings:applications"),
          ]),
          ("Open your folders from another computer at home", [
-             ("Open System Tools, Shared folders.", "page:sharing"),
+             ("Open Wheelhouse, Shared folders.", "page:sharing"),
              ("Set a sharing password, then turn on Share folders on Home networks.", ""),
              ("Click Add a folder and pick it. It starts as Read only: change it to Read and write if the other "
               "computer should save there too.", ""),
@@ -132,22 +132,22 @@ TOPICS = [
              ("Apps from Bazaar update on their own. Remove them in Bazaar too.", ""),
          ]),
          ("A Windows program you downloaded (.exe or .msi)", [
-             ("Open the file, or drop it on System Tools, Apps.", "page:apps"),
+             ("Open the file, or drop it on Wheelhouse, Apps.", "page:apps"),
              ("It tells you whether there's a version for EvenKeelOS, or a replacement that does the same job.", ""),
              ("Click Install, and it installs that instead.", ""),
          ]),
          ("An app that comes as a .rpm or .deb file", [
-             ("Open the file, or use Install a package file in System Tools, Apps.", "page:apps"),
+             ("Open the file, or use Install a package file in Wheelhouse, Apps.", "page:apps"),
              ("It says first whether the app keeps itself updated, then installs it.", ""),
              ("Some, like printer drivers, are added to the system: they're ready after the next restart.", ""),
          ]),
          ("Remove an app", [
              ("Apps from Bazaar: open Bazaar and remove it there.", ""),
-             ("Apps from a file, Get a VPN or a Windows program: System Tools, Apps, Remove apps.", "page:apps"),
+             ("Apps from a file, Get a VPN or a Windows program: Wheelhouse, Apps, Remove apps.", "page:apps"),
          ]),
          ("Start an app when you log in", [
              ("Apps from Bazaar have this setting inside the app.", ""),
-             ("Apps from a file: open System Tools, Apps, Start apps at login, and pick the app. Picking it again "
+             ("Apps from a file: open Wheelhouse, Apps, Start apps at login, and pick the app. Picking it again "
               "stops it.", "page:apps"),
          ]),
          ("Default apps", [
@@ -158,20 +158,20 @@ TOPICS = [
              ("Click the meeting link you were sent.", ""),
              ("The first time, choose Install Chrome or Use the usual browser. The meeting opens in Zoom's web "
               "version.", ""),
-             ("To be asked again: System Tools, Apps, Zoom meetings.", "page:apps"),
+             ("To be asked again: Wheelhouse, Apps, Zoom meetings.", "page:apps"),
          ]),
          ("A VPN", [
-             ("Open System Tools, Apps, Get a VPN.", "page:apps"),
+             ("Open Wheelhouse, Apps, Get a VPN.", "page:apps"),
              ("Pick Mullvad, Proton, IVPN or NordVPN. It's added from that company's own download source, and kept "
               "up to date.", ""),
              ("Restart, then sign in with your account from that company.", ""),
          ]),
          ("Media codecs, for some videos", [
-             ("Open System Tools, Apps, Media codecs.", "page:apps"),
+             ("Open Wheelhouse, Apps, Media codecs.", "page:apps"),
              ("Pick what you need. It explains each choice.", ""),
          ]),
          ("A broken app box", [
-             ("Some apps from .rpm or .deb files run in an app box. If one stops starting, open System Tools, Apps, "
+             ("Some apps from .rpm or .deb files run in an app box. If one stops starting, open Wheelhouse, Apps, "
               "Repair app boxes.", "page:apps"),
              ("Pick the box. It's set up again, with its apps. Your files aren't touched.", ""),
          ]),
@@ -186,7 +186,7 @@ TOPICS = [
               "Not sure? Keep Public place.", "page:network"),
          ]),
          ("Home, Work or Public place", [
-             ("Open System Tools, Network safety. Your networks lists every network this computer has joined.",
+             ("Open Wheelhouse, Network safety. Your networks lists every network this computer has joined.",
               "page:network"),
              ("Public place: nothing on the network can reach your computer. Pick it for cafes, hotels and airports.",
               ""),
@@ -196,7 +196,7 @@ TOPICS = [
               "name.", ""),
          ]),
          ("Let other computers in", [
-             ("Open System Tools, Network safety. Under Also let in, on Home and Work, there are two switches.",
+             ("Open Wheelhouse, Network safety. Under Also let in, on Home and Work, there are two switches.",
               "page:network"),
              ("Log in from another computer (SSH): for people who use a terminal. Leave it off if you don't know it.",
               ""),
@@ -219,7 +219,7 @@ TOPICS = [
          ]),
          ("A driver file from the maker", [
              ("Most printers don't need one. Try Add a printer first.", ""),
-             ("If yours does, download the maker's .rpm file and open it from Downloads. System Tools sees that "
+             ("If yours does, download the maker's .rpm file and open it from Downloads. Wheelhouse sees that "
               "it's a printer driver.", ""),
              ("Click Install the driver, type your password, and restart. Then add the printer.", ""),
              ("A .deb driver can't be installed. The window says how to get the .rpm from the maker.", ""),
@@ -231,14 +231,14 @@ TOPICS = [
              ("Every day at 4 am, or at the next start, the system, your apps and app boxes update.", ""),
              ("A new system version is used from the next restart. Keep working, and restart when it suits you.",
               ""),
-             ("To update now: open System Tools, Updates, System Update.", "page:updates"),
+             ("To update now: open Wheelhouse, Updates, System Update.", "page:updates"),
          ]),
          ("Turn automatic updates off or on", [
-             ("Open System Tools, Updates, Automatic updates. On is recommended.", "page:updates"),
+             ("Open Wheelhouse, Updates, Automatic updates. On is recommended.", "page:updates"),
              ("Click Turn off or Turn on. Turning them off asks for your password.", ""),
          ]),
          ("Undo the last update", [
-             ("If something stopped working after an update, open System Tools, Updates, Undo the last update.",
+             ("If something stopped working after an update, open Wheelhouse, Updates, Undo the last update.",
               "page:updates"),
              ("Click Undo the update, type your password, and restart. Your files and apps aren't touched.", ""),
              ("Automatic updates pause for 3 days, so the same update doesn't come straight back. They turn back on "
@@ -255,14 +255,14 @@ TOPICS = [
          ]),
          ("Update firmware", [
              ("Firmware is the software built into the computer's own parts, like the BIOS.", ""),
-             ("Plug the computer in. Open System Tools, Updates, Update firmware.", "page:updates"),
+             ("Plug the computer in. Open Wheelhouse, Updates, Update firmware.", "page:updates"),
              ("If updates are listed, click Update and type your password. Some finish while the computer restarts.",
               ""),
          ]),
          ("Certificate alerts", [
              ("Certificates are how the computer knows a secure website is real. An alert shows when one has expired, "
               "expires soon, or was removed.", ""),
-             ("Open System Tools, Get help, Certificate alerts to see them.", "page:help"),
+             ("Open Wheelhouse, Get help, Certificate alerts to see them.", "page:help"),
              ("For an expired one that was added to this computer, it offers Remove it. Fedora's own ones are "
               "replaced by updates, so keep automatic updates on.", ""),
          ]),
@@ -270,7 +270,7 @@ TOPICS = [
     ("yours", "Making it yours", "applications-graphics-symbolic",
      "The layout, colors, wallpaper, screen size, night light, sound and accounts", [
          ("Layout", [
-             ("Open System Tools, Make it yours, Desktop layout.", "page:yours"),
+             ("Open Wheelhouse, Make it yours, Desktop layout.", "page:yours"),
              ("Pick Windows-style or Standard, click Switch, then log out and back in.", ""),
          ]),
          ("Colors and wallpaper", [
@@ -303,18 +303,18 @@ TOPICS = [
     ("startup", "Disk and startup", "drive-harddisk-symbolic",
      "Freeing space, the disk password, boot options and BIOS settings", [
          ("Free up disk space", [
-             ("Open System Tools, Disk and startup. The bar shows how much is free.", "page:disk"),
+             ("Open Wheelhouse, Disk and startup. The bar shows how much is free.", "page:disk"),
              ("Click Free up disk space, then Free up space. Your files and apps aren't touched.", ""),
          ]),
          ("Skip the disk password at startup", [
              ("If you type a disk password every time the computer starts, it can unlock by itself with the "
               "computer's security chip.", ""),
-             ("Open System Tools, Disk and startup, Unlock disk automatically.", "page:disk"),
+             ("Open Wheelhouse, Disk and startup, Unlock disk automatically.", "page:disk"),
              ("Click Turn on, type the disk password once, and restart.", ""),
              ("After a BIOS update, it may ask for the disk password again. Turn it on again here.", ""),
          ]),
          ("Fix screen flicker or a drive that freezes", [
-             ("Open System Tools, Disk and startup. Under Common fixes, turn on the one that matches the problem.",
+             ("Open Wheelhouse, Disk and startup. Under Common fixes, turn on the one that matches the problem.",
               "page:disk"),
              ("Type your password, then restart. The fix starts at the restart.", ""),
              ("Didn't help? Turn it off again, and restart.", ""),
@@ -322,7 +322,7 @@ TOPICS = [
               ""),
          ]),
          ("BIOS settings", [
-             ("Open System Tools, Disk and startup, Restart into BIOS settings.", "page:disk"),
+             ("Open Wheelhouse, Disk and startup, Restart into BIOS settings.", "page:disk"),
              ("Save your work, then click Restart now.", ""),
              ("The BIOS screen uses the keyboard. When you're done, choose Save and Exit, or Exit.", ""),
          ]),
@@ -330,7 +330,7 @@ TOPICS = [
     ("help", "Getting help", "help-about-symbolic",
      "Sending details to your helper, checking rollback, and terminal commands", [
          ("Send details to your helper", [
-             ("Open System Tools, Get help, Save problem details.", "page:help"),
+             ("Open Wheelhouse, Get help, Save problem details.", "page:help"),
              ("Click Save details. It makes one file of recent errors, in Documents. Nothing is sent anywhere.", ""),
              ("Click Show the file, then attach it to an email to your helper.", ""),
          ]),
@@ -338,7 +338,7 @@ TOPICS = [
              ("Undo it. See Updates and safety.", "topic:updates"),
          ]),
          ("Check that automatic rollback works", [
-             ("Open System Tools, Get help, Test automatic rollback. Save your work first.", "page:help"),
+             ("Open Wheelhouse, Get help, Test automatic rollback. Save your work first.", "page:help"),
              ("Pick a test, click Start the test, and type your password.", ""),
              ("For the tests that break one thing, like Sound driver blocked, log in when the login screen shows.", ""),
              ("For those, a window asks before each restart. Click Restart now, or Not yet to save your work "
@@ -347,7 +347,7 @@ TOPICS = [
               "worked and what the test copy found broken.", ""),
          ]),
          ("Prefer the terminal?", [
-             ("Open System Tools, Get help, and scroll to the end. Every tool has its command there.", "page:help"),
+             ("Open Wheelhouse, Get help, and scroll to the end. Every tool has its command there.", "page:help"),
              ("Click the copy button next to a command, then paste it in Terminal.", ""),
          ]),
      ]),

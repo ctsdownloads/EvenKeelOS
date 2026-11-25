@@ -133,7 +133,7 @@ windows=$(python3 -I -c 'import runpy; print(*runpy.run_path("/usr/libexec/evenk
 for x in $windows; do
   [ -s "/usr/share/gnome-shell/extensions/$x/metadata.json" ] || fail "the installer's Windows layout needs $x, which is not installed"
 done
-# "I already use Linux" writes the file that keeps New to EvenKeelOS? closed at login, where System Tools looks for it.
+# "I already use Linux" writes the file that keeps New to EvenKeelOS? closed at login, where Wheelhouse looks for it.
 linux_choice="the installer's Linux choice wouldn't stop New to EvenKeelOS? at login"
 env -u XDG_STATE_HOME HOME=/h python3 -I - <<'PY' || fail "$linux_choice"
 import importlib.machinery, importlib.util, runpy, sys

@@ -138,7 +138,7 @@ def install(path):
             return 1
         if ask(f"{title} has to go on the system. It has:\n{reasons}\nThese can't work in a box.\n\n"
                f"Add to the system: everything works. Needs your password and a restart. You can remove it any time "
-               f"in System Tools, Apps, Remove apps.",
+               f"in Wheelhouse, Apps, Remove apps.",
                ok="Add to the system") != "ok":
             return 1
         return targets.install_system(pkg, title, printer, services=info["turns_on"])

@@ -1,5 +1,5 @@
 #!/usr/bin/python3 -I
-"""System Tools jobs that change the system, as root through polkit (administrator password).
+"""Wheelhouse jobs that change the system, as root through polkit (administrator password).
 
   evenkeel-os-tools-admin updates on|off
   evenkeel-os-tools-admin disk-unlock on|off      (the disk password on standard input)
