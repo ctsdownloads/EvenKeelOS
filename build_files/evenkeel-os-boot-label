@@ -1,19 +1,20 @@
 #!/bin/bash
 # Rename this system's firmware boot entry to EvenKeelOS. Dry run unless --apply.
 set -euo pipefail
+export TEXTDOMAIN=evenkeel-os
 LABEL="EvenKeelOS"
 LOADER='\EFI\fedora\shimx64.efi'   # the folder name is part of the file path and does not change
 APPLY=0; [ "${1:-}" = "--apply" ] && APPLY=1
 
-[ -d /sys/firmware/efi ] || { echo "Not booted in UEFI mode. Nothing to do."; exit 0; }
-[ "$(id -u)" -eq 0 ] || { echo "Run with sudo."; exit 1; }
-command -v efibootmgr >/dev/null || { echo "efibootmgr is not installed."; exit 1; }
+[ -d /sys/firmware/efi ] || { gettext "Not booted in UEFI mode. Nothing to do."; echo; exit 0; }
+[ "$(id -u)" -eq 0 ] || { gettext "Run with sudo."; echo; exit 1; }
+command -v efibootmgr >/dev/null || { gettext "efibootmgr is not installed."; echo; exit 1; }
 
-esp=$(findmnt -no SOURCE /boot/efi) || { echo "Could not find the EFI partition at /boot/efi."; exit 1; }
+esp=$(findmnt -no SOURCE /boot/efi) || { gettext "Could not find the EFI partition at /boot/efi."; echo; exit 1; }
 disk="/dev/$(lsblk -no PKNAME "$esp" | head -1)"
 part=$(cat "/sys/class/block/$(basename "$esp")/partition")
 uuid=$(blkid -s PARTUUID -o value "$esp" | tr 'A-F' 'a-f')
-[ -n "$uuid" ] && [ -n "$part" ] || { echo "Could not read the EFI partition details."; exit 1; }
+[ -n "$uuid" ] && [ -n "$part" ] || { gettext "Could not read the EFI partition details."; echo; exit 1; }
 
 list=$(efibootmgr -v)
 # entries on this EFI partition that point at the shim
@@ -24,25 +25,25 @@ mapfile -t old < <(printf '%s\n' "$list" | awk -v u="$uuid" -v l="$loader_slashe
     if (index(low, u) && index(low, l)) { num = substr($1, 5, 4); lab = $0; sub(/^Boot[0-9A-Fa-f]{4}\*? +/, "", lab); sub(/\t.*/, "", lab); print num "|" lab }
   }')
 
-[ "${#old[@]}" -gt 0 ] || { echo "No boot entry for this system was found. Nothing to do."; exit 0; }
+[ "${#old[@]}" -gt 0 ] || { gettext "No boot entry for this system was found. Nothing to do."; echo; exit 0; }
 todo=()
 for e in "${old[@]}"; do [ "${e#*|}" = "$LABEL" ] || todo+=("$e"); done
-[ "${#todo[@]}" -gt 0 ] || { echo "The boot entry is already named $LABEL. Nothing to do."; exit 0; }
+[ "${#todo[@]}" -gt 0 ] || { printf "$(gettext "The boot entry is already named %s. Nothing to do.")\n" "$LABEL"; exit 0; }
 
-echo "This system's EFI partition: $esp (disk $disk, partition $part)"
-echo "Boot entries that will be renamed to \"$LABEL\":"
+printf "$(gettext "This system's EFI partition: %s (disk %s, partition %s)")\n" "$esp" "$disk" "$part"
+printf "$(gettext "Boot entries that will be renamed to \"%s\":")\n" "$LABEL"
 for e in "${todo[@]}"; do echo "   Boot${e%%|*}  \"${e#*|}\""; done
-[ "$APPLY" -eq 1 ] || { echo; echo "Dry run only. To make the change run:  sudo $0 --apply"; exit 0; }
+[ "$APPLY" -eq 1 ] || { echo; printf "$(gettext "Dry run only. To make the change run:  sudo %s --apply")\n" "$0"; exit 0; }
 
 for e in "${todo[@]}"; do
   n=${e%%|*}
   efibootmgr -c -d "$disk" -p "$part" -L "$LABEL" -l "$LOADER" >/dev/null
   new=$(efibootmgr -v | awk -v u="$uuid" -v lab="$LABEL" '/^Boot[0-9A-Fa-f]{4}/ && index(tolower($0), u) && index($0, lab) {print substr($1,5,4)}' | grep -vx "$n" | tail -1)
-  [ -n "$new" ] || { echo "The new entry was not created. The old one was left alone."; exit 1; }
+  [ -n "$new" ] || { gettext "The new entry was not created. The old one was left alone."; echo; exit 1; }
   # keep the same position in the boot order, then remove the old entry
   neworder=$(printf '%s\n' "$(efibootmgr | sed -n 's/^BootOrder: *//p')" | tr ',' '\n' | grep -vx "$new" | sed "s/^$n\$/$new/" | paste -sd,)
   efibootmgr -o "$neworder" >/dev/null
   efibootmgr -B -b "$n" >/dev/null
-  echo "Renamed Boot$n to Boot$new (\"$LABEL\")."
+  printf "$(gettext "Renamed Boot%s to Boot%s (\"%s\").")\n" "$n" "$new" "$LABEL"
 done
 echo; efibootmgr

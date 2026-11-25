@@ -7,7 +7,7 @@ import subprocess
 import time
 
 import evenkeel_os_ui as ui
-from evenkeel_os_ui import GUI, ask, notify, say
+from evenkeel_os_ui import GUI, _, ask, notify, say
 from evenkeel_os_packages import common
 
 
@@ -52,8 +52,9 @@ def run_steps(text, steps, cancel=False):
         log.write("$ " + " ".join(cmd) + "\n")
         log.flush()
         try:
+            # English output, in any language: explain() reads the log for the usual reasons a step fails.
             proc = subprocess.Popen(cmd, stdout=log, stderr=subprocess.STDOUT, stdin=subprocess.DEVNULL,
-                                    start_new_session=True)
+                                    start_new_session=True, env={**os.environ, "LC_ALL": "C.UTF-8"})
         except OSError as e:
             log.write(f"{e}\n")
             ok = False
@@ -72,7 +73,7 @@ def run_steps(text, steps, cancel=False):
             mins = int(time.time() - began) // 60
             if mins > shown:
                 shown = mins
-                show("# " + html.escape(f"{label}  ({mins} min so far)"))
+                show("# " + html.escape(_("{label}  ({mins} min so far)").format(label=label, mins=mins)))
         if CANCELLED or proc.returncode != 0:
             ok = False
             break
@@ -96,27 +97,30 @@ def explain(log):
     low = log.lower()
     m = re.search(r"nothing provides ([^\s]+)", low)
     if m:
-        return (f"It needs {m.group(1)}, which Fedora {common.fedora_version()} does not have. "
-                f"It may be made for a different Fedora version.")
+        return _("It needs {name}, which Fedora {version} does not have. "
+                 "It may be made for a different Fedora version.").format(name=m.group(1),
+                                                                          version=common.fedora_version())
     m = re.search(r"depends: ([^\s]+)[^\n]*but (it is not installable|it is not going to be installed|[^\n]*is to be "
                   r"installed)", low)
     if m or "unmet dependencies" in low:
-        part = f"{m.group(1)}, which" if m else "parts that"
-        return (f"It needs {part} the Ubuntu box (Ubuntu 24.04) does not have. "
-                f"It may be made for a newer or older Ubuntu.")
+        if m:
+            return _("It needs {name}, which the Ubuntu box (Ubuntu 24.04) does not have. "
+                     "It may be made for a newer or older Ubuntu.").format(name=m.group(1))
+        return _("It needs parts that the Ubuntu box (Ubuntu 24.04) does not have. "
+                 "It may be made for a newer or older Ubuntu.")
     if "no space left on device" in low:
-        return "The disk is full. Free some space, then try again."
+        return _("The disk is full. Free some space, then try again.")
     if re.search(r"could not resolve|temporary failure resolving|name or service not known|network is unreachable|"
                  r"connection timed out|curl error|failed to download|cannot download|tls handshake", low):
-        return "It could not reach the internet. Check the connection, then try again."
+        return _("It could not reach the internet. Check the connection, then try again.")
     if re.search(r"conflicts with file from package|file [^\n]* conflicts", low):
-        return "It would replace a file that belongs to the system, so it was not added."
+        return _("It would replace a file that belongs to the system, so it was not added.")
     if re.search(r"different architecture|wrong architecture|incompatible architecture", low):
-        return "It is made for a different kind of processor than this computer has."
+        return _("It is made for a different kind of processor than this computer has.")
     if re.search(r"not authorized|accessdenied|authentication (failed|dismissed)|request dismissed", low):
-        return "The administrator password was not given, so nothing was changed."
+        return _("The administrator password was not given, so nothing was changed.")
     if re.search(r"no such container|error: container .* does not exist|cannot find container", low):
-        return "The box is missing or broken."
+        return _("The box is missing or broken.")
     return ""
 
 
@@ -126,11 +130,12 @@ def failed(what, offer=None, reason=""):
     reason = reason or explain(log)
     if not reason:
         lines = [line for line in log.splitlines() if line.strip() and not line.startswith(("===", "$ "))]
-        reason = "The last lines of the log:\n" + "\n".join(lines[-4:]) if lines else ""
-    notify(f"{what} did not work.")
-    text = f"{what} did not work.\n\n{reason}\n\nThe full details are in {common.LOG}"
+        reason = _("The last lines of the log:") + "\n" + "\n".join(lines[-4:]) if lines else ""
+    notify(_("{what} did not work.").format(what=what))
+    text = _("{what} did not work.\n\n{reason}\n\nThe full details are in {log}").format(
+        what=what, reason=reason, log=common.LOG)
     if offer:
-        if ask(text, ok=offer[0], cancel="Close") == "ok":
+        if ask(text, ok=offer[0], cancel=_("Close")) == "ok":
             return offer[1]()
         return 1
     say(text, "error")

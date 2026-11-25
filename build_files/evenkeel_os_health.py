@@ -10,6 +10,8 @@ import sys
 import time
 from pathlib import Path
 
+from evenkeel_os_ui import _, N_
+
 ROOT = Path("/")                       # the build checks point this at a made-up computer
 RECORD = "/var/lib/evenkeel-os/health-record.json"
 LOST = "/var/lib/evenkeel-os/health-lost"
@@ -32,8 +34,9 @@ COUNTDOWN = 120                         # seconds a real problem waits for an an
 # fault ("traps: app[pid] general protection fault"), GPU hangs (often one app's) and firmware restarts don't.
 CRASHES = {"kernel-bug": re.compile(r"\bBUG: |kernel BUG at "), "oops": re.compile(r"\bOops: "),
            "gpf": re.compile(r"^(?!traps: ).*general protection fault")}
-CRASH_NAMES = {"kernel-bug": "The system core reported a bug", "oops": "The system core crashed (an oops)",
-               "gpf": "The system core crashed (a protection fault)"}
+CRASH_NAMES = {"kernel-bug": N_("The system core reported a bug"),
+               "oops": N_("The system core crashed (an oops)"),
+               "gpf": N_("The system core crashed (a protection fault)")}
 
 
 def P(path):
@@ -161,7 +164,7 @@ def hardware(prefix, name, devices):
 
 
 def sound():
-    return hardware("sound", "Sound", [c / "device" for c in listed("/sys/class/sound", r"card[0-9]+")])
+    return hardware("sound", N_("Sound"), [c / "device" for c in listed("/sys/class/sound", r"card[0-9]+")])
 
 
 def networks():
@@ -173,11 +176,11 @@ def networks():
             wifi.append(n / "device")
         elif attr(n, "type") == "1":
             wired.append(n / "device")
-    return {**hardware("wifi", "Wi-Fi", wifi), **hardware("wired", "Wired network", wired)}
+    return {**hardware("wifi", N_("Wi-Fi"), wifi), **hardware("wired", N_("Wired network"), wired)}
 
 
 def bluetooth():
-    return hardware("bluetooth", "Bluetooth", [h / "device" for h in listed("/sys/class/bluetooth", r"hci[0-9]+")])
+    return hardware("bluetooth", N_("Bluetooth"), [h / "device" for h in listed("/sys/class/bluetooth", r"hci[0-9]+")])
 
 
 def graphics():
@@ -215,7 +218,7 @@ def inputs():
             continue
         # A kernel may move a touchpad to a better driver (another bus and name), so any touchpad will do.
         key = "touchpad" if kind == "touchpad" else f"keyboard:{bus}:{attr(i, 'id/vendor')}:{attr(i, 'id/product')}"
-        item = items.setdefault(key, {"name": f"The {kind} ({attr(i, 'name') or 'built in'})", "needs": []})
+        item = items.setdefault(key, {"name": f"The {kind} ({attr(i, 'name') or N_('built in')})", "needs": []})
         if n not in item["needs"]:
             item["needs"].append(n)
     return items
@@ -248,19 +251,19 @@ def batteries():
         a = a if subsystem(a) == "acpi" else anchor(a)
         if a is None:
             continue
-        items[f"battery:{akey(a)}"] = {"name": "Battery status", "needs": [dict(need(a), battery=True)]}
+        items[f"battery:{akey(a)}"] = {"name": N_("Battery status"), "needs": [dict(need(a), battery=True)]}
     return items
 
 
 def backlight():
     for b in listed("/sys/class/backlight", r".+"):
         if not b.name.startswith("ddcci") and attr(b, "type") in ("raw", "platform", "firmware"):
-            return {"backlight": {"name": "Screen brightness control", "needs": [{"lid": "open"}]}}
+            return {"backlight": {"name": N_("Screen brightness control"), "needs": [{"lid": "open"}]}}
     return {}
 
 
 def thunderbolt():
-    return hardware("thunderbolt", "Thunderbolt or USB4 ports",
+    return hardware("thunderbolt", N_("Thunderbolt or USB4 ports"),
                     listed("/sys/bus/thunderbolt/devices", r"domain[0-9]+"))
 
 
@@ -284,7 +287,9 @@ def fingerprint():
     if rc != 0 or len(out.split()) < 2 or out.split()[1] == "0":
         return {}
     readers = [d for i, d in usb_devices().items() if i in fprint_ids() and not removable(d)]
-    return {"fingerprint": {"name": "The fingerprint reader", "needs": [need(d) for d in readers]}} if readers else {}
+    if not readers:
+        return {}
+    return {"fingerprint": {"name": N_("The fingerprint reader"), "needs": [need(d) for d in readers]}}
 
 
 def enabled(units):
@@ -299,43 +304,44 @@ def software():
         if ok:
             items[key] = {"name": name, "needs": list(needs)}
 
-    works("printing", "Printing", "scheduler is running" in run(["lpstat", "-r"])[1],
+    works("printing", N_("Printing"), "scheduler is running" in run(["lpstat", "-r"])[1],
           [enabled(["cups.socket", "cups.service"])])
-    works("power-modes", "Power modes",
+    works("power-modes", N_("Power modes"),
           run(["busctl", "get-property", "org.freedesktop.UPower.PowerProfiles",
                "/org/freedesktop/UPower/PowerProfiles", "org.freedesktop.UPower.PowerProfiles",
                "ActiveProfile"])[1].startswith("s "),
           [enabled(["tuned-ppd.service", "power-profiles-daemon.service"])])
-    works("update-program", "The update program",
+    works("update-program", N_("The update program"),
           run(["uupd", "--version"])[0] == 0 and run(["rpm-ostree", "status", "--json"], 120)[0] == 0)
-    works("flatpak", "The app system (Flatpak)", run(["flatpak", "remotes", "--system", "--columns=name"])[0] == 0)
-    works("firmware-updater", "The firmware updater",
+    works("flatpak", N_("The app system (Flatpak)"), run(["flatpak", "remotes", "--system", "--columns=name"])[0] == 0)
+    works("firmware-updater", N_("The firmware updater"),
           run(["busctl", "get-property", "org.freedesktop.fwupd", "/", "org.freedesktop.fwupd",
                "DaemonVersion"], 60)[1].startswith("s "))
     up = run(["firewall-cmd", "--state"])[0] == 0
-    works("firewall", "The firewall", up, [enabled(["firewalld.service"])])
-    works("network-places", "Network places (Home, Work, Public place)",
+    works("firewall", N_("The firewall"), up, [enabled(["firewalld.service"])])
+    # Translators: Home, Work and Public place are the names of the three kinds of network place.
+    works("network-places", N_("Network places (Home, Work, Public place)"),
           up and set(PLACES) <= set(run(["firewall-cmd", "--get-zones"])[1].split()), [enabled(["firewalld.service"])])
-    works("selinux", "SELinux security", read("/sys/fs/selinux/enforce") == "1")
-    works("clock-sync", "Clock sync", run(["systemctl", "is-active", "chronyd.service"])[1].strip() == "active",
+    works("selinux", N_("SELinux security"), read("/sys/fs/selinux/enforce") == "1")
+    works("clock-sync", N_("Clock sync"), run(["systemctl", "is-active", "chronyd.service"])[1].strip() == "active",
           [enabled(["chronyd.service"])])
-    works("dns", "Looking up website names (DNS)", run(["resolvectl", "query", "--legend=no", "localhost"])[0] == 0,
+    works("dns", N_("Looking up website names (DNS)"), run(["resolvectl", "query", "--legend=no", "localhost"])[0] == 0,
           [enabled(["systemd-resolved.service"])])
     cmdline = read("/proc/cmdline").split()
     if P(DISK_UNLOCK_ON).exists() and any(a.startswith("rd.luks.uuid=") for a in cmdline):
         rc, log = run(["journalctl", "-b", "-o", "cat", "--no-pager", "-t", "systemd-cryptsetup"])
         # An unreadable journal says nothing either way, so it counts as working.
-        works("disk-unlock", "Automatic disk unlock",
+        works("disk-unlock", N_("Automatic disk unlock"),
               rc != 0 or not re.search(r"falling back to traditional unlocking|Failed to activate with TPM2", log),
               [{"file": DISK_UNLOCK_ON}, {"pcrs": pcrs()}])
     opts = boot_options()
-    works("boot-options", "Your Boot options settings", opts and all(o in cmdline for o in opts),
+    works("boot-options", N_("Your Boot options settings"), opts and all(o in cmdline for o in opts),
           [{"config": "boot-options"}])
     # Samba itself runs only on a Home network, so this is its settings: every shared folder in them.
     shares = re.findall(r"^\[(.+)\]$", read(SHARES), re.M)
     if shared_folders() and shares:
         rc, conf = run(["testparm", "-s", "--suppress-prompt"])
-        works("shared-folders", "Shared folders", rc == 0 and all(f"[{s}]" in conf for s in shares),
+        works("shared-folders", N_("Shared folders"), rc == 0 and all(f"[{s}]" in conf for s in shares),
               [{"config": "shared-folders"}])
     return items
 
@@ -384,7 +390,7 @@ def drivers():
 
 def services():
     """Services running now (long-running ones: a one-time job may fail offline, which never counts)."""
-    _, out = run(["systemctl", "list-units", "--type=service", "--state=running", "--plain", "--no-legend",
+    _rc, out = run(["systemctl", "list-units", "--type=service", "--state=running", "--plain", "--no-legend",
                   "--no-pager"])
     items = {}
     for line in out.splitlines():
@@ -397,13 +403,13 @@ def services():
 
 
 def failed_services():
-    _, out = run(["systemctl", "list-units", "--type=service", "--state=failed", "--plain", "--no-legend",
+    _rc, out = run(["systemctl", "list-units", "--type=service", "--state=failed", "--plain", "--no-legend",
                   "--no-pager"])
     return {w for line in out.splitlines() for w in line.split()[:2] if w.endswith(".service")}
 
 
 def crashes():
-    _, out = run(["journalctl", "-k", "-b", "-o", "cat", "--no-pager"], 60)
+    _rc, out = run(["journalctl", "-k", "-b", "-o", "cat", "--no-pager"], 60)
     found = {}
     for line in out.splitlines():
         for kind, pattern in CRASHES.items():
@@ -483,6 +489,31 @@ def options_only(record=None):
     except (ValueError, KeyError, TypeError, StopIteration):
         return False
     return booted == other
+
+
+# Saved names with a device or driver inside (stored in English): their pattern, the text to show, its fields.
+NAME_PATTERNS = (
+    (re.compile(r"Graphics \((.+)\)"), N_("Graphics ({driver})"), ("driver",)),
+    (re.compile(r"The camera \((.+)\)"), N_("The camera ({device})"), ("device",)),
+    (re.compile(r"The touchpad \((.+)\)"), N_("The touchpad ({device})"), ("device",)),
+    (re.compile(r"The keyboard \((.+)\)"), N_("The keyboard ({device})"), ("device",)),
+    (re.compile(r"A device lost its driver \((.+)\)"), N_("A device lost its driver ({driver})"), ("driver",)),
+    (re.compile(r"The (.+) service \((.+\.service)\)"), N_("The {name} service ({unit})"), ("name", "unit")),
+    (re.compile(r"The (.+) \((.+\.service)\)"), N_("The {name} ({unit})"), ("name", "unit")),
+)
+
+
+def display(name):
+    """A saved item name in the person's language, for a window or note; the saved text itself stays English."""
+    for kind in CRASH_NAMES.values():
+        if name.startswith(kind + ": "):
+            return _(kind) + name[len(kind):]
+    for pattern, text, fields in NAME_PATTERNS:
+        m = pattern.fullmatch(name)
+        if m:
+            parts = [_("built in") if v == "built in" else v for v in m.groups()]
+            return _(text).format(**dict(zip(fields, parts)))
+    return _(name)
 
 
 def lost(record):
@@ -603,7 +634,7 @@ def compare(wait=None, path=RECORD, note=False):
     for key, name in gone:
         print(f"Stopped working: {name} [{key}]")
     if note:                               # the trial's list, for the rollback note
-        write(LOST, f"{int(time.time())}\n" + "".join(f"{name}\n" for _, name in gone))
+        write(LOST, f"{int(time.time())}\n" + "".join(f"{name}\n" for _key, name in gone))
     return 1
 
 
@@ -682,7 +713,7 @@ def ask_first():
         if who is None:
             print("Nobody is on the screen to ask, so it restarts now.")
             return 1
-        name, _, display = who
+        name, _uid, display = who
         kind = trial_kind()
         start = "last" if last_start() else "first"
         bid = read("/proc/sys/kernel/random/boot_id").strip()

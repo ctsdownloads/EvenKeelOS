@@ -13,7 +13,8 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `Containerfile`, `build_files/build.sh` | Start from `silverblue:45`, install everything, run the checks |
 | `build_files/bluefin-packages.txt` | Fedora packages carried over from Bluefin |
 | `build_files/default-apps.txt`, `flathub-apps.txt`, `evenkeel-os-flathub-apps`, `evenkeel-os-flatpak-apps.service`, `evenkeel-os-flathub.service`, `flathub.flatpakrepo` | Default apps, and the Flathub ones installed at the first start with internet |
-| `build_files/evenkeel_os_ui.py` | Windows, notices and disk sizes shared by Wheelhouse and Install Package File |
+| `build_files/evenkeel_os_ui.py` | Windows, notices and disk sizes shared by Wheelhouse and Install Package File, and its translation (`_`) |
+| `build_files/make-pot.sh`, `po/`, `build_files/check-translatable.py` | [Translations](#translations): the list of words to translate, and the check that no screen text skips it |
 | `boot_test/run-boot-test.sh`, `boot_test/boot-check`, `boot_test/boot-check-root`, `boot_test/Containerfile` | The [boot test](#boot-test): starts each new build in a virtual machine before it's published |
 | `boot_test/run-rollback-tests.sh`, `boot_test/rollback-step` | The [rollback tests](#rollback-tests), when asked for |
 | `build_files/evenkeel_os_health.py`, `greenboot/evenkeel-os-health`, `greenboot/40-evenkeel-os-still-works.sh`, `greenboot/93-evenkeel-os-health-record.sh`, `greenboot/evenkeel-os-health-record.service` | The trial check: after each good start (4 minutes in) a list of what works is saved to `/var/lib/evenkeel-os/health-record.json`; while a new version is on trial, after a login, anything on that list that's broken now fails the start (it waits 2 minutes for slow devices first). Hardware counts only if it's still there (unplugged, switched off in the BIOS or by a privacy switch doesn't count); only USB devices in fixed ports are listed; things switched off by their owner aren't asked for; a start that only changed boot options checks programs only; a mistake in the check itself never fails a start. What broke goes to `/var/lib/evenkeel-os/health-lost`, and to `rolled-back-why` with the next rollback's note. `sudo /usr/libexec/evenkeel-os-health compare --no-wait` runs the comparison by hand |
@@ -281,3 +282,17 @@ The disk gets one copy of Fedora's signed shim (`shimx64.efi`). Fedora also
 ships it as `shim.efi`, and some PCs' firmware (Framework laptops, for one)
 turns that copy into an extra "Fedora" boot entry, so the image leaves it out.
 Installs from before this change keep it until they are installed fresh.
+
+## Translations
+
+Every word EvenKeelOS shows (the installer, Wheelhouse, the guide, every tool,
+menu names and password prompts) goes through gettext, in one domain,
+`evenkeel-os`. `build_files/make-pot.sh` collects it all into
+`po/evenkeel-os.pot`, including what each Windows program does from
+`windows-replacements.json`. [A GitHub check](../.github/workflows/translations.yml)
+fails a change when that file is out of date, or when `check-translatable.py`
+finds screen text that skips `_()` or `gettext`.
+
+The installer lists only the languages EvenKeelOS is translated into, read
+from the image's `evenkeel-os.mo` files, so a language with no translation is
+never offered. Logs and GitHub issue reports stay in English.

@@ -5,15 +5,18 @@ that one network. A network with no zone gets the default, Public place.
 """
 import subprocess
 
+from evenkeel_os_ui import N_
+
 PUBLIC, HOME, WORK = "evenkeel-public", "evenkeel-home", "evenkeel-work"
-PLACES = {HOME: "Home", WORK: "Work", PUBLIC: "Public place"}
-KINDS = {"802-11-wireless": "Wi-Fi", "802-3-ethernet": "Wired"}
+# Translators: Home, Work and Public place are the names of kinds of network place, chosen for each Wi-Fi or cable.
+PLACES = {HOME: N_("Home"), WORK: N_("Work"), PUBLIC: N_("Public place")}
+KINDS = {"802-11-wireless": N_("Wi-Fi"), "802-3-ethernet": N_("Wired")}
 LETS_IN = {
-    PUBLIC: "Nothing can reach this computer from the network. Finding printers still works.",
-    HOME: "Phones, file sharing and apps you run can reach this computer. System services stay closed unless "
-          "switched on below.",
-    WORK: "Nothing can reach this computer from the network, and your folders aren't shared. Office shared drives "
-          "and printers still work.",
+    PUBLIC: N_("Nothing can reach this computer from the network. Finding printers still works."),
+    HOME: N_("Phones, file sharing and apps you run can reach this computer. System services stay closed unless "
+             "switched on below."),
+    WORK: N_("Nothing can reach this computer from the network, and your folders aren't shared. Office shared "
+             "drives and printers still work."),
 }
 
 

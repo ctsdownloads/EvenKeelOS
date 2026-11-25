@@ -5,7 +5,7 @@ import subprocess
 from pathlib import Path
 from urllib.parse import parse_qs, urlencode, urlsplit
 
-from evenkeel_os_ui import LAUNCH_ENV, ask
+from evenkeel_os_ui import LAUNCH_ENV, _, ask
 from evenkeel_os_packages import common, flathub, installed
 
 CHROME = "com.google.Chrome"
@@ -56,10 +56,10 @@ def open_page(address, may_install=True):
     """Open a Zoom page in Chrome; the first time Chrome is missing, offer to install it, or use the usual browser."""
     command = chrome_command()
     if not command and may_install and not (CHOICE.exists() and CHOICE.read_text().strip() == "default"):
-        answer = ask("Zoom meetings work best in Google Chrome: it can also share a browser tab with its sound.\n\n"
-                     "Recommended: Install Chrome, from Flathub. It updates by itself.\n\n"
-                     "Or Use the usual browser: the meeting works, but tab sound can't be shared. This is "
-                     "remembered.", ok="Install Chrome", cancel="Cancel", extra="Use the usual browser")
+        answer = ask(_("Zoom meetings work best in Google Chrome: it can also share a browser tab with its "
+                       "sound.\n\nRecommended: Install Chrome, from Flathub. It updates by itself.\n\n"
+                       "Or Use the usual browser: the meeting works, but tab sound can't be shared. This is "
+                       "remembered."), ok=_("Install Chrome"), cancel=_("Cancel"), extra=_("Use the usual browser"))
         if answer is None:
             return 1
         if answer == "extra":

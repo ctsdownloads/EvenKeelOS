@@ -8,13 +8,15 @@ import os
 import re
 import subprocess
 
+from i18n import _, N_
+
 SYS = "/sys"
 PROC = "/proc"
 GOOD, LIMITED, BAD = "good", "limited", "bad"
 VENDORS = {"0x8086": "Intel", "0x1002": "AMD", "0x10de": "NVIDIA", "0x14e4": "Broadcom", "0x10ec": "Realtek",
            "0x14c3": "MediaTek", "0x168c": "Qualcomm Atheros", "0x17cb": "Qualcomm"}
 BROADCOM = "0x14e4"
-NVIDIA = ("The NVIDIA card runs on the open-source driver built into EvenKeelOS. The proprietary NVIDIA driver "
+NVIDIA = N_("The NVIDIA card runs on the open-source driver built into EvenKeelOS. The proprietary NVIDIA driver "
           "isn't used: it breaks too often to keep the promise that EvenKeelOS just works. If you need it, use "
           "Bazzite or Bluefin's NVIDIA editions instead.")
 NO_FIRMWARE = ("b43", "b43legacy")           # Broadcom drivers whose firmware Fedora can't include
@@ -23,6 +25,25 @@ EFI_GLOBAL = "8be4df61-93ca-11d2-aa0d-00e098032b8c"
 MIN_DISK = 20 * 10 ** 9                      # Fedora Workstation's minimum disk
 MIN_MEMORY_GB = 8                            # the README's recommended amount
 TOUCHPADS = ("touchpad", "trackpad", "glidepoint", "synaptics", "bcm5974")
+
+
+class Text(str):
+    """What the person reads, with the English it was made from (the saved results file stays English)."""
+    english = ""
+
+
+def words(template, **values):
+    """The template in the installer's language with its values put in."""
+    text = Text(_(template).format(**values))
+    text.english = template.format(**{k: getattr(v, "english", "") or v for k, v in values.items()})
+    return text
+
+
+def joined(*parts):
+    """Whole sentences one after the other."""
+    text = Text(" ".join(parts))
+    text.english = " ".join(getattr(p, "english", p) for p in parts)
+    return text
 
 
 def read(path, default=""):
@@ -76,26 +97,31 @@ def raid_hidden(log=None):
     return rst and not internal_disks()
 
 
-RAID_ADVICE = ("The BIOS's RAID setting (Intel RST) hides the disk. Restart into the BIOS and set the storage mode "
+RAID_ADVICE = N_("The BIOS's RAID setting (Intel RST) hides the disk. Restart into the BIOS and set the storage mode "
                "(often called SATA mode or SATA operation) to AHCI. Windows on this disk won't start after that "
                "change, but installing EvenKeelOS erases it anyway.")
+
+
+def save_results():
+    return words(N_("Save the results for your helper."))
 
 
 def wifi(devices):
     radios = [d for d in devices if kind(d, "0280")]
     ready = [n for n in glob.glob(f"{SYS}/class/net/*") if os.path.isdir(f"{n}/wireless")
              and os.path.basename(os.path.realpath(f"{n}/device/driver")) not in NO_FIRMWARE]
+    part = words(N_("Wi-Fi"))
     if ready:
-        return (GOOD, "Wi-Fi", "Wi-Fi found.", "")
-    todo = "Use a network cable, or a USB Wi-Fi adapter that works with Linux."
+        return (GOOD, part, words(N_("Wi-Fi found.")), "")
+    todo = words(N_("Use a network cable, or a USB Wi-Fi adapter that works with Linux."))
     if any(d["vendor"] == BROADCOM for d in radios):
-        return (BAD, "Wi-Fi", "Broadcom Wi-Fi chip found. Its driver or firmware can't be included.", todo)
+        return (BAD, part, words(N_("Broadcom Wi-Fi chip found. Its driver or firmware can't be included.")), todo)
     if any(not d["driver"] for d in radios):
-        return (BAD, "Wi-Fi", "A wireless chip was found, with no driver for it.", todo)
+        return (BAD, part, words(N_("A wireless chip was found, with no driver for it.")), todo)
     if radios:
-        return (BAD, "Wi-Fi", "A wireless chip was found, but it didn't start.",
-                todo + " Save the results for your helper.")
-    return (LIMITED, "Wi-Fi", "No Wi-Fi found.", "Use a network cable.")
+        return (BAD, part, words(N_("A wireless chip was found, but it didn't start.")),
+                joined(todo, save_results()))
+    return (LIMITED, part, words(N_("No Wi-Fi found.")), words(N_("Use a network cable.")))
 
 
 def internal_disks():
@@ -112,86 +138,102 @@ def internal_disks():
 
 def disks(raid):
     found = [size for size in internal_disks() if size >= MIN_DISK]
+    part = words(N_("Disk"))
     if raid:
         if found:
-            return (LIMITED, "Disk", f"Disk found, {max(found) / 10 ** 9:.0f} GB. Another disk is hidden by a BIOS "
-                    "setting.", RAID_ADVICE)
-        return (BAD, "Disk", "The disk is hidden by a BIOS setting.", RAID_ADVICE)
+            return (LIMITED, part, joined(words(N_("Disk found, {gb} GB."), gb=f"{max(found) / 10 ** 9:.0f}"),
+                                          words(N_("Another disk is hidden by a BIOS setting."))),
+                    words(RAID_ADVICE))
+        return (BAD, part, words(N_("The disk is hidden by a BIOS setting.")), words(RAID_ADVICE))
     if not internal_disks():
-        return (BAD, "Disk", "No disk inside the computer was found.",
-                "Check the BIOS's storage settings. Save the results for your helper.")
+        return (BAD, part, words(N_("No disk inside the computer was found.")),
+                joined(words(N_("Check the BIOS's storage settings.")), save_results()))
     if not found:
-        return (BAD, "Disk", f"The biggest disk holds {max(internal_disks()) / 10 ** 9:.0f} GB.",
-                "EvenKeelOS needs at least 20 GB.")
-    return (GOOD, "Disk", f"Disk found, {max(found) / 10 ** 9:.0f} GB.", "")
+        return (BAD, part, words(N_("The biggest disk holds {gb} GB."), gb=f"{max(internal_disks()) / 10 ** 9:.0f}"),
+                words(N_("EvenKeelOS needs at least 20 GB.")))
+    return (GOOD, part, words(N_("Disk found, {gb} GB."), gb=f"{max(found) / 10 ** 9:.0f}"), "")
+
+
+def graphics_found(names):
+    if len(names) == 1:
+        return words(N_("{names} graphics found."), names=names[0])
+    return words(N_("{names} and {last} graphics found."), names=", ".join(names[:-1]), last=names[-1])
 
 
 def graphics(devices):
     shown = [d for d in devices if kind(d, "03")]
+    part = words(N_("Graphics"))
     if "nomodeset" in read(f"{PROC}/cmdline").split():
-        return (LIMITED, "Graphics", "Started in basic graphics mode, so graphics can't be checked.",
-                "Start the USB stick again with the first entry, EvenKeelOS Live.")
+        return (LIMITED, part, words(N_("Started in basic graphics mode, so graphics can't be checked.")),
+                words(N_("Start the USB stick again with the first entry, EvenKeelOS Live.")))
     if not shown:
-        return (BAD, "Graphics", "No graphics chip found.", "Save the results for your helper.")
-    names = sorted({vendor(d) or "Unknown" for d in shown})
+        return (BAD, part, words(N_("No graphics chip found.")), save_results())
+    names = sorted({vendor(d) or words(N_("Unknown")) for d in shown})
     if any(not d["driver"] for d in shown):
-        return (BAD, "Graphics", "A graphics chip has no driver.", "Save the results for your helper.")
+        return (BAD, part, words(N_("A graphics chip has no driver.")), save_results())
     if "NVIDIA" in names:
         others = [n for n in names if n != "NVIDIA"]
-        return (GOOD, "Graphics", f"{' and '.join(['NVIDIA'] + others)} graphics found.",
-                (f"The {others[0]} graphics drive the screen. " if others else "") + NVIDIA)
-    return (GOOD, "Graphics", f"{' and '.join(names)} graphics found.", "")
+        found = graphics_found(["NVIDIA"] + others)
+        if others:
+            return (GOOD, part, found, joined(words(N_("The {name} graphics drive the screen."), name=others[0]),
+                                              words(NVIDIA)))
+        return (GOOD, part, found, words(NVIDIA))
+    return (GOOD, part, graphics_found(names), "")
 
 
 def sound(devices):
     cards = read(f"{PROC}/asound/cards")
     if cards and "no soundcards" not in cards:
-        return (GOOD, "Sound", "Sound found.", "")
+        return (GOOD, words(N_("Sound")), words(N_("Sound found.")), "")
     if any(kind(d, "0401") or kind(d, "0403") for d in devices):
-        return (BAD, "Sound", "A sound chip was found, but it didn't start.", "Save the results for your helper.")
-    return (LIMITED, "Sound", "No sound found.", "USB or Bluetooth headphones may still work.")
+        return (BAD, words(N_("Sound")), words(N_("A sound chip was found, but it didn't start.")), save_results())
+    return (LIMITED, words(N_("Sound")), words(N_("No sound found.")),
+            words(N_("USB or Bluetooth headphones may still work.")))
 
 
 def camera(devices):
     uvc = [v for v in glob.glob(f"{SYS}/class/video4linux/*")
            if os.path.basename(os.path.realpath(f"{v}/device/driver")) == "uvcvideo"]
     if uvc:
-        return (GOOD, "Camera", "Camera found.", "")
+        return (GOOD, words(N_("Camera")), words(N_("Camera found.")), "")
     ipu = [d for d in devices if d["vendor"] == "0x8086" and kind(d, "0480")
            and (not d["driver"] or "ipu" in d["driver"])]
     if ipu:
-        return (LIMITED, "Camera", "A built-in camera of the newer laptop kind was found.",
-                "It may not work yet. When it does, it works in Firefox and the Camera app, not every app.")
-    return (LIMITED, "Camera", "No camera found.", "A USB webcam works.")
+        return (LIMITED, words(N_("Camera")), words(N_("A built-in camera of the newer laptop kind was found.")),
+                words(N_("It may not work yet. When it does, it works in Firefox and the Camera app, not every app.")))
+    return (LIMITED, words(N_("Camera")), words(N_("No camera found.")), words(N_("A USB webcam works.")))
 
 
 def bluetooth():
     if glob.glob(f"{SYS}/class/bluetooth/hci*"):
-        return (GOOD, "Bluetooth", "Bluetooth found.", "")
-    return (LIMITED, "Bluetooth", "No Bluetooth found.", "")
+        return (GOOD, words(N_("Bluetooth")), words(N_("Bluetooth found.")), "")
+    return (LIMITED, words(N_("Bluetooth")), words(N_("No Bluetooth found.")), "")
 
 
 def touchpad():
     laptop = bool(glob.glob(f"{SYS}/class/power_supply/BAT*"))
     names = re.findall(r'^N: Name="(.*)"', read(f"{PROC}/bus/input/devices"), re.M)
     if any(t in n.lower() for n in names for t in TOUCHPADS):
-        return (GOOD, "Touchpad", "Touchpad found.", "")
+        return (GOOD, words(N_("Touchpad")), words(N_("Touchpad found.")), "")
     if laptop:
-        return (LIMITED, "Touchpad", "No touchpad found.", "A USB mouse works. Save the results for your helper.")
+        return (LIMITED, words(N_("Touchpad")), words(N_("No touchpad found.")),
+                joined(words(N_("A USB mouse works.")), save_results()))
     return None
 
 
 def start_mode():
     if not os.path.isdir(f"{SYS}/firmware/efi"):
-        return (BAD, "Start mode", "This computer started the USB stick in old BIOS (legacy) mode.",
-                "EvenKeelOS needs UEFI. Turn on UEFI in the BIOS, then start from the USB stick again.")
+        return (BAD, words(N_("Start mode")),
+                words(N_("This computer started the USB stick in old BIOS (legacy) mode.")),
+                words(N_("EvenKeelOS needs UEFI. Turn on UEFI in the BIOS, then start from the USB stick again.")))
     try:
         with open(f"{SYS}/firmware/efi/efivars/SecureBoot-{EFI_GLOBAL}", "rb") as f:
             state = "on" if f.read()[-1:] == b"\x01" else "off"
     except OSError:
         state = "unknown"
-    found = {"on": "Secure Boot is on.", "off": "Secure Boot is off.", "unknown": "Started in UEFI mode."}[state]
-    return (GOOD, "Secure Boot", found, "Secure Boot on or off is fine.")
+    found = {"on": N_("Secure Boot is on."), "off": N_("Secure Boot is off."),
+             "unknown": N_("Started in UEFI mode.")}[state]
+    return (GOOD, words(N_("Secure Boot")), words(found), words(N_("Secure Boot on or off is fine.")))
 
 
 def memory():
@@ -199,10 +241,11 @@ def memory():
     if not kb:
         return None
     gb = int(kb.group(1)) / 1024 ** 2
-    shown = f"{math.ceil(gb)} GB of memory."
+    shown = words(N_("{gb} GB of memory."), gb=math.ceil(gb))
     if gb < MIN_MEMORY_GB - 1:          # firmware and built-in graphics keep some back
-        return (LIMITED, "Memory", shown, "EvenKeelOS works best with 8 GB or more, so it may be slow.")
-    return (GOOD, "Memory", shown, "")
+        return (LIMITED, words(N_("Memory")), shown,
+                words(N_("EvenKeelOS works best with 8 GB or more, so it may be slow.")))
+    return (GOOD, words(N_("Memory")), shown, "")
 
 
 def check():
@@ -219,6 +262,7 @@ def report(results):
     lines = ["EvenKeelOS fit check", ""]
     marks = {GOOD: "OK", LIMITED: "LIMITED", BAD: "PROBLEM"}
     for level, part, found, todo in results:
+        part, found, todo = (getattr(x, "english", x) for x in (part, found, todo))
         lines.append(f"[{marks[level]}] {part}: {found}" + (f" {todo}" if todo else ""))
     lines += ["", "PCI devices (slot, class, vendor, driver):"]
     lines += [f"  {d['slot']} {d['class']} {d['vendor']} {d['driver'] or '(none)'}" for d in pci_devices()]

@@ -1,6 +1,7 @@
 #!/bin/bash
 # Start a box app with its output in a log (so it can't crash on a closed link), or --stop it.
 set -u
+export TEXTDOMAIN=evenkeel-os
 STATE="${XDG_RUNTIME_DIR:-/tmp}/evenkeel-os-box-apps"
 
 tree() {   # a process and all its children, children first
@@ -18,7 +19,8 @@ quit_notice() {
   done
   name=${name:-$1}
   command -v notify-send >/dev/null 2>&1 && notify-send --app-name="$name" --icon=application-exit-symbolic \
-    "Quitting $name" "Stopping $name in its box. This takes a few seconds. If GNOME shows a Force Quit / Wait window, you do not need to press anything: $name closes on its own."
+    "$(printf "$(gettext "Quitting %s")" "$name")" \
+    "$(printf "$(gettext "Stopping %s in its box. This takes a few seconds. If GNOME shows a Force Quit / Wait window, you do not need to press anything: %s closes on its own.")" "$name" "$name")"
 }
 
 stop_key() {
@@ -57,7 +59,7 @@ mkdir -p "${log%/*}"
 
 trap 'stop_key "$key"; exit 0' TERM INT HUP
 # Record the process ID, then become the app with its output going to the log.
-distrobox-enter -n "$box" -- env EVENKEEL_PID="$pidf" EVENKEEL_LOG="$log" \
+env -u TEXTDOMAIN distrobox-enter -n "$box" -- env EVENKEEL_PID="$pidf" EVENKEEL_LOG="$log" \
   sh -c 'echo $$ > "$EVENKEEL_PID"; exec "$@" </dev/null >>"$EVENKEEL_LOG" 2>&1' sh "$@" </dev/null >/dev/null 2>&1 &
 wait $!
 rc=$?

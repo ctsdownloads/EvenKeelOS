@@ -2,13 +2,13 @@
 import json
 import subprocess
 
-from evenkeel_os_ui import ask, choose, notify, offer_restart, say
+from evenkeel_os_ui import _, N_, ask, choose, notify, offer_restart, say
 from evenkeel_os_packages import after_restart, app_list, common, installed, windows
 
 LIST = "/usr/share/evenkeel-os/vpns.json"
 HELPER = "/usr/libexec/evenkeel-os-vpn"
-UPDATES = "Updates: automatic, from {maker}'s own download source. A daily check finds new versions, which start " \
-          "at the next restart."
+UPDATES = N_("Updates: automatic, from {maker}'s own download source. A daily check finds new versions, which "
+             "start at the next restart.")
 
 
 def load():
@@ -37,12 +37,12 @@ def is_installed(name):
 def pick():
     vpns = load()
     if not vpns:
-        say("The VPN list is missing.", "error")
+        say(_("The VPN list is missing."), "error")
         return 1
     keys = list(vpns)
-    rows = [[vpns[k]["title"], "Installed" if is_installed(k) else ""] for k in keys]
-    i = choose("Which VPN do you want? Each one comes from its company's own download source and keeps updating. "
-               "To connect, you need an account with that company.", ["VPN", "Status"], rows)
+    rows = [[vpns[k]["title"], _("Installed") if is_installed(k) else ""] for k in keys]
+    i = choose(_("Which VPN do you want? Each one comes from its company's own download source and keeps updating. "
+                 "To connect, you need an account with that company."), [_("VPN"), _("Status")], rows)
     return install(keys[i]) if i is not None else 1
 
 
@@ -50,26 +50,27 @@ def install(name, intro=""):
     v = load()[name]
     title, maker = v["title"], v["maker"]
     if is_installed(name):
-        say(f"{title} is already installed. Find it in Show Apps.")
+        say(_("{title} is already installed. Find it in Show Apps.").format(title=title))
         return 0
     if not has_key(v):
-        say(f"{title} isn't available for Fedora {common.fedora_version()} yet. Check again after the next System "
-            f"Update.", "warning")
+        say(_("{title} isn't available for Fedora {version} yet. Check again after the next System Update.")
+            .format(title=title, version=common.fedora_version()), "warning")
         return 1
-    if ask(f"{intro}Install {title}\n\nIt comes from {maker}'s own download source, which is added to the system "
-           f"so {title} keeps updating. Needs your password and a restart.\n\nTo connect, you need a {maker} account.",
-           ok=f"Install {title}") != "ok":
+    if ask(intro + _("Install {title}\n\nIt comes from {maker}'s own download source, which is added to the "
+                     "system so {title} keeps updating. Needs your password and a restart.\n\nTo connect, you need "
+                     "a {maker} account.").format(title=title, maker=maker),
+           ok=_("Install {title}").format(title=title)) != "ok":
         return 1
-    notify(f"Adding {title} to the system. A progress window shows it.")
-    if not windows.run_steps(f"Adding {title} to the system. This can take a few minutes.",
+    notify(_("Adding {title} to the system. A progress window shows it.").format(title=title))
+    if not windows.run_steps(_("Adding {title} to the system. This can take a few minutes.").format(title=title),
                              [["pkexec", HELPER, "install", name]]):
-        return windows.failed(f"Adding {title} to the system")
+        return windows.failed(_("Adding {title} to the system").format(title=title))
     app_list.remember({"title": title, "package": v["packages"][0], "where": "system", "vpn": name})
     after_restart.add_pending({"title": title, "package": v["packages"][0], "vpn": name})
-    notify(f"{title} is installed. Restart to use it.")
-    offer_restart(f"{title} is installed. Restart to start using it.",
-                  f"After the restart, you'll be asked for your password once, to turn it on.\n\n"
-                  f"{UPDATES.format(maker=maker)}")
+    notify(_("{title} is installed. Restart to use it.").format(title=title))
+    offer_restart(_("{title} is installed. Restart to start using it.").format(title=title),
+                  _("After the restart, you'll be asked for your password once, to turn it on.") + "\n\n" +
+                  _(UPDATES).format(maker=maker))
     return 0
 
 
@@ -77,8 +78,9 @@ def offer_for_file(name, pkg):
     """A downloaded VPN file: install from its company's own download source, so it keeps updating. A file alone
     would never update, and some are only part of the app (IVPN's) or only add the source (Proton's, NordVPN's)."""
     v = load()[name]
-    return install(name, intro=f"{pkg.path.name} is {v['title']}. It's installed from {v['maker']}'s own download "
-                               f"source instead of the file, so it keeps updating.\n\n")
+    return install(name, intro=_("{filename} is {title}. It's installed from {maker}'s own download source instead "
+                                 "of the file, so it keeps updating.").format(
+                                     filename=pkg.path.name, title=v["title"], maker=v["maker"]) + "\n\n")
 
 
 def turn_on(entry):
@@ -87,33 +89,35 @@ def turn_on(entry):
     if not v:
         return False
     title = v["title"]
-    if ask(f"{title} is installed. Turn it on: its background service starts now and with the computer. Needs your "
-           f"password.", ok="Turn it on", cancel="Later") != "ok":
+    if ask(_("{title} is installed. Turn it on: its background service starts now and with the computer. Needs "
+             "your password.").format(title=title), ok=_("Turn it on"), cancel=_("Later")) != "ok":
         return False
     r = subprocess.run(["pkexec", HELPER, "turn-on", entry["vpn"]], capture_output=True, text=True)
     if r.returncode in (126, 127):
         return False
     if r.returncode != 0:
-        say(f"{title} is installed, but its background service didn't turn on, so it may not connect.\n\n"
-            f"{r.stdout.strip()}", "warning")
+        say(_("{title} is installed, but its background service didn't turn on, so it may not connect.\n\n"
+              "{details}").format(title=title, details=r.stdout.strip()), "warning")
         return True
-    notify(f"{title} is ready.")
-    group = f"\n\nLog out and back in once, so {title} lets your account use it." if v.get("group") else ""
-    say(f"{title} is ready. Find it in Show Apps.{group}")
+    notify(_("{title} is ready.").format(title=title))
+    group = "\n\n" + _("Log out and back in once, so {title} lets your account use it.").format(title=title) \
+        if v.get("group") else ""
+    say(_("{title} is ready. Find it in Show Apps.").format(title=title) + group)
     return True
 
 
 def turn_on_services(entry):
     """An app added from a file whose installer turns on a background service. False to ask again next login."""
     title = entry["title"]
-    if ask(f"{title} is installed. It has a background service that needs turning on. Needs your password.",
-           ok="Turn it on", cancel="Later") != "ok":
+    if ask(_("{title} is installed. It has a background service that needs turning on. Needs your password.")
+           .format(title=title), ok=_("Turn it on"), cancel=_("Later")) != "ok":
         return False
     r = subprocess.run(["pkexec", HELPER, "services", entry["package"]], capture_output=True, text=True)
     if r.returncode in (126, 127):
         return False
     if r.returncode != 0:
-        say(f"{title} is installed, but its background service didn't turn on.\n\n{r.stdout.strip()}", "warning")
+        say(_("{title} is installed, but its background service didn't turn on.\n\n{details}")
+            .format(title=title, details=r.stdout.strip()), "warning")
     return True
 
 

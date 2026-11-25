@@ -8,6 +8,7 @@ from gi.repository import Gdk, Gio, GLib, Gtk
 
 import data
 import screens
+from i18n import _, N_
 
 
 ENGINE = "/usr/libexec/evenkeel-os-install-engine"
@@ -15,27 +16,31 @@ ENGINE = "/usr/libexec/evenkeel-os-install-engine"
 
 class InstallingScreen(screens.Screen):
     """Runs the install engine as root (pkexec) and follows the progress it reports, one JSON object a line."""
-    title = "Installing EvenKeelOS"
-    intro = "This takes a while."
+    title = N_("Installing EvenKeelOS")
     back = False
     next_label = None
+
+    @property
+    def intro(self):
+        return _("This takes a while.")
 
     def build(self):
         self.bar = Gtk.ProgressBar()
         self.body.append(self.bar)
         self.pulsing = None
-        self.progress(0, "Getting ready")
+        self.progress(0, _("Getting ready"))
 
     def progress(self, fraction, what):
         self.stop_pulse()
         self.bar.set_fraction(fraction)
-        self.done = f"{fraction * 100:.0f}% done. {what}..."
+        # xgettext:no-python-format
+        self.done = _("{percent}% done. {step}...").format(percent=f"{fraction * 100:.0f}", step=what)
         if getattr(self.win, "current", None) is self:      # so the screen shows the latest step
             self.changed()
 
     def pulse(self, what):
         """A step whose length can't be measured: the bar moves, and the status says what it is doing."""
-        self.done = f"{what}. This is the longest step..."
+        self.done = _("{step}. This is the longest step...").format(step=what)
         if self.pulsing is None:
             self.pulsing = GLib.timeout_add(120, lambda: self.bar.pulse() or True)
         self.changed()
@@ -60,7 +65,8 @@ class InstallingScreen(screens.Screen):
             self.engine = Gio.Subprocess.new(["pkexec", ENGINE],
                                              Gio.SubprocessFlags.STDIN_PIPE | Gio.SubprocessFlags.STDOUT_PIPE)
         except GLib.Error as e:
-            self.win.install_failed(f"The installer could not start: {e.message}", data.LOG)
+            self.win.install_failed(_("The installer could not start: {error}").format(error=e.message), data.LOG,
+                                    "The installer could not start: " + e.message)
             return
         stdin = self.engine.get_stdin_pipe()
         stdin.write_all(json.dumps(choices).encode(), None)
@@ -72,7 +78,8 @@ class InstallingScreen(screens.Screen):
         line, _length = stream.read_line_finish_utf8(result)
         if line is None:                    # the engine ended without saying how: treat it as an error
             self.stop_pulse()
-            self.win.install_failed("The installer stopped unexpectedly.", data.LOG)
+            self.win.install_failed(_("The installer stopped unexpectedly."), data.LOG,
+                                    "The installer stopped unexpectedly.")
             return
         try:
             msg = json.loads(line)
@@ -84,7 +91,7 @@ class InstallingScreen(screens.Screen):
             self.pulse(msg["step"])
         elif "error" in msg:
             self.stop_pulse()
-            self.win.install_failed(msg["error"], msg["log"])
+            self.win.install_failed(msg["error"], msg["log"], msg.get("error_en"))
             return
         elif msg.get("done"):
             self.stop_pulse()
@@ -120,19 +127,20 @@ class LogScreen(screens.ListScreen):
     def items(self):
         if self.stage != "sticks":
             return []
-        return [(f"{s['name']}, {s['size']}", s["path"], False) for s in self.found]
+        return [(_("{name}, {size}").format(name=s["name"], size=s["size"]), s["path"], False)
+                for s in self.found]
 
     def find_sticks(self):
         self.stage, self.found = "sticks", data.sticks()
-        self.saved = "" if self.found else "No USB stick found. Plug one in, then try again."
+        self.saved = "" if self.found else _("No USB stick found. Plug one in, then try again.")
         self.choose(to_chosen=True)
 
     def pick(self, i):
         stick = self.found[i]
         name = f"evenkeel-os-install-log-{datetime.datetime.now():%Y%m%d-%H%M}.txt"
         problem = data.save_to_stick(stick["path"], data.LOG, name)
-        self.saved = (f"Saved on {stick['name']} as {name}. You can take the stick out now." if not problem else
-                      f"Not saved: {problem}")
+        self.saved = (_("Saved on {stick} as {name}. You can take the stick out now.").format(
+            stick=stick["name"], name=name) if not problem else _("Not saved: {problem}").format(problem=problem))
         self.stage = "main" if not problem else "sticks"
         self.choose(to_chosen=True)
 
@@ -141,24 +149,24 @@ class LogScreen(screens.ListScreen):
 
 
 class DoneScreen(LogScreen):
-    title = "EvenKeelOS is installed"
+    title = N_("EvenKeelOS is installed")
     back = False
-    main = "Restart"
+    main = N_("Restart")
 
     @property
     def intro(self):
         if self.stage == "sticks":
-            return "Plug in a second USB stick, then click it to save the log on it. Or click Back."
-        return ("Click Restart to start EvenKeelOS. Click Save the log to put the details of this install on a "
-                "second USB stick.")
+            return _("Plug in a second USB stick, then click it to save the log on it. Or click Back.")
+        return _("Click Restart to start EvenKeelOS. Click Save the log to put the details of this install on a "
+                 "second USB stick.")
 
     def actions(self):
-        return [("Restart", self.win.restart), ("Save the log", self.find_sticks)]
+        return [(_("Restart"), self.win.restart), (_("Save the log"), self.find_sticks)]
 
 
 class ErrorScreen(LogScreen):
     """The install stopped: save the log to a stick, show a QR code, or open a report in Firefox."""
-    title = "The install stopped"
+    title = N_("The install stopped")
     next_label = None
     ISSUES = "https://github.com/ctsdownloads/evenkeel-os/issues/new"
     BODY_MAX = 7000              # the body length Anaconda's GitHub report links were limited to
@@ -171,24 +179,25 @@ class ErrorScreen(LogScreen):
         self.code.set_size_request(360, 360)
         self.body.append(self.code)
         super().build()
-        self.problem, self.log = "", ""
+        self.problem, self.problem_en, self.log = "", "", ""
 
-    def failed(self, problem, log):
-        self.problem, self.log = problem, log
+    def failed(self, problem, log, english=None):
+        """problem is shown on screen; the GitHub report uses english, or problem when there is none."""
+        self.problem, self.problem_en, self.log = problem, english or problem, log
         self.what.set_text(problem)
 
     @property
     def intro(self):
         if self.stage == "sticks":
-            return ("Plug in a USB stick, then click it to save the log on it. Click Refresh if it isn't listed, "
-                    "or Back.")
+            return _("Plug in a USB stick, then click it to save the log on it. Click Refresh if it isn't listed, "
+                     "or Back.")
         if self.stage == "code":
-            return ("Point your phone's camera at the code. It opens the report on GitHub with the details filled in. "
-                    "To send it, sign in to GitHub, or make a free account if you don't have one. It carries the end "
-                    "of the log; the whole log can go on a USB stick. Click Back when done.")
-        return ("Nothing more was changed on the disk. Save the log puts the details on a USB stick for your "
-                "helper; no account is needed. Show a QR code sends a report from your phone, and Report on "
-                "GitHub sends it from Firefox; both need a free GitHub account. Or click Restart.")
+            return _("Point your phone's camera at the code. It opens the report on GitHub with the details filled "
+                     "in. To send it, sign in to GitHub, or make a free account if you don't have one. It carries "
+                     "the end of the log; the whole log can go on a USB stick. Click Back when done.")
+        return _("Nothing more was changed on the disk. Save the log puts the details on a USB stick for your "
+                 "helper; no account is needed. Show a QR code sends a report from your phone, and Report on "
+                 "GitHub sends it from Firefox; both need a free GitHub account. Or click Restart.")
 
     def refresh(self, to_chosen=True):
         super().refresh(to_chosen)
@@ -196,17 +205,17 @@ class ErrorScreen(LogScreen):
 
     def actions(self):
         if self.stage == "sticks":
-            return [("Refresh", self.find_sticks)]
+            return [(_("Refresh"), self.find_sticks)]
         if self.stage == "code":
             return []
-        return [("Save the log", self.find_sticks), ("Show a QR code", self.show_code),
-                ("Report on GitHub", self.report), ("Restart", self.win.restart)]
+        return [(_("Save the log"), self.find_sticks), (_("Show a QR code"), self.show_code),
+                (_("Report on GitHub"), self.report), (_("Restart"), self.win.restart)]
 
     def show_code(self):
         made = subprocess.run(["qrencode", "-t", "PNG", "-l", "L", "-s", "8", "-m", "4", "-o", "-",
                                self.issue_url(self.QR_URL_MAX)], capture_output=True)
         if made.returncode != 0:
-            self.saved = "The QR code could not be made. Save the log to a stick instead."
+            self.saved = _("The QR code could not be made. Save the log to a stick instead.")
         else:
             self.code.set_paintable(Gdk.Texture.new_from_bytes(GLib.Bytes.new(made.stdout)))
             self.stage, self.saved = "code", ""
@@ -226,8 +235,8 @@ class ErrorScreen(LogScreen):
                 break
             kept.insert(0, line)
         lines = kept or [line[-self.BODY_MAX // 2:] for line in lines[-1:]]     # one line longer than all of it
-        head = f"The installer stopped with:\n\n    {self.problem}\n\nThe end of the installer's log:\n\n```\n"
-        title = f"Install stopped: {self.problem}"[:256]
+        head = f"The installer stopped with:\n\n    {self.problem_en}\n\nThe end of the installer's log:\n\n```\n"
+        title = f"Install stopped: {self.problem_en}"[:256]
         while True:
             body = head + "".join(lines) + "```"
             url = f"{self.ISSUES}?{urllib.parse.urlencode({'title': title, 'body': body})}"

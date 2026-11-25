@@ -9,6 +9,9 @@ import ast
 import subprocess
 import sys
 
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+from evenkeel_os_ui import _  # noqa: E402
+
 LAYOUTS = {"current": ["logomenu@aryan_k"],
            "windows": ["arcmenu@arcmenu.com", "dash-to-panel@jderose9.github.com"]}
 OURS = {uuid for uuids in LAYOUTS.values() for uuid in uuids}
@@ -30,7 +33,8 @@ def main():
     # Keep any extensions the user turned on themselves.
     new = [uuid for uuid in now if uuid not in OURS] + LAYOUTS[sys.argv[1]]
     subprocess.run(["gsettings", "set", *KEY, str(new)], check=True)
-    print(f"Layout set to {sys.argv[1]}. Log out and back in to finish.")
+    # Translators: {layout} is a layout keyword that stays English: windows or current
+    print(_("Layout set to {layout}. Log out and back in to finish.").format(layout=sys.argv[1]))
 
 
 main()

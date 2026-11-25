@@ -1,5 +1,6 @@
 # Shared by the codecs tool and its root helpers; sourced only. Nothing here comes from the caller.
 export PATH=/usr/sbin:/usr/bin:/sbin:/bin
+export TEXTDOMAIN=evenkeel-os     # messages shown in the codecs windows, in the person's language
 umask 022
 
 STATE=/var/lib/evenkeel-os
@@ -58,7 +59,7 @@ run_logged() {
 
 do_web() {
   if [ -n "$(requested requested-base-removals $STAND_IN)" ]; then   # already chosen, booted or pending
-    echo "Web video is already installed. Restart if you have not yet."; return 0
+    gettext "Web video is already installed. Restart if you have not yet."; echo; return 0
   fi
   local cmd=(override remove "$STAND_IN") p
   for p in $WEB; do cmd+=(--install "$p"); done
@@ -67,12 +68,12 @@ do_web() {
 
 do_full() {
   if old_setup_present; then
-    echo "error: codecs from an earlier version of this system (negativo17) are still installed."
-    echo "Remove them first: run  codecs remove , restart, then choose Everything again."
+    echo "error: $(gettext "codecs from an earlier version of this system (negativo17) are still installed.")"
+    gettext "Remove them first: run  codecs remove , restart, then choose Everything again."; echo
     return 1
   fi
   if [ -n "$(requested requested-base-removals ffmpeg-free)" ]; then   # already chosen, booted or pending
-    echo "The full codecs are already installed. Restart if you have not yet."; return 0
+    gettext "The full codecs are already installed. Restart if you have not yet."; echo; return 0
   fi
   repos_on || return 1
   local cmd=(override remove) p
@@ -80,7 +81,7 @@ do_full() {
   for p in $FULL; do cmd+=(--install "$p"); done
   if ! run_logged rpm-ostree "${cmd[@]}"; then
     repos_off
-    echo "The change was not made, and nothing was left behind."
+    gettext "The change was not made, and nothing was left behind."; echo
     return 1
   fi
 }
@@ -101,5 +102,5 @@ do_remove() {
   fi
   repos_off
   rm -f "$OLD_REPO"
-  echo "Removed. Restart to finish."
+  gettext "Removed. Restart to finish."; echo
 }

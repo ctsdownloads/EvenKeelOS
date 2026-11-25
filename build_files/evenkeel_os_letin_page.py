@@ -6,11 +6,23 @@ gi.require_version("Adw", "1")
 from gi.repository import Adw, Gtk  # noqa: E402
 import evenkeel_os_letin as letin  # noqa: E402
 import evenkeel_os_network as net  # noqa: E402
+from evenkeel_os_ui import _, N_  # noqa: E402
 
 KEYS = {net.HOME: "home", net.WORK: "work", net.PUBLIC: "public"}
-ON_A = {net.HOME: "on Home", net.WORK: "on Work", net.PUBLIC: "on a Public place"}
-PROTOCOLS = (("TCP", ("tcp",)), ("UDP", ("udp",)), ("Both", ("tcp", "udp")))
-SOURCES = {"checked": "Checked against its own docs", "firewalld": "Fedora's firewall list", "IANA": "IANA port list"}
+# Translators: Home, Work and Public place are the names of kinds of network place; one whole sentence for each.
+CLOSED_AGAIN = {net.HOME: N_("{name} is closed again on Home."), net.WORK: N_("{name} is closed again on Work."),
+                net.PUBLIC: N_("{name} is closed again on a Public place.")}
+NOTHING_EXTRA = {net.HOME: N_("Nothing extra on Home"), net.WORK: N_("Nothing extra on Work"),
+                 net.PUBLIC: N_("Nothing extra on a Public place")}
+LET_APP_IN = {net.HOME: N_("Let an app in on Home"), net.WORK: N_("Let an app in on Work"),
+              net.PUBLIC: N_("Let an app in on a Public place")}
+OPEN_PORT = {net.HOME: N_("Open a port on Home"), net.WORK: N_("Open a port on Work"),
+             net.PUBLIC: N_("Open a port on a Public place")}
+LET_IN_DONE = {net.HOME: N_("{name} is let in on Home."), net.WORK: N_("{name} is let in on Work."),
+               net.PUBLIC: N_("{name} is let in on a Public place.")}
+PROTOCOLS = (("TCP", ("tcp",)), ("UDP", ("udp",)), (N_("Both"), ("tcp", "udp")))
+SOURCES = {"checked": N_("Checked against its own docs"), "firewalld": N_("Fedora's firewall list"),
+           "IANA": N_("IANA port list")}
 
 
 class LetIn:
@@ -19,18 +31,18 @@ class LetIn:
     def __init__(self, window):
         self.window = window
         self.state, self.rows, self.followed, self.everything = {}, [], None, None
-        self.group = Adw.PreferencesGroup(title="Apps and ports let in",
-                                          description="On top of what the place itself lets in. Each change asks "
-                                                      "for your password.")
+        self.group = Adw.PreferencesGroup(title=_("Apps and ports let in"),
+                                          description=_("On top of what the place itself lets in. Each change asks "
+                                                        "for your password."))
         buttons = Gtk.Box(spacing=6, valign=Gtk.Align.CENTER)
-        for text, action in (("Let an app in", self.pick_app), ("Open a port", self.ask_port)):
-            b = Gtk.Button(label=text)
-            b.connect("clicked", lambda *_, a=action: a())
+        for text, action in ((N_("Let an app in"), self.pick_app), (N_("Open a port"), self.ask_port)):
+            b = Gtk.Button(label=_(text))
+            b.connect("clicked", lambda *_args, a=action: a())
             buttons.append(b)
         self.group.set_header_suffix(buttons)
-        self.place = Adw.ComboRow(title="Place")
-        self.place.set_model(Gtk.StringList.new(list(net.PLACES.values())))
-        self.place.connect("notify::selected", lambda *_: self.show_rows())
+        self.place = Adw.ComboRow(title=_("Place"))
+        self.place.set_model(Gtk.StringList.new([_(v) for v in net.PLACES.values()]))
+        self.place.connect("notify::selected", lambda *_args: self.show_rows())
         self.group.add(self.place)
 
     def zone(self):
@@ -50,19 +62,19 @@ class LetIn:
         self.rows = []
         zone = self.zone()
         for e in self.state.get(zone, []):
-            row = Adw.ActionRow(title=e["label"], subtitle=", ".join(e["ports"]) or f"Fedora's {e['service']} app",
-                                use_markup=False)
-            remove = Gtk.Button(icon_name="user-trash-symbolic", tooltip_text="Close it again",
+            ports = ", ".join(e["ports"]) or _("Fedora's {service} app").format(service=e["service"])
+            row = Adw.ActionRow(title=e["label"], subtitle=ports, use_markup=False)
+            remove = Gtk.Button(icon_name="user-trash-symbolic", tooltip_text=_("Close it again"),
                                 valign=Gtk.Align.CENTER, css_classes=["flat"])
-            remove.update_property([Gtk.AccessibleProperty.LABEL], [f"Close {e['label']} again"])
-            remove.connect("clicked", lambda *_, e=e: self.window.admin_reply(
-                ["let-in", KEYS[zone], "remove", e["id"]], f"{e['label']} is closed again {ON_A[zone]}."))
+            remove.update_property([Gtk.AccessibleProperty.LABEL], [_("Close {name} again").format(name=e["label"])])
+            remove.connect("clicked", lambda *_args, e=e: self.window.admin_reply(
+                ["let-in", KEYS[zone], "remove", e["id"]], _(CLOSED_AGAIN[zone]).format(name=e["label"])))
             row.add_suffix(remove)
             self.group.add(row)
             self.rows.append(row)
         if not self.rows:
-            row = Adw.ActionRow(title=f"Nothing extra {ON_A[zone]}",
-                                subtitle=net.LETS_IN.get(zone, ""))
+            row = Adw.ActionRow(title=_(NOTHING_EXTRA[zone]),
+                                subtitle=_(net.LETS_IN[zone]) if zone in net.LETS_IN else "")
             self.group.add(row)
             self.rows.append(row)
 
@@ -71,8 +83,8 @@ class LetIn:
         if self.everything is None:
             self.everything = letin.apps()
         zone = self.zone()
-        d = Adw.Dialog(title=f"Let an app in {ON_A[zone]}", content_width=480, content_height=560)
-        search = Gtk.SearchEntry(placeholder_text="App, game or port number", margin_start=12, margin_end=12,
+        d = Adw.Dialog(title=_(LET_APP_IN[zone]), content_width=480, content_height=560)
+        search = Gtk.SearchEntry(placeholder_text=_("App, game or port number"), margin_start=12, margin_end=12,
                                  margin_top=6, margin_bottom=6)
         shown = Gtk.ListBox(css_classes=["boxed-list"], selection_mode=Gtk.SelectionMode.NONE, margin_start=12,
                             margin_end=12, margin_bottom=12)
@@ -84,19 +96,21 @@ class LetIn:
         view.add_top_bar(Adw.HeaderBar())
         d.set_child(view)
 
-        def fill(*_):
+        def fill(*_args):
             shown.remove_all()
             text = search.get_text().strip()
             found = letin.find(text, self.everything) if text else \
                 [a for a in self.everything if a["source"] != "IANA"]
             for a in found:
-                where = ", ".join(a["ports"]) or "No ports of its own"
+                where = ", ".join(a["ports"]) or _("No ports of its own")
                 row = Adw.ActionRow(title=a["name"], activatable=True, title_lines=2, subtitle_lines=2,
-                                    subtitle=f"{where}. {SOURCES[a['source']]}", use_markup=False)
-                row.connect("activated", lambda *_, a=a: (d.close(), self.choose(zone, a)))
+                                    subtitle=_("{ports}. {source}").format(ports=where,
+                                                                           source=_(SOURCES[a["source"]])),
+                                    use_markup=False)
+                row.connect("activated", lambda *_args, a=a: (d.close(), self.choose(zone, a)))
                 shown.append(row)
             if not found:
-                shown.append(Adw.ActionRow(title="Nothing matches", subtitle="Use Open a port with its number."))
+                shown.append(Adw.ActionRow(title=_("Nothing matches"), subtitle=_("Use Open a port with its number.")))
         search.connect("search-changed", fill)
         fill()
         d.present(self.window)
@@ -110,25 +124,25 @@ class LetIn:
 
     def ask_port(self):
         zone = self.zone()
-        d = Adw.AlertDialog(heading=f"Open a port {ON_A[zone]}",
-                            body="Use the number the app's own instructions give.")
+        d = Adw.AlertDialog(heading=_(OPEN_PORT[zone]),
+                            body=_("Use the number the app's own instructions give."))
         rows = Gtk.ListBox(css_classes=["boxed-list"], selection_mode=Gtk.SelectionMode.NONE)
-        number = Adw.EntryRow(title="Port, like 8080, or a range, like 2456-2458")
-        kind = Adw.ComboRow(title="Protocol", subtitle="The app's instructions say TCP, UDP or both")
-        kind.set_model(Gtk.StringList.new([p for p, _ in PROTOCOLS]))
-        name = Adw.EntryRow(title="Name, so you know what it's for")
+        number = Adw.EntryRow(title=_("Port, like 8080, or a range, like 2456-2458"))
+        kind = Adw.ComboRow(title=_("Protocol"), subtitle=_("The app's instructions say TCP, UDP or both"))
+        kind.set_model(Gtk.StringList.new([_(p) for p, _protocols in PROTOCOLS]))
+        name = Adw.EntryRow(title=_("Name, so you know what it's for"))
         for r in (number, kind, name):
             rows.append(r)
         d.set_extra_child(rows)
-        d.add_response("cancel", "Cancel")
-        d.add_response("open", "Open")
+        d.add_response("cancel", _("Cancel"))
+        d.add_response("open", _("Open"))
         d.set_response_appearance("open", Adw.ResponseAppearance.SUGGESTED)
         d.set_response_enabled("open", False)
 
         def specs():
             return [f"{number.get_text().strip()}/{p}" for p in PROTOCOLS[kind.get_selected()][1]]
 
-        def typed(*_):
+        def typed(*_args):
             d.set_response_enabled("open", letin.ports(specs()) is not None and bool(letin.label(name.get_text())))
         for w in (number, name):
             w.connect("changed", typed)
@@ -144,15 +158,15 @@ class LetIn:
     def confirm(self, zone, name, args):
         """On a Public place, strangers come first: say so before letting anything in."""
         if zone != net.PUBLIC:
-            self.window.admin_reply(args, f"{name} is let in {ON_A[zone]}.")
+            self.window.admin_reply(args, _(LET_IN_DONE[zone]).format(name=name))
             return
-        d = Adw.AlertDialog(heading=f"Let {name} in on a Public place?", heading_use_markup=False,
-                            body="Strangers on the same network, in a café, hotel or airport, could reach it too. "
-                                 "Only do this if you need it here, and close it again when you're done.")
-        d.add_response("cancel", "Cancel")
-        d.add_response("open", "Let it in")
+        d = Adw.AlertDialog(heading=_("Let {name} in on a Public place?").format(name=name), heading_use_markup=False,
+                            body=_("Strangers on the same network, in a café, hotel or airport, could reach it too. "
+                                   "Only do this if you need it here, and close it again when you're done."))
+        d.add_response("cancel", _("Cancel"))
+        d.add_response("open", _("Let it in"))
         d.set_response_appearance("open", Adw.ResponseAppearance.DESTRUCTIVE)
         d.set_default_response("cancel")
-        d.connect("response", lambda _d, r: r == "open" and self.window.admin_reply(args, f"{name} is let in "
-                                                                                          f"{ON_A[zone]}."))
+        d.connect("response", lambda _d, r: r == "open" and self.window.admin_reply(
+            args, _(LET_IN_DONE[zone]).format(name=name)))
         d.present(self.window)

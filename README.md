@@ -112,7 +112,7 @@ can't change, so it stays working.
   update.
 - **[Wheelhouse](docs/wheelhouse.md)** - the one window for updates, apps, disk and startup, and help.
 - **[EvenKeelOS guide](docs/guide.md)** - how to do things, step by step, the same as in Wheelhouse.
-- **[How it's built](docs/building.md)** - the build, media codecs and the boot
+- **[How it's built](docs/building.md)** - the build, translations, media codecs and the boot
   menu name.
 
 ## Known limitations

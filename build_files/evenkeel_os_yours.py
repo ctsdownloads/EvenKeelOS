@@ -7,10 +7,11 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gio, GLib, Gtk, Pango  # noqa: E402
 import evenkeel_os_appearance as appearance  # noqa: E402
+from evenkeel_os_ui import _, N_, ngettext  # noqa: E402
 
 TIMES = [f"{h:02d}:{m:02d}" for h in range(24) for m in (0, 30)]
-FONTS = (("font-name", "Menus and windows"), ("document-font-name", "Documents"),
-         ("monospace-font-name", "Code and terminal"))
+FONTS = (("font-name", N_("Menus and windows")), ("document-font-name", N_("Documents")),
+         ("monospace-font-name", N_("Code and terminal")))
 
 
 def combo(title, names, selected):
@@ -47,15 +48,17 @@ class Yours:
     # ------------------------------------------------------------ light and dark
 
     def schedule_group(self):
-        g = Adw.PreferencesGroup(title="Light and dark", description="Switches the dark style for you. Night Light "
-                                 "in Settings only warms the colors. You can still switch it yourself any time.")
+        g = Adw.PreferencesGroup(title=_("Light and dark"),
+                                 description=_("Switches the dark style for you. Night Light in Settings only warms "
+                                               "the colors. You can still switch it yourself any time."))
         keys = list(appearance.SCHEDULES)
-        self.mode = combo("Dark style", list(appearance.SCHEDULES.values()), keys.index(self.state["schedule"]))
+        self.mode = combo(_("Dark style"), [_(v) for v in appearance.SCHEDULES.values()],
+                          keys.index(self.state["schedule"]))
         self.mode.connect("notify::selected", self.on_mode)
         g.add(self.mode)
         labels = [self.clock(datetime.time.fromisoformat(t)) for t in TIMES]
-        self.dark_from = self.time_row("Dark from", "dark_from", labels)
-        self.light_from = self.time_row("Light from", "light_from", labels)
+        self.dark_from = self.time_row(_("Dark from"), "dark_from", labels)
+        self.light_from = self.time_row(_("Light from"), "light_from", labels)
         g.add(self.dark_from)
         g.add(self.light_from)
         self.show_schedule()
@@ -74,19 +77,21 @@ class Yours:
         now = datetime.datetime.now().astimezone()
         hours = appearance.dark_hours(self.state, now)
         if self.state["schedule"] == "off":
-            text = "Switch between light and dark yourself, in Settings or the quick settings menu"
+            text = _("Switch between light and dark yourself, in Settings or the quick settings menu.")
         elif hours is None and appearance.place(appearance.time_zone()):
             up = appearance.sun_up(*appearance.place(appearance.time_zone()), now)
-            text = (f"The sun doesn't set or rise here today, so it's {'light' if up else 'dark'} until it "
-                    f"{'sets' if up else 'rises'}")
+            text = (_("The sun doesn't set or rise here today, so it's light until it sets.") if up else
+                    _("The sun doesn't set or rise here today, so it's dark until it rises."))
         elif hours is None:
-            text = "Sunset and sunrise can't be worked out for this time zone. Use Custom times"
+            text = _("Sunset and sunrise can't be worked out for this time zone. Use Custom times.")
+        elif self.state["schedule"] == "sun":
+            city = (appearance.listed_zone(appearance.time_zone()) or "").rsplit("/", 1)[-1].replace("_", " ")
+            # Translators: {city} is the city of the person's time zone.
+            text = _("Dark from {start} to {end} today, worked out for {city} (your time zone's city).").format(
+                start=self.clock(hours[0]), end=self.clock(hours[1]), city=city)
         else:
-            text = f"Dark from {self.clock(hours[0])} to {self.clock(hours[1])}"
-            if self.state["schedule"] == "sun":
-                city = (appearance.listed_zone(appearance.time_zone()) or "").rsplit("/", 1)[-1].replace("_", " ")
-                text += f" today, worked out for {city} (your time zone's city)"
-        self.mode.set_subtitle(text + ".")
+            text = _("Dark from {start} to {end}.").format(start=self.clock(hours[0]), end=self.clock(hours[1]))
+        self.mode.set_subtitle(text)
 
     def on_mode(self, row, _param):
         self.fresh()["schedule"] = list(appearance.SCHEDULES)[row.get_selected()]
@@ -103,18 +108,18 @@ class Yours:
     # ------------------------------------------------------------ wallpaper slideshow
 
     def slideshow_group(self):
-        g = Adw.PreferencesGroup(title="Wallpaper slideshow",
-                                 description="The wallpaper changes to the next picture in a folder of yours.")
-        self.slides = Adw.SwitchRow(title="Slideshow", active=bool(self.state["slideshow"]))
+        g = Adw.PreferencesGroup(title=_("Wallpaper slideshow"),
+                                 description=_("The wallpaper changes to the next picture in a folder of yours."))
+        self.slides = Adw.SwitchRow(title=_("Slideshow"), active=bool(self.state["slideshow"]))
         self.slides.connect("notify::active", self.on_slides)
         g.add(self.slides)
-        self.folder = Adw.ActionRow(title="Folder")
-        pick = Gtk.Button(label="Choose", valign=Gtk.Align.CENTER)
-        pick.connect("clicked", lambda *_: self.pick_folder())
+        self.folder = Adw.ActionRow(title=_("Folder"))
+        pick = Gtk.Button(label=_("Choose"), valign=Gtk.Align.CENTER)
+        pick.connect("clicked", lambda *_args: self.pick_folder())
         self.folder.add_suffix(pick)
         g.add(self.folder)
         keys = list(appearance.EVERY)
-        every = combo("Change it", list(appearance.EVERY.values()), keys.index(self.state["every"]))
+        every = combo(_("Change it"), [_(v) for v in appearance.EVERY.values()], keys.index(self.state["every"]))
         every.connect("notify::selected", self.on_every)
         g.add(every)
         self.show_folder()
@@ -125,8 +130,8 @@ class Yours:
         count = len(appearance.pictures(folder)) if folder else 0
         home = GLib.get_home_dir()
         where = "~" + folder[len(home):] if folder.startswith(home + "/") else folder
-        self.folder.set_subtitle(f"{where}, {count} picture{'s' if count != 1 else ''}" if folder else
-                                 "None picked yet.")
+        self.folder.set_subtitle(ngettext("{where}, {count} picture", "{where}, {count} pictures", count).format(
+            where=where, count=count) if folder else _("None picked yet."))
 
     def on_slides(self, row, _param):
         if row.get_active() and not self.fresh().get("folder"):
@@ -137,7 +142,7 @@ class Yours:
         self.save_and_apply()
 
     def pick_folder(self):
-        Gtk.FileDialog(title="Pick a folder of pictures").select_folder(self.window, None, self.on_folder)
+        Gtk.FileDialog(title=_("Pick a folder of pictures")).select_folder(self.window, None, self.on_folder)
 
     def on_folder(self, dialog, result):
         try:
@@ -145,7 +150,7 @@ class Yours:
         except GLib.Error:
             path = None
         if path and not appearance.pictures(path):
-            self.window.toast("That folder has no pictures in it (JPEG, PNG or WebP).")
+            self.window.toast(_("That folder has no pictures in it (JPEG, PNG or WebP)."))
             path = None
         if path:
             self.fresh()["folder"] = path
@@ -167,22 +172,22 @@ class Yours:
     # ------------------------------------------------------------ fonts and text size
 
     def fonts_group(self):
-        g = Adw.PreferencesGroup(title="Fonts and text")
-        back = Gtk.Button(label="Back to the original", valign=Gtk.Align.CENTER)
+        g = Adw.PreferencesGroup(title=_("Fonts and text"))
+        back = Gtk.Button(label=_("Back to the original"), valign=Gtk.Align.CENTER)
         back.connect("clicked", self.on_back)
         g.set_header_suffix(back)
         self.font_buttons = {}
         for key, title in FONTS:
-            row = Adw.ActionRow(title=title)
-            b = Gtk.FontDialogButton(dialog=Gtk.FontDialog(title=title), valign=Gtk.Align.CENTER)
+            row = Adw.ActionRow(title=_(title))
+            b = Gtk.FontDialogButton(dialog=Gtk.FontDialog(title=_(title)), valign=Gtk.Align.CENTER)
             b.set_font_desc(Pango.FontDescription.from_string(self.ui.get_string(key)))
             b.connect("notify::font-desc", self.on_font, key)
             row.add_suffix(b)
             g.add(row)
             self.font_buttons[key] = b
         size = Adw.SpinRow.new_with_range(0.8, 2.0, 0.05)
-        size.set_title("Text size")
-        size.set_subtitle("1.00 is the normal size. Large text in Settings, Accessibility sets 1.25.")
+        size.set_title(_("Text size"))
+        size.set_subtitle(_("1.00 is the normal size. Large text in Settings, Accessibility sets 1.25."))
         size.set_digits(2)
         self.ui.bind("text-scaling-factor", size, "value", Gio.SettingsBindFlags.DEFAULT)
         g.add(size)

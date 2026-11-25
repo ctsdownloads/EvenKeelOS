@@ -1,7 +1,7 @@
 """Installing an app by name from Fedora's or Ubuntu's own repositories, into its box."""
 import subprocess
 
-from evenkeel_os_ui import notify, say
+from evenkeel_os_ui import _, notify, say
 from evenkeel_os_packages import app_list, boxes, common, installed, launchers, update_notes, windows
 
 
@@ -14,16 +14,17 @@ def package_files(box, kind, name):
 def install(kind, name, title):
     """Set up the box if needed, install the package, and put its apps in Show Apps and Remove Apps."""
     box = common.BOXES[kind]["name"]
-    label = common.BOXES[kind]["label"]
+    label = _(common.BOXES[kind]["label"])
     if not boxes.box_exists(box):
-        _, size = boxes.first_time(kind)
+        size = boxes.first_time(kind)[1]
         if not boxes.room_for(boxes.setup_need(size) + 1000) or not boxes.setup_box(kind, size):
             return 1
     elif not boxes.room_for(1000):
         return 1
     boxes.ensure_helpers(kind)
-    if not windows.run_steps(f"Installing {title} in the {label}.", boxes.install_steps(kind, title, name)):
-        windows.failed(f"Installing {title}")
+    if not windows.run_steps(_("Installing {title} in the {label}.").format(title=title, label=label),
+                             boxes.install_steps(kind, title, name)):
+        windows.failed(_("Installing {title}").format(title=title))
         return 1
     files = package_files(box, kind, name)
     info = {"apps": [f for f in files if f.startswith("/usr/share/applications/") and f.endswith(".desktop")],
@@ -31,7 +32,8 @@ def install(kind, name, title):
     apps, bins = launchers.export(box, info)
     app_list.remember({"title": title, "package": name, "where": box, "apps": apps, "bins": bins,
                        "version": installed.box_version(kind, name), "updates": True})
-    notify(f"{title} is installed.")
-    where = "Find it in Show Apps." if apps else "It is a command-line tool, so it has no window in Show Apps."
-    say(f"{title} is installed in the {label}. {where}\n\n{update_notes.UPDATES_YES}")
+    notify(_("{title} is installed.").format(title=title))
+    where = _("Find it in Show Apps.") if apps else _("It is a command-line tool, so it has no window in Show Apps.")
+    say(_("{title} is installed in the {label}.").format(title=title, label=label) + " " + where + "\n\n" +
+        _(update_notes.UPDATES_YES))
     return 0

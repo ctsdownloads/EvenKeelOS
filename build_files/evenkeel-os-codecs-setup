@@ -1,6 +1,7 @@
 #!/bin/bash
 # No-password codecs helper for an admin at the computer: web, full or skip only.
 set -uo pipefail
+export TEXTDOMAIN=evenkeel-os
 . /usr/libexec/evenkeel-os-codecs-lib.sh
 need_root
 
@@ -15,7 +16,7 @@ case "$1" in
 esac
 
 if [ "$1" = skip ] && ! window_open; then
-  echo "The one-time setup window is already closed."
+  echo "$(gettext "The one-time setup window is already closed.")"
   exit 3
 fi
 

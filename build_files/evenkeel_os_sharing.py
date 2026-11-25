@@ -11,11 +11,13 @@ import stat
 import subprocess
 from pathlib import Path
 
+from evenkeel_os_ui import _, N_
+
 STATE = Path("/etc/evenkeel-os/shared-folders.json")
 SHARES = Path("/etc/samba/evenkeel-shares.conf")
 SMB_CONF = Path("/etc/samba/smb.conf")
 INCLUDE = f"include = {SHARES}"
-MODES = {"ro": "Read only", "rw": "Read and write"}
+MODES = {"ro": N_("Read only"), "rw": N_("Read and write")}
 FIREWALL_SERVICE = "evenkeel-sharing"
 NOT_IN_NAMES = set('[]"/\\:;|<>+=,*?%')
 TAKEN = {"global", "homes", "printers", "print$", "ipc$"}
@@ -49,18 +51,18 @@ def folder_problem(path, user):
         home = os.path.realpath(pwd.getpwnam(user).pw_dir)
         st = os.lstat(path)
     except (KeyError, OSError):
-        return "That folder wasn't found."
+        return _("That folder wasn't found.")
     if not path.startswith("/") or os.path.realpath(path) != path or not clean(path) or "%" in path \
             or "\\" in path or path != path.strip() or len(path) > 1024:
-        return "That folder's name can't be shared. Rename it or pick another."
+        return _("That folder's name can't be shared. Rename it or pick another.")
     if not stat.S_ISDIR(st.st_mode):
-        return "Pick a folder, not a file."
+        return _("Pick a folder, not a file.")
     if path == home or not path.startswith(home + "/"):
-        return "Pick a folder inside your home folder."
+        return _("Pick a folder inside your home folder.")
     if any(part.startswith(".") for part in path[len(home) + 1:].split("/")):
-        return "Hidden folders hold settings and keys. They can't be shared."
+        return _("Hidden folders hold settings and keys. They can't be shared.")
     if st.st_uid != pwd.getpwnam(user).pw_uid:
-        return "That folder belongs to someone else."
+        return _("That folder belongs to someone else.")
     return ""
 
 

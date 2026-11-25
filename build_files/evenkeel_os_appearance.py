@@ -12,11 +12,13 @@ import subprocess
 import zoneinfo
 from pathlib import Path
 
+from evenkeel_os_ui import N_
+
 STATE = Path.home() / ".config/evenkeel-os/appearance.json"
 ZONES = ("/usr/share/zoneinfo/zone.tab", "/usr/share/zoneinfo/zone1970.tab")   # every city, then the newer list
 PICTURES = (".jpg", ".jpeg", ".png", ".webp")
-SCHEDULES = {"off": "Off", "sun": "Sunset to sunrise", "custom": "Custom times"}
-EVERY = {"hour": "Every hour", "day": "Every day", "login": "At each login"}
+SCHEDULES = {"off": N_("Off"), "sun": N_("Sunset to sunrise"), "custom": N_("Custom times")}
+EVERY = {"hour": N_("Every hour"), "day": N_("Every day"), "login": N_("At each login")}
 FONT_KEYS = ("font-name", "document-font-name", "monospace-font-name", "text-scaling-factor")
 
 

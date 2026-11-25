@@ -6,7 +6,7 @@ import shlex
 import subprocess
 from pathlib import Path
 
-from evenkeel_os_ui import LAUNCH_ENV, choose, say
+from evenkeel_os_ui import LAUNCH_ENV, _, choose, say
 from evenkeel_os_packages import app_list, boxes, common, launchers, windows
 
 
@@ -51,22 +51,26 @@ def login():
     """Start Apps at Login: choose box apps that start by themselves when you log in."""
     apps = [r for r in app_list.load() if r["where"].startswith("evenkeel-") and r.get("apps")]
     if not apps:
-        say("No downloaded apps that can start at login are installed. Apps from Bazaar, the app store, have this "
-            "setting inside the app.")
+        say(_("No downloaded apps that can start at login are installed. Apps from Bazaar, the app store, have this "
+              "setting inside the app."))
         return 0
-    rows = [[r["title"], common.WHERE.get(r["where"], r["where"]), "Yes" if starts_at_login(r) else "No"] for r in apps]
-    i = choose("Which app should start, or stop starting, when you log in?",
-               ["App", "Installed in", "Starts at login"], rows)
+    rows = [[r["title"], _(common.WHERE.get(r["where"], r["where"])), _("Yes") if starts_at_login(r) else _("No")]
+            for r in apps]
+    i = choose(_("Which app should start, or stop starting, when you log in?"),
+               [_("App"), _("Installed in"), _("Starts at login")], rows)
     if i is None:
         return 1
     entry = apps[i]
     on = not starts_at_login(entry)
     if not set_login(entry, on):
-        windows.failed(f"Changing {entry['title']}", reason=f"{entry['title']} is missing from Show Apps. "
-                       f"Install it again to put it back.")
+        windows.failed(_("Changing {title}").format(title=entry["title"]),
+                       reason=_("{title} is missing from Show Apps. Install it again to put it back.")
+                       .format(title=entry["title"]))
         return 1
-    say(f"{entry['title']} will start when you log in." if on else
-        f"{entry['title']} will no longer start when you log in.")
+    if on:
+        say(_("{title} will start when you log in.").format(title=entry["title"]))
+    else:
+        say(_("{title} will no longer start when you log in.").format(title=entry["title"]))
     return 0
 
 

@@ -6,6 +6,7 @@ import re
 import subprocess
 import tarfile
 from pathlib import Path
+from evenkeel_os_ui import _, N_
 from evenkeel_os_packages import common, update_notes
 
 
@@ -65,7 +66,7 @@ def read_rpm(pkg):
         r = subprocess.run(["rpm", "-qp", "--nosignature", "--nodigest", *args, str(pkg.path)],
                            capture_output=True, text=True)
         if r.returncode != 0:
-            raise ValueError(r.stderr.strip() or "rpm could not read it")
+            raise ValueError(r.stderr.strip() or _("rpm could not read it"))
         return r.stdout
     info = q("--qf", "%{NAME}\n%{VERSION}-%{RELEASE}\n%{ARCH}\n%{VENDOR}\n%{EPOCHNUM}\n").split("\n")
     pkg.kind, pkg.name, pkg.version, pkg.arch, pkg.vendor = "rpm", info[0], info[1], info[2], info[3]
@@ -84,7 +85,7 @@ def read_deb(pkg):
     data = control = None
     with open(pkg.path, "rb") as f:
         if f.read(8) != b"!<arch>\n":
-            raise ValueError("it is not a .deb package")
+            raise ValueError(_("it is not a .deb package"))
         while True:
             head = f.read(60)
             if len(head) < 60:
@@ -99,7 +100,7 @@ def read_deb(pkg):
             elif name.startswith("data.tar"):
                 data = body
     if control is None or data is None:
-        raise ValueError("the .deb is incomplete")
+        raise ValueError(_("the .deb is incomplete"))
     fields, scripts = {}, []
     with tarfile.open(fileobj=io.BytesIO(control), mode="r:*") as tar:
         for m in tar:
@@ -122,7 +123,7 @@ def read_deb(pkg):
     pkg.scripts = "\n".join(scripts).lower()
     read_tar(pkg, io.BytesIO(data), "r:*")
     if not pkg.name:
-        raise ValueError("the .deb has no package name")
+        raise ValueError(_("the .deb has no package name"))
 
 
 def read_package(path):
@@ -134,7 +135,7 @@ def read_package(path):
     elif magic == b"!<arch>\n":
         read_deb(pkg)
     else:
-        raise ValueError("it is not an .rpm or .deb package")
+        raise ValueError(_("it is not an .rpm or .deb package"))
     return pkg
 
 
@@ -257,16 +258,16 @@ def classify(pkg):
     flag("admin", lambda p: starts(p, "/usr/share/polkit-1/", "/etc/polkit-1/"))
 
     words = {
-        "driver": "a driver (kernel module)",
-        "firmware": "device firmware",
-        "printer": "a printer driver",
-        "scanner": "a scanner driver",
-        "login": "login or security settings",
-        "network": "a network or VPN plugin for the system",
-        "service": "a background service that starts with the computer",
-        "needed_service": "a background service the app needs, which cannot run in a box",
-        "user_service": "a background service for your account (in a box it does not start)",
-        "programrules": "a hardware rule that runs a program",
+        "driver": N_("a driver (kernel module)"),
+        "firmware": N_("device firmware"),
+        "printer": N_("a printer driver"),
+        "scanner": N_("a scanner driver"),
+        "login": N_("login or security settings"),
+        "network": N_("a network or VPN plugin for the system"),
+        "service": N_("a background service that starts with the computer"),
+        "needed_service": N_("a background service the app needs, which cannot run in a box"),
+        "user_service": N_("a background service for your account (in a box it does not start)"),
+        "programrules": N_("a hardware rule that runs a program"),
     }
     if program_rules:
         found["programrules"] = True
@@ -281,9 +282,9 @@ def classify(pkg):
     if "programrules" in found:
         (notes if apps else blocking).append(words["programrules"])
     if "settings" in found:
-        notes.append("system settings (these will not apply)")
+        notes.append(N_("system settings (these will not apply)"))
     if "admin" in found:
-        notes.append("parts that need administrator rights (these may not work)")
+        notes.append(N_("parts that need administrator rights (these may not work)"))
 
     docs = ("/usr/share/doc/", "/usr/share/licenses/", "/usr/share/man/", "/usr/share/metainfo/",
             "/usr/share/appdata/", "/usr/lib/.build-id/", "/usr/share/lintian/")

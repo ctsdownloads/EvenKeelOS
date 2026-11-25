@@ -45,10 +45,19 @@ PIECES = {
 }
 
 
+class Words(ast.NodeTransformer):
+    """N_("text") is marked for translation, but is just the text."""
+
+    def visit_Call(self, node):
+        if getattr(node.func, "id", None) == "N_" and len(node.args) == 1:
+            return node.args[0]
+        return self.generic_visit(node)
+
+
 def assigned(path, name):
     for node in ast.parse(Path(path).read_text()).body:
         if isinstance(node, ast.Assign) and any(getattr(t, "id", None) == name for t in node.targets):
-            return ast.literal_eval(node.value)
+            return ast.literal_eval(Words().visit(node.value))
     sys.exit(f"ERROR: {name} not found in {path}")
 
 
