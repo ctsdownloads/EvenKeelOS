@@ -1,4 +1,4 @@
-# The list of words to translate is up to date, and no screen text skips it. Builds nothing.
+# The list of words to translate is up to date, no screen text skips it, and every language is complete. Builds nothing.
 name: Check the translatable text
 on:
   pull_request:
@@ -29,3 +29,6 @@ jobs:
 
       - name: The list of words to translate is up to date
         run: build_files/make-pot.sh --check
+
+      - name: Every language is complete
+        run: build_files/check-translations.sh

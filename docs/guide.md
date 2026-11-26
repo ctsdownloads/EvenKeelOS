@@ -109,7 +109,7 @@ Your folders, USB drives, the trash, searching, zip files and sharing with other
 2. Set a sharing password, then turn on Share folders on Home networks.
 3. Click Add a folder and pick it. It starts as Read only: change it to Read and write if the other computer should save there too.
 4. On a Windows PC: File Explorer, Network. The Windows PC's own network must be set to Private.
-5. On a Mac: Finder, Network. On another Linux computer: Files, Other Locations.
+5. On a Mac: Finder, Network. On another Linux computer: Files, Network.
 6. Open this computer, type your user name and the sharing password, and the folders are there.
 7. Away from home, the switch shows off: sharing only runs on a Home network, and comes back by itself there.
 

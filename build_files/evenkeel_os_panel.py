@@ -779,7 +779,7 @@ class Window(Adw.ApplicationWindow):
                                                   "details in Get help."), True)
         wired = any(n.kind == "Wired" for n in home)
         return (_("Sharing on {networks}").format(networks=", ".join(n.name for n in home)),
-                _("Other computers find this one as {host}: in Files under Other Locations on Linux, in Finder "
+                _("Other computers find this one as {host}: in Files under Network on Linux, in Finder "
                   "under Network on a Mac, and under Network in File Explorer on Windows.").format(
                       host=socket.gethostname()) +
                 (" " + _("A wired network is set to Home, so this happens on any cable you plug in.")

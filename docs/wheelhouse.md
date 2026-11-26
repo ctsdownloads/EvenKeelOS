@@ -137,7 +137,7 @@ All but the first ask for the administrator password. What's let in is listed in
 ### Shared folders
 
 Lets other computers on a Home network open folders you pick, like Windows file sharing (it uses Samba). Nobody types
-an address. A Mac finds this computer in Finder under Network, a Linux computer in Files under Other Locations, and a
+an address. A Mac finds this computer in Finder under Network, a Linux computer in Files under Network, and a
 Windows PC under Network in File Explorer. Macs and Linux find it through Avahi (the computer announces itself).
 Windows finds it through wsdd. A Windows PC lists other computers only when its own network is set to Private (in
 Settings, Network and internet); on a Public network Windows turns network discovery off.
