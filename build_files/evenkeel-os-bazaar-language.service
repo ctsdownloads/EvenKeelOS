@@ -1,0 +1,10 @@
+[Unit]
+Description=Bazaar shows app details in the account's current language
+Before=graphical-session.target io.github.kolunmi.Bazaar.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/evenkeel-os-bazaar-language
+
+[Install]
+WantedBy=graphical-session-pre.target

@@ -352,7 +352,12 @@ Disk sizes use each language's units and the region's decimal mark ("1,2 Go"
 in French). Tools find Downloads and Desktop under their names in the person's
 language (`xdg-user-dir`). After someone picks a new language in Settings
 (or for the whole computer), `evenkeel-os-flatpak-languages.timer` fetches Flatpak apps' translations for it
-within 10 minutes, instead of at the next daily update. Spell check: Fedora's
+within 10 minutes, instead of at the next daily update. Bazaar keeps a saved
+copy of app names and descriptions in the language it was using; when the
+account's language changes, `evenkeel-os-bazaar-language.service` deletes that
+copy at the next login, before the desktop starts, so Bazaar fetches them again
+in the new language.
+Spell check: Fedora's
 dictionary for every language that has one (`spellcheck-packages.txt`), Voikko
 for Finnish in GNOME apps, Bosnian from `hunspell-sr`, and a Tajik dictionary
 Fedora doesn't package (`extra-dictionaries.txt`, sha256-checked). Firefox has
