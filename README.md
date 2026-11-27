@@ -145,7 +145,7 @@ other projects, under their own licenses, with their source available there:
   source at <https://github.com/ghostty-org/ghostty>.
 - **Locked versions:** the Universal Blue and Ghostty packages, Dash to Panel,
   ArcMenu, Logo Menu and the ISO build tool are locked to exact versions and
-  checked daily for newer ones. See
+  checked daily for newer ones; Dash to Panel must carry Fedora's signature. See
   [Locked versions](docs/building.md#locked-versions).
 - **Boot test:** every build starts in a virtual machine and must reach the desktop
   before it's published, with its disk made by

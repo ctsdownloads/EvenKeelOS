@@ -572,8 +572,14 @@ command -v bazaar >/dev/null && command -v ghostty >/dev/null || { echo "ERROR: 
 # Windows-style layout: Dash to Panel and ArcMenu at their locked versions, so their text matches our translations.
 # Dash to Panel comes from Fedora's build archive, which keeps every version, and must carry Fedora's signature.
 d2p=$(awk '$1 == "fedora" && $3 == "gnome-shell-extension-dash-to-panel" {print $4}' /ctx/locked-versions.txt)
+# gpg needs a home folder; the image's /root doesn't exist during the build, so it gets a temporary one.
+GNUPGHOME=$(mktemp -d)
+export GNUPGHOME
 key=$(gpg --batch --show-keys --with-colons "/usr/share/pki/rpm-gpg/RPM-GPG-KEY-fedora-$(rpm -E %fedora)-primary" \
   | awk -F: '/^fpr/ {print tolower(substr($10, 33)); exit}')
+rm -rf "$GNUPGHOME"
+unset GNUPGHOME
+[[ $key =~ ^[0-9a-f]{8}$ ]] || { echo "ERROR: can't read the Fedora signing key's id (got '$key')"; exit 1; }
 curl -fsSL --retry 3 -o /tmp/dash-to-panel.rpm "https://kojipkgs.fedoraproject.org/packages/\
 gnome-shell-extension-dash-to-panel/${d2p%-*}/${d2p##*-}/data/signed/$key/noarch/gnome-shell-extension-dash-to-panel-$d2p.noarch.rpm"
 rpmkeys --import "/usr/share/pki/rpm-gpg/RPM-GPG-KEY-fedora-$(rpm -E %fedora)-primary"

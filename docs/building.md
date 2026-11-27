@@ -175,7 +175,7 @@ These are locked to exact versions in
 - the Universal Blue packages (uupd, Bazaar, Homebrew setup, ujust and its
   disk-encryption helper) and Ghostty, from Copr;
 - Dash to Panel, from Fedora's build archive (Koji), checked against Fedora's
-  signature;
+  signature (the build reads that key's id with gpg, in a temporary folder);
 - the GNOME extensions ArcMenu and Logo Menu, from extensions.gnome.org, checked
   against a sha256 checksum;
 - Titanoboa, the ISO build tool, at one exact commit.
