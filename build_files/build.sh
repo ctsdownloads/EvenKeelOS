@@ -665,8 +665,6 @@ for f in /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.*.policy
   GETTEXTDATADIRS=/ctx/po msgfmt --xml -d /ctx/po --template="$f" -o "$f.new" || exit 1
   mv "$f.new" "$f"
 done
-dnf5 -y remove gettext
-command -v gettext >/dev/null || { echo "ERROR: removing the translation tools took gettext with them"; exit 1; }
 langs=$(grep -c . /ctx/po/LINGUAS)
 [ "$(ls /usr/share/locale/*/LC_MESSAGES/evenkeel-os.mo | wc -l)" -eq "$langs" ] \
   || { echo "ERROR: not every language in po/LINGUAS has its messages"; exit 1; }
