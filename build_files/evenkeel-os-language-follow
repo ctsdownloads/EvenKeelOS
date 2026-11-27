@@ -1,0 +1,17 @@
+#!/bin/bash
+# After a language change in Settings, date and number formats are set back to follow the language.
+set -u
+user=/org/freedesktop/Accounts/User$(id -u)
+mark=${XDG_STATE_HOME:-$HOME/.local/state}/evenkeel-os/language
+follow() {
+  local now
+  now=$(gdbus call --system --dest org.freedesktop.Accounts --object-path "$user" \
+    --method org.freedesktop.DBus.Properties.Get org.freedesktop.Accounts.User Language \
+    | sed -n "s/^(<'\(.*\)'>,)$/\1/p")
+  [ -n "$now" ] || return 0     # empty: the account follows the computer's language
+  [ -f "$mark" ] && [ "$(cat "$mark")" = "$now" ] && return 0
+  gsettings reset org.gnome.system.locale region
+  mkdir -p "${mark%/*}" && printf '%s\n' "$now" > "$mark"
+}
+follow
+gdbus monitor --system --dest org.freedesktop.Accounts --object-path "$user" | while read -r _; do follow; done

@@ -89,7 +89,16 @@ install -Dm644 /ctx/evenkeel-os-app-updates.timer /usr/lib/systemd/system/evenke
 # A newly picked language: Flatpak apps get its translations within minutes, not at the next daily update.
 install -Dm755 /ctx/evenkeel-os-flatpak-languages /usr/libexec/evenkeel-os-flatpak-languages
 install -Dm644 -t /usr/lib/systemd/system \
-  /ctx/evenkeel-os-flatpak-languages.service /ctx/evenkeel-os-flatpak-languages.timer
+  /ctx/evenkeel-os-flatpak-languages.service /ctx/evenkeel-os-flatpak-languages.timer \
+  /ctx/evenkeel-os-flatpak-languages.path
+# Dates, times and month names follow the account's language after a change.
+install -Dm755 /ctx/evenkeel-os-language-follow /usr/libexec/evenkeel-os-language-follow
+install -Dm644 -t /usr/lib/systemd/user /ctx/evenkeel-os-language-follow.service
+mkdir -p /usr/lib/systemd/user/graphical-session.target.wants
+ln -sfn ../evenkeel-os-language-follow.service \
+  /usr/lib/systemd/user/graphical-session.target.wants/evenkeel-os-language-follow.service
+[ -f /usr/lib/systemd/user/graphical-session.target.wants/evenkeel-os-language-follow.service ] \
+  || { echo "ERROR: dates following the language is not set to run in each session"; exit 1; }
 # Bazaar shows app details in the current language after a language change: its saved copy is cleared at login.
 install -Dm755 /ctx/evenkeel-os-bazaar-language /usr/libexec/evenkeel-os-bazaar-language
 install -Dm644 -t /usr/lib/systemd/user /ctx/evenkeel-os-bazaar-language.service
@@ -272,10 +281,11 @@ python3 -I /ctx/check-windows-programs.py "$data" \
   || { echo 'ERROR: Windows Program does not read installers correctly'; exit 1; }
 rm -rf /tmp/winlist
 # Services on by default, including after the first boot.
-printf 'enable brew-setup.service\nenable evenkeel-os-codecs-setup.service\nenable evenkeel-os-flathub.service\nenable evenkeel-os-flatpak-apps.service\ndisable flatpak-add-fedora-repos.service\nenable evenkeel-os-disk-unlock-check.service\nenable tailscaled.service\nenable podman-auto-update.timer\nenable uupd.timer\nenable greenboot-healthcheck.service\nenable greenboot-set-rollback-trigger.service\nenable evenkeel-os-app-updates.timer\nenable evenkeel-os-flatpak-languages.timer\n' > /usr/lib/systemd/system-preset/80-evenkeel-os.preset
+printf 'enable brew-setup.service\nenable evenkeel-os-codecs-setup.service\nenable evenkeel-os-flathub.service\nenable evenkeel-os-flatpak-apps.service\ndisable flatpak-add-fedora-repos.service\nenable evenkeel-os-disk-unlock-check.service\nenable tailscaled.service\nenable podman-auto-update.timer\nenable uupd.timer\nenable greenboot-healthcheck.service\nenable greenboot-set-rollback-trigger.service\nenable evenkeel-os-app-updates.timer\nenable evenkeel-os-flatpak-languages.timer\nenable evenkeel-os-flatpak-languages.path\n' > /usr/lib/systemd/system-preset/80-evenkeel-os.preset
 systemctl enable tailscaled.service podman-auto-update.timer uupd.timer brew-setup.service evenkeel-os-app-updates.timer \
-  evenkeel-os-flatpak-languages.timer
-for u in tailscaled.service uupd.timer brew-setup.service evenkeel-os-app-updates.timer evenkeel-os-flatpak-languages.timer; do [ "$(systemctl is-enabled "$u")" = enabled ] || { echo "ERROR: $u is not enabled"; exit 1; }; done
+  evenkeel-os-flatpak-languages.timer evenkeel-os-flatpak-languages.path
+for u in tailscaled.service uupd.timer brew-setup.service evenkeel-os-app-updates.timer evenkeel-os-flatpak-languages.timer \
+         evenkeel-os-flatpak-languages.path; do [ "$(systemctl is-enabled "$u")" = enabled ] || { echo "ERROR: $u is not enabled"; exit 1; }; done
 bash /ctx/rebrand.sh
 # Automatic rollback: greenboot with our own checks. Fedora's default checks fail offline, so they stay out.
 dnf5 -y install greenboot
