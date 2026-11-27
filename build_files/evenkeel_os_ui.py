@@ -1,10 +1,12 @@
 """Windows, notices and disk sizes shared by Wheelhouse and Install Package File."""
 
 import gettext
+import locale
 import math
 import os
 import shutil
 import subprocess
+import time
 from pathlib import Path
 
 GUI = bool(shutil.which("zenity")) and bool(os.environ.get("WAYLAND_DISPLAY") or os.environ.get("DISPLAY"))
@@ -17,6 +19,45 @@ LAUNCH_ENV = {k: v for k, v in os.environ.items() if k != "EVENKEEL_OS_PANEL"}
 _translation = gettext.translation("evenkeel-os", fallback=True)
 _ = _translation.gettext
 ngettext = _translation.ngettext
+
+
+try:
+    TIME_LOCALE = locale.setlocale(locale.LC_TIME, "")
+except locale.Error:
+    TIME_LOCALE = locale.setlocale(locale.LC_TIME, "C")     # a region the system has no data for: English
+# Date patterns follow the Formats region in Settings, like the month and day names they hold.
+_dates = gettext.translation("evenkeel-os", languages=[TIME_LOCALE], fallback=True).gettext
+HAS_AM_PM = bool(time.strftime("%p", time.struct_time((2000, 1, 1, 13, 0, 0, 5, 1, -1))))
+
+
+def clock_24h():
+    """Whether the clock in Settings is set to 24-hour (as the top bar shows it)."""
+    try:
+        r = subprocess.run(["gsettings", "get", "org.gnome.desktop.interface", "clock-format"],
+                           capture_output=True, text=True)
+    except OSError:
+        return True
+    return r.stdout.strip() != "'12h'"
+
+
+def date_text(t, with_time=False):
+    """A date (a time.struct_time) in the person's language and order, with the time if asked."""
+    if not with_time:
+        # Translators: a date: month and day ("November 26"). Uses strftime codes.
+        fmt = _dates("%B %-d")
+    elif clock_24h() or not HAS_AM_PM:     # a region with no AM/PM words writes times as 24-hour
+        # Translators: a date and a 24-hour time ("November 26, 19:02"). Uses strftime codes.
+        fmt = _dates("%B %-d, %H:%M")
+    else:
+        # Translators: a date and a 12-hour time ("November 26, 7:02 PM"). Uses strftime codes.
+        fmt = _dates("%B %-d, %-I:%M %p")
+    return time.strftime(fmt, t)
+
+
+def day_text(t):
+    """A day (a time.struct_time) with its weekday, in the person's language and order."""
+    # Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
+    return time.strftime(_dates("%A, %B %-d"), t)
 
 
 def N_(text):

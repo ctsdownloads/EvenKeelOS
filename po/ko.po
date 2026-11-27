@@ -98,6 +98,22 @@ msgid ""
 msgstr ""
 "\"{name}\"이(가) 이 컴퓨터에 추가되었으며 {date}에 만료됩니다. 그 전에 이 인증서를 준 사람에게 새 인증서를 요청하십시오."
 
+#. Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
+msgid "%A, %B %-d"
+msgstr "%B %-d일 %A"
+
+#. Translators: a date: month and day ("November 26"). Uses strftime codes.
+msgid "%B %-d"
+msgstr "%B %-d일"
+
+#. Translators: a date and a 12-hour time ("November 26, 7:02 PM"). Uses strftime codes.
+msgid "%B %-d, %-I:%M %p"
+msgstr "%B %-d일 %p %-I:%M"
+
+#. Translators: a date and a 24-hour time ("November 26, 19:02"). Uses strftime codes.
+msgid "%B %-d, %H:%M"
+msgstr "%B %-d일 %H:%M"
+
 msgid "(nothing was printed)"
 msgstr "(출력된 내용 없음)"
 

@@ -108,6 +108,22 @@ msgstr ""
 "\"{name}\" මෙම පරිගණකයට එක් කරන ලද අතර එය {date} දින කල් ඉකුත් වේ. එයට කලින්,"
 " එය ඔබට දුන් කෙනාගෙන් අලුත් එකක් ඉල්ලන්න."
 
+#. Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
+msgid "%A, %B %-d"
+msgstr "%B %-d %A"
+
+#. Translators: a date: month and day ("November 26"). Uses strftime codes.
+msgid "%B %-d"
+msgstr "%B %-d"
+
+#. Translators: a date and a 12-hour time ("November 26, 7:02 PM"). Uses strftime codes.
+msgid "%B %-d, %-I:%M %p"
+msgstr "%B %-d %p %-I.%M"
+
+#. Translators: a date and a 24-hour time ("November 26, 19:02"). Uses strftime codes.
+msgid "%B %-d, %H:%M"
+msgstr "%B %-d %H.%M"
+
 msgid "(nothing was printed)"
 msgstr "(කිසිදු ප්‍රතිදානයක් නොලැබුණි)"
 

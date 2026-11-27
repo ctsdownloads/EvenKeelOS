@@ -114,6 +114,22 @@ msgstr ""
 "Certifikát „{name}“ bol pridaný do tohto počítača a jeho platnosť vyprší "
 "{date}. Predtým požiadajte osobu, ktorá vám ho dala, o nový."
 
+#. Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
+msgid "%A, %B %-d"
+msgstr "%A %-d. %-m."
+
+#. Translators: a date: month and day ("November 26"). Uses strftime codes.
+msgid "%B %-d"
+msgstr "%-d. %-m."
+
+#. Translators: a date and a 12-hour time ("November 26, 7:02 PM"). Uses strftime codes.
+msgid "%B %-d, %-I:%M %p"
+msgstr "%-d. %-m., %-I:%M %p"
+
+#. Translators: a date and a 24-hour time ("November 26, 19:02"). Uses strftime codes.
+msgid "%B %-d, %H:%M"
+msgstr "%-d. %-m., %-H:%M"
+
 msgid "(nothing was printed)"
 msgstr "(príkaz nič nevypísal)"
 

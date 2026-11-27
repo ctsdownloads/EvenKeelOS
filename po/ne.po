@@ -109,6 +109,22 @@ msgstr ""
 "\"{name}\" यस कम्प्युटरमा थपिएको थियो र यसको म्याद {date} मा सकिन्छ। त्यसअघि "
 "नै तपाईंलाई यो दिने व्यक्तिसँग नयाँ प्रमाणपत्र माग्नुहोस्।"
 
+#. Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
+msgid "%A, %B %-d"
+msgstr "%B %-d, %A"
+
+#. Translators: a date: month and day ("November 26"). Uses strftime codes.
+msgid "%B %-d"
+msgstr "%B %-d"
+
+#. Translators: a date and a 12-hour time ("November 26, 7:02 PM"). Uses strftime codes.
+msgid "%B %-d, %-I:%M %p"
+msgstr "%B %-d, %-I:%M %p"
+
+#. Translators: a date and a 24-hour time ("November 26, 19:02"). Uses strftime codes.
+msgid "%B %-d, %H:%M"
+msgstr "%B %-d, %H:%M"
+
 msgid "(nothing was printed)"
 msgstr "(कुनै आउटपुट आएन)"
 

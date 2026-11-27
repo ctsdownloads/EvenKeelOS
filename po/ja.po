@@ -96,6 +96,22 @@ msgid ""
 msgstr ""
 "「{name}」がこのコンピューターに追加され、{date}に期限切れになります。それまでに、これをくれた人に新しいものを頼んでおいてください。"
 
+#. Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
+msgid "%A, %B %-d"
+msgstr "%-m月%-d日%A"
+
+#. Translators: a date: month and day ("November 26"). Uses strftime codes.
+msgid "%B %-d"
+msgstr "%-m月%-d日"
+
+#. Translators: a date and a 12-hour time ("November 26, 7:02 PM"). Uses strftime codes.
+msgid "%B %-d, %-I:%M %p"
+msgstr "%-m月%-d日 %p%-I:%M"
+
+#. Translators: a date and a 24-hour time ("November 26, 19:02"). Uses strftime codes.
+msgid "%B %-d, %H:%M"
+msgstr "%-m月%-d日 %-H:%M"
+
 msgid "(nothing was printed)"
 msgstr "（出力はありませんでした）"
 

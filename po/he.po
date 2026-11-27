@@ -106,6 +106,22 @@ msgstr ""
 "„{name}” נוסף למחשב הזה ותוקפו יפוג ב-{date}. כדאי לבקש אישור חדש ממי שנתן לך"
 " אותו לפני כן."
 
+#. Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
+msgid "%A, %B %-d"
+msgstr "%A, %-d ב%B"
+
+#. Translators: a date: month and day ("November 26"). Uses strftime codes.
+msgid "%B %-d"
+msgstr "%-d ב%B"
+
+#. Translators: a date and a 12-hour time ("November 26, 7:02 PM"). Uses strftime codes.
+msgid "%B %-d, %-I:%M %p"
+msgstr "%-d ב%B, %-I:%M %p"
+
+#. Translators: a date and a 24-hour time ("November 26, 19:02"). Uses strftime codes.
+msgid "%B %-d, %H:%M"
+msgstr "%-d ב%B, %-H:%M"
+
 msgid "(nothing was printed)"
 msgstr "(הפקודה לא הציגה פלט)"
 

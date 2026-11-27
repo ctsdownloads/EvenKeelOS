@@ -106,6 +106,22 @@ msgstr ""
 "\"{name}\" ถูกเพิ่มเข้ามาในคอมพิวเตอร์เครื่องนี้และจะหมดอายุในวันที่ {date} "
 "ก่อนถึงวันนั้น ให้ขอใบใหม่จากคนที่ให้ใบนี้มา"
 
+#. Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
+msgid "%A, %B %-d"
+msgstr "%Aที่ %-d %B"
+
+#. Translators: a date: month and day ("November 26"). Uses strftime codes.
+msgid "%B %-d"
+msgstr "%-d %B"
+
+#. Translators: a date and a 12-hour time ("November 26, 7:02 PM"). Uses strftime codes.
+msgid "%B %-d, %-I:%M %p"
+msgstr "%-d %B %-I:%M %p"
+
+#. Translators: a date and a 24-hour time ("November 26, 19:02"). Uses strftime codes.
+msgid "%B %-d, %H:%M"
+msgstr "%-d %B %H:%M น."
+
 msgid "(nothing was printed)"
 msgstr "(คำสั่งไม่ได้แสดงผลลัพธ์ใด ๆ)"
 
