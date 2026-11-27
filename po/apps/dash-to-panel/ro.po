@@ -1,0 +1,1168 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+
+msgid "Quit"
+msgstr "Ieși"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Ieși (%d fereastră)"
+msgstr[1] "Ieși (%d ferestre)"
+msgstr[2] "Ieși (%d de ferestre)"
+
+msgid "Power options"
+msgstr "Opțiuni de alimentare"
+
+msgid "Event logs"
+msgstr "Jurnale de evenimente"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "Device Management"
+msgstr "Gestionarea dispozitivelor"
+
+msgid "Disk Management"
+msgstr "Gestionarea discurilor"
+
+msgid "Unlock taskbar"
+msgstr "Deblochează bara de activități"
+
+msgid "Lock taskbar"
+msgstr "Blochează bara de activități"
+
+msgid "Gnome Settings"
+msgstr "Preferințe GNOME"
+
+msgid "Dash to Panel Settings"
+msgstr "Preferințe Dash to Panel"
+
+msgid "Restore Windows"
+msgstr "Restaurează ferestrele"
+
+msgid "Show Desktop"
+msgstr "Arată desktopul"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel a fost actualizat!"
+
+msgid "You are now running version"
+msgstr "Acum rulezi versiunea"
+
+msgid "See what's new"
+msgstr "Vezi ce e nou"
+
+msgid "Top Bar"
+msgstr "Bara de sus"
+
+msgid "Show Desktop button height (px)"
+msgstr "Înălțimea butonului Arată desktopul (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Lățimea butonului Arată desktopul (px)"
+
+msgid "Left"
+msgstr "Stânga"
+
+msgid "Center"
+msgstr "Centru"
+
+msgid "Right"
+msgstr "Dreapta"
+
+msgid "Top"
+msgstr "Sus"
+
+msgid "Middle"
+msgstr "Mijloc"
+
+msgid "Bottom"
+msgstr "Jos"
+
+msgid "Start"
+msgstr "Început"
+
+msgid "End"
+msgstr "Sfârșit"
+
+msgid "Show Applications button"
+msgstr "Butonul Arată aplicațiile"
+
+msgid "Activities button"
+msgstr "Butonul Activități"
+
+msgid "Taskbar"
+msgstr "Bara de activități"
+
+msgid "Date menu"
+msgstr "Meniul de dată"
+
+msgid "System menu"
+msgstr "Meniul de sistem"
+
+msgid "Left box"
+msgstr "Caseta din stânga"
+
+msgid "Center box"
+msgstr "Caseta din centru"
+
+msgid "Right box"
+msgstr "Caseta din dreapta"
+
+msgid "Desktop button"
+msgstr "Butonul desktop"
+
+msgid "Move up"
+msgstr "Mută în sus"
+
+msgid "Move down"
+msgstr "Mută în jos"
+
+msgid "Visible"
+msgstr "Vizibil"
+
+msgid "Select element position"
+msgstr "Selectează poziția elementului"
+
+msgid "Stacked to top"
+msgstr "Stivuit sus"
+
+msgid "Stacked to left"
+msgstr "Stivuit la stânga"
+
+msgid "Stacked to bottom"
+msgstr "Stivuit jos"
+
+msgid "Stacked to right"
+msgstr "Stivuit la dreapta"
+
+msgid "Centered"
+msgstr "Centrat"
+
+msgid "Monitor Center"
+msgstr "Centrul monitorului"
+
+msgid "More options"
+msgstr "Mai multe opțiuni"
+
+msgid "Reset to defaults"
+msgstr "Resetează la valorile implicite"
+
+msgid "Show Applications options"
+msgstr "Opțiuni pentru Arată aplicațiile"
+
+msgid "Open icon"
+msgstr "Deschide pictograma"
+
+msgid "Show Desktop options"
+msgstr "Opțiuni pentru Arată desktopul"
+
+msgid "Primary monitor"
+msgstr "Monitorul principal"
+
+msgid "Monitor "
+msgstr "Monitor "
+
+msgid "Running Indicator Options"
+msgstr "Opțiuni indicator de execuție"
+
+msgid "Dynamic opacity options"
+msgstr "Opțiuni de opacitate dinamică"
+
+msgid "Intellihide options"
+msgstr "Opțiuni Intellihide"
+
+msgid "Window preview options"
+msgstr "Opțiuni previzualizare fereastră"
+
+msgid "Isolate Workspaces options"
+msgstr "Opțiuni de izolare a spațiilor de lucru"
+
+msgid "Isolate monitors options"
+msgstr "Opțiuni de izolare a monitoarelor"
+
+msgid "Ungrouped application options"
+msgstr "Opțiuni pentru aplicații negrupate"
+
+msgid "Customize middle-click behavior"
+msgstr "Personalizează comportamentul clicului de mijloc"
+
+msgid "Text"
+msgstr "Text"
+
+msgid "Command"
+msgstr "Comandă"
+
+msgid "Remove"
+msgstr "Elimină"
+
+msgid "Customize panel scroll behavior"
+msgstr "Personalizează comportamentul derulării pe panou"
+
+msgid "Customize icon scroll behavior"
+msgstr "Personalizează comportamentul derulării pe pictogramă"
+
+msgid "Advanced hotkeys options"
+msgstr "Opțiuni avansate pentru scurtături"
+
+msgid "Secondary Menu Options"
+msgstr "Opțiuni meniu secundar"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d pictogramă"
+msgstr[1] "%d pictograme"
+msgstr[2] "%d de pictograme"
+
+msgid "App icon animation options"
+msgstr "Opțiuni de animație pentru pictogramele aplicațiilor"
+
+msgid "App icon highlight options"
+msgstr "Opțiuni de evidențiere pentru pictogramele aplicațiilor"
+
+msgid "Export settings"
+msgstr "Exportă preferințele"
+
+msgid "Import settings"
+msgstr "Importă preferințele"
+
+msgid "Move to current Workspace"
+msgstr "Mută în spațiul de lucru curent"
+
+msgid "Animation type"
+msgstr "Tip de animație"
+
+msgid "Simple"
+msgstr "Simplă"
+
+msgid "Ripple"
+msgstr "Undă"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Durată"
+
+msgid "Rotation"
+msgstr "Rotație"
+
+msgid "Travel"
+msgstr "Deplasare"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Convexity"
+msgstr "Convexitate"
+
+msgid "Extent"
+msgstr "Extindere"
+
+msgid "Highlight focused application"
+msgstr "Evidențiază aplicația focalizată"
+
+msgid "Icon dominant color"
+msgstr "Culoarea dominantă a pictogramei"
+
+msgid "Custom color"
+msgstr "Culoare personalizată"
+
+msgid "Highlight opacity"
+msgstr "Opacitatea evidențierii"
+
+msgid "Indicator size (px)"
+msgstr "Dimensiunea indicatorului (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Culoarea indicatorului - dominantă din pictogramă"
+
+msgid "Indicator color - Override Theme"
+msgstr "Culoarea indicatorului - înlocuiește tema"
+
+msgid "1 window open (or ungrouped)"
+msgstr "1 fereastră deschisă (sau negrupată)"
+
+msgid "Apply to all"
+msgstr "Aplică tuturor"
+
+msgid "2 windows open"
+msgstr "2 ferestre deschise"
+
+msgid "3 windows open"
+msgstr "3 ferestre deschise"
+
+msgid "4+ windows open"
+msgstr "4+ ferestre deschise"
+
+msgid "Use different for unfocused"
+msgstr "Folosește o valoare diferită pentru nefocalizate"
+
+msgid "The panel background opacity is affected by"
+msgstr "Opacitatea fundalului panoului este afectată de"
+
+msgid "All windows"
+msgstr "Toate ferestrele"
+
+msgid "Focused windows"
+msgstr "Ferestrele focalizate"
+
+msgid "Maximized windows"
+msgstr "Ferestrele maximizate"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Schimbă opacitatea când o fereastră se apropie la mai puțin de (px)"
+
+msgid "Change opacity to (%)"
+msgstr "Schimbă opacitatea la (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Durata animației de schimbare a opacității (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Dimensiunea fontului (px) pentru titlurile aplicațiilor (implicit 14)"
+
+msgid "Font weight of application titles"
+msgstr "Grosimea fontului pentru titlurile aplicațiilor"
+
+msgid "inherit from theme"
+msgstr "moștenește din temă"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "lighter"
+msgstr "mai subțire"
+
+msgid "bold"
+msgstr "aldin"
+
+msgid "bolder"
+msgstr "mai aldin"
+
+msgid "Font color of the application titles"
+msgstr "Culoarea fontului pentru titlurile aplicațiilor"
+
+msgid "Font color of the minimized application titles"
+msgstr "Culoarea fontului pentru titlurile aplicațiilor minimizate"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Lățimea maximă (px) a titlurilor aplicațiilor"
+
+msgid "(default is 160)"
+msgstr "(implicit 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Folosește o lățime fixă pentru titlurile aplicațiilor"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Toate titlurile aplicațiilor au aceeași lățime, chiar dacă textul lor este mai scurt decât lățimea maximă. Valoarea lățimii maxime este folosită ca lățime fixă."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Afișează indicatorii de execuție pe aplicațiile nefocalizate"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Folosește pictogramele favorite ca lansatoare de aplicații"
+
+msgid "Highlight AppIcon color"
+msgstr "Culoarea evidențierii pictogramei aplicației"
+
+msgid "Pressed AppIcon color"
+msgstr "Culoarea pictogramei aplicației la apăsare"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Raza colțurilor evidențierii pictogramei aplicației"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Înlocuiește raza globală a colțurilor (implicit 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Ascunde panoul doar de ferestre"
+
+msgid "Overlapping"
+msgstr "Suprapuse"
+
+msgid "On same monitor"
+msgstr "Pe același monitor"
+
+msgid "The panel hides from"
+msgstr "Panoul se ascunde de"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Atingerea marginii monitorului cu cursorul dezvăluie panoul"
+
+msgid "Limit to panel length"
+msgstr "Limitează la lungimea panoului"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Menținerea cursorului peste zona panoului îl ține dezvăluit"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Cere presiune la marginea monitorului pentru a dezvălui panoul"
+
+msgid "Required pressure threshold (px)"
+msgstr "Pragul de presiune necesar (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Timpul de expirare al presiunii necesare (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Permite dezvăluirea panoului în modul ecran complet"
+
+msgid "(requires multi-monitors option)"
+msgstr "(necesită opțiunea pentru mai multe monitoare)"
+
+msgid "Only hide secondary panels"
+msgstr "Ascunde doar panourile secundare"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Sintaxă: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Scurtătură de tastatură pentru a dezvălui și a menține panoul"
+
+msgid "e.g. <Super>i"
+msgstr "ex. <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Păstrează starea după repornire"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(respectă modul GNOME „Nu deranja” și necesită opțiunea de afișare a insignei contorului de notificări)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Dezvăluie și menține panoul la notificare"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Durata animației de ascundere și dezvăluire (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Întârziere înainte de ascunderea panoului (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Întârziere înainte de dezvăluirea panoului (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Întârziere înainte de activarea Intellihide la pornire (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Izolează monitoarele chiar și când se folosește un singur panou"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Izolează spațiile de lucru în comutatorul de aplicații din gnome-shell"
+
+msgid "Shift+Click action"
+msgstr "Acțiunea Shift+clic"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "Când este setată la minimizare, dublu clic minimizează toate ferestrele aplicației."
+
+msgid "Raise windows"
+msgstr "Ridică ferestrele"
+
+msgid "Minimize window"
+msgstr "Minimizează fereastra"
+
+msgid "Launch new instance"
+msgstr "Lansează o instanță nouă"
+
+msgid "Cycle through windows"
+msgstr "Parcurge ferestrele"
+
+msgid "Cycle windows + minimize"
+msgstr "Parcurge ferestrele + minimizează"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Comută una / Previzualizează mai multe"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Comută una / Parcurge mai multe"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Comută una / Desfășoară mai multe"
+
+msgid "Middle-Click action"
+msgstr "Acțiunea clicului de mijloc"
+
+msgid "Behavior for Middle-Click."
+msgstr "Comportamentul clicului de mijloc."
+
+msgid "Shift+Middle-Click action"
+msgstr "Acțiunea Shift+clic de mijloc"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Comportamentul Shift+clic de mijloc."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Scurtăturile vor fi fie Super+Număr, fie Super+Alt+Număr"
+
+msgid "Hotkeys prefix"
+msgstr "Prefixul scurtăturilor"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Afișează temporar numerele aplicațiilor peste pictograme când se folosesc scurtăturile."
+
+msgid "Number overlay"
+msgstr "Suprapunere cu numere"
+
+msgid "Never"
+msgstr "Niciodată"
+
+msgid "Show temporarily"
+msgstr "Afișează temporar"
+
+msgid "Always visible"
+msgstr "Mereu vizibil"
+
+msgid "Hide timeout (ms)"
+msgstr "Timp de ascundere (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Scurtătură pentru a afișa suprapunerea timp de 2 secunde"
+
+msgid "e.g. <Super>q"
+msgstr "ex. <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Pe monitoarele secundare, afișează suprapunerea pe pictogramele corespunzătoare monitorului principal"
+
+msgid "Show the overlay on all monitors"
+msgstr "Afișează suprapunerea pe toate monitoarele"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Afișează previzualizări când aplicația are mai multe instanțe"
+
+msgid "Show window previews on hotkey"
+msgstr "Afișează previzualizări ale ferestrelor la scurtătură"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Alege ce taste numerice ale tastaturii activează scurtăturile"
+
+msgid "Hotkeys are activated with"
+msgstr "Scurtăturile se activează cu"
+
+msgid "Number row"
+msgstr "Rândul de numere"
+
+msgid "Numeric keypad"
+msgstr "Tastatura numerică"
+
+msgid "Both"
+msgstr "Ambele"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Întârziere între evenimentele de derulare a mouse-ului (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Folosește această valoare pentru a limita numărul de evenimente de derulare a mouse-ului capturate."
+
+msgid "Show popup when changing workspace"
+msgstr "Afișează o fereastră pop-up la schimbarea spațiului de lucru"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Aceasta afectează doar fereastra pop-up a spațiului de lucru la derularea pe panou."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "Integrează elementele <i>AppMenu</i>"
+
+msgid "<i>App Details</i> menu item"
+msgstr "Elementul de meniu <i>Detalii aplicație</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Detalii aplicație</i> este disponibil doar când este instalat GNOME Software"
+
+msgid "Show Applications icon"
+msgstr "Pictograma Arată aplicațiile"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Spațierea laterală (px) a pictogramei Arată aplicațiile"
+
+msgid "Override escape key and return to desktop"
+msgstr "Înlocuiește tasta Escape și revino la desktop"
+
+msgid "Override Show Desktop line color"
+msgstr "Înlocuiește culoarea liniei Arată desktopul"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Dezvăluie desktopul la trecerea cursorului peste butonul Arată desktopul"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Întârziere înainte de dezvăluirea desktopului (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Durata estompării (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Timp (ms) înainte de afișare"
+
+msgid "(400 is default)"
+msgstr "(implicit 400)"
+
+msgid "Time (ms) before hiding"
+msgstr "Timp (ms) înainte de ascundere"
+
+msgid "(100 is default)"
+msgstr "(implicit 100)"
+
+msgid "Immediate on application icon click"
+msgstr "Imediat la clic pe pictograma aplicației"
+
+msgid "Animation time (ms)"
+msgstr "Durata animației (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Clic de mijloc pe previzualizare pentru a închide fereastra"
+
+msgid "Window previews preferred size (px)"
+msgstr "Dimensiunea preferată a previzualizărilor ferestrelor (px)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Raportul de aspect al previzualizărilor ferestrelor X (lățime)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Fix"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Raportul de aspect al previzualizărilor ferestrelor Y (înălțime)"
+
+msgid "Window previews padding (px)"
+msgstr "Spațierea interioară a previzualizărilor ferestrelor (px)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Folosește opacitate personalizată pentru fundalul previzualizărilor"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Dacă este dezactivat, fundalul previzualizărilor are aceeași opacitate ca panoul."
+
+msgid "Close button and header position"
+msgstr "Poziția butonului de închidere și a antetului"
+
+msgid "Display window preview headers"
+msgstr "Afișează antetele previzualizărilor ferestrelor"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Dimensiunea pictogramei (px) din previzualizarea ferestrei"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Dacă este dezactivat, dimensiunea pictogramei din previzualizare se bazează pe dimensiunea barei de antet"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Dimensiunea fontului (px) pentru titlurile previzualizărilor"
+
+msgid "Font weight of the preview titles"
+msgstr "Grosimea fontului pentru titlurile previzualizărilor"
+
+msgid "Font color of the preview titles"
+msgstr "Culoarea fontului pentru titlurile previzualizărilor"
+
+msgid "Enable window peeking"
+msgstr "Activează aruncarea unei priviri în fereastră"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "Când cursorul stă un timp peste o previzualizare de fereastră, fereastra este scoasă în evidență."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Timp de expirare pentru intrarea în modul de privire (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "Timpul de inactivitate cu cursorul peste o previzualizare de fereastră necesar pentru a intra în modul de privire în fereastră."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Opacitatea în modul de privire în fereastră"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Toate ferestrele, în afară de cea privită, au opacitatea setată la aceeași valoare."
+
+msgid "About"
+msgstr "Despre"
+
+msgid "Info"
+msgstr "Informații"
+
+msgid "Version"
+msgstr "Versiune"
+
+msgid "Source"
+msgstr "Sursă"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Export și import"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Folosește butoanele de mai jos pentru a crea un fișier de preferințe din preferințele tale curente, care poate fi importat pe alt calculator."
+
+msgid "Export and import settings"
+msgstr "Exportă și importă preferințele"
+
+msgid "Export to file"
+msgstr "Exportă într-un fișier"
+
+msgid "Import from file"
+msgstr "Importă dintr-un fișier"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Acest program vine FĂRĂ ABSOLUT NICIO GARANȚIE.\n"
+"Vezi <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">Licența Publică Generală GNU, versiunea 2 sau ulterioară</a> pentru detalii.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Sponsorizat și dezvoltat inițial de"
+
+msgid "Action"
+msgstr "Acțiune"
+
+msgid "Click action"
+msgstr "Acțiunea clicului"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "Comportamentul la clic pe pictograma unei aplicații care rulează."
+
+msgid "Toggle windows"
+msgstr "Comută ferestrele"
+
+msgid "Scroll action"
+msgstr "Acțiunea derulării"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Comportamentul la derularea cu mouse-ul peste panou."
+
+msgid "Scroll panel action"
+msgstr "Acțiunea derulării pe panou"
+
+msgid "Do nothing"
+msgstr "Nu face nimic"
+
+msgid "Switch workspace"
+msgstr "Schimbă spațiul de lucru"
+
+msgid "Cycle windows"
+msgstr "Parcurge ferestrele"
+
+msgid "Change volume"
+msgstr "Schimbă volumul"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Comportamentul la derularea cu mouse-ul peste o pictogramă de aplicație."
+
+msgid "Scroll icon action"
+msgstr "Acțiunea derulării pe pictogramă"
+
+msgid "Same as panel"
+msgstr "La fel ca panoul"
+
+msgid "Hotkey overlay"
+msgstr "Suprapunerea scurtăturilor"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Activează Super+(0-9) ca scurtături pentru a activa aplicații. Se poate folosi și împreună cu Shift și Ctrl."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Folosește scurtături pentru a activa aplicații"
+
+msgid "Application icons context menu"
+msgstr "Meniul contextual al pictogramelor aplicațiilor"
+
+msgid "(right-click menu)"
+msgstr "(meniul de clic dreapta)"
+
+msgid "Secondary menu"
+msgstr "Meniu secundar"
+
+msgid "Panel context menu entries"
+msgstr "Intrările meniului contextual al panoului"
+
+msgid "Add entry"
+msgstr "Adaugă o intrare"
+
+msgid "Behavior"
+msgstr "Comportament"
+
+msgid "Applications"
+msgstr "Aplicații"
+
+msgid "Show favorite applications"
+msgstr "Afișează aplicațiile favorite"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Afișează aplicațiile favorite pe panourile secundare"
+
+msgid "Show running applications"
+msgstr "Afișează aplicațiile care rulează"
+
+msgid "Ungroup applications"
+msgstr "Degrupează aplicațiile"
+
+msgid "Show notification counter badge"
+msgstr "Afișează insigna contorului de notificări"
+
+msgid "Hover"
+msgstr "Trecere cursor"
+
+msgid "Show window previews on hover"
+msgstr "Afișează previzualizări ale ferestrelor la trecerea cursorului"
+
+msgid "Show tooltip on hover"
+msgstr "Afișează sfat la trecerea cursorului"
+
+msgid "Isolate"
+msgstr "Izolare"
+
+msgid "Isolate Workspaces"
+msgstr "Izolează spațiile de lucru"
+
+msgid "Isolate monitors"
+msgstr "Izolează monitoarele"
+
+msgid "Overview"
+msgstr "Prezentare generală"
+
+msgid "Click empty space to close overview"
+msgstr "Clic pe spațiul gol pentru a închide prezentarea generală"
+
+msgid "Disable show overview on startup"
+msgstr "Dezactivează afișarea prezentării generale la pornire"
+
+msgid "Fine-Tune"
+msgstr "Reglaj fin"
+
+msgid "Font size"
+msgstr "Dimensiunea fontului"
+
+msgid "(0 = theme default)"
+msgstr "(0 = implicit din temă)"
+
+msgid "Tray Font Size"
+msgstr "Dimensiunea fontului din zona de notificare"
+
+msgid "LeftBox Font Size"
+msgstr "Dimensiunea fontului din caseta din stânga"
+
+msgid "Padding"
+msgstr "Spațiere interioară"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = implicit din temă)"
+
+msgid "Tray Item Padding"
+msgstr "Spațierea elementelor din zona de notificare"
+
+msgid "Status Icon Padding"
+msgstr "Spațierea pictogramelor de stare"
+
+msgid "LeftBox Padding"
+msgstr "Spațierea casetei din stânga"
+
+msgid "Animate"
+msgstr "Animație"
+
+msgid "Animate switching applications"
+msgstr "Animă comutarea aplicațiilor"
+
+msgid "Animate launching new windows"
+msgstr "Animă lansarea ferestrelor noi"
+
+msgid "Gnome functionality"
+msgstr "Funcționalitate GNOME"
+
+msgid "(overview)"
+msgstr "(prezentare generală)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Păstrează dash-ul original din gnome-shell"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Păstrează panoul de sus original din gnome-shell"
+
+msgid "(e.g. date menu)"
+msgstr "(ex. meniul de dată)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Activează butoanele din meniul panoului doar la clic"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Forțează colțul fierbinte Activități pe monitorul principal"
+
+msgid "Position"
+msgstr "Poziție"
+
+msgid "Panel"
+msgstr "Panou"
+
+msgid "Display the main panel on"
+msgstr "Afișează panoul principal pe"
+
+msgid "Display panels on all monitors"
+msgstr "Afișează panouri pe toate monitoarele"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Ascunde și dezvăluie panoul conform preferințelor"
+
+msgid "Panel Intellihide"
+msgstr "Intellihide pentru panou"
+
+msgid "Order and Position on monitors"
+msgstr "Ordine și poziție pe monitoare"
+
+msgid "Monitor"
+msgstr "Monitor"
+
+msgid "Apply changes to all monitors"
+msgstr "Aplică modificările tuturor monitoarelor"
+
+msgid "Panel monitor position"
+msgstr "Poziția panoului pe monitor"
+
+msgid "(default is 48)"
+msgstr "(implicit 48)"
+
+msgid "Panel thickness"
+msgstr "Grosimea panoului"
+
+msgid "(default is 100)"
+msgstr "(implicit 100)"
+
+msgid "Panel length"
+msgstr "Lungimea panoului"
+
+msgid "Dynamic"
+msgstr "Dinamic"
+
+msgid "Anchor"
+msgstr "Ancoră"
+
+msgid "Taskbar Display"
+msgstr "Afișarea barei de activități"
+
+msgid "Style"
+msgstr "Stil"
+
+msgid "Global style"
+msgstr "Stil global"
+
+msgid "Border radius"
+msgstr "Raza colțurilor"
+
+msgid "AppIcon style"
+msgstr "Stilul pictogramelor aplicațiilor"
+
+msgid "(default is 8)"
+msgstr "(implicit 8)"
+
+msgid "App Icon Margin"
+msgstr "Marginea pictogramelor aplicațiilor"
+
+msgid "(default is 4)"
+msgstr "(implicit 4)"
+
+msgid "App Icon Padding"
+msgstr "Spațierea interioară a pictogramelor aplicațiilor"
+
+msgid "Animate hovering app icons"
+msgstr "Animă pictogramele aplicațiilor la trecerea cursorului"
+
+msgid "Highlight hovering app icons"
+msgstr "Evidențiază pictogramele aplicațiilor la trecerea cursorului"
+
+msgid "Icon style"
+msgstr "Stilul pictogramelor"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Symbolic"
+msgstr "Simbolic"
+
+msgid "Grayscale"
+msgstr "Tonuri de gri"
+
+msgid "Running indicator"
+msgstr "Indicator de execuție"
+
+msgid "Running indicator position"
+msgstr "Poziția indicatorului de execuție"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Stilul indicatorului de execuție (aplicație focalizată)"
+
+msgid "Dots"
+msgstr "Puncte"
+
+msgid "Squares"
+msgstr "Pătrate"
+
+msgid "Dashes"
+msgstr "Liniuțe"
+
+msgid "Segmented"
+msgstr "Segmentat"
+
+msgid "Solid"
+msgstr "Plin"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Stilul indicatorului de execuție (aplicații nefocalizate)"
+
+msgid "Panel style"
+msgstr "Stilul panoului"
+
+msgid "(default is 0)"
+msgstr "(implicit 0)"
+
+msgid "Side margins"
+msgstr "Margini laterale"
+
+msgid "Top and bottom margins"
+msgstr "Margini sus și jos"
+
+msgid "Side padding"
+msgstr "Spațiere interioară laterală"
+
+msgid "Top and bottom padding"
+msgstr "Spațiere interioară sus și jos"
+
+msgid "Override panel theme background color"
+msgstr "Înlocuiește culoarea de fundal a temei panoului"
+
+msgid "Override panel theme background opacity"
+msgstr "Înlocuiește opacitatea fundalului temei panoului"
+
+msgid "Panel background opacity (%)"
+msgstr "Opacitatea fundalului panoului (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Schimbă opacitatea când o fereastră se apropie de panou"
+
+msgid "Dynamic background opacity"
+msgstr "Opacitate dinamică a fundalului"
+
+msgid "Override panel theme gradient"
+msgstr "Înlocuiește gradientul temei panoului"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Culoarea și opacitatea (%) a gradientului de sus"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Culoarea și opacitatea (%) a gradientului de jos"
+
+msgid "Panel border"
+msgstr "Bordura panoului"
+
+msgid "Override border color"
+msgstr "Înlocuiește culoarea bordurii"
+
+msgid "Border thickness"
+msgstr "Grosimea bordurii"

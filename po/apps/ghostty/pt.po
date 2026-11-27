@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Open in Ghostty"
+msgstr "Abrir no Ghostty"
+
+msgid "Find…"
+msgstr "Localizar…"
+
+msgid "Previous Match"
+msgstr "Correspondência anterior"
+
+msgid "Next Match"
+msgstr "Correspondência seguinte"
+
+msgid "Close"
+msgstr "Fechar"
+
+msgid "Oh, no."
+msgstr "Ah, não."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "Não foi possível obter um contexto OpenGL para a composição."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "Este terminal está em modo só de leitura. Ainda pode ver, selecionar e deslocar-se pelo conteúdo, mas não serão enviados eventos de entrada para a aplicação em execução."
+
+msgid "Read-only"
+msgstr "Só de leitura"
+
+msgid "Copy"
+msgstr "Copiar"
+
+msgid "Paste"
+msgstr "Colar"
+
+msgid "Notify on Next Command Finish"
+msgstr "Notificar quando o próximo comando terminar"
+
+msgid "Clear"
+msgstr "Limpar"
+
+msgid "Reset"
+msgstr "Repor"
+
+msgid "Split"
+msgstr "Dividir"
+
+msgid "Change Title…"
+msgstr "Alterar título…"
+
+msgid "Split Up"
+msgstr "Dividir para cima"
+
+msgid "Split Down"
+msgstr "Dividir para baixo"
+
+msgid "Split Left"
+msgstr "Dividir para a esquerda"
+
+msgid "Split Right"
+msgstr "Dividir para a direita"
+
+msgid "Close Split"
+msgstr "Fechar divisão"
+
+msgid "Tab"
+msgstr "Separador"
+
+msgid "Change Tab Title…"
+msgstr "Alterar título do separador…"
+
+msgid "New Tab"
+msgstr "Novo separador"
+
+msgid "Close Tab"
+msgstr "Fechar separador"
+
+msgid "Window"
+msgstr "Janela"
+
+msgid "Change Window Title…"
+msgstr "Alterar título da janela…"
+
+msgid "New Window"
+msgstr "Nova janela"
+
+msgid "Close Window"
+msgstr "Fechar janela"
+
+msgid "Config"
+msgstr "Configuração"
+
+msgid "Open Configuration in OS Editor"
+msgstr "Abrir configuração no editor do SO"
+
+msgid "Open Configuration in New Window"
+msgstr "Abrir configuração numa nova janela"
+
+msgid "Reload Configuration"
+msgstr "Recarregar configuração"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ Está a executar uma compilação de depuração do Ghostty! O desempenho será degradado."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: Inspetor do terminal"
+
+msgid "New Split"
+msgstr "Nova divisão"
+
+msgid "View Open Tabs"
+msgstr "Ver separadores abertos"
+
+msgid "Main Menu"
+msgstr "Menu principal"
+
+msgid "Command Palette"
+msgstr "Paleta de comandos"
+
+msgid "Terminal Inspector"
+msgstr "Inspetor do terminal"
+
+msgid "About Ghostty"
+msgstr "Acerca do Ghostty"
+
+msgid "Quit"
+msgstr "Sair"
+
+msgid "Authorize Clipboard Access"
+msgstr "Autorizar acesso à área de transferência"
+
+msgid "Deny"
+msgstr "Recusar"
+
+msgid "Allow"
+msgstr "Permitir"
+
+msgid "Remember choice for this split"
+msgstr "Memorizar a escolha para esta divisão"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "Recarregue a configuração para mostrar este aviso novamente"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Execute a command…"
+msgstr "Executar um comando…"
+
+msgid "Configuration Errors"
+msgstr "Erros de configuração"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "Foram encontrados um ou mais erros de configuração. Reveja os erros abaixo e recarregue a configuração ou ignore estes erros."
+
+msgid "Ignore"
+msgstr "Ignorar"
+
+msgid "Leave blank to restore the default title."
+msgstr "Deixe em branco para repor o título predefinido."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "The keybind was revoked by the system."
+msgstr "O atalho de teclado foi revogado pelo sistema."
+
+msgid "The keybind was denied by the system."
+msgstr "O atalho de teclado foi negado pelo sistema."
+
+msgid "Global keybind unavailable"
+msgstr "Atalho de teclado global indisponível"
+
+msgid "Export Terminal IO Events"
+msgstr "Exportar eventos de E/S do terminal"
+
+msgid "Export"
+msgstr "Exportar"
+
+msgid "Editing configuration file"
+msgstr "A editar o ficheiro de configuração"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "Uma aplicação está a tentar escrever na área de transferência. O conteúdo atual da área de transferência é apresentado abaixo."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "Uma aplicação está a tentar ler da área de transferência. O conteúdo atual da área de transferência é apresentado abaixo."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "Aviso: colagem potencialmente insegura"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "Colar este texto no terminal pode ser perigoso, pois parece que alguns comandos podem ser executados."
+
+msgid "Quit Ghostty?"
+msgstr "Sair do Ghostty?"
+
+msgid "Close Tab?"
+msgstr "Fechar separador?"
+
+msgid "Close Window?"
+msgstr "Fechar janela?"
+
+msgid "Close Split?"
+msgstr "Fechar divisão?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "Todas as sessões do terminal serão terminadas."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "Todas as sessões do terminal neste separador serão terminadas."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "Todas as sessões do terminal nesta janela serão terminadas."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "O processo atualmente em execução nesta divisão será terminado."
+
+msgid "Command Finished"
+msgstr "Comando terminado"
+
+msgid "Command Succeeded"
+msgstr "Comando bem-sucedido"
+
+msgid "Command Failed"
+msgstr "Comando falhado"
+
+msgid "Change Terminal Title"
+msgstr "Alterar título do terminal"
+
+msgid "Change Tab Title"
+msgstr "Alterar título do separador"
+
+msgid "Change Window Title"
+msgstr "Alterar título da janela"
+
+msgid "Reloaded the configuration"
+msgstr "Configuração recarregada"
+
+msgid "Copied to clipboard"
+msgstr "Copiado para a área de transferência"
+
+msgid "Cleared clipboard"
+msgstr "Área de transferência limpa"
+
+msgid "Ghostty Developers"
+msgstr "Programadores do Ghostty"
+
+msgid "Reset Terminal"
+msgstr "Repor terminal"
+
+msgid "Reset the terminal to a clean state."
+msgstr "Repõe o terminal num estado limpo."
+
+msgid "Copy to Clipboard"
+msgstr "Copiar para a área de transferência"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "Copia o texto selecionado para a área de transferência nos formatos simples e com estilo."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "Copiar seleção como texto simples para a área de transferência"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "Copia o texto selecionado como texto simples para a área de transferência."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "Copiar seleção como sequências ANSI para a área de transferência"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "Copia o texto selecionado como sequências de escape ANSI para a área de transferência."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "Copiar seleção como HTML para a área de transferência"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "Copia o texto selecionado como HTML para a área de transferência."
+
+msgid "Copy URL to Clipboard"
+msgstr "Copiar URL para a área de transferência"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "Copia o URL sob o cursor para a área de transferência."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "Copiar título do terminal para a área de transferência"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "Copia o título do terminal para a área de transferência. Se o título do terminal não estiver definido, não tem qualquer efeito."
+
+msgid "Paste from Clipboard"
+msgstr "Colar da área de transferência"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "Cola o conteúdo da área de transferência principal."
+
+msgid "Paste from Selection"
+msgstr "Colar da seleção"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "Cola o conteúdo da área de transferência da seleção."
+
+msgid "Start Search"
+msgstr "Iniciar pesquisa"
+
+msgid "Start a search if one isn't already active."
+msgstr "Inicia uma pesquisa se ainda não estiver nenhuma ativa."
+
+msgid "Search Selection"
+msgstr "Pesquisar seleção"
+
+msgid "Start a search for the current text selection."
+msgstr "Inicia uma pesquisa pela seleção de texto atual."
+
+msgid "End Search"
+msgstr "Terminar pesquisa"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "Termina a pesquisa atual, se existir, e oculta todos os elementos da interface."
+
+msgid "Next Search Result"
+msgstr "Resultado de pesquisa seguinte"
+
+msgid "Navigate to the next search result, if any."
+msgstr "Navega para o resultado de pesquisa seguinte, se existir."
+
+msgid "Previous Search Result"
+msgstr "Resultado de pesquisa anterior"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "Navega para o resultado de pesquisa anterior, se existir."
+
+msgid "Increase Font Size"
+msgstr "Aumentar tamanho do tipo de letra"
+
+msgid "Increase the font size by 1 point."
+msgstr "Aumenta o tamanho do tipo de letra em 1 ponto."
+
+msgid "Decrease Font Size"
+msgstr "Diminuir tamanho do tipo de letra"
+
+msgid "Decrease the font size by 1 point."
+msgstr "Diminui o tamanho do tipo de letra em 1 ponto."
+
+msgid "Reset Font Size"
+msgstr "Repor tamanho do tipo de letra"
+
+msgid "Reset the font size to the default."
+msgstr "Repõe o tamanho do tipo de letra para o predefinido."
+
+msgid "Clear Screen"
+msgstr "Limpar ecrã"
+
+msgid "Clear the screen and scrollback."
+msgstr "Limpa o ecrã e o histórico de deslocamento."
+
+msgid "Select All"
+msgstr "Selecionar tudo"
+
+msgid "Select all text on the screen."
+msgstr "Seleciona todo o texto no ecrã."
+
+msgid "Scroll to Top"
+msgstr "Deslocar para o topo"
+
+msgid "Scroll to the top of the screen."
+msgstr "Desloca para o topo do ecrã."
+
+msgid "Scroll to Bottom"
+msgstr "Deslocar para o fundo"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "Desloca para o fundo do ecrã."
+
+msgid "Scroll to Selection"
+msgstr "Deslocar para a seleção"
+
+msgid "Scroll to the selected text."
+msgstr "Desloca para o texto selecionado."
+
+msgid "Scroll Page Up"
+msgstr "Deslocar uma página para cima"
+
+msgid "Scroll the screen up by a page."
+msgstr "Desloca o ecrã uma página para cima."
+
+msgid "Scroll Page Down"
+msgstr "Deslocar uma página para baixo"
+
+msgid "Scroll the screen down by a page."
+msgstr "Desloca o ecrã uma página para baixo."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "Copiar ecrã para ficheiro temporário e copiar caminho"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "Copia o conteúdo do ecrã para um ficheiro temporário e copia o caminho para a área de transferência."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "Copiar ecrã para ficheiro temporário e colar caminho"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "Copia o conteúdo do ecrã para um ficheiro temporário e cola o caminho do ficheiro."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "Copiar ecrã para ficheiro temporário e abrir"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "Copia o conteúdo do ecrã para um ficheiro temporário e abre-o."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "Copiar ecrã como HTML para ficheiro temporário e copiar caminho"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Copia o conteúdo do ecrã como HTML para um ficheiro temporário e copia o caminho para a área de transferência."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "Copiar ecrã como HTML para ficheiro temporário e colar caminho"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "Copia o conteúdo do ecrã como HTML para um ficheiro temporário e cola o caminho do ficheiro."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "Copiar ecrã como HTML para ficheiro temporário e abrir"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "Copia o conteúdo do ecrã como HTML para um ficheiro temporário e abre-o."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Copiar ecrã como sequências ANSI para ficheiro temporário e copiar caminho"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Copia o conteúdo do ecrã como sequências de escape ANSI para um ficheiro temporário e copia o caminho para a área de transferência."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Copiar ecrã como sequências ANSI para ficheiro temporário e colar caminho"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Copia o conteúdo do ecrã como sequências de escape ANSI para um ficheiro temporário e cola o caminho do ficheiro."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "Copiar ecrã como sequências ANSI para ficheiro temporário e abrir"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Copia o conteúdo do ecrã como sequências de escape ANSI para um ficheiro temporário e abre-o."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "Copiar seleção para ficheiro temporário e copiar caminho"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "Copia o conteúdo da seleção para um ficheiro temporário e copia o caminho para a área de transferência."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "Copiar seleção para ficheiro temporário e colar caminho"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "Copia o conteúdo da seleção para um ficheiro temporário e cola o caminho do ficheiro."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "Copiar seleção para ficheiro temporário e abrir"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "Copia o conteúdo da seleção para um ficheiro temporário e abre-o."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "Copiar seleção como HTML para ficheiro temporário e copiar caminho"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Copia o conteúdo da seleção como HTML para um ficheiro temporário e copia o caminho para a área de transferência."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "Copiar seleção como HTML para ficheiro temporário e colar caminho"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "Copia o conteúdo da seleção como HTML para um ficheiro temporário e cola o caminho do ficheiro."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "Copiar seleção como HTML para ficheiro temporário e abrir"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "Copia o conteúdo da seleção como HTML para um ficheiro temporário e abre-o."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Copiar seleção como sequências ANSI para ficheiro temporário e copiar caminho"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Copia o conteúdo da seleção como sequências de escape ANSI para um ficheiro temporário e copia o caminho para a área de transferência."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Copiar seleção como sequências ANSI para ficheiro temporário e colar caminho"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Copia o conteúdo da seleção como sequências de escape ANSI para um ficheiro temporário e cola o caminho do ficheiro."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "Copiar seleção como sequências ANSI para ficheiro temporário e abrir"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Copia o conteúdo da seleção como sequências de escape ANSI para um ficheiro temporário e abre-o."
+
+msgid "Open a new window."
+msgstr "Abre uma nova janela."
+
+msgid "Open a new tab."
+msgstr "Abre um novo separador."
+
+msgid "Move Tab Left"
+msgstr "Mover separador para a esquerda"
+
+msgid "Move the current tab to the left."
+msgstr "Move o separador atual para a esquerda."
+
+msgid "Move Tab Right"
+msgstr "Mover separador para a direita"
+
+msgid "Move the current tab to the right."
+msgstr "Move o separador atual para a direita."
+
+msgid "Move Tab to New Window"
+msgstr "Mover separador para uma nova janela"
+
+msgid "Move the current tab to a new window."
+msgstr "Move o separador atual para uma nova janela."
+
+msgid "Toggle Tab Overview"
+msgstr "Alternar visão geral dos separadores"
+
+msgid "Toggle the tab overview."
+msgstr "Alterna a visão geral dos separadores."
+
+msgid "Change Terminal Title…"
+msgstr "Alterar título do terminal…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "Pede um novo título para o terminal atual."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "Pede um novo título para o separador atual."
+
+msgid "Split the terminal to the left."
+msgstr "Divide o terminal para a esquerda."
+
+msgid "Split the terminal to the right."
+msgstr "Divide o terminal para a direita."
+
+msgid "Split the terminal up."
+msgstr "Divide o terminal para cima."
+
+msgid "Split the terminal down."
+msgstr "Divide o terminal para baixo."
+
+msgid "Focus Split: Previous"
+msgstr "Focar divisão: anterior"
+
+msgid "Focus the previous split, if any."
+msgstr "Foca a divisão anterior, se existir."
+
+msgid "Focus Split: Next"
+msgstr "Focar divisão: seguinte"
+
+msgid "Focus the next split, if any."
+msgstr "Foca a divisão seguinte, se existir."
+
+msgid "Focus Split: Left"
+msgstr "Focar divisão: esquerda"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "Foca a divisão à esquerda, se existir."
+
+msgid "Focus Split: Right"
+msgstr "Focar divisão: direita"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "Foca a divisão à direita, se existir."
+
+msgid "Focus Split: Up"
+msgstr "Focar divisão: cima"
+
+msgid "Focus the split above, if it exists."
+msgstr "Foca a divisão acima, se existir."
+
+msgid "Focus Split: Down"
+msgstr "Focar divisão: baixo"
+
+msgid "Focus the split below, if it exists."
+msgstr "Foca a divisão abaixo, se existir."
+
+msgid "Focus Window: Previous"
+msgstr "Focar janela: anterior"
+
+msgid "Focus the previous window, if any."
+msgstr "Foca a janela anterior, se existir."
+
+msgid "Focus Window: Next"
+msgstr "Focar janela: seguinte"
+
+msgid "Focus the next window, if any."
+msgstr "Foca a janela seguinte, se existir."
+
+msgid "Toggle Split Zoom"
+msgstr "Alternar ampliação da divisão"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "Alterna o estado de ampliação da divisão atual."
+
+msgid "Toggle Read-Only Mode"
+msgstr "Alternar modo só de leitura"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "Alterna o modo só de leitura para a superfície atual."
+
+msgid "Equalize Splits"
+msgstr "Igualar divisões"
+
+msgid "Equalize the size of all splits."
+msgstr "Iguala o tamanho de todas as divisões."
+
+msgid "Reset Window Size"
+msgstr "Repor tamanho da janela"
+
+msgid "Reset the window size to the default."
+msgstr "Repõe o tamanho da janela para o predefinido."
+
+msgid "Toggle Inspector"
+msgstr "Alternar inspetor"
+
+msgid "Toggle the inspector."
+msgstr "Alterna o inspetor."
+
+msgid "Show the GTK Inspector"
+msgstr "Mostrar o inspetor do GTK"
+
+msgid "Show the GTK inspector."
+msgstr "Mostra o inspetor do GTK."
+
+msgid "Show On-Screen Keyboard"
+msgstr "Mostrar teclado no ecrã"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "Mostra o teclado no ecrã, se existir."
+
+msgid "Open Config Using OS editor"
+msgstr "Abrir configuração com o editor do SO"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "Abre o ficheiro de configuração com o editor predefinido do SO."
+
+msgid "Open Config in New Terminal Window"
+msgstr "Abrir configuração numa nova janela de terminal"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "Abre o ficheiro de configuração numa nova janela com $EDITOR ou $VISUAL."
+
+msgid "Reload Config"
+msgstr "Recarregar configuração"
+
+msgid "Reload the config file."
+msgstr "Recarrega o ficheiro de configuração."
+
+msgid "Close Terminal"
+msgstr "Fechar terminal"
+
+msgid "Close the current terminal."
+msgstr "Fecha o terminal atual."
+
+msgid "Close the current tab."
+msgstr "Fecha o separador atual."
+
+msgid "Close Other Tabs"
+msgstr "Fechar outros separadores"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "Fecha todos os separadores desta janela, exceto o atual."
+
+msgid "Close Tabs to the Right"
+msgstr "Fechar separadores à direita"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "Fecha todos os separadores à direita do atual."
+
+msgid "Close the current window."
+msgstr "Fecha a janela atual."
+
+msgid "Close All Windows"
+msgstr "Fechar todas as janelas"
+
+msgid "Close all windows."
+msgstr "Fecha todas as janelas."
+
+msgid "Toggle Maximize"
+msgstr "Alternar maximização"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "Alterna o estado de maximização da janela atual."
+
+msgid "Toggle Fullscreen"
+msgstr "Alternar ecrã completo"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "Alterna o estado de ecrã completo da janela atual."
+
+msgid "Toggle Window Decorations"
+msgstr "Alternar decorações da janela"
+
+msgid "Toggle the window decorations."
+msgstr "Alterna as decorações da janela."
+
+msgid "Toggle Float on Top"
+msgstr "Alternar flutuar por cima"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "Alterna o estado de flutuar por cima da janela atual."
+
+msgid "Toggle Secure Input"
+msgstr "Alternar entrada segura"
+
+msgid "Toggle secure input mode."
+msgstr "Alterna o modo de entrada segura."
+
+msgid "Toggle Mouse Reporting"
+msgstr "Alternar comunicação do rato"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "Alterna se os eventos do rato são comunicados às aplicações do terminal."
+
+msgid "Toggle Background Opacity"
+msgstr "Alternar opacidade do fundo"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "Alterna a opacidade do fundo de uma janela que iniciou transparente."
+
+msgid "Check for Updates"
+msgstr "Procurar atualizações"
+
+msgid "Check for updates to the application."
+msgstr "Procura atualizações da aplicação."
+
+msgid "Undo"
+msgstr "Anular"
+
+msgid "Undo the last action."
+msgstr "Anula a última ação."
+
+msgid "Redo"
+msgstr "Refazer"
+
+msgid "Redo the last undone action."
+msgstr "Refaz a última ação anulada."
+
+msgid "Quit the application."
+msgstr "Sai da aplicação."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "Ponha um pouco de Ghostty no seu terminal."

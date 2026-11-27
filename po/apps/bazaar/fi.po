@@ -1,0 +1,210 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Removing remote…"
+msgstr "Poistetaan etätietovarastoa…"
+
+msgid "Could not remove remote"
+msgstr "Etätietovaraston poistaminen epäonnistui"
+
+msgid "Bundle Installation"
+msgstr "Nippuasennus"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Noin %s asennettavaa"
+
+msgid "Offline"
+msgstr "Ei yhteyttä"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s – %s, eniten %s: %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Sovellustunnisteen %1$s omistajuus on vahvistettu käyttäen palvelua %2$s."
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Tämä on paikallinen esikatselu, jotkin tiedot voivat poiketa julkaistusta kuvauksesta"
+
+msgid "Preview Store Appearance"
+msgstr "Esikatsele kaupan ulkoasua"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Lisätäänkö kuvake metatietojen esikatseluun?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Metatietotiedostot eivät sisällä sovelluskuvakkeita. Haluatko valita kuvakkeen itse?"
+
+msgid "Lesbian Pride Colors"
+msgstr "Lesbojen pride-värit"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Homomiesten pride-värit"
+
+msgid "Transgender Pride Colors"
+msgstr "Transsukupuolisten pride-värit"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Ei-binaaristen pride-värit"
+
+msgid "Bisexual Pride Colors"
+msgstr "Biseksuaalien pride-värit"
+
+msgid "Asexual Pride Colors"
+msgstr "Aseksuaalien pride-värit"
+
+msgid "Pansexual Pride Colors"
+msgstr "Panseksuaalien pride-värit"
+
+msgid "Aromantic Pride Colors"
+msgstr "Aromanttisten pride-värit"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Sukupuolifluidien pride-värit"
+
+msgid "Polysexual Pride Colors"
+msgstr "Polyseksuaalien pride-värit"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Omniseksuaalien pride-värit"
+
+msgid "Aroace Pride Colors"
+msgstr "Aroace-pride-värit"
+
+msgid "Agender Pride Colors"
+msgstr "Agenderien pride-värit"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Genderqueerien pride-värit"
+
+msgid "Intersex Pride Colors"
+msgstr "Intersukupuolisten pride-värit"
+
+msgid "Demigender Pride Colors"
+msgstr "Demisukupuolisten pride-värit"
+
+msgid "Biromantic Pride Colors"
+msgstr "Biromanttisten pride-värit"
+
+msgid "Disability Pride Colors"
+msgstr "Vammaisten pride-värit"
+
+msgid "Femboy Pride Colors"
+msgstr "Femboyien pride-värit"
+
+msgid "Neutrois Pride Colors"
+msgstr "Neutroisien pride-värit"
+
+msgid "Remotes"
+msgstr "Etätietovarastot"
+
+msgid "System Installation"
+msgstr "Järjestelmäasennus"
+
+msgid "Available to all users on this computer"
+msgstr "Kaikkien tämän tietokoneen käyttäjien käytettävissä"
+
+msgid "User Installation"
+msgstr "Käyttäjäasennus"
+
+msgid "Only available to you"
+msgstr "Vain sinun käytettävissäsi"
+
+msgid "Remove Remote"
+msgstr "Poista etätietovarasto"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Poista %s"
+
+msgid "Unused"
+msgstr "Käyttämätön"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u sovellus asennettu"
+msgstr[1] "%u sovellusta asennettu"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Poistetaanko “%s”?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Et enää voi asentaa sovelluksia tästä käyttäjän etätietovarastosta."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Et enää voi asentaa sovelluksia tästä järjestelmän etätietovarastosta."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u poistettava sovellus"
+msgstr[1] "%u poistettavaa sovellusta"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Alla oleva sovellus asennettiin tästä etätietovarastosta, ja se poistetaan käyttäjätililtäsi sen mukana."
+msgstr[1] "Nämä sovellukset asennettiin tästä etätietovarastosta, ja ne poistetaan käyttäjätililtäsi sen mukana."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Alla oleva sovellus asennettiin tästä etätietovarastosta, ja se poistetaan kaikilta käyttäjiltä sen mukana."
+msgstr[1] "Nämä sovellukset asennettiin tästä etätietovarastosta, ja ne poistetaan kaikilta käyttäjiltä sen mukana."
+
+msgid "Total"
+msgstr "Yhteensä"
+
+msgid "This Week"
+msgstr "Tällä viikolla"
+
+msgid "Installs per day"
+msgstr "Asennuksia päivässä"
+
+msgid "Installs per country"
+msgstr "Asennuksia maittain"
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Tämä sovellus käyttää vanhaa X11-ikkunointijärjestelmää, jonka ansiosta se voi <b>tallentaa kaikki näppäinpainallukset, ottaa kuvakaappauksia ja valvoa muita sovelluksia</b>. Sillä on myös pääsy internetiin, joten se voisi lähettää tietojasi ulkopuolisille.\n"
+"\n"
+"Koska sovellus on omisteinen, sen toimintaa näiden oikeuksien kanssa ei voida tarkastaa."
+
+msgid "Finishing Up"
+msgstr "Viimeistellään"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Sovelluksen %s käyttäjädata siirretty roskakoriin"
+
+msgid "Manage R_emotes"
+msgstr "Hallitse etä_tietovarastoja"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u asennus"
+msgstr[1] "%s, %'u asennusta"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Eniten asennuksia: %s"

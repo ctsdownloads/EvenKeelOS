@@ -1,0 +1,2568 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: zh_HK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "應用程式商店"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "新增、移除或更新此電腦上的 Flatpak 軟件"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "系統;套件;管理員;探索;Flatpak;軟件;應用程式;商店;"
+
+msgid "New Window"
+msgstr "新視窗"
+
+msgid "Discover and install apps"
+msgstr "探索與安裝應用程式"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "為 Linux 打造的高效能現代應用程式商店，著重探索與安裝 Flatpak 應用程式與附加元件，特別是來自 Flathub 的項目。"
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "將要安裝的應用程式加入隊列然後繼續瀏覽"
+
+msgid "Easily view app permissions"
+msgstr "輕易檢視應用程式權限"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "登入至 Flathub 以檢視與管理最愛"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "直接從 GNOME Shell 搜尋應用程式"
+
+msgid "The home page displaying Flathub apps"
+msgstr "展示 Flathub 應用程式的首頁"
+
+msgid "App page for Exhibit"
+msgstr "Exhibit 的應用程式頁面"
+
+msgid "Library page"
+msgstr "程式庫頁面"
+
+msgid "Search page"
+msgstr "搜尋頁面"
+
+msgid "Category page"
+msgstr "分類頁面"
+
+msgid "Stopped Receiving Updates"
+msgstr "已停止接收更新"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "解除安裝"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "安裝"
+
+msgid "Add-on"
+msgstr "附加元件"
+
+msgid "Manage Add-Ons"
+msgstr "管理附加元件"
+
+msgid "No Add-Ons Visible"
+msgstr "沒有可見的附加元件"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "你目前的過濾設定使得所有已知附加元件皆已被隱藏。請試著調整過濾設定。"
+
+msgid "Add-on Page"
+msgstr "附加元件頁面"
+
+msgid "Download"
+msgstr "下載"
+
+msgid "Installed"
+msgstr "已安裝"
+
+msgid "Downloads/Month"
+msgstr "每月下載次數"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "已停止接收核心更新"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "此附加元件使用的執行環境已不再接收更新或安全修補，使用上可能存在安全風險。"
+
+msgid "Other Sources"
+msgstr "其他來源"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "%s 的附加元件"
+
+msgid "Show Less"
+msgstr "顯示更少"
+
+msgid "Show More"
+msgstr "顯示更多"
+
+msgid "Download Stats"
+msgstr "下載統計數據"
+
+msgid "Age Rating"
+msgstr "年齡分級"
+
+msgid "Cartoon Violence"
+msgstr "卡通暴力"
+
+msgid "No information regarding cartoon violence"
+msgstr "未提供任何關於卡通暴力的資訊"
+
+msgid "Fantasy Violence"
+msgstr "幻想暴力"
+
+msgid "No information regarding fantasy violence"
+msgstr "未提供任何關於幻想暴力的資訊"
+
+msgid "Realistic Violence"
+msgstr "寫實暴力"
+
+msgid "No information regarding realistic violence"
+msgstr "未提供任何關於寫實暴力的資訊"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "含流血描寫的暴力內容"
+
+msgid "No information regarding bloodshed"
+msgstr "未提供任何關於流血場面的資訊"
+
+msgid "Sexual Violence"
+msgstr "性暴力"
+
+msgid "No information regarding sexual violence"
+msgstr "未提供任何關於性暴力的資訊"
+
+msgid "Alcohol"
+msgstr "酒精"
+
+msgid "No information regarding references to alcohol"
+msgstr "未提供任何關於酒精相關內容的資訊"
+
+msgid "Narcotics"
+msgstr "毒品"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "未提供任何關於非法藥物的資訊"
+
+msgid "Tobacco"
+msgstr "菸草"
+
+msgid "No information regarding references to tobacco products"
+msgstr "未提供任何關於菸草製品的資訊"
+
+msgid "Nudity"
+msgstr "裸露"
+
+msgid "No information regarding nudity of any sort"
+msgstr "未提供任何關於裸露內容的資訊"
+
+msgid "Sexual Themes"
+msgstr "性相關主題"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "未提供任何關於性相關描寫或暗示的資訊"
+
+msgid "Profanity"
+msgstr "粗俗用語"
+
+msgid "No information regarding profanity of any kind"
+msgstr "未提供任何關於粗俗用語的資訊"
+
+msgid "Inappropriate Humor"
+msgstr "不當幽默"
+
+msgid "No information regarding inappropriate humor"
+msgstr "未提供任何關於不當幽默的資訊"
+
+msgid "Discrimination"
+msgstr "歧視"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "未提供任何關於歧視性言語的資訊"
+
+msgid "Advertising"
+msgstr "廣告"
+
+msgid "No information regarding advertising of any kind"
+msgstr "未提供任何關於廣告內容的資訊"
+
+msgid "Gambling"
+msgstr "賭博"
+
+msgid "No information regarding gambling of any kind"
+msgstr "未提供任何關於賭博內容的資訊"
+
+msgid "Purchasing"
+msgstr "付費購買"
+
+msgid "No information regarding the ability to spend money"
+msgstr "未提供任何關於金錢花費功能的資訊"
+
+msgid "Chat Between Users"
+msgstr "使用者之間的文字聊天"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "未提供任何關於與其他使用者聊天方式的資訊"
+
+msgid "Audio Chat Between Users"
+msgstr "使用者之間的語音聊天"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "未提供任何關於與其他使用者語音交談方式的資訊"
+
+msgid "Contact Details"
+msgstr "聯絡資訊"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "未提供任何關於分享社群帳號或電子郵件地址的資訊"
+
+msgid "Identifying Information"
+msgstr "可識別個人身分的資訊"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "未提供任何關於與第三方分享使用者資訊的資訊"
+
+msgid "Location Sharing"
+msgstr "位置分享"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "未提供任何關於與其他使用者分享實際位置的資訊"
+
+msgid "Prostitution"
+msgstr "性交易"
+
+msgid "No information regarding references to prostitution"
+msgstr "未提供任何關於性交易相關內容的資訊"
+
+msgid "Adultery"
+msgstr "通姦"
+
+msgid "No information regarding references to adultery"
+msgstr "未提供任何關於通姦相關內容的資訊"
+
+msgid "Sexualized Characters"
+msgstr "性化角色"
+
+msgid "No information regarding sexualized characters"
+msgstr "未提供任何關於性化角色的資訊"
+
+msgid "Desecration"
+msgstr "褻瀆"
+
+msgid "No information regarding references to desecration"
+msgstr "未提供任何關於褻瀆相關內容的資訊"
+
+msgid "Human Remains"
+msgstr "人類遺骸"
+
+msgid "No information regarding visible dead human remains"
+msgstr "未提供任何關於可見人類遺骸的資訊"
+
+msgid "Slavery"
+msgstr "奴役"
+
+msgid "No information regarding references to slavery"
+msgstr "未提供任何關於奴役相關內容的資訊"
+
+msgid "Does not include references to drugs"
+msgstr "不包含任何與毒品相關的內容"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "不包含髒話、粗俗用語或其他強烈語言"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "不包含廣告或金錢交易"
+
+msgid "Does not include sex or nudity"
+msgstr "不包含性內容或裸露描寫"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "不包含未受控管的通訊功能"
+
+msgid "Does not include violence"
+msgstr "不包含暴力內容"
+
+msgid "Drugs"
+msgstr "毒品"
+
+msgid "Strong Language"
+msgstr "強烈語言"
+
+msgid "Money"
+msgstr "金錢"
+
+msgid "Social"
+msgstr "社交"
+
+msgid "Violence"
+msgstr "暴力"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "所有年齡層"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s 的年齡分級未知"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s 適合所有年齡層"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s 適合幼童"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s 適合兒童"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s 適合青少年"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s 適合成人"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s 適合 %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "系統資料夾 %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "家目錄子目錄 %s"
+
+msgid "Host system folders"
+msgstr "主機系統資料夾"
+
+msgid "Host system configuration from /etc"
+msgstr "來自主機系統 /etc 中的系統設定"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "桌面子目錄 %s"
+
+msgid "Desktop folder"
+msgstr "桌面資料夾"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "文件子目錄 %s"
+
+msgid "Documents folder"
+msgstr "文件資料夾"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "音樂子目錄 %s"
+
+msgid "Music folder"
+msgstr "音樂資料夾"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "圖片子目錄 %s"
+
+msgid "Pictures folder"
+msgstr "圖片資料夾"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "公開資料夾子目錄 %s"
+
+msgid "Public Share folder"
+msgstr "公開資料夾"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "影片子目錄 %s"
+
+msgid "Videos folder"
+msgstr "影片資料夾"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "範本子目錄 %s"
+
+msgid "Templates folder"
+msgstr "範本資料夾"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "使用者快取子目錄 %s"
+
+msgid "User cache folder"
+msgstr "使用者快取資料夾"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "使用者設定子目錄 %s"
+
+msgid "User configuration folder"
+msgstr "使用者設定資料夾"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "使用者資料子目錄 %s"
+
+msgid "User data folder"
+msgstr "使用者資料資料夾"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "使用者執行環境子目錄 %s"
+
+msgid "User runtime folder"
+msgstr "使用者執行環境資料夾"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "對 %s 的檔案系統存取"
+
+msgid "Unknown filesystem path"
+msgstr "未知的檔案系統目錄"
+
+msgid "Download Size"
+msgstr "下載大小"
+
+msgid "Installed Size"
+msgstr "安裝大小"
+
+msgid "Amount to download from the internet"
+msgstr "從互聯網下載的大小"
+
+msgid "Size on Disk"
+msgstr "磁碟上的大小"
+
+msgid "Open user data folder"
+msgstr "開啟使用者資料資料夾"
+
+msgid "Your User Data"
+msgstr "你的使用者資料"
+
+msgid "Caches, settings, and other app data"
+msgstr "快取、設定以及其他應用程式資料"
+
+msgid "Cache"
+msgstr "快取"
+
+msgid "Temporary cached data"
+msgstr "暫時快取的資料"
+
+msgid "Clear Cache"
+msgstr "清除快取"
+
+msgid "Installed Runtime Size"
+msgstr "安裝後的執行環境大小"
+
+msgid "Runtime Download Size"
+msgstr "執行環境的下載大小"
+
+msgid "N/A"
+msgstr "N/A"
+
+msgid "Storage"
+msgstr "儲存空間"
+
+msgid "Verified"
+msgstr "已驗證"
+
+msgid "The Bazaar Contributors"
+msgstr "Bazaar 貢獻者"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "特別感謝"
+
+msgid "Logged Out Successfully!"
+msgstr "已成功登出！"
+
+msgid "Performing setup…"
+msgstr "正在進行設定…"
+
+msgid "Set Up Flathub?"
+msgstr "要設定 Flathub 嗎？"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub 未在此系統上設定完成。若無法使用 Flathub，你將無法在 Bazaar 中瀏覽或安裝應用程式。\n"
+"\n"
+"你仍可使用 Bazaar 來瀏覽或移除已安裝的應用程式。"
+
+msgid "Later"
+msgstr "稍後"
+
+msgid "Set Up Flathub"
+msgstr "設定 Flathub"
+
+msgid "A backend error occurred"
+msgstr "發生後端錯誤"
+
+msgid "Refreshing…"
+msgstr "重新整理中…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "正在載入 %d 個應用程式…"
+
+msgid "Failed to open file"
+msgstr "開啟檔案失敗"
+
+msgid "Failed to load metainfo"
+msgstr "載入 metainfo 失敗"
+
+msgid "An initialization error occurred"
+msgstr "發生初始化錯誤"
+
+msgid "Checking for updates…"
+msgstr "正在檢查更新…"
+
+msgid "Failed to check for updates"
+msgstr "檢查更新失敗"
+
+msgid "Could not find app"
+msgstr "找不到應用程式"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "正在載入 %d 個應用程式…"
+
+msgid "Writing to cache…"
+msgstr "正在寫入快取…"
+
+msgid "Removing remote…"
+msgstr "正在移除遠端…"
+
+msgid "Could not remove remote"
+msgstr "無法移除遠端"
+
+msgid "Show All"
+msgstr "顯示全部"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "全部「%s」"
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d 個應用程式"
+
+msgid "Failed to Load Article"
+msgstr "載入文章失敗"
+
+msgid "All apps are already installed"
+msgstr "所有應用程式皆已安裝"
+
+msgid "_OK"
+msgstr "確定(_O)"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "要安裝 %u 個應用程式嗎？"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "將會安裝以下項目，並且可能同時安裝額外的共用元件"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "將會安裝 %d 個附加元件。"
+
+msgid "Additionally, addons will be installed."
+msgstr "此外，還會安裝附加元件。"
+
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+msgid "_Install All"
+msgstr "安裝全部(_I)"
+
+msgid "Bundle Installation"
+msgstr "Bundle 安裝"
+
+msgid "Additional dependencies may take extra space"
+msgstr "額外依賴可能會需要更多空間"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"安裝此應用程式可能需要加入新的軟件來源。加入後此來源的應用程式會出現在 Bazaar 當中。\n"
+"\n"
+"請確定僅在信任該來源時才將它加入。"
+
+msgid "Successfully Installed!"
+msgstr "成功安裝！"
+
+msgid "Open"
+msgstr "開啟"
+
+msgid "Show App Details"
+msgstr "顯示應用程式詳細資訊"
+
+msgid "Already Installed"
+msgstr "已安裝"
+
+msgid "Installation Failed"
+msgstr "安裝失敗"
+
+msgid "Unknown install size"
+msgstr "未知安裝大小"
+
+#, c-format
+msgid "About %s to install"
+msgstr "安裝需要大約 %s"
+
+msgid "No special permissions"
+msgstr "無特殊權限"
+
+msgid "Place Applet"
+msgstr "面板程式的位置"
+
+msgid "Choose where to add this applet."
+msgstr "選擇要將這個面板程式加到哪裡。"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Panel"
+msgstr "面板"
+
+msgid "Dock"
+msgstr "Dock"
+
+msgid "No Curation"
+msgstr "未經人工策選"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "此系統未提供人工策選資訊。你仍可瀏覽 Flathub 上的應用程式"
+
+msgid "Browse Flathub"
+msgstr "瀏覽 Flathub"
+
+msgid "Offline"
+msgstr "離線"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s 至 %s，%s 最高，共 %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "安裝次數："
+
+msgid "Not Verified"
+msgstr "未驗證"
+
+msgid "Developer information not available."
+msgstr "無法取得開發者資訊。"
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "應用程式 ID %s 的所有權尚未經過驗證，可能為社群提供的套件。"
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "應用程式 ID %s 的所有權已由 Flathub 團隊人工驗證。"
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "應用程式 ID %1$s 的所有權已由 <b>%2$s</b> 於 <b>%3$s</b> 驗證。"
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "應用程式 ID %1$s 的所有權已透過 %2$s 驗證。"
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "應用程式 ID %s 的所有權已完成驗證。"
+
+msgid "Bazaar Release"
+msgstr "Bazaar 發行"
+
+msgid "Full Release Notes"
+msgstr "完整發行說明"
+
+msgid "This release was made possible by users like you!"
+msgstr "這個版本有賴像你一樣的使用者支持才得以實現！"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "我熱愛製作 Bazaar，但我沒辦法靠自己一個人獨自完成。請到 Ko-Fi 捐款來支持持續的開發。"
+
+msgid "Donate to Bazaar"
+msgstr "捐款給 Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "%s 有什麼新功能？"
+
+msgid "Released %B %-e, %Y"
+msgstr "於 %Y 年 %B%-e 日發佈"
+
+msgid "Choose an Installation"
+msgstr "選擇要使用的安裝項目"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "你已安裝此應用程式的多個版本。要繼續使用哪一個版本？"
+
+msgid "Details"
+msgstr "詳細資訊"
+
+msgid "Copy"
+msgstr "複製"
+
+msgid "Copied!"
+msgstr "已複製！"
+
+msgid "Favorite Count"
+msgstr "收藏數量"
+
+msgid "Failed to update favorite"
+msgstr "更新收藏失敗"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "登入至 Flathub 以管理最愛"
+
+msgid "Log In"
+msgstr "登入"
+
+msgid "Favorites"
+msgstr "收藏"
+
+msgid "Install All"
+msgstr "安裝全部"
+
+msgid "No Favorites"
+msgstr "沒有收藏"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "你所收藏的應用程式將會顯示在這裡"
+
+msgid "Support This Application"
+msgstr "支援此應用程式"
+
+msgid "Remove From Favorites"
+msgstr "從收藏中移除"
+
+msgid "Failed to remove favorite"
+msgstr "移除收藏失敗"
+
+msgid "Previous"
+msgstr "上一個"
+
+msgid "Next"
+msgstr "下一個"
+
+msgid "Editing"
+msgstr "編輯"
+
+msgid "Midi"
+msgstr "MIDI"
+
+msgid "Mixer"
+msgstr "混音"
+
+msgid "Music"
+msgstr "音樂"
+
+msgid "Player"
+msgstr "播放程式"
+
+msgid "Recorder"
+msgstr "錄音機"
+
+msgid "Sequencer"
+msgstr "音序器"
+
+msgid "Tuner"
+msgstr "調諧器"
+
+msgid "TV"
+msgstr "電視"
+
+msgid "Emulation"
+msgstr "模擬器"
+
+msgid "Action"
+msgstr "動作"
+
+msgid "Adventure"
+msgstr "冒險"
+
+msgid "Arcade"
+msgstr "街機"
+
+msgid "Blocks"
+msgstr "方塊"
+
+msgid "Board"
+msgstr "棋盤"
+
+msgid "Card"
+msgstr "卡片"
+
+msgid "Kids"
+msgstr "兒童"
+
+msgid "Logic"
+msgstr "邏輯"
+
+msgid "Role Playing"
+msgstr "角色扮演"
+
+msgid "Shooter"
+msgstr "射擊"
+
+msgid "Simulation"
+msgstr "模擬"
+
+msgid "Sports"
+msgstr "運動"
+
+msgid "Strategy"
+msgstr "策略"
+
+msgid "Browsers"
+msgstr "瀏覽器"
+
+msgid "Chat"
+msgstr "聊天"
+
+msgid "Mail"
+msgstr "郵件"
+
+msgid "File Sharing"
+msgstr "檔案分享"
+
+msgid "Audio & Video"
+msgstr "影音"
+
+msgid "Media"
+msgstr "媒體"
+
+msgid "More Audio & Video"
+msgstr "更多影音"
+
+msgid "Developer Tools"
+msgstr "開發者工具"
+
+msgid "Develop"
+msgstr "開發"
+
+msgid "More Developer Tools"
+msgstr "更多開發者工具"
+
+msgid "Education"
+msgstr "教育"
+
+msgid "Learn"
+msgstr "學習"
+
+msgid "More Education"
+msgstr "更多教育"
+
+msgid "Gaming"
+msgstr "遊戲"
+
+msgid "Play"
+msgstr "遊玩"
+
+msgid "More Gaming"
+msgstr "更多遊戲"
+
+msgid "Graphics & Photography"
+msgstr "影像與攝影"
+
+msgid "Create"
+msgstr "創作"
+
+msgid "More Graphics & Photography"
+msgstr "更多影像與攝影"
+
+msgid "Networking"
+msgstr "網絡"
+
+msgid "Internet"
+msgstr "互聯網"
+
+msgid "More Networking"
+msgstr "更多網絡"
+
+msgid "Productivity"
+msgstr "生產力"
+
+msgid "Work"
+msgstr "工作"
+
+msgid "More Productivity"
+msgstr "更多生產力"
+
+msgid "Science"
+msgstr "科學"
+
+msgid "More Science"
+msgstr "更多科學"
+
+msgid "System"
+msgstr "系統"
+
+msgid "More System"
+msgstr "更多系統"
+
+msgid "Utilities"
+msgstr "工具程式"
+
+msgid "Tools"
+msgstr "工具"
+
+msgid "More Utilities"
+msgstr "更多工具程式"
+
+msgid "Trending"
+msgstr "近期熱門"
+
+msgid "More Trending"
+msgstr "更多近期熱門"
+
+msgid "Popular"
+msgstr "最受歡迎"
+
+msgid "More Popular"
+msgstr "更多最受歡迎"
+
+msgid "Recently Added"
+msgstr "最近新增"
+
+msgid "New"
+msgstr "最新"
+
+msgid "More New"
+msgstr "更多最新"
+
+msgid "Recently Updated"
+msgstr "最近更新"
+
+msgid "Updated"
+msgstr "已更新"
+
+msgid "More Updated"
+msgstr "更多更新"
+
+msgid "Mobile"
+msgstr "行動裝置"
+
+msgid "More Mobile"
+msgstr "更多行動裝置"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "更多 Adwaita"
+
+msgid "KDE Apps"
+msgstr "KDE 應用程式"
+
+msgid "More KDE Apps"
+msgstr "更多 KDE 應用程式"
+
+msgid "Made for COSMIC™"
+msgstr "專為 COSMIC™ 設計"
+
+msgid "For COSMIC™"
+msgstr "COSMIC™ 用"
+
+msgid "More COSMIC Apps"
+msgstr "更多 COSMIC 應用程式"
+
+msgid "Games"
+msgstr "遊戲"
+
+msgid "More Games"
+msgstr "更多遊戲"
+
+msgid "Emulators"
+msgstr "模擬器"
+
+msgid "More Emulators"
+msgstr "更多模擬器"
+
+msgid "Launchers"
+msgstr "啟動器"
+
+msgid "More Game Launchers"
+msgstr "更多遊戲啟動器"
+
+msgid "Game Tools"
+msgstr "遊戲工具"
+
+msgid "More Game Tools"
+msgstr "更多遊戲工具"
+
+msgid "New Year, New Workflows"
+msgstr "新年新流程"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "作筆記、追蹤待辦事項、做計劃的應用程式"
+
+msgid "Staff Picks"
+msgstr "團隊精選"
+
+msgid "Apps we love right now"
+msgstr "我們目前熱愛的應用程式"
+
+msgid "Get Creative"
+msgstr "發揮創意"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "繪圖、編輯相片、數位設計等的必備程式"
+
+msgid "Build Native Apps"
+msgstr "開發原生應用程式"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "開發適合你的系統的應用程式"
+
+msgid "Stay in Touch"
+msgstr "溝通與聯絡"
+
+msgid "Essential collaboration and communication apps"
+msgstr "必備的合作與通訊應用程式"
+
+msgid "Ready for Vacations"
+msgstr "準備出遊"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "地圖、公共交通、天氣與旅程規劃應用程式"
+
+msgid "Smarter Every Day"
+msgstr "一日一智"
+
+msgid "Apps to help you study, research, and write"
+msgstr "幫助你唸書、做研究、寫作的應用程式"
+
+msgid "Get Cozy"
+msgstr "享受娛樂"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "看書、看電影、玩遊戲用的優良應用程式"
+
+msgid "Web Developer Essentials"
+msgstr "Web 開發者必備"
+
+msgid "Making websites is more fun with these apps"
+msgstr "這些程式讓網頁製作變得更好玩"
+
+msgid "Take Better Notes"
+msgstr "寫出更好的筆記"
+
+msgid "Find your new favorite note taking tool"
+msgstr "來這發現你新的最愛的筆記工具"
+
+msgid "Get Focused"
+msgstr "全神專注"
+
+msgid "Great apps for task management"
+msgstr "管理待辦事項用的優良應用程式"
+
+msgid "Make Some Noise"
+msgstr "譜出旋律"
+
+msgid "Apps for creating and producing music"
+msgstr "音樂創作用的應用程式"
+
+msgid "Get To Work"
+msgstr "繼續工作"
+
+msgid "Essential office apps"
+msgstr "必備的辦公應用程式"
+
+msgid "Flathub Not Added"
+msgstr "尚未加入 Flathub"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "在你的任何 Flatpak 安裝中都找不到 Flathub 遠端"
+
+msgid "Can't Reach Flathub"
+msgstr "無法連線至 Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "你仍可管理或搜尋應用程式。"
+
+msgid "Search Apps"
+msgstr "搜尋應用程式"
+
+msgid "Reconnect"
+msgstr "重新連線"
+
+msgid "App of the Day"
+msgstr "今日精選應用程式"
+
+msgid "On the Go"
+msgstr "隨時隨地"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "適用於你的 Linux 手機與平板的應用程式"
+
+msgid "More Mobile Apps"
+msgstr "更多行動應用程式"
+
+msgid "We​ ♥​ Games"
+msgstr "我們 ♥ 遊戲"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "用來執行你最愛作品的遊戲與應用程式"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "這是本地預覽，一些細節可能與發佈後的頁面不同"
+
+msgid "Preview Store Appearance"
+msgstr "預覽商店外觀"
+
+msgid "_Support"
+msgstr "贊助(_S)"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "此應用程式使用的執行環境已不再接收更新或安全修補，使用上可能存在安全風險。"
+
+msgid "Trash Data"
+msgstr "將資料移至垃圾桶"
+
+msgid "Add-ons"
+msgstr "附加元件"
+
+msgid "More Add-Ons"
+msgstr "更多附加元件"
+
+msgid "Links"
+msgstr "連結"
+
+msgid "Similar Apps"
+msgstr "類似的應用程式"
+
+msgid "No URL"
+msgstr "沒有網址"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "此應用程式具有 FLOSS（自由且開源）授權，這意味著其原始碼可供審查以確保安全性。"
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "此應用程式採用專有授權，表示其原始碼為私有，無法由第三方獨立審查。"
+
+msgid "Other Apps From This Developer"
+msgstr "其他來自此開發者的應用程式"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "其他來自 %s 的應用程式"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s 並未安裝，但仍保留 <b>%s</b> 的資料。"
+
+#, c-format
+msgid "Apps by %s"
+msgstr "由 %s 製作的應用程式"
+
+msgid "Apps by This Developer"
+msgstr "由此開發者製作的應用程式"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d 個應用程式"
+
+msgid "Failed to Remove User Data"
+msgstr "移除使用者資料失敗"
+
+msgid "Hardware Support"
+msgstr "硬件支援"
+
+msgid "Keyboard support"
+msgstr "鍵盤支援"
+
+msgid "Requires keyboards"
+msgstr "需要鍵盤"
+
+msgid "Recommends keyboards"
+msgstr "建議搭配鍵盤使用"
+
+msgid "Supports keyboards"
+msgstr "支援鍵盤"
+
+msgid "Unknown support for keyboards"
+msgstr "鍵盤支援情況未知"
+
+msgid "Mouse support"
+msgstr "滑鼠支援"
+
+msgid "Requires mice or pointing devices"
+msgstr "需要滑鼠或指向性裝置"
+
+msgid "Recommends mice or pointing devices"
+msgstr "建議搭配滑鼠或指向性裝置"
+
+msgid "Supports mice or pointing devices"
+msgstr "支援滑鼠或指向性裝置"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "滑鼠或指向性裝置支援情況未知"
+
+msgid "Touchscreen support"
+msgstr "觸控螢幕支援"
+
+msgid "Requires touchscreens"
+msgstr "需要觸控螢幕"
+
+msgid "Recommends touchscreens"
+msgstr "建議搭配觸控螢幕"
+
+msgid "Supports touchscreens"
+msgstr "支援觸控螢幕"
+
+msgid "Unknown support for touchscreens"
+msgstr "觸控螢幕支援情況未知"
+
+msgid "Mobile support"
+msgstr "行動裝置支援"
+
+msgid "Works on mobile devices"
+msgstr "可在行動裝置上使用"
+
+msgid "May not work well on mobile devices"
+msgstr "在行動裝置上的使用體驗可能不佳"
+
+msgid "Desktop support"
+msgstr "桌面電腦支援"
+
+msgid "Works well on large screens"
+msgstr "在大螢幕上運作良好"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s 在特定硬件上可發揮最佳效能"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s 可在多數裝置上使用"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "取消"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "正在取消"
+
+msgid "_Open"
+msgstr "開啟(_O)"
+
+msgid "Uninstall Application"
+msgstr "解除安裝應用程式"
+
+msgid "_Remove"
+msgstr "移除(_R)"
+
+msgid "Update"
+msgstr "更新"
+
+msgid "Remove"
+msgstr "移除"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "安裝 %s（來自 %s）"
+
+#, c-format
+msgid "Install %s"
+msgstr "安裝 %s"
+
+msgid "Donate"
+msgstr "捐款"
+
+msgid "Search installed apps"
+msgstr "搜尋已安裝的應用程式"
+
+msgid "No Apps Found"
+msgstr "找不到任何應用程式"
+
+msgid "Search Store Instead"
+msgstr "改搜尋商店"
+
+msgid "Pending Updates"
+msgstr "待處理的更新"
+
+msgid "Downloads"
+msgstr "下載"
+
+msgid "Recently Uninstalled"
+msgstr "最近解除安裝"
+
+msgid "Clear Finished Tasks"
+msgstr "清除已完成的作業"
+
+msgid "Sort Options"
+msgstr "排序選項"
+
+msgid "Sort By"
+msgstr "排序依據"
+
+msgid "Name"
+msgstr "名稱"
+
+msgid "Size"
+msgstr "大小"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "在已安裝的應用程式清單中找不到符合「%s」的項目"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u 個可用更新"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u 個已安裝的應用程式"
+
+msgid "No applications found"
+msgstr "找不到應用程式"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "找到 %u 個應用程式"
+
+msgid "Get Involved"
+msgstr "參與貢獻"
+
+msgid "Learn More"
+msgstr "了解更多"
+
+msgid "Unknown License"
+msgstr "未知授權"
+
+msgid "Community Built"
+msgstr "社群打造"
+
+msgid "Proprietary"
+msgstr "專有"
+
+msgid "Special License"
+msgstr "特殊授權"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"此應用程式由國際社群以開放方式開發。\n"
+"\n"
+"你可以參與貢獻，協助讓它變得更好。"
+
+msgid "The license of this app is not known"
+msgstr "此應用程式的授權資訊未知"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"此應用程式由國際社群以開放方式開發，並以 %s 授權釋出。\n"
+"\n"
+"你可以參與貢獻，協助讓它變得更好。"
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"此應用程式並非以開放方式開發，因此只有開發者知道其運作方式。它可能存在難以察覺的安全風險，且可能在缺乏監督的情況下變更。\n"
+"\n"
+"你可能可以，也可能無法對此應用程式做出貢獻。"
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"此應用程式採用特殊授權 %s 開發。\n"
+"\n"
+"你可能可以，也可能無法對此應用程式做出貢獻。"
+
+msgid "License"
+msgstr "授權"
+
+msgid "Connect to Flathub"
+msgstr "連結至 Flathub"
+
+msgid "Something Went Wrong"
+msgstr "發生問題"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "登入以在裝置之間同步你收藏的應用程式"
+
+msgid "Finish"
+msgstr "完成"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "你好，%s！"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "要新增圖示到 Metainfo 預覽嗎？"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Metainfo 檔案本身不包含應用程式圖示。要手動選取一個嗎？"
+
+msgid "Skip"
+msgstr "略過"
+
+msgid "Select Icon"
+msgstr "選取圖示"
+
+msgid "Image Files"
+msgstr "影像檔案"
+
+msgid "New Permissions"
+msgstr "新權限"
+
+msgid "_Accept"
+msgstr "接受(_A)"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "%s 的新權限"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "此更新需要以下額外權限"
+
+msgid "User"
+msgstr "使用者"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "已終止支援"
+
+msgid "Preferences"
+msgstr "偏好設定"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "目前的網絡連線為計量連線 —— 已暫停商店資料的自動重新整理"
+
+msgid "Refresh Manually"
+msgstr "手動重新整理"
+
+msgid "App Updates"
+msgstr "應用程式更新"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "自動更新會在使用計量連線或省電模式時暫停，以避免浪費流量或電量。"
+
+msgid "_Automatic"
+msgstr "自動(_A)"
+
+msgid "Automatically check for and download app updates"
+msgstr "自動檢查並下載應用程式更新"
+
+msgid "_Manual"
+msgstr "手動(_M)"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "必須手動檢查與下載更新"
+
+msgid "Automatic Update _Notifications"
+msgstr "自動更新通知(_N)"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "自動更新安裝完成後顯示通知"
+
+msgid "Content Filters"
+msgstr "內容篩選"
+
+msgid "_Free Software Only"
+msgstr "僅顯示自由軟件(_F)"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "在瀏覽與搜尋時隱藏專有應用程式"
+
+msgid "F_lathub Results Only"
+msgstr "僅顯示 Flathub 結果(_L)"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "在瀏覽與搜尋時僅顯示在 Flathub 上提供的應用程式"
+
+msgid "_Verified Results Only"
+msgstr "僅顯示已驗證的結果(_V)"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "隱藏未經 Flathub 驗證的結果"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "隱藏已終止支援的應用程式(_E)"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "隱藏已不再由開發者支援的應用程式"
+
+msgid "Progress Bar Theme"
+msgstr "進度列主題"
+
+msgid "Accent Color"
+msgstr "強調色"
+
+msgid "Pride Colors"
+msgstr "驕傲旗配色"
+
+msgid "Lesbian Pride Colors"
+msgstr "女同志驕傲旗配色"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "男同志驕傲旗配色"
+
+msgid "Transgender Pride Colors"
+msgstr "跨性別驕傲旗配色"
+
+msgid "Nonbinary Pride Colors"
+msgstr "非二元性別驕傲旗配色"
+
+msgid "Bisexual Pride Colors"
+msgstr "雙性戀驕傲旗配色"
+
+msgid "Asexual Pride Colors"
+msgstr "無性戀驕傲旗配色"
+
+msgid "Pansexual Pride Colors"
+msgstr "泛性戀驕傲旗配色"
+
+msgid "Aromantic Pride Colors"
+msgstr "無浪漫傾向驕傲旗配色"
+
+msgid "Genderfluid Pride Colors"
+msgstr "性別流動驕傲旗配色"
+
+msgid "Polysexual Pride Colors"
+msgstr "多元性向驕傲旗配色"
+
+msgid "Omnisexual Pride Colors"
+msgstr "全性向驕傲旗配色"
+
+msgid "Aroace Pride Colors"
+msgstr "無浪漫／無性戀驕傲旗配色"
+
+msgid "Agender Pride Colors"
+msgstr "無性別驕傲旗配色"
+
+msgid "Genderqueer Pride Colors"
+msgstr "性別酷兒驕傲旗配色"
+
+msgid "Intersex Pride Colors"
+msgstr "雙性人驕傲旗配色"
+
+msgid "Demigender Pride Colors"
+msgstr "半性別驕傲旗配色"
+
+msgid "Biromantic Pride Colors"
+msgstr "雙浪漫傾向驕傲旗配色"
+
+msgid "Disability Pride Colors"
+msgstr "身心障礙驕傲旗配色"
+
+msgid "Femboy Pride Colors"
+msgstr "女性氣質男性驕傲旗配色"
+
+msgid "Neutrois Pride Colors"
+msgstr "中性性別驕傲旗配色"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar 需要在背景執行來檢查應用程式更新"
+
+msgid "Version History"
+msgstr "版本紀錄"
+
+msgid "Today"
+msgstr "今天"
+
+msgid "Yesterday"
+msgstr "昨天"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d 天前"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d 週前"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d 個月前"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d 年前"
+
+msgid "%e %B %Y"
+msgstr "%Y 年 %B%e 日"
+
+#, c-format
+msgid "Version %s"
+msgstr "版本 %s"
+
+msgid "No details for this release"
+msgstr "此版本沒有詳細資訊"
+
+msgid "Get More Information"
+msgstr "取得更多資訊"
+
+msgid "_Version History"
+msgstr "版本紀錄(_V)"
+
+msgid "Remotes"
+msgstr "遠端"
+
+msgid "System Installation"
+msgstr "系統安裝"
+
+msgid "Available to all users on this computer"
+msgstr "此電腦上的所有使用者皆可使用"
+
+msgid "User Installation"
+msgstr "使用者安裝"
+
+msgid "Only available to you"
+msgstr "只限你使用"
+
+msgid "Remove Remote"
+msgstr "移除遠端"
+
+#, c-format
+msgid "Remove %s"
+msgstr "移除 %s"
+
+msgid "Unused"
+msgstr "未使用"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "已安裝 %u 個應用程式"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "要移除「%s」嗎？"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "你將無法再從此使用者遠端安裝應用程式。"
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "你將無法再從此系統遠端安裝應用程式。"
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "要移除 %u 個應用程式"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "以下應用程式是從此遠端安裝的，會隨遠端一併從你的帳號中移除。"
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "以下應用程式是從此遠端安裝的，會隨遠端一併為所有使用者移除。"
+
+msgid "Uninstall"
+msgstr "解除安裝"
+
+msgid "Get"
+msgstr "取得"
+
+msgid "Arbitrary Permissions"
+msgstr "任意權限"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"此應用程式擁有一項權限，可間接讓它為自己授予<b>任何其他權限</b>，從而繞過 Flatpak 沙箱。\n"
+"\n"
+"因此它能做到任何非沙箱化的特權應用程式所能做的事，例如存取你的所有檔案及連線到互聯網。\n"
+"\n"
+"查看其他權限仍可更清楚了解此應用程式可能會做什麼。"
+
+msgid "View Other Permissions"
+msgstr "檢視其他權限"
+
+msgid "Safe"
+msgstr "安全"
+
+msgid "App ID"
+msgstr "應用程式 ID"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "此應用程式使用過時的軟件平台（SDK），可能包含不會再修復的錯誤或安全漏洞。"
+
+msgid "Safety"
+msgstr "安全性"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s 是安全的"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s 沒有不安全的權限"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s 可能是安全的"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s 可能不安全"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s 不安全"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Previous Screenshot"
+msgstr "上一張截圖"
+
+msgid "Next Screenshot"
+msgstr "下一張截圖"
+
+msgid "Copy Image"
+msgstr "複製圖片"
+
+msgid "Reset View"
+msgstr "重設檢視"
+
+msgid "Zoom Out"
+msgstr "縮小"
+
+msgid "Zoom In"
+msgstr "放大"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u 個執行環境更新"
+
+msgid "Screenshots Carousel"
+msgstr "螢幕截圖輪播"
+
+msgid "No Screenshots"
+msgstr "沒有螢幕截圖"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "螢幕截圖 %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "螢幕截圖 %u"
+
+msgid "Clear Search"
+msgstr "清除搜尋"
+
+msgid "Filters"
+msgstr "過濾器"
+
+msgid "_Verified"
+msgstr "已驗證(_V)"
+
+msgid "_Free/Open"
+msgstr "自由/開源(_F)"
+
+msgid "Non-_EOL"
+msgstr "非終止支援(_E)"
+
+msgid "Filter out End-of-Life apps"
+msgstr "過濾掉已終止支援的應用程式"
+
+msgid "_Mobile Friendly"
+msgstr "行動裝置友善(_M)"
+
+msgid "Categories"
+msgstr "分類"
+
+msgid "Search Apps, Games, Software"
+msgstr "搜尋應用程式、遊戲與軟件"
+
+msgid "Search Filters"
+msgstr "搜尋過濾器"
+
+msgid "Browse Categories"
+msgstr "瀏覽分類"
+
+msgid "Categories Unavailable"
+msgstr "分類無法使用"
+
+msgid "Search for apps using the search bar above."
+msgstr "請使用上方的搜尋列搜尋應用程式。"
+
+msgid "No Applications Found"
+msgstr "找不到任何應用程式"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "在 Flathub 中找不到符合「%s」的結果"
+
+msgid "Browser"
+msgstr "瀏覽器"
+
+msgid "Video"
+msgstr "影片"
+
+msgid "Office"
+msgstr "辦公軟件"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "行事曆"
+
+msgid "Messaging"
+msgstr "訊息"
+
+msgid "Paint"
+msgstr "塗繪"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "模擬器"
+
+msgid "Copy Link"
+msgstr "複製連結"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Flathub 頁面"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "專案網站"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "問題追蹤器"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "FAQ"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "幫助"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "捐款"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "翻譯"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "聯絡方式"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "原始碼"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "貢獻"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifest"
+
+msgid "Timeline"
+msgstr "時間軸"
+
+msgid "Total"
+msgstr "總計"
+
+msgid "This Week"
+msgstr "本週"
+
+msgid "Installs per day"
+msgstr "每日安裝次數"
+
+msgid "World"
+msgstr "全球"
+
+msgid "Installs per country"
+msgstr "各國家／地區安裝次數"
+
+msgid "Since 4/15/2024"
+msgstr "2024年4月15日以來"
+
+msgid "No Results Found"
+msgstr "沒有找到結果"
+
+msgid "Search failed"
+msgstr "搜尋失敗"
+
+msgid "Unknown"
+msgstr "未知"
+
+msgid "Keep User Data"
+msgstr "保留使用者資料"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "允許還原個人設定 &amp; 內容"
+
+msgid "Delete All Data"
+msgstr "刪除所有資料"
+
+msgid "Permanently erase user data to save space"
+msgstr "永久移除應用程式的使用者資料以節省空間"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "要移除 %s 嗎？"
+
+msgid "Select which version to remove."
+msgstr "選取要移除的版本。"
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "解除安裝後將無法再使用 %s。"
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "「%s」屬於高風險應用程式"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"此應用程式對你的系統具有完整存取權限，包括所有<b>檔案、瀏覽紀錄、已儲存的密碼</b>等。同時也可存取互聯網，代表可能會將你的資料傳送給第三方。\n"
+"\n"
+"由於此應用程式為專有軟件，無法對其如何使用這些權限進行獨立審核。"
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"此應用程式使用舊式的 X11 視窗系統，這使其能夠<b>記錄所有鍵盤輸入、擷取螢幕畫面，並監控其他應用程式</b>。同時也可存取互聯網，代表可能會將你的資料傳送給第三方。\n"
+"\n"
+"由於此應用程式為專有軟件，無法對其如何使用這些權限進行獨立審核。"
+
+msgid "_Install Anyway"
+msgstr "仍要安裝(_I)"
+
+msgid "Failed to load transaction dialog"
+msgstr "載入作業對話框失敗"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "於 %.02f 秒完成"
+
+msgid "App Add-On"
+msgstr "應用程式附加元件"
+
+msgid "Runtime"
+msgstr "執行環境"
+
+msgid "In Queue"
+msgstr "在隊列中"
+
+msgid "Finishing Up"
+msgstr "即將完成"
+
+msgid "Done"
+msgstr "完成"
+
+msgid "Cancelled"
+msgstr "已取消"
+
+msgid "Error"
+msgstr "錯誤"
+
+msgid "Cancel Transaction"
+msgstr "取消作業"
+
+msgid "Show Details"
+msgstr "顯示詳細資料"
+
+msgid "Show Error Info"
+msgstr "顯示錯誤資訊"
+
+#, c-format
+msgid "%s Freed"
+msgstr "已釋出 %s"
+
+msgid "Transaction Error"
+msgstr "作業錯誤"
+
+msgid "Pending"
+msgstr "等待中"
+
+msgid "Installed Updates"
+msgstr "已安裝的更新"
+
+msgid "Release Notes"
+msgstr "發行說明"
+
+msgid "No Release Info"
+msgstr "沒有發行資訊"
+
+msgid "_Update All"
+msgstr "更新全部(_U)"
+
+msgid "This update requests new permissions"
+msgstr "此更新要求新權限"
+
+msgid "Manage Leftover User Data"
+msgstr "管理殘留的使用者資料"
+
+msgid "No Leftover User Data Found"
+msgstr "找不到殘留的使用者資料"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "已移除的應用程式所留下來的個人資料會顯示於此"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "已將 %u 個應用程式的使用者資料移至垃圾桶"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "已將 %s 的使用者資料移至垃圾桶"
+
+msgid "Open User Data Folder"
+msgstr "開啟使用者資料資料夾"
+
+msgid "Trash User Data"
+msgstr "將使用者資料移至垃圾桶"
+
+msgid "Refreshing"
+msgstr "重新整理中"
+
+msgid "Curated"
+msgstr "精選"
+
+msgid "Explore"
+msgstr "探索"
+
+msgid "Library"
+msgstr "程式庫"
+
+msgid "Search"
+msgstr "搜尋"
+
+msgid "Main Menu"
+msgstr "主選單"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "你已更新到新版本 Bazaar！"
+
+msgid "See What's New"
+msgstr "查看更新內容"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "你目前有網絡連線，但正在檢視 Flathub 的快取版本"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "目前的網絡連線為計量連線 —— 已暫停自動重新整理"
+
+msgid "_Donate to Bazaar"
+msgstr "捐款給 Bazaar(_D)"
+
+msgid "_Refresh"
+msgstr "重新整理(_R)"
+
+msgid "_Login With Flathub"
+msgstr "使用 Flathub 登入(_L)"
+
+msgid "_Manage Leftover User Data"
+msgstr "管理殘留的使用者資料(_M)"
+
+msgid "Manage R_emotes"
+msgstr "管理遠端(_E)"
+
+msgid "_Preferences"
+msgstr "偏好設定(_P)"
+
+msgid "_Keyboard Shortcuts"
+msgstr "鍵盤快捷鍵(_K)"
+
+msgid "_About Bazaar"
+msgstr "關於 Bazaar(_A)"
+
+msgid "_Quit Bazaar"
+msgstr "結束 Bazaar(_Q)"
+
+msgid "Log Out"
+msgstr "登出"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "啟動應用程式失敗"
+
+msgid "Could not open link"
+msgstr "無法開啟連結"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "你無法在 Bazaar 中移除 Bazaar 本身！"
+
+msgid "Can't do that right now!"
+msgstr "目前無法執行此動作！"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s，%'u 次安裝"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "%s 的安裝次數最多"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "在過去一個月內有 %d 次下載"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s 執行環境"
+
+msgid "Size information unavailable"
+msgstr "大小資訊未知"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "下載 %s 的大小"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "%s 的安裝大小"
+
+msgid "All Ages"
+msgstr "所有年齡層"
+
+msgid "Age rating information unavailable"
+msgstr "年齡分級資訊未知"
+
+msgid "Suitable for all ages"
+msgstr "適合所有年齡層"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "適合 %d 歲以上"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "依 %s 授權的自由軟件"
+
+msgid "Free software"
+msgstr "自由軟件"
+
+msgid "Proprietary Software"
+msgstr "專有軟件"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "特殊授權：%s"
+
+msgid "Free Software"
+msgstr "自由軟件"
+
+msgid "Adaptive"
+msgstr "支援多裝置"
+
+msgid "Desktop Only"
+msgstr "僅限桌面"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "可在電腦、平板與手機上使用"
+
+msgid "May not work on mobile devices"
+msgstr "可能無法在行動裝置上使用"
+
+msgid "Low Risk"
+msgstr "低風險"
+
+msgid "Medium Risk"
+msgstr "中度風險"
+
+msgid "High Risk"
+msgstr "高風險"
+
+msgid "Unknown Permissions"
+msgstr "未知的權限"
+
+msgid "Permissions are missing for this app."
+msgstr "此應用程式缺少權限資訊。"
+
+msgid "No Permissions"
+msgstr "無權限需求"
+
+msgid "App is fully sandboxed"
+msgstr "此應用程式已完全沙箱化"
+
+msgid "Network Access"
+msgstr "網絡存取"
+
+msgid "Can access the internet"
+msgstr "可存取互聯網"
+
+msgid "No Network Access"
+msgstr "無網絡存取"
+
+msgid "Cannot access the internet"
+msgstr "無法存取互聯網"
+
+msgid "User Device Access"
+msgstr "使用者裝置存取"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "可存取如網絡攝影機或遊戲控制器等裝置"
+
+msgid "No User Device Access"
+msgstr "無使用者裝置存取"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "無法存取如網絡攝影機或遊戲控制器等裝置"
+
+msgid "Input Device Access"
+msgstr "輸入裝置存取"
+
+msgid "Can access input devices"
+msgstr "可存取輸入裝置"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "麥克風存取與音訊播放"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "可在未詢問權限的情況下使用麥克風收音並播放音訊"
+
+msgid "System Device Access"
+msgstr "系統裝置存取"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "可存取需要較高權限的系統裝置"
+
+msgid "Screen Contents Access"
+msgstr "螢幕內容存取"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "可存取螢幕或其他視窗的內容"
+
+msgid "Legacy Windowing System"
+msgstr "舊式視窗系統"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "一律使用舊式視窗系統（X11）"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "可取得任意權限"
+
+msgid "User Settings"
+msgstr "使用者設定"
+
+msgid "Can access and change user settings"
+msgstr "可存取並變更使用者設定"
+
+msgid "Full File System Read/Write Access"
+msgstr "完整檔案系統讀取／寫入權限"
+
+msgid "Can read and write all data on the file system"
+msgstr "可讀取與寫入檔案系統中的所有資料"
+
+msgid "Home Folder Read/Write Access"
+msgstr "家目錄讀取／寫入權限"
+
+msgid "Can read and write all data in your home directory"
+msgstr "可讀取與寫入你家目錄中的所有資料"
+
+msgid "Full File System Read Access"
+msgstr "完整檔案系統讀取權限"
+
+msgid "Can read all data on the file system"
+msgstr "可讀取檔案系統中的所有資料"
+
+msgid "Home Folder Read Access"
+msgstr "家目錄讀取權限"
+
+msgid "Can read all data in your home directory"
+msgstr "可讀取你家目錄中的所有資料"
+
+msgid "Download Folder Read/Write Access"
+msgstr "下載資料夾讀取／寫入權限"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "可讀取與寫入你下載資料夾中的所有資料"
+
+msgid "Download Folder Read Access"
+msgstr "下載資料夾讀取權限"
+
+msgid "Can read all data in your downloads directory"
+msgstr "可讀取你下載資料夾中的所有資料"
+
+msgid "Can read and write all data in the directory"
+msgstr "可讀取與寫入該目錄中的所有資料"
+
+msgid "Can read all data in the directory"
+msgstr "可讀取該目錄中的所有資料"
+
+msgid "No File System Access"
+msgstr "無檔案系統存取權限"
+
+msgid "Cannot access the file system at all"
+msgstr "完全無法存取檔案系統"
+
+msgid "Uses System Services"
+msgstr "使用系統服務"
+
+msgid "Can request data from non-portal system services"
+msgstr "可向非入口（non-portal）的系統服務請求資料"
+
+msgid "Uses Session Services"
+msgstr "使用工作階段服務"
+
+msgid "Can request data from non-portal session services"
+msgstr "可向非入口（non-portal）的工作階段服務請求資料"
+
+msgid "No Service Access"
+msgstr "無服務存取權限"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "完全無法存取非入口（non-portal）的工作階段或系統服務"
+
+msgid "Verified App Developer"
+msgstr "已驗證的應用程式開發者"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "此應用程式的開發者身分已通過驗證，確認與其所聲稱的身分相符"
+
+msgid "Proprietary Code"
+msgstr "專有程式碼"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "原始碼未公開，無法進行獨立稽核，可能存在安全風險"
+
+msgid "Auditable Code"
+msgstr "可稽核的程式碼"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "原始碼已公開，且可進行獨立稽核，使此應用程式更可能是安全的"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "使用 %s 系統服務"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "使用 %s 工作階段服務"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "使用 %s 服務"
+
+msgid "Can see the non-portal service"
+msgstr "可查看非入口（non-portal）服務"
+
+msgid "Can talk to the non-portal service"
+msgstr "可與非入口（non-portal）服務通訊"
+
+msgid "Can own the non-portal service"
+msgstr "可擁有非入口（non-portal）服務"
+
+msgid "Global Menu Integration"
+msgstr "全域選單整合"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "可將選單顯示於全域選單列"
+
+msgid "KDE Settings Integration"
+msgstr "KDE 設定整合"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "可偵測 KDE 桌面設定的變更"
+
+msgid "KDE Global Settings"
+msgstr "KDE 全域設定"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "可讀取 KDE 桌面偏好設定（如字型與色彩）"
+
+msgid "Secret Storage Service"
+msgstr "祕密儲存服務"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "可使用系統鑰匙圈儲存並取回自身的密碼"
+
+msgid "Desktop Notifications Service"
+msgstr "桌面通知服務"
+
+msgid "Can send desktop notifications"
+msgstr "可傳送桌面通知"
+
+msgid "System Tray Integration"
+msgstr "系統匣整合"
+
+msgid "Can display an icon in the system tray"
+msgstr "可在系統匣中顯示圖示"
+
+msgid "KDE Connect Integration"
+msgstr "KDE Connect 整合"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "可與透過 KDE Connect 配對的裝置互動"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "導覽"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "開啟探索頁面"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "開啟程式庫頁面"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "開啟搜尋頁面"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "遠端"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "同步遠端"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "一般"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "開啟偏好設定"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "顯示快捷鍵"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "關閉視窗"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "退出 Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s 已安裝"
+
+msgid "The app is ready to be used"
+msgstr "程式已準備好可使用"
+
+msgid "Updates Are Out of Date"
+msgstr "更新資訊已過時"
+
+msgid "Please check for available updates"
+msgstr "請檢查可用更新"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u 個程式已更新"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "《%s》已更新。"
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "《%s》與《%s》已更新。"
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "包括《%s》、《%s》以及《%s》。"

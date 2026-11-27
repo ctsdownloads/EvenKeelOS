@@ -1,0 +1,1166 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Quit"
+msgstr "बंद करें"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "%d विंडो बंद करें"
+msgstr[1] "%d विंडो बंद करें"
+
+msgid "Power options"
+msgstr "पावर विकल्प"
+
+msgid "Event logs"
+msgstr "इवेंट लॉग"
+
+msgid "System"
+msgstr "सिस्टम"
+
+msgid "Device Management"
+msgstr "डिवाइस प्रबंधन"
+
+msgid "Disk Management"
+msgstr "डिस्क प्रबंधन"
+
+msgid "Unlock taskbar"
+msgstr "टास्कबार अनलॉक करें"
+
+msgid "Lock taskbar"
+msgstr "टास्कबार लॉक करें"
+
+msgid "Gnome Settings"
+msgstr "GNOME सेटिंग"
+
+msgid "Dash to Panel Settings"
+msgstr "Dash to Panel सेटिंग"
+
+msgid "Restore Windows"
+msgstr "विंडो पहले जैसी करें"
+
+msgid "Show Desktop"
+msgstr "डेस्कटॉप दिखाएँ"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel अपडेट हो गया है!"
+
+msgid "You are now running version"
+msgstr "आप अब यह वर्शन चला रहे हैं"
+
+msgid "See what's new"
+msgstr "देखें कि नया क्या है"
+
+msgid "Top Bar"
+msgstr "शीर्ष बार"
+
+msgid "Show Desktop button height (px)"
+msgstr "डेस्कटॉप दिखाएँ बटन की ऊँचाई (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "डेस्कटॉप दिखाएँ बटन की चौड़ाई (px)"
+
+msgid "Left"
+msgstr "बाएँ"
+
+msgid "Center"
+msgstr "बीच में"
+
+msgid "Right"
+msgstr "दाएँ"
+
+msgid "Top"
+msgstr "ऊपर"
+
+msgid "Middle"
+msgstr "बीच में"
+
+msgid "Bottom"
+msgstr "नीचे"
+
+msgid "Start"
+msgstr "शुरू"
+
+msgid "End"
+msgstr "अंत"
+
+msgid "Show Applications button"
+msgstr "ऐप्लिकेशन दिखाएँ बटन"
+
+msgid "Activities button"
+msgstr "गतिविधियाँ बटन"
+
+msgid "Taskbar"
+msgstr "टास्कबार"
+
+msgid "Date menu"
+msgstr "तारीख़ मेन्यू"
+
+msgid "System menu"
+msgstr "सिस्टम मेन्यू"
+
+msgid "Left box"
+msgstr "बायाँ बॉक्स"
+
+msgid "Center box"
+msgstr "बीच का बॉक्स"
+
+msgid "Right box"
+msgstr "दायाँ बॉक्स"
+
+msgid "Desktop button"
+msgstr "डेस्कटॉप बटन"
+
+msgid "Move up"
+msgstr "ऊपर ले जाएँ"
+
+msgid "Move down"
+msgstr "नीचे ले जाएँ"
+
+msgid "Visible"
+msgstr "दिखाई दे"
+
+msgid "Select element position"
+msgstr "तत्व की स्थिति चुनें"
+
+msgid "Stacked to top"
+msgstr "ऊपर की ओर जमा हुए"
+
+msgid "Stacked to left"
+msgstr "बाईं ओर जमा हुए"
+
+msgid "Stacked to bottom"
+msgstr "नीचे की ओर जमा हुए"
+
+msgid "Stacked to right"
+msgstr "दाईं ओर जमा हुए"
+
+msgid "Centered"
+msgstr "बीच में"
+
+msgid "Monitor Center"
+msgstr "मॉनिटर के बीच में"
+
+msgid "More options"
+msgstr "और विकल्प"
+
+msgid "Reset to defaults"
+msgstr "डिफ़ॉल्ट पर रीसेट करें"
+
+msgid "Show Applications options"
+msgstr "ऐप्लिकेशन दिखाएँ के विकल्प"
+
+msgid "Open icon"
+msgstr "आइकन खोलें"
+
+msgid "Show Desktop options"
+msgstr "डेस्कटॉप दिखाएँ के विकल्प"
+
+msgid "Primary monitor"
+msgstr "मुख्य मॉनिटर"
+
+msgid "Monitor "
+msgstr "मॉनिटर "
+
+msgid "Running Indicator Options"
+msgstr "चालू संकेतक के विकल्प"
+
+msgid "Dynamic opacity options"
+msgstr "डायनामिक पारदर्शिता के विकल्प"
+
+msgid "Intellihide options"
+msgstr "Intellihide के विकल्प"
+
+msgid "Window preview options"
+msgstr "विंडो पूर्वावलोकन के विकल्प"
+
+msgid "Isolate Workspaces options"
+msgstr "वर्कस्पेस अलग करने के विकल्प"
+
+msgid "Isolate monitors options"
+msgstr "मॉनिटर अलग करने के विकल्प"
+
+msgid "Ungrouped application options"
+msgstr "असमूहित ऐप्लिकेशन के विकल्प"
+
+msgid "Customize middle-click behavior"
+msgstr "बीच के क्लिक का व्यवहार अपनी पसंद से सेट करें"
+
+msgid "Text"
+msgstr "टेक्स्ट"
+
+msgid "Command"
+msgstr "कमांड"
+
+msgid "Remove"
+msgstr "हटाएँ"
+
+msgid "Customize panel scroll behavior"
+msgstr "पैनल स्क्रॉल का व्यवहार अपनी पसंद से सेट करें"
+
+msgid "Customize icon scroll behavior"
+msgstr "आइकन स्क्रॉल का व्यवहार अपनी पसंद से सेट करें"
+
+msgid "Advanced hotkeys options"
+msgstr "उन्नत हॉटकी के विकल्प"
+
+msgid "Secondary Menu Options"
+msgstr "द्वितीयक मेन्यू के विकल्प"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d आइकन"
+msgstr[1] "%d आइकन"
+
+msgid "App icon animation options"
+msgstr "ऐप आइकन एनीमेशन के विकल्प"
+
+msgid "App icon highlight options"
+msgstr "ऐप आइकन हाइलाइट के विकल्प"
+
+msgid "Export settings"
+msgstr "सेटिंग निर्यात करें"
+
+msgid "Import settings"
+msgstr "सेटिंग आयात करें"
+
+msgid "Move to current Workspace"
+msgstr "मौजूदा वर्कस्पेस में ले जाएँ"
+
+msgid "Animation type"
+msgstr "एनीमेशन का प्रकार"
+
+msgid "Simple"
+msgstr "सरल"
+
+msgid "Ripple"
+msgstr "रिपल"
+
+msgid "Plank"
+msgstr "प्लैंक"
+
+msgid "Duration"
+msgstr "अवधि"
+
+msgid "Rotation"
+msgstr "घुमाव"
+
+msgid "Travel"
+msgstr "गति की दूरी"
+
+msgid "Zoom"
+msgstr "ज़ूम"
+
+msgid "Convexity"
+msgstr "उभार"
+
+msgid "Extent"
+msgstr "विस्तार"
+
+msgid "Highlight focused application"
+msgstr "फ़ोकस वाले ऐप्लिकेशन को हाइलाइट करें"
+
+msgid "Icon dominant color"
+msgstr "आइकन का प्रमुख रंग"
+
+msgid "Custom color"
+msgstr "कस्टम रंग"
+
+msgid "Highlight opacity"
+msgstr "हाइलाइट की पारदर्शिता"
+
+msgid "Indicator size (px)"
+msgstr "संकेतक का आकार (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "संकेतक का रंग - आइकन का प्रमुख रंग"
+
+msgid "Indicator color - Override Theme"
+msgstr "संकेतक का रंग - थीम ओवरराइड करें"
+
+msgid "1 window open (or ungrouped)"
+msgstr "1 विंडो खुली है (या असमूहित)"
+
+msgid "Apply to all"
+msgstr "सभी पर लागू करें"
+
+msgid "2 windows open"
+msgstr "2 विंडो खुली हैं"
+
+msgid "3 windows open"
+msgstr "3 विंडो खुली हैं"
+
+msgid "4+ windows open"
+msgstr "4+ विंडो खुली हैं"
+
+msgid "Use different for unfocused"
+msgstr "बिना फ़ोकस वाले के लिए अलग इस्तेमाल करें"
+
+msgid "The panel background opacity is affected by"
+msgstr "पैनल की पृष्ठभूमि की पारदर्शिता इससे प्रभावित होती है"
+
+msgid "All windows"
+msgstr "सभी विंडो"
+
+msgid "Focused windows"
+msgstr "फ़ोकस वाली विंडो"
+
+msgid "Maximized windows"
+msgstr "मैक्सिमाइज़ की गई विंडो"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "विंडो जब इतनी (px) से ज़्यादा नज़दीक आए तब पारदर्शिता बदलें"
+
+msgid "Change opacity to (%)"
+msgstr "पारदर्शिता को इतना (%) करें"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "पारदर्शिता बदलने के एनीमेशन की अवधि (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "ऐप्लिकेशन शीर्षकों का फ़ॉन्ट आकार (px) (डिफ़ॉल्ट 14 है)"
+
+msgid "Font weight of application titles"
+msgstr "ऐप्लिकेशन शीर्षकों के फ़ॉन्ट की मोटाई"
+
+msgid "inherit from theme"
+msgstr "थीम से लें"
+
+msgid "normal"
+msgstr "सामान्य"
+
+msgid "lighter"
+msgstr "हल्का"
+
+msgid "bold"
+msgstr "बोल्ड"
+
+msgid "bolder"
+msgstr "ज़्यादा बोल्ड"
+
+msgid "Font color of the application titles"
+msgstr "ऐप्लिकेशन शीर्षकों के फ़ॉन्ट का रंग"
+
+msgid "Font color of the minimized application titles"
+msgstr "छोटी की गई ऐप्लिकेशन के शीर्षकों के फ़ॉन्ट का रंग"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "ऐप्लिकेशन शीर्षकों की अधिकतम चौड़ाई (px)"
+
+msgid "(default is 160)"
+msgstr "(डिफ़ॉल्ट 160 है)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "ऐप्लिकेशन शीर्षकों के लिए तय चौड़ाई इस्तेमाल करें"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "सभी ऐप्लिकेशन शीर्षकों की चौड़ाई एक जैसी होती है, भले ही उनका टेक्स्ट अधिकतम चौड़ाई से छोटा हो। अधिकतम चौड़ाई का मान ही तय चौड़ाई के रूप में इस्तेमाल होता है।"
+
+msgid "Display running indicators on unfocused applications"
+msgstr "बिना फ़ोकस वाले ऐप्लिकेशन पर चालू संकेतक दिखाएँ"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "पसंदीदा आइकन को ऐप्लिकेशन लॉन्चर के रूप में इस्तेमाल करें"
+
+msgid "Highlight AppIcon color"
+msgstr "ऐप आइकन हाइलाइट का रंग"
+
+msgid "Pressed AppIcon color"
+msgstr "दबाए गए ऐप आइकन का रंग"
+
+msgid "Highlight AppIcon border radius"
+msgstr "ऐप आइकन हाइलाइट के बॉर्डर की गोलाई"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "वैश्विक बॉर्डर की गोलाई को ओवरराइड करता है (डिफ़ॉल्ट 0 है)"
+
+msgid "Only hide the panel from windows"
+msgstr "पैनल को सिर्फ़ विंडो से छिपाएँ"
+
+msgid "Overlapping"
+msgstr "ऊपर आने वाली"
+
+msgid "On same monitor"
+msgstr "उसी मॉनिटर पर"
+
+msgid "The panel hides from"
+msgstr "पैनल इनसे छिपता है"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "पॉइंटर से मॉनिटर के किनारे को छूने पर पैनल दिखाई देता है"
+
+msgid "Limit to panel length"
+msgstr "पैनल की लंबाई तक सीमित करें"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "पैनल के क्षेत्र पर होवर करने से पैनल दिखता रहता है"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "पैनल दिखाने के लिए मॉनिटर के किनारे पर दबाव ज़रूरी करें"
+
+msgid "Required pressure threshold (px)"
+msgstr "ज़रूरी दबाव की सीमा (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "ज़रूरी दबाव का टाइमआउट (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "फ़ुलस्क्रीन मोड में भी पैनल को दिखने दें"
+
+msgid "(requires multi-monitors option)"
+msgstr "(मल्टी-मॉनिटर विकल्प ज़रूरी है)"
+
+msgid "Only hide secondary panels"
+msgstr "सिर्फ़ द्वितीयक पैनल छिपाएँ"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "सिंटैक्स: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "पैनल को दिखाने और रोके रखने का कीबोर्ड शॉर्टकट"
+
+msgid "e.g. <Super>i"
+msgstr "जैसे <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "रीस्टार्ट के बाद भी स्थिति बनाए रखें"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(GNOME के \"परेशान न करें\" का सम्मान करता है और नोटिफ़िकेशन काउंटर बैज दिखाने का विकल्प ज़रूरी है)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "नोटिफ़िकेशन आने पर पैनल दिखाएँ और रोके रखें"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "छिपाने और दिखाने के एनीमेशन की अवधि (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "पैनल छिपाने से पहले की देरी (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "पैनल दिखाने से पहले की देरी (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "शुरू होने पर Intellihide चालू करने से पहले की देरी (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "एक ही पैनल होने पर भी मॉनिटर अलग करें"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "gnome-shell के ऐप्लिकेशन स्विचर में वर्कस्पेस अलग करें"
+
+msgid "Shift+Click action"
+msgstr "Shift+क्लिक की कार्रवाई"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "छोटा करने पर सेट होने पर, डबल क्लिक करने से ऐप्लिकेशन की सभी विंडो छोटी हो जाती हैं।"
+
+msgid "Raise windows"
+msgstr "विंडो ऊपर लाएँ"
+
+msgid "Minimize window"
+msgstr "विंडो छोटी करें"
+
+msgid "Launch new instance"
+msgstr "नया इंस्टेंस लॉन्च करें"
+
+msgid "Cycle through windows"
+msgstr "विंडो में बारी-बारी से जाएँ"
+
+msgid "Cycle windows + minimize"
+msgstr "विंडो में बारी-बारी से जाएँ + छोटी करें"
+
+msgid "Toggle single / Preview multiple"
+msgstr "एक को टॉगल करें / कई का पूर्वावलोकन दिखाएँ"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "एक को टॉगल करें / कई में बारी-बारी से जाएँ"
+
+msgid "Toggle single / Spread multiple"
+msgstr "एक को टॉगल करें / कई को फैलाएँ"
+
+msgid "Middle-Click action"
+msgstr "बीच के क्लिक की कार्रवाई"
+
+msgid "Behavior for Middle-Click."
+msgstr "बीच के क्लिक का व्यवहार।"
+
+msgid "Shift+Middle-Click action"
+msgstr "Shift+बीच के क्लिक की कार्रवाई"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Shift+बीच के क्लिक का व्यवहार।"
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "हॉटकी या तो Super+नंबर होंगी या Super+Alt+नंबर"
+
+msgid "Hotkeys prefix"
+msgstr "हॉटकी का उपसर्ग"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "हॉटकी इस्तेमाल करते समय आइकन के ऊपर ऐप्लिकेशन के नंबर कुछ देर के लिए दिखाएँ।"
+
+msgid "Number overlay"
+msgstr "नंबर ओवरले"
+
+msgid "Never"
+msgstr "कभी नहीं"
+
+msgid "Show temporarily"
+msgstr "कुछ देर के लिए दिखाएँ"
+
+msgid "Always visible"
+msgstr "हमेशा दिखाएँ"
+
+msgid "Hide timeout (ms)"
+msgstr "छिपाने का टाइमआउट (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "ओवरले को 2 सेकंड के लिए दिखाने का शॉर्टकट"
+
+msgid "e.g. <Super>q"
+msgstr "जैसे <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "द्वितीयक मॉनिटर पर, मुख्य मॉनिटर से मेल खाने वाले आइकन पर ओवरले दिखाएँ"
+
+msgid "Show the overlay on all monitors"
+msgstr "सभी मॉनिटर पर ओवरले दिखाएँ"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "ऐप्लिकेशन के कई इंस्टेंस होने पर पूर्वावलोकन दिखाएँ"
+
+msgid "Show window previews on hotkey"
+msgstr "हॉटकी दबाने पर विंडो पूर्वावलोकन दिखाएँ"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "चुनें कि हॉटकी सक्रिय करने के लिए कीबोर्ड की कौन-सी नंबर कुंजियाँ इस्तेमाल हों"
+
+msgid "Hotkeys are activated with"
+msgstr "हॉटकी इनसे सक्रिय होती हैं"
+
+msgid "Number row"
+msgstr "नंबर पंक्ति"
+
+msgid "Numeric keypad"
+msgstr "न्यूमेरिक कीपैड"
+
+msgid "Both"
+msgstr "दोनों"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "माउस स्क्रॉल इवेंट के बीच की देरी (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "पकड़े जाने वाले माउस स्क्रॉल इवेंट की संख्या सीमित करने के लिए इस मान का इस्तेमाल करें।"
+
+msgid "Show popup when changing workspace"
+msgstr "वर्कस्पेस बदलते समय पॉपअप दिखाएँ"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "यह सिर्फ़ पैनल पर स्क्रॉल करते समय दिखने वाले वर्कस्पेस पॉपअप पर लागू होता है।"
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "<i>AppMenu</i> आइटम एकीकृत करें"
+
+msgid "<i>App Details</i> menu item"
+msgstr "<i>ऐप का विवरण</i> मेन्यू आइटम"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>ऐप का विवरण</i> सिर्फ़ तब उपलब्ध है जब GNOME Software इंस्टॉल हो"
+
+msgid "Show Applications icon"
+msgstr "ऐप्लिकेशन दिखाएँ आइकन"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "ऐप्लिकेशन दिखाएँ आइकन के किनारे की पैडिंग (px)"
+
+msgid "Override escape key and return to desktop"
+msgstr "एस्केप कुंजी को ओवरराइड करें और डेस्कटॉप पर लौटें"
+
+msgid "Override Show Desktop line color"
+msgstr "डेस्कटॉप दिखाएँ की रेखा का रंग ओवरराइड करें"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "डेस्कटॉप दिखाएँ बटन पर होवर करने पर डेस्कटॉप दिखाएँ"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "डेस्कटॉप दिखाने से पहले की देरी (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "फ़ेड की अवधि (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "दिखाने से पहले का समय (ms)"
+
+msgid "(400 is default)"
+msgstr "(400 डिफ़ॉल्ट है)"
+
+msgid "Time (ms) before hiding"
+msgstr "छिपाने से पहले का समय (ms)"
+
+msgid "(100 is default)"
+msgstr "(100 डिफ़ॉल्ट है)"
+
+msgid "Immediate on application icon click"
+msgstr "ऐप्लिकेशन आइकन पर क्लिक करते ही"
+
+msgid "Animation time (ms)"
+msgstr "एनीमेशन का समय (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "विंडो बंद करने के लिए पूर्वावलोकन पर बीच का क्लिक करें"
+
+msgid "Window previews preferred size (px)"
+msgstr "विंडो पूर्वावलोकन का पसंदीदा आकार (px)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "विंडो पूर्वावलोकन का आस्पेक्ट रेशियो X (चौड़ाई)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "तय"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "विंडो पूर्वावलोकन का आस्पेक्ट रेशियो Y (ऊँचाई)"
+
+msgid "Window previews padding (px)"
+msgstr "विंडो पूर्वावलोकन की पैडिंग (px)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "पूर्वावलोकन की पृष्ठभूमि के लिए कस्टम पारदर्शिता इस्तेमाल करें"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "बंद होने पर, पूर्वावलोकन की पृष्ठभूमि की पारदर्शिता पैनल जितनी ही रहती है।"
+
+msgid "Close button and header position"
+msgstr "बंद करने का बटन और हेडर की स्थिति"
+
+msgid "Display window preview headers"
+msgstr "विंडो पूर्वावलोकन के हेडर दिखाएँ"
+
+msgid "Icon size (px) of the window preview"
+msgstr "विंडो पूर्वावलोकन के आइकन का आकार (px)"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "बंद होने पर, पूर्वावलोकन के आइकन का आकार हेडरबार के आकार पर आधारित होगा"
+
+msgid "Font size (px) of the preview titles"
+msgstr "पूर्वावलोकन के शीर्षकों का फ़ॉन्ट आकार (px)"
+
+msgid "Font weight of the preview titles"
+msgstr "पूर्वावलोकन के शीर्षकों के फ़ॉन्ट की मोटाई"
+
+msgid "Font color of the preview titles"
+msgstr "पूर्वावलोकन के शीर्षकों के फ़ॉन्ट का रंग"
+
+msgid "Enable window peeking"
+msgstr "विंडो झाँकना चालू करें"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "किसी विंडो के पूर्वावलोकन पर कुछ देर होवर करने पर वह विंडो अलग से दिखने लगती है।"
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "विंडो झाँकने के मोड में जाने का टाइमआउट (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "विंडो झाँकने के मोड में जाने के लिए विंडो पूर्वावलोकन पर होवर करते हुए ज़रूरी निष्क्रियता का समय।"
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "विंडो झाँकने के मोड की पारदर्शिता"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "झाँकी जा रही विंडो को छोड़कर बाकी सभी विंडो की पारदर्शिता एक ही मान पर सेट होती है।"
+
+msgid "About"
+msgstr "परिचय"
+
+msgid "Info"
+msgstr "जानकारी"
+
+msgid "Version"
+msgstr "वर्शन"
+
+msgid "Source"
+msgstr "सोर्स"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "निर्यात और आयात"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "नीचे दिए गए बटनों से अपनी मौजूदा पसंद से एक सेटिंग फ़ाइल बनाएँ, जिसे किसी दूसरी मशीन पर आयात किया जा सके।"
+
+msgid "Export and import settings"
+msgstr "सेटिंग निर्यात और आयात करें"
+
+msgid "Export to file"
+msgstr "फ़ाइल में निर्यात करें"
+
+msgid "Import from file"
+msgstr "फ़ाइल से आयात करें"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">इस प्रोग्राम के साथ कोई वारंटी नहीं दी जाती।\n"
+"विवरण के लिए <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU जनरल पब्लिक लाइसेंस, वर्शन 2 या उसके बाद का</a> देखें।</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "प्रायोजित और मूल रूप से विकसित करने वाले"
+
+msgid "Action"
+msgstr "कार्रवाई"
+
+msgid "Click action"
+msgstr "क्लिक की कार्रवाई"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "चालू ऐप्लिकेशन के आइकन पर क्लिक करने पर होने वाला व्यवहार।"
+
+msgid "Toggle windows"
+msgstr "विंडो टॉगल करें"
+
+msgid "Scroll action"
+msgstr "स्क्रॉल की कार्रवाई"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "पैनल पर माउस स्क्रॉल करने पर होने वाला व्यवहार।"
+
+msgid "Scroll panel action"
+msgstr "पैनल स्क्रॉल की कार्रवाई"
+
+msgid "Do nothing"
+msgstr "कुछ न करें"
+
+msgid "Switch workspace"
+msgstr "वर्कस्पेस बदलें"
+
+msgid "Cycle windows"
+msgstr "विंडो में बारी-बारी से जाएँ"
+
+msgid "Change volume"
+msgstr "आवाज़ बदलें"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "ऐप्लिकेशन आइकन पर माउस स्क्रॉल करने पर होने वाला व्यवहार।"
+
+msgid "Scroll icon action"
+msgstr "आइकन स्क्रॉल की कार्रवाई"
+
+msgid "Same as panel"
+msgstr "पैनल जैसा ही"
+
+msgid "Hotkey overlay"
+msgstr "हॉटकी ओवरले"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "ऐप्स सक्रिय करने के शॉर्टकट के रूप में Super+(0-9) चालू करें। इसे Shift और Ctrl के साथ भी इस्तेमाल किया जा सकता है।"
+
+msgid "Use hotkeys to activate apps"
+msgstr "ऐप्स सक्रिय करने के लिए हॉटकी इस्तेमाल करें"
+
+msgid "Application icons context menu"
+msgstr "ऐप्लिकेशन आइकन का संदर्भ मेन्यू"
+
+msgid "(right-click menu)"
+msgstr "(राइट-क्लिक मेन्यू)"
+
+msgid "Secondary menu"
+msgstr "द्वितीयक मेन्यू"
+
+msgid "Panel context menu entries"
+msgstr "पैनल के संदर्भ मेन्यू की प्रविष्टियाँ"
+
+msgid "Add entry"
+msgstr "प्रविष्टि जोड़ें"
+
+msgid "Behavior"
+msgstr "व्यवहार"
+
+msgid "Applications"
+msgstr "ऐप्लिकेशन"
+
+msgid "Show favorite applications"
+msgstr "पसंदीदा ऐप्लिकेशन दिखाएँ"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "द्वितीयक पैनल पर पसंदीदा ऐप्लिकेशन दिखाएँ"
+
+msgid "Show running applications"
+msgstr "चालू ऐप्लिकेशन दिखाएँ"
+
+msgid "Ungroup applications"
+msgstr "ऐप्लिकेशन असमूहित करें"
+
+msgid "Show notification counter badge"
+msgstr "नोटिफ़िकेशन काउंटर बैज दिखाएँ"
+
+msgid "Hover"
+msgstr "होवर"
+
+msgid "Show window previews on hover"
+msgstr "होवर करने पर विंडो पूर्वावलोकन दिखाएँ"
+
+msgid "Show tooltip on hover"
+msgstr "होवर करने पर टूलटिप दिखाएँ"
+
+msgid "Isolate"
+msgstr "अलग करें"
+
+msgid "Isolate Workspaces"
+msgstr "वर्कस्पेस अलग करें"
+
+msgid "Isolate monitors"
+msgstr "मॉनिटर अलग करें"
+
+msgid "Overview"
+msgstr "ओवरव्यू"
+
+msgid "Click empty space to close overview"
+msgstr "ओवरव्यू बंद करने के लिए खाली जगह पर क्लिक करें"
+
+msgid "Disable show overview on startup"
+msgstr "शुरू होने पर ओवरव्यू दिखाना बंद करें"
+
+msgid "Fine-Tune"
+msgstr "बारीक ट्यूनिंग"
+
+msgid "Font size"
+msgstr "फ़ॉन्ट का आकार"
+
+msgid "(0 = theme default)"
+msgstr "(0 = थीम का डिफ़ॉल्ट)"
+
+msgid "Tray Font Size"
+msgstr "ट्रे का फ़ॉन्ट आकार"
+
+msgid "LeftBox Font Size"
+msgstr "LeftBox का फ़ॉन्ट आकार"
+
+msgid "Padding"
+msgstr "पैडिंग"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = थीम का डिफ़ॉल्ट)"
+
+msgid "Tray Item Padding"
+msgstr "ट्रे आइटम की पैडिंग"
+
+msgid "Status Icon Padding"
+msgstr "स्टेटस आइकन की पैडिंग"
+
+msgid "LeftBox Padding"
+msgstr "LeftBox की पैडिंग"
+
+msgid "Animate"
+msgstr "एनिमेट करें"
+
+msgid "Animate switching applications"
+msgstr "ऐप्लिकेशन बदलते समय एनीमेशन दिखाएँ"
+
+msgid "Animate launching new windows"
+msgstr "नई विंडो खुलते समय एनीमेशन दिखाएँ"
+
+msgid "Gnome functionality"
+msgstr "GNOME की कार्यक्षमता"
+
+msgid "(overview)"
+msgstr "(ओवरव्यू)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "gnome-shell का मूल डैश रखें"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "gnome-shell का मूल शीर्ष पैनल रखें"
+
+msgid "(e.g. date menu)"
+msgstr "(जैसे तारीख़ मेन्यू)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "पैनल मेन्यू बटन सिर्फ़ क्लिक करने पर सक्रिय करें"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "मुख्य मॉनिटर पर गतिविधियाँ हॉट कॉर्नर ज़बरदस्ती चालू रखें"
+
+msgid "Position"
+msgstr "स्थान"
+
+msgid "Panel"
+msgstr "पैनल"
+
+msgid "Display the main panel on"
+msgstr "मुख्य पैनल यहाँ दिखाएँ"
+
+msgid "Display panels on all monitors"
+msgstr "सभी मॉनिटर पर पैनल दिखाएँ"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "पसंद के अनुसार पैनल को छिपाएँ और दिखाएँ"
+
+msgid "Panel Intellihide"
+msgstr "पैनल Intellihide"
+
+msgid "Order and Position on monitors"
+msgstr "मॉनिटर पर क्रम और स्थान"
+
+msgid "Monitor"
+msgstr "मॉनिटर"
+
+msgid "Apply changes to all monitors"
+msgstr "सभी मॉनिटर पर बदलाव लागू करें"
+
+msgid "Panel monitor position"
+msgstr "पैनल की मॉनिटर पर स्थिति"
+
+msgid "(default is 48)"
+msgstr "(डिफ़ॉल्ट 48 है)"
+
+msgid "Panel thickness"
+msgstr "पैनल की मोटाई"
+
+msgid "(default is 100)"
+msgstr "(डिफ़ॉल्ट 100 है)"
+
+msgid "Panel length"
+msgstr "पैनल की लंबाई"
+
+msgid "Dynamic"
+msgstr "डायनामिक"
+
+msgid "Anchor"
+msgstr "एंकर"
+
+msgid "Taskbar Display"
+msgstr "टास्कबार डिस्प्ले"
+
+msgid "Style"
+msgstr "शैली"
+
+msgid "Global style"
+msgstr "वैश्विक शैली"
+
+msgid "Border radius"
+msgstr "बॉर्डर की गोलाई"
+
+msgid "AppIcon style"
+msgstr "ऐप आइकन की शैली"
+
+msgid "(default is 8)"
+msgstr "(डिफ़ॉल्ट 8 है)"
+
+msgid "App Icon Margin"
+msgstr "ऐप आइकन का मार्जिन"
+
+msgid "(default is 4)"
+msgstr "(डिफ़ॉल्ट 4 है)"
+
+msgid "App Icon Padding"
+msgstr "ऐप आइकन की पैडिंग"
+
+msgid "Animate hovering app icons"
+msgstr "होवर किए गए ऐप आइकन को एनिमेट करें"
+
+msgid "Highlight hovering app icons"
+msgstr "होवर किए गए ऐप आइकन को हाइलाइट करें"
+
+msgid "Icon style"
+msgstr "आइकन की शैली"
+
+msgid "Normal"
+msgstr "सामान्य"
+
+msgid "Symbolic"
+msgstr "सिंबॉलिक"
+
+msgid "Grayscale"
+msgstr "ग्रेस्केल"
+
+msgid "Running indicator"
+msgstr "चालू संकेतक"
+
+msgid "Running indicator position"
+msgstr "चालू संकेतक की स्थिति"
+
+msgid "Running indicator style (Focused app)"
+msgstr "चालू संकेतक की शैली (फ़ोकस वाला ऐप)"
+
+msgid "Dots"
+msgstr "बिंदु"
+
+msgid "Squares"
+msgstr "वर्ग"
+
+msgid "Dashes"
+msgstr "डैश"
+
+msgid "Segmented"
+msgstr "खंडित"
+
+msgid "Solid"
+msgstr "ठोस"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "चालू संकेतक की शैली (बिना फ़ोकस वाले ऐप)"
+
+msgid "Panel style"
+msgstr "पैनल की शैली"
+
+msgid "(default is 0)"
+msgstr "(डिफ़ॉल्ट 0 है)"
+
+msgid "Side margins"
+msgstr "बगल के मार्जिन"
+
+msgid "Top and bottom margins"
+msgstr "ऊपर और नीचे के मार्जिन"
+
+msgid "Side padding"
+msgstr "बगल की पैडिंग"
+
+msgid "Top and bottom padding"
+msgstr "ऊपर और नीचे की पैडिंग"
+
+msgid "Override panel theme background color"
+msgstr "पैनल की थीम का पृष्ठभूमि रंग ओवरराइड करें"
+
+msgid "Override panel theme background opacity"
+msgstr "पैनल की थीम की पृष्ठभूमि पारदर्शिता ओवरराइड करें"
+
+msgid "Panel background opacity (%)"
+msgstr "पैनल की पृष्ठभूमि की पारदर्शिता (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "विंडो के पैनल के पास आने पर पारदर्शिता बदलें"
+
+msgid "Dynamic background opacity"
+msgstr "डायनामिक पृष्ठभूमि पारदर्शिता"
+
+msgid "Override panel theme gradient"
+msgstr "पैनल की थीम का ग्रेडिएंट ओवरराइड करें"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "ग्रेडिएंट के ऊपरी भाग का रंग और पारदर्शिता (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "ग्रेडिएंट के निचले भाग का रंग और पारदर्शिता (%)"
+
+msgid "Panel border"
+msgstr "पैनल बॉर्डर"
+
+msgid "Override border color"
+msgstr "बॉर्डर का रंग ओवरराइड करें"
+
+msgid "Border thickness"
+msgstr "बॉर्डर की मोटाई"

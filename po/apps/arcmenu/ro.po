@@ -1,0 +1,1303 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: arcmenu\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+
+msgid "Pin to ArcMenu"
+msgstr "Fixează în ArcMenu"
+
+msgid "Create Desktop Shortcut"
+msgstr "Creează scurtătură pe desktop"
+
+msgid "Delete Desktop Shortcut"
+msgstr "Șterge scurtătura de pe desktop"
+
+msgid "Unpin from ArcMenu"
+msgstr "Elimină din ArcMenu"
+
+msgid "Unpin from Folder"
+msgstr "Elimină din dosar"
+
+msgid "Open Folder Location"
+msgstr "Deschide locația dosarului"
+
+msgid "Favorites"
+msgstr "Favorite"
+
+msgid "Frequent Apps"
+msgstr "Aplicații frecvente"
+
+msgid "All Apps"
+msgstr "Toate aplicațiile"
+
+msgid "Pinned Apps"
+msgstr "Aplicații fixate"
+
+msgid "Recent Files"
+msgstr "Fișiere recente"
+
+msgid "Log Out..."
+msgstr "Deconectare..."
+
+msgid "Lock"
+msgstr "Blochează"
+
+msgid "Restart..."
+msgstr "Repornește..."
+
+msgid "Power Off..."
+msgstr "Oprește..."
+
+msgid "Suspend"
+msgstr "Suspendare"
+
+msgid "Hybrid Sleep"
+msgstr "Somn hibrid"
+
+msgid "Hibernate"
+msgstr "Hibernare"
+
+msgid "Switch User"
+msgstr "Schimbă utilizatorul"
+
+msgid "Traditional"
+msgstr "Tradițional"
+
+msgid "Modern"
+msgstr "Modern"
+
+msgid "Touch"
+msgstr "Tactil"
+
+msgid "Launcher"
+msgstr "Lansator"
+
+msgid "Alternative"
+msgstr "Alternativ"
+
+msgid "ArcMenu"
+msgstr "ArcMenu"
+
+msgid "Brisk"
+msgstr "Brisk"
+
+msgid "Budgie"
+msgstr "Budgie"
+
+msgid "GNOME Menu"
+msgstr "Meniu GNOME"
+
+msgid "Mint"
+msgstr "Mint"
+
+msgid "Whisker"
+msgstr "Whisker"
+
+msgid "11"
+msgstr "11"
+
+msgid "a.z."
+msgstr "a.z."
+
+msgid "Enterprise"
+msgstr "Enterprise"
+
+msgid "Insider"
+msgstr "Insider"
+
+msgid "Plasma"
+msgstr "Plasma"
+
+msgid "Pop"
+msgstr "Pop"
+
+msgid "Redmond"
+msgstr "Redmond"
+
+msgid "Sleek"
+msgstr "Sleek"
+
+msgid "tognee"
+msgstr "tognee"
+
+msgid "Unity"
+msgstr "Unity"
+
+msgid "Windows"
+msgstr "Windows"
+
+msgid "Zest"
+msgstr "Zest"
+
+msgid "Chromebook"
+msgstr "Chromebook"
+
+msgid "Elementary"
+msgstr "Elementary"
+
+msgid "GNOME Overview"
+msgstr "Prezentare generală GNOME"
+
+msgid "Runner"
+msgstr "Lansator"
+
+msgid "Raven"
+msgstr "Raven"
+
+msgid "Software"
+msgstr "Programe"
+
+msgid "Settings"
+msgstr "Preferințe"
+
+msgid "Tweaks"
+msgstr "Ajustări"
+
+msgid "Terminal"
+msgstr "Terminal"
+
+msgid "Activities Overview"
+msgstr "Prezentarea generală Activități"
+
+msgid "ArcMenu Settings"
+msgstr "Preferințe ArcMenu"
+
+msgid "Files"
+msgstr "Fișiere"
+
+msgid "Apps"
+msgstr "Aplicații"
+
+msgid "Loading Menu Layout..."
+msgstr "Se încarcă aspectul meniului..."
+
+msgid "Show Desktop"
+msgstr "Arată desktopul"
+
+msgid "Power Off"
+msgstr "Oprește"
+
+msgid "Dash to Panel Settings"
+msgstr "Preferințe Dash to Panel"
+
+msgid "App Icons Taskbar Settings"
+msgstr "Preferințe bară de activități cu pictograme de aplicații"
+
+msgid "Session"
+msgstr "Sesiune"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "Back"
+msgstr "Înapoi"
+
+msgid "Unnamed Folder"
+msgstr "Dosar fără nume"
+
+msgid "New"
+msgstr "Nou"
+
+msgid "Pinned"
+msgstr "Fixate"
+
+msgid "Unmount Drive"
+msgstr "Demontează unitatea"
+
+msgid "Eject Drive"
+msgstr "Ejectează unitatea"
+
+msgid "Remove from Recent"
+msgstr "Elimină din recente"
+
+msgid "Search…"
+msgstr "Caută…"
+
+msgid "Frequent"
+msgstr "Frecvente"
+
+msgid "More Recent Files..."
+msgstr "Mai multe fișiere recente..."
+
+msgid "Computer"
+msgstr "Calculator"
+
+msgid "Leave"
+msgstr "Ieșire"
+
+msgid "Application Shortcuts"
+msgstr "Scurtături de aplicații"
+
+msgid "Places"
+msgstr "Locuri"
+
+msgid "Bookmarks"
+msgstr "Marcaje"
+
+msgid "Devices"
+msgstr "Dispozitive"
+
+msgid "Network"
+msgstr "Rețea"
+
+msgid "Library Home"
+msgstr "Biblioteca acasă"
+
+msgid "New Folder"
+msgstr "Dosar nou"
+
+msgid "Rename Folder"
+msgstr "Redenumește dosarul"
+
+msgid "Delete Folder"
+msgstr "Șterge dosarul"
+
+#, javascript-format
+msgid "Permanently delete %s folder?"
+msgstr "Ștergi definitiv dosarul %s?"
+
+msgid "No"
+msgstr "Nu"
+
+msgid "Yes"
+msgstr "Da"
+
+#, javascript-format
+msgid "Rename %s folder"
+msgstr "Redenumește dosarul %s"
+
+msgid "Cancel"
+msgstr "Anulează"
+
+msgid "Apply"
+msgstr "Aplică"
+
+msgid "All Programs"
+msgstr "Toate programele"
+
+msgid "Shortcuts"
+msgstr "Scurtături"
+
+msgid "Configure Runner"
+msgstr "Configurează lansatorul"
+
+msgid "Categories"
+msgstr "Categorii"
+
+msgid "Extras"
+msgstr "Extra"
+
+#, javascript-format
+msgid "Failed to launch “%s”"
+msgstr "Nu s-a putut lansa „%s”"
+
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "Nu s-a putut monta volumul pentru „%s”"
+
+msgid "Home"
+msgstr "Acasă"
+
+#, javascript-format
+msgid "Ejecting drive “%s” failed:"
+msgstr "Ejectarea unității „%s” a eșuat:"
+
+msgid "Modify"
+msgstr "Modifică"
+
+msgid "Move Up"
+msgstr "Mută în sus"
+
+msgid "Move Down"
+msgstr "Mută în jos"
+
+msgid "Remove"
+msgstr "Elimină"
+
+msgid "Try a different search"
+msgstr "Încearcă o altă căutare"
+
+msgid "Searching"
+msgstr "Se caută"
+
+msgid "No Results Found"
+msgstr "Nu s-a găsit niciun rezultat"
+
+#, javascript-format
+msgid "%d more"
+msgstr "încă %d"
+
+msgid "List of open windows across all workspaces"
+msgstr "Lista ferestrelor deschise din toate spațiile de lucru"
+
+msgid "Open Windows"
+msgstr "Ferestre deschise"
+
+#, javascript-format
+msgid "'%s' on Workspace %d"
+msgstr "„%s” în spațiul de lucru %d"
+
+#, javascript-format
+msgid "Failed to open “%s”"
+msgstr "Nu s-a putut deschide „%s”"
+
+msgid "About"
+msgstr "Despre"
+
+msgid "Application Menu Extension for GNOME"
+msgstr "Extensie de meniu de aplicații pentru GNOME"
+
+#, javascript-format
+msgid "%s Version"
+msgstr "Versiune %s"
+
+#, javascript-format
+msgid "%s - Release Notes"
+msgstr "%s - Note de versiune"
+
+msgid "What's New"
+msgstr "Ce este nou"
+
+msgid "Message Tray Update Notification"
+msgstr "Notificare de actualizare în tava de mesaje"
+
+#, javascript-format
+msgid "Show a notification when %s receives an update."
+msgstr "Afișează o notificare când %s primește o actualizare."
+
+msgid "Git Commit"
+msgstr "Commit Git"
+
+msgid "GNOME Version"
+msgstr "Versiune GNOME"
+
+msgid "OS Name"
+msgstr "Numele sistemului de operare"
+
+msgid "Windowing System"
+msgstr "Sistem de ferestre"
+
+#, javascript-format
+msgid "%s on GitLab"
+msgstr "%s pe GitLab"
+
+msgid "Report an Issue"
+msgstr "Raportează o problemă"
+
+#, javascript-format
+msgid "%s Settings"
+msgstr "Preferințe %s"
+
+msgid "Load"
+msgstr "Încarcă"
+
+msgid "Load Settings"
+msgstr "Încarcă preferințele"
+
+msgid "Open"
+msgstr "Deschide"
+
+msgid "Save"
+msgstr "Salvează"
+
+msgid "Save Settings"
+msgstr "Salvează preferințele"
+
+msgid "Credits"
+msgstr "Mulțumiri"
+
+msgid "Brought to you by"
+msgstr "Realizat pentru tine de"
+
+msgid "History"
+msgstr "Istoric"
+
+msgid "Contributions by"
+msgstr "Contribuții de la"
+
+msgid "Contributors"
+msgstr "Contribuitori"
+
+msgid "Translators"
+msgstr "Traducători"
+
+msgid "Artwork by"
+msgstr "Grafică de"
+
+msgid "Legal"
+msgstr "Informații legale"
+
+msgid "This program comes with absolutely no warranty."
+msgstr "Acest program vine fără absolut nicio garanție."
+
+#, javascript-format
+msgid "See the <a href=\"%s\">%s</a> for details."
+msgstr "Vezi <a href=\"%s\">%s</a> pentru detalii."
+
+msgid "GNU General Public License, version 2 or later"
+msgstr "Licența Publică Generală GNU, versiunea 2 sau ulterioară"
+
+msgid "Donate"
+msgstr "Donează"
+
+#, javascript-format
+msgid "Help Support %s"
+msgstr "Ajută la susținerea %s"
+
+#, javascript-format
+msgid "Thank you for using %s! If you enjoy it and would like to help support its continued development, please consider making a donation."
+msgstr "Mulțumim că folosești %s! Dacă îți place și vrei să ajuți la susținerea dezvoltării sale continue, te rugăm să iei în considerare o donație."
+
+msgid "Donate via PayPal"
+msgstr "Donează prin PayPal"
+
+msgid "Donate via Buy Me a Coffee"
+msgstr "Donează prin Buy Me a Coffee"
+
+#, javascript-format
+msgid "A huge thank you to everyone who has supported %s! Your support helps keep %s going. It is truly appreciated!"
+msgstr "Mulțumiri sincere tuturor celor care au susținut %s! Sprijinul vostru ajută %s să meargă mai departe. Îl apreciem enorm!"
+
+msgid "General"
+msgstr "General"
+
+msgid "Panel Display Options"
+msgstr "Opțiuni de afișare în panou"
+
+msgid "Show Activities Button"
+msgstr "Afișează butonul Activități"
+
+msgid "Dash to Panel may conflict with this setting"
+msgstr "Dash to Panel poate intra în conflict cu această opțiune"
+
+msgid "Left"
+msgstr "Stânga"
+
+msgid "Center"
+msgstr "Centru"
+
+msgid "Right"
+msgstr "Dreapta"
+
+msgid "Position in Panel"
+msgstr "Poziția în panou"
+
+msgid "Menu Alignment"
+msgstr "Alinierea meniului"
+
+msgid "Display ArcMenu on all Panels"
+msgstr "Afișează ArcMenu pe toate panourile"
+
+msgid "Dash to Panel or App Icons Taskbar extension required"
+msgstr "Este necesară extensia Dash to Panel sau Bară de activități cu pictograme de aplicații"
+
+msgid "Always Prefer Top Panel"
+msgstr "Preferă mereu panoul de sus"
+
+msgid "Useful with Dash to Panel setting 'Keep original gnome-shell top panel'"
+msgstr "Util cu opțiunea Dash to Panel „Păstrează panoul de sus original din gnome-shell”"
+
+msgid "General Settings"
+msgstr "Preferințe generale"
+
+msgid "ArcMenu Hotkey"
+msgstr "Scurtătura ArcMenu"
+
+msgid "Standalone Runner Menu"
+msgstr "Meniu lansator independent"
+
+msgid "Hide Overview on Startup"
+msgstr "Ascunde prezentarea generală la pornire"
+
+msgid "Hide Overview when ArcMenu Opens"
+msgstr "Ascunde prezentarea generală când se deschide ArcMenu"
+
+#, javascript-format
+msgid "%s Layout Tweaks"
+msgstr "Ajustări de aspect %s"
+
+msgid "Disabled"
+msgstr "Dezactivat"
+
+msgid "ArcMenu Hotkeys"
+msgstr "Scurtături ArcMenu"
+
+msgid "Standalone Runner Hotkeys"
+msgstr "Scurtături lansator independent"
+
+msgid "Active Hotkeys"
+msgstr "Scurtături active"
+
+msgid "Hotkey Options"
+msgstr "Opțiuni scurtături"
+
+msgid "Super Hotkeys Override GNOME Overview Hotkey"
+msgstr "Scurtăturile Super înlocuiesc scurtătura prezentării generale GNOME"
+
+msgid "Open on Primary Monitor"
+msgstr "Deschide pe monitorul principal"
+
+msgid "Type on your keyboard to add a new hotkey."
+msgstr "Tastează pe tastatură pentru a adăuga o scurtătură nouă."
+
+msgid "Add Hotkey"
+msgstr "Adaugă scurtătură"
+
+#, javascript-format
+msgid "Conflict with <b>%s</b> hotkey"
+msgstr "Conflict cu scurtătura <b>%s</b>"
+
+msgid "Standlone Runner"
+msgstr "Lansator independent"
+
+msgid "Select an Icon"
+msgstr "Alege o pictogramă"
+
+msgid "Select"
+msgstr "Alege"
+
+msgid "Search icons…"
+msgstr "Caută pictograme…"
+
+msgid "Browse Files..."
+msgstr "Răsfoiește fișiere..."
+
+msgid "All"
+msgstr "Toate"
+
+msgid "Symbolic"
+msgstr "Simbolic"
+
+msgid "Full Color"
+msgstr "Color complet"
+
+msgid "Type"
+msgstr "Tip"
+
+msgid "Extension"
+msgstr "Extensie"
+
+msgid "Distros"
+msgstr "Distribuții"
+
+msgid "Category"
+msgstr "Categorie"
+
+msgid "Filter"
+msgstr "Filtru"
+
+msgid "Menu Button"
+msgstr "Buton de meniu"
+
+msgid "Reset settings"
+msgstr "Resetează preferințele"
+
+#, javascript-format
+msgid "Reset all %s settings?"
+msgstr "Resetezi toate preferințele %s?"
+
+#, javascript-format
+msgid "All %s settings will be reset to the default value."
+msgstr "Toate preferințele %s vor fi resetate la valoarea implicită."
+
+msgid "Appearance"
+msgstr "Aspect"
+
+msgid "Icon"
+msgstr "Pictogramă"
+
+msgid "Text"
+msgstr "Text"
+
+msgid "Icon and Text"
+msgstr "Pictogramă și text"
+
+msgid "Text and Icon"
+msgstr "Text și pictogramă"
+
+msgid "Hidden"
+msgstr "Ascuns"
+
+msgid "Display Style"
+msgstr "Stil de afișare"
+
+msgid "Padding"
+msgstr "Spațiere interioară"
+
+#, javascript-format
+msgid "%d Default Theme Value"
+msgstr "%d valoare implicită a temei"
+
+msgid "Browse..."
+msgstr "Răsfoiește..."
+
+msgid "Choose a New Icon"
+msgstr "Alege o pictogramă nouă"
+
+msgid "Icon Size"
+msgstr "Dimensiune pictogramă"
+
+msgid "Click Options"
+msgstr "Opțiuni de clic"
+
+msgid "Context Menu"
+msgstr "Meniu contextual"
+
+msgid "None"
+msgstr "Niciunul"
+
+msgid "Left Click"
+msgstr "Clic stânga"
+
+msgid "Right Click"
+msgstr "Clic dreapta"
+
+msgid "Middle Click"
+msgstr "Clic mijloc"
+
+msgid "Styling"
+msgstr "Stilizare"
+
+msgid "Results may vary with third party themes"
+msgstr "Rezultatele pot varia cu temele terțe"
+
+msgid "Foreground Color"
+msgstr "Culoarea de prim-plan"
+
+msgid "Background Color"
+msgstr "Culoarea de fundal"
+
+msgid "Hover"
+msgstr "Trecere cursor"
+
+msgid "Active"
+msgstr "Activ"
+
+msgid "Border Radius"
+msgstr "Raza colțurilor"
+
+msgid "Border Width"
+msgstr "Grosimea bordurii"
+
+msgid "Background colors required if set to 0"
+msgstr "Culorile de fundal sunt necesare dacă este setat la 0"
+
+msgid "Border Color"
+msgstr "Culoarea bordurii"
+
+msgid "Menu"
+msgstr "Meniu"
+
+msgid "How should the menu look?"
+msgstr "Cum ar trebui să arate meniul?"
+
+msgid "Menu Layout"
+msgstr "Aspectul meniului"
+
+msgid "Choose a layout style for the menu"
+msgstr "Alege un stil de aspect pentru meniu"
+
+msgid "Menu Theme"
+msgstr "Tema meniului"
+
+msgid "Modify menu colors, font size, and border"
+msgstr "Modifică culorile, dimensiunea fontului și bordura meniului"
+
+msgid "Menu Visual Appearance"
+msgstr "Aspectul vizual al meniului"
+
+msgid "Change menu height, width, location, and icon sizes"
+msgstr "Schimbă înălțimea, lățimea, locația și dimensiunile pictogramelor meniului"
+
+msgid "Fine Tune"
+msgstr "Reglaj fin"
+
+msgid "Adjust less commonly used settings"
+msgstr "Ajustează preferințele folosite mai rar"
+
+msgid "What should show on the menu?"
+msgstr "Ce ar trebui să apară în meniu?"
+
+msgid "Settings specific to the current menu layout"
+msgstr "Preferințe specifice aspectului curent al meniului"
+
+msgid "Directory Shortcuts"
+msgstr "Scurtături către dosare"
+
+msgid "Search Options"
+msgstr "Opțiuni de căutare"
+
+msgid "Power Options"
+msgstr "Opțiuni de alimentare"
+
+msgid "Choose which power options to show and the display style"
+msgstr "Alege ce opțiuni de alimentare să se afișeze și stilul de afișare"
+
+msgid "Extra Categories"
+msgstr "Categorii suplimentare"
+
+msgid "Add or remove additional custom categories"
+msgstr "Adaugă sau elimină categorii personalizate suplimentare"
+
+msgid "What should show on the context menu?"
+msgstr "Ce ar trebui să apară în meniul contextual?"
+
+msgid "Modify ArcMenu Context Menu"
+msgstr "Modifică meniul contextual ArcMenu"
+
+msgid "Show Category Sub Menus"
+msgstr "Afișează submeniurile categoriilor"
+
+msgid "Show Application Descriptions"
+msgstr "Afișează descrierile aplicațiilor"
+
+msgid "Show Generic Application Names"
+msgstr "Afișează numele generice ale aplicațiilor"
+
+msgid "Show Hidden Recent Files"
+msgstr "Afișează fișierele recente ascunse"
+
+msgid "Show Multi Lined Labels"
+msgstr "Afișează etichete pe mai multe rânduri"
+
+msgid "Allow application labels to span multiple lines on grid style layouts"
+msgstr "Permite etichetelor aplicațiilor să se întindă pe mai multe rânduri în aspectele de tip grilă"
+
+msgid "Show Tooltips"
+msgstr "Afișează sfaturi"
+
+msgid "Group Apps Alphabetically on List Views"
+msgstr "Grupează aplicațiile alfabetic în vizualizările listă"
+
+msgid "For All Apps sections"
+msgstr "Pentru secțiunile Toate aplicațiile"
+
+msgid "Group Apps Alphabetically on Grid Views"
+msgstr "Grupează aplicațiile alfabetic în vizualizările grilă"
+
+msgid "Activate App Window on Launch"
+msgstr "Activează fereastra aplicației la lansare"
+
+msgid "Launching an app activates its existing window if one is open; otherwise, it launches a new instance. Hold Ctrl while launching or middle-click to open a new window."
+msgstr "Lansarea unei aplicații activează fereastra ei existentă, dacă este deschisă una; altfel, lansează o instanță nouă. Ține apăsat Ctrl la lansare sau fă clic de mijloc pentru a deschide o fereastră nouă."
+
+msgid "Keep ArcMenu Open on Ctrl+Click"
+msgstr "Păstrează ArcMenu deschis la Ctrl+clic"
+
+msgid "Prevents the menu from closing when activating items while holding Ctrl."
+msgstr "Împiedică închiderea meniului la activarea elementelor cu Ctrl apăsat."
+
+msgid "Scrollview Options"
+msgstr "Opțiuni zonă derulabilă"
+
+msgid "Scrollview Fade Effects"
+msgstr "Efecte de estompare ale zonei derulabile"
+
+msgid "Show Scrollbars"
+msgstr "Afișează barele de derulare"
+
+msgid "Overlay Scrollbars"
+msgstr "Bare de derulare suprapuse"
+
+msgid "Icon Style"
+msgstr "Stilul pictogramelor"
+
+msgid "Category Icons"
+msgstr "Pictograme de categorii"
+
+msgid "Shortcut Icons"
+msgstr "Pictograme de scurtături"
+
+msgid "Button Icons"
+msgstr "Pictograme de butoane"
+
+msgid "New Apps Tracker"
+msgstr "Urmărirea aplicațiilor noi"
+
+msgid "Enable"
+msgstr "Activează"
+
+msgid "Clear All"
+msgstr "Șterge tot"
+
+msgid "Extra Shortcuts"
+msgstr "Scurtături suplimentare"
+
+msgid "Vertical Separator"
+msgstr "Separator vertical"
+
+msgid "Mouse Click"
+msgstr "Clic de mouse"
+
+msgid "Mouse Hover"
+msgstr "Trecere cu mouse-ul"
+
+msgid "Category Activation"
+msgstr "Activarea categoriei"
+
+msgid "Round"
+msgstr "Rotund"
+
+msgid "Square"
+msgstr "Pătrat"
+
+msgid "Avatar Shape"
+msgstr "Forma avatarului"
+
+msgid "Bottom"
+msgstr "Jos"
+
+msgid "Top"
+msgstr "Sus"
+
+msgid "Searchbar Location"
+msgstr "Poziția barei de căutare"
+
+msgid "Flip Layout Horizontally"
+msgstr "Inversează aspectul pe orizontală"
+
+msgid "Show User Avatar"
+msgstr "Afișează avatarul utilizatorului"
+
+msgid "Default View"
+msgstr "Vizualizare implicită"
+
+msgid "Show Frequent Apps"
+msgstr "Afișează aplicațiile frecvente"
+
+msgid "Merge Top and Bottom Panels"
+msgstr "Îmbină panourile de sus și de jos"
+
+msgid "Max Frequent Apps"
+msgstr "Număr maxim de aplicații frecvente"
+
+msgid "Show Apps Grid"
+msgstr "Afișează grila de aplicații"
+
+msgid "Show Pinned Apps"
+msgstr "Afișează aplicațiile fixate"
+
+msgid "Activate on Hover"
+msgstr "Activează la trecerea cursorului"
+
+msgid "Enable Activities Overview Shortcut"
+msgstr "Activează scurtătura prezentării generale Activități"
+
+msgid "Centered"
+msgstr "Centrat"
+
+msgid "Position"
+msgstr "Poziție"
+
+msgid "List"
+msgstr "Listă"
+
+msgid "Grid"
+msgstr "Grilă"
+
+msgid "Search Results Display Style"
+msgstr "Stilul de afișare al rezultatelor căutării"
+
+msgid "Width"
+msgstr "Lățime"
+
+msgid "Height"
+msgstr "Înălțime"
+
+msgid "Static Height"
+msgstr "Înălțime statică"
+
+msgid "Font Size"
+msgstr "Dimensiunea fontului"
+
+msgid "Default"
+msgstr "Implicit"
+
+msgid "Show Configure Runner Button"
+msgstr "Afișează butonul Configurează lansatorul"
+
+msgid "Position on Monitor"
+msgstr "Poziția pe monitor"
+
+msgid "Extra Shortcuts Panel Width"
+msgstr "Lățimea panoului de scurtături suplimentare"
+
+msgid "External Devices"
+msgstr "Dispozitive externe"
+
+msgid "Nothing Yet!"
+msgstr "Încă nimic!"
+
+msgid "Categories List"
+msgstr "Lista de categorii"
+
+msgid "Pinned and Frequent Apps"
+msgstr "Aplicații fixate și frecvente"
+
+msgid "0 = unlimited"
+msgstr "0 = nelimitat"
+
+msgid "'All Apps' Button Action"
+msgstr "Acțiunea butonului „Toate aplicațiile”"
+
+msgid "Category Quick Links"
+msgstr "Legături rapide către categorii"
+
+msgid "Display a category on the default menu view. Category must be enabled in ArcMenu Settings -> Menu -> Extra Categories section."
+msgstr "Afișează o categorie în vizualizarea implicită a meniului. Categoria trebuie activată în Preferințe ArcMenu -> Meniu -> secțiunea Categorii suplimentare."
+
+msgid "Quick Links Location"
+msgstr "Locația legăturilor rapide"
+
+msgid "Enable Weather Widget"
+msgstr "Activează widgetul de vreme"
+
+msgid "Enable Clock Widget"
+msgstr "Activează widgetul de ceas"
+
+msgid "Current Menu Layout"
+msgstr "Aspectul curent al meniului"
+
+msgid "Choose a new menu layout?"
+msgstr "Alegi un aspect nou al meniului?"
+
+#, javascript-format
+msgid "%s Menu Layouts"
+msgstr "Aspecte de meniu %s"
+
+msgid "Actions will be hidden from ArcMenu if not available on your system."
+msgstr "Acțiunile vor fi ascunse din ArcMenu dacă nu sunt disponibile pe sistemul tău."
+
+msgid "Off"
+msgstr "Dezactivat"
+
+msgid "Power Buttons"
+msgstr "Butoane de alimentare"
+
+msgid "Power Menu"
+msgstr "Meniu de alimentare"
+
+msgid "Override Display Style"
+msgstr "Înlocuiește stilul de afișare"
+
+msgid "Add More Apps"
+msgstr "Adaugă mai multe aplicații"
+
+msgid "Add Default User Directories"
+msgstr "Adaugă dosarele implicite ale utilizatorului"
+
+msgid "Add More Shortcuts"
+msgstr "Adaugă mai multe scurtături"
+
+msgid "Add Custom Shortcut"
+msgstr "Adaugă o scurtătură personalizată"
+
+msgid "Invalid Shortcut"
+msgstr "Scurtătură nevalidă"
+
+msgid "Add to your Pinned Apps"
+msgstr "Adaugă la aplicațiile fixate"
+
+msgid "Add to your Extra Shortcuts"
+msgstr "Adaugă la scurtăturile suplimentare"
+
+msgid "Select Application Shortcuts"
+msgstr "Alege scurtături de aplicații"
+
+msgid "Select Directory Shortcuts"
+msgstr "Alege scurtături către dosare"
+
+msgid "Add to the Context Menu"
+msgstr "Adaugă la meniul contextual"
+
+msgid "Separator"
+msgstr "Separator"
+
+msgid "Spacer"
+msgstr "Spațiu gol"
+
+msgid "Run Command..."
+msgstr "Execută comanda..."
+
+msgid "Show All Apps"
+msgstr "Afișează toate aplicațiile"
+
+msgid "Menu Settings"
+msgstr "Preferințe meniu"
+
+msgid "Menu Theming"
+msgstr "Teme de meniu"
+
+msgid "Change Menu Layout"
+msgstr "Schimbă aspectul meniului"
+
+msgid "Menu Button Settings"
+msgstr "Preferințe buton meniu"
+
+msgid "Panel Extension Settings"
+msgstr "Preferințe extensie panou"
+
+msgid "Documents"
+msgstr "Documente"
+
+msgid "Downloads"
+msgstr "Descărcări"
+
+msgid "Music"
+msgstr "Muzică"
+
+msgid "Pictures"
+msgstr "Imagini"
+
+msgid "Videos"
+msgstr "Videoclipuri"
+
+msgid "Recent"
+msgstr "Recente"
+
+msgid "Dash to Panel or App Icons Taskbar"
+msgstr "Dash to Panel sau Bară de activități cu pictograme de aplicații"
+
+#, javascript-format
+msgid "%s has been added"
+msgstr "%s a fost adăugat"
+
+#, javascript-format
+msgid "%s has been removed"
+msgstr "%s a fost eliminat"
+
+msgid "Add a Custom Shortcut"
+msgstr "Adaugă o scurtătură personalizată"
+
+msgid "Edit Pinned App"
+msgstr "Editează aplicația fixată"
+
+msgid "Edit Shortcut"
+msgstr "Editează scurtătura"
+
+msgid "Add"
+msgstr "Adaugă"
+
+msgid "Title"
+msgstr "Titlu"
+
+msgid "Clear Icon"
+msgstr "Șterge pictograma"
+
+msgid "Directory"
+msgstr "Dosar"
+
+msgid "Command"
+msgstr "Comandă"
+
+msgid "Hide Search Bar"
+msgstr "Ascunde bara de căutare"
+
+msgid "The search bar hides when empty and appears when typing."
+msgstr "Bara de căutare se ascunde când este goală și apare când tastezi."
+
+msgid "Show Search Result Descriptions"
+msgstr "Afișează descrierile rezultatelor căutării"
+
+msgid "Highlight search result terms"
+msgstr "Evidențiază termenii căutați în rezultate"
+
+msgid "Max Search Results"
+msgstr "Număr maxim de rezultate ale căutării"
+
+msgid "Search Box Border Radius"
+msgstr "Raza colțurilor casetei de căutare"
+
+msgid "Extra Search Providers"
+msgstr "Furnizori de căutare suplimentari"
+
+msgid "Search for open windows across all workspaces"
+msgstr "Caută ferestre deschise din toate spațiile de lucru"
+
+msgid "Search for recent files"
+msgstr "Caută fișiere recente"
+
+msgid "Override Theme"
+msgstr "Înlocuiește tema"
+
+msgid "Menu Themes"
+msgstr "Teme de meniu"
+
+msgid "Current Theme"
+msgstr "Tema curentă"
+
+msgid "Save as Theme"
+msgstr "Salvează ca temă"
+
+msgid "Menu Styling"
+msgstr "Stilul meniului"
+
+msgid "Separator Color"
+msgstr "Culoarea separatorului"
+
+msgid "Menu Items Styling"
+msgstr "Stilul elementelor de meniu"
+
+msgid "Save Theme As..."
+msgstr "Salvează tema ca..."
+
+msgid "Theme Name"
+msgstr "Numele temei"
+
+msgid "Save Theme"
+msgstr "Salvează tema"
+
+msgid "Manage Themes"
+msgstr "Gestionează temele"
+
+msgid "Save Themes"
+msgstr "Salvează temele"
+
+msgid "Load Themes"
+msgstr "Încarcă temele"
+
+#, javascript-format
+msgid "%s has been selected"
+msgstr "%s a fost selectat"
+
+#, javascript-format
+msgid "%s has been unselected"
+msgstr "%s a fost deselectat"
+
+msgid "Menu Size"
+msgstr "Dimensiunea meniului"
+
+msgid "Left-Panel Width"
+msgstr "Lățimea panoului din stânga"
+
+msgid "Traditional Layouts"
+msgstr "Aspecte tradiționale"
+
+msgid "Right-Panel Width"
+msgstr "Lățimea panoului din dreapta"
+
+msgid "Width Offset"
+msgstr "Decalaj de lățime"
+
+msgid "Non-Traditional Layouts"
+msgstr "Aspecte netradiționale"
+
+msgid "Menu Location"
+msgstr "Locația meniului"
+
+msgid "Top Centered"
+msgstr "Sus centrat"
+
+msgid "Top Left"
+msgstr "Sus stânga"
+
+msgid "Top Right"
+msgstr "Sus dreapta"
+
+msgid "Bottom Centered"
+msgstr "Jos centrat"
+
+msgid "Bottom Left"
+msgstr "Jos stânga"
+
+msgid "Bottom Right"
+msgstr "Jos dreapta"
+
+msgid "Left Centered"
+msgstr "Stânga centrat"
+
+msgid "Right Centered"
+msgstr "Dreapta centrat"
+
+msgid "Monitor Centered"
+msgstr "Centrat pe monitor"
+
+msgid "Override Menu Location"
+msgstr "Înlocuiește locația meniului"
+
+msgid "Override Menu Rise"
+msgstr "Înlocuiește ridicarea meniului"
+
+msgid "Menu Distance from Panel and Screen Edge"
+msgstr "Distanța meniului față de panou și marginea ecranului"
+
+msgid "Override Menu Item Icon Sizes"
+msgstr "Înlocuiește dimensiunile pictogramelor elementelor de meniu"
+
+msgid "Small"
+msgstr "Mic"
+
+msgid "Medium"
+msgstr "Mediu"
+
+msgid "Large"
+msgstr "Mare"
+
+msgid "Extra Large"
+msgstr "Foarte mare"
+
+msgid "Small Wide"
+msgstr "Mic lat"
+
+msgid "Medium Wide"
+msgstr "Mediu lat"
+
+msgid "Large Wide"
+msgstr "Mare lat"
+
+msgid "Grid Menu Items"
+msgstr "Elemente de meniu în grilă"
+
+msgid "Menu items displayed in grid style"
+msgstr "Elemente de meniu afișate în stil grilă"
+
+msgid "Presets"
+msgstr "Presetări"
+
+msgid "Grid Icon Size"
+msgstr "Dimensiunea pictogramelor din grilă"
+
+msgid "Width, Height, Icon Size"
+msgstr "Lățime, înălțime, dimensiunea pictogramelor"
+
+msgid "Applications"
+msgstr "Aplicații"
+
+msgid "Applications, pinned apps, and search results"
+msgstr "Aplicații, aplicații fixate și rezultate ale căutării"
+
+msgid "Menu items found in side panels on various layouts"
+msgstr "Elemente de meniu găsite în panourile laterale ale diverselor aspecte"
+
+msgid "Buttons"
+msgstr "Butoane"
+
+msgid "Miscellaneous"
+msgstr "Diverse"
+
+msgid "Avatar, search icons, navigation icons"
+msgstr "Avatar, pictograme de căutare, pictograme de navigare"
+
+msgid "Hide Icon"
+msgstr "Ascunde pictograma"
+
+#, javascript-format
+msgid "%s v%s Released!"
+msgstr "%s v%s a fost lansat!"
+
+msgid "Check out what's new."
+msgstr "Vezi ce este nou."
+
+msgid "What's new?"
+msgstr "Ce este nou?"
+
+msgid "Dismiss"
+msgstr "Ignoră"

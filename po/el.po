@@ -7569,6 +7569,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "Το {network} αποθηκεύτηκε ως {place}."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} GB"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} MB"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} TB"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8750,3 +8765,247 @@ msgstr "γραφή παρτιτούρας"
 
 msgid "your calendar"
 msgstr "το ημερολόγιό σας"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "Ολοκλήρωση της μετάφρασης σε κάθε γλώσσα"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "Εμφάνιση ημερομηνιών με τη σειρά κάθε γλώσσας"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "Διατήρηση του gettext στην εικόνα"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "Προσθήκη μεταφράσεων για 68 γλώσσες"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "Το κείμενο κάθε οθόνης μπορεί πλέον να μεταφραστεί"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "Εφαρμογές και θύρες επιτρέπονται ανά χώρο· στην Εργασία δεν επιτρέπεται τίποτα"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "Προσθήκη χρονοδιαγράμματος φωτεινού και σκούρου θέματος, παρουσίασης και γραμματοσειρών"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "Μετονομασία των «Εργαλείων συστήματος» σε EvenKeelOS Wheelhouse"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "Τα γραφικά NVIDIA εμφανίζονται ως εντάξει στον έλεγχο συμβατότητας"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "Φόρτωση των συστημάτων αρχείων πριν από την εγκατάσταση"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "Ερώτηση πριν από αυτόματη επανεκκίνηση"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "Σήμανση κάθε νέας έκδοσης για δοκιμή"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "Επαναφορά μιας ενημέρωσης όταν χαλάσει κάτι που δούλευε"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "Κάθε κατασκευή ξεκινά σε εικονική μηχανή πριν από τη δημοσίευση"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "Προτείνονται 8 GB μνήμης, χωρίς ελάχιστο"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "Έλεγχος του υπολογιστή πριν από την εγκατάσταση από το live USB"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "Ερώτηση για χρήστη Windows ή Linux στο πρόγραμμα εγκατάστασης"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "Προσθήκη των «Εργαλείων συστήματος» στο μενού του λογότυπου"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "Έξι ακόμη θέματα στον οδηγό του EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "Το «Νέος στο Linux» γίνεται ο οδηγός του EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "Ο οδηγός «Νέος στο Linux» στα «Εργαλεία συστήματος» και κατά τη σύνδεση"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "Προσθήκη των «Επιλογών εκκίνησης»: συνηθισμένες διορθώσεις και δικές σας ρυθμίσεις"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "Διόρθωση του ελέγχου των «Κοινόχρηστων φακέλων»: δεν υπάρχουν ακόμη προσωπικοί φάκελοι"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "Προσθήκη «Κοινόχρηστων φακέλων»: κοινή χρήση προσωπικών φακέλων σε δίκτυα Σπίτι"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "Προσθήκη της «Ασφάλειας δικτύου»: Σπίτι, Εργασία ή Δημόσιος χώρος"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "Αναγνώριση προγραμμάτων οδήγησης εκτυπωτή σε οποιονδήποτε φάκελο"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "Εμφάνιση των παραθύρων εργαλείων μέσα στα «Εργαλεία συστήματος»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "Άνοιγμα αναφοράς προβλήματος όταν αποτυγχάνει η κατασκευή της εικόνας"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "Κλείδωμα εξωτερικών πακέτων και του εργαλείου ISO σε συγκεκριμένες εκδόσεις"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "Τα παράθυρα εργαλείων παίρνουν το όνομα του εργαλείου, συντομότερη λίστα δοκιμών"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "Επισκευή διαγραμμένων ρυθμίσεων συστήματος και ειδοποίηση για πιστοποιητικά"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "Όλα τα εργαλεία σε ένα παράθυρο «Εργαλεία συστήματος»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "Δεν μένει τίποτα πίσω όταν αφαιρείται ένα VPN"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "Προσθήκη της «Λήψης VPN», με VPN που ενημερώνονται συνεχώς"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Ξεχωριστός οδηγός για τις συσκέψεις Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Άνοιγμα των συσκέψεων Zoom στο Chrome, στην ιστοσελίδα του Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "Οι εγκαταστάσεις του ArtCraft δεν χαλούν πλέον τις εγκαταστάσεις από το Flathub"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "Αναγνώριση προγραμμάτων εγκατάστασης από το συνηθισμένο όνομα αρχείου"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Προτάσεις εναλλακτικών για Linux στα προγράμματα των Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "Διόρθωση της ρύθμισης του κουτιού: το distrobox προσαρτά λάθος φακέλους μόνο για ανάγνωση"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Προτάσεις εκδόσεων Fedora ή Ubuntu για προγράμματα των Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Πρόταση της έκδοσης Linux όταν ανοίγει ένα πρόγραμμα των Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "Ένα μόνο shim, ώστε το υλικολογισμικό να μην προσθέτει επιπλέον εγγραφή Fedora"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Επαναφορά της ζώνης τείχους προστασίας του Fedora"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "Ενίσχυση ασφάλειας για βοηθούς root, τείχος προστασίας και ενημερώσεις χωρίς κωδικό"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "Νέες προεπιλογές: ταπετσαρίες, φάκελοι με χρώμα έμφασης, οθόνη κλειδώματος"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "Νέα προεπιλογή: τιρκουάζ χρώμα έμφασης, και στην οθόνη σύνδεσης"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "Διόρθωση της σημείωσης επαναφοράς, του βρόχου σύνδεσης και των δοκιμών που κόλλαγαν"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "Διόρθωση της επαναφοράς σε πάγωμα και μείωση των επαναλήψεων σε 2"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "Διόρθωση των δοκιμών αυτόματης επαναφοράς"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "Πραγματικές δοκιμές αποτυχίας για την αυτόματη επαναφορά"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "Προσθήκη αυτόματης επαναφοράς με το greenboot"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "Η διάταξη τύπου Windows ξεκινά στην επιφάνεια εργασίας, μαζί με μικρές διορθώσεις"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "Παύση των αυτόματων ενημερώσεων για 3 ημέρες μετά από αναίρεση"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "Προσθήκη βήματος «Διάταξη επιφάνειας εργασίας» στο πρόγραμμα εγκατάστασης"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "Προσθήκη της «Διάταξης επιφάνειας εργασίας» στα «Εργαλεία συστήματος»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "Οι αλλαγές λειτουργίας ισχύος δεν περιμένουν πλέον τις ενημερώσεις"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "Προσθήκη προαιρετικής διάταξης τύπου Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Διόρθωση των προεπιλογών του Fedora 45 και των διαδρομών πολιτικής κοντέινερ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "Ανάγνωση των πηγών λήψης στον νέο φάκελο του Fedora 45"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Μετάβαση στο Fedora 45"

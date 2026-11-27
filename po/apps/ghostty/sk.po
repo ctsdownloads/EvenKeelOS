@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "Open in Ghostty"
+msgstr "Otvoriť v Ghostty"
+
+msgid "Find…"
+msgstr "Hľadať…"
+
+msgid "Previous Match"
+msgstr "Predchádzajúca zhoda"
+
+msgid "Next Match"
+msgstr "Nasledujúca zhoda"
+
+msgid "Close"
+msgstr "Zavrieť"
+
+msgid "Oh, no."
+msgstr "Ale nie."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "Nepodarilo sa získať kontext OpenGL na vykresľovanie."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "Tento terminál je v režime iba na čítanie. Obsah môžete stále zobraziť, vyberať a posúvať, ale spustenej aplikácii sa nebudú odosielať žiadne vstupné udalosti."
+
+msgid "Read-only"
+msgstr "Iba na čítanie"
+
+msgid "Copy"
+msgstr "Kopírovať"
+
+msgid "Paste"
+msgstr "Prilepiť"
+
+msgid "Notify on Next Command Finish"
+msgstr "Upozorniť po dokončení ďalšieho príkazu"
+
+msgid "Clear"
+msgstr "Vymazať"
+
+msgid "Reset"
+msgstr "Obnoviť"
+
+msgid "Split"
+msgstr "Rozdeliť"
+
+msgid "Change Title…"
+msgstr "Zmeniť názov…"
+
+msgid "Split Up"
+msgstr "Rozdeliť nahor"
+
+msgid "Split Down"
+msgstr "Rozdeliť nadol"
+
+msgid "Split Left"
+msgstr "Rozdeliť doľava"
+
+msgid "Split Right"
+msgstr "Rozdeliť doprava"
+
+msgid "Close Split"
+msgstr "Zavrieť rozdelenie"
+
+msgid "Tab"
+msgstr "Karta"
+
+msgid "Change Tab Title…"
+msgstr "Zmeniť názov karty…"
+
+msgid "New Tab"
+msgstr "Nová karta"
+
+msgid "Close Tab"
+msgstr "Zavrieť kartu"
+
+msgid "Window"
+msgstr "Okno"
+
+msgid "Change Window Title…"
+msgstr "Zmeniť názov okna…"
+
+msgid "New Window"
+msgstr "Nové okno"
+
+msgid "Close Window"
+msgstr "Zavrieť okno"
+
+msgid "Config"
+msgstr "Konfigurácia"
+
+msgid "Open Configuration in OS Editor"
+msgstr "Otvoriť konfiguráciu v editore systému"
+
+msgid "Open Configuration in New Window"
+msgstr "Otvoriť konfiguráciu v novom okne"
+
+msgid "Reload Configuration"
+msgstr "Znova načítať konfiguráciu"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ Používate ladiacu zostavu Ghostty! Výkon bude znížený."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: Inšpektor terminálu"
+
+msgid "New Split"
+msgstr "Nové rozdelenie"
+
+msgid "View Open Tabs"
+msgstr "Zobraziť otvorené karty"
+
+msgid "Main Menu"
+msgstr "Hlavná ponuka"
+
+msgid "Command Palette"
+msgstr "Paleta príkazov"
+
+msgid "Terminal Inspector"
+msgstr "Inšpektor terminálu"
+
+msgid "About Ghostty"
+msgstr "O aplikácii Ghostty"
+
+msgid "Quit"
+msgstr "Ukončiť"
+
+msgid "Authorize Clipboard Access"
+msgstr "Povoliť prístup do schránky"
+
+msgid "Deny"
+msgstr "Zamietnuť"
+
+msgid "Allow"
+msgstr "Povoliť"
+
+msgid "Remember choice for this split"
+msgstr "Zapamätať si voľbu pre toto rozdelenie"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "Ak chcete túto výzvu zobraziť znova, znova načítajte konfiguráciu"
+
+msgid "Cancel"
+msgstr "Zrušiť"
+
+msgid "Execute a command…"
+msgstr "Vykonať príkaz…"
+
+msgid "Configuration Errors"
+msgstr "Chyby konfigurácie"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "Bola nájdená jedna alebo viac chýb konfigurácie. Skontrolujte nižšie uvedené chyby a buď znova načítajte konfiguráciu, alebo tieto chyby ignorujte."
+
+msgid "Ignore"
+msgstr "Ignorovať"
+
+msgid "Leave blank to restore the default title."
+msgstr "Ak chcete obnoviť predvolený názov, nechajte pole prázdne."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "The keybind was revoked by the system."
+msgstr "Klávesová skratka bola zrušená systémom."
+
+msgid "The keybind was denied by the system."
+msgstr "Klávesová skratka bola zamietnutá systémom."
+
+msgid "Global keybind unavailable"
+msgstr "Globálna klávesová skratka nie je dostupná"
+
+msgid "Export Terminal IO Events"
+msgstr "Exportovať vstupno-výstupné udalosti terminálu"
+
+msgid "Export"
+msgstr "Exportovať"
+
+msgid "Editing configuration file"
+msgstr "Úprava konfiguračného súboru"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "Aplikácia sa pokúša zapisovať do schránky. Aktuálny obsah schránky je zobrazený nižšie."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "Aplikácia sa pokúša čítať zo schránky. Aktuálny obsah schránky je zobrazený nižšie."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "Upozornenie: potenciálne nebezpečné prilepenie"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "Prilepenie tohto textu do terminálu môže byť nebezpečné, pretože vyzerá, že by sa mohli vykonať niektoré príkazy."
+
+msgid "Quit Ghostty?"
+msgstr "Ukončiť Ghostty?"
+
+msgid "Close Tab?"
+msgstr "Zavrieť kartu?"
+
+msgid "Close Window?"
+msgstr "Zavrieť okno?"
+
+msgid "Close Split?"
+msgstr "Zavrieť rozdelenie?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "Všetky relácie terminálu budú ukončené."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "Všetky relácie terminálu na tejto karte budú ukončené."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "Všetky relácie terminálu v tomto okne budú ukončené."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "Aktuálne spustený proces v tomto rozdelení bude ukončený."
+
+msgid "Command Finished"
+msgstr "Príkaz dokončený"
+
+msgid "Command Succeeded"
+msgstr "Príkaz bol úspešný"
+
+msgid "Command Failed"
+msgstr "Príkaz zlyhal"
+
+msgid "Change Terminal Title"
+msgstr "Zmeniť názov terminálu"
+
+msgid "Change Tab Title"
+msgstr "Zmeniť názov karty"
+
+msgid "Change Window Title"
+msgstr "Zmeniť názov okna"
+
+msgid "Reloaded the configuration"
+msgstr "Konfigurácia bola znova načítaná"
+
+msgid "Copied to clipboard"
+msgstr "Skopírované do schránky"
+
+msgid "Cleared clipboard"
+msgstr "Schránka bola vymazaná"
+
+msgid "Ghostty Developers"
+msgstr "Vývojári Ghostty"
+
+msgid "Reset Terminal"
+msgstr "Obnoviť terminál"
+
+msgid "Reset the terminal to a clean state."
+msgstr "Obnoví terminál do čistého stavu."
+
+msgid "Copy to Clipboard"
+msgstr "Kopírovať do schránky"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "Skopíruje vybraný text do schránky v obyčajnom aj formátovanom tvare."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "Kopírovať výber ako obyčajný text do schránky"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "Skopíruje vybraný text do schránky ako obyčajný text."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "Kopírovať výber ako sekvencie ANSI do schránky"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "Skopíruje vybraný text do schránky ako riadiace sekvencie ANSI."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "Kopírovať výber ako HTML do schránky"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "Skopíruje vybraný text do schránky ako HTML."
+
+msgid "Copy URL to Clipboard"
+msgstr "Kopírovať URL do schránky"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "Skopíruje URL pod kurzorom do schránky."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "Kopírovať názov terminálu do schránky"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "Skopíruje názov terminálu do schránky. Ak nie je názov terminálu nastavený, nič sa nestane."
+
+msgid "Paste from Clipboard"
+msgstr "Prilepiť zo schránky"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "Prilepí obsah hlavnej schránky."
+
+msgid "Paste from Selection"
+msgstr "Prilepiť z výberu"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "Prilepí obsah schránky výberu."
+
+msgid "Start Search"
+msgstr "Spustiť hľadanie"
+
+msgid "Start a search if one isn't already active."
+msgstr "Spustí hľadanie, ak ešte nie je aktívne."
+
+msgid "Search Selection"
+msgstr "Hľadať vo výbere"
+
+msgid "Start a search for the current text selection."
+msgstr "Spustí hľadanie aktuálne vybraného textu."
+
+msgid "End Search"
+msgstr "Ukončiť hľadanie"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "Ukončí aktuálne hľadanie, ak nejaké prebieha, a skryje všetky prvky rozhrania."
+
+msgid "Next Search Result"
+msgstr "Ďalší výsledok hľadania"
+
+msgid "Navigate to the next search result, if any."
+msgstr "Prejde na ďalší výsledok hľadania, ak existuje."
+
+msgid "Previous Search Result"
+msgstr "Predchádzajúci výsledok hľadania"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "Prejde na predchádzajúci výsledok hľadania, ak existuje."
+
+msgid "Increase Font Size"
+msgstr "Zväčšiť veľkosť písma"
+
+msgid "Increase the font size by 1 point."
+msgstr "Zväčší veľkosť písma o 1 bod."
+
+msgid "Decrease Font Size"
+msgstr "Zmenšiť veľkosť písma"
+
+msgid "Decrease the font size by 1 point."
+msgstr "Zmenší veľkosť písma o 1 bod."
+
+msgid "Reset Font Size"
+msgstr "Obnoviť veľkosť písma"
+
+msgid "Reset the font size to the default."
+msgstr "Obnoví predvolenú veľkosť písma."
+
+msgid "Clear Screen"
+msgstr "Vymazať obrazovku"
+
+msgid "Clear the screen and scrollback."
+msgstr "Vymaže obrazovku a históriu posúvania."
+
+msgid "Select All"
+msgstr "Vybrať všetko"
+
+msgid "Select all text on the screen."
+msgstr "Vyberie všetok text na obrazovke."
+
+msgid "Scroll to Top"
+msgstr "Posunúť na začiatok"
+
+msgid "Scroll to the top of the screen."
+msgstr "Posunie na začiatok obrazovky."
+
+msgid "Scroll to Bottom"
+msgstr "Posunúť na koniec"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "Posunie na koniec obrazovky."
+
+msgid "Scroll to Selection"
+msgstr "Posunúť na výber"
+
+msgid "Scroll to the selected text."
+msgstr "Posunie na vybraný text."
+
+msgid "Scroll Page Up"
+msgstr "Posunúť o stranu nahor"
+
+msgid "Scroll the screen up by a page."
+msgstr "Posunie obrazovku o stranu nahor."
+
+msgid "Scroll Page Down"
+msgstr "Posunúť o stranu nadol"
+
+msgid "Scroll the screen down by a page."
+msgstr "Posunie obrazovku o stranu nadol."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "Kopírovať obrazovku do dočasného súboru a kopírovať cestu"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "Skopíruje obsah obrazovky do dočasného súboru a skopíruje cestu do schránky."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "Kopírovať obrazovku do dočasného súboru a prilepiť cestu"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "Skopíruje obsah obrazovky do dočasného súboru a prilepí cestu k súboru."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "Kopírovať obrazovku do dočasného súboru a otvoriť"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "Skopíruje obsah obrazovky do dočasného súboru a otvorí ho."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "Kopírovať obrazovku ako HTML do dočasného súboru a kopírovať cestu"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Skopíruje obsah obrazovky ako HTML do dočasného súboru a skopíruje cestu do schránky."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "Kopírovať obrazovku ako HTML do dočasného súboru a prilepiť cestu"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "Skopíruje obsah obrazovky ako HTML do dočasného súboru a prilepí cestu k súboru."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "Kopírovať obrazovku ako HTML do dočasného súboru a otvoriť"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "Skopíruje obsah obrazovky ako HTML do dočasného súboru a otvorí ho."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Kopírovať obrazovku ako sekvencie ANSI do dočasného súboru a kopírovať cestu"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Skopíruje obsah obrazovky ako riadiace sekvencie ANSI do dočasného súboru a skopíruje cestu do schránky."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Kopírovať obrazovku ako sekvencie ANSI do dočasného súboru a prilepiť cestu"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Skopíruje obsah obrazovky ako riadiace sekvencie ANSI do dočasného súboru a prilepí cestu k súboru."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "Kopírovať obrazovku ako sekvencie ANSI do dočasného súboru a otvoriť"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Skopíruje obsah obrazovky ako riadiace sekvencie ANSI do dočasného súboru a otvorí ho."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "Kopírovať výber do dočasného súboru a kopírovať cestu"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "Skopíruje obsah výberu do dočasného súboru a skopíruje cestu do schránky."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "Kopírovať výber do dočasného súboru a prilepiť cestu"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "Skopíruje obsah výberu do dočasného súboru a prilepí cestu k súboru."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "Kopírovať výber do dočasného súboru a otvoriť"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "Skopíruje obsah výberu do dočasného súboru a otvorí ho."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "Kopírovať výber ako HTML do dočasného súboru a kopírovať cestu"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Skopíruje obsah výberu ako HTML do dočasného súboru a skopíruje cestu do schránky."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "Kopírovať výber ako HTML do dočasného súboru a prilepiť cestu"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "Skopíruje obsah výberu ako HTML do dočasného súboru a prilepí cestu k súboru."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "Kopírovať výber ako HTML do dočasného súboru a otvoriť"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "Skopíruje obsah výberu ako HTML do dočasného súboru a otvorí ho."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Kopírovať výber ako sekvencie ANSI do dočasného súboru a kopírovať cestu"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Skopíruje obsah výberu ako riadiace sekvencie ANSI do dočasného súboru a skopíruje cestu do schránky."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Kopírovať výber ako sekvencie ANSI do dočasného súboru a prilepiť cestu"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Skopíruje obsah výberu ako riadiace sekvencie ANSI do dočasného súboru a prilepí cestu k súboru."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "Kopírovať výber ako sekvencie ANSI do dočasného súboru a otvoriť"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Skopíruje obsah výberu ako riadiace sekvencie ANSI do dočasného súboru a otvorí ho."
+
+msgid "Open a new window."
+msgstr "Otvorí nové okno."
+
+msgid "Open a new tab."
+msgstr "Otvorí novú kartu."
+
+msgid "Move Tab Left"
+msgstr "Presunúť kartu doľava"
+
+msgid "Move the current tab to the left."
+msgstr "Presunie aktuálnu kartu doľava."
+
+msgid "Move Tab Right"
+msgstr "Presunúť kartu doprava"
+
+msgid "Move the current tab to the right."
+msgstr "Presunie aktuálnu kartu doprava."
+
+msgid "Move Tab to New Window"
+msgstr "Presunúť kartu do nového okna"
+
+msgid "Move the current tab to a new window."
+msgstr "Presunie aktuálnu kartu do nového okna."
+
+msgid "Toggle Tab Overview"
+msgstr "Prepnúť prehľad kariet"
+
+msgid "Toggle the tab overview."
+msgstr "Prepne prehľad kariet."
+
+msgid "Change Terminal Title…"
+msgstr "Zmeniť názov terminálu…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "Vyzve na zadanie nového názvu aktuálneho terminálu."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "Vyzve na zadanie nového názvu aktuálnej karty."
+
+msgid "Split the terminal to the left."
+msgstr "Rozdelí terminál doľava."
+
+msgid "Split the terminal to the right."
+msgstr "Rozdelí terminál doprava."
+
+msgid "Split the terminal up."
+msgstr "Rozdelí terminál nahor."
+
+msgid "Split the terminal down."
+msgstr "Rozdelí terminál nadol."
+
+msgid "Focus Split: Previous"
+msgstr "Zameranie rozdelenia: predchádzajúce"
+
+msgid "Focus the previous split, if any."
+msgstr "Zameria predchádzajúce rozdelenie, ak existuje."
+
+msgid "Focus Split: Next"
+msgstr "Zameranie rozdelenia: nasledujúce"
+
+msgid "Focus the next split, if any."
+msgstr "Zameria nasledujúce rozdelenie, ak existuje."
+
+msgid "Focus Split: Left"
+msgstr "Zameranie rozdelenia: vľavo"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "Zameria rozdelenie vľavo, ak existuje."
+
+msgid "Focus Split: Right"
+msgstr "Zameranie rozdelenia: vpravo"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "Zameria rozdelenie vpravo, ak existuje."
+
+msgid "Focus Split: Up"
+msgstr "Zameranie rozdelenia: hore"
+
+msgid "Focus the split above, if it exists."
+msgstr "Zameria rozdelenie hore, ak existuje."
+
+msgid "Focus Split: Down"
+msgstr "Zameranie rozdelenia: dole"
+
+msgid "Focus the split below, if it exists."
+msgstr "Zameria rozdelenie dole, ak existuje."
+
+msgid "Focus Window: Previous"
+msgstr "Zameranie okna: predchádzajúce"
+
+msgid "Focus the previous window, if any."
+msgstr "Zameria predchádzajúce okno, ak existuje."
+
+msgid "Focus Window: Next"
+msgstr "Zameranie okna: nasledujúce"
+
+msgid "Focus the next window, if any."
+msgstr "Zameria nasledujúce okno, ak existuje."
+
+msgid "Toggle Split Zoom"
+msgstr "Prepnúť priblíženie rozdelenia"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "Prepne stav priblíženia aktuálneho rozdelenia."
+
+msgid "Toggle Read-Only Mode"
+msgstr "Prepnúť režim iba na čítanie"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "Prepne režim iba na čítanie pre aktuálnu plochu."
+
+msgid "Equalize Splits"
+msgstr "Vyrovnať rozdelenia"
+
+msgid "Equalize the size of all splits."
+msgstr "Vyrovná veľkosť všetkých rozdelení."
+
+msgid "Reset Window Size"
+msgstr "Obnoviť veľkosť okna"
+
+msgid "Reset the window size to the default."
+msgstr "Obnoví predvolenú veľkosť okna."
+
+msgid "Toggle Inspector"
+msgstr "Prepnúť inšpektor"
+
+msgid "Toggle the inspector."
+msgstr "Prepne inšpektor."
+
+msgid "Show the GTK Inspector"
+msgstr "Zobraziť inšpektor GTK"
+
+msgid "Show the GTK inspector."
+msgstr "Zobrazí inšpektor GTK."
+
+msgid "Show On-Screen Keyboard"
+msgstr "Zobraziť klávesnicu na obrazovke"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "Zobrazí klávesnicu na obrazovke, ak je k dispozícii."
+
+msgid "Open Config Using OS editor"
+msgstr "Otvoriť konfiguráciu v editore systému"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "Otvorí konfiguračný súbor v predvolenom editore systému."
+
+msgid "Open Config in New Terminal Window"
+msgstr "Otvoriť konfiguráciu v novom okne terminálu"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "Otvorí konfiguračný súbor v novom okne pomocou $EDITOR alebo $VISUAL."
+
+msgid "Reload Config"
+msgstr "Znova načítať konfiguráciu"
+
+msgid "Reload the config file."
+msgstr "Znova načíta konfiguračný súbor."
+
+msgid "Close Terminal"
+msgstr "Zavrieť terminál"
+
+msgid "Close the current terminal."
+msgstr "Zavrie aktuálny terminál."
+
+msgid "Close the current tab."
+msgstr "Zavrie aktuálnu kartu."
+
+msgid "Close Other Tabs"
+msgstr "Zavrieť ostatné karty"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "Zavrie všetky karty v tomto okne okrem aktuálnej."
+
+msgid "Close Tabs to the Right"
+msgstr "Zavrieť karty vpravo"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "Zavrie všetky karty vpravo od aktuálnej."
+
+msgid "Close the current window."
+msgstr "Zavrie aktuálne okno."
+
+msgid "Close All Windows"
+msgstr "Zavrieť všetky okná"
+
+msgid "Close all windows."
+msgstr "Zavrie všetky okná."
+
+msgid "Toggle Maximize"
+msgstr "Prepnúť maximalizáciu"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "Prepne stav maximalizácie aktuálneho okna."
+
+msgid "Toggle Fullscreen"
+msgstr "Prepnúť celú obrazovku"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "Prepne stav celej obrazovky aktuálneho okna."
+
+msgid "Toggle Window Decorations"
+msgstr "Prepnúť dekorácie okna"
+
+msgid "Toggle the window decorations."
+msgstr "Prepne dekorácie okna."
+
+msgid "Toggle Float on Top"
+msgstr "Prepnúť zobrazenie navrchu"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "Prepne stav zobrazenia aktuálneho okna navrchu."
+
+msgid "Toggle Secure Input"
+msgstr "Prepnúť zabezpečený vstup"
+
+msgid "Toggle secure input mode."
+msgstr "Prepne režim zabezpečeného vstupu."
+
+msgid "Toggle Mouse Reporting"
+msgstr "Prepnúť hlásenie myši"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "Prepne, či sa udalosti myši hlásia aplikáciám v termináli."
+
+msgid "Toggle Background Opacity"
+msgstr "Prepnúť priehľadnosť pozadia"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "Prepne priehľadnosť pozadia okna, ktoré bolo spustené ako priehľadné."
+
+msgid "Check for Updates"
+msgstr "Skontrolovať aktualizácie"
+
+msgid "Check for updates to the application."
+msgstr "Skontroluje aktualizácie aplikácie."
+
+msgid "Undo"
+msgstr "Vrátiť späť"
+
+msgid "Undo the last action."
+msgstr "Vráti poslednú akciu."
+
+msgid "Redo"
+msgstr "Zopakovať"
+
+msgid "Redo the last undone action."
+msgstr "Zopakuje poslednú vrátenú akciu."
+
+msgid "Quit the application."
+msgstr "Ukončí aplikáciu."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "Trochu Ghostty vo vašom termináli."

@@ -7270,6 +7270,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "{network} đã được lưu là {place}."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} GB"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} MB"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} TB"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8425,3 +8440,247 @@ msgstr "viết bản nhạc"
 
 msgid "your calendar"
 msgstr "lịch của bạn"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "Hoàn tất dịch cho mọi ngôn ngữ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "Hiển thị ngày theo thứ tự của từng ngôn ngữ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "Giữ gettext trong ảnh hệ thống"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "Thêm bản dịch cho 68 ngôn ngữ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "Cho phép dịch văn bản của mọi màn hình"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "Cho phép ứng dụng và cổng vào theo từng nơi; Nơi làm việc không cho gì vào"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "Thêm lịch chế độ sáng và tối, trình chiếu và phông chữ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "Đổi tên Công cụ hệ thống thành EvenKeelOS Wheelhouse"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "Hiển thị đồ họa NVIDIA là ổn trong bước kiểm tra tương thích"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "Tải các hệ thống tệp trước khi cài đặt"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "Hỏi trước khi tự động khởi động lại"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "Đánh dấu mọi phiên bản mới để dùng thử"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "Khôi phục bản cập nhật khi thứ từng chạy tốt bị hỏng"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "Chạy mọi bản dựng trong máy ảo trước khi phát hành"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "Đề xuất 8 GB bộ nhớ, không có mức tối thiểu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "Kiểm tra máy tính trước khi cài đặt từ USB live"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "Hỏi bạn dùng Windows hay Linux trong trình cài đặt"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "Thêm Công cụ hệ thống vào menu logo"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "Thêm sáu chủ đề nữa vào hướng dẫn EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "Biến Mới dùng Linux thành hướng dẫn EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "Thêm hướng dẫn Mới dùng Linux vào Công cụ hệ thống và khi đăng nhập"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "Thêm Tùy chọn khởi động: các cách sửa thường gặp và cài đặt riêng của bạn"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "Sửa bước kiểm tra bản dựng Thư mục chia sẻ: chưa có thư mục chính"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "Thêm Thư mục chia sẻ: chia sẻ thư mục chính trên mạng Nhà"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "Thêm An toàn mạng: Nhà, Nơi làm việc hoặc Nơi công cộng"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "Nhận diện trình điều khiển máy in ở bất kỳ thư mục nào"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "Hiển thị cửa sổ công cụ bên trong Công cụ hệ thống"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "Mở một vấn đề khi bản dựng ảnh hệ thống thất bại"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "Khóa các gói bên ngoài và công cụ ISO ở phiên bản chính xác"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "Đặt tên cửa sổ công cụ theo công cụ, rút gọn danh sách kiểm thử"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "Sửa cài đặt hệ thống bị xóa và cảnh báo về chứng chỉ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "Đưa mọi công cụ vào một cửa sổ Công cụ hệ thống"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "Không để lại gì khi gỡ một VPN"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "Thêm Tải VPN, với các VPN luôn được cập nhật"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Tạo hướng dẫn riêng cho các cuộc họp Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Mở cuộc họp Zoom trong Chrome, ở phiên bản web của Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "Ngăn việc cài ArtCraft làm hỏng việc cài từ Flathub"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "Nhận diện trình cài đặt theo tên tệp thông thường"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Đề xuất phần mềm Linux thay thế cho chương trình Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "Sửa thiết lập hộp: distrobox gắn sai các thư mục chỉ đọc"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Đề xuất bản Fedora hoặc Ubuntu của chương trình Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Đề xuất bản Linux khi mở một chương trình Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "Chỉ kèm một shim, để firmware không thêm mục Fedora thừa"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Khôi phục vùng tường lửa của Fedora"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "Tăng cường bảo mật cho trình trợ giúp root, tường lửa và cập nhật không cần mật khẩu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "Mặc định mới: hình nền, thư mục màu nhấn, màn hình khóa"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "Mặc định mới: màu nhấn xanh mòng két, cả ở màn hình đăng nhập"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "Sửa ghi chú khôi phục, vòng lặp đăng nhập và các bài kiểm thử bị treo"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "Sửa việc khôi phục khi treo và giảm số lần thử lại xuống 2"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "Sửa các bài kiểm thử tự động khôi phục"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "Kiểm thử lỗi thực tế cho tự động khôi phục"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "Thêm tự động khôi phục với greenboot"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "Bắt đầu bố cục Windows trên màn hình nền, cùng các sửa lỗi nhỏ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "Tạm dừng cập nhật tự động 3 ngày sau khi hoàn tác"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "Thêm bước Bố cục màn hình nền vào trình cài đặt"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "Thêm Bố cục màn hình nền vào Công cụ hệ thống"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "Không để việc đổi chế độ nguồn phải chờ cập nhật"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "Thêm bố cục kiểu Windows tùy chọn"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Sửa các thiết lập sẵn của Fedora 45 và đường dẫn chính sách vùng chứa"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "Đọc nguồn tải xuống trong thư mục mới của Fedora 45"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Chuyển sang Fedora 45"

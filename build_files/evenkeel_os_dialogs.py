@@ -9,13 +9,12 @@ import shutil
 import socket
 import tempfile
 import threading
-from pathlib import Path
 
 import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gio, GLib, Gtk, Pango  # noqa: E402
-from evenkeel_os_ui import _  # noqa: E402
+from evenkeel_os_ui import _, user_folder  # noqa: E402
 
 ICONS = {"question": "dialog-question-symbolic", "info": "dialog-information-symbolic",
          "warning": "dialog-warning-symbolic", "error": "dialog-error-symbolic", "list": "view-list-symbolic",
@@ -202,7 +201,7 @@ class Request:
             filters.append(f)
             dialog.set_filters(filters)
             dialog.set_default_filter(f)
-        downloads = Path.home() / "Downloads"
+        downloads = user_folder("DOWNLOAD")
         if downloads.is_dir():
             dialog.set_initial_folder(Gio.File.new_for_path(str(downloads)))
 

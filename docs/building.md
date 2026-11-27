@@ -74,6 +74,9 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 - a power mode would still run bootc on every switch;
 - an outside package is not at its locked version or is not on the list (see
   [Locked versions](#locked-versions));
+- a language in `po/LINGUAS` misses a line of EvenKeelOS, Dash to Panel, ArcMenu,
+  Logo Menu, Bazaar or Ghostty, or an outside app's locked version has text that
+  isn't translated (see [Translations](#translations));
 - Install Package File misreads four real Fedora packages;
 - a tool would open its windows outside Wheelhouse, or answer differently there;
 - Network safety isn't set up right (a new network isn't a Public place, Work lets anything in, or Home lets in SSH), or the app list for Let an app in can't be made.
@@ -171,6 +174,10 @@ These are locked to exact versions in
 
 - the Universal Blue packages (uupd, Bazaar, Homebrew setup, ujust and its
   disk-encryption helper) and Ghostty, from Copr;
+- Dash to Panel, from Fedora's build archive (Koji), checked against Fedora's
+  signature;
+- the GNOME extensions ArcMenu and Logo Menu, from extensions.gnome.org, checked
+  against a sha256 checksum;
 - Titanoboa, the ISO build tool, at one exact commit.
 
 `build_files/build.sh` installs the Copr packages at exactly those versions. At
@@ -185,14 +192,19 @@ GitHub actions.
 
 [`check-versions.yml`](../.github/workflows/check-versions.yml) runs every day at
 9:35 UTC, before the 10:05 UTC image build. You can also run it by hand from the
-Actions tab. It runs `build_files/update-locked-versions.sh`, which asks Copr for
-the newest version of each locked package (with Fedora's own package tool, dnf5,
-in a Fedora container) and asks GitHub for Titanoboa's newest `main` commit.
+Actions tab. It runs `build_files/update-locked-versions.sh`, which asks Copr and
+Fedora for the newest version of each locked package (with Fedora's own package
+tool, dnf5, in a Fedora container), asks extensions.gnome.org for the newest
+ArcMenu and Logo Menu for the image's GNOME, and asks GitHub for Titanoboa's
+newest `main` commit.
 
 If anything is newer, it opens a pull request named "Update locked versions" on
 the branch `update-locked-versions`. The pull request is assigned to
-`ctsdownloads` and mentions him, and lists each change with a link (the Copr
-package page, or the Titanoboa compare page). If that pull request is already
+`ctsdownloads` and mentions him, and lists each change with a link (the Copr,
+Fedora or extensions.gnome.org page, or the Titanoboa compare page). Its check
+"Outside apps' text is translated" fails when a new version of Dash to Panel,
+ArcMenu, Logo Menu, Bazaar or Ghostty has text that isn't translated yet (see
+[Translations](#translations)). If that pull request is already
 open, the check adds a new commit on top of its branch and a comment listing the
 change, so anything you changed on that branch is kept. If the branch changes
 while the check runs, it stops and tries again the next day.
@@ -233,8 +245,8 @@ container image**, **Run workflow**, pick the branch `update-locked-versions`,
 - Software added after install: the optional codecs from RPM Fusion and Cisco,
   and VPN apps from each company's own download source.
 
-Locked elsewhere: the GNOME extensions Logo Menu and ArcMenu by sha256 checksum,
-and the folder icons by an Adwaita Colors commit, both in `build_files/build.sh`.
+Locked elsewhere: the folder icons, by an Adwaita Colors commit in
+`build_files/build.sh`.
 
 ## Media codecs
 
@@ -309,6 +321,42 @@ where the region has no AM and PM words. Finnish, Slovak and Tajik use the
 month's number, since the system's month names there aren't in the form a date
 needs. After changing screen text, run `build_files/make-pot.sh`, then update
 every `po/*.po` file before merging.
+
+Five outside apps EvenKeelOS ships are translated into every language in
+`po/LINGUAS` too: Dash to Panel, ArcMenu, Logo Menu, Bazaar and Ghostty. Each
+maker's own translations come first, and `po/apps/<app>/<language>.po` fills
+every line they lack. A maker's lines are used only for the same language (its
+Brazilian Portuguese never stands in for Portuguese), and its plural lines only
+when its plural rule picks the same form as `po/<language>.po` for every number. `po/apps/<app>.pot` is the app's text at its locked
+version; `build_files/app-texts.sh <app>` reads it from that version.
+`build_files/install-app-translations.sh` merges both during the build and
+fails if any language misses a line. All five are locked to exact versions in
+`build_files/locked-versions.txt` (Dash to Panel comes from Fedora's build
+archive with Fedora's signature, the two menus from extensions.gnome.org with a
+sha256), so new English text can't arrive on its own. The daily version check
+opens a PR when a newer version is out, and its check "Outside apps' text is
+translated" (`build_files/check-app-texts.sh`) fails if the new version has new
+text. The image build runs the same check, so a merged version with untranslated
+text is never published. To fix it, run `build_files/app-texts.sh` for the app
+into `po/apps/<app>.pot` and translate the new lines in every language.
+
+System Update's "What is new" list shows each change's title in the person's
+language. The titles are in `po/whats-new.txt`, translated like any other line,
+and System Update reads their translations from the new version it downloaded.
+The translation check fails a PR whose title isn't in that file, and checks
+again when a PR is renamed. Not shown, so not translated: titles starting with
+README or Build, and upkeep by Dependabot, Renovate and the daily version check
+("Update locked versions").
+
+Disk sizes use each language's units and the region's decimal mark ("1,2 Go"
+in French). Tools find Downloads and Desktop under their names in the person's
+language (`xdg-user-dir`). After someone picks a new language in Settings
+(or for the whole computer), `evenkeel-os-flatpak-languages.timer` fetches Flatpak apps' translations for it
+within 10 minutes, instead of at the next daily update. Spell check: Fedora's
+dictionary for every language that has one (`spellcheck-packages.txt`), Voikko
+for Finnish in GNOME apps, Bosnian from `hunspell-sr`, and a Tajik dictionary
+Fedora doesn't package (`extra-dictionaries.txt`, sha256-checked). Firefox has
+no Finnish dictionary, and Chinese and Japanese have no spell checking anywhere.
 
 The installer lists only the languages EvenKeelOS is translated into, read
 from the image's `evenkeel-os.mo` files, so a language with no translation is

@@ -1,0 +1,366 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Kilépés: %d ablak"
+msgstr[1] "Kilépés: %d ablak"
+
+msgid "Gnome Settings"
+msgstr "GNOME beállítások"
+
+msgid "Dash to Panel has been updated!"
+msgstr "A Dash to Panel frissítve lett!"
+
+msgid "You are now running version"
+msgstr "Most a következő verziót futtatja"
+
+msgid "See what's new"
+msgstr "Újdonságok megtekintése"
+
+msgid "Top Bar"
+msgstr "Felső sáv"
+
+msgid "Isolate Workspaces options"
+msgstr "Munkaterületek elkülönítésének beállításai"
+
+msgid "Isolate monitors options"
+msgstr "Kijelzők elszigetelésének beállításai"
+
+msgid "Text"
+msgstr "Szöveg"
+
+msgid "Command"
+msgstr "Parancs"
+
+msgid "Remove"
+msgstr "Eltávolítás"
+
+msgid "App icon highlight options"
+msgstr "Alkalmazásikon-kiemelés beállításai"
+
+msgid "Move to current Workspace"
+msgstr "Áthelyezés az aktuális munkaterületre"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Az alkalmazáscímek legnagyobb szélessége (képpont)"
+
+msgid "(default is 160)"
+msgstr "(alapértelmezetten 160)"
+
+msgid "Highlight AppIcon color"
+msgstr "Alkalmazásikon kiemelésének színe"
+
+msgid "Pressed AppIcon color"
+msgstr "Alkalmazásikon lenyomott színe"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Alkalmazásikon kiemelésének sarokkerekítése"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Felülbírálja a globális sarokkerekítést (alapértelmezetten 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "A panel elrejtése csak az ablakok elől"
+
+msgid "Overlapping"
+msgstr "Átfedő"
+
+msgid "On same monitor"
+msgstr "Ugyanazon a kijelzőn"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "A kijelző szélének mutatóval való érintése előhozza a panelt"
+
+msgid "Limit to panel length"
+msgstr "Korlátozás a panel hosszára"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "A panel területe fölé mutatva a panel előhozva marad"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Nyomás szükséges a kijelző szélénél a panel előhozásához"
+
+msgid "(requires multi-monitors option)"
+msgstr "(a többkijelzős beállítást igényli)"
+
+msgid "Only hide secondary panels"
+msgstr "Csak a másodlagos panelek elrejtése"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Szintaxis: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Persist state across restarts"
+msgstr "Állapot megőrzése újraindítások között"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(figyelembe veszi a GNOME „Ne zavarjanak” módját, és az értesítésszámláló jelvény megjelenítése beállítást igényli)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "A panel előhozása és megtartása értesítéskor"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Késleltetés a panel előhozása előtt (ezredmásodperc)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Kijelzők elszigetelése egyetlen panel használatakor is"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Munkaterületek elkülönítése a gnome-shell alkalmazásváltójában"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Önálló átkapcsolása / több szétterítése"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "A másodlagos kijelzőkön a rátét megjelenítése az elsődleges kijelzővel egyező ikonokon"
+
+msgid "Show the overlay on all monitors"
+msgstr "A rátét megjelenítése az összes kijelzőn"
+
+msgid "<i>App Details</i> menu item"
+msgstr "<i>Alkalmazásadatok</i> menüpont"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "Az <i>Alkalmazásadatok</i> csak a GNOME Szoftverek telepítése esetén érhető el"
+
+msgid "Show Applications icon"
+msgstr "„Alkalmazások megjelenítése” ikon"
+
+msgid "Time (ms) before showing"
+msgstr "Megjelenítés előtti idő (ezredmásodperc)"
+
+msgid "(400 is default)"
+msgstr "(400 az alapértelmezett)"
+
+msgid "Time (ms) before hiding"
+msgstr "Elrejtés előtti idő (ezredmásodperc)"
+
+msgid "(100 is default)"
+msgstr "(100 az alapértelmezett)"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Ha le van tiltva, az előnézetek háttere ugyanolyan átlátszatlanságú, mint a panel."
+
+msgid "About"
+msgstr "Névjegy"
+
+msgid "Info"
+msgstr "Információ"
+
+msgid "Version"
+msgstr "Verzió"
+
+msgid "Source"
+msgstr "Forrás"
+
+msgid "Export and Import"
+msgstr "Exportálás és importálás"
+
+msgid "Sponsored and originally developed by"
+msgstr "Támogatója és eredeti fejlesztője:"
+
+msgid "Action"
+msgstr "Művelet"
+
+msgid "Scroll action"
+msgstr "Görgetési művelet"
+
+msgid "Hotkey overlay"
+msgstr "Gyorsbillentyű-rátét"
+
+msgid "Application icons context menu"
+msgstr "Alkalmazásikonok helyi menüje"
+
+msgid "(right-click menu)"
+msgstr "(jobb kattintásos menü)"
+
+msgid "Secondary menu"
+msgstr "Másodlagos menü"
+
+msgid "Panel context menu entries"
+msgstr "A panel helyi menüjének elemei"
+
+msgid "Add entry"
+msgstr "Elem hozzáadása"
+
+msgid "Behavior"
+msgstr "Viselkedés"
+
+msgid "Applications"
+msgstr "Alkalmazások"
+
+msgid "Hover"
+msgstr "Rámutatás"
+
+msgid "Isolate"
+msgstr "Elkülönítés"
+
+msgid "Overview"
+msgstr "Áttekintő"
+
+msgid "Fine-Tune"
+msgstr "Finomhangolás"
+
+msgid "Font size"
+msgstr "Betűméret"
+
+msgid "(0 = theme default)"
+msgstr "(0 = a téma alapértelmezése)"
+
+msgid "Tray Font Size"
+msgstr "Tálca betűmérete"
+
+msgid "LeftBox Font Size"
+msgstr "Bal doboz betűmérete"
+
+msgid "Padding"
+msgstr "Kitöltés"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = a téma alapértelmezése)"
+
+msgid "Tray Item Padding"
+msgstr "Tálcaelem kitöltése"
+
+msgid "Status Icon Padding"
+msgstr "Állapotikon kitöltése"
+
+msgid "LeftBox Padding"
+msgstr "Bal doboz kitöltése"
+
+msgid "Animate"
+msgstr "Animálás"
+
+msgid "Gnome functionality"
+msgstr "GNOME-funkciók"
+
+msgid "(overview)"
+msgstr "(áttekintő)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Az eredeti gnome-shell dash megtartása"
+
+msgid "(e.g. date menu)"
+msgstr "(például dátum menü)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Panelmenü-gombok aktiválása csak kattintásra"
+
+msgid "Position"
+msgstr "Pozíció"
+
+msgid "Panel"
+msgstr "Panel"
+
+msgid "Order and Position on monitors"
+msgstr "Sorrend és pozíció a kijelzőkön"
+
+msgid "Monitor"
+msgstr "Kijelző"
+
+msgid "Panel monitor position"
+msgstr "Panel kijelzőpozíciója"
+
+msgid "(default is 48)"
+msgstr "(alapértelmezetten 48)"
+
+msgid "Panel thickness"
+msgstr "Panel vastagsága"
+
+msgid "(default is 100)"
+msgstr "(alapértelmezetten 100)"
+
+msgid "Panel length"
+msgstr "Panel hossza"
+
+msgid "Dynamic"
+msgstr "Dinamikus"
+
+msgid "Taskbar Display"
+msgstr "Feladatsáv megjelenítése"
+
+msgid "Style"
+msgstr "Stílus"
+
+msgid "Global style"
+msgstr "Globális stílus"
+
+msgid "Border radius"
+msgstr "Sarokkerekítés"
+
+msgid "AppIcon style"
+msgstr "Alkalmazásikon stílusa"
+
+msgid "(default is 8)"
+msgstr "(alapértelmezetten 8)"
+
+msgid "App Icon Margin"
+msgstr "Alkalmazásikon margója"
+
+msgid "(default is 4)"
+msgstr "(alapértelmezetten 4)"
+
+msgid "App Icon Padding"
+msgstr "Alkalmazásikon kitöltése"
+
+msgid "Highlight hovering app icons"
+msgstr "Rámutatott alkalmazásikonok kiemelése"
+
+msgid "Icon style"
+msgstr "Ikonstílus"
+
+msgid "Normal"
+msgstr "Normál"
+
+msgid "Symbolic"
+msgstr "Szimbolikus"
+
+msgid "Grayscale"
+msgstr "Szürkeárnyalatos"
+
+msgid "Running indicator"
+msgstr "Futásjelző"
+
+msgid "Panel style"
+msgstr "Panelstílus"
+
+msgid "(default is 0)"
+msgstr "(alapértelmezetten 0)"
+
+msgid "Side margins"
+msgstr "Oldalsó margók"
+
+msgid "Top and bottom margins"
+msgstr "Felső és alsó margók"
+
+msgid "Side padding"
+msgstr "Oldalsó kitöltés"
+
+msgid "Top and bottom padding"
+msgstr "Felső és alsó kitöltés"
+
+msgid "Override panel theme background color"
+msgstr "A paneltéma háttérszínének felülbírálása"
+
+msgid "Override panel theme gradient"
+msgstr "A paneltéma színátmenetének felülbírálása"
+
+msgid "Panel border"
+msgstr "Panel szegélye"
+
+msgid "Override border color"
+msgstr "Szegélyszín felülbírálása"
+
+msgid "Border thickness"
+msgstr "Szegély vastagsága"

@@ -30,6 +30,9 @@ xgettext "${common[@]}" -j "${other[@]}"
 # What each Windows program does ("job"), shown in the Windows Program window.
 jq -r '[(.programs, .kinds)[].job | select(.)] | unique[] | "_(\(@json))"' build_files/windows-replacements.json \
   | xgettext "${common[@]}" -j -L Python -
+# Each change's title, shown under "What is new" in System Update (one per line; every PR adds its own).
+jq -R -r '"# Translators: a change in an update, listed under What is new\n_(\(tojson))"' po/whats-new.txt \
+  | xgettext "${common[@]}" -j -L Python -
 
 if [ "${1:-}" = --check ]; then
   same() { grep -v '^"POT-Creation-Date:' "$1"; }

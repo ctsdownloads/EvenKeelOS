@@ -1,0 +1,112 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "Removing remote…"
+msgstr "Usuwanie repozytorium…"
+
+msgid "Could not remove remote"
+msgstr "Nie można usunąć repozytorium"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s do %s, najwięcej %s z liczbą %s"
+
+msgid "Remotes"
+msgstr "Repozytoria"
+
+msgid "System Installation"
+msgstr "Instalacja systemowa"
+
+msgid "Available to all users on this computer"
+msgstr "Dostępne dla wszystkich użytkowników tego komputera"
+
+msgid "User Installation"
+msgstr "Instalacja użytkownika"
+
+msgid "Only available to you"
+msgstr "Dostępne tylko dla Ciebie"
+
+msgid "Remove Remote"
+msgstr "Usuń repozytorium"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Usuń %s"
+
+msgid "Unused"
+msgstr "Nieużywane"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u zainstalowana aplikacja"
+msgstr[1] "%u zainstalowane aplikacje"
+msgstr[2] "%u zainstalowanych aplikacji"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Usunąć „%s”?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Nie będzie już można instalować aplikacji z tego repozytorium użytkownika."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Nie będzie już można instalować aplikacji z tego repozytorium systemowego."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u aplikacja do usunięcia"
+msgstr[1] "%u aplikacje do usunięcia"
+msgstr[2] "%u aplikacji do usunięcia"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Poniższa aplikacja została zainstalowana z tego repozytorium i zostanie razem z nim usunięta z konta użytkownika."
+msgstr[1] "Poniższe aplikacje zostały zainstalowane z tego repozytorium i zostaną razem z nim usunięte z konta użytkownika."
+msgstr[2] "Poniższe aplikacje zostały zainstalowane z tego repozytorium i zostaną razem z nim usunięte z konta użytkownika."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Poniższa aplikacja została zainstalowana z tego repozytorium i zostanie razem z nim usunięta dla wszystkich użytkowników."
+msgstr[1] "Poniższe aplikacje zostały zainstalowane z tego repozytorium i zostaną razem z nim usunięte dla wszystkich użytkowników."
+msgstr[2] "Poniższe aplikacje zostały zainstalowane z tego repozytorium i zostaną razem z nim usunięte dla wszystkich użytkowników."
+
+msgid "Total"
+msgstr "Łącznie"
+
+msgid "This Week"
+msgstr "W tym tygodniu"
+
+msgid "Installs per day"
+msgstr "Pobrania dziennie"
+
+msgid "Installs per country"
+msgstr "Pobrania według kraju"
+
+msgid "Finishing Up"
+msgstr "Kończenie"
+
+msgid "Manage R_emotes"
+msgstr "Zarządzaj _repozytoriami"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u pobranie"
+msgstr[1] "%s, %'u pobrania"
+msgstr[2] "%s, %'u pobrań"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Najwięcej pobrań z: %s"

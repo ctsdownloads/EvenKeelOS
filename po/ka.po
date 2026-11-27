@@ -7317,6 +7317,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "{network} შენახულია, როგორც {place}."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} გბ"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} მბ"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} ტბ"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8469,3 +8484,247 @@ msgstr "ნოტების ჩაწერა"
 
 msgid "your calendar"
 msgstr "თქვენი კალენდარი"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "ყველა ენის თარგმნის დასრულება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "თარიღების ჩვენება თითოეული ენის საკუთარი რიგით"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "gettext-ის ანაბეჭდში დატოვება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "თარგმანების დამატება 68 ენისთვის"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "ყველა ეკრანის ტექსტის თარგმნადად გადაქცევა"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "აპებისა და პორტების შეშვება თითო ადგილზე; „სამსახური“ არაფერს შეუშვებს"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "ღია და მუქი რეჟიმის გრაფიკის, სლაიდშოუსა და შრიფტების დამატება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "„სისტემური ხელსაწყოების“ გადარქმევა EvenKeelOS Wheelhouse-ად"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "NVIDIA-ს გრაფიკის ნორმალურად ჩვენება თავსებადობის შემოწმებაში"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "ფაილური სისტემების ჩატვირთვა დაყენებამდე"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "კითხვა ავტომატურ გადატვირთვამდე"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "ყოველი ახალი ვერსიის გამოსაცდელად მონიშვნა"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "განახლების დაბრუნება, როცა რამე, რაც მუშაობდა, გაფუჭდება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "ყოველი აწყობის ვირტუალურ მანქანაში გაშვება გამოქვეყნებამდე"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "8 GB მეხსიერების რეკომენდაცია, მინიმუმის გარეშე"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "კომპიუტერის შემოწმება ცოცხალი USB-დან დაყენებამდე"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "დამყენებელში კითხვა: Windows-ის მომხმარებელი ხართ თუ Linux-ის"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "„სისტემური ხელსაწყოების“ დამატება ლოგოს მენიუში"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "EvenKeelOS გზამკვლევში კიდევ ექვსი თემის დამატება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "„Linux-ის დამწყების“ EvenKeelOS გზამკვლევად გადაქცევა"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "„Linux-ის დამწყების“ გზამკვლევის დამატება სისტემურ ხელსაწყოებსა და შესვლისას"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "ჩატვირთვის პარამეტრების დამატება: გავრცელებული გამოსწორებები და თქვენი პარამეტრები"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "გაზიარებული საქაღალდეების აწყობის შემოწმების გასწორება: საშინაო საქაღალდეები ჯერ არ არის"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "გაზიარებული საქაღალდეების დამატება: საშინაო საქაღალდეების გაზიარება საშინაო ქსელებში"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "ქსელის უსაფრთხოების დამატება: სახლი, სამსახური ან საჯარო ადგილი"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "პრინტერის დრაივერების ამოცნობა ნებისმიერ საქაღალდეში"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "ხელსაწყოების ფანჯრების ჩვენება სისტემური ხელსაწყოების შიგნით"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "პრობლემის გახსნა, როცა ანაბეჭდის აწყობა ვერ მოხერხდა"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "გარე პაკეტებისა და ISO ხელსაწყოს ზუსტ ვერსიებზე დაფიქსირება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "ხელსაწყოების ფანჯრებისთვის ხელსაწყოს სახელის მიცემა, ტესტების უფრო მოკლე სია"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "წაშლილი სისტემური პარამეტრების აღდგენა და სერტიფიკატებზე გაფრთხილება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "ყველა ხელსაწყოს ერთ სისტემური ხელსაწყოების ფანჯარაში მოთავსება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "არაფრის დატოვება VPN-ის წაშლისას"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "„VPN-ის მიღების“ დამატება განახლებადი VPN-ებით"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Zoom-ის შეხვედრებისთვის საკუთარი გზამკვლევის მიცემა"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Zoom-ის შეხვედრების გახსნა Chrome-ში, Zoom-ის ვებ ვერსიაში"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "ArtCraft-ის დაყენებისას Flathub-ის დაყენების გაფუჭების აღკვეთა"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "დამყენებლების ამოცნობა მათი ჩვეული ფაილის სახელით"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Windows-ის პროგრამების Linux-ის ანალოგების შეთავაზება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "ყუთის მოწყობის გასწორება: distrobox მხოლოდ-კითხვადი საქაღალდეებს არასწორად ამაგრებს"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Windows-ის პროგრამების Fedora-ს ან Ubuntu-ს ვერსიების შეთავაზება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Linux-ის ვერსიის შეთავაზება Windows-ის პროგრამის გახსნისას"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "ერთი shim-ის მიწოდება, რომ მიკროპროგრამამ Fedora-ს ზედმეტი ჩანაწერი არ დაამატოს"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Fedora-ს ფაიერვოლის ზონის დაბრუნება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "root-ის დამხმარეების, ფაიერვოლისა და პაროლის გარეშე განახლებების გამაგრება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "ახალი ნაგულისხმევები: ფონები, აქცენტის საქაღალდეები, ჩაკეტვის ეკრანი"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "ახალი ნაგულისხმევი: ცისფერი-მწვანე აქცენტის ფერი, შესვლის ეკრანზეც"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "დაბრუნების შენიშვნის, შესვლის ციკლისა და გაჭედილი ტესტების გასწორება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "გაყინვისას დაბრუნების გასწორება და ხელახალი ცდების 2-მდე შემცირება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "ავტომატური დაბრუნების ტესტების გასწორება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "ავტომატური დაბრუნების რეალური წარუმატებლობის ტესტები"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "ავტომატური დაბრუნების დამატება greenboot-ით"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "Windows-ის განლაგების გაშვება სამუშაო მაგიდაზე, პლუს მცირე გასწორებები"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "ავტომატური განახლებების 3 დღით შეჩერება გაუქმების შემდეგ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "დამყენებელში სამუშაო მაგიდის განლაგების ნაბიჯის დამატება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "სისტემურ ხელსაწყოებში სამუშაო მაგიდის განლაგების დამატება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "ენერგორეჟიმის გადართვისთვის განახლებების ლოდინის აღკვეთა"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "არასავალდებულო Windows-ის სტილის განლაგების დამატება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Fedora 45-ის წინასწარი პარამეტრებისა და კონტეინერის პოლიტიკის ბილიკების გასწორება"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "ჩამოტვირთვის წყაროების წაკითხვა Fedora 45-ის ახალ საქაღალდეში"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Fedora 45-ზე გადასვლა"

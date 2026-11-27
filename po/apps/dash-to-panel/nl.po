@@ -1,0 +1,559 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "%d venster afsluiten"
+msgstr[1] "%d vensters afsluiten"
+
+msgid "Gnome Settings"
+msgstr "GNOME-instellingen"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel is bijgewerkt!"
+
+msgid "You are now running version"
+msgstr "Je gebruikt nu versie"
+
+msgid "See what's new"
+msgstr "Bekijk wat er nieuw is"
+
+msgid "Top Bar"
+msgstr "Bovenbalk"
+
+msgid "Center"
+msgstr "Gecentreerd"
+
+msgid "Middle"
+msgstr "Midden"
+
+msgid "Start"
+msgstr "Begin"
+
+msgid "End"
+msgstr "Einde"
+
+msgid "Show Applications button"
+msgstr "Knop ‘Alle toepassingen’"
+
+msgid "Activities button"
+msgstr "Knop Activiteiten"
+
+msgid "Taskbar"
+msgstr "Taakbalk"
+
+msgid "Date menu"
+msgstr "Datummenu"
+
+msgid "System menu"
+msgstr "Systeemmenu"
+
+msgid "Left box"
+msgstr "Linkervak"
+
+msgid "Center box"
+msgstr "Middenvak"
+
+msgid "Right box"
+msgstr "Rechtervak"
+
+msgid "Desktop button"
+msgstr "Bureaubladknop"
+
+msgid "Move up"
+msgstr "Omhoog"
+
+msgid "Move down"
+msgstr "Omlaag"
+
+msgid "Visible"
+msgstr "Zichtbaar"
+
+msgid "Select element position"
+msgstr "Elementpositie kiezen"
+
+msgid "Stacked to top"
+msgstr "Gestapeld naar boven"
+
+msgid "Stacked to left"
+msgstr "Gestapeld naar links"
+
+msgid "Stacked to bottom"
+msgstr "Gestapeld naar onderen"
+
+msgid "Stacked to right"
+msgstr "Gestapeld naar rechts"
+
+msgid "Centered"
+msgstr "Gecentreerd"
+
+msgid "Monitor Center"
+msgstr "Beeldschermmidden"
+
+msgid "More options"
+msgstr "Meer opties"
+
+msgid "Open icon"
+msgstr "Pictogram openen"
+
+msgid "Primary monitor"
+msgstr "Hoofdbeeldscherm"
+
+msgid "Isolate Workspaces options"
+msgstr "Opties voor werkbladen isoleren"
+
+msgid "Isolate monitors options"
+msgstr "Opties voor beeldschermen onafhankelijk bedienen"
+
+msgid "Text"
+msgstr "Tekst"
+
+msgid "Command"
+msgstr "Opdracht"
+
+msgid "Remove"
+msgstr "Verwijderen"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d pictogram"
+msgstr[1] "%d pictogrammen"
+
+msgid "App icon animation options"
+msgstr "Opties voor animatie van app-pictogrammen"
+
+msgid "App icon highlight options"
+msgstr "Opties voor markering van app-pictogrammen"
+
+msgid "Move to current Workspace"
+msgstr "Naar huidig werkblad verplaatsen"
+
+msgid "Animation type"
+msgstr "Animatietype"
+
+msgid "Simple"
+msgstr "Eenvoudig"
+
+msgid "Ripple"
+msgstr "Rimpel"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Duur"
+
+msgid "Rotation"
+msgstr "Rotatie"
+
+msgid "Travel"
+msgstr "Afstand"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Convexity"
+msgstr "Bolling"
+
+msgid "Extent"
+msgstr "Omvang"
+
+msgid "Indicator size (px)"
+msgstr "Grootte van indicator (px)"
+
+msgid "Font color of the minimized application titles"
+msgstr "Letterkleur van de titels van geminimaliseerde toepassingen"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Maximale breedte (px) van de titels van toepassingen"
+
+msgid "(default is 160)"
+msgstr "(standaard is 160)"
+
+msgid "Highlight AppIcon color"
+msgstr "Markeringskleur van app-pictogram"
+
+msgid "Pressed AppIcon color"
+msgstr "Kleur van ingedrukt app-pictogram"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Randstraal van gemarkeerd app-pictogram"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Overschrijft de globale randstraal (standaard is 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Paneel alleen verbergen voor vensters"
+
+msgid "Overlapping"
+msgstr "Overlappend"
+
+msgid "On same monitor"
+msgstr "Op hetzelfde beeldscherm"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Het paneel verschijnt wanneer de aanwijzer de rand van het beeldscherm raakt"
+
+msgid "Limit to panel length"
+msgstr "Beperken tot paneellengte"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Het paneel blijft zichtbaar zolang je het paneelgebied aanwijst"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Druk aan de rand van het beeldscherm vereisen om het paneel te tonen"
+
+msgid "(requires multi-monitors option)"
+msgstr "(vereist de optie voor meerdere beeldschermen)"
+
+msgid "Only hide secondary panels"
+msgstr "Alleen secundaire panelen verbergen"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Syntaxis: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Persist state across restarts"
+msgstr "Status behouden na herstarts"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(houdt rekening met ‘Niet storen’ van GNOME en vereist de optie voor de meldingenteller)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Paneel tonen en vasthouden bij een melding"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Wachttijd voor het tonen van het paneel (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Beeldschermen ook onafhankelijk bedienen bij één paneel"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Werkbladen isoleren in de toepassingswisselaar van GNOME Shell"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Eén schakelen / meerdere doorlopen"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Eén schakelen / meerdere uitspreiden"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Op secundaire beeldschermen de overlay tonen op pictogrammen die overeenkomen met het hoofdbeeldscherm"
+
+msgid "Show the overlay on all monitors"
+msgstr "Overlay op alle beeldschermen tonen"
+
+msgid "Show popup when changing workspace"
+msgstr "Pop-up tonen bij wisselen van werkblad"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Dit geldt alleen voor de werkblad-pop-up bij scrollen op het paneel."
+
+msgid "<i>App Details</i> menu item"
+msgstr "Menu-item <i>Toepassingsdetails</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Toepassingsdetails</i> is alleen beschikbaar als GNOME Software is geïnstalleerd"
+
+msgid "Show Applications icon"
+msgstr "Pictogram ‘Alle toepassingen’"
+
+msgid "Override escape key and return to desktop"
+msgstr "Escape-toets overschrijven en terugkeren naar het bureaublad"
+
+msgid "Override Show Desktop line color"
+msgstr "Lijnkleur van ‘Bureaublad tonen’ overschrijven"
+
+msgid "Time (ms) before showing"
+msgstr "Tijd (ms) vóór tonen"
+
+msgid "(400 is default)"
+msgstr "(400 is standaard)"
+
+msgid "Time (ms) before hiding"
+msgstr "Tijd (ms) vóór verbergen"
+
+msgid "(100 is default)"
+msgstr "(100 is standaard)"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Indien uitgeschakeld hebben de achtergronden van de voorvertoningen dezelfde doorzichtigheid als het paneel."
+
+msgid "Icon size (px) of the window preview"
+msgstr "Pictogramgrootte (px) van de venstervoorvertoning"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Indien uitgeschakeld is de pictogramgrootte van de voorvertoningen gebaseerd op de grootte van de kopbalk"
+
+msgid "About"
+msgstr "Over"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Version"
+msgstr "Versie"
+
+msgid "Source"
+msgstr "Bron"
+
+msgid "Export and Import"
+msgstr "Exporteren en importeren"
+
+msgid "Sponsored and originally developed by"
+msgstr "Gesponsord en oorspronkelijk ontwikkeld door"
+
+msgid "Action"
+msgstr "Actie"
+
+msgid "Scroll action"
+msgstr "Scrollactie"
+
+msgid "Change volume"
+msgstr "Volume wijzigen"
+
+msgid "Same as panel"
+msgstr "Zelfde als paneel"
+
+msgid "Hotkey overlay"
+msgstr "Sneltoets-overlay"
+
+msgid "Application icons context menu"
+msgstr "Contextmenu van toepassingspictogrammen"
+
+msgid "(right-click menu)"
+msgstr "(rechtsklikmenu)"
+
+msgid "Secondary menu"
+msgstr "Secundair menu"
+
+msgid "Panel context menu entries"
+msgstr "Items in het contextmenu van het paneel"
+
+msgid "Add entry"
+msgstr "Item toevoegen"
+
+msgid "Behavior"
+msgstr "Gedrag"
+
+msgid "Applications"
+msgstr "Toepassingen"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Favoriete toepassingen tonen op secundaire panelen"
+
+msgid "Show notification counter badge"
+msgstr "Meldingenteller tonen"
+
+msgid "Hover"
+msgstr "Aanwijzen"
+
+msgid "Isolate"
+msgstr "Isoleren"
+
+msgid "Overview"
+msgstr "Overzicht"
+
+msgid "Click empty space to close overview"
+msgstr "Op lege ruimte klikken om het overzicht te sluiten"
+
+msgid "Disable show overview on startup"
+msgstr "Overzicht bij het opstarten niet tonen"
+
+msgid "Fine-Tune"
+msgstr "Verfijnen"
+
+msgid "Font size"
+msgstr "Lettergrootte"
+
+msgid "(0 = theme default)"
+msgstr "(0 = themastandaard)"
+
+msgid "Tray Font Size"
+msgstr "Lettergrootte van systeemvak"
+
+msgid "LeftBox Font Size"
+msgstr "Lettergrootte van linkervak"
+
+msgid "Padding"
+msgstr "Opvulling"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = themastandaard)"
+
+msgid "Tray Item Padding"
+msgstr "Opvulling van items in systeemvak"
+
+msgid "Status Icon Padding"
+msgstr "Opvulling van statuspictogrammen"
+
+msgid "LeftBox Padding"
+msgstr "Opvulling van linkervak"
+
+msgid "Animate"
+msgstr "Animeren"
+
+msgid "Gnome functionality"
+msgstr "GNOME-functionaliteit"
+
+msgid "(overview)"
+msgstr "(overzicht)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Oorspronkelijke dash van GNOME Shell behouden"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Oorspronkelijk bovenpaneel van GNOME Shell behouden"
+
+msgid "(e.g. date menu)"
+msgstr "(bijv. datummenu)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Paneelmenuknoppen alleen activeren bij klikken"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Hoek voor Activiteiten op het hoofdbeeldscherm afdwingen"
+
+msgid "Position"
+msgstr "Positie"
+
+msgid "Panel"
+msgstr "Paneel"
+
+msgid "Order and Position on monitors"
+msgstr "Volgorde en positie op beeldschermen"
+
+msgid "Monitor"
+msgstr "Beeldscherm"
+
+msgid "Apply changes to all monitors"
+msgstr "Wijzigingen toepassen op alle beeldschermen"
+
+msgid "Panel monitor position"
+msgstr "Paneelpositie op beeldscherm"
+
+msgid "(default is 48)"
+msgstr "(standaard is 48)"
+
+msgid "Panel thickness"
+msgstr "Paneeldikte"
+
+msgid "(default is 100)"
+msgstr "(standaard is 100)"
+
+msgid "Panel length"
+msgstr "Paneellengte"
+
+msgid "Dynamic"
+msgstr "Dynamisch"
+
+msgid "Anchor"
+msgstr "Verankering"
+
+msgid "Taskbar Display"
+msgstr "Taakbalkweergave"
+
+msgid "Style"
+msgstr "Stijl"
+
+msgid "Global style"
+msgstr "Globale stijl"
+
+msgid "Border radius"
+msgstr "Randstraal"
+
+msgid "AppIcon style"
+msgstr "Stijl van app-pictogram"
+
+msgid "(default is 8)"
+msgstr "(standaard is 8)"
+
+msgid "App Icon Margin"
+msgstr "Marge van app-pictogram"
+
+msgid "(default is 4)"
+msgstr "(standaard is 4)"
+
+msgid "App Icon Padding"
+msgstr "Opvulling van app-pictogram"
+
+msgid "Animate hovering app icons"
+msgstr "App-pictogrammen animeren bij aanwijzen"
+
+msgid "Highlight hovering app icons"
+msgstr "App-pictogrammen markeren bij aanwijzen"
+
+msgid "Icon style"
+msgstr "Pictogramstijl"
+
+msgid "Normal"
+msgstr "Normaal"
+
+msgid "Symbolic"
+msgstr "Symbolisch"
+
+msgid "Grayscale"
+msgstr "Grijstinten"
+
+msgid "Running indicator"
+msgstr "Actief-indicator"
+
+msgid "Panel style"
+msgstr "Paneelstijl"
+
+msgid "(default is 0)"
+msgstr "(standaard is 0)"
+
+msgid "Side margins"
+msgstr "Zijmarges"
+
+msgid "Top and bottom margins"
+msgstr "Boven- en ondermarges"
+
+msgid "Side padding"
+msgstr "Zijopvulling"
+
+msgid "Top and bottom padding"
+msgstr "Boven- en onderopvulling"
+
+msgid "Override panel theme background color"
+msgstr "Achtergrondkleur van paneelthema overschrijven"
+
+msgid "Override panel theme gradient"
+msgstr "Kleurverloop van paneelthema overschrijven"
+
+msgid "Panel border"
+msgstr "Paneelrand"
+
+msgid "Override border color"
+msgstr "Randkleur overschrijven"
+
+msgid "Border thickness"
+msgstr "Randdikte"

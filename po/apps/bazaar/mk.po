@@ -1,0 +1,2588 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "Продавница за апликации"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "Додавајте, отстранувајте или ажурирајте flatpak софтвер на овој компјутер"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Систем;Пакет;Управувач;Откриј;Flatpak;Софтвер;Апликација;Продавница;"
+
+msgid "New Window"
+msgstr "Нов прозорец"
+
+msgid "Discover and install apps"
+msgstr "Откријте и инсталирајте апликации"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Брза и модерна продавница за апликации за Linux, насочена кон откривање и инсталирање Flatpak апликации и додатоци, особено од Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Ставете повеќе инсталации во редица и продолжете со прелистување"
+
+msgid "Easily view app permissions"
+msgstr "Лесно прегледајте ги дозволите на апликациите"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Најавете се на Flathub за да ги гледате и управувате вашите омилени"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Пребарувајте апликации директно од GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Почетната страница што ги прикажува апликациите на Flathub"
+
+msgid "App page for Exhibit"
+msgstr "Страница на апликацијата Exhibit"
+
+msgid "Library page"
+msgstr "Страница на библиотеката"
+
+msgid "Search page"
+msgstr "Страница за пребарување"
+
+msgid "Category page"
+msgstr "Страница на категоријата"
+
+msgid "Stopped Receiving Updates"
+msgstr "Престана да добива ажурирања"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Деинсталирај"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Инсталирај"
+
+msgid "Add-on"
+msgstr "Додаток"
+
+msgid "Manage Add-Ons"
+msgstr "Управувај со додатоците"
+
+msgid "No Add-Ons Visible"
+msgstr "Нема видливи додатоци"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "Вашите тековни претпочитања за филтрирање ги кријат сите познати додатоци. Обидете се да ги приспособите."
+
+msgid "Add-on Page"
+msgstr "Страница на додатокот"
+
+msgid "Download"
+msgstr "Преземи"
+
+msgid "Installed"
+msgstr "Инсталирано"
+
+msgid "Downloads/Month"
+msgstr "Преземања/месец"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Престана да добива основни ажурирања"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Овој додаток користи околина за извршување што повеќе не добива ажурирања или безбедносни поправки. Може да стане небезбеден за употреба."
+
+msgid "Other Sources"
+msgstr "Други извори"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Додаток за %s"
+
+msgid "Show Less"
+msgstr "Прикажи помалку"
+
+msgid "Show More"
+msgstr "Прикажи повеќе"
+
+msgid "Download Stats"
+msgstr "Статистика за преземања"
+
+msgid "Age Rating"
+msgstr "Старосна оценка"
+
+msgid "Cartoon Violence"
+msgstr "Цртано насилство"
+
+msgid "No information regarding cartoon violence"
+msgstr "Нема информации за цртано насилство"
+
+msgid "Fantasy Violence"
+msgstr "Фантастично насилство"
+
+msgid "No information regarding fantasy violence"
+msgstr "Нема информации за фантастично насилство"
+
+msgid "Realistic Violence"
+msgstr "Реалистично насилство"
+
+msgid "No information regarding realistic violence"
+msgstr "Нема информации за реалистично насилство"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "Насилство со прикажување крвопролевање"
+
+msgid "No information regarding bloodshed"
+msgstr "Нема информации за крвопролевање"
+
+msgid "Sexual Violence"
+msgstr "Сексуално насилство"
+
+msgid "No information regarding sexual violence"
+msgstr "Нема информации за сексуално насилство"
+
+msgid "Alcohol"
+msgstr "Алкохол"
+
+msgid "No information regarding references to alcohol"
+msgstr "Нема информации за спомнување алкохол"
+
+msgid "Narcotics"
+msgstr "Наркотици"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "Нема информации за спомнување недозволени дроги"
+
+msgid "Tobacco"
+msgstr "Тутун"
+
+msgid "No information regarding references to tobacco products"
+msgstr "Нема информации за спомнување тутунски производи"
+
+msgid "Nudity"
+msgstr "Голотија"
+
+msgid "No information regarding nudity of any sort"
+msgstr "Нема информации за каква било голотија"
+
+msgid "Sexual Themes"
+msgstr "Сексуални теми"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "Нема информации за спомнување или прикажување сексуална природа"
+
+msgid "Profanity"
+msgstr "Вулгарности"
+
+msgid "No information regarding profanity of any kind"
+msgstr "Нема информации за каква било вулгарност"
+
+msgid "Inappropriate Humor"
+msgstr "Несоодветен хумор"
+
+msgid "No information regarding inappropriate humor"
+msgstr "Нема информации за несоодветен хумор"
+
+msgid "Discrimination"
+msgstr "Дискриминација"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "Нема информации за дискриминаторски јазик од каков било вид"
+
+msgid "Advertising"
+msgstr "Рекламирање"
+
+msgid "No information regarding advertising of any kind"
+msgstr "Нема информации за каква било реклама"
+
+msgid "Gambling"
+msgstr "Коцкање"
+
+msgid "No information regarding gambling of any kind"
+msgstr "Нема информации за каков било вид коцкање"
+
+msgid "Purchasing"
+msgstr "Купување"
+
+msgid "No information regarding the ability to spend money"
+msgstr "Нема информации за можноста за трошење пари"
+
+msgid "Chat Between Users"
+msgstr "Разговор меѓу корисници"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "Нема информации за начини за разговор со други корисници"
+
+msgid "Audio Chat Between Users"
+msgstr "Аудио разговор меѓу корисници"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "Нема информации за начини за зборување со други корисници"
+
+msgid "Contact Details"
+msgstr "Контакт податоци"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "Нема информации за споделување корисничко име на социјална мрежа или е-пошта"
+
+msgid "Identifying Information"
+msgstr "Податоци за идентификација"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "Нема информации за споделување кориснички податоци со трети страни"
+
+msgid "Location Sharing"
+msgstr "Споделување на локација"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "Нема информации за споделување на физичка локација со други корисници"
+
+msgid "Prostitution"
+msgstr "Проституција"
+
+msgid "No information regarding references to prostitution"
+msgstr "Нема информации за спомнување проституција"
+
+msgid "Adultery"
+msgstr "Прељуба"
+
+msgid "No information regarding references to adultery"
+msgstr "Нема информации за спомнување прељуба"
+
+msgid "Sexualized Characters"
+msgstr "Сексуализирани ликови"
+
+msgid "No information regarding sexualized characters"
+msgstr "Нема информации за сексуализирани ликови"
+
+msgid "Desecration"
+msgstr "Скрнавење"
+
+msgid "No information regarding references to desecration"
+msgstr "Нема информации за спомнување скрнавење"
+
+msgid "Human Remains"
+msgstr "Човечки останки"
+
+msgid "No information regarding visible dead human remains"
+msgstr "Нема информации за видливи мртви човечки останки"
+
+msgid "Slavery"
+msgstr "Ропство"
+
+msgid "No information regarding references to slavery"
+msgstr "Нема информации за спомнување ропство"
+
+msgid "Does not include references to drugs"
+msgstr "Не содржи спомнување дроги"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "Не содржи псовки, вулгарности и други видови силен јазик"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "Не содржи реклами или парични трансакции"
+
+msgid "Does not include sex or nudity"
+msgstr "Не содржи секс или голотија"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "Не содржи неконтролирана функционалност за разговор"
+
+msgid "Does not include violence"
+msgstr "Не содржи насилство"
+
+msgid "Drugs"
+msgstr "Дроги"
+
+msgid "Strong Language"
+msgstr "Силен јазик"
+
+msgid "Money"
+msgstr "Пари"
+
+msgid "Social"
+msgstr "Социјално"
+
+msgid "Violence"
+msgstr "Насилство"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "Сите"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s има непозната старосна оценка"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s е погодно за сите"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s е погодно за мали деца"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s е погодно за деца"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s е погодно за тинејџери"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s е погодно за возрасни"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s е погодно за %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "Системска папка %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Потпапка %s во домашната папка"
+
+msgid "Host system folders"
+msgstr "Системски папки на домаќинот"
+
+msgid "Host system configuration from /etc"
+msgstr "Системска конфигурација на домаќинот од /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Потпапка %s на работната површина"
+
+msgid "Desktop folder"
+msgstr "Папка на работната површина"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "Потпапка %s во Документи"
+
+msgid "Documents folder"
+msgstr "Папка Документи"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "Потпапка %s во Музика"
+
+msgid "Music folder"
+msgstr "Папка Музика"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "Потпапка %s во Слики"
+
+msgid "Pictures folder"
+msgstr "Папка Слики"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "Потпапка %s во Јавно споделување"
+
+msgid "Public Share folder"
+msgstr "Папка Јавно споделување"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "Потпапка %s во Видеа"
+
+msgid "Videos folder"
+msgstr "Папка Видеа"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "Потпапка %s во Шаблони"
+
+msgid "Templates folder"
+msgstr "Папка Шаблони"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Потпапка %s во кориснички кеш"
+
+msgid "User cache folder"
+msgstr "Папка на корисничкиот кеш"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Потпапка %s во корисничка конфигурација"
+
+msgid "User configuration folder"
+msgstr "Папка на корисничката конфигурација"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Потпапка %s во кориснички податоци"
+
+msgid "User data folder"
+msgstr "Папка на корисничките податоци"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Потпапка %s во кориснички runtime"
+
+msgid "User runtime folder"
+msgstr "Папка на корисничкиот runtime"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Пристап до датотечниот систем: %s"
+
+msgid "Unknown filesystem path"
+msgstr "Непозната патека на датотечен систем"
+
+msgid "Download Size"
+msgstr "Големина на преземањето"
+
+msgid "Installed Size"
+msgstr "Инсталирана големина"
+
+msgid "Amount to download from the internet"
+msgstr "Количина за преземање од интернет"
+
+msgid "Size on Disk"
+msgstr "Големина на дискот"
+
+msgid "Open user data folder"
+msgstr "Отвори ја папката со кориснички податоци"
+
+msgid "Your User Data"
+msgstr "Вашите кориснички податоци"
+
+msgid "Caches, settings, and other app data"
+msgstr "Кешови, поставувања и други податоци на апликацијата"
+
+msgid "Cache"
+msgstr "Кеш"
+
+msgid "Temporary cached data"
+msgstr "Привремено кеширани податоци"
+
+msgid "Clear Cache"
+msgstr "Исчисти го кешот"
+
+msgid "Installed Runtime Size"
+msgstr "Инсталирана големина на околината за извршување"
+
+msgid "Runtime Download Size"
+msgstr "Големина за преземање на околината за извршување"
+
+msgid "N/A"
+msgstr "Н/Д"
+
+msgid "Storage"
+msgstr "Складирање"
+
+msgid "Verified"
+msgstr "Потврдено"
+
+msgid "The Bazaar Contributors"
+msgstr "Соработниците на Bazaar"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "Посебна благодарност"
+
+msgid "Logged Out Successfully!"
+msgstr "Успешно сте одјавени!"
+
+msgid "Performing setup…"
+msgstr "Се извршува поставување…"
+
+msgid "Set Up Flathub?"
+msgstr "Да се постави ли Flathub?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub не е поставен на овој систем. Нема да можете да прелистувате и инсталирате апликации во Bazaar ако не е достапен.\n"
+"\n"
+"Сепак можете да го користите Bazaar за прелистување и отстранување на веќе инсталирани апликации."
+
+msgid "Later"
+msgstr "Подоцна"
+
+msgid "Set Up Flathub"
+msgstr "Постави го Flathub"
+
+msgid "A backend error occurred"
+msgstr "Настана грешка во позадинскиот дел"
+
+msgid "Refreshing…"
+msgstr "Се освежува…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "Се вчитуваат %d апликации…"
+
+msgid "Failed to open file"
+msgstr "Не успеа отворањето на датотеката"
+
+msgid "Failed to load metainfo"
+msgstr "Не успеа вчитувањето на metainfo"
+
+msgid "An initialization error occurred"
+msgstr "Настана грешка при иницијализацијата"
+
+msgid "Checking for updates…"
+msgstr "Се проверува за ажурирања…"
+
+msgid "Failed to check for updates"
+msgstr "Не успеа проверката за ажурирања"
+
+msgid "Could not find app"
+msgstr "Апликацијата не е пронајдена"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Се вчитува %d апликација…"
+msgstr[1] "Се вчитуваат %d апликации…"
+
+msgid "Writing to cache…"
+msgstr "Се запишува во кешот…"
+
+msgid "Removing remote…"
+msgstr "Се отстранува изворот…"
+
+msgid "Could not remove remote"
+msgstr "Не може да се отстрани изворот"
+
+msgid "Show All"
+msgstr "Прикажи сѐ"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Сите „%s“"
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d апликации"
+
+msgid "Failed to Load Article"
+msgstr "Не успеа вчитувањето на статијата"
+
+msgid "All apps are already installed"
+msgstr "Сите апликации се веќе инсталирани"
+
+msgid "_OK"
+msgstr "_Во ред"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Да се инсталира ли %u апликација?"
+msgstr[1] "Да се инсталираат ли %u апликации?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Ќе бидат инсталирани следните. Може да се инсталираат и дополнителни заеднички компоненти"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "Ќе се инсталираат %d додатоци."
+
+msgid "Additionally, addons will be installed."
+msgstr "Дополнително ќе се инсталираат додатоци."
+
+msgid "_Cancel"
+msgstr "_Откажи"
+
+msgid "_Install All"
+msgstr "_Инсталирај ги сите"
+
+msgid "Bundle Installation"
+msgstr "Инсталација на пакет"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Дополнителните зависности може да заземат дополнителен простор"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Инсталирањето на оваа апликација може да бара додавање нов извор на софтвер. Другите апликации од овој извор ќе се појават во Bazaar.\n"
+"\n"
+"Додајте го овој извор само ако сте сигурни дека му верувате."
+
+msgid "Successfully Installed!"
+msgstr "Успешно инсталирано!"
+
+msgid "Open"
+msgstr "Отвори"
+
+msgid "Show App Details"
+msgstr "Прикажи ги деталите за апликацијата"
+
+msgid "Already Installed"
+msgstr "Веќе инсталирано"
+
+msgid "Installation Failed"
+msgstr "Инсталацијата не успеа"
+
+msgid "Unknown install size"
+msgstr "Непозната големина за инсталирање"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Околу %s за инсталирање"
+
+msgid "No special permissions"
+msgstr "Нема посебни дозволи"
+
+msgid "Place Applet"
+msgstr "Постави аплет"
+
+msgid "Choose where to add this applet."
+msgstr "Изберете каде да се додаде овој аплет."
+
+msgid "Cancel"
+msgstr "Откажи"
+
+msgid "Panel"
+msgstr "Панел"
+
+msgid "Dock"
+msgstr "Док"
+
+msgid "No Curation"
+msgstr "Без курирање"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "На овој систем нема информации за курирање. Сепак можете да прелистувате апликации на Flathub"
+
+msgid "Browse Flathub"
+msgstr "Прелистај го Flathub"
+
+msgid "Offline"
+msgstr "Надвор од мрежа"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s до %s, највисоко на %s со %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "Инсталации:"
+
+msgid "Not Verified"
+msgstr "Непотврдено"
+
+msgid "Developer information not available."
+msgstr "Информациите за програмерот не се достапни."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "Сопственоста на ID-то на апликацијата %s не е потврдена и може да е пакет од заедницата."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "Сопственоста на ID-то на апликацијата %s е рачно потврдена од тимот на Flathub."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "Сопственоста на ID-то на апликацијата %1$s е потврдена од <b>%2$s</b> на <b>%3$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Сопственоста на ID-то на апликацијата %1$s е потврдена со %2$s."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "Сопственоста на ID-то на апликацијата %s е потврдена."
+
+msgid "Bazaar Release"
+msgstr "Издание на Bazaar"
+
+msgid "Full Release Notes"
+msgstr "Целосни белешки за изданието"
+
+msgid "This release was made possible by users like you!"
+msgstr "Ова издание е овозможено од корисници како вас!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Сакам да го правам Bazaar, но не можам сам. Помогнете го понатамошниот развој со донација на Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "Донирај за Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Што е ново во %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Објавено на %-e %B %Y"
+
+msgid "Choose an Installation"
+msgstr "Изберете инсталација"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Имате инсталирано повеќе верзии на оваа апликација. Со која сакате да продолжите?"
+
+msgid "Details"
+msgstr "Детали"
+
+msgid "Copy"
+msgstr "Копирај"
+
+msgid "Copied!"
+msgstr "Копирано!"
+
+msgid "Favorite Count"
+msgstr "Број на омилени"
+
+msgid "Failed to update favorite"
+msgstr "Не успеа ажурирањето на омилените"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Најавете се со Flathub за да управувате со омилените"
+
+msgid "Log In"
+msgstr "Најави се"
+
+msgid "Favorites"
+msgstr "Омилени"
+
+msgid "Install All"
+msgstr "Инсталирај ги сите"
+
+msgid "No Favorites"
+msgstr "Нема омилени"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Апликациите што ќе ги означите како омилени ќе се појават овде"
+
+msgid "Support This Application"
+msgstr "Поддржете ја оваа апликација"
+
+msgid "Remove From Favorites"
+msgstr "Отстрани од омилени"
+
+msgid "Failed to remove favorite"
+msgstr "Не успеа отстранувањето на омилената"
+
+msgid "Previous"
+msgstr "Претходно"
+
+msgid "Next"
+msgstr "Следно"
+
+msgid "Editing"
+msgstr "Уредување"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Миксер"
+
+msgid "Music"
+msgstr "Музика"
+
+msgid "Player"
+msgstr "Плеер"
+
+msgid "Recorder"
+msgstr "Снимач"
+
+msgid "Sequencer"
+msgstr "Секвенцер"
+
+msgid "Tuner"
+msgstr "Штимер"
+
+msgid "TV"
+msgstr "ТВ"
+
+msgid "Emulation"
+msgstr "Емулација"
+
+msgid "Action"
+msgstr "Акција"
+
+msgid "Adventure"
+msgstr "Авантура"
+
+msgid "Arcade"
+msgstr "Аркада"
+
+msgid "Blocks"
+msgstr "Блокови"
+
+msgid "Board"
+msgstr "Табла"
+
+msgid "Card"
+msgstr "Карти"
+
+msgid "Kids"
+msgstr "Деца"
+
+msgid "Logic"
+msgstr "Логика"
+
+msgid "Role Playing"
+msgstr "Игри со улоги"
+
+msgid "Shooter"
+msgstr "Пукање"
+
+msgid "Simulation"
+msgstr "Симулација"
+
+msgid "Sports"
+msgstr "Спорт"
+
+msgid "Strategy"
+msgstr "Стратегија"
+
+msgid "Browsers"
+msgstr "Прелистувачи"
+
+msgid "Chat"
+msgstr "Разговори"
+
+msgid "Mail"
+msgstr "Пошта"
+
+msgid "File Sharing"
+msgstr "Споделување датотеки"
+
+msgid "Audio & Video"
+msgstr "Аудио и видео"
+
+msgid "Media"
+msgstr "Медиуми"
+
+msgid "More Audio & Video"
+msgstr "Повеќе аудио и видео"
+
+msgid "Developer Tools"
+msgstr "Алатки за програмирање"
+
+msgid "Develop"
+msgstr "Развој"
+
+msgid "More Developer Tools"
+msgstr "Повеќе алатки за програмирање"
+
+msgid "Education"
+msgstr "Образование"
+
+msgid "Learn"
+msgstr "Учење"
+
+msgid "More Education"
+msgstr "Повеќе образование"
+
+msgid "Gaming"
+msgstr "Игри"
+
+msgid "Play"
+msgstr "Играј"
+
+msgid "More Gaming"
+msgstr "Повеќе игри"
+
+msgid "Graphics & Photography"
+msgstr "Графика и фотографија"
+
+msgid "Create"
+msgstr "Создавај"
+
+msgid "More Graphics & Photography"
+msgstr "Повеќе графика и фотографија"
+
+msgid "Networking"
+msgstr "Вмрежување"
+
+msgid "Internet"
+msgstr "Интернет"
+
+msgid "More Networking"
+msgstr "Повеќе вмрежување"
+
+msgid "Productivity"
+msgstr "Продуктивност"
+
+msgid "Work"
+msgstr "Работа"
+
+msgid "More Productivity"
+msgstr "Повеќе продуктивност"
+
+msgid "Science"
+msgstr "Наука"
+
+msgid "More Science"
+msgstr "Повеќе наука"
+
+msgid "System"
+msgstr "Систем"
+
+msgid "More System"
+msgstr "Повеќе систем"
+
+msgid "Utilities"
+msgstr "Алатки"
+
+msgid "Tools"
+msgstr "Алатки"
+
+msgid "More Utilities"
+msgstr "Повеќе алатки"
+
+msgid "Trending"
+msgstr "Во тренд"
+
+msgid "More Trending"
+msgstr "Повеќе во тренд"
+
+msgid "Popular"
+msgstr "Популарно"
+
+msgid "More Popular"
+msgstr "Повеќе популарно"
+
+msgid "Recently Added"
+msgstr "Неодамна додадени"
+
+msgid "New"
+msgstr "Ново"
+
+msgid "More New"
+msgstr "Повеќе ново"
+
+msgid "Recently Updated"
+msgstr "Неодамна ажурирани"
+
+msgid "Updated"
+msgstr "Ажурирано"
+
+msgid "More Updated"
+msgstr "Повеќе ажурирано"
+
+msgid "Mobile"
+msgstr "Мобилни"
+
+msgid "More Mobile"
+msgstr "Повеќе мобилни"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Повеќе Adwaita"
+
+msgid "KDE Apps"
+msgstr "KDE апликации"
+
+msgid "More KDE Apps"
+msgstr "Повеќе KDE апликации"
+
+msgid "Made for COSMIC™"
+msgstr "Направено за COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "За COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Повеќе COSMIC апликации"
+
+msgid "Games"
+msgstr "Игри"
+
+msgid "More Games"
+msgstr "Повеќе игри"
+
+msgid "Emulators"
+msgstr "Емулатори"
+
+msgid "More Emulators"
+msgstr "Повеќе емулатори"
+
+msgid "Launchers"
+msgstr "Стартувачи"
+
+msgid "More Game Launchers"
+msgstr "Повеќе стартувачи на игри"
+
+msgid "Game Tools"
+msgstr "Алатки за игри"
+
+msgid "More Game Tools"
+msgstr "Повеќе алатки за игри"
+
+msgid "New Year, New Workflows"
+msgstr "Нова година, нови работни текови"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Апликации за белешки, следење задачи и правење планови"
+
+msgid "Staff Picks"
+msgstr "Избор на уредниците"
+
+msgid "Apps we love right now"
+msgstr "Апликации што ги сакаме во моментов"
+
+msgid "Get Creative"
+msgstr "Бидете креативни"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Основни апликации за цртање, уредување фотографии и дигитален дизајн"
+
+msgid "Build Native Apps"
+msgstr "Градете нативни апликации"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Развивајте апликации што се како дома на вашиот систем"
+
+msgid "Stay in Touch"
+msgstr "Останете во контакт"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Основни апликации за соработка и комуникација"
+
+msgid "Ready for Vacations"
+msgstr "Подготвени за одмор"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Апликации за карти, јавен превоз, времето и планирање патувања"
+
+msgid "Smarter Every Day"
+msgstr "Попаметни секој ден"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Апликации што помагаат при учење, истражување и пишување"
+
+msgid "Get Cozy"
+msgstr "Направете си удобно"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Одлични апликации за читање, гледање филмови и играње игри"
+
+msgid "Web Developer Essentials"
+msgstr "Основни алатки за веб-програмери"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Правењето веб-страници е позабавно со овие апликации"
+
+msgid "Take Better Notes"
+msgstr "Правете подобри белешки"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Најдете ја вашата нова омилена алатка за белешки"
+
+msgid "Get Focused"
+msgstr "Фокусирајте се"
+
+msgid "Great apps for task management"
+msgstr "Одлични апликации за управување со задачи"
+
+msgid "Make Some Noise"
+msgstr "Направете малку врева"
+
+msgid "Apps for creating and producing music"
+msgstr "Апликации за создавање и продуцирање музика"
+
+msgid "Get To Work"
+msgstr "Фатете се за работа"
+
+msgid "Essential office apps"
+msgstr "Основни канцелариски апликации"
+
+msgid "Flathub Not Added"
+msgstr "Flathub не е додаден"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Изворот Flathub не е пронајден во ниту една од вашите инсталации на Flatpak"
+
+msgid "Can't Reach Flathub"
+msgstr "Flathub не може да се достигне"
+
+msgid "You can still manage and search for apps."
+msgstr "Сепак можете да управувате со апликации и да ги пребарувате."
+
+msgid "Search Apps"
+msgstr "Пребарај апликации"
+
+msgid "Reconnect"
+msgstr "Повторно поврзи"
+
+msgid "App of the Day"
+msgstr "Апликација на денот"
+
+msgid "On the Go"
+msgstr "Во движење"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Апликации за вашите Linux телефони и таблети"
+
+msgid "More Mobile Apps"
+msgstr "Повеќе мобилни апликации"
+
+msgid "We​ ♥​ Games"
+msgstr "Ние ♥ игри"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Игри и апликации за стартување на вашите омилени наслови"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Ова е локален преглед, некои детали може да се разликуваат од објавениот запис"
+
+msgid "Preview Store Appearance"
+msgstr "Прегледај го изгледот на продавницата"
+
+msgid "_Support"
+msgstr "_Поддршка"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Оваа апликација користи околина за извршување што повеќе не добива ажурирања или безбедносни поправки. Може да стане небезбедна за употреба."
+
+msgid "Trash Data"
+msgstr "Фрли ги податоците во ѓубре"
+
+msgid "Add-ons"
+msgstr "Додатоци"
+
+msgid "More Add-Ons"
+msgstr "Повеќе додатоци"
+
+msgid "Links"
+msgstr "Врски"
+
+msgid "Similar Apps"
+msgstr "Слични апликации"
+
+msgid "No URL"
+msgstr "Нема URL"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Оваа апликација има FLOSS лиценца, што значи дека изворниот код може да се прегледа за безбедност."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Оваа апликација има сопственичка лиценца, што значи дека изворниот код се развива приватно и не може да го прегледа независна трета страна."
+
+msgid "Other Apps From This Developer"
+msgstr "Други апликации од овој програмер"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Други апликации од %s"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s не е инсталирано, но сè уште има <b>%s</b> податоци."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Апликации од %s"
+
+msgid "Apps by This Developer"
+msgstr "Апликации од овој програмер"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d апликација"
+msgstr[1] "%d апликации"
+
+msgid "Failed to Remove User Data"
+msgstr "Не успеа отстранувањето на корисничките податоци"
+
+msgid "Hardware Support"
+msgstr "Поддршка за хардвер"
+
+msgid "Keyboard support"
+msgstr "Поддршка за тастатура"
+
+msgid "Requires keyboards"
+msgstr "Бара тастатури"
+
+msgid "Recommends keyboards"
+msgstr "Препорачува тастатури"
+
+msgid "Supports keyboards"
+msgstr "Поддржува тастатури"
+
+msgid "Unknown support for keyboards"
+msgstr "Непозната поддршка за тастатури"
+
+msgid "Mouse support"
+msgstr "Поддршка за глувче"
+
+msgid "Requires mice or pointing devices"
+msgstr "Бара глувчиња или покажувачки уреди"
+
+msgid "Recommends mice or pointing devices"
+msgstr "Препорачува глувчиња или покажувачки уреди"
+
+msgid "Supports mice or pointing devices"
+msgstr "Поддржува глувчиња или покажувачки уреди"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "Непозната поддршка за глувчиња или покажувачки уреди"
+
+msgid "Touchscreen support"
+msgstr "Поддршка за екран на допир"
+
+msgid "Requires touchscreens"
+msgstr "Бара екрани на допир"
+
+msgid "Recommends touchscreens"
+msgstr "Препорачува екрани на допир"
+
+msgid "Supports touchscreens"
+msgstr "Поддржува екрани на допир"
+
+msgid "Unknown support for touchscreens"
+msgstr "Непозната поддршка за екрани на допир"
+
+msgid "Mobile support"
+msgstr "Поддршка за мобилни уреди"
+
+msgid "Works on mobile devices"
+msgstr "Работи на мобилни уреди"
+
+msgid "May not work well on mobile devices"
+msgstr "Може да не работи добро на мобилни уреди"
+
+msgid "Desktop support"
+msgstr "Поддршка за работна површина"
+
+msgid "Works well on large screens"
+msgstr "Работи добро на големи екрани"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s работи најдобро на одреден хардвер"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s работи на повеќето уреди"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Откажи"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Се откажува"
+
+msgid "_Open"
+msgstr "_Отвори"
+
+msgid "Uninstall Application"
+msgstr "Деинсталирај ја апликацијата"
+
+msgid "_Remove"
+msgstr "_Отстрани"
+
+msgid "Update"
+msgstr "Ажурирај"
+
+msgid "Remove"
+msgstr "Отстрани"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Инсталирај %s од %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Инсталирај %s"
+
+msgid "Donate"
+msgstr "Донирај"
+
+msgid "Search installed apps"
+msgstr "Пребарај инсталирани апликации"
+
+msgid "No Apps Found"
+msgstr "Не се пронајдени апликации"
+
+msgid "Search Store Instead"
+msgstr "Пребарај во продавницата"
+
+msgid "Pending Updates"
+msgstr "Ажурирања на чекање"
+
+msgid "Downloads"
+msgstr "Преземања"
+
+msgid "Recently Uninstalled"
+msgstr "Неодамна деинсталирани"
+
+msgid "Clear Finished Tasks"
+msgstr "Исчисти ги завршените задачи"
+
+msgid "Sort Options"
+msgstr "Опции за подредување"
+
+msgid "Sort By"
+msgstr "Подреди по"
+
+msgid "Name"
+msgstr "Име"
+
+msgid "Size"
+msgstr "Големина"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "Нема совпаѓања за „%s“ во списокот на инсталирани апликации"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u достапно ажурирање"
+msgstr[1] "%u достапни ажурирања"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u инсталирана апликација"
+msgstr[1] "%u инсталирани апликации"
+
+msgid "No applications found"
+msgstr "Не се пронајдени апликации"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Пронајдена е %u апликација"
+msgstr[1] "Пронајдени се %u апликации"
+
+msgid "Get Involved"
+msgstr "Вклучете се"
+
+msgid "Learn More"
+msgstr "Дознајте повеќе"
+
+msgid "Unknown License"
+msgstr "Непозната лиценца"
+
+msgid "Community Built"
+msgstr "Изградено од заедницата"
+
+msgid "Proprietary"
+msgstr "Сопственичко"
+
+msgid "Special License"
+msgstr "Посебна лиценца"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Оваа апликација се развива отворено од меѓународна заедница.\n"
+"\n"
+"Може да учествувате и да помогнете да стане уште подобра."
+
+msgid "The license of this app is not known"
+msgstr "Лиценцата на оваа апликација не е позната"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Оваа апликација се развива отворено од меѓународна заедница и е објавена под лиценцата %s.\n"
+"\n"
+"Може да учествувате и да помогнете да стане уште подобра."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Оваа апликација не се развива отворено, па само нејзините програмери знаат како работи. Може да биде небезбедна на начини што тешко се откриваат и може да се менува без надзор.\n"
+"\n"
+"Може, но и не мора да можете да придонесете за оваа апликација."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Оваа апликација се развива под посебната лиценца %s.\n"
+"\n"
+"Може, но и не мора да можете да придонесете за оваа апликација."
+
+msgid "License"
+msgstr "Лиценца"
+
+msgid "Connect to Flathub"
+msgstr "Поврзи се со Flathub"
+
+msgid "Something Went Wrong"
+msgstr "Нешто тргна наопаку"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Најавете се за да ги синхронизирате вашите омилени апликации на повеќе уреди"
+
+msgid "Finish"
+msgstr "Заврши"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Здраво, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Да се додаде ли икона во прегледот на Metainfo?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Датотеките Metainfo сами по себе не вклучуваат икони на апликации. Дали сакате да изберете една рачно?"
+
+msgid "Skip"
+msgstr "Прескокни"
+
+msgid "Select Icon"
+msgstr "Избери икона"
+
+msgid "Image Files"
+msgstr "Датотеки со слики"
+
+msgid "New Permissions"
+msgstr "Нови дозволи"
+
+msgid "_Accept"
+msgstr "_Прифати"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Нова дозвола за %s"
+msgstr[1] "Нови дозволи за %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Ова ажурирање бара следнава дополнителна дозвола"
+msgstr[1] "Ова ажурирање бара следниве дополнителни дозволи"
+
+msgid "User"
+msgstr "Корисник"
+
+msgid "Beta"
+msgstr "Бета"
+
+msgid "End-Of-Life"
+msgstr "Крај на поддршката"
+
+msgid "Preferences"
+msgstr "Претпочитања"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Мрежната врска е со ограничен пренос — автоматското освежување на податоците на продавницата е паузирано"
+
+msgid "Refresh Manually"
+msgstr "Освежи рачно"
+
+msgid "App Updates"
+msgstr "Ажурирања на апликациите"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Автоматските ажурирања ќе се паузираат на мрежи со ограничен пренос или кога е вклучено штедење енергија, за да се зачуваат податоците и батеријата."
+
+msgid "_Automatic"
+msgstr "_Автоматски"
+
+msgid "Automatically check for and download app updates"
+msgstr "Автоматски проверувај и преземај ажурирања на апликациите"
+
+msgid "_Manual"
+msgstr "_Рачно"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Проверката и преземањето на ажурирања на апликациите мора да се прави рачно"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Известувања за автоматски ажурирања"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Извести кога ажурирањата се автоматски инсталирани"
+
+msgid "Content Filters"
+msgstr "Филтри за содржина"
+
+msgid "_Free Software Only"
+msgstr "_Само слободен софтвер"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Скриј ги сопственичките апликации при прелистување и пребарување"
+
+msgid "F_lathub Results Only"
+msgstr "Само резултати од F_lathub"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Ограничи ги резултатите од пребарувањето и прелистувањето на апликации достапни само на Flathub"
+
+msgid "_Verified Results Only"
+msgstr "Само _потврдени резултати"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Скриј ги резултатите што не се потврдени на Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Скриј ги апликациите со _крај на поддршката"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "Скриј ги апликациите што повеќе не ги поддржуваат нивните програмери"
+
+msgid "Progress Bar Theme"
+msgstr "Тема на лентата за напредок"
+
+msgid "Accent Color"
+msgstr "Акцентна боја"
+
+msgid "Pride Colors"
+msgstr "Бои на Pride"
+
+msgid "Lesbian Pride Colors"
+msgstr "Бои на Pride за лезбејки"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Бои на Pride за геј мажи"
+
+msgid "Transgender Pride Colors"
+msgstr "Бои на Pride за трансродови лица"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Бои на Pride за небинарни лица"
+
+msgid "Bisexual Pride Colors"
+msgstr "Бои на Pride за бисексуалци"
+
+msgid "Asexual Pride Colors"
+msgstr "Бои на Pride за асексуалци"
+
+msgid "Pansexual Pride Colors"
+msgstr "Бои на Pride за пансексуалци"
+
+msgid "Aromantic Pride Colors"
+msgstr "Бои на Pride за аромантични лица"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Бои на Pride за родово флуидни лица"
+
+msgid "Polysexual Pride Colors"
+msgstr "Бои на Pride за полисексуалци"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Бои на Pride за омнисексуалци"
+
+msgid "Aroace Pride Colors"
+msgstr "Бои на Pride за ароејс лица"
+
+msgid "Agender Pride Colors"
+msgstr "Бои на Pride за агендер лица"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Бои на Pride за родово квир лица"
+
+msgid "Intersex Pride Colors"
+msgstr "Бои на Pride за интерсексуални лица"
+
+msgid "Demigender Pride Colors"
+msgstr "Бои на Pride за демиродови лица"
+
+msgid "Biromantic Pride Colors"
+msgstr "Бои на Pride за биромантични лица"
+
+msgid "Disability Pride Colors"
+msgstr "Бои на Pride за лица со попреченост"
+
+msgid "Femboy Pride Colors"
+msgstr "Бои на Pride за фембој"
+
+msgid "Neutrois Pride Colors"
+msgstr "Бои на Pride за неутроис"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar треба да работи во позадина за да проверува за ажурирања на апликации"
+
+msgid "Version History"
+msgstr "Историја на верзии"
+
+msgid "Today"
+msgstr "Денес"
+
+msgid "Yesterday"
+msgstr "Вчера"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "пред %d ден"
+msgstr[1] "пред %d дена"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "пред %d недела"
+msgstr[1] "пред %d недели"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "пред %d месец"
+msgstr[1] "пред %d месеци"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "пред %d година"
+msgstr[1] "пред %d години"
+
+msgid "%e %B %Y"
+msgstr "%e %B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "Верзија %s"
+
+msgid "No details for this release"
+msgstr "Нема детали за ова издание"
+
+msgid "Get More Information"
+msgstr "Добијте повеќе информации"
+
+msgid "_Version History"
+msgstr "_Историја на верзии"
+
+msgid "Remotes"
+msgstr "Извори"
+
+msgid "System Installation"
+msgstr "Системска инсталација"
+
+msgid "Available to all users on this computer"
+msgstr "Достапно за сите корисници на овој компјутер"
+
+msgid "User Installation"
+msgstr "Корисничка инсталација"
+
+msgid "Only available to you"
+msgstr "Достапно само за вас"
+
+msgid "Remove Remote"
+msgstr "Отстрани го изворот"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Отстрани %s"
+
+msgid "Unused"
+msgstr "Неискористено"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u инсталирана апликација"
+msgstr[1] "%u инсталирани апликации"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Да се отстрани ли „%s“?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Повеќе нема да можете да инсталирате апликации од овој кориснички извор."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Повеќе нема да можете да инсталирате апликации од овој системски извор."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u апликација за отстранување"
+msgstr[1] "%u апликации за отстранување"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Апликацијата подолу е инсталирана од овој извор и заедно со него ќе биде отстранета од вашата сметка."
+msgstr[1] "Овие апликации се инсталирани од овој извор и заедно со него ќе бидат отстранети од вашата сметка."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Апликацијата подолу е инсталирана од овој извор и заедно со него ќе биде отстранета за сите корисници."
+msgstr[1] "Овие апликации се инсталирани од овој извор и заедно со него ќе бидат отстранети за сите корисници."
+
+msgid "Uninstall"
+msgstr "Деинсталирај"
+
+msgid "Get"
+msgstr "Набави"
+
+msgid "Arbitrary Permissions"
+msgstr "Произволни дозволи"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Оваа апликација има дозвола што индиректно ѝ овозможува сама да си додели <b>која било друга дозвола што ја сака</b>, заобиколувајќи го Flatpak sandbox.\n"
+"\n"
+"Поради тоа може да прави сѐ што може привилегирана апликација без sandbox, како пристап до сите ваши датотеки и поврзување на интернет.\n"
+"\n"
+"Прегледот на другите дозволи сепак може да даде подобра претстава што апликацијата веројатно ќе прави."
+
+msgid "View Other Permissions"
+msgstr "Прикажи ги другите дозволи"
+
+msgid "Safe"
+msgstr "Безбедно"
+
+msgid "App ID"
+msgstr "ID на апликацијата"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Оваа апликација користи застарена верзија на софтверската платформа (SDK) и може да содржи грешки или безбедносни пропусти што нема да бидат поправени."
+
+msgid "Safety"
+msgstr "Безбедност"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s е безбедна"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s нема небезбедни дозволи"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s е веројатно безбедна"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s е можеби небезбедна"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s е небезбедна"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Previous Screenshot"
+msgstr "Претходна слика од екранот"
+
+msgid "Next Screenshot"
+msgstr "Следна слика од екранот"
+
+msgid "Copy Image"
+msgstr "Копирај ја сликата"
+
+msgid "Reset View"
+msgstr "Ресетирај го приказот"
+
+msgid "Zoom Out"
+msgstr "Намали"
+
+msgid "Zoom In"
+msgstr "Зголеми"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u ажурирање на околината за извршување"
+msgstr[1] "%u ажурирања на околината за извршување"
+
+msgid "Screenshots Carousel"
+msgstr "Вртелешка со слики од екранот"
+
+msgid "No Screenshots"
+msgstr "Нема слики од екранот"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Слика од екранот %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Слика од екранот %u"
+
+msgid "Clear Search"
+msgstr "Исчисти го пребарувањето"
+
+msgid "Filters"
+msgstr "Филтри"
+
+msgid "_Verified"
+msgstr "_Потврдено"
+
+msgid "_Free/Open"
+msgstr "_Слободно/отворено"
+
+msgid "Non-_EOL"
+msgstr "Без _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Исфрли ги апликациите со крај на поддршката"
+
+msgid "_Mobile Friendly"
+msgstr "_Погодно за мобилни"
+
+msgid "Categories"
+msgstr "Категории"
+
+msgid "Search Apps, Games, Software"
+msgstr "Пребарај апликации, игри, софтвер"
+
+msgid "Search Filters"
+msgstr "Филтри за пребарување"
+
+msgid "Browse Categories"
+msgstr "Прелистај категории"
+
+msgid "Categories Unavailable"
+msgstr "Категориите не се достапни"
+
+msgid "Search for apps using the search bar above."
+msgstr "Пребарајте апликации со лентата за пребарување погоре."
+
+msgid "No Applications Found"
+msgstr "Не се пронајдени апликации"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Не се пронајдени резултати за „%s“ на Flathub"
+
+msgid "Browser"
+msgstr "Прелистувач"
+
+msgid "Video"
+msgstr "Видео"
+
+msgid "Office"
+msgstr "Канцеларија"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Календар"
+
+msgid "Messaging"
+msgstr "Пораки"
+
+msgid "Paint"
+msgstr "Цртање"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Торент"
+
+msgid "Emulator"
+msgstr "Емулатор"
+
+msgid "Copy Link"
+msgstr "Копирај ја врската"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Страница на Flathub"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Веб-страница на проектот"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Следење на проблеми"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "ЧПП"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Помош"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Донирај"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Преведи"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Контакт"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Изворен код"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Придонеси"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Манифест"
+
+msgid "Timeline"
+msgstr "Временска линија"
+
+msgid "Total"
+msgstr "Вкупно"
+
+msgid "This Week"
+msgstr "Оваа недела"
+
+msgid "Installs per day"
+msgstr "Инсталации по ден"
+
+msgid "World"
+msgstr "Свет"
+
+msgid "Installs per country"
+msgstr "Инсталации по држава"
+
+msgid "Since 4/15/2024"
+msgstr "Од 15.4.2024"
+
+msgid "No Results Found"
+msgstr "Не се пронајдени резултати"
+
+msgid "Search failed"
+msgstr "Пребарувањето не успеа"
+
+msgid "Unknown"
+msgstr "Непознато"
+
+msgid "Keep User Data"
+msgstr "Задржи ги корисничките податоци"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Дозволи враќање на личните поставувања &amp; содржина"
+
+msgid "Delete All Data"
+msgstr "Избриши ги сите податоци"
+
+msgid "Permanently erase user data to save space"
+msgstr "Трајно избриши ги корисничките податоци за да се заштеди простор"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "Да се отстрани ли %s?"
+
+msgid "Select which version to remove."
+msgstr "Изберете која верзија да се отстрани."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "%s нема да може да се користи откако ќе се деинсталира."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "„%s“ е со висок ризик"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Оваа апликација има целосен пристап до вашиот систем, вклучувајќи ги <b>сите ваши датотеки, историја на прелистување, зачувани лозинки</b> и друго. Има пристап и до интернет, што значи дека може да ги испрати вашите податоци на надворешни страни.\n"
+"\n"
+"Бидејќи апликацијата е сопственичка, не може да се провери што прави со овие дозволи."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Оваа апликација го користи застарениот прозорски систем X11, што ѝ овозможува да <b>ги снима сите притиснати тастери, да прави слики од екранот и да следи други апликации</b>. Има пристап и до интернет, што значи дека може да ги испрати вашите податоци на надворешни страни.\n"
+"\n"
+"Бидејќи апликацијата е сопственичка, не може да се провери што прави со овие дозволи."
+
+msgid "_Install Anyway"
+msgstr "_Сепак инсталирај"
+
+msgid "Failed to load transaction dialog"
+msgstr "Не успеа вчитувањето на дијалогот за трансакции"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "Завршено за %.02f секунди"
+
+msgid "App Add-On"
+msgstr "Додаток на апликација"
+
+msgid "Runtime"
+msgstr "Околина за извршување"
+
+msgid "In Queue"
+msgstr "Во редица"
+
+msgid "Finishing Up"
+msgstr "Завршување"
+
+msgid "Done"
+msgstr "Готово"
+
+msgid "Cancelled"
+msgstr "Откажано"
+
+msgid "Error"
+msgstr "Грешка"
+
+msgid "Cancel Transaction"
+msgstr "Откажи ја трансакцијата"
+
+msgid "Show Details"
+msgstr "Прикажи ги деталите"
+
+msgid "Show Error Info"
+msgstr "Прикажи ги информациите за грешката"
+
+#, c-format
+msgid "%s Freed"
+msgstr "Ослободено %s"
+
+msgid "Transaction Error"
+msgstr "Грешка во трансакцијата"
+
+msgid "Pending"
+msgstr "На чекање"
+
+msgid "Installed Updates"
+msgstr "Инсталирани ажурирања"
+
+msgid "Release Notes"
+msgstr "Белешки за изданието"
+
+msgid "No Release Info"
+msgstr "Нема информации за изданието"
+
+msgid "_Update All"
+msgstr "_Ажурирај сѐ"
+
+msgid "This update requests new permissions"
+msgstr "Ова ажурирање бара нови дозволи"
+
+msgid "Manage Leftover User Data"
+msgstr "Управувај со преостанатите кориснички податоци"
+
+msgid "No Leftover User Data Found"
+msgstr "Не се пронајдени преостанати кориснички податоци"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Личните податоци оставени од отстранети апликации ќе се појават овде"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Фрлени кориснички податоци за %u апликација"
+msgstr[1] "Фрлени кориснички податоци за %u апликации"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Фрлени кориснички податоци за %s"
+
+msgid "Open User Data Folder"
+msgstr "Отвори ја папката со кориснички податоци"
+
+msgid "Trash User Data"
+msgstr "Фрли ги корисничките податоци во ѓубре"
+
+msgid "Refreshing"
+msgstr "Се освежува"
+
+msgid "Curated"
+msgstr "Курирано"
+
+msgid "Explore"
+msgstr "Истражи"
+
+msgid "Library"
+msgstr "Библиотека"
+
+msgid "Search"
+msgstr "Пребарување"
+
+msgid "Main Menu"
+msgstr "Главно мени"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Користите нова верзија на Bazaar!"
+
+msgid "See What's New"
+msgstr "Видете што е ново"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Имате мрежна врска, но гледате кеширана верзија на Flathub"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Мрежната врска е со ограничен пренос — автоматските освежувања се исклучени"
+
+msgid "_Donate to Bazaar"
+msgstr "_Донирај за Bazaar"
+
+msgid "_Refresh"
+msgstr "_Освежи"
+
+msgid "_Login With Flathub"
+msgstr "_Најави се со Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "_Управувај со преостанатите кориснички податоци"
+
+msgid "Manage R_emotes"
+msgstr "Управувај со _изворите"
+
+msgid "_Preferences"
+msgstr "_Претпочитања"
+
+msgid "_Keyboard Shortcuts"
+msgstr "_Кратенки на тастатурата"
+
+msgid "_About Bazaar"
+msgstr "_За Bazaar"
+
+msgid "_Quit Bazaar"
+msgstr "_Излези од Bazaar"
+
+msgid "Log Out"
+msgstr "Одјави се"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Не успеа стартувањето на апликацијата"
+
+msgid "Could not open link"
+msgstr "Врската не може да се отвори"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Не можете да го отстраните Bazaar од Bazaar!"
+
+msgid "Can't do that right now!"
+msgstr "Тоа не може да се направи сега!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u инсталација"
+msgstr[1] "%s, %'u инсталации"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Најмногу инсталации од %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d преземања во последниот месец"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s околина за извршување"
+
+msgid "Size information unavailable"
+msgstr "Информациите за големината не се достапни"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "Големина на преземање на %s"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Инсталирана големина на %s"
+
+msgid "All Ages"
+msgstr "Сите возрасти"
+
+msgid "Age rating information unavailable"
+msgstr "Информациите за старосната оценка не се достапни"
+
+msgid "Suitable for all ages"
+msgstr "Погодно за сите возрасти"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "Погодно за возраст од %d години и повеќе"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "Слободен софтвер под лиценцата %s"
+
+msgid "Free software"
+msgstr "Слободен софтвер"
+
+msgid "Proprietary Software"
+msgstr "Сопственички софтвер"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Посебна лиценца: %s"
+
+msgid "Free Software"
+msgstr "Слободен софтвер"
+
+msgid "Adaptive"
+msgstr "Прилагодлива"
+
+msgid "Desktop Only"
+msgstr "Само за работна површина"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "Работи на работна површина, таблети и телефони"
+
+msgid "May not work on mobile devices"
+msgstr "Може да не работи на мобилни уреди"
+
+msgid "Low Risk"
+msgstr "Низок ризик"
+
+msgid "Medium Risk"
+msgstr "Среден ризик"
+
+msgid "High Risk"
+msgstr "Висок ризик"
+
+msgid "Unknown Permissions"
+msgstr "Непознати дозволи"
+
+msgid "Permissions are missing for this app."
+msgstr "Недостасуваат дозволи за оваа апликација."
+
+msgid "No Permissions"
+msgstr "Без дозволи"
+
+msgid "App is fully sandboxed"
+msgstr "Апликацијата е целосно изолирана (sandbox)"
+
+msgid "Network Access"
+msgstr "Пристап до мрежа"
+
+msgid "Can access the internet"
+msgstr "Може да пристапува до интернет"
+
+msgid "No Network Access"
+msgstr "Без пристап до мрежа"
+
+msgid "Cannot access the internet"
+msgstr "Не може да пристапува до интернет"
+
+msgid "User Device Access"
+msgstr "Пристап до кориснички уреди"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Може да пристапува до уреди како веб-камери или контролери за игри"
+
+msgid "No User Device Access"
+msgstr "Без пристап до кориснички уреди"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Не може да пристапува до уреди како веб-камери или контролери за игри"
+
+msgid "Input Device Access"
+msgstr "Пристап до влезни уреди"
+
+msgid "Can access input devices"
+msgstr "Може да пристапува до влезни уреди"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Пристап до микрофон и репродукција на звук"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Може да слуша преку микрофони и да пушта звук без да бара дозвола"
+
+msgid "System Device Access"
+msgstr "Пристап до системски уреди"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Може да пристапува до системски уреди што бараат зголемени дозволи"
+
+msgid "Screen Contents Access"
+msgstr "Пристап до содржината на екранот"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Може да пристапува до содржината на екранот или други прозорци"
+
+msgid "Legacy Windowing System"
+msgstr "Застарен прозорски систем"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Секогаш користи застарен прозорски систем (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Може да добие произволни дозволи"
+
+msgid "User Settings"
+msgstr "Кориснички поставувања"
+
+msgid "Can access and change user settings"
+msgstr "Може да пристапува до корисничките поставувања и да ги менува"
+
+msgid "Full File System Read/Write Access"
+msgstr "Целосен пристап за читање/запишување во датотечниот систем"
+
+msgid "Can read and write all data on the file system"
+msgstr "Може да чита и запишува сите податоци во датотечниот систем"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Пристап за читање/запишување во домашната папка"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Може да чита и запишува сите податоци во вашата домашна папка"
+
+msgid "Full File System Read Access"
+msgstr "Целосен пристап за читање во датотечниот систем"
+
+msgid "Can read all data on the file system"
+msgstr "Може да чита сите податоци во датотечниот систем"
+
+msgid "Home Folder Read Access"
+msgstr "Пристап за читање во домашната папка"
+
+msgid "Can read all data in your home directory"
+msgstr "Може да чита сите податоци во вашата домашна папка"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Пристап за читање/запишување во папката Преземања"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Може да чита и запишува сите податоци во вашата папка Преземања"
+
+msgid "Download Folder Read Access"
+msgstr "Пристап за читање во папката Преземања"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Може да чита сите податоци во вашата папка Преземања"
+
+msgid "Can read and write all data in the directory"
+msgstr "Може да чита и запишува сите податоци во папката"
+
+msgid "Can read all data in the directory"
+msgstr "Може да чита сите податоци во папката"
+
+msgid "No File System Access"
+msgstr "Без пристап до датотечниот систем"
+
+msgid "Cannot access the file system at all"
+msgstr "Воопшто не може да пристапува до датотечниот систем"
+
+msgid "Uses System Services"
+msgstr "Користи системски услуги"
+
+msgid "Can request data from non-portal system services"
+msgstr "Може да бара податоци од системски услуги што не се портал"
+
+msgid "Uses Session Services"
+msgstr "Користи услуги на сесијата"
+
+msgid "Can request data from non-portal session services"
+msgstr "Може да бара податоци од услуги на сесијата што не се портал"
+
+msgid "No Service Access"
+msgstr "Без пристап до услуги"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Воопшто не може да пристапува до системски услуги или услуги на сесијата што не се портал"
+
+msgid "Verified App Developer"
+msgstr "Потврден програмер на апликацијата"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Програмерот на оваа апликација е потврден дека е тој што тврди дека е"
+
+msgid "Proprietary Code"
+msgstr "Сопственички код"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Изворниот код не е јавен, па не може независно да се провери и може да е небезбеден"
+
+msgid "Auditable Code"
+msgstr "Код што може да се проверува"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Изворниот код е јавен и може независно да се провери, што ја прави апликацијата поверојатно безбедна"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Користи ја системската услуга %s"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Користи ја услугата на сесијата %s"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Користи ја услугата %s"
+
+msgid "Can see the non-portal service"
+msgstr "Може да ја види услугата што не е портал"
+
+msgid "Can talk to the non-portal service"
+msgstr "Може да комуницира со услугата што не е портал"
+
+msgid "Can own the non-portal service"
+msgstr "Може да ја поседува услугата што не е портал"
+
+msgid "Global Menu Integration"
+msgstr "Интеграција со глобално мени"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Може да ги прикажува своите менија во глобална лента со менија"
+
+msgid "KDE Settings Integration"
+msgstr "Интеграција со поставувањата на KDE"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Може да открие кога се менуваат поставувањата на работната површина на KDE"
+
+msgid "KDE Global Settings"
+msgstr "Глобални поставувања на KDE"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Може да ги чита претпочитањата на работната површина на KDE како фонтови и бои"
+
+msgid "Secret Storage Service"
+msgstr "Услуга за таен склад"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Може да ги чува и вчитува своите лозинки преку системскиот привезок за клучеви"
+
+msgid "Desktop Notifications Service"
+msgstr "Услуга за известувања на работната површина"
+
+msgid "Can send desktop notifications"
+msgstr "Може да испраќа известувања на работната површина"
+
+msgid "System Tray Integration"
+msgstr "Интеграција со системската лента"
+
+msgid "Can display an icon in the system tray"
+msgstr "Може да прикажува икона во системската лента"
+
+msgid "KDE Connect Integration"
+msgstr "Интеграција со KDE Connect"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Може да комуницира со уреди спарени преку KDE Connect"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Навигација"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Отвори ја страницата Истражи"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Отвори ја страницата Библиотека"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Отвори ја страницата за пребарување"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Извори"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Синхронизирај ги изворите"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Општо"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Отвори ги претпочитањата"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Прикажи ги кратенките"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Затвори го прозорецот"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Излези од Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s е инсталирано"
+
+msgid "The app is ready to be used"
+msgstr "Апликацијата е подготвена за користење"
+
+msgid "Updates Are Out of Date"
+msgstr "Ажурирањата се застарени"
+
+msgid "Please check for available updates"
+msgstr "Проверете за достапни ажурирања"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u ажурирана апликација"
+msgstr[1] "%u ажурирани апликации"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s е ажурирано."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s и %s се ажурирани."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Вклучува %s, %s и %s."

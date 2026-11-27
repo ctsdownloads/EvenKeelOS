@@ -1,0 +1,1166 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Quit"
+msgstr "Avslutt"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Avslutt %d vindu"
+msgstr[1] "Avslutt %d vinduer"
+
+msgid "Power options"
+msgstr "Strømvalg"
+
+msgid "Event logs"
+msgstr "Hendelseslogger"
+
+msgid "System"
+msgstr "System"
+
+msgid "Device Management"
+msgstr "Enhetsbehandling"
+
+msgid "Disk Management"
+msgstr "Diskbehandling"
+
+msgid "Unlock taskbar"
+msgstr "Lås opp oppgavelinjen"
+
+msgid "Lock taskbar"
+msgstr "Lås oppgavelinjen"
+
+msgid "Gnome Settings"
+msgstr "GNOME-innstillinger"
+
+msgid "Dash to Panel Settings"
+msgstr "Innstillinger for Dash to Panel"
+
+msgid "Restore Windows"
+msgstr "Gjenopprett vinduer"
+
+msgid "Show Desktop"
+msgstr "Vis skrivebordet"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel er oppdatert!"
+
+msgid "You are now running version"
+msgstr "Du kjører nå versjon"
+
+msgid "See what's new"
+msgstr "Se hva som er nytt"
+
+msgid "Top Bar"
+msgstr "Topplinje"
+
+msgid "Show Desktop button height (px)"
+msgstr "Høyde på knappen Vis skrivebordet (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Bredde på knappen Vis skrivebordet (px)"
+
+msgid "Left"
+msgstr "Venstre"
+
+msgid "Center"
+msgstr "Midten"
+
+msgid "Right"
+msgstr "Høyre"
+
+msgid "Top"
+msgstr "Topp"
+
+msgid "Middle"
+msgstr "Midten"
+
+msgid "Bottom"
+msgstr "Bunn"
+
+msgid "Start"
+msgstr "Start"
+
+msgid "End"
+msgstr "Slutt"
+
+msgid "Show Applications button"
+msgstr "Knappen Vis apper"
+
+msgid "Activities button"
+msgstr "Aktiviteter-knappen"
+
+msgid "Taskbar"
+msgstr "Oppgavelinje"
+
+msgid "Date menu"
+msgstr "Datomeny"
+
+msgid "System menu"
+msgstr "Systemmeny"
+
+msgid "Left box"
+msgstr "Venstre boks"
+
+msgid "Center box"
+msgstr "Midtboks"
+
+msgid "Right box"
+msgstr "Høyre boks"
+
+msgid "Desktop button"
+msgstr "Skrivebordsknapp"
+
+msgid "Move up"
+msgstr "Flytt opp"
+
+msgid "Move down"
+msgstr "Flytt ned"
+
+msgid "Visible"
+msgstr "Synlig"
+
+msgid "Select element position"
+msgstr "Velg elementets plassering"
+
+msgid "Stacked to top"
+msgstr "Stablet øverst"
+
+msgid "Stacked to left"
+msgstr "Stablet til venstre"
+
+msgid "Stacked to bottom"
+msgstr "Stablet nederst"
+
+msgid "Stacked to right"
+msgstr "Stablet til høyre"
+
+msgid "Centered"
+msgstr "Midtstilt"
+
+msgid "Monitor Center"
+msgstr "Midt på skjermen"
+
+msgid "More options"
+msgstr "Flere valg"
+
+msgid "Reset to defaults"
+msgstr "Tilbakestill til standard"
+
+msgid "Show Applications options"
+msgstr "Valg for Vis apper"
+
+msgid "Open icon"
+msgstr "Åpne ikon"
+
+msgid "Show Desktop options"
+msgstr "Valg for Vis skrivebordet"
+
+msgid "Primary monitor"
+msgstr "Hovedskjerm"
+
+msgid "Monitor "
+msgstr "Skjerm "
+
+msgid "Running Indicator Options"
+msgstr "Valg for kjøreindikator"
+
+msgid "Dynamic opacity options"
+msgstr "Valg for dynamisk gjennomsiktighet"
+
+msgid "Intellihide options"
+msgstr "Valg for Intellihide"
+
+msgid "Window preview options"
+msgstr "Valg for vindusforhåndsvisning"
+
+msgid "Isolate Workspaces options"
+msgstr "Valg for isolering av arbeidsområder"
+
+msgid "Isolate monitors options"
+msgstr "Valg for isolering av skjermer"
+
+msgid "Ungrouped application options"
+msgstr "Valg for ugrupperte apper"
+
+msgid "Customize middle-click behavior"
+msgstr "Tilpass midtklikk-oppførsel"
+
+msgid "Text"
+msgstr "Tekst"
+
+msgid "Command"
+msgstr "Kommando"
+
+msgid "Remove"
+msgstr "Fjern"
+
+msgid "Customize panel scroll behavior"
+msgstr "Tilpass rulleoppførsel for panelet"
+
+msgid "Customize icon scroll behavior"
+msgstr "Tilpass rulleoppførsel for ikoner"
+
+msgid "Advanced hotkeys options"
+msgstr "Avanserte valg for hurtigtaster"
+
+msgid "Secondary Menu Options"
+msgstr "Valg for sekundærmeny"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d ikon"
+msgstr[1] "%d ikoner"
+
+msgid "App icon animation options"
+msgstr "Valg for animasjon av appikoner"
+
+msgid "App icon highlight options"
+msgstr "Valg for utheving av appikoner"
+
+msgid "Export settings"
+msgstr "Eksporter innstillinger"
+
+msgid "Import settings"
+msgstr "Importer innstillinger"
+
+msgid "Move to current Workspace"
+msgstr "Flytt til gjeldende arbeidsområde"
+
+msgid "Animation type"
+msgstr "Animasjonstype"
+
+msgid "Simple"
+msgstr "Enkel"
+
+msgid "Ripple"
+msgstr "Krusning"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Varighet"
+
+msgid "Rotation"
+msgstr "Rotasjon"
+
+msgid "Travel"
+msgstr "Bevegelse"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Convexity"
+msgstr "Konveksitet"
+
+msgid "Extent"
+msgstr "Utstrekning"
+
+msgid "Highlight focused application"
+msgstr "Fremhev fokusert app"
+
+msgid "Icon dominant color"
+msgstr "Ikonets dominerende farge"
+
+msgid "Custom color"
+msgstr "Egendefinert farge"
+
+msgid "Highlight opacity"
+msgstr "Gjennomsiktighet for utheving"
+
+msgid "Indicator size (px)"
+msgstr "Indikatorstørrelse (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Indikatorfarge – ikonets dominerende farge"
+
+msgid "Indicator color - Override Theme"
+msgstr "Indikatorfarge – overstyr tema"
+
+msgid "1 window open (or ungrouped)"
+msgstr "1 vindu åpent (eller ugruppert)"
+
+msgid "Apply to all"
+msgstr "Bruk på alle"
+
+msgid "2 windows open"
+msgstr "2 vinduer åpne"
+
+msgid "3 windows open"
+msgstr "3 vinduer åpne"
+
+msgid "4+ windows open"
+msgstr "4+ vinduer åpne"
+
+msgid "Use different for unfocused"
+msgstr "Bruk annen for ufokuserte"
+
+msgid "The panel background opacity is affected by"
+msgstr "Bakgrunnens gjennomsiktighet i panelet påvirkes av"
+
+msgid "All windows"
+msgstr "Alle vinduer"
+
+msgid "Focused windows"
+msgstr "Fokuserte vinduer"
+
+msgid "Maximized windows"
+msgstr "Maksimerte vinduer"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Endre gjennomsiktighet når et vindu kommer nærmere enn (px)"
+
+msgid "Change opacity to (%)"
+msgstr "Endre gjennomsiktighet til (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Varighet for animasjon av gjennomsiktighetsendring (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Skriftstørrelse (px) for apptitlene (standard er 14)"
+
+msgid "Font weight of application titles"
+msgstr "Skrifttykkelse for apptitlene"
+
+msgid "inherit from theme"
+msgstr "arv fra temaet"
+
+msgid "normal"
+msgstr "normal"
+
+msgid "lighter"
+msgstr "tynnere"
+
+msgid "bold"
+msgstr "fet"
+
+msgid "bolder"
+msgstr "fetere"
+
+msgid "Font color of the application titles"
+msgstr "Skriftfarge for apptitlene"
+
+msgid "Font color of the minimized application titles"
+msgstr "Skriftfarge for apptitlene til minimerte apper"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Maksimal bredde (px) for apptitlene"
+
+msgid "(default is 160)"
+msgstr "(standard er 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Bruk fast bredde for apptitlene"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Alle apptitlene har samme bredde, selv om teksten er kortere enn maksimal bredde. Verdien for maksimal bredde brukes som fast bredde."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Vis kjøreindikatorer på ufokuserte apper"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Bruk favorittikonene som appstartere"
+
+msgid "Highlight AppIcon color"
+msgstr "Utheving av appikonets farge"
+
+msgid "Pressed AppIcon color"
+msgstr "Farge på trykket appikon"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Kantradius for utheving av appikon"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Overstyrer global kantradius (standard er 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Skjul bare panelet fra vinduer"
+
+msgid "Overlapping"
+msgstr "Overlappende"
+
+msgid "On same monitor"
+msgstr "På samme skjerm"
+
+msgid "The panel hides from"
+msgstr "Panelet skjules for"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Å berøre skjermkanten med pekeren viser panelet"
+
+msgid "Limit to panel length"
+msgstr "Begrens til panelets lengde"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Å holde pekeren over panelet holder det synlig"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Krev trykk mot skjermkanten for å vise panelet"
+
+msgid "Required pressure threshold (px)"
+msgstr "Nødvendig trykkterskel (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Tidsavbrudd for nødvendig trykk (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Tillat at panelet vises i fullskjermmodus"
+
+msgid "(requires multi-monitors option)"
+msgstr "(krever valget for flere skjermer)"
+
+msgid "Only hide secondary panels"
+msgstr "Skjul bare sekundære paneler"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Syntaks: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Tastatursnarvei for å vise og holde panelet"
+
+msgid "e.g. <Super>i"
+msgstr "f.eks. <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Behold tilstanden etter omstart"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(følger GNOMEs «Ikke forstyrr» og krever valget for varselteller)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Vis og hold panelet ved varsel"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Varighet for animasjon av skjuling og visning (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Forsinkelse før panelet skjules (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Forsinkelse før panelet vises (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Forsinkelse før Intellihide slås på ved oppstart (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Isoler skjermer selv med ett enkelt panel"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Isoler arbeidsområder i appbytteren i gnome-shell"
+
+msgid "Shift+Click action"
+msgstr "Handling for Shift+klikk"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "Hvis dette er satt til å minimere, minimerer dobbeltklikk alle vinduene til appen."
+
+msgid "Raise windows"
+msgstr "Hev vinduer"
+
+msgid "Minimize window"
+msgstr "Minimer vindu"
+
+msgid "Launch new instance"
+msgstr "Start ny instans"
+
+msgid "Cycle through windows"
+msgstr "Bla gjennom vinduer"
+
+msgid "Cycle windows + minimize"
+msgstr "Bla gjennom vinduer + minimer"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Veksle enkelt / Forhåndsvis flere"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Veksle enkelt / Bla gjennom flere"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Veksle enkelt / Spre flere"
+
+msgid "Middle-Click action"
+msgstr "Handling for midtklikk"
+
+msgid "Behavior for Middle-Click."
+msgstr "Oppførsel for midtklikk."
+
+msgid "Shift+Middle-Click action"
+msgstr "Handling for Shift+midtklikk"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Oppførsel for Shift+midtklikk."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Hurtigtastene blir enten Super+tall eller Super+Alt+tall"
+
+msgid "Hotkeys prefix"
+msgstr "Hurtigtastprefiks"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Vis appnumrene midlertidig over ikonene når hurtigtastene brukes."
+
+msgid "Number overlay"
+msgstr "Nummeroverlegg"
+
+msgid "Never"
+msgstr "Aldri"
+
+msgid "Show temporarily"
+msgstr "Vis midlertidig"
+
+msgid "Always visible"
+msgstr "Alltid synlig"
+
+msgid "Hide timeout (ms)"
+msgstr "Tidsavbrudd for skjuling (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Snarvei for å vise overlegget i 2 sekunder"
+
+msgid "e.g. <Super>q"
+msgstr "f.eks. <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "På sekundære skjermer vises overlegget på ikoner som samsvarer med hovedskjermen"
+
+msgid "Show the overlay on all monitors"
+msgstr "Vis overlegget på alle skjermer"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Vis forhåndsvisninger når appen har flere instanser"
+
+msgid "Show window previews on hotkey"
+msgstr "Vis vindusforhåndsvisninger med hurtigtast"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Velg hvilke talltaster på tastaturet som brukes til å aktivere hurtigtastene"
+
+msgid "Hotkeys are activated with"
+msgstr "Hurtigtastene aktiveres med"
+
+msgid "Number row"
+msgstr "Tallrekken"
+
+msgid "Numeric keypad"
+msgstr "Talltastaturet"
+
+msgid "Both"
+msgstr "Begge"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Forsinkelse mellom musehjulhendelser (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Bruk denne verdien for å begrense antall registrerte musehjulhendelser."
+
+msgid "Show popup when changing workspace"
+msgstr "Vis hurtigvindu ved bytte av arbeidsområde"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Dette gjelder bare hurtigvinduet for arbeidsområder når du ruller på panelet."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "Integrer elementer fra <i>AppMenu</i>"
+
+msgid "<i>App Details</i> menu item"
+msgstr "Menyelementet <i>Appdetaljer</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Appdetaljer</i> er bare tilgjengelig når GNOME Software er installert"
+
+msgid "Show Applications icon"
+msgstr "Vis apper-ikon"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Sideavstand (px) for Vis apper-ikonet"
+
+msgid "Override escape key and return to desktop"
+msgstr "Overstyr escape-tasten og gå tilbake til skrivebordet"
+
+msgid "Override Show Desktop line color"
+msgstr "Overstyr linjefargen for Vis skrivebordet"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Vis skrivebordet når pekeren holdes over knappen Vis skrivebordet"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Forsinkelse før skrivebordet vises (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Varighet for uttoning (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Tid (ms) før visning"
+
+msgid "(400 is default)"
+msgstr "(400 er standard)"
+
+msgid "Time (ms) before hiding"
+msgstr "Tid (ms) før skjuling"
+
+msgid "(100 is default)"
+msgstr "(100 er standard)"
+
+msgid "Immediate on application icon click"
+msgstr "Umiddelbart ved klikk på appikonet"
+
+msgid "Animation time (ms)"
+msgstr "Animasjonstid (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Midtklikk på forhåndsvisningen for å lukke vinduet"
+
+msgid "Window previews preferred size (px)"
+msgstr "Foretrukket størrelse (px) på vindusforhåndsvisninger"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Sideforhold X (bredde) for vindusforhåndsvisninger"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Fast"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Sideforhold Y (høyde) for vindusforhåndsvisninger"
+
+msgid "Window previews padding (px)"
+msgstr "Avstand (px) rundt vindusforhåndsvisninger"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Bruk egendefinert gjennomsiktighet for bakgrunnen til forhåndsvisningene"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Hvis dette er slått av, har bakgrunnen til forhåndsvisningene samme gjennomsiktighet som panelet."
+
+msgid "Close button and header position"
+msgstr "Plassering av lukkeknapp og overskrift"
+
+msgid "Display window preview headers"
+msgstr "Vis overskrifter i vindusforhåndsvisninger"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Ikonstørrelse (px) i vindusforhåndsvisningen"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Hvis dette er slått av, baseres ikonstørrelsen i forhåndsvisningene på størrelsen til overskriftsfeltet"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Skriftstørrelse (px) for forhåndsvisningstitlene"
+
+msgid "Font weight of the preview titles"
+msgstr "Skrifttykkelse for forhåndsvisningstitlene"
+
+msgid "Font color of the preview titles"
+msgstr "Skriftfarge for forhåndsvisningstitlene"
+
+msgid "Enable window peeking"
+msgstr "Slå på vinduskikking"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "Når pekeren holdes over en vindusforhåndsvisning en stund, fremheves vinduet."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Tidsavbrudd for å gå inn i vinduskikking (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "Tid uten aktivitet over en vindusforhåndsvisning som kreves for å gå inn i vinduskikking."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Gjennomsiktighet i vinduskikking"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Alle vinduer unntatt det som kikkes på, får samme gjennomsiktighet."
+
+msgid "About"
+msgstr "Om"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Version"
+msgstr "Versjon"
+
+msgid "Source"
+msgstr "Kilde"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Eksport og import"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Bruk knappene nedenfor til å lage en innstillingsfil fra dine nåværende valg som kan importeres på en annen maskin."
+
+msgid "Export and import settings"
+msgstr "Eksporter og importer innstillinger"
+
+msgid "Export to file"
+msgstr "Eksporter til fil"
+
+msgid "Import from file"
+msgstr "Importer fra fil"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Dette programmet leveres UTEN NOEN FORM FOR GARANTI.\n"
+"Se <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, versjon 2 eller nyere</a> for detaljer.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Sponset og opprinnelig utviklet av"
+
+msgid "Action"
+msgstr "Handling"
+
+msgid "Click action"
+msgstr "Klikkhandling"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "Oppførsel ved klikk på ikonet til en app som kjører."
+
+msgid "Toggle windows"
+msgstr "Veksle vinduer"
+
+msgid "Scroll action"
+msgstr "Rullehandling"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Oppførsel når musehjulet rulles over panelet."
+
+msgid "Scroll panel action"
+msgstr "Handling for rulling på panelet"
+
+msgid "Do nothing"
+msgstr "Ikke gjør noe"
+
+msgid "Switch workspace"
+msgstr "Bytt arbeidsområde"
+
+msgid "Cycle windows"
+msgstr "Bla gjennom vinduer"
+
+msgid "Change volume"
+msgstr "Endre lydvolum"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Oppførsel når musehjulet rulles over et appikon."
+
+msgid "Scroll icon action"
+msgstr "Handling for rulling på ikon"
+
+msgid "Same as panel"
+msgstr "Samme som panelet"
+
+msgid "Hotkey overlay"
+msgstr "Hurtigtastoverlegg"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Slå på Super+(0–9) som snarveier for å aktivere apper. Kan også brukes sammen med Shift og Ctrl."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Bruk hurtigtaster for å aktivere apper"
+
+msgid "Application icons context menu"
+msgstr "Hurtigmeny for appikoner"
+
+msgid "(right-click menu)"
+msgstr "(høyreklikkmeny)"
+
+msgid "Secondary menu"
+msgstr "Sekundærmeny"
+
+msgid "Panel context menu entries"
+msgstr "Oppføringer i panelets hurtigmeny"
+
+msgid "Add entry"
+msgstr "Legg til oppføring"
+
+msgid "Behavior"
+msgstr "Oppførsel"
+
+msgid "Applications"
+msgstr "Apper"
+
+msgid "Show favorite applications"
+msgstr "Vis favorittapper"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Vis favorittapper på sekundære paneler"
+
+msgid "Show running applications"
+msgstr "Vis apper som kjører"
+
+msgid "Ungroup applications"
+msgstr "Del opp grupperte apper"
+
+msgid "Show notification counter badge"
+msgstr "Vis varselteller på ikoner"
+
+msgid "Hover"
+msgstr "Peker over"
+
+msgid "Show window previews on hover"
+msgstr "Vis vindusforhåndsvisninger ved hold over"
+
+msgid "Show tooltip on hover"
+msgstr "Vis verktøytips ved hold over"
+
+msgid "Isolate"
+msgstr "Isoler"
+
+msgid "Isolate Workspaces"
+msgstr "Isoler arbeidsområder"
+
+msgid "Isolate monitors"
+msgstr "Isoler skjermer"
+
+msgid "Overview"
+msgstr "Oversikt"
+
+msgid "Click empty space to close overview"
+msgstr "Klikk på tom plass for å lukke oversikten"
+
+msgid "Disable show overview on startup"
+msgstr "Slå av visning av oversikten ved oppstart"
+
+msgid "Fine-Tune"
+msgstr "Finjustering"
+
+msgid "Font size"
+msgstr "Skriftstørrelse"
+
+msgid "(0 = theme default)"
+msgstr "(0 = temaets standard)"
+
+msgid "Tray Font Size"
+msgstr "Skriftstørrelse i systemfeltet"
+
+msgid "LeftBox Font Size"
+msgstr "Skriftstørrelse i venstre boks"
+
+msgid "Padding"
+msgstr "Avstand"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = temaets standard)"
+
+msgid "Tray Item Padding"
+msgstr "Avstand rundt elementer i systemfeltet"
+
+msgid "Status Icon Padding"
+msgstr "Avstand rundt statusikoner"
+
+msgid "LeftBox Padding"
+msgstr "Avstand i venstre boks"
+
+msgid "Animate"
+msgstr "Animer"
+
+msgid "Animate switching applications"
+msgstr "Animer bytte mellom apper"
+
+msgid "Animate launching new windows"
+msgstr "Animer start av nye vinduer"
+
+msgid "Gnome functionality"
+msgstr "GNOME-funksjonalitet"
+
+msgid "(overview)"
+msgstr "(oversikt)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Behold originalt gnome-shell-dash"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Behold originalt gnome-shell-toppanel"
+
+msgid "(e.g. date menu)"
+msgstr "(f.eks. datomenyen)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Aktiver panelmenyknapper bare ved klikk"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Tving Aktiviteter-hurtighjørnet til hovedskjermen"
+
+msgid "Position"
+msgstr "Plassering"
+
+msgid "Panel"
+msgstr "Panel"
+
+msgid "Display the main panel on"
+msgstr "Vis hovedpanelet på"
+
+msgid "Display panels on all monitors"
+msgstr "Vis paneler på alle skjermer"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Skjul og vis panelet etter innstillingene"
+
+msgid "Panel Intellihide"
+msgstr "Intellihide for panel"
+
+msgid "Order and Position on monitors"
+msgstr "Rekkefølge og plassering på skjermer"
+
+msgid "Monitor"
+msgstr "Skjerm"
+
+msgid "Apply changes to all monitors"
+msgstr "Bruk endringene på alle skjermer"
+
+msgid "Panel monitor position"
+msgstr "Panelets plassering på skjermen"
+
+msgid "(default is 48)"
+msgstr "(standard er 48)"
+
+msgid "Panel thickness"
+msgstr "Paneltykkelse"
+
+msgid "(default is 100)"
+msgstr "(standard er 100)"
+
+msgid "Panel length"
+msgstr "Panellengde"
+
+msgid "Dynamic"
+msgstr "Dynamisk"
+
+msgid "Anchor"
+msgstr "Anker"
+
+msgid "Taskbar Display"
+msgstr "Visning av oppgavelinjen"
+
+msgid "Style"
+msgstr "Stil"
+
+msgid "Global style"
+msgstr "Global stil"
+
+msgid "Border radius"
+msgstr "Kantradius"
+
+msgid "AppIcon style"
+msgstr "Stil for appikon"
+
+msgid "(default is 8)"
+msgstr "(standard er 8)"
+
+msgid "App Icon Margin"
+msgstr "Marg rundt appikon"
+
+msgid "(default is 4)"
+msgstr "(standard er 4)"
+
+msgid "App Icon Padding"
+msgstr "Avstand rundt appikon"
+
+msgid "Animate hovering app icons"
+msgstr "Animer appikoner ved hold over"
+
+msgid "Highlight hovering app icons"
+msgstr "Fremhev appikoner ved hold over"
+
+msgid "Icon style"
+msgstr "Ikonstil"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Symbolic"
+msgstr "Symbolsk"
+
+msgid "Grayscale"
+msgstr "Gråtoner"
+
+msgid "Running indicator"
+msgstr "Kjøreindikator"
+
+msgid "Running indicator position"
+msgstr "Plassering av kjøreindikator"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Stil på kjøreindikator (fokusert app)"
+
+msgid "Dots"
+msgstr "Prikker"
+
+msgid "Squares"
+msgstr "Firkanter"
+
+msgid "Dashes"
+msgstr "Streker"
+
+msgid "Segmented"
+msgstr "Segmentert"
+
+msgid "Solid"
+msgstr "Heldekkende"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Stil på kjøreindikator (ufokuserte apper)"
+
+msgid "Panel style"
+msgstr "Panelstil"
+
+msgid "(default is 0)"
+msgstr "(standard er 0)"
+
+msgid "Side margins"
+msgstr "Sidemarger"
+
+msgid "Top and bottom margins"
+msgstr "Marger øverst og nederst"
+
+msgid "Side padding"
+msgstr "Sideavstand"
+
+msgid "Top and bottom padding"
+msgstr "Avstand øverst og nederst"
+
+msgid "Override panel theme background color"
+msgstr "Overstyr bakgrunnsfargen fra panelets tema"
+
+msgid "Override panel theme background opacity"
+msgstr "Overstyr bakgrunnens gjennomsiktighet fra panelets tema"
+
+msgid "Panel background opacity (%)"
+msgstr "Bakgrunnens gjennomsiktighet i panelet (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Endre gjennomsiktighet når et vindu kommer nær panelet"
+
+msgid "Dynamic background opacity"
+msgstr "Dynamisk gjennomsiktighet for bakgrunnen"
+
+msgid "Override panel theme gradient"
+msgstr "Overstyr gradienten fra panelets tema"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Gradientens toppfarge og gjennomsiktighet (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Gradientens bunnfarge og gjennomsiktighet (%)"
+
+msgid "Panel border"
+msgstr "Panelkant"
+
+msgid "Override border color"
+msgstr "Overstyr kantfarge"
+
+msgid "Border thickness"
+msgstr "Kanttykkelse"

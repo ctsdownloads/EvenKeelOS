@@ -10,7 +10,7 @@ import zoneinfo
 import langtable
 
 import i18n
-from i18n import _
+from i18n import N_, _
 
 EVDEV = "/usr/share/X11/xkb/rules/evdev.xml"
 LOG = "/tmp/evenkeel-os-install.log"                     # the install engine's log
@@ -95,10 +95,12 @@ def uses_12_hour(loc):
 
 
 def size_text(size):
-    for unit, step in (("TB", 10 ** 12), ("GB", 10 ** 9)):
+    """A disk's size in the installer's language ("1,5 To" in French)."""
+    # Translators: sizes of a disk; {n} is the number.
+    for unit, step in ((N_("{n} TB"), 10 ** 12), (N_("{n} GB"), 10 ** 9)):
         if size >= step:
-            return f"{size / step:.0f} {unit}" if size / step >= 10 else f"{size / step:.1f} {unit}"
-    return f"{size // 10 ** 6} MB"
+            return _(unit).format(n=i18n.number(size / step, 0 if size / step >= 10 else 1))
+    return _("{n} MB").format(n=size // 10 ** 6)
 
 
 STICK_FILESYSTEMS = {"vfat", "exfat", "ntfs", "ext4", "btrfs", "xfs"}      # ones a log can be saved to

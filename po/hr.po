@@ -7356,6 +7356,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "{network} je spremljeno kao {place}."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} GB"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} MB"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} TB"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8530,3 +8545,247 @@ msgstr "pisanje notnih zapisa"
 
 msgid "your calendar"
 msgstr "vaš kalendar"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "Dovrši prijevod na sve jezike"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "Prikaži datume redoslijedom svojstvenim svakom jeziku"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "Zadrži gettext u slici sustava"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "Dodaj prijevode na 68 jezika"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "Omogući prevođenje teksta na svakom zaslonu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "Propusti aplikacije i portove ovisno o mjestu; Posao ne propušta ništa"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "Dodaj raspored svijetlog i tamnog načina, dijaprojekciju i fontove"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "Preimenuj Alate sustava u EvenKeelOS Wheelhouse"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "Prikaži NVIDIA grafiku kao u redu u provjeri prikladnosti"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "Učitaj datotečne sustave prije instalacije"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "Pitaj prije automatskog ponovnog pokretanja"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "Označi svaku novu verziju za isprobavanje"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "Vrati ažuriranje kad se pokvari nešto što je radilo"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "Pokreni svaku izradu u virtualnom stroju prije objave"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "Preporuči 8 GB memorije, bez minimuma"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "Provjeri računalo prije instalacije s live USB-a"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "Pitaj u instalaciji koristi li se Windows ili Linux"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "Dodaj Alate sustava u izbornik s logotipom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "Dodaj još šest tema u vodič za EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "Pretvori „Novi u Linuxu” u vodič za EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "Dodaj vodič „Novi u Linuxu” u Alate sustava i pri prijavi"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "Dodaj Opcije pokretanja: uobičajeni popravci i vaše vlastite postavke"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "Popravi provjeru izrade za Dijeljene mape: još nema osobnih mapa"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "Dodaj Dijeljene mape: dijeli osobne mape na mrežama Dom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "Dodaj Sigurnost mreže: Dom, Posao ili Javno mjesto"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "Prepoznaj upravljačke programe pisača u bilo kojoj mapi"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "Prikaži prozore alata unutar Alata sustava"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "Otvori izvješće o problemu kad izrada slike ne uspije"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "Zaključaj vanjske pakete i ISO alat na točne verzije"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "Imenuj prozore alata prema alatu, kraći popis testova"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "Popravi izbrisane postavke sustava i upozori na certifikate"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "Stavi sve alate u jedan prozor Alata sustava"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "Ne ostavljaj ništa za sobom kad se ukloni VPN"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "Dodaj Nabavi VPN, s VPN-ovima koji se stalno ažuriraju"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Daj sastancima na Zoomu vlastiti vodič"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Otvori sastanke na Zoomu u Chromeu, u web verziji Zooma"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "Spriječi da instalacije ArtCrafta kvare instalacije s Flathuba"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "Prepoznaj instalacijske programe po uobičajenom nazivu datoteke"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Ponudi Linux zamjene za programe za Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "Popravi postavljanje spremnika: distrobox pogrešno montira mape samo za čitanje"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Ponudi Fedora ili Ubuntu verzije programa za Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Ponudi Linux verziju kad se otvori program za Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "Isporuči jedan shim da firmver ne dodaje suvišan unos za Fedoru"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Vrati Fedorinu zonu vatrozida"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "Ojačaj root pomoćnike, vatrozid i ažuriranja bez lozinke"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "Nove zadane postavke: pozadine, mape s bojom naglaska, zaključani zaslon"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "Nova zadana postavka: tirkizna boja naglaska, i na zaslonu za prijavu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "Popravi napomenu o vraćanju, petlju prijave i testove koji zapnu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "Popravi vraćanje pri zamrzavanju i smanji ponovne pokušaje na 2"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "Popravi testove automatskog vraćanja"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "Pravi testovi kvarova za automatsko vraćanje"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "Dodaj automatsko vraćanje pomoću greenboota"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "Pokreni Windows raspored na radnoj površini, uz sitne popravke"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "Pauziraj automatska ažuriranja na 3 dana nakon poništavanja"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "Dodaj korak Raspored radne površine u instalaciju"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "Dodaj Raspored radne površine u Alate sustava"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "Spriječi da promjene načina rada napajanja čekaju ažuriranja"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "Dodaj neobavezan raspored u stilu Windowsa"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Popravi Fedora 45 predloške i putanje pravila spremnika"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "Čitaj izvore preuzimanja u novoj mapi Fedore 45"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Prijeđi na Fedoru 45"

@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Open in Ghostty"
+msgstr "Buka dalam Ghostty"
+
+msgid "Find…"
+msgstr "Cari…"
+
+msgid "Previous Match"
+msgstr "Padanan Sebelumnya"
+
+msgid "Next Match"
+msgstr "Padanan Seterusnya"
+
+msgid "Close"
+msgstr "Tutup"
+
+msgid "Oh, no."
+msgstr "Alamak."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "Tidak dapat memperoleh konteks OpenGL untuk pemaparan."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "Terminal ini berada dalam mod baca sahaja. Anda masih boleh melihat, memilih dan menatal kandungan, tetapi tiada peristiwa input akan dihantar kepada aplikasi yang sedang berjalan."
+
+msgid "Read-only"
+msgstr "Baca sahaja"
+
+msgid "Copy"
+msgstr "Salin"
+
+msgid "Paste"
+msgstr "Tampal"
+
+msgid "Notify on Next Command Finish"
+msgstr "Beritahu Apabila Arahan Seterusnya Selesai"
+
+msgid "Clear"
+msgstr "Kosongkan"
+
+msgid "Reset"
+msgstr "Set Semula"
+
+msgid "Split"
+msgstr "Pisah"
+
+msgid "Change Title…"
+msgstr "Tukar Tajuk…"
+
+msgid "Split Up"
+msgstr "Pisah ke Atas"
+
+msgid "Split Down"
+msgstr "Pisah ke Bawah"
+
+msgid "Split Left"
+msgstr "Pisah ke Kiri"
+
+msgid "Split Right"
+msgstr "Pisah ke Kanan"
+
+msgid "Close Split"
+msgstr "Tutup Pisahan"
+
+msgid "Tab"
+msgstr "Tab"
+
+msgid "Change Tab Title…"
+msgstr "Tukar Tajuk Tab…"
+
+msgid "New Tab"
+msgstr "Tab Baharu"
+
+msgid "Close Tab"
+msgstr "Tutup Tab"
+
+msgid "Window"
+msgstr "Tetingkap"
+
+msgid "Change Window Title…"
+msgstr "Tukar Tajuk Tetingkap…"
+
+msgid "New Window"
+msgstr "Tetingkap Baharu"
+
+msgid "Close Window"
+msgstr "Tutup Tetingkap"
+
+msgid "Config"
+msgstr "Konfigurasi"
+
+msgid "Open Configuration in OS Editor"
+msgstr "Buka Konfigurasi dalam Editor OS"
+
+msgid "Open Configuration in New Window"
+msgstr "Buka Konfigurasi dalam Tetingkap Baharu"
+
+msgid "Reload Configuration"
+msgstr "Muat Semula Konfigurasi"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ Anda sedang menjalankan binaan nyahpepijat Ghostty! Prestasi akan merosot."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: Pemeriksa Terminal"
+
+msgid "New Split"
+msgstr "Pisahan Baharu"
+
+msgid "View Open Tabs"
+msgstr "Lihat Tab Terbuka"
+
+msgid "Main Menu"
+msgstr "Menu Utama"
+
+msgid "Command Palette"
+msgstr "Palet Arahan"
+
+msgid "Terminal Inspector"
+msgstr "Pemeriksa Terminal"
+
+msgid "About Ghostty"
+msgstr "Perihal Ghostty"
+
+msgid "Quit"
+msgstr "Keluar"
+
+msgid "Authorize Clipboard Access"
+msgstr "Benarkan Capaian Papan Keratan"
+
+msgid "Deny"
+msgstr "Tolak"
+
+msgid "Allow"
+msgstr "Benarkan"
+
+msgid "Remember choice for this split"
+msgstr "Ingat pilihan untuk pisahan ini"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "Muat semula konfigurasi untuk memaparkan gesaan ini semula"
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "Execute a command…"
+msgstr "Laksanakan arahan…"
+
+msgid "Configuration Errors"
+msgstr "Ralat Konfigurasi"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "Satu atau lebih ralat konfigurasi telah ditemui. Sila semak ralat di bawah, dan sama ada muat semula konfigurasi anda atau abaikan ralat ini."
+
+msgid "Ignore"
+msgstr "Abaikan"
+
+msgid "Leave blank to restore the default title."
+msgstr "Biarkan kosong untuk memulihkan tajuk lalai."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "The keybind was revoked by the system."
+msgstr "Pintasan kekunci telah dibatalkan oleh sistem."
+
+msgid "The keybind was denied by the system."
+msgstr "Pintasan kekunci telah ditolak oleh sistem."
+
+msgid "Global keybind unavailable"
+msgstr "Pintasan kekunci global tidak tersedia"
+
+msgid "Export Terminal IO Events"
+msgstr "Eksport Peristiwa IO Terminal"
+
+msgid "Export"
+msgstr "Eksport"
+
+msgid "Editing configuration file"
+msgstr "Menyunting fail konfigurasi"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "Sebuah aplikasi cuba menulis ke papan keratan. Kandungan papan keratan semasa ditunjukkan di bawah."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "Sebuah aplikasi cuba membaca daripada papan keratan. Kandungan papan keratan semasa ditunjukkan di bawah."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "Amaran: Tampalan Yang Mungkin Tidak Selamat"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "Menampal teks ini ke dalam terminal mungkin berbahaya kerana kelihatan seperti ada arahan yang akan dilaksanakan."
+
+msgid "Quit Ghostty?"
+msgstr "Keluar daripada Ghostty?"
+
+msgid "Close Tab?"
+msgstr "Tutup Tab?"
+
+msgid "Close Window?"
+msgstr "Tutup Tetingkap?"
+
+msgid "Close Split?"
+msgstr "Tutup Pisahan?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "Semua sesi terminal akan ditamatkan."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "Semua sesi terminal dalam tab ini akan ditamatkan."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "Semua sesi terminal dalam tetingkap ini akan ditamatkan."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "Proses yang sedang berjalan dalam pisahan ini akan ditamatkan."
+
+msgid "Command Finished"
+msgstr "Arahan Selesai"
+
+msgid "Command Succeeded"
+msgstr "Arahan Berjaya"
+
+msgid "Command Failed"
+msgstr "Arahan Gagal"
+
+msgid "Change Terminal Title"
+msgstr "Tukar Tajuk Terminal"
+
+msgid "Change Tab Title"
+msgstr "Tukar Tajuk Tab"
+
+msgid "Change Window Title"
+msgstr "Tukar Tajuk Tetingkap"
+
+msgid "Reloaded the configuration"
+msgstr "Konfigurasi telah dimuat semula"
+
+msgid "Copied to clipboard"
+msgstr "Disalin ke papan keratan"
+
+msgid "Cleared clipboard"
+msgstr "Papan keratan dikosongkan"
+
+msgid "Ghostty Developers"
+msgstr "Pembangun Ghostty"
+
+msgid "Reset Terminal"
+msgstr "Set Semula Terminal"
+
+msgid "Reset the terminal to a clean state."
+msgstr "Set semula terminal kepada keadaan bersih."
+
+msgid "Copy to Clipboard"
+msgstr "Salin ke Papan Keratan"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "Salin teks yang dipilih ke papan keratan dalam format biasa dan bergaya."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "Salin Pilihan sebagai Teks Biasa ke Papan Keratan"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "Salin teks yang dipilih sebagai teks biasa ke papan keratan."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "Salin Pilihan sebagai Jujukan ANSI ke Papan Keratan"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "Salin teks yang dipilih sebagai jujukan escape ANSI ke papan keratan."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "Salin Pilihan sebagai HTML ke Papan Keratan"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "Salin teks yang dipilih sebagai HTML ke papan keratan."
+
+msgid "Copy URL to Clipboard"
+msgstr "Salin URL ke Papan Keratan"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "Salin URL di bawah kursor ke papan keratan."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "Salin Tajuk Terminal ke Papan Keratan"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "Salin tajuk terminal ke papan keratan. Jika tajuk terminal tidak ditetapkan, ini tidak memberi kesan."
+
+msgid "Paste from Clipboard"
+msgstr "Tampal daripada Papan Keratan"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "Tampal kandungan papan keratan utama."
+
+msgid "Paste from Selection"
+msgstr "Tampal daripada Pilihan"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "Tampal kandungan papan keratan pilihan."
+
+msgid "Start Search"
+msgstr "Mula Carian"
+
+msgid "Start a search if one isn't already active."
+msgstr "Mulakan carian jika belum ada carian yang aktif."
+
+msgid "Search Selection"
+msgstr "Cari Pilihan"
+
+msgid "Start a search for the current text selection."
+msgstr "Mulakan carian untuk teks yang sedang dipilih."
+
+msgid "End Search"
+msgstr "Tamat Carian"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "Tamatkan carian semasa jika ada dan sembunyikan sebarang elemen GUI."
+
+msgid "Next Search Result"
+msgstr "Hasil Carian Seterusnya"
+
+msgid "Navigate to the next search result, if any."
+msgstr "Pergi ke hasil carian seterusnya, jika ada."
+
+msgid "Previous Search Result"
+msgstr "Hasil Carian Sebelumnya"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "Pergi ke hasil carian sebelumnya, jika ada."
+
+msgid "Increase Font Size"
+msgstr "Besarkan Saiz Fon"
+
+msgid "Increase the font size by 1 point."
+msgstr "Besarkan saiz fon sebanyak 1 mata."
+
+msgid "Decrease Font Size"
+msgstr "Kecilkan Saiz Fon"
+
+msgid "Decrease the font size by 1 point."
+msgstr "Kecilkan saiz fon sebanyak 1 mata."
+
+msgid "Reset Font Size"
+msgstr "Set Semula Saiz Fon"
+
+msgid "Reset the font size to the default."
+msgstr "Set semula saiz fon kepada lalai."
+
+msgid "Clear Screen"
+msgstr "Kosongkan Skrin"
+
+msgid "Clear the screen and scrollback."
+msgstr "Kosongkan skrin dan skrol balik."
+
+msgid "Select All"
+msgstr "Pilih Semua"
+
+msgid "Select all text on the screen."
+msgstr "Pilih semua teks pada skrin."
+
+msgid "Scroll to Top"
+msgstr "Tatal ke Atas"
+
+msgid "Scroll to the top of the screen."
+msgstr "Tatal ke bahagian atas skrin."
+
+msgid "Scroll to Bottom"
+msgstr "Tatal ke Bawah"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "Tatal ke bahagian bawah skrin."
+
+msgid "Scroll to Selection"
+msgstr "Tatal ke Pilihan"
+
+msgid "Scroll to the selected text."
+msgstr "Tatal ke teks yang dipilih."
+
+msgid "Scroll Page Up"
+msgstr "Tatal Satu Halaman ke Atas"
+
+msgid "Scroll the screen up by a page."
+msgstr "Tatal skrin ke atas sebanyak satu halaman."
+
+msgid "Scroll Page Down"
+msgstr "Tatal Satu Halaman ke Bawah"
+
+msgid "Scroll the screen down by a page."
+msgstr "Tatal skrin ke bawah sebanyak satu halaman."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "Salin Skrin ke Fail Sementara dan Salin Laluan"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "Salin kandungan skrin ke fail sementara dan salin laluannya ke papan keratan."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "Salin Skrin ke Fail Sementara dan Tampal Laluan"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "Salin kandungan skrin ke fail sementara dan tampal laluan ke fail itu."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "Salin Skrin ke Fail Sementara dan Buka"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "Salin kandungan skrin ke fail sementara dan bukanya."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "Salin Skrin sebagai HTML ke Fail Sementara dan Salin Laluan"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Salin kandungan skrin sebagai HTML ke fail sementara dan salin laluannya ke papan keratan."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "Salin Skrin sebagai HTML ke Fail Sementara dan Tampal Laluan"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "Salin kandungan skrin sebagai HTML ke fail sementara dan tampal laluan ke fail itu."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "Salin Skrin sebagai HTML ke Fail Sementara dan Buka"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "Salin kandungan skrin sebagai HTML ke fail sementara dan bukanya."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Salin Skrin sebagai Jujukan ANSI ke Fail Sementara dan Salin Laluan"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Salin kandungan skrin sebagai jujukan escape ANSI ke fail sementara dan salin laluannya ke papan keratan."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Salin Skrin sebagai Jujukan ANSI ke Fail Sementara dan Tampal Laluan"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Salin kandungan skrin sebagai jujukan escape ANSI ke fail sementara dan tampal laluan ke fail itu."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "Salin Skrin sebagai Jujukan ANSI ke Fail Sementara dan Buka"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Salin kandungan skrin sebagai jujukan escape ANSI ke fail sementara dan bukanya."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "Salin Pilihan ke Fail Sementara dan Salin Laluan"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "Salin kandungan pilihan ke fail sementara dan salin laluannya ke papan keratan."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "Salin Pilihan ke Fail Sementara dan Tampal Laluan"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "Salin kandungan pilihan ke fail sementara dan tampal laluan ke fail itu."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "Salin Pilihan ke Fail Sementara dan Buka"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "Salin kandungan pilihan ke fail sementara dan bukanya."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "Salin Pilihan sebagai HTML ke Fail Sementara dan Salin Laluan"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Salin kandungan pilihan sebagai HTML ke fail sementara dan salin laluannya ke papan keratan."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "Salin Pilihan sebagai HTML ke Fail Sementara dan Tampal Laluan"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "Salin kandungan pilihan sebagai HTML ke fail sementara dan tampal laluan ke fail itu."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "Salin Pilihan sebagai HTML ke Fail Sementara dan Buka"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "Salin kandungan pilihan sebagai HTML ke fail sementara dan bukanya."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Salin Pilihan sebagai Jujukan ANSI ke Fail Sementara dan Salin Laluan"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Salin kandungan pilihan sebagai jujukan escape ANSI ke fail sementara dan salin laluannya ke papan keratan."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Salin Pilihan sebagai Jujukan ANSI ke Fail Sementara dan Tampal Laluan"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Salin kandungan pilihan sebagai jujukan escape ANSI ke fail sementara dan tampal laluan ke fail itu."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "Salin Pilihan sebagai Jujukan ANSI ke Fail Sementara dan Buka"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Salin kandungan pilihan sebagai jujukan escape ANSI ke fail sementara dan bukanya."
+
+msgid "Open a new window."
+msgstr "Buka tetingkap baharu."
+
+msgid "Open a new tab."
+msgstr "Buka tab baharu."
+
+msgid "Move Tab Left"
+msgstr "Alih Tab ke Kiri"
+
+msgid "Move the current tab to the left."
+msgstr "Alihkan tab semasa ke kiri."
+
+msgid "Move Tab Right"
+msgstr "Alih Tab ke Kanan"
+
+msgid "Move the current tab to the right."
+msgstr "Alihkan tab semasa ke kanan."
+
+msgid "Move Tab to New Window"
+msgstr "Alih Tab ke Tetingkap Baharu"
+
+msgid "Move the current tab to a new window."
+msgstr "Alihkan tab semasa ke tetingkap baharu."
+
+msgid "Toggle Tab Overview"
+msgstr "Togol Gambaran Keseluruhan Tab"
+
+msgid "Toggle the tab overview."
+msgstr "Togol gambaran keseluruhan tab."
+
+msgid "Change Terminal Title…"
+msgstr "Tukar Tajuk Terminal…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "Minta tajuk baharu untuk terminal semasa."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "Minta tajuk baharu untuk tab semasa."
+
+msgid "Split the terminal to the left."
+msgstr "Pisahkan terminal ke kiri."
+
+msgid "Split the terminal to the right."
+msgstr "Pisahkan terminal ke kanan."
+
+msgid "Split the terminal up."
+msgstr "Pisahkan terminal ke atas."
+
+msgid "Split the terminal down."
+msgstr "Pisahkan terminal ke bawah."
+
+msgid "Focus Split: Previous"
+msgstr "Fokus Pisahan: Sebelumnya"
+
+msgid "Focus the previous split, if any."
+msgstr "Fokus pada pisahan sebelumnya, jika ada."
+
+msgid "Focus Split: Next"
+msgstr "Fokus Pisahan: Seterusnya"
+
+msgid "Focus the next split, if any."
+msgstr "Fokus pada pisahan seterusnya, jika ada."
+
+msgid "Focus Split: Left"
+msgstr "Fokus Pisahan: Kiri"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "Fokus pada pisahan di sebelah kiri, jika wujud."
+
+msgid "Focus Split: Right"
+msgstr "Fokus Pisahan: Kanan"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "Fokus pada pisahan di sebelah kanan, jika wujud."
+
+msgid "Focus Split: Up"
+msgstr "Fokus Pisahan: Atas"
+
+msgid "Focus the split above, if it exists."
+msgstr "Fokus pada pisahan di atas, jika wujud."
+
+msgid "Focus Split: Down"
+msgstr "Fokus Pisahan: Bawah"
+
+msgid "Focus the split below, if it exists."
+msgstr "Fokus pada pisahan di bawah, jika wujud."
+
+msgid "Focus Window: Previous"
+msgstr "Fokus Tetingkap: Sebelumnya"
+
+msgid "Focus the previous window, if any."
+msgstr "Fokus pada tetingkap sebelumnya, jika ada."
+
+msgid "Focus Window: Next"
+msgstr "Fokus Tetingkap: Seterusnya"
+
+msgid "Focus the next window, if any."
+msgstr "Fokus pada tetingkap seterusnya, jika ada."
+
+msgid "Toggle Split Zoom"
+msgstr "Togol Zum Pisahan"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "Togol keadaan zum bagi pisahan semasa."
+
+msgid "Toggle Read-Only Mode"
+msgstr "Togol Mod Baca Sahaja"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "Togol mod baca sahaja untuk permukaan semasa."
+
+msgid "Equalize Splits"
+msgstr "Samakan Pisahan"
+
+msgid "Equalize the size of all splits."
+msgstr "Samakan saiz semua pisahan."
+
+msgid "Reset Window Size"
+msgstr "Set Semula Saiz Tetingkap"
+
+msgid "Reset the window size to the default."
+msgstr "Set semula saiz tetingkap kepada lalai."
+
+msgid "Toggle Inspector"
+msgstr "Togol Pemeriksa"
+
+msgid "Toggle the inspector."
+msgstr "Togol pemeriksa."
+
+msgid "Show the GTK Inspector"
+msgstr "Tunjukkan Pemeriksa GTK"
+
+msgid "Show the GTK inspector."
+msgstr "Tunjukkan pemeriksa GTK."
+
+msgid "Show On-Screen Keyboard"
+msgstr "Tunjukkan Papan Kekunci Atas Skrin"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "Tunjukkan papan kekunci atas skrin jika ada."
+
+msgid "Open Config Using OS editor"
+msgstr "Buka Konfigurasi Menggunakan Editor OS"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "Buka fail konfigurasi dengan editor lalai OS."
+
+msgid "Open Config in New Terminal Window"
+msgstr "Buka Konfigurasi dalam Tetingkap Terminal Baharu"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "Buka fail konfigurasi dalam tetingkap baharu menggunakan $EDITOR atau $VISUAL."
+
+msgid "Reload Config"
+msgstr "Muat Semula Konfigurasi"
+
+msgid "Reload the config file."
+msgstr "Muat semula fail konfigurasi."
+
+msgid "Close Terminal"
+msgstr "Tutup Terminal"
+
+msgid "Close the current terminal."
+msgstr "Tutup terminal semasa."
+
+msgid "Close the current tab."
+msgstr "Tutup tab semasa."
+
+msgid "Close Other Tabs"
+msgstr "Tutup Tab Lain"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "Tutup semua tab dalam tetingkap ini kecuali yang semasa."
+
+msgid "Close Tabs to the Right"
+msgstr "Tutup Tab di Sebelah Kanan"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "Tutup semua tab di sebelah kanan tab semasa."
+
+msgid "Close the current window."
+msgstr "Tutup tetingkap semasa."
+
+msgid "Close All Windows"
+msgstr "Tutup Semua Tetingkap"
+
+msgid "Close all windows."
+msgstr "Tutup semua tetingkap."
+
+msgid "Toggle Maximize"
+msgstr "Togol Maksimum"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "Togol keadaan maksimum bagi tetingkap semasa."
+
+msgid "Toggle Fullscreen"
+msgstr "Togol Skrin Penuh"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "Togol keadaan skrin penuh bagi tetingkap semasa."
+
+msgid "Toggle Window Decorations"
+msgstr "Togol Hiasan Tetingkap"
+
+msgid "Toggle the window decorations."
+msgstr "Togol hiasan tetingkap."
+
+msgid "Toggle Float on Top"
+msgstr "Togol Terapung di Atas"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "Togol keadaan terapung di atas bagi tetingkap semasa."
+
+msgid "Toggle Secure Input"
+msgstr "Togol Input Selamat"
+
+msgid "Toggle secure input mode."
+msgstr "Togol mod input selamat."
+
+msgid "Toggle Mouse Reporting"
+msgstr "Togol Pelaporan Tetikus"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "Togol sama ada peristiwa tetikus dilaporkan kepada aplikasi terminal."
+
+msgid "Toggle Background Opacity"
+msgstr "Togol Kelegapan Latar Belakang"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "Togol kelegapan latar belakang bagi tetingkap yang bermula lut sinar."
+
+msgid "Check for Updates"
+msgstr "Semak Kemas Kini"
+
+msgid "Check for updates to the application."
+msgstr "Semak kemas kini untuk aplikasi."
+
+msgid "Undo"
+msgstr "Buat Asal"
+
+msgid "Undo the last action."
+msgstr "Buat asal tindakan terakhir."
+
+msgid "Redo"
+msgstr "Buat Semula"
+
+msgid "Redo the last undone action."
+msgstr "Buat semula tindakan terakhir yang dibuat asal."
+
+msgid "Quit the application."
+msgstr "Keluar daripada aplikasi."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "Letakkan sedikit Ghostty dalam terminal anda."

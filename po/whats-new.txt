@@ -1,0 +1,61 @@
+Finish translating every language
+Show dates in each language's own order
+Keep gettext in the image
+Add translations for 68 languages
+Make every screen's text translatable
+Let apps and ports in per place; Work lets nothing in
+Add light and dark schedule, slideshow and fonts
+Rename System Tools to EvenKeelOS Wheelhouse
+Show NVIDIA graphics as fine in the fit check
+Load the file systems before installing
+Ask before an automatic restart
+Mark every new version for trial
+Roll back an update when something that worked breaks
+Start every build in a virtual machine before publishing
+Recommend 8 GB of memory, with no minimum
+Check the computer before installing from the live USB
+Ask Windows or Linux user in the installer
+Add System Tools to the logo menu
+Add six more topics to the EvenKeelOS guide
+Turn New to Linux into the EvenKeelOS guide
+Add the New to Linux guide in System Tools and at login
+Add Boot options: common fixes and your own settings
+Fix the Shared folders build check: no home folders yet
+Add Shared folders: share home folders on Home networks
+Add Network safety: Home, Work or Public place
+Recognize printer drivers in any folder
+Show tool windows inside System Tools
+Open an issue when the image build fails
+Lock outside packages and the ISO tool to exact versions
+Name tool windows after the tool, shorter test list
+Repair deleted system settings and alert on certificates
+Put every tool in one System Tools window
+Leave nothing behind when a VPN is removed
+Add Get a VPN, with VPNs that keep updating
+Give Zoom meetings their own guide
+Open Zoom meetings in Chrome, in Zoom's web version
+Stop ArtCraft installs from breaking Flathub installs
+Recognize installers by their usual file name
+Offer Linux replacements for Windows programs
+Fix box setup: distrobox mounts read-only folders wrong
+Offer Fedora or Ubuntu versions of Windows programs
+Offer the Linux version when a Windows program is opened
+Ship one shim, so firmware adds no extra Fedora entry
+Put Fedora's firewall zone back
+Harden root helpers, firewall and no-password updates
+New defaults: wallpapers, accent folders, lock screen
+New default: teal accent color, also on the login screen
+Fix rollback note, login-loop and stuck tests
+Fix freeze rollback and cut retries to 2
+Fix the automatic rollback tests
+Real failure tests for automatic rollback
+Add automatic rollback with greenboot
+Start the Windows layout on the desktop, plus small fixes
+Pause automatic updates for 3 days after an undo
+Add a Desktop layout step to the installer
+Add Desktop layout to System Tools
+Keep power-mode switches from waiting on updates
+Add an optional Windows-style layout
+Fix Fedora 45 presets and container policy paths
+Read download sources in Fedora 45's new folder
+Move to Fedora 45

@@ -1,0 +1,1174 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+msgid "Quit"
+msgstr "إنهاء"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "إنهاء %d نافذة"
+msgstr[1] "إنهاء نافذة واحدة"
+msgstr[2] "إنهاء نافذتين"
+msgstr[3] "إنهاء %d نوافذ"
+msgstr[4] "إنهاء %d نافذة"
+msgstr[5] "إنهاء %d نافذة"
+
+msgid "Power options"
+msgstr "خيارات الطاقة"
+
+msgid "Event logs"
+msgstr "سجلات الأحداث"
+
+msgid "System"
+msgstr "النظام"
+
+msgid "Device Management"
+msgstr "إدارة الأجهزة"
+
+msgid "Disk Management"
+msgstr "إدارة الأقراص"
+
+msgid "Unlock taskbar"
+msgstr "فك قفل شريط المهام"
+
+msgid "Lock taskbar"
+msgstr "قفل شريط المهام"
+
+msgid "Gnome Settings"
+msgstr "إعدادات GNOME"
+
+msgid "Dash to Panel Settings"
+msgstr "إعدادات Dash to Panel"
+
+msgid "Restore Windows"
+msgstr "استعادة النوافذ"
+
+msgid "Show Desktop"
+msgstr "إظهار سطح المكتب"
+
+msgid "Dash to Panel has been updated!"
+msgstr "تم تحديث Dash to Panel!"
+
+msgid "You are now running version"
+msgstr "أنت تستخدم الآن الإصدار"
+
+msgid "See what's new"
+msgstr "اطّلع على الجديد"
+
+msgid "Top Bar"
+msgstr "الشريط العلوي"
+
+msgid "Show Desktop button height (px)"
+msgstr "ارتفاع زر إظهار سطح المكتب (بكسل)"
+
+msgid "Show Desktop button width (px)"
+msgstr "عرض زر إظهار سطح المكتب (بكسل)"
+
+msgid "Left"
+msgstr "يسار"
+
+msgid "Center"
+msgstr "وسط"
+
+msgid "Right"
+msgstr "يمين"
+
+msgid "Top"
+msgstr "أعلى"
+
+msgid "Middle"
+msgstr "منتصف"
+
+msgid "Bottom"
+msgstr "أسفل"
+
+msgid "Start"
+msgstr "البداية"
+
+msgid "End"
+msgstr "النهاية"
+
+msgid "Show Applications button"
+msgstr "زر إظهار التطبيقات"
+
+msgid "Activities button"
+msgstr "زر الأنشطة"
+
+msgid "Taskbar"
+msgstr "شريط المهام"
+
+msgid "Date menu"
+msgstr "قائمة التاريخ"
+
+msgid "System menu"
+msgstr "قائمة النظام"
+
+msgid "Left box"
+msgstr "الصندوق الأيسر"
+
+msgid "Center box"
+msgstr "الصندوق الأوسط"
+
+msgid "Right box"
+msgstr "الصندوق الأيمن"
+
+msgid "Desktop button"
+msgstr "زر سطح المكتب"
+
+msgid "Move up"
+msgstr "نقل لأعلى"
+
+msgid "Move down"
+msgstr "نقل لأسفل"
+
+msgid "Visible"
+msgstr "مرئي"
+
+msgid "Select element position"
+msgstr "اختيار موضع العنصر"
+
+msgid "Stacked to top"
+msgstr "مكدّس للأعلى"
+
+msgid "Stacked to left"
+msgstr "مكدّس لليسار"
+
+msgid "Stacked to bottom"
+msgstr "مكدّس للأسفل"
+
+msgid "Stacked to right"
+msgstr "مكدّس لليمين"
+
+msgid "Centered"
+msgstr "في الوسط"
+
+msgid "Monitor Center"
+msgstr "وسط الشاشة"
+
+msgid "More options"
+msgstr "خيارات إضافية"
+
+msgid "Reset to defaults"
+msgstr "إعادة التعيين إلى الافتراضي"
+
+msgid "Show Applications options"
+msgstr "خيارات إظهار التطبيقات"
+
+msgid "Open icon"
+msgstr "أيقونة الفتح"
+
+msgid "Show Desktop options"
+msgstr "خيارات إظهار سطح المكتب"
+
+msgid "Primary monitor"
+msgstr "الشاشة الرئيسية"
+
+msgid "Monitor "
+msgstr "الشاشة "
+
+msgid "Running Indicator Options"
+msgstr "خيارات مؤشر التشغيل"
+
+msgid "Dynamic opacity options"
+msgstr "خيارات الشفافية الديناميكية"
+
+msgid "Intellihide options"
+msgstr "خيارات الإخفاء الذكي"
+
+msgid "Window preview options"
+msgstr "خيارات معاينة النوافذ"
+
+msgid "Isolate Workspaces options"
+msgstr "خيارات عزل مساحات العمل"
+
+msgid "Isolate monitors options"
+msgstr "خيارات عزل الشاشات"
+
+msgid "Ungrouped application options"
+msgstr "خيارات التطبيقات غير المجمّعة"
+
+msgid "Customize middle-click behavior"
+msgstr "تخصيص سلوك النقر بزر الفأرة الأوسط"
+
+msgid "Text"
+msgstr "نص"
+
+msgid "Command"
+msgstr "الأمر"
+
+msgid "Remove"
+msgstr "إزالة"
+
+msgid "Customize panel scroll behavior"
+msgstr "تخصيص سلوك التمرير على اللوحة"
+
+msgid "Customize icon scroll behavior"
+msgstr "تخصيص سلوك التمرير على الأيقونة"
+
+msgid "Advanced hotkeys options"
+msgstr "خيارات مفاتيح الاختصار المتقدمة"
+
+msgid "Secondary Menu Options"
+msgstr "خيارات القائمة الثانوية"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d أيقونة"
+msgstr[1] "أيقونة واحدة"
+msgstr[2] "أيقونتان"
+msgstr[3] "%d أيقونات"
+msgstr[4] "%d أيقونة"
+msgstr[5] "%d أيقونة"
+
+msgid "App icon animation options"
+msgstr "خيارات حركة أيقونة التطبيق"
+
+msgid "App icon highlight options"
+msgstr "خيارات تمييز أيقونة التطبيق"
+
+msgid "Export settings"
+msgstr "تصدير الإعدادات"
+
+msgid "Import settings"
+msgstr "استيراد الإعدادات"
+
+msgid "Move to current Workspace"
+msgstr "نقل إلى مساحة العمل الحالية"
+
+msgid "Animation type"
+msgstr "نوع الحركة"
+
+msgid "Simple"
+msgstr "بسيط"
+
+msgid "Ripple"
+msgstr "تموّج"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "المدة"
+
+msgid "Rotation"
+msgstr "الدوران"
+
+msgid "Travel"
+msgstr "الانتقال"
+
+msgid "Zoom"
+msgstr "التكبير"
+
+msgid "Convexity"
+msgstr "التحدب"
+
+msgid "Extent"
+msgstr "المدى"
+
+msgid "Highlight focused application"
+msgstr "تمييز التطبيق المركَّز عليه"
+
+msgid "Icon dominant color"
+msgstr "اللون الغالب للأيقونة"
+
+msgid "Custom color"
+msgstr "لون مخصص"
+
+msgid "Highlight opacity"
+msgstr "شفافية التمييز"
+
+msgid "Indicator size (px)"
+msgstr "حجم المؤشر (بكسل)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "لون المؤشر - الغالب في الأيقونة"
+
+msgid "Indicator color - Override Theme"
+msgstr "لون المؤشر - تجاوز السمة"
+
+msgid "1 window open (or ungrouped)"
+msgstr "نافذة واحدة مفتوحة (أو غير مجمّعة)"
+
+msgid "Apply to all"
+msgstr "تطبيق على الكل"
+
+msgid "2 windows open"
+msgstr "نافذتان مفتوحتان"
+
+msgid "3 windows open"
+msgstr "3 نوافذ مفتوحة"
+
+msgid "4+ windows open"
+msgstr "4 نوافذ أو أكثر مفتوحة"
+
+msgid "Use different for unfocused"
+msgstr "استخدام لون مختلف لغير المركَّز عليه"
+
+msgid "The panel background opacity is affected by"
+msgstr "شفافية خلفية اللوحة تتأثر بـ"
+
+msgid "All windows"
+msgstr "كل النوافذ"
+
+msgid "Focused windows"
+msgstr "النوافذ المركَّز عليها"
+
+msgid "Maximized windows"
+msgstr "النوافذ المكبَّرة"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "تغيير الشفافية عندما تقترب نافذة بأقل من (بكسل)"
+
+msgid "Change opacity to (%)"
+msgstr "تغيير الشفافية إلى (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "مدة حركة تغيير الشفافية (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "حجم خط عناوين التطبيقات (بكسل) (الافتراضي 14)"
+
+msgid "Font weight of application titles"
+msgstr "سمك خط عناوين التطبيقات"
+
+msgid "inherit from theme"
+msgstr "وراثة من السمة"
+
+msgid "normal"
+msgstr "عادي"
+
+msgid "lighter"
+msgstr "أخف"
+
+msgid "bold"
+msgstr "عريض"
+
+msgid "bolder"
+msgstr "أعرض"
+
+msgid "Font color of the application titles"
+msgstr "لون خط عناوين التطبيقات"
+
+msgid "Font color of the minimized application titles"
+msgstr "لون خط عناوين التطبيقات المصغّرة"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "أقصى عرض (بكسل) لعناوين التطبيقات"
+
+msgid "(default is 160)"
+msgstr "(الافتراضي 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "استخدام عرض ثابت لعناوين التطبيقات"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "لعناوين التطبيقات كلها العرض نفسه، حتى لو كانت نصوصها أقصر من أقصى عرض. تُستخدم قيمة أقصى عرض كعرض ثابت."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "عرض مؤشرات التشغيل على التطبيقات غير المركَّز عليها"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "استخدام أيقونات المفضلة كمشغّلات للتطبيقات"
+
+msgid "Highlight AppIcon color"
+msgstr "لون تمييز أيقونة التطبيق"
+
+msgid "Pressed AppIcon color"
+msgstr "لون أيقونة التطبيق عند الضغط"
+
+msgid "Highlight AppIcon border radius"
+msgstr "نصف قطر حد تمييز أيقونة التطبيق"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "يتجاوز نصف قطر الحد العام (الافتراضي 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "إخفاء اللوحة عن النوافذ فقط"
+
+msgid "Overlapping"
+msgstr "متداخلة"
+
+msgid "On same monitor"
+msgstr "على الشاشة نفسها"
+
+msgid "The panel hides from"
+msgstr "تختفي اللوحة من"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "لمس حافة الشاشة بالمؤشر يُظهر اللوحة"
+
+msgid "Limit to panel length"
+msgstr "الاقتصار على طول اللوحة"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "تمرير المؤشر فوق منطقة اللوحة يُبقيها ظاهرة"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "اشتراط ضغط عند حافة الشاشة لإظهار اللوحة"
+
+msgid "Required pressure threshold (px)"
+msgstr "عتبة الضغط المطلوبة (بكسل)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "مهلة الضغط المطلوبة (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "السماح بإظهار اللوحة في وضع ملء الشاشة"
+
+msgid "(requires multi-monitors option)"
+msgstr "(يتطلب خيار الشاشات المتعددة)"
+
+msgid "Only hide secondary panels"
+msgstr "إخفاء اللوحات الثانوية فقط"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "الصيغة: &lt;Shift&gt;، &lt;Ctrl&gt;، &lt;Alt&gt;، &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "اختصار لوحة المفاتيح لإظهار اللوحة وتثبيتها"
+
+msgid "e.g. <Super>i"
+msgstr "مثال: <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "حفظ الحالة عبر عمليات إعادة التشغيل"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(يحترم وضع «عدم الإزعاج» في GNOME ويتطلب خيار إظهار شارة عدّاد الإشعارات)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "إظهار اللوحة وتثبيتها عند وصول إشعار"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "مدة حركة الإخفاء والإظهار (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "مهلة قبل إخفاء اللوحة (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "مهلة قبل إظهار اللوحة (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "مهلة قبل تفعيل الإخفاء الذكي عند البدء (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "عزل الشاشات حتى عند استخدام لوحة واحدة"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "عزل مساحات العمل في مبدّل التطبيقات في gnome-shell"
+
+msgid "Shift+Click action"
+msgstr "إجراء Shift+نقرة"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "عند الضبط على التصغير، تؤدي النقرة المزدوجة إلى تصغير جميع نوافذ التطبيق."
+
+msgid "Raise windows"
+msgstr "رفع النوافذ"
+
+msgid "Minimize window"
+msgstr "تصغير النافذة"
+
+msgid "Launch new instance"
+msgstr "تشغيل مثيل جديد"
+
+msgid "Cycle through windows"
+msgstr "التنقل بين النوافذ"
+
+msgid "Cycle windows + minimize"
+msgstr "التنقل بين النوافذ + تصغير"
+
+msgid "Toggle single / Preview multiple"
+msgstr "تبديل الفردية / معاينة المتعددة"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "تبديل الفردية / التنقل بين المتعددة"
+
+msgid "Toggle single / Spread multiple"
+msgstr "تبديل الفردية / نشر المتعددة"
+
+msgid "Middle-Click action"
+msgstr "إجراء النقر بزر الفأرة الأوسط"
+
+msgid "Behavior for Middle-Click."
+msgstr "سلوك النقر بزر الفأرة الأوسط."
+
+msgid "Shift+Middle-Click action"
+msgstr "إجراء Shift+النقر بزر الفأرة الأوسط"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "سلوك Shift+النقر بزر الفأرة الأوسط."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "ستكون مفاتيح الاختصار إما Super+رقم أو Super+Alt+رقم"
+
+msgid "Hotkeys prefix"
+msgstr "بادئة مفاتيح الاختصار"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "إظهار أرقام التطبيقات مؤقتًا فوق الأيقونات عند استخدام مفاتيح الاختصار."
+
+msgid "Number overlay"
+msgstr "تراكب الأرقام"
+
+msgid "Never"
+msgstr "أبدًا"
+
+msgid "Show temporarily"
+msgstr "إظهار مؤقت"
+
+msgid "Always visible"
+msgstr "مرئي دائمًا"
+
+msgid "Hide timeout (ms)"
+msgstr "مهلة الإخفاء (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "اختصار لإظهار التراكب لمدة ثانيتين"
+
+msgid "e.g. <Super>q"
+msgstr "مثال: <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "على الشاشات الثانوية، إظهار التراكب على الأيقونات المطابقة للشاشة الرئيسية"
+
+msgid "Show the overlay on all monitors"
+msgstr "إظهار التراكب على جميع الشاشات"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "إظهار المعاينات عندما يكون للتطبيق عدة مثيلات"
+
+msgid "Show window previews on hotkey"
+msgstr "إظهار معاينات النوافذ عند مفتاح الاختصار"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "اختر مفاتيح الأرقام في لوحة المفاتيح التي تُستخدم لتفعيل مفاتيح الاختصار"
+
+msgid "Hotkeys are activated with"
+msgstr "تُفعَّل مفاتيح الاختصار بواسطة"
+
+msgid "Number row"
+msgstr "صف الأرقام"
+
+msgid "Numeric keypad"
+msgstr "لوحة الأرقام"
+
+msgid "Both"
+msgstr "كلاهما"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "المهلة بين أحداث تمرير الفأرة (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "استخدم هذه القيمة للحد من عدد أحداث تمرير الفأرة الملتقطة."
+
+msgid "Show popup when changing workspace"
+msgstr "إظهار نافذة منبثقة عند تغيير مساحة العمل"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "يؤثر هذا على النافذة المنبثقة لمساحة العمل عند التمرير على اللوحة فقط."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "دمج عناصر <i>قائمة التطبيق</i>"
+
+msgid "<i>App Details</i> menu item"
+msgstr "عنصر القائمة <i>تفاصيل التطبيق</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>تفاصيل التطبيق</i> متاح فقط عند تثبيت برنامج GNOME Software"
+
+msgid "Show Applications icon"
+msgstr "أيقونة إظهار التطبيقات"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "الحشو الجانبي لأيقونة إظهار التطبيقات (بكسل)"
+
+msgid "Override escape key and return to desktop"
+msgstr "تجاوز مفتاح Esc والعودة إلى سطح المكتب"
+
+msgid "Override Show Desktop line color"
+msgstr "تجاوز لون خط إظهار سطح المكتب"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "إظهار سطح المكتب عند تمرير المؤشر فوق زر إظهار سطح المكتب"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "مهلة قبل إظهار سطح المكتب (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "مدة التلاشي (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "الوقت (ms) قبل الإظهار"
+
+msgid "(400 is default)"
+msgstr "(الافتراضي 400)"
+
+msgid "Time (ms) before hiding"
+msgstr "الوقت (ms) قبل الإخفاء"
+
+msgid "(100 is default)"
+msgstr "(الافتراضي 100)"
+
+msgid "Immediate on application icon click"
+msgstr "فوري عند النقر على أيقونة التطبيق"
+
+msgid "Animation time (ms)"
+msgstr "زمن الحركة (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "انقر بزر الفأرة الأوسط على المعاينة لإغلاق النافذة"
+
+msgid "Window previews preferred size (px)"
+msgstr "الحجم المفضل لمعاينات النوافذ (بكسل)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "نسبة أبعاد معاينات النوافذ X (العرض)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "ثابت"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "نسبة أبعاد معاينات النوافذ Y (الارتفاع)"
+
+msgid "Window previews padding (px)"
+msgstr "حشو معاينات النوافذ (بكسل)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "استخدام شفافية مخصصة لخلفية المعاينات"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "إذا عُطّل، فلخلفية المعاينات الشفافية نفسها للوحة."
+
+msgid "Close button and header position"
+msgstr "موضع زر الإغلاق والترويسة"
+
+msgid "Display window preview headers"
+msgstr "عرض ترويسات معاينات النوافذ"
+
+msgid "Icon size (px) of the window preview"
+msgstr "حجم أيقونة (بكسل) معاينة النافذة"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "إذا عُطّل، فسيعتمد حجم أيقونة المعاينات على حجم شريط الترويسة"
+
+msgid "Font size (px) of the preview titles"
+msgstr "حجم خط (بكسل) عناوين المعاينات"
+
+msgid "Font weight of the preview titles"
+msgstr "سمك خط عناوين المعاينات"
+
+msgid "Font color of the preview titles"
+msgstr "لون خط عناوين المعاينات"
+
+msgid "Enable window peeking"
+msgstr "تمكين الاستطلاع السريع للنوافذ"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "عند تمرير المؤشر فوق معاينة نافذة لبعض الوقت، تُميَّز النافذة عن غيرها."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "مهلة الدخول إلى وضع الاستطلاع السريع للنوافذ (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "مدة عدم النشاط أثناء تمرير المؤشر فوق معاينة نافذة اللازمة للدخول إلى وضع الاستطلاع السريع للنوافذ."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "شفافية وضع الاستطلاع السريع للنوافذ"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "تُضبط شفافية جميع النوافذ، عدا النافذة المستطلَعة، على القيمة نفسها."
+
+msgid "About"
+msgstr "حول"
+
+msgid "Info"
+msgstr "معلومات"
+
+msgid "Version"
+msgstr "الإصدار"
+
+msgid "Source"
+msgstr "المصدر"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "التصدير والاستيراد"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "استخدم الأزرار أدناه لإنشاء ملف إعدادات من تفضيلاتك الحالية يمكن استيراده على جهاز آخر."
+
+msgid "Export and import settings"
+msgstr "تصدير الإعدادات واستيرادها"
+
+msgid "Export to file"
+msgstr "تصدير إلى ملف"
+
+msgid "Import from file"
+msgstr "استيراد من ملف"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">هذا البرنامج يأتي دون أي ضمان على الإطلاق.\n"
+"راجع <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">رخصة جنو العمومية، الإصدار 2 أو أحدث</a> للتفاصيل.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "برعاية وتطوير أولي من"
+
+msgid "Action"
+msgstr "الإجراء"
+
+msgid "Click action"
+msgstr "إجراء النقر"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "السلوك عند النقر على أيقونة تطبيق قيد التشغيل."
+
+msgid "Toggle windows"
+msgstr "تبديل النوافذ"
+
+msgid "Scroll action"
+msgstr "إجراء التمرير"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "السلوك عند تمرير الفأرة فوق اللوحة."
+
+msgid "Scroll panel action"
+msgstr "إجراء تمرير اللوحة"
+
+msgid "Do nothing"
+msgstr "عدم فعل شيء"
+
+msgid "Switch workspace"
+msgstr "تبديل مساحة العمل"
+
+msgid "Cycle windows"
+msgstr "التنقل بين النوافذ"
+
+msgid "Change volume"
+msgstr "تغيير مستوى الصوت"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "السلوك عند تمرير الفأرة فوق أيقونة تطبيق."
+
+msgid "Scroll icon action"
+msgstr "إجراء تمرير الأيقونة"
+
+msgid "Same as panel"
+msgstr "مثل اللوحة"
+
+msgid "Hotkey overlay"
+msgstr "تراكب مفاتيح الاختصار"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "تمكين Super+(0-9) كاختصارات لتنشيط التطبيقات. ويمكن استخدامها أيضًا مع Shift وCtrl."
+
+msgid "Use hotkeys to activate apps"
+msgstr "استخدام مفاتيح الاختصار لتنشيط التطبيقات"
+
+msgid "Application icons context menu"
+msgstr "قائمة سياق أيقونات التطبيقات"
+
+msgid "(right-click menu)"
+msgstr "(قائمة النقر بزر الفأرة الأيمن)"
+
+msgid "Secondary menu"
+msgstr "القائمة الثانوية"
+
+msgid "Panel context menu entries"
+msgstr "عناصر قائمة سياق اللوحة"
+
+msgid "Add entry"
+msgstr "إضافة عنصر"
+
+msgid "Behavior"
+msgstr "السلوك"
+
+msgid "Applications"
+msgstr "التطبيقات"
+
+msgid "Show favorite applications"
+msgstr "إظهار التطبيقات المفضلة"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "إظهار التطبيقات المفضلة على اللوحات الثانوية"
+
+msgid "Show running applications"
+msgstr "إظهار التطبيقات قيد التشغيل"
+
+msgid "Ungroup applications"
+msgstr "فك تجميع التطبيقات"
+
+msgid "Show notification counter badge"
+msgstr "إظهار شارة عدّاد الإشعارات"
+
+msgid "Hover"
+msgstr "التمرير فوق العنصر"
+
+msgid "Show window previews on hover"
+msgstr "إظهار معاينات النوافذ عند التمرير فوق العنصر"
+
+msgid "Show tooltip on hover"
+msgstr "إظهار تلميح عند التمرير فوق العنصر"
+
+msgid "Isolate"
+msgstr "العزل"
+
+msgid "Isolate Workspaces"
+msgstr "عزل مساحات العمل"
+
+msgid "Isolate monitors"
+msgstr "عزل الشاشات"
+
+msgid "Overview"
+msgstr "النظرة العامة"
+
+msgid "Click empty space to close overview"
+msgstr "النقر على مساحة فارغة لإغلاق النظرة العامة"
+
+msgid "Disable show overview on startup"
+msgstr "تعطيل إظهار النظرة العامة عند بدء التشغيل"
+
+msgid "Fine-Tune"
+msgstr "ضبط دقيق"
+
+msgid "Font size"
+msgstr "حجم الخط"
+
+msgid "(0 = theme default)"
+msgstr "(0 = افتراضي السمة)"
+
+msgid "Tray Font Size"
+msgstr "حجم خط الصينية"
+
+msgid "LeftBox Font Size"
+msgstr "حجم خط الصندوق الأيسر"
+
+msgid "Padding"
+msgstr "الحشو"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = افتراضي السمة)"
+
+msgid "Tray Item Padding"
+msgstr "حشو عناصر الصينية"
+
+msgid "Status Icon Padding"
+msgstr "حشو أيقونة الحالة"
+
+msgid "LeftBox Padding"
+msgstr "حشو الصندوق الأيسر"
+
+msgid "Animate"
+msgstr "الحركة"
+
+msgid "Animate switching applications"
+msgstr "تحريك تبديل التطبيقات"
+
+msgid "Animate launching new windows"
+msgstr "تحريك تشغيل النوافذ الجديدة"
+
+msgid "Gnome functionality"
+msgstr "وظائف GNOME"
+
+msgid "(overview)"
+msgstr "(النظرة العامة)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "الإبقاء على dash الأصلي في gnome-shell"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "الإبقاء على اللوحة العلوية الأصلية في gnome-shell"
+
+msgid "(e.g. date menu)"
+msgstr "(مثل قائمة التاريخ)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "تنشيط أزرار قائمة اللوحة عند النقر فقط"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "فرض زاوية الأنشطة الساخنة على الشاشة الرئيسية"
+
+msgid "Position"
+msgstr "الموضع"
+
+msgid "Panel"
+msgstr "اللوحة"
+
+msgid "Display the main panel on"
+msgstr "عرض اللوحة الرئيسية على"
+
+msgid "Display panels on all monitors"
+msgstr "عرض اللوحات على جميع الشاشات"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "إخفاء اللوحة وإظهارها وفقًا للتفضيلات"
+
+msgid "Panel Intellihide"
+msgstr "الإخفاء الذكي للوحة"
+
+msgid "Order and Position on monitors"
+msgstr "الترتيب والموضع على الشاشات"
+
+msgid "Monitor"
+msgstr "الشاشة"
+
+msgid "Apply changes to all monitors"
+msgstr "تطبيق التغييرات على جميع الشاشات"
+
+msgid "Panel monitor position"
+msgstr "موضع اللوحة على الشاشة"
+
+msgid "(default is 48)"
+msgstr "(الافتراضي 48)"
+
+msgid "Panel thickness"
+msgstr "سماكة اللوحة"
+
+msgid "(default is 100)"
+msgstr "(الافتراضي 100)"
+
+msgid "Panel length"
+msgstr "طول اللوحة"
+
+msgid "Dynamic"
+msgstr "ديناميكي"
+
+msgid "Anchor"
+msgstr "التثبيت"
+
+msgid "Taskbar Display"
+msgstr "عرض شريط المهام"
+
+msgid "Style"
+msgstr "النمط"
+
+msgid "Global style"
+msgstr "النمط العام"
+
+msgid "Border radius"
+msgstr "نصف قطر الحد"
+
+msgid "AppIcon style"
+msgstr "نمط أيقونة التطبيق"
+
+msgid "(default is 8)"
+msgstr "(الافتراضي 8)"
+
+msgid "App Icon Margin"
+msgstr "هامش أيقونة التطبيق"
+
+msgid "(default is 4)"
+msgstr "(الافتراضي 4)"
+
+msgid "App Icon Padding"
+msgstr "حشو أيقونة التطبيق"
+
+msgid "Animate hovering app icons"
+msgstr "تحريك أيقونات التطبيقات عند التمرير فوقها"
+
+msgid "Highlight hovering app icons"
+msgstr "تمييز أيقونات التطبيقات عند التمرير فوقها"
+
+msgid "Icon style"
+msgstr "نمط الأيقونة"
+
+msgid "Normal"
+msgstr "عادي"
+
+msgid "Symbolic"
+msgstr "رمزي"
+
+msgid "Grayscale"
+msgstr "تدرج الرمادي"
+
+msgid "Running indicator"
+msgstr "مؤشر التشغيل"
+
+msgid "Running indicator position"
+msgstr "موضع مؤشر التشغيل"
+
+msgid "Running indicator style (Focused app)"
+msgstr "نمط مؤشر التشغيل (التطبيق المركَّز عليه)"
+
+msgid "Dots"
+msgstr "نقاط"
+
+msgid "Squares"
+msgstr "مربعات"
+
+msgid "Dashes"
+msgstr "شرطات"
+
+msgid "Segmented"
+msgstr "مجزأ"
+
+msgid "Solid"
+msgstr "ممتلئ"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "نمط مؤشر التشغيل (التطبيقات غير المركَّز عليها)"
+
+msgid "Panel style"
+msgstr "نمط اللوحة"
+
+msgid "(default is 0)"
+msgstr "(الافتراضي 0)"
+
+msgid "Side margins"
+msgstr "الهوامش الجانبية"
+
+msgid "Top and bottom margins"
+msgstr "الهوامش العلوية والسفلية"
+
+msgid "Side padding"
+msgstr "الحشو الجانبي"
+
+msgid "Top and bottom padding"
+msgstr "الحشو العلوي والسفلي"
+
+msgid "Override panel theme background color"
+msgstr "تجاوز لون خلفية سمة اللوحة"
+
+msgid "Override panel theme background opacity"
+msgstr "تجاوز شفافية خلفية سمة اللوحة"
+
+msgid "Panel background opacity (%)"
+msgstr "شفافية خلفية اللوحة (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "تغيير الشفافية عندما تقترب نافذة من اللوحة"
+
+msgid "Dynamic background opacity"
+msgstr "شفافية الخلفية الديناميكية"
+
+msgid "Override panel theme gradient"
+msgstr "تجاوز تدرج سمة اللوحة"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "لون التدرج العلوي وشفافيته (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "لون التدرج السفلي وشفافيته (%)"
+
+msgid "Panel border"
+msgstr "حد اللوحة"
+
+msgid "Override border color"
+msgstr "تجاوز لون الحد"
+
+msgid "Border thickness"
+msgstr "سماكة الحد"

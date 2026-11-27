@@ -7,6 +7,18 @@ dnf5 -y install firefox v4l-utils xdg-terminal-exec
 xargs -a /ctx/bluefin-packages.txt dnf5 -y install
 # Default apps from Fedora (default-apps.txt); fails if any is missing.
 grep -v '^#' /ctx/default-apps.txt | xargs dnf5 -y install
+# Spell check in every translated language that has a dictionary (spellcheck-packages.txt); fails if any is missing.
+grep -v '^#' /ctx/spellcheck-packages.txt | xargs dnf5 -y install
+grep -v '^#' /ctx/spellcheck-packages.txt | xargs rpm -q >/dev/null || { echo "ERROR: a spell-check dictionary is missing"; exit 1; }
+# The Tajik dictionary Fedora doesn't package (extra-dictionaries.txt), sha256-checked.
+grep -v '^#' /ctx/extra-dictionaries.txt | while read -r file sha url; do
+  curl -fsSL --retry 3 -o "/tmp/$file" "$url"
+  [[ $url == *format=TEXT ]] && base64 -d "/tmp/$file" > "/tmp/$file.d" && mv "/tmp/$file.d" "/tmp/$file"
+  echo "$sha  /tmp/$file" | sha256sum -c -
+  case $file in *README.txt) dir=/usr/share/licenses/evenkeel-os-dictionaries ;; *) dir=/usr/share/hunspell ;; esac
+  install -Dm644 "/tmp/$file" "$dir/$file" && rm "/tmp/$file"
+done
+for d in bs_BA tg_TG; do [ -f "/usr/share/hunspell/$d.dic" ] || { echo "ERROR: no $d spell check"; exit 1; }; done
 # Ghostty (scottames/ghostty COPR) replaces Ptyxis as the default terminal.
 curl -fsSL --retry 3 "https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-$(rpm -E %fedora)/scottames-ghostty-fedora-$(rpm -E %fedora).repo" -o /etc/yum.repos.d/ghostty.repo
 # Outside packages install at the exact versions in locked-versions.txt.
@@ -74,6 +86,10 @@ install -Dm644 /ctx/io.github.ctsdownloads.evenkeel-os.vpn.policy \
 install -Dm755 /ctx/evenkeel-os-app-updates /usr/libexec/evenkeel-os-app-updates
 install -Dm644 /ctx/evenkeel-os-app-updates.service /usr/lib/systemd/system/evenkeel-os-app-updates.service
 install -Dm644 /ctx/evenkeel-os-app-updates.timer /usr/lib/systemd/system/evenkeel-os-app-updates.timer
+# A newly picked language: Flatpak apps get its translations within minutes, not at the next daily update.
+install -Dm755 /ctx/evenkeel-os-flatpak-languages /usr/libexec/evenkeel-os-flatpak-languages
+install -Dm644 -t /usr/lib/systemd/system \
+  /ctx/evenkeel-os-flatpak-languages.service /ctx/evenkeel-os-flatpak-languages.timer
 # Wheelhouse, with a root helper for the jobs that change the system.
 install -Dm755 /ctx/evenkeel-os-tools /usr/bin/evenkeel-os-tools
 install -Dm755 /ctx/evenkeel-os-tools-admin /usr/libexec/evenkeel-os-tools-admin
@@ -248,9 +264,10 @@ python3 -I /ctx/check-windows-programs.py "$data" \
   || { echo 'ERROR: Windows Program does not read installers correctly'; exit 1; }
 rm -rf /tmp/winlist
 # Services on by default, including after the first boot.
-printf 'enable brew-setup.service\nenable evenkeel-os-codecs-setup.service\nenable evenkeel-os-flathub.service\nenable evenkeel-os-flatpak-apps.service\ndisable flatpak-add-fedora-repos.service\nenable evenkeel-os-disk-unlock-check.service\nenable tailscaled.service\nenable podman-auto-update.timer\nenable uupd.timer\nenable greenboot-healthcheck.service\nenable greenboot-set-rollback-trigger.service\nenable evenkeel-os-app-updates.timer\n' > /usr/lib/systemd/system-preset/80-evenkeel-os.preset
-systemctl enable tailscaled.service podman-auto-update.timer uupd.timer brew-setup.service evenkeel-os-app-updates.timer
-for u in tailscaled.service uupd.timer brew-setup.service evenkeel-os-app-updates.timer; do [ "$(systemctl is-enabled "$u")" = enabled ] || { echo "ERROR: $u is not enabled"; exit 1; }; done
+printf 'enable brew-setup.service\nenable evenkeel-os-codecs-setup.service\nenable evenkeel-os-flathub.service\nenable evenkeel-os-flatpak-apps.service\ndisable flatpak-add-fedora-repos.service\nenable evenkeel-os-disk-unlock-check.service\nenable tailscaled.service\nenable podman-auto-update.timer\nenable uupd.timer\nenable greenboot-healthcheck.service\nenable greenboot-set-rollback-trigger.service\nenable evenkeel-os-app-updates.timer\nenable evenkeel-os-flatpak-languages.timer\n' > /usr/lib/systemd/system-preset/80-evenkeel-os.preset
+systemctl enable tailscaled.service podman-auto-update.timer uupd.timer brew-setup.service evenkeel-os-app-updates.timer \
+  evenkeel-os-flatpak-languages.timer
+for u in tailscaled.service uupd.timer brew-setup.service evenkeel-os-app-updates.timer evenkeel-os-flatpak-languages.timer; do [ "$(systemctl is-enabled "$u")" = enabled ] || { echo "ERROR: $u is not enabled"; exit 1; }; done
 bash /ctx/rebrand.sh
 # Automatic rollback: greenboot with our own checks. Fedora's default checks fail offline, so they stay out.
 dnf5 -y install greenboot
@@ -511,9 +528,13 @@ install -Dm755 /ctx/evenkeel-os-accent-icons /usr/libexec/evenkeel-os-accent-ico
 install -Dm644 /ctx/evenkeel-os-accent-icons.desktop /etc/xdg/autostart/evenkeel-os-accent-icons.desktop
 bash /ctx/check-accent-icons.sh
 
-# Logo Menu 25.2, sha256-checked; its own schemas/ folder must go or it fails to load.
-curl -fsSL --retry 3 -o /tmp/logomenu.zip "https://extensions.gnome.org/extension-data/logomenuaryan_k.v45.shell-extension.zip"
-echo "78e6507d9aa033a17e7e2997ac5a1190b327b97ba019a313f1a9285854753ed2  /tmp/logomenu.zip" | sha256sum -c -
+# Logo Menu, sha256-checked; its own schemas/ folder must go or it fails to load.
+extension() {     # extensions.gnome.org zip at its locked version and sha256 (locked-versions.txt)
+  read -r version sha < <(awk -v u="$1" '$1 == "gnome-extension" && $2 == u {print $3, $4}' /ctx/locked-versions.txt)
+  curl -fsSL --retry 3 -o "$2" "https://extensions.gnome.org/extension-data/${1//@/}.v$version.shell-extension.zip"
+  echo "$sha  $2" | sha256sum -c -
+}
+extension logomenu@aryan_k /tmp/logomenu.zip
 install -d /usr/share/gnome-shell/extensions/logomenu@aryan_k
 python3 -I -m zipfile -e /tmp/logomenu.zip /usr/share/gnome-shell/extensions/logomenu@aryan_k
 rm /tmp/logomenu.zip
@@ -538,15 +559,25 @@ grep -qF "new MenuItem('Wheelhouse'," /usr/share/gnome-shell/extensions/logomenu
   || { echo 'ERROR: the Logo Menu has no Wheelhouse entry'; exit 1; }
 glib-compile-schemas /usr/share/glib-2.0/schemas 2>&1 | { grep -v 'deprecated' || true; }
 gnome_shell=$(rpm -q --qf '%{VERSION}' gnome-shell | cut -d. -f1)
-grep -q "\"$gnome_shell\"" /usr/share/gnome-shell/extensions/logomenu@aryan_k/metadata.json || { echo "ERROR: Logo Menu 25.2 does not support GNOME $gnome_shell"; exit 1; }
+grep -q "\"$gnome_shell\"" /usr/share/gnome-shell/extensions/logomenu@aryan_k/metadata.json || { echo "ERROR: Logo Menu does not support GNOME $gnome_shell"; exit 1; }
 install -Dm644 /ctx/branding/logo-EvenKeel-mark.svg /usr/share/evenkeel-os/logo-menu-icon.svg
 install -Dm644 /ctx/evenkeel-os-logo-menu.dconf /etc/dconf/db/distro.d/50-evenkeel-os-logo-menu
 command -v bazaar >/dev/null && command -v ghostty >/dev/null || { echo "ERROR: Logo Menu's software center (bazaar) or terminal (ghostty) is missing"; exit 1; }
 
-# Windows-style layout: Dash to Panel from Fedora, ArcMenu 70.0 sha256-checked, its schemas/ folder moved out.
-dnf5 -y install gnome-shell-extension-dash-to-panel
-curl -fsSL --retry 3 -o /tmp/arcmenu.zip "https://extensions.gnome.org/extension-data/arcmenuarcmenu.com.v74.shell-extension.zip"
-echo "ef414c90dcb5f2b0c6ccb5f8e59fd9963c584789d3d8d26740ddb731100c4b40  /tmp/arcmenu.zip" | sha256sum -c -
+# Windows-style layout: Dash to Panel and ArcMenu at their locked versions, so their text matches our translations.
+# Dash to Panel comes from Fedora's build archive, which keeps every version, and must carry Fedora's signature.
+d2p=$(awk '$1 == "fedora" && $3 == "gnome-shell-extension-dash-to-panel" {print $4}' /ctx/locked-versions.txt)
+key=$(gpg --batch --show-keys --with-colons "/usr/share/pki/rpm-gpg/RPM-GPG-KEY-fedora-$(rpm -E %fedora)-primary" \
+  | awk -F: '/^fpr/ {print tolower(substr($10, 33)); exit}')
+curl -fsSL --retry 3 -o /tmp/dash-to-panel.rpm "https://kojipkgs.fedoraproject.org/packages/\
+gnome-shell-extension-dash-to-panel/${d2p%-*}/${d2p##*-}/data/signed/$key/noarch/gnome-shell-extension-dash-to-panel-$d2p.noarch.rpm"
+rpmkeys --import "/usr/share/pki/rpm-gpg/RPM-GPG-KEY-fedora-$(rpm -E %fedora)-primary"
+rpmkeys --checksig /tmp/dash-to-panel.rpm | grep -q 'signatures OK' \
+  || { echo "ERROR: Dash to Panel does not carry Fedora's signature"; exit 1; }
+dnf5 -y install /tmp/dash-to-panel.rpm
+rm /tmp/dash-to-panel.rpm
+[ "$(rpm -q --qf '%{VERSION}-%{RELEASE}' gnome-shell-extension-dash-to-panel)" = "$d2p" ] || locked_failed "Dash to Panel"
+extension arcmenu@arcmenu.com /tmp/arcmenu.zip
 install -d /usr/share/gnome-shell/extensions/arcmenu@arcmenu.com
 python3 -I -m zipfile -e /tmp/arcmenu.zip /usr/share/gnome-shell/extensions/arcmenu@arcmenu.com
 rm /tmp/arcmenu.zip
@@ -665,6 +696,8 @@ for f in /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.*.policy
   GETTEXTDATADIRS=/ctx/po msgfmt --xml -d /ctx/po --template="$f" -o "$f.new" || exit 1
   mv "$f.new" "$f"
 done
+# Dash to Panel, ArcMenu, Logo Menu, Bazaar and Ghostty: their makers' translations, with ours filling the gaps.
+bash /ctx/install-app-translations.sh /ctx/po
 langs=$(grep -c . /ctx/po/LINGUAS)
 [ "$(ls /usr/share/locale/*/LC_MESSAGES/evenkeel-os.mo | wc -l)" -eq "$langs" ] \
   || { echo "ERROR: not every language in po/LINGUAS has its messages"; exit 1; }

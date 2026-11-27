@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Open in Ghostty"
+msgstr "Maak oop in Ghostty"
+
+msgid "Find…"
+msgstr "Soek…"
+
+msgid "Previous Match"
+msgstr "Vorige treffer"
+
+msgid "Next Match"
+msgstr "Volgende treffer"
+
+msgid "Close"
+msgstr "Sluit"
+
+msgid "Oh, no."
+msgstr "O nee."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "Kon nie 'n OpenGL-konteks vir uitbeelding kry nie."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "Hierdie terminaal is in leesalleen-modus. U kan steeds die inhoud sien, kies en rol, maar geen invoergebeure sal na die lopende toepassing gestuur word nie."
+
+msgid "Read-only"
+msgstr "Leesalleen"
+
+msgid "Copy"
+msgstr "Kopieer"
+
+msgid "Paste"
+msgstr "Plak"
+
+msgid "Notify on Next Command Finish"
+msgstr "Stel in kennis wanneer volgende opdrag klaar is"
+
+msgid "Clear"
+msgstr "Maak skoon"
+
+msgid "Reset"
+msgstr "Stel terug"
+
+msgid "Split"
+msgstr "Verdeel"
+
+msgid "Change Title…"
+msgstr "Verander titel…"
+
+msgid "Split Up"
+msgstr "Verdeel na bo"
+
+msgid "Split Down"
+msgstr "Verdeel na onder"
+
+msgid "Split Left"
+msgstr "Verdeel na links"
+
+msgid "Split Right"
+msgstr "Verdeel na regs"
+
+msgid "Close Split"
+msgstr "Sluit verdeling"
+
+msgid "Tab"
+msgstr "Oortjie"
+
+msgid "Change Tab Title…"
+msgstr "Verander oortjie-titel…"
+
+msgid "New Tab"
+msgstr "Nuwe oortjie"
+
+msgid "Close Tab"
+msgstr "Sluit oortjie"
+
+msgid "Window"
+msgstr "Venster"
+
+msgid "Change Window Title…"
+msgstr "Verander venstertitel…"
+
+msgid "New Window"
+msgstr "Nuwe venster"
+
+msgid "Close Window"
+msgstr "Sluit venster"
+
+msgid "Config"
+msgstr "Opstelling"
+
+msgid "Open Configuration in OS Editor"
+msgstr "Maak opstelling oop in die stelsel se redigeerder"
+
+msgid "Open Configuration in New Window"
+msgstr "Maak opstelling oop in nuwe venster"
+
+msgid "Reload Configuration"
+msgstr "Laai opstelling weer"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ U gebruik 'n ontfoutbou van Ghostty! Werkverrigting sal swakker wees."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: Terminaalinspekteur"
+
+msgid "New Split"
+msgstr "Nuwe verdeling"
+
+msgid "View Open Tabs"
+msgstr "Wys oop oortjies"
+
+msgid "Main Menu"
+msgstr "Hoofkieslys"
+
+msgid "Command Palette"
+msgstr "Opdragpalet"
+
+msgid "Terminal Inspector"
+msgstr "Terminaalinspekteur"
+
+msgid "About Ghostty"
+msgstr "Oor Ghostty"
+
+msgid "Quit"
+msgstr "Verlaat"
+
+msgid "Authorize Clipboard Access"
+msgstr "Magtig knipbordtoegang"
+
+msgid "Deny"
+msgstr "Weier"
+
+msgid "Allow"
+msgstr "Laat toe"
+
+msgid "Remember choice for this split"
+msgstr "Onthou keuse vir hierdie verdeling"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "Laai opstelling weer om hierdie aanvraag weer te wys"
+
+msgid "Cancel"
+msgstr "Kanselleer"
+
+msgid "Execute a command…"
+msgstr "Voer 'n opdrag uit…"
+
+msgid "Configuration Errors"
+msgstr "Opstellingsfoute"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "Een of meer opstellingsfoute is gevind. Hersien asseblief die foute hieronder en laai u opstelling weer of ignoreer hierdie foute."
+
+msgid "Ignore"
+msgstr "Ignoreer"
+
+msgid "Leave blank to restore the default title."
+msgstr "Los leeg om die verstektitel te herstel."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "The keybind was revoked by the system."
+msgstr "Die sleutelbinding is deur die stelsel herroep."
+
+msgid "The keybind was denied by the system."
+msgstr "Die sleutelbinding is deur die stelsel geweier."
+
+msgid "Global keybind unavailable"
+msgstr "Globale sleutelbinding nie beskikbaar nie"
+
+msgid "Export Terminal IO Events"
+msgstr "Voer terminaal-IO-gebeure uit"
+
+msgid "Export"
+msgstr "Voer uit"
+
+msgid "Editing configuration file"
+msgstr "Redigeer tans opstellingslêer"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "'n Toepassing probeer na die knipbord skryf. Die huidige knipbordinhoud word hieronder gewys."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "'n Toepassing probeer vanaf die knipbord lees. Die huidige knipbordinhoud word hieronder gewys."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "Waarskuwing: moontlik onveilige plak"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "Om hierdie teks in die terminaal te plak kan gevaarlik wees, aangesien dit lyk asof sommige opdragte uitgevoer kan word."
+
+msgid "Quit Ghostty?"
+msgstr "Verlaat Ghostty?"
+
+msgid "Close Tab?"
+msgstr "Sluit oortjie?"
+
+msgid "Close Window?"
+msgstr "Sluit venster?"
+
+msgid "Close Split?"
+msgstr "Sluit verdeling?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "Alle terminaalsessies sal beëindig word."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "Alle terminaalsessies in hierdie oortjie sal beëindig word."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "Alle terminaalsessies in hierdie venster sal beëindig word."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "Die proses wat tans in hierdie verdeling loop, sal beëindig word."
+
+msgid "Command Finished"
+msgstr "Opdrag klaar"
+
+msgid "Command Succeeded"
+msgstr "Opdrag geslaag"
+
+msgid "Command Failed"
+msgstr "Opdrag het misluk"
+
+msgid "Change Terminal Title"
+msgstr "Verander terminaaltitel"
+
+msgid "Change Tab Title"
+msgstr "Verander oortjie-titel"
+
+msgid "Change Window Title"
+msgstr "Verander venstertitel"
+
+msgid "Reloaded the configuration"
+msgstr "Opstelling is weer gelaai"
+
+msgid "Copied to clipboard"
+msgstr "Na knipbord gekopieer"
+
+msgid "Cleared clipboard"
+msgstr "Knipbord is skoongemaak"
+
+msgid "Ghostty Developers"
+msgstr "Ghostty-ontwikkelaars"
+
+msgid "Reset Terminal"
+msgstr "Stel terminaal terug"
+
+msgid "Reset the terminal to a clean state."
+msgstr "Stel die terminaal terug na 'n skoon toestand."
+
+msgid "Copy to Clipboard"
+msgstr "Kopieer na knipbord"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "Kopieer die gekose teks na die knipbord in beide gewone en gestileerde formate."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "Kopieer seleksie as gewone teks na knipbord"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "Kopieer die gekose teks as gewone teks na die knipbord."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "Kopieer seleksie as ANSI-reekse na knipbord"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "Kopieer die gekose teks as ANSI-ontsnapreeks na die knipbord."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "Kopieer seleksie as HTML na knipbord"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "Kopieer die gekose teks as HTML na die knipbord."
+
+msgid "Copy URL to Clipboard"
+msgstr "Kopieer URL na knipbord"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "Kopieer die URL onder die wyser na die knipbord."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "Kopieer terminaaltitel na knipbord"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "Kopieer die terminaaltitel na die knipbord. As die terminaaltitel nie gestel is nie, het dit geen effek nie."
+
+msgid "Paste from Clipboard"
+msgstr "Plak vanaf knipbord"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "Plak die inhoud van die hoofknipbord."
+
+msgid "Paste from Selection"
+msgstr "Plak vanaf seleksie"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "Plak die inhoud van die seleksieknipbord."
+
+msgid "Start Search"
+msgstr "Begin soek"
+
+msgid "Start a search if one isn't already active."
+msgstr "Begin 'n soektog as daar nog nie een aktief is nie."
+
+msgid "Search Selection"
+msgstr "Soek seleksie"
+
+msgid "Start a search for the current text selection."
+msgstr "Begin 'n soektog vir die huidige teksseleksie."
+
+msgid "End Search"
+msgstr "Beëindig soektog"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "Beëindig die huidige soektog, indien enige, en versteek alle grafiese elemente."
+
+msgid "Next Search Result"
+msgstr "Volgende soekresultaat"
+
+msgid "Navigate to the next search result, if any."
+msgstr "Gaan na die volgende soekresultaat, indien enige."
+
+msgid "Previous Search Result"
+msgstr "Vorige soekresultaat"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "Gaan na die vorige soekresultaat, indien enige."
+
+msgid "Increase Font Size"
+msgstr "Vergroot lettergrootte"
+
+msgid "Increase the font size by 1 point."
+msgstr "Vergroot die lettergrootte met 1 punt."
+
+msgid "Decrease Font Size"
+msgstr "Verklein lettergrootte"
+
+msgid "Decrease the font size by 1 point."
+msgstr "Verklein die lettergrootte met 1 punt."
+
+msgid "Reset Font Size"
+msgstr "Stel lettergrootte terug"
+
+msgid "Reset the font size to the default."
+msgstr "Stel die lettergrootte terug na die verstek."
+
+msgid "Clear Screen"
+msgstr "Maak skerm skoon"
+
+msgid "Clear the screen and scrollback."
+msgstr "Maak die skerm en terugrolgeskiedenis skoon."
+
+msgid "Select All"
+msgstr "Kies alles"
+
+msgid "Select all text on the screen."
+msgstr "Kies alle teks op die skerm."
+
+msgid "Scroll to Top"
+msgstr "Rol na bo"
+
+msgid "Scroll to the top of the screen."
+msgstr "Rol na die bokant van die skerm."
+
+msgid "Scroll to Bottom"
+msgstr "Rol na onder"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "Rol na die onderkant van die skerm."
+
+msgid "Scroll to Selection"
+msgstr "Rol na seleksie"
+
+msgid "Scroll to the selected text."
+msgstr "Rol na die gekose teks."
+
+msgid "Scroll Page Up"
+msgstr "Rol een bladsy op"
+
+msgid "Scroll the screen up by a page."
+msgstr "Rol die skerm een bladsy op."
+
+msgid "Scroll Page Down"
+msgstr "Rol een bladsy af"
+
+msgid "Scroll the screen down by a page."
+msgstr "Rol die skerm een bladsy af."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "Kopieer skerm na tydelike lêer en kopieer pad"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "Kopieer die skerminhoud na 'n tydelike lêer en kopieer die pad na die knipbord."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "Kopieer skerm na tydelike lêer en plak pad"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "Kopieer die skerminhoud na 'n tydelike lêer en plak die pad na die lêer."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "Kopieer skerm na tydelike lêer en maak oop"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "Kopieer die skerminhoud na 'n tydelike lêer en maak dit oop."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "Kopieer skerm as HTML na tydelike lêer en kopieer pad"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Kopieer die skerminhoud as HTML na 'n tydelike lêer en kopieer die pad na die knipbord."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "Kopieer skerm as HTML na tydelike lêer en plak pad"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "Kopieer die skerminhoud as HTML na 'n tydelike lêer en plak die pad na die lêer."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "Kopieer skerm as HTML na tydelike lêer en maak oop"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "Kopieer die skerminhoud as HTML na 'n tydelike lêer en maak dit oop."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Kopieer skerm as ANSI-reekse na tydelike lêer en kopieer pad"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Kopieer die skerminhoud as ANSI-ontsnapreeks na 'n tydelike lêer en kopieer die pad na die knipbord."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Kopieer skerm as ANSI-reekse na tydelike lêer en plak pad"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Kopieer die skerminhoud as ANSI-ontsnapreeks na 'n tydelike lêer en plak die pad na die lêer."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "Kopieer skerm as ANSI-reekse na tydelike lêer en maak oop"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Kopieer die skerminhoud as ANSI-ontsnapreeks na 'n tydelike lêer en maak dit oop."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "Kopieer seleksie na tydelike lêer en kopieer pad"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "Kopieer die seleksie-inhoud na 'n tydelike lêer en kopieer die pad na die knipbord."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "Kopieer seleksie na tydelike lêer en plak pad"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "Kopieer die seleksie-inhoud na 'n tydelike lêer en plak die pad na die lêer."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "Kopieer seleksie na tydelike lêer en maak oop"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "Kopieer die seleksie-inhoud na 'n tydelike lêer en maak dit oop."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "Kopieer seleksie as HTML na tydelike lêer en kopieer pad"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Kopieer die seleksie-inhoud as HTML na 'n tydelike lêer en kopieer die pad na die knipbord."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "Kopieer seleksie as HTML na tydelike lêer en plak pad"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "Kopieer die seleksie-inhoud as HTML na 'n tydelike lêer en plak die pad na die lêer."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "Kopieer seleksie as HTML na tydelike lêer en maak oop"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "Kopieer die seleksie-inhoud as HTML na 'n tydelike lêer en maak dit oop."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Kopieer seleksie as ANSI-reekse na tydelike lêer en kopieer pad"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Kopieer die seleksie-inhoud as ANSI-ontsnapreeks na 'n tydelike lêer en kopieer die pad na die knipbord."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Kopieer seleksie as ANSI-reekse na tydelike lêer en plak pad"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Kopieer die seleksie-inhoud as ANSI-ontsnapreeks na 'n tydelike lêer en plak die pad na die lêer."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "Kopieer seleksie as ANSI-reekse na tydelike lêer en maak oop"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Kopieer die seleksie-inhoud as ANSI-ontsnapreeks na 'n tydelike lêer en maak dit oop."
+
+msgid "Open a new window."
+msgstr "Maak 'n nuwe venster oop."
+
+msgid "Open a new tab."
+msgstr "Maak 'n nuwe oortjie oop."
+
+msgid "Move Tab Left"
+msgstr "Skuif oortjie na links"
+
+msgid "Move the current tab to the left."
+msgstr "Skuif die huidige oortjie na links."
+
+msgid "Move Tab Right"
+msgstr "Skuif oortjie na regs"
+
+msgid "Move the current tab to the right."
+msgstr "Skuif die huidige oortjie na regs."
+
+msgid "Move Tab to New Window"
+msgstr "Skuif oortjie na nuwe venster"
+
+msgid "Move the current tab to a new window."
+msgstr "Skuif die huidige oortjie na 'n nuwe venster."
+
+msgid "Toggle Tab Overview"
+msgstr "Wissel oortjie-oorsig"
+
+msgid "Toggle the tab overview."
+msgstr "Wissel die oortjie-oorsig."
+
+msgid "Change Terminal Title…"
+msgstr "Verander terminaaltitel…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "Vra vir 'n nuwe titel vir die huidige terminaal."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "Vra vir 'n nuwe titel vir die huidige oortjie."
+
+msgid "Split the terminal to the left."
+msgstr "Verdeel die terminaal na links."
+
+msgid "Split the terminal to the right."
+msgstr "Verdeel die terminaal na regs."
+
+msgid "Split the terminal up."
+msgstr "Verdeel die terminaal na bo."
+
+msgid "Split the terminal down."
+msgstr "Verdeel die terminaal na onder."
+
+msgid "Focus Split: Previous"
+msgstr "Fokus verdeling: vorige"
+
+msgid "Focus the previous split, if any."
+msgstr "Fokus die vorige verdeling, indien enige."
+
+msgid "Focus Split: Next"
+msgstr "Fokus verdeling: volgende"
+
+msgid "Focus the next split, if any."
+msgstr "Fokus die volgende verdeling, indien enige."
+
+msgid "Focus Split: Left"
+msgstr "Fokus verdeling: links"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "Fokus die verdeling na links, as dit bestaan."
+
+msgid "Focus Split: Right"
+msgstr "Fokus verdeling: regs"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "Fokus die verdeling na regs, as dit bestaan."
+
+msgid "Focus Split: Up"
+msgstr "Fokus verdeling: bo"
+
+msgid "Focus the split above, if it exists."
+msgstr "Fokus die verdeling bo, as dit bestaan."
+
+msgid "Focus Split: Down"
+msgstr "Fokus verdeling: onder"
+
+msgid "Focus the split below, if it exists."
+msgstr "Fokus die verdeling onder, as dit bestaan."
+
+msgid "Focus Window: Previous"
+msgstr "Fokus venster: vorige"
+
+msgid "Focus the previous window, if any."
+msgstr "Fokus die vorige venster, indien enige."
+
+msgid "Focus Window: Next"
+msgstr "Fokus venster: volgende"
+
+msgid "Focus the next window, if any."
+msgstr "Fokus die volgende venster, indien enige."
+
+msgid "Toggle Split Zoom"
+msgstr "Wissel verdelingsvergroting"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "Wissel die vergrotingstoestand van die huidige verdeling."
+
+msgid "Toggle Read-Only Mode"
+msgstr "Wissel leesalleen-modus"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "Wissel leesalleen-modus vir die huidige oppervlak."
+
+msgid "Equalize Splits"
+msgstr "Maak verdelings ewe groot"
+
+msgid "Equalize the size of all splits."
+msgstr "Maak alle verdelings ewe groot."
+
+msgid "Reset Window Size"
+msgstr "Stel venstergrootte terug"
+
+msgid "Reset the window size to the default."
+msgstr "Stel die venstergrootte terug na die verstek."
+
+msgid "Toggle Inspector"
+msgstr "Wissel inspekteur"
+
+msgid "Toggle the inspector."
+msgstr "Wissel die inspekteur."
+
+msgid "Show the GTK Inspector"
+msgstr "Wys die GTK-inspekteur"
+
+msgid "Show the GTK inspector."
+msgstr "Wys die GTK-inspekteur."
+
+msgid "Show On-Screen Keyboard"
+msgstr "Wys sleutelbord op die skerm"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "Wys die sleutelbord op die skerm, indien teenwoordig."
+
+msgid "Open Config Using OS editor"
+msgstr "Maak opstelling oop met stelselredigeerder"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "Maak die opstellingslêer oop met die stelsel se verstekredigeerder."
+
+msgid "Open Config in New Terminal Window"
+msgstr "Maak opstelling oop in nuwe terminaalvenster"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "Maak die opstellingslêer in 'n nuwe venster oop met $EDITOR of $VISUAL."
+
+msgid "Reload Config"
+msgstr "Laai opstelling weer"
+
+msgid "Reload the config file."
+msgstr "Laai die opstellingslêer weer."
+
+msgid "Close Terminal"
+msgstr "Sluit terminaal"
+
+msgid "Close the current terminal."
+msgstr "Sluit die huidige terminaal."
+
+msgid "Close the current tab."
+msgstr "Sluit die huidige oortjie."
+
+msgid "Close Other Tabs"
+msgstr "Sluit ander oortjies"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "Sluit alle oortjies in hierdie venster behalwe die huidige een."
+
+msgid "Close Tabs to the Right"
+msgstr "Sluit oortjies na regs"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "Sluit alle oortjies regs van die huidige een."
+
+msgid "Close the current window."
+msgstr "Sluit die huidige venster."
+
+msgid "Close All Windows"
+msgstr "Sluit alle vensters"
+
+msgid "Close all windows."
+msgstr "Sluit alle vensters."
+
+msgid "Toggle Maximize"
+msgstr "Wissel maksimeer"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "Wissel die gemaksimeerde toestand van die huidige venster."
+
+msgid "Toggle Fullscreen"
+msgstr "Wissel volskerm"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "Wissel die volskermtoestand van die huidige venster."
+
+msgid "Toggle Window Decorations"
+msgstr "Wissel vensterversiering"
+
+msgid "Toggle the window decorations."
+msgstr "Wissel die vensterversiering."
+
+msgid "Toggle Float on Top"
+msgstr "Wissel bo-op-ander-vensters"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "Wissel die toestand van die huidige venster om bo-op ander vensters te bly."
+
+msgid "Toggle Secure Input"
+msgstr "Wissel veilige invoer"
+
+msgid "Toggle secure input mode."
+msgstr "Wissel veilige invoermodus."
+
+msgid "Toggle Mouse Reporting"
+msgstr "Wissel muisrapportering"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "Wissel of muisgebeure aan terminaaltoepassings gerapporteer word."
+
+msgid "Toggle Background Opacity"
+msgstr "Wissel agtergronddeursigtigheid"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "Wissel die agtergronddeursigtigheid van 'n venster wat deursigtig begin het."
+
+msgid "Check for Updates"
+msgstr "Kyk vir opdaterings"
+
+msgid "Check for updates to the application."
+msgstr "Kyk vir opdaterings vir die toepassing."
+
+msgid "Undo"
+msgstr "Ontdoen"
+
+msgid "Undo the last action."
+msgstr "Ontdoen die laaste handeling."
+
+msgid "Redo"
+msgstr "Herdoen"
+
+msgid "Redo the last undone action."
+msgstr "Herdoen die laaste ontdane handeling."
+
+msgid "Quit the application."
+msgstr "Verlaat die toepassing."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "Sit 'n bietjie Ghostty in u terminaal."

@@ -1,0 +1,2608 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "Lietotņu veikals"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "Pievienot, noņemt vai atjaunināt Flatpak programmatūru šajā datorā"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Sistēma;Pakotne;Pārvaldnieks;Atklāt;Flatpak;Programmatūra;Lietotne;Veikals;"
+
+msgid "New Window"
+msgstr "Jauns logs"
+
+msgid "Discover and install apps"
+msgstr "Atklājiet un instalējiet lietotnes"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Ātrs un moderns lietotņu veikals Linux videi, kas orientēts uz Flatpak lietotņu un papildinājumu atklāšanu un instalēšanu, īpaši no Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Ierindojiet vairākas instalēšanas un turpiniet pārlūkot"
+
+msgid "Easily view app permissions"
+msgstr "Viegli skatiet lietotņu atļaujas"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Pierakstieties Flathub, lai skatītu un pārvaldītu savu izlasi"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Meklējiet lietotnes tieši no GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Sākumlapa, kurā redzamas Flathub lietotnes"
+
+msgid "App page for Exhibit"
+msgstr "Lietotnes Exhibit lapa"
+
+msgid "Library page"
+msgstr "Bibliotēkas lapa"
+
+msgid "Search page"
+msgstr "Meklēšanas lapa"
+
+msgid "Category page"
+msgstr "Kategorijas lapa"
+
+msgid "Stopped Receiving Updates"
+msgstr "Atjauninājumu saņemšana ir pārtraukta"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Atinstalēt"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Instalēt"
+
+msgid "Add-on"
+msgstr "Papildinājums"
+
+msgid "Manage Add-Ons"
+msgstr "Pārvaldīt papildinājumus"
+
+msgid "No Add-Ons Visible"
+msgstr "Nav redzamu papildinājumu"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "Jūsu pašreizējie filtra iestatījumi paslēpj visus zināmos papildinājumus. Mēģiniet tos pielāgot."
+
+msgid "Add-on Page"
+msgstr "Papildinājuma lapa"
+
+msgid "Download"
+msgstr "Lejupielādēt"
+
+msgid "Installed"
+msgstr "Instalēta"
+
+msgid "Downloads/Month"
+msgstr "Lejupielādes mēnesī"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Pamata atjauninājumu saņemšana ir pārtraukta"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Šis papildinājums izmanto izpildlaiku, kas vairs nesaņem atjauninājumus vai drošības labojumus. Tā izmantošana var kļūt nedroša."
+
+msgid "Other Sources"
+msgstr "Citi avoti"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Papildinājums lietotnei %s"
+
+msgid "Show Less"
+msgstr "Rādīt mazāk"
+
+msgid "Show More"
+msgstr "Rādīt vairāk"
+
+msgid "Download Stats"
+msgstr "Lejupielāžu statistika"
+
+msgid "Age Rating"
+msgstr "Vecuma ierobežojums"
+
+msgid "Cartoon Violence"
+msgstr "Multfilmu vardarbība"
+
+msgid "No information regarding cartoon violence"
+msgstr "Nav informācijas par multfilmu vardarbību"
+
+msgid "Fantasy Violence"
+msgstr "Fantāzijas vardarbība"
+
+msgid "No information regarding fantasy violence"
+msgstr "Nav informācijas par fantāzijas vardarbību"
+
+msgid "Realistic Violence"
+msgstr "Reālistiska vardarbība"
+
+msgid "No information regarding realistic violence"
+msgstr "Nav informācijas par reālistisku vardarbību"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "Vardarbība ar asinsizliešanu"
+
+msgid "No information regarding bloodshed"
+msgstr "Nav informācijas par asinsizliešanu"
+
+msgid "Sexual Violence"
+msgstr "Seksuāla vardarbība"
+
+msgid "No information regarding sexual violence"
+msgstr "Nav informācijas par seksuālu vardarbību"
+
+msgid "Alcohol"
+msgstr "Alkohols"
+
+msgid "No information regarding references to alcohol"
+msgstr "Nav informācijas par atsaucēm uz alkoholu"
+
+msgid "Narcotics"
+msgstr "Narkotikas"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "Nav informācijas par atsaucēm uz nelegālajām narkotikām"
+
+msgid "Tobacco"
+msgstr "Tabaka"
+
+msgid "No information regarding references to tobacco products"
+msgstr "Nav informācijas par atsaucēm uz tabakas izstrādājumiem"
+
+msgid "Nudity"
+msgstr "Kailums"
+
+msgid "No information regarding nudity of any sort"
+msgstr "Nav informācijas par jebkāda veida kailumu"
+
+msgid "Sexual Themes"
+msgstr "Seksuālas tēmas"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "Nav informācijas par atsaucēm uz seksuāla rakstura tēmām vai to attēlojumiem"
+
+msgid "Profanity"
+msgstr "Rupja valoda"
+
+msgid "No information regarding profanity of any kind"
+msgstr "Nav informācijas par jebkāda veida rupju valodu"
+
+msgid "Inappropriate Humor"
+msgstr "Nepiemērots humors"
+
+msgid "No information regarding inappropriate humor"
+msgstr "Nav informācijas par nepiemērotu humoru"
+
+msgid "Discrimination"
+msgstr "Diskriminācija"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "Nav informācijas par jebkāda veida diskriminējošu valodu"
+
+msgid "Advertising"
+msgstr "Reklāma"
+
+msgid "No information regarding advertising of any kind"
+msgstr "Nav informācijas par jebkāda veida reklāmu"
+
+msgid "Gambling"
+msgstr "Azartspēles"
+
+msgid "No information regarding gambling of any kind"
+msgstr "Nav informācijas par jebkāda veida azartspēlēm"
+
+msgid "Purchasing"
+msgstr "Pirkumi"
+
+msgid "No information regarding the ability to spend money"
+msgstr "Nav informācijas par iespēju tērēt naudu"
+
+msgid "Chat Between Users"
+msgstr "Tērzēšana starp lietotājiem"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "Nav informācijas par veidiem, kā tērzēt ar citiem lietotājiem"
+
+msgid "Audio Chat Between Users"
+msgstr "Audio tērzēšana starp lietotājiem"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "Nav informācijas par veidiem, kā runāt ar citiem lietotājiem"
+
+msgid "Contact Details"
+msgstr "Kontaktinformācija"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "Nav informācijas par sociālo tīklu lietotājvārdu vai e-pasta adrešu kopīgošanu"
+
+msgid "Identifying Information"
+msgstr "Identificējoša informācija"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "Nav informācijas par lietotāja informācijas kopīgošanu ar trešajām pusēm"
+
+msgid "Location Sharing"
+msgstr "Atrašanās vietas kopīgošana"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "Nav informācijas par fiziskās atrašanās vietas kopīgošanu ar citiem lietotājiem"
+
+msgid "Prostitution"
+msgstr "Prostitūcija"
+
+msgid "No information regarding references to prostitution"
+msgstr "Nav informācijas par atsaucēm uz prostitūciju"
+
+msgid "Adultery"
+msgstr "Laulības pārkāpšana"
+
+msgid "No information regarding references to adultery"
+msgstr "Nav informācijas par atsaucēm uz laulības pārkāpšanu"
+
+msgid "Sexualized Characters"
+msgstr "Seksualizēti tēli"
+
+msgid "No information regarding sexualized characters"
+msgstr "Nav informācijas par seksualizētiem tēliem"
+
+msgid "Desecration"
+msgstr "Apgānīšana"
+
+msgid "No information regarding references to desecration"
+msgstr "Nav informācijas par atsaucēm uz apgānīšanu"
+
+msgid "Human Remains"
+msgstr "Cilvēku mirstīgās atliekas"
+
+msgid "No information regarding visible dead human remains"
+msgstr "Nav informācijas par redzamām miruša cilvēka mirstīgajām atliekām"
+
+msgid "Slavery"
+msgstr "Verdzība"
+
+msgid "No information regarding references to slavery"
+msgstr "Nav informācijas par atsaucēm uz verdzību"
+
+msgid "Does not include references to drugs"
+msgstr "Nav atsauču uz narkotikām"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "Nav lamu vārdu, rupjas valodas un cita veida skarbas valodas"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "Nav reklāmu vai naudas darījumu"
+
+msgid "Does not include sex or nudity"
+msgstr "Nav seksa vai kailuma"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "Nav nekontrolētas tērzēšanas funkcionalitātes"
+
+msgid "Does not include violence"
+msgstr "Nav vardarbības"
+
+msgid "Drugs"
+msgstr "Narkotikas"
+
+msgid "Strong Language"
+msgstr "Skarba valoda"
+
+msgid "Money"
+msgstr "Nauda"
+
+msgid "Social"
+msgstr "Sociālais"
+
+msgid "Violence"
+msgstr "Vardarbība"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "Visi"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s vecuma ierobežojums nav zināms"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s ir piemērota ikvienam"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s ir piemērota maziem bērniem"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s ir piemērota bērniem"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s ir piemērota pusaudžiem"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s ir piemērota pieaugušajiem"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s ir piemērota: %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "Sistēmas mape %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Mājas apakšmape %s"
+
+msgid "Host system folders"
+msgstr "Resursdatora sistēmas mapes"
+
+msgid "Host system configuration from /etc"
+msgstr "Resursdatora sistēmas konfigurācija no /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Darbvirsmas apakšmape %s"
+
+msgid "Desktop folder"
+msgstr "Darbvirsmas mape"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "Dokumentu apakšmape %s"
+
+msgid "Documents folder"
+msgstr "Dokumentu mape"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "Mūzikas apakšmape %s"
+
+msgid "Music folder"
+msgstr "Mūzikas mape"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "Attēlu apakšmape %s"
+
+msgid "Pictures folder"
+msgstr "Attēlu mape"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "Publiskās koplietošanas apakšmape %s"
+
+msgid "Public Share folder"
+msgstr "Publiskās koplietošanas mape"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "Video apakšmape %s"
+
+msgid "Videos folder"
+msgstr "Video mape"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "Sagatavju apakšmape %s"
+
+msgid "Templates folder"
+msgstr "Sagatavju mape"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Lietotāja kešatmiņas apakšmape %s"
+
+msgid "User cache folder"
+msgstr "Lietotāja kešatmiņas mape"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Lietotāja konfigurācijas apakšmape %s"
+
+msgid "User configuration folder"
+msgstr "Lietotāja konfigurācijas mape"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Lietotāja datu apakšmape %s"
+
+msgid "User data folder"
+msgstr "Lietotāja datu mape"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Lietotāja izpildlaika apakšmape %s"
+
+msgid "User runtime folder"
+msgstr "Lietotāja izpildlaika mape"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Piekļuve failu sistēmai: %s"
+
+msgid "Unknown filesystem path"
+msgstr "Nezināms failu sistēmas ceļš"
+
+msgid "Download Size"
+msgstr "Lejupielādes izmērs"
+
+msgid "Installed Size"
+msgstr "Instalētais izmērs"
+
+msgid "Amount to download from the internet"
+msgstr "Apjoms, ko lejupielādēt no interneta"
+
+msgid "Size on Disk"
+msgstr "Izmērs diskā"
+
+msgid "Open user data folder"
+msgstr "Atvērt lietotāja datu mapi"
+
+msgid "Your User Data"
+msgstr "Jūsu lietotāja dati"
+
+msgid "Caches, settings, and other app data"
+msgstr "Kešatmiņa, iestatījumi un citi lietotnes dati"
+
+msgid "Cache"
+msgstr "Kešatmiņa"
+
+msgid "Temporary cached data"
+msgstr "Pagaidu kešatmiņā saglabātie dati"
+
+msgid "Clear Cache"
+msgstr "Notīrīt kešatmiņu"
+
+msgid "Installed Runtime Size"
+msgstr "Instalētā izpildlaika izmērs"
+
+msgid "Runtime Download Size"
+msgstr "Izpildlaika lejupielādes izmērs"
+
+msgid "N/A"
+msgstr "Nav pieejams"
+
+msgid "Storage"
+msgstr "Krātuve"
+
+msgid "Verified"
+msgstr "Pārbaudīts"
+
+msgid "The Bazaar Contributors"
+msgstr "Bazaar līdzstrādnieki"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "Īpaša pateicība"
+
+msgid "Logged Out Successfully!"
+msgstr "Veiksmīgi izrakstīts!"
+
+msgid "Performing setup…"
+msgstr "Notiek iestatīšana…"
+
+msgid "Set Up Flathub?"
+msgstr "Iestatīt Flathub?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub šajā sistēmā nav iestatīts. Ja tas nav pieejams, jūs nevarēsit pārlūkot un instalēt lietotnes programmā Bazaar.\n"
+"\n"
+"Jūs joprojām varat izmantot Bazaar, lai pārlūkotu un noņemtu jau instalētās lietotnes."
+
+msgid "Later"
+msgstr "Vēlāk"
+
+msgid "Set Up Flathub"
+msgstr "Iestatīt Flathub"
+
+msgid "A backend error occurred"
+msgstr "Radās aizmugures kļūda"
+
+msgid "Refreshing…"
+msgstr "Notiek atsvaidzināšana…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "Notiek %d lietotņu ielāde…"
+
+msgid "Failed to open file"
+msgstr "Neizdevās atvērt failu"
+
+msgid "Failed to load metainfo"
+msgstr "Neizdevās ielādēt metainfo"
+
+msgid "An initialization error occurred"
+msgstr "Radās inicializācijas kļūda"
+
+msgid "Checking for updates…"
+msgstr "Notiek atjauninājumu meklēšana…"
+
+msgid "Failed to check for updates"
+msgstr "Neizdevās pārbaudīt atjauninājumus"
+
+msgid "Could not find app"
+msgstr "Lietotne nav atrasta"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Notiek %d lietotnes ielāde…"
+msgstr[1] "Notiek %d lietotņu ielāde…"
+msgstr[2] "Notiek %d lietotņu ielāde…"
+
+msgid "Writing to cache…"
+msgstr "Notiek rakstīšana kešatmiņā…"
+
+msgid "Removing remote…"
+msgstr "Notiek attālās krātuves noņemšana…"
+
+msgid "Could not remove remote"
+msgstr "Neizdevās noņemt attālo krātuvi"
+
+msgid "Show All"
+msgstr "Rādīt visu"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Visi: “%s”"
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d lietotnes"
+
+msgid "Failed to Load Article"
+msgstr "Neizdevās ielādēt rakstu"
+
+msgid "All apps are already installed"
+msgstr "Visas lietotnes jau ir instalētas"
+
+msgid "_OK"
+msgstr "_Labi"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Instalēt %u lietotni?"
+msgstr[1] "Instalēt %u lietotnes?"
+msgstr[2] "Instalēt %u lietotņu?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Tiks instalēts tālāk minētais. Var tikt instalēti arī papildu koplietotie komponenti"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "Tiks instalēti %d papildinājumi."
+
+msgid "Additionally, addons will be installed."
+msgstr "Papildus tiks instalēti papildinājumi."
+
+msgid "_Cancel"
+msgstr "_Atcelt"
+
+msgid "_Install All"
+msgstr "_Instalēt visu"
+
+msgid "Bundle Installation"
+msgstr "Pakotnes instalēšana"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Papildu atkarības var aizņemt papildu vietu"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Šīs lietotnes instalēšanai var būt nepieciešams pievienot jaunu programmatūras avotu. Citas lietotnes no šī avota parādīsies programmā Bazaar.\n"
+"\n"
+"Pievienojiet šo avotu tikai tad, ja esat pārliecināts, ka tam uzticaties."
+
+msgid "Successfully Installed!"
+msgstr "Veiksmīgi instalēta!"
+
+msgid "Open"
+msgstr "Atvērt"
+
+msgid "Show App Details"
+msgstr "Rādīt lietotnes informāciju"
+
+msgid "Already Installed"
+msgstr "Jau instalēta"
+
+msgid "Installation Failed"
+msgstr "Instalēšana neizdevās"
+
+msgid "Unknown install size"
+msgstr "Nezināms instalēšanas izmērs"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Instalēšanai nepieciešams aptuveni %s"
+
+msgid "No special permissions"
+msgstr "Nav īpašu atļauju"
+
+msgid "Place Applet"
+msgstr "Novietot sīklietotni"
+
+msgid "Choose where to add this applet."
+msgstr "Izvēlieties, kur pievienot šo sīklietotni."
+
+msgid "Cancel"
+msgstr "Atcelt"
+
+msgid "Panel"
+msgstr "Panelis"
+
+msgid "Dock"
+msgstr "Doks"
+
+msgid "No Curation"
+msgstr "Nav kurācijas"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Šajā sistēmā nav pieejama kurācijas informācija. Jūs joprojām varat pārlūkot lietotnes pakalpojumā Flathub"
+
+msgid "Browse Flathub"
+msgstr "Pārlūkot Flathub"
+
+msgid "Offline"
+msgstr "Bezsaistē"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s līdz %s, visvairāk %s ar %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "Instalēšanas:"
+
+msgid "Not Verified"
+msgstr "Nav pārbaudīts"
+
+msgid "Developer information not available."
+msgstr "Izstrādātāja informācija nav pieejama."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "Lietotnes ID %s piederība nav pārbaudīta, un tā var būt kopienas pakotne."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "Lietotnes ID %s piederību manuāli ir pārbaudījusi Flathub komanda."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "<b>%2$s</b> ir pārbaudījis lietotnes ID %1$s piederību <b>%3$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Lietotnes ID %1$s piederība ir pārbaudīta, izmantojot %2$s."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "Lietotnes ID %s piederība ir pārbaudīta."
+
+msgid "Bazaar Release"
+msgstr "Bazaar laidiens"
+
+msgid "Full Release Notes"
+msgstr "Pilnīgas laidiena piezīmes"
+
+msgid "This release was made possible by users like you!"
+msgstr "Šo laidienu ir iespējams veikt pateicoties tādiem lietotājiem kā jūs!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Man patīk veidot Bazaar, bet es to nevaru izdarīt viens. Atbalstiet turpmāko izstrādi, ziedojot pakalpojumā Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "Ziedot Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Kas jauns versijā %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Izdots %Y. gada %-e. %B"
+
+msgid "Choose an Installation"
+msgstr "Izvēlieties instalāciju"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Jums ir instalētas vairākas šīs lietotnes versijas. Ar kuru vēlaties turpināt?"
+
+msgid "Details"
+msgstr "Informācija"
+
+msgid "Copy"
+msgstr "Kopēt"
+
+msgid "Copied!"
+msgstr "Nokopēts!"
+
+msgid "Favorite Count"
+msgstr "Izlases skaits"
+
+msgid "Failed to update favorite"
+msgstr "Neizdevās atjaunināt izlasi"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Piesakieties pakalpojumā Flathub, lai pārvaldītu izlasi"
+
+msgid "Log In"
+msgstr "Pieteikties"
+
+msgid "Favorites"
+msgstr "Izlase"
+
+msgid "Install All"
+msgstr "Instalēt visu"
+
+msgid "No Favorites"
+msgstr "Nav izlases"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Šeit parādīsies lietotnes, ko atzīmēsiet kā izlasi"
+
+msgid "Support This Application"
+msgstr "Atbalstīt šo lietotni"
+
+msgid "Remove From Favorites"
+msgstr "Noņemt no izlases"
+
+msgid "Failed to remove favorite"
+msgstr "Neizdevās noņemt no izlases"
+
+msgid "Previous"
+msgstr "Iepriekšējais"
+
+msgid "Next"
+msgstr "Nākamais"
+
+msgid "Editing"
+msgstr "Rediģēšana"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Mikseris"
+
+msgid "Music"
+msgstr "Mūzika"
+
+msgid "Player"
+msgstr "Atskaņotājs"
+
+msgid "Recorder"
+msgstr "Ierakstītājs"
+
+msgid "Sequencer"
+msgstr "Sekvenceris"
+
+msgid "Tuner"
+msgstr "Skaņotājs"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "Emulation"
+msgstr "Emulācija"
+
+msgid "Action"
+msgstr "Darbība"
+
+msgid "Adventure"
+msgstr "Piedzīvojumi"
+
+msgid "Arcade"
+msgstr "Arkādes"
+
+msgid "Blocks"
+msgstr "Bloki"
+
+msgid "Board"
+msgstr "Galda"
+
+msgid "Card"
+msgstr "Kārtis"
+
+msgid "Kids"
+msgstr "Bērniem"
+
+msgid "Logic"
+msgstr "Loģika"
+
+msgid "Role Playing"
+msgstr "Lomu spēles"
+
+msgid "Shooter"
+msgstr "Šāvēji"
+
+msgid "Simulation"
+msgstr "Simulatori"
+
+msgid "Sports"
+msgstr "Sports"
+
+msgid "Strategy"
+msgstr "Stratēģijas"
+
+msgid "Browsers"
+msgstr "Pārlūki"
+
+msgid "Chat"
+msgstr "Tērzēšana"
+
+msgid "Mail"
+msgstr "Pasts"
+
+msgid "File Sharing"
+msgstr "Failu koplietošana"
+
+msgid "Audio & Video"
+msgstr "Audio un video"
+
+msgid "Media"
+msgstr "Multivide"
+
+msgid "More Audio & Video"
+msgstr "Vairāk audio un video"
+
+msgid "Developer Tools"
+msgstr "Izstrādes rīki"
+
+msgid "Develop"
+msgstr "Izstrāde"
+
+msgid "More Developer Tools"
+msgstr "Vairāk izstrādes rīku"
+
+msgid "Education"
+msgstr "Izglītība"
+
+msgid "Learn"
+msgstr "Mācīties"
+
+msgid "More Education"
+msgstr "Vairāk izglītības"
+
+msgid "Gaming"
+msgstr "Spēles"
+
+msgid "Play"
+msgstr "Spēlēt"
+
+msgid "More Gaming"
+msgstr "Vairāk spēļu"
+
+msgid "Graphics & Photography"
+msgstr "Grafika un fotogrāfija"
+
+msgid "Create"
+msgstr "Radīt"
+
+msgid "More Graphics & Photography"
+msgstr "Vairāk grafikas un fotogrāfijas"
+
+msgid "Networking"
+msgstr "Tīkli"
+
+msgid "Internet"
+msgstr "Internets"
+
+msgid "More Networking"
+msgstr "Vairāk tīklu"
+
+msgid "Productivity"
+msgstr "Produktivitāte"
+
+msgid "Work"
+msgstr "Darbs"
+
+msgid "More Productivity"
+msgstr "Vairāk produktivitātes"
+
+msgid "Science"
+msgstr "Zinātne"
+
+msgid "More Science"
+msgstr "Vairāk zinātnes"
+
+msgid "System"
+msgstr "Sistēma"
+
+msgid "More System"
+msgstr "Vairāk sistēmas"
+
+msgid "Utilities"
+msgstr "Utilītas"
+
+msgid "Tools"
+msgstr "Rīki"
+
+msgid "More Utilities"
+msgstr "Vairāk utilītu"
+
+msgid "Trending"
+msgstr "Aktuālais"
+
+msgid "More Trending"
+msgstr "Vairāk aktuālā"
+
+msgid "Popular"
+msgstr "Populārs"
+
+msgid "More Popular"
+msgstr "Vairāk populārā"
+
+msgid "Recently Added"
+msgstr "Nesen pievienots"
+
+msgid "New"
+msgstr "Jauns"
+
+msgid "More New"
+msgstr "Vairāk jaunā"
+
+msgid "Recently Updated"
+msgstr "Nesen atjaunināts"
+
+msgid "Updated"
+msgstr "Atjaunināts"
+
+msgid "More Updated"
+msgstr "Vairāk atjaunināto"
+
+msgid "Mobile"
+msgstr "Mobilie"
+
+msgid "More Mobile"
+msgstr "Vairāk mobilo"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Vairāk Adwaita"
+
+msgid "KDE Apps"
+msgstr "KDE lietotnes"
+
+msgid "More KDE Apps"
+msgstr "Vairāk KDE lietotņu"
+
+msgid "Made for COSMIC™"
+msgstr "Veidots COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "COSMIC™ videi"
+
+msgid "More COSMIC Apps"
+msgstr "Vairāk COSMIC lietotņu"
+
+msgid "Games"
+msgstr "Spēles"
+
+msgid "More Games"
+msgstr "Vairāk spēļu"
+
+msgid "Emulators"
+msgstr "Emulatori"
+
+msgid "More Emulators"
+msgstr "Vairāk emulatoru"
+
+msgid "Launchers"
+msgstr "Palaidēji"
+
+msgid "More Game Launchers"
+msgstr "Vairāk spēļu palaidēju"
+
+msgid "Game Tools"
+msgstr "Spēļu rīki"
+
+msgid "More Game Tools"
+msgstr "Vairāk spēļu rīku"
+
+msgid "New Year, New Workflows"
+msgstr "Jauns gads, jauna darba plūsma"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Lietotnes piezīmju rakstīšanai, uzdevumu izsekošanai un plānošanai"
+
+msgid "Staff Picks"
+msgstr "Redaktoru izvēle"
+
+msgid "Apps we love right now"
+msgstr "Lietotnes, kas mums šobrīd patīk"
+
+msgid "Get Creative"
+msgstr "Radiet"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Būtiskas lietotnes zīmēšanai, fotoattēlu rediģēšanai un digitālajam dizainam"
+
+msgid "Build Native Apps"
+msgstr "Veidojiet natīvas lietotnes"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Izstrādājiet lietotnes, kas izskatās piemēroti jūsu sistēmai"
+
+msgid "Stay in Touch"
+msgstr "Esiet sakaros"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Būtiskas sadarbības un saziņas lietotnes"
+
+msgid "Ready for Vacations"
+msgstr "Gatavi atvaļinājumam"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Kartes, sabiedriskais transports, laikapstākļi un ceļojumu plānošanas lietotnes"
+
+msgid "Smarter Every Day"
+msgstr "Gudrāks ar katru dienu"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Lietotnes, kas palīdz mācīties, pētīt un rakstīt"
+
+msgid "Get Cozy"
+msgstr "Iekārtojieties omulīgi"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Lieliskas lietotnes lasīšanai, filmu skatīšanai un spēlēšanai"
+
+msgid "Web Developer Essentials"
+msgstr "Tīmekļa izstrādātāja pamatrīki"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Vietņu veidošana ir jautrāka ar šīm lietotnēm"
+
+msgid "Take Better Notes"
+msgstr "Rakstiet labākas piezīmes"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Atrodiet savu jauno iecienīto piezīmju rīku"
+
+msgid "Get Focused"
+msgstr "Koncentrējieties"
+
+msgid "Great apps for task management"
+msgstr "Lieliskas lietotnes uzdevumu pārvaldībai"
+
+msgid "Make Some Noise"
+msgstr "Sacelt troksni"
+
+msgid "Apps for creating and producing music"
+msgstr "Lietotnes mūzikas radīšanai un producēšanai"
+
+msgid "Get To Work"
+msgstr "Ķerieties pie darba"
+
+msgid "Essential office apps"
+msgstr "Būtiskas biroja lietotnes"
+
+msgid "Flathub Not Added"
+msgstr "Flathub nav pievienots"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Flathub attālā krātuve netika atrasta nevienā no jūsu Flatpak instalācijām"
+
+msgid "Can't Reach Flathub"
+msgstr "Nevar sasniegt Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "Jūs joprojām varat pārvaldīt un meklēt lietotnes."
+
+msgid "Search Apps"
+msgstr "Meklēt lietotnes"
+
+msgid "Reconnect"
+msgstr "Atkārtoti savienoties"
+
+msgid "App of the Day"
+msgstr "Dienas lietotne"
+
+msgid "On the Go"
+msgstr "Ceļā"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Lietotnes jūsu Linux tālruņiem un planšetdatoriem"
+
+msgid "More Mobile Apps"
+msgstr "Vairāk mobilo lietotņu"
+
+msgid "We​ ♥​ Games"
+msgstr "Mēs​ ♥​ spēles"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Spēles un lietotnes jūsu iecienīto nosaukumu palaišanai"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Šis ir lokāls priekšskatījums, dažas detaļas var atšķirties no publicētā ieraksta"
+
+msgid "Preview Store Appearance"
+msgstr "Priekšskatīt veikala izskatu"
+
+msgid "_Support"
+msgstr "_Atbalstīt"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Šī lietotne izmanto izpildlaiku, kas vairs nesaņem atjauninājumus vai drošības labojumus. Tā izmantošana var kļūt nedroša."
+
+msgid "Trash Data"
+msgstr "Dzēst datus"
+
+msgid "Add-ons"
+msgstr "Papildinājumi"
+
+msgid "More Add-Ons"
+msgstr "Vairāk papildinājumu"
+
+msgid "Links"
+msgstr "Saites"
+
+msgid "Similar Apps"
+msgstr "Līdzīgas lietotnes"
+
+msgid "No URL"
+msgstr "Nav URL"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Šai lietotnei ir FLOSS licence, kas nozīmē, ka tās pirmkodu var pārbaudīt drošības nolūkos."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Šai lietotnei ir slēgta licence, kas nozīmē, ka pirmkods tiek izstrādāts privāti un neatkarīga trešā puse to nevar pārbaudīt."
+
+msgid "Other Apps From This Developer"
+msgstr "Citas šī izstrādātāja lietotnes"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Citas %s lietotnes"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s nav instalēta, taču tai joprojām ir <b>%s</b> datu."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "%s lietotnes"
+
+msgid "Apps by This Developer"
+msgstr "Šī izstrādātāja lietotnes"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d lietotne"
+msgstr[1] "%d lietotnes"
+msgstr[2] "%d lietotnes"
+
+msgid "Failed to Remove User Data"
+msgstr "Neizdevās noņemt lietotāja datus"
+
+msgid "Hardware Support"
+msgstr "Aparatūras atbalsts"
+
+msgid "Keyboard support"
+msgstr "Tastatūras atbalsts"
+
+msgid "Requires keyboards"
+msgstr "Nepieciešamas tastatūras"
+
+msgid "Recommends keyboards"
+msgstr "Ieteicamas tastatūras"
+
+msgid "Supports keyboards"
+msgstr "Atbalsta tastatūras"
+
+msgid "Unknown support for keyboards"
+msgstr "Nezināms tastatūru atbalsts"
+
+msgid "Mouse support"
+msgstr "Peles atbalsts"
+
+msgid "Requires mice or pointing devices"
+msgstr "Nepieciešamas peles vai rādītājierīces"
+
+msgid "Recommends mice or pointing devices"
+msgstr "Ieteicamas peles vai rādītājierīces"
+
+msgid "Supports mice or pointing devices"
+msgstr "Atbalsta peles vai rādītājierīces"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "Nezināms peļu vai rādītājierīču atbalsts"
+
+msgid "Touchscreen support"
+msgstr "Skārienekrāna atbalsts"
+
+msgid "Requires touchscreens"
+msgstr "Nepieciešami skārienekrāni"
+
+msgid "Recommends touchscreens"
+msgstr "Ieteicami skārienekrāni"
+
+msgid "Supports touchscreens"
+msgstr "Atbalsta skārienekrānus"
+
+msgid "Unknown support for touchscreens"
+msgstr "Nezināms skārienekrānu atbalsts"
+
+msgid "Mobile support"
+msgstr "Mobilo ierīču atbalsts"
+
+msgid "Works on mobile devices"
+msgstr "Darbojas mobilajās ierīcēs"
+
+msgid "May not work well on mobile devices"
+msgstr "Mobilajās ierīcēs var nedarboties labi"
+
+msgid "Desktop support"
+msgstr "Darbvirsmas atbalsts"
+
+msgid "Works well on large screens"
+msgstr "Labi darbojas lielos ekrānos"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s vislabāk darbojas uz noteiktas aparatūras"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s darbojas uz vairuma ierīču"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Atcelt"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Notiek atcelšana"
+
+msgid "_Open"
+msgstr "_Atvērt"
+
+msgid "Uninstall Application"
+msgstr "Atinstalēt lietotni"
+
+msgid "_Remove"
+msgstr "_Noņemt"
+
+msgid "Update"
+msgstr "Atjaunināt"
+
+msgid "Remove"
+msgstr "Noņemt"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Instalēt %s no %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Instalēt %s"
+
+msgid "Donate"
+msgstr "Ziedot"
+
+msgid "Search installed apps"
+msgstr "Meklēt instalētajās lietotnēs"
+
+msgid "No Apps Found"
+msgstr "Lietotnes nav atrastas"
+
+msgid "Search Store Instead"
+msgstr "Meklēt veikalā"
+
+msgid "Pending Updates"
+msgstr "Gaidošie atjauninājumi"
+
+msgid "Downloads"
+msgstr "Lejupielādes"
+
+msgid "Recently Uninstalled"
+msgstr "Nesen atinstalētās"
+
+msgid "Clear Finished Tasks"
+msgstr "Notīrīt pabeigtos uzdevumus"
+
+msgid "Sort Options"
+msgstr "Kārtošanas opcijas"
+
+msgid "Sort By"
+msgstr "Kārtot pēc"
+
+msgid "Name"
+msgstr "Nosaukums"
+
+msgid "Size"
+msgstr "Izmērs"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "Instalēto lietotņu sarakstā nav atrasta neviena atbilstība vaicājumam “%s”"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u pieejams atjauninājums"
+msgstr[1] "%u pieejami atjauninājumi"
+msgstr[2] "%u pieejami atjauninājumi"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u instalēta lietotne"
+msgstr[1] "%u instalētas lietotnes"
+msgstr[2] "%u instalētas lietotnes"
+
+msgid "No applications found"
+msgstr "Lietotnes nav atrastas"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Atrasta %u lietotne"
+msgstr[1] "Atrastas %u lietotnes"
+msgstr[2] "Atrastas %u lietotnes"
+
+msgid "Get Involved"
+msgstr "Iesaistieties"
+
+msgid "Learn More"
+msgstr "Uzzināt vairāk"
+
+msgid "Unknown License"
+msgstr "Nezināma licence"
+
+msgid "Community Built"
+msgstr "Kopienas veidota"
+
+msgid "Proprietary"
+msgstr "Slēgta"
+
+msgid "Special License"
+msgstr "Īpaša licence"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Šo lietotni atklāti izstrādā starptautiska kopiena.\n"
+"\n"
+"Jūs varat piedalīties un palīdzēt to padarīt vēl labāku."
+
+msgid "The license of this app is not known"
+msgstr "Šīs lietotnes licence nav zināma"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Šo lietotni atklāti izstrādā starptautiska kopiena, un tā ir izdota ar %s licenci.\n"
+"\n"
+"Jūs varat piedalīties un palīdzēt to padarīt vēl labāku."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Šī lietotne netiek izstrādāta atklāti, tāpēc tikai tās izstrādātāji zina, kā tā darbojas. Tā var būt nedroša tādos veidos, kurus ir grūti atklāt, un tā var mainīties bez uzraudzības.\n"
+"\n"
+"Var būt, ka jūs varat piedalīties šīs lietotnes izstrādē, bet var būt, ka nevarat."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Šī lietotne tiek izstrādāta ar īpašo licenci %s.\n"
+"\n"
+"Var būt, ka jūs varat piedalīties šīs lietotnes izstrādē, bet var būt, ka nevarat."
+
+msgid "License"
+msgstr "Licence"
+
+msgid "Connect to Flathub"
+msgstr "Savienoties ar Flathub"
+
+msgid "Something Went Wrong"
+msgstr "Radās kļūda"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Piesakieties, lai sinhronizētu savas izlases lietotnes dažādās ierīcēs"
+
+msgid "Finish"
+msgstr "Pabeigt"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Sveicināti, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Pievienot ikonu metainfo priekšskatījumam?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Metainfo faili paši par sevi neietver lietotņu ikonas. Vai vēlaties kādu atlasīt manuāli?"
+
+msgid "Skip"
+msgstr "Izlaist"
+
+msgid "Select Icon"
+msgstr "Atlasīt ikonu"
+
+msgid "Image Files"
+msgstr "Attēlu faili"
+
+msgid "New Permissions"
+msgstr "Jaunas atļaujas"
+
+msgid "_Accept"
+msgstr "_Pieņemt"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Jauna atļauja lietotnei %s"
+msgstr[1] "Jaunas atļaujas lietotnei %s"
+msgstr[2] "Jaunas atļaujas lietotnei %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Šim atjauninājumam nepieciešama šāda papildu atļauja"
+msgstr[1] "Šim atjauninājumam nepieciešamas šādas papildu atļaujas"
+msgstr[2] "Šim atjauninājumam nepieciešamas šādas papildu atļaujas"
+
+msgid "User"
+msgstr "Lietotājs"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Dzīves cikla beigas"
+
+msgid "Preferences"
+msgstr "Iestatījumi"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Tīkla savienojums ir ierobežots, automātiska veikala datu atsvaidzināšana ir apturēta"
+
+msgid "Refresh Manually"
+msgstr "Atsvaidzināt manuāli"
+
+msgid "App Updates"
+msgstr "Lietotņu atjauninājumi"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Automātiskie atjauninājumi tiks apturēti ierobežotos tīklos vai ieslēgtā enerģijas taupīšanas režīmā, lai ietaupītu datus un akumulatoru."
+
+msgid "_Automatic"
+msgstr "_Automātiski"
+
+msgid "Automatically check for and download app updates"
+msgstr "Automātiski pārbaudīt un lejupielādēt lietotņu atjauninājumus"
+
+msgid "_Manual"
+msgstr "_Manuāli"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Lietotņu atjauninājumu pārbaude un lejupielāde jāveic manuāli"
+
+msgid "Automatic Update _Notifications"
+msgstr "Automātisko atjauninājumu _paziņojumi"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Paziņot, kad atjauninājumi ir instalēti automātiski"
+
+msgid "Content Filters"
+msgstr "Satura filtri"
+
+msgid "_Free Software Only"
+msgstr "Tikai _brīvā programmatūra"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Paslēpt slēgtās lietotnes pārlūkošanas un meklēšanas laikā"
+
+msgid "F_lathub Results Only"
+msgstr "Tikai F_lathub rezultāti"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Ierobežot meklēšanas un pārlūkošanas rezultātus ar lietotnēm, kas pieejamas tikai pakalpojumā Flathub"
+
+msgid "_Verified Results Only"
+msgstr "Tikai _pārbaudīti rezultāti"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Paslēpt rezultātus, kas nav pārbaudīti pakalpojumā Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Paslēpt lietotnes ar beigušos _dzīves ciklu"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "Paslēpt lietotnes, kuras izstrādātāji vairs neatbalsta"
+
+msgid "Progress Bar Theme"
+msgstr "Progresa joslas motīvs"
+
+msgid "Accent Color"
+msgstr "Akcenta krāsa"
+
+msgid "Pride Colors"
+msgstr "Praida krāsas"
+
+msgid "Lesbian Pride Colors"
+msgstr "Lesbiešu praida krāsas"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Homoseksuālu vīriešu praida krāsas"
+
+msgid "Transgender Pride Colors"
+msgstr "Transpersonu praida krāsas"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Nebinārā praida krāsas"
+
+msgid "Bisexual Pride Colors"
+msgstr "Biseksuāļu praida krāsas"
+
+msgid "Asexual Pride Colors"
+msgstr "Aseksuāļu praida krāsas"
+
+msgid "Pansexual Pride Colors"
+msgstr "Panseksuāļu praida krāsas"
+
+msgid "Aromantic Pride Colors"
+msgstr "Aromantiķu praida krāsas"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Dzimumplūstošo praida krāsas"
+
+msgid "Polysexual Pride Colors"
+msgstr "Poliseksuāļu praida krāsas"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Omniseksuāļu praida krāsas"
+
+msgid "Aroace Pride Colors"
+msgstr "Aroace praida krāsas"
+
+msgid "Agender Pride Colors"
+msgstr "Agender praida krāsas"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Genderqueer praida krāsas"
+
+msgid "Intersex Pride Colors"
+msgstr "Interseksuāļu praida krāsas"
+
+msgid "Demigender Pride Colors"
+msgstr "Demidzimuma praida krāsas"
+
+msgid "Biromantic Pride Colors"
+msgstr "Biromantiķu praida krāsas"
+
+msgid "Disability Pride Colors"
+msgstr "Invaliditātes praida krāsas"
+
+msgid "Femboy Pride Colors"
+msgstr "Femboy praida krāsas"
+
+msgid "Neutrois Pride Colors"
+msgstr "Neutrois praida krāsas"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar jādarbojas fonā, lai pārbaudītu lietotņu atjauninājumus"
+
+msgid "Version History"
+msgstr "Versiju vēsture"
+
+msgid "Today"
+msgstr "Šodien"
+
+msgid "Yesterday"
+msgstr "Vakar"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "pirms %d dienas"
+msgstr[1] "pirms %d dienām"
+msgstr[2] "pirms %d dienām"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "pirms %d nedēļas"
+msgstr[1] "pirms %d nedēļām"
+msgstr[2] "pirms %d nedēļām"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "pirms %d mēneša"
+msgstr[1] "pirms %d mēnešiem"
+msgstr[2] "pirms %d mēnešiem"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "pirms %d gada"
+msgstr[1] "pirms %d gadiem"
+msgstr[2] "pirms %d gadiem"
+
+msgid "%e %B %Y"
+msgstr "%Y. gada %e. %B"
+
+#, c-format
+msgid "Version %s"
+msgstr "Versija %s"
+
+msgid "No details for this release"
+msgstr "Nav informācijas par šo laidienu"
+
+msgid "Get More Information"
+msgstr "Iegūt vairāk informācijas"
+
+msgid "_Version History"
+msgstr "_Versiju vēsture"
+
+msgid "Remotes"
+msgstr "Attālās krātuves"
+
+msgid "System Installation"
+msgstr "Sistēmas instalācija"
+
+msgid "Available to all users on this computer"
+msgstr "Pieejama visiem šī datora lietotājiem"
+
+msgid "User Installation"
+msgstr "Lietotāja instalācija"
+
+msgid "Only available to you"
+msgstr "Pieejama tikai jums"
+
+msgid "Remove Remote"
+msgstr "Noņemt attālo krātuvi"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Noņemt %s"
+
+msgid "Unused"
+msgstr "Neizmantota"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u lietotne instalēta"
+msgstr[1] "%u lietotnes instalētas"
+msgstr[2] "%u lietotnes instalētas"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Vai noņemt “%s”?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Jūs vairs nevarēsiet instalēt lietotnes no šīs lietotāja attālās krātuves."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Jūs vairs nevarēsiet instalēt lietotnes no šīs sistēmas attālās krātuves."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u lietotne noņemšanai"
+msgstr[1] "%u lietotnes noņemšanai"
+msgstr[2] "%u lietotnes noņemšanai"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Tālāk norādītā lietotne tika instalēta no šīs attālās krātuves, un tā tiks noņemta no jūsu konta kopā ar to."
+msgstr[1] "Tālāk norādītās lietotnes tika instalētas no šīs attālās krātuves, un tās tiks noņemtas no jūsu konta kopā ar to."
+msgstr[2] "Tālāk norādītās lietotnes tika instalētas no šīs attālās krātuves, un tās tiks noņemtas no jūsu konta kopā ar to."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Tālāk norādītā lietotne tika instalēta no šīs attālās krātuves, un tā tiks noņemta visiem lietotājiem kopā ar to."
+msgstr[1] "Tālāk norādītās lietotnes tika instalētas no šīs attālās krātuves, un tās tiks noņemtas visiem lietotājiem kopā ar to."
+msgstr[2] "Tālāk norādītās lietotnes tika instalētas no šīs attālās krātuves, un tās tiks noņemtas visiem lietotājiem kopā ar to."
+
+msgid "Uninstall"
+msgstr "Atinstalēt"
+
+msgid "Get"
+msgstr "Iegūt"
+
+msgid "Arbitrary Permissions"
+msgstr "Patvaļīgas atļaujas"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Šai lietotnei ir atļauja, kas netieši ļauj tai piešķirt sev <b>jebkuru citu vēlamo atļauju</b>, apejot Flatpak smilškasti.\n"
+"\n"
+"Tāpēc tā var darīt visu, ko var darīt priviliģēta lietotne bez smilškastes, piemēram, piekļūt visiem jūsu failiem un savienoties ar internetu.\n"
+"\n"
+"Citu atļauju apskate joprojām var dot labāku priekšstatu par to, ko lietotne, visticamāk, darīs."
+
+msgid "View Other Permissions"
+msgstr "Skatīt citas atļaujas"
+
+msgid "Safe"
+msgstr "Droša"
+
+msgid "App ID"
+msgstr "Lietotnes ID"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Šī lietotne izmanto novecojušu programmatūras platformas (SDK) versiju, un tajā var būt kļūdas vai drošības ievainojamības, kas netiks novērstas."
+
+msgid "Safety"
+msgstr "Drošība"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s ir droša"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s nav nedrošu atļauju"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s, visticamāk, ir droša"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s, iespējams, ir nedroša"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s ir nedroša"
+
+msgid "Back"
+msgstr "Atpakaļ"
+
+msgid "Previous Screenshot"
+msgstr "Iepriekšējais ekrānuzņēmums"
+
+msgid "Next Screenshot"
+msgstr "Nākamais ekrānuzņēmums"
+
+msgid "Copy Image"
+msgstr "Kopēt attēlu"
+
+msgid "Reset View"
+msgstr "Atiestatīt skatu"
+
+msgid "Zoom Out"
+msgstr "Tālināt"
+
+msgid "Zoom In"
+msgstr "Tuvināt"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u izpildlaika atjauninājums"
+msgstr[1] "%u izpildlaika atjauninājumi"
+msgstr[2] "%u izpildlaika atjauninājumi"
+
+msgid "Screenshots Carousel"
+msgstr "Ekrānuzņēmumu karuselis"
+
+msgid "No Screenshots"
+msgstr "Nav ekrānuzņēmumu"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Ekrānuzņēmums %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Ekrānuzņēmums %u"
+
+msgid "Clear Search"
+msgstr "Notīrīt meklēšanu"
+
+msgid "Filters"
+msgstr "Filtri"
+
+msgid "_Verified"
+msgstr "_Pārbaudīts"
+
+msgid "_Free/Open"
+msgstr "_Brīvs/atvērts"
+
+msgid "Non-_EOL"
+msgstr "Bez _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Izfiltrēt lietotnes ar beigušos dzīves ciklu"
+
+msgid "_Mobile Friendly"
+msgstr "Piemērots _mobilajām ierīcēm"
+
+msgid "Categories"
+msgstr "Kategorijas"
+
+msgid "Search Apps, Games, Software"
+msgstr "Meklēt lietotnes, spēles, programmatūru"
+
+msgid "Search Filters"
+msgstr "Meklēšanas filtri"
+
+msgid "Browse Categories"
+msgstr "Pārlūkot kategorijas"
+
+msgid "Categories Unavailable"
+msgstr "Kategorijas nav pieejamas"
+
+msgid "Search for apps using the search bar above."
+msgstr "Meklējiet lietotnes, izmantojot augstāk esošo meklēšanas joslu."
+
+msgid "No Applications Found"
+msgstr "Lietotnes nav atrastas"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Pakalpojumā Flathub nav atrasts neviens rezultāts vaicājumam “%s”"
+
+msgid "Browser"
+msgstr "Pārlūks"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Office"
+msgstr "Birojs"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Kalendārs"
+
+msgid "Messaging"
+msgstr "Ziņapmaiņa"
+
+msgid "Paint"
+msgstr "Zīmēšana"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Emulators"
+
+msgid "Copy Link"
+msgstr "Kopēt saiti"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Flathub lapa"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Projekta tīmekļa vietne"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Problēmu izsekotājs"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "BUJ"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Palīdzība"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Ziedot"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Tulkot"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Kontakti"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Pirmkods"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Piedalīties"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifests"
+
+msgid "Timeline"
+msgstr "Laika skala"
+
+msgid "Total"
+msgstr "Kopā"
+
+msgid "This Week"
+msgstr "Šonedēļ"
+
+msgid "Installs per day"
+msgstr "Instalēšanas dienā"
+
+msgid "World"
+msgstr "Pasaule"
+
+msgid "Installs per country"
+msgstr "Instalēšanas pa valstīm"
+
+msgid "Since 4/15/2024"
+msgstr "Kopš 15.04.2024."
+
+msgid "No Results Found"
+msgstr "Rezultāti nav atrasti"
+
+msgid "Search failed"
+msgstr "Meklēšana neizdevās"
+
+msgid "Unknown"
+msgstr "Nezināms"
+
+msgid "Keep User Data"
+msgstr "Paturēt lietotāja datus"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Atļaut atjaunot personiskos iestatījumus &amp; saturu"
+
+msgid "Delete All Data"
+msgstr "Dzēst visus datus"
+
+msgid "Permanently erase user data to save space"
+msgstr "Neatgriezeniski dzēst lietotāja datus, lai ietaupītu vietu"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "Vai noņemt %s?"
+
+msgid "Select which version to remove."
+msgstr "Atlasiet, kuru versiju noņemt."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "Pēc atinstalēšanas %s lietot nebūs iespējams."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "“%s” ir augsts risks"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Šai lietotnei ir pilna piekļuve jūsu sistēmai, tostarp <b>visiem jūsu failiem, pārlūka vēsturei, saglabātajām parolēm</b> un citam. Tai ir arī piekļuve internetam, kas nozīmē, ka tā varētu nosūtīt jūsu datus ārpusē esošām pusēm.\n"
+"\n"
+"Tā kā lietotne ir slēgta, nav iespējams pārbaudīt, ko tā dara ar šīm atļaujām."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Šī lietotne izmanto novecojušo X11 logu sistēmu, kas ļauj tai <b>ierakstīt visus taustiņu nospiedienus, uzņemt ekrānuzņēmumus un uzraudzīt citas lietotnes</b>. Tai ir arī piekļuve internetam, kas nozīmē, ka tā varētu nosūtīt jūsu datus ārpusē esošām pusēm.\n"
+"\n"
+"Tā kā lietotne ir slēgta, nav iespējams pārbaudīt, ko tā dara ar šīm atļaujām."
+
+msgid "_Install Anyway"
+msgstr "_Tomēr instalēt"
+
+msgid "Failed to load transaction dialog"
+msgstr "Neizdevās ielādēt darījuma dialogu"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "Pabeigts %.02f sekundēs"
+
+msgid "App Add-On"
+msgstr "Lietotnes papildinājums"
+
+msgid "Runtime"
+msgstr "Izpildlaiks"
+
+msgid "In Queue"
+msgstr "Rindā"
+
+msgid "Finishing Up"
+msgstr "Pabeidz"
+
+msgid "Done"
+msgstr "Gatavs"
+
+msgid "Cancelled"
+msgstr "Atcelts"
+
+msgid "Error"
+msgstr "Kļūda"
+
+msgid "Cancel Transaction"
+msgstr "Atcelt darījumu"
+
+msgid "Show Details"
+msgstr "Rādīt informāciju"
+
+msgid "Show Error Info"
+msgstr "Rādīt kļūdas informāciju"
+
+#, c-format
+msgid "%s Freed"
+msgstr "Atbrīvots: %s"
+
+msgid "Transaction Error"
+msgstr "Darījuma kļūda"
+
+msgid "Pending"
+msgstr "Gaida"
+
+msgid "Installed Updates"
+msgstr "Instalētie atjauninājumi"
+
+msgid "Release Notes"
+msgstr "Laidiena piezīmes"
+
+msgid "No Release Info"
+msgstr "Nav informācijas par laidienu"
+
+msgid "_Update All"
+msgstr "_Atjaunināt visu"
+
+msgid "This update requests new permissions"
+msgstr "Šis atjauninājums pieprasa jaunas atļaujas"
+
+msgid "Manage Leftover User Data"
+msgstr "Pārvaldīt atlikušos lietotāja datus"
+
+msgid "No Leftover User Data Found"
+msgstr "Nav atrasti atlikušie lietotāja dati"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Šeit parādīsies personas dati, kas palikuši pēc noņemtajām lietotnēm"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Dzēstie lietotāja dati %u lietotnei"
+msgstr[1] "Dzēstie lietotāja dati %u lietotnēm"
+msgstr[2] "Dzēstie lietotāja dati %u lietotnēm"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Dzēstie lietotāja dati lietotnei %s"
+
+msgid "Open User Data Folder"
+msgstr "Atvērt lietotāja datu mapi"
+
+msgid "Trash User Data"
+msgstr "Dzēst lietotāja datus"
+
+msgid "Refreshing"
+msgstr "Notiek atsvaidzināšana"
+
+msgid "Curated"
+msgstr "Atlasīts"
+
+msgid "Explore"
+msgstr "Izpētīt"
+
+msgid "Library"
+msgstr "Bibliotēka"
+
+msgid "Search"
+msgstr "Meklēt"
+
+msgid "Main Menu"
+msgstr "Galvenā izvēlne"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Jūs izmantojat jaunu Bazaar versiju!"
+
+msgid "See What's New"
+msgstr "Skatīt jaunumus"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Jums ir tīkla savienojums, taču tiek skatīta kešatmiņā saglabāta Flathub versija"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Tīkla savienojums ir ierobežots — automātiskā atsvaidzināšana ir atspējota"
+
+msgid "_Donate to Bazaar"
+msgstr "_Ziedot Bazaar"
+
+msgid "_Refresh"
+msgstr "_Atsvaidzināt"
+
+msgid "_Login With Flathub"
+msgstr "_Pieteikties ar Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "Pārvaldīt atlikušos lietotāja _datus"
+
+msgid "Manage R_emotes"
+msgstr "Pārvaldīt attālās _krātuves"
+
+msgid "_Preferences"
+msgstr "_Iestatījumi"
+
+msgid "_Keyboard Shortcuts"
+msgstr "_Tastatūras saīsnes"
+
+msgid "_About Bazaar"
+msgstr "_Par Bazaar"
+
+msgid "_Quit Bazaar"
+msgstr "_Iziet no Bazaar"
+
+msgid "Log Out"
+msgstr "Izrakstīties"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Neizdevās palaist lietotni"
+
+msgid "Could not open link"
+msgstr "Neizdevās atvērt saiti"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Jūs nevarat noņemt Bazaar no Bazaar!"
+
+msgid "Can't do that right now!"
+msgstr "To pašlaik nevar izdarīt!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u instalēšana"
+msgstr[1] "%s, %'u instalēšanas"
+msgstr[2] "%s, %'u instalēšanas"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Visvairāk instalēšanu no: %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d lejupielādes pēdējā mēnesī"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s izpildlaiks"
+
+msgid "Size information unavailable"
+msgstr "Informācija par izmēru nav pieejama"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "%s lejupielādes izmērs"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "%s instalētais izmērs"
+
+msgid "All Ages"
+msgstr "Visi vecumi"
+
+msgid "Age rating information unavailable"
+msgstr "Informācija par vecuma ierobežojumu nav pieejama"
+
+msgid "Suitable for all ages"
+msgstr "Piemērota visiem vecumiem"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "Piemērota vecumam no %d gadiem"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "Brīvā programmatūra ar licenci %s"
+
+msgid "Free software"
+msgstr "Brīvā programmatūra"
+
+msgid "Proprietary Software"
+msgstr "Slēgtā programmatūra"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Īpaša licence: %s"
+
+msgid "Free Software"
+msgstr "Brīvā programmatūra"
+
+msgid "Adaptive"
+msgstr "Adaptīva"
+
+msgid "Desktop Only"
+msgstr "Tikai darbvirsmai"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "Darbojas darbvirsmā, planšetdatoros un tālruņos"
+
+msgid "May not work on mobile devices"
+msgstr "Var nedarboties mobilajās ierīcēs"
+
+msgid "Low Risk"
+msgstr "Zems risks"
+
+msgid "Medium Risk"
+msgstr "Vidējs risks"
+
+msgid "High Risk"
+msgstr "Augsts risks"
+
+msgid "Unknown Permissions"
+msgstr "Nezināmas atļaujas"
+
+msgid "Permissions are missing for this app."
+msgstr "Šai lietotnei trūkst atļauju."
+
+msgid "No Permissions"
+msgstr "Nav atļauju"
+
+msgid "App is fully sandboxed"
+msgstr "Lietotne ir pilnībā izolēta smilškastē"
+
+msgid "Network Access"
+msgstr "Piekļuve tīklam"
+
+msgid "Can access the internet"
+msgstr "Var piekļūt internetam"
+
+msgid "No Network Access"
+msgstr "Nav piekļuves tīklam"
+
+msgid "Cannot access the internet"
+msgstr "Nevar piekļūt internetam"
+
+msgid "User Device Access"
+msgstr "Piekļuve lietotāja ierīcēm"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Var piekļūt ierīcēm, piemēram, tīmekļa kamerām vai spēļu kontrolieriem"
+
+msgid "No User Device Access"
+msgstr "Nav piekļuves lietotāja ierīcēm"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Nevar piekļūt ierīcēm, piemēram, tīmekļa kamerām vai spēļu kontrolieriem"
+
+msgid "Input Device Access"
+msgstr "Piekļuve ievades ierīcēm"
+
+msgid "Can access input devices"
+msgstr "Var piekļūt ievades ierīcēm"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Piekļuve mikrofonam un audio atskaņošana"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Var klausīties ar mikrofoniem un atskaņot audio, neprasot atļauju"
+
+msgid "System Device Access"
+msgstr "Piekļuve sistēmas ierīcēm"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Var piekļūt sistēmas ierīcēm, kurām nepieciešamas paaugstinātas atļaujas"
+
+msgid "Screen Contents Access"
+msgstr "Piekļuve ekrāna saturam"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Var piekļūt ekrāna vai citu logu saturam"
+
+msgid "Legacy Windowing System"
+msgstr "Novecojusī logu sistēma"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Vienmēr izmanto novecojušo logu sistēmu (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Var iegūt patvaļīgas atļaujas"
+
+msgid "User Settings"
+msgstr "Lietotāja iestatījumi"
+
+msgid "Can access and change user settings"
+msgstr "Var piekļūt lietotāja iestatījumiem un tos mainīt"
+
+msgid "Full File System Read/Write Access"
+msgstr "Pilna lasīšanas/rakstīšanas piekļuve failu sistēmai"
+
+msgid "Can read and write all data on the file system"
+msgstr "Var lasīt un rakstīt visus datus failu sistēmā"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Lasīšanas/rakstīšanas piekļuve mājas mapei"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Var lasīt un rakstīt visus datus jūsu mājas direktorijā"
+
+msgid "Full File System Read Access"
+msgstr "Pilna lasīšanas piekļuve failu sistēmai"
+
+msgid "Can read all data on the file system"
+msgstr "Var lasīt visus datus failu sistēmā"
+
+msgid "Home Folder Read Access"
+msgstr "Lasīšanas piekļuve mājas mapei"
+
+msgid "Can read all data in your home directory"
+msgstr "Var lasīt visus datus jūsu mājas direktorijā"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Lasīšanas/rakstīšanas piekļuve lejupielāžu mapei"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Var lasīt un rakstīt visus datus jūsu lejupielāžu direktorijā"
+
+msgid "Download Folder Read Access"
+msgstr "Lasīšanas piekļuve lejupielāžu mapei"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Var lasīt visus datus jūsu lejupielāžu direktorijā"
+
+msgid "Can read and write all data in the directory"
+msgstr "Var lasīt un rakstīt visus datus direktorijā"
+
+msgid "Can read all data in the directory"
+msgstr "Var lasīt visus datus direktorijā"
+
+msgid "No File System Access"
+msgstr "Nav piekļuves failu sistēmai"
+
+msgid "Cannot access the file system at all"
+msgstr "Nevar piekļūt failu sistēmai vispār"
+
+msgid "Uses System Services"
+msgstr "Izmanto sistēmas pakalpojumus"
+
+msgid "Can request data from non-portal system services"
+msgstr "Var pieprasīt datus no sistēmas pakalpojumiem, kas nav portāli"
+
+msgid "Uses Session Services"
+msgstr "Izmanto sesijas pakalpojumus"
+
+msgid "Can request data from non-portal session services"
+msgstr "Var pieprasīt datus no sesijas pakalpojumiem, kas nav portāli"
+
+msgid "No Service Access"
+msgstr "Nav piekļuves pakalpojumiem"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Nevar piekļūt sesijas vai sistēmas pakalpojumiem, kas nav portāli, vispār"
+
+msgid "Verified App Developer"
+msgstr "Pārbaudīts lietotnes izstrādātājs"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Šīs lietotnes izstrādātājs ir pārbaudīts, un viņš ir tas, par ko uzdodas"
+
+msgid "Proprietary Code"
+msgstr "Slēgts kods"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Pirmkods nav publisks, tāpēc to nevar neatkarīgi pārbaudīt, un tas var būt nedrošs"
+
+msgid "Auditable Code"
+msgstr "Pārbaudāms kods"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Pirmkods ir publisks, un to var neatkarīgi pārbaudīt, tāpēc lietotne, visticamāk, ir droša"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Izmantot %s sistēmas pakalpojumu"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Izmantot %s sesijas pakalpojumu"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Izmantot %s pakalpojumu"
+
+msgid "Can see the non-portal service"
+msgstr "Var redzēt pakalpojumu, kas nav portāls"
+
+msgid "Can talk to the non-portal service"
+msgstr "Var sazināties ar pakalpojumu, kas nav portāls"
+
+msgid "Can own the non-portal service"
+msgstr "Var būt pakalpojuma, kas nav portāls, īpašnieks"
+
+msgid "Global Menu Integration"
+msgstr "Globālās izvēlnes integrācija"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Var attēlot savas izvēlnes globālajā izvēlņu joslā"
+
+msgid "KDE Settings Integration"
+msgstr "KDE iestatījumu integrācija"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Var noteikt, kad mainās KDE darbvirsmas iestatījumi"
+
+msgid "KDE Global Settings"
+msgstr "KDE globālie iestatījumi"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Var lasīt KDE darbvirsmas preferences, piemēram, fontus un krāsas"
+
+msgid "Secret Storage Service"
+msgstr "Slepeno datu glabāšanas pakalpojums"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Var glabāt un iegūt savas paroles, izmantojot sistēmas atslēgu saišķi"
+
+msgid "Desktop Notifications Service"
+msgstr "Darbvirsmas paziņojumu pakalpojums"
+
+msgid "Can send desktop notifications"
+msgstr "Var sūtīt darbvirsmas paziņojumus"
+
+msgid "System Tray Integration"
+msgstr "Sistēmas teknes integrācija"
+
+msgid "Can display an icon in the system tray"
+msgstr "Var attēlot ikonu sistēmas teknē"
+
+msgid "KDE Connect Integration"
+msgstr "KDE Connect integrācija"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Var mijiedarboties ar ierīcēm, kas savienotas pārī, izmantojot KDE Connect"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigācija"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Atvērt izpētes lapu"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Atvērt bibliotēkas lapu"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Atvērt meklēšanas lapu"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Attālās krātuves"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Sinhronizēt attālās krātuves"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Vispārīgi"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Atvērt iestatījumus"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Rādīt saīsnes"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Aizvērt logu"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Iziet no Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s ir instalēta"
+
+msgid "The app is ready to be used"
+msgstr "Lietotne ir gatava lietošanai"
+
+msgid "Updates Are Out of Date"
+msgstr "Atjauninājumi ir novecojuši"
+
+msgid "Please check for available updates"
+msgstr "Lūdzu, pārbaudiet pieejamos atjauninājumus"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "Atjaunināta %u lietotne"
+msgstr[1] "Atjauninātas %u lietotnes"
+msgstr[2] "Atjauninātas %u lietotnes"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s ir atjaunināta."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s un %s ir atjauninātas."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Ietver %s, %s un %s."

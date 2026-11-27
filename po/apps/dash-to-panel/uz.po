@@ -1,0 +1,1166 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Quit"
+msgstr "Chiqish"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "%d oynani yopish"
+msgstr[1] "%d oynani yopish"
+
+msgid "Power options"
+msgstr "Quvvat variantlari"
+
+msgid "Event logs"
+msgstr "Hodisalar jurnali"
+
+msgid "System"
+msgstr "Tizim"
+
+msgid "Device Management"
+msgstr "Qurilmalar boshqaruvi"
+
+msgid "Disk Management"
+msgstr "Disklar boshqaruvi"
+
+msgid "Unlock taskbar"
+msgstr "Vazifalar panelini ochish"
+
+msgid "Lock taskbar"
+msgstr "Vazifalar panelini qulflash"
+
+msgid "Gnome Settings"
+msgstr "GNOME sozlamalari"
+
+msgid "Dash to Panel Settings"
+msgstr "Dash to Panel sozlamalari"
+
+msgid "Restore Windows"
+msgstr "Oynalarni tiklash"
+
+msgid "Show Desktop"
+msgstr "Ish stolini koʻrsatish"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel yangilandi!"
+
+msgid "You are now running version"
+msgstr "Hozir ishlatilayotgan versiya"
+
+msgid "See what's new"
+msgstr "Nima yangiligini koʻring"
+
+msgid "Top Bar"
+msgstr "Yuqori panel"
+
+msgid "Show Desktop button height (px)"
+msgstr "Ish stolini koʻrsatish tugmasi balandligi (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Ish stolini koʻrsatish tugmasi kengligi (px)"
+
+msgid "Left"
+msgstr "Chap"
+
+msgid "Center"
+msgstr "Oʻrta"
+
+msgid "Right"
+msgstr "Oʻng"
+
+msgid "Top"
+msgstr "Yuqori"
+
+msgid "Middle"
+msgstr "Oʻrta"
+
+msgid "Bottom"
+msgstr "Pastki"
+
+msgid "Start"
+msgstr "Boshi"
+
+msgid "End"
+msgstr "Oxiri"
+
+msgid "Show Applications button"
+msgstr "Ilovalarni koʻrsatish tugmasi"
+
+msgid "Activities button"
+msgstr "Faolliklar tugmasi"
+
+msgid "Taskbar"
+msgstr "Vazifalar paneli"
+
+msgid "Date menu"
+msgstr "Sana menyusi"
+
+msgid "System menu"
+msgstr "Tizim menyusi"
+
+msgid "Left box"
+msgstr "Chap quti"
+
+msgid "Center box"
+msgstr "Oʻrta quti"
+
+msgid "Right box"
+msgstr "Oʻng quti"
+
+msgid "Desktop button"
+msgstr "Ish stoli tugmasi"
+
+msgid "Move up"
+msgstr "Yuqoriga siljitish"
+
+msgid "Move down"
+msgstr "Pastga siljitish"
+
+msgid "Visible"
+msgstr "Koʻrinadigan"
+
+msgid "Select element position"
+msgstr "Element joylashuvini tanlang"
+
+msgid "Stacked to top"
+msgstr "Tepaga tekislangan"
+
+msgid "Stacked to left"
+msgstr "Chapga tekislangan"
+
+msgid "Stacked to bottom"
+msgstr "Pastga tekislangan"
+
+msgid "Stacked to right"
+msgstr "Oʻngga tekislangan"
+
+msgid "Centered"
+msgstr "Markazlashtirilgan"
+
+msgid "Monitor Center"
+msgstr "Monitor markazi"
+
+msgid "More options"
+msgstr "Qoʻshimcha variantlar"
+
+msgid "Reset to defaults"
+msgstr "Standart qiymatlarga qaytarish"
+
+msgid "Show Applications options"
+msgstr "Ilovalarni koʻrsatish variantlari"
+
+msgid "Open icon"
+msgstr "Ikonkani ochish"
+
+msgid "Show Desktop options"
+msgstr "Ish stolini koʻrsatish variantlari"
+
+msgid "Primary monitor"
+msgstr "Asosiy monitor"
+
+msgid "Monitor "
+msgstr "Monitor "
+
+msgid "Running Indicator Options"
+msgstr "Ishlayotganlik koʻrsatkichi variantlari"
+
+msgid "Dynamic opacity options"
+msgstr "Dinamik shaffoflik variantlari"
+
+msgid "Intellihide options"
+msgstr "Intellihide variantlari"
+
+msgid "Window preview options"
+msgstr "Oyna koʻrinishi variantlari"
+
+msgid "Isolate Workspaces options"
+msgstr "Ish maydonlarini ajratish variantlari"
+
+msgid "Isolate monitors options"
+msgstr "Monitorlarni ajratish variantlari"
+
+msgid "Ungrouped application options"
+msgstr "Guruhlanmagan ilovalar variantlari"
+
+msgid "Customize middle-click behavior"
+msgstr "Oʻrta tugma xatti-harakatini moslash"
+
+msgid "Text"
+msgstr "Matn"
+
+msgid "Command"
+msgstr "Buyruq"
+
+msgid "Remove"
+msgstr "Oʻchirish"
+
+msgid "Customize panel scroll behavior"
+msgstr "Panel aylantirish xatti-harakatini moslash"
+
+msgid "Customize icon scroll behavior"
+msgstr "Ikonka aylantirish xatti-harakatini moslash"
+
+msgid "Advanced hotkeys options"
+msgstr "Qoʻshimcha tezkor tugmalar variantlari"
+
+msgid "Secondary Menu Options"
+msgstr "Ikkilamchi menyu variantlari"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d ikonka"
+msgstr[1] "%d ikonka"
+
+msgid "App icon animation options"
+msgstr "Ilova ikonkasi animatsiyasi variantlari"
+
+msgid "App icon highlight options"
+msgstr "Ilova ikonkasini ajratib koʻrsatish variantlari"
+
+msgid "Export settings"
+msgstr "Sozlamalarni eksport qilish"
+
+msgid "Import settings"
+msgstr "Sozlamalarni import qilish"
+
+msgid "Move to current Workspace"
+msgstr "Joriy ish maydoniga siljitish"
+
+msgid "Animation type"
+msgstr "Animatsiya turi"
+
+msgid "Simple"
+msgstr "Oddiy"
+
+msgid "Ripple"
+msgstr "Toʻlqin"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Davomiyligi"
+
+msgid "Rotation"
+msgstr "Aylanish"
+
+msgid "Travel"
+msgstr "Siljish"
+
+msgid "Zoom"
+msgstr "Kattalashtirish"
+
+msgid "Convexity"
+msgstr "Qavariqlik"
+
+msgid "Extent"
+msgstr "Koʻlam"
+
+msgid "Highlight focused application"
+msgstr "Fokusdagi ilovani ajratib koʻrsatish"
+
+msgid "Icon dominant color"
+msgstr "Ikonkaning asosiy rangi"
+
+msgid "Custom color"
+msgstr "Maxsus rang"
+
+msgid "Highlight opacity"
+msgstr "Ajratib koʻrsatish shaffofligi"
+
+msgid "Indicator size (px)"
+msgstr "Koʻrsatkich oʻlchami (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Koʻrsatkich rangi - ikonkaning asosiy rangi"
+
+msgid "Indicator color - Override Theme"
+msgstr "Koʻrsatkich rangi - mavzuni bekor qilish"
+
+msgid "1 window open (or ungrouped)"
+msgstr "1 ta oyna ochiq (yoki guruhlanmagan)"
+
+msgid "Apply to all"
+msgstr "Hammasiga qoʻllash"
+
+msgid "2 windows open"
+msgstr "2 ta oyna ochiq"
+
+msgid "3 windows open"
+msgstr "3 ta oyna ochiq"
+
+msgid "4+ windows open"
+msgstr "4+ ta oyna ochiq"
+
+msgid "Use different for unfocused"
+msgstr "Fokussiz ilovalar uchun boshqasini ishlatish"
+
+msgid "The panel background opacity is affected by"
+msgstr "Panel fonining shaffofligiga taʼsir qiluvchi omil"
+
+msgid "All windows"
+msgstr "Barcha oynalar"
+
+msgid "Focused windows"
+msgstr "Fokusdagi oynalar"
+
+msgid "Maximized windows"
+msgstr "Kattalashtirilgan oynalar"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Oyna (px) dan yaqinroq kelganda shaffoflikni oʻzgartirish"
+
+msgid "Change opacity to (%)"
+msgstr "Shaffoflikni oʻzgartirish (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Shaffoflik oʻzgarishi animatsiyasi davomiyligi (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Ilova sarlavhalari shrift oʻlchami (px) (standart: 14)"
+
+msgid "Font weight of application titles"
+msgstr "Ilova sarlavhalari shrift qalinligi"
+
+msgid "inherit from theme"
+msgstr "mavzudan olish"
+
+msgid "normal"
+msgstr "oddiy"
+
+msgid "lighter"
+msgstr "yengilroq"
+
+msgid "bold"
+msgstr "qalin"
+
+msgid "bolder"
+msgstr "qalinroq"
+
+msgid "Font color of the application titles"
+msgstr "Ilova sarlavhalari shrift rangi"
+
+msgid "Font color of the minimized application titles"
+msgstr "Kichraytirilgan ilova sarlavhalari shrift rangi"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Ilova sarlavhalarining eng katta kengligi (px)"
+
+msgid "(default is 160)"
+msgstr "(standart: 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Ilova sarlavhalari uchun qatʼiy kenglikdan foydalanish"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Ilova sarlavhalarining barchasi, matni eng katta kenglikdan qisqa boʻlsa ham, bir xil kenglikka ega boʻladi. Eng katta kenglik qiymati qatʼiy kenglik sifatida ishlatiladi."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Fokussiz ilovalarda ishlayotganlik koʻrsatkichlarini koʻrsatish"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Sevimli ikonkalardan ilova ishga tushirgichlari sifatida foydalanish"
+
+msgid "Highlight AppIcon color"
+msgstr "Ilova ikonkasi rangini ajratib koʻrsatish"
+
+msgid "Pressed AppIcon color"
+msgstr "Bosilgan ilova ikonkasi rangi"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Ilova ikonkasini ajratib koʻrsatish chegara radiusi"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Umumiy chegara radiusini bekor qiladi (standart: 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Panelni faqat oynalardan yashirish"
+
+msgid "Overlapping"
+msgstr "Ustma-ust tushganda"
+
+msgid "On same monitor"
+msgstr "Bir xil monitorda"
+
+msgid "The panel hides from"
+msgstr "Panel yashirinadi:"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Sichqoncha koʻrsatkichini monitor chetiga tekkizish panelni koʻrsatadi"
+
+msgid "Limit to panel length"
+msgstr "Panel uzunligi bilan cheklash"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Panel maydoni ustiga olib borish panelni koʻrinib turishda saqlaydi"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Panelni koʻrsatish uchun monitor chetida bosim talab qilish"
+
+msgid "Required pressure threshold (px)"
+msgstr "Talab qilinadigan bosim chegarasi (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Talab qilinadigan bosim kutish vaqti (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Butun ekran rejimida panelni koʻrsatishga ruxsat berish"
+
+msgid "(requires multi-monitors option)"
+msgstr "(koʻp monitor variantini talab qiladi)"
+
+msgid "Only hide secondary panels"
+msgstr "Faqat ikkilamchi panellarni yashirish"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Sintaksis: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Panelni koʻrsatish va ushlab turish uchun tezkor tugma"
+
+msgid "e.g. <Super>i"
+msgstr "masalan, <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Holatni qayta ishga tushirishlar oraligʻida saqlash"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(GNOME “Bezovta qilmang” rejimini hisobga oladi va bildirishnoma hisoblagichi nishonini koʻrsatish variantini talab qiladi)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Bildirishnomada panelni koʻrsatish va ushlab turish"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Yashirish va koʻrsatish animatsiyasi davomiyligi (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Panelni yashirishdan oldingi kechikish (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Panelni koʻrsatishdan oldingi kechikish (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Ishga tushganda intellihide-ni yoqishdan oldingi kechikish (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Bitta panel ishlatilganda ham monitorlarni ajratish"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "GNOME Shell ilova almashtirgichida ish maydonlarini ajratish"
+
+msgid "Shift+Click action"
+msgstr "Shift+bosish amali"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "Kichraytirish tanlansa, ikki marta bosish ilovaning barcha oynalarini kichraytiradi."
+
+msgid "Raise windows"
+msgstr "Oynalarni yuqoriga chiqarish"
+
+msgid "Minimize window"
+msgstr "Oynani kichraytirish"
+
+msgid "Launch new instance"
+msgstr "Yangi nusxani ishga tushirish"
+
+msgid "Cycle through windows"
+msgstr "Oynalar boʻylab aylanish"
+
+msgid "Cycle windows + minimize"
+msgstr "Oynalar boʻylab aylanish + kichraytirish"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Bittasini almashtirish / koʻpini oldindan koʻrish"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Bittasini almashtirish / koʻpi boʻylab aylanish"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Bittasini almashtirish / koʻpini yoyish"
+
+msgid "Middle-Click action"
+msgstr "Oʻrta tugma bosish amali"
+
+msgid "Behavior for Middle-Click."
+msgstr "Oʻrta tugma bosish xatti-harakati."
+
+msgid "Shift+Middle-Click action"
+msgstr "Shift+oʻrta tugma bosish amali"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Shift+oʻrta tugma bosish xatti-harakati."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Tezkor tugmalar Super+raqam yoki Super+Alt+raqam boʻladi"
+
+msgid "Hotkeys prefix"
+msgstr "Tezkor tugmalar prefiksi"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Tezkor tugmalardan foydalanganda ilova raqamlarini ikonkalar ustida vaqtincha koʻrsatish."
+
+msgid "Number overlay"
+msgstr "Raqamlar qoplamasi"
+
+msgid "Never"
+msgstr "Hech qachon"
+
+msgid "Show temporarily"
+msgstr "Vaqtincha koʻrsatish"
+
+msgid "Always visible"
+msgstr "Doim koʻrinadigan"
+
+msgid "Hide timeout (ms)"
+msgstr "Yashirish kutish vaqti (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Qoplamani 2 soniya koʻrsatish uchun tezkor tugma"
+
+msgid "e.g. <Super>q"
+msgstr "masalan, <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Ikkilamchi monitorlarda qoplamani asosiy monitordagi mos ikonkalarda koʻrsatish"
+
+msgid "Show the overlay on all monitors"
+msgstr "Qoplamani barcha monitorlarda koʻrsatish"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Ilovaning bir nechta nusxasi boʻlganda oldindan koʻrishni koʻrsatish"
+
+msgid "Show window previews on hotkey"
+msgstr "Tezkor tugmada oyna koʻrinishlarini koʻrsatish"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Tezkor tugmalarni faollashtirish uchun qaysi klaviatura raqam tugmalari ishlatilishini tanlang"
+
+msgid "Hotkeys are activated with"
+msgstr "Tezkor tugmalar quyidagi bilan faollashtiriladi:"
+
+msgid "Number row"
+msgstr "Raqamlar qatori"
+
+msgid "Numeric keypad"
+msgstr "Raqamli tugmalar paneli"
+
+msgid "Both"
+msgstr "Ikkalasi"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Sichqoncha aylantirish hodisalari orasidagi kechikish (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Qabul qilinadigan sichqoncha aylantirish hodisalari sonini cheklash uchun ushbu qiymatdan foydalaning."
+
+msgid "Show popup when changing workspace"
+msgstr "Ish maydoni oʻzgarganda qalqib chiquvchi oynani koʻrsatish"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Bu faqat panelda aylantirishda ish maydoni qalqib chiquvchi oynasiga taʼsir qiladi."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "<i>AppMenu</i> elementlarini integratsiya qilish"
+
+msgid "<i>App Details</i> menu item"
+msgstr "<i>Ilova tafsilotlari</i> menyu elementi"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Ilova tafsilotlari</i> faqat GNOME Software oʻrnatilgan boʻlsa mavjud"
+
+msgid "Show Applications icon"
+msgstr "Ilovalarni koʻrsatish ikonkasi"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Ilovalarni koʻrsatish ikonkasi yon boʻshligʻi (px)"
+
+msgid "Override escape key and return to desktop"
+msgstr "Escape tugmasini bekor qilib, ish stoliga qaytish"
+
+msgid "Override Show Desktop line color"
+msgstr "Ish stolini koʻrsatish chizigʻi rangini bekor qilish"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Ish stolini koʻrsatish tugmasi ustiga olib borilganda ish stolini koʻrsatish"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Ish stolini koʻrsatishdan oldingi kechikish (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Xiralashish davomiyligi (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Koʻrsatishdan oldingi vaqt (ms)"
+
+msgid "(400 is default)"
+msgstr "(standart: 400)"
+
+msgid "Time (ms) before hiding"
+msgstr "Yashirishdan oldingi vaqt (ms)"
+
+msgid "(100 is default)"
+msgstr "(standart: 100)"
+
+msgid "Immediate on application icon click"
+msgstr "Ilova ikonkasi bosilganda darhol"
+
+msgid "Animation time (ms)"
+msgstr "Animatsiya vaqti (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Oynani yopish uchun koʻrinishni oʻrta tugma bilan bosing"
+
+msgid "Window previews preferred size (px)"
+msgstr "Oyna koʻrinishlarining afzal oʻlchami (px)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Oyna koʻrinishlari tomonlar nisbati X (kenglik)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Qatʼiy"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Oyna koʻrinishlari tomonlar nisbati Y (balandlik)"
+
+msgid "Window previews padding (px)"
+msgstr "Oyna koʻrinishlari ichki boʻshligʻi (px)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Koʻrinishlar foni uchun maxsus shaffoflikdan foydalanish"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Oʻchirilgan boʻlsa, koʻrinishlar fonining shaffofligi panel bilan bir xil boʻladi."
+
+msgid "Close button and header position"
+msgstr "Yopish tugmasi va sarlavha joylashuvi"
+
+msgid "Display window preview headers"
+msgstr "Oyna koʻrinishi sarlavhalarini koʻrsatish"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Oyna koʻrinishi ikonkasi oʻlchami (px)"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Oʻchirilgan boʻlsa, koʻrinish ikonkasi oʻlchami sarlavha paneli oʻlchamiga bogʻliq boʻladi"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Koʻrinish sarlavhalari shrift oʻlchami (px)"
+
+msgid "Font weight of the preview titles"
+msgstr "Koʻrinish sarlavhalari shrift qalinligi"
+
+msgid "Font color of the preview titles"
+msgstr "Koʻrinish sarlavhalari shrift rangi"
+
+msgid "Enable window peeking"
+msgstr "Oynaga qarashni yoqish"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "Oyna koʻrinishi ustiga bir muddat olib borilganda, oyna ajralib turadi."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Oynaga qarash rejimiga kirish kutish vaqti (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "Oynaga qarash rejimiga kirish uchun oyna koʻrinishi ustida harakatsiz turish vaqti."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Oynaga qarash rejimi shaffofligi"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Qarab turilgan oynadan tashqari barcha oynalarning shaffofligi bir xil qiymatga oʻrnatiladi."
+
+msgid "About"
+msgstr "Haqida"
+
+msgid "Info"
+msgstr "Maʼlumot"
+
+msgid "Version"
+msgstr "Versiya"
+
+msgid "Source"
+msgstr "Manba"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Eksport va import"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Joriy sozlamalaringizdan boshqa kompyuterda import qilinadigan sozlamalar faylini yaratish uchun quyidagi tugmalardan foydalaning."
+
+msgid "Export and import settings"
+msgstr "Sozlamalarni eksport va import qilish"
+
+msgid "Export to file"
+msgstr "Faylga eksport qilish"
+
+msgid "Import from file"
+msgstr "Fayldan import qilish"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Ushbu dastur HECH QANDAY KAFOLATSIZ taqdim etiladi.\n"
+"Batafsil maʼlumot uchun <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU Umumiy jamoat litsenziyasi, 2-versiya yoki undan keyingisi</a> bilan tanishing.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Homiylik qilgan va dastlab ishlab chiqqan:"
+
+msgid "Action"
+msgstr "Amal"
+
+msgid "Click action"
+msgstr "Bosish amali"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "Ishlayotgan ilova ikonkasi bosilganda xatti-harakat."
+
+msgid "Toggle windows"
+msgstr "Oynalarni almashtirish"
+
+msgid "Scroll action"
+msgstr "Aylantirish amali"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Sichqoncha panel ustida aylantirilganda xatti-harakat."
+
+msgid "Scroll panel action"
+msgstr "Panelni aylantirish amali"
+
+msgid "Do nothing"
+msgstr "Hech narsa qilmaslik"
+
+msgid "Switch workspace"
+msgstr "Ish maydonini almashtirish"
+
+msgid "Cycle windows"
+msgstr "Oynalar boʻylab aylanish"
+
+msgid "Change volume"
+msgstr "Ovoz balandligini oʻzgartirish"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Sichqoncha ilova ikonkasi ustida aylantirilganda xatti-harakat."
+
+msgid "Scroll icon action"
+msgstr "Ikonkani aylantirish amali"
+
+msgid "Same as panel"
+msgstr "Panel bilan bir xil"
+
+msgid "Hotkey overlay"
+msgstr "Tezkor tugmalar qoplamasi"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Ilovalarni faollashtirish uchun Super+(0-9) yorliqlarini yoqish. Shift va Ctrl bilan birga ham ishlatish mumkin."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Ilovalarni faollashtirish uchun tezkor tugmalardan foydalanish"
+
+msgid "Application icons context menu"
+msgstr "Ilova ikonkalari kontekst menyusi"
+
+msgid "(right-click menu)"
+msgstr "(oʻng tugma menyusi)"
+
+msgid "Secondary menu"
+msgstr "Ikkilamchi menyu"
+
+msgid "Panel context menu entries"
+msgstr "Panel kontekst menyusi yozuvlari"
+
+msgid "Add entry"
+msgstr "Yozuv qoʻshish"
+
+msgid "Behavior"
+msgstr "Xatti-harakat"
+
+msgid "Applications"
+msgstr "Ilovalar"
+
+msgid "Show favorite applications"
+msgstr "Sevimli ilovalarni koʻrsatish"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Ikkilamchi panellarda sevimli ilovalarni koʻrsatish"
+
+msgid "Show running applications"
+msgstr "Ishlayotgan ilovalarni koʻrsatish"
+
+msgid "Ungroup applications"
+msgstr "Ilovalarni guruhlamaslik"
+
+msgid "Show notification counter badge"
+msgstr "Bildirishnoma hisoblagichi nishonini koʻrsatish"
+
+msgid "Hover"
+msgstr "Ustiga olib borish"
+
+msgid "Show window previews on hover"
+msgstr "Ustiga olib borilganda oyna koʻrinishlarini koʻrsatish"
+
+msgid "Show tooltip on hover"
+msgstr "Ustiga olib borilganda maslahatni koʻrsatish"
+
+msgid "Isolate"
+msgstr "Ajratish"
+
+msgid "Isolate Workspaces"
+msgstr "Ish maydonlarini ajratish"
+
+msgid "Isolate monitors"
+msgstr "Monitorlarni ajratish"
+
+msgid "Overview"
+msgstr "Umumiy koʻrinish"
+
+msgid "Click empty space to close overview"
+msgstr "Umumiy koʻrinishni yopish uchun boʻsh joyni bosish"
+
+msgid "Disable show overview on startup"
+msgstr "Ishga tushganda umumiy koʻrinishni koʻrsatishni oʻchirish"
+
+msgid "Fine-Tune"
+msgstr "Nozik sozlash"
+
+msgid "Font size"
+msgstr "Shrift oʻlchami"
+
+msgid "(0 = theme default)"
+msgstr "(0 = mavzu standarti)"
+
+msgid "Tray Font Size"
+msgstr "Tray shrifti oʻlchami"
+
+msgid "LeftBox Font Size"
+msgstr "Chap quti shrifti oʻlchami"
+
+msgid "Padding"
+msgstr "Ichki boʻshliq"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = mavzu standarti)"
+
+msgid "Tray Item Padding"
+msgstr "Tray elementi ichki boʻshligʻi"
+
+msgid "Status Icon Padding"
+msgstr "Holat ikonkasi ichki boʻshligʻi"
+
+msgid "LeftBox Padding"
+msgstr "Chap quti ichki boʻshligʻi"
+
+msgid "Animate"
+msgstr "Animatsiya"
+
+msgid "Animate switching applications"
+msgstr "Ilovalarni almashtirishni animatsiya qilish"
+
+msgid "Animate launching new windows"
+msgstr "Yangi oynalarni ishga tushirishni animatsiya qilish"
+
+msgid "Gnome functionality"
+msgstr "GNOME funksionalligi"
+
+msgid "(overview)"
+msgstr "(umumiy koʻrinish)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Asl gnome-shell dash-ni saqlash"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Asl gnome-shell yuqori panelini saqlash"
+
+msgid "(e.g. date menu)"
+msgstr "(masalan, sana menyusi)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Panel menyu tugmalarini faqat bosilganda faollashtirish"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Faolliklar qaynoq burchagini asosiy monitorda majburlash"
+
+msgid "Position"
+msgstr "Joylashuv"
+
+msgid "Panel"
+msgstr "Panel"
+
+msgid "Display the main panel on"
+msgstr "Asosiy panelni quyidagida koʻrsatish:"
+
+msgid "Display panels on all monitors"
+msgstr "Panellarni barcha monitorlarda koʻrsatish"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Panelni sozlamalarga koʻra yashirish va koʻrsatish"
+
+msgid "Panel Intellihide"
+msgstr "Panel Intellihide"
+
+msgid "Order and Position on monitors"
+msgstr "Monitorlarda tartib va joylashuv"
+
+msgid "Monitor"
+msgstr "Monitor"
+
+msgid "Apply changes to all monitors"
+msgstr "Oʻzgarishlarni barcha monitorlarga qoʻllash"
+
+msgid "Panel monitor position"
+msgstr "Panelning monitordagi joylashuvi"
+
+msgid "(default is 48)"
+msgstr "(standart: 48)"
+
+msgid "Panel thickness"
+msgstr "Panel qalinligi"
+
+msgid "(default is 100)"
+msgstr "(standart: 100)"
+
+msgid "Panel length"
+msgstr "Panel uzunligi"
+
+msgid "Dynamic"
+msgstr "Dinamik"
+
+msgid "Anchor"
+msgstr "Langar"
+
+msgid "Taskbar Display"
+msgstr "Vazifalar paneli koʻrinishi"
+
+msgid "Style"
+msgstr "Uslub"
+
+msgid "Global style"
+msgstr "Umumiy uslub"
+
+msgid "Border radius"
+msgstr "Chegara radiusi"
+
+msgid "AppIcon style"
+msgstr "Ilova ikonkasi uslubi"
+
+msgid "(default is 8)"
+msgstr "(standart: 8)"
+
+msgid "App Icon Margin"
+msgstr "Ilova ikonkasi chetlari"
+
+msgid "(default is 4)"
+msgstr "(standart: 4)"
+
+msgid "App Icon Padding"
+msgstr "Ilova ikonkasi ichki boʻshligʻi"
+
+msgid "Animate hovering app icons"
+msgstr "Ustiga olib borilgan ilova ikonkalarini animatsiya qilish"
+
+msgid "Highlight hovering app icons"
+msgstr "Ustiga olib borilgan ilova ikonkalarini ajratib koʻrsatish"
+
+msgid "Icon style"
+msgstr "Ikonka uslubi"
+
+msgid "Normal"
+msgstr "Oddiy"
+
+msgid "Symbolic"
+msgstr "Simvolik"
+
+msgid "Grayscale"
+msgstr "Kulrang tusli"
+
+msgid "Running indicator"
+msgstr "Ishlayotganlik koʻrsatkichi"
+
+msgid "Running indicator position"
+msgstr "Ishlayotganlik koʻrsatkichi joylashuvi"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Ishlayotganlik koʻrsatkichi uslubi (fokusdagi ilova)"
+
+msgid "Dots"
+msgstr "Nuqtalar"
+
+msgid "Squares"
+msgstr "Kvadratlar"
+
+msgid "Dashes"
+msgstr "Chiziqchalar"
+
+msgid "Segmented"
+msgstr "Boʻlakli"
+
+msgid "Solid"
+msgstr "Yaxlit"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Ishlayotganlik koʻrsatkichi uslubi (fokussiz ilovalar)"
+
+msgid "Panel style"
+msgstr "Panel uslubi"
+
+msgid "(default is 0)"
+msgstr "(standart: 0)"
+
+msgid "Side margins"
+msgstr "Yon chetlar"
+
+msgid "Top and bottom margins"
+msgstr "Yuqori va pastki chetlar"
+
+msgid "Side padding"
+msgstr "Yon ichki boʻshliq"
+
+msgid "Top and bottom padding"
+msgstr "Yuqori va pastki ichki boʻshliq"
+
+msgid "Override panel theme background color"
+msgstr "Panel mavzusi fon rangini bekor qilish"
+
+msgid "Override panel theme background opacity"
+msgstr "Panel mavzusi fon shaffofligini bekor qilish"
+
+msgid "Panel background opacity (%)"
+msgstr "Panel fon shaffofligi (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Oyna panelga yaqinlashganda shaffoflikni oʻzgartirish"
+
+msgid "Dynamic background opacity"
+msgstr "Dinamik fon shaffofligi"
+
+msgid "Override panel theme gradient"
+msgstr "Panel mavzusi gradientini bekor qilish"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Gradient yuqori rangi va shaffofligi (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Gradient pastki rangi va shaffofligi (%)"
+
+msgid "Panel border"
+msgstr "Panel chegarasi"
+
+msgid "Override border color"
+msgstr "Chegara rangini bekor qilish"
+
+msgid "Border thickness"
+msgstr "Chegara qalinligi"

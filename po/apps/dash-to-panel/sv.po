@@ -1,0 +1,559 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Avsluta %d fönster"
+msgstr[1] "Avsluta %d fönster"
+
+msgid "Gnome Settings"
+msgstr "GNOME-inställningar"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel har uppdaterats!"
+
+msgid "You are now running version"
+msgstr "Du kör nu version"
+
+msgid "See what's new"
+msgstr "Se vad som är nytt"
+
+msgid "Top Bar"
+msgstr "Översta fältet"
+
+msgid "Center"
+msgstr "Centrerad"
+
+msgid "Middle"
+msgstr "Mitten"
+
+msgid "Start"
+msgstr "Början"
+
+msgid "End"
+msgstr "Slut"
+
+msgid "Show Applications button"
+msgstr "Knappen Visa program"
+
+msgid "Activities button"
+msgstr "Knappen Aktiviteter"
+
+msgid "Taskbar"
+msgstr "Aktivitetsfält"
+
+msgid "Date menu"
+msgstr "Datummeny"
+
+msgid "System menu"
+msgstr "Systemmeny"
+
+msgid "Left box"
+msgstr "Vänster ruta"
+
+msgid "Center box"
+msgstr "Mittenruta"
+
+msgid "Right box"
+msgstr "Höger ruta"
+
+msgid "Desktop button"
+msgstr "Skrivbordsknapp"
+
+msgid "Move up"
+msgstr "Flytta upp"
+
+msgid "Move down"
+msgstr "Flytta ned"
+
+msgid "Visible"
+msgstr "Synlig"
+
+msgid "Select element position"
+msgstr "Välj elementets position"
+
+msgid "Stacked to top"
+msgstr "Staplade överst"
+
+msgid "Stacked to left"
+msgstr "Staplade till vänster"
+
+msgid "Stacked to bottom"
+msgstr "Staplade nederst"
+
+msgid "Stacked to right"
+msgstr "Staplade till höger"
+
+msgid "Centered"
+msgstr "Centrerad"
+
+msgid "Monitor Center"
+msgstr "Skärmens mitt"
+
+msgid "More options"
+msgstr "Fler alternativ"
+
+msgid "Open icon"
+msgstr "Öppna ikon"
+
+msgid "Primary monitor"
+msgstr "Primär bildskärm"
+
+msgid "Isolate Workspaces options"
+msgstr "Alternativ för isolering av arbetsytor"
+
+msgid "Isolate monitors options"
+msgstr "Alternativ för isolering av bildskärmar"
+
+msgid "Text"
+msgstr "Text"
+
+msgid "Command"
+msgstr "Kommando"
+
+msgid "Remove"
+msgstr "Ta bort"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d ikon"
+msgstr[1] "%d ikoner"
+
+msgid "App icon animation options"
+msgstr "Alternativ för animering av programikoner"
+
+msgid "App icon highlight options"
+msgstr "Alternativ för markering av programikoner"
+
+msgid "Move to current Workspace"
+msgstr "Flytta till aktuell arbetsyta"
+
+msgid "Animation type"
+msgstr "Animationstyp"
+
+msgid "Simple"
+msgstr "Enkel"
+
+msgid "Ripple"
+msgstr "Krusning"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Varaktighet"
+
+msgid "Rotation"
+msgstr "Rotation"
+
+msgid "Travel"
+msgstr "Förflyttning"
+
+msgid "Zoom"
+msgstr "Zoom"
+
+msgid "Convexity"
+msgstr "Konvexitet"
+
+msgid "Extent"
+msgstr "Omfång"
+
+msgid "Indicator size (px)"
+msgstr "Indikatorstorlek (px)"
+
+msgid "Font color of the minimized application titles"
+msgstr "Teckenfärg för minimerade programtitlar"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Maximal bredd (px) för programtitlar"
+
+msgid "(default is 160)"
+msgstr "(standard är 160)"
+
+msgid "Highlight AppIcon color"
+msgstr "Färg för markerad programikon"
+
+msgid "Pressed AppIcon color"
+msgstr "Färg för nedtryckt programikon"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Hörnradie för markerad programikon"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Åsidosätter den globala hörnradien (standard är 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Dölj endast panelen från fönster"
+
+msgid "Overlapping"
+msgstr "Överlappande"
+
+msgid "On same monitor"
+msgstr "På samma bildskärm"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Att röra vid bildskärmens kant med pekaren visar panelen"
+
+msgid "Limit to panel length"
+msgstr "Begränsa till panelens längd"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Att hålla pekaren över panelområdet håller panelen synlig"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Kräv tryck vid bildskärmens kant för att visa panelen"
+
+msgid "(requires multi-monitors option)"
+msgstr "(kräver alternativet för flera bildskärmar)"
+
+msgid "Only hide secondary panels"
+msgstr "Dölj endast sekundära paneler"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Persist state across restarts"
+msgstr "Behåll tillstånd över omstarter"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(respekterar GNOME:s ”Stör ej” och kräver alternativet för aviseringsräknare)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Visa och håll kvar panelen vid avisering"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Fördröjning innan panelen visas (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Isolera bildskärmar även vid en enda panel"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Isolera arbetsytor i programväxlaren i gnome-shell"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Växla enskilt / Bläddra bland flera"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Växla enskilt / Sprid ut flera"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "På sekundära bildskärmar, visa överlägget på ikoner som motsvarar den primära bildskärmen"
+
+msgid "Show the overlay on all monitors"
+msgstr "Visa överlägget på alla bildskärmar"
+
+msgid "Show popup when changing workspace"
+msgstr "Visa popup vid byte av arbetsyta"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Detta påverkar endast popupen för arbetsytor vid rullning på panelen."
+
+msgid "<i>App Details</i> menu item"
+msgstr "Menyalternativet <i>Programinformation</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Programinformation</i> är endast tillgängligt när GNOME Programvara är installerat"
+
+msgid "Show Applications icon"
+msgstr "Ikonen Visa program"
+
+msgid "Override escape key and return to desktop"
+msgstr "Åsidosätt escape-tangenten och återgå till skrivbordet"
+
+msgid "Override Show Desktop line color"
+msgstr "Åsidosätt linjefärg för Visa skrivbord"
+
+msgid "Time (ms) before showing"
+msgstr "Tid (ms) innan visning"
+
+msgid "(400 is default)"
+msgstr "(400 är standard)"
+
+msgid "Time (ms) before hiding"
+msgstr "Tid (ms) innan döljning"
+
+msgid "(100 is default)"
+msgstr "(100 är standard)"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Om detta är inaktiverat har förhandsvisningarnas bakgrund samma opacitet som panelen."
+
+msgid "Icon size (px) of the window preview"
+msgstr "Ikonstorlek (px) för fönsterförhandsvisningen"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Om detta är inaktiverat baseras förhandsvisningens ikonstorlek på rubrikfältets storlek"
+
+msgid "About"
+msgstr "Om"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "Source"
+msgstr "Källa"
+
+msgid "Export and Import"
+msgstr "Exportera och importera"
+
+msgid "Sponsored and originally developed by"
+msgstr "Sponsrad och ursprungligen utvecklad av"
+
+msgid "Action"
+msgstr "Åtgärd"
+
+msgid "Scroll action"
+msgstr "Rullningsåtgärd"
+
+msgid "Change volume"
+msgstr "Ändra volym"
+
+msgid "Same as panel"
+msgstr "Samma som panelen"
+
+msgid "Hotkey overlay"
+msgstr "Snabbtangentsöverlägg"
+
+msgid "Application icons context menu"
+msgstr "Kontextmeny för programikoner"
+
+msgid "(right-click menu)"
+msgstr "(högerklicksmeny)"
+
+msgid "Secondary menu"
+msgstr "Sekundär meny"
+
+msgid "Panel context menu entries"
+msgstr "Poster i panelens kontextmeny"
+
+msgid "Add entry"
+msgstr "Lägg till post"
+
+msgid "Behavior"
+msgstr "Beteende"
+
+msgid "Applications"
+msgstr "Program"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Visa favoritprogram på sekundära paneler"
+
+msgid "Show notification counter badge"
+msgstr "Visa aviseringsräknare som märke"
+
+msgid "Hover"
+msgstr "Peka"
+
+msgid "Isolate"
+msgstr "Isolera"
+
+msgid "Overview"
+msgstr "Översikt"
+
+msgid "Click empty space to close overview"
+msgstr "Klicka på tomt utrymme för att stänga översikten"
+
+msgid "Disable show overview on startup"
+msgstr "Inaktivera visning av översikten vid start"
+
+msgid "Fine-Tune"
+msgstr "Finjustering"
+
+msgid "Font size"
+msgstr "Teckenstorlek"
+
+msgid "(0 = theme default)"
+msgstr "(0 = temats standard)"
+
+msgid "Tray Font Size"
+msgstr "Teckenstorlek i systemfältet"
+
+msgid "LeftBox Font Size"
+msgstr "Teckenstorlek i vänster ruta"
+
+msgid "Padding"
+msgstr "Utfyllnad"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = temats standard)"
+
+msgid "Tray Item Padding"
+msgstr "Utfyllnad för systemfältsobjekt"
+
+msgid "Status Icon Padding"
+msgstr "Utfyllnad för statusikoner"
+
+msgid "LeftBox Padding"
+msgstr "Utfyllnad för vänster ruta"
+
+msgid "Animate"
+msgstr "Animera"
+
+msgid "Gnome functionality"
+msgstr "GNOME-funktionalitet"
+
+msgid "(overview)"
+msgstr "(översikt)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Behåll den ursprungliga dashen i gnome-shell"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Behåll den ursprungliga översta panelen i gnome-shell"
+
+msgid "(e.g. date menu)"
+msgstr "(t.ex. datummenyn)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Aktivera panelmenyknappar endast vid klick"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Tvinga aktivitetshörnet på den primära bildskärmen"
+
+msgid "Position"
+msgstr "Position"
+
+msgid "Panel"
+msgstr "Panel"
+
+msgid "Order and Position on monitors"
+msgstr "Ordning och position på bildskärmar"
+
+msgid "Monitor"
+msgstr "Bildskärm"
+
+msgid "Apply changes to all monitors"
+msgstr "Tillämpa ändringar på alla bildskärmar"
+
+msgid "Panel monitor position"
+msgstr "Panelens position på bildskärmen"
+
+msgid "(default is 48)"
+msgstr "(standard är 48)"
+
+msgid "Panel thickness"
+msgstr "Panelens tjocklek"
+
+msgid "(default is 100)"
+msgstr "(standard är 100)"
+
+msgid "Panel length"
+msgstr "Panelens längd"
+
+msgid "Dynamic"
+msgstr "Dynamisk"
+
+msgid "Anchor"
+msgstr "Förankring"
+
+msgid "Taskbar Display"
+msgstr "Visning av aktivitetsfältet"
+
+msgid "Style"
+msgstr "Stil"
+
+msgid "Global style"
+msgstr "Global stil"
+
+msgid "Border radius"
+msgstr "Hörnradie"
+
+msgid "AppIcon style"
+msgstr "Stil för programikoner"
+
+msgid "(default is 8)"
+msgstr "(standard är 8)"
+
+msgid "App Icon Margin"
+msgstr "Marginal för programikoner"
+
+msgid "(default is 4)"
+msgstr "(standard är 4)"
+
+msgid "App Icon Padding"
+msgstr "Utfyllnad för programikoner"
+
+msgid "Animate hovering app icons"
+msgstr "Animera programikoner vid pekning"
+
+msgid "Highlight hovering app icons"
+msgstr "Markera programikoner vid pekning"
+
+msgid "Icon style"
+msgstr "Ikonstil"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Symbolic"
+msgstr "Symbolisk"
+
+msgid "Grayscale"
+msgstr "Gråskala"
+
+msgid "Running indicator"
+msgstr "Körindikator"
+
+msgid "Panel style"
+msgstr "Panelstil"
+
+msgid "(default is 0)"
+msgstr "(standard är 0)"
+
+msgid "Side margins"
+msgstr "Sidomarginaler"
+
+msgid "Top and bottom margins"
+msgstr "Övre och nedre marginaler"
+
+msgid "Side padding"
+msgstr "Sidoutfyllnad"
+
+msgid "Top and bottom padding"
+msgstr "Övre och nedre utfyllnad"
+
+msgid "Override panel theme background color"
+msgstr "Åsidosätt paneltemats bakgrundsfärg"
+
+msgid "Override panel theme gradient"
+msgstr "Åsidosätt paneltemats toning"
+
+msgid "Panel border"
+msgstr "Panelkant"
+
+msgid "Override border color"
+msgstr "Åsidosätt kantfärg"
+
+msgid "Border thickness"
+msgstr "Kanttjocklek"

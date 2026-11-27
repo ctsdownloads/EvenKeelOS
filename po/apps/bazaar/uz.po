@@ -1,0 +1,2588 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "Ilovalar doʻkoni"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "Ushbu kompyuterda flatpak dasturlarini qoʻshish, olib tashlash yoki yangilash"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Tizim;Paket;Menejer;Kashf etish;Flatpak;Dastur;Ilova;Doʻkon;"
+
+msgid "New Window"
+msgstr "Yangi oyna"
+
+msgid "Discover and install apps"
+msgstr "Ilovalarni kashf eting va oʻrnating"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Linux uchun tez va zamonaviy ilovalar doʻkoni; asosiy eʼtibor Flatpak ilovalari va qoʻshimchalarini, ayniqsa Flathub-dan, topish va oʻrnatishga qaratilgan."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Bir nechta oʻrnatishni navbatga qoʻying va koʻrishda davom eting"
+
+msgid "Easily view app permissions"
+msgstr "Ilova ruxsatlarini osongina koʻring"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Sevimlilaringizni koʻrish va boshqarish uchun Flathub-ga kiring"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Ilovalarni toʻgʻridan-toʻgʻri GNOME Shell-dan qidiring"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Flathub ilovalari koʻrsatilgan bosh sahifa"
+
+msgid "App page for Exhibit"
+msgstr "Exhibit uchun ilova sahifasi"
+
+msgid "Library page"
+msgstr "Kutubxona sahifasi"
+
+msgid "Search page"
+msgstr "Qidiruv sahifasi"
+
+msgid "Category page"
+msgstr "Turkum sahifasi"
+
+msgid "Stopped Receiving Updates"
+msgstr "Yangilanishlar olinishi toʻxtadi"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Oʻchirish"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Oʻrnatish"
+
+msgid "Add-on"
+msgstr "Qoʻshimcha"
+
+msgid "Manage Add-Ons"
+msgstr "Qoʻshimchalarni boshqarish"
+
+msgid "No Add-Ons Visible"
+msgstr "Hech qanday qoʻshimcha koʻrinmayapti"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "Joriy filtr sozlamalaringiz barcha maʼlum qoʻshimchalarni yashirmoqda. Ularni oʻzgartirib koʻring."
+
+msgid "Add-on Page"
+msgstr "Qoʻshimcha sahifasi"
+
+msgid "Download"
+msgstr "Yuklab olish"
+
+msgid "Installed"
+msgstr "Oʻrnatilgan"
+
+msgid "Downloads/Month"
+msgstr "Oyiga yuklab olishlar"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Asosiy yangilanishlar olinishi toʻxtadi"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Bu qoʻshimcha endi yangilanish va xavfsizlik tuzatishlarini olmaydigan ish muhitidan foydalanadi. Undan foydalanish xavfli boʻlib qolishi mumkin."
+
+msgid "Other Sources"
+msgstr "Boshqa manbalar"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "%s uchun qoʻshimcha"
+
+msgid "Show Less"
+msgstr "Kamroq koʻrsatish"
+
+msgid "Show More"
+msgstr "Koʻproq koʻrsatish"
+
+msgid "Download Stats"
+msgstr "Yuklab olish statistikasi"
+
+msgid "Age Rating"
+msgstr "Yosh reytingi"
+
+msgid "Cartoon Violence"
+msgstr "Multfilmdagi zoʻravonlik"
+
+msgid "No information regarding cartoon violence"
+msgstr "Multfilmdagi zoʻravonlik haqida maʼlumot yoʻq"
+
+msgid "Fantasy Violence"
+msgstr "Xayoliy zoʻravonlik"
+
+msgid "No information regarding fantasy violence"
+msgstr "Xayoliy zoʻravonlik haqida maʼlumot yoʻq"
+
+msgid "Realistic Violence"
+msgstr "Realistik zoʻravonlik"
+
+msgid "No information regarding realistic violence"
+msgstr "Realistik zoʻravonlik haqida maʼlumot yoʻq"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "Qon toʻkishni aks ettiruvchi zoʻravonlik"
+
+msgid "No information regarding bloodshed"
+msgstr "Qon toʻkish haqida maʼlumot yoʻq"
+
+msgid "Sexual Violence"
+msgstr "Jinsiy zoʻravonlik"
+
+msgid "No information regarding sexual violence"
+msgstr "Jinsiy zoʻravonlik haqida maʼlumot yoʻq"
+
+msgid "Alcohol"
+msgstr "Spirtli ichimliklar"
+
+msgid "No information regarding references to alcohol"
+msgstr "Spirtli ichimliklarga havolalar haqida maʼlumot yoʻq"
+
+msgid "Narcotics"
+msgstr "Giyohvand moddalar"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "Noqonuniy giyohvand moddalarga havolalar haqida maʼlumot yoʻq"
+
+msgid "Tobacco"
+msgstr "Tamaki"
+
+msgid "No information regarding references to tobacco products"
+msgstr "Tamaki mahsulotlariga havolalar haqida maʼlumot yoʻq"
+
+msgid "Nudity"
+msgstr "Yalangʻochlik"
+
+msgid "No information regarding nudity of any sort"
+msgstr "Har qanday yalangʻochlik haqida maʼlumot yoʻq"
+
+msgid "Sexual Themes"
+msgstr "Jinsiy mavzular"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "Jinsiy xarakterdagi havolalar yoki tasvirlar haqida maʼlumot yoʻq"
+
+msgid "Profanity"
+msgstr "Qopol soʻzlar"
+
+msgid "No information regarding profanity of any kind"
+msgstr "Har qanday qopol soʻzlar haqida maʼlumot yoʻq"
+
+msgid "Inappropriate Humor"
+msgstr "Nomaqbul hazil"
+
+msgid "No information regarding inappropriate humor"
+msgstr "Nomaqbul hazil haqida maʼlumot yoʻq"
+
+msgid "Discrimination"
+msgstr "Kamsitish"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "Har qanday kamsituvchi soʻzlar haqida maʼlumot yoʻq"
+
+msgid "Advertising"
+msgstr "Reklama"
+
+msgid "No information regarding advertising of any kind"
+msgstr "Har qanday reklama haqida maʼlumot yoʻq"
+
+msgid "Gambling"
+msgstr "Qimor"
+
+msgid "No information regarding gambling of any kind"
+msgstr "Har qanday qimor haqida maʼlumot yoʻq"
+
+msgid "Purchasing"
+msgstr "Xarid qilish"
+
+msgid "No information regarding the ability to spend money"
+msgstr "Pul sarflash imkoniyati haqida maʼlumot yoʻq"
+
+msgid "Chat Between Users"
+msgstr "Foydalanuvchilar orasidagi suhbat"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "Boshqa foydalanuvchilar bilan yozishmalar haqida maʼlumot yoʻq"
+
+msgid "Audio Chat Between Users"
+msgstr "Foydalanuvchilar orasidagi ovozli suhbat"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "Boshqa foydalanuvchilar bilan gaplashish usullari haqida maʼlumot yoʻq"
+
+msgid "Contact Details"
+msgstr "Aloqa maʼlumotlari"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "Ijtimoiy tarmoq foydalanuvchi nomlari yoki elektron pochta manzillarini ulashish haqida maʼlumot yoʻq"
+
+msgid "Identifying Information"
+msgstr "Shaxsni aniqlovchi maʼlumotlar"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "Foydalanuvchi maʼlumotlarini uchinchi tomonlar bilan ulashish haqida maʼlumot yoʻq"
+
+msgid "Location Sharing"
+msgstr "Joylashuvni ulashish"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "Jismoniy joylashuvni boshqa foydalanuvchilar bilan ulashish haqida maʼlumot yoʻq"
+
+msgid "Prostitution"
+msgstr "Fohishabozlik"
+
+msgid "No information regarding references to prostitution"
+msgstr "Fohishabozlikka havolalar haqida maʼlumot yoʻq"
+
+msgid "Adultery"
+msgstr "Zino"
+
+msgid "No information regarding references to adultery"
+msgstr "Zinoga havolalar haqida maʼlumot yoʻq"
+
+msgid "Sexualized Characters"
+msgstr "Jinsiylashtirilgan qahramonlar"
+
+msgid "No information regarding sexualized characters"
+msgstr "Jinsiylashtirilgan qahramonlar haqida maʼlumot yoʻq"
+
+msgid "Desecration"
+msgstr "Haqorat qilish"
+
+msgid "No information regarding references to desecration"
+msgstr "Haqoratga havolalar haqida maʼlumot yoʻq"
+
+msgid "Human Remains"
+msgstr "Inson qoldiqlari"
+
+msgid "No information regarding visible dead human remains"
+msgstr "Koʻrinib turgan oʻlik inson qoldiqlari haqida maʼlumot yoʻq"
+
+msgid "Slavery"
+msgstr "Qullik"
+
+msgid "No information regarding references to slavery"
+msgstr "Qullikka havolalar haqida maʼlumot yoʻq"
+
+msgid "Does not include references to drugs"
+msgstr "Giyohvand moddalarga havolalar yoʻq"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "Soʻkinish, qopol soʻzlar va boshqa keskin ifodalar yoʻq"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "Reklama yoki pul tranzaksiyalari yoʻq"
+
+msgid "Does not include sex or nudity"
+msgstr "Jinsiy mazmun yoki yalangʻochlik yoʻq"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "Nazoratsiz suhbat imkoniyati yoʻq"
+
+msgid "Does not include violence"
+msgstr "Zoʻravonlik yoʻq"
+
+msgid "Drugs"
+msgstr "Giyohvand moddalar"
+
+msgid "Strong Language"
+msgstr "Keskin ifodalar"
+
+msgid "Money"
+msgstr "Pul"
+
+msgid "Social"
+msgstr "Ijtimoiy"
+
+msgid "Violence"
+msgstr "Zoʻravonlik"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "Hamma"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s uchun yosh reytingi nomaʼlum"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s hamma uchun mos"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s yosh bolalar uchun mos"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s bolalar uchun mos"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s oʻsmirlar uchun mos"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s kattalar uchun mos"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s – %s uchun mos"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "%s tizim papkasi"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "%s uy papkasi ichidagi papka"
+
+msgid "Host system folders"
+msgstr "Asosiy tizim papkalari"
+
+msgid "Host system configuration from /etc"
+msgstr "/etc ichidagi asosiy tizim sozlamalari"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "%s ish stoli ichidagi papka"
+
+msgid "Desktop folder"
+msgstr "Ish stoli papkasi"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "%s hujjatlar ichidagi papka"
+
+msgid "Documents folder"
+msgstr "Hujjatlar papkasi"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "%s musiqa ichidagi papka"
+
+msgid "Music folder"
+msgstr "Musiqa papkasi"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "%s rasmlar ichidagi papka"
+
+msgid "Pictures folder"
+msgstr "Rasmlar papkasi"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "%s ommaviy ulashish ichidagi papka"
+
+msgid "Public Share folder"
+msgstr "Ommaviy ulashish papkasi"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "%s videolar ichidagi papka"
+
+msgid "Videos folder"
+msgstr "Videolar papkasi"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "%s andozalar ichidagi papka"
+
+msgid "Templates folder"
+msgstr "Andozalar papkasi"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "%s foydalanuvchi keshi ichidagi papka"
+
+msgid "User cache folder"
+msgstr "Foydalanuvchi keshi papkasi"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "%s foydalanuvchi sozlamalari ichidagi papka"
+
+msgid "User configuration folder"
+msgstr "Foydalanuvchi sozlamalari papkasi"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "%s foydalanuvchi maʼlumotlari ichidagi papka"
+
+msgid "User data folder"
+msgstr "Foydalanuvchi maʼlumotlari papkasi"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "%s foydalanuvchi ish muhiti ichidagi papka"
+
+msgid "User runtime folder"
+msgstr "Foydalanuvchi ish muhiti papkasi"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "%s uchun fayl tizimiga kirish"
+
+msgid "Unknown filesystem path"
+msgstr "Nomaʼlum fayl tizimi yoʻli"
+
+msgid "Download Size"
+msgstr "Yuklab olish hajmi"
+
+msgid "Installed Size"
+msgstr "Oʻrnatilgan hajm"
+
+msgid "Amount to download from the internet"
+msgstr "Internetdan yuklab olinadigan hajm"
+
+msgid "Size on Disk"
+msgstr "Diskdagi hajm"
+
+msgid "Open user data folder"
+msgstr "Foydalanuvchi maʼlumotlari papkasini ochish"
+
+msgid "Your User Data"
+msgstr "Sizning foydalanuvchi maʼlumotlaringiz"
+
+msgid "Caches, settings, and other app data"
+msgstr "Keshlar, sozlamalar va boshqa ilova maʼlumotlari"
+
+msgid "Cache"
+msgstr "Kesh"
+
+msgid "Temporary cached data"
+msgstr "Vaqtinchalik keshlangan maʼlumotlar"
+
+msgid "Clear Cache"
+msgstr "Keshni tozalash"
+
+msgid "Installed Runtime Size"
+msgstr "Oʻrnatilgan ish muhiti hajmi"
+
+msgid "Runtime Download Size"
+msgstr "Ish muhitini yuklab olish hajmi"
+
+msgid "N/A"
+msgstr "Mavjud emas"
+
+msgid "Storage"
+msgstr "Xotira"
+
+msgid "Verified"
+msgstr "Tasdiqlangan"
+
+msgid "The Bazaar Contributors"
+msgstr "Bazaar hissa qoʻshuvchilari"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "Alohida minnatdorchilik"
+
+msgid "Logged Out Successfully!"
+msgstr "Muvaffaqiyatli chiqildi!"
+
+msgid "Performing setup…"
+msgstr "Sozlash bajarilmoqda…"
+
+msgid "Set Up Flathub?"
+msgstr "Flathub sozlansinmi?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub bu tizimda sozlanmagan. U mavjud boʻlmasa, Bazaar-da ilovalarni koʻrib chiqish va oʻrnatish imkoni boʻlmaydi.\n"
+"\n"
+"Bazaar yordamida allaqachon oʻrnatilgan ilovalarni koʻrib chiqish va oʻchirish hali ham mumkin."
+
+msgid "Later"
+msgstr "Keyinroq"
+
+msgid "Set Up Flathub"
+msgstr "Flathub-ni sozlash"
+
+msgid "A backend error occurred"
+msgstr "Orqa qism xatosi yuz berdi"
+
+msgid "Refreshing…"
+msgstr "Yangilanmoqda…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "%d ta ilova yuklanmoqda…"
+
+msgid "Failed to open file"
+msgstr "Faylni ochib boʻlmadi"
+
+msgid "Failed to load metainfo"
+msgstr "Metainfo-ni yuklab boʻlmadi"
+
+msgid "An initialization error occurred"
+msgstr "Ishga tushirish xatosi yuz berdi"
+
+msgid "Checking for updates…"
+msgstr "Yangilanishlar tekshirilmoqda…"
+
+msgid "Failed to check for updates"
+msgstr "Yangilanishlarni tekshirib boʻlmadi"
+
+msgid "Could not find app"
+msgstr "Ilova topilmadi"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "%d ta ilova yuklanmoqda…"
+msgstr[1] "%d ta ilova yuklanmoqda…"
+
+msgid "Writing to cache…"
+msgstr "Keshga yozilmoqda…"
+
+msgid "Removing remote…"
+msgstr "Masofaviy ombor olib tashlanmoqda…"
+
+msgid "Could not remove remote"
+msgstr "Masofaviy omborni olib tashlab boʻlmadi"
+
+msgid "Show All"
+msgstr "Hammasini koʻrsatish"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Barcha \"%s\""
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d ta ilova"
+
+msgid "Failed to Load Article"
+msgstr "Maqolani yuklab boʻlmadi"
+
+msgid "All apps are already installed"
+msgstr "Barcha ilovalar allaqachon oʻrnatilgan"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "%u ta ilova oʻrnatilsinmi?"
+msgstr[1] "%u ta ilova oʻrnatilsinmi?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Quyidagilar oʻrnatiladi. Qoʻshimcha umumiy komponentlar ham oʻrnatilishi mumkin"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "%d ta qoʻshimcha oʻrnatiladi."
+
+msgid "Additionally, addons will be installed."
+msgstr "Bundan tashqari, qoʻshimchalar oʻrnatiladi."
+
+msgid "_Cancel"
+msgstr "_Bekor qilish"
+
+msgid "_Install All"
+msgstr "Hammasini _oʻrnatish"
+
+msgid "Bundle Installation"
+msgstr "Toʻplam oʻrnatilishi"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Qoʻshimcha bogʻliqliklar qoʻshimcha joy egallashi mumkin"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Bu ilovani oʻrnatish uchun yangi dastur manbasini qoʻshish talab qilinishi mumkin. Bu manbadagi boshqa ilovalar Bazaar-da paydo boʻladi.\n"
+"\n"
+"Bu manbaga ishonchingiz komil boʻlsagina uni qoʻshing."
+
+msgid "Successfully Installed!"
+msgstr "Muvaffaqiyatli oʻrnatildi!"
+
+msgid "Open"
+msgstr "Ochish"
+
+msgid "Show App Details"
+msgstr "Ilova tafsilotlarini koʻrsatish"
+
+msgid "Already Installed"
+msgstr "Allaqachon oʻrnatilgan"
+
+msgid "Installation Failed"
+msgstr "Oʻrnatib boʻlmadi"
+
+msgid "Unknown install size"
+msgstr "Oʻrnatish hajmi nomaʼlum"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Oʻrnatish uchun taxminan %s"
+
+msgid "No special permissions"
+msgstr "Maxsus ruxsatlar yoʻq"
+
+msgid "Place Applet"
+msgstr "Applet joylashtirish"
+
+msgid "Choose where to add this applet."
+msgstr "Bu appletni qayerga qoʻshishni tanlang."
+
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+msgid "Panel"
+msgstr "Panel"
+
+msgid "Dock"
+msgstr "Dok"
+
+msgid "No Curation"
+msgstr "Saralash yoʻq"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Bu tizimda saralash maʼlumotlari berilmagan. Flathub-dagi ilovalarni hali ham koʻrib chiqishingiz mumkin"
+
+msgid "Browse Flathub"
+msgstr "Flathub-ni koʻrib chiqish"
+
+msgid "Offline"
+msgstr "Oflayn"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s dan %s gacha, eng yuqorisi %s kuni %s bilan"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "Oʻrnatishlar:"
+
+msgid "Not Verified"
+msgstr "Tasdiqlanmagan"
+
+msgid "Developer information not available."
+msgstr "Ishlab chiquvchi maʼlumotlari mavjud emas."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "%s ilova identifikatoriga egalik tasdiqlanmagan va bu jamoa paketi boʻlishi mumkin."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "%s ilova identifikatoriga egalik Flathub jamoasi tomonidan qoʻlda tasdiqlangan."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "%1$s ilova identifikatoriga egalik <b>%2$s</b> tomonidan <b>%3$s</b> sanasida tasdiqlangan."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "%1$s ilova identifikatoriga egalik %2$s yordamida tasdiqlangan."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "%s ilova identifikatoriga egalik tasdiqlangan."
+
+msgid "Bazaar Release"
+msgstr "Bazaar versiyasi"
+
+msgid "Full Release Notes"
+msgstr "Versiya haqida toʻliq maʼlumot"
+
+msgid "This release was made possible by users like you!"
+msgstr "Bu versiya siz kabi foydalanuvchilar tufayli yaratildi!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Men Bazaar-ni yaratishni yaxshi koʻraman, lekin buni yolgʻiz qilolmayman. Ko-Fi orqali xayriya qilib, keyingi rivojlanishni qoʻllab-quvvatlashga yordam bering."
+
+msgid "Donate to Bazaar"
+msgstr "Bazaar-ga xayriya qilish"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "%s-da nima yangi?"
+
+msgid "Released %B %-e, %Y"
+msgstr "%Y-yil %-e %B da chiqarilgan"
+
+msgid "Choose an Installation"
+msgstr "Oʻrnatishni tanlang"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Bu ilovaning bir nechta versiyasi oʻrnatilgan. Qaysi biri bilan davom etmoqchisiz?"
+
+msgid "Details"
+msgstr "Tafsilotlar"
+
+msgid "Copy"
+msgstr "Nusxalash"
+
+msgid "Copied!"
+msgstr "Nusxa olindi!"
+
+msgid "Favorite Count"
+msgstr "Sevimlilar soni"
+
+msgid "Failed to update favorite"
+msgstr "Sevimlini yangilab boʻlmadi"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Sevimlilarni boshqarish uchun Flathub orqali kiring"
+
+msgid "Log In"
+msgstr "Kirish"
+
+msgid "Favorites"
+msgstr "Sevimlilar"
+
+msgid "Install All"
+msgstr "Hammasini oʻrnatish"
+
+msgid "No Favorites"
+msgstr "Sevimlilar yoʻq"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Sevimli deb belgilagan ilovalaringiz shu yerda paydo boʻladi"
+
+msgid "Support This Application"
+msgstr "Ushbu ilovani qoʻllab-quvvatlash"
+
+msgid "Remove From Favorites"
+msgstr "Sevimlilardan olib tashlash"
+
+msgid "Failed to remove favorite"
+msgstr "Sevimlini olib tashlab boʻlmadi"
+
+msgid "Previous"
+msgstr "Oldingi"
+
+msgid "Next"
+msgstr "Keyingi"
+
+msgid "Editing"
+msgstr "Tahrirlash"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Mikser"
+
+msgid "Music"
+msgstr "Musiqa"
+
+msgid "Player"
+msgstr "Pleyer"
+
+msgid "Recorder"
+msgstr "Yozuvchi"
+
+msgid "Sequencer"
+msgstr "Sekvenser"
+
+msgid "Tuner"
+msgstr "Tyuner"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "Emulation"
+msgstr "Emulyatsiya"
+
+msgid "Action"
+msgstr "Jangari"
+
+msgid "Adventure"
+msgstr "Sarguzasht"
+
+msgid "Arcade"
+msgstr "Arkada"
+
+msgid "Blocks"
+msgstr "Bloklar"
+
+msgid "Board"
+msgstr "Stol oʻyinlari"
+
+msgid "Card"
+msgstr "Karta"
+
+msgid "Kids"
+msgstr "Bolalar"
+
+msgid "Logic"
+msgstr "Mantiq"
+
+msgid "Role Playing"
+msgstr "Rolli oʻyinlar"
+
+msgid "Shooter"
+msgstr "Shuter"
+
+msgid "Simulation"
+msgstr "Simulyatsiya"
+
+msgid "Sports"
+msgstr "Sport"
+
+msgid "Strategy"
+msgstr "Strategiya"
+
+msgid "Browsers"
+msgstr "Brauzerlar"
+
+msgid "Chat"
+msgstr "Chat"
+
+msgid "Mail"
+msgstr "Pochta"
+
+msgid "File Sharing"
+msgstr "Fayl almashish"
+
+msgid "Audio & Video"
+msgstr "Audio va video"
+
+msgid "Media"
+msgstr "Media"
+
+msgid "More Audio & Video"
+msgstr "Koʻproq audio va video"
+
+msgid "Developer Tools"
+msgstr "Ishlab chiquvchi vositalari"
+
+msgid "Develop"
+msgstr "Ishlab chiqish"
+
+msgid "More Developer Tools"
+msgstr "Koʻproq ishlab chiquvchi vositalari"
+
+msgid "Education"
+msgstr "Taʼlim"
+
+msgid "Learn"
+msgstr "Oʻrganish"
+
+msgid "More Education"
+msgstr "Koʻproq taʼlim"
+
+msgid "Gaming"
+msgstr "Oʻyinlar"
+
+msgid "Play"
+msgstr "Oʻynash"
+
+msgid "More Gaming"
+msgstr "Koʻproq oʻyinlar"
+
+msgid "Graphics & Photography"
+msgstr "Grafika va fotosuratlar"
+
+msgid "Create"
+msgstr "Yaratish"
+
+msgid "More Graphics & Photography"
+msgstr "Koʻproq grafika va fotosuratlar"
+
+msgid "Networking"
+msgstr "Tarmoq"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "More Networking"
+msgstr "Koʻproq tarmoq ilovalari"
+
+msgid "Productivity"
+msgstr "Unumdorlik"
+
+msgid "Work"
+msgstr "Ish"
+
+msgid "More Productivity"
+msgstr "Koʻproq unumdorlik ilovalari"
+
+msgid "Science"
+msgstr "Fan"
+
+msgid "More Science"
+msgstr "Koʻproq fan ilovalari"
+
+msgid "System"
+msgstr "Tizim"
+
+msgid "More System"
+msgstr "Koʻproq tizim ilovalari"
+
+msgid "Utilities"
+msgstr "Yordamchi dasturlar"
+
+msgid "Tools"
+msgstr "Vositalar"
+
+msgid "More Utilities"
+msgstr "Koʻproq yordamchi dasturlar"
+
+msgid "Trending"
+msgstr "Trenddagilar"
+
+msgid "More Trending"
+msgstr "Koʻproq trenddagilar"
+
+msgid "Popular"
+msgstr "Mashhur"
+
+msgid "More Popular"
+msgstr "Koʻproq mashhurlar"
+
+msgid "Recently Added"
+msgstr "Yaqinda qoʻshilganlar"
+
+msgid "New"
+msgstr "Yangi"
+
+msgid "More New"
+msgstr "Koʻproq yangilar"
+
+msgid "Recently Updated"
+msgstr "Yaqinda yangilanganlar"
+
+msgid "Updated"
+msgstr "Yangilangan"
+
+msgid "More Updated"
+msgstr "Koʻproq yangilanganlar"
+
+msgid "Mobile"
+msgstr "Mobil"
+
+msgid "More Mobile"
+msgstr "Koʻproq mobil ilovalar"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Koʻproq Adwaita"
+
+msgid "KDE Apps"
+msgstr "KDE ilovalari"
+
+msgid "More KDE Apps"
+msgstr "Koʻproq KDE ilovalari"
+
+msgid "Made for COSMIC™"
+msgstr "COSMIC™ uchun yaratilgan"
+
+msgid "For COSMIC™"
+msgstr "COSMIC™ uchun"
+
+msgid "More COSMIC Apps"
+msgstr "Koʻproq COSMIC ilovalari"
+
+msgid "Games"
+msgstr "Oʻyinlar"
+
+msgid "More Games"
+msgstr "Koʻproq oʻyinlar"
+
+msgid "Emulators"
+msgstr "Emulyatorlar"
+
+msgid "More Emulators"
+msgstr "Koʻproq emulyatorlar"
+
+msgid "Launchers"
+msgstr "Ishga tushirgichlar"
+
+msgid "More Game Launchers"
+msgstr "Koʻproq oʻyin ishga tushirgichlari"
+
+msgid "Game Tools"
+msgstr "Oʻyin vositalari"
+
+msgid "More Game Tools"
+msgstr "Koʻproq oʻyin vositalari"
+
+msgid "New Year, New Workflows"
+msgstr "Yangi yil, yangi ish usullari"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Qaydlar olish, vazifalarni kuzatish va reja tuzish uchun ilovalar"
+
+msgid "Staff Picks"
+msgstr "Jamoa tanlovi"
+
+msgid "Apps we love right now"
+msgstr "Hozir biz yoqtirgan ilovalar"
+
+msgid "Get Creative"
+msgstr "Ijodkor boʻling"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Rasm chizish, suratlarni tahrirlash va raqamli dizayn uchun zarur ilovalar"
+
+msgid "Build Native Apps"
+msgstr "Mahalliy ilovalar yarating"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Tizimingizga mos keladigan ilovalar ishlab chiqing"
+
+msgid "Stay in Touch"
+msgstr "Aloqada boʻling"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Hamkorlik va muloqot uchun zarur ilovalar"
+
+msgid "Ready for Vacations"
+msgstr "Taʼtilga tayyor"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Xaritalar, jamoat transporti, ob-havo va sayohat rejalashtirish ilovalari"
+
+msgid "Smarter Every Day"
+msgstr "Har kuni aqlliroq"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Oʻqish, tadqiqot qilish va yozishga yordam beradigan ilovalar"
+
+msgid "Get Cozy"
+msgstr "Qulay joylashing"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Kitob oʻqish, film koʻrish va oʻyin oʻynash uchun ajoyib ilovalar"
+
+msgid "Web Developer Essentials"
+msgstr "Veb-ishlab chiquvchi uchun zarurlar"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Veb-saytlar yaratish bu ilovalar bilan qiziqarliroq"
+
+msgid "Take Better Notes"
+msgstr "Yaxshiroq qaydlar oling"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Yangi sevimli qayd olish vositangizni toping"
+
+msgid "Get Focused"
+msgstr "Diqqatni jamlang"
+
+msgid "Great apps for task management"
+msgstr "Vazifalarni boshqarish uchun ajoyib ilovalar"
+
+msgid "Make Some Noise"
+msgstr "Shov-shuv qiling"
+
+msgid "Apps for creating and producing music"
+msgstr "Musiqa yaratish va ishlab chiqarish ilovalari"
+
+msgid "Get To Work"
+msgstr "Ishga kirishing"
+
+msgid "Essential office apps"
+msgstr "Zarur ofis ilovalari"
+
+msgid "Flathub Not Added"
+msgstr "Flathub qoʻshilmagan"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Flathub masofaviy ombori Flatpak oʻrnatmalaringizning hech birida topilmadi"
+
+msgid "Can't Reach Flathub"
+msgstr "Flathub-ga ulanib boʻlmadi"
+
+msgid "You can still manage and search for apps."
+msgstr "Ilovalarni boshqarish va qidirish hali ham mumkin."
+
+msgid "Search Apps"
+msgstr "Ilovalarni qidirish"
+
+msgid "Reconnect"
+msgstr "Qayta ulanish"
+
+msgid "App of the Day"
+msgstr "Kun ilovasi"
+
+msgid "On the Go"
+msgstr "Yoʻlda"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Linux telefonlaringiz va planshetlaringiz uchun ilovalar"
+
+msgid "More Mobile Apps"
+msgstr "Koʻproq mobil ilovalar"
+
+msgid "We​ ♥​ Games"
+msgstr "Biz ♥ oʻyinlarni yaxshi koʻramiz"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Sevimli oʻyinlaringizni ishga tushirish uchun oʻyinlar va ilovalar"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Bu mahalliy oldindan koʻrish, baʼzi tafsilotlar eʼlon qilingan roʻyxatdan farq qilishi mumkin"
+
+msgid "Preview Store Appearance"
+msgstr "Doʻkon koʻrinishini oldindan koʻrish"
+
+msgid "_Support"
+msgstr "_Qoʻllab-quvvatlash"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Bu ilova endi yangilanish va xavfsizlik tuzatishlarini olmaydigan ish muhitidan foydalanadi. Undan foydalanish xavfli boʻlib qolishi mumkin."
+
+msgid "Trash Data"
+msgstr "Maʼlumotlarni chiqindiga tashlash"
+
+msgid "Add-ons"
+msgstr "Qoʻshimchalar"
+
+msgid "More Add-Ons"
+msgstr "Koʻproq qoʻshimchalar"
+
+msgid "Links"
+msgstr "Havolalar"
+
+msgid "Similar Apps"
+msgstr "Oʻxshash ilovalar"
+
+msgid "No URL"
+msgstr "URL yoʻq"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Bu ilova FLOSS litsenziyasiga ega, yaʼni manba kodini xavfsizlik nuqtai nazaridan tekshirish mumkin."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Bu ilova yopiq litsenziyaga ega, yaʼni manba kodi yopiq ishlab chiqiladi va mustaqil uchinchi tomon tomonidan tekshirilishi mumkin emas."
+
+msgid "Other Apps From This Developer"
+msgstr "Ushbu ishlab chiquvchining boshqa ilovalari"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "%s ning boshqa ilovalari"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s oʻrnatilmagan, lekin undan hali ham <b>%s</b> maʼlumot qolgan."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "%s ilovalari"
+
+msgid "Apps by This Developer"
+msgstr "Ushbu ishlab chiquvchining ilovalari"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d ta ilova"
+msgstr[1] "%d ta ilova"
+
+msgid "Failed to Remove User Data"
+msgstr "Foydalanuvchi maʼlumotlarini olib tashlab boʻlmadi"
+
+msgid "Hardware Support"
+msgstr "Uskunani qoʻllab-quvvatlash"
+
+msgid "Keyboard support"
+msgstr "Klaviatura qoʻllab-quvvatlashi"
+
+msgid "Requires keyboards"
+msgstr "Klaviatura talab qilinadi"
+
+msgid "Recommends keyboards"
+msgstr "Klaviatura tavsiya etiladi"
+
+msgid "Supports keyboards"
+msgstr "Klaviaturani qoʻllab-quvvatlaydi"
+
+msgid "Unknown support for keyboards"
+msgstr "Klaviatura qoʻllab-quvvatlashi nomaʼlum"
+
+msgid "Mouse support"
+msgstr "Sichqoncha qoʻllab-quvvatlashi"
+
+msgid "Requires mice or pointing devices"
+msgstr "Sichqoncha yoki koʻrsatkich qurilmalari talab qilinadi"
+
+msgid "Recommends mice or pointing devices"
+msgstr "Sichqoncha yoki koʻrsatkich qurilmalari tavsiya etiladi"
+
+msgid "Supports mice or pointing devices"
+msgstr "Sichqoncha yoki koʻrsatkich qurilmalarini qoʻllab-quvvatlaydi"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "Sichqoncha yoki koʻrsatkich qurilmalarini qoʻllab-quvvatlashi nomaʼlum"
+
+msgid "Touchscreen support"
+msgstr "Sensorli ekran qoʻllab-quvvatlashi"
+
+msgid "Requires touchscreens"
+msgstr "Sensorli ekranlar talab qilinadi"
+
+msgid "Recommends touchscreens"
+msgstr "Sensorli ekranlar tavsiya etiladi"
+
+msgid "Supports touchscreens"
+msgstr "Sensorli ekranlarni qoʻllab-quvvatlaydi"
+
+msgid "Unknown support for touchscreens"
+msgstr "Sensorli ekranlarni qoʻllab-quvvatlashi nomaʼlum"
+
+msgid "Mobile support"
+msgstr "Mobil qoʻllab-quvvatlash"
+
+msgid "Works on mobile devices"
+msgstr "Mobil qurilmalarda ishlaydi"
+
+msgid "May not work well on mobile devices"
+msgstr "Mobil qurilmalarda yaxshi ishlamasligi mumkin"
+
+msgid "Desktop support"
+msgstr "Ish stoli qoʻllab-quvvatlashi"
+
+msgid "Works well on large screens"
+msgstr "Katta ekranlarda yaxshi ishlaydi"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s maxsus uskunada eng yaxshi ishlaydi"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s aksariyat qurilmalarda ishlaydi"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Bekor qilinmoqda"
+
+msgid "_Open"
+msgstr "_Ochish"
+
+msgid "Uninstall Application"
+msgstr "Ilovani oʻchirish"
+
+msgid "_Remove"
+msgstr "_Oʻchirish"
+
+msgid "Update"
+msgstr "Yangilash"
+
+msgid "Remove"
+msgstr "Oʻchirish"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "%s ni %s dan oʻrnatish"
+
+#, c-format
+msgid "Install %s"
+msgstr "%s ni oʻrnatish"
+
+msgid "Donate"
+msgstr "Xayriya qilish"
+
+msgid "Search installed apps"
+msgstr "Oʻrnatilgan ilovalarni qidirish"
+
+msgid "No Apps Found"
+msgstr "Ilovalar topilmadi"
+
+msgid "Search Store Instead"
+msgstr "Doʻkondan qidirish"
+
+msgid "Pending Updates"
+msgstr "Kutilayotgan yangilanishlar"
+
+msgid "Downloads"
+msgstr "Yuklab olinganlar"
+
+msgid "Recently Uninstalled"
+msgstr "Yaqinda oʻchirilganlar"
+
+msgid "Clear Finished Tasks"
+msgstr "Tugagan vazifalarni tozalash"
+
+msgid "Sort Options"
+msgstr "Saralash variantlari"
+
+msgid "Sort By"
+msgstr "Saralash mezoni"
+
+msgid "Name"
+msgstr "Nomi"
+
+msgid "Size"
+msgstr "Hajmi"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "Oʻrnatilgan ilovalar roʻyxatida \"%s\" boʻyicha mos natija topilmadi"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u ta mavjud yangilanish"
+msgstr[1] "%u ta mavjud yangilanish"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u ta oʻrnatilgan ilova"
+msgstr[1] "%u ta oʻrnatilgan ilova"
+
+msgid "No applications found"
+msgstr "Ilovalar topilmadi"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Bitta ilova topildi"
+msgstr[1] "%u ta ilova topildi"
+
+msgid "Get Involved"
+msgstr "Qatnashing"
+
+msgid "Learn More"
+msgstr "Batafsil"
+
+msgid "Unknown License"
+msgstr "Nomaʼlum litsenziya"
+
+msgid "Community Built"
+msgstr "Jamoa yaratgan"
+
+msgid "Proprietary"
+msgstr "Yopiq"
+
+msgid "Special License"
+msgstr "Maxsus litsenziya"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Bu ilova xalqaro jamoa tomonidan ochiq tarzda ishlab chiqiladi.\n"
+"\n"
+"Siz ham ishtirok etib, uni yanada yaxshilashga yordam berishingiz mumkin."
+
+msgid "The license of this app is not known"
+msgstr "Bu ilovaning litsenziyasi nomaʼlum"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Bu ilova xalqaro jamoa tomonidan ochiq tarzda ishlab chiqiladi va %s litsenziyasi ostida chiqariladi.\n"
+"\n"
+"Siz ham ishtirok etib, uni yanada yaxshilashga yordam berishingiz mumkin."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Bu ilova ochiq ishlab chiqilmaydi, shuning uchun uning qanday ishlashini faqat ishlab chiquvchilari biladi. U aniqlash qiyin boʻlgan tarzda xavfli boʻlishi va nazoratsiz oʻzgarishi mumkin.\n"
+"\n"
+"Siz bu ilovaga hissa qoʻsha olishingiz ham, olmasligingiz ham mumkin."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Bu ilova %s maxsus litsenziyasi ostida ishlab chiqilgan.\n"
+"\n"
+"Siz bu ilovaga hissa qoʻsha olishingiz ham, olmasligingiz ham mumkin."
+
+msgid "License"
+msgstr "Litsenziya"
+
+msgid "Connect to Flathub"
+msgstr "Flathub-ga ulanish"
+
+msgid "Something Went Wrong"
+msgstr "Nimadir xato ketdi"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Sevimli ilovalaringizni qurilmalar oraligʻida sinxronlash uchun kiring"
+
+msgid "Finish"
+msgstr "Tugatish"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Salom, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Metainfo koʻrinishiga ikonka qoʻshilsinmi?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Metainfo fayllarida ilova ikonkalari oʻz-oʻzidan boʻlmaydi. Birini qoʻlda tanlamoqchimisiz?"
+
+msgid "Skip"
+msgstr "Oʻtkazib yuborish"
+
+msgid "Select Icon"
+msgstr "Ikonkani tanlash"
+
+msgid "Image Files"
+msgstr "Rasm fayllari"
+
+msgid "New Permissions"
+msgstr "Yangi ruxsatlar"
+
+msgid "_Accept"
+msgstr "_Qabul qilish"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "%s uchun yangi ruxsat"
+msgstr[1] "%s uchun yangi ruxsatlar"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Bu yangilanish quyidagi qoʻshimcha ruxsatni talab qiladi"
+msgstr[1] "Bu yangilanish quyidagi qoʻshimcha ruxsatlarni talab qiladi"
+
+msgid "User"
+msgstr "Foydalanuvchi"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Qoʻllab-quvvatlash tugagan"
+
+msgid "Preferences"
+msgstr "Sozlamalar"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Tarmoq aloqasi hisoblanadigan — doʻkon maʼlumotlarini avtomatik yangilash toʻxtatilgan"
+
+msgid "Refresh Manually"
+msgstr "Qoʻlda yangilash"
+
+msgid "App Updates"
+msgstr "Ilova yangilanishlari"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Hisoblanadigan tarmoqlarda yoki quvvat tejash yoqilganda trafik va batareyani tejash uchun avtomatik yangilanishlar toʻxtatiladi."
+
+msgid "_Automatic"
+msgstr "_Avtomatik"
+
+msgid "Automatically check for and download app updates"
+msgstr "Ilova yangilanishlarini avtomatik tekshirish va yuklab olish"
+
+msgid "_Manual"
+msgstr "_Qoʻlda"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Ilova yangilanishlarini tekshirish va yuklab olish qoʻlda bajarilishi kerak"
+
+msgid "Automatic Update _Notifications"
+msgstr "Avtomatik yangilanish _bildirishnomalari"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Yangilanishlar avtomatik oʻrnatilganda xabar berish"
+
+msgid "Content Filters"
+msgstr "Kontent filtrlari"
+
+msgid "_Free Software Only"
+msgstr "Faqat _erkin dasturlar"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Koʻrib chiqish va qidirishda yopiq ilovalarni yashirish"
+
+msgid "F_lathub Results Only"
+msgstr "Faqat F_lathub natijalari"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Qidiruv va koʻrib chiqish natijalarini faqat Flathub-da mavjud ilovalar bilan cheklash"
+
+msgid "_Verified Results Only"
+msgstr "Faqat _tasdiqlangan natijalar"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Flathub-da tasdiqlanmagan natijalarni yashirish"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Qoʻllab-quvvatlash tugagan ilovalarni _yashirish"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "Ishlab chiquvchilari tomonidan endi qoʻllab-quvvatlanmaydigan ilovalarni yashirish"
+
+msgid "Progress Bar Theme"
+msgstr "Jarayon paneli mavzusi"
+
+msgid "Accent Color"
+msgstr "Urgʻu rangi"
+
+msgid "Pride Colors"
+msgstr "Pride ranglari"
+
+msgid "Lesbian Pride Colors"
+msgstr "Lesbiyan pride ranglari"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Erkak gomoseksual pride ranglari"
+
+msgid "Transgender Pride Colors"
+msgstr "Transgender pride ranglari"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Nobinar pride ranglari"
+
+msgid "Bisexual Pride Colors"
+msgstr "Biseksual pride ranglari"
+
+msgid "Asexual Pride Colors"
+msgstr "Aseksual pride ranglari"
+
+msgid "Pansexual Pride Colors"
+msgstr "Panseksual pride ranglari"
+
+msgid "Aromantic Pride Colors"
+msgstr "Aromantik pride ranglari"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Genderfluid pride ranglari"
+
+msgid "Polysexual Pride Colors"
+msgstr "Poliseksual pride ranglari"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Omniseksual pride ranglari"
+
+msgid "Aroace Pride Colors"
+msgstr "Aroeys pride ranglari"
+
+msgid "Agender Pride Colors"
+msgstr "Agender pride ranglari"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Genderqueer pride ranglari"
+
+msgid "Intersex Pride Colors"
+msgstr "Interseks pride ranglari"
+
+msgid "Demigender Pride Colors"
+msgstr "Demigender pride ranglari"
+
+msgid "Biromantic Pride Colors"
+msgstr "Biromantik pride ranglari"
+
+msgid "Disability Pride Colors"
+msgstr "Nogironlik pride ranglari"
+
+msgid "Femboy Pride Colors"
+msgstr "Femboy pride ranglari"
+
+msgid "Neutrois Pride Colors"
+msgstr "Neutrois pride ranglari"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar ilova yangilanishlarini tekshirish uchun fonda ishlashi kerak"
+
+msgid "Version History"
+msgstr "Versiyalar tarixi"
+
+msgid "Today"
+msgstr "Bugun"
+
+msgid "Yesterday"
+msgstr "Kecha"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d kun oldin"
+msgstr[1] "%d kun oldin"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d hafta oldin"
+msgstr[1] "%d hafta oldin"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d oy oldin"
+msgstr[1] "%d oy oldin"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d yil oldin"
+msgstr[1] "%d yil oldin"
+
+msgid "%e %B %Y"
+msgstr "%e %B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "Versiya %s"
+
+msgid "No details for this release"
+msgstr "Bu versiya haqida tafsilotlar yoʻq"
+
+msgid "Get More Information"
+msgstr "Qoʻshimcha maʼlumot olish"
+
+msgid "_Version History"
+msgstr "_Versiyalar tarixi"
+
+msgid "Remotes"
+msgstr "Masofaviy omborlar"
+
+msgid "System Installation"
+msgstr "Tizim boʻyicha oʻrnatish"
+
+msgid "Available to all users on this computer"
+msgstr "Bu kompyuterdagi barcha foydalanuvchilar uchun mavjud"
+
+msgid "User Installation"
+msgstr "Foydalanuvchi uchun oʻrnatish"
+
+msgid "Only available to you"
+msgstr "Faqat siz uchun mavjud"
+
+msgid "Remove Remote"
+msgstr "Masofaviy omborni olib tashlash"
+
+#, c-format
+msgid "Remove %s"
+msgstr "%s ni olib tashlash"
+
+msgid "Unused"
+msgstr "Ishlatilmagan"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u ta ilova oʻrnatilgan"
+msgstr[1] "%u ta ilova oʻrnatilgan"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "“%s” olib tashlansinmi?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Bu foydalanuvchi masofaviy omboridan endi ilova oʻrnata olmaysiz."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Bu tizim masofaviy omboridan endi ilova oʻrnata olmaysiz."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "Olib tashlanadigan %u ta ilova"
+msgstr[1] "Olib tashlanadigan %u ta ilova"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Quyidagi ilova shu masofaviy ombordan oʻrnatilgan va u bilan birga hisobingizdan olib tashlanadi."
+msgstr[1] "Quyidagi ilovalar shu masofaviy ombordan oʻrnatilgan va ular bilan birga hisobingizdan olib tashlanadi."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Quyidagi ilova shu masofaviy ombordan oʻrnatilgan va u bilan birga barcha foydalanuvchilar uchun olib tashlanadi."
+msgstr[1] "Quyidagi ilovalar shu masofaviy ombordan oʻrnatilgan va ular bilan birga barcha foydalanuvchilar uchun olib tashlanadi."
+
+msgid "Uninstall"
+msgstr "Oʻchirish"
+
+msgid "Get"
+msgstr "Olish"
+
+msgid "Arbitrary Permissions"
+msgstr "Ixtiyoriy ruxsatlar"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Bu ilovada Flatpak sandbox-ini chetlab oʻtib, oʻziga <b>istalgan boshqa ruxsatni</b> bilvosita berish imkonini beruvchi ruxsat bor.\n"
+"\n"
+"Shuning uchun u imtiyozli, sandbox-siz ilova qila oladigan hamma narsani qila oladi, masalan, barcha fayllaringizga kirish va internetga ulanish.\n"
+"\n"
+"Boshqa ruxsatlarni koʻrish ilova nima qilishi mumkinligi haqida baribir yaxshiroq tasavvur berishi mumkin."
+
+msgid "View Other Permissions"
+msgstr "Boshqa ruxsatlarni koʻrish"
+
+msgid "Safe"
+msgstr "Xavfsiz"
+
+msgid "App ID"
+msgstr "Ilova ID"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Bu ilova dasturiy platformaning (SDK) eskirgan versiyasidan foydalanadi va tuzatilmaydigan xatolar yoki xavfsizlik zaifliklarini oʻz ichiga olishi mumkin."
+
+msgid "Safety"
+msgstr "Xavfsizlik"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s xavfsiz"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s xavfli ruxsatlarga ega emas"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s ehtimol xavfsiz"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s xavfli boʻlishi mumkin"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s xavfli"
+
+msgid "Back"
+msgstr "Orqaga"
+
+msgid "Previous Screenshot"
+msgstr "Oldingi skrinshot"
+
+msgid "Next Screenshot"
+msgstr "Keyingi skrinshot"
+
+msgid "Copy Image"
+msgstr "Rasmni nusxalash"
+
+msgid "Reset View"
+msgstr "Koʻrinishni asliga qaytarish"
+
+msgid "Zoom Out"
+msgstr "Kichraytirish"
+
+msgid "Zoom In"
+msgstr "Kattalashtirish"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u ta ish muhiti yangilanishi"
+msgstr[1] "%u ta ish muhiti yangilanishi"
+
+msgid "Screenshots Carousel"
+msgstr "Skrinshotlar karuseli"
+
+msgid "No Screenshots"
+msgstr "Skrinshotlar yoʻq"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Skrinshot %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Skrinshot %u"
+
+msgid "Clear Search"
+msgstr "Qidiruvni tozalash"
+
+msgid "Filters"
+msgstr "Filtrlar"
+
+msgid "_Verified"
+msgstr "_Tasdiqlangan"
+
+msgid "_Free/Open"
+msgstr "_Erkin/Ochiq"
+
+msgid "Non-_EOL"
+msgstr "EOL _emas"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Qoʻllab-quvvatlash tugagan ilovalarni filtrlash"
+
+msgid "_Mobile Friendly"
+msgstr "_Mobilga mos"
+
+msgid "Categories"
+msgstr "Turkumlar"
+
+msgid "Search Apps, Games, Software"
+msgstr "Ilovalar, oʻyinlar, dasturlarni qidirish"
+
+msgid "Search Filters"
+msgstr "Qidiruv filtrlari"
+
+msgid "Browse Categories"
+msgstr "Turkumlarni koʻrib chiqish"
+
+msgid "Categories Unavailable"
+msgstr "Turkumlar mavjud emas"
+
+msgid "Search for apps using the search bar above."
+msgstr "Yuqoridagi qidiruv paneli yordamida ilovalarni qidiring."
+
+msgid "No Applications Found"
+msgstr "Ilovalar topilmadi"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Flathub-da \"%s\" boʻyicha natija topilmadi"
+
+msgid "Browser"
+msgstr "Brauzer"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Office"
+msgstr "Ofis"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Kalendar"
+
+msgid "Messaging"
+msgstr "Xabar almashish"
+
+msgid "Paint"
+msgstr "Chizish"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Emulyator"
+
+msgid "Copy Link"
+msgstr "Havolani nusxalash"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Flathub sahifasi"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Loyiha veb-sayti"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Muammolar kuzatuvchisi"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "Koʻp beriladigan savollar"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Yordam"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Xayriya"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Tarjima qilish"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Aloqa"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Manba kodi"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Hissa qoʻshish"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifest"
+
+msgid "Timeline"
+msgstr "Xronologiya"
+
+msgid "Total"
+msgstr "Jami"
+
+msgid "This Week"
+msgstr "Shu hafta"
+
+msgid "Installs per day"
+msgstr "Kunlik oʻrnatishlar"
+
+msgid "World"
+msgstr "Dunyo"
+
+msgid "Installs per country"
+msgstr "Mamlakatlar boʻyicha oʻrnatishlar"
+
+msgid "Since 4/15/2024"
+msgstr "15.04.2024 dan beri"
+
+msgid "No Results Found"
+msgstr "Natija topilmadi"
+
+msgid "Search failed"
+msgstr "Qidiruv bajarilmadi"
+
+msgid "Unknown"
+msgstr "Nomaʼlum"
+
+msgid "Keep User Data"
+msgstr "Foydalanuvchi maʼlumotlarini saqlash"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Shaxsiy sozlamalar &amp; kontentni tiklashga ruxsat berish"
+
+msgid "Delete All Data"
+msgstr "Barcha maʼlumotlarni oʻchirish"
+
+msgid "Permanently erase user data to save space"
+msgstr "Joy tejash uchun foydalanuvchi maʼlumotlarini butunlay oʻchirish"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "%s olib tashlansinmi?"
+
+msgid "Select which version to remove."
+msgstr "Qaysi versiyani olib tashlashni tanlang."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "%s oʻchirilgandan keyin undan foydalanib boʻlmaydi."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "“%s” yuqori xavfli"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Bu ilova tizimingizga toʻliq kirish huquqiga ega, jumladan <b>barcha fayllaringiz, brauzer tarixi, saqlangan parollaringiz</b> va boshqalar. Shuningdek, u internetga ham kira oladi, yaʼni maʼlumotlaringizni begona tomonlarga yuborishi mumkin.\n"
+"\n"
+"Ilova yopiq boʻlgani uchun u bu ruxsatlar bilan nima qilishini tekshirib boʻlmaydi."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Bu ilova eski X11 oynalar tizimidan foydalanadi, bu unga <b>barcha tugma bosishlarni yozib olish, ekran suratlarini olish va boshqa ilovalarni kuzatish</b> imkonini beradi. Shuningdek, u internetga ham kira oladi, yaʼni maʼlumotlaringizni begona tomonlarga yuborishi mumkin.\n"
+"\n"
+"Ilova yopiq boʻlgani uchun u bu ruxsatlar bilan nima qilishini tekshirib boʻlmaydi."
+
+msgid "_Install Anyway"
+msgstr "Baribir _oʻrnatish"
+
+msgid "Failed to load transaction dialog"
+msgstr "Tranzaksiya oynasini yuklab boʻlmadi"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "%.02f soniyada tugadi"
+
+msgid "App Add-On"
+msgstr "Ilova qoʻshimchasi"
+
+msgid "Runtime"
+msgstr "Ish muhiti"
+
+msgid "In Queue"
+msgstr "Navbatda"
+
+msgid "Finishing Up"
+msgstr "Yakunlanmoqda"
+
+msgid "Done"
+msgstr "Bajarildi"
+
+msgid "Cancelled"
+msgstr "Bekor qilindi"
+
+msgid "Error"
+msgstr "Xato"
+
+msgid "Cancel Transaction"
+msgstr "Tranzaksiyani bekor qilish"
+
+msgid "Show Details"
+msgstr "Tafsilotlarni koʻrsatish"
+
+msgid "Show Error Info"
+msgstr "Xato maʼlumotini koʻrsatish"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s boʻshatildi"
+
+msgid "Transaction Error"
+msgstr "Tranzaksiya xatosi"
+
+msgid "Pending"
+msgstr "Kutilmoqda"
+
+msgid "Installed Updates"
+msgstr "Oʻrnatilgan yangilanishlar"
+
+msgid "Release Notes"
+msgstr "Versiya qaydlari"
+
+msgid "No Release Info"
+msgstr "Versiya maʼlumoti yoʻq"
+
+msgid "_Update All"
+msgstr "Hammasini _yangilash"
+
+msgid "This update requests new permissions"
+msgstr "Bu yangilanish yangi ruxsatlarni soʻraydi"
+
+msgid "Manage Leftover User Data"
+msgstr "Qolgan foydalanuvchi maʼlumotlarini boshqarish"
+
+msgid "No Leftover User Data Found"
+msgstr "Qolgan foydalanuvchi maʼlumotlari topilmadi"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Olib tashlangan ilovalar qoldirgan shaxsiy maʼlumotlar shu yerda koʻrinadi"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "%u ta ilovaning chiqindiga tashlangan foydalanuvchi maʼlumotlari"
+msgstr[1] "%u ta ilovaning chiqindiga tashlangan foydalanuvchi maʼlumotlari"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "%s uchun chiqindiga tashlangan foydalanuvchi maʼlumotlari"
+
+msgid "Open User Data Folder"
+msgstr "Foydalanuvchi maʼlumotlari papkasini ochish"
+
+msgid "Trash User Data"
+msgstr "Foydalanuvchi maʼlumotlarini chiqindiga tashlash"
+
+msgid "Refreshing"
+msgstr "Yangilanmoqda"
+
+msgid "Curated"
+msgstr "Saralangan"
+
+msgid "Explore"
+msgstr "Kashf etish"
+
+msgid "Library"
+msgstr "Kutubxona"
+
+msgid "Search"
+msgstr "Qidirish"
+
+msgid "Main Menu"
+msgstr "Asosiy menyu"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Siz Bazaar-ning yangi versiyasidan foydalanmoqdasiz!"
+
+msgid "See What's New"
+msgstr "Nima yangiligini koʻring"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Tarmoq aloqasi bor, lekin Flathub-ning keshlangan versiyasi koʻrsatilmoqda"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Tarmoq aloqasi hisoblanadigan — avtomatik yangilashlar oʻchirilgan"
+
+msgid "_Donate to Bazaar"
+msgstr "Bazaar-ga _xayriya qilish"
+
+msgid "_Refresh"
+msgstr "_Yangilash"
+
+msgid "_Login With Flathub"
+msgstr "Flathub orqali _kirish"
+
+msgid "_Manage Leftover User Data"
+msgstr "Qolgan foydalanuvchi maʼlumotlarini _boshqarish"
+
+msgid "Manage R_emotes"
+msgstr "Masofaviy _omborlarni boshqarish"
+
+msgid "_Preferences"
+msgstr "_Sozlamalar"
+
+msgid "_Keyboard Shortcuts"
+msgstr "_Tezkor tugmalar"
+
+msgid "_About Bazaar"
+msgstr "Bazaar _haqida"
+
+msgid "_Quit Bazaar"
+msgstr "Bazaar-dan _chiqish"
+
+msgid "Log Out"
+msgstr "Chiqish"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Ilovani ishga tushirib boʻlmadi"
+
+msgid "Could not open link"
+msgstr "Havolani ochib boʻlmadi"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Bazaar-ni Bazaar ichidan olib tashlab boʻlmaydi!"
+
+msgid "Can't do that right now!"
+msgstr "Hozir buni qilib boʻlmaydi!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u ta oʻrnatish"
+msgstr[1] "%s, %'u ta oʻrnatish"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Eng koʻp oʻrnatishlar: %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "Oxirgi oyda %d marta yuklab olingan"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s ish muhiti"
+
+msgid "Size information unavailable"
+msgstr "Hajm maʼlumoti mavjud emas"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "%s yuklab olish hajmi"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "%s oʻrnatilgan hajmi"
+
+msgid "All Ages"
+msgstr "Barcha yoshlar"
+
+msgid "Age rating information unavailable"
+msgstr "Yosh reytingi maʼlumoti mavjud emas"
+
+msgid "Suitable for all ages"
+msgstr "Barcha yoshlar uchun mos"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "%d yosh va undan katta yoshlar uchun mos"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "%s litsenziyali erkin dastur"
+
+msgid "Free software"
+msgstr "Erkin dastur"
+
+msgid "Proprietary Software"
+msgstr "Yopiq dastur"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Maxsus litsenziya: %s"
+
+msgid "Free Software"
+msgstr "Erkin dastur"
+
+msgid "Adaptive"
+msgstr "Moslashuvchan"
+
+msgid "Desktop Only"
+msgstr "Faqat ish stoli"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "Ish stoli, planshet va telefonlarda ishlaydi"
+
+msgid "May not work on mobile devices"
+msgstr "Mobil qurilmalarda ishlamasligi mumkin"
+
+msgid "Low Risk"
+msgstr "Past xavf"
+
+msgid "Medium Risk"
+msgstr "Oʻrtacha xavf"
+
+msgid "High Risk"
+msgstr "Yuqori xavf"
+
+msgid "Unknown Permissions"
+msgstr "Nomaʼlum ruxsatlar"
+
+msgid "Permissions are missing for this app."
+msgstr "Bu ilova uchun ruxsatlar topilmadi."
+
+msgid "No Permissions"
+msgstr "Ruxsatlar yoʻq"
+
+msgid "App is fully sandboxed"
+msgstr "Ilova toʻliq izolyatsiyalangan"
+
+msgid "Network Access"
+msgstr "Tarmoqqa kirish"
+
+msgid "Can access the internet"
+msgstr "Internetga kira oladi"
+
+msgid "No Network Access"
+msgstr "Tarmoqqa kirish yoʻq"
+
+msgid "Cannot access the internet"
+msgstr "Internetga kira olmaydi"
+
+msgid "User Device Access"
+msgstr "Foydalanuvchi qurilmalariga kirish"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Veb-kamera yoki oʻyin boshqaruvchilari kabi qurilmalarga kira oladi"
+
+msgid "No User Device Access"
+msgstr "Foydalanuvchi qurilmalariga kirish yoʻq"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Veb-kamera yoki oʻyin boshqaruvchilari kabi qurilmalarga kira olmaydi"
+
+msgid "Input Device Access"
+msgstr "Kiritish qurilmalariga kirish"
+
+msgid "Can access input devices"
+msgstr "Kiritish qurilmalariga kira oladi"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Mikrofonga kirish va audio ijro etish"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Ruxsat soʻramasdan mikrofon orqali tinglay oladi va audio ijro eta oladi"
+
+msgid "System Device Access"
+msgstr "Tizim qurilmalariga kirish"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Yuqori ruxsatlarni talab qiladigan tizim qurilmalariga kira oladi"
+
+msgid "Screen Contents Access"
+msgstr "Ekran mazmuniga kirish"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Ekran yoki boshqa oynalar mazmuniga kira oladi"
+
+msgid "Legacy Windowing System"
+msgstr "Eski oynalar tizimi"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Doim eski oynalar tizimidan (X11) foydalanadi"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Ixtiyoriy ruxsatlarni ola oladi"
+
+msgid "User Settings"
+msgstr "Foydalanuvchi sozlamalari"
+
+msgid "Can access and change user settings"
+msgstr "Foydalanuvchi sozlamalariga kira oladi va ularni oʻzgartira oladi"
+
+msgid "Full File System Read/Write Access"
+msgstr "Fayl tizimini toʻliq oʻqish/yozish"
+
+msgid "Can read and write all data on the file system"
+msgstr "Fayl tizimidagi barcha maʼlumotlarni oʻqiy va yoza oladi"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Uy papkasini oʻqish/yozish"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Uy papkangizdagi barcha maʼlumotlarni oʻqiy va yoza oladi"
+
+msgid "Full File System Read Access"
+msgstr "Fayl tizimini toʻliq oʻqish"
+
+msgid "Can read all data on the file system"
+msgstr "Fayl tizimidagi barcha maʼlumotlarni oʻqiy oladi"
+
+msgid "Home Folder Read Access"
+msgstr "Uy papkasini oʻqish"
+
+msgid "Can read all data in your home directory"
+msgstr "Uy papkangizdagi barcha maʼlumotlarni oʻqiy oladi"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Yuklab olinganlar papkasini oʻqish/yozish"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Yuklab olinganlar papkasidagi barcha maʼlumotlarni oʻqiy va yoza oladi"
+
+msgid "Download Folder Read Access"
+msgstr "Yuklab olinganlar papkasini oʻqish"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Yuklab olinganlar papkasidagi barcha maʼlumotlarni oʻqiy oladi"
+
+msgid "Can read and write all data in the directory"
+msgstr "Papkadagi barcha maʼlumotlarni oʻqiy va yoza oladi"
+
+msgid "Can read all data in the directory"
+msgstr "Papkadagi barcha maʼlumotlarni oʻqiy oladi"
+
+msgid "No File System Access"
+msgstr "Fayl tizimiga kirish yoʻq"
+
+msgid "Cannot access the file system at all"
+msgstr "Fayl tizimiga umuman kira olmaydi"
+
+msgid "Uses System Services"
+msgstr "Tizim xizmatlaridan foydalanadi"
+
+msgid "Can request data from non-portal system services"
+msgstr "Portal boʻlmagan tizim xizmatlaridan maʼlumot soʻray oladi"
+
+msgid "Uses Session Services"
+msgstr "Seans xizmatlaridan foydalanadi"
+
+msgid "Can request data from non-portal session services"
+msgstr "Portal boʻlmagan seans xizmatlaridan maʼlumot soʻray oladi"
+
+msgid "No Service Access"
+msgstr "Xizmatlarga kirish yoʻq"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Portal boʻlmagan seans yoki tizim xizmatlariga umuman kira olmaydi"
+
+msgid "Verified App Developer"
+msgstr "Tasdiqlangan ilova ishlab chiquvchisi"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Bu ilovaning ishlab chiquvchisi oʻzi aytgan shaxs ekanligi tasdiqlangan"
+
+msgid "Proprietary Code"
+msgstr "Yopiq kod"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Manba kodi ochiq emas, shuning uchun uni mustaqil tekshirib boʻlmaydi va u xavfli boʻlishi mumkin"
+
+msgid "Auditable Code"
+msgstr "Tekshiriladigan kod"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Manba kodi ochiq va uni mustaqil tekshirish mumkin, bu esa ilovaning xavfsiz boʻlish ehtimolini oshiradi"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "%s tizim xizmatidan foydalanish"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "%s seans xizmatidan foydalanish"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "%s xizmatidan foydalanish"
+
+msgid "Can see the non-portal service"
+msgstr "Portal boʻlmagan xizmatni koʻra oladi"
+
+msgid "Can talk to the non-portal service"
+msgstr "Portal boʻlmagan xizmat bilan gaplasha oladi"
+
+msgid "Can own the non-portal service"
+msgstr "Portal boʻlmagan xizmatga egalik qila oladi"
+
+msgid "Global Menu Integration"
+msgstr "Global menyu integratsiyasi"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Menyularini global menyu panelida koʻrsata oladi"
+
+msgid "KDE Settings Integration"
+msgstr "KDE sozlamalari integratsiyasi"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "KDE ish stoli sozlamalari oʻzgarganini aniqlay oladi"
+
+msgid "KDE Global Settings"
+msgstr "KDE global sozlamalari"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Shrift va ranglar kabi KDE ish stoli sozlamalarini oʻqiy oladi"
+
+msgid "Secret Storage Service"
+msgstr "Maxfiy maʼlumotlar saqlash xizmati"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Tizim kalitlar zanjiri yordamida oʻz parollarini saqlay va olib tura oladi"
+
+msgid "Desktop Notifications Service"
+msgstr "Ish stoli bildirishnomalari xizmati"
+
+msgid "Can send desktop notifications"
+msgstr "Ish stoli bildirishnomalarini yubora oladi"
+
+msgid "System Tray Integration"
+msgstr "Tizim treyi integratsiyasi"
+
+msgid "Can display an icon in the system tray"
+msgstr "Tizim treyida ikonka koʻrsata oladi"
+
+msgid "KDE Connect Integration"
+msgstr "KDE Connect integratsiyasi"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "KDE Connect orqali juftlangan qurilmalar bilan aloqa qila oladi"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigatsiya"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Kashf etish sahifasini ochish"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Kutubxona sahifasini ochish"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Qidiruv sahifasini ochish"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Masofaviy omborlar"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Masofaviy omborlarni sinxronlash"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Umumiy"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Sozlamalarni ochish"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Tezkor tugmalarni koʻrsatish"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Oynani yopish"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Bazaar-dan chiqish"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s oʻrnatildi"
+
+msgid "The app is ready to be used"
+msgstr "Ilova foydalanishga tayyor"
+
+msgid "Updates Are Out of Date"
+msgstr "Yangilanishlar eskirgan"
+
+msgid "Please check for available updates"
+msgstr "Mavjud yangilanishlarni tekshiring"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u ta ilova yangilandi"
+msgstr[1] "%u ta ilova yangilandi"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s yangilandi."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s va %s yangilandi."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "%s, %s va %s kiritilgan."

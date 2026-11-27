@@ -18,7 +18,7 @@ import evenkeel_os_network as net  # noqa: E402
 import evenkeel_os_sharing as sharing  # noqa: E402
 import evenkeel_os_yours as yours  # noqa: E402
 from evenkeel_os_dialogs import Dialogs  # noqa: E402
-from evenkeel_os_ui import N_, _, ngettext  # noqa: E402
+from evenkeel_os_ui import N_, _, ngettext, user_folder  # noqa: E402
 from evenkeel_os_packages import zoom  # noqa: E402
 
 APP_ID = "io.github.ctsdownloads.evenkeel-os.Tools"
@@ -1300,7 +1300,7 @@ class Window(Adw.ApplicationWindow):
             f.add_pattern(pattern)
         filters = Gio.ListStore.new(Gtk.FileFilter)
         filters.append(f)
-        downloads = Path.home() / "Downloads"
+        downloads = user_folder("DOWNLOAD")
         dialog = Gtk.FileDialog(title=_("Pick a Windows program"), filters=filters, default_filter=f)
         if downloads.is_dir():
             dialog.set_initial_folder(Gio.File.new_for_path(str(downloads)))

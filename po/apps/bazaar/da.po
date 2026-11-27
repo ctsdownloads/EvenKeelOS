@@ -1,0 +1,2588 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "Appbutik"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "Tilføj, fjern eller opdater Flatpak-software på denne computer"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "System;Pakke;Pakkehåndtering;Opdag;Flatpak;Software;App;Butik;"
+
+msgid "New Window"
+msgstr "Nyt vindue"
+
+msgid "Discover and install apps"
+msgstr "Find og installer apps"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "En hurtig og moderne appbutik til Linux med fokus på at finde og installere Flatpak-apps og tilføjelser, især fra Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Sæt flere installationer i kø, og fortsæt med at browse"
+
+msgid "Easily view app permissions"
+msgstr "Se nemt apps' tilladelser"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Log ind på Flathub for at se og administrere dine favoritter"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Søg efter apps direkte fra GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Startsiden med Flathub-apps"
+
+msgid "App page for Exhibit"
+msgstr "Appside for Exhibit"
+
+msgid "Library page"
+msgstr "Biblioteksside"
+
+msgid "Search page"
+msgstr "Søgeside"
+
+msgid "Category page"
+msgstr "Kategoriside"
+
+msgid "Stopped Receiving Updates"
+msgstr "Modtager ikke længere opdateringer"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Afinstaller"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Installer"
+
+msgid "Add-on"
+msgstr "Tilføjelse"
+
+msgid "Manage Add-Ons"
+msgstr "Administrer tilføjelser"
+
+msgid "No Add-Ons Visible"
+msgstr "Ingen tilføjelser synlige"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "Dine nuværende filterindstillinger skjuler alle kendte tilføjelser. Prøv at justere dem."
+
+msgid "Add-on Page"
+msgstr "Tilføjelsesside"
+
+msgid "Download"
+msgstr "Download"
+
+msgid "Installed"
+msgstr "Installeret"
+
+msgid "Downloads/Month"
+msgstr "Downloads/måned"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Modtager ikke længere kerneopdateringer"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Denne tilføjelse bruger en runtime, der ikke længere modtager opdateringer eller sikkerhedsrettelser. Det kan blive usikkert at bruge den."
+
+msgid "Other Sources"
+msgstr "Andre kilder"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Tilføjelse til %s"
+
+msgid "Show Less"
+msgstr "Vis færre"
+
+msgid "Show More"
+msgstr "Vis flere"
+
+msgid "Download Stats"
+msgstr "Downloadstatistik"
+
+msgid "Age Rating"
+msgstr "Aldersgrænse"
+
+msgid "Cartoon Violence"
+msgstr "Tegneserievold"
+
+msgid "No information regarding cartoon violence"
+msgstr "Ingen oplysninger om tegneserievold"
+
+msgid "Fantasy Violence"
+msgstr "Fantasyvold"
+
+msgid "No information regarding fantasy violence"
+msgstr "Ingen oplysninger om fantasyvold"
+
+msgid "Realistic Violence"
+msgstr "Realistisk vold"
+
+msgid "No information regarding realistic violence"
+msgstr "Ingen oplysninger om realistisk vold"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "Vold med blodsudgydelse"
+
+msgid "No information regarding bloodshed"
+msgstr "Ingen oplysninger om blodsudgydelse"
+
+msgid "Sexual Violence"
+msgstr "Seksuel vold"
+
+msgid "No information regarding sexual violence"
+msgstr "Ingen oplysninger om seksuel vold"
+
+msgid "Alcohol"
+msgstr "Alkohol"
+
+msgid "No information regarding references to alcohol"
+msgstr "Ingen oplysninger om henvisninger til alkohol"
+
+msgid "Narcotics"
+msgstr "Narkotika"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "Ingen oplysninger om henvisninger til illegale stoffer"
+
+msgid "Tobacco"
+msgstr "Tobak"
+
+msgid "No information regarding references to tobacco products"
+msgstr "Ingen oplysninger om henvisninger til tobaksprodukter"
+
+msgid "Nudity"
+msgstr "Nøgenhed"
+
+msgid "No information regarding nudity of any sort"
+msgstr "Ingen oplysninger om nøgenhed af nogen art"
+
+msgid "Sexual Themes"
+msgstr "Seksuelle temaer"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "Ingen oplysninger om henvisninger til eller skildringer af seksuel karakter"
+
+msgid "Profanity"
+msgstr "Bandeord"
+
+msgid "No information regarding profanity of any kind"
+msgstr "Ingen oplysninger om bandeord af nogen art"
+
+msgid "Inappropriate Humor"
+msgstr "Upassende humor"
+
+msgid "No information regarding inappropriate humor"
+msgstr "Ingen oplysninger om upassende humor"
+
+msgid "Discrimination"
+msgstr "Diskrimination"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "Ingen oplysninger om diskriminerende sprogbrug af nogen art"
+
+msgid "Advertising"
+msgstr "Reklamer"
+
+msgid "No information regarding advertising of any kind"
+msgstr "Ingen oplysninger om reklamer af nogen art"
+
+msgid "Gambling"
+msgstr "Gambling"
+
+msgid "No information regarding gambling of any kind"
+msgstr "Ingen oplysninger om gambling af nogen art"
+
+msgid "Purchasing"
+msgstr "Køb"
+
+msgid "No information regarding the ability to spend money"
+msgstr "Ingen oplysninger om muligheden for at bruge penge"
+
+msgid "Chat Between Users"
+msgstr "Chat mellem brugere"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "Ingen oplysninger om måder at chatte med andre brugere på"
+
+msgid "Audio Chat Between Users"
+msgstr "Lydchat mellem brugere"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "Ingen oplysninger om måder at tale med andre brugere på"
+
+msgid "Contact Details"
+msgstr "Kontaktoplysninger"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "Ingen oplysninger om deling af brugernavne på sociale netværk eller e-mailadresser"
+
+msgid "Identifying Information"
+msgstr "Identificerende oplysninger"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "Ingen oplysninger om deling af brugeroplysninger med tredjeparter"
+
+msgid "Location Sharing"
+msgstr "Deling af placering"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "Ingen oplysninger om deling af fysisk placering med andre brugere"
+
+msgid "Prostitution"
+msgstr "Prostitution"
+
+msgid "No information regarding references to prostitution"
+msgstr "Ingen oplysninger om henvisninger til prostitution"
+
+msgid "Adultery"
+msgstr "Utroskab"
+
+msgid "No information regarding references to adultery"
+msgstr "Ingen oplysninger om henvisninger til utroskab"
+
+msgid "Sexualized Characters"
+msgstr "Seksualiserede figurer"
+
+msgid "No information regarding sexualized characters"
+msgstr "Ingen oplysninger om seksualiserede figurer"
+
+msgid "Desecration"
+msgstr "Vanhelligelse"
+
+msgid "No information regarding references to desecration"
+msgstr "Ingen oplysninger om henvisninger til vanhelligelse"
+
+msgid "Human Remains"
+msgstr "Menneskelige rester"
+
+msgid "No information regarding visible dead human remains"
+msgstr "Ingen oplysninger om synlige døde menneskelige rester"
+
+msgid "Slavery"
+msgstr "Slaveri"
+
+msgid "No information regarding references to slavery"
+msgstr "Ingen oplysninger om henvisninger til slaveri"
+
+msgid "Does not include references to drugs"
+msgstr "Indeholder ingen henvisninger til stoffer"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "Indeholder ikke bandeord, grove ord eller andet stærkt sprog"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "Indeholder ikke reklamer eller pengetransaktioner"
+
+msgid "Does not include sex or nudity"
+msgstr "Indeholder ikke sex eller nøgenhed"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "Indeholder ikke ukontrolleret chatfunktionalitet"
+
+msgid "Does not include violence"
+msgstr "Indeholder ikke vold"
+
+msgid "Drugs"
+msgstr "Stoffer"
+
+msgid "Strong Language"
+msgstr "Stærkt sprog"
+
+msgid "Money"
+msgstr "Penge"
+
+msgid "Social"
+msgstr "Socialt"
+
+msgid "Violence"
+msgstr "Vold"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "Alle"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s har en ukendt aldersgrænse"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s er egnet til alle"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s er egnet til små børn"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s er egnet til børn"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s er egnet til teenagere"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s er egnet til voksne"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s er egnet til %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "Systemmappen %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Undermappen %s i hjemmemappen"
+
+msgid "Host system folders"
+msgstr "Værtssystemets mapper"
+
+msgid "Host system configuration from /etc"
+msgstr "Værtssystemets konfiguration fra /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Undermappen %s på skrivebordet"
+
+msgid "Desktop folder"
+msgstr "Skrivebordsmappe"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "Undermappen %s i Dokumenter"
+
+msgid "Documents folder"
+msgstr "Mappen Dokumenter"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "Undermappen %s i Musik"
+
+msgid "Music folder"
+msgstr "Mappen Musik"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "Undermappen %s i Billeder"
+
+msgid "Pictures folder"
+msgstr "Mappen Billeder"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "Undermappen %s i Offentlig deling"
+
+msgid "Public Share folder"
+msgstr "Mappen Offentlig deling"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "Undermappen %s i Videoer"
+
+msgid "Videos folder"
+msgstr "Mappen Videoer"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "Undermappen %s i Skabeloner"
+
+msgid "Templates folder"
+msgstr "Mappen Skabeloner"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Brugerens cache-undermappe %s"
+
+msgid "User cache folder"
+msgstr "Brugerens cachemappe"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Brugerens konfigurationsundermappe %s"
+
+msgid "User configuration folder"
+msgstr "Brugerens konfigurationsmappe"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Brugerens dataundermappe %s"
+
+msgid "User data folder"
+msgstr "Brugerens datamappe"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Brugerens runtime-undermappe %s"
+
+msgid "User runtime folder"
+msgstr "Brugerens runtime-mappe"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Filsystemadgang til %s"
+
+msgid "Unknown filesystem path"
+msgstr "Ukendt filsystemsti"
+
+msgid "Download Size"
+msgstr "Downloadstørrelse"
+
+msgid "Installed Size"
+msgstr "Installeret størrelse"
+
+msgid "Amount to download from the internet"
+msgstr "Mængde, der skal downloades fra internettet"
+
+msgid "Size on Disk"
+msgstr "Størrelse på disken"
+
+msgid "Open user data folder"
+msgstr "Åbn brugerdatamappe"
+
+msgid "Your User Data"
+msgstr "Dine brugerdata"
+
+msgid "Caches, settings, and other app data"
+msgstr "Cache, indstillinger og andre appdata"
+
+msgid "Cache"
+msgstr "Cache"
+
+msgid "Temporary cached data"
+msgstr "Midlertidigt cachelagrede data"
+
+msgid "Clear Cache"
+msgstr "Ryd cache"
+
+msgid "Installed Runtime Size"
+msgstr "Størrelse på installeret runtime"
+
+msgid "Runtime Download Size"
+msgstr "Downloadstørrelse for runtime"
+
+msgid "N/A"
+msgstr "Ikke tilgængelig"
+
+msgid "Storage"
+msgstr "Lager"
+
+msgid "Verified"
+msgstr "Verificeret"
+
+msgid "The Bazaar Contributors"
+msgstr "Bazaar-bidragyderne"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "Særlig tak til"
+
+msgid "Logged Out Successfully!"
+msgstr "Logget ud"
+
+msgid "Performing setup…"
+msgstr "Udfører opsætning…"
+
+msgid "Set Up Flathub?"
+msgstr "Opsæt Flathub?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub er ikke sat op på dette system. Du vil ikke kunne gennemse og installere apps i Bazaar, hvis det ikke er tilgængeligt.\n"
+"\n"
+"Du kan stadig bruge Bazaar til at gennemse og fjerne allerede installerede apps."
+
+msgid "Later"
+msgstr "Senere"
+
+msgid "Set Up Flathub"
+msgstr "Opsæt Flathub"
+
+msgid "A backend error occurred"
+msgstr "Der opstod en fejl i backend"
+
+msgid "Refreshing…"
+msgstr "Opdaterer…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "Indlæser %d apps…"
+
+msgid "Failed to open file"
+msgstr "Kunne ikke åbne filen"
+
+msgid "Failed to load metainfo"
+msgstr "Kunne ikke indlæse metainfo"
+
+msgid "An initialization error occurred"
+msgstr "Der opstod en fejl under initialisering"
+
+msgid "Checking for updates…"
+msgstr "Søger efter opdateringer…"
+
+msgid "Failed to check for updates"
+msgstr "Kunne ikke søge efter opdateringer"
+
+msgid "Could not find app"
+msgstr "Kunne ikke finde appen"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Indlæser %d app…"
+msgstr[1] "Indlæser %d apps…"
+
+msgid "Writing to cache…"
+msgstr "Skriver til cache…"
+
+msgid "Removing remote…"
+msgstr "Fjerner remote…"
+
+msgid "Could not remove remote"
+msgstr "Kunne ikke fjerne remote"
+
+msgid "Show All"
+msgstr "Vis alle"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Alle \"%s\""
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d apps"
+
+msgid "Failed to Load Article"
+msgstr "Kunne ikke indlæse artiklen"
+
+msgid "All apps are already installed"
+msgstr "Alle apps er allerede installeret"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Installer %u app?"
+msgstr[1] "Installer %u apps?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Følgende vil blive installeret. Yderligere delte komponenter kan også blive installeret"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "%d tilføjelser vil blive installeret."
+
+msgid "Additionally, addons will be installed."
+msgstr "Derudover vil tilføjelser blive installeret."
+
+msgid "_Cancel"
+msgstr "_Annuller"
+
+msgid "_Install All"
+msgstr "_Installer alle"
+
+msgid "Bundle Installation"
+msgstr "Pakkeinstallation"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Yderligere afhængigheder kan kræve ekstra plads"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Installation af denne app kan kræve, at en ny softwarekilde tilføjes. Andre apps fra denne kilde vil blive vist i Bazaar.\n"
+"\n"
+"Tilføj kun denne kilde, hvis du er sikker på, at du stoler på den."
+
+msgid "Successfully Installed!"
+msgstr "Installeret!"
+
+msgid "Open"
+msgstr "Åbn"
+
+msgid "Show App Details"
+msgstr "Vis appdetaljer"
+
+msgid "Already Installed"
+msgstr "Allerede installeret"
+
+msgid "Installation Failed"
+msgstr "Installationen mislykkedes"
+
+msgid "Unknown install size"
+msgstr "Ukendt installationsstørrelse"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Ca. %s skal installeres"
+
+msgid "No special permissions"
+msgstr "Ingen særlige tilladelser"
+
+msgid "Place Applet"
+msgstr "Placer applet"
+
+msgid "Choose where to add this applet."
+msgstr "Vælg, hvor denne applet skal tilføjes."
+
+msgid "Cancel"
+msgstr "Annuller"
+
+msgid "Panel"
+msgstr "Panel"
+
+msgid "Dock"
+msgstr "Dock"
+
+msgid "No Curation"
+msgstr "Ingen kuratering"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Der er ingen kuraterede oplysninger på dette system. Du kan stadig gennemse apps på Flathub"
+
+msgid "Browse Flathub"
+msgstr "Gennemse Flathub"
+
+msgid "Offline"
+msgstr "Offline"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s til %s, højest den %s med %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "Installationer:"
+
+msgid "Not Verified"
+msgstr "Ikke verificeret"
+
+msgid "Developer information not available."
+msgstr "Udviklerinformation er ikke tilgængelig."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "Ejerskabet af app-id'et %s er ikke blevet verificeret, og det kan være en fællesskabspakke."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "Ejerskabet af app-id'et %s er blevet manuelt verificeret af Flathub-teamet."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "Ejerskabet af app-id'et %1$s er blevet verificeret af <b>%2$s</b> den <b>%3$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Ejerskabet af app-id'et %1$s er blevet verificeret med %2$s."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "Ejerskabet af app-id'et %s er blevet verificeret."
+
+msgid "Bazaar Release"
+msgstr "Bazaar-udgivelse"
+
+msgid "Full Release Notes"
+msgstr "Fulde udgivelsesnoter"
+
+msgid "This release was made possible by users like you!"
+msgstr "Denne udgivelse blev muliggjort af brugere som dig!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Jeg elsker at lave Bazaar, men jeg kan ikke gøre det alene. Hjælp med at støtte den videre udvikling ved at donere på Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "Doner til Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Hvad er nyt i %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Udgivet %-e. %B %Y"
+
+msgid "Choose an Installation"
+msgstr "Vælg en installation"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Du har flere versioner af denne app installeret. Hvilken vil du fortsætte med?"
+
+msgid "Details"
+msgstr "Detaljer"
+
+msgid "Copy"
+msgstr "Kopier"
+
+msgid "Copied!"
+msgstr "Kopieret!"
+
+msgid "Favorite Count"
+msgstr "Antal favoritter"
+
+msgid "Failed to update favorite"
+msgstr "Kunne ikke opdatere favorit"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Log ind med Flathub for at administrere favoritter"
+
+msgid "Log In"
+msgstr "Log ind"
+
+msgid "Favorites"
+msgstr "Favoritter"
+
+msgid "Install All"
+msgstr "Installer alle"
+
+msgid "No Favorites"
+msgstr "Ingen favoritter"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Apps, du markerer som favoritter, vises her"
+
+msgid "Support This Application"
+msgstr "Støt denne app"
+
+msgid "Remove From Favorites"
+msgstr "Fjern fra favoritter"
+
+msgid "Failed to remove favorite"
+msgstr "Kunne ikke fjerne favorit"
+
+msgid "Previous"
+msgstr "Forrige"
+
+msgid "Next"
+msgstr "Næste"
+
+msgid "Editing"
+msgstr "Redigering"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Mixer"
+
+msgid "Music"
+msgstr "Musik"
+
+msgid "Player"
+msgstr "Afspiller"
+
+msgid "Recorder"
+msgstr "Optager"
+
+msgid "Sequencer"
+msgstr "Sequencer"
+
+msgid "Tuner"
+msgstr "Tuner"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "Emulation"
+msgstr "Emulering"
+
+msgid "Action"
+msgstr "Action"
+
+msgid "Adventure"
+msgstr "Eventyr"
+
+msgid "Arcade"
+msgstr "Arkade"
+
+msgid "Blocks"
+msgstr "Klodser"
+
+msgid "Board"
+msgstr "Brætspil"
+
+msgid "Card"
+msgstr "Kortspil"
+
+msgid "Kids"
+msgstr "Børn"
+
+msgid "Logic"
+msgstr "Logik"
+
+msgid "Role Playing"
+msgstr "Rollespil"
+
+msgid "Shooter"
+msgstr "Shooter"
+
+msgid "Simulation"
+msgstr "Simulering"
+
+msgid "Sports"
+msgstr "Sport"
+
+msgid "Strategy"
+msgstr "Strategi"
+
+msgid "Browsers"
+msgstr "Browsere"
+
+msgid "Chat"
+msgstr "Chat"
+
+msgid "Mail"
+msgstr "Mail"
+
+msgid "File Sharing"
+msgstr "Fildeling"
+
+msgid "Audio & Video"
+msgstr "Lyd og video"
+
+msgid "Media"
+msgstr "Medier"
+
+msgid "More Audio & Video"
+msgstr "Mere lyd og video"
+
+msgid "Developer Tools"
+msgstr "Udviklerværktøjer"
+
+msgid "Develop"
+msgstr "Udvikl"
+
+msgid "More Developer Tools"
+msgstr "Flere udviklerværktøjer"
+
+msgid "Education"
+msgstr "Uddannelse"
+
+msgid "Learn"
+msgstr "Lær"
+
+msgid "More Education"
+msgstr "Mere uddannelse"
+
+msgid "Gaming"
+msgstr "Spil"
+
+msgid "Play"
+msgstr "Spil"
+
+msgid "More Gaming"
+msgstr "Flere spil"
+
+msgid "Graphics & Photography"
+msgstr "Grafik og fotografi"
+
+msgid "Create"
+msgstr "Skab"
+
+msgid "More Graphics & Photography"
+msgstr "Mere grafik og fotografi"
+
+msgid "Networking"
+msgstr "Netværk"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "More Networking"
+msgstr "Mere netværk"
+
+msgid "Productivity"
+msgstr "Produktivitet"
+
+msgid "Work"
+msgstr "Arbejde"
+
+msgid "More Productivity"
+msgstr "Mere produktivitet"
+
+msgid "Science"
+msgstr "Videnskab"
+
+msgid "More Science"
+msgstr "Mere videnskab"
+
+msgid "System"
+msgstr "System"
+
+msgid "More System"
+msgstr "Mere system"
+
+msgid "Utilities"
+msgstr "Værktøjer"
+
+msgid "Tools"
+msgstr "Redskaber"
+
+msgid "More Utilities"
+msgstr "Flere værktøjer"
+
+msgid "Trending"
+msgstr "Populære lige nu"
+
+msgid "More Trending"
+msgstr "Mere populære lige nu"
+
+msgid "Popular"
+msgstr "Populære"
+
+msgid "More Popular"
+msgstr "Mere populære"
+
+msgid "Recently Added"
+msgstr "Nyligt tilføjet"
+
+msgid "New"
+msgstr "Nye"
+
+msgid "More New"
+msgstr "Flere nye"
+
+msgid "Recently Updated"
+msgstr "Nyligt opdateret"
+
+msgid "Updated"
+msgstr "Opdateret"
+
+msgid "More Updated"
+msgstr "Flere opdaterede"
+
+msgid "Mobile"
+msgstr "Mobil"
+
+msgid "More Mobile"
+msgstr "Mere mobil"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Mere Adwaita"
+
+msgid "KDE Apps"
+msgstr "KDE-apps"
+
+msgid "More KDE Apps"
+msgstr "Flere KDE-apps"
+
+msgid "Made for COSMIC™"
+msgstr "Lavet til COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Til COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Flere COSMIC-apps"
+
+msgid "Games"
+msgstr "Spil"
+
+msgid "More Games"
+msgstr "Flere spil"
+
+msgid "Emulators"
+msgstr "Emulatorer"
+
+msgid "More Emulators"
+msgstr "Flere emulatorer"
+
+msgid "Launchers"
+msgstr "Startere"
+
+msgid "More Game Launchers"
+msgstr "Flere spilstartere"
+
+msgid "Game Tools"
+msgstr "Spilværktøjer"
+
+msgid "More Game Tools"
+msgstr "Flere spilværktøjer"
+
+msgid "New Year, New Workflows"
+msgstr "Nyt år, nye arbejdsgange"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Apps til at tage noter, følge opgaver og lave planer"
+
+msgid "Staff Picks"
+msgstr "Redaktionens valg"
+
+msgid "Apps we love right now"
+msgstr "Apps, vi elsker lige nu"
+
+msgid "Get Creative"
+msgstr "Vær kreativ"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Uundværlige apps til tegning, fotoredigering og digitalt design"
+
+msgid "Build Native Apps"
+msgstr "Byg native apps"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Udvikl apps, der føles hjemme på dit system"
+
+msgid "Stay in Touch"
+msgstr "Hold kontakten"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Uundværlige apps til samarbejde og kommunikation"
+
+msgid "Ready for Vacations"
+msgstr "Klar til ferie"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Apps til kort, offentlig transport, vejr og rejseplanlægning"
+
+msgid "Smarter Every Day"
+msgstr "Klogere hver dag"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Apps, der hjælper dig med at studere, researche og skrive"
+
+msgid "Get Cozy"
+msgstr "Hyg dig"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Fantastiske apps til at læse, se film og spille spil"
+
+msgid "Web Developer Essentials"
+msgstr "Uundværligt for webudviklere"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Det er sjovere at lave websteder med disse apps"
+
+msgid "Take Better Notes"
+msgstr "Tag bedre noter"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Find dit nye yndlingsværktøj til notetagning"
+
+msgid "Get Focused"
+msgstr "Bevar fokus"
+
+msgid "Great apps for task management"
+msgstr "Fantastiske apps til opgavestyring"
+
+msgid "Make Some Noise"
+msgstr "Lav lidt larm"
+
+msgid "Apps for creating and producing music"
+msgstr "Apps til at skabe og producere musik"
+
+msgid "Get To Work"
+msgstr "Kom i gang med arbejdet"
+
+msgid "Essential office apps"
+msgstr "Uundværlige kontorapps"
+
+msgid "Flathub Not Added"
+msgstr "Flathub er ikke tilføjet"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Flathub-remote blev ikke fundet i nogen af dine Flatpak-installationer"
+
+msgid "Can't Reach Flathub"
+msgstr "Kan ikke nå Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "Du kan stadig administrere og søge efter apps."
+
+msgid "Search Apps"
+msgstr "Søg efter apps"
+
+msgid "Reconnect"
+msgstr "Genopret forbindelse"
+
+msgid "App of the Day"
+msgstr "Dagens app"
+
+msgid "On the Go"
+msgstr "På farten"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Apps til dine Linux-telefoner og -tablets"
+
+msgid "More Mobile Apps"
+msgstr "Flere mobilapps"
+
+msgid "We​ ♥​ Games"
+msgstr "Vi ♥ spil"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Spil og apps til at køre dine yndlingstitler"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Dette er en lokal forhåndsvisning, nogle detaljer kan afvige fra den udgivne oversigt"
+
+msgid "Preview Store Appearance"
+msgstr "Forhåndsvis butikkens udseende"
+
+msgid "_Support"
+msgstr "_Støt"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Denne app bruger en runtime, der ikke længere modtager opdateringer eller sikkerhedsrettelser. Det kan blive usikkert at bruge den."
+
+msgid "Trash Data"
+msgstr "Flyt data til papirkurven"
+
+msgid "Add-ons"
+msgstr "Tilføjelser"
+
+msgid "More Add-Ons"
+msgstr "Flere tilføjelser"
+
+msgid "Links"
+msgstr "Links"
+
+msgid "Similar Apps"
+msgstr "Lignende apps"
+
+msgid "No URL"
+msgstr "Ingen URL"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Denne app har en FLOSS-licens, hvilket betyder, at kildekoden kan gennemgås for sikkerhed."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Denne app har en proprietær licens, hvilket betyder, at kildekoden udvikles privat og ikke kan gennemgås af en uafhængig tredjepart."
+
+msgid "Other Apps From This Developer"
+msgstr "Andre apps fra denne udvikler"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Andre apps fra %s"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s er ikke installeret, men har stadig <b>%s</b> data liggende."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Apps fra %s"
+
+msgid "Apps by This Developer"
+msgstr "Apps fra denne udvikler"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d app"
+msgstr[1] "%d apps"
+
+msgid "Failed to Remove User Data"
+msgstr "Kunne ikke fjerne brugerdata"
+
+msgid "Hardware Support"
+msgstr "Hardwarestøtte"
+
+msgid "Keyboard support"
+msgstr "Støtte til tastatur"
+
+msgid "Requires keyboards"
+msgstr "Kræver tastaturer"
+
+msgid "Recommends keyboards"
+msgstr "Anbefaler tastaturer"
+
+msgid "Supports keyboards"
+msgstr "Understøtter tastaturer"
+
+msgid "Unknown support for keyboards"
+msgstr "Ukendt støtte til tastaturer"
+
+msgid "Mouse support"
+msgstr "Støtte til mus"
+
+msgid "Requires mice or pointing devices"
+msgstr "Kræver mus eller pegeredskaber"
+
+msgid "Recommends mice or pointing devices"
+msgstr "Anbefaler mus eller pegeredskaber"
+
+msgid "Supports mice or pointing devices"
+msgstr "Understøtter mus eller pegeredskaber"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "Ukendt støtte til mus eller pegeredskaber"
+
+msgid "Touchscreen support"
+msgstr "Støtte til touchskærm"
+
+msgid "Requires touchscreens"
+msgstr "Kræver touchskærme"
+
+msgid "Recommends touchscreens"
+msgstr "Anbefaler touchskærme"
+
+msgid "Supports touchscreens"
+msgstr "Understøtter touchskærme"
+
+msgid "Unknown support for touchscreens"
+msgstr "Ukendt støtte til touchskærme"
+
+msgid "Mobile support"
+msgstr "Mobilstøtte"
+
+msgid "Works on mobile devices"
+msgstr "Fungerer på mobile enheder"
+
+msgid "May not work well on mobile devices"
+msgstr "Fungerer måske ikke godt på mobile enheder"
+
+msgid "Desktop support"
+msgstr "Skrivebordsstøtte"
+
+msgid "Works well on large screens"
+msgstr "Fungerer godt på store skærme"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s fungerer bedst på bestemt hardware"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s fungerer på de fleste enheder"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Annuller"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Annullerer"
+
+msgid "_Open"
+msgstr "_Åbn"
+
+msgid "Uninstall Application"
+msgstr "Afinstaller app"
+
+msgid "_Remove"
+msgstr "_Fjern"
+
+msgid "Update"
+msgstr "Opdater"
+
+msgid "Remove"
+msgstr "Fjern"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Installer %s fra %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Installer %s"
+
+msgid "Donate"
+msgstr "Doner"
+
+msgid "Search installed apps"
+msgstr "Søg i installerede apps"
+
+msgid "No Apps Found"
+msgstr "Ingen apps fundet"
+
+msgid "Search Store Instead"
+msgstr "Søg i butikken i stedet"
+
+msgid "Pending Updates"
+msgstr "Ventende opdateringer"
+
+msgid "Downloads"
+msgstr "Downloads"
+
+msgid "Recently Uninstalled"
+msgstr "Nyligt afinstalleret"
+
+msgid "Clear Finished Tasks"
+msgstr "Ryd afsluttede opgaver"
+
+msgid "Sort Options"
+msgstr "Sorteringsindstillinger"
+
+msgid "Sort By"
+msgstr "Sorter efter"
+
+msgid "Name"
+msgstr "Navn"
+
+msgid "Size"
+msgstr "Størrelse"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "Ingen resultater for \"%s\" på listen over installerede apps"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u tilgængelig opdatering"
+msgstr[1] "%u tilgængelige opdateringer"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u installeret app"
+msgstr[1] "%u installerede apps"
+
+msgid "No applications found"
+msgstr "Ingen apps fundet"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Én app fundet"
+msgstr[1] "%u apps fundet"
+
+msgid "Get Involved"
+msgstr "Bliv involveret"
+
+msgid "Learn More"
+msgstr "Læs mere"
+
+msgid "Unknown License"
+msgstr "Ukendt licens"
+
+msgid "Community Built"
+msgstr "Bygget af fællesskabet"
+
+msgid "Proprietary"
+msgstr "Proprietær"
+
+msgid "Special License"
+msgstr "Særlig licens"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Denne app udvikles åbent af et internationalt fællesskab.\n"
+"\n"
+"Du kan deltage og hjælpe med at gøre den endnu bedre."
+
+msgid "The license of this app is not known"
+msgstr "Licensen for denne app er ikke kendt"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Denne app udvikles åbent af et internationalt fællesskab og udgives under licensen %s.\n"
+"\n"
+"Du kan deltage og hjælpe med at gøre den endnu bedre."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Denne app udvikles ikke åbent, så kun dens udviklere ved, hvordan den fungerer. Den kan være usikker på måder, der er svære at opdage, og den kan ændre sig uden tilsyn.\n"
+"\n"
+"Du kan muligvis bidrage til denne app, eller også kan du ikke."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Denne app udvikles under den særlige licens %s.\n"
+"\n"
+"Du kan muligvis bidrage til denne app, eller også kan du ikke."
+
+msgid "License"
+msgstr "Licens"
+
+msgid "Connect to Flathub"
+msgstr "Opret forbindelse til Flathub"
+
+msgid "Something Went Wrong"
+msgstr "Noget gik galt"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Log ind for at synkronisere dine favoritapps på tværs af enheder"
+
+msgid "Finish"
+msgstr "Afslut"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Hej, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Tilføj ikon til forhåndsvisning af metainfo?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Metainfo-filer indeholder ikke appikoner i sig selv. Vil du vælge et manuelt?"
+
+msgid "Skip"
+msgstr "Spring over"
+
+msgid "Select Icon"
+msgstr "Vælg ikon"
+
+msgid "Image Files"
+msgstr "Billedfiler"
+
+msgid "New Permissions"
+msgstr "Nye tilladelser"
+
+msgid "_Accept"
+msgstr "_Accepter"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Ny tilladelse til %s"
+msgstr[1] "Nye tilladelser til %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Denne opdatering kræver følgende yderligere tilladelse"
+msgstr[1] "Denne opdatering kræver følgende yderligere tilladelser"
+
+msgid "User"
+msgstr "Bruger"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Udgået"
+
+msgid "Preferences"
+msgstr "Indstillinger"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Netværksforbindelsen er forbrugsmålt — automatisk opdatering af butiksdata er sat på pause"
+
+msgid "Refresh Manually"
+msgstr "Opdater manuelt"
+
+msgid "App Updates"
+msgstr "Appopdateringer"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Automatiske opdateringer sættes på pause på forbrugsmålte netværk, eller når strømsparing er slået til, for at spare data og batteri."
+
+msgid "_Automatic"
+msgstr "_Automatisk"
+
+msgid "Automatically check for and download app updates"
+msgstr "Søg automatisk efter appopdateringer, og download dem"
+
+msgid "_Manual"
+msgstr "_Manuelt"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Søgning efter og download af appopdateringer skal ske manuelt"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Underretninger om automatiske opdateringer"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Giv besked, når opdateringer er blevet installeret automatisk"
+
+msgid "Content Filters"
+msgstr "Indholdsfiltre"
+
+msgid "_Free Software Only"
+msgstr "Kun _fri software"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Skjul proprietære apps ved gennemsyn og søgning"
+
+msgid "F_lathub Results Only"
+msgstr "Kun F_lathub-resultater"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Begræns søge- og gennemsynsresultater til apps, der kun er tilgængelige på Flathub"
+
+msgid "_Verified Results Only"
+msgstr "Kun _verificerede resultater"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Skjul resultater, der ikke er verificeret på Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Skjul _udgåede apps"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "Skjul apps, der ikke længere understøttes af deres udviklere"
+
+msgid "Progress Bar Theme"
+msgstr "Tema for statuslinje"
+
+msgid "Accent Color"
+msgstr "Accentfarve"
+
+msgid "Pride Colors"
+msgstr "Pride-farver"
+
+msgid "Lesbian Pride Colors"
+msgstr "Pride-farver for lesbiske"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Pride-farver for homoseksuelle mænd"
+
+msgid "Transgender Pride Colors"
+msgstr "Pride-farver for transkønnede"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Pride-farver for ikke-binære"
+
+msgid "Bisexual Pride Colors"
+msgstr "Pride-farver for biseksuelle"
+
+msgid "Asexual Pride Colors"
+msgstr "Pride-farver for aseksuelle"
+
+msgid "Pansexual Pride Colors"
+msgstr "Pride-farver for panseksuelle"
+
+msgid "Aromantic Pride Colors"
+msgstr "Pride-farver for aromantiske"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Pride-farver for genderfluide"
+
+msgid "Polysexual Pride Colors"
+msgstr "Pride-farver for polyseksuelle"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Pride-farver for omniseksuelle"
+
+msgid "Aroace Pride Colors"
+msgstr "Pride-farver for aroace"
+
+msgid "Agender Pride Colors"
+msgstr "Pride-farver for agender"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Pride-farver for genderqueer"
+
+msgid "Intersex Pride Colors"
+msgstr "Pride-farver for interseksuelle"
+
+msgid "Demigender Pride Colors"
+msgstr "Pride-farver for demigender"
+
+msgid "Biromantic Pride Colors"
+msgstr "Pride-farver for biromantiske"
+
+msgid "Disability Pride Colors"
+msgstr "Pride-farver for handicap"
+
+msgid "Femboy Pride Colors"
+msgstr "Pride-farver for femboy"
+
+msgid "Neutrois Pride Colors"
+msgstr "Pride-farver for neutrois"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar skal køre i baggrunden for at søge efter appopdateringer"
+
+msgid "Version History"
+msgstr "Versionshistorik"
+
+msgid "Today"
+msgstr "I dag"
+
+msgid "Yesterday"
+msgstr "I går"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "for %d dag siden"
+msgstr[1] "for %d dage siden"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "for %d uge siden"
+msgstr[1] "for %d uger siden"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "for %d måned siden"
+msgstr[1] "for %d måneder siden"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "for %d år siden"
+msgstr[1] "for %d år siden"
+
+msgid "%e %B %Y"
+msgstr "%e. %B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "Version %s"
+
+msgid "No details for this release"
+msgstr "Ingen detaljer om denne udgivelse"
+
+msgid "Get More Information"
+msgstr "Få flere oplysninger"
+
+msgid "_Version History"
+msgstr "_Versionshistorik"
+
+msgid "Remotes"
+msgstr "Remotes"
+
+msgid "System Installation"
+msgstr "Systeminstallation"
+
+msgid "Available to all users on this computer"
+msgstr "Tilgængelig for alle brugere på denne computer"
+
+msgid "User Installation"
+msgstr "Brugerinstallation"
+
+msgid "Only available to you"
+msgstr "Kun tilgængelig for dig"
+
+msgid "Remove Remote"
+msgstr "Fjern remote"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Fjern %s"
+
+msgid "Unused"
+msgstr "Ubrugt"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u app installeret"
+msgstr[1] "%u apps installeret"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Fjern “%s”?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Du vil ikke længere kunne installere apps fra denne brugerremote."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Du vil ikke længere kunne installere apps fra denne systemremote."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u app at fjerne"
+msgstr[1] "%u apps at fjerne"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Appen nedenfor blev installeret fra denne remote og vil blive fjernet fra din konto sammen med den."
+msgstr[1] "Disse apps blev installeret fra denne remote og vil blive fjernet fra din konto sammen med den."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Appen nedenfor blev installeret fra denne remote og vil blive fjernet for alle brugere sammen med den."
+msgstr[1] "Disse apps blev installeret fra denne remote og vil blive fjernet for alle brugere sammen med den."
+
+msgid "Uninstall"
+msgstr "Afinstaller"
+
+msgid "Get"
+msgstr "Hent"
+
+msgid "Arbitrary Permissions"
+msgstr "Vilkårlige tilladelser"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Denne app har en tilladelse, der indirekte gør det muligt for den at give sig selv <b>enhver anden tilladelse, den ønsker</b>, og dermed omgå Flatpak-sandkassen.\n"
+"\n"
+"Den kan derfor gøre alt, hvad et privilegeret program uden sandkasse kan, f.eks. få adgang til alle dine filer og oprette forbindelse til internettet.\n"
+"\n"
+"Visning af de øvrige tilladelser kan stadig give et bedre billede af, hvad appen sandsynligvis vil gøre."
+
+msgid "View Other Permissions"
+msgstr "Vis andre tilladelser"
+
+msgid "Safe"
+msgstr "Sikker"
+
+msgid "App ID"
+msgstr "App-id"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Denne app bruger en forældet version af softwareplatformen (SDK) og kan indeholde fejl eller sikkerhedssårbarheder, som ikke vil blive rettet."
+
+msgid "Safety"
+msgstr "Sikkerhed"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s er sikker"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s har ingen usikre tilladelser"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s er sandsynligvis sikker"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s er muligvis usikker"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s er usikker"
+
+msgid "Back"
+msgstr "Tilbage"
+
+msgid "Previous Screenshot"
+msgstr "Forrige skærmbillede"
+
+msgid "Next Screenshot"
+msgstr "Næste skærmbillede"
+
+msgid "Copy Image"
+msgstr "Kopier billede"
+
+msgid "Reset View"
+msgstr "Nulstil visning"
+
+msgid "Zoom Out"
+msgstr "Zoom ud"
+
+msgid "Zoom In"
+msgstr "Zoom ind"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u runtime-opdatering"
+msgstr[1] "%u runtime-opdateringer"
+
+msgid "Screenshots Carousel"
+msgstr "Karrusel med skærmbilleder"
+
+msgid "No Screenshots"
+msgstr "Ingen skærmbilleder"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Skærmbillede %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Skærmbillede %u"
+
+msgid "Clear Search"
+msgstr "Ryd søgning"
+
+msgid "Filters"
+msgstr "Filtre"
+
+msgid "_Verified"
+msgstr "_Verificeret"
+
+msgid "_Free/Open"
+msgstr "_Fri/åben"
+
+msgid "Non-_EOL"
+msgstr "Ikke-_EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Filtrer udgåede apps fra"
+
+msgid "_Mobile Friendly"
+msgstr "_Mobilvenlig"
+
+msgid "Categories"
+msgstr "Kategorier"
+
+msgid "Search Apps, Games, Software"
+msgstr "Søg efter apps, spil, software"
+
+msgid "Search Filters"
+msgstr "Søgefiltre"
+
+msgid "Browse Categories"
+msgstr "Gennemse kategorier"
+
+msgid "Categories Unavailable"
+msgstr "Kategorier er ikke tilgængelige"
+
+msgid "Search for apps using the search bar above."
+msgstr "Søg efter apps med søgefeltet ovenfor."
+
+msgid "No Applications Found"
+msgstr "Ingen apps fundet"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Ingen resultater for \"%s\" på Flathub"
+
+msgid "Browser"
+msgstr "Browser"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Office"
+msgstr "Office"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Kalender"
+
+msgid "Messaging"
+msgstr "Beskeder"
+
+msgid "Paint"
+msgstr "Maling"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Emulator"
+
+msgid "Copy Link"
+msgstr "Kopier link"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Flathub-side"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Projektets websted"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Fejlsporing"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "FAQ"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Hjælp"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Doner"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Oversæt"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Kontakt"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Kildekode"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Bidrag"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifest"
+
+msgid "Timeline"
+msgstr "Tidslinje"
+
+msgid "Total"
+msgstr "I alt"
+
+msgid "This Week"
+msgstr "Denne uge"
+
+msgid "Installs per day"
+msgstr "Installationer pr. dag"
+
+msgid "World"
+msgstr "Verden"
+
+msgid "Installs per country"
+msgstr "Installationer pr. land"
+
+msgid "Since 4/15/2024"
+msgstr "Siden 15.4.2024"
+
+msgid "No Results Found"
+msgstr "Ingen resultater fundet"
+
+msgid "Search failed"
+msgstr "Søgningen mislykkedes"
+
+msgid "Unknown"
+msgstr "Ukendt"
+
+msgid "Keep User Data"
+msgstr "Behold brugerdata"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Tillad gendannelse af personlige indstillinger &amp; indhold"
+
+msgid "Delete All Data"
+msgstr "Slet alle data"
+
+msgid "Permanently erase user data to save space"
+msgstr "Slet brugerdata permanent for at spare plads"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "Fjern %s?"
+
+msgid "Select which version to remove."
+msgstr "Vælg, hvilken version der skal fjernes."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "Det vil ikke være muligt at bruge %s, efter at den er afinstalleret."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "“%s” har høj risiko"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Denne app har fuld adgang til dit system, herunder <b>alle dine filer, din browserhistorik, gemte adgangskoder</b> og meget mere. Den har også adgang til internettet, hvilket betyder, at den kan sende dine data til udenforstående.\n"
+"\n"
+"Da appen er proprietær, kan det ikke kontrolleres, hvad den gør med disse tilladelser."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Denne app bruger det gamle X11-vinduessystem, som gør det muligt for den at <b>optage alle tastetryk, tage skærmbilleder og overvåge andre programmer</b>. Den har også adgang til internettet, hvilket betyder, at den kan sende dine data til udenforstående.\n"
+"\n"
+"Da appen er proprietær, kan det ikke kontrolleres, hvad den gør med disse tilladelser."
+
+msgid "_Install Anyway"
+msgstr "_Installer alligevel"
+
+msgid "Failed to load transaction dialog"
+msgstr "Kunne ikke indlæse transaktionsdialogen"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "Færdig på %.02f sekunder"
+
+msgid "App Add-On"
+msgstr "Apptilføjelse"
+
+msgid "Runtime"
+msgstr "Runtime"
+
+msgid "In Queue"
+msgstr "I kø"
+
+msgid "Finishing Up"
+msgstr "Afslutter"
+
+msgid "Done"
+msgstr "Færdig"
+
+msgid "Cancelled"
+msgstr "Annulleret"
+
+msgid "Error"
+msgstr "Fejl"
+
+msgid "Cancel Transaction"
+msgstr "Annuller transaktion"
+
+msgid "Show Details"
+msgstr "Vis detaljer"
+
+msgid "Show Error Info"
+msgstr "Vis fejloplysninger"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s frigjort"
+
+msgid "Transaction Error"
+msgstr "Transaktionsfejl"
+
+msgid "Pending"
+msgstr "Afventer"
+
+msgid "Installed Updates"
+msgstr "Installerede opdateringer"
+
+msgid "Release Notes"
+msgstr "Udgivelsesnoter"
+
+msgid "No Release Info"
+msgstr "Ingen udgivelsesoplysninger"
+
+msgid "_Update All"
+msgstr "_Opdater alle"
+
+msgid "This update requests new permissions"
+msgstr "Denne opdatering anmoder om nye tilladelser"
+
+msgid "Manage Leftover User Data"
+msgstr "Administrer efterladte brugerdata"
+
+msgid "No Leftover User Data Found"
+msgstr "Ingen efterladte brugerdata fundet"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Personlige data, som er efterladt af fjernede apps, vises her"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Brugerdata i papirkurven for %u app"
+msgstr[1] "Brugerdata i papirkurven for %u apps"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Brugerdata i papirkurven for %s"
+
+msgid "Open User Data Folder"
+msgstr "Åbn brugerdatamappe"
+
+msgid "Trash User Data"
+msgstr "Flyt brugerdata til papirkurven"
+
+msgid "Refreshing"
+msgstr "Opdaterer"
+
+msgid "Curated"
+msgstr "Kurateret"
+
+msgid "Explore"
+msgstr "Udforsk"
+
+msgid "Library"
+msgstr "Bibliotek"
+
+msgid "Search"
+msgstr "Søg"
+
+msgid "Main Menu"
+msgstr "Hovedmenu"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Du kører en ny version af Bazaar!"
+
+msgid "See What's New"
+msgstr "Se, hvad der er nyt"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Du har en netværksforbindelse, men ser en cachelagret version af Flathub"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Netværksforbindelsen er forbrugsmålt — automatisk opdatering er deaktiveret"
+
+msgid "_Donate to Bazaar"
+msgstr "_Doner til Bazaar"
+
+msgid "_Refresh"
+msgstr "_Opdater"
+
+msgid "_Login With Flathub"
+msgstr "_Log ind med Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "_Administrer efterladte brugerdata"
+
+msgid "Manage R_emotes"
+msgstr "Administrer r_emotes"
+
+msgid "_Preferences"
+msgstr "_Indstillinger"
+
+msgid "_Keyboard Shortcuts"
+msgstr "_Tastaturgenveje"
+
+msgid "_About Bazaar"
+msgstr "_Om Bazaar"
+
+msgid "_Quit Bazaar"
+msgstr "_Afslut Bazaar"
+
+msgid "Log Out"
+msgstr "Log ud"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Kunne ikke starte appen"
+
+msgid "Could not open link"
+msgstr "Kunne ikke åbne linket"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Du kan ikke fjerne Bazaar fra Bazaar!"
+
+msgid "Can't do that right now!"
+msgstr "Det kan ikke lade sig gøre lige nu!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u installation"
+msgstr[1] "%s, %'u installationer"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Flest installationer fra %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d downloads den seneste måned"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s runtime"
+
+msgid "Size information unavailable"
+msgstr "Størrelsesoplysninger er ikke tilgængelige"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "Downloadstørrelse for %s"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Installeret størrelse for %s"
+
+msgid "All Ages"
+msgstr "Alle aldre"
+
+msgid "Age rating information unavailable"
+msgstr "Oplysninger om aldersgrænse er ikke tilgængelige"
+
+msgid "Suitable for all ages"
+msgstr "Egnet til alle aldre"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "Egnet til alderen %d og derover"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "Fri software under licensen %s"
+
+msgid "Free software"
+msgstr "Fri software"
+
+msgid "Proprietary Software"
+msgstr "Proprietær software"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Særlig licens: %s"
+
+msgid "Free Software"
+msgstr "Fri software"
+
+msgid "Adaptive"
+msgstr "Adaptiv"
+
+msgid "Desktop Only"
+msgstr "Kun skrivebord"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "Fungerer på skrivebord, tablets og telefoner"
+
+msgid "May not work on mobile devices"
+msgstr "Fungerer måske ikke på mobile enheder"
+
+msgid "Low Risk"
+msgstr "Lav risiko"
+
+msgid "Medium Risk"
+msgstr "Middel risiko"
+
+msgid "High Risk"
+msgstr "Høj risiko"
+
+msgid "Unknown Permissions"
+msgstr "Ukendte tilladelser"
+
+msgid "Permissions are missing for this app."
+msgstr "Der mangler tilladelser for denne app."
+
+msgid "No Permissions"
+msgstr "Ingen tilladelser"
+
+msgid "App is fully sandboxed"
+msgstr "Appen er fuldt sandkasset"
+
+msgid "Network Access"
+msgstr "Netværksadgang"
+
+msgid "Can access the internet"
+msgstr "Kan få adgang til internettet"
+
+msgid "No Network Access"
+msgstr "Ingen netværksadgang"
+
+msgid "Cannot access the internet"
+msgstr "Kan ikke få adgang til internettet"
+
+msgid "User Device Access"
+msgstr "Adgang til brugerenheder"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Kan få adgang til enheder som webcams eller spilcontrollere"
+
+msgid "No User Device Access"
+msgstr "Ingen adgang til brugerenheder"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Kan ikke få adgang til enheder som webcams eller spilcontrollere"
+
+msgid "Input Device Access"
+msgstr "Adgang til inputenheder"
+
+msgid "Can access input devices"
+msgstr "Kan få adgang til inputenheder"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Mikrofonadgang og lydafspilning"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Kan lytte via mikrofoner og afspille lyd uden at spørge om tilladelse"
+
+msgid "System Device Access"
+msgstr "Adgang til systemenheder"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Kan få adgang til systemenheder, som kræver forhøjede tilladelser"
+
+msgid "Screen Contents Access"
+msgstr "Adgang til skærmindhold"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Kan få adgang til indholdet på skærmen eller i andre vinduer"
+
+msgid "Legacy Windowing System"
+msgstr "Gammelt vinduessystem"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Bruger altid et gammelt vinduessystem (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Kan erhverve vilkårlige tilladelser"
+
+msgid "User Settings"
+msgstr "Brugerindstillinger"
+
+msgid "Can access and change user settings"
+msgstr "Kan få adgang til og ændre brugerindstillinger"
+
+msgid "Full File System Read/Write Access"
+msgstr "Fuld læse-/skriveadgang til filsystemet"
+
+msgid "Can read and write all data on the file system"
+msgstr "Kan læse og skrive alle data på filsystemet"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Læse-/skriveadgang til hjemmemappen"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Kan læse og skrive alle data i din hjemmemappe"
+
+msgid "Full File System Read Access"
+msgstr "Fuld læseadgang til filsystemet"
+
+msgid "Can read all data on the file system"
+msgstr "Kan læse alle data på filsystemet"
+
+msgid "Home Folder Read Access"
+msgstr "Læseadgang til hjemmemappen"
+
+msgid "Can read all data in your home directory"
+msgstr "Kan læse alle data i din hjemmemappe"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Læse-/skriveadgang til downloadmappen"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Kan læse og skrive alle data i din downloadmappe"
+
+msgid "Download Folder Read Access"
+msgstr "Læseadgang til downloadmappen"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Kan læse alle data i din downloadmappe"
+
+msgid "Can read and write all data in the directory"
+msgstr "Kan læse og skrive alle data i mappen"
+
+msgid "Can read all data in the directory"
+msgstr "Kan læse alle data i mappen"
+
+msgid "No File System Access"
+msgstr "Ingen adgang til filsystemet"
+
+msgid "Cannot access the file system at all"
+msgstr "Kan slet ikke få adgang til filsystemet"
+
+msgid "Uses System Services"
+msgstr "Bruger systemtjenester"
+
+msgid "Can request data from non-portal system services"
+msgstr "Kan anmode om data fra systemtjenester uden for portaler"
+
+msgid "Uses Session Services"
+msgstr "Bruger sessionstjenester"
+
+msgid "Can request data from non-portal session services"
+msgstr "Kan anmode om data fra sessionstjenester uden for portaler"
+
+msgid "No Service Access"
+msgstr "Ingen adgang til tjenester"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Kan slet ikke få adgang til sessions- eller systemtjenester uden for portaler"
+
+msgid "Verified App Developer"
+msgstr "Verificeret appudvikler"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Udvikleren af denne app er blevet verificeret som den, de udgiver sig for at være"
+
+msgid "Proprietary Code"
+msgstr "Proprietær kode"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Kildekoden er ikke offentlig, så den kan ikke kontrolleres uafhængigt og kan være usikker"
+
+msgid "Auditable Code"
+msgstr "Kontrollerbar kode"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Kildekoden er offentlig og kan kontrolleres uafhængigt, hvilket gør det mere sandsynligt, at appen er sikker"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Brug systemtjenesten %s"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Brug sessionstjenesten %s"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Brug tjenesten %s"
+
+msgid "Can see the non-portal service"
+msgstr "Kan se tjenesten uden for portaler"
+
+msgid "Can talk to the non-portal service"
+msgstr "Kan tale med tjenesten uden for portaler"
+
+msgid "Can own the non-portal service"
+msgstr "Kan eje tjenesten uden for portaler"
+
+msgid "Global Menu Integration"
+msgstr "Integration med global menu"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Kan vise sine menuer i en global menulinje"
+
+msgid "KDE Settings Integration"
+msgstr "Integration med KDE-indstillinger"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Kan registrere, når KDE-skrivebordets indstillinger ændres"
+
+msgid "KDE Global Settings"
+msgstr "Globale KDE-indstillinger"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Kan læse KDE-skrivebordets indstillinger som skrifttyper og farver"
+
+msgid "Secret Storage Service"
+msgstr "Tjeneste til hemmelig lagring"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Kan gemme og hente sine egne adgangskoder via systemets nøglering"
+
+msgid "Desktop Notifications Service"
+msgstr "Tjeneste til skrivebordsunderretninger"
+
+msgid "Can send desktop notifications"
+msgstr "Kan sende skrivebordsunderretninger"
+
+msgid "System Tray Integration"
+msgstr "Integration med systembakke"
+
+msgid "Can display an icon in the system tray"
+msgstr "Kan vise et ikon i systembakken"
+
+msgid "KDE Connect Integration"
+msgstr "Integration med KDE Connect"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Kan interagere med enheder, der er parret via KDE Connect"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigation"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Åbn siden Udforsk"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Åbn siden Bibliotek"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Åbn søgesiden"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Remotes"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Synkroniser remotes"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Generelt"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Åbn indstillinger"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Vis genveje"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Luk vindue"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Afslut Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s er installeret"
+
+msgid "The app is ready to be used"
+msgstr "Appen er klar til brug"
+
+msgid "Updates Are Out of Date"
+msgstr "Opdateringer er forældede"
+
+msgid "Please check for available updates"
+msgstr "Søg efter tilgængelige opdateringer"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u app opdateret"
+msgstr[1] "%u apps opdateret"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s er blevet opdateret."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s og %s er blevet opdateret."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Inkluderer %s, %s og %s."

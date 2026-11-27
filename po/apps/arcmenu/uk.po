@@ -1,0 +1,334 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: arcmenu\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "Unpin from Folder"
+msgstr "Відшпилити з теки"
+
+msgid "Zest"
+msgstr "Zest"
+
+msgid "Loading Menu Layout..."
+msgstr "Завантаження розкладки меню…"
+
+msgid "Power Off"
+msgstr "Вимкнути"
+
+msgid "Try a different search"
+msgstr "Спробуйте інший пошуковий запит"
+
+msgid "Searching"
+msgstr "Пошук"
+
+msgid "No Results Found"
+msgstr "Нічого не знайдено"
+
+#, javascript-format
+msgid "%d more"
+msgstr "ще %d"
+
+#, javascript-format
+msgid "%s Version"
+msgstr "Версія %s"
+
+#, javascript-format
+msgid "%s - Release Notes"
+msgstr "%s — нотатки щодо випуску"
+
+msgid "What's New"
+msgstr "Що нового"
+
+msgid "Message Tray Update Notification"
+msgstr "Сповіщення про оновлення в області сповіщень"
+
+#, javascript-format
+msgid "Show a notification when %s receives an update."
+msgstr "Показувати сповіщення, коли %s отримує оновлення."
+
+#, javascript-format
+msgid "%s on GitLab"
+msgstr "%s на GitLab"
+
+#, javascript-format
+msgid "%s Settings"
+msgstr "Параметри %s"
+
+msgid "Open"
+msgstr "Відкрити"
+
+msgid "Donate"
+msgstr "Пожертвувати"
+
+#, javascript-format
+msgid "Help Support %s"
+msgstr "Підтримати %s"
+
+#, javascript-format
+msgid "Thank you for using %s! If you enjoy it and would like to help support its continued development, please consider making a donation."
+msgstr "Дякуємо, що користуєтеся %s! Якщо він вам подобається і ви хочете допомогти його подальшій розробці, будь ласка, розгляньте можливість зробити пожертву."
+
+msgid "Donate via Buy Me a Coffee"
+msgstr "Пожертвувати через Buy Me a Coffee"
+
+#, javascript-format
+msgid "A huge thank you to everyone who has supported %s! Your support helps keep %s going. It is truly appreciated!"
+msgstr "Щиро дякуємо всім, хто підтримав %s! Ваша підтримка допомагає розвивати %s. Ми дуже це цінуємо!"
+
+msgid "Hide Overview when ArcMenu Opens"
+msgstr "Ховати «Огляд», коли відкривається ArcMenu"
+
+msgid "ArcMenu Hotkeys"
+msgstr "Гарячі клавіші ArcMenu"
+
+msgid "Standalone Runner Hotkeys"
+msgstr "Гарячі клавіші окремого меню пошуку"
+
+msgid "Active Hotkeys"
+msgstr "Активні гарячі клавіші"
+
+msgid "Super Hotkeys Override GNOME Overview Hotkey"
+msgstr "Гарячі клавіші Super перевизначають гарячу клавішу «Огляду» GNOME"
+
+msgid "Type on your keyboard to add a new hotkey."
+msgstr "Натисніть клавіші на клавіатурі, щоб додати нову гарячу клавішу."
+
+msgid "Add Hotkey"
+msgstr "Додати гарячу клавішу"
+
+msgid "Search icons…"
+msgstr "Пошук піктограм…"
+
+msgid "All"
+msgstr "Усі"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Extension"
+msgstr "Розширення"
+
+msgid "Category"
+msgstr "Категорія"
+
+msgid "Filter"
+msgstr "Фільтр"
+
+msgid "Appearance"
+msgstr "Вигляд"
+
+msgid "Choose a New Icon"
+msgstr "Вибір нової піктограми"
+
+msgid "Click Options"
+msgstr "Параметри клацання"
+
+msgid "Context Menu"
+msgstr "Контекстне меню"
+
+msgid "None"
+msgstr "Немає"
+
+msgid "Left Click"
+msgstr "Клацання лівою кнопкою"
+
+msgid "Right Click"
+msgstr "Клацання правою кнопкою"
+
+msgid "Middle Click"
+msgstr "Клацання середньою кнопкою"
+
+msgid "Styling"
+msgstr "Стилізація"
+
+msgid "Adjust less commonly used settings"
+msgstr "Налаштування рідше вживаних параметрів"
+
+msgid "Show Generic Application Names"
+msgstr "Показувати загальні назви програм"
+
+msgid "Show Multi Lined Labels"
+msgstr "Показувати багаторядкові підписи"
+
+msgid "Show Tooltips"
+msgstr "Показувати підказки"
+
+msgid "Group Apps Alphabetically on List Views"
+msgstr "Групувати програми за абеткою в списках"
+
+msgid "For All Apps sections"
+msgstr "Для розділів «Усі програми»"
+
+msgid "Group Apps Alphabetically on Grid Views"
+msgstr "Групувати програми за абеткою в ґратці"
+
+msgid "Activate App Window on Launch"
+msgstr "Активувати вікно програми під час запуску"
+
+msgid "Launching an app activates its existing window if one is open; otherwise, it launches a new instance. Hold Ctrl while launching or middle-click to open a new window."
+msgstr "Запуск програми активує її наявне вікно, якщо воно відкрите; інакше запускається новий екземпляр. Утримуйте Ctrl під час запуску або клацніть середньою кнопкою, щоб відкрити нове вікно."
+
+msgid "Keep ArcMenu Open on Ctrl+Click"
+msgstr "Тримати ArcMenu відкритим після Ctrl+клацання"
+
+msgid "Prevents the menu from closing when activating items while holding Ctrl."
+msgstr "Не дає меню закритися, коли елементи активуються з утримуваною клавішею Ctrl."
+
+msgid "Scrollview Options"
+msgstr "Параметри області прокручування"
+
+msgid "Scrollview Fade Effects"
+msgstr "Ефекти згасання області прокручування"
+
+msgid "Show Scrollbars"
+msgstr "Показувати смуги прокручування"
+
+msgid "Overlay Scrollbars"
+msgstr "Накладені смуги прокручування"
+
+msgid "Icon Style"
+msgstr "Стиль піктограм"
+
+msgid "Category Icons"
+msgstr "Піктограми категорій"
+
+msgid "Shortcut Icons"
+msgstr "Піктограми скорочень"
+
+msgid "Button Icons"
+msgstr "Піктограми кнопок"
+
+msgid "New Apps Tracker"
+msgstr "Відстеження нових програм"
+
+msgid "Enable"
+msgstr "Увімкнути"
+
+msgid "Avatar Shape"
+msgstr "Форма аватара"
+
+msgid "Show User Avatar"
+msgstr "Показувати аватар користувача"
+
+msgid "Merge Top and Bottom Panels"
+msgstr "Об’єднати верхню й нижню панелі"
+
+msgid "Max Frequent Apps"
+msgstr "Макс. кількість частих програм"
+
+msgid "Show Pinned Apps"
+msgstr "Показувати пришпилені програми"
+
+msgid "Static Height"
+msgstr "Стала висота"
+
+msgid "Default"
+msgstr "Типово"
+
+msgid "Show Configure Runner Button"
+msgstr "Показувати кнопку налаштування пошуку"
+
+msgid "Extra Shortcuts Panel Width"
+msgstr "Ширина панелі додаткових скорочень"
+
+msgid "Pinned and Frequent Apps"
+msgstr "Пришпилені й часто вживані програми"
+
+msgid "0 = unlimited"
+msgstr "0 = без обмежень"
+
+msgid "'All Apps' Button Action"
+msgstr "Дія кнопки «Усі програми»"
+
+msgid "Display a category on the default menu view. Category must be enabled in ArcMenu Settings -> Menu -> Extra Categories section."
+msgstr "Показувати категорію у типовому вигляді меню. Категорію має бути ввімкнено в розділі «Параметри ArcMenu» → «Меню» → «Додаткові категорії»."
+
+msgid "Clear Icon"
+msgstr "Очистити піктограму"
+
+msgid "Hide Search Bar"
+msgstr "Ховати рядок пошуку"
+
+msgid "The search bar hides when empty and appears when typing."
+msgstr "Рядок пошуку ховається, коли порожній, і з’являється під час введення."
+
+msgid "Top Left"
+msgstr "Угорі ліворуч"
+
+msgid "Top Right"
+msgstr "Угорі праворуч"
+
+msgid "Bottom Left"
+msgstr "Унизу ліворуч"
+
+msgid "Bottom Right"
+msgstr "Унизу праворуч"
+
+msgid "Left Centered"
+msgstr "По центру ліворуч"
+
+msgid "Right Centered"
+msgstr "По центру праворуч"
+
+msgid "Monitor Centered"
+msgstr "По центру монітора"
+
+msgid "Override Menu Item Icon Sizes"
+msgstr "Перевизначити розміри піктограм елементів меню"
+
+msgid "Small Wide"
+msgstr "Малий широкий"
+
+msgid "Medium Wide"
+msgstr "Середній широкий"
+
+msgid "Large Wide"
+msgstr "Великий широкий"
+
+msgid "Menu items displayed in grid style"
+msgstr "Елементи меню у вигляді ґратки"
+
+msgid "Presets"
+msgstr "Набори"
+
+msgid "Grid Icon Size"
+msgstr "Розмір піктограм ґратки"
+
+msgid "Width, Height, Icon Size"
+msgstr "Ширина, висота, розмір піктограм"
+
+msgid "Applications, pinned apps, and search results"
+msgstr "Програми, пришпилені програми та результати пошуку"
+
+msgid "Menu items found in side panels on various layouts"
+msgstr "Елементи меню на бічних панелях у різних розкладках"
+
+msgid "Buttons"
+msgstr "Кнопки"
+
+msgid "Avatar, search icons, navigation icons"
+msgstr "Аватар, піктограми пошуку, піктограми навігації"
+
+msgid "Hide Icon"
+msgstr "Ховати піктограму"
+
+#, javascript-format
+msgid "%s v%s Released!"
+msgstr "Вийшла %s v%s!"
+
+msgid "Check out what's new."
+msgstr "Дізнайтеся, що нового."
+
+msgid "What's new?"
+msgstr "Що нового?"
+
+msgid "Dismiss"
+msgstr "Закрити"

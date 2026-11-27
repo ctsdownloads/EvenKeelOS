@@ -1,0 +1,917 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "%d терезені жабу"
+
+msgid "Power options"
+msgstr "Қуат опциялары"
+
+msgid "Event logs"
+msgstr "Оқиғалар журналдары"
+
+msgid "System"
+msgstr "Жүйе"
+
+msgid "Device Management"
+msgstr "Құрылғыларды басқару"
+
+msgid "Disk Management"
+msgstr "Дискілерді басқару"
+
+msgid "Unlock taskbar"
+msgstr "Тапсырмалар панелін құлыптан шығару"
+
+msgid "Lock taskbar"
+msgstr "Тапсырмалар панелін құлыптау"
+
+msgid "Gnome Settings"
+msgstr "GNOME баптаулары"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel жаңартылды!"
+
+msgid "You are now running version"
+msgstr "Қазір сіз мына нұсқаны пайдаланып жатырсыз"
+
+msgid "See what's new"
+msgstr "Не жаңалық екенін көру"
+
+msgid "Top Bar"
+msgstr "Жоғарғы панель"
+
+msgid "Show Desktop button height (px)"
+msgstr "Жұмыс үстелі түймесінің биіктігі (пикс)"
+
+msgid "Left"
+msgstr "Сол жақ"
+
+msgid "Center"
+msgstr "Ортада"
+
+msgid "Right"
+msgstr "Оң жақ"
+
+msgid "Middle"
+msgstr "Орта"
+
+msgid "Start"
+msgstr "Басы"
+
+msgid "End"
+msgstr "Соңы"
+
+msgid "Show Applications button"
+msgstr "Қолданбаларды көрсету түймесі"
+
+msgid "Activities button"
+msgstr "Әрекеттер түймесі"
+
+msgid "Taskbar"
+msgstr "Тапсырмалар панелі"
+
+msgid "Date menu"
+msgstr "Күн мәзірі"
+
+msgid "System menu"
+msgstr "Жүйе мәзірі"
+
+msgid "Left box"
+msgstr "Сол жақ блок"
+
+msgid "Center box"
+msgstr "Орталық блок"
+
+msgid "Right box"
+msgstr "Оң жақ блок"
+
+msgid "Desktop button"
+msgstr "Жұмыс үстелі түймесі"
+
+msgid "Move up"
+msgstr "Жоғары жылжыту"
+
+msgid "Move down"
+msgstr "Төмен жылжыту"
+
+msgid "Visible"
+msgstr "Көрінеді"
+
+msgid "Select element position"
+msgstr "Элемент орнын таңдаңыз"
+
+msgid "Stacked to top"
+msgstr "Жоғарыға тізілген"
+
+msgid "Stacked to left"
+msgstr "Солға тізілген"
+
+msgid "Stacked to bottom"
+msgstr "Төменге тізілген"
+
+msgid "Stacked to right"
+msgstr "Оңға тізілген"
+
+msgid "Centered"
+msgstr "Ортаға туралаулы"
+
+msgid "Monitor Center"
+msgstr "Монитордың ортасы"
+
+msgid "More options"
+msgstr "Қосымша опциялар"
+
+msgid "Show Applications options"
+msgstr "Қолданбаларды көрсету опциялары"
+
+msgid "Open icon"
+msgstr "Белгішені ашу"
+
+msgid "Primary monitor"
+msgstr "Негізгі монитор"
+
+msgid "Monitor "
+msgstr "Монитор "
+
+msgid "Dynamic opacity options"
+msgstr "Динамикалық мөлдірсіздік опциялары"
+
+msgid "Intellihide options"
+msgstr "Intellihide опциялары"
+
+msgid "Isolate Workspaces options"
+msgstr "Жұмыс орындарын оқшаулау опциялары"
+
+msgid "Isolate monitors options"
+msgstr "Мониторларды оқшаулау опциялары"
+
+msgid "Text"
+msgstr "Мәтін"
+
+msgid "Command"
+msgstr "Команда"
+
+msgid "Remove"
+msgstr "Жою"
+
+msgid "Customize panel scroll behavior"
+msgstr "Панельді айналдыру мінез-құлқын баптау"
+
+msgid "Customize icon scroll behavior"
+msgstr "Белгішені айналдыру мінез-құлқын баптау"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d мс"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d белгіше"
+
+msgid "App icon animation options"
+msgstr "Қолданба белгішесінің анимация опциялары"
+
+msgid "App icon highlight options"
+msgstr "Қолданба белгішесін ерекшелеу опциялары"
+
+msgid "Export settings"
+msgstr "Баптауларды экспорттау"
+
+msgid "Import settings"
+msgstr "Баптауларды импорттау"
+
+msgid "Move to current Workspace"
+msgstr "Ағымдағы жұмыс орнына жылжыту"
+
+msgid "Animation type"
+msgstr "Анимация түрі"
+
+msgid "Simple"
+msgstr "Қарапайым"
+
+msgid "Ripple"
+msgstr "Толқын"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Ұзақтығы"
+
+msgid "Rotation"
+msgstr "Бұру"
+
+msgid "Travel"
+msgstr "Жылжу"
+
+msgid "Zoom"
+msgstr "Масштаб"
+
+msgid "Convexity"
+msgstr "Дөңестік"
+
+msgid "Extent"
+msgstr "Көлемі"
+
+msgid "Icon dominant color"
+msgstr "Белгішенің басым түсі"
+
+msgid "Custom color"
+msgstr "Таңдауыңызша түс"
+
+msgid "Indicator size (px)"
+msgstr "Индикатор өлшемі (пикс)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Индикатор түсі - белгішенің басым түсі"
+
+msgid "The panel background opacity is affected by"
+msgstr "Панель фонының мөлдірсіздігіне әсер етеді"
+
+msgid "All windows"
+msgstr "Барлық терезелер"
+
+msgid "Focused windows"
+msgstr "Фокустағы терезелер"
+
+msgid "Maximized windows"
+msgstr "Жайылған терезелер"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Терезе мына қашықтыққа (пикс) жақындағанда мөлдірсіздікті өзгерту"
+
+msgid "Change opacity to (%)"
+msgstr "Мөлдірсіздікті мынаған өзгерту (%)"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Мөлдірсіздікті өзгерту анимациясының ұзақтығы (мс)"
+
+msgid "Font weight of application titles"
+msgstr "Қолданба атауларының қаріп жуандығы"
+
+msgid "inherit from theme"
+msgstr "темадан алу"
+
+msgid "normal"
+msgstr "қалыпты"
+
+msgid "lighter"
+msgstr "жеңілірек"
+
+msgid "bold"
+msgstr "қалың"
+
+msgid "bolder"
+msgstr "қалыңырақ"
+
+msgid "Font color of the minimized application titles"
+msgstr "Қайырылған қолданба атауларының қаріп түсі"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Қолданба атауларының ең үлкен ені (пикс)"
+
+msgid "(default is 160)"
+msgstr "(әдепкі мәні 160)"
+
+msgid "Highlight AppIcon color"
+msgstr "Қолданба белгішесін ерекшелеу түсі"
+
+msgid "Pressed AppIcon color"
+msgstr "Басылған қолданба белгішесінің түсі"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Қолданба белгішесін ерекшелеудің жиек радиусы"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Жалпы жиек радиусын үстінен басады (әдепкі мәні 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Панельді тек терезелерден жасыру"
+
+msgid "Overlapping"
+msgstr "Қиылысатын"
+
+msgid "On same monitor"
+msgstr "Сол мониторда"
+
+msgid "The panel hides from"
+msgstr "Панель жасырылатын жағдай"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Меңзерді монитор жиегіне тигізгенде панель ашылады"
+
+msgid "Limit to panel length"
+msgstr "Панель ұзындығымен шектеу"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Панель аймағының үстінде тұрғанда панель ашық қалады"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Панельді ашу үшін монитор жиегінде қысым қажет"
+
+msgid "Required pressure threshold (px)"
+msgstr "Қажетті қысым шегі (пикс)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Қажетті қысым күту уақыты (мс)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Панельді толық экран режимінде ашуға рұқсат ету"
+
+msgid "(requires multi-monitors option)"
+msgstr "(көп монитор опциясын қажет етеді)"
+
+msgid "Only hide secondary panels"
+msgstr "Тек қосымша панельдерді жасыру"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Синтаксисі: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Панельді ашып, ұстап тұру үшін пернетақта жарлығы"
+
+msgid "e.g. <Super>i"
+msgstr "мысалы, <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Күйді қайта іске қосулар арасында сақтау"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(GNOME «Мазаламаңыз» режимін ескереді және хабарлама санағышының белгісін көрсету опциясын қажет етеді)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Хабарлама келгенде панельді ашып, ұстап тұру"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Жасыру және ашу анимациясының ұзақтығы (мс)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Панельді жасырудың алдындағы кідіріс (мс)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Панельді ашудың алдындағы кідіріс (мс)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Іске қосқанда intellihide қосудың алдындағы кідіріс (мс)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Бір панель қолданылғанда да мониторларды оқшаулау"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "gnome-shell қолданбалар ауыстырғышында жұмыс орындарын оқшаулау"
+
+msgid "Raise windows"
+msgstr "Терезелерді жоғары көтеру"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Біреуін ауыстыру / Бірнешеуінің кіші көрінісі"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Біреуін ауыстыру / Бірнешеуі арасында циклмен ауысу"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Біреуін ауыстыру / Бірнешеуін жайып көрсету"
+
+msgid "e.g. <Super>q"
+msgstr "мысалы, <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Қосымша мониторларда негізгі мониторға сәйкес келетін белгішелерде оверлейді көрсету"
+
+msgid "Show the overlay on all monitors"
+msgstr "Оверлейді барлық мониторларда көрсету"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Қолданбаның бірнеше данасы болғанда кіші көріністерді көрсету"
+
+msgid "Show window previews on hotkey"
+msgstr "Ыстық пернемен терезелердің кіші көріністерін көрсету"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Ыстық пернелерді іске қосу үшін қолданылатын сан пернелерін таңдаңыз"
+
+msgid "Hotkeys are activated with"
+msgstr "Ыстық пернелер мынамен іске қосылады"
+
+msgid "Number row"
+msgstr "Сандар қатары"
+
+msgid "Numeric keypad"
+msgstr "Сандық пернетақта"
+
+msgid "Both"
+msgstr "Екеуі де"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Тінтуір айналдыру оқиғалары арасындағы кідіріс (мс)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Түсірілетін тінтуір айналдыру оқиғаларының санын шектеу үшін осы мәнді пайдаланыңыз."
+
+msgid "Show popup when changing workspace"
+msgstr "Жұмыс орнын өзгерткенде қалқымалы терезені көрсету"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Бұл тек панельде айналдыру кезіндегі жұмыс орны қалқымалы терезесіне әсер етеді."
+
+msgid "<i>App Details</i> menu item"
+msgstr "<i>Қолданба ақпараты</i> мәзір элементі"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Қолданба ақпараты</i> тек Gnome Software орнатылған кезде қолжетімді"
+
+msgid "Show Applications icon"
+msgstr "Қолданбаларды көрсету белгішесі"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Қолданбаларды көрсету белгішесінің бүйір толтырмасы (пикс)"
+
+msgid "Override escape key and return to desktop"
+msgstr "Escape пернесін үстінен басып, жұмыс үстеліне оралу"
+
+msgid "Override Show Desktop line color"
+msgstr "Жұмыс үстелін көрсету сызығының түсін үстінен басу"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Жұмыс үстелі түймесінің үстінен өткенде жұмыс үстелін ашу"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Жұмыс үстелін ашудың алдындағы кідіріс (мс)"
+
+msgid "Fade duration (ms)"
+msgstr "Бозару ұзақтығы (мс)"
+
+msgid "Time (ms) before showing"
+msgstr "Көрсетуге дейінгі уақыт (мс)"
+
+msgid "(400 is default)"
+msgstr "(әдепкі мәні 400)"
+
+msgid "Time (ms) before hiding"
+msgstr "Жасыруға дейінгі уақыт (мс)"
+
+msgid "(100 is default)"
+msgstr "(әдепкі мәні 100)"
+
+msgid "Immediate on application icon click"
+msgstr "Қолданба белгішесін басқанда бірден"
+
+msgid "Animation time (ms)"
+msgstr "Анимация уақыты (мс)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Терезені жабу үшін кіші көріністі орта батырмамен басу"
+
+msgid "Window previews preferred size (px)"
+msgstr "Терезе кіші көріністерінің қалаулы өлшемі (пикс)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Терезе кіші көріністерінің арақатынасы X (ені)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Тіркелген"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Терезе кіші көріністерінің арақатынасы Y (биіктігі)"
+
+msgid "Window previews padding (px)"
+msgstr "Терезе кіші көріністерінің толтырмасы (пикс)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Кіші көріністер фоны үшін таңдауыңызша мөлдірсіздікті қолдану"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Өшірулі болса, кіші көріністер фонының мөлдірсіздігі панельдікімен бірдей болады."
+
+msgid "Close button and header position"
+msgstr "Жабу түймесі мен тақырыптың орны"
+
+msgid "Display window preview headers"
+msgstr "Терезе кіші көріністерінің тақырыптарын көрсету"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Терезе кіші көрінісіндегі белгіше өлшемі (пикс)"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Өшірулі болса, кіші көрініс белгішесінің өлшемі тақырып жолағының өлшеміне байланысты болады"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Кіші көрініс атауларының қаріп өлшемі (пикс)"
+
+msgid "Font weight of the preview titles"
+msgstr "Кіші көрініс атауларының қаріп жуандығы"
+
+msgid "Font color of the preview titles"
+msgstr "Кіші көрініс атауларының қаріп түсі"
+
+msgid "50"
+msgstr "50"
+
+msgid "About"
+msgstr "Бағдарлама туралы"
+
+msgid "Info"
+msgstr "Ақпарат"
+
+msgid "Version"
+msgstr "Нұсқасы"
+
+msgid "Source"
+msgstr "Дереккөз"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Экспорттау және импорттау"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Ағымдағы баптауларыңыздан басқа компьютерге импорттауға болатын баптаулар файлын жасау үшін төмендегі түймелерді пайдаланыңыз."
+
+msgid "Export and import settings"
+msgstr "Баптауларды экспорттау және импорттау"
+
+msgid "Export to file"
+msgstr "Файлға экспорттау"
+
+msgid "Import from file"
+msgstr "Файлдан импорттау"
+
+msgid "Sponsored and originally developed by"
+msgstr "Демеушісі және түпнұсқа әзірлеушісі"
+
+msgid "Action"
+msgstr "Әрекет"
+
+msgid "Toggle windows"
+msgstr "Терезелерді ауыстыру"
+
+msgid "Scroll action"
+msgstr "Айналдыру әрекеті"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Тінтуір дөңгелегін панельде айналдырған кездегі мінез-құлық."
+
+msgid "Scroll panel action"
+msgstr "Панельді айналдыру әрекеті"
+
+msgid "Do nothing"
+msgstr "Ештеңе істемеу"
+
+msgid "Switch workspace"
+msgstr "Жұмыс орнын ауыстыру"
+
+msgid "Cycle windows"
+msgstr "Терезелер арасында циклмен ауысу"
+
+msgid "Change volume"
+msgstr "Дыбыс деңгейін өзгерту"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Тінтуір дөңгелегін қолданба белгішесінде айналдырған кездегі мінез-құлық."
+
+msgid "Scroll icon action"
+msgstr "Белгішені айналдыру әрекеті"
+
+msgid "Same as panel"
+msgstr "Панельдегідей"
+
+msgid "Hotkey overlay"
+msgstr "Ыстық пернелер оверлейі"
+
+msgid "Application icons context menu"
+msgstr "Қолданба белгішелерінің контекстік мәзірі"
+
+msgid "(right-click menu)"
+msgstr "(оң жақ батырма мәзірі)"
+
+msgid "Secondary menu"
+msgstr "Қосымша мәзір"
+
+msgid "Panel context menu entries"
+msgstr "Панельдің контекстік мәзір жазбалары"
+
+msgid "Add entry"
+msgstr "Жазба қосу"
+
+msgid "Behavior"
+msgstr "Мінез-құлық"
+
+msgid "Applications"
+msgstr "Қолданбалар"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Қосымша панельдерде таңдамалы қолданбаларды көрсету"
+
+msgid "Show running applications"
+msgstr "Орындалып тұрған қолданбаларды көрсету"
+
+msgid "Show notification counter badge"
+msgstr "Хабарлама санағышының белгісін көрсету"
+
+msgid "Hover"
+msgstr "Үстінен өту"
+
+msgid "Show tooltip on hover"
+msgstr "Үстінен өткенде қалқымалы кеңесті көрсету"
+
+msgid "Isolate"
+msgstr "Оқшаулау"
+
+msgid "Isolate monitors"
+msgstr "Мониторларды оқшаулау"
+
+msgid "Overview"
+msgstr "Шолу"
+
+msgid "Click empty space to close overview"
+msgstr "Шолуды жабу үшін бос орынды басу"
+
+msgid "Disable show overview on startup"
+msgstr "Іске қосқанда шолуды көрсетуді өшіру"
+
+msgid "Fine-Tune"
+msgstr "Нақтылап баптау"
+
+msgid "Font size"
+msgstr "Қаріп өлшемі"
+
+msgid "(0 = theme default)"
+msgstr "(0 = тема әдепкі мәні)"
+
+msgid "Tray Font Size"
+msgstr "Трей қаріп өлшемі"
+
+msgid "LeftBox Font Size"
+msgstr "Сол жақ блок қаріп өлшемі"
+
+msgid "Padding"
+msgstr "Толтырма"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = тема әдепкі мәні)"
+
+msgid "Tray Item Padding"
+msgstr "Трей элементінің толтырмасы"
+
+msgid "Status Icon Padding"
+msgstr "Күй белгішесінің толтырмасы"
+
+msgid "LeftBox Padding"
+msgstr "Сол жақ блок толтырмасы"
+
+msgid "Animate"
+msgstr "Анимация"
+
+msgid "Gnome functionality"
+msgstr "GNOME функционалы"
+
+msgid "(overview)"
+msgstr "(шолу)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Түпнұсқа gnome-shell dash-ын сақтау"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Түпнұсқа gnome-shell жоғарғы панелін сақтау"
+
+msgid "(e.g. date menu)"
+msgstr "(мысалы, күн мәзірі)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Панель мәзір түймелерін тек басқанда белсендіру"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Әрекеттер ыстық бұрышын негізгі мониторда мәжбүрлеп қосу"
+
+msgid "Position"
+msgstr "Орны"
+
+msgid "Panel"
+msgstr "Панель"
+
+msgid "Display the main panel on"
+msgstr "Негізгі панельді мына жерде көрсету"
+
+msgid "Display panels on all monitors"
+msgstr "Панельдерді барлық мониторларда көрсету"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Панельді баптауларға сай жасыру және ашу"
+
+msgid "Panel Intellihide"
+msgstr "Панельдің Intellihide функциясы"
+
+msgid "Order and Position on monitors"
+msgstr "Мониторлардағы реті мен орны"
+
+msgid "Monitor"
+msgstr "Монитор"
+
+msgid "Apply changes to all monitors"
+msgstr "Өзгерістерді барлық мониторларға қолдану"
+
+msgid "Panel monitor position"
+msgstr "Панельдің монитордағы орны"
+
+msgid "(default is 48)"
+msgstr "(әдепкі мәні 48)"
+
+msgid "Panel thickness"
+msgstr "Панель қалыңдығы"
+
+msgid "(default is 100)"
+msgstr "(әдепкі мәні 100)"
+
+msgid "Panel length"
+msgstr "Панель ұзындығы"
+
+msgid "Dynamic"
+msgstr "Динамикалық"
+
+msgid "Anchor"
+msgstr "Бекіту"
+
+msgid "Taskbar Display"
+msgstr "Тапсырмалар панелінің көрінісі"
+
+msgid "Style"
+msgstr "Стиль"
+
+msgid "Global style"
+msgstr "Жалпы стиль"
+
+msgid "Border radius"
+msgstr "Жиек радиусы"
+
+msgid "AppIcon style"
+msgstr "Қолданба белгішесінің стилі"
+
+msgid "(default is 8)"
+msgstr "(әдепкі мәні 8)"
+
+msgid "App Icon Margin"
+msgstr "Қолданба белгішесінің шеті"
+
+msgid "(default is 4)"
+msgstr "(әдепкі мәні 4)"
+
+msgid "App Icon Padding"
+msgstr "Қолданба белгішесінің толтырмасы"
+
+msgid "Animate hovering app icons"
+msgstr "Үстінен өткен қолданба белгішелерін анимациялау"
+
+msgid "Highlight hovering app icons"
+msgstr "Үстінен өткен қолданба белгішелерін ерекшелеу"
+
+msgid "Icon style"
+msgstr "Белгіше стилі"
+
+msgid "Normal"
+msgstr "Қалыпты"
+
+msgid "Symbolic"
+msgstr "Символдық"
+
+msgid "Grayscale"
+msgstr "Сұр реңктер"
+
+msgid "Running indicator"
+msgstr "Орындалу индикаторы"
+
+msgid "Panel style"
+msgstr "Панель стилі"
+
+msgid "(default is 0)"
+msgstr "(әдепкі мәні 0)"
+
+msgid "Side margins"
+msgstr "Бүйір шеттері"
+
+msgid "Top and bottom margins"
+msgstr "Жоғарғы және төменгі шеттер"
+
+msgid "Side padding"
+msgstr "Бүйір толтырмасы"
+
+msgid "Top and bottom padding"
+msgstr "Жоғарғы және төменгі толтырма"
+
+msgid "Override panel theme background color"
+msgstr "Панель темасының фон түсін үстінен басу"
+
+msgid "Override panel theme background opacity"
+msgstr "Панель темасының фон мөлдірсіздігін үстінен басу"
+
+msgid "Panel background opacity (%)"
+msgstr "Панель фонының мөлдірсіздігі (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Терезе панельге жақындағанда мөлдірсіздікті өзгерту"
+
+msgid "Dynamic background opacity"
+msgstr "Динамикалық фон мөлдірсіздігі"
+
+msgid "Override panel theme gradient"
+msgstr "Панель темасының градиентін үстінен басу"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Градиенттің жоғарғы түсі және мөлдірсіздігі (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Градиенттің төменгі түсі және мөлдірсіздігі (%)"
+
+msgid "Panel border"
+msgstr "Панель жиегі"
+
+msgid "Override border color"
+msgstr "Жиек түсін үстінен басу"
+
+msgid "Border thickness"
+msgstr "Жиек қалыңдығы"

@@ -1,0 +1,2588 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "యాప్ స్టోర్"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "ఈ కంప్యూటర్‌లో flatpak సాఫ్ట్‌వేర్‌ను జోడించండి, తీసివేయండి లేదా అప్‌డేట్ చేయండి"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "సిస్టమ్;ప్యాకేజీ;మేనేజర్;కనుగొనండి;Flatpak;సాఫ్ట్‌వేర్;యాప్;స్టోర్;"
+
+msgid "New Window"
+msgstr "కొత్త విండో"
+
+msgid "Discover and install apps"
+msgstr "యాప్‌లను కనుగొని ఇన్‌స్టాల్ చేయండి"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Linux కోసం వేగవంతమైన, ఆధునిక యాప్ స్టోర్, ముఖ్యంగా Flathub నుండి Flatpak యాప్‌లు మరియు యాడ్-ఆన్‌లను కనుగొని ఇన్‌స్టాల్ చేయడంపై దృష్టి సారించింది."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "అనేక ఇన్‌స్టాల్‌లను క్యూలో ఉంచి బ్రౌజ్ చేస్తూనే ఉండండి"
+
+msgid "Easily view app permissions"
+msgstr "యాప్ అనుమతులను సులభంగా చూడండి"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "మీ ఇష్టమైనవి చూడటానికి మరియు నిర్వహించడానికి Flathubలో సైన్ ఇన్ చేయండి"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "GNOME Shell నుండే నేరుగా యాప్‌లను శోధించండి"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Flathub యాప్‌లను చూపించే హోమ్ పేజీ"
+
+msgid "App page for Exhibit"
+msgstr "Exhibit యాప్ పేజీ"
+
+msgid "Library page"
+msgstr "లైబ్రరీ పేజీ"
+
+msgid "Search page"
+msgstr "శోధన పేజీ"
+
+msgid "Category page"
+msgstr "వర్గం పేజీ"
+
+msgid "Stopped Receiving Updates"
+msgstr "అప్‌డేట్‌లు అందుకోవడం ఆగిపోయింది"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "అన్‌ఇన్‌స్టాల్ చేయండి"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "ఇన్‌స్టాల్ చేయండి"
+
+msgid "Add-on"
+msgstr "యాడ్-ఆన్"
+
+msgid "Manage Add-Ons"
+msgstr "యాడ్-ఆన్‌లను నిర్వహించండి"
+
+msgid "No Add-Ons Visible"
+msgstr "యాడ్-ఆన్‌లు కనిపించడం లేదు"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "మీ ప్రస్తుత ఫిల్టర్ ప్రాధాన్యతలు తెలిసిన అన్ని యాడ్-ఆన్‌లను దాచి ఉంచుతున్నాయి. వాటిని సర్దుబాటు చేసి చూడండి."
+
+msgid "Add-on Page"
+msgstr "యాడ్-ఆన్ పేజీ"
+
+msgid "Download"
+msgstr "డౌన్‌లోడ్ చేయండి"
+
+msgid "Installed"
+msgstr "ఇన్‌స్టాల్ చేయబడింది"
+
+msgid "Downloads/Month"
+msgstr "డౌన్‌లోడ్‌లు/నెల"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "కోర్ అప్‌డేట్‌లు అందుకోవడం ఆగిపోయింది"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "ఈ యాడ్-ఆన్ ఇకపై అప్‌డేట్‌లు లేదా భద్రతా పరిష్కారాలు అందుకోని రన్‌టైమ్‌ను ఉపయోగిస్తుంది. దీన్ని ఉపయోగించడం అసురక్షితంగా మారవచ్చు."
+
+msgid "Other Sources"
+msgstr "ఇతర మూలాలు"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "%s కోసం యాడ్-ఆన్"
+
+msgid "Show Less"
+msgstr "తక్కువ చూపించండి"
+
+msgid "Show More"
+msgstr "ఇంకా చూపించండి"
+
+msgid "Download Stats"
+msgstr "డౌన్‌లోడ్ గణాంకాలు"
+
+msgid "Age Rating"
+msgstr "వయో రేటింగ్"
+
+msgid "Cartoon Violence"
+msgstr "కార్టూన్ హింస"
+
+msgid "No information regarding cartoon violence"
+msgstr "కార్టూన్ హింస గురించి సమాచారం లేదు"
+
+msgid "Fantasy Violence"
+msgstr "ఫాంటసీ హింస"
+
+msgid "No information regarding fantasy violence"
+msgstr "ఫాంటసీ హింస గురించి సమాచారం లేదు"
+
+msgid "Realistic Violence"
+msgstr "వాస్తవిక హింస"
+
+msgid "No information regarding realistic violence"
+msgstr "వాస్తవిక హింస గురించి సమాచారం లేదు"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "రక్తపాతాన్ని చూపించే హింస"
+
+msgid "No information regarding bloodshed"
+msgstr "రక్తపాతం గురించి సమాచారం లేదు"
+
+msgid "Sexual Violence"
+msgstr "లైంగిక హింస"
+
+msgid "No information regarding sexual violence"
+msgstr "లైంగిక హింస గురించి సమాచారం లేదు"
+
+msgid "Alcohol"
+msgstr "మద్యం"
+
+msgid "No information regarding references to alcohol"
+msgstr "మద్యం ప్రస్తావనల గురించి సమాచారం లేదు"
+
+msgid "Narcotics"
+msgstr "మాదక ద్రవ్యాలు"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "నిషిద్ధ మాదక ద్రవ్యాల ప్రస్తావనల గురించి సమాచారం లేదు"
+
+msgid "Tobacco"
+msgstr "పొగాకు"
+
+msgid "No information regarding references to tobacco products"
+msgstr "పొగాకు ఉత్పత్తుల ప్రస్తావనల గురించి సమాచారం లేదు"
+
+msgid "Nudity"
+msgstr "నగ్నత్వం"
+
+msgid "No information regarding nudity of any sort"
+msgstr "ఎలాంటి నగ్నత్వం గురించి అయినా సమాచారం లేదు"
+
+msgid "Sexual Themes"
+msgstr "లైంగిక అంశాలు"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "లైంగిక స్వభావం గల ప్రస్తావనలు లేదా చిత్రణల గురించి సమాచారం లేదు"
+
+msgid "Profanity"
+msgstr "అసభ్య పదజాలం"
+
+msgid "No information regarding profanity of any kind"
+msgstr "ఎలాంటి అసభ్య పదజాలం గురించి అయినా సమాచారం లేదు"
+
+msgid "Inappropriate Humor"
+msgstr "అనుచిత హాస్యం"
+
+msgid "No information regarding inappropriate humor"
+msgstr "అనుచిత హాస్యం గురించి సమాచారం లేదు"
+
+msgid "Discrimination"
+msgstr "వివక్ష"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "ఎలాంటి వివక్షాపూరిత భాష గురించి అయినా సమాచారం లేదు"
+
+msgid "Advertising"
+msgstr "ప్రకటనలు"
+
+msgid "No information regarding advertising of any kind"
+msgstr "ఎలాంటి ప్రకటనల గురించి అయినా సమాచారం లేదు"
+
+msgid "Gambling"
+msgstr "జూదం"
+
+msgid "No information regarding gambling of any kind"
+msgstr "ఎలాంటి జూదం గురించి అయినా సమాచారం లేదు"
+
+msgid "Purchasing"
+msgstr "కొనుగోళ్లు"
+
+msgid "No information regarding the ability to spend money"
+msgstr "డబ్బు ఖర్చు చేసే సామర్థ్యం గురించి సమాచారం లేదు"
+
+msgid "Chat Between Users"
+msgstr "వినియోగదారుల మధ్య చాట్"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "ఇతర వినియోగదారులతో చాట్ చేసే మార్గాల గురించి సమాచారం లేదు"
+
+msgid "Audio Chat Between Users"
+msgstr "వినియోగదారుల మధ్య ఆడియో చాట్"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "ఇతర వినియోగదారులతో మాట్లాడే మార్గాల గురించి సమాచారం లేదు"
+
+msgid "Contact Details"
+msgstr "సంప్రదింపు వివరాలు"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "సోషల్ నెట్‌వర్క్ యూజర్‌నేమ్‌లు లేదా ఇమెయిల్ చిరునామాలను పంచుకోవడం గురించి సమాచారం లేదు"
+
+msgid "Identifying Information"
+msgstr "గుర్తింపు సమాచారం"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "వినియోగదారు సమాచారాన్ని థర్డ్ పార్టీలతో పంచుకోవడం గురించి సమాచారం లేదు"
+
+msgid "Location Sharing"
+msgstr "స్థాన భాగస్వామ్యం"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "ఇతర వినియోగదారులతో భౌతిక స్థానాన్ని పంచుకోవడం గురించి సమాచారం లేదు"
+
+msgid "Prostitution"
+msgstr "వ్యభిచారం"
+
+msgid "No information regarding references to prostitution"
+msgstr "వ్యభిచార ప్రస్తావనల గురించి సమాచారం లేదు"
+
+msgid "Adultery"
+msgstr "వివాహేతర సంబంధం"
+
+msgid "No information regarding references to adultery"
+msgstr "వివాహేతర సంబంధాల ప్రస్తావనల గురించి సమాచారం లేదు"
+
+msgid "Sexualized Characters"
+msgstr "లైంగికీకరించిన పాత్రలు"
+
+msgid "No information regarding sexualized characters"
+msgstr "లైంగికీకరించిన పాత్రల గురించి సమాచారం లేదు"
+
+msgid "Desecration"
+msgstr "అపవిత్రం చేయడం"
+
+msgid "No information regarding references to desecration"
+msgstr "అపవిత్రం చేయడం గురించిన ప్రస్తావనల సమాచారం లేదు"
+
+msgid "Human Remains"
+msgstr "మానవ అవశేషాలు"
+
+msgid "No information regarding visible dead human remains"
+msgstr "కనిపించే మృత మానవ అవశేషాల గురించి సమాచారం లేదు"
+
+msgid "Slavery"
+msgstr "బానిసత్వం"
+
+msgid "No information regarding references to slavery"
+msgstr "బానిసత్వ ప్రస్తావనల గురించి సమాచారం లేదు"
+
+msgid "Does not include references to drugs"
+msgstr "మాదక ద్రవ్యాల ప్రస్తావనలు లేవు"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "తిట్లు, అసభ్య పదజాలం మరియు ఇతర తీవ్రమైన భాష లేదు"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "ప్రకటనలు లేదా ఆర్థిక లావాదేవీలు లేవు"
+
+msgid "Does not include sex or nudity"
+msgstr "లైంగికత లేదా నగ్నత్వం లేదు"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "నియంత్రణ లేని చాట్ సదుపాయం లేదు"
+
+msgid "Does not include violence"
+msgstr "హింస లేదు"
+
+msgid "Drugs"
+msgstr "మాదక ద్రవ్యాలు"
+
+msgid "Strong Language"
+msgstr "తీవ్రమైన భాష"
+
+msgid "Money"
+msgstr "డబ్బు"
+
+msgid "Social"
+msgstr "సామాజికం"
+
+msgid "Violence"
+msgstr "హింస"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "అందరికీ"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s వయో రేటింగ్ తెలియదు"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s అందరికీ అనుకూలం"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s చిన్న పిల్లలకు అనుకూలం"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s పిల్లలకు అనుకూలం"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s టీనేజర్లకు అనుకూలం"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s పెద్దలకు అనుకూలం"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s, %sకు అనుకూలం"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "సిస్టమ్ ఫోల్డర్ %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "హోమ్ సబ్‌ఫోల్డర్ %s"
+
+msgid "Host system folders"
+msgstr "హోస్ట్ సిస్టమ్ ఫోల్డర్‌లు"
+
+msgid "Host system configuration from /etc"
+msgstr "/etc నుండి హోస్ట్ సిస్టమ్ కాన్ఫిగరేషన్"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "డెస్క్‌టాప్ సబ్‌ఫోల్డర్ %s"
+
+msgid "Desktop folder"
+msgstr "డెస్క్‌టాప్ ఫోల్డర్"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "డాక్యుమెంట్‌ల సబ్‌ఫోల్డర్ %s"
+
+msgid "Documents folder"
+msgstr "డాక్యుమెంట్‌ల ఫోల్డర్"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "సంగీతం సబ్‌ఫోల్డర్ %s"
+
+msgid "Music folder"
+msgstr "సంగీతం ఫోల్డర్"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "చిత్రాల సబ్‌ఫోల్డర్ %s"
+
+msgid "Pictures folder"
+msgstr "చిత్రాల ఫోల్డర్"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "పబ్లిక్ షేర్ సబ్‌ఫోల్డర్ %s"
+
+msgid "Public Share folder"
+msgstr "పబ్లిక్ షేర్ ఫోల్డర్"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "వీడియోల సబ్‌ఫోల్డర్ %s"
+
+msgid "Videos folder"
+msgstr "వీడియోల ఫోల్డర్"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "టెంప్లేట్‌ల సబ్‌ఫోల్డర్ %s"
+
+msgid "Templates folder"
+msgstr "టెంప్లేట్‌ల ఫోల్డర్"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "వినియోగదారు కాష్ సబ్‌ఫోల్డర్ %s"
+
+msgid "User cache folder"
+msgstr "వినియోగదారు కాష్ ఫోల్డర్"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "వినియోగదారు కాన్ఫిగరేషన్ సబ్‌ఫోల్డర్ %s"
+
+msgid "User configuration folder"
+msgstr "వినియోగదారు కాన్ఫిగరేషన్ ఫోల్డర్"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "వినియోగదారు డేటా సబ్‌ఫోల్డర్ %s"
+
+msgid "User data folder"
+msgstr "వినియోగదారు డేటా ఫోల్డర్"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "వినియోగదారు రన్‌టైమ్ సబ్‌ఫోల్డర్ %s"
+
+msgid "User runtime folder"
+msgstr "వినియోగదారు రన్‌టైమ్ ఫోల్డర్"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "%sకు ఫైల్‌సిస్టమ్ యాక్సెస్"
+
+msgid "Unknown filesystem path"
+msgstr "తెలియని ఫైల్‌సిస్టమ్ పాత్"
+
+msgid "Download Size"
+msgstr "డౌన్‌లోడ్ సైజు"
+
+msgid "Installed Size"
+msgstr "ఇన్‌స్టాల్ చేసిన సైజు"
+
+msgid "Amount to download from the internet"
+msgstr "ఇంటర్నెట్ నుండి డౌన్‌లోడ్ చేయాల్సిన పరిమాణం"
+
+msgid "Size on Disk"
+msgstr "డిస్క్‌పై సైజు"
+
+msgid "Open user data folder"
+msgstr "వినియోగదారు డేటా ఫోల్డర్‌ను తెరవండి"
+
+msgid "Your User Data"
+msgstr "మీ వినియోగదారు డేటా"
+
+msgid "Caches, settings, and other app data"
+msgstr "కాష్‌లు, అమరికలు మరియు ఇతర యాప్ డేటా"
+
+msgid "Cache"
+msgstr "కాష్"
+
+msgid "Temporary cached data"
+msgstr "తాత్కాలికంగా కాష్ చేసిన డేటా"
+
+msgid "Clear Cache"
+msgstr "కాష్‌ను తుడిచివేయండి"
+
+msgid "Installed Runtime Size"
+msgstr "ఇన్‌స్టాల్ చేసిన రన్‌టైమ్ సైజు"
+
+msgid "Runtime Download Size"
+msgstr "రన్‌టైమ్ డౌన్‌లోడ్ సైజు"
+
+msgid "N/A"
+msgstr "లేదు"
+
+msgid "Storage"
+msgstr "నిల్వ"
+
+msgid "Verified"
+msgstr "ధృవీకరించబడింది"
+
+msgid "The Bazaar Contributors"
+msgstr "Bazaar కంట్రిబ్యూటర్‌లు"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "ప్రత్యేక ధన్యవాదాలు"
+
+msgid "Logged Out Successfully!"
+msgstr "విజయవంతంగా లాగ్ అవుట్ అయ్యారు!"
+
+msgid "Performing setup…"
+msgstr "సెటప్ చేస్తోంది…"
+
+msgid "Set Up Flathub?"
+msgstr "Flathubను సెటప్ చేయాలా?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"ఈ సిస్టమ్‌లో Flathub సెటప్ చేయబడలేదు. అది అందుబాటులో లేకపోతే Bazaarలో అప్లికేషన్‌లను బ్రౌజ్ చేయలేరు మరియు ఇన్‌స్టాల్ చేయలేరు.\n"
+"\n"
+"ఇప్పటికే ఇన్‌స్టాల్ చేసిన యాప్‌లను బ్రౌజ్ చేయడానికి మరియు తీసివేయడానికి మీరు ఇప్పటికీ Bazaarను ఉపయోగించవచ్చు."
+
+msgid "Later"
+msgstr "తర్వాత"
+
+msgid "Set Up Flathub"
+msgstr "Flathubను సెటప్ చేయండి"
+
+msgid "A backend error occurred"
+msgstr "బ్యాకెండ్ లోపం సంభవించింది"
+
+msgid "Refreshing…"
+msgstr "రిఫ్రెష్ చేస్తోంది…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "%d యాప్‌లను లోడ్ చేస్తోంది…"
+
+msgid "Failed to open file"
+msgstr "ఫైల్‌ను తెరవడం విఫలమైంది"
+
+msgid "Failed to load metainfo"
+msgstr "మెటాఇన్ఫోను లోడ్ చేయడం విఫలమైంది"
+
+msgid "An initialization error occurred"
+msgstr "ప్రారంభ లోపం సంభవించింది"
+
+msgid "Checking for updates…"
+msgstr "అప్‌డేట్‌ల కోసం తనిఖీ చేస్తోంది…"
+
+msgid "Failed to check for updates"
+msgstr "అప్‌డేట్‌ల కోసం తనిఖీ చేయడం విఫలమైంది"
+
+msgid "Could not find app"
+msgstr "యాప్ కనుగొనబడలేదు"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "%d యాప్‌ను లోడ్ చేస్తోంది…"
+msgstr[1] "%d యాప్‌లను లోడ్ చేస్తోంది…"
+
+msgid "Writing to cache…"
+msgstr "కాష్‌కు రాస్తోంది…"
+
+msgid "Removing remote…"
+msgstr "రిమోట్‌ను తీసివేస్తోంది…"
+
+msgid "Could not remove remote"
+msgstr "రిమోట్‌ను తీసివేయడం సాధ్యం కాలేదు"
+
+msgid "Show All"
+msgstr "అన్నీ చూపించండి"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "అన్ని \"%s\""
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d అప్లికేషన్‌లు"
+
+msgid "Failed to Load Article"
+msgstr "వ్యాసాన్ని లోడ్ చేయడం విఫలమైంది"
+
+msgid "All apps are already installed"
+msgstr "అన్ని యాప్‌లు ఇప్పటికే ఇన్‌స్టాల్ చేయబడ్డాయి"
+
+msgid "_OK"
+msgstr "సరే(_O)"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "%u యాప్‌ను ఇన్‌స్టాల్ చేయాలా?"
+msgstr[1] "%u యాప్‌లను ఇన్‌స్టాల్ చేయాలా?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "కిందివి ఇన్‌స్టాల్ చేయబడతాయి. అదనపు షేర్డ్ కాంపోనెంట్‌లు కూడా ఇన్‌స్టాల్ కావచ్చు"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "%d యాడ్-ఆన్‌లు ఇన్‌స్టాల్ చేయబడతాయి."
+
+msgid "Additionally, addons will be installed."
+msgstr "అదనంగా, యాడ్-ఆన్‌లు ఇన్‌స్టాల్ చేయబడతాయి."
+
+msgid "_Cancel"
+msgstr "రద్దు(_C)"
+
+msgid "_Install All"
+msgstr "అన్నీ ఇన్‌స్టాల్ చేయండి(_I)"
+
+msgid "Bundle Installation"
+msgstr "బండిల్ ఇన్‌స్టాలేషన్"
+
+msgid "Additional dependencies may take extra space"
+msgstr "అదనపు డిపెండెన్సీలకు అదనపు స్థలం అవసరం కావచ్చు"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"ఈ యాప్‌ను ఇన్‌స్టాల్ చేయడానికి కొత్త సాఫ్ట్‌వేర్ మూలాన్ని జోడించాల్సి రావచ్చు. ఈ మూలం నుండి ఇతర యాప్‌లు Bazaarలో కనిపిస్తాయి.\n"
+"\n"
+"మీరు దీనిని విశ్వసిస్తున్నారని ఖచ్చితంగా తెలిస్తేనే ఈ మూలాన్ని జోడించండి."
+
+msgid "Successfully Installed!"
+msgstr "విజయవంతంగా ఇన్‌స్టాల్ చేయబడింది!"
+
+msgid "Open"
+msgstr "తెరవండి"
+
+msgid "Show App Details"
+msgstr "యాప్ వివరాలను చూపించండి"
+
+msgid "Already Installed"
+msgstr "ఇప్పటికే ఇన్‌స్టాల్ చేయబడింది"
+
+msgid "Installation Failed"
+msgstr "ఇన్‌స్టాలేషన్ విఫలమైంది"
+
+msgid "Unknown install size"
+msgstr "ఇన్‌స్టాల్ సైజు తెలియదు"
+
+#, c-format
+msgid "About %s to install"
+msgstr "ఇన్‌స్టాల్ చేయడానికి సుమారు %s"
+
+msgid "No special permissions"
+msgstr "ప్రత్యేక అనుమతులు లేవు"
+
+msgid "Place Applet"
+msgstr "యాప్లెట్‌ను ఉంచండి"
+
+msgid "Choose where to add this applet."
+msgstr "ఈ యాప్లెట్‌ను ఎక్కడ జోడించాలో ఎంచుకోండి."
+
+msgid "Cancel"
+msgstr "రద్దు చేయండి"
+
+msgid "Panel"
+msgstr "ప్యానెల్"
+
+msgid "Dock"
+msgstr "డాక్"
+
+msgid "No Curation"
+msgstr "క్యూరేషన్ లేదు"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "ఈ సిస్టమ్‌లో క్యూరేషన్ సమాచారం అందించబడలేదు. మీరు ఇప్పటికీ Flathubలో యాప్‌లను బ్రౌజ్ చేయవచ్చు"
+
+msgid "Browse Flathub"
+msgstr "Flathubను బ్రౌజ్ చేయండి"
+
+msgid "Offline"
+msgstr "ఆఫ్‌లైన్"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s నుండి %s వరకు, %s న అత్యధికంగా %s తో"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "ఇన్‌స్టాల్‌లు:"
+
+msgid "Not Verified"
+msgstr "ధృవీకరించబడలేదు"
+
+msgid "Developer information not available."
+msgstr "డెవలపర్ సమాచారం అందుబాటులో లేదు."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "%s యాప్ ID యాజమాన్యం ధృవీకరించబడలేదు మరియు ఇది కమ్యూనిటీ ప్యాకేజీ అయి ఉండవచ్చు."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "%s యాప్ ID యాజమాన్యాన్ని Flathub బృందం మాన్యువల్‌గా ధృవీకరించింది."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "%1$s యాప్ ID యాజమాన్యాన్ని <b>%2$s</b> ద్వారా <b>%3$s</b> నాడు ధృవీకరించారు."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "%1$s యాప్ ID యాజమాన్యాన్ని %2$s ఉపయోగించి ధృవీకరించారు."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "%s యాప్ ID యాజమాన్యం ధృవీకరించబడింది."
+
+msgid "Bazaar Release"
+msgstr "Bazaar విడుదల"
+
+msgid "Full Release Notes"
+msgstr "పూర్తి విడుదల గమనికలు"
+
+msgid "This release was made possible by users like you!"
+msgstr "మీలాంటి వినియోగదారుల వల్లనే ఈ విడుదల సాధ్యమైంది!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Bazaarను తయారు చేయడం నాకు ఇష్టం, కానీ దీన్ని నేను ఒంటరిగా చేయలేను. Ko-Fiలో విరాళం ఇవ్వడం ద్వారా తదుపరి అభివృద్ధికి మద్దతు ఇవ్వండి."
+
+msgid "Donate to Bazaar"
+msgstr "Bazaarకు విరాళం ఇవ్వండి"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "%sలో కొత్తగా ఏముంది?"
+
+msgid "Released %B %-e, %Y"
+msgstr "%-e %B %Y న విడుదలైంది"
+
+msgid "Choose an Installation"
+msgstr "ఇన్‌స్టాలేషన్‌ను ఎంచుకోండి"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "ఈ యాప్‌కు సంబంధించిన అనేక వెర్షన్‌లు ఇన్‌స్టాల్ చేయబడి ఉన్నాయి. దేనితో కొనసాగించాలనుకుంటున్నారు?"
+
+msgid "Details"
+msgstr "వివరాలు"
+
+msgid "Copy"
+msgstr "కాపీ చేయండి"
+
+msgid "Copied!"
+msgstr "కాపీ చేయబడింది!"
+
+msgid "Favorite Count"
+msgstr "ఇష్టమైన వాటి సంఖ్య"
+
+msgid "Failed to update favorite"
+msgstr "ఇష్టమైనదాన్ని అప్‌డేట్ చేయడం విఫలమైంది"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "ఇష్టమైనవి నిర్వహించడానికి Flathubతో లాగిన్ అవ్వండి"
+
+msgid "Log In"
+msgstr "లాగిన్ అవ్వండి"
+
+msgid "Favorites"
+msgstr "ఇష్టమైనవి"
+
+msgid "Install All"
+msgstr "అన్నీ ఇన్‌స్టాల్ చేయండి"
+
+msgid "No Favorites"
+msgstr "ఇష్టమైనవి లేవు"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "మీరు ఇష్టమైనవిగా గుర్తించిన అప్లికేషన్‌లు ఇక్కడ కనిపిస్తాయి"
+
+msgid "Support This Application"
+msgstr "ఈ అప్లికేషన్‌కు మద్దతు ఇవ్వండి"
+
+msgid "Remove From Favorites"
+msgstr "ఇష్టమైనవి నుండి తీసివేయండి"
+
+msgid "Failed to remove favorite"
+msgstr "ఇష్టమైనదాన్ని తీసివేయడం విఫలమైంది"
+
+msgid "Previous"
+msgstr "మునుపటి"
+
+msgid "Next"
+msgstr "తదుపరి"
+
+msgid "Editing"
+msgstr "ఎడిటింగ్"
+
+msgid "Midi"
+msgstr "మిడి"
+
+msgid "Mixer"
+msgstr "మిక్సర్"
+
+msgid "Music"
+msgstr "సంగీతం"
+
+msgid "Player"
+msgstr "ప్లేయర్"
+
+msgid "Recorder"
+msgstr "రికార్డర్"
+
+msgid "Sequencer"
+msgstr "సీక్వెన్సర్"
+
+msgid "Tuner"
+msgstr "ట్యూనర్"
+
+msgid "TV"
+msgstr "టీవీ"
+
+msgid "Emulation"
+msgstr "ఎమ్యులేషన్"
+
+msgid "Action"
+msgstr "యాక్షన్"
+
+msgid "Adventure"
+msgstr "అడ్వెంచర్"
+
+msgid "Arcade"
+msgstr "ఆర్కేడ్"
+
+msgid "Blocks"
+msgstr "బ్లాక్‌లు"
+
+msgid "Board"
+msgstr "బోర్డ్"
+
+msgid "Card"
+msgstr "కార్డ్"
+
+msgid "Kids"
+msgstr "పిల్లలు"
+
+msgid "Logic"
+msgstr "లాజిక్"
+
+msgid "Role Playing"
+msgstr "రోల్ ప్లేయింగ్"
+
+msgid "Shooter"
+msgstr "షూటర్"
+
+msgid "Simulation"
+msgstr "సిమ్యులేషన్"
+
+msgid "Sports"
+msgstr "క్రీడలు"
+
+msgid "Strategy"
+msgstr "వ్యూహం"
+
+msgid "Browsers"
+msgstr "బ్రౌజర్‌లు"
+
+msgid "Chat"
+msgstr "చాట్"
+
+msgid "Mail"
+msgstr "మెయిల్"
+
+msgid "File Sharing"
+msgstr "ఫైల్ షేరింగ్"
+
+msgid "Audio & Video"
+msgstr "ఆడియో & వీడియో"
+
+msgid "Media"
+msgstr "మీడియా"
+
+msgid "More Audio & Video"
+msgstr "మరిన్ని ఆడియో & వీడియో"
+
+msgid "Developer Tools"
+msgstr "డెవలపర్ టూల్స్"
+
+msgid "Develop"
+msgstr "అభివృద్ధి చేయండి"
+
+msgid "More Developer Tools"
+msgstr "మరిన్ని డెవలపర్ టూల్స్"
+
+msgid "Education"
+msgstr "విద్య"
+
+msgid "Learn"
+msgstr "నేర్చుకోండి"
+
+msgid "More Education"
+msgstr "మరిన్ని విద్య"
+
+msgid "Gaming"
+msgstr "గేమింగ్"
+
+msgid "Play"
+msgstr "ఆడండి"
+
+msgid "More Gaming"
+msgstr "మరిన్ని గేమింగ్"
+
+msgid "Graphics & Photography"
+msgstr "గ్రాఫిక్స్ & ఫోటోగ్రఫీ"
+
+msgid "Create"
+msgstr "సృష్టించండి"
+
+msgid "More Graphics & Photography"
+msgstr "మరిన్ని గ్రాఫిక్స్ & ఫోటోగ్రఫీ"
+
+msgid "Networking"
+msgstr "నెట్‌వర్కింగ్"
+
+msgid "Internet"
+msgstr "ఇంటర్నెట్"
+
+msgid "More Networking"
+msgstr "మరిన్ని నెట్‌వర్కింగ్"
+
+msgid "Productivity"
+msgstr "ఉత్పాదకత"
+
+msgid "Work"
+msgstr "పని"
+
+msgid "More Productivity"
+msgstr "మరిన్ని ఉత్పాదకత"
+
+msgid "Science"
+msgstr "సైన్స్"
+
+msgid "More Science"
+msgstr "మరిన్ని సైన్స్"
+
+msgid "System"
+msgstr "సిస్టమ్"
+
+msgid "More System"
+msgstr "మరిన్ని సిస్టమ్"
+
+msgid "Utilities"
+msgstr "యుటిలిటీలు"
+
+msgid "Tools"
+msgstr "సాధనాలు"
+
+msgid "More Utilities"
+msgstr "మరిన్ని యుటిలిటీలు"
+
+msgid "Trending"
+msgstr "ట్రెండింగ్"
+
+msgid "More Trending"
+msgstr "మరిన్ని ట్రెండింగ్"
+
+msgid "Popular"
+msgstr "ప్రజాదరణ పొందినవి"
+
+msgid "More Popular"
+msgstr "మరిన్ని ప్రజాదరణ పొందినవి"
+
+msgid "Recently Added"
+msgstr "ఇటీవల జోడించినవి"
+
+msgid "New"
+msgstr "కొత్తవి"
+
+msgid "More New"
+msgstr "మరిన్ని కొత్తవి"
+
+msgid "Recently Updated"
+msgstr "ఇటీవల అప్‌డేట్ చేసినవి"
+
+msgid "Updated"
+msgstr "అప్‌డేట్ చేసినవి"
+
+msgid "More Updated"
+msgstr "మరిన్ని అప్‌డేట్ చేసినవి"
+
+msgid "Mobile"
+msgstr "మొబైల్"
+
+msgid "More Mobile"
+msgstr "మరిన్ని మొబైల్"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "మరిన్ని Adwaita"
+
+msgid "KDE Apps"
+msgstr "KDE యాప్‌లు"
+
+msgid "More KDE Apps"
+msgstr "మరిన్ని KDE యాప్‌లు"
+
+msgid "Made for COSMIC™"
+msgstr "COSMIC™ కోసం రూపొందించినవి"
+
+msgid "For COSMIC™"
+msgstr "COSMIC™ కోసం"
+
+msgid "More COSMIC Apps"
+msgstr "మరిన్ని COSMIC యాప్‌లు"
+
+msgid "Games"
+msgstr "గేమ్‌లు"
+
+msgid "More Games"
+msgstr "మరిన్ని గేమ్‌లు"
+
+msgid "Emulators"
+msgstr "ఎమ్యులేటర్‌లు"
+
+msgid "More Emulators"
+msgstr "మరిన్ని ఎమ్యులేటర్‌లు"
+
+msgid "Launchers"
+msgstr "లాంచర్‌లు"
+
+msgid "More Game Launchers"
+msgstr "మరిన్ని గేమ్ లాంచర్‌లు"
+
+msgid "Game Tools"
+msgstr "గేమ్ టూల్స్"
+
+msgid "More Game Tools"
+msgstr "మరిన్ని గేమ్ టూల్స్"
+
+msgid "New Year, New Workflows"
+msgstr "కొత్త సంవత్సరం, కొత్త పనివిధానాలు"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "నోట్స్ రాయడానికి, పనులను ట్రాక్ చేయడానికి మరియు ప్రణాళికలు వేయడానికి యాప్‌లు"
+
+msgid "Staff Picks"
+msgstr "సిబ్బంది ఎంపికలు"
+
+msgid "Apps we love right now"
+msgstr "మాకు ఇప్పుడు నచ్చిన యాప్‌లు"
+
+msgid "Get Creative"
+msgstr "సృజనాత్మకంగా ఉండండి"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "డ్రాయింగ్, ఫోటో ఎడిటింగ్ మరియు డిజిటల్ డిజైన్ కోసం ముఖ్యమైన యాప్‌లు"
+
+msgid "Build Native Apps"
+msgstr "నేటివ్ యాప్‌లను నిర్మించండి"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "మీ సిస్టమ్‌లో సహజంగా కలిసిపోయే యాప్‌లను అభివృద్ధి చేయండి"
+
+msgid "Stay in Touch"
+msgstr "సంప్రదింపులో ఉండండి"
+
+msgid "Essential collaboration and communication apps"
+msgstr "సహకారం మరియు కమ్యూనికేషన్ కోసం ముఖ్యమైన యాప్‌లు"
+
+msgid "Ready for Vacations"
+msgstr "సెలవులకు సిద్ధంగా"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "మ్యాప్‌లు, రవాణా, వాతావరణం మరియు ప్రయాణ ప్రణాళిక యాప్‌లు"
+
+msgid "Smarter Every Day"
+msgstr "ప్రతిరోజూ మరింత తెలివిగా"
+
+msgid "Apps to help you study, research, and write"
+msgstr "చదవడానికి, పరిశోధించడానికి మరియు రాయడానికి సహాయపడే యాప్‌లు"
+
+msgid "Get Cozy"
+msgstr "హాయిగా గడపండి"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "చదవడానికి, సినిమాలు చూడటానికి మరియు ఆటలు ఆడటానికి గొప్ప యాప్‌లు"
+
+msgid "Web Developer Essentials"
+msgstr "వెబ్ డెవలపర్ ముఖ్యమైనవి"
+
+msgid "Making websites is more fun with these apps"
+msgstr "ఈ యాప్‌లతో వెబ్‌సైట్‌లను తయారు చేయడం మరింత సరదాగా ఉంటుంది"
+
+msgid "Take Better Notes"
+msgstr "మెరుగైన నోట్స్ రాయండి"
+
+msgid "Find your new favorite note taking tool"
+msgstr "మీకు నచ్చిన కొత్త నోట్స్ సాధనాన్ని కనుగొనండి"
+
+msgid "Get Focused"
+msgstr "దృష్టి కేంద్రీకరించండి"
+
+msgid "Great apps for task management"
+msgstr "పనుల నిర్వహణ కోసం గొప్ప యాప్‌లు"
+
+msgid "Make Some Noise"
+msgstr "కొంచెం సందడి చేయండి"
+
+msgid "Apps for creating and producing music"
+msgstr "సంగీతం సృష్టించడానికి మరియు నిర్మించడానికి యాప్‌లు"
+
+msgid "Get To Work"
+msgstr "పనిలోకి దిగండి"
+
+msgid "Essential office apps"
+msgstr "ముఖ్యమైన ఆఫీస్ యాప్‌లు"
+
+msgid "Flathub Not Added"
+msgstr "Flathub జోడించబడలేదు"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "మీ Flatpak ఇన్‌స్టాలేషన్‌లలో దేనిలోనూ Flathub రిమోట్ కనుగొనబడలేదు"
+
+msgid "Can't Reach Flathub"
+msgstr "Flathubను చేరుకోలేకపోయింది"
+
+msgid "You can still manage and search for apps."
+msgstr "మీరు ఇప్పటికీ యాప్‌లను నిర్వహించవచ్చు మరియు శోధించవచ్చు."
+
+msgid "Search Apps"
+msgstr "యాప్‌లను శోధించండి"
+
+msgid "Reconnect"
+msgstr "మళ్లీ కనెక్ట్ చేయండి"
+
+msgid "App of the Day"
+msgstr "ఈ రోజు యాప్"
+
+msgid "On the Go"
+msgstr "ప్రయాణంలో"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "మీ Linux ఫోన్‌లు మరియు టాబ్లెట్‌ల కోసం యాప్‌లు"
+
+msgid "More Mobile Apps"
+msgstr "మరిన్ని మొబైల్ యాప్‌లు"
+
+msgid "We​ ♥​ Games"
+msgstr "మేము ♥ గేమ్‌లను"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "మీకు ఇష్టమైన టైటిల్‌లను నడపడానికి గేమ్‌లు మరియు యాప్‌లు"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "ఇది స్థానిక ప్రివ్యూ, ప్రచురించిన జాబితాతో కొన్ని వివరాలు భిన్నంగా ఉండవచ్చు"
+
+msgid "Preview Store Appearance"
+msgstr "స్టోర్ రూపాన్ని ప్రివ్యూ చేయండి"
+
+msgid "_Support"
+msgstr "మద్దతు(_S)"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "ఈ యాప్ ఇకపై అప్‌డేట్‌లు లేదా భద్రతా పరిష్కారాలు అందుకోని రన్‌టైమ్‌ను ఉపయోగిస్తుంది. దీన్ని ఉపయోగించడం అసురక్షితంగా మారవచ్చు."
+
+msgid "Trash Data"
+msgstr "డేటాను చెత్తబుట్టలో వేయండి"
+
+msgid "Add-ons"
+msgstr "యాడ్-ఆన్‌లు"
+
+msgid "More Add-Ons"
+msgstr "మరిన్ని యాడ్-ఆన్‌లు"
+
+msgid "Links"
+msgstr "లింక్‌లు"
+
+msgid "Similar Apps"
+msgstr "సారూప్య యాప్‌లు"
+
+msgid "No URL"
+msgstr "URL లేదు"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "ఈ యాప్‌కు FLOSS లైసెన్స్ ఉంది, అంటే సోర్స్ కోడ్‌ను భద్రత కోసం తనిఖీ చేయవచ్చు."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "ఈ యాప్‌కు యాజమాన్య లైసెన్స్ ఉంది, అంటే సోర్స్ కోడ్ ప్రైవేట్‌గా అభివృద్ధి చేయబడుతుంది మరియు స్వతంత్ర థర్డ్ పార్టీ దాన్ని తనిఖీ చేయలేదు."
+
+msgid "Other Apps From This Developer"
+msgstr "ఈ డెవలపర్ నుండి ఇతర యాప్‌లు"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "%s నుండి ఇతర యాప్‌లు"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s ఇన్‌స్టాల్ చేయబడలేదు, కానీ దాని <b>%s</b> డేటా ఇప్పటికీ ఉంది."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "%s రూపొందించిన యాప్‌లు"
+
+msgid "Apps by This Developer"
+msgstr "ఈ డెవలపర్ రూపొందించిన యాప్‌లు"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d అప్లికేషన్"
+msgstr[1] "%d అప్లికేషన్‌లు"
+
+msgid "Failed to Remove User Data"
+msgstr "వినియోగదారు డేటాను తీసివేయడం విఫలమైంది"
+
+msgid "Hardware Support"
+msgstr "హార్డ్‌వేర్ మద్దతు"
+
+msgid "Keyboard support"
+msgstr "కీబోర్డ్ మద్దతు"
+
+msgid "Requires keyboards"
+msgstr "కీబోర్డ్‌లు అవసరం"
+
+msgid "Recommends keyboards"
+msgstr "కీబోర్డ్‌లను సిఫార్సు చేస్తుంది"
+
+msgid "Supports keyboards"
+msgstr "కీబోర్డ్‌లకు మద్దతు ఇస్తుంది"
+
+msgid "Unknown support for keyboards"
+msgstr "కీబోర్డ్‌ల మద్దతు తెలియదు"
+
+msgid "Mouse support"
+msgstr "మౌస్ మద్దతు"
+
+msgid "Requires mice or pointing devices"
+msgstr "మౌస్‌లు లేదా పాయింటింగ్ పరికరాలు అవసరం"
+
+msgid "Recommends mice or pointing devices"
+msgstr "మౌస్‌లు లేదా పాయింటింగ్ పరికరాలను సిఫార్సు చేస్తుంది"
+
+msgid "Supports mice or pointing devices"
+msgstr "మౌస్‌లు లేదా పాయింటింగ్ పరికరాలకు మద్దతు ఇస్తుంది"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "మౌస్‌లు లేదా పాయింటింగ్ పరికరాల మద్దతు తెలియదు"
+
+msgid "Touchscreen support"
+msgstr "టచ్‌స్క్రీన్ మద్దతు"
+
+msgid "Requires touchscreens"
+msgstr "టచ్‌స్క్రీన్‌లు అవసరం"
+
+msgid "Recommends touchscreens"
+msgstr "టచ్‌స్క్రీన్‌లను సిఫార్సు చేస్తుంది"
+
+msgid "Supports touchscreens"
+msgstr "టచ్‌స్క్రీన్‌లకు మద్దతు ఇస్తుంది"
+
+msgid "Unknown support for touchscreens"
+msgstr "టచ్‌స్క్రీన్‌ల మద్దతు తెలియదు"
+
+msgid "Mobile support"
+msgstr "మొబైల్ మద్దతు"
+
+msgid "Works on mobile devices"
+msgstr "మొబైల్ పరికరాలలో పని చేస్తుంది"
+
+msgid "May not work well on mobile devices"
+msgstr "మొబైల్ పరికరాలలో బాగా పని చేయకపోవచ్చు"
+
+msgid "Desktop support"
+msgstr "డెస్క్‌టాప్ మద్దతు"
+
+msgid "Works well on large screens"
+msgstr "పెద్ద స్క్రీన్‌లపై బాగా పని చేస్తుంది"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s నిర్దిష్ట హార్డ్‌వేర్‌పై ఉత్తమంగా పని చేస్తుంది"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s చాలా పరికరాలలో పని చేస్తుంది"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "రద్దు చేయండి"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "రద్దు చేస్తోంది"
+
+msgid "_Open"
+msgstr "తెరవండి(_O)"
+
+msgid "Uninstall Application"
+msgstr "అప్లికేషన్‌ను అన్‌ఇన్‌స్టాల్ చేయండి"
+
+msgid "_Remove"
+msgstr "తీసివేయండి(_R)"
+
+msgid "Update"
+msgstr "అప్‌డేట్ చేయండి"
+
+msgid "Remove"
+msgstr "తీసివేయండి"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "%sను %s నుండి ఇన్‌స్టాల్ చేయండి"
+
+#, c-format
+msgid "Install %s"
+msgstr "%s ఇన్‌స్టాల్ చేయండి"
+
+msgid "Donate"
+msgstr "విరాళం ఇవ్వండి"
+
+msgid "Search installed apps"
+msgstr "ఇన్‌స్టాల్ చేసిన యాప్‌లను శోధించండి"
+
+msgid "No Apps Found"
+msgstr "యాప్‌లు కనుగొనబడలేదు"
+
+msgid "Search Store Instead"
+msgstr "బదులుగా స్టోర్‌లో శోధించండి"
+
+msgid "Pending Updates"
+msgstr "పెండింగ్ అప్‌డేట్‌లు"
+
+msgid "Downloads"
+msgstr "డౌన్‌లోడ్‌లు"
+
+msgid "Recently Uninstalled"
+msgstr "ఇటీవల అన్‌ఇన్‌స్టాల్ చేసినవి"
+
+msgid "Clear Finished Tasks"
+msgstr "పూర్తయిన పనులను తుడిచివేయండి"
+
+msgid "Sort Options"
+msgstr "క్రమబద్ధీకరణ ఎంపికలు"
+
+msgid "Sort By"
+msgstr "దీని ప్రకారం క్రమబద్ధీకరించండి"
+
+msgid "Name"
+msgstr "పేరు"
+
+msgid "Size"
+msgstr "సైజు"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "ఇన్‌స్టాల్ చేసిన యాప్‌ల జాబితాలో \"%s\"కు సరిపోలికలు కనుగొనబడలేదు"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u అందుబాటులో ఉన్న అప్‌డేట్"
+msgstr[1] "%u అందుబాటులో ఉన్న అప్‌డేట్‌లు"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u ఇన్‌స్టాల్ చేసిన యాప్"
+msgstr[1] "%u ఇన్‌స్టాల్ చేసిన యాప్‌లు"
+
+msgid "No applications found"
+msgstr "అప్లికేషన్‌లు కనుగొనబడలేదు"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "ఒక అప్లికేషన్ కనుగొనబడింది"
+msgstr[1] "%u అప్లికేషన్‌లు కనుగొనబడ్డాయి"
+
+msgid "Get Involved"
+msgstr "పాల్గొనండి"
+
+msgid "Learn More"
+msgstr "మరింత తెలుసుకోండి"
+
+msgid "Unknown License"
+msgstr "తెలియని లైసెన్స్"
+
+msgid "Community Built"
+msgstr "కమ్యూనిటీ నిర్మితం"
+
+msgid "Proprietary"
+msgstr "యాజమాన్యం"
+
+msgid "Special License"
+msgstr "ప్రత్యేక లైసెన్స్"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"ఈ యాప్‌ను అంతర్జాతీయ కమ్యూనిటీ బహిరంగంగా అభివృద్ధి చేస్తోంది.\n"
+"\n"
+"మీరు పాల్గొని దీన్ని మరింత మెరుగుపరచడంలో సహాయపడవచ్చు."
+
+msgid "The license of this app is not known"
+msgstr "ఈ యాప్ లైసెన్స్ తెలియదు"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"ఈ యాప్‌ను అంతర్జాతీయ కమ్యూనిటీ బహిరంగంగా అభివృద్ధి చేస్తోంది మరియు %s లైసెన్స్ కింద విడుదల చేయబడింది.\n"
+"\n"
+"మీరు పాల్గొని దీన్ని మరింత మెరుగుపరచడంలో సహాయపడవచ్చు."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"ఈ యాప్ బహిరంగంగా అభివృద్ధి చేయబడదు, కాబట్టి అది ఎలా పని చేస్తుందో దాని డెవలపర్‌లకు మాత్రమే తెలుసు. ఇది గుర్తించడం కష్టమైన రీతుల్లో అసురక్షితంగా ఉండవచ్చు మరియు పర్యవేక్షణ లేకుండా మారవచ్చు.\n"
+"\n"
+"ఈ యాప్‌కు మీరు సహకరించగలరో లేదో చెప్పలేము."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"ఈ యాప్ %s ప్రత్యేక లైసెన్స్ కింద అభివృద్ధి చేయబడింది.\n"
+"\n"
+"ఈ యాప్‌కు మీరు సహకరించగలరో లేదో చెప్పలేము."
+
+msgid "License"
+msgstr "లైసెన్స్"
+
+msgid "Connect to Flathub"
+msgstr "Flathubకు కనెక్ట్ చేయండి"
+
+msgid "Something Went Wrong"
+msgstr "ఏదో తప్పు జరిగింది"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "మీ ఇష్టమైన యాప్‌లను పరికరాల మధ్య సింక్ చేయడానికి లాగిన్ అవ్వండి"
+
+msgid "Finish"
+msgstr "ముగించండి"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "నమస్కారం, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Metainfo ప్రివ్యూకు ఐకాన్‌ను జోడించాలా?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Metainfo ఫైల్‌లలో యాప్ ఐకాన్‌లు స్వయంగా ఉండవు. మీరు ఒకదాన్ని మాన్యువల్‌గా ఎంచుకోవాలనుకుంటున్నారా?"
+
+msgid "Skip"
+msgstr "దాటవేయండి"
+
+msgid "Select Icon"
+msgstr "ఐకాన్‌ను ఎంచుకోండి"
+
+msgid "Image Files"
+msgstr "చిత్ర ఫైల్‌లు"
+
+msgid "New Permissions"
+msgstr "కొత్త అనుమతులు"
+
+msgid "_Accept"
+msgstr "ఆమోదించండి(_A)"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "%sకు కొత్త అనుమతి"
+msgstr[1] "%sకు కొత్త అనుమతులు"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "ఈ అప్‌డేట్‌కు కింది అదనపు అనుమతి అవసరం"
+msgstr[1] "ఈ అప్‌డేట్‌కు కింది అదనపు అనుమతులు అవసరం"
+
+msgid "User"
+msgstr "వినియోగదారు"
+
+msgid "Beta"
+msgstr "బీటా"
+
+msgid "End-Of-Life"
+msgstr "జీవితకాలం ముగిసింది"
+
+msgid "Preferences"
+msgstr "ప్రాధాన్యతలు"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "నెట్‌వర్క్ కనెక్షన్ మీటర్‌డ్‌గా ఉంది — స్టోర్ డేటా ఆటోమేటిక్ రిఫ్రెష్ నిలిపివేయబడింది"
+
+msgid "Refresh Manually"
+msgstr "మాన్యువల్‌గా రిఫ్రెష్ చేయండి"
+
+msgid "App Updates"
+msgstr "యాప్ అప్‌డేట్‌లు"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "డేటా మరియు బ్యాటరీని ఆదా చేయడానికి మీటర్‌డ్ నెట్‌వర్క్‌లలో లేదా పవర్ సేవింగ్ ఆన్‌లో ఉన్నప్పుడు ఆటో-అప్‌డేట్‌లు నిలిపివేయబడతాయి."
+
+msgid "_Automatic"
+msgstr "ఆటోమేటిక్(_A)"
+
+msgid "Automatically check for and download app updates"
+msgstr "యాప్ అప్‌డేట్‌ల కోసం ఆటోమేటిక్‌గా తనిఖీ చేసి డౌన్‌లోడ్ చేయండి"
+
+msgid "_Manual"
+msgstr "మాన్యువల్(_M)"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "యాప్ అప్‌డేట్‌ల కోసం తనిఖీ చేయడం మరియు డౌన్‌లోడ్ చేయడం మాన్యువల్‌గా చేయాలి"
+
+msgid "Automatic Update _Notifications"
+msgstr "ఆటోమేటిక్ అప్‌డేట్ నోటిఫికేషన్‌లు(_N)"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "అప్‌డేట్‌లు ఆటోమేటిక్‌గా ఇన్‌స్టాల్ అయినప్పుడు తెలియజేయండి"
+
+msgid "Content Filters"
+msgstr "కంటెంట్ ఫిల్టర్‌లు"
+
+msgid "_Free Software Only"
+msgstr "ఉచిత సాఫ్ట్‌వేర్ మాత్రమే(_F)"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "బ్రౌజ్ మరియు శోధన చేసేటప్పుడు యాజమాన్య యాప్‌లను దాచండి"
+
+msgid "F_lathub Results Only"
+msgstr "Flathub ఫలితాలు మాత్రమే(_L)"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "శోధన మరియు బ్రౌజ్ ఫలితాలను Flathubలో మాత్రమే అందుబాటులో ఉన్న యాప్‌లకు పరిమితం చేయండి"
+
+msgid "_Verified Results Only"
+msgstr "ధృవీకరించిన ఫలితాలు మాత్రమే(_V)"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Flathubలో ధృవీకరించని ఫలితాలను దాచండి"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "జీవితకాలం ముగిసిన యాప్‌లను దాచండి(_E)"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "డెవలపర్‌లు ఇకపై మద్దతు ఇవ్వని యాప్‌లను దాచండి"
+
+msgid "Progress Bar Theme"
+msgstr "ప్రోగ్రెస్ బార్ థీమ్"
+
+msgid "Accent Color"
+msgstr "యాక్సెంట్ రంగు"
+
+msgid "Pride Colors"
+msgstr "ప్రైడ్ రంగులు"
+
+msgid "Lesbian Pride Colors"
+msgstr "లెస్బియన్ ప్రైడ్ రంగులు"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "పురుష సమలైంగిక ప్రైడ్ రంగులు"
+
+msgid "Transgender Pride Colors"
+msgstr "ట్రాన్స్‌జెండర్ ప్రైడ్ రంగులు"
+
+msgid "Nonbinary Pride Colors"
+msgstr "నాన్‌బైనరీ ప్రైడ్ రంగులు"
+
+msgid "Bisexual Pride Colors"
+msgstr "బైసెక్సువల్ ప్రైడ్ రంగులు"
+
+msgid "Asexual Pride Colors"
+msgstr "అసెక్సువల్ ప్రైడ్ రంగులు"
+
+msgid "Pansexual Pride Colors"
+msgstr "పాన్‌సెక్సువల్ ప్రైడ్ రంగులు"
+
+msgid "Aromantic Pride Colors"
+msgstr "ఆరోమాంటిక్ ప్రైడ్ రంగులు"
+
+msgid "Genderfluid Pride Colors"
+msgstr "జెండర్‌ఫ్లూయిడ్ ప్రైడ్ రంగులు"
+
+msgid "Polysexual Pride Colors"
+msgstr "పాలిసెక్సువల్ ప్రైడ్ రంగులు"
+
+msgid "Omnisexual Pride Colors"
+msgstr "ఓమ్నిసెక్సువల్ ప్రైడ్ రంగులు"
+
+msgid "Aroace Pride Colors"
+msgstr "ఆరోయేస్ ప్రైడ్ రంగులు"
+
+msgid "Agender Pride Colors"
+msgstr "ఏజెండర్ ప్రైడ్ రంగులు"
+
+msgid "Genderqueer Pride Colors"
+msgstr "జెండర్‌క్వీర్ ప్రైడ్ రంగులు"
+
+msgid "Intersex Pride Colors"
+msgstr "ఇంటర్‌సెక్స్ ప్రైడ్ రంగులు"
+
+msgid "Demigender Pride Colors"
+msgstr "డెమిజెండర్ ప్రైడ్ రంగులు"
+
+msgid "Biromantic Pride Colors"
+msgstr "బైరోమాంటిక్ ప్రైడ్ రంగులు"
+
+msgid "Disability Pride Colors"
+msgstr "వైకల్య ప్రైడ్ రంగులు"
+
+msgid "Femboy Pride Colors"
+msgstr "ఫెమ్‌బాయ్ ప్రైడ్ రంగులు"
+
+msgid "Neutrois Pride Colors"
+msgstr "న్యూట్రోయిస్ ప్రైడ్ రంగులు"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "యాప్ అప్‌డేట్‌ల కోసం తనిఖీ చేయడానికి Bazaar నేపథ్యంలో నడుస్తూ ఉండాలి"
+
+msgid "Version History"
+msgstr "వెర్షన్ చరిత్ర"
+
+msgid "Today"
+msgstr "ఈ రోజు"
+
+msgid "Yesterday"
+msgstr "నిన్న"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d రోజు క్రితం"
+msgstr[1] "%d రోజుల క్రితం"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d వారం క్రితం"
+msgstr[1] "%d వారాల క్రితం"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d నెల క్రితం"
+msgstr[1] "%d నెలల క్రితం"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d సంవత్సరం క్రితం"
+msgstr[1] "%d సంవత్సరాల క్రితం"
+
+msgid "%e %B %Y"
+msgstr "%e %B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "వెర్షన్ %s"
+
+msgid "No details for this release"
+msgstr "ఈ విడుదలకు వివరాలు లేవు"
+
+msgid "Get More Information"
+msgstr "మరింత సమాచారం పొందండి"
+
+msgid "_Version History"
+msgstr "వెర్షన్ చరిత్ర(_V)"
+
+msgid "Remotes"
+msgstr "రిమోట్‌లు"
+
+msgid "System Installation"
+msgstr "సిస్టమ్ ఇన్‌స్టాలేషన్"
+
+msgid "Available to all users on this computer"
+msgstr "ఈ కంప్యూటర్‌లోని వినియోగదారులందరికీ అందుబాటులో ఉంటుంది"
+
+msgid "User Installation"
+msgstr "వినియోగదారు ఇన్‌స్టాలేషన్"
+
+msgid "Only available to you"
+msgstr "మీకు మాత్రమే అందుబాటులో ఉంటుంది"
+
+msgid "Remove Remote"
+msgstr "రిమోట్‌ను తీసివేయండి"
+
+#, c-format
+msgid "Remove %s"
+msgstr "%s తీసివేయండి"
+
+msgid "Unused"
+msgstr "ఉపయోగించనివి"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u యాప్ ఇన్‌స్టాల్ చేయబడింది"
+msgstr[1] "%u యాప్‌లు ఇన్‌స్టాల్ చేయబడ్డాయి"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "“%s”ను తీసివేయాలా?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "మీరు ఇకపై ఈ వినియోగదారు రిమోట్ నుండి యాప్‌లను ఇన్‌స్టాల్ చేయలేరు."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "మీరు ఇకపై ఈ సిస్టమ్ రిమోట్ నుండి యాప్‌లను ఇన్‌స్టాల్ చేయలేరు."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "తీసివేయాల్సిన %u యాప్"
+msgstr[1] "తీసివేయాల్సిన %u యాప్‌లు"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "కింది యాప్ ఈ రిమోట్ నుండి ఇన్‌స్టాల్ చేయబడింది మరియు దానితో పాటు మీ ఖాతా నుండి తీసివేయబడుతుంది."
+msgstr[1] "ఈ యాప్‌లు ఈ రిమోట్ నుండి ఇన్‌స్టాల్ చేయబడ్డాయి మరియు వాటితో పాటు మీ ఖాతా నుండి తీసివేయబడతాయి."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "కింది యాప్ ఈ రిమోట్ నుండి ఇన్‌స్టాల్ చేయబడింది మరియు దానితో పాటు వినియోగదారులందరికీ తీసివేయబడుతుంది."
+msgstr[1] "ఈ యాప్‌లు ఈ రిమోట్ నుండి ఇన్‌స్టాల్ చేయబడ్డాయి మరియు వాటితో పాటు వినియోగదారులందరికీ తీసివేయబడతాయి."
+
+msgid "Uninstall"
+msgstr "అన్‌ఇన్‌స్టాల్ చేయండి"
+
+msgid "Get"
+msgstr "పొందండి"
+
+msgid "Arbitrary Permissions"
+msgstr "ఏకపక్ష అనుమతులు"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"ఈ యాప్‌కు పరోక్షంగా <b>తనకు కావలసిన ఏ ఇతర అనుమతినైనా</b> తానే ఇచ్చుకునేందుకు వీలు కల్పించే అనుమతి ఉంది, ఇది Flatpak శాండ్‌బాక్స్‌ను దాటవేస్తుంది.\n"
+"\n"
+"కాబట్టి, అన్ని ఫైల్‌లను యాక్సెస్ చేయడం మరియు ఇంటర్నెట్‌కు కనెక్ట్ అవ్వడం వంటి, ప్రత్యేకాధికారం కలిగిన, శాండ్‌బాక్స్ లేని అప్లికేషన్ చేయగలిగే ఏదైనా ఇది చేయగలదు.\n"
+"\n"
+"ఇతర అనుమతులను చూడటం వలన ఈ యాప్ ఏమి చేసే అవకాశం ఉందో ఇంకా మెరుగైన అవగాహన కలగవచ్చు."
+
+msgid "View Other Permissions"
+msgstr "ఇతర అనుమతులను చూడండి"
+
+msgid "Safe"
+msgstr "సురక్షితం"
+
+msgid "App ID"
+msgstr "యాప్ ID"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "ఈ యాప్ సాఫ్ట్‌వేర్ ప్లాట్‌ఫారమ్ (SDK) యొక్క పాత వెర్షన్‌ను ఉపయోగిస్తోంది మరియు పరిష్కరించబడని బగ్‌లు లేదా భద్రతా లోపాలు ఉండవచ్చు."
+
+msgid "Safety"
+msgstr "భద్రత"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s సురక్షితం"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%sకు అసురక్షిత అనుమతులు లేవు"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s బహుశా సురక్షితం"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s అసురక్షితం కావచ్చు"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s అసురక్షితం"
+
+msgid "Back"
+msgstr "వెనక్కి"
+
+msgid "Previous Screenshot"
+msgstr "మునుపటి స్క్రీన్‌షాట్"
+
+msgid "Next Screenshot"
+msgstr "తదుపరి స్క్రీన్‌షాట్"
+
+msgid "Copy Image"
+msgstr "చిత్రాన్ని కాపీ చేయండి"
+
+msgid "Reset View"
+msgstr "వీక్షణను రీసెట్ చేయండి"
+
+msgid "Zoom Out"
+msgstr "జూమ్ తగ్గించండి"
+
+msgid "Zoom In"
+msgstr "జూమ్ పెంచండి"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u రన్‌టైమ్ అప్‌డేట్"
+msgstr[1] "%u రన్‌టైమ్ అప్‌డేట్‌లు"
+
+msgid "Screenshots Carousel"
+msgstr "స్క్రీన్‌షాట్‌ల కారౌసెల్"
+
+msgid "No Screenshots"
+msgstr "స్క్రీన్‌షాట్‌లు లేవు"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "స్క్రీన్‌షాట్ %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "స్క్రీన్‌షాట్ %u"
+
+msgid "Clear Search"
+msgstr "శోధనను తుడిచివేయండి"
+
+msgid "Filters"
+msgstr "ఫిల్టర్‌లు"
+
+msgid "_Verified"
+msgstr "ధృవీకరించినవి(_V)"
+
+msgid "_Free/Open"
+msgstr "ఉచిత/ఓపెన్(_F)"
+
+msgid "Non-_EOL"
+msgstr "EOL కానివి(_E)"
+
+msgid "Filter out End-of-Life apps"
+msgstr "జీవితకాలం ముగిసిన యాప్‌లను ఫిల్టర్ చేయండి"
+
+msgid "_Mobile Friendly"
+msgstr "మొబైల్‌కు అనుకూలమైనవి(_M)"
+
+msgid "Categories"
+msgstr "వర్గాలు"
+
+msgid "Search Apps, Games, Software"
+msgstr "యాప్‌లు, గేమ్‌లు, సాఫ్ట్‌వేర్‌ను శోధించండి"
+
+msgid "Search Filters"
+msgstr "శోధన ఫిల్టర్‌లు"
+
+msgid "Browse Categories"
+msgstr "వర్గాలను బ్రౌజ్ చేయండి"
+
+msgid "Categories Unavailable"
+msgstr "వర్గాలు అందుబాటులో లేవు"
+
+msgid "Search for apps using the search bar above."
+msgstr "పై శోధన పట్టీని ఉపయోగించి యాప్‌లను శోధించండి."
+
+msgid "No Applications Found"
+msgstr "అప్లికేషన్‌లు కనుగొనబడలేదు"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Flathubలో \"%s\"కు ఫలితాలు కనుగొనబడలేదు"
+
+msgid "Browser"
+msgstr "బ్రౌజర్"
+
+msgid "Video"
+msgstr "వీడియో"
+
+msgid "Office"
+msgstr "ఆఫీస్"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "క్యాలెండర్"
+
+msgid "Messaging"
+msgstr "మెసేజింగ్"
+
+msgid "Paint"
+msgstr "పెయింట్"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "టొరెంట్"
+
+msgid "Emulator"
+msgstr "ఎమ్యులేటర్"
+
+msgid "Copy Link"
+msgstr "లింక్‌ను కాపీ చేయండి"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Flathub పేజీ"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "ప్రాజెక్ట్ వెబ్‌సైట్"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "ఇష్యూ ట్రాకర్"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "తరచుగా అడిగే ప్రశ్నలు"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "సహాయం"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "విరాళం"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "అనువదించండి"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "సంప్రదించండి"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "సోర్స్ కోడ్"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "సహకరించండి"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "మానిఫెస్ట్"
+
+msgid "Timeline"
+msgstr "టైమ్‌లైన్"
+
+msgid "Total"
+msgstr "మొత్తం"
+
+msgid "This Week"
+msgstr "ఈ వారం"
+
+msgid "Installs per day"
+msgstr "రోజుకు ఇన్‌స్టాల్‌లు"
+
+msgid "World"
+msgstr "ప్రపంచం"
+
+msgid "Installs per country"
+msgstr "దేశానికి ఇన్‌స్టాల్‌లు"
+
+msgid "Since 4/15/2024"
+msgstr "4/15/2024 నుండి"
+
+msgid "No Results Found"
+msgstr "ఫలితాలు కనుగొనబడలేదు"
+
+msgid "Search failed"
+msgstr "శోధన విఫలమైంది"
+
+msgid "Unknown"
+msgstr "తెలియదు"
+
+msgid "Keep User Data"
+msgstr "వినియోగదారు డేటాను ఉంచండి"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "వ్యక్తిగత అమరికలు &amp; కంటెంట్‌ను పునరుద్ధరించడానికి అనుమతించండి"
+
+msgid "Delete All Data"
+msgstr "మొత్తం డేటాను తొలగించండి"
+
+msgid "Permanently erase user data to save space"
+msgstr "స్థలాన్ని ఆదా చేయడానికి వినియోగదారు డేటాను శాశ్వతంగా తొలగించండి"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "%s తీసివేయాలా?"
+
+msgid "Select which version to remove."
+msgstr "ఏ వెర్షన్‌ను తీసివేయాలో ఎంచుకోండి."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "%s అన్‌ఇన్‌స్టాల్ చేసిన తర్వాత దాన్ని ఉపయోగించడం సాధ్యం కాదు."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "“%s” అధిక ప్రమాదం కలది"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"ఈ యాప్‌కు <b>మీ ఫైల్‌లు, బ్రౌజర్ చరిత్ర, సేవ్ చేసిన పాస్‌వర్డ్‌లు</b> మరియు మరిన్నింటితో సహా మీ సిస్టమ్‌కు పూర్తి యాక్సెస్ ఉంది. దీనికి ఇంటర్నెట్ యాక్సెస్ కూడా ఉంది, అంటే ఇది మీ డేటాను బయటి వారికి పంపగలదు.\n"
+"\n"
+"యాప్ యాజమాన్యమైనది కాబట్టి, ఈ అనుమతులతో అది ఏమి చేస్తుందో తనిఖీ చేయడం సాధ్యం కాదు."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"ఈ యాప్ పాత X11 విండోయింగ్ సిస్టమ్‌ను ఉపయోగిస్తోంది, ఇది <b>అన్ని కీస్ట్రోక్‌లను రికార్డ్ చేయడానికి, స్క్రీన్‌షాట్‌లు తీయడానికి మరియు ఇతర అప్లికేషన్‌లను పర్యవేక్షించడానికి</b> అనుమతిస్తుంది. దీనికి ఇంటర్నెట్ యాక్సెస్ కూడా ఉంది, అంటే ఇది మీ డేటాను బయటి వారికి పంపగలదు.\n"
+"\n"
+"యాప్ యాజమాన్యమైనది కాబట్టి, ఈ అనుమతులతో అది ఏమి చేస్తుందో తనిఖీ చేయడం సాధ్యం కాదు."
+
+msgid "_Install Anyway"
+msgstr "ఎలాగైనా ఇన్‌స్టాల్ చేయండి(_I)"
+
+msgid "Failed to load transaction dialog"
+msgstr "ట్రాన్సాక్షన్ డైలాగ్‌ను లోడ్ చేయడం విఫలమైంది"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "%.02f సెకన్లలో పూర్తయింది"
+
+msgid "App Add-On"
+msgstr "యాప్ యాడ్-ఆన్"
+
+msgid "Runtime"
+msgstr "రన్‌టైమ్"
+
+msgid "In Queue"
+msgstr "క్యూలో ఉంది"
+
+msgid "Finishing Up"
+msgstr "ముగిస్తోంది"
+
+msgid "Done"
+msgstr "పూర్తయింది"
+
+msgid "Cancelled"
+msgstr "రద్దు చేయబడింది"
+
+msgid "Error"
+msgstr "లోపం"
+
+msgid "Cancel Transaction"
+msgstr "ట్రాన్సాక్షన్‌ను రద్దు చేయండి"
+
+msgid "Show Details"
+msgstr "వివరాలను చూపించండి"
+
+msgid "Show Error Info"
+msgstr "లోపం సమాచారాన్ని చూపించండి"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s ఖాళీ అయింది"
+
+msgid "Transaction Error"
+msgstr "ట్రాన్సాక్షన్ లోపం"
+
+msgid "Pending"
+msgstr "పెండింగ్"
+
+msgid "Installed Updates"
+msgstr "ఇన్‌స్టాల్ చేసిన అప్‌డేట్‌లు"
+
+msgid "Release Notes"
+msgstr "విడుదల గమనికలు"
+
+msgid "No Release Info"
+msgstr "విడుదల సమాచారం లేదు"
+
+msgid "_Update All"
+msgstr "అన్నీ అప్‌డేట్ చేయండి(_U)"
+
+msgid "This update requests new permissions"
+msgstr "ఈ అప్‌డేట్ కొత్త అనుమతులను కోరుతోంది"
+
+msgid "Manage Leftover User Data"
+msgstr "మిగిలిపోయిన వినియోగదారు డేటాను నిర్వహించండి"
+
+msgid "No Leftover User Data Found"
+msgstr "మిగిలిపోయిన వినియోగదారు డేటా కనుగొనబడలేదు"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "తీసివేసిన యాప్‌లు వదిలివెళ్లిన వ్యక్తిగత డేటా ఇక్కడ కనిపిస్తుంది"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "%u యాప్ యొక్క చెత్తబుట్టలో వేసిన వినియోగదారు డేటా"
+msgstr[1] "%u యాప్‌ల యొక్క చెత్తబుట్టలో వేసిన వినియోగదారు డేటా"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "%s యొక్క చెత్తబుట్టలో వేసిన వినియోగదారు డేటా"
+
+msgid "Open User Data Folder"
+msgstr "వినియోగదారు డేటా ఫోల్డర్‌ను తెరవండి"
+
+msgid "Trash User Data"
+msgstr "వినియోగదారు డేటాను చెత్తబుట్టలో వేయండి"
+
+msgid "Refreshing"
+msgstr "రిఫ్రెష్ చేస్తోంది"
+
+msgid "Curated"
+msgstr "ఎంపిక చేసినవి"
+
+msgid "Explore"
+msgstr "అన్వేషించండి"
+
+msgid "Library"
+msgstr "లైబ్రరీ"
+
+msgid "Search"
+msgstr "శోధన"
+
+msgid "Main Menu"
+msgstr "ప్రధాన మెనూ"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "మీరు Bazaar యొక్క కొత్త వెర్షన్‌ను నడుపుతున్నారు!"
+
+msgid "See What's New"
+msgstr "కొత్తగా ఏముందో చూడండి"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "మీకు నెట్‌వర్క్ కనెక్షన్ ఉంది కానీ Flathub యొక్క కాష్ చేసిన వెర్షన్‌ను చూస్తున్నారు"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "నెట్‌వర్క్ కనెక్షన్ మీటర్‌డ్‌గా ఉంది — ఆటోమేటిక్ రిఫ్రెష్‌లు నిలిపివేయబడ్డాయి"
+
+msgid "_Donate to Bazaar"
+msgstr "Bazaarకు విరాళం ఇవ్వండి(_D)"
+
+msgid "_Refresh"
+msgstr "రిఫ్రెష్ చేయండి(_R)"
+
+msgid "_Login With Flathub"
+msgstr "Flathubతో లాగిన్ అవ్వండి(_L)"
+
+msgid "_Manage Leftover User Data"
+msgstr "మిగిలిపోయిన వినియోగదారు డేటాను నిర్వహించండి(_M)"
+
+msgid "Manage R_emotes"
+msgstr "రిమోట్‌లను నిర్వహించండి(_E)"
+
+msgid "_Preferences"
+msgstr "ప్రాధాన్యతలు(_P)"
+
+msgid "_Keyboard Shortcuts"
+msgstr "కీబోర్డ్ షార్ట్‌కట్‌లు(_K)"
+
+msgid "_About Bazaar"
+msgstr "Bazaar గురించి(_A)"
+
+msgid "_Quit Bazaar"
+msgstr "Bazaar నుండి నిష్క్రమించండి(_Q)"
+
+msgid "Log Out"
+msgstr "లాగ్ అవుట్ చేయండి"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "అప్లికేషన్‌ను ప్రారంభించడం విఫలమైంది"
+
+msgid "Could not open link"
+msgstr "లింక్‌ను తెరవడం సాధ్యం కాలేదు"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "మీరు Bazaar నుండి Bazaarను తీసివేయలేరు!"
+
+msgid "Can't do that right now!"
+msgstr "ఇప్పుడు అలా చేయడం సాధ్యం కాదు!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u ఇన్‌స్టాల్"
+msgstr[1] "%s, %'u ఇన్‌స్టాల్‌లు"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "%s నుండి అత్యధిక ఇన్‌స్టాల్‌లు"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "గత నెలలో %d డౌన్‌లోడ్‌లు"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s రన్‌టైమ్"
+
+msgid "Size information unavailable"
+msgstr "సైజు సమాచారం అందుబాటులో లేదు"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "%s డౌన్‌లోడ్ సైజు"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "%s ఇన్‌స్టాల్ చేసిన సైజు"
+
+msgid "All Ages"
+msgstr "అన్ని వయస్సుల వారికి"
+
+msgid "Age rating information unavailable"
+msgstr "వయో రేటింగ్ సమాచారం అందుబాటులో లేదు"
+
+msgid "Suitable for all ages"
+msgstr "అన్ని వయస్సుల వారికి అనుకూలం"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "%d సంవత్సరాలు మరియు పైబడిన వయస్సు వారికి అనుకూలం"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "%s లైసెన్స్ కింద ఉచిత సాఫ్ట్‌వేర్"
+
+msgid "Free software"
+msgstr "ఉచిత సాఫ్ట్‌వేర్"
+
+msgid "Proprietary Software"
+msgstr "యాజమాన్య సాఫ్ట్‌వేర్"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "ప్రత్యేక లైసెన్స్: %s"
+
+msgid "Free Software"
+msgstr "ఉచిత సాఫ్ట్‌వేర్"
+
+msgid "Adaptive"
+msgstr "అడాప్టివ్"
+
+msgid "Desktop Only"
+msgstr "డెస్క్‌టాప్ మాత్రమే"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "డెస్క్‌టాప్, టాబ్లెట్‌లు మరియు ఫోన్‌లలో పని చేస్తుంది"
+
+msgid "May not work on mobile devices"
+msgstr "మొబైల్ పరికరాలలో పని చేయకపోవచ్చు"
+
+msgid "Low Risk"
+msgstr "తక్కువ ప్రమాదం"
+
+msgid "Medium Risk"
+msgstr "మధ్యస్థ ప్రమాదం"
+
+msgid "High Risk"
+msgstr "అధిక ప్రమాదం"
+
+msgid "Unknown Permissions"
+msgstr "తెలియని అనుమతులు"
+
+msgid "Permissions are missing for this app."
+msgstr "ఈ యాప్‌కు అనుమతులు లేవు."
+
+msgid "No Permissions"
+msgstr "అనుమతులు లేవు"
+
+msgid "App is fully sandboxed"
+msgstr "యాప్ పూర్తిగా శాండ్‌బాక్స్‌లో ఉంది"
+
+msgid "Network Access"
+msgstr "నెట్‌వర్క్ యాక్సెస్"
+
+msgid "Can access the internet"
+msgstr "ఇంటర్నెట్‌ను యాక్సెస్ చేయగలదు"
+
+msgid "No Network Access"
+msgstr "నెట్‌వర్క్ యాక్సెస్ లేదు"
+
+msgid "Cannot access the internet"
+msgstr "ఇంటర్నెట్‌ను యాక్సెస్ చేయలేదు"
+
+msgid "User Device Access"
+msgstr "వినియోగదారు పరికర యాక్సెస్"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "వెబ్‌క్యామ్‌లు లేదా గేమింగ్ కంట్రోలర్‌ల వంటి పరికరాలను యాక్సెస్ చేయగలదు"
+
+msgid "No User Device Access"
+msgstr "వినియోగదారు పరికర యాక్సెస్ లేదు"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "వెబ్‌క్యామ్‌లు లేదా గేమింగ్ కంట్రోలర్‌ల వంటి పరికరాలను యాక్సెస్ చేయలేదు"
+
+msgid "Input Device Access"
+msgstr "ఇన్‌పుట్ పరికర యాక్సెస్"
+
+msgid "Can access input devices"
+msgstr "ఇన్‌పుట్ పరికరాలను యాక్సెస్ చేయగలదు"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "మైక్రోఫోన్ యాక్సెస్ మరియు ఆడియో ప్లేబ్యాక్"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "అనుమతి అడగకుండా మైక్రోఫోన్‌లతో వినగలదు మరియు ఆడియోను ప్లే చేయగలదు"
+
+msgid "System Device Access"
+msgstr "సిస్టమ్ పరికర యాక్సెస్"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "ఉన్నత అనుమతులు అవసరమయ్యే సిస్టమ్ పరికరాలను యాక్సెస్ చేయగలదు"
+
+msgid "Screen Contents Access"
+msgstr "స్క్రీన్ కంటెంట్ యాక్సెస్"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "స్క్రీన్ లేదా ఇతర విండోల కంటెంట్‌ను యాక్సెస్ చేయగలదు"
+
+msgid "Legacy Windowing System"
+msgstr "పాత విండోయింగ్ సిస్టమ్"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "ఎల్లప్పుడూ పాత విండోయింగ్ సిస్టమ్ (X11) ఉపయోగిస్తుంది"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "ఏకపక్ష అనుమతులను పొందగలదు"
+
+msgid "User Settings"
+msgstr "వినియోగదారు అమరికలు"
+
+msgid "Can access and change user settings"
+msgstr "వినియోగదారు అమరికలను యాక్సెస్ చేసి మార్చగలదు"
+
+msgid "Full File System Read/Write Access"
+msgstr "పూర్తి ఫైల్ సిస్టమ్ చదవడం/రాయడం యాక్సెస్"
+
+msgid "Can read and write all data on the file system"
+msgstr "ఫైల్ సిస్టమ్‌లోని మొత్తం డేటాను చదవగలదు మరియు రాయగలదు"
+
+msgid "Home Folder Read/Write Access"
+msgstr "హోమ్ ఫోల్డర్ చదవడం/రాయడం యాక్సెస్"
+
+msgid "Can read and write all data in your home directory"
+msgstr "మీ హోమ్ డైరెక్టరీలోని మొత్తం డేటాను చదవగలదు మరియు రాయగలదు"
+
+msgid "Full File System Read Access"
+msgstr "పూర్తి ఫైల్ సిస్టమ్ చదవడం యాక్సెస్"
+
+msgid "Can read all data on the file system"
+msgstr "ఫైల్ సిస్టమ్‌లోని మొత్తం డేటాను చదవగలదు"
+
+msgid "Home Folder Read Access"
+msgstr "హోమ్ ఫోల్డర్ చదవడం యాక్సెస్"
+
+msgid "Can read all data in your home directory"
+msgstr "మీ హోమ్ డైరెక్టరీలోని మొత్తం డేటాను చదవగలదు"
+
+msgid "Download Folder Read/Write Access"
+msgstr "డౌన్‌లోడ్ ఫోల్డర్ చదవడం/రాయడం యాక్సెస్"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "మీ డౌన్‌లోడ్‌ల డైరెక్టరీలోని మొత్తం డేటాను చదవగలదు మరియు రాయగలదు"
+
+msgid "Download Folder Read Access"
+msgstr "డౌన్‌లోడ్ ఫోల్డర్ చదవడం యాక్సెస్"
+
+msgid "Can read all data in your downloads directory"
+msgstr "మీ డౌన్‌లోడ్‌ల డైరెక్టరీలోని మొత్తం డేటాను చదవగలదు"
+
+msgid "Can read and write all data in the directory"
+msgstr "డైరెక్టరీలోని మొత్తం డేటాను చదవగలదు మరియు రాయగలదు"
+
+msgid "Can read all data in the directory"
+msgstr "డైరెక్టరీలోని మొత్తం డేటాను చదవగలదు"
+
+msgid "No File System Access"
+msgstr "ఫైల్ సిస్టమ్ యాక్సెస్ లేదు"
+
+msgid "Cannot access the file system at all"
+msgstr "ఫైల్ సిస్టమ్‌ను అస్సలు యాక్సెస్ చేయలేదు"
+
+msgid "Uses System Services"
+msgstr "సిస్టమ్ సేవలను ఉపయోగిస్తుంది"
+
+msgid "Can request data from non-portal system services"
+msgstr "పోర్టల్ కాని సిస్టమ్ సేవల నుండి డేటాను అభ్యర్థించగలదు"
+
+msgid "Uses Session Services"
+msgstr "సెషన్ సేవలను ఉపయోగిస్తుంది"
+
+msgid "Can request data from non-portal session services"
+msgstr "పోర్టల్ కాని సెషన్ సేవల నుండి డేటాను అభ్యర్థించగలదు"
+
+msgid "No Service Access"
+msgstr "సేవా యాక్సెస్ లేదు"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "పోర్టల్ కాని సెషన్ లేదా సిస్టమ్ సేవలను అస్సలు యాక్సెస్ చేయలేదు"
+
+msgid "Verified App Developer"
+msgstr "ధృవీకరించబడిన యాప్ డెవలపర్"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "ఈ యాప్ డెవలపర్ వారు చెప్పుకున్న వ్యక్తే అని ధృవీకరించబడింది"
+
+msgid "Proprietary Code"
+msgstr "యాజమాన్య కోడ్"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "సోర్స్ కోడ్ పబ్లిక్ కాదు, కాబట్టి దాన్ని స్వతంత్రంగా తనిఖీ చేయడం సాధ్యం కాదు మరియు అది అసురక్షితం కావచ్చు"
+
+msgid "Auditable Code"
+msgstr "తనిఖీ చేయదగిన కోడ్"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "సోర్స్ కోడ్ పబ్లిక్ మరియు స్వతంత్రంగా తనిఖీ చేయవచ్చు, దీనివల్ల యాప్ సురక్షితంగా ఉండే అవకాశం ఎక్కువ"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "%s సిస్టమ్ సేవను ఉపయోగించండి"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "%s సెషన్ సేవను ఉపయోగించండి"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "%s సేవను ఉపయోగించండి"
+
+msgid "Can see the non-portal service"
+msgstr "పోర్టల్ కాని సేవను చూడగలదు"
+
+msgid "Can talk to the non-portal service"
+msgstr "పోర్టల్ కాని సేవతో మాట్లాడగలదు"
+
+msgid "Can own the non-portal service"
+msgstr "పోర్టల్ కాని సేవకు యజమాని కాగలదు"
+
+msgid "Global Menu Integration"
+msgstr "గ్లోబల్ మెనూ ఇంటిగ్రేషన్"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "దాని మెనూలను గ్లోబల్ మెనూ బార్‌లో ప్రదర్శించగలదు"
+
+msgid "KDE Settings Integration"
+msgstr "KDE అమరికల ఇంటిగ్రేషన్"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "KDE డెస్క్‌టాప్ అమరికలు మారినప్పుడు గుర్తించగలదు"
+
+msgid "KDE Global Settings"
+msgstr "KDE గ్లోబల్ అమరికలు"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "ఫాంట్‌లు మరియు రంగుల వంటి KDE డెస్క్‌టాప్ ప్రాధాన్యతలను చదవగలదు"
+
+msgid "Secret Storage Service"
+msgstr "రహస్య నిల్వ సేవ"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "సిస్టమ్ కీరింగ్‌ను ఉపయోగించి తన స్వంత పాస్‌వర్డ్‌లను నిల్వ చేసి తిరిగి పొందగలదు"
+
+msgid "Desktop Notifications Service"
+msgstr "డెస్క్‌టాప్ నోటిఫికేషన్‌ల సేవ"
+
+msgid "Can send desktop notifications"
+msgstr "డెస్క్‌టాప్ నోటిఫికేషన్‌లను పంపగలదు"
+
+msgid "System Tray Integration"
+msgstr "సిస్టమ్ ట్రే ఇంటిగ్రేషన్"
+
+msgid "Can display an icon in the system tray"
+msgstr "సిస్టమ్ ట్రేలో ఐకాన్‌ను ప్రదర్శించగలదు"
+
+msgid "KDE Connect Integration"
+msgstr "KDE Connect ఇంటిగ్రేషన్"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "KDE Connect ద్వారా జత చేసిన పరికరాలతో సంభాషించగలదు"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "నావిగేషన్"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "అన్వేషణ పేజీని తెరవండి"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "లైబ్రరీ పేజీని తెరవండి"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "శోధన పేజీని తెరవండి"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "రిమోట్‌లు"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "రిమోట్‌లను సింక్ చేయండి"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "సాధారణం"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "ప్రాధాన్యతలను తెరవండి"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "షార్ట్‌కట్‌లను చూపించండి"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "విండోను మూసివేయండి"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Bazaar నుండి నిష్క్రమించండి"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s ఇన్‌స్టాల్ చేయబడింది"
+
+msgid "The app is ready to be used"
+msgstr "యాప్ ఉపయోగించడానికి సిద్ధంగా ఉంది"
+
+msgid "Updates Are Out of Date"
+msgstr "అప్‌డేట్‌లు పాతబడ్డాయి"
+
+msgid "Please check for available updates"
+msgstr "దయచేసి అందుబాటులో ఉన్న అప్‌డేట్‌ల కోసం తనిఖీ చేయండి"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u యాప్ అప్‌డేట్ చేయబడింది"
+msgstr[1] "%u యాప్‌లు అప్‌డేట్ చేయబడ్డాయి"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s అప్‌డేట్ చేయబడింది."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s మరియు %s అప్‌డేట్ చేయబడ్డాయి."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "%s, %s మరియు %s కలిపి ఉన్నాయి."

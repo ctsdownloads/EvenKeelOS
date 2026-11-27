@@ -1,0 +1,1172 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);\n"
+
+msgid "Quit"
+msgstr "Scoir"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Scoir %d Fhuinneog"
+msgstr[1] "Scoir %d Fhuinneog"
+msgstr[2] "Scoir %d Fhuinneog"
+msgstr[3] "Scoir %d bhFuinneog"
+msgstr[4] "Scoir %d Fuinneog"
+
+msgid "Power options"
+msgstr "Roghanna cumhachta"
+
+msgid "Event logs"
+msgstr "Logaí imeachtaí"
+
+msgid "System"
+msgstr "Córas"
+
+msgid "Device Management"
+msgstr "Bainistiú Feistí"
+
+msgid "Disk Management"
+msgstr "Bainistiú Diosca"
+
+msgid "Unlock taskbar"
+msgstr "Díghlasáil an tascbharra"
+
+msgid "Lock taskbar"
+msgstr "Glasáil an tascbharra"
+
+msgid "Gnome Settings"
+msgstr "Socruithe GNOME"
+
+msgid "Dash to Panel Settings"
+msgstr "Socruithe Dash to Panel"
+
+msgid "Restore Windows"
+msgstr "Athchóirigh Fuinneoga"
+
+msgid "Show Desktop"
+msgstr "Taispeáin an Deasc"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Nuashonraíodh Dash to Panel!"
+
+msgid "You are now running version"
+msgstr "Tá an leagan seo á rith agat anois"
+
+msgid "See what's new"
+msgstr "Féach cad atá nua"
+
+msgid "Top Bar"
+msgstr "An Barra Uachtarach"
+
+msgid "Show Desktop button height (px)"
+msgstr "Airde an chnaipe Taispeáin an Deasc (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Leithead an chnaipe Taispeáin an Deasc (px)"
+
+msgid "Left"
+msgstr "Clé"
+
+msgid "Center"
+msgstr "Lár"
+
+msgid "Right"
+msgstr "Deas"
+
+msgid "Top"
+msgstr "Barr"
+
+msgid "Middle"
+msgstr "Lár"
+
+msgid "Bottom"
+msgstr "Bun"
+
+msgid "Start"
+msgstr "Tús"
+
+msgid "End"
+msgstr "Deireadh"
+
+msgid "Show Applications button"
+msgstr "Cnaipe Taispeáin Feidhmchláir"
+
+msgid "Activities button"
+msgstr "Cnaipe Gníomhaíochtaí"
+
+msgid "Taskbar"
+msgstr "Tascbharra"
+
+msgid "Date menu"
+msgstr "Roghchlár an dáta"
+
+msgid "System menu"
+msgstr "Roghchlár an chórais"
+
+msgid "Left box"
+msgstr "Bosca clé"
+
+msgid "Center box"
+msgstr "Bosca lárnach"
+
+msgid "Right box"
+msgstr "Bosca deas"
+
+msgid "Desktop button"
+msgstr "Cnaipe an deisce"
+
+msgid "Move up"
+msgstr "Bog suas"
+
+msgid "Move down"
+msgstr "Bog síos"
+
+msgid "Visible"
+msgstr "Infheicthe"
+
+msgid "Select element position"
+msgstr "Roghnaigh suíomh an eilimint"
+
+msgid "Stacked to top"
+msgstr "Cruachta ar barr"
+
+msgid "Stacked to left"
+msgstr "Cruachta ar chlé"
+
+msgid "Stacked to bottom"
+msgstr "Cruachta ar bun"
+
+msgid "Stacked to right"
+msgstr "Cruachta ar dheis"
+
+msgid "Centered"
+msgstr "Lárnaithe"
+
+msgid "Monitor Center"
+msgstr "Lár an Mhonatóra"
+
+msgid "More options"
+msgstr "Tuilleadh roghanna"
+
+msgid "Reset to defaults"
+msgstr "Athshocraigh go dtí na réamhshocruithe"
+
+msgid "Show Applications options"
+msgstr "Roghanna Taispeáin Feidhmchláir"
+
+msgid "Open icon"
+msgstr "Oscail an deilbhín"
+
+msgid "Show Desktop options"
+msgstr "Roghanna Taispeáin an Deasc"
+
+msgid "Primary monitor"
+msgstr "Príomhmhonatóir"
+
+msgid "Monitor "
+msgstr "Monatóir "
+
+msgid "Running Indicator Options"
+msgstr "Roghanna an Taispeántóra Rite"
+
+msgid "Dynamic opacity options"
+msgstr "Roghanna doiléire dinimiciúla"
+
+msgid "Intellihide options"
+msgstr "Roghanna Intellihide"
+
+msgid "Window preview options"
+msgstr "Roghanna réamhamhairc fuinneoige"
+
+msgid "Isolate Workspaces options"
+msgstr "Roghanna Scoite Spásanna Oibre"
+
+msgid "Isolate monitors options"
+msgstr "Roghanna scoite monatóirí"
+
+msgid "Ungrouped application options"
+msgstr "Roghanna feidhmchlár neamhghrúpáilte"
+
+msgid "Customize middle-click behavior"
+msgstr "Saincheap iompar an chliceála láir"
+
+msgid "Text"
+msgstr "Téacs"
+
+msgid "Command"
+msgstr "Ordú"
+
+msgid "Remove"
+msgstr "Bain"
+
+msgid "Customize panel scroll behavior"
+msgstr "Saincheap iompar scrollaithe an phainéil"
+
+msgid "Customize icon scroll behavior"
+msgstr "Saincheap iompar scrollaithe an deilbhín"
+
+msgid "Advanced hotkeys options"
+msgstr "Roghanna casmhífhearas casta"
+
+msgid "Secondary Menu Options"
+msgstr "Roghanna an Dara Roghchláir"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d deilbhín"
+msgstr[1] "%d dheilbhín"
+msgstr[2] "%d dheilbhín"
+msgstr[3] "%d ndeilbhín"
+msgstr[4] "%d deilbhín"
+
+msgid "App icon animation options"
+msgstr "Roghanna beochana an deilbhín aipe"
+
+msgid "App icon highlight options"
+msgstr "Roghanna aibhsithe an deilbhín aipe"
+
+msgid "Export settings"
+msgstr "Easpórtáil socruithe"
+
+msgid "Import settings"
+msgstr "Iompórtáil socruithe"
+
+msgid "Move to current Workspace"
+msgstr "Bog go dtí an Spás Oibre reatha"
+
+msgid "Animation type"
+msgstr "Cineál beochana"
+
+msgid "Simple"
+msgstr "Simplí"
+
+msgid "Ripple"
+msgstr "Cuilithín"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Fad"
+
+msgid "Rotation"
+msgstr "Rothlú"
+
+msgid "Travel"
+msgstr "Taisteal"
+
+msgid "Zoom"
+msgstr "Súmáil"
+
+msgid "Convexity"
+msgstr "Dronnacht"
+
+msgid "Extent"
+msgstr "Méid"
+
+msgid "Highlight focused application"
+msgstr "Aibhsigh an feidhmchlár fócasaithe"
+
+msgid "Icon dominant color"
+msgstr "Príomhdhath an deilbhín"
+
+msgid "Custom color"
+msgstr "Dath saincheaptha"
+
+msgid "Highlight opacity"
+msgstr "Doiléire an aibhsithe"
+
+msgid "Indicator size (px)"
+msgstr "Méid an taispeántóra (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Dath an taispeántóra - Príomhdhath an Deilbhín"
+
+msgid "Indicator color - Override Theme"
+msgstr "Dath an taispeántóra - Sáraigh an Téama"
+
+msgid "1 window open (or ungrouped)"
+msgstr "1 fhuinneog oscailte (nó neamhghrúpáilte)"
+
+msgid "Apply to all"
+msgstr "Cuir i bhfeidhm ar gach ceann"
+
+msgid "2 windows open"
+msgstr "2 fhuinneog oscailte"
+
+msgid "3 windows open"
+msgstr "3 fhuinneog oscailte"
+
+msgid "4+ windows open"
+msgstr "4+ fuinneog oscailte"
+
+msgid "Use different for unfocused"
+msgstr "Úsáid ceann difriúil do cheann gan fócas"
+
+msgid "The panel background opacity is affected by"
+msgstr "Cuireann an méid seo a leanas isteach ar dhoiléire chúlra an phainéil"
+
+msgid "All windows"
+msgstr "Gach fuinneog"
+
+msgid "Focused windows"
+msgstr "Fuinneoga fócasaithe"
+
+msgid "Maximized windows"
+msgstr "Fuinneoga uasmhéadaithe"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Athraigh an doiléire nuair a thagann fuinneog níos gaire ná (px)"
+
+msgid "Change opacity to (%)"
+msgstr "Athraigh an doiléire go (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Fad beochana athraithe doiléire (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Clómhéid (px) theidil na bhfeidhmchlár (14 an réamhshocrú)"
+
+msgid "Font weight of application titles"
+msgstr "Tiús cló theidil na bhfeidhmchlár"
+
+msgid "inherit from theme"
+msgstr "oidhrigh ón téama"
+
+msgid "normal"
+msgstr "gnáth"
+
+msgid "lighter"
+msgstr "éadroime"
+
+msgid "bold"
+msgstr "trom"
+
+msgid "bolder"
+msgstr "níos troime"
+
+msgid "Font color of the application titles"
+msgstr "Dath cló theidil na bhfeidhmchlár"
+
+msgid "Font color of the minimized application titles"
+msgstr "Dath cló theidil na bhfeidhmchlár íoslaghdaithe"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Uasleithead (px) theidil na bhfeidhmchlár"
+
+msgid "(default is 160)"
+msgstr "(160 an réamhshocrú)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Úsáid leithead seasta do theidil na bhfeidhmchlár"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Tá an leithead céanna ag teidil na bhfeidhmchlár ar fad, fiú má tá a dtéacs níos giorra ná an t-uasleithead. Úsáidtear luach an uasleithid mar an leithead seasta."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Taispeáin taispeántóirí rite ar fheidhmchláir gan fócas"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Úsáid na deilbhíní is ansa leat mar sheoltóirí feidhmchlár"
+
+msgid "Highlight AppIcon color"
+msgstr "Dath AppIcon aibhsithe"
+
+msgid "Pressed AppIcon color"
+msgstr "Dath AppIcon brúite"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Ga imeall AppIcon aibhsithe"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Sáraíonn sé an ga imill domhanda (0 an réamhshocrú)"
+
+msgid "Only hide the panel from windows"
+msgstr "Ná folaigh an painéal ach ó fhuinneoga"
+
+msgid "Overlapping"
+msgstr "Forluiteach"
+
+msgid "On same monitor"
+msgstr "Ar an monatóir céanna"
+
+msgid "The panel hides from"
+msgstr "Folaíonn an painéal ó"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Nuair a leagtar an pointeoir ar imeall an mhonatóra, taispeántar an painéal"
+
+msgid "Limit to panel length"
+msgstr "Cuir teorainn le fad an phainéil"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Má choinnítear an pointeoir os cionn limistéar an phainéil, fanann an painéal le feiceáil"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Teastaíonn brú ag imeall an mhonatóra chun an painéal a thaispeáint"
+
+msgid "Required pressure threshold (px)"
+msgstr "Tairseach bhrú riachtanach (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Teorainn ama bhrú riachtanach (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Lig don phainéal a bheith le feiceáil sa mhód lánscáileáin"
+
+msgid "(requires multi-monitors option)"
+msgstr "(teastaíonn an rogha ilmhonatóirí)"
+
+msgid "Only hide secondary panels"
+msgstr "Ná folaigh ach na painéil thánaisteacha"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Comhréir: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Aicearra méarchlár chun an painéal a thaispeáint agus a choinneáil"
+
+msgid "e.g. <Super>i"
+msgstr "m.sh. <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Coinnigh an staid idir atosuithe"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(urramaíonn sé “Ná Cuir Isteach Orm” GNOME agus teastaíonn an rogha baitsí cuntair fógraí uaidh)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Taispeáin agus coinnigh an painéal nuair a thagann fógra"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Fad beochana folaithe agus taispeána (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Moill sula bhfolaítear an painéal (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Moill sula dtaispeántar an painéal (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Moill sula gcumasaítear intellihide ag tosú (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Leithlisigh monatóirí fiú agus painéal amháin in úsáid"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Leithlisigh spásanna oibre in Athraitheoir Aipeanna gnome-shell"
+
+msgid "Shift+Click action"
+msgstr "Gníomh Shift+Cliceáil"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "Nuair a shocraítear é chun íoslaghdú, íoslaghdaíonn cliceáil dhúbailte fuinneoga uile an fheidhmchláir."
+
+msgid "Raise windows"
+msgstr "Ardaigh fuinneoga"
+
+msgid "Minimize window"
+msgstr "Íoslaghdaigh an fhuinneog"
+
+msgid "Launch new instance"
+msgstr "Seol cás nua"
+
+msgid "Cycle through windows"
+msgstr "Téigh timpeall na bhfuinneog"
+
+msgid "Cycle windows + minimize"
+msgstr "Téigh timpeall na bhfuinneog + íoslaghdaigh"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Scoránaigh ceann amháin / Réamhamharc ar iliomad"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Scoránaigh ceann amháin / Téigh timpeall iliomad"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Scoránaigh ceann amháin / Scaip iliomad"
+
+msgid "Middle-Click action"
+msgstr "Gníomh cliceála láir"
+
+msgid "Behavior for Middle-Click."
+msgstr "Iompar an Chliceála Láir."
+
+msgid "Shift+Middle-Click action"
+msgstr "Gníomh Shift+Cliceáil Láir"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Iompar Shift+Cliceáil Láir."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Beidh na casmhífhearais Super+Uimhir nó Super+Alt+Uimh"
+
+msgid "Hotkeys prefix"
+msgstr "Réimír na gcasmhífhearas"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Taispeáin uimhreacha na bhfeidhmchlár go sealadach os cionn na ndeilbhíní agus na casmhífhearais in úsáid."
+
+msgid "Number overlay"
+msgstr "Forleagan uimhreacha"
+
+msgid "Never"
+msgstr "Choíche"
+
+msgid "Show temporarily"
+msgstr "Taispeáin go sealadach"
+
+msgid "Always visible"
+msgstr "Infheicthe i gcónaí"
+
+msgid "Hide timeout (ms)"
+msgstr "Teorainn ama folaithe (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Aicearra chun an forleagan a thaispeáint ar feadh 2 shoicind"
+
+msgid "e.g. <Super>q"
+msgstr "m.sh. <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Ar mhonatóirí tánaisteacha, taispeáin an forleagan ar dheilbhíní a mheaitseálann an príomhmhonatóir"
+
+msgid "Show the overlay on all monitors"
+msgstr "Taispeáin an forleagan ar gach monatóir"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Taispeáin réamhamhairc nuair a bhíonn cásanna iolracha ag an bhfeidhmchlár"
+
+msgid "Show window previews on hotkey"
+msgstr "Taispeáin réamhamhairc fuinneoige ar chasmhífhearas"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Roghnaigh na heochracha uimhreacha méarchláir a úsáidtear chun na casmhífhearais a ghníomhachtú"
+
+msgid "Hotkeys are activated with"
+msgstr "Gníomhachtaítear na casmhífhearais le"
+
+msgid "Number row"
+msgstr "Sraith uimhreacha"
+
+msgid "Numeric keypad"
+msgstr "Eochaircheap uimhriúil"
+
+msgid "Both"
+msgstr "An dá cheann"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Moill idir imeachtaí scrollaithe luiche (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Úsáid an luach seo chun teorainn a chur le líon na n-imeachtaí scrollaithe luiche a ghabhtar."
+
+msgid "Show popup when changing workspace"
+msgstr "Taispeáin preabfhuinneog agus spás oibre á athrú"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Ní bhíonn tionchar aige seo ach ar phreabfhuinneog an spáis oibre agus scrollú ar an bpainéal."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "Comhtháthaigh míreanna <i>AppMenu</i>"
+
+msgid "<i>App Details</i> menu item"
+msgstr "Mír roghchláir <i>Sonraí an Aip</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "Níl <i>Sonraí an Aip</i> ar fáil ach nuair a bhíonn Gnome Software suiteáilte"
+
+msgid "Show Applications icon"
+msgstr "Deilbhín Taispeáin Feidhmchláir"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Stuáil taobh an deilbhín Taispeáin Feidhmchláir (px)"
+
+msgid "Override escape key and return to desktop"
+msgstr "Sáraigh an eochair éalaithe agus fill ar an deasc"
+
+msgid "Override Show Desktop line color"
+msgstr "Sáraigh dath líne Taispeáin an Deasc"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Nocht an deasc nuair a leagtar an pointeoir ar an gcnaipe Taispeáin an Deasc"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Moill sula nochtar an deasc (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Fad an chlaochlaithe (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Am (ms) sula dtaispeántar"
+
+msgid "(400 is default)"
+msgstr "(400 an réamhshocrú)"
+
+msgid "Time (ms) before hiding"
+msgstr "Am (ms) sula bhfolaítear"
+
+msgid "(100 is default)"
+msgstr "(100 an réamhshocrú)"
+
+msgid "Immediate on application icon click"
+msgstr "Láithreach ar chliceáil ar dheilbhín an fheidhmchláir"
+
+msgid "Animation time (ms)"
+msgstr "Am beochana (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Cliceáil sa lár ar an réamhamharc chun an fhuinneog a dhúnadh"
+
+msgid "Window previews preferred size (px)"
+msgstr "Méid roghnaithe na réamhamhairc fuinneoige (px)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Cóimheas treoíochta réamhamhairc fuinneoige X (leithead)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Seasta"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Cóimheas treoíochta réamhamhairc fuinneoige Y (airde)"
+
+msgid "Window previews padding (px)"
+msgstr "Stuáil réamhamhairc fuinneoige (px)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Úsáid doiléire saincheaptha do chúlra na réamhamhairc"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Má dhíchumasaítear é, tá an doiléire chéanna ag cúlra na réamhamhairc agus ag an bpainéal."
+
+msgid "Close button and header position"
+msgstr "Suíomh an chnaipe dúnta agus an cheanntásc"
+
+msgid "Display window preview headers"
+msgstr "Taispeáin ceanntásca réamhamhairc fuinneoige"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Méid deilbhín (px) an réamhamhairc fuinneoige"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Má dhíchumasaítear é, beidh méid deilbhín na réamhamhairc bunaithe ar mhéid an bharra cheanntáisc"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Clómhéid (px) theidil na réamhamhairc"
+
+msgid "Font weight of the preview titles"
+msgstr "Tiús cló theidil na réamhamhairc"
+
+msgid "Font color of the preview titles"
+msgstr "Dath cló theidil na réamhamhairc"
+
+msgid "Enable window peeking"
+msgstr "Cumasaigh sracfhéachaint ar fhuinneog"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "Nuair a leagtar an pointeoir ar réamhamharc fuinneoige ar feadh tamaill, aibhsítear an fhuinneog."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Teorainn ama chun mód na sracfhéachana ar fhuinneog a thosú (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "An t-am neamhghníomhaíochta agus an pointeoir ar réamhamharc fuinneoige is gá chun dul isteach i mód na sracfhéachana ar fhuinneog."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Doiléire mhód na sracfhéachana ar fhuinneog"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Socraítear doiléire gach fuinneoige seachas an ceann a bhfuiltear ag sracfhéachaint air chuig an luach céanna."
+
+msgid "About"
+msgstr "Eolas"
+
+msgid "Info"
+msgstr "Eolas"
+
+msgid "Version"
+msgstr "Leagan"
+
+msgid "Source"
+msgstr "Foinse"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Easpórtáil agus Iompórtáil"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Úsáid na cnaipí thíos chun comhad socruithe a chruthú ó do roghanna reatha is féidir a iompórtáil ar mheaisín eile."
+
+msgid "Export and import settings"
+msgstr "Easpórtáil agus iompórtáil socruithe"
+
+msgid "Export to file"
+msgstr "Easpórtáil go comhad"
+
+msgid "Import from file"
+msgstr "Iompórtáil ó chomhad"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Níl BARÁNTAS AR BITH leis an gclár seo.\n"
+"Féach ar <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">Ceadúnas Poiblí Ginearálta GNU, leagan 2 nó níos déanaí</a> le haghaidh sonraí.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Urraithe agus forbartha ar dtús ag"
+
+msgid "Action"
+msgstr "Gníomh"
+
+msgid "Click action"
+msgstr "Gníomh cliceála"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "An t-iompar nuair a chliceáiltear ar dheilbhín feidhmchláir atá ag rith."
+
+msgid "Toggle windows"
+msgstr "Scoránaigh fuinneoga"
+
+msgid "Scroll action"
+msgstr "Gníomh scrollaithe"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "An t-iompar nuair a scrollaítear leis an luch os cionn an phainéil."
+
+msgid "Scroll panel action"
+msgstr "Gníomh scrollaithe painéil"
+
+msgid "Do nothing"
+msgstr "Ná déan faic"
+
+msgid "Switch workspace"
+msgstr "Athraigh spás oibre"
+
+msgid "Cycle windows"
+msgstr "Téigh timpeall na bhfuinneog"
+
+msgid "Change volume"
+msgstr "Athraigh an airde fuaime"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "An t-iompar nuair a scrollaítear leis an luch os cionn deilbhín feidhmchláir."
+
+msgid "Scroll icon action"
+msgstr "Gníomh scrollaithe deilbhín"
+
+msgid "Same as panel"
+msgstr "Mar an gcéanna leis an bpainéal"
+
+msgid "Hotkey overlay"
+msgstr "Forleagan casmhífhearas"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Cumasaigh Super+(0-9) mar aicearraí chun aipeanna a ghníomhachtú. Is féidir é a úsáid le Shift agus Ctrl freisin."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Úsáid casmhífhearais chun aipeanna a ghníomhachtú"
+
+msgid "Application icons context menu"
+msgstr "Roghchlár comhthéacs dheilbhíní na bhfeidhmchlár"
+
+msgid "(right-click menu)"
+msgstr "(roghchlár cliceála deise)"
+
+msgid "Secondary menu"
+msgstr "Dara roghchlár"
+
+msgid "Panel context menu entries"
+msgstr "Iontrálacha roghchláir chomhthéacs an phainéil"
+
+msgid "Add entry"
+msgstr "Cuir iontráil leis"
+
+msgid "Behavior"
+msgstr "Iompar"
+
+msgid "Applications"
+msgstr "Feidhmchláir"
+
+msgid "Show favorite applications"
+msgstr "Taispeáin na feidhmchláir is ansa leat"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Taispeáin na feidhmchláir is ansa leat ar phainéil thánaisteacha"
+
+msgid "Show running applications"
+msgstr "Taispeáin feidhmchláir atá ag rith"
+
+msgid "Ungroup applications"
+msgstr "Díghrúpáil feidhmchláir"
+
+msgid "Show notification counter badge"
+msgstr "Taispeáin baitsí cuntair fógraí"
+
+msgid "Hover"
+msgstr "Ag cur an pointeora os cionn"
+
+msgid "Show window previews on hover"
+msgstr "Taispeáin réamhamhairc fuinneoige agus an pointeoir os cionn"
+
+msgid "Show tooltip on hover"
+msgstr "Taispeáin leid uirlise agus an pointeoir os cionn"
+
+msgid "Isolate"
+msgstr "Leithlisigh"
+
+msgid "Isolate Workspaces"
+msgstr "Leithlisigh Spásanna Oibre"
+
+msgid "Isolate monitors"
+msgstr "Leithlisigh monatóirí"
+
+msgid "Overview"
+msgstr "Forbhreathnú"
+
+msgid "Click empty space to close overview"
+msgstr "Cliceáil ar spás folamh chun an forbhreathnú a dhúnadh"
+
+msgid "Disable show overview on startup"
+msgstr "Díchumasaigh taispeáint an fhorbhreathnaithe ag tosú"
+
+msgid "Fine-Tune"
+msgstr "Mionchoigeartú"
+
+msgid "Font size"
+msgstr "Clómhéid"
+
+msgid "(0 = theme default)"
+msgstr "(0 = réamhshocrú an téama)"
+
+msgid "Tray Font Size"
+msgstr "Clómhéid an Tráidire"
+
+msgid "LeftBox Font Size"
+msgstr "Clómhéid LeftBox"
+
+msgid "Padding"
+msgstr "Stuáil"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = réamhshocrú an téama)"
+
+msgid "Tray Item Padding"
+msgstr "Stuáil Míre Tráidire"
+
+msgid "Status Icon Padding"
+msgstr "Stuáil Deilbhín Stádais"
+
+msgid "LeftBox Padding"
+msgstr "Stuáil LeftBox"
+
+msgid "Animate"
+msgstr "Beoigh"
+
+msgid "Animate switching applications"
+msgstr "Beoigh aipeanna á n-athrú"
+
+msgid "Animate launching new windows"
+msgstr "Beoigh fuinneoga nua á seoladh"
+
+msgid "Gnome functionality"
+msgstr "Feidhmiúlacht GNOME"
+
+msgid "(overview)"
+msgstr "(forbhreathnú)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Coinnigh an dash gnome-shell bunaidh"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Coinnigh painéal uachtarach bunaidh gnome-shell"
+
+msgid "(e.g. date menu)"
+msgstr "(m.sh. roghchlár an dáta)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Gníomhachtaigh cnaipí roghchláir an phainéil ar chliceáil amháin"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Éignigh cúinne te Gníomhaíochtaí ar an bpríomhmhonatóir"
+
+msgid "Position"
+msgstr "Suíomh"
+
+msgid "Panel"
+msgstr "Painéal"
+
+msgid "Display the main panel on"
+msgstr "Taispeáin an príomhphainéal ar"
+
+msgid "Display panels on all monitors"
+msgstr "Taispeáin painéil ar gach monatóir"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Folaigh agus taispeáin an painéal de réir roghanna"
+
+msgid "Panel Intellihide"
+msgstr "Intellihide an Phainéil"
+
+msgid "Order and Position on monitors"
+msgstr "Ord agus Suíomh ar mhonatóirí"
+
+msgid "Monitor"
+msgstr "Monatóir"
+
+msgid "Apply changes to all monitors"
+msgstr "Cuir athruithe i bhfeidhm ar gach monatóir"
+
+msgid "Panel monitor position"
+msgstr "Suíomh monatóra an phainéil"
+
+msgid "(default is 48)"
+msgstr "(48 an réamhshocrú)"
+
+msgid "Panel thickness"
+msgstr "Tiús an phainéil"
+
+msgid "(default is 100)"
+msgstr "(100 an réamhshocrú)"
+
+msgid "Panel length"
+msgstr "Fad an phainéil"
+
+msgid "Dynamic"
+msgstr "Dinimiciúil"
+
+msgid "Anchor"
+msgstr "Ancaire"
+
+msgid "Taskbar Display"
+msgstr "Taispeáint an Tascbharra"
+
+msgid "Style"
+msgstr "Stíl"
+
+msgid "Global style"
+msgstr "Stíl dhomhanda"
+
+msgid "Border radius"
+msgstr "Ga an imill"
+
+msgid "AppIcon style"
+msgstr "Stíl AppIcon"
+
+msgid "(default is 8)"
+msgstr "(8 an réamhshocrú)"
+
+msgid "App Icon Margin"
+msgstr "Imeall Deilbhín Aipe"
+
+msgid "(default is 4)"
+msgstr "(4 an réamhshocrú)"
+
+msgid "App Icon Padding"
+msgstr "Stuáil Deilbhín Aipe"
+
+msgid "Animate hovering app icons"
+msgstr "Beoigh deilbhíní aipe agus an pointeoir os a gcionn"
+
+msgid "Highlight hovering app icons"
+msgstr "Aibhsigh deilbhíní aipe agus an pointeoir os a gcionn"
+
+msgid "Icon style"
+msgstr "Stíl dheilbhíní"
+
+msgid "Normal"
+msgstr "Gnáth"
+
+msgid "Symbolic"
+msgstr "Siombalach"
+
+msgid "Grayscale"
+msgstr "Gráscála"
+
+msgid "Running indicator"
+msgstr "Taispeántóir rite"
+
+msgid "Running indicator position"
+msgstr "Suíomh an taispeántóra rite"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Stíl an taispeántóra rite (Aip fhócasaithe)"
+
+msgid "Dots"
+msgstr "Poncanna"
+
+msgid "Squares"
+msgstr "Cearnóga"
+
+msgid "Dashes"
+msgstr "Daiseanna"
+
+msgid "Segmented"
+msgstr "Deighilte"
+
+msgid "Solid"
+msgstr "Soladach"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Stíl an taispeántóra rite (Aipeanna gan fócas)"
+
+msgid "Panel style"
+msgstr "Stíl an phainéil"
+
+msgid "(default is 0)"
+msgstr "(0 an réamhshocrú)"
+
+msgid "Side margins"
+msgstr "Imill taobh"
+
+msgid "Top and bottom margins"
+msgstr "Imill bharr agus bun"
+
+msgid "Side padding"
+msgstr "Stuáil taobh"
+
+msgid "Top and bottom padding"
+msgstr "Stuáil bharr agus bun"
+
+msgid "Override panel theme background color"
+msgstr "Sáraigh dath cúlra théama an phainéil"
+
+msgid "Override panel theme background opacity"
+msgstr "Sáraigh doiléire chúlra théama an phainéil"
+
+msgid "Panel background opacity (%)"
+msgstr "Doiléire chúlra an phainéil (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Athraigh an doiléire nuair a thagann fuinneog gar don phainéal"
+
+msgid "Dynamic background opacity"
+msgstr "Doiléire chúlra dhinimiciúil"
+
+msgid "Override panel theme gradient"
+msgstr "Sáraigh grádán théama an phainéil"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Dath agus doiléire bharr an ghrádáin (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Dath agus doiléire bhun an ghrádáin (%)"
+
+msgid "Panel border"
+msgstr "Imeall an phainéil"
+
+msgid "Override border color"
+msgstr "Sáraigh dath an imill"
+
+msgid "Border thickness"
+msgstr "Tiús an imill"

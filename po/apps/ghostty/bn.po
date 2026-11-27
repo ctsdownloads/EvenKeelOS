@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Open in Ghostty"
+msgstr "Ghostty-তে খুলুন"
+
+msgid "Find…"
+msgstr "খুঁজুন…"
+
+msgid "Previous Match"
+msgstr "আগের মিল"
+
+msgid "Next Match"
+msgstr "পরের মিল"
+
+msgid "Close"
+msgstr "বন্ধ করুন"
+
+msgid "Oh, no."
+msgstr "ওহ, না।"
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "রেন্ডারিংয়ের জন্য OpenGL কনটেক্সট পাওয়া যায়নি।"
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "এই টার্মিনাল কেবল-পাঠযোগ্য মোডে আছে। আপনি এখনও বিষয়বস্তু দেখতে, নির্বাচন করতে ও স্ক্রল করতে পারবেন, কিন্তু চলমান অ্যাপ্লিকেশনে কোনো ইনপুট ইভেন্ট পাঠানো হবে না।"
+
+msgid "Read-only"
+msgstr "কেবল-পাঠযোগ্য"
+
+msgid "Copy"
+msgstr "কপি করুন"
+
+msgid "Paste"
+msgstr "পেস্ট করুন"
+
+msgid "Notify on Next Command Finish"
+msgstr "পরের কমান্ড শেষ হলে জানান"
+
+msgid "Clear"
+msgstr "মুছে ফেলুন"
+
+msgid "Reset"
+msgstr "রিসেট করুন"
+
+msgid "Split"
+msgstr "স্প্লিট"
+
+msgid "Change Title…"
+msgstr "শিরোনাম পরিবর্তন করুন…"
+
+msgid "Split Up"
+msgstr "উপরে স্প্লিট করুন"
+
+msgid "Split Down"
+msgstr "নিচে স্প্লিট করুন"
+
+msgid "Split Left"
+msgstr "বাঁয়ে স্প্লিট করুন"
+
+msgid "Split Right"
+msgstr "ডানে স্প্লিট করুন"
+
+msgid "Close Split"
+msgstr "স্প্লিট বন্ধ করুন"
+
+msgid "Tab"
+msgstr "ট্যাব"
+
+msgid "Change Tab Title…"
+msgstr "ট্যাবের শিরোনাম পরিবর্তন করুন…"
+
+msgid "New Tab"
+msgstr "নতুন ট্যাব"
+
+msgid "Close Tab"
+msgstr "ট্যাব বন্ধ করুন"
+
+msgid "Window"
+msgstr "উইন্ডো"
+
+msgid "Change Window Title…"
+msgstr "উইন্ডোর শিরোনাম পরিবর্তন করুন…"
+
+msgid "New Window"
+msgstr "নতুন উইন্ডো"
+
+msgid "Close Window"
+msgstr "উইন্ডো বন্ধ করুন"
+
+msgid "Config"
+msgstr "কনফিগারেশন"
+
+msgid "Open Configuration in OS Editor"
+msgstr "অপারেটিং সিস্টেমের এডিটরে কনফিগারেশন খুলুন"
+
+msgid "Open Configuration in New Window"
+msgstr "নতুন উইন্ডোতে কনফিগারেশন খুলুন"
+
+msgid "Reload Configuration"
+msgstr "কনফিগারেশন পুনরায় লোড করুন"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ আপনি Ghostty-র একটি ডিবাগ বিল্ড চালাচ্ছেন! কর্মক্ষমতা কমে যাবে।"
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: টার্মিনাল ইন্সপেক্টর"
+
+msgid "New Split"
+msgstr "নতুন স্প্লিট"
+
+msgid "View Open Tabs"
+msgstr "খোলা ট্যাবগুলি দেখুন"
+
+msgid "Main Menu"
+msgstr "প্রধান মেনু"
+
+msgid "Command Palette"
+msgstr "কমান্ড প্যালেট"
+
+msgid "Terminal Inspector"
+msgstr "টার্মিনাল ইন্সপেক্টর"
+
+msgid "About Ghostty"
+msgstr "Ghostty সম্পর্কে"
+
+msgid "Quit"
+msgstr "প্রস্থান করুন"
+
+msgid "Authorize Clipboard Access"
+msgstr "ক্লিপবোর্ডে অ্যাক্সেসের অনুমতি দিন"
+
+msgid "Deny"
+msgstr "প্রত্যাখ্যান করুন"
+
+msgid "Allow"
+msgstr "অনুমতি দিন"
+
+msgid "Remember choice for this split"
+msgstr "এই স্প্লিটের জন্য পছন্দটি মনে রাখুন"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "এই প্রম্পটটি আবার দেখতে কনফিগারেশন পুনরায় লোড করুন"
+
+msgid "Cancel"
+msgstr "বাতিল করুন"
+
+msgid "Execute a command…"
+msgstr "একটি কমান্ড চালান…"
+
+msgid "Configuration Errors"
+msgstr "কনফিগারেশন ত্রুটি"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "এক বা একাধিক কনফিগারেশন ত্রুটি পাওয়া গেছে। অনুগ্রহ করে নিচের ত্রুটিগুলি দেখুন, এবং হয় আপনার কনফিগারেশন পুনরায় লোড করুন, নয়তো এই ত্রুটিগুলি উপেক্ষা করুন।"
+
+msgid "Ignore"
+msgstr "উপেক্ষা করুন"
+
+msgid "Leave blank to restore the default title."
+msgstr "ডিফল্ট শিরোনাম ফিরিয়ে আনতে ফাঁকা রাখুন।"
+
+msgid "OK"
+msgstr "ঠিক আছে"
+
+msgid "The keybind was revoked by the system."
+msgstr "সিস্টেম কিবাইন্ডটি প্রত্যাহার করেছে।"
+
+msgid "The keybind was denied by the system."
+msgstr "সিস্টেম কিবাইন্ডটি প্রত্যাখ্যান করেছে।"
+
+msgid "Global keybind unavailable"
+msgstr "গ্লোবাল কিবাইন্ড উপলব্ধ নেই"
+
+msgid "Export Terminal IO Events"
+msgstr "টার্মিনাল IO ইভেন্ট এক্সপোর্ট করুন"
+
+msgid "Export"
+msgstr "এক্সপোর্ট করুন"
+
+msgid "Editing configuration file"
+msgstr "কনফিগারেশন ফাইল সম্পাদনা করা হচ্ছে"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "একটি অ্যাপ্লিকেশন ক্লিপবোর্ডে লেখার চেষ্টা করছে। ক্লিপবোর্ডের বর্তমান বিষয়বস্তু নিচে দেখানো হয়েছে।"
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "একটি অ্যাপ্লিকেশন ক্লিপবোর্ড থেকে পড়ার চেষ্টা করছে। ক্লিপবোর্ডের বর্তমান বিষয়বস্তু নিচে দেখানো হয়েছে।"
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "সতর্কতা: সম্ভাব্য অনিরাপদ পেস্ট"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "এই লেখা টার্মিনালে পেস্ট করা বিপজ্জনক হতে পারে, কারণ দেখে মনে হচ্ছে কিছু কমান্ড চালানো হতে পারে।"
+
+msgid "Quit Ghostty?"
+msgstr "Ghostty থেকে প্রস্থান করবেন?"
+
+msgid "Close Tab?"
+msgstr "ট্যাব বন্ধ করবেন?"
+
+msgid "Close Window?"
+msgstr "উইন্ডো বন্ধ করবেন?"
+
+msgid "Close Split?"
+msgstr "স্প্লিট বন্ধ করবেন?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "সব টার্মিনাল সেশন বন্ধ করে দেওয়া হবে।"
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "এই ট্যাবের সব টার্মিনাল সেশন বন্ধ করে দেওয়া হবে।"
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "এই উইন্ডোর সব টার্মিনাল সেশন বন্ধ করে দেওয়া হবে।"
+
+msgid "The currently running process in this split will be terminated."
+msgstr "এই স্প্লিটে বর্তমানে চলমান প্রক্রিয়াটি বন্ধ করে দেওয়া হবে।"
+
+msgid "Command Finished"
+msgstr "কমান্ড শেষ হয়েছে"
+
+msgid "Command Succeeded"
+msgstr "কমান্ড সফল হয়েছে"
+
+msgid "Command Failed"
+msgstr "কমান্ড ব্যর্থ হয়েছে"
+
+msgid "Change Terminal Title"
+msgstr "টার্মিনালের শিরোনাম পরিবর্তন করুন"
+
+msgid "Change Tab Title"
+msgstr "ট্যাবের শিরোনাম পরিবর্তন করুন"
+
+msgid "Change Window Title"
+msgstr "উইন্ডোর শিরোনাম পরিবর্তন করুন"
+
+msgid "Reloaded the configuration"
+msgstr "কনফিগারেশন পুনরায় লোড করা হয়েছে"
+
+msgid "Copied to clipboard"
+msgstr "ক্লিপবোর্ডে কপি করা হয়েছে"
+
+msgid "Cleared clipboard"
+msgstr "ক্লিপবোর্ড মুছে ফেলা হয়েছে"
+
+msgid "Ghostty Developers"
+msgstr "Ghostty ডেভেলপারগণ"
+
+msgid "Reset Terminal"
+msgstr "টার্মিনাল রিসেট করুন"
+
+msgid "Reset the terminal to a clean state."
+msgstr "টার্মিনালকে পরিষ্কার অবস্থায় রিসেট করুন।"
+
+msgid "Copy to Clipboard"
+msgstr "ক্লিপবোর্ডে কপি করুন"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "নির্বাচিত লেখা সাধারণ ও স্টাইলযুক্ত, উভয় ফরম্যাটে ক্লিপবোর্ডে কপি করুন।"
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "নির্বাচিত অংশ সাধারণ লেখা হিসেবে ক্লিপবোর্ডে কপি করুন"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "নির্বাচিত লেখা সাধারণ লেখা হিসেবে ক্লিপবোর্ডে কপি করুন।"
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "নির্বাচিত অংশ ANSI সিকোয়েন্স হিসেবে ক্লিপবোর্ডে কপি করুন"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "নির্বাচিত লেখা ANSI এস্কেপ সিকোয়েন্স হিসেবে ক্লিপবোর্ডে কপি করুন।"
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "নির্বাচিত অংশ HTML হিসেবে ক্লিপবোর্ডে কপি করুন"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "নির্বাচিত লেখা HTML হিসেবে ক্লিপবোর্ডে কপি করুন।"
+
+msgid "Copy URL to Clipboard"
+msgstr "URL ক্লিপবোর্ডে কপি করুন"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "কার্সরের নিচের URL ক্লিপবোর্ডে কপি করুন।"
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "টার্মিনালের শিরোনাম ক্লিপবোর্ডে কপি করুন"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "টার্মিনালের শিরোনাম ক্লিপবোর্ডে কপি করুন। টার্মিনালের শিরোনাম ঠিক করা না থাকলে এর কোনো প্রভাব পড়বে না।"
+
+msgid "Paste from Clipboard"
+msgstr "ক্লিপবোর্ড থেকে পেস্ট করুন"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "প্রধান ক্লিপবোর্ডের বিষয়বস্তু পেস্ট করুন।"
+
+msgid "Paste from Selection"
+msgstr "নির্বাচন থেকে পেস্ট করুন"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "নির্বাচন ক্লিপবোর্ডের বিষয়বস্তু পেস্ট করুন।"
+
+msgid "Start Search"
+msgstr "অনুসন্ধান শুরু করুন"
+
+msgid "Start a search if one isn't already active."
+msgstr "আগে থেকে সক্রিয় না থাকলে একটি অনুসন্ধান শুরু করুন।"
+
+msgid "Search Selection"
+msgstr "নির্বাচিত অংশ অনুসন্ধান করুন"
+
+msgid "Start a search for the current text selection."
+msgstr "বর্তমানে নির্বাচিত লেখার জন্য অনুসন্ধান শুরু করুন।"
+
+msgid "End Search"
+msgstr "অনুসন্ধান শেষ করুন"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "চলমান অনুসন্ধান থাকলে তা শেষ করুন এবং সব GUI উপাদান লুকিয়ে ফেলুন।"
+
+msgid "Next Search Result"
+msgstr "পরের অনুসন্ধান ফলাফল"
+
+msgid "Navigate to the next search result, if any."
+msgstr "পরের অনুসন্ধান ফলাফল থাকলে সেখানে যান।"
+
+msgid "Previous Search Result"
+msgstr "আগের অনুসন্ধান ফলাফল"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "আগের অনুসন্ধান ফলাফল থাকলে সেখানে যান।"
+
+msgid "Increase Font Size"
+msgstr "ফন্টের আকার বাড়ান"
+
+msgid "Increase the font size by 1 point."
+msgstr "ফন্টের আকার ১ পয়েন্ট বাড়ান।"
+
+msgid "Decrease Font Size"
+msgstr "ফন্টের আকার কমান"
+
+msgid "Decrease the font size by 1 point."
+msgstr "ফন্টের আকার ১ পয়েন্ট কমান।"
+
+msgid "Reset Font Size"
+msgstr "ফন্টের আকার রিসেট করুন"
+
+msgid "Reset the font size to the default."
+msgstr "ফন্টের আকার ডিফল্টে ফিরিয়ে আনুন।"
+
+msgid "Clear Screen"
+msgstr "স্ক্রিন পরিষ্কার করুন"
+
+msgid "Clear the screen and scrollback."
+msgstr "স্ক্রিন ও স্ক্রলব্যাক পরিষ্কার করুন।"
+
+msgid "Select All"
+msgstr "সব নির্বাচন করুন"
+
+msgid "Select all text on the screen."
+msgstr "স্ক্রিনের সব লেখা নির্বাচন করুন।"
+
+msgid "Scroll to Top"
+msgstr "একদম উপরে স্ক্রল করুন"
+
+msgid "Scroll to the top of the screen."
+msgstr "স্ক্রিনের একদম উপরে স্ক্রল করুন।"
+
+msgid "Scroll to Bottom"
+msgstr "একদম নিচে স্ক্রল করুন"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "স্ক্রিনের একদম নিচে স্ক্রল করুন।"
+
+msgid "Scroll to Selection"
+msgstr "নির্বাচিত অংশে স্ক্রল করুন"
+
+msgid "Scroll to the selected text."
+msgstr "নির্বাচিত লেখায় স্ক্রল করুন।"
+
+msgid "Scroll Page Up"
+msgstr "এক পাতা উপরে স্ক্রল করুন"
+
+msgid "Scroll the screen up by a page."
+msgstr "স্ক্রিন এক পাতা উপরে স্ক্রল করুন।"
+
+msgid "Scroll Page Down"
+msgstr "এক পাতা নিচে স্ক্রল করুন"
+
+msgid "Scroll the screen down by a page."
+msgstr "স্ক্রিন এক পাতা নিচে স্ক্রল করুন।"
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "স্ক্রিন অস্থায়ী ফাইলে কপি করুন ও পাথ কপি করুন"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "স্ক্রিনের বিষয়বস্তু একটি অস্থায়ী ফাইলে কপি করুন এবং পাথ ক্লিপবোর্ডে কপি করুন।"
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "স্ক্রিন অস্থায়ী ফাইলে কপি করুন ও পাথ পেস্ট করুন"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "স্ক্রিনের বিষয়বস্তু একটি অস্থায়ী ফাইলে কপি করুন এবং ফাইলের পাথ পেস্ট করুন।"
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "স্ক্রিন অস্থায়ী ফাইলে কপি করুন ও খুলুন"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "স্ক্রিনের বিষয়বস্তু একটি অস্থায়ী ফাইলে কপি করুন এবং সেটি খুলুন।"
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "স্ক্রিন HTML হিসেবে অস্থায়ী ফাইলে কপি করুন ও পাথ কপি করুন"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "স্ক্রিনের বিষয়বস্তু HTML হিসেবে একটি অস্থায়ী ফাইলে কপি করুন এবং পাথ ক্লিপবোর্ডে কপি করুন।"
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "স্ক্রিন HTML হিসেবে অস্থায়ী ফাইলে কপি করুন ও পাথ পেস্ট করুন"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "স্ক্রিনের বিষয়বস্তু HTML হিসেবে একটি অস্থায়ী ফাইলে কপি করুন এবং ফাইলের পাথ পেস্ট করুন।"
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "স্ক্রিন HTML হিসেবে অস্থায়ী ফাইলে কপি করুন ও খুলুন"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "স্ক্রিনের বিষয়বস্তু HTML হিসেবে একটি অস্থায়ী ফাইলে কপি করুন এবং সেটি খুলুন।"
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "স্ক্রিন ANSI সিকোয়েন্স হিসেবে অস্থায়ী ফাইলে কপি করুন ও পাথ কপি করুন"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "স্ক্রিনের বিষয়বস্তু ANSI এস্কেপ সিকোয়েন্স হিসেবে একটি অস্থায়ী ফাইলে কপি করুন এবং পাথ ক্লিপবোর্ডে কপি করুন।"
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "স্ক্রিন ANSI সিকোয়েন্স হিসেবে অস্থায়ী ফাইলে কপি করুন ও পাথ পেস্ট করুন"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "স্ক্রিনের বিষয়বস্তু ANSI এস্কেপ সিকোয়েন্স হিসেবে একটি অস্থায়ী ফাইলে কপি করুন এবং ফাইলের পাথ পেস্ট করুন।"
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "স্ক্রিন ANSI সিকোয়েন্স হিসেবে অস্থায়ী ফাইলে কপি করুন ও খুলুন"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "স্ক্রিনের বিষয়বস্তু ANSI এস্কেপ সিকোয়েন্স হিসেবে একটি অস্থায়ী ফাইলে কপি করুন এবং সেটি খুলুন।"
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "নির্বাচিত অংশ অস্থায়ী ফাইলে কপি করুন ও পাথ কপি করুন"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "নির্বাচিত অংশের বিষয়বস্তু একটি অস্থায়ী ফাইলে কপি করুন এবং পাথ ক্লিপবোর্ডে কপি করুন।"
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "নির্বাচিত অংশ অস্থায়ী ফাইলে কপি করুন ও পাথ পেস্ট করুন"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "নির্বাচিত অংশের বিষয়বস্তু একটি অস্থায়ী ফাইলে কপি করুন এবং ফাইলের পাথ পেস্ট করুন।"
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "নির্বাচিত অংশ অস্থায়ী ফাইলে কপি করুন ও খুলুন"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "নির্বাচিত অংশের বিষয়বস্তু একটি অস্থায়ী ফাইলে কপি করুন এবং সেটি খুলুন।"
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "নির্বাচিত অংশ HTML হিসেবে অস্থায়ী ফাইলে কপি করুন ও পাথ কপি করুন"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "নির্বাচিত অংশের বিষয়বস্তু HTML হিসেবে একটি অস্থায়ী ফাইলে কপি করুন এবং পাথ ক্লিপবোর্ডে কপি করুন।"
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "নির্বাচিত অংশ HTML হিসেবে অস্থায়ী ফাইলে কপি করুন ও পাথ পেস্ট করুন"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "নির্বাচিত অংশের বিষয়বস্তু HTML হিসেবে একটি অস্থায়ী ফাইলে কপি করুন এবং ফাইলের পাথ পেস্ট করুন।"
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "নির্বাচিত অংশ HTML হিসেবে অস্থায়ী ফাইলে কপি করুন ও খুলুন"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "নির্বাচিত অংশের বিষয়বস্তু HTML হিসেবে একটি অস্থায়ী ফাইলে কপি করুন এবং সেটি খুলুন।"
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "নির্বাচিত অংশ ANSI সিকোয়েন্স হিসেবে অস্থায়ী ফাইলে কপি করুন ও পাথ কপি করুন"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "নির্বাচিত অংশের বিষয়বস্তু ANSI এস্কেপ সিকোয়েন্স হিসেবে একটি অস্থায়ী ফাইলে কপি করুন এবং পাথ ক্লিপবোর্ডে কপি করুন।"
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "নির্বাচিত অংশ ANSI সিকোয়েন্স হিসেবে অস্থায়ী ফাইলে কপি করুন ও পাথ পেস্ট করুন"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "নির্বাচিত অংশের বিষয়বস্তু ANSI এস্কেপ সিকোয়েন্স হিসেবে একটি অস্থায়ী ফাইলে কপি করুন এবং ফাইলের পাথ পেস্ট করুন।"
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "নির্বাচিত অংশ ANSI সিকোয়েন্স হিসেবে অস্থায়ী ফাইলে কপি করুন ও খুলুন"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "নির্বাচিত অংশের বিষয়বস্তু ANSI এস্কেপ সিকোয়েন্স হিসেবে একটি অস্থায়ী ফাইলে কপি করুন এবং সেটি খুলুন।"
+
+msgid "Open a new window."
+msgstr "একটি নতুন উইন্ডো খুলুন।"
+
+msgid "Open a new tab."
+msgstr "একটি নতুন ট্যাব খুলুন।"
+
+msgid "Move Tab Left"
+msgstr "ট্যাব বাঁয়ে সরান"
+
+msgid "Move the current tab to the left."
+msgstr "বর্তমান ট্যাব বাঁয়ে সরান।"
+
+msgid "Move Tab Right"
+msgstr "ট্যাব ডানে সরান"
+
+msgid "Move the current tab to the right."
+msgstr "বর্তমান ট্যাব ডানে সরান।"
+
+msgid "Move Tab to New Window"
+msgstr "ট্যাব নতুন উইন্ডোতে সরান"
+
+msgid "Move the current tab to a new window."
+msgstr "বর্তমান ট্যাব একটি নতুন উইন্ডোতে সরান।"
+
+msgid "Toggle Tab Overview"
+msgstr "ট্যাব ওভারভিউ চালু/বন্ধ করুন"
+
+msgid "Toggle the tab overview."
+msgstr "ট্যাব ওভারভিউ চালু বা বন্ধ করুন।"
+
+msgid "Change Terminal Title…"
+msgstr "টার্মিনালের শিরোনাম পরিবর্তন করুন…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "বর্তমান টার্মিনালের জন্য নতুন শিরোনাম জিজ্ঞাসা করুন।"
+
+msgid "Prompt for a new title for the current tab."
+msgstr "বর্তমান ট্যাবের জন্য নতুন শিরোনাম জিজ্ঞাসা করুন।"
+
+msgid "Split the terminal to the left."
+msgstr "টার্মিনাল বাঁয়ে স্প্লিট করুন।"
+
+msgid "Split the terminal to the right."
+msgstr "টার্মিনাল ডানে স্প্লিট করুন।"
+
+msgid "Split the terminal up."
+msgstr "টার্মিনাল উপরে স্প্লিট করুন।"
+
+msgid "Split the terminal down."
+msgstr "টার্মিনাল নিচে স্প্লিট করুন।"
+
+msgid "Focus Split: Previous"
+msgstr "স্প্লিটে ফোকাস: আগেরটি"
+
+msgid "Focus the previous split, if any."
+msgstr "আগের স্প্লিট থাকলে সেখানে ফোকাস করুন।"
+
+msgid "Focus Split: Next"
+msgstr "স্প্লিটে ফোকাস: পরেরটি"
+
+msgid "Focus the next split, if any."
+msgstr "পরের স্প্লিট থাকলে সেখানে ফোকাস করুন।"
+
+msgid "Focus Split: Left"
+msgstr "স্প্লিটে ফোকাস: বাঁয়ে"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "বাঁয়ের স্প্লিট থাকলে সেখানে ফোকাস করুন।"
+
+msgid "Focus Split: Right"
+msgstr "স্প্লিটে ফোকাস: ডানে"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "ডানের স্প্লিট থাকলে সেখানে ফোকাস করুন।"
+
+msgid "Focus Split: Up"
+msgstr "স্প্লিটে ফোকাস: উপরে"
+
+msgid "Focus the split above, if it exists."
+msgstr "উপরের স্প্লিট থাকলে সেখানে ফোকাস করুন।"
+
+msgid "Focus Split: Down"
+msgstr "স্প্লিটে ফোকাস: নিচে"
+
+msgid "Focus the split below, if it exists."
+msgstr "নিচের স্প্লিট থাকলে সেখানে ফোকাস করুন।"
+
+msgid "Focus Window: Previous"
+msgstr "উইন্ডোতে ফোকাস: আগেরটি"
+
+msgid "Focus the previous window, if any."
+msgstr "আগের উইন্ডো থাকলে সেখানে ফোকাস করুন।"
+
+msgid "Focus Window: Next"
+msgstr "উইন্ডোতে ফোকাস: পরেরটি"
+
+msgid "Focus the next window, if any."
+msgstr "পরের উইন্ডো থাকলে সেখানে ফোকাস করুন।"
+
+msgid "Toggle Split Zoom"
+msgstr "স্প্লিট জুম চালু/বন্ধ করুন"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "বর্তমান স্প্লিটের জুম অবস্থা চালু বা বন্ধ করুন।"
+
+msgid "Toggle Read-Only Mode"
+msgstr "কেবল-পাঠযোগ্য মোড চালু/বন্ধ করুন"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "বর্তমান সারফেসের জন্য কেবল-পাঠযোগ্য মোড চালু বা বন্ধ করুন।"
+
+msgid "Equalize Splits"
+msgstr "স্প্লিট সমান করুন"
+
+msgid "Equalize the size of all splits."
+msgstr "সব স্প্লিটের আকার সমান করুন।"
+
+msgid "Reset Window Size"
+msgstr "উইন্ডোর আকার রিসেট করুন"
+
+msgid "Reset the window size to the default."
+msgstr "উইন্ডোর আকার ডিফল্টে ফিরিয়ে আনুন।"
+
+msgid "Toggle Inspector"
+msgstr "ইন্সপেক্টর চালু/বন্ধ করুন"
+
+msgid "Toggle the inspector."
+msgstr "ইন্সপেক্টর চালু বা বন্ধ করুন।"
+
+msgid "Show the GTK Inspector"
+msgstr "GTK ইন্সপেক্টর দেখান"
+
+msgid "Show the GTK inspector."
+msgstr "GTK ইন্সপেক্টর দেখান।"
+
+msgid "Show On-Screen Keyboard"
+msgstr "অন-স্ক্রিন কিবোর্ড দেখান"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "অন-স্ক্রিন কিবোর্ড থাকলে তা দেখান।"
+
+msgid "Open Config Using OS editor"
+msgstr "অপারেটিং সিস্টেমের এডিটর দিয়ে কনফিগ খুলুন"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "অপারেটিং সিস্টেমের ডিফল্ট এডিটর দিয়ে কনফিগ ফাইল খুলুন।"
+
+msgid "Open Config in New Terminal Window"
+msgstr "নতুন টার্মিনাল উইন্ডোতে কনফিগ খুলুন"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "$EDITOR বা $VISUAL ব্যবহার করে একটি নতুন উইন্ডোতে কনফিগ ফাইল খুলুন।"
+
+msgid "Reload Config"
+msgstr "কনফিগ পুনরায় লোড করুন"
+
+msgid "Reload the config file."
+msgstr "কনফিগ ফাইল পুনরায় লোড করুন।"
+
+msgid "Close Terminal"
+msgstr "টার্মিনাল বন্ধ করুন"
+
+msgid "Close the current terminal."
+msgstr "বর্তমান টার্মিনাল বন্ধ করুন।"
+
+msgid "Close the current tab."
+msgstr "বর্তমান ট্যাব বন্ধ করুন।"
+
+msgid "Close Other Tabs"
+msgstr "অন্য ট্যাবগুলি বন্ধ করুন"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "বর্তমানটি বাদে এই উইন্ডোর সব ট্যাব বন্ধ করুন।"
+
+msgid "Close Tabs to the Right"
+msgstr "ডানের ট্যাবগুলি বন্ধ করুন"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "বর্তমান ট্যাবের ডানের সব ট্যাব বন্ধ করুন।"
+
+msgid "Close the current window."
+msgstr "বর্তমান উইন্ডো বন্ধ করুন।"
+
+msgid "Close All Windows"
+msgstr "সব উইন্ডো বন্ধ করুন"
+
+msgid "Close all windows."
+msgstr "সব উইন্ডো বন্ধ করুন।"
+
+msgid "Toggle Maximize"
+msgstr "বড় করা চালু/বন্ধ করুন"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "বর্তমান উইন্ডোর বড় করা অবস্থা চালু বা বন্ধ করুন।"
+
+msgid "Toggle Fullscreen"
+msgstr "ফুলস্ক্রিন চালু/বন্ধ করুন"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "বর্তমান উইন্ডোর ফুলস্ক্রিন অবস্থা চালু বা বন্ধ করুন।"
+
+msgid "Toggle Window Decorations"
+msgstr "উইন্ডো সাজসজ্জা চালু/বন্ধ করুন"
+
+msgid "Toggle the window decorations."
+msgstr "উইন্ডোর সাজসজ্জা চালু বা বন্ধ করুন।"
+
+msgid "Toggle Float on Top"
+msgstr "সবার উপরে ভাসা চালু/বন্ধ করুন"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "বর্তমান উইন্ডোর সবার উপরে ভেসে থাকার অবস্থা চালু বা বন্ধ করুন।"
+
+msgid "Toggle Secure Input"
+msgstr "নিরাপদ ইনপুট চালু/বন্ধ করুন"
+
+msgid "Toggle secure input mode."
+msgstr "নিরাপদ ইনপুট মোড চালু বা বন্ধ করুন।"
+
+msgid "Toggle Mouse Reporting"
+msgstr "মাউস রিপোর্টিং চালু/বন্ধ করুন"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "মাউস ইভেন্ট টার্মিনাল অ্যাপ্লিকেশনগুলিকে জানানো হবে কি না, তা চালু বা বন্ধ করুন।"
+
+msgid "Toggle Background Opacity"
+msgstr "পটভূমির অস্বচ্ছতা চালু/বন্ধ করুন"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "স্বচ্ছ অবস্থায় শুরু হওয়া উইন্ডোর পটভূমির অস্বচ্ছতা চালু বা বন্ধ করুন।"
+
+msgid "Check for Updates"
+msgstr "আপডেট খুঁজুন"
+
+msgid "Check for updates to the application."
+msgstr "অ্যাপ্লিকেশনের আপডেট খুঁজুন।"
+
+msgid "Undo"
+msgstr "আগের অবস্থায় ফেরান"
+
+msgid "Undo the last action."
+msgstr "শেষ কাজটি আগের অবস্থায় ফেরান।"
+
+msgid "Redo"
+msgstr "আবার করুন"
+
+msgid "Redo the last undone action."
+msgstr "সর্বশেষ আগের অবস্থায় ফেরানো কাজটি আবার করুন।"
+
+msgid "Quit the application."
+msgstr "অ্যাপ্লিকেশন থেকে প্রস্থান করুন।"
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "আপনার টার্মিনালে একটু Ghostty রাখুন।"

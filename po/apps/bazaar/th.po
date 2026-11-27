@@ -1,0 +1,2568 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "ร้านแอป"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "เพิ่ม ลบ หรืออัปเดตซอฟต์แวร์ Flatpak บนคอมพิวเตอร์เครื่องนี้"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "ระบบ;แพ็กเกจ;ตัวจัดการ;ค้นหา;Flatpak;ซอฟต์แวร์;แอป;ร้านค้า;"
+
+msgid "New Window"
+msgstr "หน้าต่างใหม่"
+
+msgid "Discover and install apps"
+msgstr "ค้นพบและติดตั้งแอป"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "ร้านแอปสำหรับ Linux ที่รวดเร็วและทันสมัย เน้นการค้นหาและติดตั้งแอปและส่วนเสริม Flatpak โดยเฉพาะจาก Flathub"
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "จัดคิวการติดตั้งหลายรายการและเรียกดูต่อไปได้"
+
+msgid "Easily view app permissions"
+msgstr "ดูสิทธิ์ของแอปได้ง่าย"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "ลงชื่อเข้าใช้ Flathub เพื่อดูและจัดการรายการโปรดของคุณ"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "ค้นหาแอปได้โดยตรงจาก GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "หน้าแรกที่แสดงแอปจาก Flathub"
+
+msgid "App page for Exhibit"
+msgstr "หน้าแอปของ Exhibit"
+
+msgid "Library page"
+msgstr "หน้าคลัง"
+
+msgid "Search page"
+msgstr "หน้าค้นหา"
+
+msgid "Category page"
+msgstr "หน้าหมวดหมู่"
+
+msgid "Stopped Receiving Updates"
+msgstr "ไม่ได้รับการอัปเดตอีกต่อไป"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "ถอนการติดตั้ง"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "ติดตั้ง"
+
+msgid "Add-on"
+msgstr "ส่วนเสริม"
+
+msgid "Manage Add-Ons"
+msgstr "จัดการส่วนเสริม"
+
+msgid "No Add-Ons Visible"
+msgstr "ไม่มีส่วนเสริมที่มองเห็นได้"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "ค่ากำหนดตัวกรองปัจจุบันของคุณกำลังซ่อนส่วนเสริมที่รู้จักทั้งหมด ลองปรับค่าเหล่านั้นดู"
+
+msgid "Add-on Page"
+msgstr "หน้าส่วนเสริม"
+
+msgid "Download"
+msgstr "ดาวน์โหลด"
+
+msgid "Installed"
+msgstr "ติดตั้งแล้ว"
+
+msgid "Downloads/Month"
+msgstr "ดาวน์โหลด/เดือน"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "ไม่ได้รับการอัปเดตแกนหลักอีกต่อไป"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "ส่วนเสริมนี้ใช้รันไทม์ที่ไม่ได้รับการอัปเดตหรือการแก้ไขด้านความปลอดภัยอีกต่อไป อาจไม่ปลอดภัยที่จะใช้งาน"
+
+msgid "Other Sources"
+msgstr "แหล่งอื่น"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "ส่วนเสริมสำหรับ %s"
+
+msgid "Show Less"
+msgstr "แสดงน้อยลง"
+
+msgid "Show More"
+msgstr "แสดงเพิ่มเติม"
+
+msgid "Download Stats"
+msgstr "สถิติการดาวน์โหลด"
+
+msgid "Age Rating"
+msgstr "การจัดระดับอายุ"
+
+msgid "Cartoon Violence"
+msgstr "ความรุนแรงแบบการ์ตูน"
+
+msgid "No information regarding cartoon violence"
+msgstr "ไม่มีข้อมูลเกี่ยวกับความรุนแรงแบบการ์ตูน"
+
+msgid "Fantasy Violence"
+msgstr "ความรุนแรงแบบแฟนตาซี"
+
+msgid "No information regarding fantasy violence"
+msgstr "ไม่มีข้อมูลเกี่ยวกับความรุนแรงแบบแฟนตาซี"
+
+msgid "Realistic Violence"
+msgstr "ความรุนแรงแบบสมจริง"
+
+msgid "No information regarding realistic violence"
+msgstr "ไม่มีข้อมูลเกี่ยวกับความรุนแรงแบบสมจริง"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "ความรุนแรงที่แสดงการนองเลือด"
+
+msgid "No information regarding bloodshed"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการนองเลือด"
+
+msgid "Sexual Violence"
+msgstr "ความรุนแรงทางเพศ"
+
+msgid "No information regarding sexual violence"
+msgstr "ไม่มีข้อมูลเกี่ยวกับความรุนแรงทางเพศ"
+
+msgid "Alcohol"
+msgstr "แอลกอฮอล์"
+
+msgid "No information regarding references to alcohol"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการกล่าวถึงแอลกอฮอล์"
+
+msgid "Narcotics"
+msgstr "ยาเสพติด"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการกล่าวถึงยาเสพติดผิดกฎหมาย"
+
+msgid "Tobacco"
+msgstr "ยาสูบ"
+
+msgid "No information regarding references to tobacco products"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการกล่าวถึงผลิตภัณฑ์ยาสูบ"
+
+msgid "Nudity"
+msgstr "ภาพเปลือย"
+
+msgid "No information regarding nudity of any sort"
+msgstr "ไม่มีข้อมูลเกี่ยวกับภาพเปลือยไม่ว่าชนิดใด"
+
+msgid "Sexual Themes"
+msgstr "เนื้อหาทางเพศ"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการกล่าวถึงหรือการแสดงภาพลักษณะทางเพศ"
+
+msgid "Profanity"
+msgstr "คำหยาบคาย"
+
+msgid "No information regarding profanity of any kind"
+msgstr "ไม่มีข้อมูลเกี่ยวกับคำหยาบคายไม่ว่าชนิดใด"
+
+msgid "Inappropriate Humor"
+msgstr "อารมณ์ขันที่ไม่เหมาะสม"
+
+msgid "No information regarding inappropriate humor"
+msgstr "ไม่มีข้อมูลเกี่ยวกับอารมณ์ขันที่ไม่เหมาะสม"
+
+msgid "Discrimination"
+msgstr "การเลือกปฏิบัติ"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "ไม่มีข้อมูลเกี่ยวกับถ้อยคำที่เลือกปฏิบัติไม่ว่าชนิดใด"
+
+msgid "Advertising"
+msgstr "การโฆษณา"
+
+msgid "No information regarding advertising of any kind"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการโฆษณาไม่ว่าชนิดใด"
+
+msgid "Gambling"
+msgstr "การพนัน"
+
+msgid "No information regarding gambling of any kind"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการพนันไม่ว่าชนิดใด"
+
+msgid "Purchasing"
+msgstr "การซื้อ"
+
+msgid "No information regarding the ability to spend money"
+msgstr "ไม่มีข้อมูลเกี่ยวกับความสามารถในการใช้จ่ายเงิน"
+
+msgid "Chat Between Users"
+msgstr "แชตระหว่างผู้ใช้"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "ไม่มีข้อมูลเกี่ยวกับวิธีการแชตกับผู้ใช้อื่น"
+
+msgid "Audio Chat Between Users"
+msgstr "แชตด้วยเสียงระหว่างผู้ใช้"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "ไม่มีข้อมูลเกี่ยวกับวิธีการพูดคุยกับผู้ใช้อื่น"
+
+msgid "Contact Details"
+msgstr "รายละเอียดการติดต่อ"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการแบ่งปันชื่อผู้ใช้เครือข่ายสังคมหรืออีเมล"
+
+msgid "Identifying Information"
+msgstr "ข้อมูลระบุตัวตน"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการแบ่งปันข้อมูลผู้ใช้กับบุคคลที่สาม"
+
+msgid "Location Sharing"
+msgstr "การแบ่งปันตำแหน่งที่ตั้ง"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการแบ่งปันตำแหน่งที่ตั้งจริงกับผู้ใช้อื่น"
+
+msgid "Prostitution"
+msgstr "การค้าประเวณี"
+
+msgid "No information regarding references to prostitution"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการกล่าวถึงการค้าประเวณี"
+
+msgid "Adultery"
+msgstr "การนอกใจ"
+
+msgid "No information regarding references to adultery"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการกล่าวถึงการนอกใจ"
+
+msgid "Sexualized Characters"
+msgstr "ตัวละครที่ถูกทำให้เป็นวัตถุทางเพศ"
+
+msgid "No information regarding sexualized characters"
+msgstr "ไม่มีข้อมูลเกี่ยวกับตัวละครที่ถูกทำให้เป็นวัตถุทางเพศ"
+
+msgid "Desecration"
+msgstr "การดูหมิ่นสิ่งศักดิ์สิทธิ์"
+
+msgid "No information regarding references to desecration"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการกล่าวถึงการดูหมิ่นสิ่งศักดิ์สิทธิ์"
+
+msgid "Human Remains"
+msgstr "ซากศพมนุษย์"
+
+msgid "No information regarding visible dead human remains"
+msgstr "ไม่มีข้อมูลเกี่ยวกับซากศพมนุษย์ที่มองเห็นได้"
+
+msgid "Slavery"
+msgstr "การเป็นทาส"
+
+msgid "No information regarding references to slavery"
+msgstr "ไม่มีข้อมูลเกี่ยวกับการกล่าวถึงการเป็นทาส"
+
+msgid "Does not include references to drugs"
+msgstr "ไม่มีการกล่าวถึงยาเสพติด"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "ไม่มีการสบถ คำหยาบคาย และภาษารุนแรงอื่น ๆ"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "ไม่มีโฆษณาหรือธุรกรรมทางการเงิน"
+
+msgid "Does not include sex or nudity"
+msgstr "ไม่มีเนื้อหาทางเพศหรือภาพเปลือย"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "ไม่มีฟังก์ชันแชตที่ไม่มีการควบคุม"
+
+msgid "Does not include violence"
+msgstr "ไม่มีความรุนแรง"
+
+msgid "Drugs"
+msgstr "ยาเสพติด"
+
+msgid "Strong Language"
+msgstr "ภาษารุนแรง"
+
+msgid "Money"
+msgstr "เงิน"
+
+msgid "Social"
+msgstr "สังคม"
+
+msgid "Violence"
+msgstr "ความรุนแรง"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "ทุกวัย"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s ไม่มีการจัดระดับอายุที่ทราบ"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s เหมาะสำหรับทุกคน"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s เหมาะสำหรับเด็กเล็ก"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s เหมาะสำหรับเด็ก"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s เหมาะสำหรับวัยรุ่น"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s เหมาะสำหรับผู้ใหญ่"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s เหมาะสำหรับ%s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "โฟลเดอร์ระบบ %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "โฟลเดอร์ย่อยในโฮม %s"
+
+msgid "Host system folders"
+msgstr "โฟลเดอร์ระบบโฮสต์"
+
+msgid "Host system configuration from /etc"
+msgstr "การกำหนดค่าระบบโฮสต์จาก /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "โฟลเดอร์ย่อยในเดสก์ท็อป %s"
+
+msgid "Desktop folder"
+msgstr "โฟลเดอร์เดสก์ท็อป"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "โฟลเดอร์ย่อยในเอกสาร %s"
+
+msgid "Documents folder"
+msgstr "โฟลเดอร์เอกสาร"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "โฟลเดอร์ย่อยในเพลง %s"
+
+msgid "Music folder"
+msgstr "โฟลเดอร์เพลง"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "โฟลเดอร์ย่อยในรูปภาพ %s"
+
+msgid "Pictures folder"
+msgstr "โฟลเดอร์รูปภาพ"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "โฟลเดอร์ย่อยในสาธารณะ %s"
+
+msgid "Public Share folder"
+msgstr "โฟลเดอร์สาธารณะ"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "โฟลเดอร์ย่อยในวิดีโอ %s"
+
+msgid "Videos folder"
+msgstr "โฟลเดอร์วิดีโอ"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "โฟลเดอร์ย่อยในแม่แบบ %s"
+
+msgid "Templates folder"
+msgstr "โฟลเดอร์แม่แบบ"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "โฟลเดอร์ย่อยแคชของผู้ใช้ %s"
+
+msgid "User cache folder"
+msgstr "โฟลเดอร์แคชของผู้ใช้"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "โฟลเดอร์ย่อยการกำหนดค่าของผู้ใช้ %s"
+
+msgid "User configuration folder"
+msgstr "โฟลเดอร์การกำหนดค่าของผู้ใช้"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "โฟลเดอร์ย่อยข้อมูลของผู้ใช้ %s"
+
+msgid "User data folder"
+msgstr "โฟลเดอร์ข้อมูลของผู้ใช้"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "โฟลเดอร์ย่อยรันไทม์ของผู้ใช้ %s"
+
+msgid "User runtime folder"
+msgstr "โฟลเดอร์รันไทม์ของผู้ใช้"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "การเข้าถึงระบบไฟล์ที่ %s"
+
+msgid "Unknown filesystem path"
+msgstr "ไม่ทราบพาธของระบบไฟล์"
+
+msgid "Download Size"
+msgstr "ขนาดดาวน์โหลด"
+
+msgid "Installed Size"
+msgstr "ขนาดที่ติดตั้ง"
+
+msgid "Amount to download from the internet"
+msgstr "ปริมาณที่ต้องดาวน์โหลดจากอินเทอร์เน็ต"
+
+msgid "Size on Disk"
+msgstr "ขนาดบนดิสก์"
+
+msgid "Open user data folder"
+msgstr "เปิดโฟลเดอร์ข้อมูลผู้ใช้"
+
+msgid "Your User Data"
+msgstr "ข้อมูลผู้ใช้ของคุณ"
+
+msgid "Caches, settings, and other app data"
+msgstr "แคช การตั้งค่า และข้อมูลแอปอื่น ๆ"
+
+msgid "Cache"
+msgstr "แคช"
+
+msgid "Temporary cached data"
+msgstr "ข้อมูลแคชชั่วคราว"
+
+msgid "Clear Cache"
+msgstr "ล้างแคช"
+
+msgid "Installed Runtime Size"
+msgstr "ขนาดรันไทม์ที่ติดตั้ง"
+
+msgid "Runtime Download Size"
+msgstr "ขนาดดาวน์โหลดรันไทม์"
+
+msgid "N/A"
+msgstr "ไม่มี"
+
+msgid "Storage"
+msgstr "พื้นที่จัดเก็บ"
+
+msgid "Verified"
+msgstr "ยืนยันแล้ว"
+
+msgid "The Bazaar Contributors"
+msgstr "ผู้มีส่วนร่วมของ Bazaar"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "ขอบคุณเป็นพิเศษ"
+
+msgid "Logged Out Successfully!"
+msgstr "ออกจากระบบสำเร็จ!"
+
+msgid "Performing setup…"
+msgstr "กำลังตั้งค่า…"
+
+msgid "Set Up Flathub?"
+msgstr "ตั้งค่า Flathub หรือไม่?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"ยังไม่ได้ตั้งค่า Flathub บนระบบนี้ คุณจะไม่สามารถเรียกดูและติดตั้งแอปพลิเคชันใน Bazaar ได้หากใช้งานไม่ได้\n"
+"\n"
+"คุณยังสามารถใช้ Bazaar เพื่อเรียกดูและลบแอปที่ติดตั้งไว้แล้วได้"
+
+msgid "Later"
+msgstr "ภายหลัง"
+
+msgid "Set Up Flathub"
+msgstr "ตั้งค่า Flathub"
+
+msgid "A backend error occurred"
+msgstr "เกิดข้อผิดพลาดของแบ็กเอนด์"
+
+msgid "Refreshing…"
+msgstr "กำลังรีเฟรช…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "กำลังโหลด %d แอป…"
+
+msgid "Failed to open file"
+msgstr "เปิดไฟล์ไม่สำเร็จ"
+
+msgid "Failed to load metainfo"
+msgstr "โหลดเมทาอินโฟไม่สำเร็จ"
+
+msgid "An initialization error occurred"
+msgstr "เกิดข้อผิดพลาดในการเริ่มต้น"
+
+msgid "Checking for updates…"
+msgstr "กำลังตรวจหาการอัปเดต…"
+
+msgid "Failed to check for updates"
+msgstr "ตรวจหาการอัปเดตไม่สำเร็จ"
+
+msgid "Could not find app"
+msgstr "ไม่พบแอป"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "กำลังโหลด %d แอป…"
+
+msgid "Writing to cache…"
+msgstr "กำลังเขียนลงแคช…"
+
+msgid "Removing remote…"
+msgstr "กำลังลบรีโมต…"
+
+msgid "Could not remove remote"
+msgstr "ลบรีโมตไม่ได้"
+
+msgid "Show All"
+msgstr "แสดงทั้งหมด"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "ทั้งหมด \"%s\""
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d แอปพลิเคชัน"
+
+msgid "Failed to Load Article"
+msgstr "โหลดบทความไม่สำเร็จ"
+
+msgid "All apps are already installed"
+msgstr "ติดตั้งแอปทั้งหมดแล้ว"
+
+msgid "_OK"
+msgstr "ตกลง(_O)"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "ติดตั้ง %u แอปหรือไม่?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "รายการต่อไปนี้จะถูกติดตั้ง อาจมีการติดตั้งคอมโพเนนต์ที่ใช้ร่วมกันเพิ่มเติมด้วย"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "จะติดตั้งส่วนเสริม %d รายการ"
+
+msgid "Additionally, addons will be installed."
+msgstr "นอกจากนี้ จะมีการติดตั้งส่วนเสริมด้วย"
+
+msgid "_Cancel"
+msgstr "ยกเลิก(_C)"
+
+msgid "_Install All"
+msgstr "ติดตั้งทั้งหมด(_I)"
+
+msgid "Bundle Installation"
+msgstr "การติดตั้งชุดแพ็กเกจ"
+
+msgid "Additional dependencies may take extra space"
+msgstr "การพึ่งพาเพิ่มเติมอาจใช้พื้นที่เพิ่ม"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"การติดตั้งแอปนี้อาจต้องเพิ่มแหล่งซอฟต์แวร์ใหม่ แอปอื่นจากแหล่งนี้จะแสดงใน Bazaar\n"
+"\n"
+"เพิ่มแหล่งนี้เฉพาะเมื่อคุณมั่นใจว่าเชื่อถือได้เท่านั้น"
+
+msgid "Successfully Installed!"
+msgstr "ติดตั้งสำเร็จ!"
+
+msgid "Open"
+msgstr "เปิด"
+
+msgid "Show App Details"
+msgstr "แสดงรายละเอียดแอป"
+
+msgid "Already Installed"
+msgstr "ติดตั้งแล้ว"
+
+msgid "Installation Failed"
+msgstr "การติดตั้งล้มเหลว"
+
+msgid "Unknown install size"
+msgstr "ไม่ทราบขนาดการติดตั้ง"
+
+#, c-format
+msgid "About %s to install"
+msgstr "ติดตั้งประมาณ %s"
+
+msgid "No special permissions"
+msgstr "ไม่มีสิทธิ์พิเศษ"
+
+msgid "Place Applet"
+msgstr "วางแอปเพล็ต"
+
+msgid "Choose where to add this applet."
+msgstr "เลือกตำแหน่งที่จะเพิ่มแอปเพล็ตนี้"
+
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+msgid "Panel"
+msgstr "แผง"
+
+msgid "Dock"
+msgstr "ด็อก"
+
+msgid "No Curation"
+msgstr "ไม่มีการคัดสรร"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "ระบบนี้ไม่มีข้อมูลการคัดสรร คุณยังสามารถเรียกดูแอปบน Flathub ได้"
+
+msgid "Browse Flathub"
+msgstr "เรียกดู Flathub"
+
+msgid "Offline"
+msgstr "ออฟไลน์"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s ถึง %s สูงสุดเมื่อ %s ที่ %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "การติดตั้ง:"
+
+msgid "Not Verified"
+msgstr "ยังไม่ยืนยัน"
+
+msgid "Developer information not available."
+msgstr "ไม่มีข้อมูลผู้พัฒนา"
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "ยังไม่มีการยืนยันความเป็นเจ้าของรหัสแอป %s และอาจเป็นแพ็กเกจจากชุมชน"
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "ทีม Flathub ยืนยันความเป็นเจ้าของรหัสแอป %s ด้วยตนเองแล้ว"
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "<b>%2$s</b> ยืนยันความเป็นเจ้าของรหัสแอป %1$s เมื่อ <b>%3$s</b> แล้ว"
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "ยืนยันความเป็นเจ้าของรหัสแอป %1$s โดยใช้ %2$s แล้ว"
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "ยืนยันความเป็นเจ้าของรหัสแอป %s แล้ว"
+
+msgid "Bazaar Release"
+msgstr "รุ่นที่ออกของ Bazaar"
+
+msgid "Full Release Notes"
+msgstr "บันทึกการออกรุ่นฉบับเต็ม"
+
+msgid "This release was made possible by users like you!"
+msgstr "รุ่นนี้เกิดขึ้นได้ด้วยผู้ใช้อย่างคุณ!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "ฉันรักการสร้าง Bazaar แต่ไม่สามารถทำได้เพียงลำพัง ช่วยสนับสนุนการพัฒนาต่อไปด้วยการบริจาคผ่าน Ko-Fi"
+
+msgid "Donate to Bazaar"
+msgstr "บริจาคให้ Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "มีอะไรใหม่ใน %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "ออกรุ่นเมื่อ %-e %B %Y"
+
+msgid "Choose an Installation"
+msgstr "เลือกการติดตั้ง"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "คุณติดตั้งแอปนี้ไว้หลายรุ่น คุณต้องการดำเนินการต่อกับรุ่นใด?"
+
+msgid "Details"
+msgstr "รายละเอียด"
+
+msgid "Copy"
+msgstr "คัดลอก"
+
+msgid "Copied!"
+msgstr "คัดลอกแล้ว!"
+
+msgid "Favorite Count"
+msgstr "จำนวนรายการโปรด"
+
+msgid "Failed to update favorite"
+msgstr "อัปเดตรายการโปรดไม่สำเร็จ"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "เข้าสู่ระบบด้วย Flathub เพื่อจัดการรายการโปรด"
+
+msgid "Log In"
+msgstr "เข้าสู่ระบบ"
+
+msgid "Favorites"
+msgstr "รายการโปรด"
+
+msgid "Install All"
+msgstr "ติดตั้งทั้งหมด"
+
+msgid "No Favorites"
+msgstr "ไม่มีรายการโปรด"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "แอปพลิเคชันที่คุณทำเครื่องหมายเป็นรายการโปรดจะแสดงที่นี่"
+
+msgid "Support This Application"
+msgstr "สนับสนุนแอปพลิเคชันนี้"
+
+msgid "Remove From Favorites"
+msgstr "ลบออกจากรายการโปรด"
+
+msgid "Failed to remove favorite"
+msgstr "ลบรายการโปรดไม่สำเร็จ"
+
+msgid "Previous"
+msgstr "ก่อนหน้า"
+
+msgid "Next"
+msgstr "ถัดไป"
+
+msgid "Editing"
+msgstr "การตัดต่อ"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "มิกเซอร์"
+
+msgid "Music"
+msgstr "เพลง"
+
+msgid "Player"
+msgstr "เครื่องเล่น"
+
+msgid "Recorder"
+msgstr "เครื่องบันทึก"
+
+msgid "Sequencer"
+msgstr "ซีเควนเซอร์"
+
+msgid "Tuner"
+msgstr "ตัวจูน"
+
+msgid "TV"
+msgstr "ทีวี"
+
+msgid "Emulation"
+msgstr "การจำลอง"
+
+msgid "Action"
+msgstr "แอ็กชัน"
+
+msgid "Adventure"
+msgstr "ผจญภัย"
+
+msgid "Arcade"
+msgstr "อาร์เคด"
+
+msgid "Blocks"
+msgstr "บล็อก"
+
+msgid "Board"
+msgstr "กระดาน"
+
+msgid "Card"
+msgstr "ไพ่"
+
+msgid "Kids"
+msgstr "เด็ก"
+
+msgid "Logic"
+msgstr "ตรรกะ"
+
+msgid "Role Playing"
+msgstr "สวมบทบาท"
+
+msgid "Shooter"
+msgstr "ยิง"
+
+msgid "Simulation"
+msgstr "จำลองสถานการณ์"
+
+msgid "Sports"
+msgstr "กีฬา"
+
+msgid "Strategy"
+msgstr "กลยุทธ์"
+
+msgid "Browsers"
+msgstr "เบราว์เซอร์"
+
+msgid "Chat"
+msgstr "แชต"
+
+msgid "Mail"
+msgstr "อีเมล"
+
+msgid "File Sharing"
+msgstr "การแบ่งปันไฟล์"
+
+msgid "Audio & Video"
+msgstr "เสียงและวิดีโอ"
+
+msgid "Media"
+msgstr "สื่อ"
+
+msgid "More Audio & Video"
+msgstr "เสียงและวิดีโอเพิ่มเติม"
+
+msgid "Developer Tools"
+msgstr "เครื่องมือนักพัฒนา"
+
+msgid "Develop"
+msgstr "พัฒนา"
+
+msgid "More Developer Tools"
+msgstr "เครื่องมือนักพัฒนาเพิ่มเติม"
+
+msgid "Education"
+msgstr "การศึกษา"
+
+msgid "Learn"
+msgstr "เรียนรู้"
+
+msgid "More Education"
+msgstr "การศึกษาเพิ่มเติม"
+
+msgid "Gaming"
+msgstr "เกม"
+
+msgid "Play"
+msgstr "เล่น"
+
+msgid "More Gaming"
+msgstr "เกมเพิ่มเติม"
+
+msgid "Graphics & Photography"
+msgstr "กราฟิกและการถ่ายภาพ"
+
+msgid "Create"
+msgstr "สร้างสรรค์"
+
+msgid "More Graphics & Photography"
+msgstr "กราฟิกและการถ่ายภาพเพิ่มเติม"
+
+msgid "Networking"
+msgstr "เครือข่าย"
+
+msgid "Internet"
+msgstr "อินเทอร์เน็ต"
+
+msgid "More Networking"
+msgstr "เครือข่ายเพิ่มเติม"
+
+msgid "Productivity"
+msgstr "ประสิทธิภาพการทำงาน"
+
+msgid "Work"
+msgstr "ทำงาน"
+
+msgid "More Productivity"
+msgstr "ประสิทธิภาพการทำงานเพิ่มเติม"
+
+msgid "Science"
+msgstr "วิทยาศาสตร์"
+
+msgid "More Science"
+msgstr "วิทยาศาสตร์เพิ่มเติม"
+
+msgid "System"
+msgstr "ระบบ"
+
+msgid "More System"
+msgstr "ระบบเพิ่มเติม"
+
+msgid "Utilities"
+msgstr "ยูทิลิตี"
+
+msgid "Tools"
+msgstr "เครื่องมือ"
+
+msgid "More Utilities"
+msgstr "ยูทิลิตีเพิ่มเติม"
+
+msgid "Trending"
+msgstr "กำลังมาแรง"
+
+msgid "More Trending"
+msgstr "กำลังมาแรงเพิ่มเติม"
+
+msgid "Popular"
+msgstr "ยอดนิยม"
+
+msgid "More Popular"
+msgstr "ยอดนิยมเพิ่มเติม"
+
+msgid "Recently Added"
+msgstr "เพิ่มเข้ามาล่าสุด"
+
+msgid "New"
+msgstr "ใหม่"
+
+msgid "More New"
+msgstr "ใหม่เพิ่มเติม"
+
+msgid "Recently Updated"
+msgstr "อัปเดตล่าสุด"
+
+msgid "Updated"
+msgstr "อัปเดตแล้ว"
+
+msgid "More Updated"
+msgstr "อัปเดตเพิ่มเติม"
+
+msgid "Mobile"
+msgstr "มือถือ"
+
+msgid "More Mobile"
+msgstr "มือถือเพิ่มเติม"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Adwaita เพิ่มเติม"
+
+msgid "KDE Apps"
+msgstr "แอป KDE"
+
+msgid "More KDE Apps"
+msgstr "แอป KDE เพิ่มเติม"
+
+msgid "Made for COSMIC™"
+msgstr "สร้างมาเพื่อ COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "สำหรับ COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "แอป COSMIC เพิ่มเติม"
+
+msgid "Games"
+msgstr "เกม"
+
+msgid "More Games"
+msgstr "เกมเพิ่มเติม"
+
+msgid "Emulators"
+msgstr "ตัวจำลอง"
+
+msgid "More Emulators"
+msgstr "ตัวจำลองเพิ่มเติม"
+
+msgid "Launchers"
+msgstr "ตัวเรียกใช้"
+
+msgid "More Game Launchers"
+msgstr "ตัวเรียกใช้เกมเพิ่มเติม"
+
+msgid "Game Tools"
+msgstr "เครื่องมือเกม"
+
+msgid "More Game Tools"
+msgstr "เครื่องมือเกมเพิ่มเติม"
+
+msgid "New Year, New Workflows"
+msgstr "ปีใหม่ เวิร์กโฟลว์ใหม่"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "แอปสำหรับจดบันทึก ติดตามงาน และวางแผน"
+
+msgid "Staff Picks"
+msgstr "คัดสรรโดยทีมงาน"
+
+msgid "Apps we love right now"
+msgstr "แอปที่เรารักในตอนนี้"
+
+msgid "Get Creative"
+msgstr "สร้างสรรค์ผลงาน"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "แอปสำคัญสำหรับการวาดภาพ แก้ไขภาพถ่าย และออกแบบดิจิทัล"
+
+msgid "Build Native Apps"
+msgstr "สร้างแอปเนทีฟ"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "พัฒนาแอปที่เข้ากับระบบของคุณอย่างลงตัว"
+
+msgid "Stay in Touch"
+msgstr "ติดต่อกันอยู่เสมอ"
+
+msgid "Essential collaboration and communication apps"
+msgstr "แอปสำคัญสำหรับการทำงานร่วมกันและการสื่อสาร"
+
+msgid "Ready for Vacations"
+msgstr "พร้อมสำหรับวันหยุด"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "แอปแผนที่ การเดินทาง สภาพอากาศ และการวางแผนทริป"
+
+msgid "Smarter Every Day"
+msgstr "ฉลาดขึ้นทุกวัน"
+
+msgid "Apps to help you study, research, and write"
+msgstr "แอปที่ช่วยในการเรียน ค้นคว้า และเขียน"
+
+msgid "Get Cozy"
+msgstr "อบอุ่นสบาย"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "แอปที่ยอดเยี่ยมสำหรับการอ่าน ดูภาพยนตร์ และเล่นเกม"
+
+msgid "Web Developer Essentials"
+msgstr "สิ่งจำเป็นสำหรับนักพัฒนาเว็บ"
+
+msgid "Making websites is more fun with these apps"
+msgstr "การสร้างเว็บไซต์สนุกขึ้นด้วยแอปเหล่านี้"
+
+msgid "Take Better Notes"
+msgstr "จดบันทึกให้ดีขึ้น"
+
+msgid "Find your new favorite note taking tool"
+msgstr "ค้นหาเครื่องมือจดบันทึกที่คุณโปรดปรานคนใหม่"
+
+msgid "Get Focused"
+msgstr "โฟกัส"
+
+msgid "Great apps for task management"
+msgstr "แอปที่ยอดเยี่ยมสำหรับการจัดการงาน"
+
+msgid "Make Some Noise"
+msgstr "ส่งเสียงกันหน่อย"
+
+msgid "Apps for creating and producing music"
+msgstr "แอปสำหรับสร้างและผลิตเพลง"
+
+msgid "Get To Work"
+msgstr "ลงมือทำงาน"
+
+msgid "Essential office apps"
+msgstr "แอปสำนักงานที่จำเป็น"
+
+msgid "Flathub Not Added"
+msgstr "ยังไม่ได้เพิ่ม Flathub"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "ไม่พบรีโมต Flathub ในการติดตั้ง Flatpak ใด ๆ ของคุณ"
+
+msgid "Can't Reach Flathub"
+msgstr "เข้าถึง Flathub ไม่ได้"
+
+msgid "You can still manage and search for apps."
+msgstr "คุณยังสามารถจัดการและค้นหาแอปได้"
+
+msgid "Search Apps"
+msgstr "ค้นหาแอป"
+
+msgid "Reconnect"
+msgstr "เชื่อมต่อใหม่"
+
+msgid "App of the Day"
+msgstr "แอปประจำวัน"
+
+msgid "On the Go"
+msgstr "ใช้งานระหว่างเดินทาง"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "แอปสำหรับโทรศัพท์และแท็บเล็ต Linux ของคุณ"
+
+msgid "More Mobile Apps"
+msgstr "แอปมือถือเพิ่มเติม"
+
+msgid "We​ ♥​ Games"
+msgstr "เรา ♥ เกม"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "เกมและแอปสำหรับเล่นชื่อเกมที่คุณชื่นชอบ"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "นี่คือตัวอย่างในเครื่อง รายละเอียดบางอย่างอาจแตกต่างจากรายการที่เผยแพร่"
+
+msgid "Preview Store Appearance"
+msgstr "ดูตัวอย่างหน้าตาร้านแอป"
+
+msgid "_Support"
+msgstr "สนับสนุน(_S)"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "แอปนี้ใช้รันไทม์ที่ไม่ได้รับการอัปเดตหรือการแก้ไขด้านความปลอดภัยอีกต่อไป อาจไม่ปลอดภัยที่จะใช้งาน"
+
+msgid "Trash Data"
+msgstr "ทิ้งข้อมูลลงถังขยะ"
+
+msgid "Add-ons"
+msgstr "ส่วนเสริม"
+
+msgid "More Add-Ons"
+msgstr "ส่วนเสริมเพิ่มเติม"
+
+msgid "Links"
+msgstr "ลิงก์"
+
+msgid "Similar Apps"
+msgstr "แอปที่คล้ายกัน"
+
+msgid "No URL"
+msgstr "ไม่มี URL"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "แอปนี้ใช้สัญญาอนุญาตแบบ FLOSS ซึ่งหมายความว่าสามารถตรวจสอบซอร์สโค้ดเพื่อความปลอดภัยได้"
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "แอปนี้ใช้สัญญาอนุญาตแบบกรรมสิทธิ์ ซึ่งหมายความว่าซอร์สโค้ดถูกพัฒนาเป็นการส่วนตัวและบุคคลที่สามอิสระไม่สามารถตรวจสอบได้"
+
+msgid "Other Apps From This Developer"
+msgstr "แอปอื่นจากผู้พัฒนารายนี้"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "แอปอื่นจาก %s"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "ไม่ได้ติดตั้ง %s แต่ยังมีข้อมูลเหลืออยู่ <b>%s</b>"
+
+#, c-format
+msgid "Apps by %s"
+msgstr "แอปโดย %s"
+
+msgid "Apps by This Developer"
+msgstr "แอปโดยผู้พัฒนารายนี้"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d แอปพลิเคชัน"
+
+msgid "Failed to Remove User Data"
+msgstr "ลบข้อมูลผู้ใช้ไม่สำเร็จ"
+
+msgid "Hardware Support"
+msgstr "การรองรับฮาร์ดแวร์"
+
+msgid "Keyboard support"
+msgstr "การรองรับแป้นพิมพ์"
+
+msgid "Requires keyboards"
+msgstr "ต้องใช้แป้นพิมพ์"
+
+msgid "Recommends keyboards"
+msgstr "แนะนำให้ใช้แป้นพิมพ์"
+
+msgid "Supports keyboards"
+msgstr "รองรับแป้นพิมพ์"
+
+msgid "Unknown support for keyboards"
+msgstr "ไม่ทราบการรองรับแป้นพิมพ์"
+
+msgid "Mouse support"
+msgstr "การรองรับเมาส์"
+
+msgid "Requires mice or pointing devices"
+msgstr "ต้องใช้เมาส์หรืออุปกรณ์ชี้ตำแหน่ง"
+
+msgid "Recommends mice or pointing devices"
+msgstr "แนะนำให้ใช้เมาส์หรืออุปกรณ์ชี้ตำแหน่ง"
+
+msgid "Supports mice or pointing devices"
+msgstr "รองรับเมาส์หรืออุปกรณ์ชี้ตำแหน่ง"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "ไม่ทราบการรองรับเมาส์หรืออุปกรณ์ชี้ตำแหน่ง"
+
+msgid "Touchscreen support"
+msgstr "การรองรับหน้าจอสัมผัส"
+
+msgid "Requires touchscreens"
+msgstr "ต้องใช้หน้าจอสัมผัส"
+
+msgid "Recommends touchscreens"
+msgstr "แนะนำให้ใช้หน้าจอสัมผัส"
+
+msgid "Supports touchscreens"
+msgstr "รองรับหน้าจอสัมผัส"
+
+msgid "Unknown support for touchscreens"
+msgstr "ไม่ทราบการรองรับหน้าจอสัมผัส"
+
+msgid "Mobile support"
+msgstr "การรองรับมือถือ"
+
+msgid "Works on mobile devices"
+msgstr "ใช้งานได้บนอุปกรณ์มือถือ"
+
+msgid "May not work well on mobile devices"
+msgstr "อาจใช้งานบนอุปกรณ์มือถือได้ไม่ดี"
+
+msgid "Desktop support"
+msgstr "การรองรับเดสก์ท็อป"
+
+msgid "Works well on large screens"
+msgstr "ใช้งานได้ดีบนหน้าจอขนาดใหญ่"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s ทำงานได้ดีที่สุดบนฮาร์ดแวร์เฉพาะ"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s ใช้งานได้บนอุปกรณ์ส่วนใหญ่"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "กำลังยกเลิก"
+
+msgid "_Open"
+msgstr "เปิด(_O)"
+
+msgid "Uninstall Application"
+msgstr "ถอนการติดตั้งแอปพลิเคชัน"
+
+msgid "_Remove"
+msgstr "ลบออก(_R)"
+
+msgid "Update"
+msgstr "อัปเดต"
+
+msgid "Remove"
+msgstr "ลบออก"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "ติดตั้ง %s จาก %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "ติดตั้ง %s"
+
+msgid "Donate"
+msgstr "บริจาค"
+
+msgid "Search installed apps"
+msgstr "ค้นหาแอปที่ติดตั้งไว้"
+
+msgid "No Apps Found"
+msgstr "ไม่พบแอป"
+
+msgid "Search Store Instead"
+msgstr "ค้นหาในร้านแอปแทน"
+
+msgid "Pending Updates"
+msgstr "การอัปเดตที่รอดำเนินการ"
+
+msgid "Downloads"
+msgstr "ดาวน์โหลด"
+
+msgid "Recently Uninstalled"
+msgstr "ถอนการติดตั้งล่าสุด"
+
+msgid "Clear Finished Tasks"
+msgstr "ล้างงานที่เสร็จสิ้น"
+
+msgid "Sort Options"
+msgstr "ตัวเลือกการเรียงลำดับ"
+
+msgid "Sort By"
+msgstr "เรียงตาม"
+
+msgid "Name"
+msgstr "ชื่อ"
+
+msgid "Size"
+msgstr "ขนาด"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "ไม่พบรายการที่ตรงกับ \"%s\" ในรายการแอปที่ติดตั้งไว้"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "มีการอัปเดต %u รายการ"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "ติดตั้งไว้ %u แอป"
+
+msgid "No applications found"
+msgstr "ไม่พบแอปพลิเคชัน"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "พบ %u แอปพลิเคชัน"
+
+msgid "Get Involved"
+msgstr "มีส่วนร่วม"
+
+msgid "Learn More"
+msgstr "เรียนรู้เพิ่มเติม"
+
+msgid "Unknown License"
+msgstr "ไม่ทราบสัญญาอนุญาต"
+
+msgid "Community Built"
+msgstr "สร้างโดยชุมชน"
+
+msgid "Proprietary"
+msgstr "กรรมสิทธิ์"
+
+msgid "Special License"
+msgstr "สัญญาอนุญาตพิเศษ"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"แอปนี้พัฒนาอย่างเปิดเผยโดยชุมชนนานาชาติ\n"
+"\n"
+"คุณสามารถเข้าร่วมและช่วยทำให้ดียิ่งขึ้นได้"
+
+msgid "The license of this app is not known"
+msgstr "ไม่ทราบสัญญาอนุญาตของแอปนี้"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"แอปนี้พัฒนาอย่างเปิดเผยโดยชุมชนนานาชาติ และเผยแพร่ภายใต้สัญญาอนุญาต %s\n"
+"\n"
+"คุณสามารถเข้าร่วมและช่วยทำให้ดียิ่งขึ้นได้"
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"แอปนี้ไม่ได้พัฒนาอย่างเปิดเผย จึงมีเพียงผู้พัฒนาเท่านั้นที่รู้ว่าทำงานอย่างไร อาจไม่ปลอดภัยในแบบที่ตรวจจับได้ยาก และอาจเปลี่ยนแปลงโดยไม่มีการกำกับดูแล\n"
+"\n"
+"คุณอาจสามารถหรือไม่สามารถมีส่วนร่วมกับแอปนี้ได้"
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"แอปนี้พัฒนาภายใต้สัญญาอนุญาตพิเศษ %s\n"
+"\n"
+"คุณอาจสามารถหรือไม่สามารถมีส่วนร่วมกับแอปนี้ได้"
+
+msgid "License"
+msgstr "สัญญาอนุญาต"
+
+msgid "Connect to Flathub"
+msgstr "เชื่อมต่อกับ Flathub"
+
+msgid "Something Went Wrong"
+msgstr "เกิดข้อผิดพลาดบางอย่าง"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "เข้าสู่ระบบเพื่อซิงก์แอปโปรดของคุณข้ามอุปกรณ์"
+
+msgid "Finish"
+msgstr "เสร็จสิ้น"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "สวัสดี %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "เพิ่มไอคอนในตัวอย่างเมทาอินโฟหรือไม่?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "ไฟล์เมทาอินโฟไม่มีไอคอนแอปในตัวเอง คุณต้องการเลือกด้วยตนเองหรือไม่?"
+
+msgid "Skip"
+msgstr "ข้าม"
+
+msgid "Select Icon"
+msgstr "เลือกไอคอน"
+
+msgid "Image Files"
+msgstr "ไฟล์รูปภาพ"
+
+msgid "New Permissions"
+msgstr "สิทธิ์ใหม่"
+
+msgid "_Accept"
+msgstr "ยอมรับ(_A)"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "สิทธิ์ใหม่สำหรับ %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "การอัปเดตนี้ต้องการสิทธิ์เพิ่มเติมดังต่อไปนี้"
+
+msgid "User"
+msgstr "ผู้ใช้"
+
+msgid "Beta"
+msgstr "เบตา"
+
+msgid "End-Of-Life"
+msgstr "สิ้นสุดอายุการสนับสนุน"
+
+msgid "Preferences"
+msgstr "ค่ากำหนด"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "การเชื่อมต่อเครือข่ายมีการจำกัดปริมาณ — การรีเฟรชข้อมูลร้านแอปอัตโนมัติถูกหยุดไว้"
+
+msgid "Refresh Manually"
+msgstr "รีเฟรชด้วยตนเอง"
+
+msgid "App Updates"
+msgstr "การอัปเดตแอป"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "การอัปเดตอัตโนมัติจะหยุดชั่วคราวบนเครือข่ายที่จำกัดปริมาณหรือเมื่อเปิดโหมดประหยัดพลังงาน เพื่อประหยัดข้อมูลและแบตเตอรี่"
+
+msgid "_Automatic"
+msgstr "อัตโนมัติ(_A)"
+
+msgid "Automatically check for and download app updates"
+msgstr "ตรวจหาและดาวน์โหลดการอัปเดตแอปโดยอัตโนมัติ"
+
+msgid "_Manual"
+msgstr "ด้วยตนเอง(_M)"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "ต้องตรวจหาและดาวน์โหลดการอัปเดตแอปด้วยตนเอง"
+
+msgid "Automatic Update _Notifications"
+msgstr "การแจ้งเตือนการอัปเดตอัตโนมัติ(_N)"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "แจ้งเตือนเมื่อติดตั้งการอัปเดตโดยอัตโนมัติแล้ว"
+
+msgid "Content Filters"
+msgstr "ตัวกรองเนื้อหา"
+
+msgid "_Free Software Only"
+msgstr "ซอฟต์แวร์เสรีเท่านั้น(_F)"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "ซ่อนแอปกรรมสิทธิ์เมื่อเรียกดูและค้นหา"
+
+msgid "F_lathub Results Only"
+msgstr "เฉพาะผลลัพธ์จาก Flathub(_L)"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "จำกัดผลการค้นหาและการเรียกดูให้เป็นแอปที่มีเฉพาะบน Flathub"
+
+msgid "_Verified Results Only"
+msgstr "เฉพาะผลลัพธ์ที่ยืนยันแล้ว(_V)"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "ซ่อนผลลัพธ์ที่ยังไม่ได้รับการยืนยันบน Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "ซ่อนแอปที่สิ้นสุดอายุการสนับสนุน(_E)"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "ซ่อนแอปที่ผู้พัฒนาไม่สนับสนุนอีกต่อไป"
+
+msgid "Progress Bar Theme"
+msgstr "ธีมแถบความคืบหน้า"
+
+msgid "Accent Color"
+msgstr "สีเน้น"
+
+msgid "Pride Colors"
+msgstr "สีธงไพรด์"
+
+msgid "Lesbian Pride Colors"
+msgstr "สีธงไพรด์เลสเบี้ยน"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "สีธงไพรด์ชายรักชาย"
+
+msgid "Transgender Pride Colors"
+msgstr "สีธงไพรด์ทรานส์เจนเดอร์"
+
+msgid "Nonbinary Pride Colors"
+msgstr "สีธงไพรด์นอนไบนารี"
+
+msgid "Bisexual Pride Colors"
+msgstr "สีธงไพรด์ไบเซ็กชวล"
+
+msgid "Asexual Pride Colors"
+msgstr "สีธงไพรด์เอเซ็กชวล"
+
+msgid "Pansexual Pride Colors"
+msgstr "สีธงไพรด์แพนเซ็กชวล"
+
+msgid "Aromantic Pride Colors"
+msgstr "สีธงไพรด์อะโรแมนติก"
+
+msgid "Genderfluid Pride Colors"
+msgstr "สีธงไพรด์เจนเดอร์ฟลูอิด"
+
+msgid "Polysexual Pride Colors"
+msgstr "สีธงไพรด์โพลีเซ็กชวล"
+
+msgid "Omnisexual Pride Colors"
+msgstr "สีธงไพรด์ออมนิเซ็กชวล"
+
+msgid "Aroace Pride Colors"
+msgstr "สีธงไพรด์อะโรเอซ"
+
+msgid "Agender Pride Colors"
+msgstr "สีธงไพรด์เอเจนเดอร์"
+
+msgid "Genderqueer Pride Colors"
+msgstr "สีธงไพรด์เจนเดอร์ควีร์"
+
+msgid "Intersex Pride Colors"
+msgstr "สีธงไพรด์อินเตอร์เซ็กซ์"
+
+msgid "Demigender Pride Colors"
+msgstr "สีธงไพรด์ดีมิเจนเดอร์"
+
+msgid "Biromantic Pride Colors"
+msgstr "สีธงไพรด์ไบโรแมนติก"
+
+msgid "Disability Pride Colors"
+msgstr "สีธงไพรด์ผู้พิการ"
+
+msgid "Femboy Pride Colors"
+msgstr "สีธงไพรด์เฟมบอย"
+
+msgid "Neutrois Pride Colors"
+msgstr "สีธงไพรด์นิวทรอยส์"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar ต้องทำงานเบื้องหลังเพื่อตรวจหาการอัปเดตแอป"
+
+msgid "Version History"
+msgstr "ประวัติรุ่น"
+
+msgid "Today"
+msgstr "วันนี้"
+
+msgid "Yesterday"
+msgstr "เมื่อวาน"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d วันที่แล้ว"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d สัปดาห์ที่แล้ว"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d เดือนที่แล้ว"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d ปีที่แล้ว"
+
+msgid "%e %B %Y"
+msgstr "%e %B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "รุ่น %s"
+
+msgid "No details for this release"
+msgstr "ไม่มีรายละเอียดสำหรับรุ่นนี้"
+
+msgid "Get More Information"
+msgstr "ดูข้อมูลเพิ่มเติม"
+
+msgid "_Version History"
+msgstr "ประวัติรุ่น(_V)"
+
+msgid "Remotes"
+msgstr "รีโมต"
+
+msgid "System Installation"
+msgstr "การติดตั้งระดับระบบ"
+
+msgid "Available to all users on this computer"
+msgstr "ใช้ได้กับผู้ใช้ทุกคนบนคอมพิวเตอร์เครื่องนี้"
+
+msgid "User Installation"
+msgstr "การติดตั้งระดับผู้ใช้"
+
+msgid "Only available to you"
+msgstr "ใช้ได้เฉพาะคุณ"
+
+msgid "Remove Remote"
+msgstr "ลบรีโมต"
+
+#, c-format
+msgid "Remove %s"
+msgstr "ลบ %s"
+
+msgid "Unused"
+msgstr "ไม่ได้ใช้"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "ติดตั้งแล้ว %u แอป"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "ลบ “%s” หรือไม่?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "คุณจะไม่สามารถติดตั้งแอปจากรีโมตของผู้ใช้นี้ได้อีกต่อไป"
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "คุณจะไม่สามารถติดตั้งแอปจากรีโมตของระบบนี้ได้อีกต่อไป"
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u แอปที่จะลบ"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "แอปด้านล่างนี้ถูกติดตั้งจากรีโมตนี้และจะถูกลบออกจากบัญชีของคุณพร้อมกัน"
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "แอปด้านล่างนี้ถูกติดตั้งจากรีโมตนี้และจะถูกลบสำหรับผู้ใช้ทุกคนพร้อมกัน"
+
+msgid "Uninstall"
+msgstr "ถอนการติดตั้ง"
+
+msgid "Get"
+msgstr "รับ"
+
+msgid "Arbitrary Permissions"
+msgstr "สิทธิ์โดยพลการ"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"แอปนี้มีสิทธิ์ที่เปิดทางให้มันให้สิทธิ์ <b>อื่นใดก็ได้ตามที่ต้องการ</b> แก่ตัวเองโดยอ้อม โดยข้ามแซนด์บอกซ์ของ Flatpak\n"
+"\n"
+"ดังนั้นจึงสามารถทำทุกอย่างที่แอปพลิเคชันที่มีสิทธิพิเศษและไม่ได้อยู่ในแซนด์บอกซ์ทำได้ เช่น เข้าถึงไฟล์ทั้งหมดของคุณและเชื่อมต่ออินเทอร์เน็ต\n"
+"\n"
+"การดูสิทธิ์อื่น ๆ อาจช่วยให้เห็นภาพมากขึ้นว่าแอปน่าจะทำอะไร"
+
+msgid "View Other Permissions"
+msgstr "ดูสิทธิ์อื่น ๆ"
+
+msgid "Safe"
+msgstr "ปลอดภัย"
+
+msgid "App ID"
+msgstr "รหัสแอป"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "แอปนี้ใช้แพลตฟอร์มซอฟต์แวร์ (SDK) รุ่นเก่า และอาจมีข้อบกพร่องหรือช่องโหว่ด้านความปลอดภัยที่จะไม่ได้รับการแก้ไข"
+
+msgid "Safety"
+msgstr "ความปลอดภัย"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s ปลอดภัย"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s ไม่มีสิทธิ์ที่ไม่ปลอดภัย"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s น่าจะปลอดภัย"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s อาจไม่ปลอดภัย"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s ไม่ปลอดภัย"
+
+msgid "Back"
+msgstr "ย้อนกลับ"
+
+msgid "Previous Screenshot"
+msgstr "ภาพหน้าจอก่อนหน้า"
+
+msgid "Next Screenshot"
+msgstr "ภาพหน้าจอถัดไป"
+
+msgid "Copy Image"
+msgstr "คัดลอกรูปภาพ"
+
+msgid "Reset View"
+msgstr "รีเซ็ตมุมมอง"
+
+msgid "Zoom Out"
+msgstr "ซูมออก"
+
+msgid "Zoom In"
+msgstr "ซูมเข้า"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "การอัปเดตรันไทม์ %u รายการ"
+
+msgid "Screenshots Carousel"
+msgstr "ภาพหน้าจอแบบสไลด์"
+
+msgid "No Screenshots"
+msgstr "ไม่มีภาพหน้าจอ"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "ภาพหน้าจอ %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "ภาพหน้าจอ %u"
+
+msgid "Clear Search"
+msgstr "ล้างการค้นหา"
+
+msgid "Filters"
+msgstr "ตัวกรอง"
+
+msgid "_Verified"
+msgstr "ยืนยันแล้ว(_V)"
+
+msgid "_Free/Open"
+msgstr "เสรี/โอเพนซอร์ส(_F)"
+
+msgid "Non-_EOL"
+msgstr "ไม่ใช่ EOL(_E)"
+
+msgid "Filter out End-of-Life apps"
+msgstr "กรองแอปที่สิ้นสุดอายุการสนับสนุนออก"
+
+msgid "_Mobile Friendly"
+msgstr "เหมาะกับมือถือ(_M)"
+
+msgid "Categories"
+msgstr "หมวดหมู่"
+
+msgid "Search Apps, Games, Software"
+msgstr "ค้นหาแอป เกม ซอฟต์แวร์"
+
+msgid "Search Filters"
+msgstr "ตัวกรองการค้นหา"
+
+msgid "Browse Categories"
+msgstr "เรียกดูหมวดหมู่"
+
+msgid "Categories Unavailable"
+msgstr "ไม่มีหมวดหมู่"
+
+msgid "Search for apps using the search bar above."
+msgstr "ค้นหาแอปโดยใช้แถบค้นหาด้านบน"
+
+msgid "No Applications Found"
+msgstr "ไม่พบแอปพลิเคชัน"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "ไม่พบผลลัพธ์สำหรับ \"%s\" ใน Flathub"
+
+msgid "Browser"
+msgstr "เบราว์เซอร์"
+
+msgid "Video"
+msgstr "วิดีโอ"
+
+msgid "Office"
+msgstr "สำนักงาน"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "ปฏิทิน"
+
+msgid "Messaging"
+msgstr "การส่งข้อความ"
+
+msgid "Paint"
+msgstr "วาดภาพ"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "ทอร์เรนต์"
+
+msgid "Emulator"
+msgstr "ตัวจำลอง"
+
+msgid "Copy Link"
+msgstr "คัดลอกลิงก์"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "หน้า Flathub"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "เว็บไซต์โครงการ"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "ตัวติดตามปัญหา"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "คำถามที่พบบ่อย"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "ความช่วยเหลือ"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "บริจาค"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "แปล"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "ติดต่อ"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "ซอร์สโค้ด"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "มีส่วนร่วม"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "แมนิเฟสต์"
+
+msgid "Timeline"
+msgstr "ไทม์ไลน์"
+
+msgid "Total"
+msgstr "รวม"
+
+msgid "This Week"
+msgstr "สัปดาห์นี้"
+
+msgid "Installs per day"
+msgstr "การติดตั้งต่อวัน"
+
+msgid "World"
+msgstr "ทั่วโลก"
+
+msgid "Installs per country"
+msgstr "การติดตั้งต่อประเทศ"
+
+msgid "Since 4/15/2024"
+msgstr "ตั้งแต่ 4/15/2024"
+
+msgid "No Results Found"
+msgstr "ไม่พบผลลัพธ์"
+
+msgid "Search failed"
+msgstr "การค้นหาล้มเหลว"
+
+msgid "Unknown"
+msgstr "ไม่ทราบ"
+
+msgid "Keep User Data"
+msgstr "เก็บข้อมูลผู้ใช้ไว้"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "อนุญาตให้กู้คืนการตั้งค่าส่วนตัว &amp; เนื้อหา"
+
+msgid "Delete All Data"
+msgstr "ลบข้อมูลทั้งหมด"
+
+msgid "Permanently erase user data to save space"
+msgstr "ลบข้อมูลผู้ใช้อย่างถาวรเพื่อประหยัดพื้นที่"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "ลบ %s หรือไม่?"
+
+msgid "Select which version to remove."
+msgstr "เลือกรุ่นที่จะลบ"
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "จะไม่สามารถใช้ %s ได้หลังจากถอนการติดตั้ง"
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "“%s” มีความเสี่ยงสูง"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"แอปนี้มีสิทธิ์เข้าถึงระบบของคุณเต็มรูปแบบ รวมถึง <b>ไฟล์ทั้งหมด ประวัติเบราว์เซอร์ รหัสผ่านที่บันทึกไว้</b> และอื่น ๆ นอกจากนี้ยังเข้าถึงอินเทอร์เน็ตได้ ซึ่งหมายความว่าอาจส่งข้อมูลของคุณไปยังบุคคลภายนอก\n"
+"\n"
+"เนื่องจากแอปเป็นกรรมสิทธิ์ จึงไม่สามารถตรวจสอบได้ว่าแอปทำอะไรกับสิทธิ์เหล่านี้"
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"แอปนี้ใช้ระบบหน้าต่าง X11 แบบเดิม ซึ่งทำให้สามารถ <b>บันทึกการกดแป้นพิมพ์ทั้งหมด จับภาพหน้าจอ และตรวจสอบแอปพลิเคชันอื่น</b> ได้ นอกจากนี้ยังเข้าถึงอินเทอร์เน็ตได้ ซึ่งหมายความว่าอาจส่งข้อมูลของคุณไปยังบุคคลภายนอก\n"
+"\n"
+"เนื่องจากแอปเป็นกรรมสิทธิ์ จึงไม่สามารถตรวจสอบได้ว่าแอปทำอะไรกับสิทธิ์เหล่านี้"
+
+msgid "_Install Anyway"
+msgstr "ติดตั้งต่อไป(_I)"
+
+msgid "Failed to load transaction dialog"
+msgstr "โหลดกล่องโต้ตอบธุรกรรมไม่สำเร็จ"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "เสร็จสิ้นใน %.02f วินาที"
+
+msgid "App Add-On"
+msgstr "ส่วนเสริมของแอป"
+
+msgid "Runtime"
+msgstr "รันไทม์"
+
+msgid "In Queue"
+msgstr "อยู่ในคิว"
+
+msgid "Finishing Up"
+msgstr "กำลังเสร็จสิ้น"
+
+msgid "Done"
+msgstr "เสร็จสิ้น"
+
+msgid "Cancelled"
+msgstr "ยกเลิกแล้ว"
+
+msgid "Error"
+msgstr "ข้อผิดพลาด"
+
+msgid "Cancel Transaction"
+msgstr "ยกเลิกธุรกรรม"
+
+msgid "Show Details"
+msgstr "แสดงรายละเอียด"
+
+msgid "Show Error Info"
+msgstr "แสดงข้อมูลข้อผิดพลาด"
+
+#, c-format
+msgid "%s Freed"
+msgstr "คืนพื้นที่ %s"
+
+msgid "Transaction Error"
+msgstr "ข้อผิดพลาดของธุรกรรม"
+
+msgid "Pending"
+msgstr "รอดำเนินการ"
+
+msgid "Installed Updates"
+msgstr "การอัปเดตที่ติดตั้งแล้ว"
+
+msgid "Release Notes"
+msgstr "บันทึกการออกรุ่น"
+
+msgid "No Release Info"
+msgstr "ไม่มีข้อมูลรุ่น"
+
+msgid "_Update All"
+msgstr "อัปเดตทั้งหมด(_U)"
+
+msgid "This update requests new permissions"
+msgstr "การอัปเดตนี้ขอสิทธิ์ใหม่"
+
+msgid "Manage Leftover User Data"
+msgstr "จัดการข้อมูลผู้ใช้ที่หลงเหลือ"
+
+msgid "No Leftover User Data Found"
+msgstr "ไม่พบข้อมูลผู้ใช้ที่หลงเหลือ"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "ข้อมูลส่วนตัวที่แอปที่ถูกลบทิ้งไว้จะแสดงที่นี่"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "ข้อมูลผู้ใช้ในถังขยะของ %u แอป"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "ข้อมูลผู้ใช้ในถังขยะของ %s"
+
+msgid "Open User Data Folder"
+msgstr "เปิดโฟลเดอร์ข้อมูลผู้ใช้"
+
+msgid "Trash User Data"
+msgstr "ทิ้งข้อมูลผู้ใช้ลงถังขยะ"
+
+msgid "Refreshing"
+msgstr "กำลังรีเฟรช"
+
+msgid "Curated"
+msgstr "คัดสรร"
+
+msgid "Explore"
+msgstr "สำรวจ"
+
+msgid "Library"
+msgstr "คลัง"
+
+msgid "Search"
+msgstr "ค้นหา"
+
+msgid "Main Menu"
+msgstr "เมนูหลัก"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "คุณกำลังใช้ Bazaar รุ่นใหม่!"
+
+msgid "See What's New"
+msgstr "ดูว่ามีอะไรใหม่"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "คุณมีการเชื่อมต่อเครือข่ายแต่กำลังดู Flathub รุ่นที่แคชไว้"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "การเชื่อมต่อเครือข่ายมีการจำกัดปริมาณ — ปิดการรีเฟรชอัตโนมัติ"
+
+msgid "_Donate to Bazaar"
+msgstr "บริจาคให้ Bazaar(_D)"
+
+msgid "_Refresh"
+msgstr "รีเฟรช(_R)"
+
+msgid "_Login With Flathub"
+msgstr "เข้าสู่ระบบด้วย Flathub(_L)"
+
+msgid "_Manage Leftover User Data"
+msgstr "จัดการข้อมูลผู้ใช้ที่หลงเหลือ(_M)"
+
+msgid "Manage R_emotes"
+msgstr "จัดการรีโมต(_E)"
+
+msgid "_Preferences"
+msgstr "ค่ากำหนด(_P)"
+
+msgid "_Keyboard Shortcuts"
+msgstr "แป้นพิมพ์ลัด(_K)"
+
+msgid "_About Bazaar"
+msgstr "เกี่ยวกับ Bazaar(_A)"
+
+msgid "_Quit Bazaar"
+msgstr "ออกจาก Bazaar(_Q)"
+
+msgid "Log Out"
+msgstr "ออกจากระบบ"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "เปิดแอปพลิเคชันไม่สำเร็จ"
+
+msgid "Could not open link"
+msgstr "เปิดลิงก์ไม่ได้"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "คุณไม่สามารถลบ Bazaar ออกจาก Bazaar ได้!"
+
+msgid "Can't do that right now!"
+msgstr "ตอนนี้ยังทำไม่ได้!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, ติดตั้ง %'u ครั้ง"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "ติดตั้งมากที่สุดจาก %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "ดาวน์โหลด %d ครั้งในเดือนที่ผ่านมา"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+รันไทม์ %s"
+
+msgid "Size information unavailable"
+msgstr "ไม่มีข้อมูลขนาด"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "ขนาดดาวน์โหลดของ %s"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "ขนาดที่ติดตั้งของ %s"
+
+msgid "All Ages"
+msgstr "ทุกวัย"
+
+msgid "Age rating information unavailable"
+msgstr "ไม่มีข้อมูลการจัดระดับอายุ"
+
+msgid "Suitable for all ages"
+msgstr "เหมาะสำหรับทุกวัย"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "เหมาะสำหรับอายุ %d ปีขึ้นไป"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "ซอฟต์แวร์เสรีภายใต้สัญญาอนุญาต %s"
+
+msgid "Free software"
+msgstr "ซอฟต์แวร์เสรี"
+
+msgid "Proprietary Software"
+msgstr "ซอฟต์แวร์กรรมสิทธิ์"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "สัญญาอนุญาตพิเศษ: %s"
+
+msgid "Free Software"
+msgstr "ซอฟต์แวร์เสรี"
+
+msgid "Adaptive"
+msgstr "ปรับตามหน้าจอ"
+
+msgid "Desktop Only"
+msgstr "เฉพาะเดสก์ท็อป"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "ใช้งานได้บนเดสก์ท็อป แท็บเล็ต และโทรศัพท์"
+
+msgid "May not work on mobile devices"
+msgstr "อาจใช้งานบนอุปกรณ์มือถือไม่ได้"
+
+msgid "Low Risk"
+msgstr "ความเสี่ยงต่ำ"
+
+msgid "Medium Risk"
+msgstr "ความเสี่ยงปานกลาง"
+
+msgid "High Risk"
+msgstr "ความเสี่ยงสูง"
+
+msgid "Unknown Permissions"
+msgstr "ไม่ทราบสิทธิ์"
+
+msgid "Permissions are missing for this app."
+msgstr "ไม่มีสิทธิ์ของแอปนี้"
+
+msgid "No Permissions"
+msgstr "ไม่มีสิทธิ์"
+
+msgid "App is fully sandboxed"
+msgstr "แอปอยู่ในแซนด์บอกซ์อย่างสมบูรณ์"
+
+msgid "Network Access"
+msgstr "การเข้าถึงเครือข่าย"
+
+msgid "Can access the internet"
+msgstr "เข้าถึงอินเทอร์เน็ตได้"
+
+msgid "No Network Access"
+msgstr "ไม่มีการเข้าถึงเครือข่าย"
+
+msgid "Cannot access the internet"
+msgstr "เข้าถึงอินเทอร์เน็ตไม่ได้"
+
+msgid "User Device Access"
+msgstr "การเข้าถึงอุปกรณ์ของผู้ใช้"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "เข้าถึงอุปกรณ์ เช่น เว็บแคมหรือจอยเกมได้"
+
+msgid "No User Device Access"
+msgstr "ไม่มีการเข้าถึงอุปกรณ์ของผู้ใช้"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "เข้าถึงอุปกรณ์ เช่น เว็บแคมหรือจอยเกมไม่ได้"
+
+msgid "Input Device Access"
+msgstr "การเข้าถึงอุปกรณ์อินพุต"
+
+msgid "Can access input devices"
+msgstr "เข้าถึงอุปกรณ์อินพุตได้"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "การเข้าถึงไมโครโฟนและการเล่นเสียง"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "ฟังผ่านไมโครโฟนและเล่นเสียงได้โดยไม่ต้องขออนุญาต"
+
+msgid "System Device Access"
+msgstr "การเข้าถึงอุปกรณ์ระบบ"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "เข้าถึงอุปกรณ์ระบบที่ต้องใช้สิทธิ์ระดับสูงได้"
+
+msgid "Screen Contents Access"
+msgstr "การเข้าถึงเนื้อหาหน้าจอ"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "เข้าถึงเนื้อหาของหน้าจอหรือหน้าต่างอื่นได้"
+
+msgid "Legacy Windowing System"
+msgstr "ระบบหน้าต่างแบบเดิม"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "ใช้ระบบหน้าต่างแบบเดิม (X11) เสมอ"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "ขอสิทธิ์ใด ๆ ก็ได้"
+
+msgid "User Settings"
+msgstr "การตั้งค่าผู้ใช้"
+
+msgid "Can access and change user settings"
+msgstr "เข้าถึงและเปลี่ยนการตั้งค่าผู้ใช้ได้"
+
+msgid "Full File System Read/Write Access"
+msgstr "การเข้าถึงระบบไฟล์ทั้งหมดแบบอ่าน/เขียน"
+
+msgid "Can read and write all data on the file system"
+msgstr "อ่านและเขียนข้อมูลทั้งหมดบนระบบไฟล์ได้"
+
+msgid "Home Folder Read/Write Access"
+msgstr "การเข้าถึงโฟลเดอร์โฮมแบบอ่าน/เขียน"
+
+msgid "Can read and write all data in your home directory"
+msgstr "อ่านและเขียนข้อมูลทั้งหมดในโฟลเดอร์โฮมของคุณได้"
+
+msgid "Full File System Read Access"
+msgstr "การเข้าถึงระบบไฟล์ทั้งหมดแบบอ่าน"
+
+msgid "Can read all data on the file system"
+msgstr "อ่านข้อมูลทั้งหมดบนระบบไฟล์ได้"
+
+msgid "Home Folder Read Access"
+msgstr "การเข้าถึงโฟลเดอร์โฮมแบบอ่าน"
+
+msgid "Can read all data in your home directory"
+msgstr "อ่านข้อมูลทั้งหมดในโฟลเดอร์โฮมของคุณได้"
+
+msgid "Download Folder Read/Write Access"
+msgstr "การเข้าถึงโฟลเดอร์ดาวน์โหลดแบบอ่าน/เขียน"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "อ่านและเขียนข้อมูลทั้งหมดในโฟลเดอร์ดาวน์โหลดของคุณได้"
+
+msgid "Download Folder Read Access"
+msgstr "การเข้าถึงโฟลเดอร์ดาวน์โหลดแบบอ่าน"
+
+msgid "Can read all data in your downloads directory"
+msgstr "อ่านข้อมูลทั้งหมดในโฟลเดอร์ดาวน์โหลดของคุณได้"
+
+msgid "Can read and write all data in the directory"
+msgstr "อ่านและเขียนข้อมูลทั้งหมดในไดเรกทอรีได้"
+
+msgid "Can read all data in the directory"
+msgstr "อ่านข้อมูลทั้งหมดในไดเรกทอรีได้"
+
+msgid "No File System Access"
+msgstr "ไม่มีการเข้าถึงระบบไฟล์"
+
+msgid "Cannot access the file system at all"
+msgstr "เข้าถึงระบบไฟล์ไม่ได้เลย"
+
+msgid "Uses System Services"
+msgstr "ใช้บริการของระบบ"
+
+msgid "Can request data from non-portal system services"
+msgstr "ขอข้อมูลจากบริการของระบบที่ไม่ใช่พอร์ทัลได้"
+
+msgid "Uses Session Services"
+msgstr "ใช้บริการของเซสชัน"
+
+msgid "Can request data from non-portal session services"
+msgstr "ขอข้อมูลจากบริการของเซสชันที่ไม่ใช่พอร์ทัลได้"
+
+msgid "No Service Access"
+msgstr "ไม่มีการเข้าถึงบริการ"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "เข้าถึงบริการของเซสชันหรือระบบที่ไม่ใช่พอร์ทัลไม่ได้เลย"
+
+msgid "Verified App Developer"
+msgstr "ผู้พัฒนาแอปที่ยืนยันแล้ว"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "ได้รับการยืนยันแล้วว่าผู้พัฒนาแอปนี้เป็นผู้ที่กล่าวอ้างจริง"
+
+msgid "Proprietary Code"
+msgstr "โค้ดกรรมสิทธิ์"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "ซอร์สโค้ดไม่เปิดเผยต่อสาธารณะ จึงไม่สามารถตรวจสอบอย่างอิสระได้และอาจไม่ปลอดภัย"
+
+msgid "Auditable Code"
+msgstr "โค้ดที่ตรวจสอบได้"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "ซอร์สโค้ดเปิดเผยต่อสาธารณะและสามารถตรวจสอบอย่างอิสระได้ ทำให้แอปมีแนวโน้มปลอดภัยมากขึ้น"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "ใช้บริการระบบ %s"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "ใช้บริการเซสชัน %s"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "ใช้บริการ %s"
+
+msgid "Can see the non-portal service"
+msgstr "เห็นบริการที่ไม่ใช่พอร์ทัลได้"
+
+msgid "Can talk to the non-portal service"
+msgstr "สื่อสารกับบริการที่ไม่ใช่พอร์ทัลได้"
+
+msgid "Can own the non-portal service"
+msgstr "เป็นเจ้าของบริการที่ไม่ใช่พอร์ทัลได้"
+
+msgid "Global Menu Integration"
+msgstr "การผสานรวมเมนูส่วนกลาง"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "แสดงเมนูของตนในแถบเมนูส่วนกลางได้"
+
+msgid "KDE Settings Integration"
+msgstr "การผสานรวมการตั้งค่า KDE"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "ตรวจจับได้เมื่อการตั้งค่าเดสก์ท็อป KDE เปลี่ยนแปลง"
+
+msgid "KDE Global Settings"
+msgstr "การตั้งค่าส่วนกลางของ KDE"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "อ่านค่ากำหนดเดสก์ท็อป KDE เช่น แบบอักษรและสีได้"
+
+msgid "Secret Storage Service"
+msgstr "บริการเก็บความลับ"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "จัดเก็บและเรียกคืนรหัสผ่านของตนเองโดยใช้พวงกุญแจของระบบได้"
+
+msgid "Desktop Notifications Service"
+msgstr "บริการแจ้งเตือนบนเดสก์ท็อป"
+
+msgid "Can send desktop notifications"
+msgstr "ส่งการแจ้งเตือนบนเดสก์ท็อปได้"
+
+msgid "System Tray Integration"
+msgstr "การผสานรวมถาดระบบ"
+
+msgid "Can display an icon in the system tray"
+msgstr "แสดงไอคอนในถาดระบบได้"
+
+msgid "KDE Connect Integration"
+msgstr "การผสานรวม KDE Connect"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "โต้ตอบกับอุปกรณ์ที่จับคู่ผ่าน KDE Connect ได้"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "การนำทาง"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "เปิดหน้าสำรวจ"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "เปิดหน้าคลัง"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "เปิดหน้าค้นหา"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "รีโมต"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "ซิงก์รีโมต"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "ทั่วไป"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "เปิดค่ากำหนด"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "แสดงแป้นพิมพ์ลัด"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "ปิดหน้าต่าง"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "ออกจาก Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "ติดตั้ง %s แล้ว"
+
+msgid "The app is ready to be used"
+msgstr "แอปพร้อมใช้งานแล้ว"
+
+msgid "Updates Are Out of Date"
+msgstr "การอัปเดตไม่เป็นปัจจุบัน"
+
+msgid "Please check for available updates"
+msgstr "โปรดตรวจหาการอัปเดตที่มีอยู่"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "อัปเดตแล้ว %u แอป"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "อัปเดต %s แล้ว"
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "อัปเดต %s และ %s แล้ว"
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "รวมถึง %s, %s และ %s"

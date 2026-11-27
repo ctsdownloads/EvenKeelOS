@@ -1,0 +1,660 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);\n"
+
+msgid "App Store"
+msgstr "Siopa Aipeanna"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Córas;Pacáiste;Bainisteoir;Aimsigh;Flatpak;Bogearraí;Aip;Siopa;"
+
+msgid "Discover and install apps"
+msgstr "Aimsigh agus suiteáil aipeanna"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Siopa aipeanna gasta agus nua-aimseartha do Linux le fócas ar aipeanna agus breiseáin Flatpak a aimsiú agus a shuiteáil, go háirithe ó Flathub."
+
+msgid "App page for Exhibit"
+msgstr "Leathanach aipe do Exhibit"
+
+msgid "Add-on"
+msgstr "Breiseán"
+
+msgid "Other Sources"
+msgstr "Foinsí Eile"
+
+msgid "Storage"
+msgstr "Stóras"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Ag lódáil %d aip…"
+msgstr[1] "Ag lódáil %d aip…"
+msgstr[2] "Ag lódáil %d aip…"
+msgstr[3] "Ag lódáil %d aip…"
+msgstr[4] "Ag lódáil %d aip…"
+
+msgid "Removing remote…"
+msgstr "Cianrialtán á bhaint…"
+
+msgid "Could not remove remote"
+msgstr "Níorbh fhéidir an cianrialtán a bhaint"
+
+msgid "Failed to Load Article"
+msgstr "Theip ar an Alt a Lódáil"
+
+msgid "Place Applet"
+msgstr "Cuir an Aplaid i Láthair"
+
+msgid "Choose where to add this applet."
+msgstr "Roghnaigh cá gcuirfear an aplaid seo."
+
+msgid "Panel"
+msgstr "Painéal"
+
+msgid "Dock"
+msgstr "Duga"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Níl aon eolas coimeádaíochta ar fáil ar an gcóras seo. Is féidir leat aipeanna a bhrabhsáil ar Flathub fós"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s go %s, is airde ar %s le %s"
+
+msgid "Bazaar Release"
+msgstr "Eisiúint Bazaar"
+
+msgid "Browsers"
+msgstr "Brabhsálaithe"
+
+msgid "Chat"
+msgstr "Comhrá"
+
+msgid "Mail"
+msgstr "Ríomhphost"
+
+msgid "File Sharing"
+msgstr "Comhroinnt Comhad"
+
+msgid "Made for COSMIC™"
+msgstr "Déanta do COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Do COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Tuilleadh Aipeanna COSMIC"
+
+msgid "Games"
+msgstr "Cluichí"
+
+msgid "Emulators"
+msgstr "Aithrisceoirí"
+
+msgid "More Emulators"
+msgstr "Tuilleadh Aithrisceoirí"
+
+msgid "Launchers"
+msgstr "Seoltóirí"
+
+msgid "More Game Launchers"
+msgstr "Tuilleadh Seoltóirí Cluichí"
+
+msgid "Game Tools"
+msgstr "Uirlisí Cluichí"
+
+msgid "More Game Tools"
+msgstr "Tuilleadh Uirlisí Cluichí"
+
+msgid "New Year, New Workflows"
+msgstr "Bliain Nua, Sreafaí Oibre Nua"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Aipeanna chun nótaí a bhreith, tascanna a rianú agus pleananna a dhéanamh"
+
+msgid "Staff Picks"
+msgstr "Roghanna na Foirne"
+
+msgid "Apps we love right now"
+msgstr "Aipeanna is ansa linn faoi láthair"
+
+msgid "Get Creative"
+msgstr "Bí Cruthaitheach"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Aipeanna riachtanacha le haghaidh líníochta, eagarthóireachta grianghraf agus dearaidh dhigitigh"
+
+msgid "Build Native Apps"
+msgstr "Tóg Aipeanna Dúchasacha"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Forbair aipeanna a oireann go nádúrtha do do chóras"
+
+msgid "Stay in Touch"
+msgstr "Coinnigh Teagmháil"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Aipeanna riachtanacha comhoibrithe agus cumarsáide"
+
+msgid "Ready for Vacations"
+msgstr "Réidh don Saoire"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Aipeanna léarscáileanna, iompair, aimsire agus pleanála turais"
+
+msgid "Smarter Every Day"
+msgstr "Níos Cliste Gach Lá"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Aipeanna chun cabhrú leat staidéar, taighde agus scríbhneoireacht a dhéanamh"
+
+msgid "Get Cozy"
+msgstr "Bí Compordach"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Aipeanna iontacha chun léamh, scannáin a fheiceáil agus cluichí a imirt"
+
+msgid "Web Developer Essentials"
+msgstr "Riachtanais an Fhorbróra Gréasáin"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Bíonn sé níos spraíúla suíomhanna gréasáin a dhéanamh leis na haipeanna seo"
+
+msgid "Take Better Notes"
+msgstr "Tóg Nótaí Níos Fearr"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Aimsigh d’uirlis nua is fearr leat chun nótaí a bhreith"
+
+msgid "Get Focused"
+msgstr "Dírigh"
+
+msgid "Great apps for task management"
+msgstr "Aipeanna iontacha le haghaidh bainistíochta tascanna"
+
+msgid "Make Some Noise"
+msgstr "Déan Torann"
+
+msgid "Apps for creating and producing music"
+msgstr "Aipeanna chun ceol a chruthú agus a tháirgeadh"
+
+msgid "Get To Work"
+msgstr "Téigh i mbun Oibre"
+
+msgid "Essential office apps"
+msgstr "Aipeanna oifige riachtanacha"
+
+msgid "Can't Reach Flathub"
+msgstr "Ní Féidir Teacht ar Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "Is féidir leat aipeanna a bhainistiú agus a chuardach fós."
+
+msgid "Reconnect"
+msgstr "Athnasc"
+
+msgid "Add-ons"
+msgstr "Breiseáin"
+
+msgid "More Add-Ons"
+msgstr "Tuilleadh Breiseán"
+
+msgid "Links"
+msgstr "Naisc"
+
+msgid "Similar Apps"
+msgstr "Aipeanna Cosúla"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Tá ceadúnas FLOSS ag an aip seo, rud a chiallaíonn gur féidir an cód foinseach a iniúchadh ar mhaithe le sábháilteacht."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Tá ceadúnas dílseánaigh ag an aip seo, rud a chiallaíonn go bhforbraítear an cód foinseach go príobháideach agus nach bhféadfadh tríú páirtí neamhspleách é a iniúchadh."
+
+msgid "Other Apps From This Developer"
+msgstr "Aipeanna Eile ón bhForbróir Seo"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Aipeanna Eile ó %s"
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Aipeanna le %s"
+
+msgid "Apps by This Developer"
+msgstr "Aipeanna ón bhForbróir Seo"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Suiteáil %s ó %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Suiteáil %s"
+
+msgid "Donate"
+msgstr "Tabhair Síntiús"
+
+msgid "Sort Options"
+msgstr "Roghanna Sórtála"
+
+msgid "No applications found"
+msgstr "Níor aimsíodh aon fheidhmchlár"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Aimsíodh feidhmchlár amháin"
+msgstr[1] "Aimsíodh %u fheidhmchlár"
+msgstr[2] "Aimsíodh %u fheidhmchlár"
+msgstr[3] "Aimsíodh %u bhfeidhmchlár"
+msgstr[4] "Aimsíodh %u feidhmchlár"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Logáil isteach chun do chuid aipeanna is ansa leat a shioncronú idir feistí"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "An Deilbhín a Chur le Réamhamharc Meiteafhaisnéise?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Ní chuimsíonn comhaid meiteafhaisnéise deilbhíní aipe astu féin. Ar mhaith leat ceann a roghnú de láimh?"
+
+msgid "Skip"
+msgstr "Scipeáil"
+
+msgid "Select Icon"
+msgstr "Roghnaigh Deilbhín"
+
+msgid "New Permissions"
+msgstr "Ceadanna Nua"
+
+msgid "_Accept"
+msgstr "_Glac leis"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Cead Nua do %s"
+msgstr[1] "Ceadanna Nua do %s"
+msgstr[2] "Ceadanna Nua do %s"
+msgstr[3] "Ceadanna Nua do %s"
+msgstr[4] "Ceadanna Nua do %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Teastaíonn an cead breise seo a leanas ón nuashonrú seo"
+msgstr[1] "Teastaíonn na ceadanna breise seo a leanas ón nuashonrú seo"
+msgstr[2] "Teastaíonn na ceadanna breise seo a leanas ón nuashonrú seo"
+msgstr[3] "Teastaíonn na ceadanna breise seo a leanas ón nuashonrú seo"
+msgstr[4] "Teastaíonn na ceadanna breise seo a leanas ón nuashonrú seo"
+
+msgid "User"
+msgstr "Úsáideoir"
+
+msgid "Beta"
+msgstr "Béite"
+
+msgid "End-Of-Life"
+msgstr "Deireadh Saoil"
+
+msgid "App Updates"
+msgstr "Nuashonruithe Aipeanna"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Cuirfear nuashonruithe uathoibríocha ar sos ar líonraí méadraithe nó nuair a bhíonn sábháil cumhachta ar siúl chun sonraí agus ceallra a shábháil."
+
+msgid "_Automatic"
+msgstr "_Uathoibríoch"
+
+msgid "Automatically check for and download app updates"
+msgstr "Seiceáil le haghaidh nuashonruithe aipeanna agus íoslódáil iad go huathoibríoch"
+
+msgid "_Manual"
+msgstr "_De Láimh"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Ní mór nuashonruithe aipeanna a sheiceáil agus a íoslódáil de láimh"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Fógraí Nuashonraithe Uathoibríocha"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Cuir in iúl nuair a shuiteáiltear nuashonruithe go huathoibríoch"
+
+msgid "_Free Software Only"
+msgstr "_Bogearraí Saora Amháin"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Folaigh aipeanna dílseánacha agus tú ag brabhsáil agus ag cuardach"
+
+msgid "F_lathub Results Only"
+msgstr "Torthaí F_lathub Amháin"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Cuir teorainn le torthaí cuardaigh agus brabhsála d’aipeanna atá ar fáil ar Flathub amháin"
+
+msgid "_Verified Results Only"
+msgstr "Torthaí _Fíoraithe Amháin"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Folaigh Aipeanna _Deireadh Saoil"
+
+msgid "Progress Bar Theme"
+msgstr "Téama an Bharra Dul Chun Cinn"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Caithfidh Bazaar rith sa chúlra chun nuashonruithe aipeanna a sheiceáil"
+
+msgid "Remotes"
+msgstr "Cianrialtáin"
+
+msgid "System Installation"
+msgstr "Suiteáil Chórais"
+
+msgid "Available to all users on this computer"
+msgstr "Ar fáil do gach úsáideoir ar an ríomhaire seo"
+
+msgid "User Installation"
+msgstr "Suiteáil Úsáideora"
+
+msgid "Only available to you"
+msgstr "Ar fáil duitse amháin"
+
+msgid "Remove Remote"
+msgstr "Bain an Cianrialtán"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Bain %s"
+
+msgid "Unused"
+msgstr "Gan Úsáid"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u aip suiteáilte"
+msgstr[1] "%u aip suiteáilte"
+msgstr[2] "%u aip suiteáilte"
+msgstr[3] "%u aip suiteáilte"
+msgstr[4] "%u aip suiteáilte"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Bain “%s”?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Ní bheidh tú in ann aipeanna a shuiteáil ón gcianrialtán úsáideora seo a thuilleadh."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Ní bheidh tú in ann aipeanna a shuiteáil ón gcianrialtán córais seo a thuilleadh."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u Aip le Baint"
+msgstr[1] "%u Aip le Baint"
+msgstr[2] "%u Aip le Baint"
+msgstr[3] "%u Aip le Baint"
+msgstr[4] "%u Aip le Baint"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Suiteáladh an aip thíos ón gcianrialtán seo agus bainfear óna cuntas í leis."
+msgstr[1] "Suiteáladh na haipeanna seo ón gcianrialtán seo agus bainfear óna cuntas iad leis."
+msgstr[2] "Suiteáladh na haipeanna seo ón gcianrialtán seo agus bainfear óna cuntas iad leis."
+msgstr[3] "Suiteáladh na haipeanna seo ón gcianrialtán seo agus bainfear óna cuntas iad leis."
+msgstr[4] "Suiteáladh na haipeanna seo ón gcianrialtán seo agus bainfear óna cuntas iad leis."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Suiteáladh an aip thíos ón gcianrialtán seo agus bainfear do gach úsáideoir í leis."
+msgstr[1] "Suiteáladh na haipeanna seo ón gcianrialtán seo agus bainfear do gach úsáideoir iad leis."
+msgstr[2] "Suiteáladh na haipeanna seo ón gcianrialtán seo agus bainfear do gach úsáideoir iad leis."
+msgstr[3] "Suiteáladh na haipeanna seo ón gcianrialtán seo agus bainfear do gach úsáideoir iad leis."
+msgstr[4] "Suiteáladh na haipeanna seo ón gcianrialtán seo agus bainfear do gach úsáideoir iad leis."
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Tá cead ag an aip seo a ligeann di <b>aon chead eile is mian léi</b> a thabhairt di féin go hindíreach, ag seachaint bhosca gainimh Flatpak.\n"
+"\n"
+"Dá bhrí sin, is féidir léi aon rud a dhéanamh a dhéanfadh feidhmchlár pribhléideach nach bhfuil i mbosca gainimh, amhail rochtain a fháil ar do chuid comhad go léir agus nascadh leis an idirlíon.\n"
+"\n"
+"D’fhéadfadh smaoineamh níos fearr a bheith agat ar an rud a dhéanfaidh an aip trí na ceadanna eile a fheiceáil fós."
+
+msgid "View Other Permissions"
+msgstr "Féach ar Cheadanna Eile"
+
+msgid "Back"
+msgstr "Siar"
+
+msgid "No Screenshots"
+msgstr "Gan Gearrthaispeántais"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Gearrthaispeántas %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Gearrthaispeántas %u"
+
+msgid "_Mobile Friendly"
+msgstr "_Cairdiúil don Soghluaiseacht"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Maniféasta"
+
+msgid "Total"
+msgstr "Iomlán"
+
+msgid "This Week"
+msgstr "An tseachtain seo"
+
+msgid "Installs per day"
+msgstr "Suiteálacha in aghaidh an lae"
+
+msgid "Installs per country"
+msgstr "Suiteálacha in aghaidh na tíre"
+
+msgid "Finishing Up"
+msgstr "Ag Críochnú"
+
+msgid "Show Details"
+msgstr "Taispeáin Sonraí"
+
+msgid "Installed Updates"
+msgstr "Nuashonruithe Suiteáilte"
+
+msgid "Release Notes"
+msgstr "Nótaí Eisiúna"
+
+msgid "No Release Info"
+msgstr "Gan Eolas Eisiúna"
+
+msgid "This update requests new permissions"
+msgstr "Iarrann an nuashonrú seo ceadanna nua"
+
+msgid "No Leftover User Data Found"
+msgstr "Níor Aimsíodh Aon Sonraí Úsáideora Fágtha Ina Ndiaidh"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Taispeánfar anseo sonraí pearsanta a d’fhág aipeanna ina ndiaidh tar éis iad a bhaint"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Sonraí Úsáideora sa Bhruscar do %u Aip"
+msgstr[1] "Sonraí Úsáideora sa Bhruscar do %u Aip"
+msgstr[2] "Sonraí Úsáideora sa Bhruscar do %u Aip"
+msgstr[3] "Sonraí Úsáideora sa Bhruscar do %u Aip"
+msgstr[4] "Sonraí Úsáideora sa Bhruscar do %u Aip"
+
+msgid "Open User Data Folder"
+msgstr "Oscail Fillteán Sonraí an Úsáideora"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Tá an nasc líonra méadraithe — díchumasaíodh athnuachan uathoibríoch"
+
+msgid "Manage R_emotes"
+msgstr "Bainistigh C_ianrialtáin"
+
+msgid "Could not open link"
+msgstr "Níorbh fhéidir an nasc a oscailt"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u suiteáil"
+msgstr[1] "%s, %'u shuiteáil"
+msgstr[2] "%s, %'u shuiteáil"
+msgstr[3] "%s, %'u suiteáil"
+msgstr[4] "%s, %'u suiteáil"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Na suiteálacha is mó ó %s"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s Am Rith"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Méid suiteáilte %s"
+
+msgid "Free Software"
+msgstr "Bogearraí Saora"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s Suiteáilte"
+
+msgid "The app is ready to be used"
+msgstr "Tá an aip réidh le húsáid"
+
+msgid "Updates Are Out of Date"
+msgstr "Tá Nuashonruithe as Dáta"
+
+msgid "Please check for available updates"
+msgstr "Seiceáil le haghaidh nuashonruithe atá ar fáil, le do thoil"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u Aip Nuashonraithe"
+msgstr[1] "%u Aip Nuashonraithe"
+msgstr[2] "%u Aip Nuashonraithe"
+msgstr[3] "%u Aip Nuashonraithe"
+msgstr[4] "%u Aip Nuashonraithe"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "Nuashonraíodh %s."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "Nuashonraíodh %s agus %s."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Folaíonn sé %s, %s agus %s."
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Suiteáil %u Aip?"
+msgstr[1] "Suiteáil %u Aip?"
+msgstr[2] "Suiteáil %u Aip?"
+msgstr[3] "Suiteáil %u n-Aip?"
+msgstr[4] "Suiteáil %u Aip?"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d Feidhmchlár"
+msgstr[1] "%d Fheidhmchlár"
+msgstr[2] "%d Fheidhmchlár"
+msgstr[3] "%d bhFeidhmchlár"
+msgstr[4] "%d Feidhmchlár"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u Nuashonrú ar Fáil"
+msgstr[1] "%u Nuashonrú ar Fáil"
+msgstr[2] "%u Nuashonrú ar Fáil"
+msgstr[3] "%u Nuashonrú ar Fáil"
+msgstr[4] "%u Nuashonrú ar Fáil"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u Aip Shuiteáilte"
+msgstr[1] "%u Aip Shuiteáilte"
+msgstr[2] "%u Aip Shuiteáilte"
+msgstr[3] "%u n-Aip Shuiteáilte"
+msgstr[4] "%u Aip Shuiteáilte"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d lá ó shin"
+msgstr[1] "%d lá ó shin"
+msgstr[2] "%d lá ó shin"
+msgstr[3] "%d lá ó shin"
+msgstr[4] "%d lá ó shin"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d seachtain ó shin"
+msgstr[1] "%d sheachtain ó shin"
+msgstr[2] "%d sheachtain ó shin"
+msgstr[3] "%d seachtain ó shin"
+msgstr[4] "%d seachtain ó shin"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d mí ó shin"
+msgstr[1] "%d mhí ó shin"
+msgstr[2] "%d mhí ó shin"
+msgstr[3] "%d mí ó shin"
+msgstr[4] "%d mí ó shin"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d bliain ó shin"
+msgstr[1] "%d bhliain ó shin"
+msgstr[2] "%d bhliain ó shin"
+msgstr[3] "%d mbliain ó shin"
+msgstr[4] "%d bliain ó shin"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u Nuashonrú Ama Rith"
+msgstr[1] "%u Nuashonrú Ama Rith"
+msgstr[2] "%u Nuashonrú Ama Rith"
+msgstr[3] "%u Nuashonrú Ama Rith"
+msgstr[4] "%u Nuashonrú Ama Rith"

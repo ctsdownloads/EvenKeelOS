@@ -1,0 +1,225 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Chiudi %d finestra"
+msgstr[1] "Chiudi %d finestre"
+
+msgid "Gnome Settings"
+msgstr "Impostazioni di GNOME"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel è stato aggiornato!"
+
+msgid "You are now running version"
+msgstr "Stai usando la versione"
+
+msgid "See what's new"
+msgstr "Scopri le novità"
+
+msgid "Top Bar"
+msgstr "Barra superiore"
+
+msgid "Isolate Workspaces options"
+msgstr "Opzioni di isolamento degli spazi di lavoro"
+
+msgid "Isolate monitors options"
+msgstr "Opzioni di isolamento dei monitor"
+
+msgid "Text"
+msgstr "Testo"
+
+msgid "Command"
+msgstr "Comando"
+
+msgid "Remove"
+msgstr "Rimuovi"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+msgid "App icon highlight options"
+msgstr "Opzioni di evidenziazione dell'icona dell'app"
+
+msgid "Move to current Workspace"
+msgstr "Sposta nello spazio di lavoro corrente"
+
+msgid "Highlight AppIcon color"
+msgstr "Colore di evidenziazione dell'icona dell'app"
+
+msgid "Pressed AppIcon color"
+msgstr "Colore dell'icona dell'app premuta"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Raggio del bordo dell'evidenziazione dell'icona dell'app"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Sovrascrive il raggio del bordo globale (il valore predefinito è 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Nascondi il pannello solo dalle finestre"
+
+msgid "Overlapping"
+msgstr "Sovrapposte"
+
+msgid "On same monitor"
+msgstr "Sullo stesso monitor"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Toccare il bordo del monitor con il puntatore rivela il pannello"
+
+msgid "Limit to panel length"
+msgstr "Limita alla lunghezza del pannello"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Passare sull'area del pannello lo mantiene visibile"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Richiedi pressione sul bordo del monitor per rivelare il pannello"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Sintassi: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Persist state across restarts"
+msgstr "Mantieni lo stato dopo i riavvii"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(rispetta la modalità «Non disturbare» di GNOME e richiede l'opzione del badge contatore delle notifiche)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Rivela e mantieni visibile il pannello alla notifica"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Ritardo prima di rivelare il pannello (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Isola i monitor anche con un solo pannello"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Isola gli spazi di lavoro nel selettore di applicazioni di gnome-shell"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Alterna singola / Distribuisci multiple"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Sui monitor secondari, mostra la sovrapposizione sulle icone corrispondenti al monitor principale"
+
+msgid "Show the overlay on all monitors"
+msgstr "Mostra la sovrapposizione su tutti i monitor"
+
+msgid "<i>App Details</i> menu item"
+msgstr "Voce di menu <i>Dettagli app</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Dettagli app</i> è disponibile solo se è installato GNOME Software"
+
+msgid "About"
+msgstr "Informazioni"
+
+msgid "Sponsored and originally developed by"
+msgstr "Sponsorizzato e sviluppato originariamente da"
+
+msgid "Action"
+msgstr "Azione"
+
+msgid "Application icons context menu"
+msgstr "Menu contestuale delle icone delle applicazioni"
+
+msgid "Secondary menu"
+msgstr "Menu secondario"
+
+msgid "Panel context menu entries"
+msgstr "Voci del menu contestuale del pannello"
+
+msgid "Add entry"
+msgstr "Aggiungi voce"
+
+msgid "Behavior"
+msgstr "Comportamento"
+
+msgid "Hover"
+msgstr "Passaggio del puntatore"
+
+msgid "Fine-Tune"
+msgstr "Regolazioni"
+
+msgid "Position"
+msgstr "Posizione"
+
+msgid "Panel monitor position"
+msgstr "Posizione del pannello sul monitor"
+
+msgid "Panel length"
+msgstr "Lunghezza del pannello"
+
+msgid "Dynamic"
+msgstr "Dinamica"
+
+msgid "Style"
+msgstr "Stile"
+
+msgid "Global style"
+msgstr "Stile globale"
+
+msgid "Border radius"
+msgstr "Raggio del bordo"
+
+msgid "Highlight hovering app icons"
+msgstr "Evidenzia le icone delle app al passaggio"
+
+msgid "Icon style"
+msgstr "Stile delle icone"
+
+msgid "Normal"
+msgstr "Normale"
+
+msgid "Symbolic"
+msgstr "Simbolico"
+
+msgid "Grayscale"
+msgstr "Scala di grigi"
+
+msgid "(default is 0)"
+msgstr "(il valore predefinito è 0)"
+
+msgid "Side margins"
+msgstr "Margini laterali"
+
+msgid "Top and bottom margins"
+msgstr "Margini superiore e inferiore"
+
+msgid "Side padding"
+msgstr "Spaziatura laterale"
+
+msgid "Top and bottom padding"
+msgstr "Spaziatura superiore e inferiore"
+
+msgid "Panel border"
+msgstr "Bordo del pannello"
+
+msgid "Override border color"
+msgstr "Sovrascrivi il colore del bordo"
+
+msgid "Border thickness"
+msgstr "Spessore del bordo"

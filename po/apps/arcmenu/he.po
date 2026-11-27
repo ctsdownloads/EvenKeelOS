@@ -1,0 +1,836 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: arcmenu\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Unpin from Folder"
+msgstr "ביטול הצמדה מתיקייה"
+
+msgid "All Apps"
+msgstr "כל היישומים"
+
+msgid "Log Out..."
+msgstr "התנתקות…"
+
+msgid "Switch User"
+msgstr "החלפת משתמש"
+
+msgid "11"
+msgstr "11"
+
+msgid "a.z."
+msgstr "a.z."
+
+msgid "Enterprise"
+msgstr "Enterprise"
+
+msgid "Pop"
+msgstr "Pop"
+
+msgid "Sleek"
+msgstr "Sleek"
+
+msgid "Zest"
+msgstr "Zest"
+
+msgid "Apps"
+msgstr "יישומים"
+
+msgid "Loading Menu Layout..."
+msgstr "תבנית התפריט נטענת…"
+
+msgid "Show Desktop"
+msgstr "הצגת שולחן העבודה"
+
+msgid "App Icons Taskbar Settings"
+msgstr "הגדרות שורת משימות סמלי יישומים"
+
+msgid "Unnamed Folder"
+msgstr "תיקייה ללא שם"
+
+msgid "Pinned"
+msgstr "מוצמדים"
+
+msgid "Unmount Drive"
+msgstr "ניתוק כונן"
+
+msgid "Eject Drive"
+msgstr "שליפת כונן"
+
+msgid "Remove from Recent"
+msgstr "הסרה מהאחרונים"
+
+msgid "Search…"
+msgstr "חיפוש…"
+
+msgid "More Recent Files..."
+msgstr "עוד קבצים אחרונים…"
+
+msgid "Library Home"
+msgstr "בית הספרייה"
+
+msgid "New Folder"
+msgstr "תיקייה חדשה"
+
+msgid "Rename Folder"
+msgstr "שינוי שם תיקייה"
+
+msgid "Delete Folder"
+msgstr "מחיקת תיקייה"
+
+#, javascript-format
+msgid "Permanently delete %s folder?"
+msgstr "למחוק את התיקייה %s לצמיתות?"
+
+msgid "No"
+msgstr "לא"
+
+msgid "Yes"
+msgstr "כן"
+
+#, javascript-format
+msgid "Rename %s folder"
+msgstr "שינוי שם התיקייה %s"
+
+msgid "Cancel"
+msgstr "ביטול"
+
+msgid "Configure Runner"
+msgstr "הגדרות המריץ"
+
+msgid "Remove"
+msgstr "הסרה"
+
+msgid "Try a different search"
+msgstr "כדאי לנסות חיפוש אחר"
+
+msgid "Searching"
+msgstr "מתבצע חיפוש"
+
+msgid "No Results Found"
+msgstr "לא נמצאו תוצאות"
+
+#, javascript-format
+msgid "%d more"
+msgstr "עוד %d"
+
+msgid "List of open windows across all workspaces"
+msgstr "רשימת החלונות הפתוחים בכל מרחבי העבודה"
+
+msgid "Open Windows"
+msgstr "חלונות פתוחים"
+
+#, javascript-format
+msgid "'%s' on Workspace %d"
+msgstr "‏'%s' במרחב עבודה %d"
+
+#, javascript-format
+msgid "Failed to open “%s”"
+msgstr "פתיחת \"%s\" נכשלה"
+
+#, javascript-format
+msgid "%s Version"
+msgstr "גרסת %s"
+
+#, javascript-format
+msgid "%s - Release Notes"
+msgstr "%s - הערות מהדורה"
+
+msgid "What's New"
+msgstr "מה חדש"
+
+msgid "Message Tray Update Notification"
+msgstr "התראת עדכון במגש ההודעות"
+
+#, javascript-format
+msgid "Show a notification when %s receives an update."
+msgstr "הצגת התראה כאשר %s מקבל עדכון."
+
+msgid "OS Name"
+msgstr "שם מערכת ההפעלה"
+
+msgid "Windowing System"
+msgstr "מערכת חלונות"
+
+#, javascript-format
+msgid "%s on GitLab"
+msgstr "%s ב־GitLab"
+
+msgid "Report an Issue"
+msgstr "דיווח על תקלה"
+
+#, javascript-format
+msgid "%s Settings"
+msgstr "הגדרות %s"
+
+msgid "Load"
+msgstr "טעינה"
+
+msgid "Load Settings"
+msgstr "טעינת הגדרות"
+
+msgid "Open"
+msgstr "פתיחה"
+
+msgid "Save Settings"
+msgstr "שמירת הגדרות"
+
+msgid "Credits"
+msgstr "תודות"
+
+msgid "Brought to you by"
+msgstr "מוגש לך על ידי"
+
+msgid "History"
+msgstr "היסטוריה"
+
+msgid "Contributions by"
+msgstr "תרומות מאת"
+
+msgid "Artwork by"
+msgstr "עבודות גרפיקה מאת"
+
+msgid "Legal"
+msgstr "משפטי"
+
+msgid "This program comes with absolutely no warranty."
+msgstr "תכנית זו מגיעה ללא אחריות כלשהי."
+
+#, javascript-format
+msgid "See the <a href=\"%s\">%s</a> for details."
+msgstr "לפרטים, ראו את <a href=\"%s\">%s</a>."
+
+msgid "GNU General Public License, version 2 or later"
+msgstr "הרישיון הציבורי הכללי של GNU, גרסה 2 ומעלה"
+
+msgid "Donate"
+msgstr "תרומה"
+
+#, javascript-format
+msgid "Help Support %s"
+msgstr "עזרה בתמיכה ב־%s"
+
+#, javascript-format
+msgid "Thank you for using %s! If you enjoy it and would like to help support its continued development, please consider making a donation."
+msgstr "תודה על השימוש ב־%s! אם נהניתם ממנו ורוצים לסייע בהמשך פיתוחו, כדאי לשקול לתרום."
+
+msgid "Donate via PayPal"
+msgstr "תרומה דרך PayPal"
+
+msgid "Donate via Buy Me a Coffee"
+msgstr "תרומה דרך Buy Me a Coffee"
+
+#, javascript-format
+msgid "A huge thank you to everyone who has supported %s! Your support helps keep %s going. It is truly appreciated!"
+msgstr "תודה גדולה לכל מי שתמך ב־%s! התמיכה שלכם עוזרת להמשיך את %s. אנחנו מעריכים זאת מאוד!"
+
+msgid "Panel Display Options"
+msgstr "אפשרויות תצוגת הלוח"
+
+msgid "Dash to Panel may conflict with this setting"
+msgstr "ייתכן ש־Dash to Panel מתנגש עם הגדרה זו"
+
+msgid "Display ArcMenu on all Panels"
+msgstr "הצגת ArcMenu בכל הלוחות"
+
+msgid "Dash to Panel or App Icons Taskbar extension required"
+msgstr "נדרשת ההרחבה Dash to Panel או שורת משימות סמלי יישומים"
+
+msgid "Always Prefer Top Panel"
+msgstr "להעדיף תמיד את הלוח העליון"
+
+msgid "Useful with Dash to Panel setting 'Keep original gnome-shell top panel'"
+msgstr "שימושי עם ההגדרה 'שמירת הלוח העליון המקורי של gnome-shell' ב־Dash to Panel"
+
+msgid "General Settings"
+msgstr "הגדרות כלליות"
+
+msgid "ArcMenu Hotkey"
+msgstr "מקש חם של ArcMenu"
+
+msgid "Standalone Runner Menu"
+msgstr "תפריט מריץ עצמאי"
+
+msgid "Hide Overview on Startup"
+msgstr "הסתרת תצוגת הפעילויות בעת ההפעלה"
+
+msgid "Hide Overview when ArcMenu Opens"
+msgstr "הסתרת תצוגת הפעילויות כאשר ArcMenu נפתח"
+
+msgid "ArcMenu Hotkeys"
+msgstr "מקשים חמים של ArcMenu"
+
+msgid "Standalone Runner Hotkeys"
+msgstr "מקשים חמים של המריץ העצמאי"
+
+msgid "Active Hotkeys"
+msgstr "מקשים חמים פעילים"
+
+msgid "Super Hotkeys Override GNOME Overview Hotkey"
+msgstr "מקשי Super חמים עוקפים את המקש החם של תצוגת הפעילויות ב־GNOME"
+
+msgid "Open on Primary Monitor"
+msgstr "פתיחה במסך הראשי"
+
+msgid "Type on your keyboard to add a new hotkey."
+msgstr "יש להקליד במקלדת כדי להוסיף מקש חם חדש."
+
+msgid "Add Hotkey"
+msgstr "הוספת מקש חם"
+
+#, javascript-format
+msgid "Conflict with <b>%s</b> hotkey"
+msgstr "התנגשות עם המקש החם <b>%s</b>"
+
+msgid "Standlone Runner"
+msgstr "מריץ עצמאי"
+
+msgid "Select"
+msgstr "בחירה"
+
+msgid "Search icons…"
+msgstr "חיפוש סמלים…"
+
+msgid "Browse Files..."
+msgstr "עיון בקבצים…"
+
+msgid "Symbolic"
+msgstr "סימבולי"
+
+msgid "Full Color"
+msgstr "צבעוני מלא"
+
+msgid "Type"
+msgstr "סוג"
+
+msgid "Extension"
+msgstr "הרחבה"
+
+msgid "Distros"
+msgstr "הפצות"
+
+msgid "Category"
+msgstr "קטגוריה"
+
+msgid "Filter"
+msgstr "מסנן"
+
+msgid "Menu Button"
+msgstr "כפתור תפריט"
+
+msgid "Reset settings"
+msgstr "איפוס הגדרות"
+
+#, javascript-format
+msgid "Reset all %s settings?"
+msgstr "לאפס את כל הגדרות %s?"
+
+#, javascript-format
+msgid "All %s settings will be reset to the default value."
+msgstr "כל הגדרות %s יאופסו לערך ברירת המחדל."
+
+msgid "Display Style"
+msgstr "סגנון תצוגה"
+
+msgid "Padding"
+msgstr "ריפוד"
+
+#, javascript-format
+msgid "%d Default Theme Value"
+msgstr "%d ערך ברירת המחדל של ערכת הנושא"
+
+msgid "Choose a New Icon"
+msgstr "בחירת סמל חדש"
+
+msgid "Click Options"
+msgstr "אפשרויות לחיצה"
+
+msgid "Context Menu"
+msgstr "תפריט הקשר"
+
+msgid "Left Click"
+msgstr "לחיצה שמאלית"
+
+msgid "Right Click"
+msgstr "לחיצה ימנית"
+
+msgid "Middle Click"
+msgstr "לחיצה אמצעית"
+
+msgid "Styling"
+msgstr "עיצוב"
+
+msgid "Results may vary with third party themes"
+msgstr "התוצאות עשויות להשתנות עם ערכות נושא של צד שלישי"
+
+msgid "Foreground Color"
+msgstr "צבע חזית"
+
+msgid "Background Color"
+msgstr "צבע רקע"
+
+msgid "Hover"
+msgstr "ריחוף"
+
+msgid "Active"
+msgstr "פעיל"
+
+msgid "Border Radius"
+msgstr "רדיוס הגבול"
+
+msgid "Border Width"
+msgstr "עובי הגבול"
+
+msgid "Background colors required if set to 0"
+msgstr "נדרשים צבעי רקע אם הערך הוא 0"
+
+msgid "Menu"
+msgstr "תפריט"
+
+msgid "How should the menu look?"
+msgstr "איך התפריט צריך להיראות?"
+
+msgid "Choose a layout style for the menu"
+msgstr "בחירת סגנון פריסה לתפריט"
+
+msgid "Modify menu colors, font size, and border"
+msgstr "שינוי צבעי התפריט, גודל הגופן והגבול"
+
+msgid "Menu Visual Appearance"
+msgstr "מראה התפריט"
+
+msgid "Change menu height, width, location, and icon sizes"
+msgstr "שינוי גובה התפריט, רוחבו, מיקומו וגודלי הסמלים"
+
+msgid "Fine Tune"
+msgstr "כוונון עדין"
+
+msgid "Adjust less commonly used settings"
+msgstr "התאמת הגדרות פחות נפוצות"
+
+msgid "What should show on the menu?"
+msgstr "מה להציג בתפריט?"
+
+msgid "Settings specific to the current menu layout"
+msgstr "הגדרות ייחודיות לפריסת התפריט הנוכחית"
+
+msgid "Search Options"
+msgstr "אפשרויות חיפוש"
+
+msgid "Choose which power options to show and the display style"
+msgstr "בחירת אפשרויות החשמל להצגה וסגנון התצוגה"
+
+msgid "Add or remove additional custom categories"
+msgstr "הוספה או הסרה של קטגוריות מותאמות נוספות"
+
+msgid "What should show on the context menu?"
+msgstr "מה להציג בתפריט ההקשר?"
+
+msgid "Modify ArcMenu Context Menu"
+msgstr "שינוי תפריט ההקשר של ArcMenu"
+
+msgid "Show Category Sub Menus"
+msgstr "הצגת תת־תפריטים של קטגוריות"
+
+msgid "Show Generic Application Names"
+msgstr "הצגת שמות יישומים כלליים"
+
+msgid "Show Hidden Recent Files"
+msgstr "הצגת קבצים אחרונים מוסתרים"
+
+msgid "Show Multi Lined Labels"
+msgstr "הצגת תוויות מרובות שורות"
+
+msgid "Allow application labels to span multiple lines on grid style layouts"
+msgstr "לאפשר לתוויות יישומים להתפרש על פני כמה שורות בפריסות בסגנון רשת"
+
+msgid "Show Tooltips"
+msgstr "הצגת חלוניות מידע"
+
+msgid "Group Apps Alphabetically on List Views"
+msgstr "קיבוץ יישומים לפי סדר אלפבתי בתצוגת רשימה"
+
+msgid "For All Apps sections"
+msgstr "עבור מקטעי כל היישומים"
+
+msgid "Group Apps Alphabetically on Grid Views"
+msgstr "קיבוץ יישומים לפי סדר אלפבתי בתצוגת רשת"
+
+msgid "Activate App Window on Launch"
+msgstr "הפעלת חלון היישום בעת הפעלה"
+
+msgid "Launching an app activates its existing window if one is open; otherwise, it launches a new instance. Hold Ctrl while launching or middle-click to open a new window."
+msgstr "הפעלת יישום תפעיל את החלון הקיים שלו אם הוא פתוח, אחרת יופעל מופע חדש. יש להחזיק את Ctrl בעת ההפעלה או ללחוץ לחיצה אמצעית כדי לפתוח חלון חדש."
+
+msgid "Keep ArcMenu Open on Ctrl+Click"
+msgstr "השארת ArcMenu פתוח בלחיצה עם Ctrl"
+
+msgid "Prevents the menu from closing when activating items while holding Ctrl."
+msgstr "מונע את סגירת התפריט בעת הפעלת פריטים תוך החזקת Ctrl."
+
+msgid "Scrollview Options"
+msgstr "אפשרויות אזור גלילה"
+
+msgid "Scrollview Fade Effects"
+msgstr "אפקטי עמעום באזור הגלילה"
+
+msgid "Show Scrollbars"
+msgstr "הצגת פסי גלילה"
+
+msgid "Overlay Scrollbars"
+msgstr "פסי גלילה צפים"
+
+msgid "Icon Style"
+msgstr "סגנון סמלים"
+
+msgid "Category Icons"
+msgstr "סמלי קטגוריות"
+
+msgid "Shortcut Icons"
+msgstr "סמלי קיצורי דרך"
+
+msgid "Button Icons"
+msgstr "סמלי כפתורים"
+
+msgid "New Apps Tracker"
+msgstr "מעקב אחר יישומים חדשים"
+
+msgid "Enable"
+msgstr "הפעלה"
+
+msgid "Vertical Separator"
+msgstr "מפריד אנכי"
+
+msgid "Round"
+msgstr "עגול"
+
+msgid "Avatar Shape"
+msgstr "צורת תמונת הפרופיל"
+
+msgid "Show User Avatar"
+msgstr "הצגת תמונת הפרופיל של המשתמש"
+
+msgid "Default View"
+msgstr "תצוגת ברירת מחדל"
+
+msgid "Merge Top and Bottom Panels"
+msgstr "מיזוג הלוחות העליון והתחתון"
+
+msgid "Max Frequent Apps"
+msgstr "מספר מרבי של יישומים תדירים"
+
+msgid "Show Apps Grid"
+msgstr "הצגת רשת היישומים"
+
+msgid "Show Pinned Apps"
+msgstr "הצגת יישומים מוצמדים"
+
+msgid "Position"
+msgstr "מיקום"
+
+msgid "List"
+msgstr "רשימה"
+
+msgid "Grid"
+msgstr "רשת"
+
+msgid "Search Results Display Style"
+msgstr "סגנון הצגת תוצאות החיפוש"
+
+msgid "Width"
+msgstr "רוחב"
+
+msgid "Height"
+msgstr "גובה"
+
+msgid "Static Height"
+msgstr "גובה קבוע"
+
+msgid "Show Configure Runner Button"
+msgstr "הצגת כפתור הגדרות המריץ"
+
+msgid "Position on Monitor"
+msgstr "מיקום על המסך"
+
+msgid "Extra Shortcuts Panel Width"
+msgstr "רוחב לוח קיצורי הדרך הנוספים"
+
+msgid "Pinned and Frequent Apps"
+msgstr "יישומים מוצמדים ותדירים"
+
+msgid "0 = unlimited"
+msgstr "0 = ללא הגבלה"
+
+msgid "'All Apps' Button Action"
+msgstr "פעולת הכפתור 'כל היישומים'"
+
+msgid "Category Quick Links"
+msgstr "קישורים מהירים לקטגוריות"
+
+msgid "Display a category on the default menu view. Category must be enabled in ArcMenu Settings -> Menu -> Extra Categories section."
+msgstr "הצגת קטגוריה בתצוגת ברירת המחדל של התפריט. יש להפעיל את הקטגוריה בהגדרות ArcMenu ‫->‬ תפריט ‫->‬ קטגוריות נוספות."
+
+msgid "Quick Links Location"
+msgstr "מיקום הקישורים המהירים"
+
+msgid "Choose a new menu layout?"
+msgstr "לבחור פריסת תפריט חדשה?"
+
+msgid "Actions will be hidden from ArcMenu if not available on your system."
+msgstr "פעולות יוסתרו מ־ArcMenu אם אינן זמינות במערכת שלך."
+
+msgid "Off"
+msgstr "כבוי"
+
+msgid "Power Buttons"
+msgstr "כפתורי חשמל"
+
+msgid "Power Menu"
+msgstr "תפריט חשמל"
+
+msgid "Override Display Style"
+msgstr "עקיפת סגנון התצוגה"
+
+msgid "Add More Shortcuts"
+msgstr "הוספת קיצורי דרך נוספים"
+
+msgid "Add to your Extra Shortcuts"
+msgstr "הוספה לקיצורי הדרך הנוספים שלך"
+
+msgid "Add to the Context Menu"
+msgstr "הוספה לתפריט ההקשר"
+
+msgid "Separator"
+msgstr "מפריד"
+
+msgid "Spacer"
+msgstr "רווח"
+
+msgid "Show All Apps"
+msgstr "הצגת כל היישומים"
+
+msgid "Menu Theming"
+msgstr "עיצוב התפריט"
+
+msgid "Menu Button Settings"
+msgstr "הגדרות כפתור התפריט"
+
+msgid "Panel Extension Settings"
+msgstr "הגדרות הרחבת הלוח"
+
+msgid "Recent"
+msgstr "אחרונים"
+
+msgid "Dash to Panel or App Icons Taskbar"
+msgstr "Dash to Panel או שורת משימות סמלי יישומים"
+
+#, javascript-format
+msgid "%s has been added"
+msgstr "%s נוסף"
+
+#, javascript-format
+msgid "%s has been removed"
+msgstr "%s הוסר"
+
+msgid "Title"
+msgstr "כותרת"
+
+msgid "Clear Icon"
+msgstr "ניקוי הסמל"
+
+msgid "Directory"
+msgstr "תיקייה"
+
+msgid "Command"
+msgstr "פקודה"
+
+msgid "Hide Search Bar"
+msgstr "הסתרת סרגל החיפוש"
+
+msgid "The search bar hides when empty and appears when typing."
+msgstr "סרגל החיפוש מוסתר כשהוא ריק ומופיע בעת הקלדה."
+
+msgid "Show Search Result Descriptions"
+msgstr "הצגת תיאורי תוצאות החיפוש"
+
+msgid "Highlight search result terms"
+msgstr "הדגשת מונחי החיפוש בתוצאות"
+
+msgid "Max Search Results"
+msgstr "מספר מרבי של תוצאות חיפוש"
+
+msgid "Search Box Border Radius"
+msgstr "רדיוס הגבול של תיבת החיפוש"
+
+msgid "Extra Search Providers"
+msgstr "ספקי חיפוש נוספים"
+
+msgid "Search for open windows across all workspaces"
+msgstr "חיפוש בחלונות פתוחים בכל מרחבי העבודה"
+
+msgid "Search for recent files"
+msgstr "חיפוש קבצים אחרונים"
+
+msgid "Override Theme"
+msgstr "עקיפת ערכת הנושא"
+
+msgid "Menu Themes"
+msgstr "ערכות נושא לתפריט"
+
+msgid "Current Theme"
+msgstr "ערכת הנושא הנוכחית"
+
+msgid "Save as Theme"
+msgstr "שמירה כערכת נושא"
+
+msgid "Menu Styling"
+msgstr "עיצוב התפריט"
+
+msgid "Menu Items Styling"
+msgstr "עיצוב פריטי התפריט"
+
+msgid "Save Theme As..."
+msgstr "שמירת ערכת הנושא בשם…"
+
+msgid "Theme Name"
+msgstr "שם ערכת הנושא"
+
+msgid "Manage Themes"
+msgstr "ניהול ערכות נושא"
+
+msgid "Save Themes"
+msgstr "שמירת ערכות נושא"
+
+msgid "Load Themes"
+msgstr "טעינת ערכות נושא"
+
+#, javascript-format
+msgid "%s has been selected"
+msgstr "%s נבחר"
+
+#, javascript-format
+msgid "%s has been unselected"
+msgstr "הבחירה ב־%s בוטלה"
+
+msgid "Menu Size"
+msgstr "גודל התפריט"
+
+msgid "Traditional Layouts"
+msgstr "פריסות מסורתיות"
+
+msgid "Width Offset"
+msgstr "היסט רוחב"
+
+msgid "Non-Traditional Layouts"
+msgstr "פריסות לא מסורתיות"
+
+msgid "Menu Location"
+msgstr "מיקום התפריט"
+
+msgid "Top Centered"
+msgstr "למעלה במרכז"
+
+msgid "Top Left"
+msgstr "למעלה משמאל"
+
+msgid "Top Right"
+msgstr "למעלה מימין"
+
+msgid "Bottom Centered"
+msgstr "למטה במרכז"
+
+msgid "Bottom Left"
+msgstr "למטה משמאל"
+
+msgid "Bottom Right"
+msgstr "למטה מימין"
+
+msgid "Left Centered"
+msgstr "שמאל במרכז"
+
+msgid "Right Centered"
+msgstr "ימין במרכז"
+
+msgid "Monitor Centered"
+msgstr "במרכז המסך"
+
+msgid "Override Menu Location"
+msgstr "עקיפת מיקום התפריט"
+
+msgid "Override Menu Rise"
+msgstr "עקיפת גובה עליית התפריט"
+
+msgid "Menu Distance from Panel and Screen Edge"
+msgstr "מרחק התפריט מהלוח ומקצה המסך"
+
+msgid "Override Menu Item Icon Sizes"
+msgstr "עקיפת גודלי הסמלים של פריטי התפריט"
+
+msgid "Small"
+msgstr "קטן"
+
+msgid "Medium"
+msgstr "בינוני"
+
+msgid "Large"
+msgstr "גדול"
+
+msgid "Extra Large"
+msgstr "גדול מאוד"
+
+msgid "Small Wide"
+msgstr "קטן ורחב"
+
+msgid "Medium Wide"
+msgstr "בינוני ורחב"
+
+msgid "Large Wide"
+msgstr "גדול ורחב"
+
+msgid "Grid Menu Items"
+msgstr "פריטי תפריט ברשת"
+
+msgid "Menu items displayed in grid style"
+msgstr "פריטי תפריט המוצגים בסגנון רשת"
+
+msgid "Grid Icon Size"
+msgstr "גודל סמל ברשת"
+
+msgid "Width, Height, Icon Size"
+msgstr "רוחב, גובה, גודל סמל"
+
+msgid "Applications, pinned apps, and search results"
+msgstr "יישומים, יישומים מוצמדים ותוצאות חיפוש"
+
+msgid "Menu items found in side panels on various layouts"
+msgstr "פריטי תפריט בלוחות הצד בפריסות שונות"
+
+msgid "Miscellaneous"
+msgstr "שונות"
+
+msgid "Avatar, search icons, navigation icons"
+msgstr "תמונת פרופיל, סמלי חיפוש, סמלי ניווט"
+
+msgid "Hide Icon"
+msgstr "הסתרת הסמל"
+
+#, javascript-format
+msgid "%s v%s Released!"
+msgstr "‏%s גרסה %s שוחררה!"
+
+msgid "Check out what's new."
+msgstr "הצצה למה שחדש."
+
+msgid "What's new?"
+msgstr "מה חדש?"
+
+msgid "Dismiss"
+msgstr "סגירה"

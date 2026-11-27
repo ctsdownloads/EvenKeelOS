@@ -1,0 +1,2588 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "Rakenduste pood"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "Lisa, eemalda või uuenda Flatpaki tarkvara sellest arvutist"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Süsteem;Pakett;Haldur;Avasta;Flatpak;Tarkvara;Rakendus;Pood;"
+
+msgid "New Window"
+msgstr "Uus aken"
+
+msgid "Discover and install apps"
+msgstr "Leia ja paigalda rakendusi"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Kiire ja kaasaegne Linuxi rakenduste pood, mis keskendub Flatpaki rakenduste ja lisandmoodulite leidmisele ja paigaldamisele, eelkõige Flathubist."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Pane mitu paigaldust järjekorda ja jätka sirvimist"
+
+msgid "Easily view app permissions"
+msgstr "Vaata hõlpsalt rakenduste õigusi"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Logi Flathubi sisse, et vaadata ja hallata oma lemmikuid"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Otsi rakendusi otse GNOME Shellist"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Avaleht, mis kuvab Flathubi rakendusi"
+
+msgid "App page for Exhibit"
+msgstr "Rakenduse Exhibit leht"
+
+msgid "Library page"
+msgstr "Teegi leht"
+
+msgid "Search page"
+msgstr "Otsingu leht"
+
+msgid "Category page"
+msgstr "Kategooria leht"
+
+msgid "Stopped Receiving Updates"
+msgstr "Uuenduste saamine on lõppenud"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Eemalda paigaldus"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Paigalda"
+
+msgid "Add-on"
+msgstr "Lisandmoodul"
+
+msgid "Manage Add-Ons"
+msgstr "Halda lisandmooduleid"
+
+msgid "No Add-Ons Visible"
+msgstr "Ühtegi lisandmoodulit pole nähtaval"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "Sinu praegused filtri eelistused peidavad kõik teadaolevad lisandmoodulid. Proovi neid muuta."
+
+msgid "Add-on Page"
+msgstr "Lisandmooduli leht"
+
+msgid "Download"
+msgstr "Laadi alla"
+
+msgid "Installed"
+msgstr "Paigaldatud"
+
+msgid "Downloads/Month"
+msgstr "Allalaadimisi kuus"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Põhiuuenduste saamine on lõppenud"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "See lisandmoodul kasutab käituskeskkonda, mis enam uuendusi ega turvaparandusi ei saa. Selle kasutamine võib muutuda ebaturvaliseks."
+
+msgid "Other Sources"
+msgstr "Muud allikad"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Lisandmoodul rakendusele %s"
+
+msgid "Show Less"
+msgstr "Kuva vähem"
+
+msgid "Show More"
+msgstr "Kuva rohkem"
+
+msgid "Download Stats"
+msgstr "Allalaadimisstatistika"
+
+msgid "Age Rating"
+msgstr "Vanusepiirang"
+
+msgid "Cartoon Violence"
+msgstr "Multifilmilik vägivald"
+
+msgid "No information regarding cartoon violence"
+msgstr "Teave multifilmilise vägivalla kohta puudub"
+
+msgid "Fantasy Violence"
+msgstr "Fantaasiavägivald"
+
+msgid "No information regarding fantasy violence"
+msgstr "Teave fantaasiavägivalla kohta puudub"
+
+msgid "Realistic Violence"
+msgstr "Realistlik vägivald"
+
+msgid "No information regarding realistic violence"
+msgstr "Teave realistliku vägivalla kohta puudub"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "Verevalamist kujutav vägivald"
+
+msgid "No information regarding bloodshed"
+msgstr "Teave verevalamise kohta puudub"
+
+msgid "Sexual Violence"
+msgstr "Seksuaalvägivald"
+
+msgid "No information regarding sexual violence"
+msgstr "Teave seksuaalvägivalla kohta puudub"
+
+msgid "Alcohol"
+msgstr "Alkohol"
+
+msgid "No information regarding references to alcohol"
+msgstr "Teave alkoholi mainimise kohta puudub"
+
+msgid "Narcotics"
+msgstr "Narkootikumid"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "Teave ebaseaduslike uimastite mainimise kohta puudub"
+
+msgid "Tobacco"
+msgstr "Tubakas"
+
+msgid "No information regarding references to tobacco products"
+msgstr "Teave tubakatoodete mainimise kohta puudub"
+
+msgid "Nudity"
+msgstr "Alastus"
+
+msgid "No information regarding nudity of any sort"
+msgstr "Teave mis tahes laadi alastuse kohta puudub"
+
+msgid "Sexual Themes"
+msgstr "Seksuaalsed teemad"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "Teave seksuaalse laadi viidete või kujutiste kohta puudub"
+
+msgid "Profanity"
+msgstr "Roppused"
+
+msgid "No information regarding profanity of any kind"
+msgstr "Teave mis tahes laadi roppuste kohta puudub"
+
+msgid "Inappropriate Humor"
+msgstr "Sobimatu huumor"
+
+msgid "No information regarding inappropriate humor"
+msgstr "Teave sobimatu huumori kohta puudub"
+
+msgid "Discrimination"
+msgstr "Diskrimineerimine"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "Teave mis tahes laadi diskrimineeriva keelekasutuse kohta puudub"
+
+msgid "Advertising"
+msgstr "Reklaam"
+
+msgid "No information regarding advertising of any kind"
+msgstr "Teave mis tahes laadi reklaami kohta puudub"
+
+msgid "Gambling"
+msgstr "Hasartmängud"
+
+msgid "No information regarding gambling of any kind"
+msgstr "Teave mis tahes laadi hasartmängude kohta puudub"
+
+msgid "Purchasing"
+msgstr "Ostmine"
+
+msgid "No information regarding the ability to spend money"
+msgstr "Teave raha kulutamise võimaluse kohta puudub"
+
+msgid "Chat Between Users"
+msgstr "Vestlus kasutajate vahel"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "Teave teiste kasutajatega vestlemise võimaluste kohta puudub"
+
+msgid "Audio Chat Between Users"
+msgstr "Helivestlus kasutajate vahel"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "Teave teiste kasutajatega rääkimise võimaluste kohta puudub"
+
+msgid "Contact Details"
+msgstr "Kontaktandmed"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "Teave sotsiaalvõrgustike kasutajanimede või e-posti aadresside jagamise kohta puudub"
+
+msgid "Identifying Information"
+msgstr "Tuvastav teave"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "Teave kasutajateabe kolmandate osapooltega jagamise kohta puudub"
+
+msgid "Location Sharing"
+msgstr "Asukoha jagamine"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "Teave füüsilise asukoha teiste kasutajatega jagamise kohta puudub"
+
+msgid "Prostitution"
+msgstr "Prostitutsioon"
+
+msgid "No information regarding references to prostitution"
+msgstr "Teave prostitutsiooni mainimise kohta puudub"
+
+msgid "Adultery"
+msgstr "Abielurikkumine"
+
+msgid "No information regarding references to adultery"
+msgstr "Teave abielurikkumise mainimise kohta puudub"
+
+msgid "Sexualized Characters"
+msgstr "Seksualiseeritud tegelased"
+
+msgid "No information regarding sexualized characters"
+msgstr "Teave seksualiseeritud tegelaste kohta puudub"
+
+msgid "Desecration"
+msgstr "Rüvetamine"
+
+msgid "No information regarding references to desecration"
+msgstr "Teave rüvetamise mainimise kohta puudub"
+
+msgid "Human Remains"
+msgstr "Inimjäänused"
+
+msgid "No information regarding visible dead human remains"
+msgstr "Teave nähtavate surnud inimjäänuste kohta puudub"
+
+msgid "Slavery"
+msgstr "Orjus"
+
+msgid "No information regarding references to slavery"
+msgstr "Teave orjuse mainimise kohta puudub"
+
+msgid "Does not include references to drugs"
+msgstr "Ei sisalda viiteid uimastitele"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "Ei sisalda vandumist, roppusi ega muud tugevat keelekasutust"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "Ei sisalda reklaame ega rahalisi tehinguid"
+
+msgid "Does not include sex or nudity"
+msgstr "Ei sisalda seksi ega alastust"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "Ei sisalda kontrollimatut vestlusfunktsiooni"
+
+msgid "Does not include violence"
+msgstr "Ei sisalda vägivalda"
+
+msgid "Drugs"
+msgstr "Uimastid"
+
+msgid "Strong Language"
+msgstr "Tugev keelekasutus"
+
+msgid "Money"
+msgstr "Raha"
+
+msgid "Social"
+msgstr "Suhtlus"
+
+msgid "Violence"
+msgstr "Vägivald"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "Kõik"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "Rakenduse %s vanusepiirang on teadmata"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s sobib kõigile"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s sobib väikelastele"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s sobib lastele"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s sobib teismelistele"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s sobib täiskasvanutele"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s sobib kasutajatele: %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "Süsteemikaust %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Kodukausta alamkaust %s"
+
+msgid "Host system folders"
+msgstr "Host-süsteemi kaustad"
+
+msgid "Host system configuration from /etc"
+msgstr "Host-süsteemi seadistus kaustast /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Töölaua alamkaust %s"
+
+msgid "Desktop folder"
+msgstr "Töölauakaust"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "Dokumentide alamkaust %s"
+
+msgid "Documents folder"
+msgstr "Dokumentide kaust"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "Muusika alamkaust %s"
+
+msgid "Music folder"
+msgstr "Muusikakaust"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "Piltide alamkaust %s"
+
+msgid "Pictures folder"
+msgstr "Piltide kaust"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "Avaliku jagamise alamkaust %s"
+
+msgid "Public Share folder"
+msgstr "Avaliku jagamise kaust"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "Videote alamkaust %s"
+
+msgid "Videos folder"
+msgstr "Videote kaust"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "Mallide alamkaust %s"
+
+msgid "Templates folder"
+msgstr "Mallide kaust"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Kasutaja vahemälu alamkaust %s"
+
+msgid "User cache folder"
+msgstr "Kasutaja vahemälu kaust"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Kasutaja seadistuse alamkaust %s"
+
+msgid "User configuration folder"
+msgstr "Kasutaja seadistuse kaust"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Kasutaja andmete alamkaust %s"
+
+msgid "User data folder"
+msgstr "Kasutaja andmete kaust"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Kasutaja käitusaja alamkaust %s"
+
+msgid "User runtime folder"
+msgstr "Kasutaja käitusaja kaust"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Failisüsteemi juurdepääs asukohale %s"
+
+msgid "Unknown filesystem path"
+msgstr "Tundmatu failisüsteemi tee"
+
+msgid "Download Size"
+msgstr "Allalaadimise suurus"
+
+msgid "Installed Size"
+msgstr "Paigaldatud suurus"
+
+msgid "Amount to download from the internet"
+msgstr "Internetist allalaaditav maht"
+
+msgid "Size on Disk"
+msgstr "Suurus kettal"
+
+msgid "Open user data folder"
+msgstr "Ava kasutaja andmete kaust"
+
+msgid "Your User Data"
+msgstr "Sinu kasutaja andmed"
+
+msgid "Caches, settings, and other app data"
+msgstr "Vahemälu, sätted ja muud rakenduse andmed"
+
+msgid "Cache"
+msgstr "Vahemälu"
+
+msgid "Temporary cached data"
+msgstr "Ajutised vahemällu salvestatud andmed"
+
+msgid "Clear Cache"
+msgstr "Tühjenda vahemälu"
+
+msgid "Installed Runtime Size"
+msgstr "Paigaldatud käituskeskkonna suurus"
+
+msgid "Runtime Download Size"
+msgstr "Käituskeskkonna allalaadimise suurus"
+
+msgid "N/A"
+msgstr "Puudub"
+
+msgid "Storage"
+msgstr "Salvestusruum"
+
+msgid "Verified"
+msgstr "Kinnitatud"
+
+msgid "The Bazaar Contributors"
+msgstr "Bazaari kaasautorid"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "Erilised tänud"
+
+msgid "Logged Out Successfully!"
+msgstr "Väljalogimine õnnestus!"
+
+msgid "Performing setup…"
+msgstr "Seadistamine…"
+
+msgid "Set Up Flathub?"
+msgstr "Kas seadistada Flathub?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub pole selles süsteemis seadistatud. Kui see pole saadaval, ei saa sa Bazaaris rakendusi sirvida ega paigaldada.\n"
+"\n"
+"Bazaari saab siiski kasutada juba paigaldatud rakenduste sirvimiseks ja eemaldamiseks."
+
+msgid "Later"
+msgstr "Hiljem"
+
+msgid "Set Up Flathub"
+msgstr "Seadista Flathub"
+
+msgid "A backend error occurred"
+msgstr "Tekkis taustaprogrammi viga"
+
+msgid "Refreshing…"
+msgstr "Värskendamine…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "Laadin %d rakendust…"
+
+msgid "Failed to open file"
+msgstr "Faili avamine nurjus"
+
+msgid "Failed to load metainfo"
+msgstr "Metainfo laadimine nurjus"
+
+msgid "An initialization error occurred"
+msgstr "Tekkis lähtestamisviga"
+
+msgid "Checking for updates…"
+msgstr "Uuenduste otsimine…"
+
+msgid "Failed to check for updates"
+msgstr "Uuenduste otsimine nurjus"
+
+msgid "Could not find app"
+msgstr "Rakendust ei leitud"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Laadin %d rakendust…"
+msgstr[1] "Laadin %d rakendust…"
+
+msgid "Writing to cache…"
+msgstr "Vahemällu kirjutamine…"
+
+msgid "Removing remote…"
+msgstr "Allika eemaldamine…"
+
+msgid "Could not remove remote"
+msgstr "Allika eemaldamine nurjus"
+
+msgid "Show All"
+msgstr "Kuva kõik"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Kõik „%s“"
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d rakendust"
+
+msgid "Failed to Load Article"
+msgstr "Artikli laadimine nurjus"
+
+msgid "All apps are already installed"
+msgstr "Kõik rakendused on juba paigaldatud"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Kas paigaldada %u rakendus?"
+msgstr[1] "Kas paigaldada %u rakendust?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Paigaldatakse järgmised. Lisaks võidakse paigaldada ühiseid komponente"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "Paigaldatakse %d lisandmoodulit."
+
+msgid "Additionally, addons will be installed."
+msgstr "Lisaks paigaldatakse lisandmoodulid."
+
+msgid "_Cancel"
+msgstr "_Loobu"
+
+msgid "_Install All"
+msgstr "_Paigalda kõik"
+
+msgid "Bundle Installation"
+msgstr "Komplekti paigaldus"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Täiendavad sõltuvused võivad võtta lisaruumi"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Selle rakenduse paigaldamiseks võib olla vaja lisada uus tarkvaraallikas. Selle allika muud rakendused ilmuvad Bazaaris.\n"
+"\n"
+"Lisa see allikas ainult siis, kui oled kindel, et usaldad seda."
+
+msgid "Successfully Installed!"
+msgstr "Paigaldamine õnnestus!"
+
+msgid "Open"
+msgstr "Ava"
+
+msgid "Show App Details"
+msgstr "Kuva rakenduse üksikasju"
+
+msgid "Already Installed"
+msgstr "On juba paigaldatud"
+
+msgid "Installation Failed"
+msgstr "Paigaldamine ebaõnnestus"
+
+msgid "Unknown install size"
+msgstr "Tundmatu paigalduse suurus"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Paigaldatakse umbes %s"
+
+msgid "No special permissions"
+msgstr "Erilisi õigusi pole"
+
+msgid "Place Applet"
+msgstr "Paiguta aplett"
+
+msgid "Choose where to add this applet."
+msgstr "Vali, kuhu see aplett lisada."
+
+msgid "Cancel"
+msgstr "Loobu"
+
+msgid "Panel"
+msgstr "Paneel"
+
+msgid "Dock"
+msgstr "Dokk"
+
+msgid "No Curation"
+msgstr "Kureerimist pole"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Selles süsteemis pole kureerimisteavet. Flathubis saad rakendusi ikkagi sirvida"
+
+msgid "Browse Flathub"
+msgstr "Sirvi Flathubi"
+
+msgid "Offline"
+msgstr "Võrguühenduseta"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s kuni %s, kõrgeim %s: %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "Paigaldusi:"
+
+msgid "Not Verified"
+msgstr "Kinnitamata"
+
+msgid "Developer information not available."
+msgstr "Arendaja teave pole saadaval."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "Rakenduse ID %s omandiõigust pole kinnitatud ja see võib olla kogukonna pakett."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "Rakenduse ID %s omandiõiguse on käsitsi kinnitanud Flathubi meeskond."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "Rakenduse ID %1$s omandiõiguse kinnitas <b>%2$s</b> kuupäeval <b>%3$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Rakenduse ID %1$s omandiõigus on kinnitatud meetodiga %2$s."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "Rakenduse ID %s omandiõigus on kinnitatud."
+
+msgid "Bazaar Release"
+msgstr "Bazaari väljalase"
+
+msgid "Full Release Notes"
+msgstr "Täielikud väljalaskemärkmed"
+
+msgid "This release was made possible by users like you!"
+msgstr "Selle väljalaske tegid võimalikuks sinusugused kasutajad!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Mulle meeldib Bazaari teha, kuid ma ei saa seda üksi teha. Toeta edasist arendust, annetades teenuses Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "Anneta Bazaarile"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Mis on uut versioonis %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Välja lastud %-e. %B %Y"
+
+msgid "Choose an Installation"
+msgstr "Vali paigaldus"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Sul on sellest rakendusest paigaldatud mitu versiooni. Millisega soovid jätkata?"
+
+msgid "Details"
+msgstr "Üksikasjad"
+
+msgid "Copy"
+msgstr "Kopeeri"
+
+msgid "Copied!"
+msgstr "Kopeeritud!"
+
+msgid "Favorite Count"
+msgstr "Lemmikute arv"
+
+msgid "Failed to update favorite"
+msgstr "Lemmiku uuendamine nurjus"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Lemmikute haldamiseks logi sisse Flathubiga"
+
+msgid "Log In"
+msgstr "Logi sisse"
+
+msgid "Favorites"
+msgstr "Lemmikud"
+
+msgid "Install All"
+msgstr "Paigalda kõik"
+
+msgid "No Favorites"
+msgstr "Lemmikuid pole"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Siia ilmuvad rakendused, mille märgid lemmikuks"
+
+msgid "Support This Application"
+msgstr "Toeta seda rakendust"
+
+msgid "Remove From Favorites"
+msgstr "Eemalda lemmikute hulgast"
+
+msgid "Failed to remove favorite"
+msgstr "Lemmiku eemaldamine nurjus"
+
+msgid "Previous"
+msgstr "Eelmine"
+
+msgid "Next"
+msgstr "Järgmine"
+
+msgid "Editing"
+msgstr "Redigeerimine"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Mikser"
+
+msgid "Music"
+msgstr "Muusika"
+
+msgid "Player"
+msgstr "Mängija"
+
+msgid "Recorder"
+msgstr "Salvestaja"
+
+msgid "Sequencer"
+msgstr "Sekvenser"
+
+msgid "Tuner"
+msgstr "Tuuner"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "Emulation"
+msgstr "Emulatsioon"
+
+msgid "Action"
+msgstr "Märulid"
+
+msgid "Adventure"
+msgstr "Seiklus"
+
+msgid "Arcade"
+msgstr "Arkaad"
+
+msgid "Blocks"
+msgstr "Klotsid"
+
+msgid "Board"
+msgstr "Lauamängud"
+
+msgid "Card"
+msgstr "Kaardimängud"
+
+msgid "Kids"
+msgstr "Lapsed"
+
+msgid "Logic"
+msgstr "Loogika"
+
+msgid "Role Playing"
+msgstr "Rollimäng"
+
+msgid "Shooter"
+msgstr "Tulistamine"
+
+msgid "Simulation"
+msgstr "Simulatsioon"
+
+msgid "Sports"
+msgstr "Sport"
+
+msgid "Strategy"
+msgstr "Strateegia"
+
+msgid "Browsers"
+msgstr "Brauserid"
+
+msgid "Chat"
+msgstr "Vestlus"
+
+msgid "Mail"
+msgstr "Post"
+
+msgid "File Sharing"
+msgstr "Failijagamine"
+
+msgid "Audio & Video"
+msgstr "Heli ja video"
+
+msgid "Media"
+msgstr "Meedia"
+
+msgid "More Audio & Video"
+msgstr "Veel heli ja videot"
+
+msgid "Developer Tools"
+msgstr "Arendustööriistad"
+
+msgid "Develop"
+msgstr "Arenda"
+
+msgid "More Developer Tools"
+msgstr "Veel arendustööriistu"
+
+msgid "Education"
+msgstr "Haridus"
+
+msgid "Learn"
+msgstr "Õpi"
+
+msgid "More Education"
+msgstr "Veel haridust"
+
+msgid "Gaming"
+msgstr "Mängimine"
+
+msgid "Play"
+msgstr "Mängi"
+
+msgid "More Gaming"
+msgstr "Veel mängimist"
+
+msgid "Graphics & Photography"
+msgstr "Graafika ja fotograafia"
+
+msgid "Create"
+msgstr "Loo"
+
+msgid "More Graphics & Photography"
+msgstr "Veel graafikat ja fotograafiat"
+
+msgid "Networking"
+msgstr "Võrgundus"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "More Networking"
+msgstr "Veel võrgundust"
+
+msgid "Productivity"
+msgstr "Tootlikkus"
+
+msgid "Work"
+msgstr "Töö"
+
+msgid "More Productivity"
+msgstr "Veel tootlikkust"
+
+msgid "Science"
+msgstr "Teadus"
+
+msgid "More Science"
+msgstr "Veel teadust"
+
+msgid "System"
+msgstr "Süsteem"
+
+msgid "More System"
+msgstr "Veel süsteemi"
+
+msgid "Utilities"
+msgstr "Utiliidid"
+
+msgid "Tools"
+msgstr "Tööriistad"
+
+msgid "More Utilities"
+msgstr "Veel utiliite"
+
+msgid "Trending"
+msgstr "Trendikad"
+
+msgid "More Trending"
+msgstr "Veel trendikaid"
+
+msgid "Popular"
+msgstr "Populaarsed"
+
+msgid "More Popular"
+msgstr "Veel populaarseid"
+
+msgid "Recently Added"
+msgstr "Hiljuti lisatud"
+
+msgid "New"
+msgstr "Uued"
+
+msgid "More New"
+msgstr "Veel uusi"
+
+msgid "Recently Updated"
+msgstr "Hiljuti uuendatud"
+
+msgid "Updated"
+msgstr "Uuendatud"
+
+msgid "More Updated"
+msgstr "Veel uuendatuid"
+
+msgid "Mobile"
+msgstr "Mobiil"
+
+msgid "More Mobile"
+msgstr "Veel mobiilseid"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Veel Adwaita rakendusi"
+
+msgid "KDE Apps"
+msgstr "KDE rakendused"
+
+msgid "More KDE Apps"
+msgstr "Veel KDE rakendusi"
+
+msgid "Made for COSMIC™"
+msgstr "Tehtud COSMIC™-ile"
+
+msgid "For COSMIC™"
+msgstr "COSMIC™-ile"
+
+msgid "More COSMIC Apps"
+msgstr "Veel COSMIC-i rakendusi"
+
+msgid "Games"
+msgstr "Mängud"
+
+msgid "More Games"
+msgstr "Veel mänge"
+
+msgid "Emulators"
+msgstr "Emulaatorid"
+
+msgid "More Emulators"
+msgstr "Veel emulaatoreid"
+
+msgid "Launchers"
+msgstr "Käivitajad"
+
+msgid "More Game Launchers"
+msgstr "Veel mängukäivitajaid"
+
+msgid "Game Tools"
+msgstr "Mängutööriistad"
+
+msgid "More Game Tools"
+msgstr "Veel mängutööriistu"
+
+msgid "New Year, New Workflows"
+msgstr "Uus aasta, uued töövood"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Rakendused märkmete tegemiseks, ülesannete jälgimiseks ja plaanide koostamiseks"
+
+msgid "Staff Picks"
+msgstr "Toimetuse valikud"
+
+msgid "Apps we love right now"
+msgstr "Rakendused, mis meile praegu meeldivad"
+
+msgid "Get Creative"
+msgstr "Ole loov"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Hädavajalikud rakendused joonistamiseks, fotode redigeerimiseks ja digitaalseks disainiks"
+
+msgid "Build Native Apps"
+msgstr "Loo natiivseid rakendusi"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Arenda rakendusi, mis sobivad sinu süsteemiga hästi kokku"
+
+msgid "Stay in Touch"
+msgstr "Püsi ühenduses"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Hädavajalikud koostöö- ja suhtlusrakendused"
+
+msgid "Ready for Vacations"
+msgstr "Valmis puhkuseks"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Kaardi-, ühistranspordi-, ilma- ja reisiplaneerimise rakendused"
+
+msgid "Smarter Every Day"
+msgstr "Targem iga päev"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Rakendused õppimiseks, uurimiseks ja kirjutamiseks"
+
+msgid "Get Cozy"
+msgstr "Mõnus olemine"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Suurepärased rakendused lugemiseks, filmide vaatamiseks ja mängimiseks"
+
+msgid "Web Developer Essentials"
+msgstr "Veebiarendaja hädavajalikud"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Veebilehtede tegemine on nende rakendustega lõbusam"
+
+msgid "Take Better Notes"
+msgstr "Tee paremaid märkmeid"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Leia oma uus lemmik märkmete tegemise tööriist"
+
+msgid "Get Focused"
+msgstr "Keskendu"
+
+msgid "Great apps for task management"
+msgstr "Suurepärased rakendused ülesannete haldamiseks"
+
+msgid "Make Some Noise"
+msgstr "Tee veidi müra"
+
+msgid "Apps for creating and producing music"
+msgstr "Rakendused muusika loomiseks ja produtseerimiseks"
+
+msgid "Get To Work"
+msgstr "Asu tööle"
+
+msgid "Essential office apps"
+msgstr "Hädavajalikud kontorirakendused"
+
+msgid "Flathub Not Added"
+msgstr "Flathub pole lisatud"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Flathubi allikat ei leitud ühestki sinu Flatpaki paigaldusest"
+
+msgid "Can't Reach Flathub"
+msgstr "Flathubiga ei õnnestu ühendust saada"
+
+msgid "You can still manage and search for apps."
+msgstr "Rakendusi saad ikkagi hallata ja otsida."
+
+msgid "Search Apps"
+msgstr "Otsi rakendusi"
+
+msgid "Reconnect"
+msgstr "Ühenda uuesti"
+
+msgid "App of the Day"
+msgstr "Päeva rakendus"
+
+msgid "On the Go"
+msgstr "Liikvel olles"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Rakendused sinu Linuxi telefonidele ja tahvelarvutitele"
+
+msgid "More Mobile Apps"
+msgstr "Veel mobiilirakendusi"
+
+msgid "We​ ♥​ Games"
+msgstr "Me ♥ mänge"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Mängud ja rakendused sinu lemmiktiitlite käitamiseks"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "See on kohalik eelvaade, mõned üksikasjad võivad avaldatud kirjest erineda"
+
+msgid "Preview Store Appearance"
+msgstr "Eelvaata poe välimust"
+
+msgid "_Support"
+msgstr "_Toeta"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "See rakendus kasutab käituskeskkonda, mis enam uuendusi ega turvaparandusi ei saa. Selle kasutamine võib muutuda ebaturvaliseks."
+
+msgid "Trash Data"
+msgstr "Viska andmed prügikasti"
+
+msgid "Add-ons"
+msgstr "Lisandmoodulid"
+
+msgid "More Add-Ons"
+msgstr "Veel lisandmooduleid"
+
+msgid "Links"
+msgstr "Lingid"
+
+msgid "Similar Apps"
+msgstr "Sarnased rakendused"
+
+msgid "No URL"
+msgstr "URL-i pole"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Sellel rakendusel on FLOSS-litsents, mis tähendab, et lähtekoodi saab turvalisuse huvides auditeerida."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Sellel rakendusel on suletud litsents, mis tähendab, et lähtekoodi arendatakse privaatselt ja sõltumatu kolmas osapool ei saa seda auditeerida."
+
+msgid "Other Apps From This Developer"
+msgstr "Selle arendaja muud rakendused"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Arendaja %s muud rakendused"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s pole paigaldatud, kuid sellel on endiselt <b>%s</b> andmeid."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Arendaja %s rakendused"
+
+msgid "Apps by This Developer"
+msgstr "Selle arendaja rakendused"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d rakendus"
+msgstr[1] "%d rakendust"
+
+msgid "Failed to Remove User Data"
+msgstr "Kasutaja andmete eemaldamine nurjus"
+
+msgid "Hardware Support"
+msgstr "Riistvaratugi"
+
+msgid "Keyboard support"
+msgstr "Klaviatuuri tugi"
+
+msgid "Requires keyboards"
+msgstr "Nõuab klaviatuure"
+
+msgid "Recommends keyboards"
+msgstr "Soovitab klaviatuure"
+
+msgid "Supports keyboards"
+msgstr "Toetab klaviatuure"
+
+msgid "Unknown support for keyboards"
+msgstr "Klaviatuuride tugi on teadmata"
+
+msgid "Mouse support"
+msgstr "Hiire tugi"
+
+msgid "Requires mice or pointing devices"
+msgstr "Nõuab hiiri või osutusseadmeid"
+
+msgid "Recommends mice or pointing devices"
+msgstr "Soovitab hiiri või osutusseadmeid"
+
+msgid "Supports mice or pointing devices"
+msgstr "Toetab hiiri või osutusseadmeid"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "Hiirte või osutusseadmete tugi on teadmata"
+
+msgid "Touchscreen support"
+msgstr "Puuteekraani tugi"
+
+msgid "Requires touchscreens"
+msgstr "Nõuab puuteekraane"
+
+msgid "Recommends touchscreens"
+msgstr "Soovitab puuteekraane"
+
+msgid "Supports touchscreens"
+msgstr "Toetab puuteekraane"
+
+msgid "Unknown support for touchscreens"
+msgstr "Puuteekraanide tugi on teadmata"
+
+msgid "Mobile support"
+msgstr "Mobiilitugi"
+
+msgid "Works on mobile devices"
+msgstr "Töötab mobiilseadmetes"
+
+msgid "May not work well on mobile devices"
+msgstr "Ei pruugi mobiilseadmetes hästi töötada"
+
+msgid "Desktop support"
+msgstr "Töölauatugi"
+
+msgid "Works well on large screens"
+msgstr "Töötab hästi suurtel ekraanidel"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s töötab kõige paremini kindla riistvaraga"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s töötab enamikus seadmetes"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Loobu"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Loobumine"
+
+msgid "_Open"
+msgstr "_Ava"
+
+msgid "Uninstall Application"
+msgstr "Eemalda rakendus"
+
+msgid "_Remove"
+msgstr "_Eemalda"
+
+msgid "Update"
+msgstr "Uuenda"
+
+msgid "Remove"
+msgstr "Eemalda"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Paigalda %s allikast %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Paigalda %s"
+
+msgid "Donate"
+msgstr "Anneta"
+
+msgid "Search installed apps"
+msgstr "Otsi paigaldatud rakendusi"
+
+msgid "No Apps Found"
+msgstr "Rakendusi ei leitud"
+
+msgid "Search Store Instead"
+msgstr "Otsi hoopis poest"
+
+msgid "Pending Updates"
+msgstr "Ootel uuendused"
+
+msgid "Downloads"
+msgstr "Allalaadimised"
+
+msgid "Recently Uninstalled"
+msgstr "Hiljuti eemaldatud"
+
+msgid "Clear Finished Tasks"
+msgstr "Tühjenda lõpetatud ülesanded"
+
+msgid "Sort Options"
+msgstr "Sortimisvalikud"
+
+msgid "Sort By"
+msgstr "Sortimisalus"
+
+msgid "Name"
+msgstr "Nimi"
+
+msgid "Size"
+msgstr "Suurus"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "Paigaldatud rakenduste loendis ei leitud vasteid päringule „%s“"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u saadaolev uuendus"
+msgstr[1] "%u saadaolevat uuendust"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u paigaldatud rakendus"
+msgstr[1] "%u paigaldatud rakendust"
+
+msgid "No applications found"
+msgstr "Rakendusi ei leitud"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Leiti üks rakendus"
+msgstr[1] "Leiti %u rakendust"
+
+msgid "Get Involved"
+msgstr "Osale"
+
+msgid "Learn More"
+msgstr "Loe lähemalt"
+
+msgid "Unknown License"
+msgstr "Tundmatu litsents"
+
+msgid "Community Built"
+msgstr "Kogukonna loodud"
+
+msgid "Proprietary"
+msgstr "Suletud"
+
+msgid "Special License"
+msgstr "Erilitsents"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Seda rakendust arendab avalikult rahvusvaheline kogukond.\n"
+"\n"
+"Sa võid osaleda ja aidata seda veelgi paremaks muuta."
+
+msgid "The license of this app is not known"
+msgstr "Selle rakenduse litsents pole teada"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Seda rakendust arendab avalikult rahvusvaheline kogukond ja see on välja antud litsentsi %s all.\n"
+"\n"
+"Sa võid osaleda ja aidata seda veelgi paremaks muuta."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Seda rakendust ei arendata avalikult, seega teavad selle toimimist ainult arendajad. See võib olla ebaturvaline viisidel, mida on raske avastada, ja see võib muutuda järelevalveta.\n"
+"\n"
+"Sa võid sellesse rakendusse panustada või mitte."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Seda rakendust arendatakse erilitsentsi %s all.\n"
+"\n"
+"Sa võid sellesse rakendusse panustada või mitte."
+
+msgid "License"
+msgstr "Litsents"
+
+msgid "Connect to Flathub"
+msgstr "Ühenda Flathubiga"
+
+msgid "Something Went Wrong"
+msgstr "Midagi läks valesti"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Logi sisse, et sünkroonida oma lemmikrakendused seadmete vahel"
+
+msgid "Finish"
+msgstr "Lõpeta"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Tere, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Kas lisada metainfo eelvaatele ikoon?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Metainfo failid ei sisalda ise rakenduste ikoone. Kas soovid ühe käsitsi valida?"
+
+msgid "Skip"
+msgstr "Jäta vahele"
+
+msgid "Select Icon"
+msgstr "Vali ikoon"
+
+msgid "Image Files"
+msgstr "Pildifailid"
+
+msgid "New Permissions"
+msgstr "Uued õigused"
+
+msgid "_Accept"
+msgstr "_Nõustu"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Uus õigus rakendusele %s"
+msgstr[1] "Uued õigused rakendusele %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "See uuendus nõuab järgmist täiendavat õigust"
+msgstr[1] "See uuendus nõuab järgmisi täiendavaid õigusi"
+
+msgid "User"
+msgstr "Kasutaja"
+
+msgid "Beta"
+msgstr "Beeta"
+
+msgid "End-Of-Life"
+msgstr "Elutsükli lõpp"
+
+msgid "Preferences"
+msgstr "Eelistused"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Võrguühendus on mahupõhine – poeandmete automaatne värskendamine on peatatud"
+
+msgid "Refresh Manually"
+msgstr "Värskenda käsitsi"
+
+msgid "App Updates"
+msgstr "Rakenduste uuendused"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Automaatsed uuendused peatatakse mahupõhistes võrkudes või energiasäästurežiimis, et säästa andmeid ja akut."
+
+msgid "_Automatic"
+msgstr "_Automaatne"
+
+msgid "Automatically check for and download app updates"
+msgstr "Otsi rakenduste uuendusi ja laadi need automaatselt alla"
+
+msgid "_Manual"
+msgstr "_Käsitsi"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Rakenduste uuenduste otsimine ja allalaadimine tuleb teha käsitsi"
+
+msgid "Automatic Update _Notifications"
+msgstr "Automaatsete uuenduste _teavitused"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Teavita, kui uuendused on automaatselt paigaldatud"
+
+msgid "Content Filters"
+msgstr "Sisufiltrid"
+
+msgid "_Free Software Only"
+msgstr "_Ainult vabatarkvara"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Peida sirvimisel ja otsimisel suletud rakendused"
+
+msgid "F_lathub Results Only"
+msgstr "Ainult F_lathubi tulemused"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Piira otsingu- ja sirvimistulemused ainult Flathubis saadaolevate rakendustega"
+
+msgid "_Verified Results Only"
+msgstr "Ainult _kinnitatud tulemused"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Peida tulemused, mis pole Flathubis kinnitatud"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Peida _eluea lõppu jõudnud rakendused"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "Peida rakendused, mida nende arendajad enam ei toeta"
+
+msgid "Progress Bar Theme"
+msgstr "Edenemisriba teema"
+
+msgid "Accent Color"
+msgstr "Rõhuvärv"
+
+msgid "Pride Colors"
+msgstr "Uhkuse värvid"
+
+msgid "Lesbian Pride Colors"
+msgstr "Lesbide uhkuse värvid"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Meeshomoseksuaalide uhkuse värvid"
+
+msgid "Transgender Pride Colors"
+msgstr "Transsooliste uhkuse värvid"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Mittebinaarsete uhkuse värvid"
+
+msgid "Bisexual Pride Colors"
+msgstr "Biseksuaalide uhkuse värvid"
+
+msgid "Asexual Pride Colors"
+msgstr "Aseksuaalide uhkuse värvid"
+
+msgid "Pansexual Pride Colors"
+msgstr "Panseksuaalide uhkuse värvid"
+
+msgid "Aromantic Pride Colors"
+msgstr "Aromantiliste uhkuse värvid"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Soovoolavate uhkuse värvid"
+
+msgid "Polysexual Pride Colors"
+msgstr "Polüseksuaalide uhkuse värvid"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Omniseksuaalide uhkuse värvid"
+
+msgid "Aroace Pride Colors"
+msgstr "Aroace'ide uhkuse värvid"
+
+msgid "Agender Pride Colors"
+msgstr "Agendrite uhkuse värvid"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Genderqueer'ide uhkuse värvid"
+
+msgid "Intersex Pride Colors"
+msgstr "Intersooliste uhkuse värvid"
+
+msgid "Demigender Pride Colors"
+msgstr "Demigendrite uhkuse värvid"
+
+msgid "Biromantic Pride Colors"
+msgstr "Biromantiliste uhkuse värvid"
+
+msgid "Disability Pride Colors"
+msgstr "Puuetega inimeste uhkuse värvid"
+
+msgid "Femboy Pride Colors"
+msgstr "Femboy uhkuse värvid"
+
+msgid "Neutrois Pride Colors"
+msgstr "Neutrois'de uhkuse värvid"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar peab rakenduste uuenduste otsimiseks töötama taustal"
+
+msgid "Version History"
+msgstr "Versiooniajalugu"
+
+msgid "Today"
+msgstr "Täna"
+
+msgid "Yesterday"
+msgstr "Eile"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d päev tagasi"
+msgstr[1] "%d päeva tagasi"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d nädal tagasi"
+msgstr[1] "%d nädalat tagasi"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d kuu tagasi"
+msgstr[1] "%d kuud tagasi"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d aasta tagasi"
+msgstr[1] "%d aastat tagasi"
+
+msgid "%e %B %Y"
+msgstr "%e. %B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "Versioon %s"
+
+msgid "No details for this release"
+msgstr "Selle väljalaske kohta pole üksikasju"
+
+msgid "Get More Information"
+msgstr "Hangi lisateavet"
+
+msgid "_Version History"
+msgstr "_Versiooniajalugu"
+
+msgid "Remotes"
+msgstr "Allikad"
+
+msgid "System Installation"
+msgstr "Süsteemipaigaldus"
+
+msgid "Available to all users on this computer"
+msgstr "Saadaval kõigile selle arvuti kasutajatele"
+
+msgid "User Installation"
+msgstr "Kasutajapaigaldus"
+
+msgid "Only available to you"
+msgstr "Saadaval ainult sulle"
+
+msgid "Remove Remote"
+msgstr "Eemalda allikas"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Eemalda %s"
+
+msgid "Unused"
+msgstr "Kasutamata"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u rakendus paigaldatud"
+msgstr[1] "%u rakendust paigaldatud"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Kas eemaldada „%s“?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Sa ei saa enam sellest kasutaja allikast rakendusi paigaldada."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Sa ei saa enam sellest süsteemi allikast rakendusi paigaldada."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u rakendus eemaldamiseks"
+msgstr[1] "%u rakendust eemaldamiseks"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Allolev rakendus paigaldati sellest allikast ja see eemaldatakse koos sellega sinu kontolt."
+msgstr[1] "Need rakendused paigaldati sellest allikast ja need eemaldatakse koos sellega sinu kontolt."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Allolev rakendus paigaldati sellest allikast ja see eemaldatakse koos sellega kõigilt kasutajatelt."
+msgstr[1] "Need rakendused paigaldati sellest allikast ja need eemaldatakse koos sellega kõigilt kasutajatelt."
+
+msgid "Uninstall"
+msgstr "Eemalda paigaldus"
+
+msgid "Get"
+msgstr "Hangi"
+
+msgid "Arbitrary Permissions"
+msgstr "Suvalised õigused"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Sellel rakendusel on õigus, mis lubab tal kaudselt anda endale <b>mis tahes muu soovitud õiguse</b>, mööda minnes Flatpaki liivakastist.\n"
+"\n"
+"Seega saab see teha kõike, mida saab teha privilegeeritud, liivakastita rakendus, näiteks pääseda ligi kõigile sinu failidele ja ühenduda internetiga.\n"
+"\n"
+"Teiste õiguste vaatamine võib siiski anda parema ettekujutuse, mida rakendus tõenäoliselt teeb."
+
+msgid "View Other Permissions"
+msgstr "Vaata muid õigusi"
+
+msgid "Safe"
+msgstr "Turvaline"
+
+msgid "App ID"
+msgstr "Rakenduse ID"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "See rakendus kasutab tarkvaraplatvormi (SDK) iganenud versiooni ja võib sisaldada vigu või turvaauke, mida ei parandata."
+
+msgid "Safety"
+msgstr "Turvalisus"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s on turvaline"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s ei sisalda ebaturvalisi õigusi"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s on tõenäoliselt turvaline"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s on võib-olla ebaturvaline"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s on ebaturvaline"
+
+msgid "Back"
+msgstr "Tagasi"
+
+msgid "Previous Screenshot"
+msgstr "Eelmine ekraanipilt"
+
+msgid "Next Screenshot"
+msgstr "Järgmine ekraanipilt"
+
+msgid "Copy Image"
+msgstr "Kopeeri pilt"
+
+msgid "Reset View"
+msgstr "Lähtesta vaade"
+
+msgid "Zoom Out"
+msgstr "Vähenda"
+
+msgid "Zoom In"
+msgstr "Suurenda"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u käituskeskkonna uuendus"
+msgstr[1] "%u käituskeskkonna uuendust"
+
+msgid "Screenshots Carousel"
+msgstr "Ekraanipiltide karussell"
+
+msgid "No Screenshots"
+msgstr "Ekraanipilte pole"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Ekraanipilt %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Ekraanipilt %u"
+
+msgid "Clear Search"
+msgstr "Tühjenda otsing"
+
+msgid "Filters"
+msgstr "Filtrid"
+
+msgid "_Verified"
+msgstr "_Kinnitatud"
+
+msgid "_Free/Open"
+msgstr "_Vaba/avatud"
+
+msgid "Non-_EOL"
+msgstr "Mitte-_EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Filtreeri välja eluea lõppu jõudnud rakendused"
+
+msgid "_Mobile Friendly"
+msgstr "_Mobiilisõbralik"
+
+msgid "Categories"
+msgstr "Kategooriad"
+
+msgid "Search Apps, Games, Software"
+msgstr "Otsi rakendusi, mänge, tarkvara"
+
+msgid "Search Filters"
+msgstr "Otsingufiltrid"
+
+msgid "Browse Categories"
+msgstr "Sirvi kategooriaid"
+
+msgid "Categories Unavailable"
+msgstr "Kategooriad pole saadaval"
+
+msgid "Search for apps using the search bar above."
+msgstr "Otsi rakendusi ülal olevast otsinguribast."
+
+msgid "No Applications Found"
+msgstr "Rakendusi ei leitud"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Flathubis ei leitud tulemusi päringule „%s“"
+
+msgid "Browser"
+msgstr "Brauser"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Office"
+msgstr "Kontor"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Kalender"
+
+msgid "Messaging"
+msgstr "Sõnumside"
+
+msgid "Paint"
+msgstr "Joonistamine"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Emulaator"
+
+msgid "Copy Link"
+msgstr "Kopeeri link"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Flathubi leht"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Projekti veebisait"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Probleemihaldur"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "KKK"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Abi"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Anneta"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Tõlgi"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Kontakt"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Lähtekood"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Panusta"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifest"
+
+msgid "Timeline"
+msgstr "Ajajoon"
+
+msgid "Total"
+msgstr "Kokku"
+
+msgid "This Week"
+msgstr "See nädal"
+
+msgid "Installs per day"
+msgstr "Paigaldusi päevas"
+
+msgid "World"
+msgstr "Maailm"
+
+msgid "Installs per country"
+msgstr "Paigaldusi riigiti"
+
+msgid "Since 4/15/2024"
+msgstr "Alates 15.04.2024"
+
+msgid "No Results Found"
+msgstr "Tulemusi ei leitud"
+
+msgid "Search failed"
+msgstr "Otsing nurjus"
+
+msgid "Unknown"
+msgstr "Teadmata"
+
+msgid "Keep User Data"
+msgstr "Säilita kasutaja andmed"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Luba isiklike sätete &amp; sisu taastamine"
+
+msgid "Delete All Data"
+msgstr "Kustuta kõik andmed"
+
+msgid "Permanently erase user data to save space"
+msgstr "Kustuta kasutaja andmed jäädavalt, et ruumi säästa"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "Kas eemaldada %s?"
+
+msgid "Select which version to remove."
+msgstr "Vali, milline versioon eemaldada."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "Pärast eemaldamist ei ole võimalik rakendust %s kasutada."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "„%s“ on suure riskiga"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Sellel rakendusel on täielik juurdepääs sinu süsteemile, sealhulgas <b>kõigile sinu failidele, brauseriajaloole, salvestatud paroolidele</b> ja muule. Samuti on sellel juurdepääs internetile, mis tähendab, et see võib sinu andmeid kõrvalistele isikutele saata.\n"
+"\n"
+"Kuna rakendus on suletud, ei saa auditeerida, mida see nende õigustega teeb."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"See rakendus kasutab vana X11 akendesüsteemi, mis lubab tal <b>salvestada kõiki klahvivajutusi, jäädvustada ekraanipilte ja jälgida teisi rakendusi</b>. Samuti on sellel juurdepääs internetile, mis tähendab, et see võib sinu andmeid kõrvalistele isikutele saata.\n"
+"\n"
+"Kuna rakendus on suletud, ei saa auditeerida, mida see nende õigustega teeb."
+
+msgid "_Install Anyway"
+msgstr "_Paigalda ikkagi"
+
+msgid "Failed to load transaction dialog"
+msgstr "Tehinguakna laadimine nurjus"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "Lõpetatud %.02f sekundiga"
+
+msgid "App Add-On"
+msgstr "Rakenduse lisandmoodul"
+
+msgid "Runtime"
+msgstr "Käituskeskkond"
+
+msgid "In Queue"
+msgstr "Järjekorras"
+
+msgid "Finishing Up"
+msgstr "Lõpetamine"
+
+msgid "Done"
+msgstr "Valmis"
+
+msgid "Cancelled"
+msgstr "Tühistatud"
+
+msgid "Error"
+msgstr "Viga"
+
+msgid "Cancel Transaction"
+msgstr "Tühista tehing"
+
+msgid "Show Details"
+msgstr "Kuva üksikasjad"
+
+msgid "Show Error Info"
+msgstr "Kuva veateave"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s vabastatud"
+
+msgid "Transaction Error"
+msgstr "Tehingu viga"
+
+msgid "Pending"
+msgstr "Ootel"
+
+msgid "Installed Updates"
+msgstr "Paigaldatud uuendused"
+
+msgid "Release Notes"
+msgstr "Väljalaskemärkmed"
+
+msgid "No Release Info"
+msgstr "Väljalaske teave puudub"
+
+msgid "_Update All"
+msgstr "_Uuenda kõik"
+
+msgid "This update requests new permissions"
+msgstr "See uuendus küsib uusi õigusi"
+
+msgid "Manage Leftover User Data"
+msgstr "Halda järelejäänud kasutaja andmeid"
+
+msgid "No Leftover User Data Found"
+msgstr "Järelejäänud kasutaja andmeid ei leitud"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Siin kuvatakse eemaldatud rakenduste maha jäetud isiklikud andmed"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Prügikasti visatud kasutaja andmed %u rakenduse jaoks"
+msgstr[1] "Prügikasti visatud kasutaja andmed %u rakenduse jaoks"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Prügikasti visatud kasutaja andmed rakenduse %s jaoks"
+
+msgid "Open User Data Folder"
+msgstr "Ava kasutaja andmete kaust"
+
+msgid "Trash User Data"
+msgstr "Viska kasutaja andmed prügikasti"
+
+msgid "Refreshing"
+msgstr "Värskendamine"
+
+msgid "Curated"
+msgstr "Kureeritud"
+
+msgid "Explore"
+msgstr "Avasta"
+
+msgid "Library"
+msgstr "Teek"
+
+msgid "Search"
+msgstr "Otsi"
+
+msgid "Main Menu"
+msgstr "Peamenüü"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Sul töötab Bazaari uus versioon!"
+
+msgid "See What's New"
+msgstr "Vaata, mis on uut"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Sul on võrguühendus, kuid vaatad Flathubi vahemällu salvestatud versiooni"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Võrguühendus on mahupõhine – automaatsed värskendused on keelatud"
+
+msgid "_Donate to Bazaar"
+msgstr "_Anneta Bazaarile"
+
+msgid "_Refresh"
+msgstr "_Värskenda"
+
+msgid "_Login With Flathub"
+msgstr "_Logi Flathubiga sisse"
+
+msgid "_Manage Leftover User Data"
+msgstr "Halda _järelejäänud kasutaja andmeid"
+
+msgid "Manage R_emotes"
+msgstr "Halda _allikaid"
+
+msgid "_Preferences"
+msgstr "_Eelistused"
+
+msgid "_Keyboard Shortcuts"
+msgstr "_Kiirklahvid"
+
+msgid "_About Bazaar"
+msgstr "Rakenduse _Bazaar info"
+
+msgid "_Quit Bazaar"
+msgstr "_Välju rakendusest Bazaar"
+
+msgid "Log Out"
+msgstr "Logi välja"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Rakenduse käivitamine nurjus"
+
+msgid "Could not open link"
+msgstr "Linki ei õnnestunud avada"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Sa ei saa Bazaari Bazaarist eemaldada!"
+
+msgid "Can't do that right now!"
+msgstr "Seda ei saa praegu teha!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u paigaldus"
+msgstr[1] "%s, %'u paigaldust"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Enim paigaldusi riigist %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d allalaadimist viimase kuu jooksul"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s käituskeskkond"
+
+msgid "Size information unavailable"
+msgstr "Suuruse teave pole saadaval"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "Rakenduse %s allalaadimise suurus"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Rakenduse %s paigaldatud suurus"
+
+msgid "All Ages"
+msgstr "Kõik vanused"
+
+msgid "Age rating information unavailable"
+msgstr "Vanusepiirangu teave pole saadaval"
+
+msgid "Suitable for all ages"
+msgstr "Sobib kõigile vanustele"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "Sobib vanuses %d+"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "Vabatarkvara litsentsiga %s"
+
+msgid "Free software"
+msgstr "Vabatarkvara"
+
+msgid "Proprietary Software"
+msgstr "Suletud tarkvara"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Erilitsents: %s"
+
+msgid "Free Software"
+msgstr "Vabatarkvara"
+
+msgid "Adaptive"
+msgstr "Kohanduv"
+
+msgid "Desktop Only"
+msgstr "Ainult töölauale"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "Töötab töölauas, tahvelarvutites ja telefonides"
+
+msgid "May not work on mobile devices"
+msgstr "Ei pruugi mobiilseadmetes töötada"
+
+msgid "Low Risk"
+msgstr "Väike risk"
+
+msgid "Medium Risk"
+msgstr "Keskmine risk"
+
+msgid "High Risk"
+msgstr "Suur risk"
+
+msgid "Unknown Permissions"
+msgstr "Tundmatud õigused"
+
+msgid "Permissions are missing for this app."
+msgstr "Selle rakenduse õigused puuduvad."
+
+msgid "No Permissions"
+msgstr "Õigusi pole"
+
+msgid "App is fully sandboxed"
+msgstr "Rakendus on täielikult liivakastis"
+
+msgid "Network Access"
+msgstr "Võrgujuurdepääs"
+
+msgid "Can access the internet"
+msgstr "Pääseb internetti"
+
+msgid "No Network Access"
+msgstr "Võrgujuurdepääsu pole"
+
+msgid "Cannot access the internet"
+msgstr "Ei pääse internetti"
+
+msgid "User Device Access"
+msgstr "Kasutaja seadmete juurdepääs"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Pääseb ligi seadmetele, nagu veebikaamerad või mängukontrollerid"
+
+msgid "No User Device Access"
+msgstr "Kasutaja seadmete juurdepääsu pole"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Ei pääse ligi seadmetele, nagu veebikaamerad või mängukontrollerid"
+
+msgid "Input Device Access"
+msgstr "Sisendseadmete juurdepääs"
+
+msgid "Can access input devices"
+msgstr "Pääseb ligi sisendseadmetele"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Mikrofoni juurdepääs ja heli esitamine"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Saab mikrofonidega kuulata ja heli esitada ilma luba küsimata"
+
+msgid "System Device Access"
+msgstr "Süsteemiseadmete juurdepääs"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Pääseb ligi süsteemiseadmetele, mis nõuavad kõrgendatud õigusi"
+
+msgid "Screen Contents Access"
+msgstr "Ekraani sisu juurdepääs"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Pääseb ligi ekraani või teiste akende sisule"
+
+msgid "Legacy Windowing System"
+msgstr "Vana akendesüsteem"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Kasutab alati vana akendesüsteemi (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Saab hankida suvalisi õigusi"
+
+msgid "User Settings"
+msgstr "Kasutaja sätted"
+
+msgid "Can access and change user settings"
+msgstr "Pääseb ligi kasutaja sätetele ja saab neid muuta"
+
+msgid "Full File System Read/Write Access"
+msgstr "Täielik failisüsteemi lugemis- ja kirjutamisjuurdepääs"
+
+msgid "Can read and write all data on the file system"
+msgstr "Saab lugeda ja kirjutada kõiki failisüsteemi andmeid"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Kodukausta lugemis- ja kirjutamisjuurdepääs"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Saab lugeda ja kirjutada kõiki andmeid sinu kodukataloogis"
+
+msgid "Full File System Read Access"
+msgstr "Täielik failisüsteemi lugemisjuurdepääs"
+
+msgid "Can read all data on the file system"
+msgstr "Saab lugeda kõiki failisüsteemi andmeid"
+
+msgid "Home Folder Read Access"
+msgstr "Kodukausta lugemisjuurdepääs"
+
+msgid "Can read all data in your home directory"
+msgstr "Saab lugeda kõiki andmeid sinu kodukataloogis"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Allalaadimiste kausta lugemis- ja kirjutamisjuurdepääs"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Saab lugeda ja kirjutada kõiki andmeid sinu allalaadimiste kataloogis"
+
+msgid "Download Folder Read Access"
+msgstr "Allalaadimiste kausta lugemisjuurdepääs"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Saab lugeda kõiki andmeid sinu allalaadimiste kataloogis"
+
+msgid "Can read and write all data in the directory"
+msgstr "Saab lugeda ja kirjutada kõiki andmeid kataloogis"
+
+msgid "Can read all data in the directory"
+msgstr "Saab lugeda kõiki andmeid kataloogis"
+
+msgid "No File System Access"
+msgstr "Failisüsteemi juurdepääsu pole"
+
+msgid "Cannot access the file system at all"
+msgstr "Ei pääse failisüsteemile üldse ligi"
+
+msgid "Uses System Services"
+msgstr "Kasutab süsteemiteenuseid"
+
+msgid "Can request data from non-portal system services"
+msgstr "Saab küsida andmeid süsteemiteenustelt, mis pole portaalid"
+
+msgid "Uses Session Services"
+msgstr "Kasutab seansiteenuseid"
+
+msgid "Can request data from non-portal session services"
+msgstr "Saab küsida andmeid seansiteenustelt, mis pole portaalid"
+
+msgid "No Service Access"
+msgstr "Teenuste juurdepääsu pole"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Ei pääse ligi seansi- ega süsteemiteenustele, mis pole portaalid"
+
+msgid "Verified App Developer"
+msgstr "Kinnitatud rakenduse arendaja"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Selle rakenduse arendaja on kinnitatud olevat see, kes ta väidab end olevat"
+
+msgid "Proprietary Code"
+msgstr "Suletud kood"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Lähtekood pole avalik, seega ei saa seda sõltumatult auditeerida ja see võib olla ebaturvaline"
+
+msgid "Auditable Code"
+msgstr "Auditeeritav kood"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Lähtekood on avalik ja seda saab sõltumatult auditeerida, mis muudab rakenduse tõenäolisemalt turvaliseks"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Kasuta süsteemiteenust %s"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Kasuta seansiteenust %s"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Kasuta teenust %s"
+
+msgid "Can see the non-portal service"
+msgstr "Näeb teenust, mis pole portaal"
+
+msgid "Can talk to the non-portal service"
+msgstr "Saab suhelda teenusega, mis pole portaal"
+
+msgid "Can own the non-portal service"
+msgstr "Saab omada teenust, mis pole portaal"
+
+msgid "Global Menu Integration"
+msgstr "Globaalmenüü integratsioon"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Saab kuvada oma menüüsid globaalses menüüribas"
+
+msgid "KDE Settings Integration"
+msgstr "KDE sätete integratsioon"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Saab tuvastada KDE töölaua sätete muutumist"
+
+msgid "KDE Global Settings"
+msgstr "KDE globaalsätted"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Saab lugeda KDE töölaua eelistusi, nagu kirjatüübid ja värvid"
+
+msgid "Secret Storage Service"
+msgstr "Salajase hoidla teenus"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Saab süsteemi võtmerõnga abil oma paroole salvestada ja tuua"
+
+msgid "Desktop Notifications Service"
+msgstr "Töölauateavituste teenus"
+
+msgid "Can send desktop notifications"
+msgstr "Saab saata töölauateavitusi"
+
+msgid "System Tray Integration"
+msgstr "Süsteemisalve integratsioon"
+
+msgid "Can display an icon in the system tray"
+msgstr "Saab kuvada ikooni süsteemisalves"
+
+msgid "KDE Connect Integration"
+msgstr "KDE Connecti integratsioon"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Saab suhelda KDE Connectiga seotud seadmetega"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigeerimine"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Ava leht Avasta"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Ava teegi leht"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Ava otsingu leht"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Allikad"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Sünkrooni allikad"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Üldine"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Ava eelistused"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Kuva kiirklahve"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Sulge aken"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Välju rakendusest Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s paigaldatud"
+
+msgid "The app is ready to be used"
+msgstr "Rakendus on kasutamiseks valmis"
+
+msgid "Updates Are Out of Date"
+msgstr "Uuendused on aegunud"
+
+msgid "Please check for available updates"
+msgstr "Palun otsi saadaolevaid uuendusi"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u rakendus uuendatud"
+msgstr[1] "%u rakendust uuendatud"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s on uuendatud."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s ja %s on uuendatud."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Sisaldab: %s, %s ja %s."

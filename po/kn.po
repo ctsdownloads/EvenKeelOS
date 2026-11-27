@@ -7491,6 +7491,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "{network} ಅನ್ನು {place} ಎಂದು ಸೇವ್ ಮಾಡಲಾಗಿದೆ."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} GB"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} MB"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} TB"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8654,3 +8669,247 @@ msgstr "ಸಂಗೀತ ನೋಟುಗಳನ್ನು ಬರೆಯುವುದ�
 
 msgid "your calendar"
 msgstr "ನಿಮ್ಮ ಕ್ಯಾಲೆಂಡರ್"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "ಎಲ್ಲಾ ಭಾಷೆಗಳ ಅನುವಾದವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "ಪ್ರತಿ ಭಾಷೆಯ ತನ್ನದೇ ಕ್ರಮದಲ್ಲಿ ದಿನಾಂಕಗಳನ್ನು ತೋರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "ಇಮೇಜ್‌ನಲ್ಲಿ gettext ಇರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "68 ಭಾಷೆಗಳಿಗೆ ಅನುವಾದಗಳನ್ನು ಸೇರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "ಪ್ರತಿ ಪರದೆಯ ಪಠ್ಯವನ್ನು ಅನುವಾದಿಸಲು ಸಾಧ್ಯವಾಗಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "ಸ್ಥಳಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಪೋರ್ಟ್‌ಗಳಿಗೆ ಪ್ರವೇಶ ನೀಡಿ; ಕೆಲಸದ ಸ್ಥಳ ಯಾವುದಕ್ಕೂ ಪ್ರವೇಶ ನೀಡುವುದಿಲ್ಲ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "ಲೈಟ್ ಮತ್ತು ಡಾರ್ಕ್ ವೇಳಾಪಟ್ಟಿ, ಸ್ಲೈಡ್‌ಶೋ ಮತ್ತು ಫಾಂಟ್‌ಗಳನ್ನು ಸೇರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "ಸಿಸ್ಟಂ ಟೂಲ್ಸ್ ಹೆಸರನ್ನು EvenKeelOS Wheelhouse ಎಂದು ಬದಲಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "ಹೊಂದಾಣಿಕೆ ಪರಿಶೀಲನೆಯಲ್ಲಿ NVIDIA ಗ್ರಾಫಿಕ್ಸ್ ಸರಿಯಿದೆ ಎಂದು ತೋರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವ ಮೊದಲು ಫೈಲ್ ಸಿಸ್ಟಂಗಳನ್ನು ಲೋಡ್ ಮಾಡಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "ಸ್ವಯಂಚಾಲಿತ ಮರುಪ್ರಾರಂಭದ ಮೊದಲು ಕೇಳಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "ಪ್ರತಿ ಹೊಸ ಆವೃತ್ತಿಯನ್ನು ಪ್ರಯೋಗಕ್ಕಾಗಿ ಗುರುತಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದ ಏನಾದರೂ ಕೆಟ್ಟುಹೋದಾಗ ಅಪ್‌ಡೇಟ್ ಅನ್ನು ರೋಲ್ ಬ್ಯಾಕ್ ಮಾಡಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "ಪ್ರಕಟಿಸುವ ಮೊದಲು ಪ್ರತಿ ಬಿಲ್ಡ್ ಅನ್ನು ವರ್ಚುವಲ್ ಮೆಷಿನ್‌ನಲ್ಲಿ ಪ್ರಾರಂಭಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "ಕನಿಷ್ಠ ಮಿತಿ ಇಲ್ಲದೆ 8 GB ಮೆಮೊರಿಯನ್ನು ಶಿಫಾರಸು ಮಾಡಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "ಲೈವ್ USB ಯಿಂದ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡುವ ಮೊದಲು ಕಂಪ್ಯೂಟರ್ ಪರಿಶೀಲಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "ಇನ್‌ಸ್ಟಾಲರ್‌ನಲ್ಲಿ Windows ಅಥವಾ Linux ಬಳಕೆದಾರರೇ ಎಂದು ಕೇಳಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "ಲೋಗೋ ಮೆನುಗೆ ಸಿಸ್ಟಂ ಟೂಲ್ಸ್ ಸೇರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "EvenKeelOS ಮಾರ್ಗದರ್ಶಿಗೆ ಇನ್ನೂ ಆರು ವಿಷಯಗಳನ್ನು ಸೇರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "Linux ಗೆ ಹೊಸಬರು ಎಂಬುದನ್ನು EvenKeelOS ಮಾರ್ಗದರ್ಶಿಯಾಗಿ ಬದಲಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "ಸಿಸ್ಟಂ ಟೂಲ್ಸ್‌ನಲ್ಲಿ ಮತ್ತು ಲಾಗಿನ್‌ನಲ್ಲಿ Linux ಗೆ ಹೊಸಬರು ಮಾರ್ಗದರ್ಶಿ ಸೇರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "ಬೂಟ್ ಆಯ್ಕೆಗಳನ್ನು ಸೇರಿಸಿ: ಸಾಮಾನ್ಯ ಸರಿಪಡಿಕೆಗಳು ಮತ್ತು ನಿಮ್ಮದೇ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "ಹಂಚಿದ ಫೋಲ್ಡರ್‌ಗಳ ಬಿಲ್ಡ್ ಪರಿಶೀಲನೆಯನ್ನು ಸರಿಪಡಿಸಿ: ಇನ್ನೂ ಹೋಮ್ ಫೋಲ್ಡರ್‌ಗಳಿಲ್ಲ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "ಹಂಚಿದ ಫೋಲ್ಡರ್‌ಗಳನ್ನು ಸೇರಿಸಿ: ಮನೆ ನೆಟ್‌ವರ್ಕ್‌ಗಳಲ್ಲಿ ಹೋಮ್ ಫೋಲ್ಡರ್‌ಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "ನೆಟ್‌ವರ್ಕ್ ಸುರಕ್ಷತೆಯನ್ನು ಸೇರಿಸಿ: ಮನೆ, ಕೆಲಸದ ಸ್ಥಳ ಅಥವಾ ಸಾರ್ವಜನಿಕ ಸ್ಥಳ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "ಯಾವುದೇ ಫೋಲ್ಡರ್‌ನಲ್ಲಿರುವ ಪ್ರಿಂಟರ್ ಡ್ರೈವರ್‌ಗಳನ್ನು ಗುರುತಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "ಟೂಲ್ ವಿಂಡೋಗಳನ್ನು ಸಿಸ್ಟಂ ಟೂಲ್ಸ್ ಒಳಗೆ ತೋರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "ಇಮೇಜ್ ಬಿಲ್ಡ್ ವಿಫಲವಾದಾಗ ಇಷ್ಯೂ ತೆರೆಯಿರಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "ಹೊರಗಿನ ಪ್ಯಾಕೇಜ್‌ಗಳು ಮತ್ತು ISO ಟೂಲ್ ಅನ್ನು ನಿಖರ ಆವೃತ್ತಿಗಳಿಗೆ ಲಾಕ್ ಮಾಡಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "ಟೂಲ್ ವಿಂಡೋಗಳಿಗೆ ಟೂಲ್‌ನ ಹೆಸರನ್ನೇ ಇಡಿ, ಪರೀಕ್ಷಾ ಪಟ್ಟಿಯನ್ನು ಚಿಕ್ಕದಾಗಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "ಅಳಿಸಿಹೋದ ಸಿಸ್ಟಂ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ದುರಸ್ತಿ ಮಾಡಿ ಮತ್ತು ಪ್ರಮಾಣಪತ್ರಗಳ ಬಗ್ಗೆ ಎಚ್ಚರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "ಎಲ್ಲಾ ಟೂಲ್‌ಗಳನ್ನು ಒಂದೇ ಸಿಸ್ಟಂ ಟೂಲ್ಸ್ ವಿಂಡೋದಲ್ಲಿ ಇರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "VPN ತೆಗೆದಾಗ ಏನನ್ನೂ ಉಳಿಸಬೇಡಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "VPN ಪಡೆಯಿರಿ ಸೇರಿಸಿ, ನಿರಂತರವಾಗಿ ಅಪ್‌ಡೇಟ್ ಆಗುವ VPN ಗಳೊಂದಿಗೆ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Zoom ಮೀಟಿಂಗ್‌ಗಳಿಗೆ ಪ್ರತ್ಯೇಕ ಮಾರ್ಗದರ್ಶಿ ನೀಡಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Zoom ಮೀಟಿಂಗ್‌ಗಳನ್ನು Chrome ನಲ್ಲಿ, Zoom ನ ವೆಬ್ ಆವೃತ್ತಿಯಲ್ಲಿ ತೆರೆಯಿರಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "ArtCraft ಇನ್‌ಸ್ಟಾಲ್‌ಗಳು Flathub ಇನ್‌ಸ್ಟಾಲ್‌ಗಳನ್ನು ಹಾಳುಮಾಡುವುದನ್ನು ತಡೆಯಿರಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "ಸಾಮಾನ್ಯ ಫೈಲ್ ಹೆಸರಿನಿಂದ ಇನ್‌ಸ್ಟಾಲರ್‌ಗಳನ್ನು ಗುರುತಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Windows ಪ್ರೋಗ್ರಾಂಗಳಿಗೆ Linux ಪರ್ಯಾಯಗಳನ್ನು ಸೂಚಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "ಬಾಕ್ಸ್ ಸೆಟಪ್ ಸರಿಪಡಿಸಿ: distrobox ಓದಲು-ಮಾತ್ರ ಫೋಲ್ಡರ್‌ಗಳನ್ನು ತಪ್ಪಾಗಿ ಮೌಂಟ್ ಮಾಡುತ್ತದೆ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Windows ಪ್ರೋಗ್ರಾಂಗಳ Fedora ಅಥವಾ Ubuntu ಆವೃತ್ತಿಗಳನ್ನು ಸೂಚಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Windows ಪ್ರೋಗ್ರಾಂ ತೆರೆದಾಗ Linux ಆವೃತ್ತಿಯನ್ನು ಸೂಚಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "ಒಂದೇ shim ಕಳುಹಿಸಿ, ಇದರಿಂದ ಫರ್ಮ್‌ವೇರ್ ಹೆಚ್ಚುವರಿ Fedora ನಮೂದನ್ನು ಸೇರಿಸುವುದಿಲ್ಲ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Fedora ನ ಫೈರ್‌ವಾಲ್ ವಲಯವನ್ನು ಮರಳಿ ಇರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "root ಸಹಾಯಕಗಳು, ಫೈರ್‌ವಾಲ್ ಮತ್ತು ಪಾಸ್‌ವರ್ಡ್ ಇಲ್ಲದ ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ಬಲಪಡಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "ಹೊಸ ಡೀಫಾಲ್ಟ್‌ಗಳು: ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಆಕ್ಸೆಂಟ್ ಫೋಲ್ಡರ್‌ಗಳು, ಲಾಕ್ ಸ್ಕ್ರೀನ್"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "ಹೊಸ ಡೀಫಾಲ್ಟ್: ಟೀಲ್ ಆಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಲಾಗಿನ್ ಪರದೆಯಲ್ಲೂ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "ರೋಲ್‌ಬ್ಯಾಕ್ ಟಿಪ್ಪಣಿ, ಲಾಗಿನ್ ಲೂಪ್ ಮತ್ತು ಸಿಲುಕಿದ ಪರೀಕ್ಷೆಗಳನ್ನು ಸರಿಪಡಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "ಫ್ರೀಜ್ ರೋಲ್‌ಬ್ಯಾಕ್ ಸರಿಪಡಿಸಿ ಮತ್ತು ಮರುಪ್ರಯತ್ನಗಳನ್ನು 2 ಕ್ಕೆ ಇಳಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "ಸ್ವಯಂಚಾಲಿತ ರೋಲ್‌ಬ್ಯಾಕ್ ಪರೀಕ್ಷೆಗಳನ್ನು ಸರಿಪಡಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "ಸ್ವಯಂಚಾಲಿತ ರೋಲ್‌ಬ್ಯಾಕ್‌ಗಾಗಿ ನಿಜವಾದ ವೈಫಲ್ಯ ಪರೀಕ್ಷೆಗಳು"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "greenboot ಜೊತೆಗೆ ಸ್ವಯಂಚಾಲಿತ ರೋಲ್‌ಬ್ಯಾಕ್ ಸೇರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "Windows ಲೇಔಟ್ ಅನ್ನು ಡೆಸ್ಕ್‌ಟಾಪ್‌ನಲ್ಲಿ ಪ್ರಾರಂಭಿಸಿ, ಜೊತೆಗೆ ಸಣ್ಣ ಸರಿಪಡಿಕೆಗಳು"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "ರದ್ದುಗೊಳಿಸಿದ ನಂತರ 3 ದಿನ ಸ್ವಯಂಚಾಲಿತ ಅಪ್‌ಡೇಟ್‌ಗಳನ್ನು ವಿರಾಮಗೊಳಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "ಇನ್‌ಸ್ಟಾಲರ್‌ಗೆ ಡೆಸ್ಕ್‌ಟಾಪ್ ಲೇಔಟ್ ಹಂತವನ್ನು ಸೇರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "ಸಿಸ್ಟಂ ಟೂಲ್ಸ್‌ಗೆ ಡೆಸ್ಕ್‌ಟಾಪ್ ಲೇಔಟ್ ಸೇರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "ಪವರ್ ಮೋಡ್ ಬದಲಾವಣೆಗಳು ಅಪ್‌ಡೇಟ್‌ಗಳಿಗಾಗಿ ಕಾಯದಂತೆ ಮಾಡಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "ಐಚ್ಛಿಕ Windows ಶೈಲಿಯ ಲೇಔಟ್ ಸೇರಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Fedora 45 ಪ್ರಿಸೆಟ್‌ಗಳು ಮತ್ತು ಕಂಟೇನರ್ ನೀತಿ ಪಾತ್‌ಗಳನ್ನು ಸರಿಪಡಿಸಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "Fedora 45 ರ ಹೊಸ ಫೋಲ್ಡರ್‌ನಲ್ಲಿರುವ ಡೌನ್‌ಲೋಡ್ ಮೂಲಗಳನ್ನು ಓದಿ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Fedora 45 ಕ್ಕೆ ಸರಿಸಿ"

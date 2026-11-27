@@ -1,0 +1,1166 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+
+msgid "Quit"
+msgstr "Hætta"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Loka %d glugga"
+msgstr[1] "Loka %d gluggum"
+
+msgid "Power options"
+msgstr "Orkuvalkostir"
+
+msgid "Event logs"
+msgstr "Atburðaskrár"
+
+msgid "System"
+msgstr "Kerfi"
+
+msgid "Device Management"
+msgstr "Tækjastjórnun"
+
+msgid "Disk Management"
+msgstr "Diskastjórnun"
+
+msgid "Unlock taskbar"
+msgstr "Aflæsa verkstiku"
+
+msgid "Lock taskbar"
+msgstr "Læsa verkstiku"
+
+msgid "Gnome Settings"
+msgstr "GNOME-stillingar"
+
+msgid "Dash to Panel Settings"
+msgstr "Stillingar Dash to Panel"
+
+msgid "Restore Windows"
+msgstr "Endurheimta glugga"
+
+msgid "Show Desktop"
+msgstr "Sýna skjáborð"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel hefur verið uppfært!"
+
+msgid "You are now running version"
+msgstr "Þú ert nú að keyra útgáfu"
+
+msgid "See what's new"
+msgstr "Sjá hvað er nýtt"
+
+msgid "Top Bar"
+msgstr "Efsta stika"
+
+msgid "Show Desktop button height (px)"
+msgstr "Hæð hnapps til að sýna skjáborð (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Breidd hnapps til að sýna skjáborð (px)"
+
+msgid "Left"
+msgstr "Vinstri"
+
+msgid "Center"
+msgstr "Miðja"
+
+msgid "Right"
+msgstr "Hægri"
+
+msgid "Top"
+msgstr "Efst"
+
+msgid "Middle"
+msgstr "Í miðju"
+
+msgid "Bottom"
+msgstr "Neðst"
+
+msgid "Start"
+msgstr "Upphaf"
+
+msgid "End"
+msgstr "Endir"
+
+msgid "Show Applications button"
+msgstr "Hnappur til að sýna forrit"
+
+msgid "Activities button"
+msgstr "Yfirlitshnappur"
+
+msgid "Taskbar"
+msgstr "Verkstika"
+
+msgid "Date menu"
+msgstr "Dagsetningarvalmynd"
+
+msgid "System menu"
+msgstr "Kerfisvalmynd"
+
+msgid "Left box"
+msgstr "Vinstri kassi"
+
+msgid "Center box"
+msgstr "Miðjukassi"
+
+msgid "Right box"
+msgstr "Hægri kassi"
+
+msgid "Desktop button"
+msgstr "Skjáborðshnappur"
+
+msgid "Move up"
+msgstr "Færa upp"
+
+msgid "Move down"
+msgstr "Færa niður"
+
+msgid "Visible"
+msgstr "Sýnilegt"
+
+msgid "Select element position"
+msgstr "Veldu staðsetningu einingar"
+
+msgid "Stacked to top"
+msgstr "Staflað efst"
+
+msgid "Stacked to left"
+msgstr "Staflað til vinstri"
+
+msgid "Stacked to bottom"
+msgstr "Staflað neðst"
+
+msgid "Stacked to right"
+msgstr "Staflað til hægri"
+
+msgid "Centered"
+msgstr "Miðjað"
+
+msgid "Monitor Center"
+msgstr "Miðja skjás"
+
+msgid "More options"
+msgstr "Fleiri valkostir"
+
+msgid "Reset to defaults"
+msgstr "Endurstilla á sjálfgefið"
+
+msgid "Show Applications options"
+msgstr "Valkostir fyrir Sýna forrit"
+
+msgid "Open icon"
+msgstr "Opna táknmynd"
+
+msgid "Show Desktop options"
+msgstr "Valkostir fyrir Sýna skjáborð"
+
+msgid "Primary monitor"
+msgstr "Aðalskjár"
+
+msgid "Monitor "
+msgstr "Skjár "
+
+msgid "Running Indicator Options"
+msgstr "Valkostir keyrsluvísis"
+
+msgid "Dynamic opacity options"
+msgstr "Valkostir kvikins ógagnsæis"
+
+msgid "Intellihide options"
+msgstr "Valkostir Intellihide"
+
+msgid "Window preview options"
+msgstr "Valkostir gluggaforskoðunar"
+
+msgid "Isolate Workspaces options"
+msgstr "Valkostir fyrir einangrun vinnusvæða"
+
+msgid "Isolate monitors options"
+msgstr "Valkostir fyrir einangrun skjáa"
+
+msgid "Ungrouped application options"
+msgstr "Valkostir fyrir óflokkuð forrit"
+
+msgid "Customize middle-click behavior"
+msgstr "Sérsníða hegðun miðjusmells"
+
+msgid "Text"
+msgstr "Texti"
+
+msgid "Command"
+msgstr "Skipun"
+
+msgid "Remove"
+msgstr "Fjarlægja"
+
+msgid "Customize panel scroll behavior"
+msgstr "Sérsníða hegðun skrunar á stiku"
+
+msgid "Customize icon scroll behavior"
+msgstr "Sérsníða hegðun skrunar á táknmynd"
+
+msgid "Advanced hotkeys options"
+msgstr "Ítarlegir valkostir flýtilykla"
+
+msgid "Secondary Menu Options"
+msgstr "Valkostir aukavalmyndar"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d táknmynd"
+msgstr[1] "%d táknmyndir"
+
+msgid "App icon animation options"
+msgstr "Valkostir hreyfimyndar forritatáknmyndar"
+
+msgid "App icon highlight options"
+msgstr "Valkostir áherslu á forritatáknmynd"
+
+msgid "Export settings"
+msgstr "Flytja út stillingar"
+
+msgid "Import settings"
+msgstr "Flytja inn stillingar"
+
+msgid "Move to current Workspace"
+msgstr "Færa á núverandi vinnusvæði"
+
+msgid "Animation type"
+msgstr "Gerð hreyfimyndar"
+
+msgid "Simple"
+msgstr "Einföld"
+
+msgid "Ripple"
+msgstr "Gárur"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Tímalengd"
+
+msgid "Rotation"
+msgstr "Snúningur"
+
+msgid "Travel"
+msgstr "Ferðalag"
+
+msgid "Zoom"
+msgstr "Aðdráttur"
+
+msgid "Convexity"
+msgstr "Kúpt"
+
+msgid "Extent"
+msgstr "Umfang"
+
+msgid "Highlight focused application"
+msgstr "Auðkenna forritið í fókus"
+
+msgid "Icon dominant color"
+msgstr "Ríkjandi litur táknmyndar"
+
+msgid "Custom color"
+msgstr "Sérsniðinn litur"
+
+msgid "Highlight opacity"
+msgstr "Ógagnsæi áherslu"
+
+msgid "Indicator size (px)"
+msgstr "Stærð vísis (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Litur vísis - ríkjandi litur táknmyndar"
+
+msgid "Indicator color - Override Theme"
+msgstr "Litur vísis - hnekkja þema"
+
+msgid "1 window open (or ungrouped)"
+msgstr "1 gluggi opinn (eða óflokkaður)"
+
+msgid "Apply to all"
+msgstr "Nota á allt"
+
+msgid "2 windows open"
+msgstr "2 gluggar opnir"
+
+msgid "3 windows open"
+msgstr "3 gluggar opnir"
+
+msgid "4+ windows open"
+msgstr "4+ gluggar opnir"
+
+msgid "Use different for unfocused"
+msgstr "Nota annað fyrir þá sem eru ekki í fókus"
+
+msgid "The panel background opacity is affected by"
+msgstr "Bakgrunnsógagnsæi stikunnar ræðst af"
+
+msgid "All windows"
+msgstr "Allir gluggar"
+
+msgid "Focused windows"
+msgstr "Gluggar í fókus"
+
+msgid "Maximized windows"
+msgstr "Hámarkaðir gluggar"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Breyta ógagnsæi þegar gluggi kemur nær en (px)"
+
+msgid "Change opacity to (%)"
+msgstr "Breyta ógagnsæi í (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Tímalengd hreyfimyndar ógagnsæisbreytingar (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Leturstærð (px) forritatitla (sjálfgefið er 14)"
+
+msgid "Font weight of application titles"
+msgstr "Leturþykkt forritatitla"
+
+msgid "inherit from theme"
+msgstr "erfa úr þema"
+
+msgid "normal"
+msgstr "venjuleg"
+
+msgid "lighter"
+msgstr "léttari"
+
+msgid "bold"
+msgstr "feitletruð"
+
+msgid "bolder"
+msgstr "feitletraðri"
+
+msgid "Font color of the application titles"
+msgstr "Leturlitur forritatitla"
+
+msgid "Font color of the minimized application titles"
+msgstr "Leturlitur forritatitla í lágmörkuðum gluggum"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Hámarksbreidd (px) forritatitla"
+
+msgid "(default is 160)"
+msgstr "(sjálfgefið er 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Nota fasta breidd fyrir forritatitla"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Allir forritatitlar hafa sömu breidd, jafnvel þótt textinn sé styttri en hámarksbreiddin. Hámarksbreiddin er notuð sem fasta breiddin."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Sýna keyrsluvísa á forritum sem eru ekki í fókus"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Nota eftirlætistáknmyndir sem forritaræsa"
+
+msgid "Highlight AppIcon color"
+msgstr "Litur auðkenndrar forritatáknmyndar"
+
+msgid "Pressed AppIcon color"
+msgstr "Litur ýttrar forritatáknmyndar"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Hornaradíus auðkenndrar forritatáknmyndar"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Hnekkir altæka hornaradíusnum (sjálfgefið er 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Fela stikuna aðeins fyrir gluggum"
+
+msgid "Overlapping"
+msgstr "Skarast"
+
+msgid "On same monitor"
+msgstr "Á sama skjá"
+
+msgid "The panel hides from"
+msgstr "Stikan felur sig fyrir"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Stikan birtist þegar bendill snertir brún skjásins"
+
+msgid "Limit to panel length"
+msgstr "Takmarka við lengd stikunnar"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Stikan helst sýnileg meðan bendill er yfir svæði hennar"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Krefjast þrýstings við brún skjásins til að birta stikuna"
+
+msgid "Required pressure threshold (px)"
+msgstr "Nauðsynlegur þrýstingsþröskuldur (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Tímamörk nauðsynlegs þrýstings (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Leyfa að stikan birtist í heilskjásham"
+
+msgid "(requires multi-monitors option)"
+msgstr "(krefst valkostsins fyrir marga skjái)"
+
+msgid "Only hide secondary panels"
+msgstr "Fela aðeins aukastikur"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Setningafræði: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Flýtilykill til að birta og halda stikunni"
+
+msgid "e.g. <Super>i"
+msgstr "t.d. <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Muna stöðu eftir endurræsingu"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(virðir „Ónáðið ekki“ í GNOME og krefst valkostsins um tilkynningatalningarmerki)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Birta og halda stikunni við tilkynningu"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Tímalengd hreyfimyndar fyrir felun og birtingu (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Töf áður en stikan er falin (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Töf áður en stikan er birt (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Töf áður en Intellihide er virkjað við ræsingu (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Einangra skjái jafnvel þegar ein stika er notuð"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Einangra vinnusvæði í forritaskiptum gnome-shell"
+
+msgid "Shift+Click action"
+msgstr "Aðgerð Shift+smells"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "Þegar stillt er á lágmörkun lágmarkar tvísmellur alla glugga forritsins."
+
+msgid "Raise windows"
+msgstr "Hækka glugga"
+
+msgid "Minimize window"
+msgstr "Lágmarka glugga"
+
+msgid "Launch new instance"
+msgstr "Ræsa nýtt tilvik"
+
+msgid "Cycle through windows"
+msgstr "Fletta í gegnum glugga"
+
+msgid "Cycle windows + minimize"
+msgstr "Fletta í gegnum glugga + lágmarka"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Víxla stökum / Forskoða marga"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Víxla stökum / Fletta í gegnum marga"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Víxla stökum / Dreifa mörgum"
+
+msgid "Middle-Click action"
+msgstr "Aðgerð miðjusmells"
+
+msgid "Behavior for Middle-Click."
+msgstr "Hegðun miðjusmells."
+
+msgid "Shift+Middle-Click action"
+msgstr "Aðgerð Shift+miðjusmells"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Hegðun Shift+miðjusmells."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Flýtilyklar verða annaðhvort Super+númer eða Super+Alt+númer"
+
+msgid "Hotkeys prefix"
+msgstr "Forskeyti flýtilykla"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Sýna forritanúmer tímabundið yfir táknmyndum þegar flýtilyklar eru notaðir."
+
+msgid "Number overlay"
+msgstr "Númerayfirlag"
+
+msgid "Never"
+msgstr "Aldrei"
+
+msgid "Show temporarily"
+msgstr "Sýna tímabundið"
+
+msgid "Always visible"
+msgstr "Alltaf sýnilegt"
+
+msgid "Hide timeout (ms)"
+msgstr "Tímamörk felunar (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Flýtilykill til að sýna yfirlagið í 2 sekúndur"
+
+msgid "e.g. <Super>q"
+msgstr "t.d. <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Á aukaskjám, sýna yfirlagið á táknmyndum sem samsvara aðalskjánum"
+
+msgid "Show the overlay on all monitors"
+msgstr "Sýna yfirlagið á öllum skjám"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Sýna forskoðun þegar forritið er með mörg tilvik"
+
+msgid "Show window previews on hotkey"
+msgstr "Sýna gluggaforskoðun með flýtilykli"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Veldu hvaða talnalyklar á lyklaborðinu eru notaðir til að virkja flýtilyklana"
+
+msgid "Hotkeys are activated with"
+msgstr "Flýtilyklar eru virkjaðir með"
+
+msgid "Number row"
+msgstr "Talnaröð"
+
+msgid "Numeric keypad"
+msgstr "Talnaborð"
+
+msgid "Both"
+msgstr "Hvort tveggja"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Töf milli skrunatburða músar (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Notaðu þetta gildi til að takmarka fjölda skrunatburða músar sem eru numdir."
+
+msgid "Show popup when changing workspace"
+msgstr "Sýna sprettglugga þegar skipt er um vinnusvæði"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Þetta hefur aðeins áhrif á sprettglugga vinnusvæða þegar skrunað er á stikunni."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "Samþætta atriði úr <i>AppMenu</i>"
+
+msgid "<i>App Details</i> menu item"
+msgstr "Valmyndaratriðið <i>Upplýsingar um forrit</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Upplýsingar um forrit</i> er aðeins í boði þegar GNOME-hugbúnaður er uppsettur"
+
+msgid "Show Applications icon"
+msgstr "Sýna forritatáknmynd"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Hliðarfylling forritatáknmyndar (px)"
+
+msgid "Override escape key and return to desktop"
+msgstr "Hnekkja escape-lykli og fara aftur á skjáborð"
+
+msgid "Override Show Desktop line color"
+msgstr "Hnekkja línulit Sýna skjáborð"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Birta skjáborðið þegar bendill er yfir hnappnum Sýna skjáborð"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Töf áður en skjáborðið er birt (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Tímalengd deyfingar (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Tími (ms) áður en birt er"
+
+msgid "(400 is default)"
+msgstr "(400 er sjálfgefið)"
+
+msgid "Time (ms) before hiding"
+msgstr "Tími (ms) áður en falið er"
+
+msgid "(100 is default)"
+msgstr "(100 er sjálfgefið)"
+
+msgid "Immediate on application icon click"
+msgstr "Strax við smell á forritatáknmynd"
+
+msgid "Animation time (ms)"
+msgstr "Tímalengd hreyfimyndar (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Miðjusmellur á forskoðun lokar glugganum"
+
+msgid "Window previews preferred size (px)"
+msgstr "Æskileg stærð gluggaforskoðana (px)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Stærðarhlutfall gluggaforskoðana X (breidd)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Föst"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Stærðarhlutfall gluggaforskoðana Y (hæð)"
+
+msgid "Window previews padding (px)"
+msgstr "Fylling gluggaforskoðana (px)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Nota sérsniðið ógagnsæi fyrir bakgrunn forskoðana"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Ef þetta er óvirkt hefur bakgrunnur forskoðana sama ógagnsæi og stikan."
+
+msgid "Close button and header position"
+msgstr "Staðsetning lokunarhnapps og haus"
+
+msgid "Display window preview headers"
+msgstr "Sýna hausa gluggaforskoðana"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Stærð táknmyndar (px) í gluggaforskoðun"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Ef þetta er óvirkt miðast stærð táknmynda forskoðana við stærð hausstikunnar"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Leturstærð (px) titla forskoðana"
+
+msgid "Font weight of the preview titles"
+msgstr "Leturþykkt titla forskoðana"
+
+msgid "Font color of the preview titles"
+msgstr "Leturlitur titla forskoðana"
+
+msgid "Enable window peeking"
+msgstr "Virkja gluggakíki"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "Þegar bendill er yfir gluggaforskoðun í nokkra stund er glugginn dreginn fram."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Tímamörk til að fara í gluggakíki (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "Hve lengi bendill þarf að vera óvirkur yfir gluggaforskoðun til að fara í gluggakíki."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Ógagnsæi í gluggakíki"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Allir gluggar nema sá sem verið er að kíkja á fá sama ógagnsæisgildi."
+
+msgid "About"
+msgstr "Um"
+
+msgid "Info"
+msgstr "Upplýsingar"
+
+msgid "Version"
+msgstr "Útgáfa"
+
+msgid "Source"
+msgstr "Frumkóði"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Útflutningur og innflutningur"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Notaðu hnappana hér að neðan til að búa til stillingaskrá úr núverandi stillingum þínum sem hægt er að flytja inn á annarri vél."
+
+msgid "Export and import settings"
+msgstr "Flytja út og inn stillingar"
+
+msgid "Export to file"
+msgstr "Flytja út í skrá"
+
+msgid "Import from file"
+msgstr "Flytja inn úr skrá"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Þetta forrit kemur án NOKKURRAR ÁBYRGÐAR.\n"
+"Sjáðu <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, útgáfu 2 eða nýrri</a> til að fá nánari upplýsingar.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Styrkt og upphaflega þróað af"
+
+msgid "Action"
+msgstr "Aðgerð"
+
+msgid "Click action"
+msgstr "Aðgerð við smell"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "Hegðun þegar smellt er á táknmynd forrits sem er í gangi."
+
+msgid "Toggle windows"
+msgstr "Víxla gluggum"
+
+msgid "Scroll action"
+msgstr "Skrunaðgerð"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Hegðun þegar skrunað er með mús yfir stikunni."
+
+msgid "Scroll panel action"
+msgstr "Aðgerð skrunar á stiku"
+
+msgid "Do nothing"
+msgstr "Gera ekkert"
+
+msgid "Switch workspace"
+msgstr "Skipta um vinnusvæði"
+
+msgid "Cycle windows"
+msgstr "Fletta í gegnum glugga"
+
+msgid "Change volume"
+msgstr "Breyta hljóðstyrk"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Hegðun þegar skrunað er með mús yfir forritatáknmynd."
+
+msgid "Scroll icon action"
+msgstr "Aðgerð skrunar á táknmynd"
+
+msgid "Same as panel"
+msgstr "Sama og stikan"
+
+msgid "Hotkey overlay"
+msgstr "Yfirlag flýtilykla"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Virkja Super+(0-9) sem flýtileiðir til að virkja forrit. Einnig er hægt að nota það með Shift og Ctrl."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Nota flýtilykla til að virkja forrit"
+
+msgid "Application icons context menu"
+msgstr "Samhengisvalmynd forritatáknmynda"
+
+msgid "(right-click menu)"
+msgstr "(hægrismellsvalmynd)"
+
+msgid "Secondary menu"
+msgstr "Aukavalmynd"
+
+msgid "Panel context menu entries"
+msgstr "Færslur í samhengisvalmynd stiku"
+
+msgid "Add entry"
+msgstr "Bæta við færslu"
+
+msgid "Behavior"
+msgstr "Hegðun"
+
+msgid "Applications"
+msgstr "Forrit"
+
+msgid "Show favorite applications"
+msgstr "Sýna eftirlætisforrit"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Sýna eftirlætisforrit á aukastikum"
+
+msgid "Show running applications"
+msgstr "Sýna forrit í gangi"
+
+msgid "Ungroup applications"
+msgstr "Afhópa forrit"
+
+msgid "Show notification counter badge"
+msgstr "Sýna tilkynningatalningarmerki"
+
+msgid "Hover"
+msgstr "Sveima"
+
+msgid "Show window previews on hover"
+msgstr "Sýna gluggaforskoðun við sveim"
+
+msgid "Show tooltip on hover"
+msgstr "Sýna ábendingu við sveim"
+
+msgid "Isolate"
+msgstr "Einangra"
+
+msgid "Isolate Workspaces"
+msgstr "Einangra vinnusvæði"
+
+msgid "Isolate monitors"
+msgstr "Einangra skjái"
+
+msgid "Overview"
+msgstr "Yfirlit"
+
+msgid "Click empty space to close overview"
+msgstr "Smella á autt svæði til að loka yfirliti"
+
+msgid "Disable show overview on startup"
+msgstr "Slökkva á því að sýna yfirlit við ræsingu"
+
+msgid "Fine-Tune"
+msgstr "Fínstilling"
+
+msgid "Font size"
+msgstr "Leturstærð"
+
+msgid "(0 = theme default)"
+msgstr "(0 = sjálfgefið í þema)"
+
+msgid "Tray Font Size"
+msgstr "Leturstærð kerfisbakka"
+
+msgid "LeftBox Font Size"
+msgstr "Leturstærð vinstri kassa"
+
+msgid "Padding"
+msgstr "Fylling"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = sjálfgefið í þema)"
+
+msgid "Tray Item Padding"
+msgstr "Fylling atriða í kerfisbakka"
+
+msgid "Status Icon Padding"
+msgstr "Fylling stöðutáknmynda"
+
+msgid "LeftBox Padding"
+msgstr "Fylling vinstri kassa"
+
+msgid "Animate"
+msgstr "Hreyfimynd"
+
+msgid "Animate switching applications"
+msgstr "Hreyfimynd þegar skipt er um forrit"
+
+msgid "Animate launching new windows"
+msgstr "Hreyfimynd þegar nýir gluggar eru ræstir"
+
+msgid "Gnome functionality"
+msgstr "GNOME-virkni"
+
+msgid "(overview)"
+msgstr "(yfirlit)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Halda upprunalegu gnome-shell dash"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Halda upprunalegu efstu stiku gnome-shell"
+
+msgid "(e.g. date menu)"
+msgstr "(t.d. dagsetningarvalmynd)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Virkja valmyndarhnappa stiku aðeins með smelli"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Þvinga heitt horn yfirlits á aðalskjá"
+
+msgid "Position"
+msgstr "Staðsetning"
+
+msgid "Panel"
+msgstr "Stika"
+
+msgid "Display the main panel on"
+msgstr "Sýna aðalstikuna á"
+
+msgid "Display panels on all monitors"
+msgstr "Sýna stikur á öllum skjám"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Fela og birta stikuna samkvæmt stillingum"
+
+msgid "Panel Intellihide"
+msgstr "Intellihide stiku"
+
+msgid "Order and Position on monitors"
+msgstr "Röð og staðsetning á skjám"
+
+msgid "Monitor"
+msgstr "Skjár"
+
+msgid "Apply changes to all monitors"
+msgstr "Nota breytingar á alla skjái"
+
+msgid "Panel monitor position"
+msgstr "Staðsetning stiku á skjá"
+
+msgid "(default is 48)"
+msgstr "(sjálfgefið er 48)"
+
+msgid "Panel thickness"
+msgstr "Þykkt stiku"
+
+msgid "(default is 100)"
+msgstr "(sjálfgefið er 100)"
+
+msgid "Panel length"
+msgstr "Lengd stiku"
+
+msgid "Dynamic"
+msgstr "Kvik"
+
+msgid "Anchor"
+msgstr "Festing"
+
+msgid "Taskbar Display"
+msgstr "Birting verkstiku"
+
+msgid "Style"
+msgstr "Stíll"
+
+msgid "Global style"
+msgstr "Altækur stíll"
+
+msgid "Border radius"
+msgstr "Hornaradíus"
+
+msgid "AppIcon style"
+msgstr "Stíll forritatáknmynda"
+
+msgid "(default is 8)"
+msgstr "(sjálfgefið er 8)"
+
+msgid "App Icon Margin"
+msgstr "Jaðar forritatáknmynda"
+
+msgid "(default is 4)"
+msgstr "(sjálfgefið er 4)"
+
+msgid "App Icon Padding"
+msgstr "Fylling forritatáknmynda"
+
+msgid "Animate hovering app icons"
+msgstr "Hreyfimynd þegar bendill er yfir forritatáknmyndum"
+
+msgid "Highlight hovering app icons"
+msgstr "Auðkenna forritatáknmyndir sem bendill er yfir"
+
+msgid "Icon style"
+msgstr "Stíll táknmynda"
+
+msgid "Normal"
+msgstr "Venjulegt"
+
+msgid "Symbolic"
+msgstr "Einlit"
+
+msgid "Grayscale"
+msgstr "Grátóna"
+
+msgid "Running indicator"
+msgstr "Keyrsluvísir"
+
+msgid "Running indicator position"
+msgstr "Staðsetning keyrsluvísis"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Stíll keyrsluvísis (forrit í fókus)"
+
+msgid "Dots"
+msgstr "Punktar"
+
+msgid "Squares"
+msgstr "Ferningar"
+
+msgid "Dashes"
+msgstr "Strik"
+
+msgid "Segmented"
+msgstr "Hlutað"
+
+msgid "Solid"
+msgstr "Heilt"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Stíll keyrsluvísis (forrit ekki í fókus)"
+
+msgid "Panel style"
+msgstr "Stíll stiku"
+
+msgid "(default is 0)"
+msgstr "(sjálfgefið er 0)"
+
+msgid "Side margins"
+msgstr "Hliðarjaðrar"
+
+msgid "Top and bottom margins"
+msgstr "Efri og neðri jaðrar"
+
+msgid "Side padding"
+msgstr "Hliðarfylling"
+
+msgid "Top and bottom padding"
+msgstr "Efri og neðri fylling"
+
+msgid "Override panel theme background color"
+msgstr "Hnekkja bakgrunnslit stikuþema"
+
+msgid "Override panel theme background opacity"
+msgstr "Hnekkja bakgrunnsógagnsæi stikuþema"
+
+msgid "Panel background opacity (%)"
+msgstr "Bakgrunnsógagnsæi stiku (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Breyta ógagnsæi þegar gluggi kemur nálægt stikunni"
+
+msgid "Dynamic background opacity"
+msgstr "Kvikt bakgrunnsógagnsæi"
+
+msgid "Override panel theme gradient"
+msgstr "Hnekkja litstigulli stikuþema"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Efri litur og ógagnsæi litstigulls (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Neðri litur og ógagnsæi litstigulls (%)"
+
+msgid "Panel border"
+msgstr "Rammi stiku"
+
+msgid "Override border color"
+msgstr "Hnekkja litnum á ramma"
+
+msgid "Border thickness"
+msgstr "Þykkt ramma"

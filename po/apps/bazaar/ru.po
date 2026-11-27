@@ -1,0 +1,364 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "App Store"
+msgstr "Магазин приложений"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Система;Пакет;Менеджер;Обзор;Flatpak;Программы;Приложения;Магазин;"
+
+msgid "App page for Exhibit"
+msgstr "Страница приложения Exhibit"
+
+msgid "Add-on"
+msgstr "Дополнение"
+
+msgid "Other Sources"
+msgstr "Другие источники"
+
+msgid "Storage"
+msgstr "Хранилище"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Загрузка %d приложения…"
+msgstr[1] "Загрузка %d приложений…"
+msgstr[2] "Загрузка %d приложений…"
+
+msgid "Removing remote…"
+msgstr "Удаление репозитория…"
+
+msgid "Could not remove remote"
+msgstr "Не удалось удалить репозиторий"
+
+msgid "Place Applet"
+msgstr "Размещение апплета"
+
+msgid "Choose where to add this applet."
+msgstr "Выберите, куда добавить этот апплет."
+
+msgid "Panel"
+msgstr "Панель"
+
+msgid "Dock"
+msgstr "Док"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s — %s, максимум %s: %s"
+
+msgid "Bazaar Release"
+msgstr "Релиз Bazaar"
+
+msgid "Made for COSMIC™"
+msgstr "Создано для COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Для COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Ещё приложения COSMIC"
+
+msgid "New Year, New Workflows"
+msgstr "Новый год — новые рабочие процессы"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Приложения для заметок, задач и планирования"
+
+msgid "Staff Picks"
+msgstr "Выбор редакции"
+
+msgid "Apps we love right now"
+msgstr "Приложения, которые мы любим сейчас"
+
+msgid "Get Creative"
+msgstr "Дайте волю творчеству"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Основные приложения для рисования, редактирования фото и цифрового дизайна"
+
+msgid "Build Native Apps"
+msgstr "Создавайте нативные приложения"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Разрабатывайте приложения, органично вписывающиеся в систему"
+
+msgid "Stay in Touch"
+msgstr "Оставайтесь на связи"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Основные приложения для совместной работы и общения"
+
+msgid "Ready for Vacations"
+msgstr "Готовы к отпуску"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Приложения для карт, транспорта, погоды и планирования поездок"
+
+msgid "Smarter Every Day"
+msgstr "Умнее с каждым днём"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Приложения для учёбы, исследований и письма"
+
+msgid "Get Cozy"
+msgstr "Устройтесь поуютнее"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Отличные приложения для чтения, просмотра фильмов и игр"
+
+msgid "Web Developer Essentials"
+msgstr "Всё для веб-разработчика"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Создавать сайты веселее с этими приложениями"
+
+msgid "Take Better Notes"
+msgstr "Ведите лучшие заметки"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Найдите свой новый любимый инструмент для заметок"
+
+msgid "Get Focused"
+msgstr "Сосредоточьтесь"
+
+msgid "Great apps for task management"
+msgstr "Отличные приложения для управления задачами"
+
+msgid "Make Some Noise"
+msgstr "Наделайте шума"
+
+msgid "Apps for creating and producing music"
+msgstr "Приложения для создания и производства музыки"
+
+msgid "Get To Work"
+msgstr "За работу"
+
+msgid "Essential office apps"
+msgstr "Основные офисные приложения"
+
+msgid "Other Apps From This Developer"
+msgstr "Другие приложения этого разработчика"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Другие приложения от %s"
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Приложения от %s"
+
+msgid "Apps by This Developer"
+msgstr "Приложения этого разработчика"
+
+msgid "Donate"
+msgstr "Пожертвовать"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Добавить значок в предпросмотр метаданных?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Файлы метаданных сами по себе не содержат значков приложений. Хотите выбрать значок вручную?"
+
+msgid "Skip"
+msgstr "Пропустить"
+
+msgid "Select Icon"
+msgstr "Выбрать значок"
+
+msgid "New Permissions"
+msgstr "Новые разрешения"
+
+msgid "_Accept"
+msgstr "_Принять"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Новое разрешение для %s"
+msgstr[1] "Новые разрешения для %s"
+msgstr[2] "Новые разрешения для %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Для этого обновления требуется следующее дополнительное разрешение"
+msgstr[1] "Для этого обновления требуются следующие дополнительные разрешения"
+msgstr[2] "Для этого обновления требуются следующие дополнительные разрешения"
+
+msgid "User"
+msgstr "Пользователь"
+
+msgid "Beta"
+msgstr "Бета"
+
+msgid "End-Of-Life"
+msgstr "Поддержка прекращена"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Автообновления приостанавливаются в сетях с ограниченным трафиком или при включённом энергосбережении, чтобы экономить трафик и заряд батареи."
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar должен работать в фоновом режиме, чтобы проверять наличие обновлений приложений"
+
+msgid "Remotes"
+msgstr "Репозитории"
+
+msgid "System Installation"
+msgstr "Установка для системы"
+
+msgid "Available to all users on this computer"
+msgstr "Доступно всем пользователям этого компьютера"
+
+msgid "User Installation"
+msgstr "Установка для пользователя"
+
+msgid "Only available to you"
+msgstr "Доступно только вам"
+
+msgid "Remove Remote"
+msgstr "Удалить репозиторий"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Удалить %s"
+
+msgid "Unused"
+msgstr "Не используется"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "Установлено %u приложение"
+msgstr[1] "Установлено %u приложения"
+msgstr[2] "Установлено %u приложений"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Удалить «%s»?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Вы больше не сможете устанавливать приложения из этого пользовательского репозитория."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Вы больше не сможете устанавливать приложения из этого системного репозитория."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u приложение для удаления"
+msgstr[1] "%u приложения для удаления"
+msgstr[2] "%u приложений для удаления"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Приложение ниже было установлено из этого репозитория и будет удалено из вашей учётной записи вместе с ним."
+msgstr[1] "Приложения ниже были установлены из этого репозитория и будут удалены из вашей учётной записи вместе с ним."
+msgstr[2] "Приложения ниже были установлены из этого репозитория и будут удалены из вашей учётной записи вместе с ним."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Приложение ниже было установлено из этого репозитория и будет удалено для всех пользователей вместе с ним."
+msgstr[1] "Приложения ниже были установлены из этого репозитория и будут удалены для всех пользователей вместе с ним."
+msgstr[2] "Приложения ниже были установлены из этого репозитория и будут удалены для всех пользователей вместе с ним."
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"У этого приложения есть разрешение, которое косвенно позволяет ему выдать себе <b>любое другое разрешение</b>, обходя песочницу Flatpak.\n"
+"\n"
+"Поэтому оно может делать всё, что может привилегированное приложение без песочницы, например получать доступ ко всем вашим файлам и подключаться к интернету.\n"
+"\n"
+"Просмотр остальных разрешений всё же может дать лучшее представление о том, что приложение, вероятно, будет делать."
+
+msgid "Total"
+msgstr "Всего"
+
+msgid "This Week"
+msgstr "За неделю"
+
+msgid "Installs per day"
+msgstr "Установок в день"
+
+msgid "Installs per country"
+msgstr "Установок по странам"
+
+msgid "Finishing Up"
+msgstr "Завершение"
+
+msgid "Installed Updates"
+msgstr "Установленные обновления"
+
+msgid "Release Notes"
+msgstr "Примечания к выпуску"
+
+msgid "No Release Info"
+msgstr "Нет сведений о выпуске"
+
+msgid "This update requests new permissions"
+msgstr "Это обновление запрашивает новые разрешения"
+
+msgid "No Leftover User Data Found"
+msgstr "Оставшиеся пользовательские данные не найдены"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Здесь будут появляться личные данные, оставшиеся после удаления приложений"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Данные пользователя в корзине для %u приложения"
+msgstr[1] "Данные пользователя в корзине для %u приложений"
+msgstr[2] "Данные пользователя в корзине для %u приложений"
+
+msgid "Manage R_emotes"
+msgstr "Управление _репозиториями"
+
+msgid "Could not open link"
+msgstr "Не удалось открыть ссылку"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u установка"
+msgstr[1] "%s, %'u установки"
+msgstr[2] "%s, %'u установок"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Больше всего установок из: %s"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s на среду выполнения"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Установленный размер %s"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s установлено"
+
+msgid "The app is ready to be used"
+msgstr "Приложение готово к использованию"
+
+msgid "Updates Are Out of Date"
+msgstr "Обновления устарели"
+
+msgid "Please check for available updates"
+msgstr "Проверьте наличие доступных обновлений"

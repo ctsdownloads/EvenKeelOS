@@ -2,6 +2,7 @@
 import functools
 import gettext
 import glob
+import locale as _locales
 import os
 
 import langtable
@@ -39,6 +40,18 @@ def place(zone):
     if _locale.startswith("en"):
         return zone.replace("_", " ")
     return (langtable.timezone_name(timezoneId=zone, languageIdQuery=_locale) or zone).replace("_", " ")
+
+
+def number(value, digits):
+    """A number with the installer's language's decimal mark: 1.5 is "1,5" in German."""
+    before = _locales.setlocale(_locales.LC_NUMERIC)
+    try:
+        _locales.setlocale(_locales.LC_NUMERIC, _locale)
+        return _locales.format_string(f"%.{digits}f", value)
+    except _locales.Error:
+        return f"{value:.{digits}f}"
+    finally:
+        _locales.setlocale(_locales.LC_NUMERIC, before)
 
 
 def translated(locale):

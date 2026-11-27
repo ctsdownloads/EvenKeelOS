@@ -1,0 +1,1170 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
+
+msgid "Quit"
+msgstr "Končaj"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Zapri %d okno"
+msgstr[1] "Zapri %d okni"
+msgstr[2] "Zapri %d okna"
+msgstr[3] "Zapri %d oken"
+
+msgid "Power options"
+msgstr "Možnosti napajanja"
+
+msgid "Event logs"
+msgstr "Dnevniki dogodkov"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "Device Management"
+msgstr "Upravljanje naprav"
+
+msgid "Disk Management"
+msgstr "Upravljanje diskov"
+
+msgid "Unlock taskbar"
+msgstr "Odkleni opravilno vrstico"
+
+msgid "Lock taskbar"
+msgstr "Zakleni opravilno vrstico"
+
+msgid "Gnome Settings"
+msgstr "Nastavitve GNOME"
+
+msgid "Dash to Panel Settings"
+msgstr "Nastavitve Dash to Panel"
+
+msgid "Restore Windows"
+msgstr "Obnovi okna"
+
+msgid "Show Desktop"
+msgstr "Pokaži namizje"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel je bil posodobljen!"
+
+msgid "You are now running version"
+msgstr "Zdaj uporabljate različico"
+
+msgid "See what's new"
+msgstr "Oglejte si novosti"
+
+msgid "Top Bar"
+msgstr "Zgornja vrstica"
+
+msgid "Show Desktop button height (px)"
+msgstr "Višina gumba Pokaži namizje (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Širina gumba Pokaži namizje (px)"
+
+msgid "Left"
+msgstr "Levo"
+
+msgid "Center"
+msgstr "Sredina"
+
+msgid "Right"
+msgstr "Desno"
+
+msgid "Top"
+msgstr "Zgoraj"
+
+msgid "Middle"
+msgstr "Na sredini"
+
+msgid "Bottom"
+msgstr "Spodaj"
+
+msgid "Start"
+msgstr "Začetek"
+
+msgid "End"
+msgstr "Konec"
+
+msgid "Show Applications button"
+msgstr "Gumb Pokaži programe"
+
+msgid "Activities button"
+msgstr "Gumb Dejavnosti"
+
+msgid "Taskbar"
+msgstr "Opravilna vrstica"
+
+msgid "Date menu"
+msgstr "Meni z datumom"
+
+msgid "System menu"
+msgstr "Sistemski meni"
+
+msgid "Left box"
+msgstr "Levo polje"
+
+msgid "Center box"
+msgstr "Osrednje polje"
+
+msgid "Right box"
+msgstr "Desno polje"
+
+msgid "Desktop button"
+msgstr "Gumb namizja"
+
+msgid "Move up"
+msgstr "Premakni navzgor"
+
+msgid "Move down"
+msgstr "Premakni navzdol"
+
+msgid "Visible"
+msgstr "Vidno"
+
+msgid "Select element position"
+msgstr "Izberite položaj elementa"
+
+msgid "Stacked to top"
+msgstr "Zloženo na vrh"
+
+msgid "Stacked to left"
+msgstr "Zloženo na levo"
+
+msgid "Stacked to bottom"
+msgstr "Zloženo na dno"
+
+msgid "Stacked to right"
+msgstr "Zloženo na desno"
+
+msgid "Centered"
+msgstr "Na sredini"
+
+msgid "Monitor Center"
+msgstr "Sredina zaslona"
+
+msgid "More options"
+msgstr "Več možnosti"
+
+msgid "Reset to defaults"
+msgstr "Ponastavi na privzeto"
+
+msgid "Show Applications options"
+msgstr "Možnosti za Pokaži programe"
+
+msgid "Open icon"
+msgstr "Odpri ikono"
+
+msgid "Show Desktop options"
+msgstr "Možnosti za Pokaži namizje"
+
+msgid "Primary monitor"
+msgstr "Primarni zaslon"
+
+msgid "Monitor "
+msgstr "Zaslon "
+
+msgid "Running Indicator Options"
+msgstr "Možnosti kazalnika zagnanih programov"
+
+msgid "Dynamic opacity options"
+msgstr "Možnosti dinamične prosojnosti"
+
+msgid "Intellihide options"
+msgstr "Možnosti samodejnega skrivanja"
+
+msgid "Window preview options"
+msgstr "Možnosti predogleda oken"
+
+msgid "Isolate Workspaces options"
+msgstr "Možnosti izolacije delovnih prostorov"
+
+msgid "Isolate monitors options"
+msgstr "Možnosti izolacije zaslonov"
+
+msgid "Ungrouped application options"
+msgstr "Možnosti negrupiranih programov"
+
+msgid "Customize middle-click behavior"
+msgstr "Prilagodi vedenje srednjega klika"
+
+msgid "Text"
+msgstr "Besedilo"
+
+msgid "Command"
+msgstr "Ukaz"
+
+msgid "Remove"
+msgstr "Odstrani"
+
+msgid "Customize panel scroll behavior"
+msgstr "Prilagodi vedenje pomikanja po vrstici"
+
+msgid "Customize icon scroll behavior"
+msgstr "Prilagodi vedenje pomikanja po ikoni"
+
+msgid "Advanced hotkeys options"
+msgstr "Napredne možnosti tipkovnih bližnjic"
+
+msgid "Secondary Menu Options"
+msgstr "Možnosti sekundarnega menija"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d ikona"
+msgstr[1] "%d ikoni"
+msgstr[2] "%d ikone"
+msgstr[3] "%d ikon"
+
+msgid "App icon animation options"
+msgstr "Možnosti animacije ikone programa"
+
+msgid "App icon highlight options"
+msgstr "Možnosti osvetlitve ikone programa"
+
+msgid "Export settings"
+msgstr "Izvozi nastavitve"
+
+msgid "Import settings"
+msgstr "Uvozi nastavitve"
+
+msgid "Move to current Workspace"
+msgstr "Premakni v trenutni delovni prostor"
+
+msgid "Animation type"
+msgstr "Vrsta animacije"
+
+msgid "Simple"
+msgstr "Preprosta"
+
+msgid "Ripple"
+msgstr "Valovanje"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Trajanje"
+
+msgid "Rotation"
+msgstr "Rotacija"
+
+msgid "Travel"
+msgstr "Pomik"
+
+msgid "Zoom"
+msgstr "Povečava"
+
+msgid "Convexity"
+msgstr "Izbočenost"
+
+msgid "Extent"
+msgstr "Obseg"
+
+msgid "Highlight focused application"
+msgstr "Osvetli program v fokusu"
+
+msgid "Icon dominant color"
+msgstr "Prevladujoča barva ikone"
+
+msgid "Custom color"
+msgstr "Barva po meri"
+
+msgid "Highlight opacity"
+msgstr "Prosojnost osvetlitve"
+
+msgid "Indicator size (px)"
+msgstr "Velikost kazalnika (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Barva kazalnika – prevladujoča barva ikone"
+
+msgid "Indicator color - Override Theme"
+msgstr "Barva kazalnika – preglasi temo"
+
+msgid "1 window open (or ungrouped)"
+msgstr "1 odprto okno (ali negrupirano)"
+
+msgid "Apply to all"
+msgstr "Uporabi za vse"
+
+msgid "2 windows open"
+msgstr "2 odprti okni"
+
+msgid "3 windows open"
+msgstr "3 odprta okna"
+
+msgid "4+ windows open"
+msgstr "4+ odprtih oken"
+
+msgid "Use different for unfocused"
+msgstr "Uporabi drugačno za nefokusirane"
+
+msgid "The panel background opacity is affected by"
+msgstr "Na prosojnost ozadja vrstice vpliva"
+
+msgid "All windows"
+msgstr "Vsa okna"
+
+msgid "Focused windows"
+msgstr "Okna v fokusu"
+
+msgid "Maximized windows"
+msgstr "Maksimirana okna"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Spremeni prosojnost, ko se okno približa na manj kot (px)"
+
+msgid "Change opacity to (%)"
+msgstr "Spremeni prosojnost na (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Trajanje animacije spremembe prosojnosti (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Velikost pisave (px) naslovov programov (privzeto 14)"
+
+msgid "Font weight of application titles"
+msgstr "Debelina pisave naslovov programov"
+
+msgid "inherit from theme"
+msgstr "podeduj iz teme"
+
+msgid "normal"
+msgstr "običajno"
+
+msgid "lighter"
+msgstr "tanjše"
+
+msgid "bold"
+msgstr "krepko"
+
+msgid "bolder"
+msgstr "krepkejše"
+
+msgid "Font color of the application titles"
+msgstr "Barva pisave naslovov programov"
+
+msgid "Font color of the minimized application titles"
+msgstr "Barva pisave naslovov minimiranih programov"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Največja širina (px) naslovov programov"
+
+msgid "(default is 160)"
+msgstr "(privzeto 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Uporabi stalno širino za naslove programov"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Vsi naslovi programov imajo enako širino, tudi če je njihovo besedilo krajše od največje širine. Kot stalna širina se uporabi vrednost največje širine."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Prikaži kazalnike zagnanih programov pri programih, ki niso v fokusu"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Uporabi ikone priljubljenih kot zaganjalnike programov"
+
+msgid "Highlight AppIcon color"
+msgstr "Barva osvetlitve ikone programa"
+
+msgid "Pressed AppIcon color"
+msgstr "Barva pritisnjene ikone programa"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Polmer robov osvetlitve ikone programa"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Preglasi splošni polmer robov (privzeto 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Skrij vrstico samo pred okni"
+
+msgid "Overlapping"
+msgstr "Prekrivanje"
+
+msgid "On same monitor"
+msgstr "Na istem zaslonu"
+
+msgid "The panel hides from"
+msgstr "Vrstica se skrije pred"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Dotik roba zaslona s kazalcem razkrije vrstico"
+
+msgid "Limit to panel length"
+msgstr "Omeji na dolžino vrstice"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Lebdenje nad območjem vrstice ohranja vrstico razkrito"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Za razkritje vrstice zahtevaj pritisk na robu zaslona"
+
+msgid "Required pressure threshold (px)"
+msgstr "Zahtevani prag pritiska (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Zahtevana časovna omejitev pritiska (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Dovoli razkritje vrstice v celozaslonskem načinu"
+
+msgid "(requires multi-monitors option)"
+msgstr "(zahteva možnost več zaslonov)"
+
+msgid "Only hide secondary panels"
+msgstr "Skrij samo sekundarne vrstice"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Sintaksa: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Tipkovna bližnjica za razkritje in zadržanje vrstice"
+
+msgid "e.g. <Super>i"
+msgstr "npr. <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Ohrani stanje ob ponovnih zagonih"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(upošteva GNOME »Ne moti« in zahteva možnost prikaza značke s števcem obvestil)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Razkrij in zadrži vrstico ob obvestilu"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Trajanje animacije skrivanja in razkritja (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Zakasnitev pred skritjem vrstice (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Zakasnitev pred razkritjem vrstice (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Zakasnitev pred omogočitvijo samodejnega skrivanja ob zagonu (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Izoliraj zaslone tudi pri uporabi ene same vrstice"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Izoliraj delovne prostore v preklopniku programov gnome-shell"
+
+msgid "Shift+Click action"
+msgstr "Dejanje Shift+klik"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "Če je nastavljeno na minimiranje, dvoklik minimira vsa okna programa."
+
+msgid "Raise windows"
+msgstr "Dvigni okna"
+
+msgid "Minimize window"
+msgstr "Minimiraj okno"
+
+msgid "Launch new instance"
+msgstr "Zaženi nov primerek"
+
+msgid "Cycle through windows"
+msgstr "Krožno preklapljaj okna"
+
+msgid "Cycle windows + minimize"
+msgstr "Krožno preklapljaj okna + minimiraj"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Preklopi eno / predogled več"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Preklopi eno / krožno preklapljaj več"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Preklopi eno / razpostavi več"
+
+msgid "Middle-Click action"
+msgstr "Dejanje srednjega klika"
+
+msgid "Behavior for Middle-Click."
+msgstr "Vedenje srednjega klika."
+
+msgid "Shift+Middle-Click action"
+msgstr "Dejanje Shift+srednji klik"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Vedenje Shift+srednji klik."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Tipkovne bližnjice bodo Super+številka ali Super+Alt+številka"
+
+msgid "Hotkeys prefix"
+msgstr "Predpona tipkovnih bližnjic"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Ob uporabi tipkovnih bližnjic začasno prikaži številke programov nad ikonami."
+
+msgid "Number overlay"
+msgstr "Prekrivanje s številkami"
+
+msgid "Never"
+msgstr "Nikoli"
+
+msgid "Show temporarily"
+msgstr "Prikaži začasno"
+
+msgid "Always visible"
+msgstr "Vedno vidno"
+
+msgid "Hide timeout (ms)"
+msgstr "Časovna omejitev skrivanja (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Bližnjica za prikaz prekrivanja za 2 sekundi"
+
+msgid "e.g. <Super>q"
+msgstr "npr. <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Na sekundarnih zaslonih prikaži prekrivanje na ikonah, ki ustrezajo primarnemu zaslonu"
+
+msgid "Show the overlay on all monitors"
+msgstr "Prikaži prekrivanje na vseh zaslonih"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Pokaži predoglede, ko ima program več primerkov"
+
+msgid "Show window previews on hotkey"
+msgstr "Pokaži predoglede oken ob tipkovni bližnjici"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Izberite, katere številske tipke na tipkovnici aktivirajo tipkovne bližnjice"
+
+msgid "Hotkeys are activated with"
+msgstr "Tipkovne bližnjice se aktivirajo z"
+
+msgid "Number row"
+msgstr "Vrstica s številkami"
+
+msgid "Numeric keypad"
+msgstr "Številska tipkovnica"
+
+msgid "Both"
+msgstr "Obe"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Zakasnitev med dogodki pomikanja miške (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "S to vrednostjo omejite število zajetih dogodkov pomikanja miške."
+
+msgid "Show popup when changing workspace"
+msgstr "Pokaži pojavno okno ob menjavi delovnega prostora"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "To vpliva samo na pojavno okno delovnega prostora pri pomikanju po vrstici."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "Vključi elemente <i>menija programa</i>"
+
+msgid "<i>App Details</i> menu item"
+msgstr "Menijska postavka <i>Podrobnosti o programu</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Podrobnosti o programu</i> so na voljo samo, če je nameščena Programska oprema GNOME"
+
+msgid "Show Applications icon"
+msgstr "Ikona Pokaži programe"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Stranski odmik ikone Pokaži programe (px)"
+
+msgid "Override escape key and return to desktop"
+msgstr "Preglasi tipko Escape in se vrni na namizje"
+
+msgid "Override Show Desktop line color"
+msgstr "Preglasi barvo črte Pokaži namizje"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Razkrij namizje, ko miška lebdi nad gumbom Pokaži namizje"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Zakasnitev pred razkritjem namizja (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Trajanje pojemanja (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Čas (ms) pred prikazom"
+
+msgid "(400 is default)"
+msgstr "(privzeto 400)"
+
+msgid "Time (ms) before hiding"
+msgstr "Čas (ms) pred skritjem"
+
+msgid "(100 is default)"
+msgstr "(privzeto 100)"
+
+msgid "Immediate on application icon click"
+msgstr "Takoj ob kliku na ikono programa"
+
+msgid "Animation time (ms)"
+msgstr "Čas animacije (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Srednji klik na predogled zapre okno"
+
+msgid "Window previews preferred size (px)"
+msgstr "Prednostna velikost predogledov oken (px)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Razmerje stranic predogledov oken X (širina)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Stalno"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Razmerje stranic predogledov oken Y (višina)"
+
+msgid "Window previews padding (px)"
+msgstr "Odmik predogledov oken (px)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Uporabi prosojnost po meri za ozadje predogledov"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Če je onemogočeno, ima ozadje predogledov enako prosojnost kot vrstica."
+
+msgid "Close button and header position"
+msgstr "Položaj gumba za zapiranje in glave"
+
+msgid "Display window preview headers"
+msgstr "Prikaži glave predogledov oken"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Velikost ikone (px) v predogledu okna"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Če je onemogočeno, bo velikost ikone predogleda odvisna od velikosti glavne vrstice"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Velikost pisave (px) naslovov predogledov"
+
+msgid "Font weight of the preview titles"
+msgstr "Debelina pisave naslovov predogledov"
+
+msgid "Font color of the preview titles"
+msgstr "Barva pisave naslovov predogledov"
+
+msgid "Enable window peeking"
+msgstr "Omogoči kukanje v okna"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "Ko miška nekaj časa lebdi nad predogledom okna, se okno izpostavi."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Časovna omejitev za vstop v način kukanja v okna (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "Čas nedejavnosti ob lebdenju nad predogledom okna, potreben za vstop v način kukanja v okna."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Prosojnost v načinu kukanja v okna"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Vsa okna razen okna, v katerega kukate, imajo prosojnost nastavljeno na enako vrednost."
+
+msgid "About"
+msgstr "O programu"
+
+msgid "Info"
+msgstr "Podatki"
+
+msgid "Version"
+msgstr "Različica"
+
+msgid "Source"
+msgstr "Izvorna koda"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Izvoz in uvoz"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "S spodnjimi gumbi ustvarite datoteko z nastavitvami iz svojih trenutnih nastavitev, ki jo lahko uvozite na drugem računalniku."
+
+msgid "Export and import settings"
+msgstr "Izvoz in uvoz nastavitev"
+
+msgid "Export to file"
+msgstr "Izvozi v datoteko"
+
+msgid "Import from file"
+msgstr "Uvozi iz datoteke"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Ta program prihaja BREZ KAKRŠNEGA KOLI JAMSTVA.\n"
+"Podrobnosti so v <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">Splošnem javnem dovoljenju GNU, različica 2 ali novejša</a>.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Sponzoriral in prvotno razvil"
+
+msgid "Action"
+msgstr "Dejanje"
+
+msgid "Click action"
+msgstr "Dejanje klika"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "Vedenje ob kliku na ikono zagnanega programa."
+
+msgid "Toggle windows"
+msgstr "Preklopi okna"
+
+msgid "Scroll action"
+msgstr "Dejanje pomikanja"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Vedenje ob pomikanju miške nad vrstico."
+
+msgid "Scroll panel action"
+msgstr "Dejanje pomikanja po vrstici"
+
+msgid "Do nothing"
+msgstr "Ne naredi ničesar"
+
+msgid "Switch workspace"
+msgstr "Preklopi delovni prostor"
+
+msgid "Cycle windows"
+msgstr "Krožno preklapljaj okna"
+
+msgid "Change volume"
+msgstr "Spremeni glasnost"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Vedenje ob pomikanju miške nad ikono programa."
+
+msgid "Scroll icon action"
+msgstr "Dejanje pomikanja po ikoni"
+
+msgid "Same as panel"
+msgstr "Enako kot vrstica"
+
+msgid "Hotkey overlay"
+msgstr "Prekrivanje tipkovnih bližnjic"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Omogoči Super+(0–9) kot bližnjice za aktiviranje programov. Uporabi se lahko tudi skupaj s tipkama Shift in Ctrl."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Uporabi tipkovne bližnjice za aktiviranje programov"
+
+msgid "Application icons context menu"
+msgstr "Kontekstni meni ikon programov"
+
+msgid "(right-click menu)"
+msgstr "(meni desnega klika)"
+
+msgid "Secondary menu"
+msgstr "Sekundarni meni"
+
+msgid "Panel context menu entries"
+msgstr "Vnosi kontekstnega menija vrstice"
+
+msgid "Add entry"
+msgstr "Dodaj vnos"
+
+msgid "Behavior"
+msgstr "Vedenje"
+
+msgid "Applications"
+msgstr "Programi"
+
+msgid "Show favorite applications"
+msgstr "Pokaži priljubljene programe"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Pokaži priljubljene programe na sekundarnih vrsticah"
+
+msgid "Show running applications"
+msgstr "Pokaži zagnane programe"
+
+msgid "Ungroup applications"
+msgstr "Razgrupiraj programe"
+
+msgid "Show notification counter badge"
+msgstr "Pokaži značko s števcem obvestil"
+
+msgid "Hover"
+msgstr "Lebdenje"
+
+msgid "Show window previews on hover"
+msgstr "Pokaži predoglede oken ob lebdenju"
+
+msgid "Show tooltip on hover"
+msgstr "Pokaži opis orodja ob lebdenju"
+
+msgid "Isolate"
+msgstr "Izolacija"
+
+msgid "Isolate Workspaces"
+msgstr "Izoliraj delovne prostore"
+
+msgid "Isolate monitors"
+msgstr "Izoliraj zaslone"
+
+msgid "Overview"
+msgstr "Pregled"
+
+msgid "Click empty space to close overview"
+msgstr "Klik na prazen prostor zapre pregled"
+
+msgid "Disable show overview on startup"
+msgstr "Onemogoči prikaz pregleda ob zagonu"
+
+msgid "Fine-Tune"
+msgstr "Fino uravnavanje"
+
+msgid "Font size"
+msgstr "Velikost pisave"
+
+msgid "(0 = theme default)"
+msgstr "(0 = privzeto iz teme)"
+
+msgid "Tray Font Size"
+msgstr "Velikost pisave sistemske vrstice"
+
+msgid "LeftBox Font Size"
+msgstr "Velikost pisave levega polja"
+
+msgid "Padding"
+msgstr "Odmik"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = privzeto iz teme)"
+
+msgid "Tray Item Padding"
+msgstr "Odmik elementa sistemske vrstice"
+
+msgid "Status Icon Padding"
+msgstr "Odmik ikone stanja"
+
+msgid "LeftBox Padding"
+msgstr "Odmik levega polja"
+
+msgid "Animate"
+msgstr "Animiraj"
+
+msgid "Animate switching applications"
+msgstr "Animiraj preklapljanje programov"
+
+msgid "Animate launching new windows"
+msgstr "Animiraj zagon novih oken"
+
+msgid "Gnome functionality"
+msgstr "Funkcionalnost GNOME"
+
+msgid "(overview)"
+msgstr "(pregled)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Ohrani izvirni dash lupine gnome-shell"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Ohrani izvirno zgornjo vrstico lupine gnome-shell"
+
+msgid "(e.g. date menu)"
+msgstr "(npr. meni z datumom)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Aktiviraj menijske gumbe vrstice samo s klikom"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Vsili vroči kot Dejavnosti na primarnem zaslonu"
+
+msgid "Position"
+msgstr "Položaj"
+
+msgid "Panel"
+msgstr "Vrstica"
+
+msgid "Display the main panel on"
+msgstr "Prikaži glavno vrstico na"
+
+msgid "Display panels on all monitors"
+msgstr "Prikaži vrstice na vseh zaslonih"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Skrij in razkrij vrstico glede na nastavitve"
+
+msgid "Panel Intellihide"
+msgstr "Samodejno skrivanje vrstice"
+
+msgid "Order and Position on monitors"
+msgstr "Vrstni red in položaj na zaslonih"
+
+msgid "Monitor"
+msgstr "Zaslon"
+
+msgid "Apply changes to all monitors"
+msgstr "Uveljavi spremembe na vseh zaslonih"
+
+msgid "Panel monitor position"
+msgstr "Položaj vrstice na zaslonu"
+
+msgid "(default is 48)"
+msgstr "(privzeto 48)"
+
+msgid "Panel thickness"
+msgstr "Debelina vrstice"
+
+msgid "(default is 100)"
+msgstr "(privzeto 100)"
+
+msgid "Panel length"
+msgstr "Dolžina vrstice"
+
+msgid "Dynamic"
+msgstr "Dinamično"
+
+msgid "Anchor"
+msgstr "Sidro"
+
+msgid "Taskbar Display"
+msgstr "Prikaz opravilne vrstice"
+
+msgid "Style"
+msgstr "Slog"
+
+msgid "Global style"
+msgstr "Splošni slog"
+
+msgid "Border radius"
+msgstr "Polmer robov"
+
+msgid "AppIcon style"
+msgstr "Slog ikone programa"
+
+msgid "(default is 8)"
+msgstr "(privzeto 8)"
+
+msgid "App Icon Margin"
+msgstr "Rob ikone programa"
+
+msgid "(default is 4)"
+msgstr "(privzeto 4)"
+
+msgid "App Icon Padding"
+msgstr "Odmik ikone programa"
+
+msgid "Animate hovering app icons"
+msgstr "Animiraj ikone programov ob lebdenju"
+
+msgid "Highlight hovering app icons"
+msgstr "Osvetli ikone programov ob lebdenju"
+
+msgid "Icon style"
+msgstr "Slog ikone"
+
+msgid "Normal"
+msgstr "Običajno"
+
+msgid "Symbolic"
+msgstr "Simbolično"
+
+msgid "Grayscale"
+msgstr "Sivinsko"
+
+msgid "Running indicator"
+msgstr "Kazalnik zagnanega programa"
+
+msgid "Running indicator position"
+msgstr "Položaj kazalnika zagnanega programa"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Slog kazalnika zagnanega programa (program v fokusu)"
+
+msgid "Dots"
+msgstr "Pike"
+
+msgid "Squares"
+msgstr "Kvadrati"
+
+msgid "Dashes"
+msgstr "Črtice"
+
+msgid "Segmented"
+msgstr "Členjeno"
+
+msgid "Solid"
+msgstr "Polno"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Slog kazalnika zagnanega programa (programi, ki niso v fokusu)"
+
+msgid "Panel style"
+msgstr "Slog vrstice"
+
+msgid "(default is 0)"
+msgstr "(privzeto 0)"
+
+msgid "Side margins"
+msgstr "Stranski robovi"
+
+msgid "Top and bottom margins"
+msgstr "Zgornji in spodnji rob"
+
+msgid "Side padding"
+msgstr "Stranski odmik"
+
+msgid "Top and bottom padding"
+msgstr "Zgornji in spodnji odmik"
+
+msgid "Override panel theme background color"
+msgstr "Preglasi barvo ozadja teme vrstice"
+
+msgid "Override panel theme background opacity"
+msgstr "Preglasi prosojnost ozadja teme vrstice"
+
+msgid "Panel background opacity (%)"
+msgstr "Prosojnost ozadja vrstice (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Spremeni prosojnost, ko se okno približa vrstici"
+
+msgid "Dynamic background opacity"
+msgstr "Dinamična prosojnost ozadja"
+
+msgid "Override panel theme gradient"
+msgstr "Preglasi preliv teme vrstice"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Barva in prosojnost zgornjega preliva (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Barva in prosojnost spodnjega preliva (%)"
+
+msgid "Panel border"
+msgstr "Rob vrstice"
+
+msgid "Override border color"
+msgstr "Preglasi barvo roba"
+
+msgid "Border thickness"
+msgstr "Debelina roba"

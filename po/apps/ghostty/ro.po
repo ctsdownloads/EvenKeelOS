@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+
+msgid "Open in Ghostty"
+msgstr "Deschide în Ghostty"
+
+msgid "Find…"
+msgstr "Caută…"
+
+msgid "Previous Match"
+msgstr "Potrivirea anterioară"
+
+msgid "Next Match"
+msgstr "Următoarea potrivire"
+
+msgid "Close"
+msgstr "Închide"
+
+msgid "Oh, no."
+msgstr "Vai, nu."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "Nu s-a putut obține un context OpenGL pentru randare."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "Acest terminal este în modul doar pentru citire. Poți în continuare să vezi, să selectezi și să derulezi conținutul, dar nicio intrare nu va fi trimisă aplicației care rulează."
+
+msgid "Read-only"
+msgstr "Doar citire"
+
+msgid "Copy"
+msgstr "Copiază"
+
+msgid "Paste"
+msgstr "Lipește"
+
+msgid "Notify on Next Command Finish"
+msgstr "Notifică la terminarea următoarei comenzi"
+
+msgid "Clear"
+msgstr "Golește"
+
+msgid "Reset"
+msgstr "Resetează"
+
+msgid "Split"
+msgstr "Împarte"
+
+msgid "Change Title…"
+msgstr "Schimbă titlul…"
+
+msgid "Split Up"
+msgstr "Împarte în sus"
+
+msgid "Split Down"
+msgstr "Împarte în jos"
+
+msgid "Split Left"
+msgstr "Împarte la stânga"
+
+msgid "Split Right"
+msgstr "Împarte la dreapta"
+
+msgid "Close Split"
+msgstr "Închide împărțirea"
+
+msgid "Tab"
+msgstr "Filă"
+
+msgid "Change Tab Title…"
+msgstr "Schimbă titlul filei…"
+
+msgid "New Tab"
+msgstr "Filă nouă"
+
+msgid "Close Tab"
+msgstr "Închide fila"
+
+msgid "Window"
+msgstr "Fereastră"
+
+msgid "Change Window Title…"
+msgstr "Schimbă titlul ferestrei…"
+
+msgid "New Window"
+msgstr "Fereastră nouă"
+
+msgid "Close Window"
+msgstr "Închide fereastra"
+
+msgid "Config"
+msgstr "Configurație"
+
+msgid "Open Configuration in OS Editor"
+msgstr "Deschide configurația în editorul sistemului"
+
+msgid "Open Configuration in New Window"
+msgstr "Deschide configurația într-o fereastră nouă"
+
+msgid "Reload Configuration"
+msgstr "Reîncarcă configurația"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ Rulezi o versiune de depanare a Ghostty! Performanța va fi redusă."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: Inspector de terminal"
+
+msgid "New Split"
+msgstr "Împărțire nouă"
+
+msgid "View Open Tabs"
+msgstr "Vezi filele deschise"
+
+msgid "Main Menu"
+msgstr "Meniu principal"
+
+msgid "Command Palette"
+msgstr "Paleta de comenzi"
+
+msgid "Terminal Inspector"
+msgstr "Inspector de terminal"
+
+msgid "About Ghostty"
+msgstr "Despre Ghostty"
+
+msgid "Quit"
+msgstr "Ieși"
+
+msgid "Authorize Clipboard Access"
+msgstr "Autorizează accesul la clipboard"
+
+msgid "Deny"
+msgstr "Refuză"
+
+msgid "Allow"
+msgstr "Permite"
+
+msgid "Remember choice for this split"
+msgstr "Ține minte alegerea pentru această împărțire"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "Reîncarcă configurația pentru a afișa din nou acest mesaj"
+
+msgid "Cancel"
+msgstr "Anulează"
+
+msgid "Execute a command…"
+msgstr "Execută o comandă…"
+
+msgid "Configuration Errors"
+msgstr "Erori de configurație"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "Au fost găsite una sau mai multe erori de configurație. Verifică erorile de mai jos și fie reîncarcă configurația, fie ignoră aceste erori."
+
+msgid "Ignore"
+msgstr "Ignoră"
+
+msgid "Leave blank to restore the default title."
+msgstr "Lasă gol pentru a restaura titlul implicit."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "The keybind was revoked by the system."
+msgstr "Combinația de taste a fost revocată de sistem."
+
+msgid "The keybind was denied by the system."
+msgstr "Combinația de taste a fost refuzată de sistem."
+
+msgid "Global keybind unavailable"
+msgstr "Combinație globală de taste indisponibilă"
+
+msgid "Export Terminal IO Events"
+msgstr "Exportă evenimentele de intrare/ieșire ale terminalului"
+
+msgid "Export"
+msgstr "Exportă"
+
+msgid "Editing configuration file"
+msgstr "Se editează fișierul de configurație"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "O aplicație încearcă să scrie în clipboard. Conținutul curent al clipboardului este afișat mai jos."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "O aplicație încearcă să citească din clipboard. Conținutul curent al clipboardului este afișat mai jos."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "Avertisment: lipire potențial nesigură"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "Lipirea acestui text în terminal poate fi periculoasă, deoarece pare că unele comenzi ar putea fi executate."
+
+msgid "Quit Ghostty?"
+msgstr "Ieși din Ghostty?"
+
+msgid "Close Tab?"
+msgstr "Închizi fila?"
+
+msgid "Close Window?"
+msgstr "Închizi fereastra?"
+
+msgid "Close Split?"
+msgstr "Închizi împărțirea?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "Toate sesiunile de terminal vor fi terminate."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "Toate sesiunile de terminal din această filă vor fi terminate."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "Toate sesiunile de terminal din această fereastră vor fi terminate."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "Procesul care rulează în prezent în această împărțire va fi terminat."
+
+msgid "Command Finished"
+msgstr "Comandă terminată"
+
+msgid "Command Succeeded"
+msgstr "Comandă reușită"
+
+msgid "Command Failed"
+msgstr "Comandă eșuată"
+
+msgid "Change Terminal Title"
+msgstr "Schimbă titlul terminalului"
+
+msgid "Change Tab Title"
+msgstr "Schimbă titlul filei"
+
+msgid "Change Window Title"
+msgstr "Schimbă titlul ferestrei"
+
+msgid "Reloaded the configuration"
+msgstr "Configurația a fost reîncărcată"
+
+msgid "Copied to clipboard"
+msgstr "Copiat în clipboard"
+
+msgid "Cleared clipboard"
+msgstr "Clipboard golit"
+
+msgid "Ghostty Developers"
+msgstr "Dezvoltatorii Ghostty"
+
+msgid "Reset Terminal"
+msgstr "Resetează terminalul"
+
+msgid "Reset the terminal to a clean state."
+msgstr "Resetează terminalul la o stare curată."
+
+msgid "Copy to Clipboard"
+msgstr "Copiază în clipboard"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "Copiază textul selectat în clipboard, atât în format simplu, cât și stilizat."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "Copiază selecția ca text simplu în clipboard"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "Copiază textul selectat ca text simplu în clipboard."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "Copiază selecția ca secvențe ANSI în clipboard"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "Copiază textul selectat ca secvențe de evadare ANSI în clipboard."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "Copiază selecția ca HTML în clipboard"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "Copiază textul selectat ca HTML în clipboard."
+
+msgid "Copy URL to Clipboard"
+msgstr "Copiază adresa URL în clipboard"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "Copiază adresa URL de sub cursor în clipboard."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "Copiază titlul terminalului în clipboard"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "Copiază titlul terminalului în clipboard. Dacă titlul terminalului nu este setat, nu are niciun efect."
+
+msgid "Paste from Clipboard"
+msgstr "Lipește din clipboard"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "Lipește conținutul clipboardului principal."
+
+msgid "Paste from Selection"
+msgstr "Lipește din selecție"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "Lipește conținutul clipboardului de selecție."
+
+msgid "Start Search"
+msgstr "Începe căutarea"
+
+msgid "Start a search if one isn't already active."
+msgstr "Începe o căutare dacă nu este deja una activă."
+
+msgid "Search Selection"
+msgstr "Caută selecția"
+
+msgid "Start a search for the current text selection."
+msgstr "Începe o căutare pentru textul selectat în prezent."
+
+msgid "End Search"
+msgstr "Termină căutarea"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "Termină căutarea curentă, dacă există, și ascunde elementele grafice."
+
+msgid "Next Search Result"
+msgstr "Următorul rezultat al căutării"
+
+msgid "Navigate to the next search result, if any."
+msgstr "Navighează la următorul rezultat al căutării, dacă există."
+
+msgid "Previous Search Result"
+msgstr "Rezultatul anterior al căutării"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "Navighează la rezultatul anterior al căutării, dacă există."
+
+msgid "Increase Font Size"
+msgstr "Mărește dimensiunea fontului"
+
+msgid "Increase the font size by 1 point."
+msgstr "Mărește dimensiunea fontului cu 1 punct."
+
+msgid "Decrease Font Size"
+msgstr "Micșorează dimensiunea fontului"
+
+msgid "Decrease the font size by 1 point."
+msgstr "Micșorează dimensiunea fontului cu 1 punct."
+
+msgid "Reset Font Size"
+msgstr "Resetează dimensiunea fontului"
+
+msgid "Reset the font size to the default."
+msgstr "Resetează dimensiunea fontului la valoarea implicită."
+
+msgid "Clear Screen"
+msgstr "Golește ecranul"
+
+msgid "Clear the screen and scrollback."
+msgstr "Golește ecranul și istoricul de derulare."
+
+msgid "Select All"
+msgstr "Selectează tot"
+
+msgid "Select all text on the screen."
+msgstr "Selectează tot textul de pe ecran."
+
+msgid "Scroll to Top"
+msgstr "Derulează la început"
+
+msgid "Scroll to the top of the screen."
+msgstr "Derulează la începutul ecranului."
+
+msgid "Scroll to Bottom"
+msgstr "Derulează la sfârșit"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "Derulează la sfârșitul ecranului."
+
+msgid "Scroll to Selection"
+msgstr "Derulează la selecție"
+
+msgid "Scroll to the selected text."
+msgstr "Derulează la textul selectat."
+
+msgid "Scroll Page Up"
+msgstr "Derulează o pagină în sus"
+
+msgid "Scroll the screen up by a page."
+msgstr "Derulează ecranul în sus cu o pagină."
+
+msgid "Scroll Page Down"
+msgstr "Derulează o pagină în jos"
+
+msgid "Scroll the screen down by a page."
+msgstr "Derulează ecranul în jos cu o pagină."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "Copiază ecranul într-un fișier temporar și copiază calea"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "Copiază conținutul ecranului într-un fișier temporar și copiază calea în clipboard."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "Copiază ecranul într-un fișier temporar și lipește calea"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "Copiază conținutul ecranului într-un fișier temporar și lipește calea către fișier."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "Copiază ecranul într-un fișier temporar și deschide-l"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "Copiază conținutul ecranului într-un fișier temporar și deschide-l."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "Copiază ecranul ca HTML într-un fișier temporar și copiază calea"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Copiază conținutul ecranului ca HTML într-un fișier temporar și copiază calea în clipboard."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "Copiază ecranul ca HTML într-un fișier temporar și lipește calea"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "Copiază conținutul ecranului ca HTML într-un fișier temporar și lipește calea către fișier."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "Copiază ecranul ca HTML într-un fișier temporar și deschide-l"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "Copiază conținutul ecranului ca HTML într-un fișier temporar și deschide-l."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Copiază ecranul ca secvențe ANSI într-un fișier temporar și copiază calea"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Copiază conținutul ecranului ca secvențe de evadare ANSI într-un fișier temporar și copiază calea în clipboard."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Copiază ecranul ca secvențe ANSI într-un fișier temporar și lipește calea"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Copiază conținutul ecranului ca secvențe de evadare ANSI într-un fișier temporar și lipește calea către fișier."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "Copiază ecranul ca secvențe ANSI într-un fișier temporar și deschide-l"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Copiază conținutul ecranului ca secvențe de evadare ANSI într-un fișier temporar și deschide-l."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "Copiază selecția într-un fișier temporar și copiază calea"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "Copiază conținutul selecției într-un fișier temporar și copiază calea în clipboard."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "Copiază selecția într-un fișier temporar și lipește calea"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "Copiază conținutul selecției într-un fișier temporar și lipește calea către fișier."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "Copiază selecția într-un fișier temporar și deschide-l"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "Copiază conținutul selecției într-un fișier temporar și deschide-l."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "Copiază selecția ca HTML într-un fișier temporar și copiază calea"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Copiază conținutul selecției ca HTML într-un fișier temporar și copiază calea în clipboard."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "Copiază selecția ca HTML într-un fișier temporar și lipește calea"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "Copiază conținutul selecției ca HTML într-un fișier temporar și lipește calea către fișier."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "Copiază selecția ca HTML într-un fișier temporar și deschide-l"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "Copiază conținutul selecției ca HTML într-un fișier temporar și deschide-l."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Copiază selecția ca secvențe ANSI într-un fișier temporar și copiază calea"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Copiază conținutul selecției ca secvențe de evadare ANSI într-un fișier temporar și copiază calea în clipboard."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Copiază selecția ca secvențe ANSI într-un fișier temporar și lipește calea"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Copiază conținutul selecției ca secvențe de evadare ANSI într-un fișier temporar și lipește calea către fișier."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "Copiază selecția ca secvențe ANSI într-un fișier temporar și deschide-l"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Copiază conținutul selecției ca secvențe de evadare ANSI într-un fișier temporar și deschide-l."
+
+msgid "Open a new window."
+msgstr "Deschide o fereastră nouă."
+
+msgid "Open a new tab."
+msgstr "Deschide o filă nouă."
+
+msgid "Move Tab Left"
+msgstr "Mută fila la stânga"
+
+msgid "Move the current tab to the left."
+msgstr "Mută fila curentă la stânga."
+
+msgid "Move Tab Right"
+msgstr "Mută fila la dreapta"
+
+msgid "Move the current tab to the right."
+msgstr "Mută fila curentă la dreapta."
+
+msgid "Move Tab to New Window"
+msgstr "Mută fila într-o fereastră nouă"
+
+msgid "Move the current tab to a new window."
+msgstr "Mută fila curentă într-o fereastră nouă."
+
+msgid "Toggle Tab Overview"
+msgstr "Comută prezentarea filelor"
+
+msgid "Toggle the tab overview."
+msgstr "Comută prezentarea generală a filelor."
+
+msgid "Change Terminal Title…"
+msgstr "Schimbă titlul terminalului…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "Solicită un titlu nou pentru terminalul curent."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "Solicită un titlu nou pentru fila curentă."
+
+msgid "Split the terminal to the left."
+msgstr "Împarte terminalul la stânga."
+
+msgid "Split the terminal to the right."
+msgstr "Împarte terminalul la dreapta."
+
+msgid "Split the terminal up."
+msgstr "Împarte terminalul în sus."
+
+msgid "Split the terminal down."
+msgstr "Împarte terminalul în jos."
+
+msgid "Focus Split: Previous"
+msgstr "Focalizează împărțirea: anterioară"
+
+msgid "Focus the previous split, if any."
+msgstr "Focalizează împărțirea anterioară, dacă există."
+
+msgid "Focus Split: Next"
+msgstr "Focalizează împărțirea: următoare"
+
+msgid "Focus the next split, if any."
+msgstr "Focalizează următoarea împărțire, dacă există."
+
+msgid "Focus Split: Left"
+msgstr "Focalizează împărțirea: stânga"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "Focalizează împărțirea din stânga, dacă există."
+
+msgid "Focus Split: Right"
+msgstr "Focalizează împărțirea: dreapta"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "Focalizează împărțirea din dreapta, dacă există."
+
+msgid "Focus Split: Up"
+msgstr "Focalizează împărțirea: sus"
+
+msgid "Focus the split above, if it exists."
+msgstr "Focalizează împărțirea de deasupra, dacă există."
+
+msgid "Focus Split: Down"
+msgstr "Focalizează împărțirea: jos"
+
+msgid "Focus the split below, if it exists."
+msgstr "Focalizează împărțirea de dedesubt, dacă există."
+
+msgid "Focus Window: Previous"
+msgstr "Focalizează fereastra: anterioară"
+
+msgid "Focus the previous window, if any."
+msgstr "Focalizează fereastra anterioară, dacă există."
+
+msgid "Focus Window: Next"
+msgstr "Focalizează fereastra: următoare"
+
+msgid "Focus the next window, if any."
+msgstr "Focalizează următoarea fereastră, dacă există."
+
+msgid "Toggle Split Zoom"
+msgstr "Comută mărirea împărțirii"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "Comută starea de mărire a împărțirii curente."
+
+msgid "Toggle Read-Only Mode"
+msgstr "Comută modul doar pentru citire"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "Comută modul doar pentru citire pentru suprafața curentă."
+
+msgid "Equalize Splits"
+msgstr "Egalizează împărțirile"
+
+msgid "Equalize the size of all splits."
+msgstr "Egalizează dimensiunea tuturor împărțirilor."
+
+msgid "Reset Window Size"
+msgstr "Resetează dimensiunea ferestrei"
+
+msgid "Reset the window size to the default."
+msgstr "Resetează dimensiunea ferestrei la valoarea implicită."
+
+msgid "Toggle Inspector"
+msgstr "Comută inspectorul"
+
+msgid "Toggle the inspector."
+msgstr "Comută inspectorul."
+
+msgid "Show the GTK Inspector"
+msgstr "Arată inspectorul GTK"
+
+msgid "Show the GTK inspector."
+msgstr "Arată inspectorul GTK."
+
+msgid "Show On-Screen Keyboard"
+msgstr "Arată tastatura de pe ecran"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "Arată tastatura de pe ecran, dacă există."
+
+msgid "Open Config Using OS editor"
+msgstr "Deschide configurația cu editorul sistemului"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "Deschide fișierul de configurație cu editorul implicit al sistemului."
+
+msgid "Open Config in New Terminal Window"
+msgstr "Deschide configurația într-o fereastră nouă de terminal"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "Deschide fișierul de configurație într-o fereastră nouă folosind $EDITOR sau $VISUAL."
+
+msgid "Reload Config"
+msgstr "Reîncarcă configurația"
+
+msgid "Reload the config file."
+msgstr "Reîncarcă fișierul de configurație."
+
+msgid "Close Terminal"
+msgstr "Închide terminalul"
+
+msgid "Close the current terminal."
+msgstr "Închide terminalul curent."
+
+msgid "Close the current tab."
+msgstr "Închide fila curentă."
+
+msgid "Close Other Tabs"
+msgstr "Închide celelalte file"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "Închide toate filele din această fereastră, în afară de cea curentă."
+
+msgid "Close Tabs to the Right"
+msgstr "Închide filele din dreapta"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "Închide toate filele din dreapta celei curente."
+
+msgid "Close the current window."
+msgstr "Închide fereastra curentă."
+
+msgid "Close All Windows"
+msgstr "Închide toate ferestrele"
+
+msgid "Close all windows."
+msgstr "Închide toate ferestrele."
+
+msgid "Toggle Maximize"
+msgstr "Comută maximizarea"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "Comută starea maximizată a ferestrei curente."
+
+msgid "Toggle Fullscreen"
+msgstr "Comută ecranul complet"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "Comută starea de ecran complet a ferestrei curente."
+
+msgid "Toggle Window Decorations"
+msgstr "Comută decorațiile ferestrei"
+
+msgid "Toggle the window decorations."
+msgstr "Comută decorațiile ferestrei."
+
+msgid "Toggle Float on Top"
+msgstr "Comută menținerea deasupra"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "Comută starea de menținere deasupra a ferestrei curente."
+
+msgid "Toggle Secure Input"
+msgstr "Comută intrarea securizată"
+
+msgid "Toggle secure input mode."
+msgstr "Comută modul de intrare securizată."
+
+msgid "Toggle Mouse Reporting"
+msgstr "Comută raportarea mouse-ului"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "Comută dacă evenimentele mouse-ului sunt raportate aplicațiilor de terminal."
+
+msgid "Toggle Background Opacity"
+msgstr "Comută opacitatea fundalului"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "Comută opacitatea fundalului unei ferestre care a pornit transparentă."
+
+msgid "Check for Updates"
+msgstr "Caută actualizări"
+
+msgid "Check for updates to the application."
+msgstr "Caută actualizări pentru aplicație."
+
+msgid "Undo"
+msgstr "Anulează"
+
+msgid "Undo the last action."
+msgstr "Anulează ultima acțiune."
+
+msgid "Redo"
+msgstr "Refă"
+
+msgid "Redo the last undone action."
+msgstr "Refă ultima acțiune anulată."
+
+msgid "Quit the application."
+msgstr "Ieși din aplicație."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "Pune un pic de Ghostty în terminalul tău."

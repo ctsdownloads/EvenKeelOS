@@ -1,0 +1,1303 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: arcmenu\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: zh_HK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Pin to ArcMenu"
+msgstr "釘選到 ArcMenu"
+
+msgid "Create Desktop Shortcut"
+msgstr "建立桌面捷徑"
+
+msgid "Delete Desktop Shortcut"
+msgstr "刪除桌面捷徑"
+
+msgid "Unpin from ArcMenu"
+msgstr "從 ArcMenu 取消釘選"
+
+msgid "Unpin from Folder"
+msgstr "從資料夾取消釘選"
+
+msgid "Open Folder Location"
+msgstr "開啟資料夾位置"
+
+msgid "Favorites"
+msgstr "收藏"
+
+msgid "Frequent Apps"
+msgstr "常用程式"
+
+msgid "All Apps"
+msgstr "所有應用程式"
+
+msgid "Pinned Apps"
+msgstr "釘選應用程式"
+
+msgid "Recent Files"
+msgstr "最近使用的檔案"
+
+msgid "Log Out..."
+msgstr "登出..."
+
+msgid "Lock"
+msgstr "鎖定"
+
+msgid "Restart..."
+msgstr "重新啟動..."
+
+msgid "Power Off..."
+msgstr "關機..."
+
+msgid "Suspend"
+msgstr "暫停"
+
+msgid "Hybrid Sleep"
+msgstr "混合睡眠"
+
+msgid "Hibernate"
+msgstr "休眠"
+
+msgid "Switch User"
+msgstr "切換使用者"
+
+msgid "Traditional"
+msgstr "傳統"
+
+msgid "Modern"
+msgstr "現代"
+
+msgid "Touch"
+msgstr "觸控"
+
+msgid "Launcher"
+msgstr "啟動器"
+
+msgid "Alternative"
+msgstr "替代"
+
+msgid "ArcMenu"
+msgstr "ArcMenu"
+
+msgid "Brisk"
+msgstr "Brisk"
+
+msgid "Budgie"
+msgstr "Budgie"
+
+msgid "GNOME Menu"
+msgstr "GNOME 選單"
+
+msgid "Mint"
+msgstr "Mint"
+
+msgid "Whisker"
+msgstr "Whisker"
+
+msgid "11"
+msgstr "11"
+
+msgid "a.z."
+msgstr "a.z."
+
+msgid "Enterprise"
+msgstr "Enterprise"
+
+msgid "Insider"
+msgstr "Insider"
+
+msgid "Plasma"
+msgstr "Plasma"
+
+msgid "Pop"
+msgstr "Pop"
+
+msgid "Redmond"
+msgstr "Redmond"
+
+msgid "Sleek"
+msgstr "Sleek"
+
+msgid "tognee"
+msgstr "tognee"
+
+msgid "Unity"
+msgstr "Unity"
+
+msgid "Windows"
+msgstr "Windows"
+
+msgid "Zest"
+msgstr "Zest"
+
+msgid "Chromebook"
+msgstr "Chromebook"
+
+msgid "Elementary"
+msgstr "Elementary"
+
+msgid "GNOME Overview"
+msgstr "GNOME 概覽"
+
+msgid "Runner"
+msgstr "Runner"
+
+msgid "Raven"
+msgstr "Raven"
+
+msgid "Software"
+msgstr "軟件"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Tweaks"
+msgstr "調校"
+
+msgid "Terminal"
+msgstr "終端機"
+
+msgid "Activities Overview"
+msgstr "活動概覽"
+
+msgid "ArcMenu Settings"
+msgstr "ArcMenu 設定"
+
+msgid "Files"
+msgstr "檔案"
+
+msgid "Apps"
+msgstr "應用程式"
+
+msgid "Loading Menu Layout..."
+msgstr "正在載入選單佈局..."
+
+msgid "Show Desktop"
+msgstr "顯示桌面"
+
+msgid "Power Off"
+msgstr "關機"
+
+msgid "Dash to Panel Settings"
+msgstr "Dash to Panel 設定"
+
+msgid "App Icons Taskbar Settings"
+msgstr "應用程式圖示工作列設定"
+
+msgid "Session"
+msgstr "工作階段"
+
+msgid "System"
+msgstr "系統"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Unnamed Folder"
+msgstr "未命名資料夾"
+
+msgid "New"
+msgstr "新增"
+
+msgid "Pinned"
+msgstr "已釘選"
+
+msgid "Unmount Drive"
+msgstr "卸載磁碟機"
+
+msgid "Eject Drive"
+msgstr "退出磁碟機"
+
+msgid "Remove from Recent"
+msgstr "從最近使用中移除"
+
+msgid "Search…"
+msgstr "搜尋…"
+
+msgid "Frequent"
+msgstr "常用"
+
+msgid "More Recent Files..."
+msgstr "更多最近使用的檔案..."
+
+msgid "Computer"
+msgstr "電腦"
+
+msgid "Leave"
+msgstr "離開"
+
+msgid "Application Shortcuts"
+msgstr "應用程式捷徑"
+
+msgid "Places"
+msgstr "地點"
+
+msgid "Bookmarks"
+msgstr "書籤"
+
+msgid "Devices"
+msgstr "裝置"
+
+msgid "Network"
+msgstr "網絡"
+
+msgid "Library Home"
+msgstr "資料庫主頁"
+
+msgid "New Folder"
+msgstr "新增資料夾"
+
+msgid "Rename Folder"
+msgstr "重新命名資料夾"
+
+msgid "Delete Folder"
+msgstr "刪除資料夾"
+
+#, javascript-format
+msgid "Permanently delete %s folder?"
+msgstr "要永久刪除資料夾 %s 嗎？"
+
+msgid "No"
+msgstr "否"
+
+msgid "Yes"
+msgstr "是"
+
+#, javascript-format
+msgid "Rename %s folder"
+msgstr "重新命名資料夾 %s"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Apply"
+msgstr "套用"
+
+msgid "All Programs"
+msgstr "所有程式"
+
+msgid "Shortcuts"
+msgstr "捷徑"
+
+msgid "Configure Runner"
+msgstr "設定 Runner"
+
+msgid "Categories"
+msgstr "類別"
+
+msgid "Extras"
+msgstr "額外項目"
+
+#, javascript-format
+msgid "Failed to launch “%s”"
+msgstr "啟動「%s」失敗"
+
+#, javascript-format
+msgid "Failed to mount volume for “%s”"
+msgstr "掛載卷冊「%s」失敗"
+
+msgid "Home"
+msgstr "家目錄"
+
+#, javascript-format
+msgid "Ejecting drive “%s” failed:"
+msgstr "退出磁碟機「%s」失敗："
+
+msgid "Modify"
+msgstr "更改"
+
+msgid "Move Up"
+msgstr "上移"
+
+msgid "Move Down"
+msgstr "下移"
+
+msgid "Remove"
+msgstr "移除"
+
+msgid "Try a different search"
+msgstr "請嘗試其他搜尋字詞"
+
+msgid "Searching"
+msgstr "正在搜尋"
+
+msgid "No Results Found"
+msgstr "找不到結果"
+
+#, javascript-format
+msgid "%d more"
+msgstr "另外 %d 項"
+
+msgid "List of open windows across all workspaces"
+msgstr "所有工作區中已開啟視窗的清單"
+
+msgid "Open Windows"
+msgstr "已開啟的視窗"
+
+#, javascript-format
+msgid "'%s' on Workspace %d"
+msgstr "「%s」，工作區 %d"
+
+#, javascript-format
+msgid "Failed to open “%s”"
+msgstr "無法開啟「%s」"
+
+msgid "About"
+msgstr "關於"
+
+msgid "Application Menu Extension for GNOME"
+msgstr "GNOME 的應用程式選單擴充功能"
+
+#, javascript-format
+msgid "%s Version"
+msgstr "%s 版本"
+
+#, javascript-format
+msgid "%s - Release Notes"
+msgstr "%s - 發行說明"
+
+msgid "What's New"
+msgstr "新功能"
+
+msgid "Message Tray Update Notification"
+msgstr "訊息匣更新通知"
+
+#, javascript-format
+msgid "Show a notification when %s receives an update."
+msgstr "%s 有更新時顯示通知。"
+
+msgid "Git Commit"
+msgstr "Git 提交號"
+
+msgid "GNOME Version"
+msgstr "GNOME 版本"
+
+msgid "OS Name"
+msgstr "作業系統名稱"
+
+msgid "Windowing System"
+msgstr "視窗系統"
+
+#, javascript-format
+msgid "%s on GitLab"
+msgstr "GitLab 上的 %s"
+
+msgid "Report an Issue"
+msgstr "回報問題"
+
+#, javascript-format
+msgid "%s Settings"
+msgstr "%s 設定"
+
+msgid "Load"
+msgstr "載入"
+
+msgid "Load Settings"
+msgstr "載入設定"
+
+msgid "Open"
+msgstr "開啟"
+
+msgid "Save"
+msgstr "儲存"
+
+msgid "Save Settings"
+msgstr "儲存設定"
+
+msgid "Credits"
+msgstr "鳴謝"
+
+msgid "Brought to you by"
+msgstr "製作團隊："
+
+msgid "History"
+msgstr "歷史"
+
+msgid "Contributions by"
+msgstr "貢獻者："
+
+msgid "Contributors"
+msgstr "貢獻人員"
+
+msgid "Translators"
+msgstr "翻譯人員"
+
+msgid "Artwork by"
+msgstr "美術設計："
+
+msgid "Legal"
+msgstr "法律資訊"
+
+msgid "This program comes with absolutely no warranty."
+msgstr "本程式不附帶任何保證。"
+
+#, javascript-format
+msgid "See the <a href=\"%s\">%s</a> for details."
+msgstr "詳情請參閱<a href=\"%s\">%s</a>。"
+
+msgid "GNU General Public License, version 2 or later"
+msgstr "GNU 通用公共許可證第 2 版或更新版本"
+
+msgid "Donate"
+msgstr "捐款"
+
+#, javascript-format
+msgid "Help Support %s"
+msgstr "支持 %s"
+
+#, javascript-format
+msgid "Thank you for using %s! If you enjoy it and would like to help support its continued development, please consider making a donation."
+msgstr "多謝你使用 %s！如果你喜歡它，並希望支持它的持續開發，請考慮捐款。"
+
+msgid "Donate via PayPal"
+msgstr "透過 PayPal 捐款"
+
+msgid "Donate via Buy Me a Coffee"
+msgstr "透過 Buy Me a Coffee 捐款"
+
+#, javascript-format
+msgid "A huge thank you to everyone who has supported %s! Your support helps keep %s going. It is truly appreciated!"
+msgstr "衷心感謝每一位支持 %s 的人！你的支持讓 %s 得以持續發展，我們非常感激！"
+
+msgid "General"
+msgstr "基本"
+
+msgid "Panel Display Options"
+msgstr "面板顯示選項"
+
+msgid "Show Activities Button"
+msgstr "顯示「活動」按鈕"
+
+msgid "Dash to Panel may conflict with this setting"
+msgstr "Dash to Panel 可能與此設定衝突"
+
+msgid "Left"
+msgstr "左"
+
+msgid "Center"
+msgstr "中"
+
+msgid "Right"
+msgstr "右"
+
+msgid "Position in Panel"
+msgstr "在面板中的位置"
+
+msgid "Menu Alignment"
+msgstr "選單對齊方式"
+
+msgid "Display ArcMenu on all Panels"
+msgstr "在所有面板上顯示 ArcMenu"
+
+msgid "Dash to Panel or App Icons Taskbar extension required"
+msgstr "需要 Dash to Panel 或 App Icons Taskbar 擴充功能"
+
+msgid "Always Prefer Top Panel"
+msgstr "一律優先使用頂部面板"
+
+msgid "Useful with Dash to Panel setting 'Keep original gnome-shell top panel'"
+msgstr "配合 Dash to Panel 的「保留原本的 GNOME Shell 頂部面板」設定使用時很有用"
+
+msgid "General Settings"
+msgstr "一般設定"
+
+msgid "ArcMenu Hotkey"
+msgstr "ArcMenu 快捷鍵"
+
+msgid "Standalone Runner Menu"
+msgstr "獨立 Runner 選單"
+
+msgid "Hide Overview on Startup"
+msgstr "啟動時隱藏概覽"
+
+msgid "Hide Overview when ArcMenu Opens"
+msgstr "ArcMenu 開啟時隱藏概覽"
+
+#, javascript-format
+msgid "%s Layout Tweaks"
+msgstr "%s 佈局微調"
+
+msgid "Disabled"
+msgstr "停用"
+
+msgid "ArcMenu Hotkeys"
+msgstr "ArcMenu 快捷鍵"
+
+msgid "Standalone Runner Hotkeys"
+msgstr "獨立 Runner 快捷鍵"
+
+msgid "Active Hotkeys"
+msgstr "使用中的快捷鍵"
+
+msgid "Hotkey Options"
+msgstr "快捷鍵選項"
+
+msgid "Super Hotkeys Override GNOME Overview Hotkey"
+msgstr "Super 快捷鍵取代 GNOME 概覽快捷鍵"
+
+msgid "Open on Primary Monitor"
+msgstr "在主螢幕上開啟"
+
+msgid "Type on your keyboard to add a new hotkey."
+msgstr "在鍵盤上輸入以新增快捷鍵。"
+
+msgid "Add Hotkey"
+msgstr "新增快捷鍵"
+
+#, javascript-format
+msgid "Conflict with <b>%s</b> hotkey"
+msgstr "與 <b>%s</b> 快捷鍵衝突"
+
+msgid "Standlone Runner"
+msgstr "獨立 Runner"
+
+msgid "Select an Icon"
+msgstr "選擇圖示"
+
+msgid "Select"
+msgstr "選擇"
+
+msgid "Search icons…"
+msgstr "搜尋圖示…"
+
+msgid "Browse Files..."
+msgstr "瀏覽檔案..."
+
+msgid "All"
+msgstr "全部"
+
+msgid "Symbolic"
+msgstr "符號"
+
+msgid "Full Color"
+msgstr "全彩"
+
+msgid "Type"
+msgstr "類型"
+
+msgid "Extension"
+msgstr "擴充功能"
+
+msgid "Distros"
+msgstr "發行版"
+
+msgid "Category"
+msgstr "類別"
+
+msgid "Filter"
+msgstr "篩選"
+
+msgid "Menu Button"
+msgstr "選單按鈕"
+
+msgid "Reset settings"
+msgstr "重設設定"
+
+#, javascript-format
+msgid "Reset all %s settings?"
+msgstr "要重設所有 %s 設定嗎？"
+
+#, javascript-format
+msgid "All %s settings will be reset to the default value."
+msgstr "所有 %s 設定都會重設為預設值。"
+
+msgid "Appearance"
+msgstr "外觀"
+
+msgid "Icon"
+msgstr "圖示"
+
+msgid "Text"
+msgstr "文字"
+
+msgid "Icon and Text"
+msgstr "圖示加文字"
+
+msgid "Text and Icon"
+msgstr "文字加圖示"
+
+msgid "Hidden"
+msgstr "隱藏"
+
+msgid "Display Style"
+msgstr "顯示樣式"
+
+msgid "Padding"
+msgstr "間距"
+
+#, javascript-format
+msgid "%d Default Theme Value"
+msgstr "%d 主題預設值"
+
+msgid "Browse..."
+msgstr "瀏覽..."
+
+msgid "Choose a New Icon"
+msgstr "選擇新圖示"
+
+msgid "Icon Size"
+msgstr "圖示大小"
+
+msgid "Click Options"
+msgstr "點擊選項"
+
+msgid "Context Menu"
+msgstr "內容選單"
+
+msgid "None"
+msgstr "無"
+
+msgid "Left Click"
+msgstr "左鍵點擊"
+
+msgid "Right Click"
+msgstr "右鍵點擊"
+
+msgid "Middle Click"
+msgstr "中鍵點擊"
+
+msgid "Styling"
+msgstr "樣式"
+
+msgid "Results may vary with third party themes"
+msgstr "結果可能因第三方主題而異"
+
+msgid "Foreground Color"
+msgstr "前景顏色"
+
+msgid "Background Color"
+msgstr "背景顏色"
+
+msgid "Hover"
+msgstr "懸停"
+
+msgid "Active"
+msgstr "使用中"
+
+msgid "Border Radius"
+msgstr "圓角半徑"
+
+msgid "Border Width"
+msgstr "邊框寬度"
+
+msgid "Background colors required if set to 0"
+msgstr "如設為 0，則需要背景顏色"
+
+msgid "Border Color"
+msgstr "邊框顏色"
+
+msgid "Menu"
+msgstr "選單"
+
+msgid "How should the menu look?"
+msgstr "選單應該是什麼樣子？"
+
+msgid "Menu Layout"
+msgstr "選單佈局"
+
+msgid "Choose a layout style for the menu"
+msgstr "選擇選單的佈局樣式"
+
+msgid "Menu Theme"
+msgstr "選單主題"
+
+msgid "Modify menu colors, font size, and border"
+msgstr "修改選單顏色、字型大小和邊框"
+
+msgid "Menu Visual Appearance"
+msgstr "選單外觀"
+
+msgid "Change menu height, width, location, and icon sizes"
+msgstr "變更選單高度、寬度、位置和圖示大小"
+
+msgid "Fine Tune"
+msgstr "微調"
+
+msgid "Adjust less commonly used settings"
+msgstr "調整較少使用的設定"
+
+msgid "What should show on the menu?"
+msgstr "選單應該顯示什麼？"
+
+msgid "Settings specific to the current menu layout"
+msgstr "目前選單佈局專用的設定"
+
+msgid "Directory Shortcuts"
+msgstr "目錄捷徑"
+
+msgid "Search Options"
+msgstr "搜尋選項"
+
+msgid "Power Options"
+msgstr "電源選項"
+
+msgid "Choose which power options to show and the display style"
+msgstr "選擇要顯示哪些電源選項及其顯示樣式"
+
+msgid "Extra Categories"
+msgstr "額外類別"
+
+msgid "Add or remove additional custom categories"
+msgstr "新增或移除額外的自訂類別"
+
+msgid "What should show on the context menu?"
+msgstr "內容選單應該顯示什麼？"
+
+msgid "Modify ArcMenu Context Menu"
+msgstr "修改 ArcMenu 內容選單"
+
+msgid "Show Category Sub Menus"
+msgstr "顯示類別子選單"
+
+msgid "Show Application Descriptions"
+msgstr "顯示應用程式描述"
+
+msgid "Show Generic Application Names"
+msgstr "顯示通用應用程式名稱"
+
+msgid "Show Hidden Recent Files"
+msgstr "顯示隱藏的最近使用檔案"
+
+msgid "Show Multi Lined Labels"
+msgstr "顯示多行標籤"
+
+msgid "Allow application labels to span multiple lines on grid style layouts"
+msgstr "在格線樣式佈局中，允許應用程式標籤顯示多行"
+
+msgid "Show Tooltips"
+msgstr "顯示工具提示"
+
+msgid "Group Apps Alphabetically on List Views"
+msgstr "在清單檢視中按字母順序將應用程式分組"
+
+msgid "For All Apps sections"
+msgstr "適用於「所有應用程式」區域"
+
+msgid "Group Apps Alphabetically on Grid Views"
+msgstr "在格線檢視中按字母順序將應用程式分組"
+
+msgid "Activate App Window on Launch"
+msgstr "啟動時啟用應用程式視窗"
+
+msgid "Launching an app activates its existing window if one is open; otherwise, it launches a new instance. Hold Ctrl while launching or middle-click to open a new window."
+msgstr "啟動應用程式時，如已有開啟的視窗便會啟用該視窗，否則會啟動新實例。啟動時按住 Ctrl 或按中鍵可開啟新視窗。"
+
+msgid "Keep ArcMenu Open on Ctrl+Click"
+msgstr "按住 Ctrl 點擊時保持 ArcMenu 開啟"
+
+msgid "Prevents the menu from closing when activating items while holding Ctrl."
+msgstr "按住 Ctrl 啟用項目時，選單不會關閉。"
+
+msgid "Scrollview Options"
+msgstr "捲動檢視選項"
+
+msgid "Scrollview Fade Effects"
+msgstr "捲動檢視淡出效果"
+
+msgid "Show Scrollbars"
+msgstr "顯示捲軸"
+
+msgid "Overlay Scrollbars"
+msgstr "疊加捲軸"
+
+msgid "Icon Style"
+msgstr "圖示樣式"
+
+msgid "Category Icons"
+msgstr "類別圖示"
+
+msgid "Shortcut Icons"
+msgstr "捷徑圖示"
+
+msgid "Button Icons"
+msgstr "按鈕圖示"
+
+msgid "New Apps Tracker"
+msgstr "新應用程式追蹤器"
+
+msgid "Enable"
+msgstr "啟用"
+
+msgid "Clear All"
+msgstr "清除全部"
+
+msgid "Extra Shortcuts"
+msgstr "額外捷徑"
+
+msgid "Vertical Separator"
+msgstr "垂直分隔線"
+
+msgid "Mouse Click"
+msgstr "滑鼠點擊"
+
+msgid "Mouse Hover"
+msgstr "滑鼠懸停"
+
+msgid "Category Activation"
+msgstr "類別啟動於"
+
+msgid "Round"
+msgstr "圓形"
+
+msgid "Square"
+msgstr "方形"
+
+msgid "Avatar Shape"
+msgstr "頭像形狀"
+
+msgid "Bottom"
+msgstr "底部"
+
+msgid "Top"
+msgstr "頂部"
+
+msgid "Searchbar Location"
+msgstr "搜尋欄位置"
+
+msgid "Flip Layout Horizontally"
+msgstr "水平翻轉佈局"
+
+msgid "Show User Avatar"
+msgstr "顯示使用者頭像"
+
+msgid "Default View"
+msgstr "預設檢視"
+
+msgid "Show Frequent Apps"
+msgstr "顯示常用應用程式"
+
+msgid "Merge Top and Bottom Panels"
+msgstr "合併頂部和底部面板"
+
+msgid "Max Frequent Apps"
+msgstr "常用應用程式上限"
+
+msgid "Show Apps Grid"
+msgstr "顯示應用程式格線"
+
+msgid "Show Pinned Apps"
+msgstr "顯示已釘選的應用程式"
+
+msgid "Activate on Hover"
+msgstr "懸停時觸發"
+
+msgid "Enable Activities Overview Shortcut"
+msgstr "啟用活動概覽捷徑"
+
+msgid "Centered"
+msgstr "置中"
+
+msgid "Position"
+msgstr "位置"
+
+msgid "List"
+msgstr "清單"
+
+msgid "Grid"
+msgstr "格線"
+
+msgid "Search Results Display Style"
+msgstr "搜尋結果顯示樣式"
+
+msgid "Width"
+msgstr "寬度"
+
+msgid "Height"
+msgstr "高度"
+
+msgid "Static Height"
+msgstr "固定高度"
+
+msgid "Font Size"
+msgstr "字型大小"
+
+msgid "Default"
+msgstr "預設"
+
+msgid "Show Configure Runner Button"
+msgstr "顯示「設定 Runner」按鈕"
+
+msgid "Position on Monitor"
+msgstr "在螢幕上的位置"
+
+msgid "Extra Shortcuts Panel Width"
+msgstr "額外捷徑面板寬度"
+
+msgid "External Devices"
+msgstr "外部裝置"
+
+msgid "Nothing Yet!"
+msgstr "暫時沒有內容！"
+
+msgid "Categories List"
+msgstr "類別清單"
+
+msgid "Pinned and Frequent Apps"
+msgstr "已釘選和常用的應用程式"
+
+msgid "0 = unlimited"
+msgstr "0 = 無限制"
+
+msgid "'All Apps' Button Action"
+msgstr "「所有應用程式」按鈕的動作"
+
+msgid "Category Quick Links"
+msgstr "類別快速連結"
+
+msgid "Display a category on the default menu view. Category must be enabled in ArcMenu Settings -> Menu -> Extra Categories section."
+msgstr "在預設選單檢視中顯示某個類別。必須先在 ArcMenu 設定 -> 選單 -> 額外類別區域中啟用該類別。"
+
+msgid "Quick Links Location"
+msgstr "快速連結位置"
+
+msgid "Enable Weather Widget"
+msgstr "啟用天氣小工具"
+
+msgid "Enable Clock Widget"
+msgstr "啟用時鐘小工具"
+
+msgid "Current Menu Layout"
+msgstr "目前選單佈局"
+
+msgid "Choose a new menu layout?"
+msgstr "要選擇新的選單佈局嗎？"
+
+#, javascript-format
+msgid "%s Menu Layouts"
+msgstr "%s 選單佈局"
+
+msgid "Actions will be hidden from ArcMenu if not available on your system."
+msgstr "如果你的系統不支援，有關動作會從 ArcMenu 中隱藏。"
+
+msgid "Off"
+msgstr "關閉"
+
+msgid "Power Buttons"
+msgstr "電源按鈕"
+
+msgid "Power Menu"
+msgstr "電源選單"
+
+msgid "Override Display Style"
+msgstr "覆寫顯示樣式"
+
+msgid "Add More Apps"
+msgstr "新增更多應用程式"
+
+msgid "Add Default User Directories"
+msgstr "新增預設使用者目錄"
+
+msgid "Add More Shortcuts"
+msgstr "新增更多捷徑"
+
+msgid "Add Custom Shortcut"
+msgstr "新增自定義捷徑"
+
+msgid "Invalid Shortcut"
+msgstr "無效捷徑"
+
+msgid "Add to your Pinned Apps"
+msgstr "新增至你的釘選應用程式"
+
+msgid "Add to your Extra Shortcuts"
+msgstr "新增至你的額外捷徑"
+
+msgid "Select Application Shortcuts"
+msgstr "選擇應用程式捷徑"
+
+msgid "Select Directory Shortcuts"
+msgstr "選擇目錄捷徑"
+
+msgid "Add to the Context Menu"
+msgstr "新增至內容選單"
+
+msgid "Separator"
+msgstr "分隔線"
+
+msgid "Spacer"
+msgstr "間隔"
+
+msgid "Run Command..."
+msgstr "執行指令..."
+
+msgid "Show All Apps"
+msgstr "顯示所有應用程式"
+
+msgid "Menu Settings"
+msgstr "選單設定"
+
+msgid "Menu Theming"
+msgstr "選單佈景主題"
+
+msgid "Change Menu Layout"
+msgstr "變更選單佈局"
+
+msgid "Menu Button Settings"
+msgstr "選單按鈕設定"
+
+msgid "Panel Extension Settings"
+msgstr "面板擴充功能設定"
+
+msgid "Documents"
+msgstr "文件"
+
+msgid "Downloads"
+msgstr "下載"
+
+msgid "Music"
+msgstr "音樂"
+
+msgid "Pictures"
+msgstr "圖片"
+
+msgid "Videos"
+msgstr "影片"
+
+msgid "Recent"
+msgstr "最近使用"
+
+msgid "Dash to Panel or App Icons Taskbar"
+msgstr "Dash to Panel 或 App Icons Taskbar"
+
+#, javascript-format
+msgid "%s has been added"
+msgstr "已新增 %s"
+
+#, javascript-format
+msgid "%s has been removed"
+msgstr "已移除 %s"
+
+msgid "Add a Custom Shortcut"
+msgstr "新增自定義捷徑"
+
+msgid "Edit Pinned App"
+msgstr "編輯釘選應用程式"
+
+msgid "Edit Shortcut"
+msgstr "編輯捷徑"
+
+msgid "Add"
+msgstr "新增"
+
+msgid "Title"
+msgstr "標題"
+
+msgid "Clear Icon"
+msgstr "清除圖示"
+
+msgid "Directory"
+msgstr "目錄"
+
+msgid "Command"
+msgstr "指令"
+
+msgid "Hide Search Bar"
+msgstr "隱藏搜尋列"
+
+msgid "The search bar hides when empty and appears when typing."
+msgstr "搜尋列在空白時隱藏，輸入時顯示。"
+
+msgid "Show Search Result Descriptions"
+msgstr "顯示搜尋結果描述"
+
+msgid "Highlight search result terms"
+msgstr "突顯搜尋結果中的字詞"
+
+msgid "Max Search Results"
+msgstr "搜尋結果上限"
+
+msgid "Search Box Border Radius"
+msgstr "搜尋框圓角半徑"
+
+msgid "Extra Search Providers"
+msgstr "額外搜尋提供者"
+
+msgid "Search for open windows across all workspaces"
+msgstr "搜尋所有工作區中已開啟的視窗"
+
+msgid "Search for recent files"
+msgstr "搜尋最近使用的檔案"
+
+msgid "Override Theme"
+msgstr "覆寫主題"
+
+msgid "Menu Themes"
+msgstr "選單主題"
+
+msgid "Current Theme"
+msgstr "目前主題"
+
+msgid "Save as Theme"
+msgstr "另存為主題"
+
+msgid "Menu Styling"
+msgstr "選單樣式"
+
+msgid "Separator Color"
+msgstr "分隔線顏色"
+
+msgid "Menu Items Styling"
+msgstr "選單項目樣式"
+
+msgid "Save Theme As..."
+msgstr "主題另存為..."
+
+msgid "Theme Name"
+msgstr "主題名稱"
+
+msgid "Save Theme"
+msgstr "儲存主題"
+
+msgid "Manage Themes"
+msgstr "管理主題"
+
+msgid "Save Themes"
+msgstr "儲存主題"
+
+msgid "Load Themes"
+msgstr "載入主題"
+
+#, javascript-format
+msgid "%s has been selected"
+msgstr "已選取 %s"
+
+#, javascript-format
+msgid "%s has been unselected"
+msgstr "已取消選取 %s"
+
+msgid "Menu Size"
+msgstr "選單大小"
+
+msgid "Left-Panel Width"
+msgstr "左側面板寬度"
+
+msgid "Traditional Layouts"
+msgstr "傳統佈局"
+
+msgid "Right-Panel Width"
+msgstr "右側面板寬度"
+
+msgid "Width Offset"
+msgstr "寬度偏移"
+
+msgid "Non-Traditional Layouts"
+msgstr "非傳統佈局"
+
+msgid "Menu Location"
+msgstr "選單位置"
+
+msgid "Top Centered"
+msgstr "頂部置中"
+
+msgid "Top Left"
+msgstr "左上"
+
+msgid "Top Right"
+msgstr "右上"
+
+msgid "Bottom Centered"
+msgstr "底部置中"
+
+msgid "Bottom Left"
+msgstr "左下"
+
+msgid "Bottom Right"
+msgstr "右下"
+
+msgid "Left Centered"
+msgstr "左側置中"
+
+msgid "Right Centered"
+msgstr "右側置中"
+
+msgid "Monitor Centered"
+msgstr "螢幕置中"
+
+msgid "Override Menu Location"
+msgstr "覆寫選單位置"
+
+msgid "Override Menu Rise"
+msgstr "覆寫選單升起距離"
+
+msgid "Menu Distance from Panel and Screen Edge"
+msgstr "選單與面板和螢幕邊緣的距離"
+
+msgid "Override Menu Item Icon Sizes"
+msgstr "覆寫選單項目圖示大小"
+
+msgid "Small"
+msgstr "小"
+
+msgid "Medium"
+msgstr "中"
+
+msgid "Large"
+msgstr "大"
+
+msgid "Extra Large"
+msgstr "特大"
+
+msgid "Small Wide"
+msgstr "小（寬）"
+
+msgid "Medium Wide"
+msgstr "中（寬）"
+
+msgid "Large Wide"
+msgstr "大（寬）"
+
+msgid "Grid Menu Items"
+msgstr "格線選單項目"
+
+msgid "Menu items displayed in grid style"
+msgstr "以格線樣式顯示的選單項目"
+
+msgid "Presets"
+msgstr "預設集"
+
+msgid "Grid Icon Size"
+msgstr "格線圖示大小"
+
+msgid "Width, Height, Icon Size"
+msgstr "寬度、高度、圖示大小"
+
+msgid "Applications"
+msgstr "應用程式"
+
+msgid "Applications, pinned apps, and search results"
+msgstr "應用程式、已釘選的應用程式和搜尋結果"
+
+msgid "Menu items found in side panels on various layouts"
+msgstr "各種佈局中側面板內的選單項目"
+
+msgid "Buttons"
+msgstr "按鈕"
+
+msgid "Miscellaneous"
+msgstr "其他"
+
+msgid "Avatar, search icons, navigation icons"
+msgstr "頭像、搜尋圖示、導覽圖示"
+
+msgid "Hide Icon"
+msgstr "隱藏圖示"
+
+#, javascript-format
+msgid "%s v%s Released!"
+msgstr "%s v%s 已發佈！"
+
+msgid "Check out what's new."
+msgstr "看看有什麼新功能。"
+
+msgid "What's new?"
+msgstr "有什麼新功能？"
+
+msgid "Dismiss"
+msgstr "關閉"

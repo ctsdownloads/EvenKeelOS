@@ -7211,6 +7211,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "{network} به‌عنوان {place} ذخیره شد."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} گیگابایت"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} مگابایت"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} ترابایت"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8363,3 +8378,247 @@ msgstr "نوشتن نت موسیقی"
 
 msgid "your calendar"
 msgstr "تقویم شما"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "تکمیل ترجمهٔ همهٔ زبان‌ها"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "نمایش تاریخ‌ها به ترتیب مخصوص هر زبان"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "نگه داشتن gettext در ایمیج"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "افزودن ترجمه برای ۶۸ زبان"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "قابل‌ترجمه کردن متن همهٔ صفحه‌ها"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "اجازهٔ ورود برنامه‌ها و درگاه‌ها برای هر مکان؛ «محل کار» هیچ چیز را راه نمی‌دهد"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "افزودن زمان‌بندی روشن و تیره، نمایش پی‌درپی تصاویر و قلم‌ها"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "تغییر نام «ابزارهای سامانه» به EvenKeelOS Wheelhouse"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "نمایش گرافیک NVIDIA به‌عنوان سالم در بررسی سازگاری"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "بارگیری سامانه‌های پرونده پیش از نصب"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "پرسیدن پیش از راه‌اندازی دوبارهٔ خودکار"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "علامت‌گذاری هر نسخهٔ جدید برای آزمایش"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "بازگرداندن یک به‌روزرسانی وقتی چیزی که کار می‌کرد خراب می‌شود"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "اجرای هر ساخت در یک ماشین مجازی پیش از انتشار"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "توصیهٔ ۸ گیگابایت حافظه، بدون حداقل"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "بررسی رایانه پیش از نصب از USB زنده"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "پرسیدن «کاربر Windows یا Linux» در نصب‌کننده"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "افزودن «ابزارهای سامانه» به منوی نشان"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "افزودن شش موضوع دیگر به راهنمای EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "تبدیل «تازه با Linux» به راهنمای EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "افزودن راهنمای «تازه با Linux» در «ابزارهای سامانه» و هنگام ورود"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "افزودن گزینه‌های بوت: رفع مشکل‌های رایج و تنظیمات خودتان"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "رفع بررسی ساخت پوشه‌های هم‌رسانی‌شده: هنوز پوشهٔ خانه‌ای نیست"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "افزودن پوشه‌های هم‌رسانی‌شده: هم‌رسانی پوشه‌های خانه در شبکه‌های خانگی"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "افزودن امنیت شبکه: خانه، محل کار یا مکان عمومی"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "شناسایی راه‌اندازهای چاپگر در هر پوشه"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "نمایش پنجره‌های ابزار درون «ابزارهای سامانه»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "باز کردن یک گزارش مشکل وقتی ساخت ایمیج شکست می‌خورد"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "قفل کردن بسته‌های بیرونی و ابزار ISO روی نسخه‌های دقیق"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "نام‌گذاری پنجره‌های ابزار با نام ابزار، فهرست آزمون کوتاه‌تر"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "تعمیر تنظیمات سامانهٔ حذف‌شده و هشدار دربارهٔ گواهی‌ها"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "قرار دادن همهٔ ابزارها در یک پنجرهٔ «ابزارهای سامانه»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "برجا نماندن چیزی هنگام حذف یک VPN"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "افزودن «دریافت VPN»، با VPNهایی که به‌روز می‌مانند"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "راهنمای جداگانه برای جلسه‌های Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "باز کردن جلسه‌های Zoom در Chrome، در نسخهٔ وب Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "جلوگیری از خراب کردن نصب‌های Flathub توسط نصب‌های ArtCraft"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "شناسایی نصب‌کننده‌ها از روی نام پروندهٔ معمولشان"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "پیشنهاد جایگزین‌های Linux برای برنامه‌های Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "رفع راه‌اندازی جعبه: distrobox پوشه‌های فقط‌خواندنی را اشتباه سوار می‌کند"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "پیشنهاد نسخه‌های Fedora یا Ubuntu برای برنامه‌های Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "پیشنهاد نسخهٔ Linux هنگام باز شدن یک برنامهٔ Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "ارائهٔ یک shim، تا ثابت‌افزار ورودی اضافی Fedora اضافه نکند"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "بازگرداندن ناحیهٔ دیوار آتش Fedora"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "مستحکم‌تر کردن یاریگرهای روت، دیوار آتش و به‌روزرسانی‌های بدون گذرواژه"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "پیش‌فرض‌های جدید: تصویرهای پس‌زمینه، پوشه‌های رنگ تأکیدی، صفحهٔ قفل"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "پیش‌فرض جدید: رنگ تأکیدی سبزآبی، روی صفحهٔ ورود هم"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "رفع یادداشت بازگشت، حلقهٔ ورود و آزمون‌های گیرکرده"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "رفع بازگشت هنگام انجماد و کاهش تلاش‌های دوباره به ۲"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "رفع آزمون‌های بازگشت خودکار"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "آزمون‌های شکست واقعی برای بازگشت خودکار"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "افزودن بازگشت خودکار با greenboot"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "شروع چیدمان Windows روی میزکار، به‌همراه رفع چند مشکل کوچک"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "مکث به‌روزرسانی‌های خودکار به مدت ۳ روز پس از یک بازگرداندن"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "افزودن مرحلهٔ چیدمان میزکار به نصب‌کننده"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "افزودن چیدمان میزکار به «ابزارهای سامانه»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "جلوگیری از انتظار تغییر حالت توان برای به‌روزرسانی‌ها"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "افزودن چیدمان اختیاری سبک Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "رفع پیش‌تنظیم‌های Fedora 45 و مسیرهای سیاست کانتینر"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "خواندن منبع‌های دانلود در پوشهٔ جدید Fedora 45"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "رفتن به Fedora 45"

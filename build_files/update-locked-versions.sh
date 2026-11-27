@@ -22,12 +22,35 @@ for project in "${projects[@]}"; do
   done <<< "$found"
 done
 
+# Newest Fedora version of each locked Fedora package, and the GNOME version extensions must support.
+mapfile -t fedora_names < <(awk '$1 == "fedora" {print $3}' "$lock")
+found=$(docker run --rm "quay.io/fedora/fedora:$fedora" dnf5 -q repoquery --latest-limit=1 --arch=x86_64,noarch \
+  --qf '%{name} %{version}-%{release}\n' gnome-shell "${fedora_names[@]}")
+while read -r name version; do
+  [ -n "$name" ] && newest[$name]=$version
+done <<< "$found"
+gnome=${newest[gnome-shell]%%.*}
+
 : > "$notes"
 new_lock=$(mktemp)
 while IFS= read -r line; do
   read -r kind source name version _ <<< "$line" || true
   case $kind in
     copr) new=${newest[$name]:-}; label=$name; link="https://copr.fedorainfracloud.org/coprs/$source/package/$name/" ;;
+    fedora) new=${newest[$name]:-}; label=$name
+            link="https://koji.fedoraproject.org/koji/packageinfo?packageID=$name" ;;
+    gnome-extension)
+      # source is the extension's uuid, name its version on extensions.gnome.org, version its sha256
+      ego=https://extensions.gnome.org; label=$source; link="$ego/extension-info/?uuid=$source"
+      latest=$(curl -fsSL "$ego/extension-info/?uuid=$source&shell_version=$gnome" | jq -r .version)
+      [[ $latest =~ ^[0-9]+$ ]] \
+        || { echo "ERROR: extensions.gnome.org gave $source an unexpected version: $latest"; exit 1; }
+      if [ "$latest" != "$name" ]; then
+        sha=$(curl -fsSL "$ego/extension-data/${source//@/}.v$latest.shell-extension.zip" | sha256sum)
+        echo "- **$label**: version $name to $latest, $link" >> "$notes"
+        line="$kind $source $latest ${sha%% *}"
+      fi
+      printf '%s\n' "$line" >> "$new_lock"; continue ;;
     git) ref="refs/heads/$name"; label=${source#*/}
          new=$(git ls-remote "https://github.com/$source" "$ref" | awk -v r="$ref" '$2 == r {print $1}')
          link="https://github.com/$source/compare/$version...$new" ;;

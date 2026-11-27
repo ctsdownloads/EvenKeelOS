@@ -1,0 +1,2588 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "חנות יישומים"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "הוספה, הסרה או עדכון של תכנת Flatpak במחשב זה"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "מערכת;חבילה;מנהל;גילוי;Flatpak;תכנה;יישום;חנות;"
+
+msgid "New Window"
+msgstr "חלון חדש"
+
+msgid "Discover and install apps"
+msgstr "גילוי והתקנה של יישומים"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "חנות יישומים מהירה ומודרנית עבור Linux, המתמקדת בגילוי והתקנה של יישומי Flatpak והרחבות, במיוחד מ־Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "הוספת כמה התקנות לתור והמשך הגלישה"
+
+msgid "Easily view app permissions"
+msgstr "צפייה קלה בהרשאות היישומים"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "התחברות ל־Flathub כדי לצפות במועדפים ולנהל אותם"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "חיפוש יישומים ישירות מ־GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "דף הבית המציג יישומי Flathub"
+
+msgid "App page for Exhibit"
+msgstr "דף היישום Exhibit"
+
+msgid "Library page"
+msgstr "דף הספרייה"
+
+msgid "Search page"
+msgstr "דף החיפוש"
+
+msgid "Category page"
+msgstr "דף הקטגוריה"
+
+msgid "Stopped Receiving Updates"
+msgstr "הפסיק לקבל עדכונים"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "הסרה"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "התקנה"
+
+msgid "Add-on"
+msgstr "תוסף"
+
+msgid "Manage Add-Ons"
+msgstr "ניהול תוספים"
+
+msgid "No Add-Ons Visible"
+msgstr "אין תוספים גלויים"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "העדפות הסינון הנוכחיות שלך מסתירות את כל התוספים המוכרים. כדאי לנסות לשנות אותן."
+
+msgid "Add-on Page"
+msgstr "דף התוסף"
+
+msgid "Download"
+msgstr "הורדה"
+
+msgid "Installed"
+msgstr "מותקן"
+
+msgid "Downloads/Month"
+msgstr "הורדות/חודש"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "הפסיק לקבל עדכוני ליבה"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "תוסף זה משתמש בסביבת ריצה שאינה מקבלת עוד עדכונים או תיקוני אבטחה. ייתכן שהשימוש בו יהפוך לבלתי בטוח."
+
+msgid "Other Sources"
+msgstr "מקורות אחרים"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "תוסף עבור %s"
+
+msgid "Show Less"
+msgstr "הצגת פחות"
+
+msgid "Show More"
+msgstr "הצגת עוד"
+
+msgid "Download Stats"
+msgstr "נתוני הורדות"
+
+msgid "Age Rating"
+msgstr "דירוג גיל"
+
+msgid "Cartoon Violence"
+msgstr "אלימות מצוירת"
+
+msgid "No information regarding cartoon violence"
+msgstr "אין מידע לגבי אלימות מצוירת"
+
+msgid "Fantasy Violence"
+msgstr "אלימות פנטזיה"
+
+msgid "No information regarding fantasy violence"
+msgstr "אין מידע לגבי אלימות פנטזיה"
+
+msgid "Realistic Violence"
+msgstr "אלימות ריאליסטית"
+
+msgid "No information regarding realistic violence"
+msgstr "אין מידע לגבי אלימות ריאליסטית"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "אלימות המציגה שפיכות דמים"
+
+msgid "No information regarding bloodshed"
+msgstr "אין מידע לגבי שפיכות דמים"
+
+msgid "Sexual Violence"
+msgstr "אלימות מינית"
+
+msgid "No information regarding sexual violence"
+msgstr "אין מידע לגבי אלימות מינית"
+
+msgid "Alcohol"
+msgstr "אלכוהול"
+
+msgid "No information regarding references to alcohol"
+msgstr "אין מידע לגבי התייחסויות לאלכוהול"
+
+msgid "Narcotics"
+msgstr "סמים"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "אין מידע לגבי התייחסויות לסמים לא חוקיים"
+
+msgid "Tobacco"
+msgstr "טבק"
+
+msgid "No information regarding references to tobacco products"
+msgstr "אין מידע לגבי התייחסויות למוצרי טבק"
+
+msgid "Nudity"
+msgstr "עירום"
+
+msgid "No information regarding nudity of any sort"
+msgstr "אין מידע לגבי עירום מכל סוג"
+
+msgid "Sexual Themes"
+msgstr "תכנים מיניים"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "אין מידע לגבי התייחסויות או תיאורים בעלי אופי מיני"
+
+msgid "Profanity"
+msgstr "גסות"
+
+msgid "No information regarding profanity of any kind"
+msgstr "אין מידע לגבי גסויות מכל סוג"
+
+msgid "Inappropriate Humor"
+msgstr "הומור לא הולם"
+
+msgid "No information regarding inappropriate humor"
+msgstr "אין מידע לגבי הומור לא הולם"
+
+msgid "Discrimination"
+msgstr "אפליה"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "אין מידע לגבי שפה מפלה מכל סוג"
+
+msgid "Advertising"
+msgstr "פרסום"
+
+msgid "No information regarding advertising of any kind"
+msgstr "אין מידע לגבי פרסום מכל סוג"
+
+msgid "Gambling"
+msgstr "הימורים"
+
+msgid "No information regarding gambling of any kind"
+msgstr "אין מידע לגבי הימורים מכל סוג"
+
+msgid "Purchasing"
+msgstr "רכישות"
+
+msgid "No information regarding the ability to spend money"
+msgstr "אין מידע לגבי היכולת להוציא כסף"
+
+msgid "Chat Between Users"
+msgstr "צ׳אט בין משתמשים"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "אין מידע לגבי דרכים לשוחח עם משתמשים אחרים"
+
+msgid "Audio Chat Between Users"
+msgstr "צ׳אט קולי בין משתמשים"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "אין מידע לגבי דרכים לדבר עם משתמשים אחרים"
+
+msgid "Contact Details"
+msgstr "פרטי קשר"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "אין מידע לגבי שיתוף של שמות משתמש ברשתות חברתיות או כתובות דוא״ל"
+
+msgid "Identifying Information"
+msgstr "מידע מזהה"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "אין מידע לגבי שיתוף מידע על המשתמש עם צדדים שלישיים"
+
+msgid "Location Sharing"
+msgstr "שיתוף מיקום"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "אין מידע לגבי שיתוף המיקום הפיזי עם משתמשים אחרים"
+
+msgid "Prostitution"
+msgstr "זנות"
+
+msgid "No information regarding references to prostitution"
+msgstr "אין מידע לגבי התייחסויות לזנות"
+
+msgid "Adultery"
+msgstr "ניאוף"
+
+msgid "No information regarding references to adultery"
+msgstr "אין מידע לגבי התייחסויות לניאוף"
+
+msgid "Sexualized Characters"
+msgstr "דמויות מיניות"
+
+msgid "No information regarding sexualized characters"
+msgstr "אין מידע לגבי דמויות בעלות אופי מיני"
+
+msgid "Desecration"
+msgstr "חילול קודש"
+
+msgid "No information regarding references to desecration"
+msgstr "אין מידע לגבי התייחסויות לחילול קודש"
+
+msgid "Human Remains"
+msgstr "שרידי אדם"
+
+msgid "No information regarding visible dead human remains"
+msgstr "אין מידע לגבי שרידי אדם מתים גלויים"
+
+msgid "Slavery"
+msgstr "עבדות"
+
+msgid "No information regarding references to slavery"
+msgstr "אין מידע לגבי התייחסויות לעבדות"
+
+msgid "Does not include references to drugs"
+msgstr "אינו כולל התייחסויות לסמים"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "אינו כולל קללות, גסויות וסוגים אחרים של שפה בוטה"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "אינו כולל פרסומות או עסקאות כספיות"
+
+msgid "Does not include sex or nudity"
+msgstr "אינו כולל מין או עירום"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "אינו כולל יכולות צ׳אט בלתי מבוקרות"
+
+msgid "Does not include violence"
+msgstr "אינו כולל אלימות"
+
+msgid "Drugs"
+msgstr "סמים"
+
+msgid "Strong Language"
+msgstr "שפה בוטה"
+
+msgid "Money"
+msgstr "כסף"
+
+msgid "Social"
+msgstr "חברתי"
+
+msgid "Violence"
+msgstr "אלימות"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "הכול"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "ל־%s יש דירוג גיל לא ידוע"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s מתאים לכולם"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s מתאים לילדים צעירים"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s מתאים לילדים"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s מתאים לבני נוער"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s מתאים למבוגרים"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s מתאים עבור %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "תיקיית המערכת %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "תת־תיקייה של תיקיית הבית %s"
+
+msgid "Host system folders"
+msgstr "תיקיות המערכת המארחת"
+
+msgid "Host system configuration from /etc"
+msgstr "הגדרות המערכת המארחת מתוך /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "תת־תיקייה של שולחן העבודה %s"
+
+msgid "Desktop folder"
+msgstr "תיקיית שולחן העבודה"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "תת־תיקייה של המסמכים %s"
+
+msgid "Documents folder"
+msgstr "תיקיית המסמכים"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "תת־תיקייה של המוזיקה %s"
+
+msgid "Music folder"
+msgstr "תיקיית המוזיקה"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "תת־תיקייה של התמונות %s"
+
+msgid "Pictures folder"
+msgstr "תיקיית התמונות"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "תת־תיקייה של השיתוף הציבורי %s"
+
+msgid "Public Share folder"
+msgstr "תיקיית השיתוף הציבורי"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "תת־תיקייה של הווידאו %s"
+
+msgid "Videos folder"
+msgstr "תיקיית הווידאו"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "תת־תיקייה של התבניות %s"
+
+msgid "Templates folder"
+msgstr "תיקיית התבניות"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "תת־תיקייה של מטמון המשתמש %s"
+
+msgid "User cache folder"
+msgstr "תיקיית מטמון המשתמש"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "תת־תיקייה של הגדרות המשתמש %s"
+
+msgid "User configuration folder"
+msgstr "תיקיית הגדרות המשתמש"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "תת־תיקייה של נתוני המשתמש %s"
+
+msgid "User data folder"
+msgstr "תיקיית נתוני המשתמש"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "תת־תיקייה של סביבת הריצה של המשתמש %s"
+
+msgid "User runtime folder"
+msgstr "תיקיית סביבת הריצה של המשתמש"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "גישה למערכת הקבצים אל %s"
+
+msgid "Unknown filesystem path"
+msgstr "נתיב לא ידוע במערכת הקבצים"
+
+msgid "Download Size"
+msgstr "גודל ההורדה"
+
+msgid "Installed Size"
+msgstr "גודל לאחר ההתקנה"
+
+msgid "Amount to download from the internet"
+msgstr "כמות הנתונים להורדה מהאינטרנט"
+
+msgid "Size on Disk"
+msgstr "גודל בדיסק"
+
+msgid "Open user data folder"
+msgstr "פתיחת תיקיית נתוני המשתמש"
+
+msgid "Your User Data"
+msgstr "נתוני המשתמש שלך"
+
+msgid "Caches, settings, and other app data"
+msgstr "מטמונים, הגדרות ונתוני יישומים אחרים"
+
+msgid "Cache"
+msgstr "מטמון"
+
+msgid "Temporary cached data"
+msgstr "נתוני מטמון זמניים"
+
+msgid "Clear Cache"
+msgstr "ניקוי המטמון"
+
+msgid "Installed Runtime Size"
+msgstr "גודל סביבת הריצה המותקנת"
+
+msgid "Runtime Download Size"
+msgstr "גודל הורדת סביבת הריצה"
+
+msgid "N/A"
+msgstr "לא זמין"
+
+msgid "Storage"
+msgstr "אחסון"
+
+msgid "Verified"
+msgstr "מאומת"
+
+msgid "The Bazaar Contributors"
+msgstr "תורמי Bazaar"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "תודות מיוחדות"
+
+msgid "Logged Out Successfully!"
+msgstr "ההתנתקות הצליחה!"
+
+msgid "Performing setup…"
+msgstr "מבצע הגדרה…"
+
+msgid "Set Up Flathub?"
+msgstr "להגדיר את Flathub?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub אינו מוגדר במערכת זו. לא תהיה אפשרות לעיין ביישומים ולהתקין אותם ב־Bazaar אם הוא אינו זמין.\n"
+"\n"
+"עדיין אפשר להשתמש ב־Bazaar כדי לעיין ביישומים שכבר מותקנים ולהסיר אותם."
+
+msgid "Later"
+msgstr "מאוחר יותר"
+
+msgid "Set Up Flathub"
+msgstr "הגדרת Flathub"
+
+msgid "A backend error occurred"
+msgstr "אירעה שגיאה במנגנון הצד האחורי"
+
+msgid "Refreshing…"
+msgstr "מרענן…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "%d יישומים נטענים…"
+
+msgid "Failed to open file"
+msgstr "פתיחת הקובץ נכשלה"
+
+msgid "Failed to load metainfo"
+msgstr "טעינת ה־metainfo נכשלה"
+
+msgid "An initialization error occurred"
+msgstr "אירעה שגיאת אתחול"
+
+msgid "Checking for updates…"
+msgstr "בודק אם יש עדכונים…"
+
+msgid "Failed to check for updates"
+msgstr "בדיקת העדכונים נכשלה"
+
+msgid "Could not find app"
+msgstr "לא ניתן למצוא את היישום"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "%d יישום נטען…"
+msgstr[1] "%d יישומים נטענים…"
+
+msgid "Writing to cache…"
+msgstr "כותב למטמון…"
+
+msgid "Removing remote…"
+msgstr "מסיר מקור…"
+
+msgid "Could not remove remote"
+msgstr "לא ניתן להסיר את המקור"
+
+msgid "Show All"
+msgstr "הצגת הכול"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "כל ה־\"%s\""
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d יישומים"
+
+msgid "Failed to Load Article"
+msgstr "טעינת המאמר נכשלה"
+
+msgid "All apps are already installed"
+msgstr "כל היישומים כבר מותקנים"
+
+msgid "_OK"
+msgstr "_אישור"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "להתקין יישום %u?"
+msgstr[1] "להתקין %u יישומים?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "הפריטים הבאים יותקנו. ייתכן שיותקנו גם רכיבים משותפים נוספים"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "%d תוספים יותקנו."
+
+msgid "Additionally, addons will be installed."
+msgstr "בנוסף, יותקנו תוספים."
+
+msgid "_Cancel"
+msgstr "_ביטול"
+
+msgid "_Install All"
+msgstr "התקנת ה_כול"
+
+msgid "Bundle Installation"
+msgstr "התקנת חבילה"
+
+msgid "Additional dependencies may take extra space"
+msgstr "תלויות נוספות עשויות לתפוס מקום נוסף"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"התקנת יישום זה עשויה לדרוש הוספת מקור תכנה חדש. יישומים אחרים ממקור זה יופיעו ב־Bazaar.\n"
+"\n"
+"יש להוסיף מקור זה רק אם אתם בטוחים שאפשר לסמוך עליו."
+
+msgid "Successfully Installed!"
+msgstr "ההתקנה הצליחה!"
+
+msgid "Open"
+msgstr "פתיחה"
+
+msgid "Show App Details"
+msgstr "הצגת פרטי היישום"
+
+msgid "Already Installed"
+msgstr "כבר מותקן"
+
+msgid "Installation Failed"
+msgstr "ההתקנה נכשלה"
+
+msgid "Unknown install size"
+msgstr "גודל ההתקנה לא ידוע"
+
+#, c-format
+msgid "About %s to install"
+msgstr "כ־%s להתקנה"
+
+msgid "No special permissions"
+msgstr "אין הרשאות מיוחדות"
+
+msgid "Place Applet"
+msgstr "הצבת יישומון"
+
+msgid "Choose where to add this applet."
+msgstr "בחירת המקום להוספת היישומון."
+
+msgid "Cancel"
+msgstr "ביטול"
+
+msgid "Panel"
+msgstr "לוח"
+
+msgid "Dock"
+msgstr "מעגן"
+
+msgid "No Curation"
+msgstr "ללא אצירה"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "אין מידע אצירה במערכת זו. עדיין אפשר לעיין ביישומים ב־Flathub"
+
+msgid "Browse Flathub"
+msgstr "עיון ב־Flathub"
+
+msgid "Offline"
+msgstr "לא מחובר"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s עד %s, השיא ב־%s עם %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "התקנות:"
+
+msgid "Not Verified"
+msgstr "לא מאומת"
+
+msgid "Developer information not available."
+msgstr "פרטי המפתח אינם זמינים."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "הבעלות על מזהה היישום %s לא אומתה ויתכן שזו חבילת קהילה."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "הבעלות על מזהה היישום %s אומתה ידנית על ידי צוות Flathub."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "הבעלות על מזהה היישום %1$s אומתה על ידי <b>%2$s</b> ב־<b>%3$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "הבעלות על מזהה היישום %1$s אומתה באמצעות %2$s."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "הבעלות על מזהה היישום %s אומתה."
+
+msgid "Bazaar Release"
+msgstr "מהדורת Bazaar"
+
+msgid "Full Release Notes"
+msgstr "הערות מהדורה מלאות"
+
+msgid "This release was made possible by users like you!"
+msgstr "מהדורה זו התאפשרה הודות למשתמשים כמוכם!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "אני אוהב ליצור את Bazaar, אבל אני לא יכול לעשות זאת לבד. אפשר לסייע להמשך הפיתוח בתרומה ב־Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "תרומה ל־Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "מה חדש ב־%s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "שוחרר ב־%-e ב%B %Y"
+
+msgid "Choose an Installation"
+msgstr "בחירת התקנה"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "מותקנות אצלכם כמה גרסאות של יישום זה. באיזו מהן להמשיך?"
+
+msgid "Details"
+msgstr "פרטים"
+
+msgid "Copy"
+msgstr "העתקה"
+
+msgid "Copied!"
+msgstr "הועתק!"
+
+msgid "Favorite Count"
+msgstr "מספר המועדפים"
+
+msgid "Failed to update favorite"
+msgstr "עדכון המועדף נכשל"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "יש להתחבר עם Flathub כדי לנהל מועדפים"
+
+msgid "Log In"
+msgstr "התחברות"
+
+msgid "Favorites"
+msgstr "מועדפים"
+
+msgid "Install All"
+msgstr "התקנת הכול"
+
+msgid "No Favorites"
+msgstr "אין מועדפים"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "יישומים שתסמנו כמועדפים יופיעו כאן"
+
+msgid "Support This Application"
+msgstr "תמיכה ביישום זה"
+
+msgid "Remove From Favorites"
+msgstr "הסרה מהמועדפים"
+
+msgid "Failed to remove favorite"
+msgstr "הסרת המועדף נכשלה"
+
+msgid "Previous"
+msgstr "הקודם"
+
+msgid "Next"
+msgstr "הבא"
+
+msgid "Editing"
+msgstr "עריכה"
+
+msgid "Midi"
+msgstr "MIDI"
+
+msgid "Mixer"
+msgstr "מערבל"
+
+msgid "Music"
+msgstr "מוזיקה"
+
+msgid "Player"
+msgstr "נגן"
+
+msgid "Recorder"
+msgstr "מקליט"
+
+msgid "Sequencer"
+msgstr "סידרן"
+
+msgid "Tuner"
+msgstr "מכוון"
+
+msgid "TV"
+msgstr "טלוויזיה"
+
+msgid "Emulation"
+msgstr "הדמיה"
+
+msgid "Action"
+msgstr "אקשן"
+
+msgid "Adventure"
+msgstr "הרפתקאות"
+
+msgid "Arcade"
+msgstr "ארקייד"
+
+msgid "Blocks"
+msgstr "קוביות"
+
+msgid "Board"
+msgstr "לוח"
+
+msgid "Card"
+msgstr "קלפים"
+
+msgid "Kids"
+msgstr "ילדים"
+
+msgid "Logic"
+msgstr "היגיון"
+
+msgid "Role Playing"
+msgstr "משחקי תפקידים"
+
+msgid "Shooter"
+msgstr "יריות"
+
+msgid "Simulation"
+msgstr "סימולציה"
+
+msgid "Sports"
+msgstr "ספורט"
+
+msgid "Strategy"
+msgstr "אסטרטגיה"
+
+msgid "Browsers"
+msgstr "דפדפנים"
+
+msgid "Chat"
+msgstr "צ׳אט"
+
+msgid "Mail"
+msgstr "דואר"
+
+msgid "File Sharing"
+msgstr "שיתוף קבצים"
+
+msgid "Audio & Video"
+msgstr "שמע ווידאו"
+
+msgid "Media"
+msgstr "מדיה"
+
+msgid "More Audio & Video"
+msgstr "עוד שמע ווידאו"
+
+msgid "Developer Tools"
+msgstr "כלי פיתוח"
+
+msgid "Develop"
+msgstr "פיתוח"
+
+msgid "More Developer Tools"
+msgstr "עוד כלי פיתוח"
+
+msgid "Education"
+msgstr "חינוך"
+
+msgid "Learn"
+msgstr "למידה"
+
+msgid "More Education"
+msgstr "עוד חינוך"
+
+msgid "Gaming"
+msgstr "משחקים"
+
+msgid "Play"
+msgstr "משחק"
+
+msgid "More Gaming"
+msgstr "עוד משחקים"
+
+msgid "Graphics & Photography"
+msgstr "גרפיקה וצילום"
+
+msgid "Create"
+msgstr "יצירה"
+
+msgid "More Graphics & Photography"
+msgstr "עוד גרפיקה וצילום"
+
+msgid "Networking"
+msgstr "רשתות"
+
+msgid "Internet"
+msgstr "אינטרנט"
+
+msgid "More Networking"
+msgstr "עוד רשתות"
+
+msgid "Productivity"
+msgstr "פרודוקטיביות"
+
+msgid "Work"
+msgstr "עבודה"
+
+msgid "More Productivity"
+msgstr "עוד פרודוקטיביות"
+
+msgid "Science"
+msgstr "מדע"
+
+msgid "More Science"
+msgstr "עוד מדע"
+
+msgid "System"
+msgstr "מערכת"
+
+msgid "More System"
+msgstr "עוד מערכת"
+
+msgid "Utilities"
+msgstr "כלי עזר"
+
+msgid "Tools"
+msgstr "כלים"
+
+msgid "More Utilities"
+msgstr "עוד כלי עזר"
+
+msgid "Trending"
+msgstr "פופולרי כעת"
+
+msgid "More Trending"
+msgstr "עוד פופולרי כעת"
+
+msgid "Popular"
+msgstr "פופולרי"
+
+msgid "More Popular"
+msgstr "עוד פופולרי"
+
+msgid "Recently Added"
+msgstr "נוספו לאחרונה"
+
+msgid "New"
+msgstr "חדש"
+
+msgid "More New"
+msgstr "עוד חדש"
+
+msgid "Recently Updated"
+msgstr "עודכנו לאחרונה"
+
+msgid "Updated"
+msgstr "עודכן"
+
+msgid "More Updated"
+msgstr "עוד עודכן"
+
+msgid "Mobile"
+msgstr "נייד"
+
+msgid "More Mobile"
+msgstr "עוד נייד"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "עוד Adwaita"
+
+msgid "KDE Apps"
+msgstr "יישומי KDE"
+
+msgid "More KDE Apps"
+msgstr "עוד יישומי KDE"
+
+msgid "Made for COSMIC™"
+msgstr "נוצר עבור COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "עבור COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "עוד יישומי COSMIC"
+
+msgid "Games"
+msgstr "משחקים"
+
+msgid "More Games"
+msgstr "עוד משחקים"
+
+msgid "Emulators"
+msgstr "אמולטורים"
+
+msgid "More Emulators"
+msgstr "עוד אמולטורים"
+
+msgid "Launchers"
+msgstr "מפעילים"
+
+msgid "More Game Launchers"
+msgstr "עוד מפעילי משחקים"
+
+msgid "Game Tools"
+msgstr "כלי משחקים"
+
+msgid "More Game Tools"
+msgstr "עוד כלי משחקים"
+
+msgid "New Year, New Workflows"
+msgstr "שנה חדשה, זרימות עבודה חדשות"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "יישומים לרישום הערות, מעקב אחר משימות ותכנון"
+
+msgid "Staff Picks"
+msgstr "בחירות הצוות"
+
+msgid "Apps we love right now"
+msgstr "יישומים שאנחנו אוהבים כרגע"
+
+msgid "Get Creative"
+msgstr "זמן ליצור"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "יישומים חיוניים לציור, עריכת תמונות ועיצוב דיגיטלי"
+
+msgid "Build Native Apps"
+msgstr "בניית יישומים מקוריים"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "פיתוח יישומים שמרגישים בבית במערכת שלכם"
+
+msgid "Stay in Touch"
+msgstr "להישאר בקשר"
+
+msgid "Essential collaboration and communication apps"
+msgstr "יישומים חיוניים לשיתוף פעולה ולתקשורת"
+
+msgid "Ready for Vacations"
+msgstr "מוכנים לחופשה"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "יישומי מפות, תחבורה ציבורית, מזג אוויר ותכנון טיולים"
+
+msgid "Smarter Every Day"
+msgstr "חכמים יותר מדי יום"
+
+msgid "Apps to help you study, research, and write"
+msgstr "יישומים שיעזרו לכם ללמוד, לחקור ולכתוב"
+
+msgid "Get Cozy"
+msgstr "להתכרבל"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "יישומים נהדרים לקריאה, צפייה בסרטים ומשחקים"
+
+msgid "Web Developer Essentials"
+msgstr "הכלים החיוניים למפתחי אתרים"
+
+msgid "Making websites is more fun with these apps"
+msgstr "בניית אתרים כיפית יותר עם יישומים אלה"
+
+msgid "Take Better Notes"
+msgstr "לרשום הערות טוב יותר"
+
+msgid "Find your new favorite note taking tool"
+msgstr "מצאו את כלי רישום ההערות החדש האהוב עליכם"
+
+msgid "Get Focused"
+msgstr "להתמקד"
+
+msgid "Great apps for task management"
+msgstr "יישומים נהדרים לניהול משימות"
+
+msgid "Make Some Noise"
+msgstr "לעשות קצת רעש"
+
+msgid "Apps for creating and producing music"
+msgstr "יישומים ליצירה והפקה של מוזיקה"
+
+msgid "Get To Work"
+msgstr "לעבודה"
+
+msgid "Essential office apps"
+msgstr "יישומי משרד חיוניים"
+
+msgid "Flathub Not Added"
+msgstr "Flathub לא נוסף"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "המקור Flathub לא נמצא באף אחת מהתקנות ה־Flatpak שלכם"
+
+msgid "Can't Reach Flathub"
+msgstr "לא ניתן להגיע אל Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "עדיין אפשר לנהל יישומים ולחפש אותם."
+
+msgid "Search Apps"
+msgstr "חיפוש יישומים"
+
+msgid "Reconnect"
+msgstr "התחברות מחדש"
+
+msgid "App of the Day"
+msgstr "יישום היום"
+
+msgid "On the Go"
+msgstr "בדרכים"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "יישומים לטלפונים וללוחיות Linux שלכם"
+
+msgid "More Mobile Apps"
+msgstr "עוד יישומים לנייד"
+
+msgid "We​ ♥​ Games"
+msgstr "אנחנו ♥ משחקים"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "משחקים ויישומים להרצת התוכנות האהובות עליכם"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "זוהי תצוגה מקדימה מקומית, ייתכן שחלק מהפרטים שונים מהרישום המפורסם"
+
+msgid "Preview Store Appearance"
+msgstr "תצוגה מקדימה של מראה החנות"
+
+msgid "_Support"
+msgstr "_תמיכה"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "יישום זה משתמש בסביבת ריצה שאינה מקבלת עוד עדכונים או תיקוני אבטחה. ייתכן שהשימוש בו יהפוך לבלתי בטוח."
+
+msgid "Trash Data"
+msgstr "העברת הנתונים לאשפה"
+
+msgid "Add-ons"
+msgstr "תוספים"
+
+msgid "More Add-Ons"
+msgstr "עוד תוספים"
+
+msgid "Links"
+msgstr "קישורים"
+
+msgid "Similar Apps"
+msgstr "יישומים דומים"
+
+msgid "No URL"
+msgstr "אין כתובת"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "ליישום זה יש רישיון FLOSS, כלומר אפשר לבדוק את קוד המקור שלו מבחינת בטיחות."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "ליישום זה יש רישיון קנייני, כלומר קוד המקור מפותח באופן פרטי ואי אפשר לבדוק אותו על ידי צד שלישי בלתי תלוי."
+
+msgid "Other Apps From This Developer"
+msgstr "יישומים נוספים של מפתח זה"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "יישומים נוספים של %s"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s אינו מותקן, אבל עדיין קיימים בו נתונים בנפח <b>%s</b>."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "יישומים מאת %s"
+
+msgid "Apps by This Developer"
+msgstr "יישומים של מפתח זה"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d יישום"
+msgstr[1] "%d יישומים"
+
+msgid "Failed to Remove User Data"
+msgstr "הסרת נתוני המשתמש נכשלה"
+
+msgid "Hardware Support"
+msgstr "תמיכה בחומרה"
+
+msgid "Keyboard support"
+msgstr "תמיכה במקלדת"
+
+msgid "Requires keyboards"
+msgstr "דורש מקלדות"
+
+msgid "Recommends keyboards"
+msgstr "ממליץ על מקלדות"
+
+msgid "Supports keyboards"
+msgstr "תומך במקלדות"
+
+msgid "Unknown support for keyboards"
+msgstr "תמיכה לא ידועה במקלדות"
+
+msgid "Mouse support"
+msgstr "תמיכה בעכבר"
+
+msgid "Requires mice or pointing devices"
+msgstr "דורש עכברים או התקני הצבעה"
+
+msgid "Recommends mice or pointing devices"
+msgstr "ממליץ על עכברים או התקני הצבעה"
+
+msgid "Supports mice or pointing devices"
+msgstr "תומך בעכברים או בהתקני הצבעה"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "תמיכה לא ידועה בעכברים או בהתקני הצבעה"
+
+msgid "Touchscreen support"
+msgstr "תמיכה במסך מגע"
+
+msgid "Requires touchscreens"
+msgstr "דורש מסכי מגע"
+
+msgid "Recommends touchscreens"
+msgstr "ממליץ על מסכי מגע"
+
+msgid "Supports touchscreens"
+msgstr "תומך במסכי מגע"
+
+msgid "Unknown support for touchscreens"
+msgstr "תמיכה לא ידועה במסכי מגע"
+
+msgid "Mobile support"
+msgstr "תמיכה בנייד"
+
+msgid "Works on mobile devices"
+msgstr "פועל בהתקנים ניידים"
+
+msgid "May not work well on mobile devices"
+msgstr "ייתכן שלא יפעל היטב בהתקנים ניידים"
+
+msgid "Desktop support"
+msgstr "תמיכה בשולחן העבודה"
+
+msgid "Works well on large screens"
+msgstr "פועל היטב במסכים גדולים"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s פועל בצורה הטובה ביותר בחומרה מסוימת"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s פועל ברוב ההתקנים"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "ביטול"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "מבטל"
+
+msgid "_Open"
+msgstr "_פתיחה"
+
+msgid "Uninstall Application"
+msgstr "הסרת היישום"
+
+msgid "_Remove"
+msgstr "ה_סרה"
+
+msgid "Update"
+msgstr "עדכון"
+
+msgid "Remove"
+msgstr "הסרה"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "התקנת %s מתוך %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "התקנת %s"
+
+msgid "Donate"
+msgstr "תרומה"
+
+msgid "Search installed apps"
+msgstr "חיפוש ביישומים מותקנים"
+
+msgid "No Apps Found"
+msgstr "לא נמצאו יישומים"
+
+msgid "Search Store Instead"
+msgstr "חיפוש בחנות במקום זאת"
+
+msgid "Pending Updates"
+msgstr "עדכונים ממתינים"
+
+msgid "Downloads"
+msgstr "הורדות"
+
+msgid "Recently Uninstalled"
+msgstr "הוסרו לאחרונה"
+
+msgid "Clear Finished Tasks"
+msgstr "ניקוי משימות שהסתיימו"
+
+msgid "Sort Options"
+msgstr "אפשרויות מיון"
+
+msgid "Sort By"
+msgstr "מיון לפי"
+
+msgid "Name"
+msgstr "שם"
+
+msgid "Size"
+msgstr "גודל"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "לא נמצאו התאמות ל־\"%s\" ברשימת היישומים המותקנים"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u עדכון זמין"
+msgstr[1] "%u עדכונים זמינים"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u יישום מותקן"
+msgstr[1] "%u יישומים מותקנים"
+
+msgid "No applications found"
+msgstr "לא נמצאו יישומים"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "נמצא יישום אחד"
+msgstr[1] "נמצאו %u יישומים"
+
+msgid "Get Involved"
+msgstr "להיות שותפים"
+
+msgid "Learn More"
+msgstr "מידע נוסף"
+
+msgid "Unknown License"
+msgstr "רישיון לא ידוע"
+
+msgid "Community Built"
+msgstr "נבנה בידי הקהילה"
+
+msgid "Proprietary"
+msgstr "קנייני"
+
+msgid "Special License"
+msgstr "רישיון מיוחד"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"יישום זה מפותח בגלוי על ידי קהילה בינלאומית.\n"
+"\n"
+"אפשר להשתתף ולעזור להפוך אותו לטוב עוד יותר."
+
+msgid "The license of this app is not known"
+msgstr "הרישיון של יישום זה אינו ידוע"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"יישום זה מפותח בגלוי על ידי קהילה בינלאומית, ומשוחרר תחת הרישיון %s.\n"
+"\n"
+"אפשר להשתתף ולעזור להפוך אותו לטוב עוד יותר."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"יישום זה אינו מפותח בגלוי, ולכן רק המפתחים שלו יודעים איך הוא עובד. ייתכן שהוא אינו מאובטח בדרכים שקשה לזהות, והוא עלול להשתנות ללא פיקוח.\n"
+"\n"
+"ייתכן שתוכלו לתרום ליישום זה, וייתכן שלא."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"יישום זה מפותח תחת הרישיון המיוחד %s.\n"
+"\n"
+"ייתכן שתוכלו לתרום ליישום זה, וייתכן שלא."
+
+msgid "License"
+msgstr "רישיון"
+
+msgid "Connect to Flathub"
+msgstr "התחברות ל־Flathub"
+
+msgid "Something Went Wrong"
+msgstr "משהו השתבש"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "יש להתחבר כדי לסנכרן את היישומים המועדפים שלכם בין התקנים"
+
+msgid "Finish"
+msgstr "סיום"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "שלום, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "להוסיף סמל לתצוגה המקדימה של Metainfo?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "קובצי Metainfo אינם כוללים סמלי יישומים בעצמם. האם לבחור סמל ידנית?"
+
+msgid "Skip"
+msgstr "דילוג"
+
+msgid "Select Icon"
+msgstr "בחירת סמל"
+
+msgid "Image Files"
+msgstr "קובצי תמונה"
+
+msgid "New Permissions"
+msgstr "הרשאות חדשות"
+
+msgid "_Accept"
+msgstr "_קבלה"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "הרשאה חדשה עבור %s"
+msgstr[1] "הרשאות חדשות עבור %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "עדכון זה דורש את ההרשאה הנוספת הבאה"
+msgstr[1] "עדכון זה דורש את ההרשאות הנוספות הבאות"
+
+msgid "User"
+msgstr "משתמש"
+
+msgid "Beta"
+msgstr "בטא"
+
+msgid "End-Of-Life"
+msgstr "סוף חיים"
+
+msgid "Preferences"
+msgstr "העדפות"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "החיבור לרשת מוגבל בנפח — רענון נתוני החנות האוטומטי מושהה"
+
+msgid "Refresh Manually"
+msgstr "רענון ידני"
+
+msgid "App Updates"
+msgstr "עדכוני יישומים"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "העדכונים האוטומטיים יושהו ברשתות מוגבלות בנפח או כשחיסכון בחשמל פעיל, כדי לחסוך בנתונים ובסוללה."
+
+msgid "_Automatic"
+msgstr "_אוטומטי"
+
+msgid "Automatically check for and download app updates"
+msgstr "בדיקה והורדה אוטומטית של עדכוני יישומים"
+
+msgid "_Manual"
+msgstr "_ידני"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "בדיקה והורדה של עדכוני יישומים צריכות להתבצע ידנית"
+
+msgid "Automatic Update _Notifications"
+msgstr "הת_ראות עדכון אוטומטי"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "הודעה כשעדכונים הותקנו אוטומטית"
+
+msgid "Content Filters"
+msgstr "מסנני תוכן"
+
+msgid "_Free Software Only"
+msgstr "תכנה _חופשית בלבד"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "הסתרת יישומים קנייניים בעת גלישה וחיפוש"
+
+msgid "F_lathub Results Only"
+msgstr "תוצאות מ־F_lathub בלבד"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "הגבלת תוצאות החיפוש והגלישה ליישומים הזמינים ב־Flathub בלבד"
+
+msgid "_Verified Results Only"
+msgstr "תוצאות _מאומתות בלבד"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "הסתרת תוצאות שאינן מאומתות ב־Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "הסתרת יישומים ב_סוף חייהם"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "הסתרת יישומים שהמפתחים שלהם כבר אינם תומכים בהם"
+
+msgid "Progress Bar Theme"
+msgstr "ערכת נושא לסרגל ההתקדמות"
+
+msgid "Accent Color"
+msgstr "צבע הדגשה"
+
+msgid "Pride Colors"
+msgstr "צבעי הגאווה"
+
+msgid "Lesbian Pride Colors"
+msgstr "צבעי הגאווה הלסבית"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "צבעי הגאווה ההומוסקסואלית הגברית"
+
+msgid "Transgender Pride Colors"
+msgstr "צבעי הגאווה הטרנסג׳נדרית"
+
+msgid "Nonbinary Pride Colors"
+msgstr "צבעי הגאווה הלא־בינארית"
+
+msgid "Bisexual Pride Colors"
+msgstr "צבעי הגאווה הביסקסואלית"
+
+msgid "Asexual Pride Colors"
+msgstr "צבעי הגאווה האל־מינית"
+
+msgid "Pansexual Pride Colors"
+msgstr "צבעי הגאווה הפנסקסואלית"
+
+msgid "Aromantic Pride Colors"
+msgstr "צבעי הגאווה האל־רומנטית"
+
+msgid "Genderfluid Pride Colors"
+msgstr "צבעי הגאווה של נזילות מגדרית"
+
+msgid "Polysexual Pride Colors"
+msgstr "צבעי הגאווה הפולי־סקסואלית"
+
+msgid "Omnisexual Pride Colors"
+msgstr "צבעי הגאווה האומני־סקסואלית"
+
+msgid "Aroace Pride Colors"
+msgstr "צבעי הגאווה האל־מינית והאל־רומנטית"
+
+msgid "Agender Pride Colors"
+msgstr "צבעי הגאווה האל־מגדרית"
+
+msgid "Genderqueer Pride Colors"
+msgstr "צבעי הגאווה הג׳נדרקוויר"
+
+msgid "Intersex Pride Colors"
+msgstr "צבעי הגאווה של בעלי תכונות מין בין־מיניות"
+
+msgid "Demigender Pride Colors"
+msgstr "צבעי הגאווה של חצי־מגדר"
+
+msgid "Biromantic Pride Colors"
+msgstr "צבעי הגאווה הבי־רומנטית"
+
+msgid "Disability Pride Colors"
+msgstr "צבעי הגאווה של אנשים עם מוגבלויות"
+
+msgid "Femboy Pride Colors"
+msgstr "צבעי הגאווה של Femboy"
+
+msgid "Neutrois Pride Colors"
+msgstr "צבעי הגאווה של Neutrois"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar צריך לפעול ברקע כדי לבדוק אם יש עדכוני יישומים"
+
+msgid "Version History"
+msgstr "היסטוריית גרסאות"
+
+msgid "Today"
+msgstr "היום"
+
+msgid "Yesterday"
+msgstr "אתמול"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "לפני %d יום"
+msgstr[1] "לפני %d ימים"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "לפני %d שבוע"
+msgstr[1] "לפני %d שבועות"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "לפני %d חודש"
+msgstr[1] "לפני %d חודשים"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "לפני %d שנה"
+msgstr[1] "לפני %d שנים"
+
+msgid "%e %B %Y"
+msgstr "%e ב%B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "גרסה %s"
+
+msgid "No details for this release"
+msgstr "אין פרטים עבור מהדורה זו"
+
+msgid "Get More Information"
+msgstr "קבלת מידע נוסף"
+
+msgid "_Version History"
+msgstr "היסטוריית _גרסאות"
+
+msgid "Remotes"
+msgstr "מקורות"
+
+msgid "System Installation"
+msgstr "התקנת מערכת"
+
+msgid "Available to all users on this computer"
+msgstr "זמין לכל המשתמשים במחשב זה"
+
+msgid "User Installation"
+msgstr "התקנת משתמש"
+
+msgid "Only available to you"
+msgstr "זמין לך בלבד"
+
+msgid "Remove Remote"
+msgstr "הסרת מקור"
+
+#, c-format
+msgid "Remove %s"
+msgstr "הסרת %s"
+
+msgid "Unused"
+msgstr "לא בשימוש"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u יישום מותקן"
+msgstr[1] "%u יישומים מותקנים"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "להסיר את “%s”?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "לא תהיה לך עוד אפשרות להתקין יישומים ממקור משתמש זה."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "לא תהיה לך עוד אפשרות להתקין יישומים ממקור מערכת זה."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u יישום להסרה"
+msgstr[1] "%u יישומים להסרה"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "היישום שלהלן הותקן ממקור זה ויוסר מהחשבון שלך יחד איתו."
+msgstr[1] "היישומים שלהלן הותקנו ממקור זה ויוסרו מהחשבון שלך יחד איתו."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "היישום שלהלן הותקן ממקור זה ויוסר עבור כל המשתמשים יחד איתו."
+msgstr[1] "היישומים שלהלן הותקנו ממקור זה ויוסרו עבור כל המשתמשים יחד איתו."
+
+msgid "Uninstall"
+msgstr "הסרה"
+
+msgid "Get"
+msgstr "הורדה"
+
+msgid "Arbitrary Permissions"
+msgstr "הרשאות שרירותיות"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"ליישום זה יש הרשאה שמאפשרת לו בעקיפין להעניק לעצמו <b>כל הרשאה אחרת שירצה</b>, תוך עקיפת ארגז החול של Flatpak.\n"
+"\n"
+"לכן הוא יכול לעשות כל דבר שיישום בעל הרשאות מורחבות וללא ארגז חול יכול לעשות, כגון גישה לכל הקבצים שלך והתחברות לאינטרנט.\n"
+"\n"
+"צפייה בהרשאות האחרות עשויה עדיין לתת מושג טוב יותר על מה שהיישום צפוי לעשות."
+
+msgid "View Other Permissions"
+msgstr "צפייה בהרשאות אחרות"
+
+msgid "Safe"
+msgstr "בטוח"
+
+msgid "App ID"
+msgstr "מזהה יישום"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "יישום זה משתמש בגרסה מיושנת של פלטפורמת התכנה (SDK) וייתכן שיש בו באגים או פגיעויות אבטחה שלא יתוקנו."
+
+msgid "Safety"
+msgstr "בטיחות"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s בטוח"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "ל־%s אין הרשאות לא בטוחות"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s כנראה בטוח"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s עשוי להיות לא בטוח"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s אינו בטוח"
+
+msgid "Back"
+msgstr "חזרה"
+
+msgid "Previous Screenshot"
+msgstr "צילום המסך הקודם"
+
+msgid "Next Screenshot"
+msgstr "צילום המסך הבא"
+
+msgid "Copy Image"
+msgstr "העתקת התמונה"
+
+msgid "Reset View"
+msgstr "איפוס התצוגה"
+
+msgid "Zoom Out"
+msgstr "התרחקות"
+
+msgid "Zoom In"
+msgstr "התקרבות"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "עדכון סביבת ריצה %u"
+msgstr[1] "%u עדכוני סביבת ריצה"
+
+msgid "Screenshots Carousel"
+msgstr "קרוסלת צילומי מסך"
+
+msgid "No Screenshots"
+msgstr "אין צילומי מסך"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "צילום מסך %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "צילום מסך %u"
+
+msgid "Clear Search"
+msgstr "ניקוי החיפוש"
+
+msgid "Filters"
+msgstr "מסננים"
+
+msgid "_Verified"
+msgstr "_מאומת"
+
+msgid "_Free/Open"
+msgstr "_חופשי/פתוח"
+
+msgid "Non-_EOL"
+msgstr "לא _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "סינון יישומים שהגיעו לסוף חייהם"
+
+msgid "_Mobile Friendly"
+msgstr "_ידידותי לנייד"
+
+msgid "Categories"
+msgstr "קטגוריות"
+
+msgid "Search Apps, Games, Software"
+msgstr "חיפוש יישומים, משחקים ותכנה"
+
+msgid "Search Filters"
+msgstr "מסנני חיפוש"
+
+msgid "Browse Categories"
+msgstr "עיון בקטגוריות"
+
+msgid "Categories Unavailable"
+msgstr "הקטגוריות אינן זמינות"
+
+msgid "Search for apps using the search bar above."
+msgstr "אפשר לחפש יישומים באמצעות שורת החיפוש שלמעלה."
+
+msgid "No Applications Found"
+msgstr "לא נמצאו יישומים"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "לא נמצאו תוצאות עבור \"%s\" ב־Flathub"
+
+msgid "Browser"
+msgstr "דפדפן"
+
+msgid "Video"
+msgstr "וידאו"
+
+msgid "Office"
+msgstr "משרד"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "לוח שנה"
+
+msgid "Messaging"
+msgstr "הודעות"
+
+msgid "Paint"
+msgstr "צביעה"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "טורנט"
+
+msgid "Emulator"
+msgstr "אמולטור"
+
+msgid "Copy Link"
+msgstr "העתקת הקישור"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "דף Flathub"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "אתר הפרויקט"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "מעקב תקלות"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "שאלות נפוצות"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "עזרה"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "תרומה"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "תרגום"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "יצירת קשר"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "קוד מקור"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "תרומה לפרויקט"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifest"
+
+msgid "Timeline"
+msgstr "ציר זמן"
+
+msgid "Total"
+msgstr "סך הכול"
+
+msgid "This Week"
+msgstr "השבוע"
+
+msgid "Installs per day"
+msgstr "התקנות ליום"
+
+msgid "World"
+msgstr "העולם"
+
+msgid "Installs per country"
+msgstr "התקנות לפי מדינה"
+
+msgid "Since 4/15/2024"
+msgstr "מאז 15/4/2024"
+
+msgid "No Results Found"
+msgstr "לא נמצאו תוצאות"
+
+msgid "Search failed"
+msgstr "החיפוש נכשל"
+
+msgid "Unknown"
+msgstr "לא ידוע"
+
+msgid "Keep User Data"
+msgstr "שמירת נתוני המשתמש"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "מאפשר שחזור של הגדרות &amp; תכנים אישיים"
+
+msgid "Delete All Data"
+msgstr "מחיקת כל הנתונים"
+
+msgid "Permanently erase user data to save space"
+msgstr "מחיקה לצמיתות של נתוני המשתמש כדי לחסוך מקום"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "להסיר את %s?"
+
+msgid "Select which version to remove."
+msgstr "יש לבחור איזו גרסה להסיר."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "לא תהיה אפשרות להשתמש ב־%s לאחר הסרת ההתקנה."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "“%s” הוא בסיכון גבוה"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"ליישום זה יש גישה מלאה למערכת שלך, כולל <b>כל הקבצים שלך, היסטוריית הגלישה, הססמאות השמורות</b> ועוד. יש לו גם גישה לאינטרנט, כלומר הוא עשוי לשלוח את הנתונים שלך לגורמים חיצוניים.\n"
+"\n"
+"מכיוון שהיישום קנייני, אי אפשר לבדוק מה הוא עושה עם הרשאות אלה."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"יישום זה משתמש במערכת החלונות הישנה X11, שמאפשרת לו <b>להקליט את כל הקשות המקשים, לצלם את המסך ולנטר יישומים אחרים</b>. יש לו גם גישה לאינטרנט, כלומר הוא עשוי לשלוח את הנתונים שלך לגורמים חיצוניים.\n"
+"\n"
+"מכיוון שהיישום קנייני, אי אפשר לבדוק מה הוא עושה עם הרשאות אלה."
+
+msgid "_Install Anyway"
+msgstr "_להתקין בכל זאת"
+
+msgid "Failed to load transaction dialog"
+msgstr "טעינת חלון הפעולה נכשלה"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "הסתיים תוך %.02f שניות"
+
+msgid "App Add-On"
+msgstr "תוסף יישום"
+
+msgid "Runtime"
+msgstr "סביבת ריצה"
+
+msgid "In Queue"
+msgstr "בתור"
+
+msgid "Finishing Up"
+msgstr "מסיים"
+
+msgid "Done"
+msgstr "בוצע"
+
+msgid "Cancelled"
+msgstr "בוטל"
+
+msgid "Error"
+msgstr "שגיאה"
+
+msgid "Cancel Transaction"
+msgstr "ביטול הפעולה"
+
+msgid "Show Details"
+msgstr "הצגת פרטים"
+
+msgid "Show Error Info"
+msgstr "הצגת פרטי השגיאה"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s שוחררו"
+
+msgid "Transaction Error"
+msgstr "שגיאת פעולה"
+
+msgid "Pending"
+msgstr "ממתין"
+
+msgid "Installed Updates"
+msgstr "עדכונים שהותקנו"
+
+msgid "Release Notes"
+msgstr "הערות מהדורה"
+
+msgid "No Release Info"
+msgstr "אין מידע על המהדורה"
+
+msgid "_Update All"
+msgstr "עדכון ה_כול"
+
+msgid "This update requests new permissions"
+msgstr "עדכון זה מבקש הרשאות חדשות"
+
+msgid "Manage Leftover User Data"
+msgstr "ניהול נתוני משתמש שנותרו"
+
+msgid "No Leftover User Data Found"
+msgstr "לא נמצאו נתוני משתמש שנותרו"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "נתונים אישיים שנותרו מיישומים שהוסרו יופיעו כאן"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "נתוני משתמש שהועברו לאשפה עבור %u יישום"
+msgstr[1] "נתוני משתמש שהועברו לאשפה עבור %u יישומים"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "נתוני משתמש שהועברו לאשפה עבור %s"
+
+msgid "Open User Data Folder"
+msgstr "פתיחת תיקיית נתוני המשתמש"
+
+msgid "Trash User Data"
+msgstr "העברת נתוני המשתמש לאשפה"
+
+msgid "Refreshing"
+msgstr "מרענן"
+
+msgid "Curated"
+msgstr "אצורים"
+
+msgid "Explore"
+msgstr "גילוי"
+
+msgid "Library"
+msgstr "ספרייה"
+
+msgid "Search"
+msgstr "חיפוש"
+
+msgid "Main Menu"
+msgstr "תפריט ראשי"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "אתם מריצים גרסה חדשה של Bazaar!"
+
+msgid "See What's New"
+msgstr "הצצה למה שחדש"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "יש לכם חיבור לרשת אבל אתם צופים בגרסה שמורה במטמון של Flathub"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "החיבור לרשת מוגבל בנפח — הרענונים האוטומטיים מושבתים"
+
+msgid "_Donate to Bazaar"
+msgstr "_תרומה ל־Bazaar"
+
+msgid "_Refresh"
+msgstr "_רענון"
+
+msgid "_Login With Flathub"
+msgstr "_התחברות עם Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "ניהול נתוני משתמש ש_נשארו"
+
+msgid "Manage R_emotes"
+msgstr "ניהול מ_קורות"
+
+msgid "_Preferences"
+msgstr "_העדפות"
+
+msgid "_Keyboard Shortcuts"
+msgstr "קיצורי _מקלדת"
+
+msgid "_About Bazaar"
+msgstr "על _אודות Bazaar"
+
+msgid "_Quit Bazaar"
+msgstr "י_ציאה מ־Bazaar"
+
+msgid "Log Out"
+msgstr "התנתקות"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "הפעלת היישום נכשלה"
+
+msgid "Could not open link"
+msgstr "לא ניתן לפתוח את הקישור"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "אי אפשר להסיר את Bazaar מתוך Bazaar!"
+
+msgid "Can't do that right now!"
+msgstr "אי אפשר לעשות זאת כרגע!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, התקנה %'u"
+msgstr[1] "%s, %'u התקנות"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "הכי הרבה התקנות מ־%s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d הורדות בחודש האחרון"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s סביבת ריצה"
+
+msgid "Size information unavailable"
+msgstr "מידע על הגודל אינו זמין"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "גודל ההורדה של %s"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "הגודל המותקן של %s"
+
+msgid "All Ages"
+msgstr "כל הגילאים"
+
+msgid "Age rating information unavailable"
+msgstr "מידע על דירוג הגיל אינו זמין"
+
+msgid "Suitable for all ages"
+msgstr "מתאים לכל הגילאים"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "מתאים לגילאי %d ומעלה"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "תכנה חופשית ברישיון %s"
+
+msgid "Free software"
+msgstr "תכנה חופשית"
+
+msgid "Proprietary Software"
+msgstr "תכנה קניינית"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "רישיון מיוחד: %s"
+
+msgid "Free Software"
+msgstr "תכנה חופשית"
+
+msgid "Adaptive"
+msgstr "מסתגל"
+
+msgid "Desktop Only"
+msgstr "שולחן עבודה בלבד"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "פועל בשולחן עבודה, בלוחיות ובטלפונים"
+
+msgid "May not work on mobile devices"
+msgstr "ייתכן שלא יפעל בהתקנים ניידים"
+
+msgid "Low Risk"
+msgstr "סיכון נמוך"
+
+msgid "Medium Risk"
+msgstr "סיכון בינוני"
+
+msgid "High Risk"
+msgstr "סיכון גבוה"
+
+msgid "Unknown Permissions"
+msgstr "הרשאות לא ידועות"
+
+msgid "Permissions are missing for this app."
+msgstr "חסרות הרשאות ליישום זה."
+
+msgid "No Permissions"
+msgstr "אין הרשאות"
+
+msgid "App is fully sandboxed"
+msgstr "היישום נמצא בארגז חול מלא"
+
+msgid "Network Access"
+msgstr "גישה לרשת"
+
+msgid "Can access the internet"
+msgstr "יכול לגשת לאינטרנט"
+
+msgid "No Network Access"
+msgstr "אין גישה לרשת"
+
+msgid "Cannot access the internet"
+msgstr "אינו יכול לגשת לאינטרנט"
+
+msgid "User Device Access"
+msgstr "גישה להתקני משתמש"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "יכול לגשת להתקנים כגון מצלמות רשת או בקרי משחק"
+
+msgid "No User Device Access"
+msgstr "אין גישה להתקני משתמש"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "אינו יכול לגשת להתקנים כגון מצלמות רשת או בקרי משחק"
+
+msgid "Input Device Access"
+msgstr "גישה להתקני קלט"
+
+msgid "Can access input devices"
+msgstr "יכול לגשת להתקני קלט"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "גישה למיקרופון והשמעת שמע"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "יכול להאזין באמצעות מיקרופונים ולהשמיע שמע ללא בקשת רשות"
+
+msgid "System Device Access"
+msgstr "גישה להתקני מערכת"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "יכול לגשת להתקני מערכת הדורשים הרשאות מוגברות"
+
+msgid "Screen Contents Access"
+msgstr "גישה לתוכן המסך"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "יכול לגשת לתוכן המסך או לחלונות אחרים"
+
+msgid "Legacy Windowing System"
+msgstr "מערכת חלונות ישנה"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "משתמש תמיד במערכת חלונות ישנה (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "יכול לקבל הרשאות שרירותיות"
+
+msgid "User Settings"
+msgstr "הגדרות משתמש"
+
+msgid "Can access and change user settings"
+msgstr "יכול לגשת להגדרות משתמש ולשנות אותן"
+
+msgid "Full File System Read/Write Access"
+msgstr "גישה מלאה לקריאה וכתיבה במערכת הקבצים"
+
+msgid "Can read and write all data on the file system"
+msgstr "יכול לקרוא ולכתוב את כל הנתונים במערכת הקבצים"
+
+msgid "Home Folder Read/Write Access"
+msgstr "גישה לקריאה וכתיבה בתיקיית הבית"
+
+msgid "Can read and write all data in your home directory"
+msgstr "יכול לקרוא ולכתוב את כל הנתונים בתיקיית הבית שלך"
+
+msgid "Full File System Read Access"
+msgstr "גישה מלאה לקריאה במערכת הקבצים"
+
+msgid "Can read all data on the file system"
+msgstr "יכול לקרוא את כל הנתונים במערכת הקבצים"
+
+msgid "Home Folder Read Access"
+msgstr "גישה לקריאה בתיקיית הבית"
+
+msgid "Can read all data in your home directory"
+msgstr "יכול לקרוא את כל הנתונים בתיקיית הבית שלך"
+
+msgid "Download Folder Read/Write Access"
+msgstr "גישה לקריאה וכתיבה בתיקיית ההורדות"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "יכול לקרוא ולכתוב את כל הנתונים בתיקיית ההורדות שלך"
+
+msgid "Download Folder Read Access"
+msgstr "גישה לקריאה בתיקיית ההורדות"
+
+msgid "Can read all data in your downloads directory"
+msgstr "יכול לקרוא את כל הנתונים בתיקיית ההורדות שלך"
+
+msgid "Can read and write all data in the directory"
+msgstr "יכול לקרוא ולכתוב את כל הנתונים בתיקייה"
+
+msgid "Can read all data in the directory"
+msgstr "יכול לקרוא את כל הנתונים בתיקייה"
+
+msgid "No File System Access"
+msgstr "אין גישה למערכת הקבצים"
+
+msgid "Cannot access the file system at all"
+msgstr "אינו יכול לגשת כלל למערכת הקבצים"
+
+msgid "Uses System Services"
+msgstr "משתמש בשירותי מערכת"
+
+msgid "Can request data from non-portal system services"
+msgstr "יכול לבקש נתונים משירותי מערכת שאינם פורטל"
+
+msgid "Uses Session Services"
+msgstr "משתמש בשירותי הפעלה"
+
+msgid "Can request data from non-portal session services"
+msgstr "יכול לבקש נתונים משירותי הפעלה שאינם פורטל"
+
+msgid "No Service Access"
+msgstr "אין גישה לשירותים"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "אינו יכול לגשת כלל לשירותי הפעלה או מערכת שאינם פורטל"
+
+msgid "Verified App Developer"
+msgstr "מפתח יישום מאומת"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "זהות המפתח של יישום זה אומתה"
+
+msgid "Proprietary Code"
+msgstr "קוד קנייני"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "קוד המקור אינו ציבורי, ולכן אי אפשר לבדוק אותו באופן עצמאי וייתכן שהוא אינו בטוח"
+
+msgid "Auditable Code"
+msgstr "קוד הניתן לביקורת"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "קוד המקור ציבורי וניתן לבדיקה עצמאית, מה שמגדיל את הסיכוי שהיישום בטוח"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "שימוש בשירות המערכת %s"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "שימוש בשירות ההפעלה %s"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "שימוש בשירות %s"
+
+msgid "Can see the non-portal service"
+msgstr "יכול לראות את השירות שאינו פורטל"
+
+msgid "Can talk to the non-portal service"
+msgstr "יכול לתקשר עם השירות שאינו פורטל"
+
+msgid "Can own the non-portal service"
+msgstr "יכול להיות הבעלים של השירות שאינו פורטל"
+
+msgid "Global Menu Integration"
+msgstr "שילוב בתפריט גלובלי"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "יכול להציג את התפריטים שלו בשורת תפריט גלובלית"
+
+msgid "KDE Settings Integration"
+msgstr "שילוב עם הגדרות KDE"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "יכול לזהות מתי הגדרות שולחן העבודה של KDE משתנות"
+
+msgid "KDE Global Settings"
+msgstr "הגדרות גלובליות של KDE"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "יכול לקרוא העדפות שולחן עבודה של KDE כגון גופנים וצבעים"
+
+msgid "Secret Storage Service"
+msgstr "שירות אחסון סודות"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "יכול לאחסן ולאחזר את הססמאות שלו באמצעות מחזיק המפתחות של המערכת"
+
+msgid "Desktop Notifications Service"
+msgstr "שירות התראות שולחן העבודה"
+
+msgid "Can send desktop notifications"
+msgstr "יכול לשלוח התראות לשולחן העבודה"
+
+msgid "System Tray Integration"
+msgstr "שילוב במגש המערכת"
+
+msgid "Can display an icon in the system tray"
+msgstr "יכול להציג סמל במגש המערכת"
+
+msgid "KDE Connect Integration"
+msgstr "שילוב עם KDE Connect"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "יכול לקיים אינטראקציה עם התקנים שצומדו באמצעות KDE Connect"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "ניווט"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "פתיחת דף הגילוי"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "פתיחת דף הספרייה"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "פתיחת דף החיפוש"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "מקורות"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "סנכרון מקורות"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "כללי"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "פתיחת ההעדפות"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "הצגת קיצורים"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "סגירת החלון"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "יציאה מ־Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s הותקן"
+
+msgid "The app is ready to be used"
+msgstr "היישום מוכן לשימוש"
+
+msgid "Updates Are Out of Date"
+msgstr "העדכונים אינם עדכניים"
+
+msgid "Please check for available updates"
+msgstr "יש לבדוק אם יש עדכונים זמינים"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u יישום עודכן"
+msgstr[1] "%u יישומים עודכנו"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s עודכן."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s ו־%s עודכנו."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "כולל את %s, %s ו־%s."

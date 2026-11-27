@@ -1,0 +1,214 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Ukončit %d okno"
+msgstr[1] "Ukončit %d okna"
+msgstr[2] "Ukončit %d oken"
+
+msgid "Gnome Settings"
+msgstr "Nastavení GNOME"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel byl aktualizován!"
+
+msgid "You are now running version"
+msgstr "Nyní používáte verzi"
+
+msgid "See what's new"
+msgstr "Zobrazit novinky"
+
+msgid "Top Bar"
+msgstr "Horní lišta"
+
+msgid "Isolate Workspaces options"
+msgstr "Možnosti oddělení pracovních ploch"
+
+msgid "Isolate monitors options"
+msgstr "Možnosti oddělení monitorů"
+
+msgid "Text"
+msgstr "Text"
+
+msgid "Command"
+msgstr "Příkaz"
+
+msgid "Remove"
+msgstr "Odebrat"
+
+msgid "App icon highlight options"
+msgstr "Možnosti zvýraznění ikon aplikací"
+
+msgid "Move to current Workspace"
+msgstr "Přesunout na aktuální pracovní plochu"
+
+msgid "Highlight AppIcon color"
+msgstr "Barva zvýraznění ikony aplikace"
+
+msgid "Pressed AppIcon color"
+msgstr "Barva stisknuté ikony aplikace"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Poloměr zaoblení rohů zvýrazněné ikony aplikace"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Přepíše globální poloměr zaoblení rohů (výchozí je 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Skrýt panel pouze před okny"
+
+msgid "Overlapping"
+msgstr "Překrývající se"
+
+msgid "On same monitor"
+msgstr "Na stejném monitoru"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Dotyk ukazatele na okraji monitoru zobrazí panel"
+
+msgid "Limit to panel length"
+msgstr "Omezit na délku panelu"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Najetí na oblast panelu ponechá panel zobrazený"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Pro zobrazení panelu vyžadovat tlak na okraji monitoru"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Syntaxe: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Persist state across restarts"
+msgstr "Zachovat stav po restartech"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(respektuje funkci GNOME „Nerušit“ a vyžaduje možnost zobrazení počitadla oznámení)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Zobrazit a podržet panel při oznámení"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Prodleva před zobrazením panelu (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Oddělit monitory i při použití jediného panelu"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Oddělit pracovní plochy v přepínači aplikací gnome-shell"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Přepnout jednu / Rozložit více"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Na sekundárních monitorech zobrazit překryv na ikonách odpovídajících hlavnímu monitoru"
+
+msgid "Show the overlay on all monitors"
+msgstr "Zobrazit překryv na všech monitorech"
+
+msgid "<i>App Details</i> menu item"
+msgstr "Položka nabídky <i>Podrobnosti o aplikaci</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Podrobnosti o aplikaci</i> jsou dostupné pouze po instalaci Softwaru GNOME"
+
+msgid "About"
+msgstr "O aplikaci"
+
+msgid "Sponsored and originally developed by"
+msgstr "Sponzorováno a původně vyvinuto"
+
+msgid "Action"
+msgstr "Akce"
+
+msgid "Application icons context menu"
+msgstr "Kontextová nabídka ikon aplikací"
+
+msgid "Secondary menu"
+msgstr "Sekundární nabídka"
+
+msgid "Panel context menu entries"
+msgstr "Položky kontextové nabídky panelu"
+
+msgid "Add entry"
+msgstr "Přidat položku"
+
+msgid "Behavior"
+msgstr "Chování"
+
+msgid "Hover"
+msgstr "Najetí"
+
+msgid "Fine-Tune"
+msgstr "Jemné ladění"
+
+msgid "Position"
+msgstr "Umístění"
+
+msgid "Panel monitor position"
+msgstr "Umístění panelu na monitoru"
+
+msgid "Panel length"
+msgstr "Délka panelu"
+
+msgid "Dynamic"
+msgstr "Dynamická"
+
+msgid "Style"
+msgstr "Styl"
+
+msgid "Global style"
+msgstr "Globální styl"
+
+msgid "Border radius"
+msgstr "Poloměr zaoblení rohů"
+
+msgid "Highlight hovering app icons"
+msgstr "Zvýraznit ikony aplikací při najetí"
+
+msgid "Icon style"
+msgstr "Styl ikon"
+
+msgid "Normal"
+msgstr "Normální"
+
+msgid "Symbolic"
+msgstr "Symbolické"
+
+msgid "Grayscale"
+msgstr "Odstíny šedi"
+
+msgid "(default is 0)"
+msgstr "(výchozí je 0)"
+
+msgid "Side margins"
+msgstr "Boční okraje"
+
+msgid "Top and bottom margins"
+msgstr "Horní a dolní okraje"
+
+msgid "Side padding"
+msgstr "Boční vnitřní odsazení"
+
+msgid "Top and bottom padding"
+msgstr "Horní a dolní vnitřní odsazení"
+
+msgid "Panel border"
+msgstr "Okraj panelu"
+
+msgid "Override border color"
+msgstr "Přepsat barvu okraje"
+
+msgid "Border thickness"
+msgstr "Tloušťka okraje"

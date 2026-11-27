@@ -1,0 +1,234 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "Removing remote…"
+msgstr "Уклањање удаљеног извора…"
+
+msgid "Could not remove remote"
+msgstr "Није могуће уклонити удаљени извор"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s до %s, највише на %s са %s"
+
+msgid "Made for COSMIC™"
+msgstr "Направљено за COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "За COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Још COSMIC програма"
+
+msgid "New Permissions"
+msgstr "Нова овлашћења"
+
+msgid "_Accept"
+msgstr "_Прихвати"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Ново овлашћење за %s"
+msgstr[1] "Нова овлашћења за %s"
+msgstr[2] "Нова овлашћења за %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Ово ажурирање захтева следеће додатно овлашћење"
+msgstr[1] "Ово ажурирање захтева следећа додатна овлашћења"
+msgstr[2] "Ово ажурирање захтева следећа додатна овлашћења"
+
+msgid "Remotes"
+msgstr "Удаљени"
+
+msgid "System Installation"
+msgstr "Инсталација за систем"
+
+msgid "Available to all users on this computer"
+msgstr "Доступно свим корисницима на овом рачунару"
+
+msgid "User Installation"
+msgstr "Инсталација за корисника"
+
+msgid "Only available to you"
+msgstr "Доступно само вама"
+
+msgid "Remove Remote"
+msgstr "Уклони удаљени извор"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Уклони %s"
+
+msgid "Unused"
+msgstr "Некоришћено"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u програм инсталиран"
+msgstr[1] "%u програма инсталирана"
+msgstr[2] "%u програма инсталирано"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Уклонити „%s“?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Више нећете моћи да инсталирате програме из овог корисничког удаљеног извора."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Више нећете моћи да инсталирате програме из овог системског удаљеног извора."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u програм за уклањање"
+msgstr[1] "%u програма за уклањање"
+msgstr[2] "%u програма за уклањање"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Програм испод је инсталиран из овог удаљеног извора и биће уклоњен са вашег налога заједно са њим."
+msgstr[1] "Ови програми су инсталирани из овог удаљеног извора и биће уклоњени са вашег налога заједно са њим."
+msgstr[2] "Ови програми су инсталирани из овог удаљеног извора и биће уклоњени са вашег налога заједно са њим."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Програм испод је инсталиран из овог удаљеног извора и биће уклоњен за све кориснике заједно са њим."
+msgstr[1] "Ови програми су инсталирани из овог удаљеног извора и биће уклоњени за све кориснике заједно са њим."
+msgstr[2] "Ови програми су инсталирани из овог удаљеног извора и биће уклоњени за све кориснике заједно са њим."
+
+msgid "Total"
+msgstr "Укупно"
+
+msgid "This Week"
+msgstr "Ове недеље"
+
+msgid "Installs per day"
+msgstr "Инсталација по дану"
+
+msgid "Installs per country"
+msgstr "Инсталација по држави"
+
+msgid "Finishing Up"
+msgstr "Завршавање"
+
+msgid "This update requests new permissions"
+msgstr "Ово ажурирање захтева нова овлашћења"
+
+msgid "Manage R_emotes"
+msgstr "Управљај _удаљеним изворима"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u инсталација"
+msgstr[1] "%s, %'u инсталације"
+msgstr[2] "%s, %'u инсталација"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Највише инсталација из: %s"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Учитавање %d програма…"
+msgstr[1] "Учитавање %d програма…"
+msgstr[2] "Учитавање %d програма…"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Инсталирати %u програм?"
+msgstr[1] "Инсталирати %u програма?"
+msgstr[2] "Инсталирати %u програма?"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d програм"
+msgstr[1] "%d програма"
+msgstr[2] "%d програма"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u доступно ажурирање"
+msgstr[1] "%u доступна ажурирања"
+msgstr[2] "%u доступних ажурирања"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u инсталиран програм"
+msgstr[1] "%u инсталирана програма"
+msgstr[2] "%u инсталираних програма"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Пронађен %u програм"
+msgstr[1] "Пронађена %u програма"
+msgstr[2] "Пронађено %u програма"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "пре %d дан"
+msgstr[1] "пре %d дана"
+msgstr[2] "пре %d дана"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "пре %d недељу"
+msgstr[1] "пре %d недеље"
+msgstr[2] "пре %d недеља"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "пре %d месец"
+msgstr[1] "пре %d месеца"
+msgstr[2] "пре %d месеци"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "пре %d годину"
+msgstr[1] "пре %d године"
+msgstr[2] "пре %d година"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u ажурирање извршног окружења"
+msgstr[1] "%u ажурирања извршног окружења"
+msgstr[2] "%u ажурирања извршног окружења"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Кориснички подаци за %u програм пребачени у смеће"
+msgstr[1] "Кориснички подаци за %u програма пребачени у смеће"
+msgstr[2] "Кориснички подаци за %u програма пребачени у смеће"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u програм ажуриран"
+msgstr[1] "%u програма ажурирана"
+msgstr[2] "%u програма ажурирано"

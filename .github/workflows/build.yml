@@ -52,7 +52,8 @@ jobs:
         run: |
           shellcheck -s bash -S warning evenkeel-os-codecs-setup evenkeel-os-codecs-admin evenkeel-os-codecs-lib.sh \
             evenkeel-os-updates-pause-check evenkeel-os-flathub-apps greenboot/*.sh greenboot/evenkeel-os-boot-menu-repair \
-            greenboot/evenkeel-os-greenboot-arm greenboot/evenkeel-os-test-fail update-locked-versions.sh
+            greenboot/evenkeel-os-greenboot-arm greenboot/evenkeel-os-test-fail update-locked-versions.sh \
+            evenkeel-os-flatpak-languages app-texts.sh check-app-texts.sh install-app-translations.sh
           pipx run --spec bandit==1.9.4 bandit -q -ll evenkeel-os-tools-admin evenkeel-os-tools-safe evenkeel-os-hwrules \
             evenkeel-os-vpn evenkeel-os-app-updates check-root-helpers.py check-vpns.py greenboot/evenkeel-os-settings \
             check-settings-repair.py greenboot/evenkeel-os-settings-test evenkeel-os-cert-remove evenkeel-os-certs \
@@ -73,9 +74,18 @@ jobs:
         run: |
           just check
 
-      # Last 60 change titles go into the image for System Update's what's new.
+      # Last 60 change titles go into the image for System Update's what's new. Upkeep by Dependabot, Renovate and
+      # the daily version check isn't listed.
       - name: List of changes
-        run: git log -60 --format='%cs%x09%s' > build_files/changes.txt
+        run: |
+          git log -60 --format='%cs%x09%s' --perl-regexp --author='^(?!(dependabot|renovate|github-actions)\[bot\])' \
+            --invert-grep --grep='^Update locked versions' > build_files/changes.txt
+
+      # A locked version of Dash to Panel, ArcMenu, Logo Menu, Bazaar or Ghostty with untranslated text stops the build.
+      - name: The outside apps' text is translated
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y --no-install-recommends gettext rpm2cpio cpio jq
+          build_files/check-app-texts.sh
 
       # Windows Program's downloads; a site that is down falls back to the copy saved by the last build.
       - name: Restore saved Windows Program downloads

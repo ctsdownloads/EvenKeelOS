@@ -1,0 +1,1166 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Quit"
+msgstr "Irten"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Itxi %d leiho"
+msgstr[1] "Itxi %d leiho"
+
+msgid "Power options"
+msgstr "Energia-aukerak"
+
+msgid "Event logs"
+msgstr "Gertaera-erregistroak"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "Device Management"
+msgstr "Gailuen kudeaketa"
+
+msgid "Disk Management"
+msgstr "Diskoen kudeaketa"
+
+msgid "Unlock taskbar"
+msgstr "Desblokeatu zereginen barra"
+
+msgid "Lock taskbar"
+msgstr "Blokeatu zereginen barra"
+
+msgid "Gnome Settings"
+msgstr "GNOME ezarpenak"
+
+msgid "Dash to Panel Settings"
+msgstr "Dash to Panel ezarpenak"
+
+msgid "Restore Windows"
+msgstr "Leheneratu leihoak"
+
+msgid "Show Desktop"
+msgstr "Erakutsi mahaigaina"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel eguneratu da!"
+
+msgid "You are now running version"
+msgstr "Orain bertsio honetan ari zara:"
+
+msgid "See what's new"
+msgstr "Ikusi berritasunak"
+
+msgid "Top Bar"
+msgstr "Goiko barra"
+
+msgid "Show Desktop button height (px)"
+msgstr "Erakutsi mahaigaina botoiaren altuera (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Erakutsi mahaigaina botoiaren zabalera (px)"
+
+msgid "Left"
+msgstr "Ezkerra"
+
+msgid "Center"
+msgstr "Erdia"
+
+msgid "Right"
+msgstr "Eskuina"
+
+msgid "Top"
+msgstr "Goian"
+
+msgid "Middle"
+msgstr "Erdian"
+
+msgid "Bottom"
+msgstr "Behean"
+
+msgid "Start"
+msgstr "Hasiera"
+
+msgid "End"
+msgstr "Amaiera"
+
+msgid "Show Applications button"
+msgstr "Erakutsi aplikazioak botoia"
+
+msgid "Activities button"
+msgstr "Jarduerak botoia"
+
+msgid "Taskbar"
+msgstr "Zereginen barra"
+
+msgid "Date menu"
+msgstr "Data-menua"
+
+msgid "System menu"
+msgstr "Sistema-menua"
+
+msgid "Left box"
+msgstr "Ezkerreko kutxa"
+
+msgid "Center box"
+msgstr "Erdiko kutxa"
+
+msgid "Right box"
+msgstr "Eskuineko kutxa"
+
+msgid "Desktop button"
+msgstr "Mahaigaineko botoia"
+
+msgid "Move up"
+msgstr "Eraman gora"
+
+msgid "Move down"
+msgstr "Eraman behera"
+
+msgid "Visible"
+msgstr "Ikusgai"
+
+msgid "Select element position"
+msgstr "Hautatu elementuaren posizioa"
+
+msgid "Stacked to top"
+msgstr "Goian pilatuta"
+
+msgid "Stacked to left"
+msgstr "Ezkerrean pilatuta"
+
+msgid "Stacked to bottom"
+msgstr "Behean pilatuta"
+
+msgid "Stacked to right"
+msgstr "Eskuinean pilatuta"
+
+msgid "Centered"
+msgstr "Zentratuta"
+
+msgid "Monitor Center"
+msgstr "Monitorearen erdia"
+
+msgid "More options"
+msgstr "Aukera gehiago"
+
+msgid "Reset to defaults"
+msgstr "Berrezarri lehenespenak"
+
+msgid "Show Applications options"
+msgstr "Erakutsi aplikazioak aukerak"
+
+msgid "Open icon"
+msgstr "Ireki ikonoa"
+
+msgid "Show Desktop options"
+msgstr "Erakutsi mahaigaina aukerak"
+
+msgid "Primary monitor"
+msgstr "Monitore nagusia"
+
+msgid "Monitor "
+msgstr "Monitorea "
+
+msgid "Running Indicator Options"
+msgstr "Exekuzio-adierazlearen aukerak"
+
+msgid "Dynamic opacity options"
+msgstr "Opakotasun dinamikoaren aukerak"
+
+msgid "Intellihide options"
+msgstr "Ezkutatze adimentsuaren aukerak"
+
+msgid "Window preview options"
+msgstr "Leiho-aurrebistaren aukerak"
+
+msgid "Isolate Workspaces options"
+msgstr "Laneko areak isolatzeko aukerak"
+
+msgid "Isolate monitors options"
+msgstr "Monitoreak isolatzeko aukerak"
+
+msgid "Ungrouped application options"
+msgstr "Taldekatu gabeko aplikazioen aukerak"
+
+msgid "Customize middle-click behavior"
+msgstr "Pertsonalizatu erdiko klikaren portaera"
+
+msgid "Text"
+msgstr "Testua"
+
+msgid "Command"
+msgstr "Komandoa"
+
+msgid "Remove"
+msgstr "Kendu"
+
+msgid "Customize panel scroll behavior"
+msgstr "Pertsonalizatu panelaren korritze-portaera"
+
+msgid "Customize icon scroll behavior"
+msgstr "Pertsonalizatu ikonoen korritze-portaera"
+
+msgid "Advanced hotkeys options"
+msgstr "Laster-tekla aurreratuen aukerak"
+
+msgid "Secondary Menu Options"
+msgstr "Bigarren mailako menuaren aukerak"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d ikono"
+msgstr[1] "%d ikono"
+
+msgid "App icon animation options"
+msgstr "Aplikazio-ikonoen animazio-aukerak"
+
+msgid "App icon highlight options"
+msgstr "Aplikazio-ikonoen nabarmentze-aukerak"
+
+msgid "Export settings"
+msgstr "Esportatu ezarpenak"
+
+msgid "Import settings"
+msgstr "Inportatu ezarpenak"
+
+msgid "Move to current Workspace"
+msgstr "Eraman uneko laneko areara"
+
+msgid "Animation type"
+msgstr "Animazio mota"
+
+msgid "Simple"
+msgstr "Sinplea"
+
+msgid "Ripple"
+msgstr "Uhina"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Iraupena"
+
+msgid "Rotation"
+msgstr "Biraketa"
+
+msgid "Travel"
+msgstr "Ibilbidea"
+
+msgid "Zoom"
+msgstr "Zooma"
+
+msgid "Convexity"
+msgstr "Ganbiltasuna"
+
+msgid "Extent"
+msgstr "Hedadura"
+
+msgid "Highlight focused application"
+msgstr "Nabarmendu fokuratutako aplikazioa"
+
+msgid "Icon dominant color"
+msgstr "Ikonoaren kolore nagusia"
+
+msgid "Custom color"
+msgstr "Kolore pertsonalizatua"
+
+msgid "Highlight opacity"
+msgstr "Nabarmentzearen opakotasuna"
+
+msgid "Indicator size (px)"
+msgstr "Adierazlearen tamaina (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Adierazlearen kolorea - Ikonoaren nagusia"
+
+msgid "Indicator color - Override Theme"
+msgstr "Adierazlearen kolorea - Gainidatzi gaia"
+
+msgid "1 window open (or ungrouped)"
+msgstr "Leiho 1 irekita (edo taldekatu gabe)"
+
+msgid "Apply to all"
+msgstr "Aplikatu guztiei"
+
+msgid "2 windows open"
+msgstr "2 leiho irekita"
+
+msgid "3 windows open"
+msgstr "3 leiho irekita"
+
+msgid "4+ windows open"
+msgstr "4+ leiho irekita"
+
+msgid "Use different for unfocused"
+msgstr "Erabili desberdina fokuratu gabekoentzat"
+
+msgid "The panel background opacity is affected by"
+msgstr "Panelaren atzeko planoaren opakotasunean eragiten dute:"
+
+msgid "All windows"
+msgstr "Leiho guztiek"
+
+msgid "Focused windows"
+msgstr "Fokuratutako leihoek"
+
+msgid "Maximized windows"
+msgstr "Maximizatutako leihoek"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Aldatu opakotasuna leiho bat (px) baino hurbilago dagoenean"
+
+msgid "Change opacity to (%)"
+msgstr "Aldatu opakotasuna honetara (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Opakotasun-aldaketaren animazioaren iraupena (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Aplikazioen izenburuen letra-tamaina (px) (lehenespena 14 da)"
+
+msgid "Font weight of application titles"
+msgstr "Aplikazioen izenburuen letra-pisua"
+
+msgid "inherit from theme"
+msgstr "heredatu gaiatik"
+
+msgid "normal"
+msgstr "normala"
+
+msgid "lighter"
+msgstr "argiagoa"
+
+msgid "bold"
+msgstr "lodia"
+
+msgid "bolder"
+msgstr "lodiagoa"
+
+msgid "Font color of the application titles"
+msgstr "Aplikazioen izenburuen letra-kolorea"
+
+msgid "Font color of the minimized application titles"
+msgstr "Minimizatutako aplikazioen izenburuen letra-kolorea"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Aplikazioen izenburuen gehienezko zabalera (px)"
+
+msgid "(default is 160)"
+msgstr "(lehenespena 160 da)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Erabili zabalera finkoa aplikazioen izenburuentzat"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Aplikazioen izenburu guztiek zabalera bera dute, testuak gehienezko zabalera baino laburragoak badira ere. Gehienezko zabaleraren balioa erabiltzen da zabalera finko gisa."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Erakutsi exekuzio-adierazleak fokuratu gabeko aplikazioetan"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Erabili gogokoen ikonoak aplikazio-abiarazle gisa"
+
+msgid "Highlight AppIcon color"
+msgstr "Nabarmendu aplikazio-ikonoaren kolorea"
+
+msgid "Pressed AppIcon color"
+msgstr "Sakatutako aplikazio-ikonoaren kolorea"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Nabarmendu aplikazio-ikonoaren ertzaren erradioa"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Erradio globala gainidazten du (lehenespena 0 da)"
+
+msgid "Only hide the panel from windows"
+msgstr "Ezkutatu panela leihoengandik soilik"
+
+msgid "Overlapping"
+msgstr "Gainjarrita"
+
+msgid "On same monitor"
+msgstr "Monitore berean"
+
+msgid "The panel hides from"
+msgstr "Panela hemendik ezkutatzen da:"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Erakusleak monitorearen ertzera ukitzean panela agerrarazten da"
+
+msgid "Limit to panel length"
+msgstr "Mugatu panelaren luzerara"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Panelaren gainean ibiltzean panela agerrarazita geratzen da"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Eskatu presioa monitorearen ertzean panela agerrarazteko"
+
+msgid "Required pressure threshold (px)"
+msgstr "Beharrezko presio-atalasea (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Beharrezko presio-denbora-muga (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Onartu panela agerraraztea pantaila osoko moduan"
+
+msgid "(requires multi-monitors option)"
+msgstr "(hainbat monitoreren aukera behar du)"
+
+msgid "Only hide secondary panels"
+msgstr "Ezkutatu bigarren mailako panelak soilik"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Sintaxia: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Panela agerrarazi eta mantentzeko laster-tekla"
+
+msgid "e.g. <Super>i"
+msgstr "adib. <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Mantendu egoera berrabiarazteetan"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(GNOMEren \"Ez molestatu\" kontuan hartzen du eta jakinarazpen-kontagailuaren txapa erakusteko aukera behar du)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Agerrarazi eta mantendu panela jakinarazpenean"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Ezkutatze eta agerrarazte animazioaren iraupena (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Panela ezkutatu aurreko atzerapena (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Panela agerrarazi aurreko atzerapena (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Hasieran ezkutatze adimentsua gaitu aurreko atzerapena (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Isolatu monitoreak panel bakarra erabiltzean ere"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Isolatu laneko areak gnome-shell-eko aplikazio-aldatzailean"
+
+msgid "Shift+Click action"
+msgstr "Maius+Klik ekintza"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "Minimizatzera ezarrita dagoenean, klik bikoitzak aplikazioaren leiho guztiak minimizatzen ditu."
+
+msgid "Raise windows"
+msgstr "Goratu leihoak"
+
+msgid "Minimize window"
+msgstr "Minimizatu leihoa"
+
+msgid "Launch new instance"
+msgstr "Abiarazi instantzia berria"
+
+msgid "Cycle through windows"
+msgstr "Txandakatu leihoak"
+
+msgid "Cycle windows + minimize"
+msgstr "Txandakatu leihoak + minimizatu"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Txandakatu bakarra / Aurreikusi anitz"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Txandakatu bakarra / Txandakatu anitz"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Txandakatu bakarra / Zabaldu anitz"
+
+msgid "Middle-Click action"
+msgstr "Erdiko klikaren ekintza"
+
+msgid "Behavior for Middle-Click."
+msgstr "Erdiko klikaren portaera."
+
+msgid "Shift+Middle-Click action"
+msgstr "Maius+Erdiko klikaren ekintza"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Maius+Erdiko klikaren portaera."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Laster-teklak Super+Zenbakia edo Super+Alt+Zenb izango dira"
+
+msgid "Hotkeys prefix"
+msgstr "Laster-teklen aurrizkia"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Erakutsi aldi baterako aplikazioen zenbakiak ikonoen gainean laster-teklak erabiltzean."
+
+msgid "Number overlay"
+msgstr "Zenbaki-gainjartzea"
+
+msgid "Never"
+msgstr "Inoiz ez"
+
+msgid "Show temporarily"
+msgstr "Erakutsi aldi baterako"
+
+msgid "Always visible"
+msgstr "Beti ikusgai"
+
+msgid "Hide timeout (ms)"
+msgstr "Ezkutatze-denbora-muga (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Gainjartzea 2 segundoz erakusteko lasterbidea"
+
+msgid "e.g. <Super>q"
+msgstr "adib. <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Bigarren mailako monitoreetan, erakutsi gainjartzea monitore nagusiko ikonoei dagozkienetan"
+
+msgid "Show the overlay on all monitors"
+msgstr "Erakutsi gainjartzea monitore guztietan"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Erakutsi aurrebistak aplikazioak instantzia anitz dituenean"
+
+msgid "Show window previews on hotkey"
+msgstr "Erakutsi leiho-aurrebistak laster-teklarekin"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Hautatu zein zenbaki-tekla erabiltzen diren laster-teklak aktibatzeko"
+
+msgid "Hotkeys are activated with"
+msgstr "Laster-teklak honekin aktibatzen dira:"
+
+msgid "Number row"
+msgstr "Zenbaki-errenkada"
+
+msgid "Numeric keypad"
+msgstr "Zenbaki-teklatua"
+
+msgid "Both"
+msgstr "Biak"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Sagu-korritze gertaeren arteko atzerapena (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Erabili balio hau harrapatutako sagu-korritze gertaera kopurua mugatzeko."
+
+msgid "Show popup when changing workspace"
+msgstr "Erakutsi laneko areak aldatzean laster-leihoa"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Honek panelean korritzean agertzen den laneko areen laster-leihoari soilik eragiten dio."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "Integratu <i>AppMenu</i> elementuak"
+
+msgid "<i>App Details</i> menu item"
+msgstr "<i>Aplikazioaren xehetasunak</i> menu-elementua"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Aplikazioaren xehetasunak</i> GNOME Software instalatuta dagoenean soilik daude erabilgarri"
+
+msgid "Show Applications icon"
+msgstr "Erakutsi aplikazioak ikonoa"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Erakutsi aplikazioak ikonoaren alboko betegarria (px)"
+
+msgid "Override escape key and return to desktop"
+msgstr "Gainidatzi ihes-tekla eta itzuli mahaigainera"
+
+msgid "Override Show Desktop line color"
+msgstr "Gainidatzi Erakutsi mahaigaina lerroaren kolorea"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Agerrarazi mahaigaina Erakutsi mahaigaina botoiaren gainean ibiltzean"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Mahaigaina agerrarazi aurreko atzerapena (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Lausotze-iraupena (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Erakutsi aurreko denbora (ms)"
+
+msgid "(400 is default)"
+msgstr "(400 da lehenespena)"
+
+msgid "Time (ms) before hiding"
+msgstr "Ezkutatu aurreko denbora (ms)"
+
+msgid "(100 is default)"
+msgstr "(100 da lehenespena)"
+
+msgid "Immediate on application icon click"
+msgstr "Berehala aplikazio-ikonoan klik egitean"
+
+msgid "Animation time (ms)"
+msgstr "Animazio-denbora (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Egin erdiko klika aurrebistan leihoa ixteko"
+
+msgid "Window previews preferred size (px)"
+msgstr "Leiho-aurrebisten tamaina hobetsia (px)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Leiho-aurrebisten itxura-erlazioa X (zabalera)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Finkoa"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Leiho-aurrebisten itxura-erlazioa Y (altuera)"
+
+msgid "Window previews padding (px)"
+msgstr "Leiho-aurrebisten betegarria (px)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Erabili opakotasun pertsonalizatua aurrebisten atzeko planorako"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Desgaituta badago, aurrebisten atzeko planoak panelaren opakotasun bera du."
+
+msgid "Close button and header position"
+msgstr "Itxi botoiaren eta goiburuaren posizioa"
+
+msgid "Display window preview headers"
+msgstr "Erakutsi leiho-aurrebisten goiburuak"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Leiho-aurrebistaren ikonoaren tamaina (px)"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Desgaituta badago, aurrebisten ikonoaren tamaina goiburu-barraren tamainaren araberakoa izango da"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Aurrebisten izenburuen letra-tamaina (px)"
+
+msgid "Font weight of the preview titles"
+msgstr "Aurrebisten izenburuen letra-pisua"
+
+msgid "Font color of the preview titles"
+msgstr "Aurrebisten izenburuen letra-kolorea"
+
+msgid "Enable window peeking"
+msgstr "Gaitu leihoen begiratzea"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "Leiho-aurrebista baten gainean denbora batez ibiltzean, leihoa nabarmentzen da."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Leihoen begiratze-modura sartzeko denbora-muga (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "Leiho-aurrebista baten gainean ibiltzean leihoen begiratze-modura sartzeko behar den jarduerarik gabeko denbora."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Leihoen begiratze-moduaren opakotasuna"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Begiratutako leihoa ez beste leiho guztiek opakotasun-balio bera dute."
+
+msgid "About"
+msgstr "Honi buruz"
+
+msgid "Info"
+msgstr "Informazioa"
+
+msgid "Version"
+msgstr "Bertsioa"
+
+msgid "Source"
+msgstr "Iturburua"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Esportatu eta inportatu"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Erabili beheko botoiak zure uneko hobespenekin ezarpen-fitxategi bat sortzeko, beste makina batean inporta daitekeena."
+
+msgid "Export and import settings"
+msgstr "Esportatu eta inportatu ezarpenak"
+
+msgid "Export to file"
+msgstr "Esportatu fitxategira"
+
+msgid "Import from file"
+msgstr "Inportatu fitxategitik"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Programa honek ez du INOLAKO BERMERIK.\n"
+"Xehetasunak ikusteko, ikusi <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU Lizentzia Publiko Orokorra, 2. bertsioa edo ondorengoa</a>.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Babeslea eta jatorrizko garatzailea:"
+
+msgid "Action"
+msgstr "Ekintza"
+
+msgid "Click action"
+msgstr "Klik ekintza"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "Portaera exekutatzen ari den aplikazio baten ikonoan klik egitean."
+
+msgid "Toggle windows"
+msgstr "Txandakatu leihoak"
+
+msgid "Scroll action"
+msgstr "Korritze-ekintza"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Portaera sagua panelaren gainean korritzean."
+
+msgid "Scroll panel action"
+msgstr "Panela korritzeko ekintza"
+
+msgid "Do nothing"
+msgstr "Ez egin ezer"
+
+msgid "Switch workspace"
+msgstr "Aldatu laneko area"
+
+msgid "Cycle windows"
+msgstr "Txandakatu leihoak"
+
+msgid "Change volume"
+msgstr "Aldatu bolumena"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Portaera sagua aplikazio-ikono baten gainean korritzean."
+
+msgid "Scroll icon action"
+msgstr "Ikonoa korritzeko ekintza"
+
+msgid "Same as panel"
+msgstr "Panelaren berdina"
+
+msgid "Hotkey overlay"
+msgstr "Laster-teklen gainjartzea"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Gaitu Super+(0-9) aplikazioak aktibatzeko lasterbide gisa. Maius eta Ctrl-ekin batera ere erabil daiteke."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Erabili laster-teklak aplikazioak aktibatzeko"
+
+msgid "Application icons context menu"
+msgstr "Aplikazio-ikonoen testuinguru-menua"
+
+msgid "(right-click menu)"
+msgstr "(eskuineko klikaren menua)"
+
+msgid "Secondary menu"
+msgstr "Bigarren mailako menua"
+
+msgid "Panel context menu entries"
+msgstr "Panelaren testuinguru-menuko sarrerak"
+
+msgid "Add entry"
+msgstr "Gehitu sarrera"
+
+msgid "Behavior"
+msgstr "Portaera"
+
+msgid "Applications"
+msgstr "Aplikazioak"
+
+msgid "Show favorite applications"
+msgstr "Erakutsi aplikazio gogokoenak"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Erakutsi aplikazio gogokoenak bigarren mailako paneletan"
+
+msgid "Show running applications"
+msgstr "Erakutsi exekutatzen ari diren aplikazioak"
+
+msgid "Ungroup applications"
+msgstr "Banandu aplikazioak"
+
+msgid "Show notification counter badge"
+msgstr "Erakutsi jakinarazpen-kontagailuaren txapa"
+
+msgid "Hover"
+msgstr "Gainetik pasatzea"
+
+msgid "Show window previews on hover"
+msgstr "Erakutsi leiho-aurrebistak gainetik pasatzean"
+
+msgid "Show tooltip on hover"
+msgstr "Erakutsi aholku-laguntza gainetik pasatzean"
+
+msgid "Isolate"
+msgstr "Isolatu"
+
+msgid "Isolate Workspaces"
+msgstr "Isolatu laneko areak"
+
+msgid "Isolate monitors"
+msgstr "Isolatu monitoreak"
+
+msgid "Overview"
+msgstr "Ikuspegi orokorra"
+
+msgid "Click empty space to close overview"
+msgstr "Egin klik leku hutsean ikuspegi orokorra ixteko"
+
+msgid "Disable show overview on startup"
+msgstr "Desgaitu ikuspegi orokorra abioan erakustea"
+
+msgid "Fine-Tune"
+msgstr "Doikuntza fina"
+
+msgid "Font size"
+msgstr "Letra-tamaina"
+
+msgid "(0 = theme default)"
+msgstr "(0 = gaiaren lehenespena)"
+
+msgid "Tray Font Size"
+msgstr "Erretiluaren letra-tamaina"
+
+msgid "LeftBox Font Size"
+msgstr "Ezkerreko kutxaren letra-tamaina"
+
+msgid "Padding"
+msgstr "Betegarria"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = gaiaren lehenespena)"
+
+msgid "Tray Item Padding"
+msgstr "Erretiluko elementuen betegarria"
+
+msgid "Status Icon Padding"
+msgstr "Egoera-ikonoen betegarria"
+
+msgid "LeftBox Padding"
+msgstr "Ezkerreko kutxaren betegarria"
+
+msgid "Animate"
+msgstr "Animatu"
+
+msgid "Animate switching applications"
+msgstr "Animatu aplikazioen aldaketa"
+
+msgid "Animate launching new windows"
+msgstr "Animatu leiho berrien abioa"
+
+msgid "Gnome functionality"
+msgstr "GNOME funtzionalitatea"
+
+msgid "(overview)"
+msgstr "(ikuspegi orokorra)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Mantendu gnome-shell-en jatorrizko dash-a"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Mantendu gnome-shell-en jatorrizko goiko panela"
+
+msgid "(e.g. date menu)"
+msgstr "(adib. data-menua)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Aktibatu panelaren menu-botoiak klik eginda soilik"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Behartu Jarduerak izkina beroa monitore nagusian"
+
+msgid "Position"
+msgstr "Posizioa"
+
+msgid "Panel"
+msgstr "Panela"
+
+msgid "Display the main panel on"
+msgstr "Erakutsi panel nagusia hemen:"
+
+msgid "Display panels on all monitors"
+msgstr "Erakutsi panelak monitore guztietan"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Ezkutatu eta agerrarazi panela hobespenen arabera"
+
+msgid "Panel Intellihide"
+msgstr "Panelaren ezkutatze adimentsua"
+
+msgid "Order and Position on monitors"
+msgstr "Monitoreetako ordena eta posizioa"
+
+msgid "Monitor"
+msgstr "Monitorea"
+
+msgid "Apply changes to all monitors"
+msgstr "Aplikatu aldaketak monitore guztietan"
+
+msgid "Panel monitor position"
+msgstr "Panelaren monitore-posizioa"
+
+msgid "(default is 48)"
+msgstr "(lehenespena 48 da)"
+
+msgid "Panel thickness"
+msgstr "Panelaren lodiera"
+
+msgid "(default is 100)"
+msgstr "(lehenespena 100 da)"
+
+msgid "Panel length"
+msgstr "Panelaren luzera"
+
+msgid "Dynamic"
+msgstr "Dinamikoa"
+
+msgid "Anchor"
+msgstr "Aingura"
+
+msgid "Taskbar Display"
+msgstr "Zereginen barraren bistaratzea"
+
+msgid "Style"
+msgstr "Estiloa"
+
+msgid "Global style"
+msgstr "Estilo orokorra"
+
+msgid "Border radius"
+msgstr "Ertzaren erradioa"
+
+msgid "AppIcon style"
+msgstr "Aplikazio-ikonoaren estiloa"
+
+msgid "(default is 8)"
+msgstr "(lehenespena 8 da)"
+
+msgid "App Icon Margin"
+msgstr "Aplikazio-ikonoaren marjina"
+
+msgid "(default is 4)"
+msgstr "(lehenespena 4 da)"
+
+msgid "App Icon Padding"
+msgstr "Aplikazio-ikonoaren betegarria"
+
+msgid "Animate hovering app icons"
+msgstr "Animatu gainetik pasatzen diren aplikazio-ikonoak"
+
+msgid "Highlight hovering app icons"
+msgstr "Nabarmendu gainetik pasatzen diren aplikazio-ikonoak"
+
+msgid "Icon style"
+msgstr "Ikonoen estiloa"
+
+msgid "Normal"
+msgstr "Normala"
+
+msgid "Symbolic"
+msgstr "Sinbolikoa"
+
+msgid "Grayscale"
+msgstr "Grisen eskala"
+
+msgid "Running indicator"
+msgstr "Exekuzio-adierazlea"
+
+msgid "Running indicator position"
+msgstr "Exekuzio-adierazlearen posizioa"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Exekuzio-adierazlearen estiloa (fokuratutako aplikazioa)"
+
+msgid "Dots"
+msgstr "Puntuak"
+
+msgid "Squares"
+msgstr "Karratuak"
+
+msgid "Dashes"
+msgstr "Marrak"
+
+msgid "Segmented"
+msgstr "Zatikatua"
+
+msgid "Solid"
+msgstr "Solidoa"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Exekuzio-adierazlearen estiloa (fokuratu gabeko aplikazioak)"
+
+msgid "Panel style"
+msgstr "Panelaren estiloa"
+
+msgid "(default is 0)"
+msgstr "(lehenespena 0 da)"
+
+msgid "Side margins"
+msgstr "Alboetako marjinak"
+
+msgid "Top and bottom margins"
+msgstr "Goiko eta beheko marjinak"
+
+msgid "Side padding"
+msgstr "Alboetako betegarria"
+
+msgid "Top and bottom padding"
+msgstr "Goiko eta beheko betegarria"
+
+msgid "Override panel theme background color"
+msgstr "Gainidatzi panelaren gaiaren atzeko planoaren kolorea"
+
+msgid "Override panel theme background opacity"
+msgstr "Gainidatzi panelaren gaiaren atzeko planoaren opakotasuna"
+
+msgid "Panel background opacity (%)"
+msgstr "Panelaren atzeko planoaren opakotasuna (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Aldatu opakotasuna leiho bat panelera hurbiltzen denean"
+
+msgid "Dynamic background opacity"
+msgstr "Atzeko planoaren opakotasun dinamikoa"
+
+msgid "Override panel theme gradient"
+msgstr "Gainidatzi panelaren gaiaren gradientea"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Gradientearen goiko kolorea eta opakotasuna (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Gradientearen beheko kolorea eta opakotasuna (%)"
+
+msgid "Panel border"
+msgstr "Panelaren ertza"
+
+msgid "Override border color"
+msgstr "Gainidatzi ertzaren kolorea"
+
+msgid "Border thickness"
+msgstr "Ertzaren lodiera"

@@ -1,0 +1,104 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Removing remote…"
+msgstr "Urrunekoa kentzen…"
+
+msgid "Could not remove remote"
+msgstr "Ezin izan da urrunekoa kendu"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s - %s, gehien %s egunean, %s instalaziorekin"
+
+msgid "Remotes"
+msgstr "Urrunekoak"
+
+msgid "System Installation"
+msgstr "Sistemako instalazioa"
+
+msgid "Available to all users on this computer"
+msgstr "Ordenagailu honetako erabiltzaile guztientzat erabilgarri"
+
+msgid "User Installation"
+msgstr "Erabiltzailearen instalazioa"
+
+msgid "Only available to you"
+msgstr "Zuk bakarrik erabil dezakezu"
+
+msgid "Remove Remote"
+msgstr "Kendu urrunekoa"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Kendu %s"
+
+msgid "Unused"
+msgstr "Erabili gabe"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u aplikazio instalatuta"
+msgstr[1] "%u aplikazio instalatuta"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "“%s” kendu nahi duzu?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Ezin izango dituzu aplikazioak instalatu erabiltzaile-urruneko honetatik."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Ezin izango dituzu aplikazioak instalatu sistema-urruneko honetatik."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "Kendu beharreko %u aplikazio"
+msgstr[1] "Kendu beharreko %u aplikazio"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Azpiko aplikazioa urruneko honetatik instalatu zen eta harekin batera kenduko da zure kontutik."
+msgstr[1] "Aplikazio hauek urruneko honetatik instalatu ziren eta harekin batera kenduko dira zure kontutik."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Azpiko aplikazioa urruneko honetatik instalatu zen eta harekin batera kenduko da erabiltzaile guztientzat."
+msgstr[1] "Aplikazio hauek urruneko honetatik instalatu ziren eta harekin batera kenduko dira erabiltzaile guztientzat."
+
+msgid "Total"
+msgstr "Guztira"
+
+msgid "This Week"
+msgstr "Aste honetan"
+
+msgid "Installs per day"
+msgstr "Instalazioak egunean"
+
+msgid "Installs per country"
+msgstr "Instalazioak herrialdeka"
+
+msgid "Manage R_emotes"
+msgstr "Kudeatu _urrunekoak"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u instalazio"
+msgstr[1] "%s, %'u instalazio"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Instalazio gehienak hemendik: %s"

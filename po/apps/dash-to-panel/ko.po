@@ -1,0 +1,365 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "창 %d개 종료"
+
+msgid "Gnome Settings"
+msgstr "GNOME 설정"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel이 업데이트되었습니다!"
+
+msgid "You are now running version"
+msgstr "현재 실행 중인 버전:"
+
+msgid "See what's new"
+msgstr "새로운 기능 보기"
+
+msgid "Top Bar"
+msgstr "상단 바"
+
+msgid "Isolate Workspaces options"
+msgstr "작업 공간 분리 옵션"
+
+msgid "Isolate monitors options"
+msgstr "모니터 분리 옵션"
+
+msgid "Text"
+msgstr "텍스트"
+
+msgid "Command"
+msgstr "명령"
+
+msgid "Remove"
+msgstr "제거"
+
+msgid "App icon highlight options"
+msgstr "앱 아이콘 강조 옵션"
+
+msgid "Move to current Workspace"
+msgstr "현재 작업 공간으로 이동"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "앱 제목의 최대 너비(px)"
+
+msgid "(default is 160)"
+msgstr "(기본값은 160)"
+
+msgid "Highlight AppIcon color"
+msgstr "앱 아이콘 강조 색상"
+
+msgid "Pressed AppIcon color"
+msgstr "앱 아이콘 눌림 색상"
+
+msgid "Highlight AppIcon border radius"
+msgstr "앱 아이콘 강조 테두리 반지름"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "전역 테두리 반지름을 덮어씁니다 (기본값은 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "창에서만 패널 숨기기"
+
+msgid "Overlapping"
+msgstr "겹침"
+
+msgid "On same monitor"
+msgstr "같은 모니터에서"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "포인터로 모니터 가장자리를 건드리면 패널이 나타납니다"
+
+msgid "Limit to panel length"
+msgstr "패널 길이로 제한"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "패널 영역에 마우스를 올리면 패널이 계속 표시됩니다"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "패널을 나타내려면 모니터 가장자리에 압력이 필요함"
+
+msgid "(requires multi-monitors option)"
+msgstr "(다중 모니터 옵션 필요)"
+
+msgid "Only hide secondary panels"
+msgstr "보조 패널만 숨기기"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "구문: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Persist state across restarts"
+msgstr "다시 시작해도 상태 유지"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(GNOME의 \"방해 금지\" 설정을 따르며 알림 카운터 배지 표시 옵션이 필요합니다)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "알림이 오면 패널을 나타내고 유지"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "패널을 나타내기 전 지연 시간(ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "패널이 하나일 때도 모니터 분리"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "gnome-shell 앱 전환기에서 작업 공간 분리"
+
+msgid "Toggle single / Spread multiple"
+msgstr "하나만 보기 / 여러 개 펼치기 전환"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "보조 모니터에서는 기본 모니터와 일치하는 아이콘에 오버레이 표시"
+
+msgid "Show the overlay on all monitors"
+msgstr "모든 모니터에 오버레이 표시"
+
+msgid "<i>App Details</i> menu item"
+msgstr "<i>앱 정보</i> 메뉴 항목"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>앱 정보</i>는 GNOME 소프트웨어가 설치되어 있을 때만 사용할 수 있습니다"
+
+msgid "Show Applications icon"
+msgstr "앱 보기 아이콘"
+
+msgid "Time (ms) before showing"
+msgstr "표시 전 시간(ms)"
+
+msgid "(400 is default)"
+msgstr "(기본값은 400)"
+
+msgid "Time (ms) before hiding"
+msgstr "숨기기 전 시간(ms)"
+
+msgid "(100 is default)"
+msgstr "(기본값은 100)"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "사용하지 않으면 미리보기 배경의 불투명도가 패널과 같아집니다."
+
+msgid "About"
+msgstr "정보"
+
+msgid "Info"
+msgstr "정보"
+
+msgid "Version"
+msgstr "버전"
+
+msgid "Source"
+msgstr "소스"
+
+msgid "Export and Import"
+msgstr "내보내기 및 가져오기"
+
+msgid "Sponsored and originally developed by"
+msgstr "후원 및 최초 개발:"
+
+msgid "Action"
+msgstr "동작"
+
+msgid "Scroll action"
+msgstr "스크롤 동작"
+
+msgid "Hotkey overlay"
+msgstr "단축키 오버레이"
+
+msgid "Application icons context menu"
+msgstr "애플리케이션 아이콘 컨텍스트 메뉴"
+
+msgid "(right-click menu)"
+msgstr "(오른쪽 클릭 메뉴)"
+
+msgid "Secondary menu"
+msgstr "보조 메뉴"
+
+msgid "Panel context menu entries"
+msgstr "패널 컨텍스트 메뉴 항목"
+
+msgid "Add entry"
+msgstr "항목 추가"
+
+msgid "Behavior"
+msgstr "동작 방식"
+
+msgid "Applications"
+msgstr "앱"
+
+msgid "Hover"
+msgstr "마우스 올림"
+
+msgid "Isolate"
+msgstr "분리"
+
+msgid "Overview"
+msgstr "오버뷰"
+
+msgid "Fine-Tune"
+msgstr "세부 조정"
+
+msgid "Font size"
+msgstr "글꼴 크기"
+
+msgid "(0 = theme default)"
+msgstr "(0 = 테마 기본값)"
+
+msgid "Tray Font Size"
+msgstr "트레이 글꼴 크기"
+
+msgid "LeftBox Font Size"
+msgstr "왼쪽 상자 글꼴 크기"
+
+msgid "Padding"
+msgstr "여백"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = 테마 기본값)"
+
+msgid "Tray Item Padding"
+msgstr "트레이 항목 여백"
+
+msgid "Status Icon Padding"
+msgstr "상태 아이콘 여백"
+
+msgid "LeftBox Padding"
+msgstr "왼쪽 상자 여백"
+
+msgid "Animate"
+msgstr "애니메이션"
+
+msgid "Gnome functionality"
+msgstr "GNOME 기능"
+
+msgid "(overview)"
+msgstr "(오버뷰)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "원래 gnome-shell 대시 유지"
+
+msgid "(e.g. date menu)"
+msgstr "(예: 날짜 메뉴)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "클릭할 때만 패널 메뉴 버튼 활성화"
+
+msgid "Position"
+msgstr "위치"
+
+msgid "Panel"
+msgstr "패널"
+
+msgid "Order and Position on monitors"
+msgstr "모니터별 순서 및 위치"
+
+msgid "Monitor"
+msgstr "모니터"
+
+msgid "Panel monitor position"
+msgstr "패널 모니터 위치"
+
+msgid "(default is 48)"
+msgstr "(기본값은 48)"
+
+msgid "Panel thickness"
+msgstr "패널 두께"
+
+msgid "(default is 100)"
+msgstr "(기본값은 100)"
+
+msgid "Panel length"
+msgstr "패널 길이"
+
+msgid "Dynamic"
+msgstr "동적"
+
+msgid "Taskbar Display"
+msgstr "작업 표시줄 표시"
+
+msgid "Style"
+msgstr "스타일"
+
+msgid "Global style"
+msgstr "전역 스타일"
+
+msgid "Border radius"
+msgstr "테두리 반지름"
+
+msgid "AppIcon style"
+msgstr "앱 아이콘 스타일"
+
+msgid "(default is 8)"
+msgstr "(기본값은 8)"
+
+msgid "App Icon Margin"
+msgstr "앱 아이콘 바깥 여백"
+
+msgid "(default is 4)"
+msgstr "(기본값은 4)"
+
+msgid "App Icon Padding"
+msgstr "앱 아이콘 안쪽 여백"
+
+msgid "Highlight hovering app icons"
+msgstr "마우스를 올린 앱 아이콘 강조"
+
+msgid "Icon style"
+msgstr "아이콘 스타일"
+
+msgid "Normal"
+msgstr "일반"
+
+msgid "Symbolic"
+msgstr "심볼릭"
+
+msgid "Grayscale"
+msgstr "회색조"
+
+msgid "Running indicator"
+msgstr "실행 표시기"
+
+msgid "Panel style"
+msgstr "패널 스타일"
+
+msgid "(default is 0)"
+msgstr "(기본값은 0)"
+
+msgid "Side margins"
+msgstr "좌우 바깥 여백"
+
+msgid "Top and bottom margins"
+msgstr "위아래 바깥 여백"
+
+msgid "Side padding"
+msgstr "좌우 안쪽 여백"
+
+msgid "Top and bottom padding"
+msgstr "위아래 안쪽 여백"
+
+msgid "Override panel theme background color"
+msgstr "패널 테마 배경 색상 덮어쓰기"
+
+msgid "Override panel theme gradient"
+msgstr "패널 테마 그라데이션 덮어쓰기"
+
+msgid "Panel border"
+msgstr "패널 테두리"
+
+msgid "Override border color"
+msgstr "테두리 색상 덮어쓰기"
+
+msgid "Border thickness"
+msgstr "테두리 두께"

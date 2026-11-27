@@ -7347,6 +7347,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "{network} захавана з тыпам {place}."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} ГБ"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} МБ"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} ТБ"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8510,3 +8525,247 @@ msgstr "напісанне нот"
 
 msgid "your calendar"
 msgstr "ваш каляндар"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "Завяршыць пераклад на ўсе мовы"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "Паказваць даты ў парадку, звыклым для кожнай мовы"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "Пакінуць gettext у вобразе"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "Дадаць пераклады на 68 моў"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "Зрабіць тэкст на кожным экране даступным для перакладу"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "Прапускаць праграмы і парты па месцах; у сетцы «Праца» нічога не прапускаецца"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "Дадаць графік светлага і цёмнага рэжымаў, слайд-шоў і шрыфты"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "Перайменаваць «Сістэмныя інструменты» ў EvenKeelOS Wheelhouse"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "Паказваць графіку NVIDIA як нармальную пры праверцы прыдатнасці"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "Загружаць файлавыя сістэмы перад усталёўкай"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "Пытацца перад аўтаматычным перазапускам"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "Пазначаць кожную новую версію для пробнага запуску"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "Адкочваць абнаўленне, калі зламалася тое, што працавала"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "Запускаць кожную зборку ў віртуальнай машыне перад публікацыяй"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "Рэкамендаваць 8 ГБ аператыўнай памяці, без мінімуму"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "Правяраць камп'ютар перад усталёўкай з Live USB"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "Пытацца ў праграме ўсталёўкі, ці вы карыстальнік Windows або Linux"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "Дадаць «Сістэмныя інструменты» ў меню лагатыпа"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "Дадаць шэсць тэм у кіраўніцтва EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "Ператварыць «Упершыню з Linux» у кіраўніцтва EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "Дадаць кіраўніцтва «Упершыню з Linux» у «Сістэмныя інструменты» і пры ўваходзе"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "Дадаць «Параметры загрузкі»: тыповыя выпраўленні і вашы ўласныя налады"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "Выправіць праверку зборкі «Агульныя папкі»: хатніх папак пакуль няма"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "Дадаць «Агульныя папкі»: абагульванне хатніх папак у сетках «Дом»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "Дадаць «Бяспека сеткі»: «Дом», «Праца» або «Грамадскае месца»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "Распазнаваць драйверы прынтараў у любой папцы"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "Паказваць вокны інструментаў у «Сістэмных інструментах»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "Адкрываць зварот, калі зборка вобраза не ўдалася"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "Зафіксаваць знешнія пакеты і інструмент ISO на дакладных версіях"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "Называць вокны інструментаў па назве інструмента, карацейшы спіс тэстаў"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "Аднаўляць выдаленыя сістэмныя налады і папярэджваць пра сертыфікаты"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "Сабраць усе інструменты ў адным акне «Сістэмных інструментаў»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "Нічога не пакідаць пасля выдалення VPN"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "Дадаць «Атрымаць VPN» з VPN, якія працягваюць абнаўляцца"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Даць сустрэчам у Zoom асобнае кіраўніцтва"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Адкрываць сустрэчы ў Zoom у Chrome, у вэб-версіі Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "Не дапускаць, каб усталёўкі ArtCraft ламалі ўсталёўкі з Flathub"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "Распазнаваць праграмы ўсталёўкі па звычайнай назве файла"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Прапаноўваць замены для праграм Windows у Linux"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "Выправіць наладу скрыні: distrobox няправільна мантуе папкі толькі для чытання"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Прапаноўваць версіі праграм Windows для Fedora або Ubuntu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Прапаноўваць версію для Linux, калі адкрываецца праграма Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "Выкарыстоўваць адзін shim, каб прашыўка не дадавала лішні запіс Fedora"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Вярнуць зону брандмаўэра Fedora"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "Узмацніць абарону службаў root, брандмаўэра і абнаўленняў без пароля"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "Новыя стандартныя налады: шпалеры, акцэнтныя папкі, экран блакіроўкі"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "Новая стандартная налада: бірузовы акцэнтны колер, таксама на экране ўваходу"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "Выправіць нататку пра адкат, цыкл уваходу і тэсты, што завісаюць"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "Выправіць адкат пры зависанні і паменшыць колькасць паўтораў да 2"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "Выправіць тэсты аўтаматычнага адкату"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "Рэальныя тэсты збояў для аўтаматычнага адкату"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "Дадаць аўтаматычны адкат праз greenboot"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "Запускаць макет у стылі Windows на працоўным стале, плюс дробныя выпраўленні"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "Прыпыняць аўтаматычныя абнаўленні на 3 дні пасля адмены абнаўлення"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "Дадаць у праграму ўсталёўкі крок «Макет працоўнага стала»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "Дадаць «Макет працоўнага стала» ў «Сістэмныя інструменты»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "Не даваць пераключэнню рэжымаў сілкавання чакаць абнаўленняў"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "Дадаць неабавязковы макет у стылі Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Выправіць прадусталёўкі Fedora 45 і шляхі палітыкі кантэйнераў"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "Чытаць крыніцы загрузкі ў новай папцы Fedora 45"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Перайсці на Fedora 45"
