@@ -95,6 +95,22 @@ msgid ""
 " it to you for a new one before then."
 msgstr "已將「{name}」新增至這台電腦，並將於 {date} 到期。到期前，請向提供給您的人索取新的憑證。"
 
+#. Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
+msgid "%A, %B %-d"
+msgstr "%-m月%-d日 %A"
+
+#. Translators: a date: month and day ("November 26"). Uses strftime codes.
+msgid "%B %-d"
+msgstr "%-m月%-d日"
+
+#. Translators: a date and a 12-hour time ("November 26, 7:02 PM"). Uses strftime codes.
+msgid "%B %-d, %-I:%M %p"
+msgstr "%-m月%-d日 %p%-I:%M"
+
+#. Translators: a date and a 24-hour time ("November 26, 19:02"). Uses strftime codes.
+msgid "%B %-d, %H:%M"
+msgstr "%-m月%-d日 %H:%M"
+
 msgid "(nothing was printed)"
 msgstr "（沒有任何輸出）"
 

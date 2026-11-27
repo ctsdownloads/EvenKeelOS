@@ -162,7 +162,7 @@ def paused_until():
 
 
 def day(t):
-    return time.strftime("%A, %B %-d", time.localtime(t))
+    return ui.day_text(time.localtime(t))
 
 
 def pause_updates(w):
@@ -395,13 +395,13 @@ def built(d):
 
 
 def when(d, other=None):
-    """A version's date in plain words ("Oct 14"), with the time ("Oct 14, 1:03 AM") if `other` is from that day too."""
+    """A version's date ("October 14"), with the time ("October 14, 1:03 AM") if `other` is from that day too."""
     t = built(d)
     if t is None:
         return _("an earlier date")
     o = built(other) if other is not None else None
     same_day = o is not None and t[:3] == o[:3]
-    return time.strftime("%b %-d, %-I:%M %p" if same_day else "%b %-d", t)
+    return ui.date_text(t, with_time=same_day)
 
 
 def undo_update():
@@ -900,7 +900,7 @@ def settings_note():
     try:
         lines = SETTINGS_REPAIRED.read_text().splitlines()
         kind, stamp, saved = lines[0].split()
-        saved = time.strftime("%A, %B %-d at %-I:%M %p", time.localtime(int(saved)))
+        saved = ui.date_text(time.localtime(int(saved)), with_time=True)
     except (OSError, ValueError, IndexError):
         return 0
     # Only soon after: an account made later doesn't get an old message.

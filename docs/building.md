@@ -293,15 +293,22 @@ menu names and password prompts) goes through gettext, in one domain,
 fails a change when that file is out of date, or when `check-translatable.py`
 finds screen text that skips `_()` or `gettext`.
 
-Each language is one file, `po/<language>.po`, and `po/LINGUAS` lists them
-(68 today). The build (`build_files/build.sh`) turns each file into
+Each language is one file, `po/<language>.po`, and `po/LINGUAS` lists them (68
+today). The build (`build_files/build.sh`) turns each file into
 `/usr/share/locale/<language>/LC_MESSAGES/evenkeel-os.mo`, and adds the
 translated names and descriptions to the menu entries (`.desktop`) and the
 password prompts (`.policy`). It fails if any language is missing.
 `build_files/check-translations.sh` runs on GitHub too: it fails a change when
 a language in `po/LINGUAS` has no file, a file has an error, or a line is
-untranslated or marked fuzzy. After changing screen text, run
-`build_files/make-pot.sh`, then update every `po/*.po` file before merging.
+untranslated or marked fuzzy. Dates follow the region picked under Formats in
+Settings, Region & Language ("26. November" for Germany, "11月26日" for Japan):
+the patterns are translatable lines filled in from the Unicode Common Locale
+Data Repository (CLDR), looked up by that region, with month and day names from
+the system. Times follow the 12- or 24-hour clock in Settings, and are 24-hour
+where the region has no AM and PM words. Finnish, Slovak and Tajik use the
+month's number, since the system's month names there aren't in the form a date
+needs. After changing screen text, run `build_files/make-pot.sh`, then update
+every `po/*.po` file before merging.
 
 The installer lists only the languages EvenKeelOS is translated into, read
 from the image's `evenkeel-os.mo` files, so a language with no translation is

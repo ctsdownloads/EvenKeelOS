@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: EvenKeelOS\n"
 "Report-Msgid-Bugs-To: https://github.com/ctsdownloads/EvenKeelOS/issues\n"
-"POT-Creation-Date: 2026-11-26 19:00+0000\n"
+"POT-Creation-Date: 2026-11-27 03:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,6 +91,22 @@ msgstr ""
 msgid ""
 "\"{name}\" was added to this computer and expires on {date}. Ask whoever "
 "gave it to you for a new one before then."
+msgstr ""
+
+#. Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
+msgid "%A, %B %-d"
+msgstr ""
+
+#. Translators: a date: month and day ("November 26"). Uses strftime codes.
+msgid "%B %-d"
+msgstr ""
+
+#. Translators: a date and a 12-hour time ("November 26, 7:02 PM"). Uses strftime codes.
+msgid "%B %-d, %-I:%M %p"
+msgstr ""
+
+#. Translators: a date and a 24-hour time ("November 26, 19:02"). Uses strftime codes.
+msgid "%B %-d, %H:%M"
 msgstr ""
 
 msgid "(nothing was printed)"

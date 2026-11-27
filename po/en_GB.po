@@ -107,6 +107,22 @@ msgstr ""
 "\"{name}\" was added to this computer and expires on {date}. Ask whoever gave"
 " it to you for a new one before then."
 
+#. Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
+msgid "%A, %B %-d"
+msgstr "%A %-d %B"
+
+#. Translators: a date: month and day ("November 26"). Uses strftime codes.
+msgid "%B %-d"
+msgstr "%-d %B"
+
+#. Translators: a date and a 12-hour time ("November 26, 7:02 PM"). Uses strftime codes.
+msgid "%B %-d, %-I:%M %p"
+msgstr "%-d %B, %-I:%M %p"
+
+#. Translators: a date and a 24-hour time ("November 26, 19:02"). Uses strftime codes.
+msgid "%B %-d, %H:%M"
+msgstr "%-d %B, %H:%M"
+
 msgid "(nothing was printed)"
 msgstr "(nothing was printed)"
 

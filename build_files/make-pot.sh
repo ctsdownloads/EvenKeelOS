@@ -24,7 +24,7 @@ other=(build_files/*.desktop iso/src/*.desktop build_files/*.policy iso/src/*.po
 common=(--from-code=UTF-8 --package-name=EvenKeelOS
         --msgid-bugs-address=https://github.com/ctsdownloads/EvenKeelOS/issues
         --add-comments=Translators: --sort-by-file --no-location -o "$new")
-xgettext "${common[@]}" -L Python -k_ -kN_ -kngettext:1,2 "${py[@]}"
+xgettext "${common[@]}" -L Python -k_ -kN_ -k_dates -kngettext:1,2 "${py[@]}"
 xgettext "${common[@]}" -j -L Shell -k -kgettext "${sh[@]}"
 xgettext "${common[@]}" -j "${other[@]}"
 # What each Windows program does ("job"), shown in the Windows Program window.
