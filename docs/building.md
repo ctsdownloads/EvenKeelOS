@@ -50,7 +50,7 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/evenkeel_os_yours.py` | Make it yours in Wheelhouse: the Light and dark, Wallpaper slideshow, and Fonts and text sections |
 | `build_files/check-appearance.py` | Build check: sunrise and sunset within 6 minutes of known times in four cities, no sunset in a polar night, a city for every time zone the installer offers, the custom times, a switch by hand kept until the next change, and the slideshow order |
 | `build_files/evenkeel-os-accent-icons`, `evenkeel-os-accent-icons.desktop`, `check-accent-icons.sh` | Folder icons in the accent color: the colored sets are built from Fedora's Adwaita at a pinned [Adwaita Colors](https://github.com/dpejoh/Adwaita-colors) commit; the helper switches sets when the accent color changes and leaves any other icon theme alone |
-| `build_files/rebrand.sh`, `initramfs.sh`, `evenkeel-os-boot-label` | EvenKeelOS name and logo, and the boot menu rename |
+| `build_files/rebrand.sh`, `initramfs.sh`, `evenkeel-os-boot-label` | EvenKeelOS name and logo, and the boot menu rename. Before the boot files are made, the build matches the zstd tool to its library version, since an update can bring one without the other |
 | `build_files/branding/` | Logos, the user picture, and the wallpapers (`wallpapers/`, a day and a night picture each, listed for Settings in `evenkeel-os.xml`) |
 | `build_files/evenkeel-os-shell-theme.sh` | Adds one rule to GNOME Shell's own style file at build time so the lock screen's password box uses the accent color; fails the build if GNOME renames that part |
 | `build_files/evenkeel-os-no-bootc.tuned.conf` | Keeps tuned from running bootc, and waiting on updates, at every power-mode switch |

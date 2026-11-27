@@ -415,6 +415,11 @@ done
 # TPM support in the boot image, for automatic disk unlock.
 dnf5 -y install tpm2-tss
 printf 'add_dracutmodules+=" tpm2-tss "\n' > /usr/lib/dracut/dracut.conf.d/90-evenkeel-os-tpm.conf
+# The zstd tool runs only with its own library version, and the boot files are compressed with it. An update can
+# bring a newer library without the tool (Fedora's zstd 1.6.0), so the tool is matched to the library first.
+zv=$(rpm -q --qf '%{version}-%{release}\n' libzstd | head -1)
+[ "$(rpm -q --qf '%{version}-%{release}\n' zstd | head -1)" = "$zv" ] || dnf5 -y install "zstd-$zv"
+[ "$(echo ok | zstd -q | zstd -dq)" = ok ] || { echo "ERROR: zstd $zv does not run: no boot files"; exit 1; }
 bash /ctx/initramfs.sh
 install -Dm755 /ctx/evenkeel-os-boot-label /usr/bin/evenkeel-os-boot-label
 install -Dm644 /ctx/NOTICE /usr/share/doc/evenkeel-os/NOTICE

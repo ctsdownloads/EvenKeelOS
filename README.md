@@ -153,6 +153,9 @@ other projects, under their own licenses, with their source available there:
   one version. See [Boot test](docs/building.md#boot-test). Every Test automatic
   rollback test can also run for real in that virtual machine when a build is
   started by hand. See [Rollback tests](docs/building.md#rollback-tests).
+- **Boot files:** before making them, the build matches the zstd tool to its
+  library version, since a Fedora update can bring one without the other. See
+  [How it's built](docs/building.md#how-its-built).
 - **Logo Menu:** <https://github.com/Aryan20/Logomenu> (GPL-2.0), from
   <https://extensions.gnome.org/extension/4451/logo-menu/>. Changed by the build: its menu gets a
   Wheelhouse entry (`build_files/build.sh`).
