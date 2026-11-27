@@ -53,7 +53,8 @@ jobs:
           shellcheck -s bash -S warning evenkeel-os-codecs-setup evenkeel-os-codecs-admin evenkeel-os-codecs-lib.sh \
             evenkeel-os-updates-pause-check evenkeel-os-flathub-apps greenboot/*.sh greenboot/evenkeel-os-boot-menu-repair \
             greenboot/evenkeel-os-greenboot-arm greenboot/evenkeel-os-test-fail update-locked-versions.sh \
-            evenkeel-os-flatpak-languages evenkeel-os-bazaar-language app-texts.sh check-app-texts.sh \
+            evenkeel-os-flatpak-languages evenkeel-os-bazaar-language evenkeel-os-language-follow app-texts.sh \
+            check-app-texts.sh \
             install-app-translations.sh
           pipx run --spec bandit==1.9.4 bandit -q -ll evenkeel-os-tools-admin evenkeel-os-tools-safe evenkeel-os-hwrules \
             evenkeel-os-vpn evenkeel-os-app-updates check-root-helpers.py check-vpns.py greenboot/evenkeel-os-settings \

@@ -351,8 +351,12 @@ README or Build, and upkeep by Dependabot, Renovate and the daily version check
 Disk sizes use each language's units and the region's decimal mark ("1,2 Go"
 in French). Tools find Downloads and Desktop under their names in the person's
 language (`xdg-user-dir`). After someone picks a new language in Settings
-(or for the whole computer), `evenkeel-os-flatpak-languages.timer` fetches Flatpak apps' translations for it
-within 10 minutes, instead of at the next daily update. Bazaar keeps a saved
+(or for the whole computer), `evenkeel-os-flatpak-languages.path` fetches Flatpak
+apps' translations for it right away (the `.timer` checks again every 10
+minutes), instead of at the next daily update. GNOME keeps dates, times and month
+names on the old language once their formats were ever set apart from it; when
+an account's language changes, `evenkeel-os-language-follow.service` sets the
+formats back to follow it, so they match after the next login. Bazaar keeps a saved
 copy of app names and descriptions in the language it was using; when the
 account's language changes, `evenkeel-os-bazaar-language.service` deletes that
 copy at the next login, before the desktop starts, so Bazaar fetches them again

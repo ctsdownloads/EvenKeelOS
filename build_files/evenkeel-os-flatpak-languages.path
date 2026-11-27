@@ -1,0 +1,8 @@
+[Unit]
+Description=Download Flatpak apps' translations as soon as an account's language changes
+
+[Path]
+PathChanged=/var/lib/AccountsService/users
+
+[Install]
+WantedBy=paths.target
