@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Build check: every test in Wheelhouse's Test automatic rollback list reaches the piece that breaks that thing."""
-import re
 import ast
+import re
 import subprocess
 import sys
 import tempfile

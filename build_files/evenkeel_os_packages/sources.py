@@ -28,15 +28,14 @@ def source_packages(kind, box, sources):
         arch = {"x86_64": "amd64", "aarch64": "arm64"}.get(platform.machine(), platform.machine())
         new = [f for f in apt_lists(box) if any(os.path.basename(f).startswith(m) for m in marks) and
                re.search(rf"_binary-({arch}|all)_Packages(\.\w+)?$", f)]
-        rows, name = [], None
+        rows = []
         if new:
             r = subprocess.run(boxes.in_box(box, "sh", "-c", "for f in " + " ".join(shlex.quote(f) for f in new) +
                                             "; do /usr/lib/apt/apt-helper cat-file \"$f\"; done | "
                                             "grep -E '^(Package|Description):'"), capture_output=True, text=True)
             for line in r.stdout.splitlines():
                 if line.startswith("Package:"):
-                    name = line.split(":", 1)[1].strip()
-                    rows.append([name, ""])
+                    rows.append([line.split(":", 1)[1].strip(), ""])
                 elif line.startswith("Description:") and rows and not rows[-1][1]:
                     rows[-1][1] = line.split(":", 1)[1].strip()
     seen, out = set(), []

@@ -3703,28 +3703,6 @@ msgstr "Рӯйхати барномаҳо аз манбаи нави борги�
 msgid "Recommended"
 msgstr "Тавсия дода мешавад"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Тавсия: «Нест кардани қуттӣ». Он тақрибан {size} озод мекунад ва дафъаи "
-"дигар, ки {apps}-ро насб мекунед, худ аз худ бармегардад. Ҳар чизе, ки бо "
-"роҳи дигар ба қуттӣ илова шудааст, низ нест карда мешавад. Ба файлҳои шумо "
-"даст расонида намешавад."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Тавсия: «Нест кардани қуттӣ». Он ҷои дискро, ки қуттӣ мегирад, озод мекунад "
-"ва дафъаи дигар, ки {apps}-ро насб мекунед, худ аз худ бармегардад. Ҳар чизе,"
-" ки бо роҳи дигар ба қуттӣ илова шудааст, низ нест карда мешавад. Ба файлҳои "
-"шумо даст расонида намешавад."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3828,13 +3806,6 @@ msgstr "Кодекҳои медиаро тоза мекунед?"
 
 msgid "Remove the test marker"
 msgstr "Тоза кардани нишонаи санҷиш"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Аввал онҳоро тоза кунед:  codecs remove -ро иҷро кунед, бозоғозӣ кунед, баъд "
-"«Ҳама чиз»-ро боз интихоб кунед."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Тоза кардани чизҳое, ки компютер дигар ба онҳо ниёз надорад"
@@ -6751,12 +6722,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage тоза кардан ҷои диск"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"кодекҳо аз версияи пештараи ин система (negativo17) ҳанӯз насб шудаанд."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;кодекҳо;кодек;видео;аудио;медиа;насб;"
@@ -7200,16 +7165,6 @@ msgstr "{name} оғоз нашуд."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} «Ҷои ҷамъиятӣ» аст"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} аллакай аз Bazaar, мағозаи барномаҳо, насб шудааст.\n"
-"\n"
-"Тавсия: «Кушодан»."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8819,3 +8774,14 @@ msgstr "Хондани манбаъҳои боргирӣ дар ҷузвдони
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Гузариш ба Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Шрифтҳо ва андозаи матн ба ҳолати аввалаи EvenKeelOS баргардонида шуданд."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Тавсия: «Нест кардани қуттӣ». Дафъаи дигар, ки {apps}-ро насб мекунед, он худ аз худ бармегардад. Ҳар чизе, ки бо роҳи дигар ба қуттӣ илова шудааст, низ нест карда мешавад. Ба файлҳои шумо даст расонида намешавад."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Нест кардани он тақрибан {size} озод мекунад."

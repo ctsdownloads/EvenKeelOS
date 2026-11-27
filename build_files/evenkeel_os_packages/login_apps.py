@@ -13,10 +13,6 @@ from evenkeel_os_packages import app_list, boxes, common, launchers, windows
 AUTOSTART = common.HOME / ".config/autostart"
 
 
-def launcher(entry, app):
-    return common.HOME / ".local/share/applications" / f"{entry['where']}-{os.path.basename(app)}"
-
-
 def login_file(entry, app):
     return AUTOSTART / f"evenkeel-os-{entry['where']}-{os.path.basename(app)}"
 
@@ -35,7 +31,7 @@ def set_login(entry, on):
             done = True
             continue
         try:
-            text = launcher(entry, a).read_text()
+            text = common.launcher(entry["where"], a).read_text()
         except OSError:         # the app's launcher is gone: nothing to switch
             continue
         text = re.sub(r"(?m)^(X-GNOME-Autostart-[^=]*|Hidden|NoDisplay)=.*\n?", "", text)
@@ -97,6 +93,17 @@ def unchecked(f, checked):
         return False
 
 
+def others_entries(checked):
+    """(file, text) of login entries not made here and changed since they were last checked."""
+    for f in sorted(AUTOSTART.glob("*.desktop")):
+        if f.name.startswith("evenkeel-os-") or not unchecked(f, checked):
+            continue
+        try:
+            yield f, f.read_text()
+        except OSError:         # removed while we looked
+            continue
+
+
 def fix_app_login_files():
     """Point an app's own open-at-login entry at its box (Discord); returns how many were fixed."""
     fixed = 0
@@ -107,13 +114,7 @@ def fix_app_login_files():
     if not by_box or not AUTOSTART.is_dir():
         return 0
     checked = login_checked()
-    for f in sorted(AUTOSTART.glob("*.desktop")):
-        if f.name.startswith("evenkeel-os-") or not unchecked(f, checked):
-            continue
-        try:
-            text = f.read_text()
-        except OSError:         # removed while we looked
-            continue
+    for f, text in others_entries(checked):
         if launchers.BOX_RUN in text or re.search(r"(?m)^(Hidden=true|X-GNOME-Autostart-enabled=false)$", text):
             continue        # already fixed, or switched off
         m = re.search(r"(?m)^Exec=(.*)$", text)
@@ -153,14 +154,8 @@ def app_login_files_to_fix():
     """Cheap test for login: are there login entries pointing at a path the system does not have?"""
     if not AUTOSTART.is_dir() or not any(r["where"].startswith("evenkeel-") for r in app_list.load()):
         return False
-    checked = login_checked()
-    for f in AUTOSTART.glob("*.desktop"):
-        if f.name.startswith("evenkeel-os-") or not unchecked(f, checked):
-            continue
-        try:
-            m = re.search(r"(?m)^Exec=(\S+)", f.read_text())
-        except OSError:         # removed while we looked
-            continue
+    for _f, text in others_entries(login_checked()):
+        m = re.search(r"(?m)^Exec=(\S+)", text)
         if m and m.group(1).startswith("/") and launchers.BOX_RUN not in m.group(1) and not os.path.exists(m.group(1)):
             return True
     return False

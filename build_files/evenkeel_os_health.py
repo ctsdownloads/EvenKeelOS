@@ -7,7 +7,8 @@ import sys
 import time
 from pathlib import Path
 
-from evenkeel_os_ui import _, N_
+import evenkeel_os_network as net
+from evenkeel_os_ui import _, N_, answer
 
 ROOT = Path("/")                       # the build checks point this at a made-up computer
 RECORD = "/var/lib/evenkeel-os/health-record.json"
@@ -17,7 +18,7 @@ BOOT_OPTIONS = "/var/lib/evenkeel-os/boot-options.json"
 SHARED_FOLDERS = "/etc/evenkeel-os/shared-folders.json"
 SHARES = "/etc/samba/evenkeel-shares.conf"     # the shares Samba is given (folders with a sharing password)
 TPM_PCRS = ("7", "14")                          # what automatic disk unlock is tied to (evenkeel-os-tools-admin)
-PLACES = ("evenkeel-public", "evenkeel-home", "evenkeel-work")    # evenkeel_os_network's zones (a build check)
+PLACES = (net.PUBLIC, net.HOME, net.WORK)
 # Real services the "A system service fails" test may break (each has the test drop-in); the first one running.
 TEST_SERVICES = ("ModemManager.service", "switcheroo-control.service")
 FORMAT = 2
@@ -52,11 +53,8 @@ def read(path, default=""):
 
 def run(cmd, timeout=30):
     """(exit code, output); 127 when the program is missing or hangs."""
-    try:
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, env=dict(os.environ, LC_ALL="C"))
-    except (OSError, subprocess.TimeoutExpired):
-        return 127, ""
-    return r.returncode, r.stdout
+    r = answer(cmd, timeout, env=dict(os.environ, LC_ALL="C"))
+    return (r.returncode, r.stdout) if r else (127, "")
 
 
 def link_name(p):
@@ -324,7 +322,7 @@ def software():
     works("dns", N_("Looking up website names (DNS)"), run(["resolvectl", "query", "--legend=no", "localhost"])[0] == 0,
           [enabled(["systemd-resolved.service"])])
     cmdline = read("/proc/cmdline").split()
-    if P(DISK_UNLOCK_ON).exists() and any(a.startswith("rd.luks.uuid=") for a in cmdline):
+    if P(DISK_UNLOCK_ON).exists() and luks_uuids():
         rc, log = run(["journalctl", "-b", "-o", "cat", "--no-pager", "-t", "systemd-cryptsetup"])
         # An unreadable journal says nothing either way, so it counts as working.
         works("disk-unlock", N_("Automatic disk unlock"),
@@ -387,7 +385,7 @@ def drivers():
 def services():
     """Services running now (long-running ones: a one-time job may fail offline, which never counts)."""
     _rc, out = run(["systemctl", "list-units", "--type=service", "--state=running", "--plain", "--no-legend",
-                  "--no-pager"])
+                    "--no-pager"])
     items = {}
     for line in out.splitlines():
         f = line.lstrip("\u25cf* ").split(None, 4)      # a failed unit can start with a dot
@@ -400,7 +398,7 @@ def services():
 
 def failed_services():
     _rc, out = run(["systemctl", "list-units", "--type=service", "--state=failed", "--plain", "--no-legend",
-                  "--no-pager"])
+                    "--no-pager"])
     return {w for line in out.splitlines() for w in line.split()[:2] if w.endswith(".service")}
 
 
@@ -475,13 +473,33 @@ def options_only(record=None):
         return False
     if record and isinstance(record.get("kargs"), list) and record["kargs"] != own_kargs():
         return True
-    rc, out = run(["rpm-ostree", "status", "--json"], 120)
+    return same_system() is True
+
+
+def deployments(*flags, timeout=120):
+    """The system versions on disk, newest first (rpm-ostree status --json), or None when it can't say."""
+    rc, out = run(["rpm-ostree", "status", "--json", *flags], timeout)
     try:
-        ds = json.loads(out)["deployments"]
+        ds = json.loads(out)["deployments"] if rc == 0 else None
+    except (ValueError, KeyError, TypeError):
+        return None
+    return ds if isinstance(ds, list) else None
+
+
+def requested(deployment):
+    """The package names added to a system version, by name or from a file (listed as name-version-release.arch)."""
+    return set(deployment.get("requested-packages", [])) | \
+        {n.rsplit("-", 2)[0] for n in deployment.get("requested-local-packages", [])}
+
+
+def same_system(timeout=120):
+    """Whether the version running and the other one on disk are the same system; None when it can't be told."""
+    try:
+        ds = deployments(timeout=timeout)
         booted = next(d["checksum"] for d in ds if d.get("booted"))
         other = next(d["checksum"] for d in ds if not d.get("booted"))
-    except (ValueError, KeyError, TypeError, StopIteration):
-        return False
+    except (KeyError, TypeError, StopIteration):
+        return None
     return booted == other
 
 
@@ -634,15 +652,20 @@ def compare(wait=None, path=RECORD, note=False):
 USAGE = "Usage: evenkeel-os-health trial | record [--now] | compare [--no-wait] [--record=FILE]"
 
 
+def grubenv():
+    """The boot menu's saved settings, as name=value words."""
+    return run(["grub2-editenv", "/boot/grub2/grubenv", "list"])[1].split()
+
+
 def on_trial():
     """A new version greenboot is trying (named in the boot menu's settings), not a fallback to the previous one."""
-    env = run(["grub2-editenv", "/boot/grub2/grubenv", "list"])[1].split()
+    env = grubenv()
     return any(v.startswith("greenboot_next_deployment_id=") for v in env) and "boot_counter=-1" not in env
 
 
 def last_start():
     """Whether greenboot goes back after this failure (its retries are used up) instead of trying again."""
-    for v in run(["grub2-editenv", "/boot/grub2/grubenv", "list"])[1].split():
+    for v in grubenv():
         if v.startswith("boot_counter="):
             try:
                 return int(v.split("=", 1)[1]) <= 0
@@ -651,18 +674,46 @@ def last_start():
     return False
 
 
+def luks_uuids():
+    """The encrypted disks named at startup (rd.luks.uuid=), without their luks- prefix."""
+    return [a.split("=", 1)[1].removeprefix("luks-") for a in read("/proc/cmdline").split()
+            if a.startswith("rd.luks.uuid=")]
+
+
+def running_test():
+    """The rollback test this start runs (its kernel argument), or None."""
+    return next((a.split("=", 1)[1] for a in read("/proc/cmdline").split()
+                 if a.startswith("evenkeel_os.test_rollback=")), None)
+
+
+# Switched on from /usr (build.sh), so deleting /etc can't switch it off; systemctl is-enabled only reads /etc.
+GREENBOOT_ON = "/usr/lib/systemd/system/multi-user.target.wants/greenboot-healthcheck.service"
+
+
+def test_refusal():
+    """Why a rollback or settings test can't start now: (exit code, reason, []), or (0, "", the system versions)."""
+    masked = run(["systemctl", "is-enabled", "greenboot-healthcheck.service"])[1].strip().startswith("masked")
+    if not P(GREENBOOT_ON).exists() or masked:
+        return 4, "Automatic rollback is not turned on in this version, or it was switched off (masked).", []
+    if "boot_counter" not in read("/boot/grub2/grub.cfg"):
+        return 4, "The boot menu has no rollback counter: this computer was installed before automatic rollback.", []
+    if running_test() is not None:
+        return 6, "This start is a test copy; take its test marker off first.", []
+    ds = deployments()
+    if ds is None:
+        return 1, "The system versions couldn't be read.", []
+    if any(d.get("staged") for d in ds):
+        return 5, "An update is waiting for a restart.", []
+    return 0, "", ds
+
+
 def trial_kind():
     """The test this start runs, "boot-options" for the same system with other boot options, or "update"."""
-    for a in read("/proc/cmdline").split():
-        if a.startswith("evenkeel_os.test_rollback="):
-            return a.split("=", 1)[1]
+    test = running_test()
+    if test:
+        return test
     # As 90-evenkeel-os-rolled-back.sh tells them apart: the running version and the other one on disk.
-    try:
-        ds = json.loads(run(["rpm-ostree", "status", "--json"], 60)[1])["deployments"]
-        sums = [d["checksum"] for d in ds if d.get("booted")] + [d["checksum"] for d in ds if not d.get("booted")][:1]
-    except (ValueError, KeyError, TypeError):
-        return "update"
-    return "boot-options" if len(sums) == 2 and sums[0] == sums[1] else "update"
+    return "boot-options" if same_system(60) else "update"
 
 
 def desktop_user():

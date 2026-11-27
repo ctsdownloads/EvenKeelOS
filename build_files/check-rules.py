@@ -1,5 +1,5 @@
 #!/usr/bin/python3 -I
-"""Fails on a comment or docstring over one line, an error dropped silently, or a forbidden word, in any file."""
+"""Fails on a comment or docstring over one line, a divider comment, an error dropped silently, or a forbidden word."""
 import ast
 import io
 import re
@@ -9,6 +9,7 @@ import tokenize
 
 SELF = "build_files/check-rules.py"
 WORDS = ["-e", "co-authored-by", "-e", "easy ?speak"]
+DIVIDER = re.compile(r"[-=*#]{8,}")
 HEREDOC = re.compile(r"(?<!<)<<(?!<)-?\s*(['\"]?)([A-Za-z_]\w*)\1")
 
 
@@ -76,6 +77,8 @@ for path in tracked():
     if k:
         rows = comment_rows(k, text)
         problems += [(path, i, "comment over one line") for i in sorted(rows) if i + 1 in rows and i - 1 not in rows]
+        lines = text.split("\n")
+        problems += [(path, i, "divider comment") for i in sorted(rows) if DIVIDER.search(lines[i - 1])]
     if k == "python":
         problems += [(path, i, why) for i, why in python_problems(path, text)]
 found = subprocess.run(["git", "grep", "-nIiE", *WORDS, "--", ".", f":!{SELF}", ":!po"], capture_output=True, text=True)

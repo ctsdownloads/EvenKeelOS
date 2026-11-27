@@ -3593,26 +3593,6 @@ msgstr "جارٍ قراءة قائمة التطبيقات من مصدر التن
 msgid "Recommended"
 msgstr "موصى به"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"موصى به: \"حذف الصندوق\". يحرّر نحو {size}، ويعود من تلقاء نفسه في المرة "
-"التالية التي تثبّت فيها {apps}. ويُحذف أيضًا أي شيء أُضيف إلى الصندوق بطريقة "
-"أخرى. لن تُمَسّ ملفاتك."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"موصى به: \"حذف الصندوق\". يحرّر مساحة القرص التي يشغلها، ويعود من تلقاء نفسه "
-"في المرة التالية التي تثبّت فيها {apps}. ويُحذف أيضًا أي شيء أُضيف إلى "
-"الصندوق بطريقة أخرى. لن تُمَسّ ملفاتك."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3712,13 +3692,6 @@ msgstr "هل تريد إزالة برامج ترميز الوسائط؟"
 
 msgid "Remove the test marker"
 msgstr "إزالة علامة الاختبار"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"أزلها أولاً: شغّل  codecs remove ، ثم أعد التشغيل، ثم اختر \"كل شيء\" مرة "
-"أخرى."
 
 msgid "Remove things the computer no longer needs"
 msgstr "إزالة الأشياء التي لم يعد الكمبيوتر بحاجة إليها"
@@ -6564,11 +6537,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "تنظيف التخزين clean storage"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "لا تزال برامج الترميز من إصدار أقدم من هذا النظام (negativo17) مثبتة."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;برامج "
@@ -6994,16 +6962,6 @@ msgstr "لم يبدأ {name}."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} مكان عام"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} مثبّت بالفعل من Bazaar، متجر التطبيقات.\n"
-"\n"
-"موصى به: \"افتحه\"."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8622,3 +8580,14 @@ msgstr "قراءة مصادر التنزيل في مجلد Fedora 45 الجدي�
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "الانتقال إلى Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "الخطوط وحجم النص عادت إلى إعدادات EvenKeelOS الأصلية."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "موصى به: \"حذف الصندوق\". يعود الصندوق من تلقاء نفسه في المرة التالية التي تثبّت فيها {apps}. ويُحذف أيضًا أي شيء أُضيف إلى الصندوق بطريقة أخرى. لن تُمَسّ ملفاتك."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "يحرّر حذفه نحو {size}."

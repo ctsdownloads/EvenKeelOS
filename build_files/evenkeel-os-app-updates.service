@@ -1,6 +1,6 @@
 [Unit]
 Description=Check apps added to the system for newer versions
-Documentation=https://github.com/ctsdownloads/evenkeel-os/blob/main/docs/apps.md#updates
+Documentation=https://github.com/ctsdownloads/EvenKeelOS/blob/main/docs/apps.md#updates
 Wants=network-online.target
 After=network-online.target uupd.service uupd-manual.service
 

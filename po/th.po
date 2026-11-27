@@ -3588,26 +3588,6 @@ msgstr "กำลังอ่านรายการแอปจากแหล
 msgid "Recommended"
 msgstr "แนะนำ"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"แนะนำ: \"ลบกล่อง\" จะได้พื้นที่คืนประมาณ {size} "
-"และกล่องจะกลับมาเองในครั้งถัดไปที่คุณติดตั้ง {apps} "
-"สิ่งที่เพิ่มลงในกล่องด้วยวิธีอื่นจะถูกลบไปด้วย ไฟล์ของคุณจะไม่ได้รับผลกระทบ"
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"แนะนำ: \"ลบกล่อง\" จะได้พื้นที่ดิสก์ของกล่องคืน "
-"และกล่องจะกลับมาเองในครั้งถัดไปที่คุณติดตั้ง {apps} "
-"สิ่งที่เพิ่มลงในกล่องด้วยวิธีอื่นจะถูกลบไปด้วย ไฟล์ของคุณจะไม่ได้รับผลกระทบ"
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3706,13 +3686,6 @@ msgstr "ลบตัวแปลงสัญญาณสื่อไหม?"
 
 msgid "Remove the test marker"
 msgstr "ลบเครื่องหมายการทดสอบ"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"ลบสิ่งเหล่านั้นออกก่อน: เรียกใช้  codecs remove  รีสตาร์ท แล้วเลือก "
-"\"ทุกอย่าง\" อีกครั้ง"
 
 msgid "Remove things the computer no longer needs"
 msgstr "ลบสิ่งที่คอมพิวเตอร์ไม่ต้องใช้อีกต่อไป"
@@ -6528,11 +6501,6 @@ msgstr "chrome โครม"
 msgid "clean storage"
 msgstr "clean storage ล้าง พื้นที่เก็บข้อมูล"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "ยังมีตัวแปลงสัญญาณจากระบบเวอร์ชันก่อนหน้า (negativo17) ติดตั้งอยู่"
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;ตัวแปลงสัญญาณ;โคเดก;วิดีโอ;เสียง;สื่อ;ติดตั้ง;"
@@ -6962,16 +6930,6 @@ msgstr "{name} ไม่ได้เริ่มทำงาน"
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} เป็นสถานที่สาธารณะ"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} ติดตั้งจาก Bazaar ร้านค้าแอป อยู่แล้ว\n"
-"\n"
-"แนะนำ: \"เปิด\""
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8571,3 +8529,14 @@ msgstr "อ่านแหล่งดาวน์โหลดในโฟลเ
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "ย้ายไปใช้ Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "แบบอักษรและขนาดข้อความกลับเป็นค่าของ EvenKeelOS แล้ว"
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "แนะนำ: \"ลบกล่อง\" กล่องจะกลับมาเองในครั้งถัดไปที่คุณติดตั้ง {apps} สิ่งที่เพิ่มลงในกล่องด้วยวิธีอื่นจะถูกลบไปด้วย ไฟล์ของคุณจะไม่ได้รับผลกระทบ"
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "การลบจะได้พื้นที่คืนประมาณ {size}"

@@ -3,9 +3,12 @@ import glob
 import math
 import os
 import re
-import subprocess
+import sys
 
 from i18n import _, N_
+
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+from evenkeel_os_ui import answer  # noqa: E402
 
 SYS = "/sys"
 PROC = "/proc"
@@ -14,8 +17,8 @@ VENDORS = {"0x8086": "Intel", "0x1002": "AMD", "0x10de": "NVIDIA", "0x14e4": "Br
            "0x14c3": "MediaTek", "0x168c": "Qualcomm Atheros", "0x17cb": "Qualcomm"}
 BROADCOM = "0x14e4"
 NVIDIA = N_("The NVIDIA card runs on the open-source driver built into EvenKeelOS. The proprietary NVIDIA driver "
-          "isn't used: it breaks too often to keep the promise that EvenKeelOS just works. If you need it, use "
-          "Bazzite or Bluefin's NVIDIA editions instead.")
+            "isn't used: it breaks too often to keep the promise that EvenKeelOS just works. If you need it, use "
+            "Bazzite or Bluefin's NVIDIA editions instead.")
 NO_FIRMWARE = ("b43", "b43legacy")           # Broadcom drivers whose firmware Fedora can't include
 RAID_HIDDEN = re.compile(r"remapped NVMe devices|Switch your BIOS from RAID to AHCI")
 EFI_GLOBAL = "8be4df61-93ca-11d2-aa0d-00e098032b8c"
@@ -73,11 +76,8 @@ def kind(dev, prefix):
 def kernel_log():
     """This start's kernel messages, or "" when they can't be read."""
     for cmd in (["journalctl", "-k", "-b", "0", "-o", "cat", "--no-pager"], ["dmesg"]):
-        try:
-            r = subprocess.run(cmd, capture_output=True, text=True, timeout=20)
-        except (OSError, subprocess.TimeoutExpired):
-            continue
-        if r.returncode == 0 and r.stdout.strip():
+        r = answer(cmd)
+        if r and r.returncode == 0 and r.stdout.strip():
             return r.stdout
     return ""
 
@@ -94,8 +94,8 @@ def raid_hidden(log=None):
 
 
 RAID_ADVICE = N_("The BIOS's RAID setting (Intel RST) hides the disk. Restart into the BIOS and set the storage mode "
-               "(often called SATA mode or SATA operation) to AHCI. Windows on this disk won't start after that "
-               "change, but installing EvenKeelOS erases it anyway.")
+                 "(often called SATA mode or SATA operation) to AHCI. Windows on this disk won't start after that "
+                 "change, but installing EvenKeelOS erases it anyway.")
 
 
 def save_results():

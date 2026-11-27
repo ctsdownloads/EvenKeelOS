@@ -152,9 +152,6 @@ def check(notify):
 
 
 def seen(fp):
-    if not FINGERPRINT.fullmatch(fp):
-        print(__doc__)
-        return 2
     known = load(KNOWN, {})
     known.pop(fp, None)
     save(KNOWN, known)
@@ -163,19 +160,14 @@ def seen(fp):
 
 
 def trusted(fp):
-    if not FINGERPRINT.fullmatch(fp):
-        print(__doc__)
-        return 2
     return 0 if fp in trusted_now()[0] else 1
 
 
 def main(argv):
     if argv[1:] in (["check"], ["check", "--notify"]):
         return check(len(argv) == 3)
-    if len(argv) == 3 and argv[1] == "seen":
-        return seen(argv[2])
-    if len(argv) == 3 and argv[1] == "trusted":
-        return trusted(argv[2])
+    if len(argv) == 3 and argv[1] in ("seen", "trusted") and FINGERPRINT.fullmatch(argv[2]):
+        return (seen if argv[1] == "seen" else trusted)(argv[2])
     print(__doc__)
     return 2
 

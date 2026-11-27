@@ -3782,28 +3782,6 @@ msgstr "Liste der Apps aus der neuen Download-Quelle wird gelesen"
 msgid "Recommended"
 msgstr "Empfohlen"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Empfohlen: Box löschen. Das gibt etwa {size} frei, und die Box kommt von "
-"selbst zurück, wenn Sie das nächste Mal {apps} installieren. Alles, was auf "
-"anderem Weg in die Box gelangt ist, wird ebenfalls gelöscht. Ihre Dateien "
-"bleiben unberührt."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Empfohlen: Box löschen. Das gibt ihren Speicherplatz frei, und die Box kommt "
-"von selbst zurück, wenn Sie das nächste Mal {apps} installieren. Alles, was "
-"auf anderem Weg in die Box gelangt ist, wird ebenfalls gelöscht. Ihre Dateien"
-" bleiben unberührt."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3910,13 +3888,6 @@ msgstr "Medien-Codecs entfernen?"
 
 msgid "Remove the test marker"
 msgstr "Testmarkierung entfernen"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Entfernen Sie sie zuerst: Führen Sie  codecs remove  aus, starten Sie neu und"
-" wählen Sie dann erneut „Alles“."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Dinge entfernen, die der Computer nicht mehr braucht"
@@ -6902,13 +6873,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "Speicher bereinigen"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"Codecs aus einer früheren Version dieses Systems (negativo17) sind noch "
-"installiert."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr "Codecs;Codec;ffmpeg;h264;Video;Audio;Medien;installieren;"
 
@@ -7347,16 +7311,6 @@ msgstr "{name} wurde nicht gestartet."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} ist ein öffentlicher Ort"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} ist bereits über Bazaar, den App-Store, installiert.\n"
-"\n"
-"Empfohlen: Öffnen."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8979,3 +8933,14 @@ msgstr "Download-Quellen im neuen Ordner von Fedora 45 lesen"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Auf Fedora 45 umstellen"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Schriftarten und Textgröße sind wieder die von EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Empfohlen: Box löschen. Die Box kommt von selbst zurück, wenn Sie das nächste Mal {apps} installieren. Alles, was auf anderem Weg in die Box gelangt ist, wird ebenfalls gelöscht. Ihre Dateien bleiben unberührt."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Das Löschen gibt etwa {size} frei."

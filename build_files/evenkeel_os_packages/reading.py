@@ -6,7 +6,7 @@ import re
 import subprocess
 import tarfile
 from pathlib import Path
-from evenkeel_os_ui import _, N_
+from evenkeel_os_ui import _, N_, load_program
 from evenkeel_os_packages import common, update_notes
 
 
@@ -139,7 +139,7 @@ def read_package(path):
     return pkg
 
 
-# ---------------------------------------------------------------- what the package needs
+# What the package needs
 
 def desktop_entry(text):
     """(visible, name) for a .desktop file."""
@@ -156,12 +156,8 @@ def desktop_entry(text):
     return visible, fields.get("Name", "")
 
 
-RUNS_PROGRAM = re.compile(r"\bRUN\b(?!\{builtin\})|\bPROGRAM\b|IMPORT\{program\}")   # RUN{builtin} stays in udev
-
-
-def rule_runs_program(text):
-    joined = re.sub(r"\\\n", " ", text)
-    return any(RUNS_PROGRAM.search(line) for line in joined.splitlines() if not line.lstrip().startswith("#"))
+# The hardware-rules helper's own test, so a rule offered here is one it takes.
+rule_runs_program = load_program(common.HWRULES, "hwrules").runs_program
 
 
 # Printer description, filter or driver files, not docs or examples; ADDS_PRINTER matches an install script's lpadmin.

@@ -3753,28 +3753,6 @@ msgstr "Ag léamh liosta na n-aipeanna ón bhfoinse íoslódála nua"
 msgid "Recommended"
 msgstr "Molta"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Molta: Scrios an bosca. Saorfaidh sé thart ar {size}, agus tiocfaidh sé ar "
-"ais leis féin an chéad uair eile a shuiteálann tú {apps}. Scriostar freisin "
-"aon rud a cuireadh leis an mbosca ar bhealach eile. Ní bhaintear le do chuid "
-"comhad."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Molta: Scrios an bosca. Saorfaidh sé a spás diosca, agus tiocfaidh sé ar ais "
-"leis féin an chéad uair eile a shuiteálann tú {apps}. Scriostar freisin aon "
-"rud a cuireadh leis an mbosca ar bhealach eile. Ní bhaintear le do chuid "
-"comhad."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3875,13 +3853,6 @@ msgstr "An mian leat na codecanna meán a bhaint?"
 
 msgid "Remove the test marker"
 msgstr "Bain an marcóir tástála"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Bain iad ar dtús: rith  codecs remove , atosaigh, ansin roghnaigh Gach rud "
-"arís."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Bain rudaí nach dteastaíonn ón ríomhaire a thuilleadh"
@@ -6846,13 +6817,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "glan stóras clean storage"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"tá codecanna ó leagan níos luaithe den chóras seo (negativo17) fós "
-"suiteáilte."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecanna;codec;ffmpeg;h264;físeán;fuaim;meáin;suiteáil;video;audio;media;install;"
@@ -7300,16 +7264,6 @@ msgstr "Níor thosaigh {name}."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "Is Áit phoiblí é {name}"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"Tá {name} suiteáilte cheana féin ó Bazaar, an siopa aipeanna.\n"
-"\n"
-"Molta: Oscail é."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8939,3 +8893,14 @@ msgstr "Léigh foinsí íoslódála i bhfillteán nua Fedora 45"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Bog go Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Tá na clónna agus méid an téacs ar ais go dtí socruithe féin EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Molta: Scrios an bosca. Tiocfaidh sí ar ais léi féin an chéad uair eile a shuiteálann tú {apps}. Scriostar freisin aon rud a cuireadh leis an mbosca ar bhealach eile. Ní bhaintear le do chuid comhad."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Saorfaidh a scriosadh thart ar {size}."

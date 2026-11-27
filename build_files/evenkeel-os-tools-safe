@@ -5,13 +5,14 @@
   evenkeel-os-tools-safe disk-unlock on|off      (the disk password on standard input)
   evenkeel-os-tools-safe free-space
 """
-import importlib.machinery
-import importlib.util
 import os
 import subprocess
 import sys
 import time
 from pathlib import Path
+
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+from evenkeel_os_ui import load_program  # noqa: E402
 
 ADMIN = "/usr/libexec/evenkeel-os-tools-admin"
 FAILURES = Path("/var/lib/evenkeel-os/disk-password-wrong")    # the times of recent wrong disk passwords
@@ -35,7 +36,7 @@ def disk_unlock(state):
         print("Too many wrong disk passwords. Try again in an hour.")
         return 4
     try:
-        admin().disk_unlock(state)
+        load_program(ADMIN, "evenkeel_os_tools_admin").disk_unlock(state)
         rc = 0
     except SystemExit as e:
         rc = e.code if isinstance(e.code, int) else 1
@@ -45,14 +46,6 @@ def disk_unlock(state):
     elif rc == 0:
         FAILURES.unlink(missing_ok=True)
     return rc
-
-
-def admin():
-    loader = importlib.machinery.SourceFileLoader("evenkeel_os_tools_admin", ADMIN)
-    spec = importlib.util.spec_from_loader(loader.name, loader)
-    module = importlib.util.module_from_spec(spec)
-    loader.exec_module(module)
-    return module
 
 
 def main(argv):

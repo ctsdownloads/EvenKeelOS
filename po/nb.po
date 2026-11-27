@@ -3635,26 +3635,6 @@ msgstr "Leser listen over apper fra den nye nedlastingskilden"
 msgid "Recommended"
 msgstr "Anbefalt"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Anbefalt: Slett boksen. Det frigjør omtrent {size}, og kommer tilbake av seg "
-"selv neste gang du installerer {apps}. Alt som er lagt til i boksen på en "
-"annen måte, blir også slettet. Filene dine blir ikke rørt."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Anbefalt: Slett boksen. Den frigjør diskplassen sin og kommer tilbake av seg "
-"selv neste gang du installerer {apps}. Alt som legges til i boksen på en "
-"annen måte, blir også slettet. Filene dine blir ikke rørt."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3757,13 +3737,6 @@ msgstr "Vil du fjerne mediekodekene?"
 
 msgid "Remove the test marker"
 msgstr "Fjern testmarkøren"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Fjern dem først: Kjør  codecs remove , start på nytt, og velg deretter «Alt» "
-"igjen."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Fjern ting datamaskinen ikke lenger trenger"
@@ -6628,13 +6601,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "rydd lagringsplass"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"kodeker fra en tidligere versjon av dette systemet (negativo17) er fortsatt "
-"installert."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;kodeker;kodek;lyd;medier;installer;"
@@ -7058,16 +7024,6 @@ msgstr "{name} startet ikke."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} er et Offentlig sted"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} er allerede installert fra Bazaar, appbutikken.\n"
-"\n"
-"Anbefalt: Åpne det."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8678,3 +8634,14 @@ msgstr "Les nedlastingskilder i Fedora 45s nye mappe"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Gå over til Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Skrifttyper og tekststørrelse er tilbake til EvenKeelOS sine egne."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Anbefalt: Slett boksen. Den kommer tilbake av seg selv neste gang du installerer {apps}. Alt som er lagt til i boksen på en annen måte, blir også slettet. Filene dine blir ikke rørt."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Å slette den frigjør omtrent {size}."

@@ -15,6 +15,10 @@ from i18n import _, N_
 HERE = os.path.dirname(os.path.realpath(__file__))
 
 
+def disk_name(disk):
+    return f"{disk['model']}, {disk['size']}"
+
+
 class DiskScreen(screens.ListScreen):
     title = N_("Disk")
     step = N_("Disk")
@@ -32,7 +36,7 @@ class DiskScreen(screens.ListScreen):
         super().enter()
 
     def items(self):
-        return [(f"{d['model']}, {d['size']}",
+        return [(disk_name(d),
                  (_("{path}, has encrypted data").format(path=d["path"]) if d["encrypted"] else d["path"]),
                  bool(self.c.disk) and self.c.disk["path"] == d["path"]) for d in self.disks]
 
@@ -51,11 +55,11 @@ class DiskScreen(screens.ListScreen):
         if not self.disks:
             return (_("No disk was found. Connect one and click Refresh.") if not advice else
                     _("A disk is hidden.") + advice)
-        return (_("Chosen: {disk}.").format(disk=f"{self.c.disk['model']}, {self.c.disk['size']}") if self.c.disk else
+        return (_("Chosen: {disk}.").format(disk=disk_name(self.c.disk)) if self.c.disk else
                 _("No disk chosen yet.")) + advice
 
 
-# ---------------------------------------------------------------------------------------------------- 9 Erase warning
+# 9 Erase warning
 
 class EraseScreen(screens.Screen):
     title = N_("Erase the disk?")
@@ -78,13 +82,11 @@ class EraseScreen(screens.Screen):
         return [(_("Erase and install"), self.win.go_next)]
 
     def status(self):
-        d = self.c.disk
-        disk = f"{d['model']}, {d['size']}"
-        return (_("Everything on {disk} will be erased, including encrypted data.") if d["encrypted"] else
-                _("Everything on {disk} will be erased.")).format(disk=disk)
+        return (_("Everything on {disk} will be erased, including encrypted data.") if self.c.disk["encrypted"] else
+                _("Everything on {disk} will be erased.")).format(disk=disk_name(self.c.disk))
 
 
-# ---------------------------------------------------------------------------------------------------- 10 Encryption
+# 10 Encryption
 
 
 class EncryptionScreen(screens.PasswordChoiceScreen):
@@ -118,7 +120,7 @@ class EncryptionScreen(screens.PasswordChoiceScreen):
                                               _("Type the disk password twice."))
 
 
-# ---------------------------------------------------------------------------------------------------- 11 Root
+# 11 Root
 
 class RootScreen(screens.PasswordChoiceScreen):
     title = N_("Administrator account (root)")
@@ -148,7 +150,7 @@ class RootScreen(screens.PasswordChoiceScreen):
         return _("Chosen: enabled.") if self.c.root_enabled else _("Chosen: locked.")
 
 
-# ---------------------------------------------------------------------------------------------------- 12 User
+# 12 User
 
 def system_names():
     """The user and group names the system already has: the installed system is the one this USB stick runs."""
@@ -253,7 +255,7 @@ class UserScreen(screens.ListScreen):
                 + (_("The password is typed and matches.") if self.pair.ready() else _("Type the password twice.")))
 
 
-# ---------------------------------------------------------------------------------------------------- 13 Computer name
+# 13 Computer name
 
 class ComputerNameScreen(screens.Screen):
     title = N_("Computer name")
@@ -296,7 +298,7 @@ class ComputerNameScreen(screens.Screen):
             "" if self.ready() else " " + _("Use letters, digits and -, not at the start or end."))
 
 
-# ---------------------------------------------------------------------------------------------------- 14 Experience
+# 14 Experience
 
 class ExperienceScreen(screens.ListScreen):
     title = N_("Coming from Windows?")
@@ -323,15 +325,12 @@ class ExperienceScreen(screens.ListScreen):
         return self.c.experience is not None
 
     def status(self):
-        return (_("Chosen: {name}.").format(name=experience_name(self.c.experience)) if self.c.experience else
-                _("Pick one."))
+        if not self.c.experience:
+            return _("Pick one.")
+        return _("Chosen: {name}.").format(name=choice_name(ExperienceScreen.CHOICES, self.c.experience))
 
 
-def experience_name(key):
-    return _(next(name for k, name, _a in ExperienceScreen.CHOICES if k == key))
-
-
-# ---------------------------------------------------------------------------------------------------- 15 Desktop layout
+# 15 Desktop layout
 
 class LayoutScreen(screens.Screen):
     title = N_("Desktop layout")
@@ -377,14 +376,15 @@ class LayoutScreen(screens.Screen):
             (button.add_css_class if key == self.c.layout else button.remove_css_class)("chosen")
 
     def status(self):
-        return _("Chosen: {name}.").format(name=layout_name(self.c.layout))
+        return _("Chosen: {name}.").format(name=choice_name(LayoutScreen.CHOICES, self.c.layout))
 
 
-def layout_name(key):
-    return _(next(name for k, name, _a in LayoutScreen.CHOICES if k == key))
+def choice_name(choices, key):
+    """The shown name of a key in a screen's CHOICES."""
+    return _(next(name for k, name, _a in choices if k == key))
 
 
-# ---------------------------------------------------------------------------------------------------- 16 Review
+# 16 Review
 
 class ReviewScreen(screens.ListScreen):
     title = N_("Review")
@@ -398,12 +398,11 @@ class ReviewScreen(screens.ListScreen):
 
     def summary(self):
         c, kb = self.c, data.keyboards()
-        h24 = c.clock_24 if c.clock_24 is not None else not data.uses_12_hour(c.locale)
-        clock = _("24 hour") if h24 else _("12 hour")
+        clock = _("24 hour") if c.uses_24_hour() else _("12 hour")
         user = (_("{name} ({username}), administrator") if c.admin else _("{name} ({username})")).format(
             name=c.full_name, username=c.username)
         return [
-            (_("Language"), locale_screens.language_name(c.locale), locale_screens.LanguageScreen),
+            (_("Language"), i18n.language(c.locale), locale_screens.LanguageScreen),
             (_("Keyboard"), ", ".join(i18n.keyboard(kb[k]) for k in c.layouts), locale_screens.KeyboardScreen),
             (_("Keyboard at start"), i18n.keyboard(kb[c.boot_layout or c.layouts[0]]),
              locale_screens.BootKeyboardScreen),
@@ -412,14 +411,14 @@ class ReviewScreen(screens.ListScreen):
             (_("Date and time"), _("Automatic") if c.time_automatic else locale_screens.time_text(c.manual_time),
              locale_screens.DateTimeScreen),
             (_("Clock"), clock, locale_screens.ClockScreen),
-            (_("Disk"), _("{disk}, erased").format(disk=f"{c.disk['model']}, {c.disk['size']}") if c.disk else
+            (_("Disk"), _("{disk}, erased").format(disk=disk_name(c.disk)) if c.disk else
              _("Not chosen"), DiskScreen),
             (_("Encryption"), _("Encrypted") if c.encrypt else _("Not encrypted"), EncryptionScreen),
             (_("Root"), _("Enabled") if c.root_enabled else _("Locked"), RootScreen),
             (_("Account"), user, UserScreen),
             (_("Computer name"), c.hostname, ComputerNameScreen),
-            (_("Experience"), experience_name(c.experience), ExperienceScreen),
-            (_("Desktop layout"), layout_name(c.layout), LayoutScreen),
+            (_("Experience"), choice_name(ExperienceScreen.CHOICES, c.experience), ExperienceScreen),
+            (_("Desktop layout"), choice_name(LayoutScreen.CHOICES, c.layout), LayoutScreen),
         ]
 
     def items(self):

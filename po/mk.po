@@ -3719,27 +3719,6 @@ msgstr "Се чита листата на апликации од новиот �
 msgid "Recommended"
 msgstr "Препорачано"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Препорачано: „Избриши ја кутијата“. Ослободува околу {size}, а кутијата сама "
-"се враќа следниот пат кога ќе инсталирате {apps}. Сѐ што е додадено во "
-"кутијата на друг начин исто така се брише. Вашите датотеки не се допираат."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Препорачано: „Избриши ја кутијата“. Го ослободува нејзиниот простор на "
-"дискот, а кутијата сама се враќа следниот пат кога ќе инсталирате {apps}. Сѐ "
-"што е додадено во кутијата на друг начин исто така се брише. Вашите датотеки "
-"не се допираат."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3845,13 +3824,6 @@ msgstr "Да се отстранат медиумските кодеци?"
 
 msgid "Remove the test marker"
 msgstr "Отстрани ја ознаката за тестирање"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Прво отстранете ги: извршете  codecs remove , рестартирајте, па повторно "
-"изберете „Сѐ“."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Отстрани ги работите што веќе не му се потребни на компјутерот"
@@ -6777,12 +6749,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "чистење простор"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"сѐ уште се инсталирани кодеци од постара верзија на овој систем (negativo17)."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;кодеци;кодек;видео;аудио;медиуми;инсталирај;"
@@ -7218,16 +7184,6 @@ msgstr "{name} не се стартуваше."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} е „Јавно место“"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} е веќе инсталирано од Bazaar, продавницата за апликации.\n"
-"\n"
-"Препорачано: „Отвори го“."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8845,3 +8801,14 @@ msgstr "Читај ги изворите за преземање во новат
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Премини на Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Фонтовите и големината на текстот се вратени на оригиналните на EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Препорачано: „Избриши ја кутијата“. Кутијата сама се враќа следниот пат кога ќе инсталирате {apps}. Сѐ што е додадено во кутијата на друг начин исто така се брише. Вашите датотеки не се допираат."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Со бришењето се ослободува околу {size}."

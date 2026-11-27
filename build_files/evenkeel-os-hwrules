@@ -17,7 +17,7 @@ from evenkeel_os_ui import _  # noqa: E402
 RULES = Path("/etc/udev/rules.d")
 PKG = re.compile(r"^[A-Za-z0-9][A-Za-z0-9.+_-]{0,127}$")
 FILE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._+-]{0,127}\.rules$")
-RUNS_PROGRAM = re.compile(r"\bRUN\b(?!\{builtin\})|\bPROGRAM\b|IMPORT\{program\}")
+RUNS_PROGRAM = re.compile(r"\bRUN\b(?!\{builtin\})|\bPROGRAM\b|IMPORT\{program\}")   # RUN{builtin} stays in udev
 # Access changes (MODE, OWNER, GROUP, uaccess) are allowed only for these device kinds: never disks or memory.
 SUBSYSTEMS_OK = {"usb", "usbmisc", "hidraw", "hid", "input", "tty", "sound", "video4linux", "media", "i2c-dev", "gpio",
                  "drm", "dri", "leds", "bluetooth", "misc"}
@@ -35,6 +35,12 @@ FLAG_SET = re.compile(r'\bENV\{(\w+)\}\s*=\s*"')
 FLAG_TEST = re.compile(r'\bENV\{(\w+)\}\s*==\s*"')
 GUARD = re.compile(r'\bSUBSYSTEM\s*!=\s*"([^"]*)"\s*,.*\bGOTO\s*=\s*"([^"]+)"')
 LABEL = re.compile(r'\bLABEL\s*=\s*"([^"]+)"')
+
+
+def runs_program(text):
+    """Whether a rule file starts a program (Install Package File asks this too)."""
+    joined = re.sub(r"\\\n", " ", text)
+    return any(RUNS_PROGRAM.search(line) for line in joined.splitlines() if not line.lstrip().startswith("#"))
 
 
 def kinds_ok(subsystems, kernels):
@@ -122,10 +128,9 @@ def add(pkg, files):
                 text = fh.read(64 * 1024 + 1).decode("utf-8")
             except UnicodeDecodeError:
                 fail(_("{name} is not a text file.").format(name=name))
-        joined = re.sub(r"\\\n", " ", text)
-        if any(RUNS_PROGRAM.search(line) for line in joined.splitlines() if not line.lstrip().startswith("#")):
+        if runs_program(text):
             fail(_("{name} runs a program, so it is not added.").format(name=name))
-        if grants_storage(joined):
+        if grants_storage(re.sub(r"\\\n", " ", text)):
             fail(_("{name} could give access to disks, other system devices or every keyboard, "
                    "so it is not added.").format(name=name))
         target = RULES / name

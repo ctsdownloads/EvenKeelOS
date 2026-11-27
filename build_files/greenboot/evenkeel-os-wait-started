@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+# Exit 0 once a unit runs; 1 when it fails or isn't running within 3 minutes: evenkeel-os-wait-started UNIT WHAT
+for _ in $(seq 180); do
+  systemctl -q is-active "$1" && exit 0
+  systemctl -q is-failed "$1" && break
+  sleep 1
+done
+echo "$2 ($1) did not start."
+exit 1

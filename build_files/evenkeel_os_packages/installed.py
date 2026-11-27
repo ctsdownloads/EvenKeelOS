@@ -1,12 +1,14 @@
 """Spotting an app that is already installed."""
-import json
-import os
 import re
 import shlex
 import subprocess
 
+import evenkeel_os_health as health
 from evenkeel_os_ui import LAUNCH_ENV, _, ask, say
 from evenkeel_os_packages import app_list, boxes, common, update_notes
+
+# Only version characters: a version is read from the downloaded file and goes into rpm's Lua below.
+VERSION = re.compile(r"^[\w.+~^:-]+$")
 
 
 def box_version(kind, name):
@@ -35,7 +37,7 @@ def host_version(name):
 
 def compare(kind, a, b):
     """-1, 0 or 1 as version a is older, the same or newer than b."""
-    if a == b:
+    if a == b or not all(VERSION.match(v) for v in (a, b)):
         return 0
     if kind == "rpm":
         lua = f"%{{lua: print(rpm.vercmp('{a}', '{b}'))}}"
@@ -59,13 +61,8 @@ def plain_version(v):
 
 def system_requested():
     """Package names added to the version that starts next, or None if rpm-ostree can't say."""
-    r = subprocess.run(["rpm-ostree", "status", "--json"], capture_output=True, text=True)
-    try:
-        d = json.loads(r.stdout)["deployments"][0]
-    except (ValueError, KeyError, IndexError):
-        return None
-    # local packages are listed as name-version-release.arch
-    return set(d.get("requested-packages", [])) | {n.rsplit("-", 2)[0] for n in d.get("requested-local-packages", [])}
+    ds = health.deployments()
+    return health.requested(ds[0]) if ds else None
 
 
 def flatpak_installed(app_id):
@@ -81,8 +78,7 @@ def open_app(entry):
     if entry["where"] in common.FLATPAK_PLACES:
         cmd = ["flatpak", "run", entry["package"]]
     else:
-        files = [common.HOME / ".local/share/applications" / f"{entry['where']}-{os.path.basename(a)}"
-                 for a in entry.get("apps", [])]
+        files = [common.launcher(entry["where"], a) for a in entry.get("apps", [])]
         f = next((f for f in files if f.exists()), None)
         if not f:
             return False
@@ -93,6 +89,16 @@ def open_app(entry):
     except OSError:
         say(_("{title} didn't open.").format(title=entry["title"]), kind="error")
     return True
+
+
+def from_bazaar(pkg, info, title, record):
+    """The app is already installed from Bazaar: 'ok' opens it, 'extra' installs the file too, None stops."""
+    a = ask(_("{title} is already installed from Bazaar, the app store.\n\nRecommended: Open it.").format(title=title)
+            + "\n\n" + update_notes.second_copy(pkg, info, _("Install the file too")),
+            ok=_("Open it"), extra=_("Install the file too"))
+    if a == "ok":
+        open_app(record)
+    return a
 
 
 def already_installed(pkg, info, title):
@@ -153,11 +159,8 @@ def already_installed(pkg, info, title):
     want = {norm_name(title), norm_name(pkg.name)}
     for r in records:
         if r["where"] == "flathub" and (norm_name(r["title"]) in want) and flatpak_installed(r["package"]):
-            a = ask(_("{title} is already installed from Bazaar, the app store.\n\nRecommended: Open it.")
-                    .format(title=r["title"]) + "\n\n" + update_notes.second_copy(pkg, info, _("Install the file too")),
-                    ok=_("Open it"), extra=_("Install the file too"))
+            a = from_bazaar(pkg, info, r["title"], r)
             if a == "ok":
-                open_app(r)
                 return False, "", 0
             return (True, "install", 0) if a == "extra" else (False, "", 1)
         if r["where"] in (common.BOXES["rpm"]["name"], common.BOXES["deb"]["name"]) and r["where"] != ours and \

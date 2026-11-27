@@ -109,10 +109,9 @@ def free_disk(disk):
 
 
 def console_keymap(layout):
-    name = data.keymap_name(layout)
-    if not os.path.exists(f"{data.KEYMAPS}/{name}.map.gz"):
+    if not data.has_console_keymap(layout):
         raise Stop(N_("There is no start-up keyboard layout for {layout}."), layout=layout)
-    return name
+    return data.keymap_name(layout)
 
 
 def write(path, text):

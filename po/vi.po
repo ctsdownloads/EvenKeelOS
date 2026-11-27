@@ -3623,26 +3623,6 @@ msgstr "Đang đọc danh sách ứng dụng từ nguồn tải xuống mới"
 msgid "Recommended"
 msgstr "Được đề xuất"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Đề xuất: Xóa hộp. Thao tác này sẽ giải phóng khoảng {size} và hộp sẽ tự xuất "
-"hiện lại vào lần tới khi bạn cài đặt {apps}. Bất kỳ nội dung nào được thêm "
-"vào hộp theo cách khác cũng sẽ bị xóa. Các tệp của bạn không bị ảnh hưởng."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Đề xuất: Xóa hộp. Việc này giải phóng dung lượng ổ đĩa mà hộp chiếm, và hộp "
-"sẽ tự quay lại vào lần tới bạn cài đặt {apps}. Bất cứ thứ gì được thêm vào "
-"hộp theo cách khác cũng sẽ bị xóa. Các tệp của bạn không bị ảnh hưởng."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3747,13 +3727,6 @@ msgstr "Gỡ các codec đa phương tiện?"
 
 msgid "Remove the test marker"
 msgstr "Xóa dấu đánh dấu thử nghiệm"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Trước tiên, hãy gỡ chúng: chạy  codecs remove , khởi động lại, sau đó chọn "
-"lại Tất cả."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Xóa những thứ mà máy tính không còn cần nữa"
@@ -6628,13 +6601,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage dọn dẹp bộ nhớ"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"các codec từ phiên bản trước của hệ thống này (negativo17) vẫn còn được cài "
-"đặt."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;âm thanh;đa phương "
@@ -7077,16 +7043,6 @@ msgstr "{name} không khởi động được."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} là một nơi công cộng"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} đã được cài đặt từ Bazaar, cửa hàng ứng dụng.\n"
-"\n"
-"Đề xuất: Mở ra."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8692,3 +8648,14 @@ msgstr "Đọc nguồn tải xuống trong thư mục mới của Fedora 45"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Chuyển sang Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Phông chữ và cỡ chữ đã trở về như của EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Đề xuất: Xóa hộp. Hộp sẽ tự xuất hiện lại vào lần tới khi bạn cài đặt {apps}. Bất kỳ nội dung nào được thêm vào hộp theo cách khác cũng sẽ bị xóa. Các tệp của bạn không bị ảnh hưởng."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Việc xóa sẽ giải phóng khoảng {size}."

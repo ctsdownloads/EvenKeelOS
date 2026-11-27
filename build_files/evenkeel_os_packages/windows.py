@@ -83,6 +83,11 @@ def run_steps(text, steps, cancel=False):
     return ok
 
 
+def run_quietly(steps):
+    """Run (label, command) steps with no window, as a login task does; True if all worked."""
+    return all(subprocess.run(cmd, capture_output=True).returncode == 0 for _label, cmd in steps)
+
+
 def log_tail(n=4000):
     try:
         with open(common.LOG, errors="replace") as f:

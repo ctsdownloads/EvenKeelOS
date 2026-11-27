@@ -174,7 +174,8 @@ def save_to_stick(path, source, name):
             os.fsync(dst.fileno())
     except OSError as e:
         return _("The file could not be written: {error}.").format(error=e.strerror)
-    subprocess.run(["udisksctl", "unmount", "--no-user-interaction", "-b", path], capture_output=True)
+    finally:
+        subprocess.run(["udisksctl", "unmount", "--no-user-interaction", "-b", path], capture_output=True)
     return ""
 
 

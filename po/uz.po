@@ -3721,26 +3721,6 @@ msgstr "Yangi yuklab olish manbaidan ilovalar roʻyxati oʻqilmoqda"
 msgid "Recommended"
 msgstr "Tavsiya etiladi"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Tavsiya etiladi: “Qutini oʻchirish”. U taxminan {size} joy boʻshatadi va "
-"keyingi safar {apps} ni oʻrnatganingizda oʻzi qaytadi. Qutiga boshqa yoʻl "
-"bilan qoʻshilgan narsalar ham oʻchiriladi. Fayllaringizga tegilmaydi."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Tavsiya etiladi: “Qutini oʻchirish”. U oʻzi egallagan disk joyini boʻshatadi "
-"va keyingi safar {apps} ni oʻrnatganingizda oʻzi qaytadi. Qutiga boshqa yoʻl "
-"bilan qoʻshilgan narsalar ham oʻchiriladi. Fayllaringizga tegilmaydi."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3845,13 +3825,6 @@ msgstr "Media kodeklari olib tashlansinmi?"
 
 msgid "Remove the test marker"
 msgstr "Sinov belgisini olib tashlash"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Avval ularni olib tashlang:  codecs remove  buyrugʻini bajaring, qayta ishga "
-"tushiring, soʻng yana “Hammasi”ni tanlang."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Kompyuterga endi kerak boʻlmagan narsalarni oʻchirish"
@@ -6783,12 +6756,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage tozalash xotira joy"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"tizimning oldingi versiyasidagi kodeklar (negativo17) hali ham oʻrnatilgan."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;kodeklar;kodek;oʻrnatish;"
@@ -7234,16 +7201,6 @@ msgstr "{name} ishga tushmadi."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} — Jamoat joyi"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} ilovalar doʻkoni Bazaar-dan allaqachon oʻrnatilgan.\n"
-"\n"
-"Tavsiya etiladi: “Uni ochish”."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8860,3 +8817,14 @@ msgstr "Yuklab olish manbalarini Fedora 45-ning yangi papkasidan oʻqish"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Fedora 45-ga oʻtish"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Shriftlar va matn oʻlchami EvenKeelOS’ning asl holiga qaytdi."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Tavsiya etiladi: “Qutini oʻchirish”. U keyingi safar {apps} ni oʻrnatganingizda oʻzi qaytadi. Qutiga boshqa yoʻl bilan qoʻshilgan narsalar ham oʻchiriladi. Fayllaringizga tegilmaydi."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Uni oʻchirish taxminan {size} joy boʻshatadi."

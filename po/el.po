@@ -3794,28 +3794,6 @@ msgstr "Ανάγνωση της λίστας εφαρμογών από τη νέ
 msgid "Recommended"
 msgstr "Συνιστάται"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Συνιστάται: Διαγραφή του κουτιού. Απελευθερώνει περίπου {size} και "
-"δημιουργείται ξανά αυτόματα την επόμενη φορά που θα εγκαταστήσετε {apps}. "
-"Οτιδήποτε προστέθηκε στο κουτί με άλλον τρόπο διαγράφεται επίσης. Τα αρχεία "
-"σας παραμένουν ανέπαφα."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Συνιστάται: Διαγραφή του κουτιού. Απελευθερώνει τον χώρο του στον δίσκο και "
-"δημιουργείται ξανά αυτόματα την επόμενη φορά που θα εγκαταστήσετε {apps}. "
-"Οτιδήποτε προστέθηκε στο κουτί με άλλον τρόπο διαγράφεται επίσης. Τα αρχεία "
-"σας παραμένουν ανέπαφα."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3923,13 +3901,6 @@ msgstr "Να αφαιρεθούν οι κωδικοποιητές πολυμέσ
 
 msgid "Remove the test marker"
 msgstr "Αφαίρεση του δείκτη δοκιμής"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Αφαιρέστε τους πρώτα: εκτελέστε την εντολή  codecs remove , κάντε "
-"επανεκκίνηση και, στη συνέχεια, επιλέξτε ξανά «Όλα»."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Αφαίρεση στοιχείων που δεν χρειάζεται πλέον ο υπολογιστής"
@@ -6920,13 +6891,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "καθαρισμός αποθηκευτικός χώρος clean storage"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"κωδικοποιητές από παλαιότερη έκδοση αυτού του συστήματος (negativo17) είναι "
-"ακόμα εγκατεστημένοι."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "κωδικοποιητές;κωδικοποιητής;ffmpeg;h264;βίντεο;ήχος;πολυμέσα;εγκατάσταση;codecs;codec;video;audio;media;install;"
@@ -7376,16 +7340,6 @@ msgstr "Το {name} δεν ξεκίνησε."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "Το {name} είναι Δημόσιος χώρος"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"Το {name} είναι ήδη εγκατεστημένο από το Bazaar, το κατάστημα εφαρμογών.\n"
-"\n"
-"Συνιστάται: Άνοιγμα."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -9017,3 +8971,14 @@ msgstr "Ανάγνωση των πηγών λήψης στον νέο φάκελ
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Μετάβαση στο Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Οι γραμματοσειρές και το μέγεθος κειμένου επέστρεψαν σε αυτά του EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Συνιστάται: Διαγραφή του κουτιού. Δημιουργείται ξανά αυτόματα την επόμενη φορά που θα εγκαταστήσετε {apps}. Οτιδήποτε προστέθηκε στο κουτί με άλλον τρόπο διαγράφεται επίσης. Τα αρχεία σας παραμένουν ανέπαφα."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Η διαγραφή του απελευθερώνει περίπου {size}."

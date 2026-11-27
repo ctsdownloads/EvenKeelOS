@@ -2,11 +2,11 @@
 import json
 import subprocess
 
-from evenkeel_os_ui import _, N_, ask, choose, notify, offer_restart, say
+from evenkeel_os_ui import _, N_, ask, choose, load_program, notify, say
 from evenkeel_os_packages import after_restart, app_list, common, installed, windows
 
-LIST = "/usr/share/evenkeel-os/vpns.json"
 HELPER = "/usr/libexec/evenkeel-os-vpn"
+LIST = load_program(HELPER, "vpnhelper").LIST     # the root helper's own list, so both read the same file
 UPDATES = N_("Updates: automatic, from {maker}'s own download source. A daily check finds new versions, which "
              "start at the next restart.")
 
@@ -67,10 +67,8 @@ def install(name, intro=""):
         return windows.failed(_("Adding {title} to the system").format(title=title))
     app_list.remember({"title": title, "package": v["packages"][0], "where": "system", "vpn": name})
     after_restart.add_pending({"title": title, "package": v["packages"][0], "vpn": name})
-    notify(_("{title} is installed. Restart to use it.").format(title=title))
-    offer_restart(_("{title} is installed. Restart to start using it.").format(title=title),
-                  _("After the restart, you'll be asked for your password once, to turn it on.") + "\n\n" +
-                  _(UPDATES).format(maker=maker))
+    after_restart.offer(title, _("After the restart, you'll be asked for your password once, to turn it on.") +
+                        "\n\n" + _(UPDATES).format(maker=maker))
     return 0
 
 
@@ -82,6 +80,12 @@ def offer_for_file(name, pkg):
                                      filename=pkg.path.name, title=v["title"], maker=v["maker"]) + "\n\n")
 
 
+def run_helper(*args):
+    """The root helper's answer; None when the password wasn't given."""
+    r = subprocess.run(["pkexec", HELPER, *args], capture_output=True, text=True)
+    return None if r.returncode in (126, 127) else r
+
+
 def turn_on(entry):
     """After the restart: turn on its background services. False to ask again at the next login."""
     v = load().get(entry["vpn"])
@@ -91,8 +95,8 @@ def turn_on(entry):
     if ask(_("{title} is installed. Turn it on: its background service starts now and with the computer. Needs "
              "your password.").format(title=title), ok=_("Turn it on"), cancel=_("Later")) != "ok":
         return False
-    r = subprocess.run(["pkexec", HELPER, "turn-on", entry["vpn"]], capture_output=True, text=True)
-    if r.returncode in (126, 127):
+    r = run_helper("turn-on", entry["vpn"])
+    if r is None:
         return False
     if r.returncode != 0:
         say(_("{title} is installed, but its background service didn't turn on, so it may not connect.\n\n"
@@ -111,8 +115,8 @@ def turn_on_services(entry):
     if ask(_("{title} is installed. It has a background service that needs turning on. Needs your password.")
            .format(title=title), ok=_("Turn it on"), cancel=_("Later")) != "ok":
         return False
-    r = subprocess.run(["pkexec", HELPER, "services", entry["package"]], capture_output=True, text=True)
-    if r.returncode in (126, 127):
+    r = run_helper("services", entry["package"])
+    if r is None:
         return False
     if r.returncode != 0:
         say(_("{title} is installed, but its background service didn't turn on.\n\n{details}")

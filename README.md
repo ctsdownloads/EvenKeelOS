@@ -4,7 +4,7 @@ A desktop that just works. It is a derivative of **Fedora®**, built on Fedora
 Silverblue 45, with packages, the updater and Homebrew setup from
 [Bluefin](https://projectbluefin.io/).
 
-[![Build](https://github.com/ctsdownloads/evenkeel-os/actions/workflows/build.yml/badge.svg)](https://github.com/ctsdownloads/evenkeel-os/actions/workflows/build.yml)
+[![Build](https://github.com/ctsdownloads/EvenKeelOS/actions/workflows/build.yml/badge.svg)](https://github.com/ctsdownloads/EvenKeelOS/actions/workflows/build.yml)
 [![Status](https://img.shields.io/badge/status-alpha-orange.svg)](#status)
 [![Base](https://img.shields.io/badge/base-Fedora%20Silverblue%2045-1f6feb.svg)](https://fedoraproject.org/atomic-desktops/silverblue/)
 [![Desktop](https://img.shields.io/badge/desktop-GNOME%20%7C%20Wayland-green.svg)](https://www.gnome.org/)
@@ -170,7 +170,7 @@ other projects, under their own licenses, with their source available there:
 - **Everything else** added is in this repository.
 
 Can't find the source for something? Open an issue at
-<https://github.com/ctsdownloads/evenkeel-os/issues>.
+<https://github.com/ctsdownloads/EvenKeelOS/issues>.
 
 ## Credits
 
@@ -193,7 +193,7 @@ Can't find the source for something? Open an issue at
 **This repository** is [GPL-3.0-or-later](LICENSE), except **files from
 Universal Blue's [image template](https://github.com/ublue-os/image-template)**,
 which stay [Apache-2.0](LICENSES/Apache-2.0.txt): the `Justfile`,
-`Containerfile`, build workflows, `disk_config/` and a few settings files. The
+`Containerfile`, the build workflow and a few settings files. The
 live-ISO build in `iso/`, based on Universal Blue's
 [titanoboa](https://github.com/ublue-os/titanoboa), is Apache-2.0 too, except the
 EvenKeelOS installer (`iso/src/evenkeel-os-installer/`,

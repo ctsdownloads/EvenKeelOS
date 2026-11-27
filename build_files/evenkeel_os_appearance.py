@@ -3,11 +3,10 @@ import datetime
 import json
 import math
 import os
-import subprocess
 import zoneinfo
 from pathlib import Path
 
-from evenkeel_os_ui import N_
+from evenkeel_os_ui import N_, answer
 
 STATE = Path.home() / ".config/evenkeel-os/appearance.json"
 ZONES = ("/usr/share/zoneinfo/zone.tab", "/usr/share/zoneinfo/zone1970.tab")   # every city, then the newer list
@@ -28,9 +27,7 @@ def load():
                              ("dark_from", "20:00", clock_time), ("light_from", "07:00", clock_time),
                              ("slideshow", "", lambda v: isinstance(v, str)),
                              ("folder", "", lambda v: isinstance(v, str))):
-        if not ok(state.get(key, default)):
-            state[key] = default
-        state.setdefault(key, default)
+        state[key] = state[key] if key in state and ok(state[key]) else default
     if not isinstance(state.get("slide", -1), int):
         state.pop("slide")
     return state
@@ -53,11 +50,8 @@ def save(state):
 
 def gsettings(*args):
     """gsettings' answer, or None when it fails (no session)."""
-    try:
-        r = subprocess.run(["gsettings", *args], capture_output=True, text=True, timeout=20)
-    except (OSError, subprocess.TimeoutExpired):
-        return None
-    return r.stdout.strip() if r.returncode == 0 else None
+    r = answer(["gsettings", *args])
+    return r.stdout.strip() if r and r.returncode == 0 else None
 
 
 def time_zone():
@@ -113,13 +107,19 @@ def city(zone, tables):
     return None
 
 
-def sun_times(lat, lon, day):
-    """Sunrise and sunset on a day, in UTC (NOAA's formulas); None when the sun doesn't rise or set that day."""
-    g = 2 * math.pi / 365 * (day.timetuple().tm_yday - 1)
+def solar(g):
+    """NOAA's equation of time (minutes) and the sun's declination (radians), for the year's angle g."""
     eqtime = 229.18 * (0.000075 + 0.001868 * math.cos(g) - 0.032077 * math.sin(g) - 0.014615 * math.cos(2 * g)
                        - 0.040849 * math.sin(2 * g))
     decl = (0.006918 - 0.399912 * math.cos(g) + 0.070257 * math.sin(g) - 0.006758 * math.cos(2 * g)
             + 0.000907 * math.sin(2 * g) - 0.002697 * math.cos(3 * g) + 0.00148 * math.sin(3 * g))
+    return eqtime, decl
+
+
+def sun_times(lat, lon, day):
+    """Sunrise and sunset on a day, in UTC (NOAA's formulas); None when the sun doesn't rise or set that day."""
+    g = 2 * math.pi / 365 * (day.timetuple().tm_yday - 1)
+    eqtime, decl = solar(g)
     la = math.radians(lat)
     cos_ha = math.cos(math.radians(90.833)) / (math.cos(la) * math.cos(decl)) - math.tan(la) * math.tan(decl)
     if not -1 <= cos_ha <= 1:
@@ -134,10 +134,7 @@ def sun_up(lat, lon, when):
     when = when.astimezone(datetime.timezone.utc)
     hours = when.hour + when.minute / 60 + when.second / 3600
     g = 2 * math.pi / 365 * (when.timetuple().tm_yday - 1 + (hours - 12) / 24)
-    eqtime = 229.18 * (0.000075 + 0.001868 * math.cos(g) - 0.032077 * math.sin(g) - 0.014615 * math.cos(2 * g)
-                       - 0.040849 * math.sin(2 * g))
-    decl = (0.006918 - 0.399912 * math.cos(g) + 0.070257 * math.sin(g) - 0.006758 * math.cos(2 * g)
-            + 0.000907 * math.sin(2 * g) - 0.002697 * math.cos(3 * g) + 0.00148 * math.sin(3 * g))
+    eqtime, decl = solar(g)
     ha = math.radians((hours * 60 + eqtime + 4 * lon) / 4 - 180)
     la = math.radians(lat)
     return math.sin(la) * math.sin(decl) + math.cos(la) * math.cos(decl) * math.cos(ha) > math.cos(math.radians(90.833))

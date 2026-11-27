@@ -5,22 +5,19 @@ set -uo pipefail
 OUT=${RUNNER_TEMP:-/tmp}/rollback-test-results
 HERE=$(dirname "$0")
 . "$HERE/vm.sh"
-# Wheelhouse's tests, less the two a virtual machine has no chip for: Wi-Fi and Bluetooth.
-mapfile -t TESTS < <(python3 -I - "$HERE/../build_files/evenkeel-os-tools-admin" <<'PY'
+# The names in a list assigned in a Python file: $1 the file, $2 the list.
+assigned() {
+  python3 -I - "$1" "$2" <<'PY'
 import ast, sys
 for n in ast.parse(open(sys.argv[1]).read()).body:
-    if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == "TEST_KINDS":
-        print("\n".join(k for k in ast.literal_eval(n.value) if k not in ("wifi", "bluetooth")))
-PY
-)
-# The tests that ask first before each restart: those checked after login (evenkeel-os-tools).
-mapfile -t ASKS < <(python3 -I - "$HERE/../build_files/evenkeel-os-tools" <<'PY'
-import ast, sys
-for n in ast.parse(open(sys.argv[1]).read()).body:
-    if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == "AFTER_LOGIN_TESTS":
+    if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == sys.argv[2]:
         print("\n".join(ast.literal_eval(n.value)))
 PY
-)
+}
+# Wheelhouse's tests, less the two a virtual machine has no chip for: Wi-Fi and Bluetooth.
+mapfile -t TESTS < <(assigned "$HERE/../build_files/evenkeel-os-tools-admin" TEST_KINDS | grep -vxE 'wifi|bluetooth')
+# The tests that ask first before each restart: those checked after login (evenkeel-os-tools).
+mapfile -t ASKS < <(assigned "$HERE/../build_files/evenkeel-os-tools" AFTER_LOGIN_TESTS)
 WAIT=90             # seconds from staging to the restart: longer than rpm-ostreed's old 60-second idle exit
 TEST_TIME=1800      # seconds one test may take, all 3 starts
 STEP=/usr/libexec/evenkeel-os-rollback-step

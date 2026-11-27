@@ -24,8 +24,7 @@ TOPICS = [
              (N_("Windows programs (.exe and .msi) don't run here. Open one anyway: Wheelhouse tells you the version "
                  "for EvenKeelOS, or a replacement when there is one, and installs it."), "topic:apps"),
              (N_("Updates install on their own. If one stops the computer starting properly, it goes back to the "
-                 "version "
-                 "before by itself and tells you."), "page:updates"),
+                 "version before by itself and tells you."), "page:updates"),
              (N_("The system itself can't be changed by apps or by mistake. Each update replaces it whole."), ""),
              (N_("Every network is Home, Work or a Public place. A new one is a Public place, where nothing can reach "
                  "your computer."), "page:network"),
@@ -55,8 +54,7 @@ TOPICS = [
              (N_("Drag a window to the top of the screen to fill the screen. Drag it to the left or right edge to fill "
                  "that half."), ""),
              (N_("Or use the keyboard: Windows key + Up fills the screen, Windows key + Left or Right fills a half, "
-                 "and "
-                 "Windows key + H minimizes."), ""),
+                 "and Windows key + H minimizes."), ""),
              (N_("Alt+Tab switches between apps. Alt and the key above Tab switches between windows of the same app."),
               ""),
          ]),
@@ -262,8 +260,7 @@ TOPICS = [
          ]),
          (N_("If the computer won't start properly"), [
              (N_("You don't need to do anything. If a new version fails to start twice in a row, the computer goes "
-                 "back "
-                 "to the version before by itself."), ""),
+                 "back to the version before by itself."), ""),
              (N_("A new version also goes back if something that worked before is broken after you log in, like "
                  "sound, Wi-Fi, Bluetooth, the camera or printing. Unplugged or switched-off things don't count."), ""),
              (N_("A note at the next login says so and names what broke, and automatic updates pause for 3 days."), ""),
@@ -278,8 +275,7 @@ TOPICS = [
          ]),
          (N_("Certificate alerts"), [
              (N_("Certificates are how the computer knows a secure website is real. An alert shows when one has "
-                 "expired, "
-                 "expires soon, or was removed."), ""),
+                 "expired, expires soon, or was removed."), ""),
              (N_("Open Wheelhouse, Get help, Certificate alerts to see them."), "page:help"),
              (N_("For an expired one that was added to this computer, it offers Remove it. Fedora's own ones are "
                  "replaced by updates, so keep automatic updates on."), ""),

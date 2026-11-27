@@ -17,10 +17,13 @@ def save(records):
     tmp.replace(common.STATE)
 
 
+def others(entry):
+    return [r for r in load() if (r["package"], r["where"]) != (entry["package"], entry["where"])]
+
+
 def remember(entry):
-    records = [r for r in load() if not (r["package"] == entry["package"] and r["where"] == entry["where"])]
-    save(records + [entry])
+    save(others(entry) + [entry])
 
 
 def forget(entry):
-    save([r for r in load() if not (r["package"] == entry["package"] and r["where"] == entry["where"])])
+    save(others(entry))

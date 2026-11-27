@@ -3,6 +3,7 @@ import datetime
 
 from gi.repository import Gtk
 
+import data
 from i18n import N_
 from widgets import ChoiceList, PasswordPair
 
@@ -35,6 +36,10 @@ class Choices:
         self.experience = None                     # "windows" or "linux"; None: not picked yet
         self.layout = "current"                    # or "windows", as evenkeel-os-layout names them
         self.layout_chosen_by_hand = False
+
+    def uses_24_hour(self):
+        """The clock as picked, or as the language writes times."""
+        return self.clock_24 if self.clock_24 is not None else not data.uses_12_hour(self.locale)
 
 
 class Screen:

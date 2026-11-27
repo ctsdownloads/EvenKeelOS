@@ -18,7 +18,7 @@ import evenkeel_os_network as net  # noqa: E402
 import evenkeel_os_sharing as sharing  # noqa: E402
 import evenkeel_os_yours as yours  # noqa: E402
 from evenkeel_os_dialogs import Dialogs  # noqa: E402
-from evenkeel_os_ui import N_, _, ngettext, user_folder  # noqa: E402
+from evenkeel_os_ui import N_, _, icon_button, ngettext, short_home, user_folder  # noqa: E402
 from evenkeel_os_packages import zoom  # noqa: E402
 
 APP_ID = "io.github.ctsdownloads.evenkeel-os.Tools"
@@ -26,6 +26,7 @@ TOOLS = "/usr/bin/evenkeel-os-tools"
 ADMIN = ["pkexec", "/usr/libexec/evenkeel-os-tools-admin"]
 BOOT_OPTIONS = ["pkexec", "/usr/libexec/evenkeel-os-boot-options"]
 PACKAGES = "/usr/bin/evenkeel-os-packages"
+LAYOUT = "/usr/bin/evenkeel-os-layout"
 OURS = (TOOLS, PACKAGES, "/usr/bin/evenkeel-os-update", "/usr/bin/evenkeel-os-codecs")   # their windows show here
 PACKAGE_TYPES = (".rpm", ".deb")
 WINDOWS_TYPES = (".exe", ".msi")
@@ -81,6 +82,23 @@ def spawn(argv, done=None, panel=None):
     if done:
         proc.wait_async(None, lambda p, r: done(p.get_exit_status() if p.wait_finish(r) else 1))
     return True
+
+
+def banner(icon, title="", text=""):
+    """A coloured banner: an icon, a title and a line under it; returns the box and the two labels."""
+    box = Gtk.Box(spacing=20, css_classes=["ek-banner"])
+    box.append(Gtk.Image(icon_name=icon, pixel_size=40))
+    words = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6, hexpand=True, valign=Gtk.Align.CENTER)
+    head = Gtk.Label(label=title, xalign=0, wrap=True, css_classes=["title-2"])
+    sub = Gtk.Label(label=text, xalign=0, wrap=True, css_classes=["ek-sub"])
+    words.append(head)
+    words.append(sub)
+    box.append(words)
+    return box, head, sub
+
+
+def current_layout():
+    return subprocess.run([LAYOUT], capture_output=True, text=True).stdout.strip()
 
 
 def zoom_usual_browser():
@@ -296,7 +314,7 @@ class Window(Adw.ApplicationWindow):
         self.connect("close-request", self.on_close)
         self.refresh()
 
-    # ------------------------------------------------------------ pages
+    # Pages
 
     def page(self, key):
         page = Adw.PreferencesPage()
@@ -348,18 +366,11 @@ class Window(Adw.ApplicationWindow):
 
     def overview_banner(self):
         g = Adw.PreferencesGroup()
-        box = Gtk.Box(spacing=20, css_classes=["ek-banner"])
-        text = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4, hexpand=True, valign=Gtk.Align.CENTER)
-        self.banner_title = Gtk.Label(xalign=0, wrap=True, css_classes=["title-2"])
-        self.banner_sub = Gtk.Label(xalign=0, wrap=True, css_classes=["ek-sub"])
-        text.append(self.banner_title)
-        text.append(self.banner_sub)
+        box, self.banner_title, self.banner_sub = banner("object-select-symbolic")
+        self.banner_icon = box.get_first_child()
         self.banner_action = ""
         self.banner_button = Gtk.Button(valign=Gtk.Align.CENTER, css_classes=["pill"], visible=False)
         self.banner_button.connect("clicked", self.on_banner_button)
-        self.banner_icon = Gtk.Image(icon_name="object-select-symbolic", pixel_size=40)
-        box.append(self.banner_icon)
-        box.append(text)
         box.append(self.banner_button)
         self.banner = box
         g.add(box)
@@ -393,8 +404,7 @@ class Window(Adw.ApplicationWindow):
                                  description=_("A new layout shows after you log out and back in. It changes only "
                                                "your own desktop."))
         box = Gtk.Box(spacing=16, homogeneous=True)
-        r = subprocess.run(["/usr/bin/evenkeel-os-layout"], capture_output=True, text=True)
-        now = r.stdout.strip() or "current"
+        now = current_layout() or "current"
         first = None
         self.layout_buttons = []
         for key, name, about in (("current", _("Standard"), _("Top bar, apps from the bottom dock")),
@@ -463,13 +473,7 @@ class Window(Adw.ApplicationWindow):
     @staticmethod
     def guide_banner(title, text):
         g = Adw.PreferencesGroup()
-        box = Gtk.Box(spacing=20, css_classes=["ek-banner"])
-        box.append(Gtk.Image(icon_name="help-about-symbolic", pixel_size=40))
-        words = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6, hexpand=True, valign=Gtk.Align.CENTER)
-        words.append(Gtk.Label(label=title, xalign=0, wrap=True, css_classes=["title-2"]))
-        words.append(Gtk.Label(label=text, xalign=0, wrap=True, css_classes=["ek-sub"]))
-        box.append(words)
-        g.add(box)
+        g.add(banner("help-about-symbolic", title, text)[0])
         return g
 
     @staticmethod
@@ -501,11 +505,14 @@ class Window(Adw.ApplicationWindow):
         here = self.stack.get_visible_child_name()
         if here != name:
             self.trail.append(self.before if here == "tool" else here)
-        self.stack.set_visible_child_name(name)
-        self.content_title.set_title(self.page_title(name))
+        self.show_page(name)
         self.back.set_visible(True)
         self.show_waiting()
         self.split.set_show_content(True)
+
+    def show_page(self, name):
+        self.stack.set_visible_child_name(name)
+        self.content_title.set_title(self.page_title(name))
 
     def open_guide(self, at_login=False):
         if at_login:
@@ -525,14 +532,7 @@ class Window(Adw.ApplicationWindow):
 
     def network_page(self, page):
         """Which place the network you're on is, every saved network's place, and what each place lets in."""
-        box = Gtk.Box(spacing=20, css_classes=["ek-banner"])
-        box.append(Gtk.Image(icon_name="security-high-symbolic", pixel_size=40))
-        text = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6, hexpand=True, valign=Gtk.Align.CENTER)
-        self.net_title = Gtk.Label(xalign=0, wrap=True, css_classes=["title-2"], label=_("Checking the network…"))
-        self.net_sub = Gtk.Label(xalign=0, wrap=True, css_classes=["ek-sub"])
-        text.append(self.net_title)
-        text.append(self.net_sub)
-        box.append(text)
+        box, self.net_title, self.net_sub = banner("security-high-symbolic", _("Checking the network…"))
         self.net_fix = Gtk.Button(label=_("Fix"), valign=Gtk.Align.CENTER, css_classes=["pill"], visible=False)
         self.net_fix.connect("clicked", lambda *_args: self.admin(["firewall", "default"],
                                                                   _("New networks are a Public place now.")))
@@ -665,14 +665,7 @@ class Window(Adw.ApplicationWindow):
 
     def sharing_page(self, page):
         """Whether sharing is on and working here, the sharing password, and the folders shared."""
-        box = Gtk.Box(spacing=20, css_classes=["ek-banner"])
-        box.append(Gtk.Image(icon_name="folder-remote-symbolic", pixel_size=40))
-        text = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6, hexpand=True, valign=Gtk.Align.CENTER)
-        self.share_title = Gtk.Label(xalign=0, wrap=True, css_classes=["title-2"], label=_("Checking sharing…"))
-        self.share_sub = Gtk.Label(xalign=0, wrap=True, css_classes=["ek-sub"])
-        text.append(self.share_title)
-        text.append(self.share_sub)
-        box.append(text)
+        box, self.share_title, self.share_sub = banner("folder-remote-symbolic", _("Checking sharing…"))
         self.share_banner = box
         g = Adw.PreferencesGroup()
         g.add(box)
@@ -729,9 +722,8 @@ class Window(Adw.ApplicationWindow):
         for row in self.share_rows:
             self.share_list.remove(row)
         self.share_rows = []
-        home_dir = GLib.get_home_dir()
         for f in (f for f in state["folders"] if f["owner"] == user):
-            where = "~" + f["path"][len(home_dir):] if f["path"].startswith(home_dir + "/") else f["path"]
+            where = short_home(f["path"])
             row = Adw.ActionRow(title=f["name"], subtitle=where if os.path.isdir(f["path"]) else
                                 _("{path}. Folder not found: it was moved or deleted.").format(path=where),
                                 use_markup=False)
@@ -740,13 +732,10 @@ class Window(Adw.ApplicationWindow):
             mode.set_selected(list(sharing.MODES).index(f["mode"]))
             mode.connect("notify::selected", self.on_share_mode, f)
             row.add_suffix(mode)
-            remove = Gtk.Button(icon_name="user-trash-symbolic", tooltip_text=_("Stop sharing it"),
-                                valign=Gtk.Align.CENTER, css_classes=["flat"])
-            remove.update_property([Gtk.AccessibleProperty.LABEL],
-                                   [_("Stop sharing {name}").format(name=f["name"])])
-            remove.connect("clicked", lambda *_a, f=f: self.admin_reply(
-                ["sharing", "remove", f["path"]], _("{name} isn't shared now.").format(name=f["name"])))
-            row.add_suffix(remove)
+            row.add_suffix(icon_button(
+                "user-trash-symbolic", _("Stop sharing it"), _("Stop sharing {name}").format(name=f["name"]),
+                lambda f=f: self.admin_reply(["sharing", "remove", f["path"]],
+                                             _("{name} isn't shared now.").format(name=f["name"]))))
             self.share_list.add(row)
             self.share_rows.append(row)
         if not self.share_rows:
@@ -776,7 +765,7 @@ class Window(Adw.ApplicationWindow):
             return (_("Nothing is shared yet"), _("Add a folder and set the sharing password below."), False)
         if not running:
             return (_("Sharing didn't start"), _("Turn sharing off and on again. If this stays, use Save problem "
-                                                  "details in Get help."), True)
+                                                 "details in Get help."), True)
         wired = any(n.kind == "Wired" for n in home)
         return (_("Sharing on {networks}").format(networks=", ".join(n.name for n in home)),
                 _("Other computers find this one as {host}: in Files under Network on Linux, in Finder "
@@ -927,13 +916,11 @@ class Window(Adw.ApplicationWindow):
         self.boot_rows = []
         for s in (s for s in self.boot_on if s not in bootopts.COMMON_SETTINGS):
             row = Adw.ActionRow(title=s, subtitle=bootopts.risk(s) or _("Added by you"))
-            remove = Gtk.Button(icon_name="user-trash-symbolic", tooltip_text=_("Take it out"),
-                                valign=Gtk.Align.CENTER, css_classes=["flat"], sensitive=not self.boot_busy)
-            remove.update_property([Gtk.AccessibleProperty.LABEL], [_("Take out {setting}").format(setting=s)])
-            remove.connect("clicked", lambda *_a, s=s: self.boot_apply(
-                [x for x in self.boot_on if x != s], _("{setting} is taken out from the next restart.").format(
-                    setting=s)))
-            row.add_suffix(remove)
+            row.add_suffix(icon_button(
+                "user-trash-symbolic", _("Take it out"), _("Take out {setting}").format(setting=s),
+                lambda s=s: self.boot_apply([x for x in self.boot_on if x != s],
+                                            _("{setting} is taken out from the next restart.").format(setting=s)),
+                sensitive=not self.boot_busy))
             self.boot_own.add(row)
             self.boot_rows.append(row)
         self.boot_button.set_visible(False)
@@ -1020,19 +1007,17 @@ class Window(Adw.ApplicationWindow):
                 seen.add(tool.command)
                 r = Adw.ActionRow(title=tool.command, subtitle=tr(tool.title), css_classes=["property"])
                 r.set_subtitle_selectable(True)
-                copy = Gtk.Button(icon_name="edit-copy-symbolic", tooltip_text=_("Copy the command"),
-                                  valign=Gtk.Align.CENTER, css_classes=["flat"])
-                copy.update_property([Gtk.AccessibleProperty.LABEL], [_("Copy {command}").format(command=tool.command)])
-                copy.connect("clicked", self.copy_command, tool.command)
-                r.add_suffix(copy)
+                r.add_suffix(icon_button("edit-copy-symbolic", _("Copy the command"),
+                                         _("Copy {command}").format(command=tool.command),
+                                         lambda c=tool.command: self.copy_command(c)))
                 g.add(r)
         return g
 
-    def copy_command(self, _button, command):
+    def copy_command(self, command):
         self.get_clipboard().set(command)
         self.toast(_("Copied: {command}").format(command=command))
 
-    # ------------------------------------------------------------ state
+    # State
 
     def refresh(self, *_):
         threading.Thread(target=self.read_state, daemon=True).start()
@@ -1098,7 +1083,7 @@ class Window(Adw.ApplicationWindow):
         d, mb = s["disk"], 1_000_000
         self.disk_row.set_title(_("{size} free").format(size=self.t.human(d.free // mb)))
         self.disk_row.set_subtitle(_("{used} of {total} used").format(used=self.t.human(d.used // mb),
-                                                                       total=self.t.human(d.total // mb)))
+                                                                      total=self.t.human(d.total // mb)))
         self.disk_bar.set_value(d.used / d.total if d.total else 0)
         self.set_subtitle(N_("Automatic updates"), _("On. Turn them on or off.") if s["on"] and not s["paused"] else
                           _("Paused. Turn them on or off.") if s["paused"] else _("Off. Turn them on or off."))
@@ -1114,7 +1099,7 @@ class Window(Adw.ApplicationWindow):
         for r in self.subtitles.get(title, []):
             r.set_subtitle(text)
 
-    # ------------------------------------------------------------ actions
+    # Actions
 
     def activate_tool(self, tool):
         if tool.run == "windows":
@@ -1196,8 +1181,7 @@ class Window(Adw.ApplicationWindow):
         """Back one page. From the tool page, a tool that is open stays open, behind the bar at the top."""
         name = self.before if self.stack.get_visible_child_name() == "tool" else \
             self.trail.pop() if self.trail else self.before
-        self.stack.set_visible_child_name(name)
-        self.content_title.set_title(self.page_title(name))
+        self.show_page(name)
         self.back.set_visible(bool(self.trail))
         self.show_waiting()
 
@@ -1324,10 +1308,9 @@ class Window(Adw.ApplicationWindow):
     def on_layout(self, button, key):
         if not button.get_active():
             return
-        r = subprocess.run(["/usr/bin/evenkeel-os-layout"], capture_output=True, text=True)
-        if r.stdout.strip() == key:
+        if current_layout() == key:
             return
-        if subprocess.run(["/usr/bin/evenkeel-os-layout", key], capture_output=True).returncode == 0:
+        if subprocess.run([LAYOUT, key], capture_output=True).returncode == 0:
             self.toast(_("Log out and back in to see the new layout."))
             return
         self.toast(_("The layout didn't change."))

@@ -3628,26 +3628,6 @@ msgstr "नवीन डाउनलोड स्रोतावरून ॲप
 msgid "Recommended"
 msgstr "शिफारस केलेले"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"शिफारस: बॉक्स हटवा. यामुळे सुमारे {size} जागा मोकळी होते, आणि पुढच्या वेळी "
-"तुम्ही {apps} इंस्टॉल कराल तेव्हा तो आपोआप परत येतो. बॉक्समध्ये इतर मार्गाने "
-"जोडलेले काहीही सुद्धा हटवले जाते. तुमच्या फाइल्सना हात लावला जात नाही."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"शिफारस: बॉक्स हटवा. यामुळे त्याची डिस्क जागा मोकळी होते, आणि पुढच्या वेळी "
-"तुम्ही {apps} इंस्टॉल कराल तेव्हा तो आपोआप परत येतो. बॉक्समध्ये इतर मार्गाने "
-"जोडलेले काहीही सुद्धा हटवले जाते. तुमच्या फाइल्सना हात लावला जात नाही."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3746,13 +3726,6 @@ msgstr "मीडिया कोडेक्स काढून टाकाय
 
 msgid "Remove the test marker"
 msgstr "चाचणी मार्कर काढून टाका"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"आधी ते काढून टाका:  codecs remove  चालवा, रीस्टार्ट करा, मग पुन्हा "
-"\"सर्वकाही\" निवडा."
 
 msgid "Remove things the computer no longer needs"
 msgstr "संगणकाला यापुढे नको असलेल्या गोष्टी काढून टाका"
@@ -6600,12 +6573,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "स्टोरेज साफ करा"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"या सिस्टमच्या पूर्वीच्या आवृत्तीतील (negativo17) कोडेक्स अजूनही इंस्टॉल आहेत."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;कोडेक्स;कोडेक;व्हिडिओ;ऑडिओ;मीडिया;इंस्टॉल;"
@@ -7037,16 +7004,6 @@ msgstr "{name} सुरू झाले नाही."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} हे सार्वजनिक ठिकाण आहे"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} आधीच Bazaar, ॲप स्टोअर, मधून इंस्टॉल केलेले आहे.\n"
-"\n"
-"शिफारस: ते उघडा."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8657,3 +8614,14 @@ msgstr "Fedora 45 च्या नवीन फोल्डरमधून ड�
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Fedora 45 वर जा"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "फॉन्ट्स आणि मजकूराचा आकार EvenKeelOS च्या मूळ स्थितीत परत आले आहेत."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "शिफारस: बॉक्स हटवा. पुढच्या वेळी तुम्ही {apps} इंस्टॉल कराल तेव्हा तो आपोआप परत येतो. बॉक्समध्ये इतर मार्गाने जोडलेले काहीही सुद्धा हटवले जाते. तुमच्या फाइल्सना हात लावला जात नाही."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "तो हटवल्याने सुमारे {size} जागा मोकळी होते."

@@ -3,10 +3,9 @@ import json
 import os
 import pwd
 import stat
-import subprocess
 from pathlib import Path
 
-from evenkeel_os_ui import _, N_
+from evenkeel_os_ui import _, N_, answer
 
 STATE = Path("/etc/evenkeel-os/shared-folders.json")
 SHARES = Path("/etc/samba/evenkeel-shares.conf")
@@ -43,7 +42,8 @@ def clean(text):
 def folder_problem(path, user):
     """Why user can't share path ("" when they can). path must already be the real path, with no shortcuts in it."""
     try:
-        home = os.path.realpath(pwd.getpwnam(user).pw_dir)
+        account = pwd.getpwnam(user)
+        home = os.path.realpath(account.pw_dir)
         st = os.lstat(path)
     except (KeyError, OSError):
         return _("That folder wasn't found.")
@@ -56,7 +56,7 @@ def folder_problem(path, user):
         return _("Pick a folder inside your home folder.")
     if any(part.startswith(".") for part in path[len(home) + 1:].split("/")):
         return _("Hidden folders hold settings and keys. They can't be shared.")
-    if st.st_uid != pwd.getpwnam(user).pw_uid:
+    if st.st_uid != account.pw_uid:
         return _("That folder belongs to someone else.")
     return ""
 
@@ -67,8 +67,9 @@ def share_name(path, taken):
     base = " ".join(base.split())[:60] or "Shared folder"
     if base.lower() in TAKEN:
         base += " folder"
+    taken = {t.lower() for t in taken}
     name, n = base, 2
-    while name.lower() in {t.lower() for t in taken}:
+    while name.lower() in taken:
         name, n = f"{base} {n}", n + 1
     return name
 
@@ -94,11 +95,8 @@ def set_up():
 
 def running():
     """Whether Samba is running, or starting (its start may still be waiting in systemd's queue)."""
-    try:
-        state = subprocess.run(["systemctl", "is-active", "smb.service"], capture_output=True, text=True,
-                               timeout=20).stdout.strip()
-        queued = subprocess.run(["systemctl", "list-jobs", "--no-legend", "smb.service"], capture_output=True,
-                                text=True, timeout=20).stdout.strip()
-    except (OSError, subprocess.TimeoutExpired):
+    state = answer(["systemctl", "is-active", "smb.service"])
+    queued = answer(["systemctl", "list-jobs", "--no-legend", "smb.service"])
+    if state is None or queued is None:
         return False
-    return state in ("active", "activating", "reloading") or bool(queued)
+    return state.stdout.strip() in ("active", "activating", "reloading") or bool(queued.stdout.strip())

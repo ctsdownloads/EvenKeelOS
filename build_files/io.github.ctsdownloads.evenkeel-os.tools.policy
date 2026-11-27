@@ -2,7 +2,7 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD polkit Policy Configuration 1.0//EN" "http://www.freedesktop.org/software/polkit/policyconfig-1.dtd">
 <policyconfig>
   <vendor>EvenKeelOS</vendor>
-  <vendor_url>https://github.com/ctsdownloads/evenkeel-os</vendor_url>
+  <vendor_url>https://github.com/ctsdownloads/EvenKeelOS</vendor_url>
 
   <!-- Wheelhouse: automatic updates, disk unlock and the rollback tests. Admin password. -->
   <action id="io.github.ctsdownloads.evenkeel-os.tools">
@@ -52,7 +52,7 @@
     <annotate key="org.freedesktop.policykit.exec.path">/usr/libexec/evenkeel-os-boot-options</annotate>
   </action>
 
-  <!-- Harmless Wheelhouse jobs: 50-evenkeel-os-tools.rules lets an admin at the computer skip the password. -->
+  <!-- Harmless Wheelhouse jobs: 50-evenkeel-os.rules lets an admin at the computer skip the password. -->
   <action id="io.github.ctsdownloads.evenkeel-os.tools.safe">
     <description>Turn on automatic updates or automatic disk unlock, or free up disk space</description>
     <message>Authentication is required to change a Wheelhouse setting</message>

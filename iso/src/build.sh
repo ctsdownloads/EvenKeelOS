@@ -7,7 +7,7 @@ IMAGE=ghcr.io/ctsdownloads/evenkeel-os:latest
 # Directory that /root links to.
 mkdir -p "$(realpath /root)"
 
-# ---------------------------------------------------------------- the live session
+# The live session
 
 # No updates, setup, first-login questions or rollback checks in the live session.
 for s in uupd.timer brew-setup.service podman-auto-update.timer tailscaled.service \
@@ -28,7 +28,7 @@ systemctl enable livesys.service livesys-late.service
 install -Dm755 /src/evenkeel-os-live-welcome /usr/libexec/evenkeel-os-live-welcome
 install -Dm644 /src/evenkeel-os-live-welcome.desktop /etc/xdg/autostart/evenkeel-os-live-welcome.desktop
 
-# ---------------------------------------------------------------- the installer
+# The installer
 
 # The installer: screens as the live user, disk work as root through pkexec (live USB only).
 dnf install -y python3-gobject gtk4 libadwaita python3-langtable python3-pwquality qrencode xkeyboard-config \
@@ -83,7 +83,7 @@ else
   podman pull "$IMAGE"
 fi
 
-# ---------------------------------------------------------------- live boot
+# Live boot
 
 dnf install -y dracut-live
 kernel=$(kernel-install list --json pretty | jq -r '.[] | select(.has_kernel == true) | .version')
@@ -106,7 +106,7 @@ cp /src/iso.yaml /usr/lib/bootc-image-builder/iso.yaml
 
 dnf clean all
 
-# ---------------------------------------------------------------- checks: fail the build, never ship it wrong
+# Checks: fail the build, never ship it wrong
 
 fail() { echo "ERROR: $*"; exit 1; }
 rpm -q anaconda-core >/dev/null 2>&1 && fail "Fedora's installer (Anaconda) is still on the USB"
@@ -132,11 +132,10 @@ done
 # "I already use Linux" writes the file that keeps New to EvenKeelOS? closed at login, where Wheelhouse looks for it.
 linux_choice="the installer's Linux choice wouldn't stop New to EvenKeelOS? at login"
 env -u XDG_STATE_HOME HOME=/h python3 -I - <<'PY' || fail "$linux_choice"
-import importlib.machinery, importlib.util, runpy, sys
+import runpy, sys
 sys.path.insert(0, "/usr/lib/evenkeel-os")
-loader = importlib.machinery.SourceFileLoader("tools", "/usr/bin/evenkeel-os-tools")
-tools = importlib.util.module_from_spec(importlib.util.spec_from_loader("tools", loader))
-loader.exec_module(tools)
+from evenkeel_os_ui import load_program
+tools = load_program("/usr/bin/evenkeel-os-tools", "tools")
 engine = runpy.run_path("/usr/libexec/evenkeel-os-install-engine")["GUIDE_HIDDEN"]
 sys.exit(str(tools.GUIDE_HIDDEN) != "/h/" + engine)
 PY

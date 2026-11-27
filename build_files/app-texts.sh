@@ -42,8 +42,7 @@ ${version%-*}/${version##*-}/noarch/gnome-shell-extension-dash-to-panel-$version
     mv "$work/p" "$out" ;;
   ghostty)
     read -r _ version < <(field copr ghostty)
-    base=https://download.copr.fedorainfracloud.org/results/scottames/ghostty/fedora-$(sed -n \
-      's|^FROM quay.io/fedora-ostree-desktops/silverblue:\([0-9]*\)$|\1|p' Containerfile)-x86_64
+    base=https://download.copr.fedorainfracloud.org/results/scottames/ghostty/fedora-$(build_files/fedora-version.sh)-x86_64
     curl -fsSL -o "$work/s.rpm" "$base/Packages/g/ghostty-$version.src.rpm"
     (cd "$work" && rpm2cpio s.rpm | cpio -idm --quiet && tar xzf ./*.tar.gz --wildcards '*/po/*.pot')
     cp "$(find "$work" -name '*.pot')" "$out" ;;

@@ -3707,28 +3707,6 @@ msgstr "Membaca senarai aplikasi daripada sumber muat turun baharu"
 msgid "Recommended"
 msgstr "Disyorkan"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Disyorkan: Hapuskan kotak. Ia membebaskan kira-kira {size}, dan akan muncul "
-"semula dengan sendirinya pada kali seterusnya anda memasang {apps}. Apa-apa "
-"sahaja yang ditambah ke dalam kotak melalui cara lain juga akan dihapuskan. "
-"Fail anda tidak disentuh."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Disyorkan: Hapuskan kotak. Ia membebaskan ruang cakeranya, dan akan muncul "
-"semula dengan sendirinya pada kali seterusnya anda memasang {apps}. Apa-apa "
-"sahaja yang ditambah ke dalam kotak melalui cara lain juga akan dihapuskan. "
-"Fail anda tidak disentuh."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3832,13 +3810,6 @@ msgstr "Buang kodek media?"
 
 msgid "Remove the test marker"
 msgstr "Buang penanda ujian"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Buang dahulu: jalankan  codecs remove , mulakan semula, kemudian pilih "
-"Semuanya sekali lagi."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Buang perkara yang sudah tidak diperlukan oleh komputer"
@@ -6759,11 +6730,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage bersihkan storan"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "kodek daripada versi terdahulu sistem ini (negativo17) masih dipasang."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr "codecs;codec;ffmpeg;h264;video;audio;media;install;kodek;pasang;"
 
@@ -7209,16 +7175,6 @@ msgstr "{name} tidak bermula."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} ialah Tempat Awam"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} sudah dipasang daripada Bazaar, kedai aplikasi.\n"
-"\n"
-"Disyorkan: Bukanya."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8825,3 +8781,14 @@ msgstr "Baca sumber muat turun dalam folder baharu Fedora 45"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Beralih kepada Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Fon dan saiz teks sudah kembali kepada asal EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Disyorkan: Hapuskan kotak. Kotak akan muncul semula dengan sendirinya pada kali seterusnya anda memasang {apps}. Apa-apa sahaja yang ditambah ke dalam kotak melalui cara lain juga akan dihapuskan. Fail anda tidak disentuh."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Menghapuskannya membebaskan kira-kira {size}."

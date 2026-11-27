@@ -1,11 +1,12 @@
 """Network safety: whether each saved network is Home, Work or a Public place, and what that lets in."""
-import subprocess
 
-from evenkeel_os_ui import N_
+from evenkeel_os_ui import N_, answer
 
 PUBLIC, HOME, WORK = "evenkeel-public", "evenkeel-home", "evenkeel-work"
 # Translators: Home, Work and Public place are the names of kinds of network place, chosen for each Wi-Fi or cable.
 PLACES = {HOME: N_("Home"), WORK: N_("Work"), PUBLIC: N_("Public place")}
+ABOUT = {HOME: N_("Your own home network"), WORK: N_("An office. Nothing gets in, and your folders aren't shared."),
+         PUBLIC: N_("A café, hotel, airport, or anywhere else. Nothing gets in.")}
 KINDS = {"802-11-wireless": N_("Wi-Fi"), "802-3-ethernet": N_("Wired")}
 LETS_IN = {
     PUBLIC: N_("Nothing can reach this computer from the network. Finding printers still works."),
@@ -18,11 +19,8 @@ LETS_IN = {
 
 def nmcli(*args):
     """nmcli's terse output as lines, or None when it fails."""
-    try:
-        r = subprocess.run(["nmcli", "-t", *args], capture_output=True, text=True, timeout=20)
-    except (OSError, subprocess.TimeoutExpired):
-        return None
-    return r.stdout.splitlines() if r.returncode == 0 else None
+    r = answer(["nmcli", "-t", *args])
+    return r.stdout.splitlines() if r and r.returncode == 0 else None
 
 
 def fields(line):
@@ -102,11 +100,8 @@ def set_place(network, zone):
 
 def firewall(*args):
     """A firewall question any user may ask (the zone's settings, the default zone); None when it can't answer."""
-    try:
-        r = subprocess.run(["firewall-cmd", *args], capture_output=True, text=True, timeout=20)
-    except (OSError, subprocess.TimeoutExpired):
-        return None
-    return r.stdout.strip() if r.returncode == 0 else None
+    r = answer(["firewall-cmd", *args])
+    return r.stdout.strip() if r and r.returncode == 0 else None
 
 
 def default_zone():
@@ -116,9 +111,8 @@ def default_zone():
 def running(service):
     """Whether the SSH server is switched on, or printers here are shared; None when it can't be told."""
     cmd = (["systemctl", "is-enabled", "sshd.service"] if service == "ssh" else ["cupsctl"])
-    try:
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=20)
-    except (OSError, subprocess.TimeoutExpired):
+    r = answer(cmd)
+    if r is None:
         return None
     if service == "ssh":
         return r.stdout.strip() == "enabled"
