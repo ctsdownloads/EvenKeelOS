@@ -1,0 +1,1164 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Quit"
+msgstr "ออก"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "ปิด %d หน้าต่าง"
+
+msgid "Power options"
+msgstr "ตัวเลือกพลังงาน"
+
+msgid "Event logs"
+msgstr "บันทึกเหตุการณ์"
+
+msgid "System"
+msgstr "ระบบ"
+
+msgid "Device Management"
+msgstr "การจัดการอุปกรณ์"
+
+msgid "Disk Management"
+msgstr "การจัดการดิสก์"
+
+msgid "Unlock taskbar"
+msgstr "ปลดล็อกแถบงาน"
+
+msgid "Lock taskbar"
+msgstr "ล็อกแถบงาน"
+
+msgid "Gnome Settings"
+msgstr "การตั้งค่า GNOME"
+
+msgid "Dash to Panel Settings"
+msgstr "การตั้งค่า Dash to Panel"
+
+msgid "Restore Windows"
+msgstr "คืนค่าหน้าต่าง"
+
+msgid "Show Desktop"
+msgstr "แสดงเดสก์ท็อป"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel ได้รับการอัปเดตแล้ว!"
+
+msgid "You are now running version"
+msgstr "ตอนนี้คุณกำลังใช้รุ่น"
+
+msgid "See what's new"
+msgstr "ดูว่ามีอะไรใหม่"
+
+msgid "Top Bar"
+msgstr "แถบด้านบน"
+
+msgid "Show Desktop button height (px)"
+msgstr "ความสูงของปุ่มแสดงเดสก์ท็อป (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "ความกว้างของปุ่มแสดงเดสก์ท็อป (px)"
+
+msgid "Left"
+msgstr "ซ้าย"
+
+msgid "Center"
+msgstr "กึ่งกลาง"
+
+msgid "Right"
+msgstr "ขวา"
+
+msgid "Top"
+msgstr "บน"
+
+msgid "Middle"
+msgstr "กลาง"
+
+msgid "Bottom"
+msgstr "ล่าง"
+
+msgid "Start"
+msgstr "เริ่มต้น"
+
+msgid "End"
+msgstr "สิ้นสุด"
+
+msgid "Show Applications button"
+msgstr "ปุ่มแสดงแอปพลิเคชัน"
+
+msgid "Activities button"
+msgstr "ปุ่มกิจกรรม"
+
+msgid "Taskbar"
+msgstr "แถบงาน"
+
+msgid "Date menu"
+msgstr "เมนูวันที่"
+
+msgid "System menu"
+msgstr "เมนูระบบ"
+
+msgid "Left box"
+msgstr "กล่องซ้าย"
+
+msgid "Center box"
+msgstr "กล่องกลาง"
+
+msgid "Right box"
+msgstr "กล่องขวา"
+
+msgid "Desktop button"
+msgstr "ปุ่มเดสก์ท็อป"
+
+msgid "Move up"
+msgstr "เลื่อนขึ้น"
+
+msgid "Move down"
+msgstr "เลื่อนลง"
+
+msgid "Visible"
+msgstr "มองเห็นได้"
+
+msgid "Select element position"
+msgstr "เลือกตำแหน่งองค์ประกอบ"
+
+msgid "Stacked to top"
+msgstr "ซ้อนชิดด้านบน"
+
+msgid "Stacked to left"
+msgstr "ซ้อนชิดด้านซ้าย"
+
+msgid "Stacked to bottom"
+msgstr "ซ้อนชิดด้านล่าง"
+
+msgid "Stacked to right"
+msgstr "ซ้อนชิดด้านขวา"
+
+msgid "Centered"
+msgstr "กึ่งกลาง"
+
+msgid "Monitor Center"
+msgstr "กึ่งกลางจอภาพ"
+
+msgid "More options"
+msgstr "ตัวเลือกเพิ่มเติม"
+
+msgid "Reset to defaults"
+msgstr "รีเซ็ตเป็นค่าเริ่มต้น"
+
+msgid "Show Applications options"
+msgstr "ตัวเลือกการแสดงแอปพลิเคชัน"
+
+msgid "Open icon"
+msgstr "ไอคอนเปิด"
+
+msgid "Show Desktop options"
+msgstr "ตัวเลือกการแสดงเดสก์ท็อป"
+
+msgid "Primary monitor"
+msgstr "จอภาพหลัก"
+
+msgid "Monitor "
+msgstr "จอภาพ "
+
+msgid "Running Indicator Options"
+msgstr "ตัวเลือกตัวบ่งชี้การทำงาน"
+
+msgid "Dynamic opacity options"
+msgstr "ตัวเลือกความทึบแบบไดนามิก"
+
+msgid "Intellihide options"
+msgstr "ตัวเลือก Intellihide"
+
+msgid "Window preview options"
+msgstr "ตัวเลือกตัวอย่างหน้าต่าง"
+
+msgid "Isolate Workspaces options"
+msgstr "ตัวเลือกการแยกพื้นที่ทำงาน"
+
+msgid "Isolate monitors options"
+msgstr "ตัวเลือกการแยกจอภาพ"
+
+msgid "Ungrouped application options"
+msgstr "ตัวเลือกแอปพลิเคชันที่ไม่จัดกลุ่ม"
+
+msgid "Customize middle-click behavior"
+msgstr "ปรับแต่งพฤติกรรมการคลิกกลาง"
+
+msgid "Text"
+msgstr "ข้อความ"
+
+msgid "Command"
+msgstr "คำสั่ง"
+
+msgid "Remove"
+msgstr "ลบออก"
+
+msgid "Customize panel scroll behavior"
+msgstr "ปรับแต่งพฤติกรรมการเลื่อนบนแผง"
+
+msgid "Customize icon scroll behavior"
+msgstr "ปรับแต่งพฤติกรรมการเลื่อนบนไอคอน"
+
+msgid "Advanced hotkeys options"
+msgstr "ตัวเลือกปุ่มลัดขั้นสูง"
+
+msgid "Secondary Menu Options"
+msgstr "ตัวเลือกเมนูรอง"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d มิลลิวินาที"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d ไอคอน"
+
+msgid "App icon animation options"
+msgstr "ตัวเลือกแอนิเมชันไอคอนแอป"
+
+msgid "App icon highlight options"
+msgstr "ตัวเลือกการเน้นไอคอนแอป"
+
+msgid "Export settings"
+msgstr "ส่งออกการตั้งค่า"
+
+msgid "Import settings"
+msgstr "นำเข้าการตั้งค่า"
+
+msgid "Move to current Workspace"
+msgstr "ย้ายไปยังพื้นที่ทำงานปัจจุบัน"
+
+msgid "Animation type"
+msgstr "ประเภทแอนิเมชัน"
+
+msgid "Simple"
+msgstr "เรียบง่าย"
+
+msgid "Ripple"
+msgstr "ระลอกคลื่น"
+
+msgid "Plank"
+msgstr "กระดาน"
+
+msgid "Duration"
+msgstr "ระยะเวลา"
+
+msgid "Rotation"
+msgstr "การหมุน"
+
+msgid "Travel"
+msgstr "ระยะเคลื่อนที่"
+
+msgid "Zoom"
+msgstr "ซูม"
+
+msgid "Convexity"
+msgstr "ความนูน"
+
+msgid "Extent"
+msgstr "ขอบเขต"
+
+msgid "Highlight focused application"
+msgstr "เน้นแอปพลิเคชันที่โฟกัสอยู่"
+
+msgid "Icon dominant color"
+msgstr "สีเด่นของไอคอน"
+
+msgid "Custom color"
+msgstr "สีที่กำหนดเอง"
+
+msgid "Highlight opacity"
+msgstr "ความทึบของการเน้น"
+
+msgid "Indicator size (px)"
+msgstr "ขนาดตัวบ่งชี้ (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "สีตัวบ่งชี้ - สีเด่นของไอคอน"
+
+msgid "Indicator color - Override Theme"
+msgstr "สีตัวบ่งชี้ - แทนที่ธีม"
+
+msgid "1 window open (or ungrouped)"
+msgstr "เปิดอยู่ 1 หน้าต่าง (หรือไม่จัดกลุ่ม)"
+
+msgid "Apply to all"
+msgstr "นำไปใช้กับทั้งหมด"
+
+msgid "2 windows open"
+msgstr "เปิดอยู่ 2 หน้าต่าง"
+
+msgid "3 windows open"
+msgstr "เปิดอยู่ 3 หน้าต่าง"
+
+msgid "4+ windows open"
+msgstr "เปิดอยู่ 4 หน้าต่างขึ้นไป"
+
+msgid "Use different for unfocused"
+msgstr "ใช้ค่าอื่นสำหรับหน้าต่างที่ไม่ได้โฟกัส"
+
+msgid "The panel background opacity is affected by"
+msgstr "ความทึบของพื้นหลังแผงได้รับผลจาก"
+
+msgid "All windows"
+msgstr "ทุกหน้าต่าง"
+
+msgid "Focused windows"
+msgstr "หน้าต่างที่โฟกัสอยู่"
+
+msgid "Maximized windows"
+msgstr "หน้าต่างที่ขยายใหญ่สุด"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "เปลี่ยนความทึบเมื่อหน้าต่างเข้าใกล้กว่า (px)"
+
+msgid "Change opacity to (%)"
+msgstr "เปลี่ยนความทึบเป็น (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "ระยะเวลาแอนิเมชันการเปลี่ยนความทึบ (มิลลิวินาที)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "ขนาดตัวอักษร (px) ของชื่อแอปพลิเคชัน (ค่าเริ่มต้นคือ 14)"
+
+msgid "Font weight of application titles"
+msgstr "น้ำหนักตัวอักษรของชื่อแอปพลิเคชัน"
+
+msgid "inherit from theme"
+msgstr "รับค่าจากธีม"
+
+msgid "normal"
+msgstr "ปกติ"
+
+msgid "lighter"
+msgstr "บางลง"
+
+msgid "bold"
+msgstr "ตัวหนา"
+
+msgid "bolder"
+msgstr "หนาขึ้น"
+
+msgid "Font color of the application titles"
+msgstr "สีตัวอักษรของชื่อแอปพลิเคชัน"
+
+msgid "Font color of the minimized application titles"
+msgstr "สีตัวอักษรของชื่อแอปพลิเคชันที่ย่อเก็บ"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "ความกว้างสูงสุด (px) ของชื่อแอปพลิเคชัน"
+
+msgid "(default is 160)"
+msgstr "(ค่าเริ่มต้นคือ 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "ใช้ความกว้างคงที่สำหรับชื่อแอปพลิเคชัน"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "ชื่อแอปพลิเคชันทั้งหมดมีความกว้างเท่ากัน แม้ว่าข้อความจะสั้นกว่าความกว้างสูงสุดก็ตาม โดยใช้ค่าความกว้างสูงสุดเป็นความกว้างคงที่"
+
+msgid "Display running indicators on unfocused applications"
+msgstr "แสดงตัวบ่งชี้การทำงานบนแอปพลิเคชันที่ไม่ได้โฟกัส"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "ใช้ไอคอนรายการโปรดเป็นตัวเปิดแอปพลิเคชัน"
+
+msgid "Highlight AppIcon color"
+msgstr "สีไอคอนแอปที่เน้น"
+
+msgid "Pressed AppIcon color"
+msgstr "สีไอคอนแอปที่กดอยู่"
+
+msgid "Highlight AppIcon border radius"
+msgstr "รัศมีขอบของไอคอนแอปที่เน้น"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "แทนที่รัศมีขอบส่วนกลาง (ค่าเริ่มต้นคือ 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "ซ่อนแผงจากหน้าต่างเท่านั้น"
+
+msgid "Overlapping"
+msgstr "ซ้อนทับ"
+
+msgid "On same monitor"
+msgstr "บนจอภาพเดียวกัน"
+
+msgid "The panel hides from"
+msgstr "แผงจะซ่อนจาก"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "การเอาตัวชี้ไปแตะขอบจอภาพจะแสดงแผง"
+
+msgid "Limit to panel length"
+msgstr "จำกัดตามความยาวของแผง"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "การวางตัวชี้เหนือพื้นที่แผงจะคงแผงให้แสดงอยู่"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "ต้องใช้แรงกดที่ขอบจอภาพเพื่อแสดงแผง"
+
+msgid "Required pressure threshold (px)"
+msgstr "เกณฑ์แรงกดที่ต้องใช้ (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "เวลาหมดอายุของแรงกดที่ต้องใช้ (มิลลิวินาที)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "อนุญาตให้แสดงแผงได้ขณะอยู่ในโหมดเต็มหน้าจอ"
+
+msgid "(requires multi-monitors option)"
+msgstr "(ต้องเปิดตัวเลือกหลายจอภาพ)"
+
+msgid "Only hide secondary panels"
+msgstr "ซ่อนเฉพาะแผงรอง"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "ไวยากรณ์: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "แป้นพิมพ์ลัดเพื่อแสดงและค้างแผงไว้"
+
+msgid "e.g. <Super>i"
+msgstr "เช่น <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "คงสถานะไว้เมื่อเริ่มระบบใหม่"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(เคารพการตั้งค่า \"ห้ามรบกวน\" ของ GNOME และต้องเปิดตัวเลือกแสดงตัวนับการแจ้งเตือน)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "แสดงและค้างแผงไว้เมื่อมีการแจ้งเตือน"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "ระยะเวลาแอนิเมชันการซ่อนและแสดง (มิลลิวินาที)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "เวลาหน่วงก่อนซ่อนแผง (มิลลิวินาที)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "เวลาหน่วงก่อนแสดงแผง (มิลลิวินาที)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "เวลาหน่วงก่อนเปิดใช้ intellihide ตอนเริ่มต้น (มิลลิวินาที)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "แยกจอภาพแม้ว่าจะใช้แผงเดียว"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "แยกพื้นที่ทำงานในตัวสลับแอปพลิเคชันของ GNOME Shell"
+
+msgid "Shift+Click action"
+msgstr "การดำเนินการเมื่อกด Shift+คลิก"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "เมื่อตั้งเป็นย่อเก็บ การดับเบิลคลิกจะย่อเก็บทุกหน้าต่างของแอปพลิเคชัน"
+
+msgid "Raise windows"
+msgstr "ยกหน้าต่างขึ้นมา"
+
+msgid "Minimize window"
+msgstr "ย่อเก็บหน้าต่าง"
+
+msgid "Launch new instance"
+msgstr "เปิดอินสแตนซ์ใหม่"
+
+msgid "Cycle through windows"
+msgstr "เวียนดูหน้าต่าง"
+
+msgid "Cycle windows + minimize"
+msgstr "เวียนดูหน้าต่าง + ย่อเก็บ"
+
+msgid "Toggle single / Preview multiple"
+msgstr "สลับเดี่ยว / แสดงตัวอย่างหลายหน้าต่าง"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "สลับเดี่ยว / เวียนดูหลายหน้าต่าง"
+
+msgid "Toggle single / Spread multiple"
+msgstr "สลับเดี่ยว / กางหลายหน้าต่าง"
+
+msgid "Middle-Click action"
+msgstr "การดำเนินการเมื่อคลิกกลาง"
+
+msgid "Behavior for Middle-Click."
+msgstr "พฤติกรรมเมื่อคลิกกลาง"
+
+msgid "Shift+Middle-Click action"
+msgstr "การดำเนินการเมื่อกด Shift+คลิกกลาง"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "พฤติกรรมเมื่อกด Shift+คลิกกลาง"
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "ปุ่มลัดจะเป็น Super+ตัวเลข หรือ Super+Alt+ตัวเลข"
+
+msgid "Hotkeys prefix"
+msgstr "คำนำหน้าปุ่มลัด"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "แสดงหมายเลขแอปพลิเคชันบนไอคอนชั่วคราวเมื่อใช้ปุ่มลัด"
+
+msgid "Number overlay"
+msgstr "การซ้อนทับตัวเลข"
+
+msgid "Never"
+msgstr "ไม่เลย"
+
+msgid "Show temporarily"
+msgstr "แสดงชั่วคราว"
+
+msgid "Always visible"
+msgstr "แสดงตลอดเวลา"
+
+msgid "Hide timeout (ms)"
+msgstr "หมดเวลาซ่อน (มิลลิวินาที)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "ทางลัดเพื่อแสดงการซ้อนทับเป็นเวลา 2 วินาที"
+
+msgid "e.g. <Super>q"
+msgstr "เช่น <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "บนจอภาพรอง ให้แสดงการซ้อนทับบนไอคอนที่ตรงกับจอภาพหลัก"
+
+msgid "Show the overlay on all monitors"
+msgstr "แสดงการซ้อนทับบนทุกจอภาพ"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "แสดงตัวอย่างเมื่อแอปพลิเคชันมีหลายอินสแตนซ์"
+
+msgid "Show window previews on hotkey"
+msgstr "แสดงตัวอย่างหน้าต่างเมื่อกดปุ่มลัด"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "เลือกปุ่มตัวเลขบนแป้นพิมพ์ที่ใช้เปิดใช้งานปุ่มลัด"
+
+msgid "Hotkeys are activated with"
+msgstr "ปุ่มลัดเปิดใช้งานด้วย"
+
+msgid "Number row"
+msgstr "แถวตัวเลข"
+
+msgid "Numeric keypad"
+msgstr "แป้นตัวเลข"
+
+msgid "Both"
+msgstr "ทั้งสองแบบ"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "เวลาหน่วงระหว่างเหตุการณ์การเลื่อนเมาส์ (มิลลิวินาที)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "ใช้ค่านี้เพื่อจำกัดจำนวนเหตุการณ์การเลื่อนเมาส์ที่จับได้"
+
+msgid "Show popup when changing workspace"
+msgstr "แสดงป๊อปอัปเมื่อเปลี่ยนพื้นที่ทำงาน"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "มีผลกับป๊อปอัปพื้นที่ทำงานเมื่อเลื่อนบนแผงเท่านั้น"
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "รวมรายการ <i>AppMenu</i>"
+
+msgid "<i>App Details</i> menu item"
+msgstr "รายการเมนู <i>รายละเอียดแอป</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>รายละเอียดแอป</i> ใช้ได้เมื่อติดตั้ง GNOME Software เท่านั้น"
+
+msgid "Show Applications icon"
+msgstr "ไอคอนแสดงแอปพลิเคชัน"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "ระยะขอบด้านข้างของไอคอนแสดงแอปพลิเคชัน (px)"
+
+msgid "Override escape key and return to desktop"
+msgstr "แทนที่ปุ่ม Esc และกลับไปยังเดสก์ท็อป"
+
+msgid "Override Show Desktop line color"
+msgstr "แทนที่สีเส้นแสดงเดสก์ท็อป"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "แสดงเดสก์ท็อปเมื่อวางตัวชี้เหนือปุ่มแสดงเดสก์ท็อป"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "เวลาหน่วงก่อนแสดงเดสก์ท็อป (มิลลิวินาที)"
+
+msgid "Fade duration (ms)"
+msgstr "ระยะเวลาการเฟด (มิลลิวินาที)"
+
+msgid "Time (ms) before showing"
+msgstr "เวลา (มิลลิวินาที) ก่อนแสดง"
+
+msgid "(400 is default)"
+msgstr "(ค่าเริ่มต้นคือ 400)"
+
+msgid "Time (ms) before hiding"
+msgstr "เวลา (มิลลิวินาที) ก่อนซ่อน"
+
+msgid "(100 is default)"
+msgstr "(ค่าเริ่มต้นคือ 100)"
+
+msgid "Immediate on application icon click"
+msgstr "ทันทีเมื่อคลิกไอคอนแอปพลิเคชัน"
+
+msgid "Animation time (ms)"
+msgstr "เวลาแอนิเมชัน (มิลลิวินาที)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "คลิกกลางบนตัวอย่างเพื่อปิดหน้าต่าง"
+
+msgid "Window previews preferred size (px)"
+msgstr "ขนาดที่ต้องการของตัวอย่างหน้าต่าง (px)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "สัดส่วนภาพของตัวอย่างหน้าต่าง X (ความกว้าง)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "คงที่"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "สัดส่วนภาพของตัวอย่างหน้าต่าง Y (ความสูง)"
+
+msgid "Window previews padding (px)"
+msgstr "ระยะห่างภายในของตัวอย่างหน้าต่าง (px)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "ใช้ความทึบที่กำหนดเองสำหรับพื้นหลังของตัวอย่าง"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "หากปิดใช้ พื้นหลังของตัวอย่างจะมีความทึบเท่ากับแผง"
+
+msgid "Close button and header position"
+msgstr "ตำแหน่งของปุ่มปิดและส่วนหัว"
+
+msgid "Display window preview headers"
+msgstr "แสดงส่วนหัวของตัวอย่างหน้าต่าง"
+
+msgid "Icon size (px) of the window preview"
+msgstr "ขนาดไอคอน (px) ของตัวอย่างหน้าต่าง"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "หากปิดใช้ ขนาดไอคอนของตัวอย่างจะอิงตามขนาดของแถบส่วนหัว"
+
+msgid "Font size (px) of the preview titles"
+msgstr "ขนาดตัวอักษร (px) ของชื่อตัวอย่าง"
+
+msgid "Font weight of the preview titles"
+msgstr "น้ำหนักตัวอักษรของชื่อตัวอย่าง"
+
+msgid "Font color of the preview titles"
+msgstr "สีตัวอักษรของชื่อตัวอย่าง"
+
+msgid "Enable window peeking"
+msgstr "เปิดใช้การแอบดูหน้าต่าง"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "เมื่อวางตัวชี้เหนือตัวอย่างหน้าต่างครู่หนึ่ง หน้าต่างนั้นจะถูกเน้นให้เด่นขึ้น"
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "หมดเวลาเข้าสู่โหมดแอบดูหน้าต่าง (มิลลิวินาที)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "ระยะเวลาที่ไม่มีการเคลื่อนไหวขณะวางตัวชี้เหนือตัวอย่างหน้าต่างที่จำเป็นเพื่อเข้าสู่โหมดแอบดูหน้าต่าง"
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "ความทึบของโหมดแอบดูหน้าต่าง"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "ทุกหน้าต่างยกเว้นหน้าต่างที่กำลังแอบดูจะถูกตั้งความทึบเป็นค่าเดียวกัน"
+
+msgid "About"
+msgstr "เกี่ยวกับ"
+
+msgid "Info"
+msgstr "ข้อมูล"
+
+msgid "Version"
+msgstr "รุ่น"
+
+msgid "Source"
+msgstr "ซอร์ส"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "ส่งออกและนำเข้า"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "ใช้ปุ่มด้านล่างเพื่อสร้างไฟล์การตั้งค่าจากค่ากำหนดปัจจุบันของคุณ ซึ่งสามารถนำเข้าบนเครื่องอื่นได้"
+
+msgid "Export and import settings"
+msgstr "ส่งออกและนำเข้าการตั้งค่า"
+
+msgid "Export to file"
+msgstr "ส่งออกเป็นไฟล์"
+
+msgid "Import from file"
+msgstr "นำเข้าจากไฟล์"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">โปรแกรมนี้ไม่มีการรับประกันใด ๆ ทั้งสิ้น\n"
+"ดูรายละเอียดได้ที่ <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License รุ่น 2 หรือใหม่กว่า</a></span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "สนับสนุนและพัฒนาครั้งแรกโดย"
+
+msgid "Action"
+msgstr "การดำเนินการ"
+
+msgid "Click action"
+msgstr "การดำเนินการเมื่อคลิก"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "พฤติกรรมเมื่อคลิกที่ไอคอนของแอปพลิเคชันที่กำลังทำงานอยู่"
+
+msgid "Toggle windows"
+msgstr "สลับหน้าต่าง"
+
+msgid "Scroll action"
+msgstr "การดำเนินการเมื่อเลื่อน"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "พฤติกรรมเมื่อเลื่อนเมาส์เหนือแผง"
+
+msgid "Scroll panel action"
+msgstr "การดำเนินการเมื่อเลื่อนบนแผง"
+
+msgid "Do nothing"
+msgstr "ไม่ทำอะไร"
+
+msgid "Switch workspace"
+msgstr "สลับพื้นที่ทำงาน"
+
+msgid "Cycle windows"
+msgstr "เวียนดูหน้าต่าง"
+
+msgid "Change volume"
+msgstr "เปลี่ยนระดับเสียง"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "พฤติกรรมเมื่อเลื่อนเมาส์เหนือไอคอนแอปพลิเคชัน"
+
+msgid "Scroll icon action"
+msgstr "การดำเนินการเมื่อเลื่อนบนไอคอน"
+
+msgid "Same as panel"
+msgstr "เหมือนแผง"
+
+msgid "Hotkey overlay"
+msgstr "การซ้อนทับปุ่มลัด"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "เปิดใช้ Super+(0-9) เป็นทางลัดเพื่อเปิดใช้งานแอป สามารถใช้ร่วมกับ Shift และ Ctrl ได้เช่นกัน"
+
+msgid "Use hotkeys to activate apps"
+msgstr "ใช้ปุ่มลัดเพื่อเปิดใช้งานแอป"
+
+msgid "Application icons context menu"
+msgstr "เมนูบริบทของไอคอนแอปพลิเคชัน"
+
+msgid "(right-click menu)"
+msgstr "(เมนูคลิกขวา)"
+
+msgid "Secondary menu"
+msgstr "เมนูรอง"
+
+msgid "Panel context menu entries"
+msgstr "รายการเมนูบริบทของแผง"
+
+msgid "Add entry"
+msgstr "เพิ่มรายการ"
+
+msgid "Behavior"
+msgstr "พฤติกรรม"
+
+msgid "Applications"
+msgstr "แอปพลิเคชัน"
+
+msgid "Show favorite applications"
+msgstr "แสดงแอปพลิเคชันโปรด"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "แสดงแอปพลิเคชันโปรดบนแผงรอง"
+
+msgid "Show running applications"
+msgstr "แสดงแอปพลิเคชันที่กำลังทำงาน"
+
+msgid "Ungroup applications"
+msgstr "ไม่จัดกลุ่มแอปพลิเคชัน"
+
+msgid "Show notification counter badge"
+msgstr "แสดงป้ายตัวนับการแจ้งเตือน"
+
+msgid "Hover"
+msgstr "วางตัวชี้"
+
+msgid "Show window previews on hover"
+msgstr "แสดงตัวอย่างหน้าต่างเมื่อวางตัวชี้"
+
+msgid "Show tooltip on hover"
+msgstr "แสดงคำแนะนำเครื่องมือเมื่อวางตัวชี้"
+
+msgid "Isolate"
+msgstr "แยก"
+
+msgid "Isolate Workspaces"
+msgstr "แยกพื้นที่ทำงาน"
+
+msgid "Isolate monitors"
+msgstr "แยกจอภาพ"
+
+msgid "Overview"
+msgstr "ภาพรวม"
+
+msgid "Click empty space to close overview"
+msgstr "คลิกพื้นที่ว่างเพื่อปิดภาพรวม"
+
+msgid "Disable show overview on startup"
+msgstr "ปิดการแสดงภาพรวมเมื่อเริ่มต้น"
+
+msgid "Fine-Tune"
+msgstr "ปรับแต่งละเอียด"
+
+msgid "Font size"
+msgstr "ขนาดตัวอักษร"
+
+msgid "(0 = theme default)"
+msgstr "(0 = ค่าเริ่มต้นของธีม)"
+
+msgid "Tray Font Size"
+msgstr "ขนาดตัวอักษรของถาดระบบ"
+
+msgid "LeftBox Font Size"
+msgstr "ขนาดตัวอักษรของกล่องซ้าย"
+
+msgid "Padding"
+msgstr "ระยะห่างภายใน"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = ค่าเริ่มต้นของธีม)"
+
+msgid "Tray Item Padding"
+msgstr "ระยะห่างภายในของรายการในถาดระบบ"
+
+msgid "Status Icon Padding"
+msgstr "ระยะห่างภายในของไอคอนสถานะ"
+
+msgid "LeftBox Padding"
+msgstr "ระยะห่างภายในของกล่องซ้าย"
+
+msgid "Animate"
+msgstr "แอนิเมชัน"
+
+msgid "Animate switching applications"
+msgstr "แอนิเมชันเมื่อสลับแอปพลิเคชัน"
+
+msgid "Animate launching new windows"
+msgstr "แอนิเมชันเมื่อเปิดหน้าต่างใหม่"
+
+msgid "Gnome functionality"
+msgstr "ฟังก์ชันของ GNOME"
+
+msgid "(overview)"
+msgstr "(ภาพรวม)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "คงแถบ dash ดั้งเดิมของ GNOME Shell ไว้"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "คงแผงด้านบนดั้งเดิมของ GNOME Shell ไว้"
+
+msgid "(e.g. date menu)"
+msgstr "(เช่น เมนูวันที่)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "เปิดใช้งานปุ่มเมนูของแผงเมื่อคลิกเท่านั้น"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "บังคับให้มุมลัดกิจกรรมอยู่บนจอภาพหลัก"
+
+msgid "Position"
+msgstr "ตำแหน่ง"
+
+msgid "Panel"
+msgstr "แผง"
+
+msgid "Display the main panel on"
+msgstr "แสดงแผงหลักบน"
+
+msgid "Display panels on all monitors"
+msgstr "แสดงแผงบนทุกจอภาพ"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "ซ่อนและแสดงแผงตามค่ากำหนด"
+
+msgid "Panel Intellihide"
+msgstr "Intellihide ของแผง"
+
+msgid "Order and Position on monitors"
+msgstr "ลำดับและตำแหน่งบนจอภาพ"
+
+msgid "Monitor"
+msgstr "จอภาพ"
+
+msgid "Apply changes to all monitors"
+msgstr "นำการเปลี่ยนแปลงไปใช้กับทุกจอภาพ"
+
+msgid "Panel monitor position"
+msgstr "ตำแหน่งแผงบนจอภาพ"
+
+msgid "(default is 48)"
+msgstr "(ค่าเริ่มต้นคือ 48)"
+
+msgid "Panel thickness"
+msgstr "ความหนาของแผง"
+
+msgid "(default is 100)"
+msgstr "(ค่าเริ่มต้นคือ 100)"
+
+msgid "Panel length"
+msgstr "ความยาวของแผง"
+
+msgid "Dynamic"
+msgstr "แบบไดนามิก"
+
+msgid "Anchor"
+msgstr "จุดยึด"
+
+msgid "Taskbar Display"
+msgstr "การแสดงแถบงาน"
+
+msgid "Style"
+msgstr "สไตล์"
+
+msgid "Global style"
+msgstr "สไตล์ส่วนกลาง"
+
+msgid "Border radius"
+msgstr "รัศมีขอบ"
+
+msgid "AppIcon style"
+msgstr "สไตล์ไอคอนแอป"
+
+msgid "(default is 8)"
+msgstr "(ค่าเริ่มต้นคือ 8)"
+
+msgid "App Icon Margin"
+msgstr "ระยะขอบของไอคอนแอป"
+
+msgid "(default is 4)"
+msgstr "(ค่าเริ่มต้นคือ 4)"
+
+msgid "App Icon Padding"
+msgstr "ระยะห่างภายในของไอคอนแอป"
+
+msgid "Animate hovering app icons"
+msgstr "แอนิเมชันเมื่อวางตัวชี้บนไอคอนแอป"
+
+msgid "Highlight hovering app icons"
+msgstr "เน้นไอคอนแอปเมื่อวางตัวชี้"
+
+msgid "Icon style"
+msgstr "สไตล์ไอคอน"
+
+msgid "Normal"
+msgstr "ปกติ"
+
+msgid "Symbolic"
+msgstr "สัญลักษณ์"
+
+msgid "Grayscale"
+msgstr "โทนสีเทา"
+
+msgid "Running indicator"
+msgstr "ตัวบ่งชี้การทำงาน"
+
+msgid "Running indicator position"
+msgstr "ตำแหน่งตัวบ่งชี้การทำงาน"
+
+msgid "Running indicator style (Focused app)"
+msgstr "สไตล์ตัวบ่งชี้การทำงาน (แอปที่โฟกัสอยู่)"
+
+msgid "Dots"
+msgstr "จุด"
+
+msgid "Squares"
+msgstr "สี่เหลี่ยม"
+
+msgid "Dashes"
+msgstr "ขีด"
+
+msgid "Segmented"
+msgstr "แบ่งส่วน"
+
+msgid "Solid"
+msgstr "ทึบ"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "สไตล์ตัวบ่งชี้การทำงาน (แอปที่ไม่ได้โฟกัส)"
+
+msgid "Panel style"
+msgstr "สไตล์แผง"
+
+msgid "(default is 0)"
+msgstr "(ค่าเริ่มต้นคือ 0)"
+
+msgid "Side margins"
+msgstr "ระยะขอบด้านข้าง"
+
+msgid "Top and bottom margins"
+msgstr "ระยะขอบด้านบนและด้านล่าง"
+
+msgid "Side padding"
+msgstr "ระยะห่างภายในด้านข้าง"
+
+msgid "Top and bottom padding"
+msgstr "ระยะห่างภายในด้านบนและด้านล่าง"
+
+msgid "Override panel theme background color"
+msgstr "แทนที่สีพื้นหลังของธีมแผง"
+
+msgid "Override panel theme background opacity"
+msgstr "แทนที่ความทึบพื้นหลังของธีมแผง"
+
+msgid "Panel background opacity (%)"
+msgstr "ความทึบของพื้นหลังแผง (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "เปลี่ยนความทึบเมื่อหน้าต่างเข้าใกล้แผง"
+
+msgid "Dynamic background opacity"
+msgstr "ความทึบของพื้นหลังแบบไดนามิก"
+
+msgid "Override panel theme gradient"
+msgstr "แทนที่ไล่ระดับสีของธีมแผง"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "สีและความทึบของไล่ระดับสีด้านบน (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "สีและความทึบของไล่ระดับสีด้านล่าง (%)"
+
+msgid "Panel border"
+msgstr "ขอบแผง"
+
+msgid "Override border color"
+msgstr "แทนที่สีขอบ"
+
+msgid "Border thickness"
+msgstr "ความหนาของขอบ"

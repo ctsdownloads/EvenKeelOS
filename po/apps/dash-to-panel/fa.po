@@ -1,0 +1,502 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "خروج از %d پنجره"
+
+msgid "Power options"
+msgstr "گزینه‌های توان"
+
+msgid "Event logs"
+msgstr "گزارش رویدادها"
+
+msgid "System"
+msgstr "سامانه"
+
+msgid "Device Management"
+msgstr "مدیریت دستگاه"
+
+msgid "Disk Management"
+msgstr "مدیریت دیسک"
+
+msgid "Gnome Settings"
+msgstr "تنظیمات GNOME"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel به‌روز شد!"
+
+msgid "You are now running version"
+msgstr "اکنون نسخهٔ زیر را اجرا می‌کنید"
+
+msgid "See what's new"
+msgstr "دیدن تازه‌ها"
+
+msgid "Top Bar"
+msgstr "نوار بالا"
+
+msgid "Isolate Workspaces options"
+msgstr "گزینه‌های جداسازی فضاهای کاری"
+
+msgid "Isolate monitors options"
+msgstr "گزینه‌های جداسازی نمایشگرها"
+
+msgid "Text"
+msgstr "متن"
+
+msgid "Command"
+msgstr "فرمان"
+
+msgid "Remove"
+msgstr "حذف"
+
+msgid "App icon highlight options"
+msgstr "گزینه‌های برجسته‌سازی نقشک برنامه"
+
+msgid "Move to current Workspace"
+msgstr "انتقال به فضای کاری کنونی"
+
+msgid "The panel background opacity is affected by"
+msgstr "کدری پس‌زمینهٔ تابلو تحت تأثیر این است"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "تغییر کدری وقتی پنجره نزدیک‌تر از این مقدار (پیکسل) شود"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "بیشینهٔ عرض (پیکسل) عنوان برنامه‌ها"
+
+msgid "(default is 160)"
+msgstr "(پیش‌گزیده ۱۶۰ است)"
+
+msgid "Highlight AppIcon color"
+msgstr "رنگ برجستهٔ نقشک برنامه"
+
+msgid "Pressed AppIcon color"
+msgstr "رنگ نقشک برنامه هنگام فشردن"
+
+msgid "Highlight AppIcon border radius"
+msgstr "شعاع گوشهٔ برجستهٔ نقشک برنامه"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "شعاع گوشهٔ سراسری را نادیده می‌گیرد (پیش‌گزیده ۰ است)"
+
+msgid "Only hide the panel from windows"
+msgstr "فقط وقتی تابلو پنهان شود که پنجره‌ها روی آن باشند"
+
+msgid "Overlapping"
+msgstr "هم‌پوشان"
+
+msgid "On same monitor"
+msgstr "روی همان نمایشگر"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "رساندن اشاره‌گر به لبهٔ نمایشگر، تابلو را آشکار می‌کند"
+
+msgid "Limit to panel length"
+msgstr "محدود به طول تابلو"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "شناور بودن روی ناحیهٔ تابلو آن را آشکار نگه می‌دارد"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "برای آشکارشدن تابلو، فشار در لبهٔ نمایشگر لازم است"
+
+msgid "Required pressure threshold (px)"
+msgstr "آستانهٔ فشار لازم (پیکسل)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "مهلت فشار لازم (میلی‌ثانیه)"
+
+msgid "(requires multi-monitors option)"
+msgstr "(نیازمند گزینهٔ چندنمایشگره است)"
+
+msgid "Only hide secondary panels"
+msgstr "فقط پنهان‌کردن تابلوهای ثانویه"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "نحو: &lt;Shift&gt;، &lt;Ctrl&gt;، &lt;Alt&gt;، &lt;Super&gt;"
+
+msgid "e.g. <Super>i"
+msgstr "مثلاً <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "حفظ وضعیت میان راه‌اندازی‌های دوباره"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(از «مزاحم نشوید» در GNOME پیروی می‌کند و گزینهٔ نمایش نشان شمارندهٔ اعلان لازم است)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "آشکارکردن و نگه‌داشتن تابلو هنگام اعلان"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "تأخیر پیش از آشکارکردن تابلو (میلی‌ثانیه)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "جداسازی نمایشگرها حتی هنگام استفاده از یک تابلو"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "جداسازی فضاهای کاری در جابه‌جاگر برنامه‌های gnome-shell"
+
+msgid "Toggle single / Spread multiple"
+msgstr "تغییر وضعیت یکی / پخش چندتا"
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "کلیدهای میانبر یا Super+عدد خواهند بود یا Super+Alt+عدد"
+
+msgid "Hotkeys prefix"
+msgstr "پیشوند کلیدهای میانبر"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "نمایش موقت شمارهٔ برنامه‌ها روی نقشک‌ها هنگام استفاده از کلیدهای میانبر."
+
+msgid "Number overlay"
+msgstr "پوشش شماره"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "میانبر برای نمایش پوشش به مدت ۲ ثانیه"
+
+msgid "e.g. <Super>q"
+msgstr "مثلاً <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "در نمایشگرهای ثانویه، پوشش را روی نقشک‌های منطبق با نمایشگر اصلی نشان بده"
+
+msgid "Show the overlay on all monitors"
+msgstr "نمایش پوشش روی همهٔ نمایشگرها"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "نمایش پیش‌نمایش‌ها وقتی برنامه چند نمونه دارد"
+
+msgid "Show window previews on hotkey"
+msgstr "نمایش پیش‌نمایش پنجره‌ها با کلید میانبر"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "انتخاب کنید کدام کلیدهای عددی صفحه‌کلید برای فعال‌کردن کلیدهای میانبر به کار روند"
+
+msgid "Hotkeys are activated with"
+msgstr "کلیدهای میانبر فعال می‌شوند با"
+
+msgid "Number row"
+msgstr "ردیف اعداد"
+
+msgid "Numeric keypad"
+msgstr "صفحهٔ کلید عددی"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "این فقط بر پنجرهٔ بازشوی فضای کاری هنگام لغزاندن روی تابلو اثر می‌گذارد."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "یکپارچه‌سازی موارد <i>منوی برنامه</i>"
+
+msgid "<i>App Details</i> menu item"
+msgstr "مورد منوی <i>جزئیات برنامه</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>جزئیات برنامه</i> فقط وقتی در دسترس است که GNOME Software نصب باشد"
+
+msgid "Show Applications icon"
+msgstr "نمایش نقشک برنامه‌ها"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "آشکارکردن میزکار هنگام شناور شدن روی دکمهٔ نمایش میزکار"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "تأخیر پیش از آشکارکردن میزکار (میلی‌ثانیه)"
+
+msgid "Fade duration (ms)"
+msgstr "مدت محوشدن (میلی‌ثانیه)"
+
+msgid "Time (ms) before showing"
+msgstr "زمان (میلی‌ثانیه) پیش از نمایش"
+
+msgid "(400 is default)"
+msgstr "(پیش‌گزیده ۴۰۰ است)"
+
+msgid "Time (ms) before hiding"
+msgstr "زمان (میلی‌ثانیه) پیش از پنهان‌شدن"
+
+msgid "(100 is default)"
+msgstr "(پیش‌گزیده ۱۰۰ است)"
+
+msgid "Immediate on application icon click"
+msgstr "بی‌درنگ با کلیک روی نقشک برنامه"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "اگر غیرفعال باشد، پس‌زمینهٔ پیش‌نمایش‌ها همان کدری تابلو را دارد."
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "اگر غیرفعال باشد، اندازهٔ نقشک پیش‌نمایش‌ها بر پایهٔ اندازهٔ نوار سرصفحه خواهد بود"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "مدت بی‌فعالیتی هنگام شناور بودن روی پیش‌نمایش پنجره که برای ورود به حالت نگاه زیرکانهٔ پنجره لازم است."
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "کدری همهٔ پنجره‌ها به‌جز پنجرهٔ مورد نگاه روی یک مقدار تنظیم می‌شود."
+
+msgid "About"
+msgstr "دربارهٔ"
+
+msgid "Info"
+msgstr "اطلاعات"
+
+msgid "Version"
+msgstr "نسخه"
+
+msgid "Source"
+msgstr "منبع"
+
+msgid "Export and Import"
+msgstr "برون‌ریزی و درون‌ریزی"
+
+msgid "Sponsored and originally developed by"
+msgstr "با حمایت مالی و توسعهٔ اولیه توسط"
+
+msgid "Action"
+msgstr "کنش"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "رفتار هنگام کلیک روی نقشک یک برنامهٔ در حال اجرا."
+
+msgid "Scroll action"
+msgstr "کنش لغزش"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "رفتار هنگام لغزاندن موشی روی تابلو."
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "رفتار هنگام لغزاندن موشی روی نقشک یک برنامه."
+
+msgid "Hotkey overlay"
+msgstr "پوشش کلید میانبر"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Super+(0-9) را به‌عنوان میانبر برای فعال‌کردن برنامه‌ها به کار بیندازید. همچنین می‌توان آن را با Shift و Ctrl با هم به کار برد."
+
+msgid "Application icons context menu"
+msgstr "منوی زمینهٔ نقشک‌های برنامه"
+
+msgid "(right-click menu)"
+msgstr "(منوی کلیک راست)"
+
+msgid "Secondary menu"
+msgstr "منوی ثانویه"
+
+msgid "Panel context menu entries"
+msgstr "موارد منوی زمینهٔ تابلو"
+
+msgid "Add entry"
+msgstr "افزودن مورد"
+
+msgid "Behavior"
+msgstr "رفتار"
+
+msgid "Applications"
+msgstr "برنامه‌ها"
+
+msgid "Show notification counter badge"
+msgstr "نمایش نشان شمارندهٔ اعلان"
+
+msgid "Hover"
+msgstr "شناور شدن"
+
+msgid "Isolate"
+msgstr "جداسازی"
+
+msgid "Overview"
+msgstr "نمای کلی"
+
+msgid "Click empty space to close overview"
+msgstr "کلیک روی فضای خالی برای بستن نمای کلی"
+
+msgid "Disable show overview on startup"
+msgstr "غیرفعال‌کردن نمایش نمای کلی هنگام آغاز"
+
+msgid "Fine-Tune"
+msgstr "تنظیم دقیق"
+
+msgid "Font size"
+msgstr "اندازهٔ قلم"
+
+msgid "(0 = theme default)"
+msgstr "(۰ = پیش‌گزیدهٔ زمینه)"
+
+msgid "Tray Font Size"
+msgstr "اندازهٔ قلم سینی"
+
+msgid "LeftBox Font Size"
+msgstr "اندازهٔ قلم جعبهٔ چپ"
+
+msgid "Padding"
+msgstr "لایه‌گذاری"
+
+msgid "(-1 = theme default)"
+msgstr "(۱- = پیش‌گزیدهٔ زمینه)"
+
+msgid "Tray Item Padding"
+msgstr "لایه‌گذاری موارد سینی"
+
+msgid "Status Icon Padding"
+msgstr "لایه‌گذاری نقشک وضعیت"
+
+msgid "LeftBox Padding"
+msgstr "لایه‌گذاری جعبهٔ چپ"
+
+msgid "Animate"
+msgstr "پویانمایی"
+
+msgid "Gnome functionality"
+msgstr "قابلیت‌های GNOME"
+
+msgid "(overview)"
+msgstr "(نمای کلی)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "نگه‌داشتن dash اصلی gnome-shell"
+
+msgid "(e.g. date menu)"
+msgstr "(مثلاً منوی تاریخ)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "فعال‌کردن دکمه‌های منوی تابلو فقط با کلیک"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "اجبار گوشهٔ داغ فعالیت‌ها روی نمایشگر اصلی"
+
+msgid "Position"
+msgstr "موقعیت"
+
+msgid "Panel"
+msgstr "تابلو"
+
+msgid "Order and Position on monitors"
+msgstr "ترتیب و موقعیت روی نمایشگرها"
+
+msgid "Monitor"
+msgstr "نمایشگر"
+
+msgid "Panel monitor position"
+msgstr "موقعیت نمایشگر تابلو"
+
+msgid "(default is 48)"
+msgstr "(پیش‌گزیده ۴۸ است)"
+
+msgid "Panel thickness"
+msgstr "ضخامت تابلو"
+
+msgid "(default is 100)"
+msgstr "(پیش‌گزیده ۱۰۰ است)"
+
+msgid "Panel length"
+msgstr "طول تابلو"
+
+msgid "Dynamic"
+msgstr "پویا"
+
+msgid "Taskbar Display"
+msgstr "نمایش نوار وظیفه"
+
+msgid "Style"
+msgstr "سبک"
+
+msgid "Global style"
+msgstr "سبک سراسری"
+
+msgid "Border radius"
+msgstr "شعاع گوشه"
+
+msgid "AppIcon style"
+msgstr "سبک نقشک برنامه"
+
+msgid "(default is 8)"
+msgstr "(پیش‌گزیده ۸ است)"
+
+msgid "App Icon Margin"
+msgstr "حاشیهٔ نقشک برنامه"
+
+msgid "(default is 4)"
+msgstr "(پیش‌گزیده ۴ است)"
+
+msgid "App Icon Padding"
+msgstr "لایه‌گذاری نقشک برنامه"
+
+msgid "Highlight hovering app icons"
+msgstr "برجسته‌کردن نقشک برنامه‌ها هنگام شناور شدن"
+
+msgid "Icon style"
+msgstr "سبک نقشک"
+
+msgid "Normal"
+msgstr "عادی"
+
+msgid "Symbolic"
+msgstr "نمادین"
+
+msgid "Grayscale"
+msgstr "خاکستری"
+
+msgid "Running indicator"
+msgstr "نشانگر اجرا"
+
+msgid "Segmented"
+msgstr "قطعه‌قطعه"
+
+msgid "Solid"
+msgstr "توپر"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Panel style"
+msgstr "سبک تابلو"
+
+msgid "(default is 0)"
+msgstr "(پیش‌گزیده ۰ است)"
+
+msgid "Side margins"
+msgstr "حاشیه‌های کناری"
+
+msgid "Top and bottom margins"
+msgstr "حاشیه‌های بالا و پایین"
+
+msgid "Side padding"
+msgstr "لایه‌گذاری کناری"
+
+msgid "Top and bottom padding"
+msgstr "لایه‌گذاری بالا و پایین"
+
+msgid "Override panel theme background color"
+msgstr "نادیده گرفتن رنگ پس‌زمینهٔ زمینهٔ تابلو"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "تغییر کدری وقتی پنجره به تابلو نزدیک می‌شود"
+
+msgid "Override panel theme gradient"
+msgstr "نادیده گرفتن گرادیان زمینهٔ تابلو"
+
+msgid "Panel border"
+msgstr "حاشیهٔ تابلو"
+
+msgid "Override border color"
+msgstr "نادیده گرفتن رنگ حاشیه"
+
+msgid "Border thickness"
+msgstr "ضخامت حاشیه"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d نقشک"

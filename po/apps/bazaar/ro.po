@@ -1,0 +1,2608 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "Magazin de aplicații"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "Adaugă, elimină sau actualizează programe flatpak pe acest calculator"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Sistem;Pachet;Manager;Descoperă;Flatpak;Programe;Aplicații;Magazin;"
+
+msgid "New Window"
+msgstr "Fereastră nouă"
+
+msgid "Discover and install apps"
+msgstr "Descoperă și instalează aplicații"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Un magazin de aplicații rapid și modern pentru Linux, axat pe descoperirea și instalarea aplicațiilor și a suplimentelor Flatpak, în special de pe Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Pune în coadă mai multe instalări și continuă să răsfoiești"
+
+msgid "Easily view app permissions"
+msgstr "Vezi ușor permisiunile aplicațiilor"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Autentifică-te la Flathub pentru a vedea și gestiona favoritele"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Caută aplicații direct din GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Pagina principală care afișează aplicațiile Flathub"
+
+msgid "App page for Exhibit"
+msgstr "Pagina aplicației Exhibit"
+
+msgid "Library page"
+msgstr "Pagina Bibliotecă"
+
+msgid "Search page"
+msgstr "Pagina de căutare"
+
+msgid "Category page"
+msgstr "Pagina categoriei"
+
+msgid "Stopped Receiving Updates"
+msgstr "Nu mai primește actualizări"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Dezinstalează"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Instalează"
+
+msgid "Add-on"
+msgstr "Supliment"
+
+msgid "Manage Add-Ons"
+msgstr "Gestionează suplimentele"
+
+msgid "No Add-Ons Visible"
+msgstr "Niciun supliment vizibil"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "Preferințele tale actuale de filtrare ascund toate suplimentele cunoscute. Încearcă să le ajustezi."
+
+msgid "Add-on Page"
+msgstr "Pagina suplimentului"
+
+msgid "Download"
+msgstr "Descarcă"
+
+msgid "Installed"
+msgstr "Instalat"
+
+msgid "Downloads/Month"
+msgstr "Descărcări/lună"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Nu mai primește actualizări de bază"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Acest supliment folosește un runtime care nu mai primește actualizări sau remedieri de securitate. Utilizarea lui poate deveni nesigură."
+
+msgid "Other Sources"
+msgstr "Alte surse"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Supliment pentru %s"
+
+msgid "Show Less"
+msgstr "Arată mai puțin"
+
+msgid "Show More"
+msgstr "Arată mai mult"
+
+msgid "Download Stats"
+msgstr "Statistici de descărcare"
+
+msgid "Age Rating"
+msgstr "Clasificare pe vârste"
+
+msgid "Cartoon Violence"
+msgstr "Violență în desene animate"
+
+msgid "No information regarding cartoon violence"
+msgstr "Nu există informații despre violența în desene animate"
+
+msgid "Fantasy Violence"
+msgstr "Violență fantastică"
+
+msgid "No information regarding fantasy violence"
+msgstr "Nu există informații despre violența fantastică"
+
+msgid "Realistic Violence"
+msgstr "Violență realistă"
+
+msgid "No information regarding realistic violence"
+msgstr "Nu există informații despre violența realistă"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "Violență cu vărsare de sânge"
+
+msgid "No information regarding bloodshed"
+msgstr "Nu există informații despre vărsarea de sânge"
+
+msgid "Sexual Violence"
+msgstr "Violență sexuală"
+
+msgid "No information regarding sexual violence"
+msgstr "Nu există informații despre violența sexuală"
+
+msgid "Alcohol"
+msgstr "Alcool"
+
+msgid "No information regarding references to alcohol"
+msgstr "Nu există informații despre referințele la alcool"
+
+msgid "Narcotics"
+msgstr "Narcotice"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "Nu există informații despre referințele la droguri ilicite"
+
+msgid "Tobacco"
+msgstr "Tutun"
+
+msgid "No information regarding references to tobacco products"
+msgstr "Nu există informații despre referințele la produse din tutun"
+
+msgid "Nudity"
+msgstr "Nuditate"
+
+msgid "No information regarding nudity of any sort"
+msgstr "Nu există informații despre nuditate de niciun fel"
+
+msgid "Sexual Themes"
+msgstr "Teme sexuale"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "Nu există informații despre referințe la sau reprezentări cu caracter sexual"
+
+msgid "Profanity"
+msgstr "Limbaj vulgar"
+
+msgid "No information regarding profanity of any kind"
+msgstr "Nu există informații despre limbaj vulgar de niciun fel"
+
+msgid "Inappropriate Humor"
+msgstr "Umor nepotrivit"
+
+msgid "No information regarding inappropriate humor"
+msgstr "Nu există informații despre umor nepotrivit"
+
+msgid "Discrimination"
+msgstr "Discriminare"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "Nu există informații despre limbaj discriminatoriu de niciun fel"
+
+msgid "Advertising"
+msgstr "Publicitate"
+
+msgid "No information regarding advertising of any kind"
+msgstr "Nu există informații despre publicitate de niciun fel"
+
+msgid "Gambling"
+msgstr "Jocuri de noroc"
+
+msgid "No information regarding gambling of any kind"
+msgstr "Nu există informații despre jocuri de noroc de niciun fel"
+
+msgid "Purchasing"
+msgstr "Achiziții"
+
+msgid "No information regarding the ability to spend money"
+msgstr "Nu există informații despre posibilitatea de a cheltui bani"
+
+msgid "Chat Between Users"
+msgstr "Conversații între utilizatori"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "Nu există informații despre modalitățile de a conversa cu alți utilizatori"
+
+msgid "Audio Chat Between Users"
+msgstr "Conversații audio între utilizatori"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "Nu există informații despre modalitățile de a vorbi cu alți utilizatori"
+
+msgid "Contact Details"
+msgstr "Date de contact"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "Nu există informații despre partajarea numelor de utilizator din rețelele sociale sau a adreselor de e-mail"
+
+msgid "Identifying Information"
+msgstr "Informații de identificare"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "Nu există informații despre partajarea informațiilor utilizatorului cu terți"
+
+msgid "Location Sharing"
+msgstr "Partajarea locației"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "Nu există informații despre partajarea locației fizice cu alți utilizatori"
+
+msgid "Prostitution"
+msgstr "Prostituție"
+
+msgid "No information regarding references to prostitution"
+msgstr "Nu există informații despre referințele la prostituție"
+
+msgid "Adultery"
+msgstr "Adulter"
+
+msgid "No information regarding references to adultery"
+msgstr "Nu există informații despre referințele la adulter"
+
+msgid "Sexualized Characters"
+msgstr "Personaje sexualizate"
+
+msgid "No information regarding sexualized characters"
+msgstr "Nu există informații despre personaje sexualizate"
+
+msgid "Desecration"
+msgstr "Profanare"
+
+msgid "No information regarding references to desecration"
+msgstr "Nu există informații despre referințele la profanare"
+
+msgid "Human Remains"
+msgstr "Rămășițe umane"
+
+msgid "No information regarding visible dead human remains"
+msgstr "Nu există informații despre rămășițe umane vizibile"
+
+msgid "Slavery"
+msgstr "Sclavie"
+
+msgid "No information regarding references to slavery"
+msgstr "Nu există informații despre referințele la sclavie"
+
+msgid "Does not include references to drugs"
+msgstr "Nu include referințe la droguri"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "Nu include înjurături, limbaj vulgar și alte tipuri de limbaj grosolan"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "Nu include reclame sau tranzacții bănești"
+
+msgid "Does not include sex or nudity"
+msgstr "Nu include sex sau nuditate"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "Nu include funcționalitate de conversație necontrolată"
+
+msgid "Does not include violence"
+msgstr "Nu include violență"
+
+msgid "Drugs"
+msgstr "Droguri"
+
+msgid "Strong Language"
+msgstr "Limbaj grosolan"
+
+msgid "Money"
+msgstr "Bani"
+
+msgid "Social"
+msgstr "Social"
+
+msgid "Violence"
+msgstr "Violență"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "Toate"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s are o clasificare pe vârste necunoscută"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s este potrivit pentru toți"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s este potrivit pentru copii mici"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s este potrivit pentru copii"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s este potrivit pentru adolescenți"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s este potrivit pentru adulți"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s este potrivit pentru %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "Dosarul de sistem %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Subdosarul %s din dosarul personal"
+
+msgid "Host system folders"
+msgstr "Dosare ale sistemului gazdă"
+
+msgid "Host system configuration from /etc"
+msgstr "Configurația sistemului gazdă din /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Subdosarul %s de pe desktop"
+
+msgid "Desktop folder"
+msgstr "Dosarul Desktop"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "Subdosarul %s din Documente"
+
+msgid "Documents folder"
+msgstr "Dosarul Documente"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "Subdosarul %s din Muzică"
+
+msgid "Music folder"
+msgstr "Dosarul Muzică"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "Subdosarul %s din Imagini"
+
+msgid "Pictures folder"
+msgstr "Dosarul Imagini"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "Subdosarul %s din Partajare publică"
+
+msgid "Public Share folder"
+msgstr "Dosarul Partajare publică"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "Subdosarul %s din Videoclipuri"
+
+msgid "Videos folder"
+msgstr "Dosarul Videoclipuri"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "Subdosarul %s din Șabloane"
+
+msgid "Templates folder"
+msgstr "Dosarul Șabloane"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Subdosarul %s din memoria cache a utilizatorului"
+
+msgid "User cache folder"
+msgstr "Dosarul memoriei cache a utilizatorului"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Subdosarul %s din configurația utilizatorului"
+
+msgid "User configuration folder"
+msgstr "Dosarul configurației utilizatorului"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Subdosarul %s din datele utilizatorului"
+
+msgid "User data folder"
+msgstr "Dosarul datelor utilizatorului"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Subdosarul %s din runtime-ul utilizatorului"
+
+msgid "User runtime folder"
+msgstr "Dosarul runtime-ului utilizatorului"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Acces la sistemul de fișiere pentru %s"
+
+msgid "Unknown filesystem path"
+msgstr "Cale necunoscută în sistemul de fișiere"
+
+msgid "Download Size"
+msgstr "Dimensiune de descărcare"
+
+msgid "Installed Size"
+msgstr "Dimensiune instalată"
+
+msgid "Amount to download from the internet"
+msgstr "Cantitatea de descărcat de pe internet"
+
+msgid "Size on Disk"
+msgstr "Dimensiune pe disc"
+
+msgid "Open user data folder"
+msgstr "Deschide dosarul cu datele utilizatorului"
+
+msgid "Your User Data"
+msgstr "Datele tale de utilizator"
+
+msgid "Caches, settings, and other app data"
+msgstr "Memorie cache, preferințe și alte date ale aplicației"
+
+msgid "Cache"
+msgstr "Memorie cache"
+
+msgid "Temporary cached data"
+msgstr "Date temporare din cache"
+
+msgid "Clear Cache"
+msgstr "Golește memoria cache"
+
+msgid "Installed Runtime Size"
+msgstr "Dimensiunea runtime-ului instalat"
+
+msgid "Runtime Download Size"
+msgstr "Dimensiunea de descărcare a runtime-ului"
+
+msgid "N/A"
+msgstr "N/A"
+
+msgid "Storage"
+msgstr "Stocare"
+
+msgid "Verified"
+msgstr "Verificat"
+
+msgid "The Bazaar Contributors"
+msgstr "Contribuitorii Bazaar"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "Mulțumiri speciale"
+
+msgid "Logged Out Successfully!"
+msgstr "Deconectare reușită!"
+
+msgid "Performing setup…"
+msgstr "Se efectuează configurarea…"
+
+msgid "Set Up Flathub?"
+msgstr "Configurezi Flathub?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub nu este configurat pe acest sistem. Nu vei putea răsfoi și instala aplicații în Bazaar dacă nu este disponibil.\n"
+"\n"
+"Poți folosi în continuare Bazaar pentru a răsfoi și elimina aplicațiile deja instalate."
+
+msgid "Later"
+msgstr "Mai târziu"
+
+msgid "Set Up Flathub"
+msgstr "Configurează Flathub"
+
+msgid "A backend error occurred"
+msgstr "A apărut o eroare de backend"
+
+msgid "Refreshing…"
+msgstr "Se reîmprospătează…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "Se încarcă %d aplicații…"
+
+msgid "Failed to open file"
+msgstr "Nu s-a putut deschide fișierul"
+
+msgid "Failed to load metainfo"
+msgstr "Nu s-au putut încărca metainformațiile"
+
+msgid "An initialization error occurred"
+msgstr "A apărut o eroare de inițializare"
+
+msgid "Checking for updates…"
+msgstr "Se caută actualizări…"
+
+msgid "Failed to check for updates"
+msgstr "Nu s-au putut căuta actualizări"
+
+msgid "Could not find app"
+msgstr "Nu s-a găsit aplicația"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Se încarcă %d aplicație…"
+msgstr[1] "Se încarcă %d aplicații…"
+msgstr[2] "Se încarcă %d de aplicații…"
+
+msgid "Writing to cache…"
+msgstr "Se scrie în memoria cache…"
+
+msgid "Removing remote…"
+msgstr "Se elimină sursa…"
+
+msgid "Could not remove remote"
+msgstr "Nu s-a putut elimina sursa"
+
+msgid "Show All"
+msgstr "Arată tot"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Toate „%s”"
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d aplicații"
+
+msgid "Failed to Load Article"
+msgstr "Nu s-a putut încărca articolul"
+
+msgid "All apps are already installed"
+msgstr "Toate aplicațiile sunt deja instalate"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Instalezi %u aplicație?"
+msgstr[1] "Instalezi %u aplicații?"
+msgstr[2] "Instalezi %u de aplicații?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Următoarele vor fi instalate. Pot fi instalate și componente partajate suplimentare"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "%d suplimente vor fi instalate."
+
+msgid "Additionally, addons will be installed."
+msgstr "În plus, vor fi instalate suplimente."
+
+msgid "_Cancel"
+msgstr "_Anulează"
+
+msgid "_Install All"
+msgstr "_Instalează tot"
+
+msgid "Bundle Installation"
+msgstr "Instalarea pachetului"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Dependențele suplimentare pot ocupa spațiu în plus"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Instalarea acestei aplicații poate necesita adăugarea unei surse noi de programe. Alte aplicații din această sursă vor apărea în Bazaar.\n"
+"\n"
+"Adaugă această sursă doar dacă ești sigur că ai încredere în ea."
+
+msgid "Successfully Installed!"
+msgstr "Instalat cu succes!"
+
+msgid "Open"
+msgstr "Deschide"
+
+msgid "Show App Details"
+msgstr "Arată detaliile aplicației"
+
+msgid "Already Installed"
+msgstr "Deja instalat"
+
+msgid "Installation Failed"
+msgstr "Instalare eșuată"
+
+msgid "Unknown install size"
+msgstr "Dimensiune de instalare necunoscută"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Aproximativ %s de instalat"
+
+msgid "No special permissions"
+msgstr "Fără permisiuni speciale"
+
+msgid "Place Applet"
+msgstr "Plasează applet-ul"
+
+msgid "Choose where to add this applet."
+msgstr "Alege unde să adaugi acest applet."
+
+msgid "Cancel"
+msgstr "Anulează"
+
+msgid "Panel"
+msgstr "Panou"
+
+msgid "Dock"
+msgstr "Dock"
+
+msgid "No Curation"
+msgstr "Fără curatoriere"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Nu există informații de curatoriere pe acest sistem. Poți în continuare să răsfoiești aplicațiile de pe Flathub"
+
+msgid "Browse Flathub"
+msgstr "Răsfoiește Flathub"
+
+msgid "Offline"
+msgstr "Offline"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s – %s, maximul pe %s cu %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "Instalări:"
+
+msgid "Not Verified"
+msgstr "Neverificat"
+
+msgid "Developer information not available."
+msgstr "Informațiile despre dezvoltator nu sunt disponibile."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "Proprietatea asupra ID-ului de aplicație %s nu a fost verificată și poate fi un pachet comunitar."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "Proprietatea asupra ID-ului de aplicație %s a fost verificată manual de echipa Flathub."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "Proprietatea asupra ID-ului de aplicație %1$s a fost verificată de <b>%2$s</b> la <b>%3$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Proprietatea asupra ID-ului de aplicație %1$s a fost verificată folosind %2$s."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "Proprietatea asupra ID-ului de aplicație %s a fost verificată."
+
+msgid "Bazaar Release"
+msgstr "Versiune Bazaar"
+
+msgid "Full Release Notes"
+msgstr "Note de versiune complete"
+
+msgid "This release was made possible by users like you!"
+msgstr "Această versiune a fost posibilă datorită utilizatorilor ca tine!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Îmi place să fac Bazaar, dar nu pot face asta singur. Sprijină dezvoltarea în continuare printr-o donație pe Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "Donează pentru Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Ce este nou în %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Lansat pe %-e %B %Y"
+
+msgid "Choose an Installation"
+msgstr "Alege o instalare"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Ai instalate mai multe versiuni ale acestei aplicații. Cu care dorești să continui?"
+
+msgid "Details"
+msgstr "Detalii"
+
+msgid "Copy"
+msgstr "Copiază"
+
+msgid "Copied!"
+msgstr "Copiat!"
+
+msgid "Favorite Count"
+msgstr "Număr de favorite"
+
+msgid "Failed to update favorite"
+msgstr "Nu s-a putut actualiza favorita"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Autentifică-te cu Flathub pentru a gestiona favoritele"
+
+msgid "Log In"
+msgstr "Autentifică-te"
+
+msgid "Favorites"
+msgstr "Favorite"
+
+msgid "Install All"
+msgstr "Instalează tot"
+
+msgid "No Favorites"
+msgstr "Fără favorite"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Aplicațiile pe care le marchezi ca favorite vor apărea aici"
+
+msgid "Support This Application"
+msgstr "Susține această aplicație"
+
+msgid "Remove From Favorites"
+msgstr "Elimină din favorite"
+
+msgid "Failed to remove favorite"
+msgstr "Nu s-a putut elimina favorita"
+
+msgid "Previous"
+msgstr "Anterior"
+
+msgid "Next"
+msgstr "Următor"
+
+msgid "Editing"
+msgstr "Editare"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Mixer"
+
+msgid "Music"
+msgstr "Muzică"
+
+msgid "Player"
+msgstr "Player"
+
+msgid "Recorder"
+msgstr "Înregistrator"
+
+msgid "Sequencer"
+msgstr "Secvențiator"
+
+msgid "Tuner"
+msgstr "Acordor"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "Emulation"
+msgstr "Emulare"
+
+msgid "Action"
+msgstr "Acțiune"
+
+msgid "Adventure"
+msgstr "Aventură"
+
+msgid "Arcade"
+msgstr "Arcade"
+
+msgid "Blocks"
+msgstr "Blocuri"
+
+msgid "Board"
+msgstr "Joc de societate"
+
+msgid "Card"
+msgstr "Cărți de joc"
+
+msgid "Kids"
+msgstr "Copii"
+
+msgid "Logic"
+msgstr "Logică"
+
+msgid "Role Playing"
+msgstr "Jocuri de rol"
+
+msgid "Shooter"
+msgstr "Shooter"
+
+msgid "Simulation"
+msgstr "Simulare"
+
+msgid "Sports"
+msgstr "Sport"
+
+msgid "Strategy"
+msgstr "Strategie"
+
+msgid "Browsers"
+msgstr "Browsere"
+
+msgid "Chat"
+msgstr "Chat"
+
+msgid "Mail"
+msgstr "E-mail"
+
+msgid "File Sharing"
+msgstr "Partajare de fișiere"
+
+msgid "Audio & Video"
+msgstr "Audio și video"
+
+msgid "Media"
+msgstr "Media"
+
+msgid "More Audio & Video"
+msgstr "Mai multe audio și video"
+
+msgid "Developer Tools"
+msgstr "Instrumente pentru dezvoltatori"
+
+msgid "Develop"
+msgstr "Dezvoltă"
+
+msgid "More Developer Tools"
+msgstr "Mai multe instrumente pentru dezvoltatori"
+
+msgid "Education"
+msgstr "Educație"
+
+msgid "Learn"
+msgstr "Învață"
+
+msgid "More Education"
+msgstr "Mai multă educație"
+
+msgid "Gaming"
+msgstr "Jocuri"
+
+msgid "Play"
+msgstr "Joacă"
+
+msgid "More Gaming"
+msgstr "Mai multe jocuri"
+
+msgid "Graphics & Photography"
+msgstr "Grafică și fotografie"
+
+msgid "Create"
+msgstr "Creează"
+
+msgid "More Graphics & Photography"
+msgstr "Mai multă grafică și fotografie"
+
+msgid "Networking"
+msgstr "Rețea"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "More Networking"
+msgstr "Mai multă rețea"
+
+msgid "Productivity"
+msgstr "Productivitate"
+
+msgid "Work"
+msgstr "Lucru"
+
+msgid "More Productivity"
+msgstr "Mai multă productivitate"
+
+msgid "Science"
+msgstr "Știință"
+
+msgid "More Science"
+msgstr "Mai multă știință"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "More System"
+msgstr "Mai mult sistem"
+
+msgid "Utilities"
+msgstr "Utilitare"
+
+msgid "Tools"
+msgstr "Instrumente"
+
+msgid "More Utilities"
+msgstr "Mai multe utilitare"
+
+msgid "Trending"
+msgstr "În tendințe"
+
+msgid "More Trending"
+msgstr "Mai multe în tendințe"
+
+msgid "Popular"
+msgstr "Populare"
+
+msgid "More Popular"
+msgstr "Mai multe populare"
+
+msgid "Recently Added"
+msgstr "Adăugate recent"
+
+msgid "New"
+msgstr "Nou"
+
+msgid "More New"
+msgstr "Mai multe noutăți"
+
+msgid "Recently Updated"
+msgstr "Actualizate recent"
+
+msgid "Updated"
+msgstr "Actualizat"
+
+msgid "More Updated"
+msgstr "Mai multe actualizate"
+
+msgid "Mobile"
+msgstr "Mobil"
+
+msgid "More Mobile"
+msgstr "Mai multe pentru mobil"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Mai multe Adwaita"
+
+msgid "KDE Apps"
+msgstr "Aplicații KDE"
+
+msgid "More KDE Apps"
+msgstr "Mai multe aplicații KDE"
+
+msgid "Made for COSMIC™"
+msgstr "Făcute pentru COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Pentru COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Mai multe aplicații COSMIC"
+
+msgid "Games"
+msgstr "Jocuri"
+
+msgid "More Games"
+msgstr "Mai multe jocuri"
+
+msgid "Emulators"
+msgstr "Emulatoare"
+
+msgid "More Emulators"
+msgstr "Mai multe emulatoare"
+
+msgid "Launchers"
+msgstr "Lansatoare"
+
+msgid "More Game Launchers"
+msgstr "Mai multe lansatoare de jocuri"
+
+msgid "Game Tools"
+msgstr "Instrumente pentru jocuri"
+
+msgid "More Game Tools"
+msgstr "Mai multe instrumente pentru jocuri"
+
+msgid "New Year, New Workflows"
+msgstr "An nou, fluxuri de lucru noi"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Aplicații pentru a lua notițe, a urmări sarcini și a face planuri"
+
+msgid "Staff Picks"
+msgstr "Alegerile echipei"
+
+msgid "Apps we love right now"
+msgstr "Aplicațiile pe care le iubim acum"
+
+msgid "Get Creative"
+msgstr "Fii creativ"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Aplicații esențiale pentru desen, editare de fotografii și design digital"
+
+msgid "Build Native Apps"
+msgstr "Construiește aplicații native"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Dezvoltă aplicații care se potrivesc cu sistemul tău"
+
+msgid "Stay in Touch"
+msgstr "Rămâi în legătură"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Aplicații esențiale pentru colaborare și comunicare"
+
+msgid "Ready for Vacations"
+msgstr "Gata de vacanță"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Aplicații pentru hărți, transport în comun, vreme și planificarea călătoriilor"
+
+msgid "Smarter Every Day"
+msgstr "Mai deștept în fiecare zi"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Aplicații care te ajută să studiezi, să cercetezi și să scrii"
+
+msgid "Get Cozy"
+msgstr "Fă-te comod"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Aplicații excelente pentru citit, vizionat filme și jucat"
+
+msgid "Web Developer Essentials"
+msgstr "Esențiale pentru dezvoltatorii web"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Crearea de site-uri web este mai distractivă cu aceste aplicații"
+
+msgid "Take Better Notes"
+msgstr "Ia notițe mai bune"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Găsește noul tău instrument preferat pentru notițe"
+
+msgid "Get Focused"
+msgstr "Concentrează-te"
+
+msgid "Great apps for task management"
+msgstr "Aplicații excelente pentru gestionarea sarcinilor"
+
+msgid "Make Some Noise"
+msgstr "Fă puțin zgomot"
+
+msgid "Apps for creating and producing music"
+msgstr "Aplicații pentru crearea și producerea de muzică"
+
+msgid "Get To Work"
+msgstr "Pune-te pe treabă"
+
+msgid "Essential office apps"
+msgstr "Aplicații de birou esențiale"
+
+msgid "Flathub Not Added"
+msgstr "Flathub nu este adăugat"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Sursa Flathub nu a fost găsită în niciuna dintre instalările tale Flatpak"
+
+msgid "Can't Reach Flathub"
+msgstr "Nu se poate contacta Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "Poți în continuare să gestionezi și să cauți aplicații."
+
+msgid "Search Apps"
+msgstr "Caută aplicații"
+
+msgid "Reconnect"
+msgstr "Reconectează"
+
+msgid "App of the Day"
+msgstr "Aplicația zilei"
+
+msgid "On the Go"
+msgstr "Din mers"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Aplicații pentru telefoanele și tabletele tale cu Linux"
+
+msgid "More Mobile Apps"
+msgstr "Mai multe aplicații pentru mobil"
+
+msgid "We​ ♥​ Games"
+msgstr "Ne​ ♥​ jocurile"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Jocuri și aplicații pentru a rula titlurile tale preferate"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Aceasta este o previzualizare locală, unele detalii pot diferi de listarea publicată"
+
+msgid "Preview Store Appearance"
+msgstr "Previzualizează aspectul magazinului"
+
+msgid "_Support"
+msgstr "_Susține"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Această aplicație folosește un runtime care nu mai primește actualizări sau remedieri de securitate. Utilizarea ei poate deveni nesigură."
+
+msgid "Trash Data"
+msgstr "Mută datele în coșul de gunoi"
+
+msgid "Add-ons"
+msgstr "Suplimente"
+
+msgid "More Add-Ons"
+msgstr "Mai multe suplimente"
+
+msgid "Links"
+msgstr "Legături"
+
+msgid "Similar Apps"
+msgstr "Aplicații similare"
+
+msgid "No URL"
+msgstr "Fără URL"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Această aplicație are o licență FLOSS, ceea ce înseamnă că codul sursă poate fi auditat pentru siguranță."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Această aplicație are o licență proprietară, ceea ce înseamnă că codul sursă este dezvoltat privat și nu poate fi auditat de o terță parte independentă."
+
+msgid "Other Apps From This Developer"
+msgstr "Alte aplicații de la acest dezvoltator"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Alte aplicații de la %s"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s nu este instalat, dar are încă <b>%s</b> de date prezente."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Aplicații de la %s"
+
+msgid "Apps by This Developer"
+msgstr "Aplicații de la acest dezvoltator"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d aplicație"
+msgstr[1] "%d aplicații"
+msgstr[2] "%d de aplicații"
+
+msgid "Failed to Remove User Data"
+msgstr "Nu s-au putut elimina datele utilizatorului"
+
+msgid "Hardware Support"
+msgstr "Suport hardware"
+
+msgid "Keyboard support"
+msgstr "Suport pentru tastatură"
+
+msgid "Requires keyboards"
+msgstr "Necesită tastaturi"
+
+msgid "Recommends keyboards"
+msgstr "Recomandă tastaturi"
+
+msgid "Supports keyboards"
+msgstr "Acceptă tastaturi"
+
+msgid "Unknown support for keyboards"
+msgstr "Suport necunoscut pentru tastaturi"
+
+msgid "Mouse support"
+msgstr "Suport pentru mouse"
+
+msgid "Requires mice or pointing devices"
+msgstr "Necesită mouse-uri sau dispozitive de indicare"
+
+msgid "Recommends mice or pointing devices"
+msgstr "Recomandă mouse-uri sau dispozitive de indicare"
+
+msgid "Supports mice or pointing devices"
+msgstr "Acceptă mouse-uri sau dispozitive de indicare"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "Suport necunoscut pentru mouse-uri sau dispozitive de indicare"
+
+msgid "Touchscreen support"
+msgstr "Suport pentru ecran tactil"
+
+msgid "Requires touchscreens"
+msgstr "Necesită ecrane tactile"
+
+msgid "Recommends touchscreens"
+msgstr "Recomandă ecrane tactile"
+
+msgid "Supports touchscreens"
+msgstr "Acceptă ecrane tactile"
+
+msgid "Unknown support for touchscreens"
+msgstr "Suport necunoscut pentru ecrane tactile"
+
+msgid "Mobile support"
+msgstr "Suport pentru mobil"
+
+msgid "Works on mobile devices"
+msgstr "Funcționează pe dispozitive mobile"
+
+msgid "May not work well on mobile devices"
+msgstr "Poate să nu funcționeze bine pe dispozitive mobile"
+
+msgid "Desktop support"
+msgstr "Suport pentru desktop"
+
+msgid "Works well on large screens"
+msgstr "Funcționează bine pe ecrane mari"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s funcționează cel mai bine pe hardware specific"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s funcționează pe majoritatea dispozitivelor"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Anulează"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Se anulează"
+
+msgid "_Open"
+msgstr "_Deschide"
+
+msgid "Uninstall Application"
+msgstr "Dezinstalează aplicația"
+
+msgid "_Remove"
+msgstr "_Elimină"
+
+msgid "Update"
+msgstr "Actualizează"
+
+msgid "Remove"
+msgstr "Elimină"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Instalează %s din %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Instalează %s"
+
+msgid "Donate"
+msgstr "Donează"
+
+msgid "Search installed apps"
+msgstr "Caută în aplicațiile instalate"
+
+msgid "No Apps Found"
+msgstr "Nicio aplicație găsită"
+
+msgid "Search Store Instead"
+msgstr "Caută în magazin"
+
+msgid "Pending Updates"
+msgstr "Actualizări în așteptare"
+
+msgid "Downloads"
+msgstr "Descărcări"
+
+msgid "Recently Uninstalled"
+msgstr "Dezinstalate recent"
+
+msgid "Clear Finished Tasks"
+msgstr "Șterge sarcinile terminate"
+
+msgid "Sort Options"
+msgstr "Opțiuni de sortare"
+
+msgid "Sort By"
+msgstr "Sortează după"
+
+msgid "Name"
+msgstr "Nume"
+
+msgid "Size"
+msgstr "Dimensiune"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "Nu s-au găsit potriviri pentru „%s” în lista aplicațiilor instalate"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u actualizare disponibilă"
+msgstr[1] "%u actualizări disponibile"
+msgstr[2] "%u de actualizări disponibile"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u aplicație instalată"
+msgstr[1] "%u aplicații instalate"
+msgstr[2] "%u de aplicații instalate"
+
+msgid "No applications found"
+msgstr "Nu s-a găsit nicio aplicație"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "S-a găsit o aplicație"
+msgstr[1] "S-au găsit %u aplicații"
+msgstr[2] "S-au găsit %u de aplicații"
+
+msgid "Get Involved"
+msgstr "Implică-te"
+
+msgid "Learn More"
+msgstr "Află mai multe"
+
+msgid "Unknown License"
+msgstr "Licență necunoscută"
+
+msgid "Community Built"
+msgstr "Construită de comunitate"
+
+msgid "Proprietary"
+msgstr "Proprietară"
+
+msgid "Special License"
+msgstr "Licență specială"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Această aplicație este dezvoltată în mod deschis de o comunitate internațională.\n"
+"\n"
+"Poți participa și ajuta să fie și mai bună."
+
+msgid "The license of this app is not known"
+msgstr "Licența acestei aplicații nu este cunoscută"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Această aplicație este dezvoltată în mod deschis de o comunitate internațională și lansată sub licența %s.\n"
+"\n"
+"Poți participa și ajuta să fie și mai bună."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Această aplicație nu este dezvoltată în mod deschis, așa că doar dezvoltatorii ei știu cum funcționează. Poate fi nesigură în moduri greu de detectat și se poate schimba fără supraveghere.\n"
+"\n"
+"Poate că poți sau poate că nu poți contribui la această aplicație."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Această aplicație este dezvoltată sub licența specială %s.\n"
+"\n"
+"Poate că poți sau poate că nu poți contribui la această aplicație."
+
+msgid "License"
+msgstr "Licență"
+
+msgid "Connect to Flathub"
+msgstr "Conectează-te la Flathub"
+
+msgid "Something Went Wrong"
+msgstr "Ceva nu a mers bine"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Autentifică-te pentru a sincroniza aplicațiile favorite între dispozitive"
+
+msgid "Finish"
+msgstr "Termină"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Salut, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Adaugi o pictogramă la previzualizarea metainformațiilor?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Fișierele de metainformații nu includ pictograme de aplicații. Vrei să alegi una manual?"
+
+msgid "Skip"
+msgstr "Omite"
+
+msgid "Select Icon"
+msgstr "Alege pictograma"
+
+msgid "Image Files"
+msgstr "Fișiere imagine"
+
+msgid "New Permissions"
+msgstr "Permisiuni noi"
+
+msgid "_Accept"
+msgstr "_Acceptă"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Permisiune nouă pentru %s"
+msgstr[1] "Permisiuni noi pentru %s"
+msgstr[2] "Permisiuni noi pentru %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Această actualizare necesită următoarea permisiune suplimentară"
+msgstr[1] "Această actualizare necesită următoarele permisiuni suplimentare"
+msgstr[2] "Această actualizare necesită următoarele permisiuni suplimentare"
+
+msgid "User"
+msgstr "Utilizator"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Sfârșit de viață"
+
+msgid "Preferences"
+msgstr "Preferințe"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Conexiunea la rețea este cu taxare — reîmprospătarea automată a datelor magazinului este oprită"
+
+msgid "Refresh Manually"
+msgstr "Reîmprospătează manual"
+
+msgid "App Updates"
+msgstr "Actualizările aplicațiilor"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Actualizările automate se vor opri pe rețelele cu taxare sau când economisirea energiei este activă, pentru a economisi date și baterie."
+
+msgid "_Automatic"
+msgstr "_Automat"
+
+msgid "Automatically check for and download app updates"
+msgstr "Caută și descarcă automat actualizările aplicațiilor"
+
+msgid "_Manual"
+msgstr "_Manual"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Căutarea și descărcarea actualizărilor aplicațiilor trebuie făcute manual"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Notificări pentru actualizări automate"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Notifică atunci când actualizările au fost instalate automat"
+
+msgid "Content Filters"
+msgstr "Filtre de conținut"
+
+msgid "_Free Software Only"
+msgstr "Doar programe _libere"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Ascunde aplicațiile proprietare la răsfoire și căutare"
+
+msgid "F_lathub Results Only"
+msgstr "Doar rezultate de pe F_lathub"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Limitează rezultatele căutării și răsfoirii la aplicațiile disponibile doar pe Flathub"
+
+msgid "_Verified Results Only"
+msgstr "Doar rezultate _verificate"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Ascunde rezultatele care nu sunt verificate pe Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Ascunde aplicațiile la _sfârșit de viață"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "Ascunde aplicațiile care nu mai sunt acceptate de dezvoltatorii lor"
+
+msgid "Progress Bar Theme"
+msgstr "Tema barei de progres"
+
+msgid "Accent Color"
+msgstr "Culoare de accent"
+
+msgid "Pride Colors"
+msgstr "Culorile mândriei"
+
+msgid "Lesbian Pride Colors"
+msgstr "Culorile mândriei lesbiene"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Culorile mândriei homosexualilor bărbați"
+
+msgid "Transgender Pride Colors"
+msgstr "Culorile mândriei transgender"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Culorile mândriei nonbinare"
+
+msgid "Bisexual Pride Colors"
+msgstr "Culorile mândriei bisexuale"
+
+msgid "Asexual Pride Colors"
+msgstr "Culorile mândriei asexuale"
+
+msgid "Pansexual Pride Colors"
+msgstr "Culorile mândriei pansexuale"
+
+msgid "Aromantic Pride Colors"
+msgstr "Culorile mândriei aromantice"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Culorile mândriei genderfluid"
+
+msgid "Polysexual Pride Colors"
+msgstr "Culorile mândriei polisexuale"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Culorile mândriei omnisexuale"
+
+msgid "Aroace Pride Colors"
+msgstr "Culorile mândriei aroace"
+
+msgid "Agender Pride Colors"
+msgstr "Culorile mândriei agender"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Culorile mândriei genderqueer"
+
+msgid "Intersex Pride Colors"
+msgstr "Culorile mândriei intersex"
+
+msgid "Demigender Pride Colors"
+msgstr "Culorile mândriei demigender"
+
+msgid "Biromantic Pride Colors"
+msgstr "Culorile mândriei biromantice"
+
+msgid "Disability Pride Colors"
+msgstr "Culorile mândriei persoanelor cu dizabilități"
+
+msgid "Femboy Pride Colors"
+msgstr "Culorile mândriei femboy"
+
+msgid "Neutrois Pride Colors"
+msgstr "Culorile mândriei neutrois"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar trebuie să ruleze în fundal pentru a căuta actualizări ale aplicațiilor"
+
+msgid "Version History"
+msgstr "Istoricul versiunilor"
+
+msgid "Today"
+msgstr "Astăzi"
+
+msgid "Yesterday"
+msgstr "Ieri"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "Acum %d zi"
+msgstr[1] "Acum %d zile"
+msgstr[2] "Acum %d de zile"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "Acum %d săptămână"
+msgstr[1] "Acum %d săptămâni"
+msgstr[2] "Acum %d de săptămâni"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "Acum %d lună"
+msgstr[1] "Acum %d luni"
+msgstr[2] "Acum %d de luni"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "Acum %d an"
+msgstr[1] "Acum %d ani"
+msgstr[2] "Acum %d de ani"
+
+msgid "%e %B %Y"
+msgstr "%e %B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "Versiunea %s"
+
+msgid "No details for this release"
+msgstr "Nu există detalii pentru această versiune"
+
+msgid "Get More Information"
+msgstr "Obține mai multe informații"
+
+msgid "_Version History"
+msgstr "_Istoricul versiunilor"
+
+msgid "Remotes"
+msgstr "Surse"
+
+msgid "System Installation"
+msgstr "Instalare la nivel de sistem"
+
+msgid "Available to all users on this computer"
+msgstr "Disponibilă pentru toți utilizatorii acestui calculator"
+
+msgid "User Installation"
+msgstr "Instalare pentru utilizator"
+
+msgid "Only available to you"
+msgstr "Disponibilă doar pentru tine"
+
+msgid "Remove Remote"
+msgstr "Elimină sursa"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Elimină %s"
+
+msgid "Unused"
+msgstr "Neutilizată"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u aplicație instalată"
+msgstr[1] "%u aplicații instalate"
+msgstr[2] "%u de aplicații instalate"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Elimini „%s”?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Nu vei mai putea instala aplicații din această sursă a utilizatorului."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Nu vei mai putea instala aplicații din această sursă a sistemului."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u aplicație de eliminat"
+msgstr[1] "%u aplicații de eliminat"
+msgstr[2] "%u de aplicații de eliminat"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Aplicația de mai jos a fost instalată din această sursă și va fi eliminată din contul tău odată cu ea."
+msgstr[1] "Aplicațiile de mai jos au fost instalate din această sursă și vor fi eliminate din contul tău odată cu ea."
+msgstr[2] "Aplicațiile de mai jos au fost instalate din această sursă și vor fi eliminate din contul tău odată cu ea."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Aplicația de mai jos a fost instalată din această sursă și va fi eliminată pentru toți utilizatorii odată cu ea."
+msgstr[1] "Aplicațiile de mai jos au fost instalate din această sursă și vor fi eliminate pentru toți utilizatorii odată cu ea."
+msgstr[2] "Aplicațiile de mai jos au fost instalate din această sursă și vor fi eliminate pentru toți utilizatorii odată cu ea."
+
+msgid "Uninstall"
+msgstr "Dezinstalează"
+
+msgid "Get"
+msgstr "Obține"
+
+msgid "Arbitrary Permissions"
+msgstr "Permisiuni arbitrare"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Această aplicație are o permisiune care îi permite indirect să-și acorde <b>orice altă permisiune dorește</b>, ocolind sandbox-ul Flatpak.\n"
+"\n"
+"Astfel, poate face orice poate face o aplicație privilegiată, fără sandbox, cum ar fi accesarea tuturor fișierelor tale și conectarea la internet.\n"
+"\n"
+"Vizualizarea celorlalte permisiuni poate oferi totuși o idee mai bună despre ce este probabil să facă aplicația."
+
+msgid "View Other Permissions"
+msgstr "Vezi celelalte permisiuni"
+
+msgid "Safe"
+msgstr "Sigură"
+
+msgid "App ID"
+msgstr "ID aplicație"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Această aplicație folosește o versiune învechită a platformei software (SDK) și poate conține erori sau vulnerabilități de securitate care nu vor fi remediate."
+
+msgid "Safety"
+msgstr "Siguranță"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s este sigură"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s nu are permisiuni nesigure"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s este probabil sigură"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s este posibil nesigură"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s este nesigură"
+
+msgid "Back"
+msgstr "Înapoi"
+
+msgid "Previous Screenshot"
+msgstr "Captura de ecran anterioară"
+
+msgid "Next Screenshot"
+msgstr "Următoarea captură de ecran"
+
+msgid "Copy Image"
+msgstr "Copiază imaginea"
+
+msgid "Reset View"
+msgstr "Resetează vizualizarea"
+
+msgid "Zoom Out"
+msgstr "Micșorează"
+
+msgid "Zoom In"
+msgstr "Mărește"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u actualizare de runtime"
+msgstr[1] "%u actualizări de runtime"
+msgstr[2] "%u de actualizări de runtime"
+
+msgid "Screenshots Carousel"
+msgstr "Carusel de capturi de ecran"
+
+msgid "No Screenshots"
+msgstr "Nicio captură de ecran"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Captura de ecran %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Captura de ecran %u"
+
+msgid "Clear Search"
+msgstr "Șterge căutarea"
+
+msgid "Filters"
+msgstr "Filtre"
+
+msgid "_Verified"
+msgstr "_Verificate"
+
+msgid "_Free/Open"
+msgstr "_Libere/Deschise"
+
+msgid "Non-_EOL"
+msgstr "Fără _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Filtrează aplicațiile la sfârșit de viață"
+
+msgid "_Mobile Friendly"
+msgstr "Potrivite pentru _mobil"
+
+msgid "Categories"
+msgstr "Categorii"
+
+msgid "Search Apps, Games, Software"
+msgstr "Caută aplicații, jocuri, programe"
+
+msgid "Search Filters"
+msgstr "Filtre de căutare"
+
+msgid "Browse Categories"
+msgstr "Răsfoiește categoriile"
+
+msgid "Categories Unavailable"
+msgstr "Categorii indisponibile"
+
+msgid "Search for apps using the search bar above."
+msgstr "Caută aplicații folosind bara de căutare de mai sus."
+
+msgid "No Applications Found"
+msgstr "Nicio aplicație găsită"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Nu s-au găsit rezultate pentru „%s” pe Flathub"
+
+msgid "Browser"
+msgstr "Browser"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Office"
+msgstr "Birou"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Calendar"
+
+msgid "Messaging"
+msgstr "Mesagerie"
+
+msgid "Paint"
+msgstr "Desen"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Emulator"
+
+msgid "Copy Link"
+msgstr "Copiază legătura"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Pagina Flathub"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Site-ul proiectului"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Urmăritor de probleme"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "Întrebări frecvente"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Ajutor"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Donează"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Traducere"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Contact"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Cod sursă"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Contribuie"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifest"
+
+msgid "Timeline"
+msgstr "Cronologie"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "This Week"
+msgstr "Această săptămână"
+
+msgid "Installs per day"
+msgstr "Instalări pe zi"
+
+msgid "World"
+msgstr "Lume"
+
+msgid "Installs per country"
+msgstr "Instalări pe țară"
+
+msgid "Since 4/15/2024"
+msgstr "Din 15.04.2024"
+
+msgid "No Results Found"
+msgstr "Niciun rezultat găsit"
+
+msgid "Search failed"
+msgstr "Căutarea a eșuat"
+
+msgid "Unknown"
+msgstr "Necunoscut"
+
+msgid "Keep User Data"
+msgstr "Păstrează datele utilizatorului"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Permite restaurarea preferințelor personale &amp; a conținutului"
+
+msgid "Delete All Data"
+msgstr "Șterge toate datele"
+
+msgid "Permanently erase user data to save space"
+msgstr "Șterge definitiv datele utilizatorului pentru a economisi spațiu"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "Elimini %s?"
+
+msgid "Select which version to remove."
+msgstr "Alege ce versiune să fie eliminată."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "Nu va fi posibil să folosești %s după dezinstalare."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "„%s” are risc ridicat"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Această aplicație are acces complet la sistemul tău, inclusiv la <b>toate fișierele tale, istoricul browserului, parolele salvate</b> și altele. Are acces și la internet, ceea ce înseamnă că ar putea trimite datele tale unor terți.\n"
+"\n"
+"Fiind o aplicație proprietară, nu poate fi auditată pentru ce face cu aceste permisiuni."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Această aplicație folosește sistemul de ferestre vechi X11, care îi permite să <b>înregistreze toate tastele apăsate, să captureze ecranul și să monitorizeze alte aplicații</b>. Are acces și la internet, ceea ce înseamnă că ar putea trimite datele tale unor terți.\n"
+"\n"
+"Fiind o aplicație proprietară, nu poate fi auditată pentru ce face cu aceste permisiuni."
+
+msgid "_Install Anyway"
+msgstr "_Instalează oricum"
+
+msgid "Failed to load transaction dialog"
+msgstr "Nu s-a putut încărca fereastra tranzacției"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "Terminat în %.02f secunde"
+
+msgid "App Add-On"
+msgstr "Supliment de aplicație"
+
+msgid "Runtime"
+msgstr "Runtime"
+
+msgid "In Queue"
+msgstr "În coadă"
+
+msgid "Finishing Up"
+msgstr "Se finalizează"
+
+msgid "Done"
+msgstr "Gata"
+
+msgid "Cancelled"
+msgstr "Anulat"
+
+msgid "Error"
+msgstr "Eroare"
+
+msgid "Cancel Transaction"
+msgstr "Anulează tranzacția"
+
+msgid "Show Details"
+msgstr "Arată detaliile"
+
+msgid "Show Error Info"
+msgstr "Arată informațiile despre eroare"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s eliberat"
+
+msgid "Transaction Error"
+msgstr "Eroare de tranzacție"
+
+msgid "Pending"
+msgstr "În așteptare"
+
+msgid "Installed Updates"
+msgstr "Actualizări instalate"
+
+msgid "Release Notes"
+msgstr "Note de versiune"
+
+msgid "No Release Info"
+msgstr "Nicio informație despre versiune"
+
+msgid "_Update All"
+msgstr "_Actualizează tot"
+
+msgid "This update requests new permissions"
+msgstr "Această actualizare solicită permisiuni noi"
+
+msgid "Manage Leftover User Data"
+msgstr "Gestionează datele rămase ale utilizatorului"
+
+msgid "No Leftover User Data Found"
+msgstr "Nu s-au găsit date rămase ale utilizatorului"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Datele personale lăsate în urmă de aplicațiile eliminate vor apărea aici"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Datele utilizatorului din coșul de gunoi pentru %u aplicație"
+msgstr[1] "Datele utilizatorului din coșul de gunoi pentru %u aplicații"
+msgstr[2] "Datele utilizatorului din coșul de gunoi pentru %u de aplicații"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Datele utilizatorului din coșul de gunoi pentru %s"
+
+msgid "Open User Data Folder"
+msgstr "Deschide dosarul cu datele utilizatorului"
+
+msgid "Trash User Data"
+msgstr "Mută datele utilizatorului în coșul de gunoi"
+
+msgid "Refreshing"
+msgstr "Se reîmprospătează"
+
+msgid "Curated"
+msgstr "Selecționate"
+
+msgid "Explore"
+msgstr "Explorează"
+
+msgid "Library"
+msgstr "Bibliotecă"
+
+msgid "Search"
+msgstr "Caută"
+
+msgid "Main Menu"
+msgstr "Meniu principal"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Rulezi o versiune nouă de Bazaar!"
+
+msgid "See What's New"
+msgstr "Vezi ce este nou"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Ai o conexiune la rețea, dar vezi o versiune din cache a Flathub"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Conexiunea la rețea este cu taxare — reîmprospătările automate sunt dezactivate"
+
+msgid "_Donate to Bazaar"
+msgstr "_Donează pentru Bazaar"
+
+msgid "_Refresh"
+msgstr "_Reîmprospătează"
+
+msgid "_Login With Flathub"
+msgstr "Autentifică-te cu _Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "_Gestionează datele rămase ale utilizatorului"
+
+msgid "Manage R_emotes"
+msgstr "Gestionează s_ursele"
+
+msgid "_Preferences"
+msgstr "_Preferințe"
+
+msgid "_Keyboard Shortcuts"
+msgstr "_Scurtături de tastatură"
+
+msgid "_About Bazaar"
+msgstr "_Despre Bazaar"
+
+msgid "_Quit Bazaar"
+msgstr "_Ieși din Bazaar"
+
+msgid "Log Out"
+msgstr "Deconectare"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Nu s-a putut lansa aplicația"
+
+msgid "Could not open link"
+msgstr "Nu s-a putut deschide legătura"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Nu poți elimina Bazaar din Bazaar!"
+
+msgid "Can't do that right now!"
+msgstr "Nu se poate face asta acum!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u instalare"
+msgstr[1] "%s, %'u instalări"
+msgstr[2] "%s, %'u de instalări"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Cele mai multe instalări din %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d descărcări în ultima lună"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s Runtime"
+
+msgid "Size information unavailable"
+msgstr "Informațiile despre dimensiune nu sunt disponibile"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "Dimensiunea de descărcare a %s"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Dimensiunea instalată a %s"
+
+msgid "All Ages"
+msgstr "Toate vârstele"
+
+msgid "Age rating information unavailable"
+msgstr "Informațiile despre clasificarea pe vârste nu sunt disponibile"
+
+msgid "Suitable for all ages"
+msgstr "Potrivit pentru toate vârstele"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "Potrivit pentru vârste de %d ani și peste"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "Program liber cu licența %s"
+
+msgid "Free software"
+msgstr "Program liber"
+
+msgid "Proprietary Software"
+msgstr "Program proprietar"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Licență specială: %s"
+
+msgid "Free Software"
+msgstr "Program liber"
+
+msgid "Adaptive"
+msgstr "Adaptiv"
+
+msgid "Desktop Only"
+msgstr "Doar desktop"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "Funcționează pe desktop, tablete și telefoane"
+
+msgid "May not work on mobile devices"
+msgstr "Poate să nu funcționeze pe dispozitive mobile"
+
+msgid "Low Risk"
+msgstr "Risc scăzut"
+
+msgid "Medium Risk"
+msgstr "Risc mediu"
+
+msgid "High Risk"
+msgstr "Risc ridicat"
+
+msgid "Unknown Permissions"
+msgstr "Permisiuni necunoscute"
+
+msgid "Permissions are missing for this app."
+msgstr "Lipsesc permisiunile pentru această aplicație."
+
+msgid "No Permissions"
+msgstr "Fără permisiuni"
+
+msgid "App is fully sandboxed"
+msgstr "Aplicația este complet izolată în sandbox"
+
+msgid "Network Access"
+msgstr "Acces la rețea"
+
+msgid "Can access the internet"
+msgstr "Poate accesa internetul"
+
+msgid "No Network Access"
+msgstr "Fără acces la rețea"
+
+msgid "Cannot access the internet"
+msgstr "Nu poate accesa internetul"
+
+msgid "User Device Access"
+msgstr "Acces la dispozitivele utilizatorului"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Poate accesa dispozitive precum camere web sau controlere de joc"
+
+msgid "No User Device Access"
+msgstr "Fără acces la dispozitivele utilizatorului"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Nu poate accesa dispozitive precum camere web sau controlere de joc"
+
+msgid "Input Device Access"
+msgstr "Acces la dispozitivele de intrare"
+
+msgid "Can access input devices"
+msgstr "Poate accesa dispozitivele de intrare"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Acces la microfon și redare audio"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Poate asculta prin microfoane și reda audio fără a cere permisiunea"
+
+msgid "System Device Access"
+msgstr "Acces la dispozitivele sistemului"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Poate accesa dispozitive ale sistemului care necesită permisiuni ridicate"
+
+msgid "Screen Contents Access"
+msgstr "Acces la conținutul ecranului"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Poate accesa conținutul ecranului sau al altor ferestre"
+
+msgid "Legacy Windowing System"
+msgstr "Sistem de ferestre vechi"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Folosește mereu un sistem de ferestre vechi (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Poate obține permisiuni arbitrare"
+
+msgid "User Settings"
+msgstr "Preferințele utilizatorului"
+
+msgid "Can access and change user settings"
+msgstr "Poate accesa și schimba preferințele utilizatorului"
+
+msgid "Full File System Read/Write Access"
+msgstr "Acces complet de citire/scriere la sistemul de fișiere"
+
+msgid "Can read and write all data on the file system"
+msgstr "Poate citi și scrie toate datele din sistemul de fișiere"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Acces de citire/scriere la dosarul personal"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Poate citi și scrie toate datele din directorul tău personal"
+
+msgid "Full File System Read Access"
+msgstr "Acces complet de citire la sistemul de fișiere"
+
+msgid "Can read all data on the file system"
+msgstr "Poate citi toate datele din sistemul de fișiere"
+
+msgid "Home Folder Read Access"
+msgstr "Acces de citire la dosarul personal"
+
+msgid "Can read all data in your home directory"
+msgstr "Poate citi toate datele din directorul tău personal"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Acces de citire/scriere la dosarul Descărcări"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Poate citi și scrie toate datele din directorul tău de descărcări"
+
+msgid "Download Folder Read Access"
+msgstr "Acces de citire la dosarul Descărcări"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Poate citi toate datele din directorul tău de descărcări"
+
+msgid "Can read and write all data in the directory"
+msgstr "Poate citi și scrie toate datele din director"
+
+msgid "Can read all data in the directory"
+msgstr "Poate citi toate datele din director"
+
+msgid "No File System Access"
+msgstr "Fără acces la sistemul de fișiere"
+
+msgid "Cannot access the file system at all"
+msgstr "Nu poate accesa deloc sistemul de fișiere"
+
+msgid "Uses System Services"
+msgstr "Folosește servicii de sistem"
+
+msgid "Can request data from non-portal system services"
+msgstr "Poate solicita date de la servicii de sistem din afara portalurilor"
+
+msgid "Uses Session Services"
+msgstr "Folosește servicii de sesiune"
+
+msgid "Can request data from non-portal session services"
+msgstr "Poate solicita date de la servicii de sesiune din afara portalurilor"
+
+msgid "No Service Access"
+msgstr "Fără acces la servicii"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Nu poate accesa deloc servicii de sesiune sau de sistem din afara portalurilor"
+
+msgid "Verified App Developer"
+msgstr "Dezvoltator de aplicații verificat"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Dezvoltatorul acestei aplicații a fost verificat că este cine spune că este"
+
+msgid "Proprietary Code"
+msgstr "Cod proprietar"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Codul sursă nu este public, deci nu poate fi auditat independent și ar putea fi nesigur"
+
+msgid "Auditable Code"
+msgstr "Cod auditabil"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Codul sursă este public și poate fi auditat independent, ceea ce face aplicația mai probabil sigură"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Folosește serviciul de sistem %s"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Folosește serviciul de sesiune %s"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Folosește serviciul %s"
+
+msgid "Can see the non-portal service"
+msgstr "Poate vedea serviciul din afara portalurilor"
+
+msgid "Can talk to the non-portal service"
+msgstr "Poate comunica cu serviciul din afara portalurilor"
+
+msgid "Can own the non-portal service"
+msgstr "Poate deține serviciul din afara portalurilor"
+
+msgid "Global Menu Integration"
+msgstr "Integrare cu meniul global"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Își poate afișa meniurile într-o bară de meniu globală"
+
+msgid "KDE Settings Integration"
+msgstr "Integrare cu preferințele KDE"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Poate detecta când se schimbă preferințele desktopului KDE"
+
+msgid "KDE Global Settings"
+msgstr "Preferințe globale KDE"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Poate citi preferințele desktopului KDE, precum fonturile și culorile"
+
+msgid "Secret Storage Service"
+msgstr "Serviciul de stocare a secretelor"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Își poate stoca și recupera propriile parole folosind inelul de chei al sistemului"
+
+msgid "Desktop Notifications Service"
+msgstr "Serviciul de notificări desktop"
+
+msgid "Can send desktop notifications"
+msgstr "Poate trimite notificări pe desktop"
+
+msgid "System Tray Integration"
+msgstr "Integrare cu zona de notificare a sistemului"
+
+msgid "Can display an icon in the system tray"
+msgstr "Poate afișa o pictogramă în zona de notificare a sistemului"
+
+msgid "KDE Connect Integration"
+msgstr "Integrare cu KDE Connect"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Poate interacționa cu dispozitivele asociate prin KDE Connect"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigare"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Deschide pagina Explorează"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Deschide pagina Bibliotecă"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Deschide pagina de căutare"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Surse"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Sincronizează sursele"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "General"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Deschide preferințele"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Arată scurtăturile"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Închide fereastra"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Ieși din Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s a fost instalat"
+
+msgid "The app is ready to be used"
+msgstr "Aplicația este gata de utilizare"
+
+msgid "Updates Are Out of Date"
+msgstr "Actualizările sunt depășite"
+
+msgid "Please check for available updates"
+msgstr "Verifică dacă există actualizări disponibile"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u aplicație actualizată"
+msgstr[1] "%u aplicații actualizate"
+msgstr[2] "%u de aplicații actualizate"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s a fost actualizat."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s și %s au fost actualizate."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Include %s, %s și %s."

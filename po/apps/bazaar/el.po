@@ -1,0 +1,882 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Removing remote…"
+msgstr "Αφαίρεση απομακρυσμένου αποθετηρίου…"
+
+msgid "Could not remove remote"
+msgstr "Δεν ήταν δυνατή η αφαίρεση του απομακρυσμένου αποθετηρίου"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s έως %s, με μέγιστο στις %s: %s"
+
+msgid "We​ ♥​ Games"
+msgstr "Αγαπάμε​ ♥​ τα παιχνίδια"
+
+msgid "License"
+msgstr "Άδεια χρήσης"
+
+msgid "Connect to Flathub"
+msgstr "Σύνδεση στο Flathub"
+
+msgid "Something Went Wrong"
+msgstr "Κάτι πήγε στραβά"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Συνδεθείτε για να συγχρονίσετε τις αγαπημένες εφαρμογές σας μεταξύ συσκευών"
+
+msgid "Finish"
+msgstr "Τέλος"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Γεια σας, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Προσθήκη εικονιδίου στην προεπισκόπηση Metainfo;"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Τα αρχεία Metainfo δεν περιλαμβάνουν από μόνα τους εικονίδια εφαρμογών. Θέλετε να επιλέξετε ένα χειροκίνητα;"
+
+msgid "Skip"
+msgstr "Παράλειψη"
+
+msgid "Select Icon"
+msgstr "Επιλογή εικονιδίου"
+
+msgid "Image Files"
+msgstr "Αρχεία εικόνας"
+
+msgid "New Permissions"
+msgstr "Νέα δικαιώματα"
+
+msgid "_Accept"
+msgstr "_Αποδοχή"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Νέο δικαίωμα για το %s"
+msgstr[1] "Νέα δικαιώματα για το %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Αυτή η ενημέρωση απαιτεί το ακόλουθο πρόσθετο δικαίωμα"
+msgstr[1] "Αυτή η ενημέρωση απαιτεί τα ακόλουθα πρόσθετα δικαιώματα"
+
+msgid "User"
+msgstr "Χρήστης"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Τέλος κύκλου ζωής"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Η σύνδεση δικτύου είναι με μέτρηση δεδομένων — η αυτόματη ανανέωση των δεδομένων του καταστήματος έχει διακοπεί"
+
+msgid "Refresh Manually"
+msgstr "Χειροκίνητη ανανέωση"
+
+msgid "App Updates"
+msgstr "Ενημερώσεις εφαρμογών"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Οι αυτόματες ενημερώσεις θα διακόπτονται σε δίκτυα με μέτρηση δεδομένων ή όταν είναι ενεργή η εξοικονόμηση ενέργειας, ώστε να εξοικονομούνται δεδομένα και μπαταρία."
+
+msgid "_Automatic"
+msgstr "_Αυτόματα"
+
+msgid "Automatically check for and download app updates"
+msgstr "Αυτόματος έλεγχος και λήψη ενημερώσεων εφαρμογών"
+
+msgid "_Manual"
+msgstr "_Χειροκίνητα"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Ο έλεγχος και η λήψη ενημερώσεων εφαρμογών πρέπει να γίνονται χειροκίνητα"
+
+msgid "Automatic Update _Notifications"
+msgstr "Ειδοποιήσεις αυτόματης ε_νημέρωσης"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Ειδοποίηση όταν έχουν εγκατασταθεί ενημερώσεις αυτόματα"
+
+msgid "_Free Software Only"
+msgstr "Μόνο _ελεύθερο λογισμικό"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Απόκρυψη ιδιόκτητων εφαρμογών κατά την περιήγηση και την αναζήτηση"
+
+msgid "F_lathub Results Only"
+msgstr "Μόνο αποτελέσματα _Flathub"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Περιορισμός των αποτελεσμάτων αναζήτησης και περιήγησης σε εφαρμογές που διατίθενται μόνο στο Flathub"
+
+msgid "_Verified Results Only"
+msgstr "Μόνο ε_παληθευμένα αποτελέσματα"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Απόκρυψη αποτελεσμάτων που δεν είναι επαληθευμένα στο Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Απόκρυψη εφαρμογών _τέλους κύκλου ζωής"
+
+msgid "Progress Bar Theme"
+msgstr "Θέμα γραμμής προόδου"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Χρώματα υπερηφάνειας ομοφυλόφιλων ανδρών"
+
+msgid "Disability Pride Colors"
+msgstr "Χρώματα υπερηφάνειας αναπηρίας"
+
+msgid "Femboy Pride Colors"
+msgstr "Χρώματα υπερηφάνειας Femboy"
+
+msgid "Neutrois Pride Colors"
+msgstr "Χρώματα υπερηφάνειας Neutrois"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Το Bazaar πρέπει να εκτελείται στο παρασκήνιο για να ελέγχει για ενημερώσεις εφαρμογών"
+
+msgid "Today"
+msgstr "Σήμερα"
+
+msgid "Yesterday"
+msgstr "Χθες"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "πριν από %d ημέρα"
+msgstr[1] "πριν από %d ημέρες"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "πριν από %d εβδομάδα"
+msgstr[1] "πριν από %d εβδομάδες"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "πριν από %d μήνα"
+msgstr[1] "πριν από %d μήνες"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "πριν από %d έτος"
+msgstr[1] "πριν από %d έτη"
+
+msgid "%e %B %Y"
+msgstr "%e %B %Y"
+
+msgid "Get More Information"
+msgstr "Περισσότερες πληροφορίες"
+
+msgid "_Version History"
+msgstr "_Ιστορικό εκδόσεων"
+
+msgid "Remotes"
+msgstr "Απομακρυσμένα αποθετήρια"
+
+msgid "System Installation"
+msgstr "Εγκατάσταση συστήματος"
+
+msgid "Available to all users on this computer"
+msgstr "Διαθέσιμο σε όλους τους χρήστες αυτού του υπολογιστή"
+
+msgid "User Installation"
+msgstr "Εγκατάσταση χρήστη"
+
+msgid "Only available to you"
+msgstr "Διαθέσιμο μόνο σε εσάς"
+
+msgid "Remove Remote"
+msgstr "Αφαίρεση απομακρυσμένου αποθετηρίου"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Αφαίρεση του %s"
+
+msgid "Unused"
+msgstr "Αχρησιμοποίητο"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u εφαρμογή εγκατεστημένη"
+msgstr[1] "%u εφαρμογές εγκατεστημένες"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Αφαίρεση του «%s»;"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Δεν θα μπορείτε πλέον να εγκαθιστάτε εφαρμογές από αυτό το απομακρυσμένο αποθετήριο χρήστη."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Δεν θα μπορείτε πλέον να εγκαθιστάτε εφαρμογές από αυτό το απομακρυσμένο αποθετήριο συστήματος."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u εφαρμογή προς αφαίρεση"
+msgstr[1] "%u εφαρμογές προς αφαίρεση"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Η παρακάτω εφαρμογή εγκαταστάθηκε από αυτό το απομακρυσμένο αποθετήριο και θα αφαιρεθεί μαζί με αυτό από τον λογαριασμό σας."
+msgstr[1] "Αυτές οι εφαρμογές εγκαταστάθηκαν από αυτό το απομακρυσμένο αποθετήριο και θα αφαιρεθούν μαζί με αυτό από τον λογαριασμό σας."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Η παρακάτω εφαρμογή εγκαταστάθηκε από αυτό το απομακρυσμένο αποθετήριο και θα αφαιρεθεί μαζί με αυτό για όλους τους χρήστες."
+msgstr[1] "Αυτές οι εφαρμογές εγκαταστάθηκαν από αυτό το απομακρυσμένο αποθετήριο και θα αφαιρεθούν μαζί με αυτό για όλους τους χρήστες."
+
+msgid "Uninstall"
+msgstr "Απεγκατάσταση"
+
+msgid "Arbitrary Permissions"
+msgstr "Αυθαίρετα δικαιώματα"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Αυτή η εφαρμογή διαθέτει ένα δικαίωμα που της επιτρέπει έμμεσα να παραχωρεί στον εαυτό της <b>οποιοδήποτε άλλο δικαίωμα επιθυμεί</b>, παρακάμπτοντας το sandbox του Flatpak.\n"
+"\n"
+"Μπορεί επομένως να κάνει οτιδήποτε μπορεί να κάνει μια προνομιούχα εφαρμογή χωρίς sandbox, όπως να έχει πρόσβαση σε όλα τα αρχεία σας και να συνδέεται στο διαδίκτυο.\n"
+"\n"
+"Η προβολή των άλλων δικαιωμάτων μπορεί και πάλι να δώσει καλύτερη εικόνα για το τι είναι πιθανό να κάνει η εφαρμογή."
+
+msgid "View Other Permissions"
+msgstr "Προβολή άλλων δικαιωμάτων"
+
+msgid "Safe"
+msgstr "Ασφαλές"
+
+msgid "App ID"
+msgstr "Αναγνωριστικό εφαρμογής"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Αυτή η εφαρμογή χρησιμοποιεί παλαιά έκδοση της πλατφόρμας λογισμικού (SDK) και ενδέχεται να περιέχει σφάλματα ή ευπάθειες ασφαλείας που δεν θα διορθωθούν."
+
+msgid "Safety"
+msgstr "Ασφάλεια"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "Το %s είναι ασφαλές"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "Το %s δεν έχει μη ασφαλή δικαιώματα"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "Το %s είναι πιθανώς ασφαλές"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "Το %s είναι πιθανώς μη ασφαλές"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "Το %s είναι μη ασφαλές"
+
+msgid "Back"
+msgstr "Πίσω"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u ενημέρωση περιβάλλοντος εκτέλεσης"
+msgstr[1] "%u ενημερώσεις περιβάλλοντος εκτέλεσης"
+
+msgid "No Screenshots"
+msgstr "Χωρίς στιγμιότυπα οθόνης"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Στιγμιότυπο οθόνης %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Στιγμιότυπο οθόνης %u"
+
+msgid "Clear Search"
+msgstr "Εκκαθάριση αναζήτησης"
+
+msgid "Filters"
+msgstr "Φίλτρα"
+
+msgid "_Verified"
+msgstr "_Επαληθευμένα"
+
+msgid "_Free/Open"
+msgstr "_Ελεύθερα/Ανοικτά"
+
+msgid "Non-_EOL"
+msgstr "Όχι _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Φιλτράρισμα εφαρμογών τέλους κύκλου ζωής"
+
+msgid "_Mobile Friendly"
+msgstr "_Φιλικά προς κινητά"
+
+msgid "Categories"
+msgstr "Κατηγορίες"
+
+msgid "Search Filters"
+msgstr "Φίλτρα αναζήτησης"
+
+msgid "Browse Categories"
+msgstr "Περιήγηση στις κατηγορίες"
+
+msgid "Video"
+msgstr "Βίντεο"
+
+msgid "Office"
+msgstr "Γραφείο"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Ημερολόγιο"
+
+msgid "Messaging"
+msgstr "Μηνύματα"
+
+msgid "Paint"
+msgstr "Ζωγραφική"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Προσομοιωτής"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Μανιφέστο"
+
+msgid "Total"
+msgstr "Σύνολο"
+
+msgid "This Week"
+msgstr "Αυτή την εβδομάδα"
+
+msgid "Installs per day"
+msgstr "Εγκαταστάσεις ανά ημέρα"
+
+msgid "Installs per country"
+msgstr "Εγκαταστάσεις ανά χώρα"
+
+msgid "Since 4/15/2024"
+msgstr "Από τις 15/4/2024"
+
+msgid "Keep User Data"
+msgstr "Διατήρηση δεδομένων χρήστη"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Να επιτρέπεται η επαναφορά προσωπικών ρυθμίσεων &amp; περιεχομένου"
+
+msgid "Delete All Data"
+msgstr "Διαγραφή όλων των δεδομένων"
+
+msgid "Permanently erase user data to save space"
+msgstr "Οριστική διαγραφή των δεδομένων χρήστη για εξοικονόμηση χώρου"
+
+msgid "Select which version to remove."
+msgstr "Επιλέξτε ποια έκδοση θα αφαιρεθεί."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "Το «%s» είναι υψηλού κινδύνου"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Αυτή η εφαρμογή έχει πλήρη πρόσβαση στο σύστημά σας, συμπεριλαμβανομένων <b>όλων των αρχείων σας, του ιστορικού περιήγησης, των αποθηκευμένων κωδικών πρόσβασης</b> και άλλων. Έχει επίσης πρόσβαση στο διαδίκτυο, πράγμα που σημαίνει ότι θα μπορούσε να στείλει τα δεδομένα σας σε τρίτους.\n"
+"\n"
+"Επειδή η εφαρμογή είναι ιδιόκτητη, δεν μπορεί να ελεγχθεί τι κάνει με αυτά τα δικαιώματα."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Αυτή η εφαρμογή χρησιμοποιεί το παλαιού τύπου σύστημα παραθύρων X11, το οποίο της επιτρέπει να <b>καταγράφει όλα τα πατήματα πλήκτρων, να λαμβάνει στιγμιότυπα οθόνης και να παρακολουθεί άλλες εφαρμογές</b>. Έχει επίσης πρόσβαση στο διαδίκτυο, πράγμα που σημαίνει ότι θα μπορούσε να στείλει τα δεδομένα σας σε τρίτους.\n"
+"\n"
+"Επειδή η εφαρμογή είναι ιδιόκτητη, δεν μπορεί να ελεγχθεί τι κάνει με αυτά τα δικαιώματα."
+
+msgid "_Install Anyway"
+msgstr "_Εγκατάσταση ούτως ή άλλως"
+
+msgid "Failed to load transaction dialog"
+msgstr "Αποτυχία φόρτωσης του διαλόγου συναλλαγής"
+
+msgid "App Add-On"
+msgstr "Πρόσθετο εφαρμογής"
+
+msgid "In Queue"
+msgstr "Σε αναμονή"
+
+msgid "Finishing Up"
+msgstr "Ολοκλήρωση"
+
+msgid "Done"
+msgstr "Ολοκληρώθηκε"
+
+msgid "Cancelled"
+msgstr "Ακυρώθηκε"
+
+msgid "Error"
+msgstr "Σφάλμα"
+
+msgid "Cancel Transaction"
+msgstr "Ακύρωση συναλλαγής"
+
+msgid "Show Details"
+msgstr "Εμφάνιση λεπτομερειών"
+
+msgid "Show Error Info"
+msgstr "Εμφάνιση πληροφοριών σφάλματος"
+
+#, c-format
+msgid "%s Freed"
+msgstr "Ελευθερώθηκαν %s"
+
+msgid "Transaction Error"
+msgstr "Σφάλμα συναλλαγής"
+
+msgid "Installed Updates"
+msgstr "Εγκατεστημένες ενημερώσεις"
+
+msgid "Release Notes"
+msgstr "Σημειώσεις έκδοσης"
+
+msgid "No Release Info"
+msgstr "Χωρίς πληροφορίες έκδοσης"
+
+msgid "_Update All"
+msgstr "_Ενημέρωση όλων"
+
+msgid "This update requests new permissions"
+msgstr "Αυτή η ενημέρωση ζητά νέα δικαιώματα"
+
+msgid "No Leftover User Data Found"
+msgstr "Δεν βρέθηκαν υπολειπόμενα δεδομένα χρήστη"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Τα προσωπικά δεδομένα που έχουν μείνει από εφαρμογές που αφαιρέθηκαν θα εμφανίζονται εδώ"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Δεδομένα χρήστη στον κάδο για %u εφαρμογή"
+msgstr[1] "Δεδομένα χρήστη στον κάδο για %u εφαρμογές"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Δεδομένα χρήστη στον κάδο για το %s"
+
+msgid "Open User Data Folder"
+msgstr "Άνοιγμα φακέλου δεδομένων χρήστη"
+
+msgid "Trash User Data"
+msgstr "Μετακίνηση δεδομένων χρήστη στον κάδο"
+
+msgid "Refreshing"
+msgstr "Ανανέωση"
+
+msgid "Explore"
+msgstr "Εξερεύνηση"
+
+msgid "Library"
+msgstr "Βιβλιοθήκη"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Χρησιμοποιείτε μια νέα έκδοση του Bazaar!"
+
+msgid "See What's New"
+msgstr "Δείτε τι νέο υπάρχει"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Η σύνδεση δικτύου είναι με μέτρηση δεδομένων — οι αυτόματες ανανεώσεις είναι απενεργοποιημένες"
+
+msgid "_Donate to Bazaar"
+msgstr "_Δωρεά στο Bazaar"
+
+msgid "_Refresh"
+msgstr "_Ανανέωση"
+
+msgid "_Login With Flathub"
+msgstr "_Σύνδεση με το Flathub"
+
+msgid "Manage R_emotes"
+msgstr "Διαχείριση απομακρυσμένων _αποθετηρίων"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Αποτυχία εκκίνησης της εφαρμογής"
+
+msgid "Could not open link"
+msgstr "Δεν ήταν δυνατό το άνοιγμα του συνδέσμου"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Δεν μπορείτε να αφαιρέσετε το Bazaar από το Bazaar!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u εγκατάσταση"
+msgstr[1] "%s, %'u εγκαταστάσεις"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Περισσότερες εγκαταστάσεις από %s"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d λήψεις τον τελευταίο μήνα"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s περιβάλλον εκτέλεσης"
+
+msgid "Size information unavailable"
+msgstr "Οι πληροφορίες μεγέθους δεν είναι διαθέσιμες"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Εγκατεστημένο μέγεθος του %s"
+
+msgid "Free Software"
+msgstr "Ελεύθερο λογισμικό"
+
+msgid "Low Risk"
+msgstr "Χαμηλός κίνδυνος"
+
+msgid "Medium Risk"
+msgstr "Μέτριος κίνδυνος"
+
+msgid "High Risk"
+msgstr "Υψηλός κίνδυνος"
+
+msgid "Unknown Permissions"
+msgstr "Άγνωστα δικαιώματα"
+
+msgid "Permissions are missing for this app."
+msgstr "Λείπουν τα δικαιώματα για αυτή την εφαρμογή."
+
+msgid "No Permissions"
+msgstr "Χωρίς δικαιώματα"
+
+msgid "App is fully sandboxed"
+msgstr "Η εφαρμογή είναι πλήρως απομονωμένη (sandbox)"
+
+msgid "Network Access"
+msgstr "Πρόσβαση στο δίκτυο"
+
+msgid "Can access the internet"
+msgstr "Έχει πρόσβαση στο διαδίκτυο"
+
+msgid "No Network Access"
+msgstr "Χωρίς πρόσβαση στο δίκτυο"
+
+msgid "Cannot access the internet"
+msgstr "Δεν έχει πρόσβαση στο διαδίκτυο"
+
+msgid "User Device Access"
+msgstr "Πρόσβαση σε συσκευές χρήστη"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Έχει πρόσβαση σε συσκευές όπως κάμερες web ή χειριστήρια παιχνιδιών"
+
+msgid "No User Device Access"
+msgstr "Χωρίς πρόσβαση σε συσκευές χρήστη"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Δεν έχει πρόσβαση σε συσκευές όπως κάμερες web ή χειριστήρια παιχνιδιών"
+
+msgid "Input Device Access"
+msgstr "Πρόσβαση σε συσκευές εισόδου"
+
+msgid "Can access input devices"
+msgstr "Έχει πρόσβαση σε συσκευές εισόδου"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Πρόσβαση στο μικρόφωνο και αναπαραγωγή ήχου"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Μπορεί να ακούει μέσω μικροφώνων και να αναπαράγει ήχο χωρίς να ζητά άδεια"
+
+msgid "System Device Access"
+msgstr "Πρόσβαση σε συσκευές συστήματος"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Έχει πρόσβαση σε συσκευές συστήματος που απαιτούν αυξημένα δικαιώματα"
+
+msgid "Screen Contents Access"
+msgstr "Πρόσβαση στο περιεχόμενο της οθόνης"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Έχει πρόσβαση στο περιεχόμενο της οθόνης ή άλλων παραθύρων"
+
+msgid "Legacy Windowing System"
+msgstr "Παλαιού τύπου σύστημα παραθύρων"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Χρησιμοποιεί πάντα παλαιού τύπου σύστημα παραθύρων (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Μπορεί να αποκτήσει αυθαίρετα δικαιώματα"
+
+msgid "User Settings"
+msgstr "Ρυθμίσεις χρήστη"
+
+msgid "Can access and change user settings"
+msgstr "Έχει πρόσβαση στις ρυθμίσεις χρήστη και μπορεί να τις αλλάξει"
+
+msgid "Full File System Read/Write Access"
+msgstr "Πλήρης πρόσβαση ανάγνωσης/εγγραφής στο σύστημα αρχείων"
+
+msgid "Can read and write all data on the file system"
+msgstr "Μπορεί να διαβάζει και να γράφει όλα τα δεδομένα στο σύστημα αρχείων"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Πρόσβαση ανάγνωσης/εγγραφής στον προσωπικό φάκελο"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Μπορεί να διαβάζει και να γράφει όλα τα δεδομένα στον προσωπικό σας φάκελο"
+
+msgid "Full File System Read Access"
+msgstr "Πλήρης πρόσβαση ανάγνωσης στο σύστημα αρχείων"
+
+msgid "Can read all data on the file system"
+msgstr "Μπορεί να διαβάζει όλα τα δεδομένα στο σύστημα αρχείων"
+
+msgid "Home Folder Read Access"
+msgstr "Πρόσβαση ανάγνωσης στον προσωπικό φάκελο"
+
+msgid "Can read all data in your home directory"
+msgstr "Μπορεί να διαβάζει όλα τα δεδομένα στον προσωπικό σας φάκελο"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Πρόσβαση ανάγνωσης/εγγραφής στον φάκελο Λήψεις"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Μπορεί να διαβάζει και να γράφει όλα τα δεδομένα στον φάκελο λήψεών σας"
+
+msgid "Download Folder Read Access"
+msgstr "Πρόσβαση ανάγνωσης στον φάκελο Λήψεις"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Μπορεί να διαβάζει όλα τα δεδομένα στον φάκελο λήψεών σας"
+
+msgid "Can read and write all data in the directory"
+msgstr "Μπορεί να διαβάζει και να γράφει όλα τα δεδομένα στον φάκελο"
+
+msgid "Can read all data in the directory"
+msgstr "Μπορεί να διαβάζει όλα τα δεδομένα στον φάκελο"
+
+msgid "No File System Access"
+msgstr "Χωρίς πρόσβαση στο σύστημα αρχείων"
+
+msgid "Cannot access the file system at all"
+msgstr "Δεν έχει καθόλου πρόσβαση στο σύστημα αρχείων"
+
+msgid "Uses System Services"
+msgstr "Χρησιμοποιεί υπηρεσίες συστήματος"
+
+msgid "Can request data from non-portal system services"
+msgstr "Μπορεί να ζητά δεδομένα από υπηρεσίες συστήματος εκτός πυλών (portal)"
+
+msgid "Uses Session Services"
+msgstr "Χρησιμοποιεί υπηρεσίες συνεδρίας"
+
+msgid "Can request data from non-portal session services"
+msgstr "Μπορεί να ζητά δεδομένα από υπηρεσίες συνεδρίας εκτός πυλών (portal)"
+
+msgid "No Service Access"
+msgstr "Χωρίς πρόσβαση σε υπηρεσίες"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Δεν έχει καθόλου πρόσβαση σε υπηρεσίες συστήματος ή συνεδρίας εκτός πυλών (portal)"
+
+msgid "Verified App Developer"
+msgstr "Επαληθευμένος προγραμματιστής εφαρμογής"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Ο προγραμματιστής αυτής της εφαρμογής έχει επαληθευτεί ότι είναι αυτός που δηλώνει"
+
+msgid "Proprietary Code"
+msgstr "Ιδιόκτητος κώδικας"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Ο πηγαίος κώδικας δεν είναι δημόσιος, επομένως δεν μπορεί να ελεγχθεί ανεξάρτητα και μπορεί να μην είναι ασφαλής"
+
+msgid "Auditable Code"
+msgstr "Ελέγξιμος κώδικας"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Ο πηγαίος κώδικας είναι δημόσιος και μπορεί να ελεγχθεί ανεξάρτητα, γεγονός που καθιστά την εφαρμογή πιο πιθανό να είναι ασφαλής"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Χρήση της υπηρεσίας συστήματος %s"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Χρήση της υπηρεσίας συνεδρίας %s"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Χρήση της υπηρεσίας %s"
+
+msgid "Can see the non-portal service"
+msgstr "Μπορεί να βλέπει την υπηρεσία εκτός πυλών (portal)"
+
+msgid "Can talk to the non-portal service"
+msgstr "Μπορεί να επικοινωνεί με την υπηρεσία εκτός πυλών (portal)"
+
+msgid "Can own the non-portal service"
+msgstr "Μπορεί να κατέχει την υπηρεσία εκτός πυλών (portal)"
+
+msgid "Global Menu Integration"
+msgstr "Ενσωμάτωση καθολικού μενού"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Μπορεί να εμφανίζει τα μενού της σε καθολική γραμμή μενού"
+
+msgid "KDE Settings Integration"
+msgstr "Ενσωμάτωση ρυθμίσεων KDE"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Μπορεί να εντοπίζει πότε αλλάζουν οι ρυθμίσεις του επιτραπέζιου περιβάλλοντος KDE"
+
+msgid "KDE Global Settings"
+msgstr "Καθολικές ρυθμίσεις KDE"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Μπορεί να διαβάζει προτιμήσεις του επιτραπέζιου περιβάλλοντος KDE, όπως γραμματοσειρές και χρώματα"
+
+msgid "Secret Storage Service"
+msgstr "Υπηρεσία αποθήκευσης μυστικών"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Μπορεί να αποθηκεύει και να ανακτά τους δικούς της κωδικούς πρόσβασης μέσω της κλειδοθήκης του συστήματος"
+
+msgid "Desktop Notifications Service"
+msgstr "Υπηρεσία ειδοποιήσεων επιφάνειας εργασίας"
+
+msgid "Can send desktop notifications"
+msgstr "Μπορεί να στέλνει ειδοποιήσεις επιφάνειας εργασίας"
+
+msgid "System Tray Integration"
+msgstr "Ενσωμάτωση περιοχής ειδοποιήσεων συστήματος"
+
+msgid "Can display an icon in the system tray"
+msgstr "Μπορεί να εμφανίζει εικονίδιο στην περιοχή ειδοποιήσεων του συστήματος"
+
+msgid "KDE Connect Integration"
+msgstr "Ενσωμάτωση KDE Connect"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Μπορεί να αλληλεπιδρά με συσκευές που έχουν αντιστοιχιστεί μέσω του KDE Connect"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Πλοήγηση"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Άνοιγμα σελίδας Εξερεύνησης"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Άνοιγμα σελίδας Βιβλιοθήκης"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Άνοιγμα σελίδας αναζήτησης"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Απομακρυσμένα αποθετήρια"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Συγχρονισμός απομακρυσμένων αποθετηρίων"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Κλείσιμο παραθύρου"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Έξοδος από το Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "Εγκαταστάθηκε το %s"
+
+msgid "The app is ready to be used"
+msgstr "Η εφαρμογή είναι έτοιμη για χρήση"
+
+msgid "Updates Are Out of Date"
+msgstr "Οι ενημερώσεις είναι παλιές"
+
+msgid "Please check for available updates"
+msgstr "Ελέγξτε για διαθέσιμες ενημερώσεις"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "Ενημερώθηκε %u εφαρμογή"
+msgstr[1] "Ενημερώθηκαν %u εφαρμογές"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "Το %s ενημερώθηκε."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "Τα %s και %s ενημερώθηκαν."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Περιλαμβάνει τα %s, %s και %s."

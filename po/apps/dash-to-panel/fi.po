@@ -1,0 +1,1166 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Quit"
+msgstr "Lopeta"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Lopeta %d ikkuna"
+msgstr[1] "Lopeta %d ikkunaa"
+
+msgid "Power options"
+msgstr "Virranhallinta"
+
+msgid "Event logs"
+msgstr "Tapahtumalokit"
+
+msgid "System"
+msgstr "Järjestelmä"
+
+msgid "Device Management"
+msgstr "Laitehallinta"
+
+msgid "Disk Management"
+msgstr "Levynhallinta"
+
+msgid "Unlock taskbar"
+msgstr "Avaa tehtäväpalkin lukitus"
+
+msgid "Lock taskbar"
+msgstr "Lukitse tehtäväpalkki"
+
+msgid "Gnome Settings"
+msgstr "GNOME-asetukset"
+
+msgid "Dash to Panel Settings"
+msgstr "Dash to Panel -asetukset"
+
+msgid "Restore Windows"
+msgstr "Palauta ikkunat"
+
+msgid "Show Desktop"
+msgstr "Näytä työpöytä"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel on päivitetty!"
+
+msgid "You are now running version"
+msgstr "Käytössäsi on nyt versio"
+
+msgid "See what's new"
+msgstr "Katso mitä uutta"
+
+msgid "Top Bar"
+msgstr "Yläpalkki"
+
+msgid "Show Desktop button height (px)"
+msgstr "Näytä työpöytä -painikkeen korkeus (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Näytä työpöytä -painikkeen leveys (px)"
+
+msgid "Left"
+msgstr "Vasen"
+
+msgid "Center"
+msgstr "Keskellä"
+
+msgid "Right"
+msgstr "Oikea"
+
+msgid "Top"
+msgstr "Ylhäällä"
+
+msgid "Middle"
+msgstr "Keskellä"
+
+msgid "Bottom"
+msgstr "Alhaalla"
+
+msgid "Start"
+msgstr "Alku"
+
+msgid "End"
+msgstr "Loppu"
+
+msgid "Show Applications button"
+msgstr "Näytä sovellukset -painike"
+
+msgid "Activities button"
+msgstr "Yleisnäkymä-painike"
+
+msgid "Taskbar"
+msgstr "Tehtäväpalkki"
+
+msgid "Date menu"
+msgstr "Päivämäärävalikko"
+
+msgid "System menu"
+msgstr "Järjestelmävalikko"
+
+msgid "Left box"
+msgstr "Vasen osio"
+
+msgid "Center box"
+msgstr "Keskiosio"
+
+msgid "Right box"
+msgstr "Oikea osio"
+
+msgid "Desktop button"
+msgstr "Työpöytäpainike"
+
+msgid "Move up"
+msgstr "Siirrä ylös"
+
+msgid "Move down"
+msgstr "Siirrä alas"
+
+msgid "Visible"
+msgstr "Näkyvissä"
+
+msgid "Select element position"
+msgstr "Valitse elementin sijainti"
+
+msgid "Stacked to top"
+msgstr "Pinottu ylös"
+
+msgid "Stacked to left"
+msgstr "Pinottu vasemmalle"
+
+msgid "Stacked to bottom"
+msgstr "Pinottu alas"
+
+msgid "Stacked to right"
+msgstr "Pinottu oikealle"
+
+msgid "Centered"
+msgstr "Keskitetty"
+
+msgid "Monitor Center"
+msgstr "Näytön keskellä"
+
+msgid "More options"
+msgstr "Lisää asetuksia"
+
+msgid "Reset to defaults"
+msgstr "Palauta oletukset"
+
+msgid "Show Applications options"
+msgstr "Näytä sovellukset -asetukset"
+
+msgid "Open icon"
+msgstr "Avaa kuvake"
+
+msgid "Show Desktop options"
+msgstr "Näytä työpöytä -asetukset"
+
+msgid "Primary monitor"
+msgstr "Ensisijainen näyttö"
+
+msgid "Monitor "
+msgstr "Näyttö "
+
+msgid "Running Indicator Options"
+msgstr "Käynnissä olon ilmaisimen asetukset"
+
+msgid "Dynamic opacity options"
+msgstr "Dynaamisen läpinäkyvyyden asetukset"
+
+msgid "Intellihide options"
+msgstr "Älykkään piilotuksen asetukset"
+
+msgid "Window preview options"
+msgstr "Ikkunaesikatselun asetukset"
+
+msgid "Isolate Workspaces options"
+msgstr "Työtilojen eristämisen asetukset"
+
+msgid "Isolate monitors options"
+msgstr "Näyttöjen eristämisen asetukset"
+
+msgid "Ungrouped application options"
+msgstr "Ryhmittelemättömien sovellusten asetukset"
+
+msgid "Customize middle-click behavior"
+msgstr "Mukauta keskipainikkeen toimintaa"
+
+msgid "Text"
+msgstr "Teksti"
+
+msgid "Command"
+msgstr "Komento"
+
+msgid "Remove"
+msgstr "Poista"
+
+msgid "Customize panel scroll behavior"
+msgstr "Mukauta paneelin vierityksen toimintaa"
+
+msgid "Customize icon scroll behavior"
+msgstr "Mukauta kuvakkeen vierityksen toimintaa"
+
+msgid "Advanced hotkeys options"
+msgstr "Lisäpikanäppäinasetukset"
+
+msgid "Secondary Menu Options"
+msgstr "Toissijaisen valikon asetukset"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d kuvake"
+msgstr[1] "%d kuvaketta"
+
+msgid "App icon animation options"
+msgstr "Sovelluskuvakkeen animaation asetukset"
+
+msgid "App icon highlight options"
+msgstr "Sovelluskuvakkeen korostuksen asetukset"
+
+msgid "Export settings"
+msgstr "Vie asetukset"
+
+msgid "Import settings"
+msgstr "Tuo asetukset"
+
+msgid "Move to current Workspace"
+msgstr "Siirrä nykyiseen työtilaan"
+
+msgid "Animation type"
+msgstr "Animaation tyyppi"
+
+msgid "Simple"
+msgstr "Yksinkertainen"
+
+msgid "Ripple"
+msgstr "Väreily"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Kesto"
+
+msgid "Rotation"
+msgstr "Kierto"
+
+msgid "Travel"
+msgstr "Siirtymä"
+
+msgid "Zoom"
+msgstr "Zoomaus"
+
+msgid "Convexity"
+msgstr "Kuperuus"
+
+msgid "Extent"
+msgstr "Laajuus"
+
+msgid "Highlight focused application"
+msgstr "Korosta kohdistettu sovellus"
+
+msgid "Icon dominant color"
+msgstr "Kuvakkeen hallitseva väri"
+
+msgid "Custom color"
+msgstr "Mukautettu väri"
+
+msgid "Highlight opacity"
+msgstr "Korostuksen läpinäkyvyys"
+
+msgid "Indicator size (px)"
+msgstr "Ilmaisimen koko (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Ilmaisimen väri – kuvakkeen hallitseva väri"
+
+msgid "Indicator color - Override Theme"
+msgstr "Ilmaisimen väri – ohita teema"
+
+msgid "1 window open (or ungrouped)"
+msgstr "1 ikkuna auki (tai ryhmittelemätön)"
+
+msgid "Apply to all"
+msgstr "Käytä kaikkiin"
+
+msgid "2 windows open"
+msgstr "2 ikkunaa auki"
+
+msgid "3 windows open"
+msgstr "3 ikkunaa auki"
+
+msgid "4+ windows open"
+msgstr "4+ ikkunaa auki"
+
+msgid "Use different for unfocused"
+msgstr "Käytä eri asetusta kohdistamattomille"
+
+msgid "The panel background opacity is affected by"
+msgstr "Paneelin taustan läpinäkyvyyteen vaikuttavat"
+
+msgid "All windows"
+msgstr "Kaikki ikkunat"
+
+msgid "Focused windows"
+msgstr "Kohdistetut ikkunat"
+
+msgid "Maximized windows"
+msgstr "Suurennetut ikkunat"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Muuta läpinäkyvyyttä, kun ikkuna tulee lähemmäs kuin (px)"
+
+msgid "Change opacity to (%)"
+msgstr "Muuta läpinäkyvyys arvoon (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Läpinäkyvyyden muutosanimaation kesto (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Sovellusotsikoiden fonttikoko (px) (oletus on 14)"
+
+msgid "Font weight of application titles"
+msgstr "Sovellusotsikoiden fontin paksuus"
+
+msgid "inherit from theme"
+msgstr "peri teemasta"
+
+msgid "normal"
+msgstr "normaali"
+
+msgid "lighter"
+msgstr "ohuempi"
+
+msgid "bold"
+msgstr "lihavoitu"
+
+msgid "bolder"
+msgstr "lihavampi"
+
+msgid "Font color of the application titles"
+msgstr "Sovellusotsikoiden fontin väri"
+
+msgid "Font color of the minimized application titles"
+msgstr "Pienennettyjen sovellusten otsikoiden fontin väri"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Sovellusotsikoiden enimmäisleveys (px)"
+
+msgid "(default is 160)"
+msgstr "(oletus on 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Käytä sovellusotsikoille kiinteää leveyttä"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Kaikilla sovellusotsikoilla on sama leveys, vaikka niiden tekstit olisivat enimmäisleveyttä lyhyempiä. Enimmäisleveyden arvoa käytetään kiinteänä leveytenä."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Näytä käynnissä olon ilmaisimet kohdistamattomissa sovelluksissa"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Käytä suosikkikuvakkeita sovellusten käynnistiminä"
+
+msgid "Highlight AppIcon color"
+msgstr "Sovelluskuvakkeen korostuksen väri"
+
+msgid "Pressed AppIcon color"
+msgstr "Painetun sovelluskuvakkeen väri"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Sovelluskuvakkeen korostuksen reunan pyöristys"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Ohittaa yleisen reunan pyöristyksen (oletus on 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Piilota paneeli vain ikkunoilta"
+
+msgid "Overlapping"
+msgstr "Päällekkäin"
+
+msgid "On same monitor"
+msgstr "Samalla näytöllä"
+
+msgid "The panel hides from"
+msgstr "Paneeli piiloutuu kohteelta"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Osoittimen vieminen näytön reunaan tuo paneelin esiin"
+
+msgid "Limit to panel length"
+msgstr "Rajoita paneelin pituuteen"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Paneelin alueen päällä leijuminen pitää paneelin esillä"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Vaadi painetta näytön reunassa paneelin tuomiseksi esiin"
+
+msgid "Required pressure threshold (px)"
+msgstr "Vaadittu paineen kynnys (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Vaadittu paineen aikakatkaisu (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Salli paneelin tuominen esiin kokonäyttötilassa"
+
+msgid "(requires multi-monitors option)"
+msgstr "(vaatii usean näytön asetuksen)"
+
+msgid "Only hide secondary panels"
+msgstr "Piilota vain toissijaiset paneelit"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Syntaksi: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Pikanäppäin paneelin tuomiseksi esiin ja pitämiseksi esillä"
+
+msgid "e.g. <Super>i"
+msgstr "esim. <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Säilytä tila uudelleenkäynnistysten yli"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(noudattaa GNOMEn Älä häiritse -tilaa ja vaatii ilmoituslaskurin näyttämisen asetuksen)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Tuo paneeli esiin ja pidä se esillä ilmoituksen yhteydessä"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Piilotus- ja esiintuontianimaation kesto (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Viive ennen paneelin piilottamista (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Viive ennen paneelin esiin tuomista (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Viive ennen älykkään piilotuksen käyttöönottoa käynnistyksessä (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Eristä näytöt myös yhtä paneelia käytettäessä"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Eristä työtilat gnome-shellin sovellusvaihtimessa"
+
+msgid "Shift+Click action"
+msgstr "Vaihto+napsautus-toiminto"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "Kun asetettuna pienennykseksi, kaksoisnapsautus pienentää kaikki sovelluksen ikkunat."
+
+msgid "Raise windows"
+msgstr "Nosta ikkunat esiin"
+
+msgid "Minimize window"
+msgstr "Pienennä ikkuna"
+
+msgid "Launch new instance"
+msgstr "Käynnistä uusi esiintymä"
+
+msgid "Cycle through windows"
+msgstr "Selaa ikkunoita"
+
+msgid "Cycle windows + minimize"
+msgstr "Selaa ikkunoita + pienennä"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Vaihda yksittäinen / esikatsele useita"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Vaihda yksittäinen / selaa useita"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Vaihda yksittäinen / levitä useita"
+
+msgid "Middle-Click action"
+msgstr "Keskipainikkeen napsautus -toiminto"
+
+msgid "Behavior for Middle-Click."
+msgstr "Keskipainikkeen napsautuksen toiminta."
+
+msgid "Shift+Middle-Click action"
+msgstr "Vaihto+keskipainikkeen napsautus -toiminto"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Vaihto+keskipainikkeen napsautuksen toiminta."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Pikanäppäimet ovat joko Super+numero tai Super+Alt+numero"
+
+msgid "Hotkeys prefix"
+msgstr "Pikanäppäinten etuliite"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Näytä sovellusten numerot tilapäisesti kuvakkeiden päällä pikanäppäimiä käytettäessä."
+
+msgid "Number overlay"
+msgstr "Numerokerros"
+
+msgid "Never"
+msgstr "Ei koskaan"
+
+msgid "Show temporarily"
+msgstr "Näytä tilapäisesti"
+
+msgid "Always visible"
+msgstr "Aina näkyvissä"
+
+msgid "Hide timeout (ms)"
+msgstr "Piilotuksen aikakatkaisu (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Pikanäppäin kerroksen näyttämiseksi 2 sekunnin ajan"
+
+msgid "e.g. <Super>q"
+msgstr "esim. <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Toissijaisilla näytöillä näytä kerros kuvakkeissa, jotka vastaavat ensisijaista näyttöä"
+
+msgid "Show the overlay on all monitors"
+msgstr "Näytä kerros kaikilla näytöillä"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Näytä esikatselut, kun sovelluksella on useita esiintymiä"
+
+msgid "Show window previews on hotkey"
+msgstr "Näytä ikkunaesikatselut pikanäppäimellä"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Valitse, mitä näppäimistön numeronäppäimiä käytetään pikanäppäinten aktivointiin"
+
+msgid "Hotkeys are activated with"
+msgstr "Pikanäppäimet aktivoidaan näppäimillä"
+
+msgid "Number row"
+msgstr "Numerorivi"
+
+msgid "Numeric keypad"
+msgstr "Numeronäppäimistö"
+
+msgid "Both"
+msgstr "Molemmat"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Viive hiiren vierityksen tapahtumien välillä (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Tällä arvolla rajoitetaan kaapattujen hiiren vierityksen tapahtumien määrää."
+
+msgid "Show popup when changing workspace"
+msgstr "Näytä ponnahdusikkuna työtilaa vaihdettaessa"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Tämä vaikuttaa vain työtilan ponnahdusikkunaan, kun vieritetään paneelissa."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "Integroi <i>Sovellusvalikon</i> kohteet"
+
+msgid "<i>App Details</i> menu item"
+msgstr "<i>Sovelluksen tiedot</i> -valikkokohta"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Sovelluksen tiedot</i> on käytettävissä vain, kun GNOME Software on asennettu"
+
+msgid "Show Applications icon"
+msgstr "Näytä sovellukset -kuvake"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Näytä sovellukset -kuvakkeen sivutäyte (px)"
+
+msgid "Override escape key and return to desktop"
+msgstr "Ohita Esc-näppäin ja palaa työpöydälle"
+
+msgid "Override Show Desktop line color"
+msgstr "Ohita Näytä työpöytä -viivan väri"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Paljasta työpöytä viemällä osoitin Näytä työpöytä -painikkeen päälle"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Viive ennen työpöydän paljastamista (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Häivytyksen kesto (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Aika (ms) ennen näyttämistä"
+
+msgid "(400 is default)"
+msgstr "(400 on oletus)"
+
+msgid "Time (ms) before hiding"
+msgstr "Aika (ms) ennen piilottamista"
+
+msgid "(100 is default)"
+msgstr "(100 on oletus)"
+
+msgid "Immediate on application icon click"
+msgstr "Välittömästi sovelluskuvaketta napsautettaessa"
+
+msgid "Animation time (ms)"
+msgstr "Animaation kesto (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Sulje ikkuna napsauttamalla esikatselua keskipainikkeella"
+
+msgid "Window previews preferred size (px)"
+msgstr "Ikkunaesikatselujen ensisijainen koko (px)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Ikkunaesikatselujen kuvasuhde X (leveys)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Kiinteä"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Ikkunaesikatselujen kuvasuhde Y (korkeus)"
+
+msgid "Window previews padding (px)"
+msgstr "Ikkunaesikatselujen täyte (px)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Käytä mukautettua läpinäkyvyyttä esikatselujen taustalle"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Jos poistettu käytöstä, esikatselujen taustalla on sama läpinäkyvyys kuin paneelilla."
+
+msgid "Close button and header position"
+msgstr "Sulkupainikkeen ja ylätunnisteen sijainti"
+
+msgid "Display window preview headers"
+msgstr "Näytä ikkunaesikatselujen ylätunnisteet"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Ikkunaesikatselun kuvakkeen koko (px)"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Jos poistettu käytöstä, esikatselun kuvakkeen koko perustuu otsikkopalkin kokoon"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Esikatselujen otsikoiden fonttikoko (px)"
+
+msgid "Font weight of the preview titles"
+msgstr "Esikatselujen otsikoiden fontin paksuus"
+
+msgid "Font color of the preview titles"
+msgstr "Esikatselujen otsikoiden fontin väri"
+
+msgid "Enable window peeking"
+msgstr "Ota ikkunan vilkaisu käyttöön"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "Kun ikkunaesikatselun päällä leijutaan jonkin aikaa, ikkuna erottuu muista."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Ikkunan vilkaisutilaan siirtymisen aikakatkaisu (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "Ikkunaesikatselun päällä leijuttaessa vaadittu toimettomuusaika ikkunan vilkaisutilaan siirtymiseksi."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Ikkunan vilkaisutilan läpinäkyvyys"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Kaikkien ikkunoiden paitsi vilkaistun läpinäkyvyys asetetaan samaan arvoon."
+
+msgid "About"
+msgstr "Tietoja"
+
+msgid "Info"
+msgstr "Tiedot"
+
+msgid "Version"
+msgstr "Versio"
+
+msgid "Source"
+msgstr "Lähdekoodi"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Vienti ja tuonti"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Käytä alla olevia painikkeita luodaksesi nykyisistä asetuksistasi asetustiedoston, joka voidaan tuoda toiselle koneelle."
+
+msgid "Export and import settings"
+msgstr "Vie ja tuo asetukset"
+
+msgid "Export to file"
+msgstr "Vie tiedostoon"
+
+msgid "Import from file"
+msgstr "Tuo tiedostosta"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Tällä ohjelmalla EI OLE MITÄÄN TAKUUTA.\n"
+"Katso lisätietoja <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License -lisenssistä, versio 2 tai uudempi</a>.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Sponsoroi ja alun perin kehittänyt"
+
+msgid "Action"
+msgstr "Toiminto"
+
+msgid "Click action"
+msgstr "Napsautustoiminto"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "Toiminta, kun napsautetaan käynnissä olevan sovelluksen kuvaketta."
+
+msgid "Toggle windows"
+msgstr "Näytä tai piilota ikkunat"
+
+msgid "Scroll action"
+msgstr "Vieritystoiminto"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Toiminta, kun hiirellä vieritetään paneelin päällä."
+
+msgid "Scroll panel action"
+msgstr "Paneelin vieritystoiminto"
+
+msgid "Do nothing"
+msgstr "Älä tee mitään"
+
+msgid "Switch workspace"
+msgstr "Vaihda työtilaa"
+
+msgid "Cycle windows"
+msgstr "Selaa ikkunoita"
+
+msgid "Change volume"
+msgstr "Muuta äänenvoimakkuutta"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Toiminta, kun hiirellä vieritetään sovelluskuvakkeen päällä."
+
+msgid "Scroll icon action"
+msgstr "Kuvakkeen vieritystoiminto"
+
+msgid "Same as panel"
+msgstr "Sama kuin paneelissa"
+
+msgid "Hotkey overlay"
+msgstr "Pikanäppäinkerros"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Ota Super+(0-9) käyttöön pikanäppäimenä sovellusten aktivointiin. Sitä voi käyttää myös yhdessä Vaihto- ja Ctrl-näppäinten kanssa."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Käytä pikanäppäimiä sovellusten aktivointiin"
+
+msgid "Application icons context menu"
+msgstr "Sovelluskuvakkeiden kontekstivalikko"
+
+msgid "(right-click menu)"
+msgstr "(oikean painikkeen valikko)"
+
+msgid "Secondary menu"
+msgstr "Toissijainen valikko"
+
+msgid "Panel context menu entries"
+msgstr "Paneelin kontekstivalikon kohdat"
+
+msgid "Add entry"
+msgstr "Lisää kohta"
+
+msgid "Behavior"
+msgstr "Toiminta"
+
+msgid "Applications"
+msgstr "Sovellukset"
+
+msgid "Show favorite applications"
+msgstr "Näytä suosikkisovellukset"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Näytä suosikkisovellukset toissijaisilla paneeleilla"
+
+msgid "Show running applications"
+msgstr "Näytä käynnissä olevat sovellukset"
+
+msgid "Ungroup applications"
+msgstr "Pura sovellusten ryhmittely"
+
+msgid "Show notification counter badge"
+msgstr "Näytä ilmoituslaskurin merkki"
+
+msgid "Hover"
+msgstr "Leijuminen"
+
+msgid "Show window previews on hover"
+msgstr "Näytä ikkunaesikatselut leijuttaessa"
+
+msgid "Show tooltip on hover"
+msgstr "Näytä vihje leijuttaessa"
+
+msgid "Isolate"
+msgstr "Eristä"
+
+msgid "Isolate Workspaces"
+msgstr "Eristä työtilat"
+
+msgid "Isolate monitors"
+msgstr "Eristä näytöt"
+
+msgid "Overview"
+msgstr "Yleisnäkymä"
+
+msgid "Click empty space to close overview"
+msgstr "Sulje yleisnäkymä napsauttamalla tyhjää tilaa"
+
+msgid "Disable show overview on startup"
+msgstr "Älä näytä yleisnäkymää käynnistyksessä"
+
+msgid "Fine-Tune"
+msgstr "Hienosäätö"
+
+msgid "Font size"
+msgstr "Fonttikoko"
+
+msgid "(0 = theme default)"
+msgstr "(0 = teeman oletus)"
+
+msgid "Tray Font Size"
+msgstr "Ilmoitusalueen fonttikoko"
+
+msgid "LeftBox Font Size"
+msgstr "Vasemman osion fonttikoko"
+
+msgid "Padding"
+msgstr "Täyte"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = teeman oletus)"
+
+msgid "Tray Item Padding"
+msgstr "Ilmoitusalueen kohteen täyte"
+
+msgid "Status Icon Padding"
+msgstr "Tilakuvakkeen täyte"
+
+msgid "LeftBox Padding"
+msgstr "Vasemman osion täyte"
+
+msgid "Animate"
+msgstr "Animoi"
+
+msgid "Animate switching applications"
+msgstr "Animoi sovellusten vaihtaminen"
+
+msgid "Animate launching new windows"
+msgstr "Animoi uusien ikkunoiden käynnistäminen"
+
+msgid "Gnome functionality"
+msgstr "GNOMEn toiminnallisuus"
+
+msgid "(overview)"
+msgstr "(yleisnäkymä)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Säilytä alkuperäinen gnome-shellin dash"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Säilytä alkuperäinen gnome-shellin yläpaneeli"
+
+msgid "(e.g. date menu)"
+msgstr "(esim. päivämäärävalikko)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Aktivoi paneelin valikkopainikkeet vain napsautuksella"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Pakota Yleisnäkymän kuuma kulma ensisijaiselle näytölle"
+
+msgid "Position"
+msgstr "Sijainti"
+
+msgid "Panel"
+msgstr "Paneeli"
+
+msgid "Display the main panel on"
+msgstr "Näytä pääpaneeli näytöllä"
+
+msgid "Display panels on all monitors"
+msgstr "Näytä paneelit kaikilla näytöillä"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Piilota ja tuo paneeli esiin asetusten mukaan"
+
+msgid "Panel Intellihide"
+msgstr "Paneelin älykäs piilotus"
+
+msgid "Order and Position on monitors"
+msgstr "Järjestys ja sijainti näytöillä"
+
+msgid "Monitor"
+msgstr "Näyttö"
+
+msgid "Apply changes to all monitors"
+msgstr "Ota muutokset käyttöön kaikilla näytöillä"
+
+msgid "Panel monitor position"
+msgstr "Paneelin sijainti näytöllä"
+
+msgid "(default is 48)"
+msgstr "(oletus on 48)"
+
+msgid "Panel thickness"
+msgstr "Paneelin paksuus"
+
+msgid "(default is 100)"
+msgstr "(oletus on 100)"
+
+msgid "Panel length"
+msgstr "Paneelin pituus"
+
+msgid "Dynamic"
+msgstr "Dynaaminen"
+
+msgid "Anchor"
+msgstr "Ankkuri"
+
+msgid "Taskbar Display"
+msgstr "Tehtäväpalkin näyttö"
+
+msgid "Style"
+msgstr "Tyyli"
+
+msgid "Global style"
+msgstr "Yleinen tyyli"
+
+msgid "Border radius"
+msgstr "Reunan pyöristys"
+
+msgid "AppIcon style"
+msgstr "Sovelluskuvakkeen tyyli"
+
+msgid "(default is 8)"
+msgstr "(oletus on 8)"
+
+msgid "App Icon Margin"
+msgstr "Sovelluskuvakkeen marginaali"
+
+msgid "(default is 4)"
+msgstr "(oletus on 4)"
+
+msgid "App Icon Padding"
+msgstr "Sovelluskuvakkeen täyte"
+
+msgid "Animate hovering app icons"
+msgstr "Animoi leijutettavat sovelluskuvakkeet"
+
+msgid "Highlight hovering app icons"
+msgstr "Korosta leijutettavat sovelluskuvakkeet"
+
+msgid "Icon style"
+msgstr "Kuvakkeen tyyli"
+
+msgid "Normal"
+msgstr "Normaali"
+
+msgid "Symbolic"
+msgstr "Symbolinen"
+
+msgid "Grayscale"
+msgstr "Harmaasävy"
+
+msgid "Running indicator"
+msgstr "Käynnissä olon ilmaisin"
+
+msgid "Running indicator position"
+msgstr "Käynnissä olon ilmaisimen sijainti"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Käynnissä olon ilmaisimen tyyli (kohdistettu sovellus)"
+
+msgid "Dots"
+msgstr "Pisteet"
+
+msgid "Squares"
+msgstr "Neliöt"
+
+msgid "Dashes"
+msgstr "Viivat"
+
+msgid "Segmented"
+msgstr "Jaksotettu"
+
+msgid "Solid"
+msgstr "Yhtenäinen"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Käynnissä olon ilmaisimen tyyli (kohdistamattomat sovellukset)"
+
+msgid "Panel style"
+msgstr "Paneelin tyyli"
+
+msgid "(default is 0)"
+msgstr "(oletus on 0)"
+
+msgid "Side margins"
+msgstr "Sivumarginaalit"
+
+msgid "Top and bottom margins"
+msgstr "Ylä- ja alamarginaalit"
+
+msgid "Side padding"
+msgstr "Sivutäyte"
+
+msgid "Top and bottom padding"
+msgstr "Ylä- ja alatäyte"
+
+msgid "Override panel theme background color"
+msgstr "Ohita paneelin teeman taustaväri"
+
+msgid "Override panel theme background opacity"
+msgstr "Ohita paneelin teeman taustan läpinäkyvyys"
+
+msgid "Panel background opacity (%)"
+msgstr "Paneelin taustan läpinäkyvyys (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Muuta läpinäkyvyyttä, kun ikkuna tulee lähelle paneelia"
+
+msgid "Dynamic background opacity"
+msgstr "Dynaaminen taustan läpinäkyvyys"
+
+msgid "Override panel theme gradient"
+msgstr "Ohita paneelin teeman liukuväri"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Liukuvärin ylävärin ja läpinäkyvyyden arvo (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Liukuvärin alavärin ja läpinäkyvyyden arvo (%)"
+
+msgid "Panel border"
+msgstr "Paneelin reunus"
+
+msgid "Override border color"
+msgstr "Ohita reunuksen väri"
+
+msgid "Border thickness"
+msgstr "Reunuksen paksuus"

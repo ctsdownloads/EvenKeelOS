@@ -1,0 +1,2588 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "Forritaverslun"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "Bæta við, fjarlægja eða uppfæra flatpak-hugbúnað á þessari tölvu"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Kerfi;Pakki;Stjórnun;Uppgötva;Flatpak;Hugbúnaður;Forrit;Verslun;"
+
+msgid "New Window"
+msgstr "Nýr gluggi"
+
+msgid "Discover and install apps"
+msgstr "Uppgötvaðu og settu upp forrit"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Hröð og nútímaleg forritaverslun fyrir Linux sem leggur áherslu á að uppgötva og setja upp Flatpak-forrit og viðbætur, sérstaklega frá Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Settu margar uppsetningar í biðröð og haltu áfram að vafra"
+
+msgid "Easily view app permissions"
+msgstr "Skoðaðu heimildir forrita á einfaldan hátt"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Skráðu þig inn á Flathub til að skoða og stjórna eftirlætum þínum"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Leitaðu að forritum beint úr GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Upphafssíðan sem sýnir Flathub-forrit"
+
+msgid "App page for Exhibit"
+msgstr "Forritssíða fyrir Exhibit"
+
+msgid "Library page"
+msgstr "Safnsíða"
+
+msgid "Search page"
+msgstr "Leitarsíða"
+
+msgid "Category page"
+msgstr "Flokkasíða"
+
+msgid "Stopped Receiving Updates"
+msgstr "Fær ekki lengur uppfærslur"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Fjarlægja"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Setja upp"
+
+msgid "Add-on"
+msgstr "Viðbót"
+
+msgid "Manage Add-Ons"
+msgstr "Stjórna viðbótum"
+
+msgid "No Add-Ons Visible"
+msgstr "Engar viðbætur sýnilegar"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "Núverandi síustillingar þínar fela allar þekktar viðbætur. Prófaðu að breyta þeim."
+
+msgid "Add-on Page"
+msgstr "Viðbótarsíða"
+
+msgid "Download"
+msgstr "Sækja"
+
+msgid "Installed"
+msgstr "Uppsett"
+
+msgid "Downloads/Month"
+msgstr "Niðurhöl/mánuði"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Fær ekki lengur kjarnauppfærslur"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Þessi viðbót notar keyrslusafn sem fær ekki lengur uppfærslur eða öryggisleiðréttingar. Það gæti orðið óöruggt í notkun."
+
+msgid "Other Sources"
+msgstr "Aðrar uppsprettur"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Viðbót fyrir %s"
+
+msgid "Show Less"
+msgstr "Sýna minna"
+
+msgid "Show More"
+msgstr "Sýna meira"
+
+msgid "Download Stats"
+msgstr "Niðurhalstölfræði"
+
+msgid "Age Rating"
+msgstr "Aldurstakmark"
+
+msgid "Cartoon Violence"
+msgstr "Teiknimyndaofbeldi"
+
+msgid "No information regarding cartoon violence"
+msgstr "Engar upplýsingar um teiknimyndaofbeldi"
+
+msgid "Fantasy Violence"
+msgstr "Ævintýraofbeldi"
+
+msgid "No information regarding fantasy violence"
+msgstr "Engar upplýsingar um ævintýraofbeldi"
+
+msgid "Realistic Violence"
+msgstr "Raunsætt ofbeldi"
+
+msgid "No information regarding realistic violence"
+msgstr "Engar upplýsingar um raunsætt ofbeldi"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "Ofbeldi með blóðsúthellingum"
+
+msgid "No information regarding bloodshed"
+msgstr "Engar upplýsingar um blóðsúthellingar"
+
+msgid "Sexual Violence"
+msgstr "Kynferðisofbeldi"
+
+msgid "No information regarding sexual violence"
+msgstr "Engar upplýsingar um kynferðisofbeldi"
+
+msgid "Alcohol"
+msgstr "Áfengi"
+
+msgid "No information regarding references to alcohol"
+msgstr "Engar upplýsingar um tilvísanir í áfengi"
+
+msgid "Narcotics"
+msgstr "Fíkniefni"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "Engar upplýsingar um tilvísanir í ólögleg fíkniefni"
+
+msgid "Tobacco"
+msgstr "Tóbak"
+
+msgid "No information regarding references to tobacco products"
+msgstr "Engar upplýsingar um tilvísanir í tóbaksvörur"
+
+msgid "Nudity"
+msgstr "Nekt"
+
+msgid "No information regarding nudity of any sort"
+msgstr "Engar upplýsingar um nekt af neinu tagi"
+
+msgid "Sexual Themes"
+msgstr "Kynferðisleg stef"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "Engar upplýsingar um tilvísanir í eða myndir af kynferðislegum toga"
+
+msgid "Profanity"
+msgstr "Blótsyrði"
+
+msgid "No information regarding profanity of any kind"
+msgstr "Engar upplýsingar um blótsyrði af neinu tagi"
+
+msgid "Inappropriate Humor"
+msgstr "Óviðeigandi húmor"
+
+msgid "No information regarding inappropriate humor"
+msgstr "Engar upplýsingar um óviðeigandi húmor"
+
+msgid "Discrimination"
+msgstr "Mismunun"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "Engar upplýsingar um orðfæri sem felur í sér mismunun af neinu tagi"
+
+msgid "Advertising"
+msgstr "Auglýsingar"
+
+msgid "No information regarding advertising of any kind"
+msgstr "Engar upplýsingar um auglýsingar af neinu tagi"
+
+msgid "Gambling"
+msgstr "Fjárhættuspil"
+
+msgid "No information regarding gambling of any kind"
+msgstr "Engar upplýsingar um fjárhættuspil af neinu tagi"
+
+msgid "Purchasing"
+msgstr "Kaup"
+
+msgid "No information regarding the ability to spend money"
+msgstr "Engar upplýsingar um möguleika á að eyða peningum"
+
+msgid "Chat Between Users"
+msgstr "Spjall milli notenda"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "Engar upplýsingar um leiðir til að spjalla við aðra notendur"
+
+msgid "Audio Chat Between Users"
+msgstr "Hljóðspjall milli notenda"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "Engar upplýsingar um leiðir til að tala við aðra notendur"
+
+msgid "Contact Details"
+msgstr "Samskiptaupplýsingar"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "Engar upplýsingar um deilingu á notendanöfnum á samfélagsmiðlum eða tölvupóstföngum"
+
+msgid "Identifying Information"
+msgstr "Auðkennandi upplýsingar"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "Engar upplýsingar um deilingu notendaupplýsinga með þriðju aðilum"
+
+msgid "Location Sharing"
+msgstr "Deiling staðsetningar"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "Engar upplýsingar um deilingu raunverulegrar staðsetningar með öðrum notendum"
+
+msgid "Prostitution"
+msgstr "Vændi"
+
+msgid "No information regarding references to prostitution"
+msgstr "Engar upplýsingar um tilvísanir í vændi"
+
+msgid "Adultery"
+msgstr "Framhjáhald"
+
+msgid "No information regarding references to adultery"
+msgstr "Engar upplýsingar um tilvísanir í framhjáhald"
+
+msgid "Sexualized Characters"
+msgstr "Kynferðisleg persónusköpun"
+
+msgid "No information regarding sexualized characters"
+msgstr "Engar upplýsingar um kynferðislega persónusköpun"
+
+msgid "Desecration"
+msgstr "Vanhelgun"
+
+msgid "No information regarding references to desecration"
+msgstr "Engar upplýsingar um tilvísanir í vanhelgun"
+
+msgid "Human Remains"
+msgstr "Líkamsleifar manna"
+
+msgid "No information regarding visible dead human remains"
+msgstr "Engar upplýsingar um sýnilegar líkamsleifar látinna manna"
+
+msgid "Slavery"
+msgstr "Þrælahald"
+
+msgid "No information regarding references to slavery"
+msgstr "Engar upplýsingar um tilvísanir í þrælahald"
+
+msgid "Does not include references to drugs"
+msgstr "Inniheldur engar tilvísanir í fíkniefni"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "Inniheldur ekki blótsyrði, ljótt orðbragð eða annað gróft málfar"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "Inniheldur hvorki auglýsingar né fjárhagsleg viðskipti"
+
+msgid "Does not include sex or nudity"
+msgstr "Inniheldur hvorki kynlíf né nekt"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "Inniheldur ekki stjórnlausa spjallvirkni"
+
+msgid "Does not include violence"
+msgstr "Inniheldur ekkert ofbeldi"
+
+msgid "Drugs"
+msgstr "Fíkniefni"
+
+msgid "Strong Language"
+msgstr "Gróft málfar"
+
+msgid "Money"
+msgstr "Peningar"
+
+msgid "Social"
+msgstr "Samfélag"
+
+msgid "Violence"
+msgstr "Ofbeldi"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "Allir"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "Aldurstakmark %s er óþekkt"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s hentar öllum"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s hentar ungum börnum"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s hentar börnum"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s hentar unglingum"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s hentar fullorðnum"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s hentar %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "Kerfismappa %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Undirmappa heimamöppu %s"
+
+msgid "Host system folders"
+msgstr "Kerfismöppur vélar"
+
+msgid "Host system configuration from /etc"
+msgstr "Kerfisstillingar vélar úr /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Undirmappa skjáborðs %s"
+
+msgid "Desktop folder"
+msgstr "Skjáborðsmappa"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "Undirmappa skjala %s"
+
+msgid "Documents folder"
+msgstr "Skjalamappa"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "Undirmappa tónlistar %s"
+
+msgid "Music folder"
+msgstr "Tónlistarmappa"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "Undirmappa mynda %s"
+
+msgid "Pictures folder"
+msgstr "Myndamappa"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "Undirmappa sameiginlegrar möppu %s"
+
+msgid "Public Share folder"
+msgstr "Sameiginleg mappa"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "Undirmappa myndskeiða %s"
+
+msgid "Videos folder"
+msgstr "Myndskeiðamappa"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "Undirmappa sniðmáta %s"
+
+msgid "Templates folder"
+msgstr "Sniðmátamappa"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Undirmappa skyndiminnis notanda %s"
+
+msgid "User cache folder"
+msgstr "Skyndiminnismappa notanda"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Undirmappa notandastillinga %s"
+
+msgid "User configuration folder"
+msgstr "Stillingamappa notanda"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Undirmappa notandagagna %s"
+
+msgid "User data folder"
+msgstr "Gagnamappa notanda"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Undirmappa notandakeyrslu %s"
+
+msgid "User runtime folder"
+msgstr "Keyrslumappa notanda"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Aðgangur að skráakerfi að %s"
+
+msgid "Unknown filesystem path"
+msgstr "Óþekkt slóð í skráakerfi"
+
+msgid "Download Size"
+msgstr "Stærð niðurhals"
+
+msgid "Installed Size"
+msgstr "Uppsett stærð"
+
+msgid "Amount to download from the internet"
+msgstr "Magn sem sótt er af netinu"
+
+msgid "Size on Disk"
+msgstr "Stærð á diski"
+
+msgid "Open user data folder"
+msgstr "Opna gagnamöppu notanda"
+
+msgid "Your User Data"
+msgstr "Gögnin þín"
+
+msgid "Caches, settings, and other app data"
+msgstr "Skyndiminni, stillingar og önnur forritagögn"
+
+msgid "Cache"
+msgstr "Skyndiminni"
+
+msgid "Temporary cached data"
+msgstr "Tímabundin gögn í skyndiminni"
+
+msgid "Clear Cache"
+msgstr "Hreinsa skyndiminni"
+
+msgid "Installed Runtime Size"
+msgstr "Stærð uppsetts keyrslusafns"
+
+msgid "Runtime Download Size"
+msgstr "Stærð niðurhals keyrslusafns"
+
+msgid "N/A"
+msgstr "Á ekki við"
+
+msgid "Storage"
+msgstr "Geymsla"
+
+msgid "Verified"
+msgstr "Staðfest"
+
+msgid "The Bazaar Contributors"
+msgstr "Þátttakendur í Bazaar"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "Sérstakar þakkir"
+
+msgid "Logged Out Successfully!"
+msgstr "Útskráning tókst!"
+
+msgid "Performing setup…"
+msgstr "Framkvæmi uppsetningu…"
+
+msgid "Set Up Flathub?"
+msgstr "Setja upp Flathub?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub er ekki uppsett á þessu kerfi. Þú munt ekki geta vafrað um og sett upp forrit í Bazaar ef það er ekki tiltækt.\n"
+"\n"
+"Þú getur enn notað Bazaar til að vafra um og fjarlægja forrit sem þegar eru uppsett."
+
+msgid "Later"
+msgstr "Síðar"
+
+msgid "Set Up Flathub"
+msgstr "Setja upp Flathub"
+
+msgid "A backend error occurred"
+msgstr "Villa kom upp í bakenda"
+
+msgid "Refreshing…"
+msgstr "Endurhleð…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "Hleð %d forritum…"
+
+msgid "Failed to open file"
+msgstr "Ekki tókst að opna skrá"
+
+msgid "Failed to load metainfo"
+msgstr "Ekki tókst að hlaða metainfo"
+
+msgid "An initialization error occurred"
+msgstr "Villa kom upp við frumstillingu"
+
+msgid "Checking for updates…"
+msgstr "Athuga með uppfærslur…"
+
+msgid "Failed to check for updates"
+msgstr "Ekki tókst að athuga með uppfærslur"
+
+msgid "Could not find app"
+msgstr "Ekki tókst að finna forritið"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Hleð %d forriti…"
+msgstr[1] "Hleð %d forritum…"
+
+msgid "Writing to cache…"
+msgstr "Skrifa í skyndiminni…"
+
+msgid "Removing remote…"
+msgstr "Fjarlægi fjartengda uppsprettu…"
+
+msgid "Could not remove remote"
+msgstr "Ekki tókst að fjarlægja fjartengda uppsprettu"
+
+msgid "Show All"
+msgstr "Sýna allt"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Allt „%s“"
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d forrit"
+
+msgid "Failed to Load Article"
+msgstr "Ekki tókst að hlaða grein"
+
+msgid "All apps are already installed"
+msgstr "Öll forrit eru þegar uppsett"
+
+msgid "_OK"
+msgstr "_Í lagi"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Setja upp %u forrit?"
+msgstr[1] "Setja upp %u forrit?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Eftirfarandi verður sett upp. Viðbótar sameiginlegir íhlutir gætu einnig verið settir upp"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "%d viðbætur verða settar upp."
+
+msgid "Additionally, addons will be installed."
+msgstr "Að auki verða viðbætur settar upp."
+
+msgid "_Cancel"
+msgstr "_Hætta við"
+
+msgid "_Install All"
+msgstr "_Setja upp allt"
+
+msgid "Bundle Installation"
+msgstr "Uppsetning búnts"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Viðbótarþarfir geta tekið aukið pláss"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Uppsetning þessa forrits gæti krafist þess að nýrri hugbúnaðaruppsprettu sé bætt við. Önnur forrit frá þessari uppsprettu birtast í Bazaar.\n"
+"\n"
+"Bættu aðeins við þessari uppsprettu ef þú ert viss um að þú treystir henni."
+
+msgid "Successfully Installed!"
+msgstr "Uppsetning tókst!"
+
+msgid "Open"
+msgstr "Opna"
+
+msgid "Show App Details"
+msgstr "Sýna upplýsingar um forrit"
+
+msgid "Already Installed"
+msgstr "Þegar uppsett"
+
+msgid "Installation Failed"
+msgstr "Uppsetning mistókst"
+
+msgid "Unknown install size"
+msgstr "Óþekkt uppsetningarstærð"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Um %s í uppsetningu"
+
+msgid "No special permissions"
+msgstr "Engar sérstakar heimildir"
+
+msgid "Place Applet"
+msgstr "Setja smáforrit"
+
+msgid "Choose where to add this applet."
+msgstr "Veldu hvar bæta á þessu smáforriti við."
+
+msgid "Cancel"
+msgstr "Hætta við"
+
+msgid "Panel"
+msgstr "Stika"
+
+msgid "Dock"
+msgstr "Forritastika"
+
+msgid "No Curation"
+msgstr "Engin ritstýring"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Engar upplýsingar um ritstýringu eru í boði á þessu kerfi. Þú getur samt skoðað forrit á Flathub"
+
+msgid "Browse Flathub"
+msgstr "Skoða Flathub"
+
+msgid "Offline"
+msgstr "Ónettengt"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s til %s, hæst %s með %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*f þ."
+
+msgid "Installs:"
+msgstr "Uppsetningar:"
+
+msgid "Not Verified"
+msgstr "Ekki staðfest"
+
+msgid "Developer information not available."
+msgstr "Upplýsingar um þróunaraðila eru ekki tiltækar."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "Eignarhald á forritsauðkenninu %s hefur ekki verið staðfest og það gæti verið samfélagspakki."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "Eignarhald á forritsauðkenninu %s hefur verið staðfest handvirkt af Flathub-teyminu."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "Eignarhald á forritsauðkenninu %1$s hefur verið staðfest af <b>%2$s</b> þann <b>%3$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Eignarhald á forritsauðkenninu %1$s hefur verið staðfest með %2$s."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "Eignarhald á forritsauðkenninu %s hefur verið staðfest."
+
+msgid "Bazaar Release"
+msgstr "Bazaar-útgáfa"
+
+msgid "Full Release Notes"
+msgstr "Allar útgáfuskýringar"
+
+msgid "This release was made possible by users like you!"
+msgstr "Þessi útgáfa var möguleg þökk sé notendum eins og þér!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Mér þykir gaman að gera Bazaar, en ég get ekki gert það einn. Styddu áframhaldandi þróun með því að leggja fram styrk á Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "Styrkja Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Hvað er nýtt í %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Gefin út %-e. %B %Y"
+
+msgid "Choose an Installation"
+msgstr "Veldu uppsetningu"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Þú ert með margar útgáfur af þessu forriti uppsettar. Hverja þeirra viltu halda áfram með?"
+
+msgid "Details"
+msgstr "Upplýsingar"
+
+msgid "Copy"
+msgstr "Afrita"
+
+msgid "Copied!"
+msgstr "Afritað!"
+
+msgid "Favorite Count"
+msgstr "Fjöldi eftirlætismerkinga"
+
+msgid "Failed to update favorite"
+msgstr "Ekki tókst að uppfæra eftirlæti"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Skráðu þig inn með Flathub til að stjórna eftirlætum"
+
+msgid "Log In"
+msgstr "Skrá inn"
+
+msgid "Favorites"
+msgstr "Eftirlæti"
+
+msgid "Install All"
+msgstr "Setja upp allt"
+
+msgid "No Favorites"
+msgstr "Engin eftirlæti"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Forrit sem þú merkir sem eftirlæti birtast hér"
+
+msgid "Support This Application"
+msgstr "Styðja þetta forrit"
+
+msgid "Remove From Favorites"
+msgstr "Fjarlægja úr eftirlætum"
+
+msgid "Failed to remove favorite"
+msgstr "Ekki tókst að fjarlægja eftirlæti"
+
+msgid "Previous"
+msgstr "Fyrri"
+
+msgid "Next"
+msgstr "Næsta"
+
+msgid "Editing"
+msgstr "Klipping"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Hljóðblandari"
+
+msgid "Music"
+msgstr "Tónlist"
+
+msgid "Player"
+msgstr "Spilari"
+
+msgid "Recorder"
+msgstr "Upptökutæki"
+
+msgid "Sequencer"
+msgstr "Röðunartæki"
+
+msgid "Tuner"
+msgstr "Stillitæki"
+
+msgid "TV"
+msgstr "Sjónvarp"
+
+msgid "Emulation"
+msgstr "Hermun"
+
+msgid "Action"
+msgstr "Hasar"
+
+msgid "Adventure"
+msgstr "Ævintýri"
+
+msgid "Arcade"
+msgstr "Spilakassi"
+
+msgid "Blocks"
+msgstr "Kubbar"
+
+msgid "Board"
+msgstr "Borðspil"
+
+msgid "Card"
+msgstr "Spil"
+
+msgid "Kids"
+msgstr "Börn"
+
+msgid "Logic"
+msgstr "Rökfræði"
+
+msgid "Role Playing"
+msgstr "Hlutverkaleikir"
+
+msgid "Shooter"
+msgstr "Skotleikir"
+
+msgid "Simulation"
+msgstr "Hermileikir"
+
+msgid "Sports"
+msgstr "Íþróttir"
+
+msgid "Strategy"
+msgstr "Herkænska"
+
+msgid "Browsers"
+msgstr "Vafrar"
+
+msgid "Chat"
+msgstr "Spjall"
+
+msgid "Mail"
+msgstr "Póstur"
+
+msgid "File Sharing"
+msgstr "Skráadeiling"
+
+msgid "Audio & Video"
+msgstr "Hljóð og myndskeið"
+
+msgid "Media"
+msgstr "Miðlar"
+
+msgid "More Audio & Video"
+msgstr "Meira af hljóði og myndskeiðum"
+
+msgid "Developer Tools"
+msgstr "Þróunarverkfæri"
+
+msgid "Develop"
+msgstr "Þróa"
+
+msgid "More Developer Tools"
+msgstr "Fleiri þróunarverkfæri"
+
+msgid "Education"
+msgstr "Menntun"
+
+msgid "Learn"
+msgstr "Læra"
+
+msgid "More Education"
+msgstr "Meira af menntun"
+
+msgid "Gaming"
+msgstr "Leikir"
+
+msgid "Play"
+msgstr "Spila"
+
+msgid "More Gaming"
+msgstr "Fleiri leikir"
+
+msgid "Graphics & Photography"
+msgstr "Grafík og ljósmyndun"
+
+msgid "Create"
+msgstr "Skapa"
+
+msgid "More Graphics & Photography"
+msgstr "Meira af grafík og ljósmyndun"
+
+msgid "Networking"
+msgstr "Netkerfi"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "More Networking"
+msgstr "Meira af netkerfum"
+
+msgid "Productivity"
+msgstr "Afköst"
+
+msgid "Work"
+msgstr "Vinna"
+
+msgid "More Productivity"
+msgstr "Meira af afkastaforritum"
+
+msgid "Science"
+msgstr "Vísindi"
+
+msgid "More Science"
+msgstr "Meira af vísindum"
+
+msgid "System"
+msgstr "Kerfi"
+
+msgid "More System"
+msgstr "Meira af kerfisforritum"
+
+msgid "Utilities"
+msgstr "Nytjaforrit"
+
+msgid "Tools"
+msgstr "Verkfæri"
+
+msgid "More Utilities"
+msgstr "Meira af nytjaforritum"
+
+msgid "Trending"
+msgstr "Vinsælt núna"
+
+msgid "More Trending"
+msgstr "Meira af því sem er vinsælt núna"
+
+msgid "Popular"
+msgstr "Vinsæl"
+
+msgid "More Popular"
+msgstr "Meira af vinsælu"
+
+msgid "Recently Added"
+msgstr "Nýlega bætt við"
+
+msgid "New"
+msgstr "Nýtt"
+
+msgid "More New"
+msgstr "Meira af nýju"
+
+msgid "Recently Updated"
+msgstr "Nýlega uppfært"
+
+msgid "Updated"
+msgstr "Uppfært"
+
+msgid "More Updated"
+msgstr "Meira af uppfærðu"
+
+msgid "Mobile"
+msgstr "Farsímar"
+
+msgid "More Mobile"
+msgstr "Meira fyrir farsíma"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Meira af Adwaita"
+
+msgid "KDE Apps"
+msgstr "KDE-forrit"
+
+msgid "More KDE Apps"
+msgstr "Meira af KDE-forritum"
+
+msgid "Made for COSMIC™"
+msgstr "Gert fyrir COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Fyrir COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Meira af COSMIC-forritum"
+
+msgid "Games"
+msgstr "Leikir"
+
+msgid "More Games"
+msgstr "Fleiri leikir"
+
+msgid "Emulators"
+msgstr "Hermar"
+
+msgid "More Emulators"
+msgstr "Fleiri hermar"
+
+msgid "Launchers"
+msgstr "Ræsar"
+
+msgid "More Game Launchers"
+msgstr "Fleiri leikjaræsar"
+
+msgid "Game Tools"
+msgstr "Leikjaverkfæri"
+
+msgid "More Game Tools"
+msgstr "Fleiri leikjaverkfæri"
+
+msgid "New Year, New Workflows"
+msgstr "Nýtt ár, ný vinnubrögð"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Forrit til að skrifa minnispunkta, fylgjast með verkefnum og gera áætlanir"
+
+msgid "Staff Picks"
+msgstr "Úrval starfsfólks"
+
+msgid "Apps we love right now"
+msgstr "Forrit sem við elskum núna"
+
+msgid "Get Creative"
+msgstr "Vertu skapandi"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Nauðsynleg forrit fyrir teikningu, myndvinnslu og stafræna hönnun"
+
+msgid "Build Native Apps"
+msgstr "Smíðaðu forrit fyrir kerfið"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Þróaðu forrit sem falla vel að kerfinu þínu"
+
+msgid "Stay in Touch"
+msgstr "Haltu sambandi"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Nauðsynleg forrit fyrir samvinnu og samskipti"
+
+msgid "Ready for Vacations"
+msgstr "Tilbúin fyrir fríið"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Kort, almenningssamgöngur, veður og ferðaskipulagning"
+
+msgid "Smarter Every Day"
+msgstr "Snjallari á hverjum degi"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Forrit sem hjálpa þér að læra, rannsaka og skrifa"
+
+msgid "Get Cozy"
+msgstr "Gerðu það notalegt"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Frábær forrit til að lesa, horfa á kvikmyndir og spila leiki"
+
+msgid "Web Developer Essentials"
+msgstr "Nauðsynjar vefhönnuða"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Vefsmíði er skemmtilegri með þessum forritum"
+
+msgid "Take Better Notes"
+msgstr "Skrifaðu betri minnispunkta"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Finndu nýja eftirlætisverkfærið þitt fyrir minnispunkta"
+
+msgid "Get Focused"
+msgstr "Einbeittu þér"
+
+msgid "Great apps for task management"
+msgstr "Frábær forrit til verkefnastjórnunar"
+
+msgid "Make Some Noise"
+msgstr "Láttu heyra í þér"
+
+msgid "Apps for creating and producing music"
+msgstr "Forrit til að búa til og framleiða tónlist"
+
+msgid "Get To Work"
+msgstr "Komdu þér að verki"
+
+msgid "Essential office apps"
+msgstr "Nauðsynleg skrifstofuforrit"
+
+msgid "Flathub Not Added"
+msgstr "Flathub ekki bætt við"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Flathub-uppsprettan fannst ekki í neinum Flatpak-uppsetningum þínum"
+
+msgid "Can't Reach Flathub"
+msgstr "Næ ekki sambandi við Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "Þú getur samt stjórnað og leitað að forritum."
+
+msgid "Search Apps"
+msgstr "Leita að forritum"
+
+msgid "Reconnect"
+msgstr "Tengjast aftur"
+
+msgid "App of the Day"
+msgstr "Forrit dagsins"
+
+msgid "On the Go"
+msgstr "Á ferðinni"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Forrit fyrir Linux-símana þína og spjaldtölvur"
+
+msgid "More Mobile Apps"
+msgstr "Fleiri farsímaforrit"
+
+msgid "We​ ♥​ Games"
+msgstr "Við​ ♥​ leiki"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Leikir og forrit til að keyra uppáhaldsleikina þína"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Þetta er staðbundin forskoðun, sumar upplýsingar gætu verið frábrugðnar birtum skráningum"
+
+msgid "Preview Store Appearance"
+msgstr "Forskoða útlit verslunar"
+
+msgid "_Support"
+msgstr "_Styðja"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Þetta forrit notar keyrslusafn sem fær ekki lengur uppfærslur eða öryggisleiðréttingar. Það gæti orðið óöruggt í notkun."
+
+msgid "Trash Data"
+msgstr "Henda gögnum"
+
+msgid "Add-ons"
+msgstr "Viðbætur"
+
+msgid "More Add-Ons"
+msgstr "Fleiri viðbætur"
+
+msgid "Links"
+msgstr "Tenglar"
+
+msgid "Similar Apps"
+msgstr "Svipuð forrit"
+
+msgid "No URL"
+msgstr "Engin vefslóð"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Þetta forrit er með FLOSS-leyfi, sem þýðir að hægt er að rýna frumkóðann til að tryggja öryggi."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Þetta forrit er með séreignarleyfi, sem þýðir að frumkóðinn er þróaður í einrúmi og óháður þriðji aðili getur ekki rýnt hann."
+
+msgid "Other Apps From This Developer"
+msgstr "Önnur forrit frá þessum þróunaraðila"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Önnur forrit frá %s"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s er ekki uppsett, en það eru enn <b>%s</b> af gögnum til staðar."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Forrit eftir %s"
+
+msgid "Apps by This Developer"
+msgstr "Forrit eftir þennan þróunaraðila"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d forrit"
+msgstr[1] "%d forrit"
+
+msgid "Failed to Remove User Data"
+msgstr "Ekki tókst að fjarlægja notandagögn"
+
+msgid "Hardware Support"
+msgstr "Vélbúnaðarstuðningur"
+
+msgid "Keyboard support"
+msgstr "Lyklaborðsstuðningur"
+
+msgid "Requires keyboards"
+msgstr "Krefst lyklaborða"
+
+msgid "Recommends keyboards"
+msgstr "Mælir með lyklaborðum"
+
+msgid "Supports keyboards"
+msgstr "Styður lyklaborð"
+
+msgid "Unknown support for keyboards"
+msgstr "Óþekktur stuðningur við lyklaborð"
+
+msgid "Mouse support"
+msgstr "Músarstuðningur"
+
+msgid "Requires mice or pointing devices"
+msgstr "Krefst músa eða bendla"
+
+msgid "Recommends mice or pointing devices"
+msgstr "Mælir með músum eða bendlum"
+
+msgid "Supports mice or pointing devices"
+msgstr "Styður mýs eða bendla"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "Óþekktur stuðningur við mýs eða bendla"
+
+msgid "Touchscreen support"
+msgstr "Snertiskjástuðningur"
+
+msgid "Requires touchscreens"
+msgstr "Krefst snertiskjáa"
+
+msgid "Recommends touchscreens"
+msgstr "Mælir með snertiskjáum"
+
+msgid "Supports touchscreens"
+msgstr "Styður snertiskjái"
+
+msgid "Unknown support for touchscreens"
+msgstr "Óþekktur stuðningur við snertiskjái"
+
+msgid "Mobile support"
+msgstr "Stuðningur við farsíma"
+
+msgid "Works on mobile devices"
+msgstr "Virkar á farsímum"
+
+msgid "May not work well on mobile devices"
+msgstr "Virkar hugsanlega ekki vel á farsímum"
+
+msgid "Desktop support"
+msgstr "Skjáborðsstuðningur"
+
+msgid "Works well on large screens"
+msgstr "Virkar vel á stórum skjáum"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s virkar best á tilteknum vélbúnaði"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s virkar á flestum tækjum"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Hætta við"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Hætti við"
+
+msgid "_Open"
+msgstr "_Opna"
+
+msgid "Uninstall Application"
+msgstr "Fjarlægja forrit"
+
+msgid "_Remove"
+msgstr "_Fjarlægja"
+
+msgid "Update"
+msgstr "Uppfæra"
+
+msgid "Remove"
+msgstr "Fjarlægja"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Setja upp %s frá %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Setja upp %s"
+
+msgid "Donate"
+msgstr "Styrkja"
+
+msgid "Search installed apps"
+msgstr "Leita í uppsettum forritum"
+
+msgid "No Apps Found"
+msgstr "Engin forrit fundust"
+
+msgid "Search Store Instead"
+msgstr "Leita frekar í versluninni"
+
+msgid "Pending Updates"
+msgstr "Uppfærslur í bið"
+
+msgid "Downloads"
+msgstr "Niðurhöl"
+
+msgid "Recently Uninstalled"
+msgstr "Nýlega fjarlægt"
+
+msgid "Clear Finished Tasks"
+msgstr "Hreinsa kláruð verkefni"
+
+msgid "Sort Options"
+msgstr "Röðunarvalkostir"
+
+msgid "Sort By"
+msgstr "Raða eftir"
+
+msgid "Name"
+msgstr "Heiti"
+
+msgid "Size"
+msgstr "Stærð"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "Engar niðurstöður fundust fyrir „%s“ í lista yfir uppsett forrit"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u tiltæk uppfærsla"
+msgstr[1] "%u tiltækar uppfærslur"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u uppsett forrit"
+msgstr[1] "%u uppsett forrit"
+
+msgid "No applications found"
+msgstr "Engin forrit fundust"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "%u forrit fannst"
+msgstr[1] "%u forrit fundust"
+
+msgid "Get Involved"
+msgstr "Taktu þátt"
+
+msgid "Learn More"
+msgstr "Frekari upplýsingar"
+
+msgid "Unknown License"
+msgstr "Óþekkt leyfi"
+
+msgid "Community Built"
+msgstr "Samfélagssmíðað"
+
+msgid "Proprietary"
+msgstr "Séreign"
+
+msgid "Special License"
+msgstr "Sérstakt leyfi"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Þetta forrit er þróað í opnu umhverfi af alþjóðlegu samfélagi.\n"
+"\n"
+"Þú getur tekið þátt og hjálpað til við að gera það enn betra."
+
+msgid "The license of this app is not known"
+msgstr "Leyfi þessa forrits er óþekkt"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Þetta forrit er þróað í opnu umhverfi af alþjóðlegu samfélagi og gefið út með %s-leyfinu.\n"
+"\n"
+"Þú getur tekið þátt og hjálpað til við að gera það enn betra."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Þetta forrit er ekki þróað í opnu umhverfi, þannig að aðeins þróunaraðilar þess vita hvernig það virkar. Það gæti verið óöruggt á vegu sem erfitt er að greina og það gæti breyst án eftirlits.\n"
+"\n"
+"Þú gætir hugsanlega lagt þitt af mörkum til þessa forrits, en það er ekki víst."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Þetta forrit er þróað undir sérstöku leyfi %s.\n"
+"\n"
+"Þú gætir hugsanlega lagt þitt af mörkum til þessa forrits, en það er ekki víst."
+
+msgid "License"
+msgstr "Leyfi"
+
+msgid "Connect to Flathub"
+msgstr "Tengjast Flathub"
+
+msgid "Something Went Wrong"
+msgstr "Eitthvað fór úrskeiðis"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Skráðu þig inn til að samstilla eftirlætisforritin þín milli tækja"
+
+msgid "Finish"
+msgstr "Ljúka"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Halló, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Bæta táknmynd við forskoðun metainfo?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Metainfo-skrár innihalda ekki forritatáknmyndir sjálfar. Viltu velja eina handvirkt?"
+
+msgid "Skip"
+msgstr "Sleppa"
+
+msgid "Select Icon"
+msgstr "Velja táknmynd"
+
+msgid "Image Files"
+msgstr "Myndaskrár"
+
+msgid "New Permissions"
+msgstr "Nýjar heimildir"
+
+msgid "_Accept"
+msgstr "_Samþykkja"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Ný heimild fyrir %s"
+msgstr[1] "Nýjar heimildir fyrir %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Þessi uppfærsla krefst eftirfarandi viðbótarheimildar"
+msgstr[1] "Þessi uppfærsla krefst eftirfarandi viðbótarheimilda"
+
+msgid "User"
+msgstr "Notandi"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Úr þjónustu"
+
+msgid "Preferences"
+msgstr "Stillingar"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Nettengingin er mæld — sjálfvirk endurnýjun verslunargagna er í bið"
+
+msgid "Refresh Manually"
+msgstr "Endurnýja handvirkt"
+
+msgid "App Updates"
+msgstr "Forritauppfærslur"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Sjálfvirkar uppfærslur verða settar í bið á mældum netum eða þegar orkusparnaður er á til að spara gögn og rafhlöðu."
+
+msgid "_Automatic"
+msgstr "_Sjálfvirkt"
+
+msgid "Automatically check for and download app updates"
+msgstr "Athuga sjálfkrafa með forritauppfærslum og sækja þær"
+
+msgid "_Manual"
+msgstr "_Handvirkt"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Athuga með forritauppfærslum og sækja þær þarf að gera handvirkt"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Tilkynningar um sjálfvirkar uppfærslur"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Láta vita þegar uppfærslur hafa verið settar upp sjálfkrafa"
+
+msgid "Content Filters"
+msgstr "Efnissíur"
+
+msgid "_Free Software Only"
+msgstr "_Aðeins frjáls hugbúnaður"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Fela séreignarforrit við vafur og leit"
+
+msgid "F_lathub Results Only"
+msgstr "Aðeins _Flathub-niðurstöður"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Takmarka leit og vafur við forrit sem eru aðeins fáanleg á Flathub"
+
+msgid "_Verified Results Only"
+msgstr "Aðeins _staðfestar niðurstöður"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Fela niðurstöður sem eru ekki staðfestar á Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Fela forrit sem eru _úr þjónustu"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "Fela forrit sem þróunaraðilar styðja ekki lengur"
+
+msgid "Progress Bar Theme"
+msgstr "Þema framvindustikunnar"
+
+msgid "Accent Color"
+msgstr "Áherslulitur"
+
+msgid "Pride Colors"
+msgstr "Pride-litir hinsegin fólks"
+
+msgid "Lesbian Pride Colors"
+msgstr "Pride-litir lesbía"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Pride-litir samkynhneigðra karla"
+
+msgid "Transgender Pride Colors"
+msgstr "Pride-litir trans fólks"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Pride-litir kynsegin fólks"
+
+msgid "Bisexual Pride Colors"
+msgstr "Pride-litir tvíkynhneigðra"
+
+msgid "Asexual Pride Colors"
+msgstr "Pride-litir ókynhneigðra"
+
+msgid "Pansexual Pride Colors"
+msgstr "Pride-litir pankynhneigðra"
+
+msgid "Aromantic Pride Colors"
+msgstr "Pride-litir rómantíklausra"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Pride-litir kynflæðis"
+
+msgid "Polysexual Pride Colors"
+msgstr "Pride-litir fjölkynhneigðra"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Pride-litir allkynhneigðra"
+
+msgid "Aroace Pride Colors"
+msgstr "Pride-litir aroace"
+
+msgid "Agender Pride Colors"
+msgstr "Pride-litir kynleysis"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Pride-litir genderqueer"
+
+msgid "Intersex Pride Colors"
+msgstr "Pride-litir intersex fólks"
+
+msgid "Demigender Pride Colors"
+msgstr "Pride-litir demigender"
+
+msgid "Biromantic Pride Colors"
+msgstr "Pride-litir tvírómantískra"
+
+msgid "Disability Pride Colors"
+msgstr "Pride-litir fatlaðs fólks"
+
+msgid "Femboy Pride Colors"
+msgstr "Pride-litir femboy"
+
+msgid "Neutrois Pride Colors"
+msgstr "Pride-litir neutrois"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar þarf að keyra í bakgrunni til að athuga með forritauppfærslum"
+
+msgid "Version History"
+msgstr "Útgáfusaga"
+
+msgid "Today"
+msgstr "Í dag"
+
+msgid "Yesterday"
+msgstr "Í gær"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "Fyrir %d degi"
+msgstr[1] "Fyrir %d dögum"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "Fyrir %d viku"
+msgstr[1] "Fyrir %d vikum"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "Fyrir %d mánuði"
+msgstr[1] "Fyrir %d mánuðum"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "Fyrir %d ári"
+msgstr[1] "Fyrir %d árum"
+
+msgid "%e %B %Y"
+msgstr "%e. %B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "Útgáfa %s"
+
+msgid "No details for this release"
+msgstr "Engar upplýsingar um þessa útgáfu"
+
+msgid "Get More Information"
+msgstr "Fá frekari upplýsingar"
+
+msgid "_Version History"
+msgstr "_Útgáfusaga"
+
+msgid "Remotes"
+msgstr "Fjartengdar uppsprettur"
+
+msgid "System Installation"
+msgstr "Kerfisuppsetning"
+
+msgid "Available to all users on this computer"
+msgstr "Í boði fyrir alla notendur þessarar tölvu"
+
+msgid "User Installation"
+msgstr "Notandauppsetning"
+
+msgid "Only available to you"
+msgstr "Aðeins í boði fyrir þig"
+
+msgid "Remove Remote"
+msgstr "Fjarlægja fjartengda uppsprettu"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Fjarlægja %s"
+
+msgid "Unused"
+msgstr "Ónotað"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u forrit uppsett"
+msgstr[1] "%u forrit uppsett"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Fjarlægja „%s“?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Þú munt ekki lengur geta sett upp forrit frá þessari notendauppsprettu."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Þú munt ekki lengur geta sett upp forrit frá þessari kerfisuppsprettu."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u forrit til að fjarlægja"
+msgstr[1] "%u forrit til að fjarlægja"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Forritið hér að neðan var sett upp frá þessari uppsprettu og verður fjarlægt af reikningnum þínum ásamt henni."
+msgstr[1] "Forritin hér að neðan voru sett upp frá þessari uppsprettu og verða fjarlægð af reikningnum þínum ásamt henni."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Forritið hér að neðan var sett upp frá þessari uppsprettu og verður fjarlægt fyrir alla notendur ásamt henni."
+msgstr[1] "Forritin hér að neðan voru sett upp frá þessari uppsprettu og verða fjarlægð fyrir alla notendur ásamt henni."
+
+msgid "Uninstall"
+msgstr "Fjarlægja"
+
+msgid "Get"
+msgstr "Fá"
+
+msgid "Arbitrary Permissions"
+msgstr "Handahófskenndar heimildir"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Þetta forrit er með heimild sem gerir því óbeint kleift að veita sjálfu sér <b>hverja aðra heimild sem það vill</b> og fara þannig framhjá Flatpak-sandkassanum.\n"
+"\n"
+"Það getur því gert allt sem forrit með auknar heimildir utan sandkassa getur gert, svo sem að fá aðgang að öllum skrám þínum og tengjast internetinu.\n"
+"\n"
+"Að skoða hinar heimildirnar gæti samt gefið betri hugmynd um hvað forritið er líklegt til að gera."
+
+msgid "View Other Permissions"
+msgstr "Skoða aðrar heimildir"
+
+msgid "Safe"
+msgstr "Öruggt"
+
+msgid "App ID"
+msgstr "Forritsauðkenni"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Þetta forrit notar úrelta útgáfu af hugbúnaðarvettvangi (SDK) og gæti innihaldið villur eða öryggisveikleika sem verða ekki lagaðir."
+
+msgid "Safety"
+msgstr "Öryggi"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s er öruggt"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s hefur engar óöruggar heimildir"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s er líklega öruggt"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s er hugsanlega óöruggt"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s er óöruggt"
+
+msgid "Back"
+msgstr "Til baka"
+
+msgid "Previous Screenshot"
+msgstr "Fyrri skjámynd"
+
+msgid "Next Screenshot"
+msgstr "Næsta skjámynd"
+
+msgid "Copy Image"
+msgstr "Afrita mynd"
+
+msgid "Reset View"
+msgstr "Endurstilla sýn"
+
+msgid "Zoom Out"
+msgstr "Smækka"
+
+msgid "Zoom In"
+msgstr "Stækka"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u uppfærsla keyrslusafns"
+msgstr[1] "%u uppfærslur keyrslusafna"
+
+msgid "Screenshots Carousel"
+msgstr "Skjámyndahringekja"
+
+msgid "No Screenshots"
+msgstr "Engar skjámyndir"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Skjámynd %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Skjámynd %u"
+
+msgid "Clear Search"
+msgstr "Hreinsa leit"
+
+msgid "Filters"
+msgstr "Síur"
+
+msgid "_Verified"
+msgstr "_Staðfest"
+
+msgid "_Free/Open"
+msgstr "_Frjáls/opin"
+
+msgid "Non-_EOL"
+msgstr "Ekki _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Sía út forrit sem eru úr þjónustu"
+
+msgid "_Mobile Friendly"
+msgstr "_Farsímavænt"
+
+msgid "Categories"
+msgstr "Flokkar"
+
+msgid "Search Apps, Games, Software"
+msgstr "Leita að forritum, leikjum, hugbúnaði"
+
+msgid "Search Filters"
+msgstr "Leitarsíur"
+
+msgid "Browse Categories"
+msgstr "Skoða flokka"
+
+msgid "Categories Unavailable"
+msgstr "Flokkar ekki tiltækir"
+
+msgid "Search for apps using the search bar above."
+msgstr "Leitaðu að forritum með leitarstikunni hér að ofan."
+
+msgid "No Applications Found"
+msgstr "Engin forrit fundust"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Engar niðurstöður fundust fyrir „%s“ á Flathub"
+
+msgid "Browser"
+msgstr "Vafri"
+
+msgid "Video"
+msgstr "Myndskeið"
+
+msgid "Office"
+msgstr "Skrifstofa"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Dagatal"
+
+msgid "Messaging"
+msgstr "Skilaboð"
+
+msgid "Paint"
+msgstr "Teikning"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Hermir"
+
+msgid "Copy Link"
+msgstr "Afrita tengil"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Flathub-síða"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Vefsvæði verkefnis"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Villuskráning"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "Algengar spurningar"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Hjálp"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Styrkja"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Þýða"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Hafa samband"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Frumkóði"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Leggja til"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Upptalning (manifest)"
+
+msgid "Timeline"
+msgstr "Tímalína"
+
+msgid "Total"
+msgstr "Samtals"
+
+msgid "This Week"
+msgstr "Þessa viku"
+
+msgid "Installs per day"
+msgstr "Uppsetningar á dag"
+
+msgid "World"
+msgstr "Heimurinn"
+
+msgid "Installs per country"
+msgstr "Uppsetningar eftir löndum"
+
+msgid "Since 4/15/2024"
+msgstr "Frá 15.4.2024"
+
+msgid "No Results Found"
+msgstr "Engar niðurstöður fundust"
+
+msgid "Search failed"
+msgstr "Leit mistókst"
+
+msgid "Unknown"
+msgstr "Óþekkt"
+
+msgid "Keep User Data"
+msgstr "Halda notandagögnum"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Leyfa endurheimt persónulegra stillinga &amp; efnis"
+
+msgid "Delete All Data"
+msgstr "Eyða öllum gögnum"
+
+msgid "Permanently erase user data to save space"
+msgstr "Eyða notandagögnum varanlega til að spara pláss"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "Fjarlægja %s?"
+
+msgid "Select which version to remove."
+msgstr "Veldu hvaða útgáfu á að fjarlægja."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "Ekki verður hægt að nota %s eftir að það hefur verið fjarlægt."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "„%s“ er mikil áhætta"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Þetta forrit hefur fullan aðgang að kerfinu þínu, þar á meðal <b>öllum skrám þínum, vafrasögu, vistuðum lykilorðum</b> og fleiru. Það hefur einnig aðgang að internetinu, sem þýðir að það gæti sent gögnin þín til utanaðkomandi aðila.\n"
+"\n"
+"Þar sem forritið er séreign er ekki hægt að rýna hvað það gerir með þessar heimildir."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Þetta forrit notar gamla X11-gluggakerfið, sem gerir því kleift að <b>skrá öll lyklaborðsslög, taka skjámyndir og fylgjast með öðrum forritum</b>. Það hefur einnig aðgang að internetinu, sem þýðir að það gæti sent gögnin þín til utanaðkomandi aðila.\n"
+"\n"
+"Þar sem forritið er séreign er ekki hægt að rýna hvað það gerir með þessar heimildir."
+
+msgid "_Install Anyway"
+msgstr "_Setja upp samt"
+
+msgid "Failed to load transaction dialog"
+msgstr "Ekki tókst að hlaða færsluglugga"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "Lokið á %.02f sekúndum"
+
+msgid "App Add-On"
+msgstr "Forritsviðbót"
+
+msgid "Runtime"
+msgstr "Keyrslusafn"
+
+msgid "In Queue"
+msgstr "Í biðröð"
+
+msgid "Finishing Up"
+msgstr "Lýk"
+
+msgid "Done"
+msgstr "Lokið"
+
+msgid "Cancelled"
+msgstr "Hætt við"
+
+msgid "Error"
+msgstr "Villa"
+
+msgid "Cancel Transaction"
+msgstr "Hætta við færslu"
+
+msgid "Show Details"
+msgstr "Sýna upplýsingar"
+
+msgid "Show Error Info"
+msgstr "Sýna villuupplýsingar"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s losað"
+
+msgid "Transaction Error"
+msgstr "Færsluvilla"
+
+msgid "Pending"
+msgstr "Í bið"
+
+msgid "Installed Updates"
+msgstr "Uppsettar uppfærslur"
+
+msgid "Release Notes"
+msgstr "Útgáfuskýringar"
+
+msgid "No Release Info"
+msgstr "Engar útgáfuupplýsingar"
+
+msgid "_Update All"
+msgstr "_Uppfæra allt"
+
+msgid "This update requests new permissions"
+msgstr "Þessi uppfærsla biður um nýjar heimildir"
+
+msgid "Manage Leftover User Data"
+msgstr "Stjórna afgangsnotandagögnum"
+
+msgid "No Leftover User Data Found"
+msgstr "Engin afgangsnotandagögn fundust"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Persónuleg gögn sem forrit sem hafa verið fjarlægð skildu eftir birtast hér"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Notandagögn í ruslinu fyrir %u forrit"
+msgstr[1] "Notandagögn í ruslinu fyrir %u forrit"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Notandagögn í ruslinu fyrir %s"
+
+msgid "Open User Data Folder"
+msgstr "Opna gagnamöppu notanda"
+
+msgid "Trash User Data"
+msgstr "Henda notandagögnum"
+
+msgid "Refreshing"
+msgstr "Endurnýja"
+
+msgid "Curated"
+msgstr "Ritstýrt"
+
+msgid "Explore"
+msgstr "Kanna"
+
+msgid "Library"
+msgstr "Safn"
+
+msgid "Search"
+msgstr "Leita"
+
+msgid "Main Menu"
+msgstr "Aðalvalmynd"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Þú ert að keyra nýja útgáfu af Bazaar!"
+
+msgid "See What's New"
+msgstr "Sjá hvað er nýtt"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Þú ert með nettengingu en ert að skoða skyndiminnisútgáfu af Flathub"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Nettengingin er mæld — slökkt á sjálfvirkri endurnýjun"
+
+msgid "_Donate to Bazaar"
+msgstr "_Styrkja Bazaar"
+
+msgid "_Refresh"
+msgstr "_Endurnýja"
+
+msgid "_Login With Flathub"
+msgstr "_Skrá inn með Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "_Stjórna afgangsnotandagögnum"
+
+msgid "Manage R_emotes"
+msgstr "Stjórna fjartengdum _uppsprettum"
+
+msgid "_Preferences"
+msgstr "_Stillingar"
+
+msgid "_Keyboard Shortcuts"
+msgstr "_Flýtilyklar"
+
+msgid "_About Bazaar"
+msgstr "_Um Bazaar"
+
+msgid "_Quit Bazaar"
+msgstr "_Hætta í Bazaar"
+
+msgid "Log Out"
+msgstr "Skrá út"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Ekki tókst að ræsa forrit"
+
+msgid "Could not open link"
+msgstr "Ekki tókst að opna tengil"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Þú getur ekki fjarlægt Bazaar úr Bazaar!"
+
+msgid "Can't do that right now!"
+msgstr "Ekki hægt að gera þetta núna!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u uppsetning"
+msgstr[1] "%s, %'u uppsetningar"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Flestar uppsetningar frá %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*f m."
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d niðurhöl síðasta mánuðinn"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s keyrslusafn"
+
+msgid "Size information unavailable"
+msgstr "Upplýsingar um stærð eru ekki tiltækar"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "Niðurhalsstærð %s"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Uppsett stærð %s"
+
+msgid "All Ages"
+msgstr "Allir aldurshópar"
+
+msgid "Age rating information unavailable"
+msgstr "Upplýsingar um aldurstakmark eru ekki tiltækar"
+
+msgid "Suitable for all ages"
+msgstr "Hentar öllum aldri"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "Hentar fyrir %d ára og eldri"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "Frjáls hugbúnaður með %s-leyfi"
+
+msgid "Free software"
+msgstr "Frjáls hugbúnaður"
+
+msgid "Proprietary Software"
+msgstr "Séreignarhugbúnaður"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Sérstakt leyfi: %s"
+
+msgid "Free Software"
+msgstr "Frjáls hugbúnaður"
+
+msgid "Adaptive"
+msgstr "Aðlagandi"
+
+msgid "Desktop Only"
+msgstr "Aðeins fyrir skjáborð"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "Virkar á skjáborði, spjaldtölvum og símum"
+
+msgid "May not work on mobile devices"
+msgstr "Virkar hugsanlega ekki á farsímum"
+
+msgid "Low Risk"
+msgstr "Lítil áhætta"
+
+msgid "Medium Risk"
+msgstr "Miðlungs áhætta"
+
+msgid "High Risk"
+msgstr "Mikil áhætta"
+
+msgid "Unknown Permissions"
+msgstr "Óþekktar heimildir"
+
+msgid "Permissions are missing for this app."
+msgstr "Heimildir vantar fyrir þetta forrit."
+
+msgid "No Permissions"
+msgstr "Engar heimildir"
+
+msgid "App is fully sandboxed"
+msgstr "Forritið er algerlega í sandkassa"
+
+msgid "Network Access"
+msgstr "Netaðgangur"
+
+msgid "Can access the internet"
+msgstr "Hefur aðgang að internetinu"
+
+msgid "No Network Access"
+msgstr "Enginn netaðgangur"
+
+msgid "Cannot access the internet"
+msgstr "Hefur ekki aðgang að internetinu"
+
+msgid "User Device Access"
+msgstr "Aðgangur að notandatækjum"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Hefur aðgang að tækjum eins og vefmyndavélum eða leikjastýringum"
+
+msgid "No User Device Access"
+msgstr "Enginn aðgangur að notandatækjum"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Hefur ekki aðgang að tækjum eins og vefmyndavélum eða leikjastýringum"
+
+msgid "Input Device Access"
+msgstr "Aðgangur að inntakstækjum"
+
+msgid "Can access input devices"
+msgstr "Hefur aðgang að inntakstækjum"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Aðgangur að hljóðnema og hljóðspilun"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Getur hlustað með hljóðnemum og spilað hljóð án þess að spyrja um leyfi"
+
+msgid "System Device Access"
+msgstr "Aðgangur að kerfistækjum"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Hefur aðgang að kerfistækjum sem krefjast aukinna heimilda"
+
+msgid "Screen Contents Access"
+msgstr "Aðgangur að efni skjásins"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Hefur aðgang að efni skjásins eða annarra glugga"
+
+msgid "Legacy Windowing System"
+msgstr "Gamalt gluggakerfi"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Notar alltaf gamalt gluggakerfi (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Getur öðlast handahófskenndar heimildir"
+
+msgid "User Settings"
+msgstr "Notandastillingar"
+
+msgid "Can access and change user settings"
+msgstr "Getur lesið og breytt notandastillingum"
+
+msgid "Full File System Read/Write Access"
+msgstr "Fullur les- og skrifaðgangur að skráakerfi"
+
+msgid "Can read and write all data on the file system"
+msgstr "Getur lesið og skrifað öll gögn í skráakerfinu"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Les- og skrifaðgangur að heimamöppu"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Getur lesið og skrifað öll gögn í heimamöppunni þinni"
+
+msgid "Full File System Read Access"
+msgstr "Fullur lesaðgangur að skráakerfi"
+
+msgid "Can read all data on the file system"
+msgstr "Getur lesið öll gögn í skráakerfinu"
+
+msgid "Home Folder Read Access"
+msgstr "Lesaðgangur að heimamöppu"
+
+msgid "Can read all data in your home directory"
+msgstr "Getur lesið öll gögn í heimamöppunni þinni"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Les- og skrifaðgangur að niðurhalsmöppu"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Getur lesið og skrifað öll gögn í niðurhalsmöppunni þinni"
+
+msgid "Download Folder Read Access"
+msgstr "Lesaðgangur að niðurhalsmöppu"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Getur lesið öll gögn í niðurhalsmöppunni þinni"
+
+msgid "Can read and write all data in the directory"
+msgstr "Getur lesið og skrifað öll gögn í möppunni"
+
+msgid "Can read all data in the directory"
+msgstr "Getur lesið öll gögn í möppunni"
+
+msgid "No File System Access"
+msgstr "Enginn aðgangur að skráakerfi"
+
+msgid "Cannot access the file system at all"
+msgstr "Hefur alls ekki aðgang að skráakerfinu"
+
+msgid "Uses System Services"
+msgstr "Notar kerfisþjónustur"
+
+msgid "Can request data from non-portal system services"
+msgstr "Getur beðið um gögn frá kerfisþjónustum sem eru ekki gáttir"
+
+msgid "Uses Session Services"
+msgstr "Notar setuþjónustur"
+
+msgid "Can request data from non-portal session services"
+msgstr "Getur beðið um gögn frá setuþjónustum sem eru ekki gáttir"
+
+msgid "No Service Access"
+msgstr "Enginn aðgangur að þjónustum"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Hefur alls ekki aðgang að setu- eða kerfisþjónustum sem eru ekki gáttir"
+
+msgid "Verified App Developer"
+msgstr "Staðfestur forritaþróunaraðili"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Þróunaraðili þessa forrits hefur verið staðfestur sem sá sem hann segist vera"
+
+msgid "Proprietary Code"
+msgstr "Séreignarkóði"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Frumkóðinn er ekki opinber, svo ekki er hægt að rýna hann óháð og hann gæti verið óöruggur"
+
+msgid "Auditable Code"
+msgstr "Rýnanlegur kóði"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Frumkóðinn er opinber og hægt er að rýna hann óháð, sem gerir forritið líklegra til að vera öruggt"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Nota kerfisþjónustuna %s"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Nota setuþjónustuna %s"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Nota þjónustuna %s"
+
+msgid "Can see the non-portal service"
+msgstr "Getur séð þjónustu sem er ekki gátt"
+
+msgid "Can talk to the non-portal service"
+msgstr "Getur átt samskipti við þjónustu sem er ekki gátt"
+
+msgid "Can own the non-portal service"
+msgstr "Getur átt þjónustu sem er ekki gátt"
+
+msgid "Global Menu Integration"
+msgstr "Samþætting við altæka valmynd"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Getur birt valmyndir sínar í altækri valmyndastiku"
+
+msgid "KDE Settings Integration"
+msgstr "Samþætting við KDE-stillingar"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Getur greint þegar KDE-skjáborðsstillingar breytast"
+
+msgid "KDE Global Settings"
+msgstr "Altækar KDE-stillingar"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Getur lesið KDE-skjáborðsstillingar eins og leturgerðir og liti"
+
+msgid "Secret Storage Service"
+msgstr "Leyndarmálageymsla"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Getur vistað og sótt eigin lykilorð með lyklakippu kerfisins"
+
+msgid "Desktop Notifications Service"
+msgstr "Skjáborðstilkynningaþjónusta"
+
+msgid "Can send desktop notifications"
+msgstr "Getur sent skjáborðstilkynningar"
+
+msgid "System Tray Integration"
+msgstr "Samþætting við kerfisbakka"
+
+msgid "Can display an icon in the system tray"
+msgstr "Getur birt táknmynd í kerfisbakkanum"
+
+msgid "KDE Connect Integration"
+msgstr "Samþætting við KDE Connect"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Getur átt samskipti við tæki sem pöruð eru í gegnum KDE Connect"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Leiðsögn"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Opna könnunarsíðu"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Opna safnsíðu"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Opna leitarsíðu"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Fjartengdar uppsprettur"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Samstilla fjartengdar uppsprettur"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Almennt"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Opna stillingar"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Sýna flýtilykla"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Loka glugga"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Hætta í Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s uppsett"
+
+msgid "The app is ready to be used"
+msgstr "Forritið er tilbúið til notkunar"
+
+msgid "Updates Are Out of Date"
+msgstr "Uppfærslur eru úreltar"
+
+msgid "Please check for available updates"
+msgstr "Athugaðu með tiltækum uppfærslum"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u forrit uppfært"
+msgstr[1] "%u forrit uppfærð"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s hefur verið uppfært."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s og %s hafa verið uppfærð."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Inniheldur %s, %s og %s."

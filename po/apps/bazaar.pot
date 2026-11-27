@@ -1,0 +1,2772 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-27 06:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. Translators: Please treat "Bazaar" as a brand name and avoid translating.
+msgid "Bazaar"
+msgstr ""
+
+msgid "App Store"
+msgstr ""
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr ""
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr ""
+
+msgid "New Window"
+msgstr ""
+
+msgid "Discover and install apps"
+msgstr ""
+
+msgid ""
+"A fast and modern app store for Linux with a focus on discovering and "
+"installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr ""
+
+msgid "Queue multiple installs and keep browsing"
+msgstr ""
+
+msgid "Easily view app permissions"
+msgstr ""
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr ""
+
+msgid "Search apps directly from GNOME Shell"
+msgstr ""
+
+msgid "The home page displaying Flathub apps"
+msgstr ""
+
+msgid "App page for Exhibit"
+msgstr ""
+
+msgid "Library page"
+msgstr ""
+
+msgid "Search page"
+msgstr ""
+
+msgid "Category page"
+msgstr ""
+
+msgid "Stopped Receiving Updates"
+msgstr ""
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr ""
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr ""
+
+msgid "Add-on"
+msgstr ""
+
+msgid "Manage Add-Ons"
+msgstr ""
+
+msgid "No Add-Ons Visible"
+msgstr ""
+
+msgid ""
+"Your current filter preferences are hiding all known add-ons. Try adjusting "
+"them."
+msgstr ""
+
+msgid "Add-on Page"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+#. Translators: As in 'The app is installed'.
+msgid "Installed"
+msgstr ""
+
+msgid "Downloads/Month"
+msgstr ""
+
+msgid "Stopped Receiving Core Updates"
+msgstr ""
+
+msgid ""
+"This add-on uses a runtime that no longer receives updates or security "
+"fixes. It may become unsafe to use."
+msgstr ""
+
+msgid "Other Sources"
+msgstr ""
+
+#, c-format
+msgid "Add-on for %s"
+msgstr ""
+
+msgid "Show Less"
+msgstr ""
+
+msgid "Show More"
+msgstr ""
+
+msgid "Download Stats"
+msgstr ""
+
+msgid "Age Rating"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Cartoon Violence"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding cartoon violence"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Fantasy Violence"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding fantasy violence"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Realistic Violence"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding realistic violence"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Violence Depicting Bloodshed"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding bloodshed"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Sexual Violence"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding sexual violence"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Alcohol"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding references to alcohol"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Narcotics"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding references to illicit drugs"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Tobacco"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding references to tobacco products"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Nudity"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding nudity of any sort"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Sexual Themes"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Profanity"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding profanity of any kind"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Inappropriate Humor"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding inappropriate humor"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Discrimination"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding discriminatory language of any kind"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Advertising"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding advertising of any kind"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Gambling"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding gambling of any kind"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Purchasing"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding the ability to spend money"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Chat Between Users"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding ways to chat with other users"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Audio Chat Between Users"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding ways to talk with other users"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Contact Details"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid ""
+"No information regarding sharing of social network usernames or email "
+"addresses"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Identifying Information"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding sharing of user information with third parties"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Location Sharing"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding sharing of physical location with other users"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Prostitution"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding references to prostitution"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Adultery"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding references to adultery"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Sexualized Characters"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding sexualized characters"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Desecration"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding references to desecration"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Human Remains"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding visible dead human remains"
+msgstr ""
+
+#. TRANSLATORS: content rating title, see https://hughsie.github.io/oars/
+msgid "Slavery"
+msgstr ""
+
+#. TRANSLATORS: content rating description, see https://hughsie.github.io/oars/
+msgid "No information regarding references to slavery"
+msgstr ""
+
+msgid "Does not include references to drugs"
+msgstr ""
+
+msgid ""
+"Does not include swearing, profanity, and other kinds of strong language"
+msgstr ""
+
+msgid "Does not include ads or monetary transactions"
+msgstr ""
+
+msgid "Does not include sex or nudity"
+msgstr ""
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr ""
+
+msgid "Does not include violence"
+msgstr ""
+
+msgid "Drugs"
+msgstr ""
+
+msgid "Strong Language"
+msgstr ""
+
+msgid "Money"
+msgstr ""
+
+msgid "Social"
+msgstr ""
+
+msgid "Violence"
+msgstr ""
+
+#. Translators: Age rating format, e.g. "12+" for ages 12 and up
+#, c-format
+msgid "%d+"
+msgstr ""
+
+msgctxt "Age rating"
+msgid "All"
+msgstr ""
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr ""
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr ""
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr ""
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr ""
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr ""
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr ""
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr ""
+
+#, c-format
+msgid "%s • %s"
+msgstr ""
+
+#, c-format
+msgid "System folder %s"
+msgstr ""
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr ""
+
+msgid "Host system folders"
+msgstr ""
+
+msgid "Host system configuration from /etc"
+msgstr ""
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr ""
+
+msgid "Desktop folder"
+msgstr ""
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr ""
+
+msgid "Documents folder"
+msgstr ""
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr ""
+
+msgid "Music folder"
+msgstr ""
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr ""
+
+msgid "Pictures folder"
+msgstr ""
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr ""
+
+msgid "Public Share folder"
+msgstr ""
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr ""
+
+msgid "Videos folder"
+msgstr ""
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr ""
+
+msgid "Templates folder"
+msgstr ""
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr ""
+
+msgid "User cache folder"
+msgstr ""
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr ""
+
+msgid "User configuration folder"
+msgstr ""
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr ""
+
+msgid "User data folder"
+msgstr ""
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr ""
+
+msgid "User runtime folder"
+msgstr ""
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr ""
+
+msgid "Unknown filesystem path"
+msgstr ""
+
+msgid "Download Size"
+msgstr ""
+
+msgid "Installed Size"
+msgstr ""
+
+msgid "Amount to download from the internet"
+msgstr ""
+
+msgid "Size on Disk"
+msgstr ""
+
+msgid "Open user data folder"
+msgstr ""
+
+msgid "Your User Data"
+msgstr ""
+
+msgid "Caches, settings, and other app data"
+msgstr ""
+
+msgid "Cache"
+msgstr ""
+
+msgid "Temporary cached data"
+msgstr ""
+
+msgid "Clear Cache"
+msgstr ""
+
+msgid "Installed Runtime Size"
+msgstr ""
+
+msgid "Runtime Download Size"
+msgstr ""
+
+msgid "N/A"
+msgstr ""
+
+msgid "Storage"
+msgstr ""
+
+msgid "Verified"
+msgstr ""
+
+msgid "The Bazaar Contributors"
+msgstr ""
+
+#. Translators: Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgid "translator-credits"
+msgstr ""
+
+msgid "Special Thanks"
+msgstr ""
+
+msgid "Logged Out Successfully!"
+msgstr ""
+
+msgid "Performing setup…"
+msgstr ""
+
+msgid "Set Up Flathub?"
+msgstr ""
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and "
+"install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+
+msgid "Later"
+msgstr ""
+
+msgid "Set Up Flathub"
+msgstr ""
+
+msgid "A backend error occurred"
+msgstr ""
+
+msgid "Refreshing…"
+msgstr ""
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr ""
+
+msgid "Failed to open file"
+msgstr ""
+
+msgid "Failed to load metainfo"
+msgstr ""
+
+msgid "An initialization error occurred"
+msgstr ""
+
+msgid "Checking for updates…"
+msgstr ""
+
+msgid "Failed to check for updates"
+msgstr ""
+
+msgid "Could not find app"
+msgstr ""
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Writing to cache…"
+msgstr ""
+
+msgid "Removing remote…"
+msgstr ""
+
+msgid "Could not remove remote"
+msgstr ""
+
+msgid "Show All"
+msgstr ""
+
+#, c-format
+msgid "All \"%s\""
+msgstr ""
+
+#, c-format
+msgid "%d Applications"
+msgstr ""
+
+msgid "Failed to Load Article"
+msgstr ""
+
+msgid "All apps are already installed"
+msgstr ""
+
+msgid "_OK"
+msgstr ""
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid ""
+"The following will be installed. Additional shared components may also be "
+"installed"
+msgstr ""
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr ""
+
+msgid "Additionally, addons will be installed."
+msgstr ""
+
+msgid "_Cancel"
+msgstr ""
+
+msgid "_Install All"
+msgstr ""
+
+msgid "Bundle Installation"
+msgstr ""
+
+msgid "Additional dependencies may take extra space"
+msgstr ""
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps "
+"from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+
+msgid "Successfully Installed!"
+msgstr ""
+
+#. TRANSLATORS: Button to launch an installed app
+msgid "Open"
+msgstr ""
+
+msgid "Show App Details"
+msgstr ""
+
+msgid "Already Installed"
+msgstr ""
+
+msgid "Installation Failed"
+msgstr ""
+
+msgid "Unknown install size"
+msgstr ""
+
+#, c-format
+msgid "About %s to install"
+msgstr ""
+
+msgid "No special permissions"
+msgstr ""
+
+msgid "Place Applet"
+msgstr ""
+
+msgid "Choose where to add this applet."
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Panel"
+msgstr ""
+
+msgid "Dock"
+msgstr ""
+
+msgid "No Curation"
+msgstr ""
+
+msgid ""
+"There is no curation information provided on this system. You can still "
+"browse apps on Flathub"
+msgstr ""
+
+msgid "Browse Flathub"
+msgstr ""
+
+msgid "Offline"
+msgstr ""
+
+#. TRANSLATORS: accessible description of the installs graph, like "14 May to 31 Oct, highest on 30 Oct with 4,600"
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr ""
+
+#. Translators: K is the suffix for thousands
+#, c-format
+msgid "%.*fK"
+msgstr ""
+
+#. TRANSLATORS: label prefix shown in graph tooltips, for example: "Installs: 42"
+msgid "Installs:"
+msgstr ""
+
+msgid "Not Verified"
+msgstr ""
+
+msgid "Developer information not available."
+msgstr ""
+
+#, c-format
+msgid ""
+"The ownership of the %s app ID has not been verified and it may be a "
+"community package."
+msgstr ""
+
+#, c-format
+msgid ""
+"The ownership of the %s app ID has been manually verified by the Flathub "
+"team."
+msgstr ""
+
+#, c-format
+msgid ""
+"The ownership of the %1$s app ID has been verified by <b>%2$s</b> on "
+"<b>%3$s</b>."
+msgstr ""
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr ""
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr ""
+
+#. Translators: Please treat "Bazaar" as a brand name and avoid translating.
+msgid "Bazaar Release"
+msgstr ""
+
+msgid "Full Release Notes"
+msgstr ""
+
+msgid "This release was made possible by users like you!"
+msgstr ""
+
+#. Translators: Please treat "Bazaar" as a brand name and avoid translating.
+msgid ""
+"I love making Bazaar, but I cannot do it alone. Help support further "
+"development by donating on Ko-Fi."
+msgstr ""
+
+#. Translators: Please treat "Bazaar" as a brand name and avoid translating.
+msgid "Donate to Bazaar"
+msgstr ""
+
+#. Translators: the %s format specifier will be something along the lines of "0.7.6" etc
+#, c-format
+msgid "What's New in %s?"
+msgstr ""
+
+#. Translators: this is a release date label, like "Released February 9, 2026"
+msgid "Released %B %-e, %Y"
+msgstr ""
+
+msgid "Choose an Installation"
+msgstr ""
+
+msgid ""
+"You have multiple versions of this app installed. Which one would you like "
+"to proceed with?"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+#. TRANSLATORS: tooltip for a button that copies text to the clipboard
+msgid "Copy"
+msgstr ""
+
+msgid "Copied!"
+msgstr ""
+
+msgid "Favorite Count"
+msgstr ""
+
+msgid "Failed to update favorite"
+msgstr ""
+
+msgid "Log in with Flathub to manage favorites"
+msgstr ""
+
+msgid "Log In"
+msgstr ""
+
+msgid "Favorites"
+msgstr ""
+
+msgid "Install All"
+msgstr ""
+
+msgid "No Favorites"
+msgstr ""
+
+msgid "Applications you mark as favorite will appear here"
+msgstr ""
+
+msgid "Support This Application"
+msgstr ""
+
+msgid "Remove From Favorites"
+msgstr ""
+
+msgid "Failed to remove favorite"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Editing"
+msgstr ""
+
+msgid "Midi"
+msgstr ""
+
+msgid "Mixer"
+msgstr ""
+
+#. Translators: Search suggestion: the english text will be used for the
+#. search regardless of what you put here, so don't worry about the string
+#. yielding poor search results. Focus on correctness and friendliness,
+#. etc
+msgid "Music"
+msgstr ""
+
+msgid "Player"
+msgstr ""
+
+msgid "Recorder"
+msgstr ""
+
+msgid "Sequencer"
+msgstr ""
+
+msgid "Tuner"
+msgstr ""
+
+msgid "TV"
+msgstr ""
+
+msgid "Emulation"
+msgstr ""
+
+msgid "Action"
+msgstr ""
+
+msgid "Adventure"
+msgstr ""
+
+msgid "Arcade"
+msgstr ""
+
+msgid "Blocks"
+msgstr ""
+
+msgid "Board"
+msgstr ""
+
+msgid "Card"
+msgstr ""
+
+msgid "Kids"
+msgstr ""
+
+msgid "Logic"
+msgstr ""
+
+msgid "Role Playing"
+msgstr ""
+
+msgid "Shooter"
+msgstr ""
+
+msgid "Simulation"
+msgstr ""
+
+msgid "Sports"
+msgstr ""
+
+msgid "Strategy"
+msgstr ""
+
+msgid "Browsers"
+msgstr ""
+
+msgid "Chat"
+msgstr ""
+
+msgid "Mail"
+msgstr ""
+
+msgid "File Sharing"
+msgstr ""
+
+msgid "Audio & Video"
+msgstr ""
+
+msgid "Media"
+msgstr ""
+
+msgid "More Audio & Video"
+msgstr ""
+
+msgid "Developer Tools"
+msgstr ""
+
+msgid "Develop"
+msgstr ""
+
+msgid "More Developer Tools"
+msgstr ""
+
+msgid "Education"
+msgstr ""
+
+msgid "Learn"
+msgstr ""
+
+msgid "More Education"
+msgstr ""
+
+msgid "Gaming"
+msgstr ""
+
+msgid "Play"
+msgstr ""
+
+msgid "More Gaming"
+msgstr ""
+
+msgid "Graphics & Photography"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "More Graphics & Photography"
+msgstr ""
+
+msgid "Networking"
+msgstr ""
+
+msgid "Internet"
+msgstr ""
+
+msgid "More Networking"
+msgstr ""
+
+msgid "Productivity"
+msgstr ""
+
+msgid "Work"
+msgstr ""
+
+msgid "More Productivity"
+msgstr ""
+
+msgid "Science"
+msgstr ""
+
+msgid "More Science"
+msgstr ""
+
+msgid "System"
+msgstr ""
+
+msgid "More System"
+msgstr ""
+
+msgid "Utilities"
+msgstr ""
+
+msgid "Tools"
+msgstr ""
+
+msgid "More Utilities"
+msgstr ""
+
+msgid "Trending"
+msgstr ""
+
+msgid "More Trending"
+msgstr ""
+
+msgid "Popular"
+msgstr ""
+
+msgid "More Popular"
+msgstr ""
+
+msgid "Recently Added"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "More New"
+msgstr ""
+
+msgid "Recently Updated"
+msgstr ""
+
+msgid "Updated"
+msgstr ""
+
+msgid "More Updated"
+msgstr ""
+
+msgid "Mobile"
+msgstr ""
+
+msgid "More Mobile"
+msgstr ""
+
+msgid "Adwaita"
+msgstr ""
+
+msgid "More Adwaita"
+msgstr ""
+
+msgid "KDE Apps"
+msgstr ""
+
+msgid "More KDE Apps"
+msgstr ""
+
+msgid "Made for COSMIC™"
+msgstr ""
+
+msgid "For COSMIC™"
+msgstr ""
+
+msgid "More COSMIC Apps"
+msgstr ""
+
+msgid "Games"
+msgstr ""
+
+msgid "More Games"
+msgstr ""
+
+msgid "Emulators"
+msgstr ""
+
+msgid "More Emulators"
+msgstr ""
+
+msgid "Launchers"
+msgstr ""
+
+msgid "More Game Launchers"
+msgstr ""
+
+msgid "Game Tools"
+msgstr ""
+
+msgid "More Game Tools"
+msgstr ""
+
+msgid "New Year, New Workflows"
+msgstr ""
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr ""
+
+msgid "Staff Picks"
+msgstr ""
+
+msgid "Apps we love right now"
+msgstr ""
+
+msgid "Get Creative"
+msgstr ""
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr ""
+
+msgid "Build Native Apps"
+msgstr ""
+
+msgid "Develop apps that feel at home on your system"
+msgstr ""
+
+msgid "Stay in Touch"
+msgstr ""
+
+msgid "Essential collaboration and communication apps"
+msgstr ""
+
+msgid "Ready for Vacations"
+msgstr ""
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr ""
+
+msgid "Smarter Every Day"
+msgstr ""
+
+msgid "Apps to help you study, research, and write"
+msgstr ""
+
+msgid "Get Cozy"
+msgstr ""
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr ""
+
+msgid "Web Developer Essentials"
+msgstr ""
+
+msgid "Making websites is more fun with these apps"
+msgstr ""
+
+msgid "Take Better Notes"
+msgstr ""
+
+msgid "Find your new favorite note taking tool"
+msgstr ""
+
+msgid "Get Focused"
+msgstr ""
+
+msgid "Great apps for task management"
+msgstr ""
+
+msgid "Make Some Noise"
+msgstr ""
+
+msgid "Apps for creating and producing music"
+msgstr ""
+
+msgid "Get To Work"
+msgstr ""
+
+msgid "Essential office apps"
+msgstr ""
+
+msgid "Flathub Not Added"
+msgstr ""
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr ""
+
+msgid "Can't Reach Flathub"
+msgstr ""
+
+msgid "You can still manage and search for apps."
+msgstr ""
+
+msgid "Search Apps"
+msgstr ""
+
+msgid "Reconnect"
+msgstr ""
+
+msgid "App of the Day"
+msgstr ""
+
+msgid "On the Go"
+msgstr ""
+
+msgid "Apps for your Linux phones and tablets"
+msgstr ""
+
+msgid "More Mobile Apps"
+msgstr ""
+
+msgid "We​ ♥​ Games"
+msgstr ""
+
+msgid "Games and apps to run your favorite titles"
+msgstr ""
+
+msgid ""
+"This is a local preview, some details may differ from the published listing"
+msgstr ""
+
+msgid "Preview Store Appearance"
+msgstr ""
+
+msgid "_Support"
+msgstr ""
+
+msgid ""
+"This app uses a runtime that no longer receives updates or security fixes. "
+"It may become unsafe to use."
+msgstr ""
+
+msgid "Trash Data"
+msgstr ""
+
+msgid "Add-ons"
+msgstr ""
+
+msgid "More Add-Ons"
+msgstr ""
+
+msgid "Links"
+msgstr ""
+
+msgid "Similar Apps"
+msgstr ""
+
+msgid "No URL"
+msgstr ""
+
+msgid ""
+"This app has a FLOSS license, meaning the source code can be audited for "
+"safety."
+msgstr ""
+
+msgid ""
+"This app has a proprietary license, meaning the source code is developed "
+"privately and cannot be audited by an independent third party."
+msgstr ""
+
+msgid "Other Apps From This Developer"
+msgstr ""
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr ""
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr ""
+
+#, c-format
+msgid "Apps by %s"
+msgstr ""
+
+msgid "Apps by This Developer"
+msgstr ""
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Failed to Remove User Data"
+msgstr ""
+
+msgid "Hardware Support"
+msgstr ""
+
+msgid "Keyboard support"
+msgstr ""
+
+msgid "Requires keyboards"
+msgstr ""
+
+msgid "Recommends keyboards"
+msgstr ""
+
+msgid "Supports keyboards"
+msgstr ""
+
+msgid "Unknown support for keyboards"
+msgstr ""
+
+msgid "Mouse support"
+msgstr ""
+
+msgid "Requires mice or pointing devices"
+msgstr ""
+
+msgid "Recommends mice or pointing devices"
+msgstr ""
+
+msgid "Supports mice or pointing devices"
+msgstr ""
+
+msgid "Unknown support for mice or pointing devices"
+msgstr ""
+
+msgid "Touchscreen support"
+msgstr ""
+
+msgid "Requires touchscreens"
+msgstr ""
+
+msgid "Recommends touchscreens"
+msgstr ""
+
+msgid "Supports touchscreens"
+msgstr ""
+
+msgid "Unknown support for touchscreens"
+msgstr ""
+
+msgid "Mobile support"
+msgstr ""
+
+msgid "Works on mobile devices"
+msgstr ""
+
+msgid "May not work well on mobile devices"
+msgstr ""
+
+msgid "Desktop support"
+msgstr ""
+
+msgid "Works well on large screens"
+msgstr ""
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr ""
+
+#, c-format
+msgid "%s works on most devices"
+msgstr ""
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr ""
+
+msgid "_Open"
+msgstr ""
+
+msgid "Uninstall Application"
+msgstr ""
+
+msgid "_Remove"
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+#, c-format
+msgid "Install %s from %s"
+msgstr ""
+
+#, c-format
+msgid "Install %s"
+msgstr ""
+
+msgid "Donate"
+msgstr ""
+
+msgid "Search installed apps"
+msgstr ""
+
+msgid "No Apps Found"
+msgstr ""
+
+msgid "Search Store Instead"
+msgstr ""
+
+msgid "Pending Updates"
+msgstr ""
+
+msgid "Downloads"
+msgstr ""
+
+msgid "Recently Uninstalled"
+msgstr ""
+
+msgid "Clear Finished Tasks"
+msgstr ""
+
+msgid "Sort Options"
+msgstr ""
+
+msgid "Sort By"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr ""
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "No applications found"
+msgstr ""
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Get Involved"
+msgstr ""
+
+msgid "Learn More"
+msgstr ""
+
+msgid "Unknown License"
+msgstr ""
+
+msgid "Community Built"
+msgstr ""
+
+msgid "Proprietary"
+msgstr ""
+
+msgid "Special License"
+msgstr ""
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+
+msgid "The license of this app is not known"
+msgstr ""
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and "
+"released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it "
+"works. It may be insecure in ways that are hard to detect, and it may change "
+"without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+
+msgid "License"
+msgstr ""
+
+msgid "Connect to Flathub"
+msgstr ""
+
+msgid "Something Went Wrong"
+msgstr ""
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr ""
+
+msgid "Finish"
+msgstr ""
+
+#, c-format
+msgid "Hello, %s!"
+msgstr ""
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr ""
+
+msgid ""
+"Metainfo files don't include app icons by themselves. Would you like to "
+"select one manually?"
+msgstr ""
+
+msgid "Skip"
+msgstr ""
+
+msgid "Select Icon"
+msgstr ""
+
+msgid "Image Files"
+msgstr ""
+
+msgid "New Permissions"
+msgstr ""
+
+msgid "_Accept"
+msgstr ""
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "User"
+msgstr ""
+
+msgid "Beta"
+msgstr ""
+
+msgid "End-Of-Life"
+msgstr ""
+
+msgid "Preferences"
+msgstr ""
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr ""
+
+msgid "Refresh Manually"
+msgstr ""
+
+msgid "App Updates"
+msgstr ""
+
+msgid ""
+"Auto-updates will pause on metered networks or when power saving is on to "
+"save data and battery."
+msgstr ""
+
+msgid "_Automatic"
+msgstr ""
+
+msgid "Automatically check for and download app updates"
+msgstr ""
+
+msgid "_Manual"
+msgstr ""
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr ""
+
+msgid "Automatic Update _Notifications"
+msgstr ""
+
+msgid "Notify when updates have been automatically installed"
+msgstr ""
+
+msgid "Content Filters"
+msgstr ""
+
+msgid "_Free Software Only"
+msgstr ""
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr ""
+
+msgid "F_lathub Results Only"
+msgstr ""
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr ""
+
+msgid "_Verified Results Only"
+msgstr ""
+
+msgid "Hide results that are not verified on Flathub"
+msgstr ""
+
+msgid "Hide _End-of-Life Apps"
+msgstr ""
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr ""
+
+msgid "Progress Bar Theme"
+msgstr ""
+
+msgid "Accent Color"
+msgstr ""
+
+msgid "Pride Colors"
+msgstr ""
+
+msgid "Lesbian Pride Colors"
+msgstr ""
+
+msgid "Male Homosexual Pride Colors"
+msgstr ""
+
+msgid "Transgender Pride Colors"
+msgstr ""
+
+msgid "Nonbinary Pride Colors"
+msgstr ""
+
+msgid "Bisexual Pride Colors"
+msgstr ""
+
+msgid "Asexual Pride Colors"
+msgstr ""
+
+msgid "Pansexual Pride Colors"
+msgstr ""
+
+msgid "Aromantic Pride Colors"
+msgstr ""
+
+msgid "Genderfluid Pride Colors"
+msgstr ""
+
+msgid "Polysexual Pride Colors"
+msgstr ""
+
+msgid "Omnisexual Pride Colors"
+msgstr ""
+
+msgid "Aroace Pride Colors"
+msgstr ""
+
+msgid "Agender Pride Colors"
+msgstr ""
+
+msgid "Genderqueer Pride Colors"
+msgstr ""
+
+msgid "Intersex Pride Colors"
+msgstr ""
+
+msgid "Demigender Pride Colors"
+msgstr ""
+
+msgid "Biromantic Pride Colors"
+msgstr ""
+
+msgid "Disability Pride Colors"
+msgstr ""
+
+msgid "Femboy Pride Colors"
+msgstr ""
+
+msgid "Neutrois Pride Colors"
+msgstr ""
+
+#. Translators: Please treat "Bazaar" as a brand name and avoid translating.
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr ""
+
+msgid "Version History"
+msgstr ""
+
+#. Translators: something happened less than a day ago
+msgid "Today"
+msgstr ""
+
+#. Translators: something happened more than a day ago but less than 2 days ago
+msgid "Yesterday"
+msgstr ""
+
+#. Translators: something happened days ago
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#. Translators: something happened weeks ago
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#. Translators: something happened months ago
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#. Translators: something happened years ago
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#. TRANSLATORS: This is the date string with: day number, month name, year.
+#. i.e. "22 March 2026"
+msgid "%e %B %Y"
+msgstr ""
+
+#, c-format
+msgid "Version %s"
+msgstr ""
+
+msgid "No details for this release"
+msgstr ""
+
+msgid "Get More Information"
+msgstr ""
+
+msgid "_Version History"
+msgstr ""
+
+msgid "Remotes"
+msgstr ""
+
+msgid "System Installation"
+msgstr ""
+
+msgid "Available to all users on this computer"
+msgstr ""
+
+msgid "User Installation"
+msgstr ""
+
+msgid "Only available to you"
+msgstr ""
+
+msgid "Remove Remote"
+msgstr ""
+
+#, c-format
+msgid "Remove %s"
+msgstr ""
+
+msgid "Unused"
+msgstr ""
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr ""
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr ""
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr ""
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid ""
+"The app below was installed from this remote and will be removed from your "
+"account along with it."
+msgid_plural ""
+"These apps were installed from this remote and will be removed from your "
+"account along with it."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid ""
+"The app below was installed from this remote and will be removed for all "
+"users along with it."
+msgid_plural ""
+"These apps were installed from this remote and will be removed for all users "
+"along with it."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Uninstall"
+msgstr ""
+
+#. Translators: If you can't find a short enough translation, use "/" to use an icon instead.
+msgid "Get"
+msgstr ""
+
+msgid "Arbitrary Permissions"
+msgstr ""
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any "
+"other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, "
+"such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app "
+"is likely to do."
+msgstr ""
+
+msgid "View Other Permissions"
+msgstr ""
+
+#. TRANSLATORS: short app safety rating label
+msgid "Safe"
+msgstr ""
+
+msgid "App ID"
+msgstr ""
+
+msgid "SDK"
+msgstr ""
+
+msgid ""
+"This app uses an outdated version of the software platform (SDK) and might "
+"contain bugs or security vulnerabilities which will not be fixed."
+msgstr ""
+
+msgid "Safety"
+msgstr ""
+
+#, c-format
+msgid "%s is Safe"
+msgstr ""
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr ""
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr ""
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr ""
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Previous Screenshot"
+msgstr ""
+
+msgid "Next Screenshot"
+msgstr ""
+
+msgid "Copy Image"
+msgstr ""
+
+msgid "Reset View"
+msgstr ""
+
+msgid "Zoom Out"
+msgstr ""
+
+msgid "Zoom In"
+msgstr ""
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Screenshots Carousel"
+msgstr ""
+
+msgid "No Screenshots"
+msgstr ""
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr ""
+
+#, c-format
+msgid "Screenshot %u"
+msgstr ""
+
+msgid "Clear Search"
+msgstr ""
+
+msgid "Filters"
+msgstr ""
+
+msgid "_Verified"
+msgstr ""
+
+msgid "_Free/Open"
+msgstr ""
+
+msgid "Non-_EOL"
+msgstr ""
+
+msgid "Filter out End-of-Life apps"
+msgstr ""
+
+msgid "_Mobile Friendly"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Search Apps, Games, Software"
+msgstr ""
+
+msgid "Search Filters"
+msgstr ""
+
+msgid "Browse Categories"
+msgstr ""
+
+msgid "Categories Unavailable"
+msgstr ""
+
+msgid "Search for apps using the search bar above."
+msgstr ""
+
+msgid "No Applications Found"
+msgstr ""
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr ""
+
+#. Translators: Search suggestion: the english text will be used for the
+#. search regardless of what you put here, so don't worry about the string
+#. yielding poor search results. Focus on correctness and friendliness,
+#. etc
+msgid "Browser"
+msgstr ""
+
+#. Translators: Search suggestion: the english text will be used for the
+#. search regardless of what you put here, so don't worry about the string
+#. yielding poor search results. Focus on correctness and friendliness,
+#. etc
+msgid "Video"
+msgstr ""
+
+#. Translators: Search suggestion: the english text will be used for the
+#. search regardless of what you put here, so don't worry about the string
+#. yielding poor search results. Focus on correctness and friendliness,
+#. etc
+msgid "Office"
+msgstr ""
+
+#. Translators: Search suggestion: the english text will be used for the
+#. search regardless of what you put here, so don't worry about the string
+#. yielding poor search results. Focus on correctness and friendliness,
+#. etc
+msgid "PDF"
+msgstr ""
+
+#. Translators: Search suggestion: the english text will be used for the
+#. search regardless of what you put here, so don't worry about the string
+#. yielding poor search results. Focus on correctness and friendliness,
+#. etc
+msgid "Calendar"
+msgstr ""
+
+#. Translators: Search suggestion: the english text will be used for the
+#. search regardless of what you put here, so don't worry about the string
+#. yielding poor search results. Focus on correctness and friendliness,
+#. etc
+msgid "Messaging"
+msgstr ""
+
+#. Translators: Search suggestion: the english text will be used for the
+#. search regardless of what you put here, so don't worry about the string
+#. yielding poor search results. Focus on correctness and friendliness,
+#. etc
+msgid "Paint"
+msgstr ""
+
+#. Translators: Search suggestion: the english text will be used for the
+#. search regardless of what you put here, so don't worry about the string
+#. yielding poor search results. Focus on correctness and friendliness,
+#. etc
+msgid "VPN"
+msgstr ""
+
+#. Translators: Search suggestion: the english text will be used for the
+#. search regardless of what you put here, so don't worry about the string
+#. yielding poor search results. Focus on correctness and friendliness,
+#. etc
+msgid "Torrent"
+msgstr ""
+
+#. Translators: Search suggestion: the english text will be used for the
+#. search regardless of what you put here, so don't worry about the string
+#. yielding poor search results. Focus on correctness and friendliness,
+#. etc
+msgid "Emulator"
+msgstr ""
+
+msgid "Copy Link"
+msgstr ""
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr ""
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr ""
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr ""
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr ""
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr ""
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr ""
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr ""
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr ""
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr ""
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr ""
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr ""
+
+#. TRANSLATORS: page in the statistics dialog
+msgid "Timeline"
+msgstr ""
+
+#. TRANSLATORS: total number of installs of an app, shown in the statistics dialog
+msgid "Total"
+msgstr ""
+
+#. TRANSLATORS: installs in the last 7 days, shown in the statistics dialog
+msgid "This Week"
+msgstr ""
+
+msgid "Installs per day"
+msgstr ""
+
+#. TRANSLATORS: page in the statistics dialog
+msgid "World"
+msgstr ""
+
+msgid "Installs per country"
+msgstr ""
+
+msgid "Since 4/15/2024"
+msgstr ""
+
+msgid "No Results Found"
+msgstr ""
+
+msgid "Search failed"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Keep User Data"
+msgstr ""
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr ""
+
+msgid "Delete All Data"
+msgstr ""
+
+msgid "Permanently erase user data to save space"
+msgstr ""
+
+#, c-format
+msgid "Remove %s?"
+msgstr ""
+
+msgid "Select which version to remove."
+msgstr ""
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr ""
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr ""
+
+msgid ""
+"This app has full access to your system, including all <b>your files, "
+"browser history, saved passwords</b>, and more. It also has access to the "
+"internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with "
+"these permissions."
+msgstr ""
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record "
+"all keystrokes, capture screenshots, and monitor other applications</b>. It "
+"also has access to the internet, meaning it could send your data to outside "
+"parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with "
+"these permissions."
+msgstr ""
+
+msgid "_Install Anyway"
+msgstr ""
+
+msgid "Failed to load transaction dialog"
+msgstr ""
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr ""
+
+msgid "App Add-On"
+msgstr ""
+
+msgid "Runtime"
+msgstr ""
+
+msgid "In Queue"
+msgstr ""
+
+msgid "Finishing Up"
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Cancelled"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Cancel Transaction"
+msgstr ""
+
+msgid "Show Details"
+msgstr ""
+
+msgid "Show Error Info"
+msgstr ""
+
+#, c-format
+msgid "%s Freed"
+msgstr ""
+
+msgid "Transaction Error"
+msgstr ""
+
+msgid "Pending"
+msgstr ""
+
+msgid "Installed Updates"
+msgstr ""
+
+msgid "Release Notes"
+msgstr ""
+
+msgid "No Release Info"
+msgstr ""
+
+msgid "_Update All"
+msgstr ""
+
+msgid "This update requests new permissions"
+msgstr ""
+
+msgid "Manage Leftover User Data"
+msgstr ""
+
+msgid "No Leftover User Data Found"
+msgstr ""
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr ""
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr ""
+
+msgid "Open User Data Folder"
+msgstr ""
+
+msgid "Trash User Data"
+msgstr ""
+
+msgid "Refreshing"
+msgstr ""
+
+msgid "Curated"
+msgstr ""
+
+msgid "Explore"
+msgstr ""
+
+#. Translators: .
+msgid "Library"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Main Menu"
+msgstr ""
+
+#. Translators: Please treat "Bazaar" as a brand name and avoid translating.
+msgid "You are running a new version of Bazaar!"
+msgstr ""
+
+msgid "See What's New"
+msgstr ""
+
+msgid ""
+"You have a network connection but are viewing a cached version of Flathub"
+msgstr ""
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr ""
+
+#. Translators: Please treat "Bazaar" as a brand name and avoid translating.
+msgid "_Donate to Bazaar"
+msgstr ""
+
+msgid "_Refresh"
+msgstr ""
+
+msgid "_Login With Flathub"
+msgstr ""
+
+msgid "_Manage Leftover User Data"
+msgstr ""
+
+msgid "Manage R_emotes"
+msgstr ""
+
+msgid "_Preferences"
+msgstr ""
+
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#. Translators: Please treat "Bazaar" as a brand name and avoid translating.
+msgid "_About Bazaar"
+msgstr ""
+
+#. Translators: Please treat "Bazaar" as a brand name and avoid translating.
+msgid "_Quit Bazaar"
+msgstr ""
+
+msgid "Log Out"
+msgstr ""
+
+#. Translators: Please treat "Bazaar" as a brand name and avoid translating. %s is the title of the current page.
+#, c-format
+msgid "Bazaar — %s"
+msgstr ""
+
+msgid "Failed to launch application"
+msgstr ""
+
+msgid "Could not open link"
+msgstr ""
+
+#. Translators: Please treat "Bazaar" as a brand name and avoid translating.
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr ""
+
+msgid "Can't do that right now!"
+msgstr ""
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] ""
+msgstr[1] ""
+
+#. Translators: accessible description of the world map, like. "Most installs from Germany, 1,200 installs, France, 800 installs"
+#, c-format
+msgid "Most installs from %s"
+msgstr ""
+
+msgid "---"
+msgstr ""
+
+#. Translators: M is the suffix for millions
+#, c-format
+msgid "%.*fM"
+msgstr ""
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr ""
+
+#. TRANSLATORS: %s is a formatted file size, for example: "128 MB"
+#, c-format
+msgid "+%s Runtime"
+msgstr ""
+
+msgid "Size information unavailable"
+msgstr ""
+
+#, c-format
+msgid "Download size of %s"
+msgstr ""
+
+#, c-format
+msgid "Installed size of %s"
+msgstr ""
+
+msgid "All Ages"
+msgstr ""
+
+msgid "Age rating information unavailable"
+msgstr ""
+
+msgid "Suitable for all ages"
+msgstr ""
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr ""
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr ""
+
+msgid "Free software"
+msgstr ""
+
+msgid "Proprietary Software"
+msgstr ""
+
+#, c-format
+msgid "Special License: %s"
+msgstr ""
+
+#. TRANSLATORS: You can omit the "software" part if your translation makes it obvious we're talking about "libre" and not "gratis"
+msgid "Free Software"
+msgstr ""
+
+msgid "Adaptive"
+msgstr ""
+
+msgid "Desktop Only"
+msgstr ""
+
+msgid "Works on desktop, tablets, and phones"
+msgstr ""
+
+msgid "May not work on mobile devices"
+msgstr ""
+
+#. TRANSLATORS: short app safety rating label
+msgid "Low Risk"
+msgstr ""
+
+#. TRANSLATORS: short app safety rating label
+msgid "Medium Risk"
+msgstr ""
+
+#. TRANSLATORS: short app safety rating label
+msgid "High Risk"
+msgstr ""
+
+msgid "Unknown Permissions"
+msgstr ""
+
+msgid "Permissions are missing for this app."
+msgstr ""
+
+msgid "No Permissions"
+msgstr ""
+
+msgid "App is fully sandboxed"
+msgstr ""
+
+msgid "Network Access"
+msgstr ""
+
+msgid "Can access the internet"
+msgstr ""
+
+msgid "No Network Access"
+msgstr ""
+
+msgid "Cannot access the internet"
+msgstr ""
+
+msgid "User Device Access"
+msgstr ""
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr ""
+
+msgid "No User Device Access"
+msgstr ""
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr ""
+
+msgid "Input Device Access"
+msgstr ""
+
+msgid "Can access input devices"
+msgstr ""
+
+msgid "Microphone Access and Audio Playback"
+msgstr ""
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr ""
+
+msgid "System Device Access"
+msgstr ""
+
+msgid "Can access system devices which require elevated permissions"
+msgstr ""
+
+msgid "Screen Contents Access"
+msgstr ""
+
+msgid "Can access the contents of the screen or other windows"
+msgstr ""
+
+msgid "Legacy Windowing System"
+msgstr ""
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr ""
+
+msgid "Can acquire arbitrary permissions"
+msgstr ""
+
+msgid "User Settings"
+msgstr ""
+
+msgid "Can access and change user settings"
+msgstr ""
+
+msgid "Full File System Read/Write Access"
+msgstr ""
+
+msgid "Can read and write all data on the file system"
+msgstr ""
+
+msgid "Home Folder Read/Write Access"
+msgstr ""
+
+msgid "Can read and write all data in your home directory"
+msgstr ""
+
+msgid "Full File System Read Access"
+msgstr ""
+
+msgid "Can read all data on the file system"
+msgstr ""
+
+msgid "Home Folder Read Access"
+msgstr ""
+
+msgid "Can read all data in your home directory"
+msgstr ""
+
+msgid "Download Folder Read/Write Access"
+msgstr ""
+
+msgid "Can read and write all data in your downloads directory"
+msgstr ""
+
+msgid "Download Folder Read Access"
+msgstr ""
+
+msgid "Can read all data in your downloads directory"
+msgstr ""
+
+msgid "Can read and write all data in the directory"
+msgstr ""
+
+msgid "Can read all data in the directory"
+msgstr ""
+
+msgid "No File System Access"
+msgstr ""
+
+msgid "Cannot access the file system at all"
+msgstr ""
+
+msgid "Uses System Services"
+msgstr ""
+
+msgid "Can request data from non-portal system services"
+msgstr ""
+
+msgid "Uses Session Services"
+msgstr ""
+
+msgid "Can request data from non-portal session services"
+msgstr ""
+
+msgid "No Service Access"
+msgstr ""
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr ""
+
+msgid "Verified App Developer"
+msgstr ""
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr ""
+
+msgid "Proprietary Code"
+msgstr ""
+
+msgid ""
+"The source code is not public, so it cannot be independently audited and "
+"might be unsafe"
+msgstr ""
+
+msgid "Auditable Code"
+msgstr ""
+
+msgid ""
+"The source code is public and can be independently audited, which makes the "
+"app more likely to be safe"
+msgstr ""
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr ""
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr ""
+
+#, c-format
+msgid "Use the %s Service"
+msgstr ""
+
+msgid "Can see the non-portal service"
+msgstr ""
+
+msgid "Can talk to the non-portal service"
+msgstr ""
+
+msgid "Can own the non-portal service"
+msgstr ""
+
+msgid "Global Menu Integration"
+msgstr ""
+
+msgid "Can display its menus in a global menu bar"
+msgstr ""
+
+msgid "KDE Settings Integration"
+msgstr ""
+
+msgid "Can detect when KDE desktop settings change"
+msgstr ""
+
+msgid "KDE Global Settings"
+msgstr ""
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr ""
+
+msgid "Secret Storage Service"
+msgstr ""
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr ""
+
+msgid "Desktop Notifications Service"
+msgstr ""
+
+msgid "Can send desktop notifications"
+msgstr ""
+
+msgid "System Tray Integration"
+msgstr ""
+
+msgid "Can display an icon in the system tray"
+msgstr ""
+
+msgid "KDE Connect Integration"
+msgstr ""
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr ""
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr ""
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr ""
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr ""
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr ""
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr ""
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr ""
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr ""
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr ""
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr ""
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr ""
+
+#, c-format
+msgid "%s Installed"
+msgstr ""
+
+msgid "The app is ready to be used"
+msgstr ""
+
+msgid "Updates Are Out of Date"
+msgstr ""
+
+msgid "Please check for available updates"
+msgstr ""
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "%s has been updated."
+msgstr ""
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr ""
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr ""
+

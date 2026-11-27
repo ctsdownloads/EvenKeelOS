@@ -1,0 +1,591 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Encerrar %d janela"
+msgstr[1] "Encerrar %d janelas"
+
+msgid "Power options"
+msgstr "Opções de energia"
+
+msgid "Event logs"
+msgstr "Registros de eventos"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "Device Management"
+msgstr "Gerenciamento de dispositivos"
+
+msgid "Disk Management"
+msgstr "Gerenciamento de disco"
+
+msgid "Gnome Settings"
+msgstr "Configurações do GNOME"
+
+msgid "Dash to Panel has been updated!"
+msgstr "O Dash to Panel foi atualizado!"
+
+msgid "You are now running version"
+msgstr "Você está executando agora a versão"
+
+msgid "See what's new"
+msgstr "Veja o que há de novo"
+
+msgid "Top Bar"
+msgstr "Barra superior"
+
+msgid "Isolate Workspaces options"
+msgstr "Opções de isolamento de espaços de trabalho"
+
+msgid "Isolate monitors options"
+msgstr "Opções de isolamento de monitores"
+
+msgid "Text"
+msgstr "Texto"
+
+msgid "Command"
+msgstr "Comando"
+
+msgid "Remove"
+msgstr "Remover"
+
+msgid "App icon highlight options"
+msgstr "Opções de destaque do ícone do aplicativo"
+
+msgid "Move to current Workspace"
+msgstr "Mover para o espaço de trabalho atual"
+
+msgid "The panel background opacity is affected by"
+msgstr "A opacidade do fundo do painel é afetada por"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Alterar a opacidade quando uma janela chegar a menos de (px)"
+
+msgid "Change opacity to (%)"
+msgstr "Alterar a opacidade para (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Duração da animação de mudança de opacidade (ms)"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Largura máxima (px) dos títulos dos aplicativos"
+
+msgid "(default is 160)"
+msgstr "(o padrão é 160)"
+
+msgid "Highlight AppIcon color"
+msgstr "Cor de destaque do ícone do aplicativo"
+
+msgid "Pressed AppIcon color"
+msgstr "Cor do ícone do aplicativo pressionado"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Raio dos cantos do destaque do ícone do aplicativo"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Substitui o raio global dos cantos (o padrão é 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Ocultar o painel somente de janelas"
+
+msgid "Overlapping"
+msgstr "Sobrepostas"
+
+msgid "On same monitor"
+msgstr "No mesmo monitor"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Tocar a borda do monitor com o ponteiro revela o painel"
+
+msgid "Limit to panel length"
+msgstr "Limitar ao comprimento do painel"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Passar o ponteiro sobre a área do painel mantém o painel visível"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Exigir pressão na borda do monitor para revelar o painel"
+
+msgid "(requires multi-monitors option)"
+msgstr "(requer a opção de vários monitores)"
+
+msgid "Only hide secondary panels"
+msgstr "Ocultar somente os painéis secundários"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Sintaxe: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Persist state across restarts"
+msgstr "Manter o estado entre reinicializações"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(respeita o “Não perturbe” do GNOME e requer a opção de mostrar o contador de notificações)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Revelar e manter o painel ao receber notificação"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Atraso antes de revelar o painel (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Isolar monitores mesmo ao usar um único painel"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Isolar espaços de trabalho no alternador de aplicativos do GNOME Shell"
+
+msgid "Raise windows"
+msgstr "Trazer janelas para frente"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Alternar única / Distribuir várias"
+
+msgid "e.g. <Super>q"
+msgstr "ex.: <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Nos monitores secundários, mostrar a sobreposição nos ícones correspondentes ao monitor principal"
+
+msgid "Show the overlay on all monitors"
+msgstr "Mostrar a sobreposição em todos os monitores"
+
+msgid "Show window previews on hotkey"
+msgstr "Mostrar pré-visualizações de janelas com a tecla de atalho"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Selecione quais teclas numéricas do teclado ativam as teclas de atalho"
+
+msgid "Hotkeys are activated with"
+msgstr "As teclas de atalho são ativadas com"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Atraso entre eventos de rolagem do mouse (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Use este valor para limitar o número de eventos de rolagem do mouse capturados."
+
+msgid "Show popup when changing workspace"
+msgstr "Mostrar aviso ao mudar de espaço de trabalho"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Isto afeta apenas o aviso de espaço de trabalho ao rolar sobre o painel."
+
+msgid "<i>App Details</i> menu item"
+msgstr "Item de menu <i>Detalhes do aplicativo</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Detalhes do aplicativo</i> só está disponível quando o GNOME Software está instalado"
+
+msgid "Show Applications icon"
+msgstr "Ícone Mostrar aplicativos"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Espaçamento lateral do ícone Mostrar aplicativos (px)"
+
+msgid "Override escape key and return to desktop"
+msgstr "Substituir a tecla Esc e voltar à área de trabalho"
+
+msgid "Override Show Desktop line color"
+msgstr "Substituir a cor da linha de Exibir área de trabalho"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Revelar a área de trabalho ao passar o ponteiro sobre o botão Exibir área de trabalho"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Atraso antes de revelar a área de trabalho (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Duração do esmaecimento (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Tempo (ms) antes de mostrar"
+
+msgid "(400 is default)"
+msgstr "(o padrão é 400)"
+
+msgid "Time (ms) before hiding"
+msgstr "Tempo (ms) antes de ocultar"
+
+msgid "(100 is default)"
+msgstr "(o padrão é 100)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Se desativado, o fundo das pré-visualizações tem a mesma opacidade do painel."
+
+msgid "50"
+msgstr "50"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Todas as janelas, exceto a visualizada, têm a opacidade definida com o mesmo valor."
+
+msgid "About"
+msgstr "Sobre"
+
+msgid "Info"
+msgstr "Informações"
+
+msgid "Version"
+msgstr "Versão"
+
+msgid "Source"
+msgstr "Código-fonte"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Exportar e importar"
+
+msgid "Sponsored and originally developed by"
+msgstr "Patrocinado e desenvolvido originalmente por"
+
+msgid "Action"
+msgstr "Ação"
+
+msgid "Toggle windows"
+msgstr "Alternar janelas"
+
+msgid "Scroll action"
+msgstr "Ação de rolagem"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Comportamento ao rolar o mouse sobre o painel."
+
+msgid "Scroll panel action"
+msgstr "Ação de rolagem do painel"
+
+msgid "Do nothing"
+msgstr "Não fazer nada"
+
+msgid "Switch workspace"
+msgstr "Alternar espaço de trabalho"
+
+msgid "Cycle windows"
+msgstr "Percorrer janelas"
+
+msgid "Change volume"
+msgstr "Alterar volume"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Comportamento ao rolar o mouse sobre um ícone de aplicativo."
+
+msgid "Scroll icon action"
+msgstr "Ação de rolagem do ícone"
+
+msgid "Same as panel"
+msgstr "Igual ao painel"
+
+msgid "Hotkey overlay"
+msgstr "Sobreposição de teclas de atalho"
+
+msgid "Application icons context menu"
+msgstr "Menu de contexto dos ícones de aplicativos"
+
+msgid "(right-click menu)"
+msgstr "(menu do botão direito)"
+
+msgid "Secondary menu"
+msgstr "Menu secundário"
+
+msgid "Panel context menu entries"
+msgstr "Entradas do menu de contexto do painel"
+
+msgid "Add entry"
+msgstr "Adicionar entrada"
+
+msgid "Behavior"
+msgstr "Comportamento"
+
+msgid "Applications"
+msgstr "Aplicativos"
+
+msgid "Show favorite applications"
+msgstr "Mostrar aplicativos favoritos"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Mostrar aplicativos favoritos nos painéis secundários"
+
+msgid "Show running applications"
+msgstr "Mostrar aplicativos em execução"
+
+msgid "Ungroup applications"
+msgstr "Desagrupar aplicativos"
+
+msgid "Show notification counter badge"
+msgstr "Mostrar o selo contador de notificações"
+
+msgid "Hover"
+msgstr "Passar o ponteiro"
+
+msgid "Show tooltip on hover"
+msgstr "Mostrar dica ao passar o ponteiro"
+
+msgid "Isolate"
+msgstr "Isolar"
+
+msgid "Isolate monitors"
+msgstr "Isolar monitores"
+
+msgid "Overview"
+msgstr "Visão geral"
+
+msgid "Click empty space to close overview"
+msgstr "Clicar em espaço vazio para fechar a visão geral"
+
+msgid "Disable show overview on startup"
+msgstr "Desativar a visão geral na inicialização"
+
+msgid "Fine-Tune"
+msgstr "Ajuste fino"
+
+msgid "Font size"
+msgstr "Tamanho da fonte"
+
+msgid "(0 = theme default)"
+msgstr "(0 = padrão do tema)"
+
+msgid "Tray Font Size"
+msgstr "Tamanho da fonte da bandeja"
+
+msgid "LeftBox Font Size"
+msgstr "Tamanho da fonte da LeftBox"
+
+msgid "Padding"
+msgstr "Espaçamento"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = padrão do tema)"
+
+msgid "Tray Item Padding"
+msgstr "Espaçamento dos itens da bandeja"
+
+msgid "Status Icon Padding"
+msgstr "Espaçamento dos ícones de status"
+
+msgid "LeftBox Padding"
+msgstr "Espaçamento da LeftBox"
+
+msgid "Animate"
+msgstr "Animar"
+
+msgid "Gnome functionality"
+msgstr "Funcionalidade do GNOME"
+
+msgid "(overview)"
+msgstr "(visão geral)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Manter o dash original do GNOME Shell"
+
+msgid "(e.g. date menu)"
+msgstr "(ex.: menu de data)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Ativar os botões de menu do painel somente ao clicar"
+
+msgid "Position"
+msgstr "Posição"
+
+msgid "Panel"
+msgstr "Painel"
+
+msgid "Order and Position on monitors"
+msgstr "Ordem e posição nos monitores"
+
+msgid "Monitor"
+msgstr "Monitor"
+
+msgid "Panel monitor position"
+msgstr "Posição do painel no monitor"
+
+msgid "(default is 48)"
+msgstr "(o padrão é 48)"
+
+msgid "Panel thickness"
+msgstr "Espessura do painel"
+
+msgid "(default is 100)"
+msgstr "(o padrão é 100)"
+
+msgid "Panel length"
+msgstr "Comprimento do painel"
+
+msgid "Dynamic"
+msgstr "Dinâmico"
+
+msgid "Taskbar Display"
+msgstr "Exibição da barra de tarefas"
+
+msgid "Style"
+msgstr "Estilo"
+
+msgid "Global style"
+msgstr "Estilo global"
+
+msgid "Border radius"
+msgstr "Raio dos cantos"
+
+msgid "AppIcon style"
+msgstr "Estilo do ícone do aplicativo"
+
+msgid "(default is 8)"
+msgstr "(o padrão é 8)"
+
+msgid "App Icon Margin"
+msgstr "Margem do ícone do aplicativo"
+
+msgid "(default is 4)"
+msgstr "(o padrão é 4)"
+
+msgid "App Icon Padding"
+msgstr "Espaçamento do ícone do aplicativo"
+
+msgid "Animate hovering app icons"
+msgstr "Animar ícones de aplicativos ao passar o ponteiro"
+
+msgid "Highlight hovering app icons"
+msgstr "Destacar ícones de aplicativos ao passar o ponteiro"
+
+msgid "Icon style"
+msgstr "Estilo do ícone"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Symbolic"
+msgstr "Simbólico"
+
+msgid "Grayscale"
+msgstr "Tons de cinza"
+
+msgid "Running indicator"
+msgstr "Indicador de execução"
+
+msgid "Panel style"
+msgstr "Estilo do painel"
+
+msgid "(default is 0)"
+msgstr "(o padrão é 0)"
+
+msgid "Side margins"
+msgstr "Margens laterais"
+
+msgid "Top and bottom margins"
+msgstr "Margens superior e inferior"
+
+msgid "Side padding"
+msgstr "Espaçamento lateral"
+
+msgid "Top and bottom padding"
+msgstr "Espaçamento superior e inferior"
+
+msgid "Override panel theme background color"
+msgstr "Substituir a cor de fundo do tema do painel"
+
+msgid "Override panel theme background opacity"
+msgstr "Substituir a opacidade de fundo do tema do painel"
+
+msgid "Panel background opacity (%)"
+msgstr "Opacidade do fundo do painel (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Alterar a opacidade quando uma janela se aproximar do painel"
+
+msgid "Dynamic background opacity"
+msgstr "Opacidade de fundo dinâmica"
+
+msgid "Override panel theme gradient"
+msgstr "Substituir o gradiente do tema do painel"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Cor e opacidade (%) do topo do gradiente"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Cor e opacidade (%) da base do gradiente"
+
+msgid "Panel border"
+msgstr "Borda do painel"
+
+msgid "Override border color"
+msgstr "Substituir a cor da borda"
+
+msgid "Border thickness"
+msgstr "Espessura da borda"

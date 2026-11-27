@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Open in Ghostty"
+msgstr "បើកក្នុង Ghostty"
+
+msgid "Find…"
+msgstr "រក…"
+
+msgid "Previous Match"
+msgstr "ការផ្គូផ្គងមុន"
+
+msgid "Next Match"
+msgstr "ការផ្គូផ្គងបន្ទាប់"
+
+msgid "Close"
+msgstr "បិទ"
+
+msgid "Oh, no."
+msgstr "អូ មិនបានទេ។"
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "មិនអាចទទួលបានបរិបទ OpenGL សម្រាប់ការបង្ហាញទេ។"
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "ស្ថានីយនេះស្ថិតក្នុងរបៀបអានតែប៉ុណ្ណោះ។ អ្នកនៅតែអាចមើល ជ្រើស និងរមូរមើលខ្លឹមសារបាន ប៉ុន្តែគ្មានព្រឹត្តិការណ៍បញ្ចូលណាមួយត្រូវបានផ្ញើទៅកម្មវិធីដែលកំពុងដំណើរការទេ។"
+
+msgid "Read-only"
+msgstr "អានតែប៉ុណ្ណោះ"
+
+msgid "Copy"
+msgstr "ចម្លង"
+
+msgid "Paste"
+msgstr "បិទភ្ជាប់"
+
+msgid "Notify on Next Command Finish"
+msgstr "ជូនដំណឹងពេលពាក្យបញ្ជាបន្ទាប់ចប់"
+
+msgid "Clear"
+msgstr "សម្អាត"
+
+msgid "Reset"
+msgstr "កំណត់ឡើងវិញ"
+
+msgid "Split"
+msgstr "បំបែក"
+
+msgid "Change Title…"
+msgstr "ប្ដូរចំណងជើង…"
+
+msgid "Split Up"
+msgstr "បំបែកឡើងលើ"
+
+msgid "Split Down"
+msgstr "បំបែកចុះក្រោម"
+
+msgid "Split Left"
+msgstr "បំបែកទៅឆ្វេង"
+
+msgid "Split Right"
+msgstr "បំបែកទៅស្ដាំ"
+
+msgid "Close Split"
+msgstr "បិទការបំបែក"
+
+msgid "Tab"
+msgstr "ផ្ទាំង"
+
+msgid "Change Tab Title…"
+msgstr "ប្ដូរចំណងជើងផ្ទាំង…"
+
+msgid "New Tab"
+msgstr "ផ្ទាំងថ្មី"
+
+msgid "Close Tab"
+msgstr "បិទផ្ទាំង"
+
+msgid "Window"
+msgstr "បង្អួច"
+
+msgid "Change Window Title…"
+msgstr "ប្ដូរចំណងជើងបង្អួច…"
+
+msgid "New Window"
+msgstr "បង្អួចថ្មី"
+
+msgid "Close Window"
+msgstr "បិទបង្អួច"
+
+msgid "Config"
+msgstr "ការកំណត់រចនាសម្ព័ន្ធ"
+
+msgid "Open Configuration in OS Editor"
+msgstr "បើកការកំណត់រចនាសម្ព័ន្ធក្នុងកម្មវិធីនិពន្ធរបស់ប្រព័ន្ធ"
+
+msgid "Open Configuration in New Window"
+msgstr "បើកការកំណត់រចនាសម្ព័ន្ធក្នុងបង្អួចថ្មី"
+
+msgid "Reload Configuration"
+msgstr "ផ្ទុកការកំណត់រចនាសម្ព័ន្ធឡើងវិញ"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ អ្នកកំពុងដំណើរការកំណែបំបាត់កំហុសរបស់ Ghostty! ប្រសិទ្ធភាពនឹងថយចុះ។"
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty៖ កម្មវិធីត្រួតពិនិត្យស្ថានីយ"
+
+msgid "New Split"
+msgstr "ការបំបែកថ្មី"
+
+msgid "View Open Tabs"
+msgstr "មើលផ្ទាំងដែលបានបើក"
+
+msgid "Main Menu"
+msgstr "ម៉ឺនុយមេ"
+
+msgid "Command Palette"
+msgstr "បន្ទះពាក្យបញ្ជា"
+
+msgid "Terminal Inspector"
+msgstr "កម្មវិធីត្រួតពិនិត្យស្ថានីយ"
+
+msgid "About Ghostty"
+msgstr "អំពី Ghostty"
+
+msgid "Quit"
+msgstr "ចាកចេញ"
+
+msgid "Authorize Clipboard Access"
+msgstr "អនុញ្ញាតការចូលប្រើក្ដារតម្បៀតខ្ទាស់"
+
+msgid "Deny"
+msgstr "បដិសេធ"
+
+msgid "Allow"
+msgstr "អនុញ្ញាត"
+
+msgid "Remember choice for this split"
+msgstr "ចងចាំជម្រើសសម្រាប់ការបំបែកនេះ"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "ផ្ទុកការកំណត់រចនាសម្ព័ន្ធឡើងវិញដើម្បីបង្ហាញសារនេះម្ដងទៀត"
+
+msgid "Cancel"
+msgstr "បោះបង់"
+
+msgid "Execute a command…"
+msgstr "ប្រតិបត្តិពាក្យបញ្ជា…"
+
+msgid "Configuration Errors"
+msgstr "កំហុសការកំណត់រចនាសម្ព័ន្ធ"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "បានរកឃើញកំហុសការកំណត់រចនាសម្ព័ន្ធមួយ ឬច្រើន។ សូមពិនិត្យកំហុសខាងក្រោម ហើយផ្ទុកការកំណត់រចនាសម្ព័ន្ធរបស់អ្នកឡើងវិញ ឬមិនអើពើកំហុសទាំងនេះ។"
+
+msgid "Ignore"
+msgstr "មិនអើពើ"
+
+msgid "Leave blank to restore the default title."
+msgstr "ទុកទទេដើម្បីស្ដារចំណងជើងលំនាំដើម។"
+
+msgid "OK"
+msgstr "យល់ព្រម"
+
+msgid "The keybind was revoked by the system."
+msgstr "ប្រព័ន្ធបានដកហូតការចងគ្រាប់ចុចនេះ។"
+
+msgid "The keybind was denied by the system."
+msgstr "ប្រព័ន្ធបានបដិសេធការចងគ្រាប់ចុចនេះ។"
+
+msgid "Global keybind unavailable"
+msgstr "ការចងគ្រាប់ចុចសកលមិនអាចប្រើបាន"
+
+msgid "Export Terminal IO Events"
+msgstr "នាំចេញព្រឹត្តិការណ៍ IO របស់ស្ថានីយ"
+
+msgid "Export"
+msgstr "នាំចេញ"
+
+msgid "Editing configuration file"
+msgstr "កំពុងកែសម្រួលឯកសារការកំណត់រចនាសម្ព័ន្ធ"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "កម្មវិធីមួយកំពុងព្យាយាមសរសេរទៅក្ដារតម្បៀតខ្ទាស់។ មាតិកាក្ដារតម្បៀតខ្ទាស់បច្ចុប្បន្នត្រូវបានបង្ហាញខាងក្រោម។"
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "កម្មវិធីមួយកំពុងព្យាយាមអានពីក្ដារតម្បៀតខ្ទាស់។ មាតិកាក្ដារតម្បៀតខ្ទាស់បច្ចុប្បន្នត្រូវបានបង្ហាញខាងក្រោម។"
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "ព្រមាន៖ ការបិទភ្ជាប់ដែលអាចមិនសុវត្ថិភាព"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "ការបិទភ្ជាប់អត្ថបទនេះទៅក្នុងស្ថានីយអាចមានគ្រោះថ្នាក់ ព្រោះវាមើលទៅដូចជាមានពាក្យបញ្ជាមួយចំនួនអាចនឹងត្រូវបានប្រតិបត្តិ។"
+
+msgid "Quit Ghostty?"
+msgstr "ចាកចេញពី Ghostty ឬ?"
+
+msgid "Close Tab?"
+msgstr "បិទផ្ទាំងឬ?"
+
+msgid "Close Window?"
+msgstr "បិទបង្អួចឬ?"
+
+msgid "Close Split?"
+msgstr "បិទការបំបែកឬ?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "សម័យស្ថានីយទាំងអស់នឹងត្រូវបានបញ្ចប់។"
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "សម័យស្ថានីយទាំងអស់ក្នុងផ្ទាំងនេះនឹងត្រូវបានបញ្ចប់។"
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "សម័យស្ថានីយទាំងអស់ក្នុងបង្អួចនេះនឹងត្រូវបានបញ្ចប់។"
+
+msgid "The currently running process in this split will be terminated."
+msgstr "ដំណើរការដែលកំពុងដំណើរការក្នុងការបំបែកនេះនឹងត្រូវបានបញ្ចប់។"
+
+msgid "Command Finished"
+msgstr "ពាក្យបញ្ជាបានចប់"
+
+msgid "Command Succeeded"
+msgstr "ពាក្យបញ្ជាបានជោគជ័យ"
+
+msgid "Command Failed"
+msgstr "ពាក្យបញ្ជាបរាជ័យ"
+
+msgid "Change Terminal Title"
+msgstr "ប្ដូរចំណងជើងស្ថានីយ"
+
+msgid "Change Tab Title"
+msgstr "ប្ដូរចំណងជើងផ្ទាំង"
+
+msgid "Change Window Title"
+msgstr "ប្ដូរចំណងជើងបង្អួច"
+
+msgid "Reloaded the configuration"
+msgstr "បានផ្ទុកការកំណត់រចនាសម្ព័ន្ធឡើងវិញ"
+
+msgid "Copied to clipboard"
+msgstr "បានចម្លងទៅក្ដារតម្បៀតខ្ទាស់"
+
+msgid "Cleared clipboard"
+msgstr "បានសម្អាតក្ដារតម្បៀតខ្ទាស់"
+
+msgid "Ghostty Developers"
+msgstr "អ្នកអភិវឌ្ឍន៍ Ghostty"
+
+msgid "Reset Terminal"
+msgstr "កំណត់ស្ថានីយឡើងវិញ"
+
+msgid "Reset the terminal to a clean state."
+msgstr "កំណត់ស្ថានីយឡើងវិញទៅស្ថានភាពស្អាត។"
+
+msgid "Copy to Clipboard"
+msgstr "ចម្លងទៅក្ដារតម្បៀតខ្ទាស់"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "ចម្លងអត្ថបទដែលបានជ្រើសទៅក្ដារតម្បៀតខ្ទាស់ទាំងជាទម្រង់ធម្មតា និងទម្រង់មានរចនាប័ទ្ម។"
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "ចម្លងការជ្រើសជាអត្ថបទធម្មតាទៅក្ដារតម្បៀតខ្ទាស់"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "ចម្លងអត្ថបទដែលបានជ្រើសជាអត្ថបទធម្មតាទៅក្ដារតម្បៀតខ្ទាស់។"
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "ចម្លងការជ្រើសជាលំដាប់ ANSI ទៅក្ដារតម្បៀតខ្ទាស់"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "ចម្លងអត្ថបទដែលបានជ្រើសជាលំដាប់គ្រាប់ចុចគេច ANSI ទៅក្ដារតម្បៀតខ្ទាស់។"
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "ចម្លងការជ្រើសជា HTML ទៅក្ដារតម្បៀតខ្ទាស់"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "ចម្លងអត្ថបទដែលបានជ្រើសជា HTML ទៅក្ដារតម្បៀតខ្ទាស់។"
+
+msgid "Copy URL to Clipboard"
+msgstr "ចម្លង URL ទៅក្ដារតម្បៀតខ្ទាស់"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "ចម្លង URL ក្រោមទ្រនិចទៅក្ដារតម្បៀតខ្ទាស់។"
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "ចម្លងចំណងជើងស្ថានីយទៅក្ដារតម្បៀតខ្ទាស់"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "ចម្លងចំណងជើងស្ថានីយទៅក្ដារតម្បៀតខ្ទាស់។ ប្រសិនបើមិនបានកំណត់ចំណងជើងស្ថានីយ នេះមិនមានផលអ្វីទេ។"
+
+msgid "Paste from Clipboard"
+msgstr "បិទភ្ជាប់ពីក្ដារតម្បៀតខ្ទាស់"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "បិទភ្ជាប់មាតិកាក្ដារតម្បៀតខ្ទាស់មេ។"
+
+msgid "Paste from Selection"
+msgstr "បិទភ្ជាប់ពីការជ្រើស"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "បិទភ្ជាប់មាតិកាក្ដារតម្បៀតខ្ទាស់ការជ្រើស។"
+
+msgid "Start Search"
+msgstr "ចាប់ផ្ដើមស្វែងរក"
+
+msgid "Start a search if one isn't already active."
+msgstr "ចាប់ផ្ដើមការស្វែងរក ប្រសិនបើមិនទាន់មានការស្វែងរកដែលកំពុងសកម្ម។"
+
+msgid "Search Selection"
+msgstr "ស្វែងរកការជ្រើស"
+
+msgid "Start a search for the current text selection."
+msgstr "ចាប់ផ្ដើមការស្វែងរកអត្ថបទដែលបានជ្រើសបច្ចុប្បន្ន។"
+
+msgid "End Search"
+msgstr "បញ្ចប់ការស្វែងរក"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "បញ្ចប់ការស្វែងរកបច្ចុប្បន្ន (ប្រសិនបើមាន) ហើយលាក់ធាតុ GUI ទាំងអស់។"
+
+msgid "Next Search Result"
+msgstr "លទ្ធផលស្វែងរកបន្ទាប់"
+
+msgid "Navigate to the next search result, if any."
+msgstr "រកមើលលទ្ធផលស្វែងរកបន្ទាប់ ប្រសិនបើមាន។"
+
+msgid "Previous Search Result"
+msgstr "លទ្ធផលស្វែងរកមុន"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "រកមើលលទ្ធផលស្វែងរកមុន ប្រសិនបើមាន។"
+
+msgid "Increase Font Size"
+msgstr "បង្កើនទំហំពុម្ពអក្សរ"
+
+msgid "Increase the font size by 1 point."
+msgstr "បង្កើនទំហំពុម្ពអក្សរ ១ ពិន្ទុ។"
+
+msgid "Decrease Font Size"
+msgstr "បន្ថយទំហំពុម្ពអក្សរ"
+
+msgid "Decrease the font size by 1 point."
+msgstr "បន្ថយទំហំពុម្ពអក្សរ ១ ពិន្ទុ។"
+
+msgid "Reset Font Size"
+msgstr "កំណត់ទំហំពុម្ពអក្សរឡើងវិញ"
+
+msgid "Reset the font size to the default."
+msgstr "កំណត់ទំហំពុម្ពអក្សរឡើងវិញទៅលំនាំដើម។"
+
+msgid "Clear Screen"
+msgstr "សម្អាតអេក្រង់"
+
+msgid "Clear the screen and scrollback."
+msgstr "សម្អាតអេក្រង់ និងប្រវត្តិរមូរ។"
+
+msgid "Select All"
+msgstr "ជ្រើសទាំងអស់"
+
+msgid "Select all text on the screen."
+msgstr "ជ្រើសអត្ថបទទាំងអស់នៅលើអេក្រង់។"
+
+msgid "Scroll to Top"
+msgstr "រមូរទៅខាងលើ"
+
+msgid "Scroll to the top of the screen."
+msgstr "រមូរទៅខាងលើនៃអេក្រង់។"
+
+msgid "Scroll to Bottom"
+msgstr "រមូរទៅខាងក្រោម"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "រមូរទៅខាងក្រោមនៃអេក្រង់។"
+
+msgid "Scroll to Selection"
+msgstr "រមូរទៅការជ្រើស"
+
+msgid "Scroll to the selected text."
+msgstr "រមូរទៅអត្ថបទដែលបានជ្រើស។"
+
+msgid "Scroll Page Up"
+msgstr "រមូរមួយទំព័រឡើងលើ"
+
+msgid "Scroll the screen up by a page."
+msgstr "រមូរអេក្រង់ឡើងលើមួយទំព័រ។"
+
+msgid "Scroll Page Down"
+msgstr "រមូរមួយទំព័រចុះក្រោម"
+
+msgid "Scroll the screen down by a page."
+msgstr "រមូរអេក្រង់ចុះក្រោមមួយទំព័រ។"
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "ចម្លងអេក្រង់ទៅឯកសារបណ្ដោះអាសន្ន ហើយចម្លងផ្លូវ"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "ចម្លងមាតិកាអេក្រង់ទៅឯកសារបណ្ដោះអាសន្ន ហើយចម្លងផ្លូវទៅក្ដារតម្បៀតខ្ទាស់។"
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "ចម្លងអេក្រង់ទៅឯកសារបណ្ដោះអាសន្ន ហើយបិទភ្ជាប់ផ្លូវ"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "ចម្លងមាតិកាអេក្រង់ទៅឯកសារបណ្ដោះអាសន្ន ហើយបិទភ្ជាប់ផ្លូវទៅឯកសារនោះ។"
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "ចម្លងអេក្រង់ទៅឯកសារបណ្ដោះអាសន្ន ហើយបើក"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "ចម្លងមាតិកាអេក្រង់ទៅឯកសារបណ្ដោះអាសន្ន ហើយបើកវា។"
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "ចម្លងអេក្រង់ជា HTML ទៅឯកសារបណ្ដោះអាសន្ន ហើយចម្លងផ្លូវ"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "ចម្លងមាតិកាអេក្រង់ជា HTML ទៅឯកសារបណ្ដោះអាសន្ន ហើយចម្លងផ្លូវទៅក្ដារតម្បៀតខ្ទាស់។"
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "ចម្លងអេក្រង់ជា HTML ទៅឯកសារបណ្ដោះអាសន្ន ហើយបិទភ្ជាប់ផ្លូវ"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "ចម្លងមាតិកាអេក្រង់ជា HTML ទៅឯកសារបណ្ដោះអាសន្ន ហើយបិទភ្ជាប់ផ្លូវទៅឯកសារនោះ។"
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "ចម្លងអេក្រង់ជា HTML ទៅឯកសារបណ្ដោះអាសន្ន ហើយបើក"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "ចម្លងមាតិកាអេក្រង់ជា HTML ទៅឯកសារបណ្ដោះអាសន្ន ហើយបើកវា។"
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "ចម្លងអេក្រង់ជាលំដាប់ ANSI ទៅឯកសារបណ្ដោះអាសន្ន ហើយចម្លងផ្លូវ"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "ចម្លងមាតិកាអេក្រង់ជាលំដាប់គ្រាប់ចុចគេច ANSI ទៅឯកសារបណ្ដោះអាសន្ន ហើយចម្លងផ្លូវទៅក្ដារតម្បៀតខ្ទាស់។"
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "ចម្លងអេក្រង់ជាលំដាប់ ANSI ទៅឯកសារបណ្ដោះអាសន្ន ហើយបិទភ្ជាប់ផ្លូវ"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "ចម្លងមាតិកាអេក្រង់ជាលំដាប់គ្រាប់ចុចគេច ANSI ទៅឯកសារបណ្ដោះអាសន្ន ហើយបិទភ្ជាប់ផ្លូវទៅឯកសារនោះ។"
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "ចម្លងអេក្រង់ជាលំដាប់ ANSI ទៅឯកសារបណ្ដោះអាសន្ន ហើយបើក"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "ចម្លងមាតិកាអេក្រង់ជាលំដាប់គ្រាប់ចុចគេច ANSI ទៅឯកសារបណ្ដោះអាសន្ន ហើយបើកវា។"
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "ចម្លងការជ្រើសទៅឯកសារបណ្ដោះអាសន្ន ហើយចម្លងផ្លូវ"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "ចម្លងមាតិកាដែលបានជ្រើសទៅឯកសារបណ្ដោះអាសន្ន ហើយចម្លងផ្លូវទៅក្ដារតម្បៀតខ្ទាស់។"
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "ចម្លងការជ្រើសទៅឯកសារបណ្ដោះអាសន្ន ហើយបិទភ្ជាប់ផ្លូវ"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "ចម្លងមាតិកាដែលបានជ្រើសទៅឯកសារបណ្ដោះអាសន្ន ហើយបិទភ្ជាប់ផ្លូវទៅឯកសារនោះ។"
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "ចម្លងការជ្រើសទៅឯកសារបណ្ដោះអាសន្ន ហើយបើក"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "ចម្លងមាតិកាដែលបានជ្រើសទៅឯកសារបណ្ដោះអាសន្ន ហើយបើកវា។"
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "ចម្លងការជ្រើសជា HTML ទៅឯកសារបណ្ដោះអាសន្ន ហើយចម្លងផ្លូវ"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "ចម្លងមាតិកាដែលបានជ្រើសជា HTML ទៅឯកសារបណ្ដោះអាសន្ន ហើយចម្លងផ្លូវទៅក្ដារតម្បៀតខ្ទាស់។"
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "ចម្លងការជ្រើសជា HTML ទៅឯកសារបណ្ដោះអាសន្ន ហើយបិទភ្ជាប់ផ្លូវ"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "ចម្លងមាតិកាដែលបានជ្រើសជា HTML ទៅឯកសារបណ្ដោះអាសន្ន ហើយបិទភ្ជាប់ផ្លូវទៅឯកសារនោះ។"
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "ចម្លងការជ្រើសជា HTML ទៅឯកសារបណ្ដោះអាសន្ន ហើយបើក"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "ចម្លងមាតិកាដែលបានជ្រើសជា HTML ទៅឯកសារបណ្ដោះអាសន្ន ហើយបើកវា។"
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "ចម្លងការជ្រើសជាលំដាប់ ANSI ទៅឯកសារបណ្ដោះអាសន្ន ហើយចម្លងផ្លូវ"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "ចម្លងមាតិកាដែលបានជ្រើសជាលំដាប់គ្រាប់ចុចគេច ANSI ទៅឯកសារបណ្ដោះអាសន្ន ហើយចម្លងផ្លូវទៅក្ដារតម្បៀតខ្ទាស់។"
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "ចម្លងការជ្រើសជាលំដាប់ ANSI ទៅឯកសារបណ្ដោះអាសន្ន ហើយបិទភ្ជាប់ផ្លូវ"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "ចម្លងមាតិកាដែលបានជ្រើសជាលំដាប់គ្រាប់ចុចគេច ANSI ទៅឯកសារបណ្ដោះអាសន្ន ហើយបិទភ្ជាប់ផ្លូវទៅឯកសារនោះ។"
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "ចម្លងការជ្រើសជាលំដាប់ ANSI ទៅឯកសារបណ្ដោះអាសន្ន ហើយបើក"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "ចម្លងមាតិកាដែលបានជ្រើសជាលំដាប់គ្រាប់ចុចគេច ANSI ទៅឯកសារបណ្ដោះអាសន្ន ហើយបើកវា។"
+
+msgid "Open a new window."
+msgstr "បើកបង្អួចថ្មី។"
+
+msgid "Open a new tab."
+msgstr "បើកផ្ទាំងថ្មី។"
+
+msgid "Move Tab Left"
+msgstr "ផ្លាស់ទីផ្ទាំងទៅឆ្វេង"
+
+msgid "Move the current tab to the left."
+msgstr "ផ្លាស់ទីផ្ទាំងបច្ចុប្បន្នទៅឆ្វេង។"
+
+msgid "Move Tab Right"
+msgstr "ផ្លាស់ទីផ្ទាំងទៅស្ដាំ"
+
+msgid "Move the current tab to the right."
+msgstr "ផ្លាស់ទីផ្ទាំងបច្ចុប្បន្នទៅស្ដាំ។"
+
+msgid "Move Tab to New Window"
+msgstr "ផ្លាស់ទីផ្ទាំងទៅបង្អួចថ្មី"
+
+msgid "Move the current tab to a new window."
+msgstr "ផ្លាស់ទីផ្ទាំងបច្ចុប្បន្នទៅបង្អួចថ្មី។"
+
+msgid "Toggle Tab Overview"
+msgstr "បិទ/បើកទិដ្ឋភាពទូទៅនៃផ្ទាំង"
+
+msgid "Toggle the tab overview."
+msgstr "បិទ/បើកទិដ្ឋភាពទូទៅនៃផ្ទាំង។"
+
+msgid "Change Terminal Title…"
+msgstr "ប្ដូរចំណងជើងស្ថានីយ…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "សួររកចំណងជើងថ្មីសម្រាប់ស្ថានីយបច្ចុប្បន្ន។"
+
+msgid "Prompt for a new title for the current tab."
+msgstr "សួររកចំណងជើងថ្មីសម្រាប់ផ្ទាំងបច្ចុប្បន្ន។"
+
+msgid "Split the terminal to the left."
+msgstr "បំបែកស្ថានីយទៅឆ្វេង។"
+
+msgid "Split the terminal to the right."
+msgstr "បំបែកស្ថានីយទៅស្ដាំ។"
+
+msgid "Split the terminal up."
+msgstr "បំបែកស្ថានីយឡើងលើ។"
+
+msgid "Split the terminal down."
+msgstr "បំបែកស្ថានីយចុះក្រោម។"
+
+msgid "Focus Split: Previous"
+msgstr "ផ្ដោតលើការបំបែក៖ មុន"
+
+msgid "Focus the previous split, if any."
+msgstr "ផ្ដោតលើការបំបែកមុន ប្រសិនបើមាន។"
+
+msgid "Focus Split: Next"
+msgstr "ផ្ដោតលើការបំបែក៖ បន្ទាប់"
+
+msgid "Focus the next split, if any."
+msgstr "ផ្ដោតលើការបំបែកបន្ទាប់ ប្រសិនបើមាន។"
+
+msgid "Focus Split: Left"
+msgstr "ផ្ដោតលើការបំបែក៖ ឆ្វេង"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "ផ្ដោតលើការបំបែកនៅខាងឆ្វេង ប្រសិនបើមាន។"
+
+msgid "Focus Split: Right"
+msgstr "ផ្ដោតលើការបំបែក៖ ស្ដាំ"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "ផ្ដោតលើការបំបែកនៅខាងស្ដាំ ប្រសិនបើមាន។"
+
+msgid "Focus Split: Up"
+msgstr "ផ្ដោតលើការបំបែក៖ ឡើងលើ"
+
+msgid "Focus the split above, if it exists."
+msgstr "ផ្ដោតលើការបំបែកនៅខាងលើ ប្រសិនបើមាន។"
+
+msgid "Focus Split: Down"
+msgstr "ផ្ដោតលើការបំបែក៖ ចុះក្រោម"
+
+msgid "Focus the split below, if it exists."
+msgstr "ផ្ដោតលើការបំបែកនៅខាងក្រោម ប្រសិនបើមាន។"
+
+msgid "Focus Window: Previous"
+msgstr "ផ្ដោតលើបង្អួច៖ មុន"
+
+msgid "Focus the previous window, if any."
+msgstr "ផ្ដោតលើបង្អួចមុន ប្រសិនបើមាន។"
+
+msgid "Focus Window: Next"
+msgstr "ផ្ដោតលើបង្អួច៖ បន្ទាប់"
+
+msgid "Focus the next window, if any."
+msgstr "ផ្ដោតលើបង្អួចបន្ទាប់ ប្រសិនបើមាន។"
+
+msgid "Toggle Split Zoom"
+msgstr "បិទ/បើកការពង្រីកការបំបែក"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "បិទ/បើកស្ថានភាពពង្រីកនៃការបំបែកបច្ចុប្បន្ន។"
+
+msgid "Toggle Read-Only Mode"
+msgstr "បិទ/បើករបៀបអានតែប៉ុណ្ណោះ"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "បិទ/បើករបៀបអានតែប៉ុណ្ណោះសម្រាប់ផ្ទៃបច្ចុប្បន្ន។"
+
+msgid "Equalize Splits"
+msgstr "ធ្វើឱ្យការបំបែកស្មើគ្នា"
+
+msgid "Equalize the size of all splits."
+msgstr "ធ្វើឱ្យទំហំនៃការបំបែកទាំងអស់ស្មើគ្នា។"
+
+msgid "Reset Window Size"
+msgstr "កំណត់ទំហំបង្អួចឡើងវិញ"
+
+msgid "Reset the window size to the default."
+msgstr "កំណត់ទំហំបង្អួចឡើងវិញទៅលំនាំដើម។"
+
+msgid "Toggle Inspector"
+msgstr "បិទ/បើកកម្មវិធីត្រួតពិនិត្យ"
+
+msgid "Toggle the inspector."
+msgstr "បិទ/បើកកម្មវិធីត្រួតពិនិត្យ។"
+
+msgid "Show the GTK Inspector"
+msgstr "បង្ហាញកម្មវិធីត្រួតពិនិត្យ GTK"
+
+msgid "Show the GTK inspector."
+msgstr "បង្ហាញកម្មវិធីត្រួតពិនិត្យ GTK។"
+
+msgid "Show On-Screen Keyboard"
+msgstr "បង្ហាញក្ដារចុចលើអេក្រង់"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "បង្ហាញក្ដារចុចលើអេក្រង់ ប្រសិនបើមាន។"
+
+msgid "Open Config Using OS editor"
+msgstr "បើកការកំណត់រចនាសម្ព័ន្ធដោយប្រើកម្មវិធីនិពន្ធរបស់ប្រព័ន្ធ"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "បើកឯកសារការកំណត់រចនាសម្ព័ន្ធដោយកម្មវិធីនិពន្ធលំនាំដើមរបស់ប្រព័ន្ធ។"
+
+msgid "Open Config in New Terminal Window"
+msgstr "បើកការកំណត់រចនាសម្ព័ន្ធក្នុងបង្អួចស្ថានីយថ្មី"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "បើកឯកសារការកំណត់រចនាសម្ព័ន្ធក្នុងបង្អួចថ្មីដោយប្រើ $EDITOR ឬ $VISUAL។"
+
+msgid "Reload Config"
+msgstr "ផ្ទុកការកំណត់រចនាសម្ព័ន្ធឡើងវិញ"
+
+msgid "Reload the config file."
+msgstr "ផ្ទុកឯកសារការកំណត់រចនាសម្ព័ន្ធឡើងវិញ។"
+
+msgid "Close Terminal"
+msgstr "បិទស្ថានីយ"
+
+msgid "Close the current terminal."
+msgstr "បិទស្ថានីយបច្ចុប្បន្ន។"
+
+msgid "Close the current tab."
+msgstr "បិទផ្ទាំងបច្ចុប្បន្ន។"
+
+msgid "Close Other Tabs"
+msgstr "បិទផ្ទាំងផ្សេងទៀត"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "បិទផ្ទាំងទាំងអស់ក្នុងបង្អួចនេះ លើកលែងតែផ្ទាំងបច្ចុប្បន្ន។"
+
+msgid "Close Tabs to the Right"
+msgstr "បិទផ្ទាំងនៅខាងស្ដាំ"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "បិទផ្ទាំងទាំងអស់នៅខាងស្ដាំនៃផ្ទាំងបច្ចុប្បន្ន។"
+
+msgid "Close the current window."
+msgstr "បិទបង្អួចបច្ចុប្បន្ន។"
+
+msgid "Close All Windows"
+msgstr "បិទបង្អួចទាំងអស់"
+
+msgid "Close all windows."
+msgstr "បិទបង្អួចទាំងអស់។"
+
+msgid "Toggle Maximize"
+msgstr "បិទ/បើកការពង្រីកអតិបរមា"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "បិទ/បើកស្ថានភាពពង្រីកអតិបរមានៃបង្អួចបច្ចុប្បន្ន។"
+
+msgid "Toggle Fullscreen"
+msgstr "បិទ/បើកពេញអេក្រង់"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "បិទ/បើកស្ថានភាពពេញអេក្រង់នៃបង្អួចបច្ចុប្បន្ន។"
+
+msgid "Toggle Window Decorations"
+msgstr "បិទ/បើកការតុបតែងបង្អួច"
+
+msgid "Toggle the window decorations."
+msgstr "បិទ/បើកការតុបតែងបង្អួច។"
+
+msgid "Toggle Float on Top"
+msgstr "បិទ/បើកការអណ្ដែតនៅលើគេ"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "បិទ/បើកស្ថានភាពអណ្ដែតនៅលើគេនៃបង្អួចបច្ចុប្បន្ន។"
+
+msgid "Toggle Secure Input"
+msgstr "បិទ/បើកការបញ្ចូលសុវត្ថិភាព"
+
+msgid "Toggle secure input mode."
+msgstr "បិទ/បើករបៀបបញ្ចូលសុវត្ថិភាព។"
+
+msgid "Toggle Mouse Reporting"
+msgstr "បិទ/បើកការរាយការណ៍កណ្ដុរ"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "បិទ/បើកថាតើព្រឹត្តិការណ៍កណ្ដុរត្រូវបានរាយការណ៍ទៅកម្មវិធីស្ថានីយឬអត់។"
+
+msgid "Toggle Background Opacity"
+msgstr "បិទ/បើកភាពស្រអាប់នៃផ្ទៃខាងក្រោយ"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "បិទ/បើកភាពស្រអាប់នៃផ្ទៃខាងក្រោយរបស់បង្អួចដែលចាប់ផ្ដើមដោយថ្លា។"
+
+msgid "Check for Updates"
+msgstr "ពិនិត្យមើលបច្ចុប្បន្នភាព"
+
+msgid "Check for updates to the application."
+msgstr "ពិនិត្យមើលបច្ចុប្បន្នភាពសម្រាប់កម្មវិធី។"
+
+msgid "Undo"
+msgstr "មិនធ្វើវិញ"
+
+msgid "Undo the last action."
+msgstr "មិនធ្វើសកម្មភាពចុងក្រោយវិញ។"
+
+msgid "Redo"
+msgstr "ធ្វើវិញ"
+
+msgid "Redo the last undone action."
+msgstr "ធ្វើសកម្មភាពដែលបានមិនធ្វើចុងក្រោយវិញ។"
+
+msgid "Quit the application."
+msgstr "ចាកចេញពីកម្មវិធី។"
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "ដាក់ Ghostty បន្តិចក្នុងស្ថានីយរបស់អ្នក។"

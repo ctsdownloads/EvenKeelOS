@@ -6,5 +6,10 @@ copr ublue-os/packages ublue-brew 0.1.13-1.fc44
 copr ublue-os/packages ublue-os-just 0.57-3.fc45
 copr ublue-os/packages ublue-os-luks 0.3-1.fc44
 copr scottames/ghostty ghostty 1.4.0-2.fc45
+# fedora fedora <package> <version-release>: a Fedora package, from Fedora's build archive (its text is translated).
+fedora fedora gnome-shell-extension-dash-to-panel 74-1.fc45
+# gnome-extension <uuid> <version> <sha256>: from extensions.gnome.org, checked against the sha256.
+gnome-extension arcmenu@arcmenu.com 74 ef414c90dcb5f2b0c6ccb5f8e59fd9963c584789d3d8d26740ddb731100c4b40
+gnome-extension logomenu@aryan_k 45 78e6507d9aa033a17e7e2997ac5a1190b327b97ba019a313f1a9285854753ed2
 # git <repository> <branch> <commit>, the ISO build tool used by build-iso.yml and iso/build-local-iso.sh.
 git ublue-os/titanoboa main 5c457c3d0518bd17e754be0fd98a60d29d26abb4

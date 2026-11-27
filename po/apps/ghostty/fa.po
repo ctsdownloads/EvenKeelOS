@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Open in Ghostty"
+msgstr "گشودن در Ghostty"
+
+msgid "Find…"
+msgstr "یافتن…"
+
+msgid "Previous Match"
+msgstr "تطابق پیشین"
+
+msgid "Next Match"
+msgstr "تطابق بعدی"
+
+msgid "Close"
+msgstr "بستن"
+
+msgid "Oh, no."
+msgstr "اوه، نه."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "دریافت بافتار OpenGL برای نمایش ممکن نیست."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "این پایانه در حالت فقط‌خواندنی است. همچنان می‌توانید محتوا را ببینید، انتخاب کنید و پیمایش کنید، اما هیچ رویداد ورودی‌ای به برنامهٔ در حال اجرا فرستاده نمی‌شود."
+
+msgid "Read-only"
+msgstr "فقط‌خواندنی"
+
+msgid "Copy"
+msgstr "رونوشت"
+
+msgid "Paste"
+msgstr "چسباندن"
+
+msgid "Notify on Next Command Finish"
+msgstr "اعلان هنگام پایان فرمان بعدی"
+
+msgid "Clear"
+msgstr "پاک‌کردن"
+
+msgid "Reset"
+msgstr "بازنشانی"
+
+msgid "Split"
+msgstr "تقسیم"
+
+msgid "Change Title…"
+msgstr "تغییر عنوان…"
+
+msgid "Split Up"
+msgstr "تقسیم به بالا"
+
+msgid "Split Down"
+msgstr "تقسیم به پایین"
+
+msgid "Split Left"
+msgstr "تقسیم به چپ"
+
+msgid "Split Right"
+msgstr "تقسیم به راست"
+
+msgid "Close Split"
+msgstr "بستن تقسیم"
+
+msgid "Tab"
+msgstr "زبانه"
+
+msgid "Change Tab Title…"
+msgstr "تغییر عنوان زبانه…"
+
+msgid "New Tab"
+msgstr "زبانهٔ جدید"
+
+msgid "Close Tab"
+msgstr "بستن زبانه"
+
+msgid "Window"
+msgstr "پنجره"
+
+msgid "Change Window Title…"
+msgstr "تغییر عنوان پنجره…"
+
+msgid "New Window"
+msgstr "پنجرهٔ جدید"
+
+msgid "Close Window"
+msgstr "بستن پنجره"
+
+msgid "Config"
+msgstr "پیکربندی"
+
+msgid "Open Configuration in OS Editor"
+msgstr "گشودن پیکربندی در ویرایشگر سامانه"
+
+msgid "Open Configuration in New Window"
+msgstr "گشودن پیکربندی در پنجرهٔ جدید"
+
+msgid "Reload Configuration"
+msgstr "بارگذاری دوبارهٔ پیکربندی"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ شما در حال اجرای یک ساخت اشکال‌زدایی از Ghostty هستید! کارایی کاهش خواهد یافت."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: بازرس پایانه"
+
+msgid "New Split"
+msgstr "تقسیم جدید"
+
+msgid "View Open Tabs"
+msgstr "دیدن زبانه‌های باز"
+
+msgid "Main Menu"
+msgstr "منوی اصلی"
+
+msgid "Command Palette"
+msgstr "پالت فرمان"
+
+msgid "Terminal Inspector"
+msgstr "بازرس پایانه"
+
+msgid "About Ghostty"
+msgstr "دربارهٔ Ghostty"
+
+msgid "Quit"
+msgstr "خروج"
+
+msgid "Authorize Clipboard Access"
+msgstr "اجازهٔ دسترسی به کلیپ‌بورد"
+
+msgid "Deny"
+msgstr "رد کردن"
+
+msgid "Allow"
+msgstr "اجازه دادن"
+
+msgid "Remember choice for this split"
+msgstr "به خاطر سپردن انتخاب برای این تقسیم"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "برای نمایش دوبارهٔ این پرسش، پیکربندی را دوباره بارگذاری کنید"
+
+msgid "Cancel"
+msgstr "لغو"
+
+msgid "Execute a command…"
+msgstr "اجرای یک فرمان…"
+
+msgid "Configuration Errors"
+msgstr "خطاهای پیکربندی"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "یک یا چند خطای پیکربندی پیدا شد. لطفاً خطاهای زیر را بررسی کنید و پیکربندی خود را دوباره بارگذاری کنید یا این خطاها را نادیده بگیرید."
+
+msgid "Ignore"
+msgstr "نادیده گرفتن"
+
+msgid "Leave blank to restore the default title."
+msgstr "برای بازگرداندن عنوان پیش‌گزیده، خالی بگذارید."
+
+msgid "OK"
+msgstr "تأیید"
+
+msgid "The keybind was revoked by the system."
+msgstr "کلید میانبر توسط سامانه لغو شد."
+
+msgid "The keybind was denied by the system."
+msgstr "کلید میانبر توسط سامانه رد شد."
+
+msgid "Global keybind unavailable"
+msgstr "کلید میانبر سراسری در دسترس نیست"
+
+msgid "Export Terminal IO Events"
+msgstr "برون‌ریزی رویدادهای ورودی/خروجی پایانه"
+
+msgid "Export"
+msgstr "برون‌ریزی"
+
+msgid "Editing configuration file"
+msgstr "ویرایش پروندهٔ پیکربندی"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "یک برنامه می‌کوشد در کلیپ‌بورد بنویسد. محتوای کنونی کلیپ‌بورد در زیر نشان داده شده است."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "یک برنامه می‌کوشد از کلیپ‌بورد بخواند. محتوای کنونی کلیپ‌بورد در زیر نشان داده شده است."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "هشدار: چسباندن بالقوه ناامن"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "چسباندن این متن در پایانه ممکن است خطرناک باشد، زیرا به نظر می‌رسد برخی فرمان‌ها اجرا شوند."
+
+msgid "Quit Ghostty?"
+msgstr "از Ghostty خارج می‌شوید؟"
+
+msgid "Close Tab?"
+msgstr "زبانه بسته شود؟"
+
+msgid "Close Window?"
+msgstr "پنجره بسته شود؟"
+
+msgid "Close Split?"
+msgstr "تقسیم بسته شود؟"
+
+msgid "All terminal sessions will be terminated."
+msgstr "همهٔ نشست‌های پایانه خاتمه خواهند یافت."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "همهٔ نشست‌های پایانه در این زبانه خاتمه خواهند یافت."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "همهٔ نشست‌های پایانه در این پنجره خاتمه خواهند یافت."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "فرایند در حال اجرا در این تقسیم خاتمه خواهد یافت."
+
+msgid "Command Finished"
+msgstr "فرمان پایان یافت"
+
+msgid "Command Succeeded"
+msgstr "فرمان با موفقیت انجام شد"
+
+msgid "Command Failed"
+msgstr "فرمان ناموفق بود"
+
+msgid "Change Terminal Title"
+msgstr "تغییر عنوان پایانه"
+
+msgid "Change Tab Title"
+msgstr "تغییر عنوان زبانه"
+
+msgid "Change Window Title"
+msgstr "تغییر عنوان پنجره"
+
+msgid "Reloaded the configuration"
+msgstr "پیکربندی دوباره بارگذاری شد"
+
+msgid "Copied to clipboard"
+msgstr "در کلیپ‌بورد رونوشت شد"
+
+msgid "Cleared clipboard"
+msgstr "کلیپ‌بورد پاک شد"
+
+msgid "Ghostty Developers"
+msgstr "توسعه‌دهندگان Ghostty"
+
+msgid "Reset Terminal"
+msgstr "بازنشانی پایانه"
+
+msgid "Reset the terminal to a clean state."
+msgstr "پایانه را به حالت پاک بازنشانی می‌کند."
+
+msgid "Copy to Clipboard"
+msgstr "رونوشت در کلیپ‌بورد"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "متن انتخاب‌شده را هم به‌صورت ساده و هم با سبک در کلیپ‌بورد رونوشت می‌کند."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "رونوشت انتخاب به‌صورت متن ساده در کلیپ‌بورد"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "متن انتخاب‌شده را به‌صورت متن ساده در کلیپ‌بورد رونوشت می‌کند."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "رونوشت انتخاب به‌صورت دنباله‌های ANSI در کلیپ‌بورد"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "متن انتخاب‌شده را به‌صورت دنباله‌های گریز ANSI در کلیپ‌بورد رونوشت می‌کند."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "رونوشت انتخاب به‌صورت HTML در کلیپ‌بورد"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "متن انتخاب‌شده را به‌صورت HTML در کلیپ‌بورد رونوشت می‌کند."
+
+msgid "Copy URL to Clipboard"
+msgstr "رونوشت نشانی اینترنتی در کلیپ‌بورد"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "نشانی اینترنتی زیر نشانگر را در کلیپ‌بورد رونوشت می‌کند."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "رونوشت عنوان پایانه در کلیپ‌بورد"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "عنوان پایانه را در کلیپ‌بورد رونوشت می‌کند. اگر عنوان پایانه تنظیم نشده باشد، اثری ندارد."
+
+msgid "Paste from Clipboard"
+msgstr "چسباندن از کلیپ‌بورد"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "محتوای کلیپ‌بورد اصلی را می‌چسباند."
+
+msgid "Paste from Selection"
+msgstr "چسباندن از انتخاب"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "محتوای کلیپ‌بورد انتخاب را می‌چسباند."
+
+msgid "Start Search"
+msgstr "آغاز جست‌وجو"
+
+msgid "Start a search if one isn't already active."
+msgstr "اگر جست‌وجویی فعال نیست، جست‌وجویی آغاز می‌کند."
+
+msgid "Search Selection"
+msgstr "جست‌وجوی انتخاب"
+
+msgid "Start a search for the current text selection."
+msgstr "جست‌وجو برای متن انتخاب‌شدهٔ کنونی را آغاز می‌کند."
+
+msgid "End Search"
+msgstr "پایان جست‌وجو"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "جست‌وجوی کنونی را در صورت وجود پایان می‌دهد و عناصر رابط گرافیکی را پنهان می‌کند."
+
+msgid "Next Search Result"
+msgstr "نتیجهٔ جست‌وجوی بعدی"
+
+msgid "Navigate to the next search result, if any."
+msgstr "به نتیجهٔ جست‌وجوی بعدی، در صورت وجود، می‌رود."
+
+msgid "Previous Search Result"
+msgstr "نتیجهٔ جست‌وجوی پیشین"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "به نتیجهٔ جست‌وجوی پیشین، در صورت وجود، می‌رود."
+
+msgid "Increase Font Size"
+msgstr "افزایش اندازهٔ قلم"
+
+msgid "Increase the font size by 1 point."
+msgstr "اندازهٔ قلم را ۱ پوینت افزایش می‌دهد."
+
+msgid "Decrease Font Size"
+msgstr "کاهش اندازهٔ قلم"
+
+msgid "Decrease the font size by 1 point."
+msgstr "اندازهٔ قلم را ۱ پوینت کاهش می‌دهد."
+
+msgid "Reset Font Size"
+msgstr "بازنشانی اندازهٔ قلم"
+
+msgid "Reset the font size to the default."
+msgstr "اندازهٔ قلم را به پیش‌گزیده بازمی‌گرداند."
+
+msgid "Clear Screen"
+msgstr "پاک‌کردن صفحه"
+
+msgid "Clear the screen and scrollback."
+msgstr "صفحه و تاریخچهٔ پیمایش را پاک می‌کند."
+
+msgid "Select All"
+msgstr "انتخاب همه"
+
+msgid "Select all text on the screen."
+msgstr "همهٔ متن روی صفحه را انتخاب می‌کند."
+
+msgid "Scroll to Top"
+msgstr "پیمایش به بالا"
+
+msgid "Scroll to the top of the screen."
+msgstr "به بالای صفحه پیمایش می‌کند."
+
+msgid "Scroll to Bottom"
+msgstr "پیمایش به پایین"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "به پایین صفحه پیمایش می‌کند."
+
+msgid "Scroll to Selection"
+msgstr "پیمایش به انتخاب"
+
+msgid "Scroll to the selected text."
+msgstr "به متن انتخاب‌شده پیمایش می‌کند."
+
+msgid "Scroll Page Up"
+msgstr "پیمایش یک صفحه به بالا"
+
+msgid "Scroll the screen up by a page."
+msgstr "صفحه را یک صفحه به بالا پیمایش می‌کند."
+
+msgid "Scroll Page Down"
+msgstr "پیمایش یک صفحه به پایین"
+
+msgid "Scroll the screen down by a page."
+msgstr "صفحه را یک صفحه به پایین پیمایش می‌کند."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "رونوشت صفحه در پروندهٔ موقت و رونوشت مسیر"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "محتوای صفحه را در یک پروندهٔ موقت رونوشت می‌کند و مسیر را در کلیپ‌بورد رونوشت می‌کند."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "رونوشت صفحه در پروندهٔ موقت و چسباندن مسیر"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "محتوای صفحه را در یک پروندهٔ موقت رونوشت می‌کند و مسیر پرونده را می‌چسباند."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "رونوشت صفحه در پروندهٔ موقت و گشودن آن"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "محتوای صفحه را در یک پروندهٔ موقت رونوشت می‌کند و آن را می‌گشاید."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "رونوشت صفحه به‌صورت HTML در پروندهٔ موقت و رونوشت مسیر"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "محتوای صفحه را به‌صورت HTML در یک پروندهٔ موقت رونوشت می‌کند و مسیر را در کلیپ‌بورد رونوشت می‌کند."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "رونوشت صفحه به‌صورت HTML در پروندهٔ موقت و چسباندن مسیر"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "محتوای صفحه را به‌صورت HTML در یک پروندهٔ موقت رونوشت می‌کند و مسیر پرونده را می‌چسباند."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "رونوشت صفحه به‌صورت HTML در پروندهٔ موقت و گشودن آن"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "محتوای صفحه را به‌صورت HTML در یک پروندهٔ موقت رونوشت می‌کند و آن را می‌گشاید."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "رونوشت صفحه به‌صورت دنباله‌های ANSI در پروندهٔ موقت و رونوشت مسیر"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "محتوای صفحه را به‌صورت دنباله‌های گریز ANSI در یک پروندهٔ موقت رونوشت می‌کند و مسیر را در کلیپ‌بورد رونوشت می‌کند."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "رونوشت صفحه به‌صورت دنباله‌های ANSI در پروندهٔ موقت و چسباندن مسیر"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "محتوای صفحه را به‌صورت دنباله‌های گریز ANSI در یک پروندهٔ موقت رونوشت می‌کند و مسیر پرونده را می‌چسباند."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "رونوشت صفحه به‌صورت دنباله‌های ANSI در پروندهٔ موقت و گشودن آن"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "محتوای صفحه را به‌صورت دنباله‌های گریز ANSI در یک پروندهٔ موقت رونوشت می‌کند و آن را می‌گشاید."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "رونوشت انتخاب در پروندهٔ موقت و رونوشت مسیر"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "محتوای انتخاب را در یک پروندهٔ موقت رونوشت می‌کند و مسیر را در کلیپ‌بورد رونوشت می‌کند."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "رونوشت انتخاب در پروندهٔ موقت و چسباندن مسیر"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "محتوای انتخاب را در یک پروندهٔ موقت رونوشت می‌کند و مسیر پرونده را می‌چسباند."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "رونوشت انتخاب در پروندهٔ موقت و گشودن آن"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "محتوای انتخاب را در یک پروندهٔ موقت رونوشت می‌کند و آن را می‌گشاید."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "رونوشت انتخاب به‌صورت HTML در پروندهٔ موقت و رونوشت مسیر"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "محتوای انتخاب را به‌صورت HTML در یک پروندهٔ موقت رونوشت می‌کند و مسیر را در کلیپ‌بورد رونوشت می‌کند."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "رونوشت انتخاب به‌صورت HTML در پروندهٔ موقت و چسباندن مسیر"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "محتوای انتخاب را به‌صورت HTML در یک پروندهٔ موقت رونوشت می‌کند و مسیر پرونده را می‌چسباند."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "رونوشت انتخاب به‌صورت HTML در پروندهٔ موقت و گشودن آن"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "محتوای انتخاب را به‌صورت HTML در یک پروندهٔ موقت رونوشت می‌کند و آن را می‌گشاید."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "رونوشت انتخاب به‌صورت دنباله‌های ANSI در پروندهٔ موقت و رونوشت مسیر"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "محتوای انتخاب را به‌صورت دنباله‌های گریز ANSI در یک پروندهٔ موقت رونوشت می‌کند و مسیر را در کلیپ‌بورد رونوشت می‌کند."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "رونوشت انتخاب به‌صورت دنباله‌های ANSI در پروندهٔ موقت و چسباندن مسیر"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "محتوای انتخاب را به‌صورت دنباله‌های گریز ANSI در یک پروندهٔ موقت رونوشت می‌کند و مسیر پرونده را می‌چسباند."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "رونوشت انتخاب به‌صورت دنباله‌های ANSI در پروندهٔ موقت و گشودن آن"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "محتوای انتخاب را به‌صورت دنباله‌های گریز ANSI در یک پروندهٔ موقت رونوشت می‌کند و آن را می‌گشاید."
+
+msgid "Open a new window."
+msgstr "یک پنجرهٔ جدید می‌گشاید."
+
+msgid "Open a new tab."
+msgstr "یک زبانهٔ جدید می‌گشاید."
+
+msgid "Move Tab Left"
+msgstr "انتقال زبانه به چپ"
+
+msgid "Move the current tab to the left."
+msgstr "زبانهٔ کنونی را به چپ منتقل می‌کند."
+
+msgid "Move Tab Right"
+msgstr "انتقال زبانه به راست"
+
+msgid "Move the current tab to the right."
+msgstr "زبانهٔ کنونی را به راست منتقل می‌کند."
+
+msgid "Move Tab to New Window"
+msgstr "انتقال زبانه به پنجرهٔ جدید"
+
+msgid "Move the current tab to a new window."
+msgstr "زبانهٔ کنونی را به یک پنجرهٔ جدید منتقل می‌کند."
+
+msgid "Toggle Tab Overview"
+msgstr "تغییر وضعیت نمای کلی زبانه‌ها"
+
+msgid "Toggle the tab overview."
+msgstr "نمای کلی زبانه‌ها را روشن یا خاموش می‌کند."
+
+msgid "Change Terminal Title…"
+msgstr "تغییر عنوان پایانه…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "عنوان جدیدی برای پایانهٔ کنونی می‌پرسد."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "عنوان جدیدی برای زبانهٔ کنونی می‌پرسد."
+
+msgid "Split the terminal to the left."
+msgstr "پایانه را به چپ تقسیم می‌کند."
+
+msgid "Split the terminal to the right."
+msgstr "پایانه را به راست تقسیم می‌کند."
+
+msgid "Split the terminal up."
+msgstr "پایانه را به بالا تقسیم می‌کند."
+
+msgid "Split the terminal down."
+msgstr "پایانه را به پایین تقسیم می‌کند."
+
+msgid "Focus Split: Previous"
+msgstr "کانون روی تقسیم: پیشین"
+
+msgid "Focus the previous split, if any."
+msgstr "کانون را به تقسیم پیشین، در صورت وجود، می‌برد."
+
+msgid "Focus Split: Next"
+msgstr "کانون روی تقسیم: بعدی"
+
+msgid "Focus the next split, if any."
+msgstr "کانون را به تقسیم بعدی، در صورت وجود، می‌برد."
+
+msgid "Focus Split: Left"
+msgstr "کانون روی تقسیم: چپ"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "کانون را به تقسیم سمت چپ، در صورت وجود، می‌برد."
+
+msgid "Focus Split: Right"
+msgstr "کانون روی تقسیم: راست"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "کانون را به تقسیم سمت راست، در صورت وجود، می‌برد."
+
+msgid "Focus Split: Up"
+msgstr "کانون روی تقسیم: بالا"
+
+msgid "Focus the split above, if it exists."
+msgstr "کانون را به تقسیم بالایی، در صورت وجود، می‌برد."
+
+msgid "Focus Split: Down"
+msgstr "کانون روی تقسیم: پایین"
+
+msgid "Focus the split below, if it exists."
+msgstr "کانون را به تقسیم پایینی، در صورت وجود، می‌برد."
+
+msgid "Focus Window: Previous"
+msgstr "کانون روی پنجره: پیشین"
+
+msgid "Focus the previous window, if any."
+msgstr "کانون را به پنجرهٔ پیشین، در صورت وجود، می‌برد."
+
+msgid "Focus Window: Next"
+msgstr "کانون روی پنجره: بعدی"
+
+msgid "Focus the next window, if any."
+msgstr "کانون را به پنجرهٔ بعدی، در صورت وجود، می‌برد."
+
+msgid "Toggle Split Zoom"
+msgstr "تغییر وضعیت بزرگنمایی تقسیم"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "وضعیت بزرگنمایی تقسیم کنونی را تغییر می‌دهد."
+
+msgid "Toggle Read-Only Mode"
+msgstr "تغییر وضعیت حالت فقط‌خواندنی"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "حالت فقط‌خواندنی را برای سطح کنونی روشن یا خاموش می‌کند."
+
+msgid "Equalize Splits"
+msgstr "یکسان‌سازی تقسیم‌ها"
+
+msgid "Equalize the size of all splits."
+msgstr "اندازهٔ همهٔ تقسیم‌ها را یکسان می‌کند."
+
+msgid "Reset Window Size"
+msgstr "بازنشانی اندازهٔ پنجره"
+
+msgid "Reset the window size to the default."
+msgstr "اندازهٔ پنجره را به پیش‌گزیده بازمی‌گرداند."
+
+msgid "Toggle Inspector"
+msgstr "تغییر وضعیت بازرس"
+
+msgid "Toggle the inspector."
+msgstr "بازرس را روشن یا خاموش می‌کند."
+
+msgid "Show the GTK Inspector"
+msgstr "نمایش بازرس GTK"
+
+msgid "Show the GTK inspector."
+msgstr "بازرس GTK را نشان می‌دهد."
+
+msgid "Show On-Screen Keyboard"
+msgstr "نمایش صفحه‌کلید روی صفحه"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "صفحه‌کلید روی صفحه را، در صورت وجود، نشان می‌دهد."
+
+msgid "Open Config Using OS editor"
+msgstr "گشودن پیکربندی با ویرایشگر سامانه"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "پروندهٔ پیکربندی را با ویرایشگر پیش‌گزیدهٔ سامانه می‌گشاید."
+
+msgid "Open Config in New Terminal Window"
+msgstr "گشودن پیکربندی در پنجرهٔ پایانهٔ جدید"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "پروندهٔ پیکربندی را با $EDITOR یا $VISUAL در یک پنجرهٔ جدید می‌گشاید."
+
+msgid "Reload Config"
+msgstr "بارگذاری دوبارهٔ پیکربندی"
+
+msgid "Reload the config file."
+msgstr "پروندهٔ پیکربندی را دوباره بارگذاری می‌کند."
+
+msgid "Close Terminal"
+msgstr "بستن پایانه"
+
+msgid "Close the current terminal."
+msgstr "پایانهٔ کنونی را می‌بندد."
+
+msgid "Close the current tab."
+msgstr "زبانهٔ کنونی را می‌بندد."
+
+msgid "Close Other Tabs"
+msgstr "بستن زبانه‌های دیگر"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "همهٔ زبانه‌های این پنجره را به‌جز زبانهٔ کنونی می‌بندد."
+
+msgid "Close Tabs to the Right"
+msgstr "بستن زبانه‌های سمت راست"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "همهٔ زبانه‌های سمت راست زبانهٔ کنونی را می‌بندد."
+
+msgid "Close the current window."
+msgstr "پنجرهٔ کنونی را می‌بندد."
+
+msgid "Close All Windows"
+msgstr "بستن همهٔ پنجره‌ها"
+
+msgid "Close all windows."
+msgstr "همهٔ پنجره‌ها را می‌بندد."
+
+msgid "Toggle Maximize"
+msgstr "تغییر وضعیت بیشینه‌سازی"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "وضعیت بیشینه‌شدن پنجرهٔ کنونی را تغییر می‌دهد."
+
+msgid "Toggle Fullscreen"
+msgstr "تغییر وضعیت تمام‌صفحه"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "وضعیت تمام‌صفحهٔ پنجرهٔ کنونی را تغییر می‌دهد."
+
+msgid "Toggle Window Decorations"
+msgstr "تغییر وضعیت تزیینات پنجره"
+
+msgid "Toggle the window decorations."
+msgstr "تزیینات پنجره را روشن یا خاموش می‌کند."
+
+msgid "Toggle Float on Top"
+msgstr "تغییر وضعیت شناور بودن روی بقیه"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "وضعیت شناور بودن پنجرهٔ کنونی روی بقیه را تغییر می‌دهد."
+
+msgid "Toggle Secure Input"
+msgstr "تغییر وضعیت ورودی امن"
+
+msgid "Toggle secure input mode."
+msgstr "حالت ورودی امن را روشن یا خاموش می‌کند."
+
+msgid "Toggle Mouse Reporting"
+msgstr "تغییر وضعیت گزارش موشی"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "تعیین می‌کند رویدادهای موشی به برنامه‌های پایانه گزارش شوند یا نه."
+
+msgid "Toggle Background Opacity"
+msgstr "تغییر وضعیت کدری پس‌زمینه"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "کدری پس‌زمینهٔ پنجره‌ای را که شفاف آغاز شده تغییر می‌دهد."
+
+msgid "Check for Updates"
+msgstr "بررسی به‌روزرسانی‌ها"
+
+msgid "Check for updates to the application."
+msgstr "وجود به‌روزرسانی برای برنامه را بررسی می‌کند."
+
+msgid "Undo"
+msgstr "واگرد"
+
+msgid "Undo the last action."
+msgstr "آخرین کنش را واگرد می‌کند."
+
+msgid "Redo"
+msgstr "انجام دوباره"
+
+msgid "Redo the last undone action."
+msgstr "آخرین کنش واگردشده را دوباره انجام می‌دهد."
+
+msgid "Quit the application."
+msgstr "از برنامه خارج می‌شود."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "کمی Ghostty در پایانهٔ خود بگذارید."

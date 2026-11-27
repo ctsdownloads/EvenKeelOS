@@ -1,0 +1,2588 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "Tenda de aplicacións"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "Engadir, eliminar ou actualizar software Flatpak neste computador"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Sistema;Paquete;Xestor;Descubrir;Flatpak;Software;Aplicación;Tenda;"
+
+msgid "New Window"
+msgstr "Nova xanela"
+
+msgid "Discover and install apps"
+msgstr "Descubra e instale aplicacións"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Unha tenda de aplicacións rápida e moderna para Linux, centrada en descubrir e instalar aplicacións e complementos Flatpak, en particular de Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Poña varias instalacións en cola e siga navegando"
+
+msgid "Easily view app permissions"
+msgstr "Vexa facilmente os permisos das aplicacións"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Inicie sesión en Flathub para ver e xestionar os seus favoritos"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Busque aplicacións directamente desde GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "A páxina de inicio que mostra as aplicacións de Flathub"
+
+msgid "App page for Exhibit"
+msgstr "Páxina de aplicación de Exhibit"
+
+msgid "Library page"
+msgstr "Páxina da biblioteca"
+
+msgid "Search page"
+msgstr "Páxina de busca"
+
+msgid "Category page"
+msgstr "Páxina de categoría"
+
+msgid "Stopped Receiving Updates"
+msgstr "Deixou de recibir actualizacións"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Desinstalar"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Instalar"
+
+msgid "Add-on"
+msgstr "Complemento"
+
+msgid "Manage Add-Ons"
+msgstr "Xestionar os complementos"
+
+msgid "No Add-Ons Visible"
+msgstr "Non hai complementos visibles"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "As súas preferencias de filtro actuais están ocultando todos os complementos coñecidos. Probe a axustalas."
+
+msgid "Add-on Page"
+msgstr "Páxina do complemento"
+
+msgid "Download"
+msgstr "Descargar"
+
+msgid "Installed"
+msgstr "Instalado"
+
+msgid "Downloads/Month"
+msgstr "Descargas/mes"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Deixou de recibir actualizacións do núcleo"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Este complemento usa un runtime que xa non recibe actualizacións nin correccións de seguridade. Pode deixar de ser seguro de usar."
+
+msgid "Other Sources"
+msgstr "Outras fontes"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Complemento para %s"
+
+msgid "Show Less"
+msgstr "Mostrar menos"
+
+msgid "Show More"
+msgstr "Mostrar máis"
+
+msgid "Download Stats"
+msgstr "Estatísticas de descargas"
+
+msgid "Age Rating"
+msgstr "Clasificación por idade"
+
+msgid "Cartoon Violence"
+msgstr "Violencia de debuxos animados"
+
+msgid "No information regarding cartoon violence"
+msgstr "Non hai información sobre a violencia de debuxos animados"
+
+msgid "Fantasy Violence"
+msgstr "Violencia de fantasía"
+
+msgid "No information regarding fantasy violence"
+msgstr "Non hai información sobre a violencia de fantasía"
+
+msgid "Realistic Violence"
+msgstr "Violencia realista"
+
+msgid "No information regarding realistic violence"
+msgstr "Non hai información sobre a violencia realista"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "Violencia con derramamento de sangue"
+
+msgid "No information regarding bloodshed"
+msgstr "Non hai información sobre o derramamento de sangue"
+
+msgid "Sexual Violence"
+msgstr "Violencia sexual"
+
+msgid "No information regarding sexual violence"
+msgstr "Non hai información sobre a violencia sexual"
+
+msgid "Alcohol"
+msgstr "Alcohol"
+
+msgid "No information regarding references to alcohol"
+msgstr "Non hai información sobre referencias ao alcohol"
+
+msgid "Narcotics"
+msgstr "Estupefacientes"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "Non hai información sobre referencias ás drogas ilícitas"
+
+msgid "Tobacco"
+msgstr "Tabaco"
+
+msgid "No information regarding references to tobacco products"
+msgstr "Non hai información sobre referencias aos produtos do tabaco"
+
+msgid "Nudity"
+msgstr "Nudez"
+
+msgid "No information regarding nudity of any sort"
+msgstr "Non hai información sobre a nudez de ningún tipo"
+
+msgid "Sexual Themes"
+msgstr "Temas sexuais"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "Non hai información sobre referencias ou representacións de natureza sexual"
+
+msgid "Profanity"
+msgstr "Palabras groseiras"
+
+msgid "No information regarding profanity of any kind"
+msgstr "Non hai información sobre as palabras groseiras de ningún tipo"
+
+msgid "Inappropriate Humor"
+msgstr "Humor inapropiado"
+
+msgid "No information regarding inappropriate humor"
+msgstr "Non hai información sobre o humor inapropiado"
+
+msgid "Discrimination"
+msgstr "Discriminación"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "Non hai información sobre a linguaxe discriminatoria de ningún tipo"
+
+msgid "Advertising"
+msgstr "Publicidade"
+
+msgid "No information regarding advertising of any kind"
+msgstr "Non hai información sobre a publicidade de ningún tipo"
+
+msgid "Gambling"
+msgstr "Xogos de azar"
+
+msgid "No information regarding gambling of any kind"
+msgstr "Non hai información sobre os xogos de azar de ningún tipo"
+
+msgid "Purchasing"
+msgstr "Compras"
+
+msgid "No information regarding the ability to spend money"
+msgstr "Non hai información sobre a posibilidade de gastar diñeiro"
+
+msgid "Chat Between Users"
+msgstr "Chat entre usuarios"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "Non hai información sobre as formas de conversar con outros usuarios"
+
+msgid "Audio Chat Between Users"
+msgstr "Chat de audio entre usuarios"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "Non hai información sobre as formas de falar con outros usuarios"
+
+msgid "Contact Details"
+msgstr "Datos de contacto"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "Non hai información sobre o intercambio de nomes de usuario de redes sociais ou enderezos de correo electrónico"
+
+msgid "Identifying Information"
+msgstr "Información identificativa"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "Non hai información sobre o intercambio de información do usuario con terceiros"
+
+msgid "Location Sharing"
+msgstr "Compartición da localización"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "Non hai información sobre o intercambio da localización física con outros usuarios"
+
+msgid "Prostitution"
+msgstr "Prostitución"
+
+msgid "No information regarding references to prostitution"
+msgstr "Non hai información sobre referencias á prostitución"
+
+msgid "Adultery"
+msgstr "Adulterio"
+
+msgid "No information regarding references to adultery"
+msgstr "Non hai información sobre referencias ao adulterio"
+
+msgid "Sexualized Characters"
+msgstr "Personaxes sexualizados"
+
+msgid "No information regarding sexualized characters"
+msgstr "Non hai información sobre personaxes sexualizados"
+
+msgid "Desecration"
+msgstr "Profanación"
+
+msgid "No information regarding references to desecration"
+msgstr "Non hai información sobre referencias á profanación"
+
+msgid "Human Remains"
+msgstr "Restos humanos"
+
+msgid "No information regarding visible dead human remains"
+msgstr "Non hai información sobre restos humanos mortos visibles"
+
+msgid "Slavery"
+msgstr "Escravitude"
+
+msgid "No information regarding references to slavery"
+msgstr "Non hai información sobre referencias á escravitude"
+
+msgid "Does not include references to drugs"
+msgstr "Non inclúe referencias a drogas"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "Non inclúe xuramentos, palabras groseiras nin outros tipos de linguaxe forte"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "Non inclúe publicidade nin transaccións monetarias"
+
+msgid "Does not include sex or nudity"
+msgstr "Non inclúe sexo nin nudez"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "Non inclúe funcionalidade de chat sen control"
+
+msgid "Does not include violence"
+msgstr "Non inclúe violencia"
+
+msgid "Drugs"
+msgstr "Drogas"
+
+msgid "Strong Language"
+msgstr "Linguaxe forte"
+
+msgid "Money"
+msgstr "Diñeiro"
+
+msgid "Social"
+msgstr "Social"
+
+msgid "Violence"
+msgstr "Violencia"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "Todas"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s ten unha clasificación por idade descoñecida"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s é adecuada para todos os públicos"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s é adecuada para nenos pequenos"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s é adecuada para nenos"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s é adecuada para adolescentes"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s é adecuada para adultos"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s é adecuada para %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "Cartafol do sistema %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Subcartafol persoal %s"
+
+msgid "Host system folders"
+msgstr "Cartafoles do sistema anfitrión"
+
+msgid "Host system configuration from /etc"
+msgstr "Configuración do sistema anfitrión desde /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Subcartafol do escritorio %s"
+
+msgid "Desktop folder"
+msgstr "Cartafol do escritorio"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "Subcartafol de documentos %s"
+
+msgid "Documents folder"
+msgstr "Cartafol de documentos"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "Subcartafol de música %s"
+
+msgid "Music folder"
+msgstr "Cartafol de música"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "Subcartafol de imaxes %s"
+
+msgid "Pictures folder"
+msgstr "Cartafol de imaxes"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "Subcartafol de compartición pública %s"
+
+msgid "Public Share folder"
+msgstr "Cartafol de compartición pública"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "Subcartafol de vídeos %s"
+
+msgid "Videos folder"
+msgstr "Cartafol de vídeos"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "Subcartafol de modelos %s"
+
+msgid "Templates folder"
+msgstr "Cartafol de modelos"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Subcartafol da caché do usuario %s"
+
+msgid "User cache folder"
+msgstr "Cartafol da caché do usuario"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Subcartafol da configuración do usuario %s"
+
+msgid "User configuration folder"
+msgstr "Cartafol da configuración do usuario"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Subcartafol dos datos do usuario %s"
+
+msgid "User data folder"
+msgstr "Cartafol dos datos do usuario"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Subcartafol de runtime do usuario %s"
+
+msgid "User runtime folder"
+msgstr "Cartafol de runtime do usuario"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Acceso ao sistema de ficheiros a %s"
+
+msgid "Unknown filesystem path"
+msgstr "Ruta do sistema de ficheiros descoñecida"
+
+msgid "Download Size"
+msgstr "Tamaño da descarga"
+
+msgid "Installed Size"
+msgstr "Tamaño instalado"
+
+msgid "Amount to download from the internet"
+msgstr "Cantidade que se descargará de internet"
+
+msgid "Size on Disk"
+msgstr "Tamaño no disco"
+
+msgid "Open user data folder"
+msgstr "Abrir o cartafol dos datos do usuario"
+
+msgid "Your User Data"
+msgstr "Os seus datos de usuario"
+
+msgid "Caches, settings, and other app data"
+msgstr "Cachés, preferencias e outros datos da aplicación"
+
+msgid "Cache"
+msgstr "Caché"
+
+msgid "Temporary cached data"
+msgstr "Datos temporais na caché"
+
+msgid "Clear Cache"
+msgstr "Limpar a caché"
+
+msgid "Installed Runtime Size"
+msgstr "Tamaño do runtime instalado"
+
+msgid "Runtime Download Size"
+msgstr "Tamaño da descarga do runtime"
+
+msgid "N/A"
+msgstr "N/D"
+
+msgid "Storage"
+msgstr "Almacenamento"
+
+msgid "Verified"
+msgstr "Verificado"
+
+msgid "The Bazaar Contributors"
+msgstr "Colaboradores de Bazaar"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "Agradecementos especiais"
+
+msgid "Logged Out Successfully!"
+msgstr "Sesión pechada correctamente!"
+
+msgid "Performing setup…"
+msgstr "Realizando a configuración…"
+
+msgid "Set Up Flathub?"
+msgstr "Configurar Flathub?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub non está configurado neste sistema. Non poderá explorar nin instalar aplicacións en Bazaar se non está dispoñible.\n"
+"\n"
+"Aínda pode usar Bazaar para explorar e eliminar as aplicacións xa instaladas."
+
+msgid "Later"
+msgstr "Máis tarde"
+
+msgid "Set Up Flathub"
+msgstr "Configurar Flathub"
+
+msgid "A backend error occurred"
+msgstr "Produciuse un erro no backend"
+
+msgid "Refreshing…"
+msgstr "Actualizando…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "Cargando %d aplicacións…"
+
+msgid "Failed to open file"
+msgstr "Produciuse un fallo ao abrir o ficheiro"
+
+msgid "Failed to load metainfo"
+msgstr "Produciuse un fallo ao cargar a metainfo"
+
+msgid "An initialization error occurred"
+msgstr "Produciuse un erro de inicialización"
+
+msgid "Checking for updates…"
+msgstr "Buscando actualizacións…"
+
+msgid "Failed to check for updates"
+msgstr "Produciuse un fallo ao buscar actualizacións"
+
+msgid "Could not find app"
+msgstr "Non se puido atopar a aplicación"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Cargando %d aplicación…"
+msgstr[1] "Cargando %d aplicacións…"
+
+msgid "Writing to cache…"
+msgstr "Escribindo na caché…"
+
+msgid "Removing remote…"
+msgstr "Eliminando o remoto…"
+
+msgid "Could not remove remote"
+msgstr "Non se puido eliminar o remoto"
+
+msgid "Show All"
+msgstr "Mostrar todo"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Todo «%s»"
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d aplicacións"
+
+msgid "Failed to Load Article"
+msgstr "Produciuse un fallo ao cargar o artigo"
+
+msgid "All apps are already installed"
+msgstr "Todas as aplicacións xa están instaladas"
+
+msgid "_OK"
+msgstr "_Aceptar"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Instalar %u aplicación?"
+msgstr[1] "Instalar %u aplicacións?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Instalarase o seguinte. Tamén se poden instalar outros compoñentes compartidos adicionais"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "Instalaranse %d complementos."
+
+msgid "Additionally, addons will be installed."
+msgstr "Ademais, instalaranse complementos."
+
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+msgid "_Install All"
+msgstr "_Instalar todo"
+
+msgid "Bundle Installation"
+msgstr "Instalación do paquete"
+
+msgid "Additional dependencies may take extra space"
+msgstr "As dependencias adicionais poden ocupar espazo extra"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Instalar esta aplicación pode requirir engadir unha nova fonte de software. As outras aplicacións desta fonte aparecerán en Bazaar.\n"
+"\n"
+"Engada esta fonte só se está seguro de que confía nela."
+
+msgid "Successfully Installed!"
+msgstr "Instalouse correctamente!"
+
+msgid "Open"
+msgstr "Abrir"
+
+msgid "Show App Details"
+msgstr "Mostrar os detalles da aplicación"
+
+msgid "Already Installed"
+msgstr "Xa está instalada"
+
+msgid "Installation Failed"
+msgstr "Produciuse un fallo na instalación"
+
+msgid "Unknown install size"
+msgstr "Tamaño de instalación descoñecido"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Instalaranse aproximadamente %s"
+
+msgid "No special permissions"
+msgstr "Sen permisos especiais"
+
+msgid "Place Applet"
+msgstr "Colocar o applet"
+
+msgid "Choose where to add this applet."
+msgstr "Escolla onde engadir este applet."
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Panel"
+msgstr "Panel"
+
+msgid "Dock"
+msgstr "Dock"
+
+msgid "No Curation"
+msgstr "Sen curación"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Non se proporciona información de curación neste sistema. Aínda pode explorar as aplicacións de Flathub"
+
+msgid "Browse Flathub"
+msgstr "Explorar Flathub"
+
+msgid "Offline"
+msgstr "Sen conexión"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s a %s, máximo o %s con %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "Instalacións:"
+
+msgid "Not Verified"
+msgstr "Non verificado"
+
+msgid "Developer information not available."
+msgstr "A información do desenvolvedor non está dispoñible."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "A titularidade do ID de aplicación %s non foi verificada e pode ser un paquete da comunidade."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "A titularidade do ID de aplicación %s foi verificada manualmente polo equipo de Flathub."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "A titularidade do ID de aplicación %1$s foi verificada por <b>%2$s</b> o <b>%3$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "A titularidade do ID de aplicación %1$s foi verificada mediante %2$s."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "A titularidade do ID de aplicación %s foi verificada."
+
+msgid "Bazaar Release"
+msgstr "Versión de Bazaar"
+
+msgid "Full Release Notes"
+msgstr "Notas completas da versión"
+
+msgid "This release was made possible by users like you!"
+msgstr "Esta versión foi posible grazas a usuarios coma vostede!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Gústame moito facer Bazaar, pero non o podo facer só. Axude a apoiar o seu desenvolvemento futuro doando en Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "Doar a Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Que hai de novo en %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Publicada o %-e de %B de %Y"
+
+msgid "Choose an Installation"
+msgstr "Escoller unha instalación"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Ten instaladas varias versións desta aplicación. Con cal desexa continuar?"
+
+msgid "Details"
+msgstr "Detalles"
+
+msgid "Copy"
+msgstr "Copiar"
+
+msgid "Copied!"
+msgstr "Copiado!"
+
+msgid "Favorite Count"
+msgstr "Número de favoritos"
+
+msgid "Failed to update favorite"
+msgstr "Produciuse un fallo ao actualizar o favorito"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Inicie sesión con Flathub para xestionar os favoritos"
+
+msgid "Log In"
+msgstr "Iniciar sesión"
+
+msgid "Favorites"
+msgstr "Favoritos"
+
+msgid "Install All"
+msgstr "Instalar todo"
+
+msgid "No Favorites"
+msgstr "Sen favoritos"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "As aplicacións que marque como favoritas aparecerán aquí"
+
+msgid "Support This Application"
+msgstr "Apoiar esta aplicación"
+
+msgid "Remove From Favorites"
+msgstr "Eliminar dos favoritos"
+
+msgid "Failed to remove favorite"
+msgstr "Produciuse un fallo ao eliminar o favorito"
+
+msgid "Previous"
+msgstr "Anterior"
+
+msgid "Next"
+msgstr "Seguinte"
+
+msgid "Editing"
+msgstr "Edición"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Mesturador"
+
+msgid "Music"
+msgstr "Música"
+
+msgid "Player"
+msgstr "Reprodutor"
+
+msgid "Recorder"
+msgstr "Gravador"
+
+msgid "Sequencer"
+msgstr "Secuenciador"
+
+msgid "Tuner"
+msgstr "Afinador"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "Emulation"
+msgstr "Emulación"
+
+msgid "Action"
+msgstr "Acción"
+
+msgid "Adventure"
+msgstr "Aventura"
+
+msgid "Arcade"
+msgstr "Árcade"
+
+msgid "Blocks"
+msgstr "Bloques"
+
+msgid "Board"
+msgstr "Taboleiro"
+
+msgid "Card"
+msgstr "Cartas"
+
+msgid "Kids"
+msgstr "Nenos"
+
+msgid "Logic"
+msgstr "Lóxica"
+
+msgid "Role Playing"
+msgstr "Xogos de rol"
+
+msgid "Shooter"
+msgstr "Disparos"
+
+msgid "Simulation"
+msgstr "Simulación"
+
+msgid "Sports"
+msgstr "Deportes"
+
+msgid "Strategy"
+msgstr "Estratexia"
+
+msgid "Browsers"
+msgstr "Navegadores"
+
+msgid "Chat"
+msgstr "Chat"
+
+msgid "Mail"
+msgstr "Correo"
+
+msgid "File Sharing"
+msgstr "Compartición de ficheiros"
+
+msgid "Audio & Video"
+msgstr "Son e vídeo"
+
+msgid "Media"
+msgstr "Multimedia"
+
+msgid "More Audio & Video"
+msgstr "Máis son e vídeo"
+
+msgid "Developer Tools"
+msgstr "Ferramentas de desenvolvemento"
+
+msgid "Develop"
+msgstr "Desenvolver"
+
+msgid "More Developer Tools"
+msgstr "Máis ferramentas de desenvolvemento"
+
+msgid "Education"
+msgstr "Educación"
+
+msgid "Learn"
+msgstr "Aprender"
+
+msgid "More Education"
+msgstr "Máis educación"
+
+msgid "Gaming"
+msgstr "Xogos"
+
+msgid "Play"
+msgstr "Xogar"
+
+msgid "More Gaming"
+msgstr "Máis xogos"
+
+msgid "Graphics & Photography"
+msgstr "Gráficos e fotografía"
+
+msgid "Create"
+msgstr "Crear"
+
+msgid "More Graphics & Photography"
+msgstr "Máis gráficos e fotografía"
+
+msgid "Networking"
+msgstr "Redes"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "More Networking"
+msgstr "Máis redes"
+
+msgid "Productivity"
+msgstr "Produtividade"
+
+msgid "Work"
+msgstr "Traballo"
+
+msgid "More Productivity"
+msgstr "Máis produtividade"
+
+msgid "Science"
+msgstr "Ciencia"
+
+msgid "More Science"
+msgstr "Máis ciencia"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "More System"
+msgstr "Máis sistema"
+
+msgid "Utilities"
+msgstr "Utilidades"
+
+msgid "Tools"
+msgstr "Ferramentas"
+
+msgid "More Utilities"
+msgstr "Máis utilidades"
+
+msgid "Trending"
+msgstr "Tendencias"
+
+msgid "More Trending"
+msgstr "Máis tendencias"
+
+msgid "Popular"
+msgstr "Populares"
+
+msgid "More Popular"
+msgstr "Máis populares"
+
+msgid "Recently Added"
+msgstr "Engadidas recentemente"
+
+msgid "New"
+msgstr "Novas"
+
+msgid "More New"
+msgstr "Máis novas"
+
+msgid "Recently Updated"
+msgstr "Actualizadas recentemente"
+
+msgid "Updated"
+msgstr "Actualizadas"
+
+msgid "More Updated"
+msgstr "Máis actualizadas"
+
+msgid "Mobile"
+msgstr "Móbil"
+
+msgid "More Mobile"
+msgstr "Máis móbil"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Máis Adwaita"
+
+msgid "KDE Apps"
+msgstr "Aplicacións de KDE"
+
+msgid "More KDE Apps"
+msgstr "Máis aplicacións de KDE"
+
+msgid "Made for COSMIC™"
+msgstr "Feito para COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Para COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Máis aplicacións de COSMIC"
+
+msgid "Games"
+msgstr "Xogos"
+
+msgid "More Games"
+msgstr "Máis xogos"
+
+msgid "Emulators"
+msgstr "Emuladores"
+
+msgid "More Emulators"
+msgstr "Máis emuladores"
+
+msgid "Launchers"
+msgstr "Lanzadores"
+
+msgid "More Game Launchers"
+msgstr "Máis lanzadores de xogos"
+
+msgid "Game Tools"
+msgstr "Ferramentas para xogos"
+
+msgid "More Game Tools"
+msgstr "Máis ferramentas para xogos"
+
+msgid "New Year, New Workflows"
+msgstr "Ano novo, novos fluxos de traballo"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Aplicacións para tomar notas, seguir tarefas e facer plans"
+
+msgid "Staff Picks"
+msgstr "Escollas do equipo"
+
+msgid "Apps we love right now"
+msgstr "Aplicacións que nos encantan agora mesmo"
+
+msgid "Get Creative"
+msgstr "Sexa creativo"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Aplicacións esenciais para debuxar, editar fotos e facer deseño dixital"
+
+msgid "Build Native Apps"
+msgstr "Cree aplicacións nativas"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Desenvolva aplicacións que se sintan como na casa no seu sistema"
+
+msgid "Stay in Touch"
+msgstr "Manteña o contacto"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Aplicacións esenciais de colaboración e comunicación"
+
+msgid "Ready for Vacations"
+msgstr "Listo para as vacacións"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Aplicacións de mapas, transporte público, tempo e planificación de viaxes"
+
+msgid "Smarter Every Day"
+msgstr "Máis listo cada día"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Aplicacións para axudarlle a estudar, investigar e escribir"
+
+msgid "Get Cozy"
+msgstr "Póñase cómodo"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Grandes aplicacións para ler, ver películas e xogar"
+
+msgid "Web Developer Essentials"
+msgstr "Esenciais para desenvolvedores web"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Facer sitios web é máis divertido con estas aplicacións"
+
+msgid "Take Better Notes"
+msgstr "Tome mellores notas"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Atope a súa nova ferramenta favorita para tomar notas"
+
+msgid "Get Focused"
+msgstr "Concéntrese"
+
+msgid "Great apps for task management"
+msgstr "Grandes aplicacións para a xestión de tarefas"
+
+msgid "Make Some Noise"
+msgstr "Faga un pouco de ruído"
+
+msgid "Apps for creating and producing music"
+msgstr "Aplicacións para crear e producir música"
+
+msgid "Get To Work"
+msgstr "Poñámonos a traballar"
+
+msgid "Essential office apps"
+msgstr "Aplicacións de oficina esenciais"
+
+msgid "Flathub Not Added"
+msgstr "Flathub non está engadido"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Non se atopou o remoto de Flathub en ningunha das súas instalacións de Flatpak"
+
+msgid "Can't Reach Flathub"
+msgstr "Non se pode acceder a Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "Aínda pode xestionar e buscar aplicacións."
+
+msgid "Search Apps"
+msgstr "Buscar aplicacións"
+
+msgid "Reconnect"
+msgstr "Reconectar"
+
+msgid "App of the Day"
+msgstr "Aplicación do día"
+
+msgid "On the Go"
+msgstr "En marcha"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Aplicacións para os seus teléfonos e tabletas Linux"
+
+msgid "More Mobile Apps"
+msgstr "Máis aplicacións para móbil"
+
+msgid "We​ ♥​ Games"
+msgstr "Amamos ♥ os xogos"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Xogos e aplicacións para executar os seus títulos favoritos"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Esta é unha vista previa local; algúns detalles poden diferir da listaxe publicada"
+
+msgid "Preview Store Appearance"
+msgstr "Vista previa da aparencia na tenda"
+
+msgid "_Support"
+msgstr "_Apoiar"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Esta aplicación usa un runtime que xa non recibe actualizacións nin correccións de seguridade. Pode deixar de ser segura de usar."
+
+msgid "Trash Data"
+msgstr "Mover os datos ao lixo"
+
+msgid "Add-ons"
+msgstr "Complementos"
+
+msgid "More Add-Ons"
+msgstr "Máis complementos"
+
+msgid "Links"
+msgstr "Ligazóns"
+
+msgid "Similar Apps"
+msgstr "Aplicacións similares"
+
+msgid "No URL"
+msgstr "Sen URL"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Esta aplicación ten unha licenza FLOSS, o que significa que o código fonte pode ser auditado para comprobar a súa seguridade."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Esta aplicación ten unha licenza privativa, o que significa que o código fonte se desenvolve en privado e non pode ser auditado por un terceiro independente."
+
+msgid "Other Apps From This Developer"
+msgstr "Outras aplicacións deste desenvolvedor"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Outras aplicacións de %s"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s non está instalada, pero aínda ten <b>%s</b> de datos presentes."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Aplicacións de %s"
+
+msgid "Apps by This Developer"
+msgstr "Aplicacións deste desenvolvedor"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d aplicación"
+msgstr[1] "%d aplicacións"
+
+msgid "Failed to Remove User Data"
+msgstr "Produciuse un fallo ao eliminar os datos do usuario"
+
+msgid "Hardware Support"
+msgstr "Compatibilidade de hardware"
+
+msgid "Keyboard support"
+msgstr "Compatibilidade con teclado"
+
+msgid "Requires keyboards"
+msgstr "Require teclados"
+
+msgid "Recommends keyboards"
+msgstr "Recomenda teclados"
+
+msgid "Supports keyboards"
+msgstr "Admite teclados"
+
+msgid "Unknown support for keyboards"
+msgstr "Compatibilidade con teclados descoñecida"
+
+msgid "Mouse support"
+msgstr "Compatibilidade con rato"
+
+msgid "Requires mice or pointing devices"
+msgstr "Require ratos ou dispositivos apuntadores"
+
+msgid "Recommends mice or pointing devices"
+msgstr "Recomenda ratos ou dispositivos apuntadores"
+
+msgid "Supports mice or pointing devices"
+msgstr "Admite ratos ou dispositivos apuntadores"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "Compatibilidade con ratos ou dispositivos apuntadores descoñecida"
+
+msgid "Touchscreen support"
+msgstr "Compatibilidade con pantalla táctil"
+
+msgid "Requires touchscreens"
+msgstr "Require pantallas táctiles"
+
+msgid "Recommends touchscreens"
+msgstr "Recomenda pantallas táctiles"
+
+msgid "Supports touchscreens"
+msgstr "Admite pantallas táctiles"
+
+msgid "Unknown support for touchscreens"
+msgstr "Compatibilidade con pantallas táctiles descoñecida"
+
+msgid "Mobile support"
+msgstr "Compatibilidade con móbiles"
+
+msgid "Works on mobile devices"
+msgstr "Funciona en dispositivos móbiles"
+
+msgid "May not work well on mobile devices"
+msgstr "Pode non funcionar ben en dispositivos móbiles"
+
+msgid "Desktop support"
+msgstr "Compatibilidade con escritorio"
+
+msgid "Works well on large screens"
+msgstr "Funciona ben en pantallas grandes"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s funciona mellor en hardware específico"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s funciona na maioría dos dispositivos"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Cancelando"
+
+msgid "_Open"
+msgstr "_Abrir"
+
+msgid "Uninstall Application"
+msgstr "Desinstalar a aplicación"
+
+msgid "_Remove"
+msgstr "_Eliminar"
+
+msgid "Update"
+msgstr "Actualizar"
+
+msgid "Remove"
+msgstr "Eliminar"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Instalar %s desde %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Instalar %s"
+
+msgid "Donate"
+msgstr "Doar"
+
+msgid "Search installed apps"
+msgstr "Buscar nas aplicacións instaladas"
+
+msgid "No Apps Found"
+msgstr "Non se atopou ningunha aplicación"
+
+msgid "Search Store Instead"
+msgstr "Buscar na tenda no seu lugar"
+
+msgid "Pending Updates"
+msgstr "Actualizacións pendentes"
+
+msgid "Downloads"
+msgstr "Descargas"
+
+msgid "Recently Uninstalled"
+msgstr "Desinstaladas recentemente"
+
+msgid "Clear Finished Tasks"
+msgstr "Limpar as tarefas rematadas"
+
+msgid "Sort Options"
+msgstr "Opcións de ordenación"
+
+msgid "Sort By"
+msgstr "Ordenar por"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Size"
+msgstr "Tamaño"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "Non se atopou ningunha coincidencia para «%s» na lista de aplicacións instaladas"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u actualización dispoñible"
+msgstr[1] "%u actualizacións dispoñibles"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u aplicación instalada"
+msgstr[1] "%u aplicacións instaladas"
+
+msgid "No applications found"
+msgstr "Non se atopou ningunha aplicación"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Atopouse unha aplicación"
+msgstr[1] "Atopáronse %u aplicacións"
+
+msgid "Get Involved"
+msgstr "Participe"
+
+msgid "Learn More"
+msgstr "Saber máis"
+
+msgid "Unknown License"
+msgstr "Licenza descoñecida"
+
+msgid "Community Built"
+msgstr "Construída pola comunidade"
+
+msgid "Proprietary"
+msgstr "Privativa"
+
+msgid "Special License"
+msgstr "Licenza especial"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Esta aplicación desenvólvese de forma aberta por unha comunidade internacional.\n"
+"\n"
+"Pode participar e axudar a facela aínda mellor."
+
+msgid "The license of this app is not known"
+msgstr "A licenza desta aplicación non se coñece"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Esta aplicación desenvólvese de forma aberta por unha comunidade internacional e publícase baixo a licenza %s.\n"
+"\n"
+"Pode participar e axudar a facela aínda mellor."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Esta aplicación non se desenvolve de forma aberta, polo que só os seus desenvolvedores saben como funciona. Pode ser insegura de maneiras difíciles de detectar e pode cambiar sen supervisión.\n"
+"\n"
+"Pode que poida ou non contribuír a esta aplicación."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Esta aplicación desenvólvese baixo a licenza especial %s.\n"
+"\n"
+"Pode que poida ou non contribuír a esta aplicación."
+
+msgid "License"
+msgstr "Licenza"
+
+msgid "Connect to Flathub"
+msgstr "Conectar con Flathub"
+
+msgid "Something Went Wrong"
+msgstr "Algo foi mal"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Inicie sesión para sincronizar as súas aplicacións favoritas entre dispositivos"
+
+msgid "Finish"
+msgstr "Rematar"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Ola, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Engadir a icona á vista previa de metainfo?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Os ficheiros de metainfo non inclúen iconas de aplicación por si mesmos. Quere seleccionar unha manualmente?"
+
+msgid "Skip"
+msgstr "Omitir"
+
+msgid "Select Icon"
+msgstr "Seleccionar a icona"
+
+msgid "Image Files"
+msgstr "Ficheiros de imaxe"
+
+msgid "New Permissions"
+msgstr "Novos permisos"
+
+msgid "_Accept"
+msgstr "_Aceptar"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Novo permiso para %s"
+msgstr[1] "Novos permisos para %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Esta actualización require o seguinte permiso adicional"
+msgstr[1] "Esta actualización require os seguintes permisos adicionais"
+
+msgid "User"
+msgstr "Usuario"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Fin de vida"
+
+msgid "Preferences"
+msgstr "Preferencias"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "A conexión de rede é de uso medido: a actualización automática dos datos da tenda está en pausa"
+
+msgid "Refresh Manually"
+msgstr "Actualizar manualmente"
+
+msgid "App Updates"
+msgstr "Actualizacións de aplicacións"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "As actualizacións automáticas pausaranse nas redes de uso medido ou cando o aforro de enerxía estea activado, para aforrar datos e batería."
+
+msgid "_Automatic"
+msgstr "_Automática"
+
+msgid "Automatically check for and download app updates"
+msgstr "Buscar e descargar automaticamente as actualizacións das aplicacións"
+
+msgid "_Manual"
+msgstr "_Manual"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "A busca e a descarga das actualizacións das aplicacións deben facerse manualmente"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Notificacións de actualización automática"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Notificar cando as actualizacións se instalaron automaticamente"
+
+msgid "Content Filters"
+msgstr "Filtros de contido"
+
+msgid "_Free Software Only"
+msgstr "Só software _libre"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Ocultar as aplicacións privativas ao explorar e buscar"
+
+msgid "F_lathub Results Only"
+msgstr "Só _resultados de Flathub"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Limitar os resultados de busca e exploración ás aplicacións dispoñibles só en Flathub"
+
+msgid "_Verified Results Only"
+msgstr "Só resultados _verificados"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Ocultar os resultados que non están verificados en Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Ocultar as aplicacións de _fin de vida"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "Ocultar as aplicacións que os seus desenvolvedores xa non admiten"
+
+msgid "Progress Bar Theme"
+msgstr "Tema da barra de progreso"
+
+msgid "Accent Color"
+msgstr "Cor de énfase"
+
+msgid "Pride Colors"
+msgstr "Cores do orgullo"
+
+msgid "Lesbian Pride Colors"
+msgstr "Cores do orgullo lésbico"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Cores do orgullo homosexual masculino"
+
+msgid "Transgender Pride Colors"
+msgstr "Cores do orgullo transxénero"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Cores do orgullo non binario"
+
+msgid "Bisexual Pride Colors"
+msgstr "Cores do orgullo bisexual"
+
+msgid "Asexual Pride Colors"
+msgstr "Cores do orgullo asexual"
+
+msgid "Pansexual Pride Colors"
+msgstr "Cores do orgullo pansexual"
+
+msgid "Aromantic Pride Colors"
+msgstr "Cores do orgullo arromántico"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Cores do orgullo de xénero fluído"
+
+msgid "Polysexual Pride Colors"
+msgstr "Cores do orgullo polisexual"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Cores do orgullo omnisexual"
+
+msgid "Aroace Pride Colors"
+msgstr "Cores do orgullo aroace"
+
+msgid "Agender Pride Colors"
+msgstr "Cores do orgullo axénero"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Cores do orgullo xénero queer"
+
+msgid "Intersex Pride Colors"
+msgstr "Cores do orgullo intersexual"
+
+msgid "Demigender Pride Colors"
+msgstr "Cores do orgullo demixénero"
+
+msgid "Biromantic Pride Colors"
+msgstr "Cores do orgullo birromántico"
+
+msgid "Disability Pride Colors"
+msgstr "Cores do orgullo da discapacidade"
+
+msgid "Femboy Pride Colors"
+msgstr "Cores do orgullo femboy"
+
+msgid "Neutrois Pride Colors"
+msgstr "Cores do orgullo neutrois"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar precisa executarse en segundo plano para buscar actualizacións das aplicacións"
+
+msgid "Version History"
+msgstr "Historial de versións"
+
+msgid "Today"
+msgstr "Hoxe"
+
+msgid "Yesterday"
+msgstr "Onte"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "Hai %d día"
+msgstr[1] "Hai %d días"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "Hai %d semana"
+msgstr[1] "Hai %d semanas"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "Hai %d mes"
+msgstr[1] "Hai %d meses"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "Hai %d ano"
+msgstr[1] "Hai %d anos"
+
+msgid "%e %B %Y"
+msgstr "%e de %B de %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "Versión %s"
+
+msgid "No details for this release"
+msgstr "Non hai detalles para esta versión"
+
+msgid "Get More Information"
+msgstr "Obter máis información"
+
+msgid "_Version History"
+msgstr "_Historial de versións"
+
+msgid "Remotes"
+msgstr "Remotos"
+
+msgid "System Installation"
+msgstr "Instalación do sistema"
+
+msgid "Available to all users on this computer"
+msgstr "Dispoñible para todos os usuarios deste computador"
+
+msgid "User Installation"
+msgstr "Instalación do usuario"
+
+msgid "Only available to you"
+msgstr "Dispoñible só para vostede"
+
+msgid "Remove Remote"
+msgstr "Eliminar o remoto"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Eliminar %s"
+
+msgid "Unused"
+msgstr "Sen usar"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u aplicación instalada"
+msgstr[1] "%u aplicacións instaladas"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Eliminar «%s»?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Xa non poderá instalar aplicacións desde este remoto do usuario."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Xa non poderá instalar aplicacións desde este remoto do sistema."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u aplicación para eliminar"
+msgstr[1] "%u aplicacións para eliminar"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "A aplicación de abaixo instalouse desde este remoto e eliminarase da súa conta xunto con el."
+msgstr[1] "Estas aplicacións instaláronse desde este remoto e eliminaranse da súa conta xunto con el."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "A aplicación de abaixo instalouse desde este remoto e eliminarase para todos os usuarios xunto con el."
+msgstr[1] "Estas aplicacións instaláronse desde este remoto e eliminaranse para todos os usuarios xunto con el."
+
+msgid "Uninstall"
+msgstr "Desinstalar"
+
+msgid "Get"
+msgstr "Obter"
+
+msgid "Arbitrary Permissions"
+msgstr "Permisos arbitrarios"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Esta aplicación ten un permiso que lle permite indirectamente concederse a si mesma <b>calquera outro permiso que queira</b>, saltándose a sandbox de Flatpak.\n"
+"\n"
+"Polo tanto, pode facer calquera cousa que faga unha aplicación privilexiada e sen sandbox, como acceder a todos os seus ficheiros e conectarse a internet.\n"
+"\n"
+"Ver os outros permisos aínda pode dar unha mellor idea do que probablemente fará a aplicación."
+
+msgid "View Other Permissions"
+msgstr "Ver os outros permisos"
+
+msgid "Safe"
+msgstr "Segura"
+
+msgid "App ID"
+msgstr "ID da aplicación"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Esta aplicación usa unha versión desactualizada da plataforma de software (SDK) e pode conter erros ou vulnerabilidades de seguridade que non se corrixirán."
+
+msgid "Safety"
+msgstr "Seguridade"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s é segura"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s non ten permisos inseguros"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s probablemente é segura"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s posiblemente non é segura"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s non é segura"
+
+msgid "Back"
+msgstr "Atrás"
+
+msgid "Previous Screenshot"
+msgstr "Captura de pantalla anterior"
+
+msgid "Next Screenshot"
+msgstr "Seguinte captura de pantalla"
+
+msgid "Copy Image"
+msgstr "Copiar a imaxe"
+
+msgid "Reset View"
+msgstr "Restablecer a vista"
+
+msgid "Zoom Out"
+msgstr "Reducir"
+
+msgid "Zoom In"
+msgstr "Ampliar"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u actualización de runtime"
+msgstr[1] "%u actualizacións de runtime"
+
+msgid "Screenshots Carousel"
+msgstr "Carrusel de capturas de pantalla"
+
+msgid "No Screenshots"
+msgstr "Sen capturas de pantalla"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Captura de pantalla %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Captura de pantalla %u"
+
+msgid "Clear Search"
+msgstr "Limpar a busca"
+
+msgid "Filters"
+msgstr "Filtros"
+
+msgid "_Verified"
+msgstr "_Verificadas"
+
+msgid "_Free/Open"
+msgstr "_Libres/abertas"
+
+msgid "Non-_EOL"
+msgstr "Non _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Filtrar as aplicacións de fin de vida"
+
+msgid "_Mobile Friendly"
+msgstr "_Compatibles con móbil"
+
+msgid "Categories"
+msgstr "Categorías"
+
+msgid "Search Apps, Games, Software"
+msgstr "Buscar aplicacións, xogos, software"
+
+msgid "Search Filters"
+msgstr "Filtros de busca"
+
+msgid "Browse Categories"
+msgstr "Explorar categorías"
+
+msgid "Categories Unavailable"
+msgstr "Categorías non dispoñibles"
+
+msgid "Search for apps using the search bar above."
+msgstr "Busque aplicacións usando a barra de busca de arriba."
+
+msgid "No Applications Found"
+msgstr "Non se atopou ningunha aplicación"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Non se atopou ningún resultado para «%s» en Flathub"
+
+msgid "Browser"
+msgstr "Navegador"
+
+msgid "Video"
+msgstr "Vídeo"
+
+msgid "Office"
+msgstr "Oficina"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Calendario"
+
+msgid "Messaging"
+msgstr "Mensaxería"
+
+msgid "Paint"
+msgstr "Debuxo"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Emulador"
+
+msgid "Copy Link"
+msgstr "Copiar a ligazón"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Páxina de Flathub"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Sitio web do proxecto"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Seguimento de problemas"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "Preguntas frecuentes"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Axuda"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Doar"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Traducir"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Contacto"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Código fonte"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Contribuír"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifesto"
+
+msgid "Timeline"
+msgstr "Cronoloxía"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "This Week"
+msgstr "Esta semana"
+
+msgid "Installs per day"
+msgstr "Instalacións por día"
+
+msgid "World"
+msgstr "Mundo"
+
+msgid "Installs per country"
+msgstr "Instalacións por país"
+
+msgid "Since 4/15/2024"
+msgstr "Desde o 15/4/2024"
+
+msgid "No Results Found"
+msgstr "Non se atopou ningún resultado"
+
+msgid "Search failed"
+msgstr "Produciuse un fallo na busca"
+
+msgid "Unknown"
+msgstr "Descoñecido"
+
+msgid "Keep User Data"
+msgstr "Manter os datos do usuario"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Permitir restaurar a configuración &amp; o contido persoais"
+
+msgid "Delete All Data"
+msgstr "Eliminar todos os datos"
+
+msgid "Permanently erase user data to save space"
+msgstr "Borrar definitivamente os datos do usuario para aforrar espazo"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "Eliminar %s?"
+
+msgid "Select which version to remove."
+msgstr "Seleccione a versión que quere eliminar."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "Non será posible usar %s despois de desinstalala."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "«%s» ten un risco alto"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Esta aplicación ten acceso completo ao seu sistema, incluídos <b>todos os seus ficheiros, o historial do navegador, os contrasinais gardados</b> e moito máis. Tamén ten acceso a internet, o que significa que podería enviar os seus datos a terceiros.\n"
+"\n"
+"Como a aplicación é privativa, non se pode auditar o que fai con estes permisos."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Esta aplicación usa o sistema de xanelas herdado X11, que lle permite <b>rexistrar todas as teclas premidas, facer capturas de pantalla e vixiar outras aplicacións</b>. Tamén ten acceso a internet, o que significa que podería enviar os seus datos a terceiros.\n"
+"\n"
+"Como a aplicación é privativa, non se pode auditar o que fai con estes permisos."
+
+msgid "_Install Anyway"
+msgstr "_Instalar igualmente"
+
+msgid "Failed to load transaction dialog"
+msgstr "Produciuse un fallo ao cargar o diálogo da transacción"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "Rematou en %.02f segundos"
+
+msgid "App Add-On"
+msgstr "Complemento da aplicación"
+
+msgid "Runtime"
+msgstr "Runtime"
+
+msgid "In Queue"
+msgstr "En cola"
+
+msgid "Finishing Up"
+msgstr "Rematando"
+
+msgid "Done"
+msgstr "Feito"
+
+msgid "Cancelled"
+msgstr "Cancelado"
+
+msgid "Error"
+msgstr "Erro"
+
+msgid "Cancel Transaction"
+msgstr "Cancelar a transacción"
+
+msgid "Show Details"
+msgstr "Mostrar os detalles"
+
+msgid "Show Error Info"
+msgstr "Mostrar a información do erro"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s liberados"
+
+msgid "Transaction Error"
+msgstr "Erro da transacción"
+
+msgid "Pending"
+msgstr "Pendente"
+
+msgid "Installed Updates"
+msgstr "Actualizacións instaladas"
+
+msgid "Release Notes"
+msgstr "Notas da versión"
+
+msgid "No Release Info"
+msgstr "Sen información da versión"
+
+msgid "_Update All"
+msgstr "_Actualizar todo"
+
+msgid "This update requests new permissions"
+msgstr "Esta actualización solicita novos permisos"
+
+msgid "Manage Leftover User Data"
+msgstr "Xestionar os datos de usuario sobrantes"
+
+msgid "No Leftover User Data Found"
+msgstr "Non se atoparon datos de usuario sobrantes"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Os datos persoais que deixaron as aplicacións eliminadas aparecerán aquí"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Datos de usuario no lixo de %u aplicación"
+msgstr[1] "Datos de usuario no lixo de %u aplicacións"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Datos de usuario no lixo de %s"
+
+msgid "Open User Data Folder"
+msgstr "Abrir o cartafol dos datos do usuario"
+
+msgid "Trash User Data"
+msgstr "Mover os datos do usuario ao lixo"
+
+msgid "Refreshing"
+msgstr "Actualizando"
+
+msgid "Curated"
+msgstr "Selección"
+
+msgid "Explore"
+msgstr "Explorar"
+
+msgid "Library"
+msgstr "Biblioteca"
+
+msgid "Search"
+msgstr "Buscar"
+
+msgid "Main Menu"
+msgstr "Menú principal"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Está a executar unha nova versión de Bazaar!"
+
+msgid "See What's New"
+msgstr "Ver as novidades"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Ten conexión de rede pero está a ver unha versión en caché de Flathub"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "A conexión de rede é de uso medido: as actualizacións automáticas están desactivadas"
+
+msgid "_Donate to Bazaar"
+msgstr "_Doar a Bazaar"
+
+msgid "_Refresh"
+msgstr "_Recargar"
+
+msgid "_Login With Flathub"
+msgstr "_Iniciar sesión con Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "_Xestionar os datos de usuario sobrantes"
+
+msgid "Manage R_emotes"
+msgstr "Xestionar r_emotos"
+
+msgid "_Preferences"
+msgstr "_Preferencias"
+
+msgid "_Keyboard Shortcuts"
+msgstr "Atallos de _teclado"
+
+msgid "_About Bazaar"
+msgstr "_Sobre Bazaar"
+
+msgid "_Quit Bazaar"
+msgstr "_Saír de Bazaar"
+
+msgid "Log Out"
+msgstr "Pechar a sesión"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Produciuse un fallo ao iniciar a aplicación"
+
+msgid "Could not open link"
+msgstr "Non se puido abrir a ligazón"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Non pode eliminar Bazaar desde Bazaar!"
+
+msgid "Can't do that right now!"
+msgstr "Non se pode facer iso agora mesmo!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u instalación"
+msgstr[1] "%s, %'u instalacións"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Máis instalacións desde %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d descargas no último mes"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s de runtime"
+
+msgid "Size information unavailable"
+msgstr "Información de tamaño non dispoñible"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "Tamaño da descarga de %s"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Tamaño instalado de %s"
+
+msgid "All Ages"
+msgstr "Todas as idades"
+
+msgid "Age rating information unavailable"
+msgstr "Información da clasificación por idade non dispoñible"
+
+msgid "Suitable for all ages"
+msgstr "Axeitada para todas as idades"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "Axeitada para maiores de %d anos"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "Software libre baixo a licenza %s"
+
+msgid "Free software"
+msgstr "Software libre"
+
+msgid "Proprietary Software"
+msgstr "Software privativo"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Licenza especial: %s"
+
+msgid "Free Software"
+msgstr "Software libre"
+
+msgid "Adaptive"
+msgstr "Adaptable"
+
+msgid "Desktop Only"
+msgstr "Só escritorio"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "Funciona en escritorios, tabletas e teléfonos"
+
+msgid "May not work on mobile devices"
+msgstr "Pode non funcionar en dispositivos móbiles"
+
+msgid "Low Risk"
+msgstr "Risco baixo"
+
+msgid "Medium Risk"
+msgstr "Risco medio"
+
+msgid "High Risk"
+msgstr "Risco alto"
+
+msgid "Unknown Permissions"
+msgstr "Permisos descoñecidos"
+
+msgid "Permissions are missing for this app."
+msgstr "Faltan os permisos desta aplicación."
+
+msgid "No Permissions"
+msgstr "Sen permisos"
+
+msgid "App is fully sandboxed"
+msgstr "A aplicación está completamente illada nunha sandbox"
+
+msgid "Network Access"
+msgstr "Acceso á rede"
+
+msgid "Can access the internet"
+msgstr "Pode acceder a internet"
+
+msgid "No Network Access"
+msgstr "Sen acceso á rede"
+
+msgid "Cannot access the internet"
+msgstr "Non pode acceder a internet"
+
+msgid "User Device Access"
+msgstr "Acceso aos dispositivos do usuario"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Pode acceder a dispositivos como cámaras web ou mandos de xogos"
+
+msgid "No User Device Access"
+msgstr "Sen acceso aos dispositivos do usuario"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Non pode acceder a dispositivos como cámaras web ou mandos de xogos"
+
+msgid "Input Device Access"
+msgstr "Acceso aos dispositivos de entrada"
+
+msgid "Can access input devices"
+msgstr "Pode acceder aos dispositivos de entrada"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Acceso ao micrófono e reprodución de son"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Pode escoitar con micrófonos e reproducir son sen pedir permiso"
+
+msgid "System Device Access"
+msgstr "Acceso aos dispositivos do sistema"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Pode acceder a dispositivos do sistema que requiren permisos elevados"
+
+msgid "Screen Contents Access"
+msgstr "Acceso ao contido da pantalla"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Pode acceder ao contido da pantalla ou doutras xanelas"
+
+msgid "Legacy Windowing System"
+msgstr "Sistema de xanelas herdado"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Usa sempre un sistema de xanelas herdado (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Pode adquirir permisos arbitrarios"
+
+msgid "User Settings"
+msgstr "Preferencias do usuario"
+
+msgid "Can access and change user settings"
+msgstr "Pode acceder ás preferencias do usuario e cambialas"
+
+msgid "Full File System Read/Write Access"
+msgstr "Acceso de lectura e escritura a todo o sistema de ficheiros"
+
+msgid "Can read and write all data on the file system"
+msgstr "Pode ler e escribir todos os datos do sistema de ficheiros"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Acceso de lectura e escritura ao cartafol persoal"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Pode ler e escribir todos os datos do seu cartafol persoal"
+
+msgid "Full File System Read Access"
+msgstr "Acceso de lectura a todo o sistema de ficheiros"
+
+msgid "Can read all data on the file system"
+msgstr "Pode ler todos os datos do sistema de ficheiros"
+
+msgid "Home Folder Read Access"
+msgstr "Acceso de lectura ao cartafol persoal"
+
+msgid "Can read all data in your home directory"
+msgstr "Pode ler todos os datos do seu cartafol persoal"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Acceso de lectura e escritura ao cartafol de descargas"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Pode ler e escribir todos os datos do seu cartafol de descargas"
+
+msgid "Download Folder Read Access"
+msgstr "Acceso de lectura ao cartafol de descargas"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Pode ler todos os datos do seu cartafol de descargas"
+
+msgid "Can read and write all data in the directory"
+msgstr "Pode ler e escribir todos os datos do cartafol"
+
+msgid "Can read all data in the directory"
+msgstr "Pode ler todos os datos do cartafol"
+
+msgid "No File System Access"
+msgstr "Sen acceso ao sistema de ficheiros"
+
+msgid "Cannot access the file system at all"
+msgstr "Non pode acceder ao sistema de ficheiros en absoluto"
+
+msgid "Uses System Services"
+msgstr "Usa servizos do sistema"
+
+msgid "Can request data from non-portal system services"
+msgstr "Pode solicitar datos a servizos do sistema que non son de portal"
+
+msgid "Uses Session Services"
+msgstr "Usa servizos da sesión"
+
+msgid "Can request data from non-portal session services"
+msgstr "Pode solicitar datos a servizos da sesión que non son de portal"
+
+msgid "No Service Access"
+msgstr "Sen acceso a servizos"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Non pode acceder en absoluto a servizos da sesión nin do sistema que non sexan de portal"
+
+msgid "Verified App Developer"
+msgstr "Desenvolvedor da aplicación verificado"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Verificouse que o desenvolvedor desta aplicación é quen di ser"
+
+msgid "Proprietary Code"
+msgstr "Código privativo"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "O código fonte non é público, polo que non se pode auditar de forma independente e podería ser inseguro"
+
+msgid "Auditable Code"
+msgstr "Código auditable"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "O código fonte é público e pode ser auditado de forma independente, o que fai máis probable que a aplicación sexa segura"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Usar o servizo do sistema %s"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Usar o servizo da sesión %s"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Usar o servizo %s"
+
+msgid "Can see the non-portal service"
+msgstr "Pode ver o servizo que non é de portal"
+
+msgid "Can talk to the non-portal service"
+msgstr "Pode comunicarse co servizo que non é de portal"
+
+msgid "Can own the non-portal service"
+msgstr "Pode ser propietaria do servizo que non é de portal"
+
+msgid "Global Menu Integration"
+msgstr "Integración co menú global"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Pode mostrar os seus menús nunha barra de menú global"
+
+msgid "KDE Settings Integration"
+msgstr "Integración coas preferencias de KDE"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Pode detectar cando cambian as preferencias do escritorio de KDE"
+
+msgid "KDE Global Settings"
+msgstr "Preferencias globais de KDE"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Pode ler as preferencias do escritorio de KDE, como tipos de letra e cores"
+
+msgid "Secret Storage Service"
+msgstr "Servizo de almacenamento de segredos"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Pode almacenar e recuperar os seus propios contrasinais usando o chaveiro do sistema"
+
+msgid "Desktop Notifications Service"
+msgstr "Servizo de notificacións do escritorio"
+
+msgid "Can send desktop notifications"
+msgstr "Pode enviar notificacións do escritorio"
+
+msgid "System Tray Integration"
+msgstr "Integración coa bandexa do sistema"
+
+msgid "Can display an icon in the system tray"
+msgstr "Pode mostrar unha icona na bandexa do sistema"
+
+msgid "KDE Connect Integration"
+msgstr "Integración con KDE Connect"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Pode interactuar con dispositivos emparellados mediante KDE Connect"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navegación"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Abrir a páxina Explorar"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Abrir a páxina Biblioteca"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Abrir a páxina de busca"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Remotos"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Sincronizar os remotos"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Xeral"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Abrir as preferencias"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Mostrar os atallos"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Pechar a xanela"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Saír de Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s instalada"
+
+msgid "The app is ready to be used"
+msgstr "A aplicación está lista para usarse"
+
+msgid "Updates Are Out of Date"
+msgstr "As actualizacións están desactualizadas"
+
+msgid "Please check for available updates"
+msgstr "Busque as actualizacións dispoñibles"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u aplicación actualizada"
+msgstr[1] "%u aplicacións actualizadas"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s actualizouse."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s e %s actualizáronse."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Inclúe %s, %s e %s."

@@ -1,0 +1,1039 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+msgid "App Store"
+msgstr "متجر التطبيقات"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "النظام;الحزم;المدير;اكتشاف;Flatpak;البرامج;التطبيقات;المتجر;"
+
+msgid "Discover and install apps"
+msgstr "اكتشاف التطبيقات وتثبيتها"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "متجر تطبيقات سريع وعصري للينكس يركّز على اكتشاف تطبيقات Flatpak وإضافاتها وتثبيتها، خصوصًا من Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "ضع عدة عمليات تثبيت في الطابور وواصل التصفح"
+
+msgid "Easily view app permissions"
+msgstr "اعرض أذونات التطبيقات بسهولة"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "سجّل الدخول إلى Flathub لعرض مفضلتك وإدارتها"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "ابحث عن التطبيقات مباشرة من GNOME Shell"
+
+msgid "App page for Exhibit"
+msgstr "صفحة تطبيق Exhibit"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "إزالة"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "تثبيت"
+
+msgid "Add-on"
+msgstr "إضافة"
+
+msgid "Manage Add-Ons"
+msgstr "إدارة الإضافات"
+
+msgid "No Add-Ons Visible"
+msgstr "لا توجد إضافات ظاهرة"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "تفضيلات التصفية الحالية تخفي جميع الإضافات المعروفة. جرّب تعديلها."
+
+msgid "Add-on Page"
+msgstr "صفحة الإضافة"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "تستخدم هذه الإضافة بيئة تشغيل لم تعد تتلقى تحديثات أو إصلاحات أمنية. قد يصبح استخدامها غير آمن."
+
+msgid "Other Sources"
+msgstr "مصادر أخرى"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "إضافة لـ %s"
+
+msgid "Download Stats"
+msgstr "إحصاءات التنزيل"
+
+msgid "Open user data folder"
+msgstr "فتح مجلد بيانات المستخدم"
+
+msgid "Your User Data"
+msgstr "بيانات المستخدم الخاصة بك"
+
+msgid "Cache"
+msgstr "ذاكرة التخزين المؤقت"
+
+msgid "Temporary cached data"
+msgstr "بيانات مخزنة مؤقتًا"
+
+msgid "Clear Cache"
+msgstr "مسح ذاكرة التخزين المؤقت"
+
+msgid "Installed Runtime Size"
+msgstr "حجم بيئة التشغيل المثبتة"
+
+msgid "Runtime Download Size"
+msgstr "حجم تنزيل بيئة التشغيل"
+
+msgid "Storage"
+msgstr "التخزين"
+
+msgid "Verified"
+msgstr "موثّق"
+
+msgid "The Bazaar Contributors"
+msgstr "مساهمو Bazaar"
+
+msgid "Performing setup…"
+msgstr "جارٍ الإعداد…"
+
+msgid "Set Up Flathub?"
+msgstr "إعداد Flathub؟"
+
+msgid "A backend error occurred"
+msgstr "حدث خطأ في الواجهة الخلفية"
+
+msgid "Refreshing…"
+msgstr "جارٍ التحديث…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "جارٍ تحميل %d تطبيقًا…"
+
+msgid "Failed to open file"
+msgstr "تعذّر فتح الملف"
+
+msgid "Failed to load metainfo"
+msgstr "تعذّر تحميل metainfo"
+
+msgid "An initialization error occurred"
+msgstr "حدث خطأ في التهيئة"
+
+msgid "Checking for updates…"
+msgstr "جارٍ التحقق من التحديثات…"
+
+msgid "Failed to check for updates"
+msgstr "تعذّر التحقق من التحديثات"
+
+msgid "Could not find app"
+msgstr "تعذّر العثور على التطبيق"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "جارٍ تحميل %d تطبيق…"
+msgstr[1] "جارٍ تحميل تطبيق واحد…"
+msgstr[2] "جارٍ تحميل تطبيقين…"
+msgstr[3] "جارٍ تحميل %d تطبيقات…"
+msgstr[4] "جارٍ تحميل %d تطبيقًا…"
+msgstr[5] "جارٍ تحميل %d تطبيق…"
+
+msgid "Writing to cache…"
+msgstr "جارٍ الكتابة إلى ذاكرة التخزين المؤقت…"
+
+msgid "Removing remote…"
+msgstr "جارٍ إزالة المستودع البعيد…"
+
+msgid "Could not remove remote"
+msgstr "تعذّرت إزالة المستودع البعيد"
+
+msgid "Failed to Load Article"
+msgstr "تعذّر تحميل المقال"
+
+msgid "_OK"
+msgstr "_موافق"
+
+msgid "_Cancel"
+msgstr "_إلغاء"
+
+msgid "_Install All"
+msgstr "تثبيت _الكل"
+
+msgid "Bundle Installation"
+msgstr "تثبيت الحزمة"
+
+msgid "Additional dependencies may take extra space"
+msgstr "قد تتطلب الاعتماديات الإضافية مساحة أكبر"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"قد يتطلب تثبيت هذا التطبيق إضافة مصدر برامج جديد. ستظهر التطبيقات الأخرى من هذا المصدر في Bazaar.\n"
+"\n"
+"أضف هذا المصدر فقط إذا كنت متأكدًا من أنك تثق به."
+
+msgid "Successfully Installed!"
+msgstr "تم التثبيت بنجاح!"
+
+msgid "Show App Details"
+msgstr "عرض تفاصيل التطبيق"
+
+msgid "Already Installed"
+msgstr "مثبّت بالفعل"
+
+msgid "Installation Failed"
+msgstr "فشل التثبيت"
+
+msgid "Unknown install size"
+msgstr "حجم التثبيت غير معروف"
+
+#, c-format
+msgid "About %s to install"
+msgstr "حوالي %s للتثبيت"
+
+msgid "No special permissions"
+msgstr "لا أذونات خاصة"
+
+msgid "Place Applet"
+msgstr "وضع التطبيق المصغّر"
+
+msgid "Choose where to add this applet."
+msgstr "اختر أين تريد إضافة هذا التطبيق المصغّر."
+
+msgid "Panel"
+msgstr "اللوحة"
+
+msgid "Dock"
+msgstr "شريط التطبيقات"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "لا تتوفر معلومات انتقاء على هذا النظام. لا يزال بإمكانك تصفح التطبيقات على Flathub"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s إلى %s، الأعلى في %s بعدد %s"
+
+msgid "Not Verified"
+msgstr "غير موثّق"
+
+msgid "Bazaar Release"
+msgstr "إصدار Bazaar"
+
+msgid "Full Release Notes"
+msgstr "ملاحظات الإصدار الكاملة"
+
+msgid "This release was made possible by users like you!"
+msgstr "أصبح هذا الإصدار ممكنًا بفضل مستخدمين مثلك!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "أحب تطوير Bazaar، لكنني لا أستطيع فعل ذلك وحدي. ادعم استمرار التطوير بالتبرع عبر Ko-Fi."
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "ما الجديد في %s؟"
+
+msgid "Released %B %-e, %Y"
+msgstr "صدر في %-e %B %Y"
+
+msgid "Copy"
+msgstr "نسخ"
+
+msgid "Failed to update favorite"
+msgstr "تعذّر تحديث المفضلة"
+
+msgid "Support This Application"
+msgstr "دعم هذا التطبيق"
+
+msgid "Remove From Favorites"
+msgstr "إزالة من المفضلة"
+
+msgid "Failed to remove favorite"
+msgstr "تعذّرت إزالة المفضلة"
+
+msgid "Browsers"
+msgstr "المتصفحات"
+
+msgid "Chat"
+msgstr "الدردشة"
+
+msgid "Mail"
+msgstr "البريد"
+
+msgid "File Sharing"
+msgstr "مشاركة الملفات"
+
+msgid "Made for COSMIC™"
+msgstr "مصنوع لـ COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "لـ COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "المزيد من تطبيقات COSMIC"
+
+msgid "Games"
+msgstr "الألعاب"
+
+msgid "Emulators"
+msgstr "المحاكيات"
+
+msgid "More Emulators"
+msgstr "المزيد من المحاكيات"
+
+msgid "Launchers"
+msgstr "المشغّلات"
+
+msgid "More Game Launchers"
+msgstr "المزيد من مشغّلات الألعاب"
+
+msgid "Game Tools"
+msgstr "أدوات الألعاب"
+
+msgid "More Game Tools"
+msgstr "المزيد من أدوات الألعاب"
+
+msgid "New Year, New Workflows"
+msgstr "عام جديد، أساليب عمل جديدة"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "تطبيقات لتدوين الملاحظات وتتبع المهام ووضع الخطط"
+
+msgid "Staff Picks"
+msgstr "اختيارات الفريق"
+
+msgid "Apps we love right now"
+msgstr "تطبيقات نحبها الآن"
+
+msgid "Get Creative"
+msgstr "أطلق إبداعك"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "تطبيقات أساسية للرسم وتحرير الصور والتصميم الرقمي"
+
+msgid "Build Native Apps"
+msgstr "ابنِ تطبيقات أصلية"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "طوّر تطبيقات تبدو في بيتها على نظامك"
+
+msgid "Stay in Touch"
+msgstr "ابقَ على تواصل"
+
+msgid "Essential collaboration and communication apps"
+msgstr "تطبيقات أساسية للتعاون والتواصل"
+
+msgid "Ready for Vacations"
+msgstr "جاهز للإجازات"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "تطبيقات الخرائط والمواصلات والطقس وتخطيط الرحلات"
+
+msgid "Smarter Every Day"
+msgstr "أذكى كل يوم"
+
+msgid "Apps to help you study, research, and write"
+msgstr "تطبيقات تساعدك على الدراسة والبحث والكتابة"
+
+msgid "Get Cozy"
+msgstr "اجعلها دافئة"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "تطبيقات رائعة للقراءة ومشاهدة الأفلام وممارسة الألعاب"
+
+msgid "Web Developer Essentials"
+msgstr "أساسيات مطوّر الويب"
+
+msgid "Making websites is more fun with these apps"
+msgstr "صنع المواقع أكثر متعة مع هذه التطبيقات"
+
+msgid "Take Better Notes"
+msgstr "دوّن ملاحظات أفضل"
+
+msgid "Find your new favorite note taking tool"
+msgstr "اعثر على أداة تدوين الملاحظات المفضلة الجديدة"
+
+msgid "Get Focused"
+msgstr "ركّز"
+
+msgid "Great apps for task management"
+msgstr "تطبيقات رائعة لإدارة المهام"
+
+msgid "Make Some Noise"
+msgstr "أحدث ضجة"
+
+msgid "Apps for creating and producing music"
+msgstr "تطبيقات لإنشاء الموسيقى وإنتاجها"
+
+msgid "Get To Work"
+msgstr "ابدأ العمل"
+
+msgid "Essential office apps"
+msgstr "تطبيقات مكتبية أساسية"
+
+msgid "Can't Reach Flathub"
+msgstr "يتعذّر الوصول إلى Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "لا يزال بإمكانك إدارة التطبيقات والبحث عنها."
+
+msgid "Reconnect"
+msgstr "إعادة الاتصال"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "هذه معاينة محلية، وقد تختلف بعض التفاصيل عن القائمة المنشورة"
+
+msgid "Preview Store Appearance"
+msgstr "معاينة مظهر المتجر"
+
+msgid "_Support"
+msgstr "_دعم"
+
+msgid "Add-ons"
+msgstr "الإضافات"
+
+msgid "More Add-Ons"
+msgstr "المزيد من الإضافات"
+
+msgid "Links"
+msgstr "الروابط"
+
+msgid "Similar Apps"
+msgstr "تطبيقات مشابهة"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "لهذا التطبيق رخصة برمجيات حرة، أي أنه يمكن تدقيق شيفرته المصدرية للتحقق من أمانها."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "لهذا التطبيق رخصة مملوكة، أي أن شيفرته المصدرية تُطوَّر بشكل خاص ولا يمكن لطرف ثالث مستقل تدقيقها."
+
+msgid "Other Apps From This Developer"
+msgstr "تطبيقات أخرى من هذا المطوّر"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "تطبيقات أخرى من %s"
+
+#, c-format
+msgid "Apps by %s"
+msgstr "تطبيقات من %s"
+
+msgid "Apps by This Developer"
+msgstr "تطبيقات من هذا المطوّر"
+
+msgid "Failed to Remove User Data"
+msgstr "تعذّرت إزالة بيانات المستخدم"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "جارٍ الإلغاء"
+
+msgid "_Open"
+msgstr "_فتح"
+
+msgid "_Remove"
+msgstr "_إزالة"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "تثبيت %s من %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "تثبيت %s"
+
+msgid "Donate"
+msgstr "تبرّع"
+
+msgid "Search Store Instead"
+msgstr "البحث في المتجر بدلًا من ذلك"
+
+msgid "Sort Options"
+msgstr "خيارات الترتيب"
+
+msgid "Sort By"
+msgstr "ترتيب حسب"
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Size"
+msgstr "الحجم"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u تطبيق مثبّت"
+msgstr[1] "تطبيق واحد مثبّت"
+msgstr[2] "تطبيقان مثبّتان"
+msgstr[3] "%u تطبيقات مثبّتة"
+msgstr[4] "%u تطبيقًا مثبّتًا"
+msgstr[5] "%u تطبيق مثبّت"
+
+msgid "No applications found"
+msgstr "لم يُعثر على أي تطبيقات"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "تم العثور على %u تطبيق"
+msgstr[1] "تم العثور على تطبيق واحد"
+msgstr[2] "تم العثور على تطبيقين"
+msgstr[3] "تم العثور على %u تطبيقات"
+msgstr[4] "تم العثور على %u تطبيقًا"
+msgstr[5] "تم العثور على %u تطبيق"
+
+msgid "Learn More"
+msgstr "اعرف المزيد"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "سجّل الدخول لمزامنة تطبيقاتك المفضلة بين الأجهزة"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "إضافة أيقونة إلى معاينة Metainfo؟"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "لا تتضمن ملفات Metainfo أيقونات التطبيقات بحد ذاتها. هل تريد اختيار واحدة يدويًا؟"
+
+msgid "Skip"
+msgstr "تخطي"
+
+msgid "Select Icon"
+msgstr "اختيار أيقونة"
+
+msgid "Image Files"
+msgstr "ملفات الصور"
+
+msgid "New Permissions"
+msgstr "أذونات جديدة"
+
+msgid "_Accept"
+msgstr "_قبول"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "أذونات جديدة لـ %s"
+msgstr[1] "إذن جديد لـ %s"
+msgstr[2] "إذنان جديدان لـ %s"
+msgstr[3] "أذونات جديدة لـ %s"
+msgstr[4] "أذونات جديدة لـ %s"
+msgstr[5] "أذونات جديدة لـ %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "يتطلب هذا التحديث الأذونات الإضافية التالية"
+msgstr[1] "يتطلب هذا التحديث الإذن الإضافي التالي"
+msgstr[2] "يتطلب هذا التحديث الإذنين الإضافيين التاليين"
+msgstr[3] "يتطلب هذا التحديث الأذونات الإضافية التالية"
+msgstr[4] "يتطلب هذا التحديث الأذونات الإضافية التالية"
+msgstr[5] "يتطلب هذا التحديث الأذونات الإضافية التالية"
+
+msgid "User"
+msgstr "المستخدم"
+
+msgid "Beta"
+msgstr "تجريبي"
+
+msgid "End-Of-Life"
+msgstr "منتهي الدعم"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "اتصال الشبكة محدود الاستهلاك، لذا توقف التحديث التلقائي لبيانات المتجر مؤقتًا"
+
+msgid "Refresh Manually"
+msgstr "تحديث يدوي"
+
+msgid "App Updates"
+msgstr "تحديثات التطبيقات"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "ستتوقف التحديثات التلقائية مؤقتًا على الشبكات محدودة الاستهلاك أو عند تفعيل توفير الطاقة لتوفير البيانات والبطارية."
+
+msgid "_Automatic"
+msgstr "_تلقائي"
+
+msgid "Automatically check for and download app updates"
+msgstr "التحقق من تحديثات التطبيقات وتنزيلها تلقائيًا"
+
+msgid "_Manual"
+msgstr "_يدوي"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "يجب التحقق من تحديثات التطبيقات وتنزيلها يدويًا"
+
+msgid "Automatic Update _Notifications"
+msgstr "_إشعارات التحديث التلقائي"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "الإشعار عند تثبيت التحديثات تلقائيًا"
+
+msgid "_Free Software Only"
+msgstr "_البرمجيات الحرة فقط"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "إخفاء التطبيقات المملوكة عند التصفح والبحث"
+
+msgid "F_lathub Results Only"
+msgstr "نتائ_ج Flathub فقط"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "قصر نتائج البحث والتصفح على التطبيقات المتوفرة على Flathub فقط"
+
+msgid "_Verified Results Only"
+msgstr "_النتائج الموثّقة فقط"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "إخفاء التطبيقات _منتهية الدعم"
+
+msgid "Progress Bar Theme"
+msgstr "سمة شريط التقدم"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "يحتاج Bazaar إلى العمل في الخلفية للتحقق من تحديثات التطبيقات"
+
+msgid "Today"
+msgstr "اليوم"
+
+msgid "Yesterday"
+msgstr "أمس"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "منذ %d يوم"
+msgstr[1] "منذ يوم واحد"
+msgstr[2] "منذ يومين"
+msgstr[3] "منذ %d أيام"
+msgstr[4] "منذ %d يومًا"
+msgstr[5] "منذ %d يوم"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "منذ %d أسبوع"
+msgstr[1] "منذ أسبوع واحد"
+msgstr[2] "منذ أسبوعين"
+msgstr[3] "منذ %d أسابيع"
+msgstr[4] "منذ %d أسبوعًا"
+msgstr[5] "منذ %d أسبوع"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "منذ %d شهر"
+msgstr[1] "منذ شهر واحد"
+msgstr[2] "منذ شهرين"
+msgstr[3] "منذ %d أشهر"
+msgstr[4] "منذ %d شهرًا"
+msgstr[5] "منذ %d شهر"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "منذ %d سنة"
+msgstr[1] "منذ سنة واحدة"
+msgstr[2] "منذ سنتين"
+msgstr[3] "منذ %d سنوات"
+msgstr[4] "منذ %d سنة"
+msgstr[5] "منذ %d سنة"
+
+msgid "%e %B %Y"
+msgstr "%e %B %Y"
+
+msgid "_Version History"
+msgstr "_سجل الإصدارات"
+
+msgid "Remotes"
+msgstr "المستودعات البعيدة"
+
+msgid "System Installation"
+msgstr "تثبيت على مستوى النظام"
+
+msgid "Available to all users on this computer"
+msgstr "متاح لجميع المستخدمين على هذا الحاسوب"
+
+msgid "User Installation"
+msgstr "تثبيت للمستخدم"
+
+msgid "Only available to you"
+msgstr "متاح لك وحدك"
+
+msgid "Remove Remote"
+msgstr "إزالة المستودع البعيد"
+
+#, c-format
+msgid "Remove %s"
+msgstr "إزالة %s"
+
+msgid "Unused"
+msgstr "غير مستخدم"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u تطبيق مثبّت"
+msgstr[1] "تطبيق واحد مثبّت"
+msgstr[2] "تطبيقان مثبّتان"
+msgstr[3] "%u تطبيقات مثبّتة"
+msgstr[4] "%u تطبيقًا مثبّتًا"
+msgstr[5] "%u تطبيق مثبّت"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "إزالة «%s»؟"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "لن تتمكن بعد الآن من تثبيت التطبيقات من هذا المستودع البعيد الخاص بالمستخدم."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "لن تتمكن بعد الآن من تثبيت التطبيقات من هذا المستودع البعيد الخاص بالنظام."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u تطبيق للإزالة"
+msgstr[1] "تطبيق واحد للإزالة"
+msgstr[2] "تطبيقان للإزالة"
+msgstr[3] "%u تطبيقات للإزالة"
+msgstr[4] "%u تطبيقًا للإزالة"
+msgstr[5] "%u تطبيق للإزالة"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "ثُبّتت هذه التطبيقات من هذا المستودع البعيد وستُزال من حسابك معه."
+msgstr[1] "ثُبّت التطبيق أدناه من هذا المستودع البعيد وسيُزال من حسابك معه."
+msgstr[2] "ثُبّت التطبيقان أدناه من هذا المستودع البعيد وسيُزالان من حسابك معه."
+msgstr[3] "ثُبّتت هذه التطبيقات من هذا المستودع البعيد وستُزال من حسابك معها."
+msgstr[4] "ثُبّتت هذه التطبيقات من هذا المستودع البعيد وستُزال من حسابك معها."
+msgstr[5] "ثُبّتت هذه التطبيقات من هذا المستودع البعيد وستُزال من حسابك معها."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "ثُبّتت هذه التطبيقات من هذا المستودع البعيد وستُزال لجميع المستخدمين معه."
+msgstr[1] "ثُبّت التطبيق أدناه من هذا المستودع البعيد وسيُزال لجميع المستخدمين معه."
+msgstr[2] "ثُبّت التطبيقان أدناه من هذا المستودع البعيد وسيُزالان لجميع المستخدمين معهما."
+msgstr[3] "ثُبّتت هذه التطبيقات من هذا المستودع البعيد وستُزال لجميع المستخدمين معه."
+msgstr[4] "ثُبّتت هذه التطبيقات من هذا المستودع البعيد وستُزال لجميع المستخدمين معه."
+msgstr[5] "ثُبّتت هذه التطبيقات من هذا المستودع البعيد وستُزال لجميع المستخدمين معه."
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"لدى هذا التطبيق إذنٌ يسمح له، بشكل غير مباشر، بمنح نفسه <b>أي إذن آخر يريده</b>، متجاوزًا صندوق حماية Flatpak.\n"
+"\n"
+"لذلك يمكنه فعل أي شيء يمكن أن يفعله تطبيق مميّز غير معزول، مثل الوصول إلى جميع ملفاتك والاتصال بالإنترنت.\n"
+"\n"
+"قد يمنحك عرض الأذونات الأخرى فكرة أفضل عمّا يُرجَّح أن يفعله التطبيق."
+
+msgid "View Other Permissions"
+msgstr "عرض الأذونات الأخرى"
+
+msgid "Back"
+msgstr "رجوع"
+
+msgid "No Screenshots"
+msgstr "لا لقطات شاشة"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "لقطة الشاشة %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "لقطة الشاشة %u"
+
+msgid "Clear Search"
+msgstr "مسح البحث"
+
+msgid "Filters"
+msgstr "عوامل التصفية"
+
+msgid "_Verified"
+msgstr "_موثّق"
+
+msgid "_Free/Open"
+msgstr "_حر/مفتوح"
+
+msgid "Non-_EOL"
+msgstr "غير _منتهية الدعم"
+
+msgid "Filter out End-of-Life apps"
+msgstr "استبعاد التطبيقات منتهية الدعم"
+
+msgid "_Mobile Friendly"
+msgstr "_مناسب للجوال"
+
+msgid "Categories"
+msgstr "التصنيفات"
+
+msgid "Search Filters"
+msgstr "عوامل تصفية البحث"
+
+msgid "Browse Categories"
+msgstr "تصفح التصنيفات"
+
+msgid "Video"
+msgstr "فيديو"
+
+msgid "Office"
+msgstr "مكتب"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "تقويم"
+
+msgid "Messaging"
+msgstr "مراسلة"
+
+msgid "Paint"
+msgstr "رسم"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "تورنت"
+
+msgid "Emulator"
+msgstr "محاكي"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifest"
+
+msgid "Total"
+msgstr "الإجمالي"
+
+msgid "This Week"
+msgstr "هذا الأسبوع"
+
+msgid "Installs per day"
+msgstr "عمليات التثبيت يوميًا"
+
+msgid "Installs per country"
+msgstr "عمليات التثبيت لكل بلد"
+
+msgid "Since 4/15/2024"
+msgstr "منذ 15/4/2024"
+
+msgid "Keep User Data"
+msgstr "الاحتفاظ ببيانات المستخدم"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "السماح باستعادة الإعدادات الشخصية &amp; المحتوى"
+
+msgid "Delete All Data"
+msgstr "حذف كل البيانات"
+
+msgid "Permanently erase user data to save space"
+msgstr "مسح بيانات المستخدم نهائيًا لتوفير المساحة"
+
+msgid "_Install Anyway"
+msgstr "_التثبيت على أي حال"
+
+msgid "Failed to load transaction dialog"
+msgstr "تعذّر تحميل مربع حوار المعاملة"
+
+msgid "App Add-On"
+msgstr "إضافة التطبيق"
+
+msgid "Finishing Up"
+msgstr "إنهاء العملية"
+
+msgid "Cancelled"
+msgstr "أُلغي"
+
+msgid "Cancel Transaction"
+msgstr "إلغاء المعاملة"
+
+msgid "Show Details"
+msgstr "عرض التفاصيل"
+
+msgid "Show Error Info"
+msgstr "عرض معلومات الخطأ"
+
+msgid "Transaction Error"
+msgstr "خطأ في المعاملة"
+
+msgid "Installed Updates"
+msgstr "التحديثات المثبتة"
+
+msgid "Release Notes"
+msgstr "ملاحظات الإصدار"
+
+msgid "No Release Info"
+msgstr "لا معلومات عن الإصدار"
+
+msgid "_Update All"
+msgstr "تحديث _الكل"
+
+msgid "This update requests new permissions"
+msgstr "يطلب هذا التحديث أذونات جديدة"
+
+msgid "No Leftover User Data Found"
+msgstr "لم يُعثر على بيانات مستخدم متبقية"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "ستظهر هنا البيانات الشخصية التي خلّفتها التطبيقات المزالة"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "بيانات مستخدم محذوفة لـ %u تطبيق"
+msgstr[1] "بيانات مستخدم محذوفة لتطبيق واحد"
+msgstr[2] "بيانات مستخدم محذوفة لتطبيقين"
+msgstr[3] "بيانات مستخدم محذوفة لـ %u تطبيقات"
+msgstr[4] "بيانات مستخدم محذوفة لـ %u تطبيقًا"
+msgstr[5] "بيانات مستخدم محذوفة لـ %u تطبيق"
+
+msgid "Open User Data Folder"
+msgstr "فتح مجلد بيانات المستخدم"
+
+msgid "Refreshing"
+msgstr "جارٍ التحديث"
+
+msgid "Explore"
+msgstr "استكشاف"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "اتصال الشبكة محدود الاستهلاك، لذا عُطّل التحديث التلقائي"
+
+msgid "_Donate to Bazaar"
+msgstr "_التبرع لـ Bazaar"
+
+msgid "_Refresh"
+msgstr "_تحديث"
+
+msgid "_Login With Flathub"
+msgstr "_تسجيل الدخول عبر Flathub"
+
+msgid "Manage R_emotes"
+msgstr "إدارة المستودعات الب_عيدة"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "تعذّر تشغيل التطبيق"
+
+msgid "Could not open link"
+msgstr "تعذّر فتح الرابط"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s، %'u عملية تثبيت"
+msgstr[1] "%s، عملية تثبيت واحدة"
+msgstr[2] "%s، عمليتا تثبيت"
+msgstr[3] "%s، %'u عمليات تثبيت"
+msgstr[4] "%s، %'u عملية تثبيت"
+msgstr[5] "%s، %'u عملية تثبيت"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "معظم عمليات التثبيت من %s"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d تنزيل في الشهر الماضي"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s بيئة تشغيل"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "الحجم المثبّت لـ %s"
+
+msgid "Free Software"
+msgstr "برمجيات حرة"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "التنقل"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "فتح صفحة الاستكشاف"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "فتح صفحة المكتبة"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "فتح صفحة البحث"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "المستودعات البعيدة"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "مزامنة المستودعات البعيدة"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "إغلاق النافذة"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "إنهاء Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "تم تثبيت %s"
+
+msgid "The app is ready to be used"
+msgstr "التطبيق جاهز للاستخدام"
+
+msgid "Updates Are Out of Date"
+msgstr "التحديثات قديمة"
+
+msgid "Please check for available updates"
+msgstr "يرجى التحقق من التحديثات المتوفرة"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "تم تحديث %u تطبيق"
+msgstr[1] "تم تحديث تطبيق واحد"
+msgstr[2] "تم تحديث تطبيقين"
+msgstr[3] "تم تحديث %u تطبيقات"
+msgstr[4] "تم تحديث %u تطبيقًا"
+msgstr[5] "تم تحديث %u تطبيق"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "تم تحديث %s."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "تم تحديث %s و%s."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "يشمل %s و%s و%s."

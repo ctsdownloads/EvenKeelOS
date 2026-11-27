@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Open in Ghostty"
+msgstr "Άνοιγμα στο Ghostty"
+
+msgid "Find…"
+msgstr "Εύρεση…"
+
+msgid "Previous Match"
+msgstr "Προηγούμενο αποτέλεσμα"
+
+msgid "Next Match"
+msgstr "Επόμενο αποτέλεσμα"
+
+msgid "Close"
+msgstr "Κλείσιμο"
+
+msgid "Oh, no."
+msgstr "Ωχ, όχι."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "Αδυναμία απόκτησης περιβάλλοντος OpenGL για την απόδοση."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "Αυτό το τερματικό βρίσκεται σε λειτουργία μόνο ανάγνωσης. Μπορείτε να προβάλλετε, να επιλέγετε και να κυλάτε το περιεχόμενο, αλλά δεν θα σταλούν συμβάντα εισόδου στην εφαρμογή που εκτελείται."
+
+msgid "Read-only"
+msgstr "Μόνο ανάγνωση"
+
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+msgid "Paste"
+msgstr "Επικόλληση"
+
+msgid "Notify on Next Command Finish"
+msgstr "Ειδοποίηση μετά το τέλος της επόμενης εντολής"
+
+msgid "Clear"
+msgstr "Εκκαθάριση"
+
+msgid "Reset"
+msgstr "Επαναφορά"
+
+msgid "Split"
+msgstr "Διαίρεση"
+
+msgid "Change Title…"
+msgstr "Αλλαγή τίτλου…"
+
+msgid "Split Up"
+msgstr "Διαίρεση προς τα πάνω"
+
+msgid "Split Down"
+msgstr "Διαίρεση προς τα κάτω"
+
+msgid "Split Left"
+msgstr "Διαίρεση προς τα αριστερά"
+
+msgid "Split Right"
+msgstr "Διαίρεση προς τα δεξιά"
+
+msgid "Close Split"
+msgstr "Κλείσιμο διαίρεσης"
+
+msgid "Tab"
+msgstr "Καρτέλα"
+
+msgid "Change Tab Title…"
+msgstr "Αλλαγή τίτλου καρτέλας…"
+
+msgid "New Tab"
+msgstr "Νέα καρτέλα"
+
+msgid "Close Tab"
+msgstr "Κλείσιμο καρτέλας"
+
+msgid "Window"
+msgstr "Παράθυρο"
+
+msgid "Change Window Title…"
+msgstr "Αλλαγή τίτλου παραθύρου…"
+
+msgid "New Window"
+msgstr "Νέο παράθυρο"
+
+msgid "Close Window"
+msgstr "Κλείσιμο παραθύρου"
+
+msgid "Config"
+msgstr "Ρυθμίσεις διαμόρφωσης"
+
+msgid "Open Configuration in OS Editor"
+msgstr "Άνοιγμα διαμόρφωσης στον επεξεργαστή του συστήματος"
+
+msgid "Open Configuration in New Window"
+msgstr "Άνοιγμα διαμόρφωσης σε νέο παράθυρο"
+
+msgid "Reload Configuration"
+msgstr "Επαναφόρτωση διαμόρφωσης"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ Εκτελείτε μια έκδοση αποσφαλμάτωσης του Ghostty! Η απόδοση θα είναι μειωμένη."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: Επιθεωρητής τερματικού"
+
+msgid "New Split"
+msgstr "Νέα διαίρεση"
+
+msgid "View Open Tabs"
+msgstr "Προβολή ανοιχτών καρτελών"
+
+msgid "Main Menu"
+msgstr "Κύριο μενού"
+
+msgid "Command Palette"
+msgstr "Παλέτα εντολών"
+
+msgid "Terminal Inspector"
+msgstr "Επιθεωρητής τερματικού"
+
+msgid "About Ghostty"
+msgstr "Σχετικά με το Ghostty"
+
+msgid "Quit"
+msgstr "Έξοδος"
+
+msgid "Authorize Clipboard Access"
+msgstr "Εξουσιοδότηση πρόσβασης στο πρόχειρο"
+
+msgid "Deny"
+msgstr "Άρνηση"
+
+msgid "Allow"
+msgstr "Να επιτρέπεται"
+
+msgid "Remember choice for this split"
+msgstr "Απομνημόνευση επιλογής για αυτή τη διαίρεση"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "Επαναφορτώστε τη διαμόρφωση για να εμφανιστεί ξανά αυτό το μήνυμα"
+
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+msgid "Execute a command…"
+msgstr "Εκτέλεση εντολής…"
+
+msgid "Configuration Errors"
+msgstr "Σφάλματα διαμόρφωσης"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "Βρέθηκαν ένα ή περισσότερα σφάλματα διαμόρφωσης. Εξετάστε τα παρακάτω σφάλματα και είτε επαναφορτώστε τη διαμόρφωσή σας είτε αγνοήστε τα."
+
+msgid "Ignore"
+msgstr "Παράβλεψη"
+
+msgid "Leave blank to restore the default title."
+msgstr "Αφήστε το κενό για να επαναφέρετε τον προεπιλεγμένο τίτλο."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "The keybind was revoked by the system."
+msgstr "Η συντόμευση ανακλήθηκε από το σύστημα."
+
+msgid "The keybind was denied by the system."
+msgstr "Η συντόμευση απορρίφθηκε από το σύστημα."
+
+msgid "Global keybind unavailable"
+msgstr "Η καθολική συντόμευση δεν είναι διαθέσιμη"
+
+msgid "Export Terminal IO Events"
+msgstr "Εξαγωγή συμβάντων εισόδου/εξόδου τερματικού"
+
+msgid "Export"
+msgstr "Εξαγωγή"
+
+msgid "Editing configuration file"
+msgstr "Επεξεργασία αρχείου διαμόρφωσης"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "Μια εφαρμογή επιχειρεί να γράψει στο πρόχειρο. Το τρέχον περιεχόμενο του πρόχειρου εμφανίζεται παρακάτω."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "Μια εφαρμογή επιχειρεί να διαβάσει από το πρόχειρο. Το τρέχον περιεχόμενο του πρόχειρου εμφανίζεται παρακάτω."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "Προειδοποίηση: Δυνητικά μη ασφαλής επικόλληση"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "Η επικόλληση αυτού του κειμένου στο τερματικό μπορεί να είναι επικίνδυνη, καθώς φαίνεται ότι ενδέχεται να εκτελεστούν κάποιες εντολές."
+
+msgid "Quit Ghostty?"
+msgstr "Έξοδος από το Ghostty;"
+
+msgid "Close Tab?"
+msgstr "Κλείσιμο καρτέλας;"
+
+msgid "Close Window?"
+msgstr "Κλείσιμο παραθύρου;"
+
+msgid "Close Split?"
+msgstr "Κλείσιμο διαίρεσης;"
+
+msgid "All terminal sessions will be terminated."
+msgstr "Όλες οι συνεδρίες τερματικού θα τερματιστούν."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "Όλες οι συνεδρίες τερματικού σε αυτή την καρτέλα θα τερματιστούν."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "Όλες οι συνεδρίες τερματικού σε αυτό το παράθυρο θα τερματιστούν."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "Η διεργασία που εκτελείται αυτήν τη στιγμή σε αυτή τη διαίρεση θα τερματιστεί."
+
+msgid "Command Finished"
+msgstr "Η εντολή ολοκληρώθηκε"
+
+msgid "Command Succeeded"
+msgstr "Η εντολή ολοκληρώθηκε με επιτυχία"
+
+msgid "Command Failed"
+msgstr "Η εντολή απέτυχε"
+
+msgid "Change Terminal Title"
+msgstr "Αλλαγή τίτλου τερματικού"
+
+msgid "Change Tab Title"
+msgstr "Αλλαγή τίτλου καρτέλας"
+
+msgid "Change Window Title"
+msgstr "Αλλαγή τίτλου παραθύρου"
+
+msgid "Reloaded the configuration"
+msgstr "Η διαμόρφωση επαναφορτώθηκε"
+
+msgid "Copied to clipboard"
+msgstr "Αντιγράφηκε στο πρόχειρο"
+
+msgid "Cleared clipboard"
+msgstr "Το πρόχειρο εκκαθαρίστηκε"
+
+msgid "Ghostty Developers"
+msgstr "Προγραμματιστές του Ghostty"
+
+msgid "Reset Terminal"
+msgstr "Επαναφορά τερματικού"
+
+msgid "Reset the terminal to a clean state."
+msgstr "Επαναφορά του τερματικού σε καθαρή κατάσταση."
+
+msgid "Copy to Clipboard"
+msgstr "Αντιγραφή στο πρόχειρο"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "Αντιγραφή του επιλεγμένου κειμένου στο πρόχειρο, σε απλή και μορφοποιημένη μορφή."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "Αντιγραφή επιλογής ως απλού κειμένου στο πρόχειρο"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "Αντιγραφή του επιλεγμένου κειμένου ως απλού κειμένου στο πρόχειρο."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "Αντιγραφή επιλογής ως ακολουθιών ANSI στο πρόχειρο"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "Αντιγραφή του επιλεγμένου κειμένου ως ακολουθιών διαφυγής ANSI στο πρόχειρο."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "Αντιγραφή επιλογής ως HTML στο πρόχειρο"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "Αντιγραφή του επιλεγμένου κειμένου ως HTML στο πρόχειρο."
+
+msgid "Copy URL to Clipboard"
+msgstr "Αντιγραφή URL στο πρόχειρο"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "Αντιγραφή του URL κάτω από τον δρομέα στο πρόχειρο."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "Αντιγραφή τίτλου τερματικού στο πρόχειρο"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "Αντιγραφή του τίτλου του τερματικού στο πρόχειρο. Αν δεν έχει οριστεί τίτλος τερματικού, δεν έχει κανένα αποτέλεσμα."
+
+msgid "Paste from Clipboard"
+msgstr "Επικόλληση από το πρόχειρο"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "Επικόλληση του περιεχομένου του κύριου πρόχειρου."
+
+msgid "Paste from Selection"
+msgstr "Επικόλληση από την επιλογή"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "Επικόλληση του περιεχομένου του πρόχειρου επιλογής."
+
+msgid "Start Search"
+msgstr "Έναρξη αναζήτησης"
+
+msgid "Start a search if one isn't already active."
+msgstr "Έναρξη αναζήτησης, αν δεν είναι ήδη ενεργή."
+
+msgid "Search Selection"
+msgstr "Αναζήτηση επιλογής"
+
+msgid "Start a search for the current text selection."
+msgstr "Έναρξη αναζήτησης για το τρέχον επιλεγμένο κείμενο."
+
+msgid "End Search"
+msgstr "Τέλος αναζήτησης"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "Τέλος της τρέχουσας αναζήτησης, αν υπάρχει, και απόκρυψη των στοιχείων του γραφικού περιβάλλοντος."
+
+msgid "Next Search Result"
+msgstr "Επόμενο αποτέλεσμα αναζήτησης"
+
+msgid "Navigate to the next search result, if any."
+msgstr "Μετάβαση στο επόμενο αποτέλεσμα αναζήτησης, αν υπάρχει."
+
+msgid "Previous Search Result"
+msgstr "Προηγούμενο αποτέλεσμα αναζήτησης"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "Μετάβαση στο προηγούμενο αποτέλεσμα αναζήτησης, αν υπάρχει."
+
+msgid "Increase Font Size"
+msgstr "Αύξηση μεγέθους γραμματοσειράς"
+
+msgid "Increase the font size by 1 point."
+msgstr "Αύξηση του μεγέθους γραμματοσειράς κατά 1 pt."
+
+msgid "Decrease Font Size"
+msgstr "Μείωση μεγέθους γραμματοσειράς"
+
+msgid "Decrease the font size by 1 point."
+msgstr "Μείωση του μεγέθους γραμματοσειράς κατά 1 pt."
+
+msgid "Reset Font Size"
+msgstr "Επαναφορά μεγέθους γραμματοσειράς"
+
+msgid "Reset the font size to the default."
+msgstr "Επαναφορά του μεγέθους γραμματοσειράς στην προεπιλογή."
+
+msgid "Clear Screen"
+msgstr "Εκκαθάριση οθόνης"
+
+msgid "Clear the screen and scrollback."
+msgstr "Εκκαθάριση της οθόνης και του ιστορικού κύλισης."
+
+msgid "Select All"
+msgstr "Επιλογή όλων"
+
+msgid "Select all text on the screen."
+msgstr "Επιλογή όλου του κειμένου στην οθόνη."
+
+msgid "Scroll to Top"
+msgstr "Κύλιση στην αρχή"
+
+msgid "Scroll to the top of the screen."
+msgstr "Κύλιση στην αρχή της οθόνης."
+
+msgid "Scroll to Bottom"
+msgstr "Κύλιση στο τέλος"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "Κύλιση στο τέλος της οθόνης."
+
+msgid "Scroll to Selection"
+msgstr "Κύλιση στην επιλογή"
+
+msgid "Scroll to the selected text."
+msgstr "Κύλιση στο επιλεγμένο κείμενο."
+
+msgid "Scroll Page Up"
+msgstr "Κύλιση σελίδας προς τα πάνω"
+
+msgid "Scroll the screen up by a page."
+msgstr "Κύλιση της οθόνης προς τα πάνω κατά μία σελίδα."
+
+msgid "Scroll Page Down"
+msgstr "Κύλιση σελίδας προς τα κάτω"
+
+msgid "Scroll the screen down by a page."
+msgstr "Κύλιση της οθόνης προς τα κάτω κατά μία σελίδα."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "Αντιγραφή οθόνης σε προσωρινό αρχείο και αντιγραφή διαδρομής"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "Αντιγραφή του περιεχομένου της οθόνης σε προσωρινό αρχείο και αντιγραφή της διαδρομής στο πρόχειρο."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "Αντιγραφή οθόνης σε προσωρινό αρχείο και επικόλληση διαδρομής"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "Αντιγραφή του περιεχομένου της οθόνης σε προσωρινό αρχείο και επικόλληση της διαδρομής του αρχείου."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "Αντιγραφή οθόνης σε προσωρινό αρχείο και άνοιγμα"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "Αντιγραφή του περιεχομένου της οθόνης σε προσωρινό αρχείο και άνοιγμά του."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "Αντιγραφή οθόνης ως HTML σε προσωρινό αρχείο και αντιγραφή διαδρομής"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Αντιγραφή του περιεχομένου της οθόνης ως HTML σε προσωρινό αρχείο και αντιγραφή της διαδρομής στο πρόχειρο."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "Αντιγραφή οθόνης ως HTML σε προσωρινό αρχείο και επικόλληση διαδρομής"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "Αντιγραφή του περιεχομένου της οθόνης ως HTML σε προσωρινό αρχείο και επικόλληση της διαδρομής του αρχείου."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "Αντιγραφή οθόνης ως HTML σε προσωρινό αρχείο και άνοιγμα"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "Αντιγραφή του περιεχομένου της οθόνης ως HTML σε προσωρινό αρχείο και άνοιγμά του."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Αντιγραφή οθόνης ως ακολουθιών ANSI σε προσωρινό αρχείο και αντιγραφή διαδρομής"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Αντιγραφή του περιεχομένου της οθόνης ως ακολουθιών διαφυγής ANSI σε προσωρινό αρχείο και αντιγραφή της διαδρομής στο πρόχειρο."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Αντιγραφή οθόνης ως ακολουθιών ANSI σε προσωρινό αρχείο και επικόλληση διαδρομής"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Αντιγραφή του περιεχομένου της οθόνης ως ακολουθιών διαφυγής ANSI σε προσωρινό αρχείο και επικόλληση της διαδρομής του αρχείου."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "Αντιγραφή οθόνης ως ακολουθιών ANSI σε προσωρινό αρχείο και άνοιγμα"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Αντιγραφή του περιεχομένου της οθόνης ως ακολουθιών διαφυγής ANSI σε προσωρινό αρχείο και άνοιγμά του."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "Αντιγραφή επιλογής σε προσωρινό αρχείο και αντιγραφή διαδρομής"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "Αντιγραφή του περιεχομένου της επιλογής σε προσωρινό αρχείο και αντιγραφή της διαδρομής στο πρόχειρο."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "Αντιγραφή επιλογής σε προσωρινό αρχείο και επικόλληση διαδρομής"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "Αντιγραφή του περιεχομένου της επιλογής σε προσωρινό αρχείο και επικόλληση της διαδρομής του αρχείου."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "Αντιγραφή επιλογής σε προσωρινό αρχείο και άνοιγμα"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "Αντιγραφή του περιεχομένου της επιλογής σε προσωρινό αρχείο και άνοιγμά του."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "Αντιγραφή επιλογής ως HTML σε προσωρινό αρχείο και αντιγραφή διαδρομής"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Αντιγραφή του περιεχομένου της επιλογής ως HTML σε προσωρινό αρχείο και αντιγραφή της διαδρομής στο πρόχειρο."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "Αντιγραφή επιλογής ως HTML σε προσωρινό αρχείο και επικόλληση διαδρομής"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "Αντιγραφή του περιεχομένου της επιλογής ως HTML σε προσωρινό αρχείο και επικόλληση της διαδρομής του αρχείου."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "Αντιγραφή επιλογής ως HTML σε προσωρινό αρχείο και άνοιγμα"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "Αντιγραφή του περιεχομένου της επιλογής ως HTML σε προσωρινό αρχείο και άνοιγμά του."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Αντιγραφή επιλογής ως ακολουθιών ANSI σε προσωρινό αρχείο και αντιγραφή διαδρομής"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Αντιγραφή του περιεχομένου της επιλογής ως ακολουθιών διαφυγής ANSI σε προσωρινό αρχείο και αντιγραφή της διαδρομής στο πρόχειρο."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Αντιγραφή επιλογής ως ακολουθιών ANSI σε προσωρινό αρχείο και επικόλληση διαδρομής"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Αντιγραφή του περιεχομένου της επιλογής ως ακολουθιών διαφυγής ANSI σε προσωρινό αρχείο και επικόλληση της διαδρομής του αρχείου."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "Αντιγραφή επιλογής ως ακολουθιών ANSI σε προσωρινό αρχείο και άνοιγμα"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Αντιγραφή του περιεχομένου της επιλογής ως ακολουθιών διαφυγής ANSI σε προσωρινό αρχείο και άνοιγμά του."
+
+msgid "Open a new window."
+msgstr "Άνοιγμα νέου παραθύρου."
+
+msgid "Open a new tab."
+msgstr "Άνοιγμα νέας καρτέλας."
+
+msgid "Move Tab Left"
+msgstr "Μετακίνηση καρτέλας αριστερά"
+
+msgid "Move the current tab to the left."
+msgstr "Μετακίνηση της τρέχουσας καρτέλας προς τα αριστερά."
+
+msgid "Move Tab Right"
+msgstr "Μετακίνηση καρτέλας δεξιά"
+
+msgid "Move the current tab to the right."
+msgstr "Μετακίνηση της τρέχουσας καρτέλας προς τα δεξιά."
+
+msgid "Move Tab to New Window"
+msgstr "Μετακίνηση καρτέλας σε νέο παράθυρο"
+
+msgid "Move the current tab to a new window."
+msgstr "Μετακίνηση της τρέχουσας καρτέλας σε νέο παράθυρο."
+
+msgid "Toggle Tab Overview"
+msgstr "Εναλλαγή επισκόπησης καρτελών"
+
+msgid "Toggle the tab overview."
+msgstr "Εναλλαγή της επισκόπησης καρτελών."
+
+msgid "Change Terminal Title…"
+msgstr "Αλλαγή τίτλου τερματικού…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "Ερώτηση για νέο τίτλο για το τρέχον τερματικό."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "Ερώτηση για νέο τίτλο για την τρέχουσα καρτέλα."
+
+msgid "Split the terminal to the left."
+msgstr "Διαίρεση του τερματικού προς τα αριστερά."
+
+msgid "Split the terminal to the right."
+msgstr "Διαίρεση του τερματικού προς τα δεξιά."
+
+msgid "Split the terminal up."
+msgstr "Διαίρεση του τερματικού προς τα πάνω."
+
+msgid "Split the terminal down."
+msgstr "Διαίρεση του τερματικού προς τα κάτω."
+
+msgid "Focus Split: Previous"
+msgstr "Εστίαση διαίρεσης: Προηγούμενη"
+
+msgid "Focus the previous split, if any."
+msgstr "Εστίαση στην προηγούμενη διαίρεση, αν υπάρχει."
+
+msgid "Focus Split: Next"
+msgstr "Εστίαση διαίρεσης: Επόμενη"
+
+msgid "Focus the next split, if any."
+msgstr "Εστίαση στην επόμενη διαίρεση, αν υπάρχει."
+
+msgid "Focus Split: Left"
+msgstr "Εστίαση διαίρεσης: Αριστερά"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "Εστίαση στη διαίρεση στα αριστερά, αν υπάρχει."
+
+msgid "Focus Split: Right"
+msgstr "Εστίαση διαίρεσης: Δεξιά"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "Εστίαση στη διαίρεση στα δεξιά, αν υπάρχει."
+
+msgid "Focus Split: Up"
+msgstr "Εστίαση διαίρεσης: Πάνω"
+
+msgid "Focus the split above, if it exists."
+msgstr "Εστίαση στη διαίρεση από πάνω, αν υπάρχει."
+
+msgid "Focus Split: Down"
+msgstr "Εστίαση διαίρεσης: Κάτω"
+
+msgid "Focus the split below, if it exists."
+msgstr "Εστίαση στη διαίρεση από κάτω, αν υπάρχει."
+
+msgid "Focus Window: Previous"
+msgstr "Εστίαση παραθύρου: Προηγούμενο"
+
+msgid "Focus the previous window, if any."
+msgstr "Εστίαση στο προηγούμενο παράθυρο, αν υπάρχει."
+
+msgid "Focus Window: Next"
+msgstr "Εστίαση παραθύρου: Επόμενο"
+
+msgid "Focus the next window, if any."
+msgstr "Εστίαση στο επόμενο παράθυρο, αν υπάρχει."
+
+msgid "Toggle Split Zoom"
+msgstr "Εναλλαγή μεγέθυνσης διαίρεσης"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "Εναλλαγή της κατάστασης μεγέθυνσης της τρέχουσας διαίρεσης."
+
+msgid "Toggle Read-Only Mode"
+msgstr "Εναλλαγή λειτουργίας μόνο ανάγνωσης"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "Εναλλαγή της λειτουργίας μόνο ανάγνωσης για την τρέχουσα επιφάνεια."
+
+msgid "Equalize Splits"
+msgstr "Εξίσωση διαιρέσεων"
+
+msgid "Equalize the size of all splits."
+msgstr "Εξίσωση του μεγέθους όλων των διαιρέσεων."
+
+msgid "Reset Window Size"
+msgstr "Επαναφορά μεγέθους παραθύρου"
+
+msgid "Reset the window size to the default."
+msgstr "Επαναφορά του μεγέθους του παραθύρου στην προεπιλογή."
+
+msgid "Toggle Inspector"
+msgstr "Εναλλαγή επιθεωρητή"
+
+msgid "Toggle the inspector."
+msgstr "Εναλλαγή του επιθεωρητή."
+
+msgid "Show the GTK Inspector"
+msgstr "Εμφάνιση του GTK Inspector"
+
+msgid "Show the GTK inspector."
+msgstr "Εμφάνιση του GTK Inspector."
+
+msgid "Show On-Screen Keyboard"
+msgstr "Εμφάνιση εικονικού πληκτρολογίου"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "Εμφάνιση του εικονικού πληκτρολογίου, αν υπάρχει."
+
+msgid "Open Config Using OS editor"
+msgstr "Άνοιγμα διαμόρφωσης με τον επεξεργαστή του συστήματος"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "Άνοιγμα του αρχείου διαμόρφωσης με τον προεπιλεγμένο επεξεργαστή του συστήματος."
+
+msgid "Open Config in New Terminal Window"
+msgstr "Άνοιγμα διαμόρφωσης σε νέο παράθυρο τερματικού"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "Άνοιγμα του αρχείου διαμόρφωσης σε νέο παράθυρο με χρήση των $EDITOR ή $VISUAL."
+
+msgid "Reload Config"
+msgstr "Επαναφόρτωση διαμόρφωσης"
+
+msgid "Reload the config file."
+msgstr "Επαναφόρτωση του αρχείου διαμόρφωσης."
+
+msgid "Close Terminal"
+msgstr "Κλείσιμο τερματικού"
+
+msgid "Close the current terminal."
+msgstr "Κλείσιμο του τρέχοντος τερματικού."
+
+msgid "Close the current tab."
+msgstr "Κλείσιμο της τρέχουσας καρτέλας."
+
+msgid "Close Other Tabs"
+msgstr "Κλείσιμο άλλων καρτελών"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "Κλείσιμο όλων των καρτελών σε αυτό το παράθυρο εκτός από την τρέχουσα."
+
+msgid "Close Tabs to the Right"
+msgstr "Κλείσιμο καρτελών προς τα δεξιά"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "Κλείσιμο όλων των καρτελών στα δεξιά της τρέχουσας."
+
+msgid "Close the current window."
+msgstr "Κλείσιμο του τρέχοντος παραθύρου."
+
+msgid "Close All Windows"
+msgstr "Κλείσιμο όλων των παραθύρων"
+
+msgid "Close all windows."
+msgstr "Κλείσιμο όλων των παραθύρων."
+
+msgid "Toggle Maximize"
+msgstr "Εναλλαγή μεγιστοποίησης"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "Εναλλαγή της κατάστασης μεγιστοποίησης του τρέχοντος παραθύρου."
+
+msgid "Toggle Fullscreen"
+msgstr "Εναλλαγή πλήρους οθόνης"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "Εναλλαγή της κατάστασης πλήρους οθόνης του τρέχοντος παραθύρου."
+
+msgid "Toggle Window Decorations"
+msgstr "Εναλλαγή διακοσμήσεων παραθύρου"
+
+msgid "Toggle the window decorations."
+msgstr "Εναλλαγή των διακοσμήσεων του παραθύρου."
+
+msgid "Toggle Float on Top"
+msgstr "Εναλλαγή παραμονής στην κορυφή"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "Εναλλαγή της κατάστασης παραμονής στην κορυφή του τρέχοντος παραθύρου."
+
+msgid "Toggle Secure Input"
+msgstr "Εναλλαγή ασφαλούς εισόδου"
+
+msgid "Toggle secure input mode."
+msgstr "Εναλλαγή της λειτουργίας ασφαλούς εισόδου."
+
+msgid "Toggle Mouse Reporting"
+msgstr "Εναλλαγή αναφοράς ποντικιού"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "Εναλλαγή της αναφοράς των συμβάντων ποντικιού στις εφαρμογές τερματικού."
+
+msgid "Toggle Background Opacity"
+msgstr "Εναλλαγή αδιαφάνειας φόντου"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "Εναλλαγή της αδιαφάνειας φόντου ενός παραθύρου που ξεκίνησε διαφανές."
+
+msgid "Check for Updates"
+msgstr "Έλεγχος για ενημερώσεις"
+
+msgid "Check for updates to the application."
+msgstr "Έλεγχος για ενημερώσεις της εφαρμογής."
+
+msgid "Undo"
+msgstr "Αναίρεση"
+
+msgid "Undo the last action."
+msgstr "Αναίρεση της τελευταίας ενέργειας."
+
+msgid "Redo"
+msgstr "Επανάληψη"
+
+msgid "Redo the last undone action."
+msgstr "Επανάληψη της τελευταίας αναιρεμένης ενέργειας."
+
+msgid "Quit the application."
+msgstr "Έξοδος από την εφαρμογή."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "Βάλτε λίγο Ghostty στο τερματικό σας."

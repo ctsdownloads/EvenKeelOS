@@ -23,6 +23,7 @@ ngettext = _translation.ngettext
 
 try:
     TIME_LOCALE = locale.setlocale(locale.LC_TIME, "")
+    locale.setlocale(locale.LC_NUMERIC, "")
 except locale.Error:
     TIME_LOCALE = locale.setlocale(locale.LC_TIME, "C")     # a region the system has no data for: English
 # Date patterns follow the Formats region in Settings, like the month and day names they hold.
@@ -156,8 +157,21 @@ def offer_restart(text, rest=""):
 
 
 def human(mb):
-    """'450 MB' or '1.2 GB'."""
-    return f"{mb / 1000:.1f} GB" if mb >= 1000 else f"{math.ceil(mb)} MB"
+    """'450 MB' or '1.2 GB', in the person's language and region ('1,2 Go' in French)."""
+    if mb >= 1000:
+        # Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+        return _("{n} GB").format(n=locale.format_string("%.1f", mb / 1000))
+    # Translators: a size in megabytes ("450 MB"); {n} is the number.
+    return _("{n} MB").format(n=math.ceil(mb))
+
+
+def user_folder(kind):
+    """A person's own folder under the name their language gives it: "DOWNLOAD" is ~/Téléchargements in French."""
+    try:
+        r = subprocess.run(["xdg-user-dir", kind], capture_output=True, text=True)
+    except OSError:
+        return Path.home()
+    return Path(r.stdout.strip() or Path.home())
 
 
 def free_mb(where=None):

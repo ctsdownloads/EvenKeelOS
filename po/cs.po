@@ -7268,6 +7268,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "Síť {network} je uložena jako {place}."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} GB"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} MB"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} TB"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8433,3 +8448,247 @@ msgstr "psaní not"
 
 msgid "your calendar"
 msgstr "váš kalendář"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "Dokončit překlad do všech jazyků"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "Zobrazovat data v pořadí typickém pro každý jazyk"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "Ponechat gettext v obrazu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "Přidat překlady do 68 jazyků"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "Umožnit překlad textu na každé obrazovce"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "Povolit aplikace a porty podle místa; Práce nepovoluje nic"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "Přidat plán světlého a tmavého vzhledu, prezentaci a písma"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "Přejmenovat Systémové nástroje na EvenKeelOS Wheelhouse"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "Zobrazovat grafiku NVIDIA v kontrole vhodnosti jako v pořádku"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "Načíst souborové systémy před instalací"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "Zeptat se před automatickým restartem"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "Označit každou novou verzi k vyzkoušení"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "Vrátit aktualizaci zpět, když se rozbije něco, co fungovalo"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "Spouštět každé sestavení ve virtuálním počítači před zveřejněním"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "Doporučit 8 GB paměti, bez minima"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "Zkontrolovat počítač před instalací z živého USB"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "Zeptat se v instalátoru, zda jde o uživatele Windows nebo Linuxu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "Přidat Systémové nástroje do nabídky pod logem"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "Přidat do průvodce EvenKeelOS šest dalších témat"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "Změnit Začínáme s Linuxem na průvodce EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "Přidat průvodce Začínáme s Linuxem do Systémových nástrojů a na přihlášení"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "Přidat Možnosti spouštění: běžné opravy a vlastní nastavení"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "Opravit kontrolu sestavení Sdílených složek: zatím žádné domovské složky"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "Přidat Sdílené složky: sdílení domovských složek v sítích Domov"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "Přidat Bezpečnost sítě: Domov, Práce nebo Veřejné místo"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "Rozpoznávat ovladače tiskáren v jakékoli složce"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "Zobrazovat okna nástrojů uvnitř Systémových nástrojů"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "Otevřít hlášení problému, když selže sestavení obrazu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "Zamknout externí balíčky a nástroj ISO na přesné verze"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "Pojmenovat okna nástrojů podle nástroje, kratší seznam testů"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "Opravit smazaná systémová nastavení a upozorňovat na certifikáty"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "Dát všechny nástroje do jednoho okna Systémových nástrojů"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "Nenechat po odebrání VPN nic za sebou"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "Přidat Získat VPN s VPN, které se stále aktualizují"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Dát schůzkám Zoom vlastního průvodce"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Otevírat schůzky Zoom v Chrome, ve webové verzi Zoomu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "Zabránit tomu, aby instalace ArtCraft rozbíjely instalace z Flathubu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "Rozpoznávat instalátory podle obvyklého názvu souboru"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Nabízet linuxové náhrady programů pro Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "Opravit nastavení kontejneru: distrobox špatně připojuje složky jen pro čtení"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Nabízet verze programů pro Windows z Fedory nebo Ubuntu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Nabídnout linuxovou verzi při otevření programu pro Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "Dodávat jeden shim, aby firmware nepřidával další položku Fedory"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Vrátit zónu firewallu Fedory"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "Zpřísnit pomocné programy root, firewall a aktualizace bez hesla"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "Nové výchozí hodnoty: tapety, barevné složky, zamykací obrazovka"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "Nová výchozí hodnota: modrozelený barevný odstín, i na přihlašovací obrazovce"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "Opravit poznámku o vrácení zpět, smyčku přihlášení a zaseknuté testy"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "Opravit vrácení zpět po zamrznutí a snížit počet opakování na 2"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "Opravit testy automatického vrácení zpět"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "Skutečné testy selhání pro automatické vrácení zpět"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "Přidat automatické vrácení zpět pomocí greenboot"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "Spouštět rozložení Windows na ploše a drobné opravy"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "Pozastavit automatické aktualizace na 3 dny po vrácení zpět"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "Přidat do instalátoru krok Rozložení plochy"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "Přidat Rozložení plochy do Systémových nástrojů"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "Nenechat přepínání režimů napájení čekat na aktualizace"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "Přidat volitelné rozložení ve stylu Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Opravit předvolby Fedory 45 a cesty zásad kontejnerů"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "Číst zdroje stahování v nové složce Fedory 45"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Přejít na Fedoru 45"

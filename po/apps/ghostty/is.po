@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+
+msgid "Open in Ghostty"
+msgstr "Opna í Ghostty"
+
+msgid "Find…"
+msgstr "Finna…"
+
+msgid "Previous Match"
+msgstr "Fyrri niðurstaða"
+
+msgid "Next Match"
+msgstr "Næsta niðurstaða"
+
+msgid "Close"
+msgstr "Loka"
+
+msgid "Oh, no."
+msgstr "Æ, nei."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "Ekki tókst að fá OpenGL-samhengi fyrir teikningu."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "Þessi skjáhermir er í skrifvarinni stillingu. Þú getur áfram skoðað, valið og flett í efninu, en engir inntaksatburðir verða sendir til forritsins sem er í gangi."
+
+msgid "Read-only"
+msgstr "Skrifvarið"
+
+msgid "Copy"
+msgstr "Afrita"
+
+msgid "Paste"
+msgstr "Líma"
+
+msgid "Notify on Next Command Finish"
+msgstr "Láta vita þegar næstu skipun lýkur"
+
+msgid "Clear"
+msgstr "Hreinsa"
+
+msgid "Reset"
+msgstr "Endurstilla"
+
+msgid "Split"
+msgstr "Skipting"
+
+msgid "Change Title…"
+msgstr "Breyta titli…"
+
+msgid "Split Up"
+msgstr "Skipta upp"
+
+msgid "Split Down"
+msgstr "Skipta niður"
+
+msgid "Split Left"
+msgstr "Skipta til vinstri"
+
+msgid "Split Right"
+msgstr "Skipta til hægri"
+
+msgid "Close Split"
+msgstr "Loka skiptingu"
+
+msgid "Tab"
+msgstr "Flipi"
+
+msgid "Change Tab Title…"
+msgstr "Breyta titli flipa…"
+
+msgid "New Tab"
+msgstr "Nýr flipi"
+
+msgid "Close Tab"
+msgstr "Loka flipa"
+
+msgid "Window"
+msgstr "Gluggi"
+
+msgid "Change Window Title…"
+msgstr "Breyta titli glugga…"
+
+msgid "New Window"
+msgstr "Nýr gluggi"
+
+msgid "Close Window"
+msgstr "Loka glugga"
+
+msgid "Config"
+msgstr "Stillingar"
+
+msgid "Open Configuration in OS Editor"
+msgstr "Opna stillingar í ritli kerfisins"
+
+msgid "Open Configuration in New Window"
+msgstr "Opna stillingar í nýjum glugga"
+
+msgid "Reload Configuration"
+msgstr "Endurhlaða stillingar"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ Þú ert að keyra villuleitarútgáfu af Ghostty! Afköst verða skert."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: Skoðun skjáhermis"
+
+msgid "New Split"
+msgstr "Ný skipting"
+
+msgid "View Open Tabs"
+msgstr "Skoða opna flipa"
+
+msgid "Main Menu"
+msgstr "Aðalvalmynd"
+
+msgid "Command Palette"
+msgstr "Skipanaspjald"
+
+msgid "Terminal Inspector"
+msgstr "Skoðun skjáhermis"
+
+msgid "About Ghostty"
+msgstr "Um Ghostty"
+
+msgid "Quit"
+msgstr "Hætta"
+
+msgid "Authorize Clipboard Access"
+msgstr "Heimila aðgang að klippispjaldi"
+
+msgid "Deny"
+msgstr "Hafna"
+
+msgid "Allow"
+msgstr "Leyfa"
+
+msgid "Remember choice for this split"
+msgstr "Muna valið fyrir þessa skiptingu"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "Endurhlaða stillingar til að sjá þessa fyrirspurn aftur"
+
+msgid "Cancel"
+msgstr "Hætta við"
+
+msgid "Execute a command…"
+msgstr "Keyra skipun…"
+
+msgid "Configuration Errors"
+msgstr "Villur í stillingum"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "Ein eða fleiri villur fundust í stillingum. Farðu yfir villurnar hér að neðan og endurhlaðið annaðhvort stillingarnar eða hunsaðu þessar villur."
+
+msgid "Ignore"
+msgstr "Hunsa"
+
+msgid "Leave blank to restore the default title."
+msgstr "Skildu eftir autt til að endurheimta sjálfgefinn titil."
+
+msgid "OK"
+msgstr "Í lagi"
+
+msgid "The keybind was revoked by the system."
+msgstr "Kerfið afturkallaði flýtilykilinn."
+
+msgid "The keybind was denied by the system."
+msgstr "Kerfið hafnaði flýtilyklinum."
+
+msgid "Global keybind unavailable"
+msgstr "Altækur flýtilykill ekki tiltækur"
+
+msgid "Export Terminal IO Events"
+msgstr "Flytja út IO-atburði skjáhermis"
+
+msgid "Export"
+msgstr "Flytja út"
+
+msgid "Editing configuration file"
+msgstr "Breyti stillingaskrá"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "Forrit reynir að skrifa á klippispjaldið. Núverandi innihald klippispjaldsins er sýnt hér að neðan."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "Forrit reynir að lesa af klippispjaldinu. Núverandi innihald klippispjaldsins er sýnt hér að neðan."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "Viðvörun: Hugsanlega óörugg líming"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "Það getur verið hættulegt að líma þennan texta í skjáherminn þar sem hann lítur út fyrir að keyra einhverjar skipanir."
+
+msgid "Quit Ghostty?"
+msgstr "Hætta í Ghostty?"
+
+msgid "Close Tab?"
+msgstr "Loka flipa?"
+
+msgid "Close Window?"
+msgstr "Loka glugga?"
+
+msgid "Close Split?"
+msgstr "Loka skiptingu?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "Öllum skjáhermislotum verður lokað."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "Öllum skjáhermislotum í þessum flipa verður lokað."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "Öllum skjáhermislotum í þessum glugga verður lokað."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "Ferlinu sem er í gangi í þessari skiptingu verður lokað."
+
+msgid "Command Finished"
+msgstr "Skipun lauk"
+
+msgid "Command Succeeded"
+msgstr "Skipun heppnaðist"
+
+msgid "Command Failed"
+msgstr "Skipun mistókst"
+
+msgid "Change Terminal Title"
+msgstr "Breyta titli skjáhermis"
+
+msgid "Change Tab Title"
+msgstr "Breyta titli flipa"
+
+msgid "Change Window Title"
+msgstr "Breyta titli glugga"
+
+msgid "Reloaded the configuration"
+msgstr "Stillingar endurhlaðnar"
+
+msgid "Copied to clipboard"
+msgstr "Afritað á klippispjald"
+
+msgid "Cleared clipboard"
+msgstr "Klippispjald hreinsað"
+
+msgid "Ghostty Developers"
+msgstr "Þróunaraðilar Ghostty"
+
+msgid "Reset Terminal"
+msgstr "Endurstilla skjáhermi"
+
+msgid "Reset the terminal to a clean state."
+msgstr "Endurstilla skjáherminn í hreint ástand."
+
+msgid "Copy to Clipboard"
+msgstr "Afrita á klippispjald"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "Afrita valinn texta á klippispjaldið bæði sem hreinan og sniðinn texta."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "Afrita val sem hreinan texta á klippispjald"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "Afrita valinn texta sem hreinan texta á klippispjaldið."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "Afrita val sem ANSI-raðir á klippispjald"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "Afrita valinn texta sem ANSI-stýriraðir á klippispjaldið."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "Afrita val sem HTML á klippispjald"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "Afrita valinn texta sem HTML á klippispjaldið."
+
+msgid "Copy URL to Clipboard"
+msgstr "Afrita vefslóð á klippispjald"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "Afrita vefslóðina undir bendlinum á klippispjaldið."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "Afrita titil skjáhermis á klippispjald"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "Afrita titil skjáhermisins á klippispjaldið. Ef titill skjáhermisins er ekki stilltur hefur þetta engin áhrif."
+
+msgid "Paste from Clipboard"
+msgstr "Líma af klippispjaldi"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "Líma innihald aðalklippispjaldsins."
+
+msgid "Paste from Selection"
+msgstr "Líma úr vali"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "Líma innihald valklippispjaldsins."
+
+msgid "Start Search"
+msgstr "Hefja leit"
+
+msgid "Start a search if one isn't already active."
+msgstr "Hefja leit ef engin er þegar virk."
+
+msgid "Search Selection"
+msgstr "Leita að vali"
+
+msgid "Start a search for the current text selection."
+msgstr "Hefja leit að núverandi völdum texta."
+
+msgid "End Search"
+msgstr "Ljúka leit"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "Ljúka núverandi leit, ef hún er til, og fela allar viðmótseiningar."
+
+msgid "Next Search Result"
+msgstr "Næsta leitarniðurstaða"
+
+msgid "Navigate to the next search result, if any."
+msgstr "Fara í næstu leitarniðurstöðu, ef hún er til."
+
+msgid "Previous Search Result"
+msgstr "Fyrri leitarniðurstaða"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "Fara í fyrri leitarniðurstöðu, ef hún er til."
+
+msgid "Increase Font Size"
+msgstr "Stækka letur"
+
+msgid "Increase the font size by 1 point."
+msgstr "Stækka letrið um 1 punkt."
+
+msgid "Decrease Font Size"
+msgstr "Minnka letur"
+
+msgid "Decrease the font size by 1 point."
+msgstr "Minnka letrið um 1 punkt."
+
+msgid "Reset Font Size"
+msgstr "Endurstilla leturstærð"
+
+msgid "Reset the font size to the default."
+msgstr "Endurstilla leturstærðina á sjálfgefið gildi."
+
+msgid "Clear Screen"
+msgstr "Hreinsa skjá"
+
+msgid "Clear the screen and scrollback."
+msgstr "Hreinsa skjáinn og flettisögu."
+
+msgid "Select All"
+msgstr "Velja allt"
+
+msgid "Select all text on the screen."
+msgstr "Velja allan texta á skjánum."
+
+msgid "Scroll to Top"
+msgstr "Fletta efst"
+
+msgid "Scroll to the top of the screen."
+msgstr "Fletta efst á skjáinn."
+
+msgid "Scroll to Bottom"
+msgstr "Fletta neðst"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "Fletta neðst á skjáinn."
+
+msgid "Scroll to Selection"
+msgstr "Fletta að vali"
+
+msgid "Scroll to the selected text."
+msgstr "Fletta að valda textanum."
+
+msgid "Scroll Page Up"
+msgstr "Fletta síðu upp"
+
+msgid "Scroll the screen up by a page."
+msgstr "Fletta skjánum upp um eina síðu."
+
+msgid "Scroll Page Down"
+msgstr "Fletta síðu niður"
+
+msgid "Scroll the screen down by a page."
+msgstr "Fletta skjánum niður um eina síðu."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "Afrita skjá í tímabundna skrá og afrita slóð"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "Afrita innihald skjásins í tímabundna skrá og afrita slóðina á klippispjaldið."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "Afrita skjá í tímabundna skrá og líma slóð"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "Afrita innihald skjásins í tímabundna skrá og líma slóðina að skránni."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "Afrita skjá í tímabundna skrá og opna"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "Afrita innihald skjásins í tímabundna skrá og opna hana."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "Afrita skjá sem HTML í tímabundna skrá og afrita slóð"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Afrita innihald skjásins sem HTML í tímabundna skrá og afrita slóðina á klippispjaldið."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "Afrita skjá sem HTML í tímabundna skrá og líma slóð"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "Afrita innihald skjásins sem HTML í tímabundna skrá og líma slóðina að skránni."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "Afrita skjá sem HTML í tímabundna skrá og opna"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "Afrita innihald skjásins sem HTML í tímabundna skrá og opna hana."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Afrita skjá sem ANSI-raðir í tímabundna skrá og afrita slóð"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Afrita innihald skjásins sem ANSI-stýriraðir í tímabundna skrá og afrita slóðina á klippispjaldið."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Afrita skjá sem ANSI-raðir í tímabundna skrá og líma slóð"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Afrita innihald skjásins sem ANSI-stýriraðir í tímabundna skrá og líma slóðina að skránni."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "Afrita skjá sem ANSI-raðir í tímabundna skrá og opna"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Afrita innihald skjásins sem ANSI-stýriraðir í tímabundna skrá og opna hana."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "Afrita val í tímabundna skrá og afrita slóð"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "Afrita innihald valsins í tímabundna skrá og afrita slóðina á klippispjaldið."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "Afrita val í tímabundna skrá og líma slóð"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "Afrita innihald valsins í tímabundna skrá og líma slóðina að skránni."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "Afrita val í tímabundna skrá og opna"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "Afrita innihald valsins í tímabundna skrá og opna hana."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "Afrita val sem HTML í tímabundna skrá og afrita slóð"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Afrita innihald valsins sem HTML í tímabundna skrá og afrita slóðina á klippispjaldið."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "Afrita val sem HTML í tímabundna skrá og líma slóð"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "Afrita innihald valsins sem HTML í tímabundna skrá og líma slóðina að skránni."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "Afrita val sem HTML í tímabundna skrá og opna"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "Afrita innihald valsins sem HTML í tímabundna skrá og opna hana."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Afrita val sem ANSI-raðir í tímabundna skrá og afrita slóð"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Afrita innihald valsins sem ANSI-stýriraðir í tímabundna skrá og afrita slóðina á klippispjaldið."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Afrita val sem ANSI-raðir í tímabundna skrá og líma slóð"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Afrita innihald valsins sem ANSI-stýriraðir í tímabundna skrá og líma slóðina að skránni."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "Afrita val sem ANSI-raðir í tímabundna skrá og opna"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Afrita innihald valsins sem ANSI-stýriraðir í tímabundna skrá og opna hana."
+
+msgid "Open a new window."
+msgstr "Opna nýjan glugga."
+
+msgid "Open a new tab."
+msgstr "Opna nýjan flipa."
+
+msgid "Move Tab Left"
+msgstr "Færa flipa til vinstri"
+
+msgid "Move the current tab to the left."
+msgstr "Færa núverandi flipa til vinstri."
+
+msgid "Move Tab Right"
+msgstr "Færa flipa til hægri"
+
+msgid "Move the current tab to the right."
+msgstr "Færa núverandi flipa til hægri."
+
+msgid "Move Tab to New Window"
+msgstr "Færa flipa í nýjan glugga"
+
+msgid "Move the current tab to a new window."
+msgstr "Færa núverandi flipa í nýjan glugga."
+
+msgid "Toggle Tab Overview"
+msgstr "Víxla flipayfirliti"
+
+msgid "Toggle the tab overview."
+msgstr "Víxla flipayfirlitinu."
+
+msgid "Change Terminal Title…"
+msgstr "Breyta titli skjáhermis…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "Biðja um nýjan titil fyrir núverandi skjáhermi."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "Biðja um nýjan titil fyrir núverandi flipa."
+
+msgid "Split the terminal to the left."
+msgstr "Skipta skjáherminum til vinstri."
+
+msgid "Split the terminal to the right."
+msgstr "Skipta skjáherminum til hægri."
+
+msgid "Split the terminal up."
+msgstr "Skipta skjáherminum upp."
+
+msgid "Split the terminal down."
+msgstr "Skipta skjáherminum niður."
+
+msgid "Focus Split: Previous"
+msgstr "Fókus á skiptingu: fyrri"
+
+msgid "Focus the previous split, if any."
+msgstr "Setja fókus á fyrri skiptingu, ef hún er til."
+
+msgid "Focus Split: Next"
+msgstr "Fókus á skiptingu: næsta"
+
+msgid "Focus the next split, if any."
+msgstr "Setja fókus á næstu skiptingu, ef hún er til."
+
+msgid "Focus Split: Left"
+msgstr "Fókus á skiptingu: vinstri"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "Setja fókus á skiptinguna til vinstri, ef hún er til."
+
+msgid "Focus Split: Right"
+msgstr "Fókus á skiptingu: hægri"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "Setja fókus á skiptinguna til hægri, ef hún er til."
+
+msgid "Focus Split: Up"
+msgstr "Fókus á skiptingu: upp"
+
+msgid "Focus the split above, if it exists."
+msgstr "Setja fókus á skiptinguna fyrir ofan, ef hún er til."
+
+msgid "Focus Split: Down"
+msgstr "Fókus á skiptingu: niður"
+
+msgid "Focus the split below, if it exists."
+msgstr "Setja fókus á skiptinguna fyrir neðan, ef hún er til."
+
+msgid "Focus Window: Previous"
+msgstr "Fókus á glugga: fyrri"
+
+msgid "Focus the previous window, if any."
+msgstr "Setja fókus á fyrri glugga, ef hann er til."
+
+msgid "Focus Window: Next"
+msgstr "Fókus á glugga: næsti"
+
+msgid "Focus the next window, if any."
+msgstr "Setja fókus á næsta glugga, ef hann er til."
+
+msgid "Toggle Split Zoom"
+msgstr "Víxla aðdrætti skiptingar"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "Víxla aðdráttarstöðu núverandi skiptingar."
+
+msgid "Toggle Read-Only Mode"
+msgstr "Víxla skrifvarinni stillingu"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "Víxla skrifvarinni stillingu fyrir núverandi flöt."
+
+msgid "Equalize Splits"
+msgstr "Jafna skiptingar"
+
+msgid "Equalize the size of all splits."
+msgstr "Jafna stærð allra skiptinga."
+
+msgid "Reset Window Size"
+msgstr "Endurstilla stærð glugga"
+
+msgid "Reset the window size to the default."
+msgstr "Endurstilla stærð gluggans á sjálfgefið gildi."
+
+msgid "Toggle Inspector"
+msgstr "Víxla skoðara"
+
+msgid "Toggle the inspector."
+msgstr "Víxla skoðaranum."
+
+msgid "Show the GTK Inspector"
+msgstr "Sýna GTK-skoðara"
+
+msgid "Show the GTK inspector."
+msgstr "Sýna GTK-skoðarann."
+
+msgid "Show On-Screen Keyboard"
+msgstr "Sýna skjályklaborð"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "Sýna skjályklaborðið ef það er til staðar."
+
+msgid "Open Config Using OS editor"
+msgstr "Opna stillingar í ritli kerfisins"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "Opna stillingaskrána í sjálfgefnum ritli kerfisins."
+
+msgid "Open Config in New Terminal Window"
+msgstr "Opna stillingar í nýjum skjáhermisglugga"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "Opna stillingaskrána í nýjum glugga með $EDITOR eða $VISUAL."
+
+msgid "Reload Config"
+msgstr "Endurhlaða stillingar"
+
+msgid "Reload the config file."
+msgstr "Endurhlaða stillingaskrána."
+
+msgid "Close Terminal"
+msgstr "Loka skjáhermi"
+
+msgid "Close the current terminal."
+msgstr "Loka núverandi skjáhermi."
+
+msgid "Close the current tab."
+msgstr "Loka núverandi flipa."
+
+msgid "Close Other Tabs"
+msgstr "Loka öðrum flipum"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "Loka öllum flipum í þessum glugga nema þeim núverandi."
+
+msgid "Close Tabs to the Right"
+msgstr "Loka flipum til hægri"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "Loka öllum flipum hægra megin við þann núverandi."
+
+msgid "Close the current window."
+msgstr "Loka núverandi glugga."
+
+msgid "Close All Windows"
+msgstr "Loka öllum gluggum"
+
+msgid "Close all windows."
+msgstr "Loka öllum gluggum."
+
+msgid "Toggle Maximize"
+msgstr "Víxla hámörkun"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "Víxla hámörkunarstöðu núverandi glugga."
+
+msgid "Toggle Fullscreen"
+msgstr "Víxla yfir á allan skjáinn"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "Víxla heilskjásstöðu núverandi glugga."
+
+msgid "Toggle Window Decorations"
+msgstr "Víxla gluggaskreytingum"
+
+msgid "Toggle the window decorations."
+msgstr "Víxla gluggaskreytingunum."
+
+msgid "Toggle Float on Top"
+msgstr "Víxla fljótandi efst"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "Víxla stöðunni „fljótandi efst“ fyrir núverandi glugga."
+
+msgid "Toggle Secure Input"
+msgstr "Víxla öruggu inntaki"
+
+msgid "Toggle secure input mode."
+msgstr "Víxla öruggri inntaksstillingu."
+
+msgid "Toggle Mouse Reporting"
+msgstr "Víxla músartilkynningum"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "Víxla því hvort músaratburðir eru tilkynntir til skjáhermisforrita."
+
+msgid "Toggle Background Opacity"
+msgstr "Víxla gegnsæi bakgrunns"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "Víxla gegnsæi bakgrunns glugga sem byrjaði gegnsær."
+
+msgid "Check for Updates"
+msgstr "Athuga með uppfærslur"
+
+msgid "Check for updates to the application."
+msgstr "Athuga með uppfærslur á forritinu."
+
+msgid "Undo"
+msgstr "Afturkalla"
+
+msgid "Undo the last action."
+msgstr "Afturkalla síðustu aðgerð."
+
+msgid "Redo"
+msgstr "Endurgera"
+
+msgid "Redo the last undone action."
+msgstr "Endurgera síðustu afturkölluðu aðgerð."
+
+msgid "Quit the application."
+msgstr "Hætta í forritinu."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "Settu smá Ghostty í skjáherminn þinn."

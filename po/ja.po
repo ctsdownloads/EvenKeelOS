@@ -6614,6 +6614,21 @@ msgstr "{network}を{place}として保存できませんでした。EvenKeelOS 
 msgid "{network} is saved as {place}."
 msgstr "{network} は {place} として保存されました。"
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} GB"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} MB"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} TB"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -7745,3 +7760,247 @@ msgstr "楽譜を書く"
 
 msgid "your calendar"
 msgstr "カレンダー"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "すべての言語の翻訳を完了"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "日付を各言語の並び順で表示"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "イメージに gettext を含めたままにする"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "68 言語の翻訳を追加"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "すべての画面のテキストを翻訳可能に"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "場所ごとにアプリとポートを許可。「職場」では何も許可しない"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "ライトとダークのスケジュール、スライドショー、フォントを追加"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "「システムツール」を EvenKeelOS Wheelhouse に名称変更"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "適合チェックで NVIDIA グラフィックスを問題なしと表示"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "インストール前にファイルシステムを読み込む"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "自動再起動の前に確認する"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "新しいバージョンをすべて試用扱いにする"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "動いていたものが壊れたらアップデートをロールバック"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "公開前にすべてのビルドを仮想マシンで起動"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "メモリは 8 GB を推奨、最小要件はなし"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "ライブ USB からのインストール前にコンピューターをチェック"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "インストーラーで Windows ユーザーか Linux ユーザーかを質問"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "ロゴメニューに「システムツール」を追加"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "EvenKeelOS ガイドにトピックを 6 つ追加"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "「Linux 入門」を EvenKeelOS ガイドに変更"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "「Linux 入門」ガイドを「システムツール」とログイン時に追加"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "「起動オプション」を追加：よくある修正と独自の設定"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "「共有フォルダー」のビルドチェックを修正：ホームフォルダーがまだない場合"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "「共有フォルダー」を追加：ホームネットワークでホームフォルダーを共有"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "「ネットワークの安全性」を追加：ホーム、職場、公共の場所"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "どのフォルダーにあるプリンタードライバーも認識"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "ツールのウィンドウを「システムツール」の中に表示"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "イメージのビルドが失敗したら Issue を開く"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "外部パッケージと ISO ツールを正確なバージョンに固定"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "ツールのウィンドウにツール名を付け、テスト一覧を短縮"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "削除されたシステム設定を修復し、証明書を警告"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "すべてのツールを 1 つの「システムツール」ウィンドウにまとめる"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "VPN を削除したときに何も残さない"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "「VPN を入手」を追加：更新され続ける VPN"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Zoom ミーティング専用のガイドを追加"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Zoom ミーティングを Chrome で Zoom のウェブ版として開く"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "ArtCraft のインストールで Flathub のインストールが壊れないよう修正"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "通常のファイル名でインストーラーを認識"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Windows プログラムの Linux 向け代替を提案"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "ボックスの設定を修正：distrobox が読み取り専用フォルダーを正しくマウントしない問題"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Windows プログラムの Fedora 版または Ubuntu 版を提案"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Windows プログラムを開いたときに Linux 版を提案"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "shim を 1 つだけ配布し、ファームウェアが Fedora のエントリーを余分に追加しないように"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Fedora のファイアウォールゾーンを元に戻す"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "root ヘルパー、ファイアウォール、パスワード不要のアップデートを強化"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "新しい初期設定：壁紙、アクセントフォルダー、ロック画面"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "新しい初期設定：ティール色のアクセントカラー、ログイン画面にも適用"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "ロールバックの注記、ログインループ、止まったテストを修正"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "フリーズ時のロールバックを修正し、再試行を 2 回に削減"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "自動ロールバックのテストを修正"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "自動ロールバックの実際の障害テスト"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "greenboot による自動ロールバックを追加"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "デスクトップで Windows レイアウトを開始、ほか細かな修正"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "元に戻した後、自動アップデートを 3 日間一時停止"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "インストーラーに「デスクトップのレイアウト」の手順を追加"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "「システムツール」に「デスクトップのレイアウト」を追加"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "電源モードの切り替えがアップデートを待たないように修正"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "Windows スタイルのレイアウトをオプションとして追加"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Fedora 45 のプリセットとコンテナーポリシーのパスを修正"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "Fedora 45 の新しいフォルダーからダウンロード元を読み取る"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Fedora 45 へ移行"

@@ -67,6 +67,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      statuses: write
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -86,6 +87,8 @@ jobs:
             echo
             base64 -d <<< "$NOTES"
             echo
+            echo "The check \"Outside apps' text is translated\" on this PR fails if a new version has new text."
+            echo "Then paste this PR's link to get the translations; the build stops until they are in."
             echo "The image build runs after the merge. If a check fails, nothing is published."
             echo "Copr deletes an old version about 14 days after a newer one is out."
             echo "If a locked version is gone, the daily build stops until this PR is merged."
@@ -105,3 +108,14 @@ jobs:
           else
             echo "ERROR: the PR was opened or closed during this check; the next run tries again"; exit 1
           fi
+
+      # A PR opened by this workflow starts no other workflow, so the text check runs here and shows on the PR.
+      - name: The outside apps' text is translated
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y --no-install-recommends gettext rpm2cpio cpio jq
+          if build_files/check-app-texts.sh; then state=success; text="No new text"
+          else state=failure; text="New text to translate, or a download failed: see the check run's log"; fi
+          gh api -X POST "repos/$GITHUB_REPOSITORY/statuses/$(git rev-parse HEAD)" -f state="$state" \
+            -f context="Outside apps' text is translated" -f description="$text" >/dev/null

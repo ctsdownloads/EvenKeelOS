@@ -7402,6 +7402,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "{network} disimpan sebagai {place}."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} GB"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} MB"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} TB"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8558,3 +8573,247 @@ msgstr "menulis skor muzik"
 
 msgid "your calendar"
 msgstr "kalendar anda"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "Siapkan terjemahan untuk setiap bahasa"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "Papar tarikh mengikut susunan setiap bahasa"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "Kekalkan gettext dalam imej"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "Tambah terjemahan untuk 68 bahasa"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "Jadikan teks setiap skrin boleh diterjemahkan"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "Benarkan aplikasi dan port mengikut tempat; Tempat Kerja tidak membenarkan apa-apa"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "Tambah jadual cerah dan gelap, tayangan slaid dan fon"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "Namakan semula Alat Sistem kepada EvenKeelOS Wheelhouse"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "Papar grafik NVIDIA sebagai baik dalam semakan kesesuaian"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "Muatkan sistem fail sebelum memasang"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "Tanya sebelum mula semula automatik"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "Tandakan setiap versi baharu untuk percubaan"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "Pulihkan kemas kini apabila sesuatu yang berfungsi menjadi rosak"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "Mulakan setiap binaan dalam mesin maya sebelum diterbitkan"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "Cadangkan memori 8 GB, tanpa minimum"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "Semak komputer sebelum memasang daripada USB langsung"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "Tanya pengguna Windows atau Linux dalam pemasang"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "Tambah Alat Sistem pada menu logo"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "Tambah enam topik lagi pada panduan EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "Tukar Baharu kepada Linux menjadi panduan EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "Tambah panduan Baharu kepada Linux dalam Alat Sistem dan semasa log masuk"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "Tambah Pilihan but: pembetulan biasa dan tetapan anda sendiri"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "Betulkan semakan binaan Folder dikongsi: belum ada folder utama"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "Tambah Folder dikongsi: kongsi folder utama pada rangkaian Rumah"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "Tambah Keselamatan rangkaian: Rumah, Tempat Kerja atau Tempat Awam"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "Kenali pemacu pencetak dalam mana-mana folder"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "Papar tetingkap alat di dalam Alat Sistem"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "Buka isu apabila binaan imej gagal"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "Kunci pakej luar dan alat ISO kepada versi tepat"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "Namakan tetingkap alat mengikut nama alat, senarai ujian lebih pendek"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "Baiki tetapan sistem yang dipadam dan beri amaran tentang sijil"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "Letakkan semua alat dalam satu tetingkap Alat Sistem"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "Tidak meninggalkan apa-apa apabila VPN dibuang"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "Tambah Dapatkan VPN, dengan VPN yang sentiasa dikemas kini"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Beri mesyuarat Zoom panduan tersendiri"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Buka mesyuarat Zoom dalam Chrome, dalam versi web Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "Hentikan pemasangan ArtCraft daripada merosakkan pemasangan Flathub"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "Kenali pemasang melalui nama fail lazimnya"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Tawarkan pengganti Linux untuk program Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "Betulkan persediaan kotak: distrobox melekap folder baca sahaja dengan salah"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Tawarkan versi Fedora atau Ubuntu bagi program Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Tawarkan versi Linux apabila program Windows dibuka"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "Hantar satu shim, supaya perisian tegar tidak menambah entri Fedora tambahan"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Pulihkan zon tembok api Fedora"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "Perkukuh pembantu root, tembok api dan kemas kini tanpa kata laluan"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "Lalai baharu: kertas dinding, folder warna aksen, skrin kunci"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "Lalai baharu: warna aksen teal, juga pada skrin log masuk"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "Betulkan nota pemulihan, gelung log masuk dan ujian tersekat"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "Betulkan pemulihan ketika beku dan kurangkan percubaan semula kepada 2"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "Betulkan ujian pemulihan automatik"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "Ujian kegagalan sebenar untuk pemulihan automatik"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "Tambah pemulihan automatik dengan greenboot"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "Mulakan susun atur Windows pada desktop, serta pembetulan kecil"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "Jeda kemas kini automatik selama 3 hari selepas buat asal"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "Tambah langkah Susun atur desktop pada pemasang"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "Tambah Susun atur desktop pada Alat Sistem"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "Elakkan penukaran mod kuasa menunggu kemas kini"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "Tambah susun atur gaya Windows pilihan"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Betulkan pratetap Fedora 45 dan laluan dasar kontena"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "Baca sumber muat turun dalam folder baharu Fedora 45"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Beralih kepada Fedora 45"

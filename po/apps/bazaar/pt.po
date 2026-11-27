@@ -1,0 +1,1452 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "App Store"
+msgstr "Loja de aplicações"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Sistema;Pacote;Gestor;Discover;Flatpak;Software;Aplicações;Loja;"
+
+msgid "Discover and install apps"
+msgstr "Descobrir e instalar aplicações"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Uma loja de aplicações rápida e moderna para Linux, centrada na descoberta e instalação de aplicações e extras Flatpak, em particular do Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Coloque várias instalações em fila e continue a navegar"
+
+msgid "Easily view app permissions"
+msgstr "Veja facilmente as permissões das aplicações"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Inicie sessão no Flathub para ver e gerir os seus favoritos"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Pesquise aplicações diretamente a partir do GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "A página inicial com as aplicações do Flathub"
+
+msgid "App page for Exhibit"
+msgstr "Página da aplicação Exhibit"
+
+msgid "Library page"
+msgstr "Página da biblioteca"
+
+msgid "Search page"
+msgstr "Página de pesquisa"
+
+msgid "Stopped Receiving Updates"
+msgstr "Deixou de receber atualizações"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Desinstalar"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Instalar"
+
+msgid "Add-on"
+msgstr "Extra"
+
+msgid "Manage Add-Ons"
+msgstr "Gerir extras"
+
+msgid "No Add-Ons Visible"
+msgstr "Nenhum extra visível"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "As suas preferências de filtro atuais estão a ocultar todos os extras conhecidos. Tente ajustá-las."
+
+msgid "Add-on Page"
+msgstr "Página do extra"
+
+msgid "Download"
+msgstr "Transferir"
+
+msgid "Downloads/Month"
+msgstr "Transferências/mês"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Este extra utiliza um runtime que já não recebe atualizações nem correções de segurança. Pode tornar-se inseguro de utilizar."
+
+msgid "Other Sources"
+msgstr "Outras origens"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Extra para %s"
+
+msgid "Show More"
+msgstr "Mostrar mais"
+
+msgid "Download Stats"
+msgstr "Estatísticas de transferências"
+
+msgid "Contact Details"
+msgstr "Detalhes de contacto"
+
+msgid "Desecration"
+msgstr "Profanação"
+
+msgid "Violence"
+msgstr "Violência"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s é adequado para adolescentes"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s é adequado para adultos"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s é adequado para %s"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Subpasta do ambiente de trabalho %s"
+
+msgid "Desktop folder"
+msgstr "Pasta do ambiente de trabalho"
+
+msgid "Download Size"
+msgstr "Tamanho da transferência"
+
+msgid "Installed Size"
+msgstr "Tamanho instalado"
+
+msgid "Open user data folder"
+msgstr "Abrir a pasta de dados do utilizador"
+
+msgid "Your User Data"
+msgstr "Os seus dados de utilizador"
+
+msgid "Cache"
+msgstr "Cache"
+
+msgid "Temporary cached data"
+msgstr "Dados temporários em cache"
+
+msgid "Clear Cache"
+msgstr "Limpar cache"
+
+msgid "Installed Runtime Size"
+msgstr "Tamanho do runtime instalado"
+
+msgid "Runtime Download Size"
+msgstr "Tamanho da transferência do runtime"
+
+msgid "Storage"
+msgstr "Armazenamento"
+
+msgid "Verified"
+msgstr "Verificado"
+
+msgid "The Bazaar Contributors"
+msgstr "Os colaboradores do Bazaar"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Performing setup…"
+msgstr "A configurar…"
+
+msgid "Set Up Flathub?"
+msgstr "Configurar o Flathub?"
+
+msgid "Set Up Flathub"
+msgstr "Configurar o Flathub"
+
+msgid "A backend error occurred"
+msgstr "Ocorreu um erro no backend"
+
+msgid "Refreshing…"
+msgstr "A atualizar…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "A carregar %d aplicações…"
+
+msgid "Failed to open file"
+msgstr "Falha ao abrir o ficheiro"
+
+msgid "Failed to load metainfo"
+msgstr "Falha ao carregar os metadados"
+
+msgid "An initialization error occurred"
+msgstr "Ocorreu um erro de inicialização"
+
+msgid "Checking for updates…"
+msgstr "A procurar atualizações…"
+
+msgid "Failed to check for updates"
+msgstr "Falha ao procurar atualizações"
+
+msgid "Could not find app"
+msgstr "Não foi possível encontrar a aplicação"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "A carregar %d aplicação…"
+msgstr[1] "A carregar %d aplicações…"
+
+msgid "Writing to cache…"
+msgstr "A escrever na cache…"
+
+msgid "Removing remote…"
+msgstr "A remover o repositório…"
+
+msgid "Could not remove remote"
+msgstr "Não foi possível remover o repositório"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Todas as \"%s\""
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d aplicações"
+
+msgid "Failed to Load Article"
+msgstr "Falha ao carregar o artigo"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Instalar %u aplicação?"
+msgstr[1] "Instalar %u aplicações?"
+
+msgid "Additionally, addons will be installed."
+msgstr "Além disso, serão instalados extras."
+
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+msgid "_Install All"
+msgstr "_Instalar tudo"
+
+msgid "Bundle Installation"
+msgstr "Instalação de pacote"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Dependências adicionais podem ocupar espaço extra"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"A instalação desta aplicação pode exigir a adição de uma nova origem de software. As outras aplicações desta origem aparecerão no Bazaar.\n"
+"\n"
+"Adicione esta origem apenas se tiver a certeza de que confia nela."
+
+msgid "Successfully Installed!"
+msgstr "Instalado com sucesso!"
+
+msgid "Show App Details"
+msgstr "Mostrar detalhes da aplicação"
+
+msgid "Already Installed"
+msgstr "Já instalada"
+
+msgid "Installation Failed"
+msgstr "Falha na instalação"
+
+msgid "Unknown install size"
+msgstr "Tamanho de instalação desconhecido"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Cerca de %s para instalar"
+
+msgid "No special permissions"
+msgstr "Sem permissões especiais"
+
+msgid "Place Applet"
+msgstr "Colocar applet"
+
+msgid "Choose where to add this applet."
+msgstr "Escolha onde adicionar este applet."
+
+msgid "Panel"
+msgstr "Painel"
+
+msgid "Dock"
+msgstr "Dock"
+
+msgid "No Curation"
+msgstr "Sem curadoria"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Não existe informação de curadoria neste sistema. Pode continuar a navegar pelas aplicações no Flathub"
+
+msgid "Browse Flathub"
+msgstr "Navegar no Flathub"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s a %s, máximo em %s com %s"
+
+msgid "Installs:"
+msgstr "Instalações:"
+
+msgid "Not Verified"
+msgstr "Não verificado"
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "A titularidade do ID de aplicação %1$s foi verificada por <b>%2$s</b> em <b>%3$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "A titularidade do ID de aplicação %1$s foi verificada através de %2$s."
+
+msgid "Bazaar Release"
+msgstr "Versão do Bazaar"
+
+msgid "Full Release Notes"
+msgstr "Notas de lançamento completas"
+
+msgid "This release was made possible by users like you!"
+msgstr "Esta versão foi possível graças a utilizadores como si!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Adoro fazer o Bazaar, mas não consigo fazê-lo sozinho. Ajude a apoiar o desenvolvimento futuro com um donativo no Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "Doar ao Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Novidades no %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Lançado em %-e de %B de %Y"
+
+msgid "Choose an Installation"
+msgstr "Escolha uma instalação"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Tem várias versões desta aplicação instaladas. Com qual deseja continuar?"
+
+msgid "Copy"
+msgstr "Copiar"
+
+msgid "Failed to update favorite"
+msgstr "Falha ao atualizar o favorito"
+
+msgid "Install All"
+msgstr "Instalar tudo"
+
+msgid "Support This Application"
+msgstr "Apoiar esta aplicação"
+
+msgid "Remove From Favorites"
+msgstr "Remover dos favoritos"
+
+msgid "Failed to remove favorite"
+msgstr "Falha ao remover o favorito"
+
+msgid "Editing"
+msgstr "Edição"
+
+msgid "Player"
+msgstr "Leitor"
+
+msgid "Sequencer"
+msgstr "Sequenciador"
+
+msgid "Emulation"
+msgstr "Emulação"
+
+msgid "Action"
+msgstr "Ação"
+
+msgid "Simulation"
+msgstr "Simulação"
+
+msgid "Sports"
+msgstr "Desporto"
+
+msgid "Browsers"
+msgstr "Navegadores"
+
+msgid "Chat"
+msgstr "Conversas"
+
+msgid "Mail"
+msgstr "Correio"
+
+msgid "File Sharing"
+msgstr "Partilha de ficheiros"
+
+msgid "More Education"
+msgstr "Mais de Educação"
+
+msgid "More Gaming"
+msgstr "Mais de Jogos"
+
+msgid "More Science"
+msgstr "Mais de Ciência"
+
+msgid "More Utilities"
+msgstr "Mais de Utilitários"
+
+msgid "More Trending"
+msgstr "Mais em tendência"
+
+msgid "More Popular"
+msgstr "Mais populares"
+
+msgid "More New"
+msgstr "Mais novas"
+
+msgid "Updated"
+msgstr "Atualizadas"
+
+msgid "More Updated"
+msgstr "Mais atualizadas"
+
+msgid "More Mobile"
+msgstr "Mais para telemóvel"
+
+msgid "More Adwaita"
+msgstr "Mais Adwaita"
+
+msgid "More KDE Apps"
+msgstr "Mais aplicações KDE"
+
+msgid "Made for COSMIC™"
+msgstr "Feito para o COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Para o COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Mais aplicações COSMIC"
+
+msgid "Games"
+msgstr "Jogos"
+
+msgid "More Games"
+msgstr "Mais jogos"
+
+msgid "Emulators"
+msgstr "Emuladores"
+
+msgid "More Emulators"
+msgstr "Mais emuladores"
+
+msgid "Launchers"
+msgstr "Lançadores"
+
+msgid "More Game Launchers"
+msgstr "Mais lançadores de jogos"
+
+msgid "Game Tools"
+msgstr "Ferramentas de jogos"
+
+msgid "More Game Tools"
+msgstr "Mais ferramentas de jogos"
+
+msgid "New Year, New Workflows"
+msgstr "Ano novo, novos fluxos de trabalho"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Aplicações para tomar notas, acompanhar tarefas e fazer planos"
+
+msgid "Staff Picks"
+msgstr "Escolhas da equipa"
+
+msgid "Apps we love right now"
+msgstr "Aplicações de que gostamos neste momento"
+
+msgid "Get Creative"
+msgstr "Seja criativo"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Aplicações essenciais para desenhar, editar fotografias e design digital"
+
+msgid "Build Native Apps"
+msgstr "Crie aplicações nativas"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Desenvolva aplicações que se sentem em casa no seu sistema"
+
+msgid "Stay in Touch"
+msgstr "Mantenha-se em contacto"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Aplicações essenciais de colaboração e comunicação"
+
+msgid "Ready for Vacations"
+msgstr "Prontos para as férias"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Aplicações de mapas, transportes, meteorologia e planeamento de viagens"
+
+msgid "Smarter Every Day"
+msgstr "Mais inteligente todos os dias"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Aplicações para ajudar a estudar, pesquisar e escrever"
+
+msgid "Get Cozy"
+msgstr "Fique confortável"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Ótimas aplicações para ler, ver filmes e jogar"
+
+msgid "Web Developer Essentials"
+msgstr "Essenciais para programadores web"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Criar sites é mais divertido com estas aplicações"
+
+msgid "Take Better Notes"
+msgstr "Tome melhores notas"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Encontre a sua nova ferramenta favorita para tomar notas"
+
+msgid "Get Focused"
+msgstr "Mantenha o foco"
+
+msgid "Great apps for task management"
+msgstr "Ótimas aplicações para gestão de tarefas"
+
+msgid "Make Some Noise"
+msgstr "Faça algum barulho"
+
+msgid "Apps for creating and producing music"
+msgstr "Aplicações para criar e produzir música"
+
+msgid "Get To Work"
+msgstr "Ao trabalho"
+
+msgid "Essential office apps"
+msgstr "Aplicações de escritório essenciais"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "O repositório Flathub não foi encontrado em nenhuma das suas instalações Flatpak"
+
+msgid "Can't Reach Flathub"
+msgstr "Não é possível contactar o Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "Ainda pode gerir e pesquisar aplicações."
+
+msgid "Search Apps"
+msgstr "Pesquisar aplicações"
+
+msgid "Reconnect"
+msgstr "Voltar a ligar"
+
+msgid "On the Go"
+msgstr "Em movimento"
+
+msgid "More Mobile Apps"
+msgstr "Mais aplicações para telemóvel"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Esta é uma pré-visualização local, alguns detalhes podem diferir da listagem publicada"
+
+msgid "Preview Store Appearance"
+msgstr "Pré-visualizar o aspeto da loja"
+
+msgid "_Support"
+msgstr "_Apoiar"
+
+msgid "Trash Data"
+msgstr "Enviar dados para o lixo"
+
+msgid "Add-ons"
+msgstr "Extras"
+
+msgid "More Add-Ons"
+msgstr "Mais extras"
+
+msgid "Links"
+msgstr "Ligações"
+
+msgid "Similar Apps"
+msgstr "Aplicações semelhantes"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Esta aplicação tem uma licença FLOSS, o que significa que o código-fonte pode ser auditado quanto à segurança."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Esta aplicação tem uma licença proprietária, o que significa que o código-fonte é desenvolvido de forma privada e não pode ser auditado por terceiros independentes."
+
+msgid "Other Apps From This Developer"
+msgstr "Outras aplicações deste programador"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Outras aplicações de %s"
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Aplicações de %s"
+
+msgid "Apps by This Developer"
+msgstr "Aplicações deste programador"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d aplicação"
+msgstr[1] "%d aplicações"
+
+msgid "Failed to Remove User Data"
+msgstr "Falha ao remover os dados do utilizador"
+
+msgid "Hardware Support"
+msgstr "Suporte de hardware"
+
+msgid "Keyboard support"
+msgstr "Suporte de teclado"
+
+msgid "Supports keyboards"
+msgstr "Suporta teclados"
+
+msgid "Mouse support"
+msgstr "Suporte de rato"
+
+msgid "Supports touchscreens"
+msgstr "Suporta ecrãs táteis"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "A cancelar"
+
+msgid "_Open"
+msgstr "_Abrir"
+
+msgid "Uninstall Application"
+msgstr "Desinstalar aplicação"
+
+msgid "_Remove"
+msgstr "_Remover"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Instalar %s a partir de %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Instalar %s"
+
+msgid "Donate"
+msgstr "Donativo"
+
+msgid "Search installed apps"
+msgstr "Pesquisar aplicações instaladas"
+
+msgid "No Apps Found"
+msgstr "Nenhuma aplicação encontrada"
+
+msgid "Search Store Instead"
+msgstr "Pesquisar antes na loja"
+
+msgid "Pending Updates"
+msgstr "Atualizações pendentes"
+
+msgid "Downloads"
+msgstr "Transferências"
+
+msgid "Recently Uninstalled"
+msgstr "Desinstaladas recentemente"
+
+msgid "Clear Finished Tasks"
+msgstr "Limpar tarefas concluídas"
+
+msgid "Sort Options"
+msgstr "Opções de ordenação"
+
+msgid "Sort By"
+msgstr "Ordenar por"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Size"
+msgstr "Tamanho"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u atualização disponível"
+msgstr[1] "%u atualizações disponíveis"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u aplicação instalada"
+msgstr[1] "%u aplicações instaladas"
+
+msgid "No applications found"
+msgstr "Nenhuma aplicação encontrada"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Uma aplicação encontrada"
+msgstr[1] "%u aplicações encontradas"
+
+msgid "Learn More"
+msgstr "Saber mais"
+
+msgid "Unknown License"
+msgstr "Licença desconhecida"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Esta aplicação é desenvolvida abertamente por uma comunidade internacional e lançada sob a licença %s.\n"
+"\n"
+"Pode participar e ajudar a torná-la ainda melhor."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Esta aplicação não é desenvolvida abertamente, pelo que só os seus programadores sabem como funciona. Pode ser insegura de formas difíceis de detetar e pode mudar sem supervisão.\n"
+"\n"
+"Pode ou não ser possível contribuir para esta aplicação."
+
+msgid "Connect to Flathub"
+msgstr "Ligar ao Flathub"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Inicie sessão para sincronizar as suas aplicações favoritas entre dispositivos"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Adicionar ícone à pré-visualização dos metadados?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Os ficheiros de metadados não incluem, por si só, ícones de aplicações. Deseja selecionar um manualmente?"
+
+msgid "Skip"
+msgstr "Ignorar"
+
+msgid "Select Icon"
+msgstr "Selecionar ícone"
+
+msgid "Image Files"
+msgstr "Ficheiros de imagem"
+
+msgid "New Permissions"
+msgstr "Novas permissões"
+
+msgid "_Accept"
+msgstr "_Aceitar"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Nova permissão para %s"
+msgstr[1] "Novas permissões para %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Esta atualização requer a seguinte permissão adicional"
+msgstr[1] "Esta atualização requer as seguintes permissões adicionais"
+
+msgid "User"
+msgstr "Utilizador"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Fim de vida"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "A ligação de rede é de tráfego limitado — a atualização automática dos dados da loja está em pausa"
+
+msgid "Refresh Manually"
+msgstr "Atualizar manualmente"
+
+msgid "App Updates"
+msgstr "Atualizações de aplicações"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "As atualizações automáticas ficam em pausa em redes de tráfego limitado ou quando a poupança de energia está ativa, para poupar dados e bateria."
+
+msgid "_Automatic"
+msgstr "_Automático"
+
+msgid "Automatically check for and download app updates"
+msgstr "Procurar e transferir automaticamente atualizações de aplicações"
+
+msgid "_Manual"
+msgstr "_Manual"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "A procura e a transferência de atualizações de aplicações têm de ser feitas manualmente"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Notificações de atualização automática"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Notificar quando as atualizações tiverem sido instaladas automaticamente"
+
+msgid "Content Filters"
+msgstr "Filtros de conteúdo"
+
+msgid "_Free Software Only"
+msgstr "Apenas software _livre"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Ocultar aplicações proprietárias ao navegar e pesquisar"
+
+msgid "F_lathub Results Only"
+msgstr "Apenas resultados do F_lathub"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Limitar os resultados de pesquisa e navegação às aplicações disponíveis apenas no Flathub"
+
+msgid "_Verified Results Only"
+msgstr "Apenas resultados _verificados"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Ocultar os resultados que não estão verificados no Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Ocultar aplicações em _fim de vida"
+
+msgid "Progress Bar Theme"
+msgstr "Tema da barra de progresso"
+
+msgid "Pride Colors"
+msgstr "Cores do orgulho"
+
+msgid "Lesbian Pride Colors"
+msgstr "Cores do orgulho lésbico"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Cores do orgulho gay masculino"
+
+msgid "Transgender Pride Colors"
+msgstr "Cores do orgulho transgénero"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Cores do orgulho não binário"
+
+msgid "Bisexual Pride Colors"
+msgstr "Cores do orgulho bissexual"
+
+msgid "Asexual Pride Colors"
+msgstr "Cores do orgulho assexual"
+
+msgid "Pansexual Pride Colors"
+msgstr "Cores do orgulho pansexual"
+
+msgid "Aromantic Pride Colors"
+msgstr "Cores do orgulho arromântico"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Cores do orgulho de género fluido"
+
+msgid "Polysexual Pride Colors"
+msgstr "Cores do orgulho polissexual"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Cores do orgulho onissexual"
+
+msgid "Aroace Pride Colors"
+msgstr "Cores do orgulho aroace"
+
+msgid "Agender Pride Colors"
+msgstr "Cores do orgulho agénero"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Cores do orgulho genderqueer"
+
+msgid "Intersex Pride Colors"
+msgstr "Cores do orgulho intersexo"
+
+msgid "Demigender Pride Colors"
+msgstr "Cores do orgulho demigénero"
+
+msgid "Biromantic Pride Colors"
+msgstr "Cores do orgulho birromântico"
+
+msgid "Disability Pride Colors"
+msgstr "Cores do orgulho da deficiência"
+
+msgid "Femboy Pride Colors"
+msgstr "Cores do orgulho femboy"
+
+msgid "Neutrois Pride Colors"
+msgstr "Cores do orgulho neutrois"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "O Bazaar precisa de ser executado em segundo plano para procurar atualizações de aplicações"
+
+msgid "Today"
+msgstr "Hoje"
+
+msgid "Yesterday"
+msgstr "Ontem"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "há %d dia"
+msgstr[1] "há %d dias"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "há %d semana"
+msgstr[1] "há %d semanas"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "há %d mês"
+msgstr[1] "há %d meses"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "há %d ano"
+msgstr[1] "há %d anos"
+
+msgid "%e %B %Y"
+msgstr "%e de %B de %Y"
+
+msgid "Get More Information"
+msgstr "Obter mais informação"
+
+msgid "_Version History"
+msgstr "_Histórico de versões"
+
+msgid "Remotes"
+msgstr "Repositórios"
+
+msgid "System Installation"
+msgstr "Instalação do sistema"
+
+msgid "Available to all users on this computer"
+msgstr "Disponível para todos os utilizadores neste computador"
+
+msgid "User Installation"
+msgstr "Instalação do utilizador"
+
+msgid "Only available to you"
+msgstr "Disponível apenas para si"
+
+msgid "Remove Remote"
+msgstr "Remover repositório"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Remover %s"
+
+msgid "Unused"
+msgstr "Não utilizado"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u aplicação instalada"
+msgstr[1] "%u aplicações instaladas"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Remover “%s”?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Deixará de poder instalar aplicações a partir deste repositório do utilizador."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Deixará de poder instalar aplicações a partir deste repositório do sistema."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u aplicação a remover"
+msgstr[1] "%u aplicações a remover"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "A aplicação abaixo foi instalada a partir deste repositório e será removida da sua conta juntamente com ele."
+msgstr[1] "As aplicações abaixo foram instaladas a partir deste repositório e serão removidas da sua conta juntamente com ele."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "A aplicação abaixo foi instalada a partir deste repositório e será removida para todos os utilizadores juntamente com ele."
+msgstr[1] "As aplicações abaixo foram instaladas a partir deste repositório e serão removidas para todos os utilizadores juntamente com ele."
+
+msgid "Uninstall"
+msgstr "Desinstalar"
+
+msgid "Arbitrary Permissions"
+msgstr "Permissões arbitrárias"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Esta aplicação tem uma permissão que lhe permite, indiretamente, conceder a si própria <b>qualquer outra permissão que queira</b>, contornando a sandbox do Flatpak.\n"
+"\n"
+"Pode, por isso, fazer tudo o que uma aplicação privilegiada e sem sandbox pode fazer, como aceder a todos os seus ficheiros e ligar-se à Internet.\n"
+"\n"
+"Ver as outras permissões pode ainda dar uma melhor ideia do que a aplicação provavelmente fará."
+
+msgid "View Other Permissions"
+msgstr "Ver outras permissões"
+
+msgid "Back"
+msgstr "Voltar"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u atualização de runtime"
+msgstr[1] "%u atualizações de runtime"
+
+msgid "No Screenshots"
+msgstr "Sem capturas de ecrã"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Captura de ecrã %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Captura de ecrã %u"
+
+msgid "Clear Search"
+msgstr "Limpar pesquisa"
+
+msgid "Filters"
+msgstr "Filtros"
+
+msgid "_Verified"
+msgstr "_Verificadas"
+
+msgid "_Free/Open"
+msgstr "_Livres/abertas"
+
+msgid "Non-_EOL"
+msgstr "Sem _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Filtrar aplicações em fim de vida"
+
+msgid "_Mobile Friendly"
+msgstr "_Adaptadas a telemóvel"
+
+msgid "Categories"
+msgstr "Categorias"
+
+msgid "Search Filters"
+msgstr "Filtros de pesquisa"
+
+msgid "Browse Categories"
+msgstr "Navegar por categorias"
+
+msgid "Categories Unavailable"
+msgstr "Categorias indisponíveis"
+
+msgid "No Applications Found"
+msgstr "Nenhuma aplicação encontrada"
+
+msgid "Video"
+msgstr "Vídeo"
+
+msgid "Office"
+msgstr "Escritório"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Calendário"
+
+msgid "Messaging"
+msgstr "Mensagens"
+
+msgid "Paint"
+msgstr "Pintura"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Emulador"
+
+msgid "Copy Link"
+msgstr "Copiar ligação"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Página do Flathub"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Site do projeto"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Seguimento de problemas"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "FAQ"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Ajuda"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Donativo"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Traduzir"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Contacto"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Código-fonte"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Contribuir"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifesto"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "This Week"
+msgstr "Esta semana"
+
+msgid "Installs per day"
+msgstr "Instalações por dia"
+
+msgid "Installs per country"
+msgstr "Instalações por país"
+
+msgid "Since 4/15/2024"
+msgstr "Desde 15/04/2024"
+
+msgid "No Results Found"
+msgstr "Nenhum resultado encontrado"
+
+msgid "Search failed"
+msgstr "A pesquisa falhou"
+
+msgid "Keep User Data"
+msgstr "Manter dados do utilizador"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Permitir restaurar definições &amp; conteúdo pessoais"
+
+msgid "Delete All Data"
+msgstr "Eliminar todos os dados"
+
+msgid "Permanently erase user data to save space"
+msgstr "Apagar permanentemente os dados do utilizador para poupar espaço"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "Remover %s?"
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Esta aplicação utiliza o sistema de janelas X11 legado, que lhe permite <b>registar todas as teclas premidas, capturar o ecrã e monitorizar outras aplicações</b>. Tem também acesso à Internet, o que significa que poderia enviar os seus dados a terceiros.\n"
+"\n"
+"Como a aplicação é proprietária, não é possível auditar o que faz com estas permissões."
+
+msgid "_Install Anyway"
+msgstr "_Instalar mesmo assim"
+
+msgid "Failed to load transaction dialog"
+msgstr "Falha ao carregar a caixa de diálogo da transação"
+
+msgid "App Add-On"
+msgstr "Extra de aplicação"
+
+msgid "In Queue"
+msgstr "Em fila"
+
+msgid "Finishing Up"
+msgstr "A terminar"
+
+msgid "Done"
+msgstr "Concluído"
+
+msgid "Cancelled"
+msgstr "Cancelado"
+
+msgid "Error"
+msgstr "Erro"
+
+msgid "Cancel Transaction"
+msgstr "Cancelar transação"
+
+msgid "Show Details"
+msgstr "Mostrar detalhes"
+
+msgid "Show Error Info"
+msgstr "Mostrar informação do erro"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s libertados"
+
+msgid "Transaction Error"
+msgstr "Erro de transação"
+
+msgid "Installed Updates"
+msgstr "Atualizações instaladas"
+
+msgid "Release Notes"
+msgstr "Notas de lançamento"
+
+msgid "No Release Info"
+msgstr "Sem informação de lançamento"
+
+msgid "_Update All"
+msgstr "_Atualizar tudo"
+
+msgid "This update requests new permissions"
+msgstr "Esta atualização pede novas permissões"
+
+msgid "No Leftover User Data Found"
+msgstr "Nenhum dado de utilizador remanescente encontrado"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Os dados pessoais deixados por aplicações removidas aparecerão aqui"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Dados de utilizador de %u aplicação no lixo"
+msgstr[1] "Dados de utilizador de %u aplicações no lixo"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Dados de utilizador de %s no lixo"
+
+msgid "Open User Data Folder"
+msgstr "Abrir a pasta de dados do utilizador"
+
+msgid "Trash User Data"
+msgstr "Enviar dados do utilizador para o lixo"
+
+msgid "Refreshing"
+msgstr "A atualizar"
+
+msgid "Explore"
+msgstr "Explorar"
+
+msgid "Library"
+msgstr "Biblioteca"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Está a executar uma nova versão do Bazaar!"
+
+msgid "See What's New"
+msgstr "Ver as novidades"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "A ligação de rede é de tráfego limitado — atualizações automáticas desativadas"
+
+msgid "_Donate to Bazaar"
+msgstr "_Doar ao Bazaar"
+
+msgid "_Refresh"
+msgstr "_Atualizar"
+
+msgid "_Login With Flathub"
+msgstr "_Iniciar sessão com o Flathub"
+
+msgid "Manage R_emotes"
+msgstr "Gerir r_epositórios"
+
+msgid "_Preferences"
+msgstr "_Preferências"
+
+msgid "_Quit Bazaar"
+msgstr "_Sair do Bazaar"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Falha ao iniciar a aplicação"
+
+msgid "Could not open link"
+msgstr "Não foi possível abrir a ligação"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u instalação"
+msgstr[1] "%s, %'u instalações"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Mais instalações a partir de %s"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d transferências no último mês"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s de runtime"
+
+msgid "Size information unavailable"
+msgstr "Informação de tamanho indisponível"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "Tamanho de transferência de %s"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Tamanho instalado de %s"
+
+msgid "Free software"
+msgstr "Software livre"
+
+msgid "Free Software"
+msgstr "Software livre"
+
+msgid "Unknown Permissions"
+msgstr "Permissões desconhecidas"
+
+msgid "No Permissions"
+msgstr "Sem permissões"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Utiliza sempre um sistema de janelas legado (X11)"
+
+msgid "Verified App Developer"
+msgstr "Programador de aplicações verificado"
+
+msgid "Proprietary Code"
+msgstr "Código proprietário"
+
+msgid "Global Menu Integration"
+msgstr "Integração com o menu global"
+
+msgid "Secret Storage Service"
+msgstr "Serviço de armazenamento de segredos"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navegação"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Abrir a página Explorar"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Abrir a página Biblioteca"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Abrir a página de pesquisa"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Repositórios"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Sincronizar repositórios"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Abrir as preferências"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Fechar janela"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Sair do Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s instalada"
+
+msgid "The app is ready to be used"
+msgstr "A aplicação está pronta a ser utilizada"
+
+msgid "Updates Are Out of Date"
+msgstr "As atualizações estão desatualizadas"
+
+msgid "Please check for available updates"
+msgstr "Verifique se existem atualizações disponíveis"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u aplicação atualizada"
+msgstr[1] "%u aplicações atualizadas"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s foi atualizada."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s e %s foram atualizadas."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Inclui %s, %s e %s."

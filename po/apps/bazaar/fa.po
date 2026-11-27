@@ -1,0 +1,971 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "یک فروشگاه برنامهٔ سریع و مدرن برای Linux با تمرکز بر کشف و نصب برنامه‌ها و افزونه‌های Flatpak، به‌ویژه از Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "چند نصب را در صف بگذارید و به مرور ادامه دهید"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "برای دیدن و مدیریت برگزیده‌های خود به Flathub وارد شوید"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "جست‌وجوی برنامه‌ها مستقیماً از GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "صفحهٔ آغازین که برنامه‌های Flathub را نشان می‌دهد"
+
+msgid "App page for Exhibit"
+msgstr "صفحهٔ برنامهٔ Exhibit"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "ترجیحات پالایهٔ کنونی شما همهٔ افزونه‌های شناخته‌شده را پنهان کرده است. آن‌ها را تنظیم کنید."
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "این افزونه از زمان اجرایی استفاده می‌کند که دیگر به‌روزرسانی و رفع مشکل امنیتی دریافت نمی‌کند. ممکن است استفاده از آن ناامن شود."
+
+msgid "The Bazaar Contributors"
+msgstr "مشارکت‌کنندگان Bazaar"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub روی این سامانه برپا نشده است. اگر در دسترس نباشد، نمی‌توانید در Bazaar برنامه‌ها را مرور و نصب کنید.\n"
+"\n"
+"همچنان می‌توانید از Bazaar برای مرور و حذف برنامه‌های از پیش نصب‌شده استفاده کنید."
+
+msgid "Removing remote…"
+msgstr "در حال حذف دوردست…"
+
+msgid "Could not remove remote"
+msgstr "حذف دوردست ممکن نبود"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "موارد زیر نصب خواهند شد. ممکن است مؤلفه‌های مشترک اضافی نیز نصب شوند"
+
+msgid "Additional dependencies may take extra space"
+msgstr "وابستگی‌های اضافی ممکن است فضای بیشتری بگیرند"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"نصب این برنامه ممکن است نیازمند افزودن یک منبع نرم‌افزاری جدید باشد. دیگر برنامه‌های این منبع در Bazaar نشان داده خواهند شد.\n"
+"\n"
+"این منبع را فقط وقتی بیفزایید که مطمئن هستید به آن اعتماد دارید."
+
+#, c-format
+msgid "About %s to install"
+msgstr "حدود %s برای نصب"
+
+msgid "Place Applet"
+msgstr "قرار دادن برنامک"
+
+msgid "Choose where to add this applet."
+msgstr "انتخاب کنید این برنامک کجا افزوده شود."
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "هیچ اطلاعات گزینش‌گری روی این سامانه ارائه نشده است. همچنان می‌توانید برنامه‌های Flathub را مرور کنید"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s تا %s، بیشترین در %s با %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*f هزار"
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "مالکیت شناسهٔ برنامهٔ %s تأیید نشده است و ممکن است بستهٔ جامعه‌ساخت باشد."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "مالکیت شناسهٔ برنامهٔ %s به‌صورت دستی توسط تیم Flathub تأیید شده است."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "مالکیت شناسهٔ برنامهٔ %1$s توسط <b>%2$s</b> در <b>%3$s</b> تأیید شده است."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "مالکیت شناسهٔ برنامهٔ %1$s با استفاده از %2$s تأیید شده است."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "مالکیت شناسهٔ برنامهٔ %s تأیید شده است."
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "ساختن Bazaar را دوست دارم، اما نمی‌توانم تنهایی انجامش دهم. با اهدا در Ko-Fi از توسعهٔ بیشتر پشتیبانی کنید."
+
+msgid "Mixer"
+msgstr "میکسر"
+
+msgid "Emulation"
+msgstr "شبیه‌سازی"
+
+msgid "More Audio & Video"
+msgstr "صدا و تصویر بیشتر"
+
+msgid "More Developer Tools"
+msgstr "ابزارهای توسعهٔ بیشتر"
+
+msgid "Gaming"
+msgstr "بازی"
+
+msgid "More Graphics & Photography"
+msgstr "گرافیک و عکاسی بیشتر"
+
+msgid "More Networking"
+msgstr "شبکه‌های بیشتر"
+
+msgid "More Productivity"
+msgstr "بهره‌وری بیشتر"
+
+msgid "More System"
+msgstr "سامانهٔ بیشتر"
+
+msgid "KDE Apps"
+msgstr "برنامه‌های KDE"
+
+msgid "More KDE Apps"
+msgstr "برنامه‌های KDE بیشتر"
+
+msgid "Made for COSMIC™"
+msgstr "ساخته‌شده برای COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "برای COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "برنامه‌های COSMIC بیشتر"
+
+msgid "More Game Launchers"
+msgstr "اجراکنندهٔ بازی بیشتر"
+
+msgid "Game Tools"
+msgstr "ابزارهای بازی"
+
+msgid "More Game Tools"
+msgstr "ابزارهای بازی بیشتر"
+
+msgid "New Year, New Workflows"
+msgstr "سال نو، روال‌های نو"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "برنامه‌هایی برای یادداشت‌برداری، پیگیری کارها و برنامه‌ریزی"
+
+msgid "Staff Picks"
+msgstr "انتخاب‌های کارکنان"
+
+msgid "Apps we love right now"
+msgstr "برنامه‌هایی که همین حالا دوستشان داریم"
+
+msgid "Get Creative"
+msgstr "خلاق باشید"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "برنامه‌های ضروری برای طراحی، ویرایش عکس و طراحی دیجیتال"
+
+msgid "Build Native Apps"
+msgstr "ساخت برنامه‌های بومی"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "برنامه‌هایی بسازید که روی سامانهٔ شما خانگی به نظر برسند"
+
+msgid "Stay in Touch"
+msgstr "در ارتباط بمانید"
+
+msgid "Essential collaboration and communication apps"
+msgstr "برنامه‌های ضروری همکاری و ارتباط"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "برنامه‌های نقشه، حمل‌ونقل عمومی، آب‌وهوا و برنامه‌ریزی سفر"
+
+msgid "Smarter Every Day"
+msgstr "هر روز باهوش‌تر"
+
+msgid "Apps to help you study, research, and write"
+msgstr "برنامه‌هایی برای کمک به مطالعه، پژوهش و نوشتن"
+
+msgid "Get Cozy"
+msgstr "راحت باشید"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "برنامه‌های عالی برای مطالعه، تماشای فیلم و بازی"
+
+msgid "Web Developer Essentials"
+msgstr "ملزومات توسعهٔ وب"
+
+msgid "Making websites is more fun with these apps"
+msgstr "ساختن وب‌سایت با این برنامه‌ها جذاب‌تر است"
+
+msgid "Take Better Notes"
+msgstr "یادداشت‌برداری بهتر"
+
+msgid "Find your new favorite note taking tool"
+msgstr "ابزار یادداشت‌برداری مورد علاقهٔ جدید خود را بیابید"
+
+msgid "Get Focused"
+msgstr "متمرکز بمانید"
+
+msgid "Great apps for task management"
+msgstr "برنامه‌های عالی برای مدیریت کارها"
+
+msgid "Make Some Noise"
+msgstr "سروصدا راه بیندازید"
+
+msgid "Apps for creating and producing music"
+msgstr "برنامه‌هایی برای ساخت و تولید موسیقی"
+
+msgid "Get To Work"
+msgstr "سر کار بروید"
+
+msgid "Essential office apps"
+msgstr "برنامه‌های اداری ضروری"
+
+msgid "Flathub Not Added"
+msgstr "Flathub افزوده نشده"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "دوردست Flathub در هیچ‌یک از نصب‌های Flatpak شما یافت نشد"
+
+msgid "Can't Reach Flathub"
+msgstr "دسترسی به Flathub ممکن نیست"
+
+msgid "You can still manage and search for apps."
+msgstr "همچنان می‌توانید برنامه‌ها را مدیریت و جست‌وجو کنید."
+
+msgid "App of the Day"
+msgstr "برنامهٔ روز"
+
+msgid "On the Go"
+msgstr "در حرکت"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "برنامه‌هایی برای تلفن‌ها و رایانه‌های لوحی Linux شما"
+
+msgid "More Mobile Apps"
+msgstr "برنامه‌های همراه بیشتر"
+
+msgid "We​ ♥​ Games"
+msgstr "ما ♥ بازی‌ها"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "بازی‌ها و برنامه‌هایی برای اجرای عنوان‌های مورد علاقهٔ شما"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "این یک پیش‌نمایش محلی است؛ ممکن است برخی جزئیات با فهرست منتشرشده تفاوت داشته باشد"
+
+msgid "Preview Store Appearance"
+msgstr "پیش‌نمایش ظاهر فروشگاه"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "این برنامه از زمان اجرایی استفاده می‌کند که دیگر به‌روزرسانی و رفع مشکل امنیتی دریافت نمی‌کند. ممکن است استفاده از آن ناامن شود."
+
+msgid "Trash Data"
+msgstr "ریختن داده در زباله‌دان"
+
+msgid "Similar Apps"
+msgstr "برنامه‌های مشابه"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "دیگر برنامه‌های %s"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s نصب نیست، اما هنوز <b>%s</b> داده دارد."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "برنامه‌های %s"
+
+msgid "Failed to Remove User Data"
+msgstr "حذف دادهٔ کاربر ناموفق بود"
+
+msgid "Requires keyboards"
+msgstr "به صفحه‌کلید نیاز دارد"
+
+msgid "Recommends keyboards"
+msgstr "صفحه‌کلید را توصیه می‌کند"
+
+msgid "Unknown support for keyboards"
+msgstr "پشتیبانی از صفحه‌کلید نامعلوم است"
+
+msgid "Requires mice or pointing devices"
+msgstr "به موشی یا دستگاه‌های اشاره‌گر نیاز دارد"
+
+msgid "Recommends mice or pointing devices"
+msgstr "موشی یا دستگاه‌های اشاره‌گر را توصیه می‌کند"
+
+msgid "Supports mice or pointing devices"
+msgstr "از موشی یا دستگاه‌های اشاره‌گر پشتیبانی می‌کند"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "پشتیبانی از موشی یا دستگاه‌های اشاره‌گر نامعلوم است"
+
+msgid "Touchscreen support"
+msgstr "پشتیبانی از صفحهٔ لمسی"
+
+msgid "Requires touchscreens"
+msgstr "به صفحهٔ لمسی نیاز دارد"
+
+msgid "Recommends touchscreens"
+msgstr "صفحهٔ لمسی را توصیه می‌کند"
+
+msgid "Unknown support for touchscreens"
+msgstr "پشتیبانی از صفحهٔ لمسی نامعلوم است"
+
+msgid "Mobile support"
+msgstr "پشتیبانی از همراه"
+
+msgid "Works on mobile devices"
+msgstr "روی دستگاه‌های همراه کار می‌کند"
+
+msgid "May not work well on mobile devices"
+msgstr "ممکن است روی دستگاه‌های همراه خوب کار نکند"
+
+msgid "Desktop support"
+msgstr "پشتیبانی از میزکار"
+
+msgid "Works well on large screens"
+msgstr "روی صفحه‌های بزرگ خوب کار می‌کند"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s روی سخت‌افزار مشخصی بهتر کار می‌کند"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s روی بیشتر دستگاه‌ها کار می‌کند"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "هیچ تطابقی برای «%s» در فهرست برنامه‌های نصب‌شده یافت نشد"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u به‌روزرسانی در دسترس"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"این برنامه به‌صورت آزاد توسط یک جامعهٔ بین‌المللی توسعه می‌یابد.\n"
+"\n"
+"می‌توانید مشارکت کنید و به بهتر شدن آن کمک کنید."
+
+msgid "The license of this app is not known"
+msgstr "مجوز این برنامه معلوم نیست"
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"این برنامه به‌صورت آزاد توسعه نمی‌یابد، بنابراین فقط توسعه‌دهندگانش می‌دانند چگونه کار می‌کند. ممکن است به شیوه‌هایی ناامن باشد که تشخیصشان دشوار است و ممکن است بدون نظارت تغییر کند.\n"
+"\n"
+"ممکن است بتوانید در این برنامه مشارکت کنید یا نتوانید."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"این برنامه با مجوز ویژهٔ %s توسعه می‌یابد.\n"
+"\n"
+"ممکن است بتوانید در این برنامه مشارکت کنید یا نتوانید."
+
+msgid "Something Went Wrong"
+msgstr "مشکلی پیش آمد"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "برای همگام‌سازی برنامه‌های برگزیدهٔ خود میان دستگاه‌ها وارد شوید"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "سلام، %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "نقشک به پیش‌نمایش فراداده افزوده شود؟"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "پرونده‌های فراداده به‌خودی‌خود نقشک برنامه ندارند. می‌خواهید یکی را دستی انتخاب کنید؟"
+
+msgid "Select Icon"
+msgstr "انتخاب نقشک"
+
+msgid "Image Files"
+msgstr "پرونده‌های تصویر"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "این به‌روزرسانی به اجازهٔ اضافی زیر نیاز دارد"
+
+msgid "End-Of-Life"
+msgstr "پایان عمر"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "اتصال شبکه محدود حجمی است — تازه‌سازی خودکار دادهٔ فروشگاه متوقف شده است"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "برای صرفه‌جویی در داده و باتری، به‌روزرسانی خودکار در شبکه‌های محدود حجمی یا هنگام روشن بودن صرفه‌جویی انرژی متوقف می‌شود."
+
+msgid "Automatically check for and download app updates"
+msgstr "بررسی و بارگیری خودکار به‌روزرسانی‌های برنامه"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "بررسی و بارگیری به‌روزرسانی‌های برنامه باید دستی انجام شود"
+
+msgid "_Free Software Only"
+msgstr "_فقط نرم‌افزار آزاد"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "پنهان‌کردن برنامه‌های مالکیتی هنگام مرور و جست‌وجو"
+
+msgid "F_lathub Results Only"
+msgstr "_فقط نتایج Flathub"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "محدودکردن نتایج جست‌وجو و مرور به برنامه‌هایی که فقط در Flathub هستند"
+
+msgid "_Verified Results Only"
+msgstr "_فقط نتایج تأییدشده"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "پنهان‌کردن برنامه‌های _پایان‌عمر"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "پنهان‌کردن برنامه‌هایی که دیگر توسط توسعه‌دهندگانشان پشتیبانی نمی‌شوند"
+
+msgid "Progress Bar Theme"
+msgstr "زمینهٔ نوار پیشرفت"
+
+msgid "Accent Color"
+msgstr "رنگ تأکیدی"
+
+msgid "Pride Colors"
+msgstr "رنگ‌های غرور"
+
+msgid "Lesbian Pride Colors"
+msgstr "رنگ‌های غرور همجنس‌گرایان زن"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "رنگ‌های غرور همجنس‌گرایان مرد"
+
+msgid "Transgender Pride Colors"
+msgstr "رنگ‌های غرور تراجنسی‌ها"
+
+msgid "Nonbinary Pride Colors"
+msgstr "رنگ‌های غرور غیردوتایی‌ها"
+
+msgid "Bisexual Pride Colors"
+msgstr "رنگ‌های غرور دوجنس‌گرایان"
+
+msgid "Asexual Pride Colors"
+msgstr "رنگ‌های غرور بی‌جنس‌گرایان"
+
+msgid "Pansexual Pride Colors"
+msgstr "رنگ‌های غرور همه‌جنس‌گرایان"
+
+msgid "Aromantic Pride Colors"
+msgstr "رنگ‌های غرور بی‌عاطفه‌گرایان"
+
+msgid "Genderfluid Pride Colors"
+msgstr "رنگ‌های غرور جنسیت‌سیال"
+
+msgid "Polysexual Pride Colors"
+msgstr "رنگ‌های غرور چندجنس‌گرایان"
+
+msgid "Omnisexual Pride Colors"
+msgstr "رنگ‌های غرور همه‌جنس‌خواهان"
+
+msgid "Aroace Pride Colors"
+msgstr "رنگ‌های غرور بی‌جنس بی‌عاطفه"
+
+msgid "Agender Pride Colors"
+msgstr "رنگ‌های غرور بی‌جنسیت‌ها"
+
+msgid "Genderqueer Pride Colors"
+msgstr "رنگ‌های غرور جنسیت‌کوئیر"
+
+msgid "Intersex Pride Colors"
+msgstr "رنگ‌های غرور میان‌جنسی‌ها"
+
+msgid "Demigender Pride Colors"
+msgstr "رنگ‌های غرور نیمه‌جنسیتی‌ها"
+
+msgid "Biromantic Pride Colors"
+msgstr "رنگ‌های غرور دوعاشقانه‌گرایان"
+
+msgid "Disability Pride Colors"
+msgstr "رنگ‌های غرور معلولیت"
+
+msgid "Femboy Pride Colors"
+msgstr "رنگ‌های غرور فم‌بوی‌ها"
+
+msgid "Neutrois Pride Colors"
+msgstr "رنگ‌های غرور نیوتروآها"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar برای بررسی به‌روزرسانی‌های برنامه باید در پس‌زمینه اجرا شود"
+
+msgid "_Version History"
+msgstr "_تاریخچهٔ نسخه‌ها"
+
+msgid "Remotes"
+msgstr "دوردست‌ها"
+
+msgid "System Installation"
+msgstr "نصب سامانه‌ای"
+
+msgid "Available to all users on this computer"
+msgstr "در دسترس همهٔ کاربران این رایانه"
+
+msgid "User Installation"
+msgstr "نصب کاربری"
+
+msgid "Only available to you"
+msgstr "فقط در دسترس شما"
+
+msgid "Remove Remote"
+msgstr "حذف دوردست"
+
+#, c-format
+msgid "Remove %s"
+msgstr "حذف %s"
+
+msgid "Unused"
+msgstr "استفاده‌نشده"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u برنامهٔ نصب‌شده"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "«%s» حذف شود؟"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "دیگر نمی‌توانید از این دوردست کاربری برنامه نصب کنید."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "دیگر نمی‌توانید از این دوردست سامانه‌ای برنامه نصب کنید."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u برنامه برای حذف"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "برنامهٔ زیر از این دوردست نصب شده بود و همراه با آن از حساب شما حذف خواهد شد."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "برنامهٔ زیر از این دوردست نصب شده بود و همراه با آن برای همهٔ کاربران حذف خواهد شد."
+
+msgid "Get"
+msgstr "دریافت"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"این برنامه اجازه‌ای دارد که به‌طور غیرمستقیم به آن امکان می‌دهد <b>هر اجازهٔ دیگری که بخواهد</b> به خودش بدهد و قرنطینهٔ Flatpak را دور بزند.\n"
+"\n"
+"بنابراین می‌تواند هر کاری که یک برنامهٔ دارای امتیاز و بدون قرنطینه می‌تواند انجام دهد، مانند دسترسی به همهٔ پرونده‌های شما و اتصال به اینترنت.\n"
+"\n"
+"دیدن اجازه‌های دیگر ممکن است همچنان تصور بهتری از کار احتمالی برنامه بدهد."
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "این برنامه از نسخهٔ قدیمی بستر نرم‌افزاری (SDK) استفاده می‌کند و ممکن است حاوی اشکال‌ها یا آسیب‌پذیری‌های امنیتی باشد که رفع نخواهند شد."
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s ایمن است"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s اجازهٔ ناامن ندارد"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s احتمالاً ایمن است"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s احتمالاً ناامن است"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s ناامن است"
+
+msgid "Copy Image"
+msgstr "رونوشت تصویر"
+
+msgid "Reset View"
+msgstr "بازنشانی نما"
+
+msgid "Screenshots Carousel"
+msgstr "چرخ‌فلک تصاویر صفحه"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "تصویر صفحهٔ %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "تصویر صفحهٔ %u"
+
+msgid "_Verified"
+msgstr "_تأییدشده"
+
+msgid "_Free/Open"
+msgstr "_آزاد/باز"
+
+msgid "Non-_EOL"
+msgstr "غیر _پایان‌عمر"
+
+msgid "Filter out End-of-Life apps"
+msgstr "پالایش برنامه‌های پایان‌عمر"
+
+msgid "_Mobile Friendly"
+msgstr "_سازگار با همراه"
+
+msgid "Search Apps, Games, Software"
+msgstr "جست‌وجوی برنامه‌ها، بازی‌ها، نرم‌افزارها"
+
+msgid "Browse Categories"
+msgstr "مرور دسته‌ها"
+
+msgid "Search for apps using the search bar above."
+msgstr "با نوار جست‌وجوی بالا دنبال برنامه‌ها بگردید."
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "نتیجه‌ای برای «%s» در Flathub یافت نشد"
+
+msgid "Messaging"
+msgstr "پیام‌رسانی"
+
+msgid "Torrent"
+msgstr "تورنت"
+
+msgid "Emulator"
+msgstr "شبیه‌ساز"
+
+msgid "Total"
+msgstr "کل"
+
+msgid "This Week"
+msgstr "این هفته"
+
+msgid "Installs per country"
+msgstr "نصب‌ها به تفکیک کشور"
+
+msgid "Since 4/15/2024"
+msgstr "از ۱۵ آوریل ۲۰۲۴"
+
+msgid "Keep User Data"
+msgstr "نگه‌داشتن دادهٔ کاربر"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "اجازهٔ بازیابی تنظیمات &amp; محتوای شخصی"
+
+msgid "Delete All Data"
+msgstr "حذف همهٔ داده‌ها"
+
+msgid "Permanently erase user data to save space"
+msgstr "پاک‌کردن دائمی دادهٔ کاربر برای صرفه‌جویی در فضا"
+
+msgid "Select which version to remove."
+msgstr "انتخاب کنید کدام نسخه حذف شود."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "پس از حذف نصب %s، استفاده از آن ممکن نخواهد بود."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "«%s» پرخطر است"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"این برنامه دسترسی کامل به سامانهٔ شما دارد، از جمله <b>همهٔ پرونده‌ها، تاریخچهٔ مرورگر، گذرواژه‌های ذخیره‌شده</b> و بیشتر. همچنین به اینترنت دسترسی دارد، یعنی می‌تواند داده‌های شما را برای اشخاص بیرونی بفرستد.\n"
+"\n"
+"چون برنامه مالکیتی است، نمی‌توان بررسی کرد که با این اجازه‌ها چه می‌کند."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"این برنامه از سامانهٔ پنجره‌بندی قدیمی X11 استفاده می‌کند که به آن اجازه می‌دهد <b>همهٔ کلیدهای فشرده‌شده را ضبط کند، تصویر صفحه بگیرد و برنامه‌های دیگر را پایش کند</b>. همچنین به اینترنت دسترسی دارد، یعنی می‌تواند داده‌های شما را برای اشخاص بیرونی بفرستد.\n"
+"\n"
+"چون برنامه مالکیتی است، نمی‌توان بررسی کرد که با این اجازه‌ها چه می‌کند."
+
+msgid "Failed to load transaction dialog"
+msgstr "بارگذاری گفتگوی تراکنش ناموفق بود"
+
+msgid "App Add-On"
+msgstr "افزونهٔ برنامه"
+
+msgid "In Queue"
+msgstr "در صف"
+
+msgid "Finishing Up"
+msgstr "در حال پایان‌دادن"
+
+msgid "Show Error Info"
+msgstr "نمایش اطلاعات خطا"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s آزاد شد"
+
+msgid "This update requests new permissions"
+msgstr "این به‌روزرسانی اجازه‌های جدید می‌خواهد"
+
+msgid "Manage Leftover User Data"
+msgstr "مدیریت دادهٔ کاربر باقی‌مانده"
+
+msgid "No Leftover User Data Found"
+msgstr "دادهٔ کاربر باقی‌مانده‌ای یافت نشد"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "دادهٔ شخصی‌ای که برنامه‌های حذف‌شده برجا گذاشته‌اند اینجا نشان داده می‌شود"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "دادهٔ کاربر ریخته‌شده در زباله‌دان برای %u برنامه"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "دادهٔ کاربر ریخته‌شده در زباله‌دان برای %s"
+
+msgid "Open User Data Folder"
+msgstr "گشودن پوشهٔ دادهٔ کاربر"
+
+msgid "Trash User Data"
+msgstr "ریختن دادهٔ کاربر در زباله‌دان"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "شما نسخهٔ جدیدی از Bazaar را اجرا می‌کنید!"
+
+msgid "See What's New"
+msgstr "دیدن تازه‌ها"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "اتصال شبکه دارید اما نسخهٔ ذخیره‌شدهٔ Flathub را می‌بینید"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "اتصال شبکه محدود حجمی است — تازه‌سازی خودکار غیرفعال شده است"
+
+msgid "_Login With Flathub"
+msgstr "_ورود با Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "_مدیریت دادهٔ کاربر باقی‌مانده"
+
+msgid "Manage R_emotes"
+msgstr "مدیریت _دوردست‌ها"
+
+msgid "Could not open link"
+msgstr "گشودن پیوند ممکن نبود"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "نمی‌توانید Bazaar را از Bazaar حذف کنید!"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*f میلیون"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d بارگیری در ماه گذشته"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s زمان اجرا"
+
+msgid "Size information unavailable"
+msgstr "اطلاعات اندازه در دسترس نیست"
+
+msgid "All Ages"
+msgstr "همهٔ سنین"
+
+msgid "Age rating information unavailable"
+msgstr "اطلاعات رده‌بندی سنی در دسترس نیست"
+
+msgid "Suitable for all ages"
+msgstr "مناسب همهٔ سنین"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "مناسب سنین %d به بالا"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "نرم‌افزار آزاد با مجوز %s"
+
+msgid "Free software"
+msgstr "نرم‌افزار آزاد"
+
+msgid "Proprietary Software"
+msgstr "نرم‌افزار مالکیتی"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "مجوز ویژه: %s"
+
+msgid "Free Software"
+msgstr "نرم‌افزار آزاد"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "روی میزکار، رایانه‌های لوحی و تلفن‌ها کار می‌کند"
+
+msgid "May not work on mobile devices"
+msgstr "ممکن است روی دستگاه‌های همراه کار نکند"
+
+msgid "Low Risk"
+msgstr "خطر کم"
+
+msgid "Medium Risk"
+msgstr "خطر متوسط"
+
+msgid "High Risk"
+msgstr "خطر زیاد"
+
+msgid "Permissions are missing for this app."
+msgstr "اجازه‌های این برنامه موجود نیست."
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "همیشه از سامانهٔ پنجره‌بندی قدیمی (X11) استفاده می‌کند"
+
+msgid "Verified App Developer"
+msgstr "توسعه‌دهندهٔ تأییدشدهٔ برنامه"
+
+msgid "Global Menu Integration"
+msgstr "یکپارچگی با منوی سراسری"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "می‌تواند منوهایش را در نوار منوی سراسری نشان دهد"
+
+msgid "KDE Settings Integration"
+msgstr "یکپارچگی با تنظیمات KDE"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "می‌تواند تغییر تنظیمات میزکار KDE را تشخیص دهد"
+
+msgid "KDE Global Settings"
+msgstr "تنظیمات سراسری KDE"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "می‌تواند ترجیحات میزکار KDE مانند قلم‌ها و رنگ‌ها را بخواند"
+
+msgid "Secret Storage Service"
+msgstr "خدمت ذخیرهٔ رمز"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "می‌تواند گذرواژه‌های خود را با استفادهٔ از دسته‌کلید سامانه ذخیره و بازیابی کند"
+
+msgid "Desktop Notifications Service"
+msgstr "خدمت اعلان‌های میزکار"
+
+msgid "Can send desktop notifications"
+msgstr "می‌تواند اعلان‌های میزکار بفرستد"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "در حال بارگیری %d برنامه…"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "نصب %u برنامه؟"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d برنامه"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u برنامهٔ نصب‌شده"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "%u برنامه پیدا شد"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "اجازهٔ جدید برای %s"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d روز پیش"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d هفته پیش"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d ماه پیش"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d سال پیش"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u به‌روزرسانی زمان اجرا"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s، %'u نصب"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u برنامه به‌روز شد"

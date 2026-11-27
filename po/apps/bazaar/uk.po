@@ -1,0 +1,193 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "Removing remote…"
+msgstr "Видалення віддаленого сховища…"
+
+msgid "Could not remove remote"
+msgstr "Не вдалося видалити віддалене сховище"
+
+msgid "Remotes"
+msgstr "Віддалені сховища"
+
+msgid "System Installation"
+msgstr "Системне встановлення"
+
+msgid "Available to all users on this computer"
+msgstr "Доступне всім користувачам цього комп’ютера"
+
+msgid "User Installation"
+msgstr "Користувацьке встановлення"
+
+msgid "Only available to you"
+msgstr "Доступне лише вам"
+
+msgid "Remove Remote"
+msgstr "Видалити віддалене сховище"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Видалити %s"
+
+msgid "Unused"
+msgstr "Не використовується"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u встановлений застосунок"
+msgstr[1] "%u встановлені застосунки"
+msgstr[2] "%u встановлених застосунків"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Видалити «%s»?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Ви більше не зможете встановлювати застосунки з цього користувацького віддаленого сховища."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Ви більше не зможете встановлювати застосунки з цього системного віддаленого сховища."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u застосунок для видалення"
+msgstr[1] "%u застосунки для видалення"
+msgstr[2] "%u застосунків для видалення"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Застосунок нижче було встановлено з цього віддаленого сховища, і його буде видалено з вашого облікового запису разом зі сховищем."
+msgstr[1] "Ці застосунки було встановлено з цього віддаленого сховища, і їх буде видалено з вашого облікового запису разом зі сховищем."
+msgstr[2] "Ці застосунки було встановлено з цього віддаленого сховища, і їх буде видалено з вашого облікового запису разом зі сховищем."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Застосунок нижче було встановлено з цього віддаленого сховища, і його буде видалено для всіх користувачів разом зі сховищем."
+msgstr[1] "Ці застосунки було встановлено з цього віддаленого сховища, і їх буде видалено для всіх користувачів разом зі сховищем."
+msgstr[2] "Ці застосунки було встановлено з цього віддаленого сховища, і їх буде видалено для всіх користувачів разом зі сховищем."
+
+msgid "Manage R_emotes"
+msgstr "Керування віддаленими _сховищами"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Завантаження %d застосунку…"
+msgstr[1] "Завантаження %d застосунків…"
+msgstr[2] "Завантаження %d застосунків…"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Встановити %u застосунок?"
+msgstr[1] "Встановити %u застосунки?"
+msgstr[2] "Встановити %u застосунків?"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d застосунок"
+msgstr[1] "%d застосунки"
+msgstr[2] "%d застосунків"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u доступне оновлення"
+msgstr[1] "%u доступні оновлення"
+msgstr[2] "%u доступних оновлень"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u встановлений застосунок"
+msgstr[1] "%u встановлені застосунки"
+msgstr[2] "%u встановлених застосунків"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Знайдено %u застосунок"
+msgstr[1] "Знайдено %u застосунки"
+msgstr[2] "Знайдено %u застосунків"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Новий дозвіл для %s"
+msgstr[1] "Нові дозволи для %s"
+msgstr[2] "Нові дозволи для %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Це оновлення потребує такого додаткового дозволу"
+msgstr[1] "Це оновлення потребує таких додаткових дозволів"
+msgstr[2] "Це оновлення потребує таких додаткових дозволів"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d день тому"
+msgstr[1] "%d дні тому"
+msgstr[2] "%d днів тому"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d тиждень тому"
+msgstr[1] "%d тижні тому"
+msgstr[2] "%d тижнів тому"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d місяць тому"
+msgstr[1] "%d місяці тому"
+msgstr[2] "%d місяців тому"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d рік тому"
+msgstr[1] "%d роки тому"
+msgstr[2] "%d років тому"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u оновлення середовища виконання"
+msgstr[1] "%u оновлення середовища виконання"
+msgstr[2] "%u оновлень середовища виконання"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Видалені до смітника дані користувача для %u застосунку"
+msgstr[1] "Видалені до смітника дані користувача для %u застосунків"
+msgstr[2] "Видалені до смітника дані користувача для %u застосунків"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u встановлення"
+msgstr[1] "%s, %'u встановлення"
+msgstr[2] "%s, %'u встановлень"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "Оновлено %u застосунок"
+msgstr[1] "Оновлено %u застосунки"
+msgstr[2] "Оновлено %u застосунків"

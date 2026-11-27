@@ -1,0 +1,2568 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "Kedai Aplikasi"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "Tambah, buang atau kemas kini perisian flatpak pada komputer ini"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Sistem;Pakej;Pengurus;Temui;Flatpak;Perisian;Aplikasi;Kedai;"
+
+msgid "New Window"
+msgstr "Tetingkap Baharu"
+
+msgid "Discover and install apps"
+msgstr "Temui dan pasang aplikasi"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Kedai aplikasi yang pantas dan moden untuk Linux dengan tumpuan pada penemuan dan pemasangan aplikasi dan alat tambah Flatpak, terutamanya daripada Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Gilirkan beberapa pemasangan dan terus menyemak imbas"
+
+msgid "Easily view app permissions"
+msgstr "Lihat kebenaran aplikasi dengan mudah"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Log masuk ke Flathub untuk melihat dan mengurus kegemaran anda"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Cari aplikasi terus dari GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Halaman utama yang memaparkan aplikasi Flathub"
+
+msgid "App page for Exhibit"
+msgstr "Halaman aplikasi untuk Exhibit"
+
+msgid "Library page"
+msgstr "Halaman pustaka"
+
+msgid "Search page"
+msgstr "Halaman carian"
+
+msgid "Category page"
+msgstr "Halaman kategori"
+
+msgid "Stopped Receiving Updates"
+msgstr "Berhenti Menerima Kemas Kini"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Nyahpasang"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Pasang"
+
+msgid "Add-on"
+msgstr "Alat tambah"
+
+msgid "Manage Add-Ons"
+msgstr "Urus Alat Tambah"
+
+msgid "No Add-Ons Visible"
+msgstr "Tiada Alat Tambah Kelihatan"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "Keutamaan penapis semasa anda menyembunyikan semua alat tambah yang diketahui. Cuba laraskannya."
+
+msgid "Add-on Page"
+msgstr "Halaman Alat Tambah"
+
+msgid "Download"
+msgstr "Muat Turun"
+
+msgid "Installed"
+msgstr "Dipasang"
+
+msgid "Downloads/Month"
+msgstr "Muat Turun/Bulan"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Berhenti Menerima Kemas Kini Teras"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Alat tambah ini menggunakan masa jalan yang tidak lagi menerima kemas kini atau pembetulan keselamatan. Ia mungkin menjadi tidak selamat untuk digunakan."
+
+msgid "Other Sources"
+msgstr "Sumber Lain"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Alat tambah untuk %s"
+
+msgid "Show Less"
+msgstr "Tunjukkan Kurang"
+
+msgid "Show More"
+msgstr "Tunjukkan Lagi"
+
+msgid "Download Stats"
+msgstr "Statistik Muat Turun"
+
+msgid "Age Rating"
+msgstr "Kadar Umur"
+
+msgid "Cartoon Violence"
+msgstr "Keganasan Kartun"
+
+msgid "No information regarding cartoon violence"
+msgstr "Tiada maklumat mengenai keganasan kartun"
+
+msgid "Fantasy Violence"
+msgstr "Keganasan Fantasi"
+
+msgid "No information regarding fantasy violence"
+msgstr "Tiada maklumat mengenai keganasan fantasi"
+
+msgid "Realistic Violence"
+msgstr "Keganasan Realistik"
+
+msgid "No information regarding realistic violence"
+msgstr "Tiada maklumat mengenai keganasan realistik"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "Keganasan Menggambarkan Pertumpahan Darah"
+
+msgid "No information regarding bloodshed"
+msgstr "Tiada maklumat mengenai pertumpahan darah"
+
+msgid "Sexual Violence"
+msgstr "Keganasan Seksual"
+
+msgid "No information regarding sexual violence"
+msgstr "Tiada maklumat mengenai keganasan seksual"
+
+msgid "Alcohol"
+msgstr "Alkohol"
+
+msgid "No information regarding references to alcohol"
+msgstr "Tiada maklumat mengenai rujukan kepada alkohol"
+
+msgid "Narcotics"
+msgstr "Narkotik"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "Tiada maklumat mengenai rujukan kepada dadah haram"
+
+msgid "Tobacco"
+msgstr "Tembakau"
+
+msgid "No information regarding references to tobacco products"
+msgstr "Tiada maklumat mengenai rujukan kepada produk tembakau"
+
+msgid "Nudity"
+msgstr "Ketelanjangan"
+
+msgid "No information regarding nudity of any sort"
+msgstr "Tiada maklumat mengenai ketelanjangan dalam apa jua bentuk"
+
+msgid "Sexual Themes"
+msgstr "Tema Seksual"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "Tiada maklumat mengenai rujukan atau gambaran yang berunsur seksual"
+
+msgid "Profanity"
+msgstr "Bahasa Kesat"
+
+msgid "No information regarding profanity of any kind"
+msgstr "Tiada maklumat mengenai bahasa kesat dalam apa jua bentuk"
+
+msgid "Inappropriate Humor"
+msgstr "Jenaka Tidak Sesuai"
+
+msgid "No information regarding inappropriate humor"
+msgstr "Tiada maklumat mengenai jenaka yang tidak sesuai"
+
+msgid "Discrimination"
+msgstr "Diskriminasi"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "Tiada maklumat mengenai bahasa diskriminasi dalam apa jua bentuk"
+
+msgid "Advertising"
+msgstr "Pengiklanan"
+
+msgid "No information regarding advertising of any kind"
+msgstr "Tiada maklumat mengenai pengiklanan dalam apa jua bentuk"
+
+msgid "Gambling"
+msgstr "Perjudian"
+
+msgid "No information regarding gambling of any kind"
+msgstr "Tiada maklumat mengenai perjudian dalam apa jua bentuk"
+
+msgid "Purchasing"
+msgstr "Pembelian"
+
+msgid "No information regarding the ability to spend money"
+msgstr "Tiada maklumat mengenai keupayaan untuk membelanjakan wang"
+
+msgid "Chat Between Users"
+msgstr "Sembang Antara Pengguna"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "Tiada maklumat mengenai cara untuk bersembang dengan pengguna lain"
+
+msgid "Audio Chat Between Users"
+msgstr "Sembang Audio Antara Pengguna"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "Tiada maklumat mengenai cara untuk bercakap dengan pengguna lain"
+
+msgid "Contact Details"
+msgstr "Butiran Hubungan"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "Tiada maklumat mengenai perkongsian nama pengguna rangkaian sosial atau alamat e-mel"
+
+msgid "Identifying Information"
+msgstr "Maklumat Pengenalan"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "Tiada maklumat mengenai perkongsian maklumat pengguna dengan pihak ketiga"
+
+msgid "Location Sharing"
+msgstr "Perkongsian Lokasi"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "Tiada maklumat mengenai perkongsian lokasi fizikal dengan pengguna lain"
+
+msgid "Prostitution"
+msgstr "Pelacuran"
+
+msgid "No information regarding references to prostitution"
+msgstr "Tiada maklumat mengenai rujukan kepada pelacuran"
+
+msgid "Adultery"
+msgstr "Perzinaan"
+
+msgid "No information regarding references to adultery"
+msgstr "Tiada maklumat mengenai rujukan kepada perzinaan"
+
+msgid "Sexualized Characters"
+msgstr "Watak Diseksualkan"
+
+msgid "No information regarding sexualized characters"
+msgstr "Tiada maklumat mengenai watak yang diseksualkan"
+
+msgid "Desecration"
+msgstr "Pencemaran Kesucian"
+
+msgid "No information regarding references to desecration"
+msgstr "Tiada maklumat mengenai rujukan kepada pencemaran kesucian"
+
+msgid "Human Remains"
+msgstr "Jenazah Manusia"
+
+msgid "No information regarding visible dead human remains"
+msgstr "Tiada maklumat mengenai jenazah manusia yang kelihatan"
+
+msgid "Slavery"
+msgstr "Perhambaan"
+
+msgid "No information regarding references to slavery"
+msgstr "Tiada maklumat mengenai rujukan kepada perhambaan"
+
+msgid "Does not include references to drugs"
+msgstr "Tidak termasuk rujukan kepada dadah"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "Tidak termasuk carutan, bahasa kesat dan jenis bahasa kasar yang lain"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "Tidak termasuk iklan atau transaksi kewangan"
+
+msgid "Does not include sex or nudity"
+msgstr "Tidak termasuk seks atau ketelanjangan"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "Tidak termasuk fungsi sembang yang tidak terkawal"
+
+msgid "Does not include violence"
+msgstr "Tidak termasuk keganasan"
+
+msgid "Drugs"
+msgstr "Dadah"
+
+msgid "Strong Language"
+msgstr "Bahasa Kasar"
+
+msgid "Money"
+msgstr "Wang"
+
+msgid "Social"
+msgstr "Sosial"
+
+msgid "Violence"
+msgstr "Keganasan"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "Semua"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s mempunyai kadar umur yang tidak diketahui"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s sesuai untuk semua orang"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s sesuai untuk kanak-kanak kecil"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s sesuai untuk kanak-kanak"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s sesuai untuk remaja"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s sesuai untuk orang dewasa"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s sesuai untuk %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "Folder sistem %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Subfolder Rumah %s"
+
+msgid "Host system folders"
+msgstr "Folder sistem hos"
+
+msgid "Host system configuration from /etc"
+msgstr "Konfigurasi sistem hos daripada /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Subfolder Desktop %s"
+
+msgid "Desktop folder"
+msgstr "Folder Desktop"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "Subfolder Dokumen %s"
+
+msgid "Documents folder"
+msgstr "Folder Dokumen"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "Subfolder Muzik %s"
+
+msgid "Music folder"
+msgstr "Folder Muzik"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "Subfolder Gambar %s"
+
+msgid "Pictures folder"
+msgstr "Folder Gambar"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "Subfolder Kongsi Awam %s"
+
+msgid "Public Share folder"
+msgstr "Folder Kongsi Awam"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "Subfolder Video %s"
+
+msgid "Videos folder"
+msgstr "Folder Video"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "Subfolder Templat %s"
+
+msgid "Templates folder"
+msgstr "Folder Templat"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Subfolder cache pengguna %s"
+
+msgid "User cache folder"
+msgstr "Folder cache pengguna"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Subfolder konfigurasi pengguna %s"
+
+msgid "User configuration folder"
+msgstr "Folder konfigurasi pengguna"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Subfolder data pengguna %s"
+
+msgid "User data folder"
+msgstr "Folder data pengguna"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Subfolder masa jalan pengguna %s"
+
+msgid "User runtime folder"
+msgstr "Folder masa jalan pengguna"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Capaian sistem fail kepada %s"
+
+msgid "Unknown filesystem path"
+msgstr "Laluan sistem fail tidak diketahui"
+
+msgid "Download Size"
+msgstr "Saiz Muat Turun"
+
+msgid "Installed Size"
+msgstr "Saiz Dipasang"
+
+msgid "Amount to download from the internet"
+msgstr "Jumlah untuk dimuat turun daripada internet"
+
+msgid "Size on Disk"
+msgstr "Saiz pada Cakera"
+
+msgid "Open user data folder"
+msgstr "Buka folder data pengguna"
+
+msgid "Your User Data"
+msgstr "Data Pengguna Anda"
+
+msgid "Caches, settings, and other app data"
+msgstr "Cache, tetapan dan data aplikasi lain"
+
+msgid "Cache"
+msgstr "Cache"
+
+msgid "Temporary cached data"
+msgstr "Data cache sementara"
+
+msgid "Clear Cache"
+msgstr "Kosongkan Cache"
+
+msgid "Installed Runtime Size"
+msgstr "Saiz Masa Jalan Dipasang"
+
+msgid "Runtime Download Size"
+msgstr "Saiz Muat Turun Masa Jalan"
+
+msgid "N/A"
+msgstr "T/A"
+
+msgid "Storage"
+msgstr "Storan"
+
+msgid "Verified"
+msgstr "Disahkan"
+
+msgid "The Bazaar Contributors"
+msgstr "Penyumbang Bazaar"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "Terima Kasih Khas"
+
+msgid "Logged Out Successfully!"
+msgstr "Berjaya Log Keluar!"
+
+msgid "Performing setup…"
+msgstr "Melaksanakan persediaan…"
+
+msgid "Set Up Flathub?"
+msgstr "Sediakan Flathub?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub belum disediakan pada sistem ini. Anda tidak akan dapat menyemak imbas dan memasang aplikasi dalam Bazaar jika ia tidak tersedia.\n"
+"\n"
+"Anda masih boleh menggunakan Bazaar untuk menyemak imbas dan membuang aplikasi yang sudah dipasang."
+
+msgid "Later"
+msgstr "Kemudian"
+
+msgid "Set Up Flathub"
+msgstr "Sediakan Flathub"
+
+msgid "A backend error occurred"
+msgstr "Ralat bahagian belakang berlaku"
+
+msgid "Refreshing…"
+msgstr "Menyegarkan…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "Memuatkan %d aplikasi…"
+
+msgid "Failed to open file"
+msgstr "Gagal membuka fail"
+
+msgid "Failed to load metainfo"
+msgstr "Gagal memuatkan metainfo"
+
+msgid "An initialization error occurred"
+msgstr "Ralat permulaan berlaku"
+
+msgid "Checking for updates…"
+msgstr "Menyemak kemas kini…"
+
+msgid "Failed to check for updates"
+msgstr "Gagal menyemak kemas kini"
+
+msgid "Could not find app"
+msgstr "Tidak dapat mencari aplikasi"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Memuatkan %d aplikasi…"
+
+msgid "Writing to cache…"
+msgstr "Menulis ke cache…"
+
+msgid "Removing remote…"
+msgstr "Membuang remote…"
+
+msgid "Could not remove remote"
+msgstr "Tidak dapat membuang remote"
+
+msgid "Show All"
+msgstr "Tunjukkan Semua"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Semua \"%s\""
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d Aplikasi"
+
+msgid "Failed to Load Article"
+msgstr "Gagal Memuatkan Artikel"
+
+msgid "All apps are already installed"
+msgstr "Semua aplikasi sudah dipasang"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Pasang %u Aplikasi?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Yang berikut akan dipasang. Komponen kongsi tambahan mungkin turut dipasang"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "%d alat tambah akan dipasang."
+
+msgid "Additionally, addons will be installed."
+msgstr "Selain itu, alat tambah akan dipasang."
+
+msgid "_Cancel"
+msgstr "_Batal"
+
+msgid "_Install All"
+msgstr "_Pasang Semua"
+
+msgid "Bundle Installation"
+msgstr "Pemasangan Bundle"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Kebergantungan tambahan mungkin mengambil ruang tambahan"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Memasang aplikasi ini mungkin memerlukan penambahan sumber perisian baharu. Aplikasi lain daripada sumber ini akan muncul dalam Bazaar.\n"
+"\n"
+"Tambah sumber ini hanya jika anda pasti anda mempercayainya."
+
+msgid "Successfully Installed!"
+msgstr "Berjaya Dipasang!"
+
+msgid "Open"
+msgstr "Buka"
+
+msgid "Show App Details"
+msgstr "Tunjukkan Butiran Aplikasi"
+
+msgid "Already Installed"
+msgstr "Sudah Dipasang"
+
+msgid "Installation Failed"
+msgstr "Pemasangan Gagal"
+
+msgid "Unknown install size"
+msgstr "Saiz pemasangan tidak diketahui"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Kira-kira %s untuk dipasang"
+
+msgid "No special permissions"
+msgstr "Tiada kebenaran khas"
+
+msgid "Place Applet"
+msgstr "Letakkan Applet"
+
+msgid "Choose where to add this applet."
+msgstr "Pilih tempat untuk menambah applet ini."
+
+msgid "Cancel"
+msgstr "Batal"
+
+msgid "Panel"
+msgstr "Panel"
+
+msgid "Dock"
+msgstr "Dok"
+
+msgid "No Curation"
+msgstr "Tiada Kurasi"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Tiada maklumat kurasi disediakan pada sistem ini. Anda masih boleh menyemak imbas aplikasi di Flathub"
+
+msgid "Browse Flathub"
+msgstr "Semak Imbas Flathub"
+
+msgid "Offline"
+msgstr "Luar talian"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s hingga %s, tertinggi pada %s dengan %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "Pemasangan:"
+
+msgid "Not Verified"
+msgstr "Tidak Disahkan"
+
+msgid "Developer information not available."
+msgstr "Maklumat pembangun tidak tersedia."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "Pemilikan ID aplikasi %s belum disahkan dan ia mungkin pakej komuniti."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "Pemilikan ID aplikasi %s telah disahkan secara manual oleh pasukan Flathub."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "Pemilikan ID aplikasi %1$s telah disahkan oleh <b>%2$s</b> pada <b>%3$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Pemilikan ID aplikasi %1$s telah disahkan menggunakan %2$s."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "Pemilikan ID aplikasi %s telah disahkan."
+
+msgid "Bazaar Release"
+msgstr "Keluaran Bazaar"
+
+msgid "Full Release Notes"
+msgstr "Nota Keluaran Penuh"
+
+msgid "This release was made possible by users like you!"
+msgstr "Keluaran ini dapat direalisasikan oleh pengguna seperti anda!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Saya suka membuat Bazaar, tetapi saya tidak boleh melakukannya seorang diri. Bantu sokong pembangunan selanjutnya dengan menderma di Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "Dermakan kepada Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Apa yang Baharu dalam %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Dikeluarkan pada %-e %B %Y"
+
+msgid "Choose an Installation"
+msgstr "Pilih Pemasangan"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Anda mempunyai berbilang versi aplikasi ini yang dipasang. Yang manakah ingin anda teruskan?"
+
+msgid "Details"
+msgstr "Butiran"
+
+msgid "Copy"
+msgstr "Salin"
+
+msgid "Copied!"
+msgstr "Disalin!"
+
+msgid "Favorite Count"
+msgstr "Bilangan Kegemaran"
+
+msgid "Failed to update favorite"
+msgstr "Gagal mengemas kini kegemaran"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Log masuk dengan Flathub untuk mengurus kegemaran"
+
+msgid "Log In"
+msgstr "Log Masuk"
+
+msgid "Favorites"
+msgstr "Kegemaran"
+
+msgid "Install All"
+msgstr "Pasang Semua"
+
+msgid "No Favorites"
+msgstr "Tiada Kegemaran"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Aplikasi yang anda tandakan sebagai kegemaran akan muncul di sini"
+
+msgid "Support This Application"
+msgstr "Sokong Aplikasi Ini"
+
+msgid "Remove From Favorites"
+msgstr "Buang Daripada Kegemaran"
+
+msgid "Failed to remove favorite"
+msgstr "Gagal membuang kegemaran"
+
+msgid "Previous"
+msgstr "Sebelumnya"
+
+msgid "Next"
+msgstr "Seterusnya"
+
+msgid "Editing"
+msgstr "Penyuntingan"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Pengadun"
+
+msgid "Music"
+msgstr "Muzik"
+
+msgid "Player"
+msgstr "Pemain"
+
+msgid "Recorder"
+msgstr "Perakam"
+
+msgid "Sequencer"
+msgstr "Penjujuk"
+
+msgid "Tuner"
+msgstr "Penala"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "Emulation"
+msgstr "Emulasi"
+
+msgid "Action"
+msgstr "Aksi"
+
+msgid "Adventure"
+msgstr "Pengembaraan"
+
+msgid "Arcade"
+msgstr "Arked"
+
+msgid "Blocks"
+msgstr "Blok"
+
+msgid "Board"
+msgstr "Papan"
+
+msgid "Card"
+msgstr "Kad"
+
+msgid "Kids"
+msgstr "Kanak-kanak"
+
+msgid "Logic"
+msgstr "Logik"
+
+msgid "Role Playing"
+msgstr "Main Peranan"
+
+msgid "Shooter"
+msgstr "Penembak"
+
+msgid "Simulation"
+msgstr "Simulasi"
+
+msgid "Sports"
+msgstr "Sukan"
+
+msgid "Strategy"
+msgstr "Strategi"
+
+msgid "Browsers"
+msgstr "Pelayar"
+
+msgid "Chat"
+msgstr "Sembang"
+
+msgid "Mail"
+msgstr "E-mel"
+
+msgid "File Sharing"
+msgstr "Perkongsian Fail"
+
+msgid "Audio & Video"
+msgstr "Audio & Video"
+
+msgid "Media"
+msgstr "Media"
+
+msgid "More Audio & Video"
+msgstr "Lagi Audio & Video"
+
+msgid "Developer Tools"
+msgstr "Alat Pembangun"
+
+msgid "Develop"
+msgstr "Bangun"
+
+msgid "More Developer Tools"
+msgstr "Lagi Alat Pembangun"
+
+msgid "Education"
+msgstr "Pendidikan"
+
+msgid "Learn"
+msgstr "Belajar"
+
+msgid "More Education"
+msgstr "Lagi Pendidikan"
+
+msgid "Gaming"
+msgstr "Permainan"
+
+msgid "Play"
+msgstr "Main"
+
+msgid "More Gaming"
+msgstr "Lagi Permainan"
+
+msgid "Graphics & Photography"
+msgstr "Grafik & Fotografi"
+
+msgid "Create"
+msgstr "Cipta"
+
+msgid "More Graphics & Photography"
+msgstr "Lagi Grafik & Fotografi"
+
+msgid "Networking"
+msgstr "Rangkaian"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "More Networking"
+msgstr "Lagi Rangkaian"
+
+msgid "Productivity"
+msgstr "Produktiviti"
+
+msgid "Work"
+msgstr "Kerja"
+
+msgid "More Productivity"
+msgstr "Lagi Produktiviti"
+
+msgid "Science"
+msgstr "Sains"
+
+msgid "More Science"
+msgstr "Lagi Sains"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "More System"
+msgstr "Lagi Sistem"
+
+msgid "Utilities"
+msgstr "Utiliti"
+
+msgid "Tools"
+msgstr "Alat"
+
+msgid "More Utilities"
+msgstr "Lagi Utiliti"
+
+msgid "Trending"
+msgstr "Sedang Tren"
+
+msgid "More Trending"
+msgstr "Lagi Sedang Tren"
+
+msgid "Popular"
+msgstr "Popular"
+
+msgid "More Popular"
+msgstr "Lagi Popular"
+
+msgid "Recently Added"
+msgstr "Baru Ditambah"
+
+msgid "New"
+msgstr "Baharu"
+
+msgid "More New"
+msgstr "Lagi Baharu"
+
+msgid "Recently Updated"
+msgstr "Baru Dikemas Kini"
+
+msgid "Updated"
+msgstr "Dikemas Kini"
+
+msgid "More Updated"
+msgstr "Lagi Dikemas Kini"
+
+msgid "Mobile"
+msgstr "Mudah Alih"
+
+msgid "More Mobile"
+msgstr "Lagi Mudah Alih"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Lagi Adwaita"
+
+msgid "KDE Apps"
+msgstr "Aplikasi KDE"
+
+msgid "More KDE Apps"
+msgstr "Lagi Aplikasi KDE"
+
+msgid "Made for COSMIC™"
+msgstr "Dibuat untuk COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Untuk COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Lagi Aplikasi COSMIC"
+
+msgid "Games"
+msgstr "Permainan"
+
+msgid "More Games"
+msgstr "Lagi Permainan"
+
+msgid "Emulators"
+msgstr "Emulator"
+
+msgid "More Emulators"
+msgstr "Lagi Emulator"
+
+msgid "Launchers"
+msgstr "Pelancar"
+
+msgid "More Game Launchers"
+msgstr "Lagi Pelancar Permainan"
+
+msgid "Game Tools"
+msgstr "Alat Permainan"
+
+msgid "More Game Tools"
+msgstr "Lagi Alat Permainan"
+
+msgid "New Year, New Workflows"
+msgstr "Tahun Baharu, Aliran Kerja Baharu"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Aplikasi untuk mencatat nota, menjejak tugas dan membuat rancangan"
+
+msgid "Staff Picks"
+msgstr "Pilihan Kakitangan"
+
+msgid "Apps we love right now"
+msgstr "Aplikasi yang kami sukai sekarang"
+
+msgid "Get Creative"
+msgstr "Jadilah Kreatif"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Aplikasi penting untuk melukis, menyunting foto dan reka bentuk digital"
+
+msgid "Build Native Apps"
+msgstr "Bina Aplikasi Natif"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Bangunkan aplikasi yang terasa seperti di rumah pada sistem anda"
+
+msgid "Stay in Touch"
+msgstr "Kekal Berhubung"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Aplikasi penting untuk kolaborasi dan komunikasi"
+
+msgid "Ready for Vacations"
+msgstr "Sedia untuk Percutian"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Aplikasi peta, transit, cuaca dan perancangan perjalanan"
+
+msgid "Smarter Every Day"
+msgstr "Lebih Bijak Setiap Hari"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Aplikasi untuk membantu anda belajar, membuat penyelidikan dan menulis"
+
+msgid "Get Cozy"
+msgstr "Berasa Selesa"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Aplikasi hebat untuk membaca, menonton filem dan bermain permainan"
+
+msgid "Web Developer Essentials"
+msgstr "Keperluan Pembangun Web"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Membuat laman web lebih menyeronokkan dengan aplikasi ini"
+
+msgid "Take Better Notes"
+msgstr "Catat Nota dengan Lebih Baik"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Temui alat mencatat nota kegemaran baharu anda"
+
+msgid "Get Focused"
+msgstr "Kekal Fokus"
+
+msgid "Great apps for task management"
+msgstr "Aplikasi hebat untuk pengurusan tugas"
+
+msgid "Make Some Noise"
+msgstr "Buat Sedikit Bunyi"
+
+msgid "Apps for creating and producing music"
+msgstr "Aplikasi untuk mencipta dan menghasilkan muzik"
+
+msgid "Get To Work"
+msgstr "Mulakan Bekerja"
+
+msgid "Essential office apps"
+msgstr "Aplikasi pejabat penting"
+
+msgid "Flathub Not Added"
+msgstr "Flathub Tidak Ditambah"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Remote Flathub tidak ditemui pada mana-mana pemasangan Flatpak anda"
+
+msgid "Can't Reach Flathub"
+msgstr "Tidak Dapat Menghubungi Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "Anda masih boleh mengurus dan mencari aplikasi."
+
+msgid "Search Apps"
+msgstr "Cari Aplikasi"
+
+msgid "Reconnect"
+msgstr "Sambung Semula"
+
+msgid "App of the Day"
+msgstr "Aplikasi Hari Ini"
+
+msgid "On the Go"
+msgstr "Semasa Bergerak"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Aplikasi untuk telefon dan tablet Linux anda"
+
+msgid "More Mobile Apps"
+msgstr "Lagi Aplikasi Mudah Alih"
+
+msgid "We​ ♥​ Games"
+msgstr "Kami ♥ Permainan"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Permainan dan aplikasi untuk menjalankan tajuk kegemaran anda"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Ini ialah pratonton setempat, sesetengah butiran mungkin berbeza daripada penyenaraian yang diterbitkan"
+
+msgid "Preview Store Appearance"
+msgstr "Pratonton Penampilan Kedai"
+
+msgid "_Support"
+msgstr "_Sokongan"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Aplikasi ini menggunakan masa jalan yang tidak lagi menerima kemas kini atau pembetulan keselamatan. Ia mungkin menjadi tidak selamat untuk digunakan."
+
+msgid "Trash Data"
+msgstr "Buang Data ke Tong Sampah"
+
+msgid "Add-ons"
+msgstr "Alat tambah"
+
+msgid "More Add-Ons"
+msgstr "Lagi Alat Tambah"
+
+msgid "Links"
+msgstr "Pautan"
+
+msgid "Similar Apps"
+msgstr "Aplikasi Serupa"
+
+msgid "No URL"
+msgstr "Tiada URL"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Aplikasi ini mempunyai lesen FLOSS, bermakna kod sumber boleh diaudit untuk keselamatan."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Aplikasi ini mempunyai lesen proprietari, bermakna kod sumber dibangunkan secara persendirian dan tidak boleh diaudit oleh pihak ketiga bebas."
+
+msgid "Other Apps From This Developer"
+msgstr "Aplikasi Lain Daripada Pembangun Ini"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Aplikasi Lain Daripada %s"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s tidak dipasang, tetapi masih ada <b>%s</b> data."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Aplikasi oleh %s"
+
+msgid "Apps by This Developer"
+msgstr "Aplikasi oleh Pembangun Ini"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d Aplikasi"
+
+msgid "Failed to Remove User Data"
+msgstr "Gagal Membuang Data Pengguna"
+
+msgid "Hardware Support"
+msgstr "Sokongan Perkakasan"
+
+msgid "Keyboard support"
+msgstr "Sokongan papan kekunci"
+
+msgid "Requires keyboards"
+msgstr "Memerlukan papan kekunci"
+
+msgid "Recommends keyboards"
+msgstr "Mengesyorkan papan kekunci"
+
+msgid "Supports keyboards"
+msgstr "Menyokong papan kekunci"
+
+msgid "Unknown support for keyboards"
+msgstr "Sokongan untuk papan kekunci tidak diketahui"
+
+msgid "Mouse support"
+msgstr "Sokongan tetikus"
+
+msgid "Requires mice or pointing devices"
+msgstr "Memerlukan tetikus atau peranti penuding"
+
+msgid "Recommends mice or pointing devices"
+msgstr "Mengesyorkan tetikus atau peranti penuding"
+
+msgid "Supports mice or pointing devices"
+msgstr "Menyokong tetikus atau peranti penuding"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "Sokongan untuk tetikus atau peranti penuding tidak diketahui"
+
+msgid "Touchscreen support"
+msgstr "Sokongan skrin sentuh"
+
+msgid "Requires touchscreens"
+msgstr "Memerlukan skrin sentuh"
+
+msgid "Recommends touchscreens"
+msgstr "Mengesyorkan skrin sentuh"
+
+msgid "Supports touchscreens"
+msgstr "Menyokong skrin sentuh"
+
+msgid "Unknown support for touchscreens"
+msgstr "Sokongan untuk skrin sentuh tidak diketahui"
+
+msgid "Mobile support"
+msgstr "Sokongan mudah alih"
+
+msgid "Works on mobile devices"
+msgstr "Berfungsi pada peranti mudah alih"
+
+msgid "May not work well on mobile devices"
+msgstr "Mungkin tidak berfungsi dengan baik pada peranti mudah alih"
+
+msgid "Desktop support"
+msgstr "Sokongan desktop"
+
+msgid "Works well on large screens"
+msgstr "Berfungsi dengan baik pada skrin besar"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s berfungsi paling baik pada perkakasan tertentu"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s berfungsi pada kebanyakan peranti"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Batal"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Membatalkan"
+
+msgid "_Open"
+msgstr "_Buka"
+
+msgid "Uninstall Application"
+msgstr "Nyahpasang Aplikasi"
+
+msgid "_Remove"
+msgstr "_Buang"
+
+msgid "Update"
+msgstr "Kemas kini"
+
+msgid "Remove"
+msgstr "Buang"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Pasang %s daripada %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Pasang %s"
+
+msgid "Donate"
+msgstr "Dermakan"
+
+msgid "Search installed apps"
+msgstr "Cari aplikasi yang dipasang"
+
+msgid "No Apps Found"
+msgstr "Tiada Aplikasi Ditemui"
+
+msgid "Search Store Instead"
+msgstr "Cari dalam Kedai Sebaliknya"
+
+msgid "Pending Updates"
+msgstr "Kemas Kini Belum Selesai"
+
+msgid "Downloads"
+msgstr "Muat Turun"
+
+msgid "Recently Uninstalled"
+msgstr "Baru Dinyahpasang"
+
+msgid "Clear Finished Tasks"
+msgstr "Kosongkan Tugas Selesai"
+
+msgid "Sort Options"
+msgstr "Pilihan Isih"
+
+msgid "Sort By"
+msgstr "Isih Mengikut"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "Size"
+msgstr "Saiz"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "Tiada padanan ditemui untuk \"%s\" dalam senarai aplikasi yang dipasang"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u Kemas Kini Tersedia"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u Aplikasi Dipasang"
+
+msgid "No applications found"
+msgstr "Tiada aplikasi ditemui"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "%u aplikasi ditemui"
+
+msgid "Get Involved"
+msgstr "Libatkan Diri"
+
+msgid "Learn More"
+msgstr "Ketahui Lebih Lanjut"
+
+msgid "Unknown License"
+msgstr "Lesen Tidak Diketahui"
+
+msgid "Community Built"
+msgstr "Dibina Komuniti"
+
+msgid "Proprietary"
+msgstr "Proprietari"
+
+msgid "Special License"
+msgstr "Lesen Khas"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Aplikasi ini dibangunkan secara terbuka oleh komuniti antarabangsa.\n"
+"\n"
+"Anda boleh mengambil bahagian dan membantu menjadikannya lebih baik."
+
+msgid "The license of this app is not known"
+msgstr "Lesen aplikasi ini tidak diketahui"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Aplikasi ini dibangunkan secara terbuka oleh komuniti antarabangsa, dan dikeluarkan di bawah lesen %s.\n"
+"\n"
+"Anda boleh mengambil bahagian dan membantu menjadikannya lebih baik."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Aplikasi ini tidak dibangunkan secara terbuka, jadi hanya pembangunnya yang tahu cara ia berfungsi. Ia mungkin tidak selamat dengan cara yang sukar dikesan, dan ia mungkin berubah tanpa pengawasan.\n"
+"\n"
+"Anda mungkin boleh atau mungkin tidak boleh menyumbang kepada aplikasi ini."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Aplikasi ini dibangunkan di bawah lesen khas %s.\n"
+"\n"
+"Anda mungkin boleh atau mungkin tidak boleh menyumbang kepada aplikasi ini."
+
+msgid "License"
+msgstr "Lesen"
+
+msgid "Connect to Flathub"
+msgstr "Sambung ke Flathub"
+
+msgid "Something Went Wrong"
+msgstr "Sesuatu Telah Berlaku"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Log masuk untuk menyegerakkan aplikasi kegemaran anda merentasi peranti"
+
+msgid "Finish"
+msgstr "Selesai"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Helo, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Tambah Ikon pada Pratonton Metainfo?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Fail metainfo tidak termasuk ikon aplikasi dengan sendirinya. Adakah anda ingin memilih satu secara manual?"
+
+msgid "Skip"
+msgstr "Langkau"
+
+msgid "Select Icon"
+msgstr "Pilih Ikon"
+
+msgid "Image Files"
+msgstr "Fail Imej"
+
+msgid "New Permissions"
+msgstr "Kebenaran Baharu"
+
+msgid "_Accept"
+msgstr "_Terima"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Kebenaran Baharu untuk %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Kemas kini ini memerlukan kebenaran tambahan berikut"
+
+msgid "User"
+msgstr "Pengguna"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Tamat Hayat"
+
+msgid "Preferences"
+msgstr "Keutamaan"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Sambungan rangkaian bermeter — penyegaran data kedai automatik dijeda"
+
+msgid "Refresh Manually"
+msgstr "Segarkan Secara Manual"
+
+msgid "App Updates"
+msgstr "Kemas Kini Aplikasi"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Kemas kini automatik akan dijeda pada rangkaian bermeter atau apabila penjimatan kuasa dihidupkan untuk menjimatkan data dan bateri."
+
+msgid "_Automatic"
+msgstr "_Automatik"
+
+msgid "Automatically check for and download app updates"
+msgstr "Semak dan muat turun kemas kini aplikasi secara automatik"
+
+msgid "_Manual"
+msgstr "_Manual"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Menyemak dan memuat turun kemas kini aplikasi mesti dilakukan secara manual"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Pemberitahuan Kemas Kini Automatik"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Beritahu apabila kemas kini telah dipasang secara automatik"
+
+msgid "Content Filters"
+msgstr "Penapis Kandungan"
+
+msgid "_Free Software Only"
+msgstr "Perisian _Bebas Sahaja"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Sembunyikan aplikasi proprietari semasa menyemak imbas dan mencari"
+
+msgid "F_lathub Results Only"
+msgstr "Hasil F_lathub Sahaja"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Hadkan hasil carian dan semak imbas kepada aplikasi yang hanya tersedia di Flathub"
+
+msgid "_Verified Results Only"
+msgstr "Hasil _Disahkan Sahaja"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Sembunyikan hasil yang tidak disahkan di Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Sembunyikan Aplikasi _Tamat Hayat"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "Sembunyikan aplikasi yang tidak lagi disokong oleh pembangunnya"
+
+msgid "Progress Bar Theme"
+msgstr "Tema Bar Kemajuan"
+
+msgid "Accent Color"
+msgstr "Warna Aksen"
+
+msgid "Pride Colors"
+msgstr "Warna Kebanggaan"
+
+msgid "Lesbian Pride Colors"
+msgstr "Warna Kebanggaan Lesbian"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Warna Kebanggaan Homoseksual Lelaki"
+
+msgid "Transgender Pride Colors"
+msgstr "Warna Kebanggaan Transgender"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Warna Kebanggaan Bukan Binari"
+
+msgid "Bisexual Pride Colors"
+msgstr "Warna Kebanggaan Biseksual"
+
+msgid "Asexual Pride Colors"
+msgstr "Warna Kebanggaan Aseksual"
+
+msgid "Pansexual Pride Colors"
+msgstr "Warna Kebanggaan Panseksual"
+
+msgid "Aromantic Pride Colors"
+msgstr "Warna Kebanggaan Aromantik"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Warna Kebanggaan Genderfluid"
+
+msgid "Polysexual Pride Colors"
+msgstr "Warna Kebanggaan Poliseksual"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Warna Kebanggaan Omniseksual"
+
+msgid "Aroace Pride Colors"
+msgstr "Warna Kebanggaan Aroace"
+
+msgid "Agender Pride Colors"
+msgstr "Warna Kebanggaan Agender"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Warna Kebanggaan Genderqueer"
+
+msgid "Intersex Pride Colors"
+msgstr "Warna Kebanggaan Interseks"
+
+msgid "Demigender Pride Colors"
+msgstr "Warna Kebanggaan Demigender"
+
+msgid "Biromantic Pride Colors"
+msgstr "Warna Kebanggaan Biromantik"
+
+msgid "Disability Pride Colors"
+msgstr "Warna Kebanggaan Orang Kurang Upaya"
+
+msgid "Femboy Pride Colors"
+msgstr "Warna Kebanggaan Femboy"
+
+msgid "Neutrois Pride Colors"
+msgstr "Warna Kebanggaan Neutrois"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar perlu berjalan di latar belakang untuk menyemak kemas kini aplikasi"
+
+msgid "Version History"
+msgstr "Sejarah Versi"
+
+msgid "Today"
+msgstr "Hari ini"
+
+msgid "Yesterday"
+msgstr "Semalam"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d hari lalu"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d minggu lalu"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d bulan lalu"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d tahun lalu"
+
+msgid "%e %B %Y"
+msgstr "%e %B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "Versi %s"
+
+msgid "No details for this release"
+msgstr "Tiada butiran untuk keluaran ini"
+
+msgid "Get More Information"
+msgstr "Dapatkan Maklumat Lanjut"
+
+msgid "_Version History"
+msgstr "_Sejarah Versi"
+
+msgid "Remotes"
+msgstr "Remote"
+
+msgid "System Installation"
+msgstr "Pemasangan Sistem"
+
+msgid "Available to all users on this computer"
+msgstr "Tersedia untuk semua pengguna pada komputer ini"
+
+msgid "User Installation"
+msgstr "Pemasangan Pengguna"
+
+msgid "Only available to you"
+msgstr "Hanya tersedia untuk anda"
+
+msgid "Remove Remote"
+msgstr "Buang Remote"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Buang %s"
+
+msgid "Unused"
+msgstr "Tidak digunakan"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u aplikasi dipasang"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Buang “%s”?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Anda tidak akan dapat memasang aplikasi daripada remote pengguna ini lagi."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Anda tidak akan dapat memasang aplikasi daripada remote sistem ini lagi."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u Aplikasi untuk Dibuang"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Aplikasi di bawah dipasang daripada remote ini dan akan dibuang daripada akaun anda bersamanya."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Aplikasi di bawah dipasang daripada remote ini dan akan dibuang untuk semua pengguna bersamanya."
+
+msgid "Uninstall"
+msgstr "Nyahpasang"
+
+msgid "Get"
+msgstr "Dapatkan"
+
+msgid "Arbitrary Permissions"
+msgstr "Kebenaran Sewenang-wenangnya"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Aplikasi ini mempunyai kebenaran yang secara tidak langsung membolehkannya memberi dirinya <b>sebarang kebenaran lain yang dikehendakinya</b>, memintas kotak pasir Flatpak.\n"
+"\n"
+"Oleh itu, ia boleh melakukan apa sahaja yang boleh dilakukan oleh aplikasi istimewa tanpa kotak pasir, seperti mengakses semua fail anda dan menyambung ke internet.\n"
+"\n"
+"Melihat kebenaran lain mungkin masih memberi gambaran yang lebih baik tentang apa yang mungkin dilakukan oleh aplikasi ini."
+
+msgid "View Other Permissions"
+msgstr "Lihat Kebenaran Lain"
+
+msgid "Safe"
+msgstr "Selamat"
+
+msgid "App ID"
+msgstr "ID Aplikasi"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Aplikasi ini menggunakan versi platform perisian (SDK) yang lapuk dan mungkin mengandungi pepijat atau kelemahan keselamatan yang tidak akan dibetulkan."
+
+msgid "Safety"
+msgstr "Keselamatan"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s Selamat"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s tiada Kebenaran Tidak Selamat"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s Mungkin Selamat"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s Mungkin Tidak Selamat"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s Tidak Selamat"
+
+msgid "Back"
+msgstr "Kembali"
+
+msgid "Previous Screenshot"
+msgstr "Tangkapan Skrin Sebelumnya"
+
+msgid "Next Screenshot"
+msgstr "Tangkapan Skrin Seterusnya"
+
+msgid "Copy Image"
+msgstr "Salin Imej"
+
+msgid "Reset View"
+msgstr "Set Semula Paparan"
+
+msgid "Zoom Out"
+msgstr "Zum Keluar"
+
+msgid "Zoom In"
+msgstr "Zum Masuk"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u Kemas Kini Masa Jalan"
+
+msgid "Screenshots Carousel"
+msgstr "Karusel Tangkapan Skrin"
+
+msgid "No Screenshots"
+msgstr "Tiada Tangkapan Skrin"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Tangkapan Skrin %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Tangkapan Skrin %u"
+
+msgid "Clear Search"
+msgstr "Kosongkan Carian"
+
+msgid "Filters"
+msgstr "Penapis"
+
+msgid "_Verified"
+msgstr "_Disahkan"
+
+msgid "_Free/Open"
+msgstr "_Bebas/Terbuka"
+
+msgid "Non-_EOL"
+msgstr "Bukan _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Tapis keluar aplikasi Tamat Hayat"
+
+msgid "_Mobile Friendly"
+msgstr "_Mesra Mudah Alih"
+
+msgid "Categories"
+msgstr "Kategori"
+
+msgid "Search Apps, Games, Software"
+msgstr "Cari Aplikasi, Permainan, Perisian"
+
+msgid "Search Filters"
+msgstr "Penapis Carian"
+
+msgid "Browse Categories"
+msgstr "Semak Imbas Kategori"
+
+msgid "Categories Unavailable"
+msgstr "Kategori Tidak Tersedia"
+
+msgid "Search for apps using the search bar above."
+msgstr "Cari aplikasi menggunakan bar carian di atas."
+
+msgid "No Applications Found"
+msgstr "Tiada Aplikasi Ditemui"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Tiada hasil ditemui untuk \"%s\" di Flathub"
+
+msgid "Browser"
+msgstr "Pelayar"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Office"
+msgstr "Pejabat"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Kalendar"
+
+msgid "Messaging"
+msgstr "Pemesejan"
+
+msgid "Paint"
+msgstr "Cat"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Emulator"
+
+msgid "Copy Link"
+msgstr "Salin Pautan"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Halaman Flathub"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Laman Web Projek"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Penjejak Isu"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "Soalan Lazim"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Bantuan"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Dermakan"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Terjemah"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Hubungi"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Kod Sumber"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Sumbang"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifes"
+
+msgid "Timeline"
+msgstr "Garis Masa"
+
+msgid "Total"
+msgstr "Jumlah"
+
+msgid "This Week"
+msgstr "Minggu Ini"
+
+msgid "Installs per day"
+msgstr "Pemasangan sehari"
+
+msgid "World"
+msgstr "Dunia"
+
+msgid "Installs per country"
+msgstr "Pemasangan setiap negara"
+
+msgid "Since 4/15/2024"
+msgstr "Sejak 4/15/2024"
+
+msgid "No Results Found"
+msgstr "Tiada Hasil Ditemui"
+
+msgid "Search failed"
+msgstr "Carian gagal"
+
+msgid "Unknown"
+msgstr "Tidak diketahui"
+
+msgid "Keep User Data"
+msgstr "Simpan Data Pengguna"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Benarkan pemulihan tetapan peribadi &amp; kandungan"
+
+msgid "Delete All Data"
+msgstr "Padam Semua Data"
+
+msgid "Permanently erase user data to save space"
+msgstr "Padam data pengguna secara kekal untuk menjimatkan ruang"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "Buang %s?"
+
+msgid "Select which version to remove."
+msgstr "Pilih versi yang hendak dibuang."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "%s tidak boleh digunakan selepas dinyahpasang."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "“%s” Berisiko Tinggi"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Aplikasi ini mempunyai akses penuh kepada sistem anda, termasuk <b>semua fail anda, sejarah pelayar, kata laluan yang disimpan</b> dan banyak lagi. Ia juga mempunyai akses ke internet, bermakna ia boleh menghantar data anda kepada pihak luar.\n"
+"\n"
+"Oleh kerana aplikasi ini proprietari, ia tidak boleh diaudit untuk melihat apa yang dilakukannya dengan kebenaran ini."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Aplikasi ini menggunakan sistem tetingkap X11 lama, yang membolehkannya <b>merakam semua ketukan kekunci, menangkap tangkapan skrin dan memantau aplikasi lain</b>. Ia juga mempunyai akses ke internet, bermakna ia boleh menghantar data anda kepada pihak luar.\n"
+"\n"
+"Oleh kerana aplikasi ini proprietari, ia tidak boleh diaudit untuk melihat apa yang dilakukannya dengan kebenaran ini."
+
+msgid "_Install Anyway"
+msgstr "_Pasang Juga"
+
+msgid "Failed to load transaction dialog"
+msgstr "Gagal memuatkan dialog transaksi"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "Selesai dalam %.02f saat"
+
+msgid "App Add-On"
+msgstr "Alat Tambah Aplikasi"
+
+msgid "Runtime"
+msgstr "Masa Jalan"
+
+msgid "In Queue"
+msgstr "Dalam Giliran"
+
+msgid "Finishing Up"
+msgstr "Menyelesaikan"
+
+msgid "Done"
+msgstr "Selesai"
+
+msgid "Cancelled"
+msgstr "Dibatalkan"
+
+msgid "Error"
+msgstr "Ralat"
+
+msgid "Cancel Transaction"
+msgstr "Batalkan Transaksi"
+
+msgid "Show Details"
+msgstr "Tunjukkan Butiran"
+
+msgid "Show Error Info"
+msgstr "Tunjukkan Maklumat Ralat"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s Dibebaskan"
+
+msgid "Transaction Error"
+msgstr "Ralat Transaksi"
+
+msgid "Pending"
+msgstr "Belum Selesai"
+
+msgid "Installed Updates"
+msgstr "Kemas Kini Dipasang"
+
+msgid "Release Notes"
+msgstr "Nota Keluaran"
+
+msgid "No Release Info"
+msgstr "Tiada Maklumat Keluaran"
+
+msgid "_Update All"
+msgstr "_Kemas Kini Semua"
+
+msgid "This update requests new permissions"
+msgstr "Kemas kini ini meminta kebenaran baharu"
+
+msgid "Manage Leftover User Data"
+msgstr "Urus Data Pengguna Tertinggal"
+
+msgid "No Leftover User Data Found"
+msgstr "Tiada Data Pengguna Tertinggal Ditemui"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Data peribadi yang ditinggalkan oleh aplikasi yang telah dibuang akan muncul di sini"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Data Pengguna dalam Tong Sampah untuk %u Aplikasi"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Data Pengguna dalam Tong Sampah untuk %s"
+
+msgid "Open User Data Folder"
+msgstr "Buka Folder Data Pengguna"
+
+msgid "Trash User Data"
+msgstr "Buang Data Pengguna ke Tong Sampah"
+
+msgid "Refreshing"
+msgstr "Menyegarkan"
+
+msgid "Curated"
+msgstr "Dikurasi"
+
+msgid "Explore"
+msgstr "Teroka"
+
+msgid "Library"
+msgstr "Pustaka"
+
+msgid "Search"
+msgstr "Cari"
+
+msgid "Main Menu"
+msgstr "Menu Utama"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Anda sedang menjalankan versi baharu Bazaar!"
+
+msgid "See What's New"
+msgstr "Lihat Apa yang Baharu"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Anda mempunyai sambungan rangkaian tetapi sedang melihat versi Flathub yang disimpan dalam cache"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Sambungan rangkaian bermeter — penyegaran automatik dinyahdayakan"
+
+msgid "_Donate to Bazaar"
+msgstr "_Dermakan kepada Bazaar"
+
+msgid "_Refresh"
+msgstr "_Segarkan"
+
+msgid "_Login With Flathub"
+msgstr "_Log Masuk Dengan Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "_Urus Data Pengguna Tertinggal"
+
+msgid "Manage R_emotes"
+msgstr "Urus R_emote"
+
+msgid "_Preferences"
+msgstr "_Keutamaan"
+
+msgid "_Keyboard Shortcuts"
+msgstr "Pintasan _Papan Kekunci"
+
+msgid "_About Bazaar"
+msgstr "_Perihal Bazaar"
+
+msgid "_Quit Bazaar"
+msgstr "_Keluar Bazaar"
+
+msgid "Log Out"
+msgstr "Log Keluar"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Gagal melancarkan aplikasi"
+
+msgid "Could not open link"
+msgstr "Tidak dapat membuka pautan"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Anda tidak boleh membuang Bazaar daripada Bazaar!"
+
+msgid "Can't do that right now!"
+msgstr "Tidak boleh berbuat demikian sekarang!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u pemasangan"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Pemasangan terbanyak daripada %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d muat turun dalam sebulan lepas"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s Masa Jalan"
+
+msgid "Size information unavailable"
+msgstr "Maklumat saiz tidak tersedia"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "Saiz muat turun %s"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Saiz dipasang %s"
+
+msgid "All Ages"
+msgstr "Semua Peringkat Umur"
+
+msgid "Age rating information unavailable"
+msgstr "Maklumat kadar umur tidak tersedia"
+
+msgid "Suitable for all ages"
+msgstr "Sesuai untuk semua peringkat umur"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "Sesuai untuk umur %d tahun ke atas"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "Perisian bebas dilesenkan di bawah %s"
+
+msgid "Free software"
+msgstr "Perisian bebas"
+
+msgid "Proprietary Software"
+msgstr "Perisian Proprietari"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Lesen Khas: %s"
+
+msgid "Free Software"
+msgstr "Perisian Bebas"
+
+msgid "Adaptive"
+msgstr "Adaptif"
+
+msgid "Desktop Only"
+msgstr "Desktop Sahaja"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "Berfungsi pada desktop, tablet dan telefon"
+
+msgid "May not work on mobile devices"
+msgstr "Mungkin tidak berfungsi pada peranti mudah alih"
+
+msgid "Low Risk"
+msgstr "Risiko Rendah"
+
+msgid "Medium Risk"
+msgstr "Risiko Sederhana"
+
+msgid "High Risk"
+msgstr "Risiko Tinggi"
+
+msgid "Unknown Permissions"
+msgstr "Kebenaran Tidak Diketahui"
+
+msgid "Permissions are missing for this app."
+msgstr "Kebenaran tiada untuk aplikasi ini."
+
+msgid "No Permissions"
+msgstr "Tiada Kebenaran"
+
+msgid "App is fully sandboxed"
+msgstr "Aplikasi ini menggunakan kotak pasir sepenuhnya"
+
+msgid "Network Access"
+msgstr "Capaian Rangkaian"
+
+msgid "Can access the internet"
+msgstr "Boleh mengakses internet"
+
+msgid "No Network Access"
+msgstr "Tiada Capaian Rangkaian"
+
+msgid "Cannot access the internet"
+msgstr "Tidak boleh mengakses internet"
+
+msgid "User Device Access"
+msgstr "Capaian Peranti Pengguna"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Boleh mengakses peranti seperti kamera web atau alat kawalan permainan"
+
+msgid "No User Device Access"
+msgstr "Tiada Capaian Peranti Pengguna"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Tidak boleh mengakses peranti seperti kamera web atau alat kawalan permainan"
+
+msgid "Input Device Access"
+msgstr "Capaian Peranti Input"
+
+msgid "Can access input devices"
+msgstr "Boleh mengakses peranti input"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Capaian Mikrofon dan Main Balik Audio"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Boleh mendengar menggunakan mikrofon dan memainkan audio tanpa meminta kebenaran"
+
+msgid "System Device Access"
+msgstr "Capaian Peranti Sistem"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Boleh mengakses peranti sistem yang memerlukan kebenaran dinaikkan"
+
+msgid "Screen Contents Access"
+msgstr "Capaian Kandungan Skrin"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Boleh mengakses kandungan skrin atau tetingkap lain"
+
+msgid "Legacy Windowing System"
+msgstr "Sistem Tetingkap Lama"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Sentiasa menggunakan sistem tetingkap lama (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Boleh memperoleh kebenaran sewenang-wenangnya"
+
+msgid "User Settings"
+msgstr "Tetapan Pengguna"
+
+msgid "Can access and change user settings"
+msgstr "Boleh mengakses dan menukar tetapan pengguna"
+
+msgid "Full File System Read/Write Access"
+msgstr "Capaian Baca/Tulis Sistem Fail Penuh"
+
+msgid "Can read and write all data on the file system"
+msgstr "Boleh membaca dan menulis semua data pada sistem fail"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Capaian Baca/Tulis Folder Rumah"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Boleh membaca dan menulis semua data dalam direktori rumah anda"
+
+msgid "Full File System Read Access"
+msgstr "Capaian Baca Sistem Fail Penuh"
+
+msgid "Can read all data on the file system"
+msgstr "Boleh membaca semua data pada sistem fail"
+
+msgid "Home Folder Read Access"
+msgstr "Capaian Baca Folder Rumah"
+
+msgid "Can read all data in your home directory"
+msgstr "Boleh membaca semua data dalam direktori rumah anda"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Capaian Baca/Tulis Folder Muat Turun"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Boleh membaca dan menulis semua data dalam direktori muat turun anda"
+
+msgid "Download Folder Read Access"
+msgstr "Capaian Baca Folder Muat Turun"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Boleh membaca semua data dalam direktori muat turun anda"
+
+msgid "Can read and write all data in the directory"
+msgstr "Boleh membaca dan menulis semua data dalam direktori itu"
+
+msgid "Can read all data in the directory"
+msgstr "Boleh membaca semua data dalam direktori itu"
+
+msgid "No File System Access"
+msgstr "Tiada Capaian Sistem Fail"
+
+msgid "Cannot access the file system at all"
+msgstr "Tidak boleh mengakses sistem fail langsung"
+
+msgid "Uses System Services"
+msgstr "Menggunakan Perkhidmatan Sistem"
+
+msgid "Can request data from non-portal system services"
+msgstr "Boleh meminta data daripada perkhidmatan sistem bukan portal"
+
+msgid "Uses Session Services"
+msgstr "Menggunakan Perkhidmatan Sesi"
+
+msgid "Can request data from non-portal session services"
+msgstr "Boleh meminta data daripada perkhidmatan sesi bukan portal"
+
+msgid "No Service Access"
+msgstr "Tiada Capaian Perkhidmatan"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Tidak boleh mengakses perkhidmatan sesi atau sistem bukan portal langsung"
+
+msgid "Verified App Developer"
+msgstr "Pembangun Aplikasi Disahkan"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Pembangun aplikasi ini telah disahkan sebagai orang yang mereka dakwa"
+
+msgid "Proprietary Code"
+msgstr "Kod Proprietari"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Kod sumber tidak awam, jadi ia tidak boleh diaudit secara bebas dan mungkin tidak selamat"
+
+msgid "Auditable Code"
+msgstr "Kod Boleh Diaudit"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Kod sumber adalah awam dan boleh diaudit secara bebas, yang menjadikan aplikasi lebih berkemungkinan selamat"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Guna Perkhidmatan Sistem %s"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Guna Perkhidmatan Sesi %s"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Guna Perkhidmatan %s"
+
+msgid "Can see the non-portal service"
+msgstr "Boleh melihat perkhidmatan bukan portal"
+
+msgid "Can talk to the non-portal service"
+msgstr "Boleh berkomunikasi dengan perkhidmatan bukan portal"
+
+msgid "Can own the non-portal service"
+msgstr "Boleh memiliki perkhidmatan bukan portal"
+
+msgid "Global Menu Integration"
+msgstr "Integrasi Menu Global"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Boleh memaparkan menunya dalam bar menu global"
+
+msgid "KDE Settings Integration"
+msgstr "Integrasi Tetapan KDE"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Boleh mengesan apabila tetapan desktop KDE berubah"
+
+msgid "KDE Global Settings"
+msgstr "Tetapan Global KDE"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Boleh membaca keutamaan desktop KDE seperti fon dan warna"
+
+msgid "Secret Storage Service"
+msgstr "Perkhidmatan Storan Rahsia"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Boleh menyimpan dan mendapatkan semula kata laluannya sendiri menggunakan gelang kunci sistem"
+
+msgid "Desktop Notifications Service"
+msgstr "Perkhidmatan Pemberitahuan Desktop"
+
+msgid "Can send desktop notifications"
+msgstr "Boleh menghantar pemberitahuan desktop"
+
+msgid "System Tray Integration"
+msgstr "Integrasi Dulang Sistem"
+
+msgid "Can display an icon in the system tray"
+msgstr "Boleh memaparkan ikon dalam dulang sistem"
+
+msgid "KDE Connect Integration"
+msgstr "Integrasi KDE Connect"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Boleh berinteraksi dengan peranti yang dipasangkan melalui KDE Connect"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigasi"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Buka Halaman Teroka"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Buka Halaman Pustaka"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Buka Halaman Carian"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Remote"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Segerakkan Remote"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Umum"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Buka Keutamaan"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Tunjukkan Pintasan"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Tutup Tetingkap"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Keluar Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s Dipasang"
+
+msgid "The app is ready to be used"
+msgstr "Aplikasi sedia untuk digunakan"
+
+msgid "Updates Are Out of Date"
+msgstr "Kemas Kini Sudah Lapuk"
+
+msgid "Please check for available updates"
+msgstr "Sila semak kemas kini yang tersedia"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u Aplikasi Dikemas Kini"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s telah dikemas kini."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s dan %s telah dikemas kini."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Termasuk %s, %s dan %s."

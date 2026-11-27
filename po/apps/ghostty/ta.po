@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Open in Ghostty"
+msgstr "Ghostty-இல் திற"
+
+msgid "Find…"
+msgstr "தேடு…"
+
+msgid "Previous Match"
+msgstr "முந்தைய பொருத்தம்"
+
+msgid "Next Match"
+msgstr "அடுத்த பொருத்தம்"
+
+msgid "Close"
+msgstr "மூடு"
+
+msgid "Oh, no."
+msgstr "அடடா."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "ரெண்டரிங்கிற்கான OpenGL சூழலைப் பெற முடியவில்லை."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "இந்த முனையம் படிக்க-மட்டும் பயன்முறையில் உள்ளது. உள்ளடக்கத்தைப் பார்க்கவும், தேர்ந்தெடுக்கவும், உருட்டவும் முடியும், ஆனால் இயங்கும் பயன்பாட்டுக்கு உள்ளீட்டு நிகழ்வுகள் எதுவும் அனுப்பப்படாது."
+
+msgid "Read-only"
+msgstr "படிக்க-மட்டும்"
+
+msgid "Copy"
+msgstr "நகலெடு"
+
+msgid "Paste"
+msgstr "ஒட்டு"
+
+msgid "Notify on Next Command Finish"
+msgstr "அடுத்த கட்டளை முடிந்ததும் அறிவி"
+
+msgid "Clear"
+msgstr "அழி"
+
+msgid "Reset"
+msgstr "மீட்டமை"
+
+msgid "Split"
+msgstr "பிரி"
+
+msgid "Change Title…"
+msgstr "தலைப்பை மாற்று…"
+
+msgid "Split Up"
+msgstr "மேலே பிரி"
+
+msgid "Split Down"
+msgstr "கீழே பிரி"
+
+msgid "Split Left"
+msgstr "இடதுபுறம் பிரி"
+
+msgid "Split Right"
+msgstr "வலதுபுறம் பிரி"
+
+msgid "Close Split"
+msgstr "பிரிவை மூடு"
+
+msgid "Tab"
+msgstr "தாவல்"
+
+msgid "Change Tab Title…"
+msgstr "தாவல் தலைப்பை மாற்று…"
+
+msgid "New Tab"
+msgstr "புதிய தாவல்"
+
+msgid "Close Tab"
+msgstr "தாவலை மூடு"
+
+msgid "Window"
+msgstr "சாளரம்"
+
+msgid "Change Window Title…"
+msgstr "சாளரத் தலைப்பை மாற்று…"
+
+msgid "New Window"
+msgstr "புதிய சாளரம்"
+
+msgid "Close Window"
+msgstr "சாளரத்தை மூடு"
+
+msgid "Config"
+msgstr "உள்ளமைவு"
+
+msgid "Open Configuration in OS Editor"
+msgstr "OS தொகுப்பானில் உள்ளமைவைத் திற"
+
+msgid "Open Configuration in New Window"
+msgstr "புதிய சாளரத்தில் உள்ளமைவைத் திற"
+
+msgid "Reload Configuration"
+msgstr "உள்ளமைவை மீண்டும் ஏற்று"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ நீங்கள் Ghostty-இன் பிழைத்திருத்த உருவாக்கத்தை இயக்குகிறீர்கள்! செயல்திறன் குறையும்."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: முனைய ஆய்வி"
+
+msgid "New Split"
+msgstr "புதிய பிரிவு"
+
+msgid "View Open Tabs"
+msgstr "திறந்த தாவல்களைக் காட்டு"
+
+msgid "Main Menu"
+msgstr "பிரதான பட்டி"
+
+msgid "Command Palette"
+msgstr "கட்டளைத் தட்டு"
+
+msgid "Terminal Inspector"
+msgstr "முனைய ஆய்வி"
+
+msgid "About Ghostty"
+msgstr "Ghostty பற்றி"
+
+msgid "Quit"
+msgstr "வெளியேறு"
+
+msgid "Authorize Clipboard Access"
+msgstr "கிளிப்போர்டு அணுகலை அங்கீகரி"
+
+msgid "Deny"
+msgstr "மறு"
+
+msgid "Allow"
+msgstr "அனுமதி"
+
+msgid "Remember choice for this split"
+msgstr "இந்தப் பிரிவுக்கான தேர்வை நினைவில் கொள்"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "இந்த அறிவிப்பை மீண்டும் காட்ட உள்ளமைவை மீண்டும் ஏற்று"
+
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+msgid "Execute a command…"
+msgstr "கட்டளையை இயக்கு…"
+
+msgid "Configuration Errors"
+msgstr "உள்ளமைவுப் பிழைகள்"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "ஒன்று அல்லது அதற்கு மேற்பட்ட உள்ளமைவுப் பிழைகள் கண்டறியப்பட்டன. கீழே உள்ள பிழைகளைப் பார்த்து, உங்கள் உள்ளமைவை மீண்டும் ஏற்றவும் அல்லது இந்தப் பிழைகளைப் புறக்கணிக்கவும்."
+
+msgid "Ignore"
+msgstr "புறக்கணி"
+
+msgid "Leave blank to restore the default title."
+msgstr "முன்னிருப்புத் தலைப்பை மீட்டமைக்க காலியாக விடுங்கள்."
+
+msgid "OK"
+msgstr "சரி"
+
+msgid "The keybind was revoked by the system."
+msgstr "விசை இணைப்பை முறைமை திரும்பப் பெற்றது."
+
+msgid "The keybind was denied by the system."
+msgstr "விசை இணைப்பை முறைமை மறுத்தது."
+
+msgid "Global keybind unavailable"
+msgstr "உலகளாவிய விசை இணைப்பு கிடைக்கவில்லை"
+
+msgid "Export Terminal IO Events"
+msgstr "முனைய IO நிகழ்வுகளை ஏற்றுமதி செய்"
+
+msgid "Export"
+msgstr "ஏற்றுமதி செய்"
+
+msgid "Editing configuration file"
+msgstr "உள்ளமைவுக் கோப்பைத் தொகுக்கிறது"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "ஒரு பயன்பாடு கிளிப்போர்டில் எழுத முயற்சிக்கிறது. தற்போதைய கிளிப்போர்டு உள்ளடக்கம் கீழே காட்டப்பட்டுள்ளது."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "ஒரு பயன்பாடு கிளிப்போர்டிலிருந்து படிக்க முயற்சிக்கிறது. தற்போதைய கிளிப்போர்டு உள்ளடக்கம் கீழே காட்டப்பட்டுள்ளது."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "எச்சரிக்கை: பாதுகாப்பற்றதாக இருக்கக்கூடிய ஒட்டுதல்"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "இந்த உரையை முனையத்தில் ஒட்டுவது ஆபத்தாக இருக்கலாம், ஏனெனில் சில கட்டளைகள் இயக்கப்படுவது போலத் தெரிகிறது."
+
+msgid "Quit Ghostty?"
+msgstr "Ghostty-ஐ விட்டு வெளியேறவா?"
+
+msgid "Close Tab?"
+msgstr "தாவலை மூடவா?"
+
+msgid "Close Window?"
+msgstr "சாளரத்தை மூடவா?"
+
+msgid "Close Split?"
+msgstr "பிரிவை மூடவா?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "அனைத்து முனைய அமர்வுகளும் நிறுத்தப்படும்."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "இந்தத் தாவலில் உள்ள அனைத்து முனைய அமர்வுகளும் நிறுத்தப்படும்."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "இந்தச் சாளரத்தில் உள்ள அனைத்து முனைய அமர்வுகளும் நிறுத்தப்படும்."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "இந்தப் பிரிவில் தற்போது இயங்கும் செயல்முறை நிறுத்தப்படும்."
+
+msgid "Command Finished"
+msgstr "கட்டளை முடிந்தது"
+
+msgid "Command Succeeded"
+msgstr "கட்டளை வெற்றிபெற்றது"
+
+msgid "Command Failed"
+msgstr "கட்டளை தோல்வியடைந்தது"
+
+msgid "Change Terminal Title"
+msgstr "முனையத் தலைப்பை மாற்று"
+
+msgid "Change Tab Title"
+msgstr "தாவல் தலைப்பை மாற்று"
+
+msgid "Change Window Title"
+msgstr "சாளரத் தலைப்பை மாற்று"
+
+msgid "Reloaded the configuration"
+msgstr "உள்ளமைவு மீண்டும் ஏற்றப்பட்டது"
+
+msgid "Copied to clipboard"
+msgstr "கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது"
+
+msgid "Cleared clipboard"
+msgstr "கிளிப்போர்டு அழிக்கப்பட்டது"
+
+msgid "Ghostty Developers"
+msgstr "Ghostty உருவாக்குநர்கள்"
+
+msgid "Reset Terminal"
+msgstr "முனையத்தை மீட்டமை"
+
+msgid "Reset the terminal to a clean state."
+msgstr "முனையத்தைச் சுத்தமான நிலைக்கு மீட்டமை."
+
+msgid "Copy to Clipboard"
+msgstr "கிளிப்போர்டுக்கு நகலெடு"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "தேர்ந்தெடுத்த உரையை எளிய மற்றும் வடிவூட்டப்பட்ட இரு வடிவங்களிலும் கிளிப்போர்டுக்கு நகலெடு."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "தேர்வை எளிய உரையாகக் கிளிப்போர்டுக்கு நகலெடு"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "தேர்ந்தெடுத்த உரையை எளிய உரையாகக் கிளிப்போர்டுக்கு நகலெடு."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "தேர்வை ANSI தொடர்களாகக் கிளிப்போர்டுக்கு நகலெடு"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "தேர்ந்தெடுத்த உரையை ANSI escape தொடர்களாகக் கிளிப்போர்டுக்கு நகலெடு."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "தேர்வை HTML ஆகக் கிளிப்போர்டுக்கு நகலெடு"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "தேர்ந்தெடுத்த உரையை HTML ஆகக் கிளிப்போர்டுக்கு நகலெடு."
+
+msgid "Copy URL to Clipboard"
+msgstr "URL-ஐக் கிளிப்போர்டுக்கு நகலெடு"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "சுட்டிக்காட்டி உள்ள URL-ஐக் கிளிப்போர்டுக்கு நகலெடு."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "முனையத் தலைப்பைக் கிளிப்போர்டுக்கு நகலெடு"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "முனையத் தலைப்பைக் கிளிப்போர்டுக்கு நகலெடு. முனையத் தலைப்பு அமைக்கப்படவில்லை என்றால் இதனால் எந்த விளைவும் இல்லை."
+
+msgid "Paste from Clipboard"
+msgstr "கிளிப்போர்டிலிருந்து ஒட்டு"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "முதன்மைக் கிளிப்போர்டின் உள்ளடக்கத்தை ஒட்டு."
+
+msgid "Paste from Selection"
+msgstr "தேர்விலிருந்து ஒட்டு"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "தேர்வுக் கிளிப்போர்டின் உள்ளடக்கத்தை ஒட்டு."
+
+msgid "Start Search"
+msgstr "தேடலைத் தொடங்கு"
+
+msgid "Start a search if one isn't already active."
+msgstr "செயலில் தேடல் எதுவும் இல்லையெனில் ஒரு தேடலைத் தொடங்கு."
+
+msgid "Search Selection"
+msgstr "தேர்வைத் தேடு"
+
+msgid "Start a search for the current text selection."
+msgstr "தற்போதைய உரைத் தேர்வுக்கான தேடலைத் தொடங்கு."
+
+msgid "End Search"
+msgstr "தேடலை முடி"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "தற்போதைய தேடல் ஏதேனும் இருந்தால் அதை முடித்து, அனைத்து GUI உறுப்புகளையும் மறை."
+
+msgid "Next Search Result"
+msgstr "அடுத்த தேடல் முடிவு"
+
+msgid "Navigate to the next search result, if any."
+msgstr "அடுத்த தேடல் முடிவு இருந்தால் அதற்குச் செல்."
+
+msgid "Previous Search Result"
+msgstr "முந்தைய தேடல் முடிவு"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "முந்தைய தேடல் முடிவு இருந்தால் அதற்குச் செல்."
+
+msgid "Increase Font Size"
+msgstr "எழுத்துரு அளவை அதிகரி"
+
+msgid "Increase the font size by 1 point."
+msgstr "எழுத்துரு அளவை 1 புள்ளி அதிகரி."
+
+msgid "Decrease Font Size"
+msgstr "எழுத்துரு அளவைக் குறை"
+
+msgid "Decrease the font size by 1 point."
+msgstr "எழுத்துரு அளவை 1 புள்ளி குறை."
+
+msgid "Reset Font Size"
+msgstr "எழுத்துரு அளவை மீட்டமை"
+
+msgid "Reset the font size to the default."
+msgstr "எழுத்துரு அளவை முன்னிருப்புக்கு மீட்டமை."
+
+msgid "Clear Screen"
+msgstr "திரையை அழி"
+
+msgid "Clear the screen and scrollback."
+msgstr "திரையையும் உருட்டு வரலாற்றையும் அழி."
+
+msgid "Select All"
+msgstr "அனைத்தையும் தேர்ந்தெடு"
+
+msgid "Select all text on the screen."
+msgstr "திரையில் உள்ள அனைத்து உரையையும் தேர்ந்தெடு."
+
+msgid "Scroll to Top"
+msgstr "மேலே உருட்டு"
+
+msgid "Scroll to the top of the screen."
+msgstr "திரையின் மேல்பகுதிக்கு உருட்டு."
+
+msgid "Scroll to Bottom"
+msgstr "கீழே உருட்டு"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "திரையின் கீழ்ப்பகுதிக்கு உருட்டு."
+
+msgid "Scroll to Selection"
+msgstr "தேர்வுக்கு உருட்டு"
+
+msgid "Scroll to the selected text."
+msgstr "தேர்ந்தெடுத்த உரைக்கு உருட்டு."
+
+msgid "Scroll Page Up"
+msgstr "பக்கம் மேலே உருட்டு"
+
+msgid "Scroll the screen up by a page."
+msgstr "திரையை ஒரு பக்கம் மேலே உருட்டு."
+
+msgid "Scroll Page Down"
+msgstr "பக்கம் கீழே உருட்டு"
+
+msgid "Scroll the screen down by a page."
+msgstr "திரையை ஒரு பக்கம் கீழே உருட்டு."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "திரையைத் தற்காலிகக் கோப்புக்கு நகலெடுத்து பாதையை நகலெடு"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "திரை உள்ளடக்கத்தைத் தற்காலிகக் கோப்புக்கு நகலெடுத்து, பாதையைக் கிளிப்போர்டுக்கு நகலெடு."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "திரையைத் தற்காலிகக் கோப்புக்கு நகலெடுத்து பாதையை ஒட்டு"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "திரை உள்ளடக்கத்தைத் தற்காலிகக் கோப்புக்கு நகலெடுத்து, கோப்பின் பாதையை ஒட்டு."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "திரையைத் தற்காலிகக் கோப்புக்கு நகலெடுத்துத் திற"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "திரை உள்ளடக்கத்தைத் தற்காலிகக் கோப்புக்கு நகலெடுத்து அதைத் திற."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "திரையை HTML ஆகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து பாதையை நகலெடு"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "திரை உள்ளடக்கத்தை HTML ஆகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து, பாதையைக் கிளிப்போர்டுக்கு நகலெடு."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "திரையை HTML ஆகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து பாதையை ஒட்டு"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "திரை உள்ளடக்கத்தை HTML ஆகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து, கோப்பின் பாதையை ஒட்டு."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "திரையை HTML ஆகத் தற்காலிகக் கோப்புக்கு நகலெடுத்துத் திற"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "திரை உள்ளடக்கத்தை HTML ஆகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து அதைத் திற."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "திரையை ANSI தொடர்களாகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து பாதையை நகலெடு"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "திரை உள்ளடக்கத்தை ANSI escape தொடர்களாகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து, பாதையைக் கிளிப்போர்டுக்கு நகலெடு."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "திரையை ANSI தொடர்களாகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து பாதையை ஒட்டு"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "திரை உள்ளடக்கத்தை ANSI escape தொடர்களாகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து, கோப்பின் பாதையை ஒட்டு."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "திரையை ANSI தொடர்களாகத் தற்காலிகக் கோப்புக்கு நகலெடுத்துத் திற"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "திரை உள்ளடக்கத்தை ANSI escape தொடர்களாகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து அதைத் திற."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "தேர்வைத் தற்காலிகக் கோப்புக்கு நகலெடுத்து பாதையை நகலெடு"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "தேர்வின் உள்ளடக்கத்தைத் தற்காலிகக் கோப்புக்கு நகலெடுத்து, பாதையைக் கிளிப்போர்டுக்கு நகலெடு."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "தேர்வைத் தற்காலிகக் கோப்புக்கு நகலெடுத்து பாதையை ஒட்டு"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "தேர்வின் உள்ளடக்கத்தைத் தற்காலிகக் கோப்புக்கு நகலெடுத்து, கோப்பின் பாதையை ஒட்டு."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "தேர்வைத் தற்காலிகக் கோப்புக்கு நகலெடுத்துத் திற"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "தேர்வின் உள்ளடக்கத்தைத் தற்காலிகக் கோப்புக்கு நகலெடுத்து அதைத் திற."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "தேர்வை HTML ஆகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து பாதையை நகலெடு"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "தேர்வின் உள்ளடக்கத்தை HTML ஆகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து, பாதையைக் கிளிப்போர்டுக்கு நகலெடு."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "தேர்வை HTML ஆகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து பாதையை ஒட்டு"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "தேர்வின் உள்ளடக்கத்தை HTML ஆகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து, கோப்பின் பாதையை ஒட்டு."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "தேர்வை HTML ஆகத் தற்காலிகக் கோப்புக்கு நகலெடுத்துத் திற"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "தேர்வின் உள்ளடக்கத்தை HTML ஆகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து அதைத் திற."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "தேர்வை ANSI தொடர்களாகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து பாதையை நகலெடு"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "தேர்வின் உள்ளடக்கத்தை ANSI escape தொடர்களாகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து, பாதையைக் கிளிப்போர்டுக்கு நகலெடு."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "தேர்வை ANSI தொடர்களாகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து பாதையை ஒட்டு"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "தேர்வின் உள்ளடக்கத்தை ANSI escape தொடர்களாகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து, கோப்பின் பாதையை ஒட்டு."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "தேர்வை ANSI தொடர்களாகத் தற்காலிகக் கோப்புக்கு நகலெடுத்துத் திற"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "தேர்வின் உள்ளடக்கத்தை ANSI escape தொடர்களாகத் தற்காலிகக் கோப்புக்கு நகலெடுத்து அதைத் திற."
+
+msgid "Open a new window."
+msgstr "புதிய சாளரத்தைத் திற."
+
+msgid "Open a new tab."
+msgstr "புதிய தாவலைத் திற."
+
+msgid "Move Tab Left"
+msgstr "தாவலை இடதுபுறம் நகர்த்து"
+
+msgid "Move the current tab to the left."
+msgstr "தற்போதைய தாவலை இடதுபுறம் நகர்த்து."
+
+msgid "Move Tab Right"
+msgstr "தாவலை வலதுபுறம் நகர்த்து"
+
+msgid "Move the current tab to the right."
+msgstr "தற்போதைய தாவலை வலதுபுறம் நகர்த்து."
+
+msgid "Move Tab to New Window"
+msgstr "தாவலைப் புதிய சாளரத்துக்கு நகர்த்து"
+
+msgid "Move the current tab to a new window."
+msgstr "தற்போதைய தாவலைப் புதிய சாளரத்துக்கு நகர்த்து."
+
+msgid "Toggle Tab Overview"
+msgstr "தாவல் மேலோட்டத்தை நிலைமாற்று"
+
+msgid "Toggle the tab overview."
+msgstr "தாவல் மேலோட்டத்தை நிலைமாற்று."
+
+msgid "Change Terminal Title…"
+msgstr "முனையத் தலைப்பை மாற்று…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "தற்போதைய முனையத்துக்குப் புதிய தலைப்பைக் கேள்."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "தற்போதைய தாவலுக்குப் புதிய தலைப்பைக் கேள்."
+
+msgid "Split the terminal to the left."
+msgstr "முனையத்தை இடதுபுறம் பிரி."
+
+msgid "Split the terminal to the right."
+msgstr "முனையத்தை வலதுபுறம் பிரி."
+
+msgid "Split the terminal up."
+msgstr "முனையத்தை மேலே பிரி."
+
+msgid "Split the terminal down."
+msgstr "முனையத்தைக் கீழே பிரி."
+
+msgid "Focus Split: Previous"
+msgstr "பிரிவுக் குவிமையம்: முந்தையது"
+
+msgid "Focus the previous split, if any."
+msgstr "முந்தைய பிரிவு இருந்தால் அதற்குக் குவிமையத்தை மாற்று."
+
+msgid "Focus Split: Next"
+msgstr "பிரிவுக் குவிமையம்: அடுத்தது"
+
+msgid "Focus the next split, if any."
+msgstr "அடுத்த பிரிவு இருந்தால் அதற்குக் குவிமையத்தை மாற்று."
+
+msgid "Focus Split: Left"
+msgstr "பிரிவுக் குவிமையம்: இடது"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "இடதுபுறப் பிரிவு இருந்தால் அதற்குக் குவிமையத்தை மாற்று."
+
+msgid "Focus Split: Right"
+msgstr "பிரிவுக் குவிமையம்: வலது"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "வலதுபுறப் பிரிவு இருந்தால் அதற்குக் குவிமையத்தை மாற்று."
+
+msgid "Focus Split: Up"
+msgstr "பிரிவுக் குவிமையம்: மேலே"
+
+msgid "Focus the split above, if it exists."
+msgstr "மேலே உள்ள பிரிவு இருந்தால் அதற்குக் குவிமையத்தை மாற்று."
+
+msgid "Focus Split: Down"
+msgstr "பிரிவுக் குவிமையம்: கீழே"
+
+msgid "Focus the split below, if it exists."
+msgstr "கீழே உள்ள பிரிவு இருந்தால் அதற்குக் குவிமையத்தை மாற்று."
+
+msgid "Focus Window: Previous"
+msgstr "சாளரக் குவிமையம்: முந்தையது"
+
+msgid "Focus the previous window, if any."
+msgstr "முந்தைய சாளரம் இருந்தால் அதற்குக் குவிமையத்தை மாற்று."
+
+msgid "Focus Window: Next"
+msgstr "சாளரக் குவிமையம்: அடுத்தது"
+
+msgid "Focus the next window, if any."
+msgstr "அடுத்த சாளரம் இருந்தால் அதற்குக் குவிமையத்தை மாற்று."
+
+msgid "Toggle Split Zoom"
+msgstr "பிரிவு பெரிதாக்கத்தை நிலைமாற்று"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "தற்போதைய பிரிவின் பெரிதாக்க நிலையை நிலைமாற்று."
+
+msgid "Toggle Read-Only Mode"
+msgstr "படிக்க-மட்டும் பயன்முறையை நிலைமாற்று"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "தற்போதைய மேற்பரப்புக்கான படிக்க-மட்டும் பயன்முறையை நிலைமாற்று."
+
+msgid "Equalize Splits"
+msgstr "பிரிவுகளைச் சமமாக்கு"
+
+msgid "Equalize the size of all splits."
+msgstr "அனைத்துப் பிரிவுகளின் அளவையும் சமமாக்கு."
+
+msgid "Reset Window Size"
+msgstr "சாளர அளவை மீட்டமை"
+
+msgid "Reset the window size to the default."
+msgstr "சாளர அளவை முன்னிருப்புக்கு மீட்டமை."
+
+msgid "Toggle Inspector"
+msgstr "ஆய்வியை நிலைமாற்று"
+
+msgid "Toggle the inspector."
+msgstr "ஆய்வியை நிலைமாற்று."
+
+msgid "Show the GTK Inspector"
+msgstr "GTK ஆய்வியைக் காட்டு"
+
+msgid "Show the GTK inspector."
+msgstr "GTK ஆய்வியைக் காட்டு."
+
+msgid "Show On-Screen Keyboard"
+msgstr "திரை விசைப்பலகையைக் காட்டு"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "திரை விசைப்பலகை இருந்தால் அதைக் காட்டு."
+
+msgid "Open Config Using OS editor"
+msgstr "OS தொகுப்பானைப் பயன்படுத்தி உள்ளமைவைத் திற"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "உள்ளமைவுக் கோப்பை OS-இன் முன்னிருப்புத் தொகுப்பானில் திற."
+
+msgid "Open Config in New Terminal Window"
+msgstr "புதிய முனையச் சாளரத்தில் உள்ளமைவைத் திற"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "$EDITOR அல்லது $VISUAL-ஐப் பயன்படுத்தி உள்ளமைவுக் கோப்பைப் புதிய சாளரத்தில் திற."
+
+msgid "Reload Config"
+msgstr "உள்ளமைவை மீண்டும் ஏற்று"
+
+msgid "Reload the config file."
+msgstr "உள்ளமைவுக் கோப்பை மீண்டும் ஏற்று."
+
+msgid "Close Terminal"
+msgstr "முனையத்தை மூடு"
+
+msgid "Close the current terminal."
+msgstr "தற்போதைய முனையத்தை மூடு."
+
+msgid "Close the current tab."
+msgstr "தற்போதைய தாவலை மூடு."
+
+msgid "Close Other Tabs"
+msgstr "மற்ற தாவல்களை மூடு"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "தற்போதையதைத் தவிர இந்தச் சாளரத்தில் உள்ள அனைத்துத் தாவல்களையும் மூடு."
+
+msgid "Close Tabs to the Right"
+msgstr "வலதுபுறத் தாவல்களை மூடு"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "தற்போதைய தாவலின் வலதுபுறம் உள்ள அனைத்துத் தாவல்களையும் மூடு."
+
+msgid "Close the current window."
+msgstr "தற்போதைய சாளரத்தை மூடு."
+
+msgid "Close All Windows"
+msgstr "அனைத்துச் சாளரங்களையும் மூடு"
+
+msgid "Close all windows."
+msgstr "அனைத்துச் சாளரங்களையும் மூடு."
+
+msgid "Toggle Maximize"
+msgstr "பெரிதாக்கலை நிலைமாற்று"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "தற்போதைய சாளரத்தின் பெரிதாக்க நிலையை நிலைமாற்று."
+
+msgid "Toggle Fullscreen"
+msgstr "முழுத்திரையை நிலைமாற்று"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "தற்போதைய சாளரத்தின் முழுத்திரை நிலையை நிலைமாற்று."
+
+msgid "Toggle Window Decorations"
+msgstr "சாளர அலங்காரங்களை நிலைமாற்று"
+
+msgid "Toggle the window decorations."
+msgstr "சாளர அலங்காரங்களை நிலைமாற்று."
+
+msgid "Toggle Float on Top"
+msgstr "மேலே மிதப்பதை நிலைமாற்று"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "தற்போதைய சாளரத்தின் மேலே மிதக்கும் நிலையை நிலைமாற்று."
+
+msgid "Toggle Secure Input"
+msgstr "பாதுகாப்பான உள்ளீட்டை நிலைமாற்று"
+
+msgid "Toggle secure input mode."
+msgstr "பாதுகாப்பான உள்ளீட்டுப் பயன்முறையை நிலைமாற்று."
+
+msgid "Toggle Mouse Reporting"
+msgstr "சுட்டி அறிக்கையிடலை நிலைமாற்று"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "சுட்டி நிகழ்வுகள் முனையப் பயன்பாடுகளுக்கு அறிக்கையிடப்படுமா என்பதை நிலைமாற்று."
+
+msgid "Toggle Background Opacity"
+msgstr "பின்னணி ஒளிபுகாமையை நிலைமாற்று"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "ஒளிஊடுருவும் நிலையில் தொடங்கிய சாளரத்தின் பின்னணி ஒளிபுகாமையை நிலைமாற்று."
+
+msgid "Check for Updates"
+msgstr "புதுப்பிப்புகளைத் தேடு"
+
+msgid "Check for updates to the application."
+msgstr "பயன்பாட்டுக்கான புதுப்பிப்புகளைத் தேடு."
+
+msgid "Undo"
+msgstr "செயல்தவிர்"
+
+msgid "Undo the last action."
+msgstr "கடைசிச் செயலைச் செயல்தவிர்."
+
+msgid "Redo"
+msgstr "மீண்டும் செய்"
+
+msgid "Redo the last undone action."
+msgstr "செயல்தவிர்த்த கடைசிச் செயலை மீண்டும் செய்."
+
+msgid "Quit the application."
+msgstr "பயன்பாட்டிலிருந்து வெளியேறு."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "உங்கள் முனையத்தில் கொஞ்சம் Ghostty சேர்த்துக்கொள்ளுங்கள்."

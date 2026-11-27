@@ -1,0 +1,2608 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "Programėlių parduotuvė"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "Pridėti, pašalinti arba atnaujinti flatpak programinę įrangą šiame kompiuteryje"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Sistema;Paketas;Tvarkyklė;Tvarkytuvė;Atrasti;Flatpak;Programinė įranga;Programa;Parduotuvė;"
+
+msgid "New Window"
+msgstr "Naujas langas"
+
+msgid "Discover and install apps"
+msgstr "Atraskite ir įdiekite programas"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Sparti ir moderni Linux programų parduotuvė, orientuota į Flatpak programų ir priedų atradimą bei diegimą, ypač iš Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Eilėje laikykite kelis diegimus ir toliau naršykite"
+
+msgid "Easily view app permissions"
+msgstr "Lengvai peržiūrėkite programų leidimus"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Prisijunkite prie Flathub, kad peržiūrėtumėte ir tvarkytumėte savo mėgstamas"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Ieškokite programų tiesiai iš GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Pradžios puslapis, rodantis Flathub programas"
+
+msgid "App page for Exhibit"
+msgstr "Exhibit programos puslapis"
+
+msgid "Library page"
+msgstr "Bibliotekos puslapis"
+
+msgid "Search page"
+msgstr "Paieškos puslapis"
+
+msgid "Category page"
+msgstr "Kategorijos puslapis"
+
+msgid "Stopped Receiving Updates"
+msgstr "Nebegauna naujinimų"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Pašalinti"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Įdiegti"
+
+msgid "Add-on"
+msgstr "Priedas"
+
+msgid "Manage Add-Ons"
+msgstr "Tvarkyti priedus"
+
+msgid "No Add-Ons Visible"
+msgstr "Nematomų priedų nėra"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "Dabartinės filtro nuostatos slepia visus žinomus priedus. Pabandykite jas pakeisti."
+
+msgid "Add-on Page"
+msgstr "Priedo puslapis"
+
+msgid "Download"
+msgstr "Atsisiųsti"
+
+msgid "Installed"
+msgstr "Įdiegta"
+
+msgid "Downloads/Month"
+msgstr "Atsisiuntimų per mėnesį"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Nebegauna pagrindinių naujinimų"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Šis priedas naudoja vykdymo aplinką, kuri nebegauna naujinimų ar saugumo pataisų. Jį naudoti gali tapti nesaugu."
+
+msgid "Other Sources"
+msgstr "Kiti šaltiniai"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Priedas, skirtas %s"
+
+msgid "Show Less"
+msgstr "Rodyti mažiau"
+
+msgid "Show More"
+msgstr "Rodyti daugiau"
+
+msgid "Download Stats"
+msgstr "Atsisiuntimų statistika"
+
+msgid "Age Rating"
+msgstr "Amžiaus reitingas"
+
+msgid "Cartoon Violence"
+msgstr "Animacinis smurtas"
+
+msgid "No information regarding cartoon violence"
+msgstr "Informacijos apie animacinį smurtą nėra"
+
+msgid "Fantasy Violence"
+msgstr "Fantazinis smurtas"
+
+msgid "No information regarding fantasy violence"
+msgstr "Informacijos apie fantazinį smurtą nėra"
+
+msgid "Realistic Violence"
+msgstr "Realistinis smurtas"
+
+msgid "No information regarding realistic violence"
+msgstr "Informacijos apie realistinį smurtą nėra"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "Smurtas su kraujo praliejimu"
+
+msgid "No information regarding bloodshed"
+msgstr "Informacijos apie kraujo praliejimą nėra"
+
+msgid "Sexual Violence"
+msgstr "Seksualinis smurtas"
+
+msgid "No information regarding sexual violence"
+msgstr "Informacijos apie seksualinį smurtą nėra"
+
+msgid "Alcohol"
+msgstr "Alkoholis"
+
+msgid "No information regarding references to alcohol"
+msgstr "Informacijos apie užuominas į alkoholį nėra"
+
+msgid "Narcotics"
+msgstr "Narkotikai"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "Informacijos apie užuominas į neteisėtus narkotikus nėra"
+
+msgid "Tobacco"
+msgstr "Tabakas"
+
+msgid "No information regarding references to tobacco products"
+msgstr "Informacijos apie užuominas į tabako gaminius nėra"
+
+msgid "Nudity"
+msgstr "Nuogumas"
+
+msgid "No information regarding nudity of any sort"
+msgstr "Informacijos apie bet kokį nuogumą nėra"
+
+msgid "Sexual Themes"
+msgstr "Seksualinės temos"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "Informacijos apie seksualinio pobūdžio užuominas ar vaizdavimą nėra"
+
+msgid "Profanity"
+msgstr "Keiksmažodžiai"
+
+msgid "No information regarding profanity of any kind"
+msgstr "Informacijos apie bet kokius keiksmažodžius nėra"
+
+msgid "Inappropriate Humor"
+msgstr "Netinkamas humoras"
+
+msgid "No information regarding inappropriate humor"
+msgstr "Informacijos apie netinkamą humorą nėra"
+
+msgid "Discrimination"
+msgstr "Diskriminacija"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "Informacijos apie bet kokią diskriminuojančią kalbą nėra"
+
+msgid "Advertising"
+msgstr "Reklama"
+
+msgid "No information regarding advertising of any kind"
+msgstr "Informacijos apie bet kokią reklamą nėra"
+
+msgid "Gambling"
+msgstr "Azartiniai lošimai"
+
+msgid "No information regarding gambling of any kind"
+msgstr "Informacijos apie bet kokius azartinius lošimus nėra"
+
+msgid "Purchasing"
+msgstr "Pirkimas"
+
+msgid "No information regarding the ability to spend money"
+msgstr "Informacijos apie galimybę išleisti pinigus nėra"
+
+msgid "Chat Between Users"
+msgstr "Pokalbiai tarp naudotojų"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "Informacijos apie galimybes kalbėtis raštu su kitais naudotojais nėra"
+
+msgid "Audio Chat Between Users"
+msgstr "Garso pokalbiai tarp naudotojų"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "Informacijos apie galimybes kalbėtis su kitais naudotojais nėra"
+
+msgid "Contact Details"
+msgstr "Kontaktiniai duomenys"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "Informacijos apie socialinių tinklų naudotojo vardų ar el. pašto adresų bendrinimą nėra"
+
+msgid "Identifying Information"
+msgstr "Identifikuojanti informacija"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "Informacijos apie naudotojo informacijos bendrinimą su trečiosiomis šalimis nėra"
+
+msgid "Location Sharing"
+msgstr "Buvimo vietos bendrinimas"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "Informacijos apie fizinės buvimo vietos bendrinimą su kitais naudotojais nėra"
+
+msgid "Prostitution"
+msgstr "Prostitucija"
+
+msgid "No information regarding references to prostitution"
+msgstr "Informacijos apie užuominas į prostituciją nėra"
+
+msgid "Adultery"
+msgstr "Svetimavimas"
+
+msgid "No information regarding references to adultery"
+msgstr "Informacijos apie užuominas į svetimavimą nėra"
+
+msgid "Sexualized Characters"
+msgstr "Seksualizuoti veikėjai"
+
+msgid "No information regarding sexualized characters"
+msgstr "Informacijos apie seksualizuotus veikėjus nėra"
+
+msgid "Desecration"
+msgstr "Šventvagystė"
+
+msgid "No information regarding references to desecration"
+msgstr "Informacijos apie užuominas į šventvagystę nėra"
+
+msgid "Human Remains"
+msgstr "Žmonių palaikai"
+
+msgid "No information regarding visible dead human remains"
+msgstr "Informacijos apie matomus mirusių žmonių palaikus nėra"
+
+msgid "Slavery"
+msgstr "Vergovė"
+
+msgid "No information regarding references to slavery"
+msgstr "Informacijos apie užuominas į vergovę nėra"
+
+msgid "Does not include references to drugs"
+msgstr "Nėra nuorodų į narkotikus"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "Nėra keiksmų, necenzūrinės leksikos ir kitokios šiurkščios kalbos"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "Nėra reklamos ar piniginių sandorių"
+
+msgid "Does not include sex or nudity"
+msgstr "Nėra seksualinio turinio ar nuogumo"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "Nėra nekontroliuojamų pokalbių galimybių"
+
+msgid "Does not include violence"
+msgstr "Nėra smurto"
+
+msgid "Drugs"
+msgstr "Narkotikai"
+
+msgid "Strong Language"
+msgstr "Šiurkšti kalba"
+
+msgid "Money"
+msgstr "Pinigai"
+
+msgid "Social"
+msgstr "Socialumas"
+
+msgid "Violence"
+msgstr "Smurtas"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "Visi"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s amžiaus reitingas nežinomas"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s tinka visiems"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s tinka mažiems vaikams"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s tinka vaikams"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s tinka paaugliams"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s tinka suaugusiesiems"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s tinka: %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "Sistemos aplankas %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Namų poaplankis %s"
+
+msgid "Host system folders"
+msgstr "Pagrindinės sistemos aplankai"
+
+msgid "Host system configuration from /etc"
+msgstr "Pagrindinės sistemos konfigūracija iš /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Darbalaukio poaplankis %s"
+
+msgid "Desktop folder"
+msgstr "Darbalaukio aplankas"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "Dokumentų poaplankis %s"
+
+msgid "Documents folder"
+msgstr "Dokumentų aplankas"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "Muzikos poaplankis %s"
+
+msgid "Music folder"
+msgstr "Muzikos aplankas"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "Paveikslėlių poaplankis %s"
+
+msgid "Pictures folder"
+msgstr "Paveikslėlių aplankas"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "Viešo bendrinimo poaplankis %s"
+
+msgid "Public Share folder"
+msgstr "Viešo bendrinimo aplankas"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "Vaizdo įrašų poaplankis %s"
+
+msgid "Videos folder"
+msgstr "Vaizdo įrašų aplankas"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "Šablonų poaplankis %s"
+
+msgid "Templates folder"
+msgstr "Šablonų aplankas"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Naudotojo podėlio poaplankis %s"
+
+msgid "User cache folder"
+msgstr "Naudotojo podėlio aplankas"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Naudotojo konfigūracijos poaplankis %s"
+
+msgid "User configuration folder"
+msgstr "Naudotojo konfigūracijos aplankas"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Naudotojo duomenų poaplankis %s"
+
+msgid "User data folder"
+msgstr "Naudotojo duomenų aplankas"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Naudotojo vykdymo laiko poaplankis %s"
+
+msgid "User runtime folder"
+msgstr "Naudotojo vykdymo laiko aplankas"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Prieiga prie failų sistemos: %s"
+
+msgid "Unknown filesystem path"
+msgstr "Nežinomas failų sistemos kelias"
+
+msgid "Download Size"
+msgstr "Atsisiuntimo dydis"
+
+msgid "Installed Size"
+msgstr "Įdiegtas dydis"
+
+msgid "Amount to download from the internet"
+msgstr "Iš interneto atsisiunčiamas kiekis"
+
+msgid "Size on Disk"
+msgstr "Dydis diske"
+
+msgid "Open user data folder"
+msgstr "Atidaryti naudotojo duomenų aplanką"
+
+msgid "Your User Data"
+msgstr "Jūsų naudotojo duomenys"
+
+msgid "Caches, settings, and other app data"
+msgstr "Podėliai, nustatymai ir kiti programos duomenys"
+
+msgid "Cache"
+msgstr "Podėlis"
+
+msgid "Temporary cached data"
+msgstr "Laikini podėlio duomenys"
+
+msgid "Clear Cache"
+msgstr "Išvalyti podėlį"
+
+msgid "Installed Runtime Size"
+msgstr "Įdiegtos vykdymo aplinkos dydis"
+
+msgid "Runtime Download Size"
+msgstr "Vykdymo aplinkos atsisiuntimo dydis"
+
+msgid "N/A"
+msgstr "Nėra duomenų"
+
+msgid "Storage"
+msgstr "Saugykla"
+
+msgid "Verified"
+msgstr "Patikrinta"
+
+msgid "The Bazaar Contributors"
+msgstr "Bazaar bendradarbiai"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "Ypatingas ačiū"
+
+msgid "Logged Out Successfully!"
+msgstr "Sėkmingai atsijungta!"
+
+msgid "Performing setup…"
+msgstr "Atliekamas nustatymas…"
+
+msgid "Set Up Flathub?"
+msgstr "Nustatyti Flathub?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub šioje sistemoje nenustatytas. Jei jis nepasiekiamas, negalėsite naršyti ir diegti programų Bazaar.\n"
+"\n"
+"Vis tiek galite naudoti Bazaar jau įdiegtoms programoms naršyti ir šalinti."
+
+msgid "Later"
+msgstr "Vėliau"
+
+msgid "Set Up Flathub"
+msgstr "Nustatyti Flathub"
+
+msgid "A backend error occurred"
+msgstr "Įvyko vidinė klaida"
+
+msgid "Refreshing…"
+msgstr "Atnaujinama…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "Įkeliama programų: %d…"
+
+msgid "Failed to open file"
+msgstr "Nepavyko atidaryti failo"
+
+msgid "Failed to load metainfo"
+msgstr "Nepavyko įkelti metainformacijos"
+
+msgid "An initialization error occurred"
+msgstr "Įvyko inicijavimo klaida"
+
+msgid "Checking for updates…"
+msgstr "Tikrinama, ar yra naujinimų…"
+
+msgid "Failed to check for updates"
+msgstr "Nepavyko patikrinti, ar yra naujinimų"
+
+msgid "Could not find app"
+msgstr "Nepavyko rasti programos"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Įkeliama %d programa…"
+msgstr[1] "Įkeliamos %d programos…"
+msgstr[2] "Įkeliama %d programų…"
+
+msgid "Writing to cache…"
+msgstr "Rašoma į podėlį…"
+
+msgid "Removing remote…"
+msgstr "Pašalinama saugykla…"
+
+msgid "Could not remove remote"
+msgstr "Nepavyko pašalinti saugyklos"
+
+msgid "Show All"
+msgstr "Rodyti viską"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Visos „%s“"
+
+#, c-format
+msgid "%d Applications"
+msgstr "Programų: %d"
+
+msgid "Failed to Load Article"
+msgstr "Nepavyko įkelti straipsnio"
+
+msgid "All apps are already installed"
+msgstr "Visos programos jau įdiegtos"
+
+msgid "_OK"
+msgstr "_Gerai"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Įdiegti %u programą?"
+msgstr[1] "Įdiegti %u programas?"
+msgstr[2] "Įdiegti %u programų?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Bus įdiegta toliau nurodyta. Taip pat gali būti įdiegta papildomų bendrų komponentų"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "Bus įdiegta priedų: %d."
+
+msgid "Additionally, addons will be installed."
+msgstr "Taip pat bus įdiegti priedai."
+
+msgid "_Cancel"
+msgstr "_Atsisakyti"
+
+msgid "_Install All"
+msgstr "Įdiegti _viską"
+
+msgid "Bundle Installation"
+msgstr "Paketo diegimas"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Papildomos priklausomybės gali užimti papildomos vietos"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Šios programos diegimui gali reikėti pridėti naują programinės įrangos šaltinį. Kitos šio šaltinio programos bus rodomos Bazaar.\n"
+"\n"
+"Pridėkite šį šaltinį tik jei esate tikri, kad juo pasitikite."
+
+msgid "Successfully Installed!"
+msgstr "Sėkmingai įdiegta!"
+
+msgid "Open"
+msgstr "Atidaryti"
+
+msgid "Show App Details"
+msgstr "Rodyti programos informaciją"
+
+msgid "Already Installed"
+msgstr "Jau įdiegta"
+
+msgid "Installation Failed"
+msgstr "Įdiegti nepavyko"
+
+msgid "Unknown install size"
+msgstr "Nežinomas diegimo dydis"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Diegimui reikės maždaug %s"
+
+msgid "No special permissions"
+msgstr "Jokių ypatingų leidimų"
+
+msgid "Place Applet"
+msgstr "Įdėti programėlę"
+
+msgid "Choose where to add this applet."
+msgstr "Pasirinkite, kur pridėti šią programėlę."
+
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+msgid "Panel"
+msgstr "Skydelis"
+
+msgid "Dock"
+msgstr "Dokas"
+
+msgid "No Curation"
+msgstr "Nėra kuravimo"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Šioje sistemoje kuravimo informacijos nėra. Vis tiek galite naršyti programas Flathub"
+
+msgid "Browse Flathub"
+msgstr "Naršyti Flathub"
+
+msgid "Offline"
+msgstr "Neprisijungta"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s – %s, daugiausia %s su %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*f tūkst."
+
+msgid "Installs:"
+msgstr "Diegimų:"
+
+msgid "Not Verified"
+msgstr "Nepatikrinta"
+
+msgid "Developer information not available."
+msgstr "Informacijos apie kūrėją nėra."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "Programos ID %s nuosavybė nepatikrinta, tai gali būti bendruomenės paketas."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "Programos ID %s nuosavybę rankiniu būdu patikrino Flathub komanda."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "Programos ID %1$s nuosavybę <b>%3$s</b> patikrino <b>%2$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Programos ID %1$s nuosavybė patikrinta naudojant %2$s."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "Programos ID %s nuosavybė patikrinta."
+
+msgid "Bazaar Release"
+msgstr "Bazaar leidimas"
+
+msgid "Full Release Notes"
+msgstr "Visos leidimo pastabos"
+
+msgid "This release was made possible by users like you!"
+msgstr "Šį leidimą įmanoma buvo sukurti dėka tokių naudotojų kaip jūs!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Man patinka kurti Bazaar, bet vienas to padaryti negaliu. Padėkite remti tolesnį kūrimą paaukodami per Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "Paaukoti Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Kas naujo %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Išleista %Y m. %B %-e d."
+
+msgid "Choose an Installation"
+msgstr "Pasirinkite įdiegtį"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Turite įdiegę kelias šios programos versijas. Su kuria norėtumėte tęsti?"
+
+msgid "Details"
+msgstr "Išsami informacija"
+
+msgid "Copy"
+msgstr "Kopijuoti"
+
+msgid "Copied!"
+msgstr "Nukopijuota!"
+
+msgid "Favorite Count"
+msgstr "Mėgstamų skaičius"
+
+msgid "Failed to update favorite"
+msgstr "Nepavyko atnaujinti mėgstamos"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Prisijunkite prie Flathub, kad tvarkytumėte mėgstamas"
+
+msgid "Log In"
+msgstr "Prisijungti"
+
+msgid "Favorites"
+msgstr "Mėgstamos"
+
+msgid "Install All"
+msgstr "Įdiegti viską"
+
+msgid "No Favorites"
+msgstr "Mėgstamų nėra"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Čia bus rodomos programos, kurias pažymėsite kaip mėgstamas"
+
+msgid "Support This Application"
+msgstr "Paremti šią programą"
+
+msgid "Remove From Favorites"
+msgstr "Pašalinti iš mėgstamų"
+
+msgid "Failed to remove favorite"
+msgstr "Nepavyko pašalinti mėgstamos"
+
+msgid "Previous"
+msgstr "Ankstesnis"
+
+msgid "Next"
+msgstr "Kitas"
+
+msgid "Editing"
+msgstr "Redagavimas"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Maišytuvas"
+
+msgid "Music"
+msgstr "Muzika"
+
+msgid "Player"
+msgstr "Grotuvas"
+
+msgid "Recorder"
+msgstr "Rašytuvas"
+
+msgid "Sequencer"
+msgstr "Sekvenseris"
+
+msgid "Tuner"
+msgstr "Derintuvas"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "Emulation"
+msgstr "Emuliacija"
+
+msgid "Action"
+msgstr "Veiksmo"
+
+msgid "Adventure"
+msgstr "Nuotykių"
+
+msgid "Arcade"
+msgstr "Arkadiniai"
+
+msgid "Blocks"
+msgstr "Kaladėlės"
+
+msgid "Board"
+msgstr "Stalo"
+
+msgid "Card"
+msgstr "Kortų"
+
+msgid "Kids"
+msgstr "Vaikams"
+
+msgid "Logic"
+msgstr "Loginiai"
+
+msgid "Role Playing"
+msgstr "Vaidmenų"
+
+msgid "Shooter"
+msgstr "Šaudyklės"
+
+msgid "Simulation"
+msgstr "Simuliacijos"
+
+msgid "Sports"
+msgstr "Sportas"
+
+msgid "Strategy"
+msgstr "Strategijos"
+
+msgid "Browsers"
+msgstr "Naršyklės"
+
+msgid "Chat"
+msgstr "Pokalbiai"
+
+msgid "Mail"
+msgstr "Paštas"
+
+msgid "File Sharing"
+msgstr "Failų bendrinimas"
+
+msgid "Audio & Video"
+msgstr "Garsas ir vaizdas"
+
+msgid "Media"
+msgstr "Medija"
+
+msgid "More Audio & Video"
+msgstr "Daugiau garso ir vaizdo"
+
+msgid "Developer Tools"
+msgstr "Kūrėjo įrankiai"
+
+msgid "Develop"
+msgstr "Kurti"
+
+msgid "More Developer Tools"
+msgstr "Daugiau kūrėjo įrankių"
+
+msgid "Education"
+msgstr "Švietimas"
+
+msgid "Learn"
+msgstr "Mokytis"
+
+msgid "More Education"
+msgstr "Daugiau švietimo"
+
+msgid "Gaming"
+msgstr "Žaidimai"
+
+msgid "Play"
+msgstr "Žaisti"
+
+msgid "More Gaming"
+msgstr "Daugiau žaidimų"
+
+msgid "Graphics & Photography"
+msgstr "Grafika ir fotografija"
+
+msgid "Create"
+msgstr "Kurti"
+
+msgid "More Graphics & Photography"
+msgstr "Daugiau grafikos ir fotografijos"
+
+msgid "Networking"
+msgstr "Tinklai"
+
+msgid "Internet"
+msgstr "Internetas"
+
+msgid "More Networking"
+msgstr "Daugiau tinklų"
+
+msgid "Productivity"
+msgstr "Našumas"
+
+msgid "Work"
+msgstr "Darbas"
+
+msgid "More Productivity"
+msgstr "Daugiau našumo"
+
+msgid "Science"
+msgstr "Mokslas"
+
+msgid "More Science"
+msgstr "Daugiau mokslo"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "More System"
+msgstr "Daugiau sistemos"
+
+msgid "Utilities"
+msgstr "Paslaugų programos"
+
+msgid "Tools"
+msgstr "Įrankiai"
+
+msgid "More Utilities"
+msgstr "Daugiau paslaugų programų"
+
+msgid "Trending"
+msgstr "Populiaru dabar"
+
+msgid "More Trending"
+msgstr "Daugiau populiarių dabar"
+
+msgid "Popular"
+msgstr "Populiarios"
+
+msgid "More Popular"
+msgstr "Daugiau populiarių"
+
+msgid "Recently Added"
+msgstr "Neseniai pridėtos"
+
+msgid "New"
+msgstr "Naujos"
+
+msgid "More New"
+msgstr "Daugiau naujų"
+
+msgid "Recently Updated"
+msgstr "Neseniai atnaujintos"
+
+msgid "Updated"
+msgstr "Atnaujintos"
+
+msgid "More Updated"
+msgstr "Daugiau atnaujintų"
+
+msgid "Mobile"
+msgstr "Mobiliesiems"
+
+msgid "More Mobile"
+msgstr "Daugiau mobiliesiems"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Daugiau Adwaita"
+
+msgid "KDE Apps"
+msgstr "KDE programos"
+
+msgid "More KDE Apps"
+msgstr "Daugiau KDE programų"
+
+msgid "Made for COSMIC™"
+msgstr "Sukurta COSMIC™ aplinkai"
+
+msgid "For COSMIC™"
+msgstr "Skirta COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Daugiau COSMIC programų"
+
+msgid "Games"
+msgstr "Žaidimai"
+
+msgid "More Games"
+msgstr "Daugiau žaidimų"
+
+msgid "Emulators"
+msgstr "Emuliatoriai"
+
+msgid "More Emulators"
+msgstr "Daugiau emuliatorių"
+
+msgid "Launchers"
+msgstr "Paleidikliai"
+
+msgid "More Game Launchers"
+msgstr "Daugiau žaidimų paleidiklių"
+
+msgid "Game Tools"
+msgstr "Žaidimų įrankiai"
+
+msgid "More Game Tools"
+msgstr "Daugiau žaidimų įrankių"
+
+msgid "New Year, New Workflows"
+msgstr "Nauji metai, nauja darbotvarkė"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Programos užrašams rašyti, užduotims sekti ir planams daryti"
+
+msgid "Staff Picks"
+msgstr "Redaktorių pasirinkimas"
+
+msgid "Apps we love right now"
+msgstr "Programos, kurias dabar mėgstame"
+
+msgid "Get Creative"
+msgstr "Būkite kūrybingi"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Būtinos programos piešimui, nuotraukų redagavimui ir skaitmeniniam dizainui"
+
+msgid "Build Native Apps"
+msgstr "Kurkite savąsias programas"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Kurkite programas, kurios jaučiasi kaip namuose jūsų sistemoje"
+
+msgid "Stay in Touch"
+msgstr "Būkite ryšyje"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Būtinos bendradarbiavimo ir bendravimo programos"
+
+msgid "Ready for Vacations"
+msgstr "Pasiruošę atostogoms"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Žemėlapių, viešojo transporto, orų ir kelionių planavimo programos"
+
+msgid "Smarter Every Day"
+msgstr "Kasdien išmanesni"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Programos, padedančios mokytis, tyrinėti ir rašyti"
+
+msgid "Get Cozy"
+msgstr "Jaukiai leiskite laiką"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Puikios programos skaitymui, filmų žiūrėjimui ir žaidimams"
+
+msgid "Web Developer Essentials"
+msgstr "Žiniatinklio kūrėjo būtiniausi įrankiai"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Kurti svetaines smagiau su šiomis programomis"
+
+msgid "Take Better Notes"
+msgstr "Rašykite geresnius užrašus"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Raskite savo naują mėgstamą užrašų įrankį"
+
+msgid "Get Focused"
+msgstr "Susikaupkite"
+
+msgid "Great apps for task management"
+msgstr "Puikios programos užduotims tvarkyti"
+
+msgid "Make Some Noise"
+msgstr "Pakelkite triukšmą"
+
+msgid "Apps for creating and producing music"
+msgstr "Programos muzikai kurti ir gaminti"
+
+msgid "Get To Work"
+msgstr "Imkimės darbo"
+
+msgid "Essential office apps"
+msgstr "Būtinos biuro programos"
+
+msgid "Flathub Not Added"
+msgstr "Flathub nepridėtas"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Flathub saugykla nerasta jokioje jūsų Flatpak įdiegtyje"
+
+msgid "Can't Reach Flathub"
+msgstr "Nepavyksta pasiekti Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "Vis tiek galite tvarkyti programas ir jų ieškoti."
+
+msgid "Search Apps"
+msgstr "Ieškoti programų"
+
+msgid "Reconnect"
+msgstr "Prisijungti iš naujo"
+
+msgid "App of the Day"
+msgstr "Dienos programa"
+
+msgid "On the Go"
+msgstr "Keliaujantiems"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Programos jūsų Linux telefonams ir planšetėms"
+
+msgid "More Mobile Apps"
+msgstr "Daugiau mobiliųjų programų"
+
+msgid "We​ ♥​ Games"
+msgstr "Mes​ ♥​ žaidimus"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Žaidimai ir programos mėgstamiems pavadinimams paleisti"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Tai vietinė peržiūra, kai kurios detalės gali skirtis nuo paskelbto aprašo"
+
+msgid "Preview Store Appearance"
+msgstr "Peržiūrėti parduotuvės išvaizdą"
+
+msgid "_Support"
+msgstr "_Paremti"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Ši programa naudoja vykdymo aplinką, kuri nebegauna naujinimų ar saugumo pataisų. Ją naudoti gali tapti nesaugu."
+
+msgid "Trash Data"
+msgstr "Išmesti duomenis"
+
+msgid "Add-ons"
+msgstr "Priedai"
+
+msgid "More Add-Ons"
+msgstr "Daugiau priedų"
+
+msgid "Links"
+msgstr "Nuorodos"
+
+msgid "Similar Apps"
+msgstr "Panašios programos"
+
+msgid "No URL"
+msgstr "Nėra URL"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Ši programa turi laisvą ir atvirojo kodo (FLOSS) licenciją, vadinasi, šaltinio kodą galima patikrinti dėl saugumo."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Ši programa turi nuosavybinę licenciją, vadinasi, šaltinio kodas kuriamas privačiai ir jo negali patikrinti nepriklausoma trečioji šalis."
+
+msgid "Other Apps From This Developer"
+msgstr "Kitos šio kūrėjo programos"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Kitos %s programos"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s neįdiegta, bet vis dar yra <b>%s</b> duomenų."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "%s programos"
+
+msgid "Apps by This Developer"
+msgstr "Šio kūrėjo programos"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d programa"
+msgstr[1] "%d programos"
+msgstr[2] "%d programų"
+
+msgid "Failed to Remove User Data"
+msgstr "Nepavyko pašalinti naudotojo duomenų"
+
+msgid "Hardware Support"
+msgstr "Aparatinės įrangos palaikymas"
+
+msgid "Keyboard support"
+msgstr "Klaviatūros palaikymas"
+
+msgid "Requires keyboards"
+msgstr "Reikalingos klaviatūros"
+
+msgid "Recommends keyboards"
+msgstr "Rekomenduojamos klaviatūros"
+
+msgid "Supports keyboards"
+msgstr "Palaiko klaviatūras"
+
+msgid "Unknown support for keyboards"
+msgstr "Klaviatūrų palaikymas nežinomas"
+
+msgid "Mouse support"
+msgstr "Pelės palaikymas"
+
+msgid "Requires mice or pointing devices"
+msgstr "Reikalingos pelės ar žymeklio įrenginiai"
+
+msgid "Recommends mice or pointing devices"
+msgstr "Rekomenduojamos pelės ar žymeklio įrenginiai"
+
+msgid "Supports mice or pointing devices"
+msgstr "Palaiko peles ar žymeklio įrenginius"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "Pelių ar žymeklio įrenginių palaikymas nežinomas"
+
+msgid "Touchscreen support"
+msgstr "Jutiklinių ekranų palaikymas"
+
+msgid "Requires touchscreens"
+msgstr "Reikalingi jutikliniai ekranai"
+
+msgid "Recommends touchscreens"
+msgstr "Rekomenduojami jutikliniai ekranai"
+
+msgid "Supports touchscreens"
+msgstr "Palaiko jutiklinius ekranus"
+
+msgid "Unknown support for touchscreens"
+msgstr "Jutiklinių ekranų palaikymas nežinomas"
+
+msgid "Mobile support"
+msgstr "Mobiliųjų įrenginių palaikymas"
+
+msgid "Works on mobile devices"
+msgstr "Veikia mobiliuosiuose įrenginiuose"
+
+msgid "May not work well on mobile devices"
+msgstr "Gali neveikti gerai mobiliuosiuose įrenginiuose"
+
+msgid "Desktop support"
+msgstr "Darbalaukio palaikymas"
+
+msgid "Works well on large screens"
+msgstr "Gerai veikia dideliuose ekranuose"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s geriausiai veikia su tam tikra aparatine įranga"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s veikia daugumoje įrenginių"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Atsisakoma"
+
+msgid "_Open"
+msgstr "_Atidaryti"
+
+msgid "Uninstall Application"
+msgstr "Pašalinti programą"
+
+msgid "_Remove"
+msgstr "_Pašalinti"
+
+msgid "Update"
+msgstr "Atnaujinti"
+
+msgid "Remove"
+msgstr "Pašalinti"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Įdiegti %s iš %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Įdiegti %s"
+
+msgid "Donate"
+msgstr "Paaukoti"
+
+msgid "Search installed apps"
+msgstr "Ieškoti įdiegtų programų"
+
+msgid "No Apps Found"
+msgstr "Programų nerasta"
+
+msgid "Search Store Instead"
+msgstr "Ieškoti parduotuvėje"
+
+msgid "Pending Updates"
+msgstr "Laukiantys naujinimai"
+
+msgid "Downloads"
+msgstr "Atsisiuntimai"
+
+msgid "Recently Uninstalled"
+msgstr "Neseniai pašalintos"
+
+msgid "Clear Finished Tasks"
+msgstr "Išvalyti baigtas užduotis"
+
+msgid "Sort Options"
+msgstr "Rikiavimo parinktys"
+
+msgid "Sort By"
+msgstr "Rikiuoti pagal"
+
+msgid "Name"
+msgstr "Pavadinimas"
+
+msgid "Size"
+msgstr "Dydis"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "Įdiegtų programų sąraše nėra atitikmenų užklausai „%s“"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u galimas naujinimas"
+msgstr[1] "%u galimi naujinimai"
+msgstr[2] "%u galimų naujinimų"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u įdiegta programa"
+msgstr[1] "%u įdiegtos programos"
+msgstr[2] "%u įdiegtų programų"
+
+msgid "No applications found"
+msgstr "Programų nerasta"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Rasta %u programa"
+msgstr[1] "Rastos %u programos"
+msgstr[2] "Rasta %u programų"
+
+msgid "Get Involved"
+msgstr "Įsitraukite"
+
+msgid "Learn More"
+msgstr "Sužinoti daugiau"
+
+msgid "Unknown License"
+msgstr "Nežinoma licencija"
+
+msgid "Community Built"
+msgstr "Bendruomenės kuriama"
+
+msgid "Proprietary"
+msgstr "Nuosavybinė"
+
+msgid "Special License"
+msgstr "Speciali licencija"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Ši programa kuriama atvirai tarptautinės bendruomenės.\n"
+"\n"
+"Galite dalyvauti ir padėti ją padaryti dar geresnę."
+
+msgid "The license of this app is not known"
+msgstr "Šios programos licencija nežinoma"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Ši programa kuriama atvirai tarptautinės bendruomenės ir išleista pagal %s licenciją.\n"
+"\n"
+"Galite dalyvauti ir padėti ją padaryti dar geresnę."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Ši programa nekuriama atvirai, todėl tik jos kūrėjai žino, kaip ji veikia. Ji gali būti nesaugi sunkiai aptinkamais būdais ir gali keistis be priežiūros.\n"
+"\n"
+"Galbūt galėsite prisidėti prie šios programos, o galbūt ne."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Ši programa kuriama pagal specialią licenciją %s.\n"
+"\n"
+"Galbūt galėsite prisidėti prie šios programos, o galbūt ne."
+
+msgid "License"
+msgstr "Licencija"
+
+msgid "Connect to Flathub"
+msgstr "Prisijungti prie Flathub"
+
+msgid "Something Went Wrong"
+msgstr "Kažkas nepavyko"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Prisijunkite, kad sinchronizuotumėte mėgstamas programas visuose įrenginiuose"
+
+msgid "Finish"
+msgstr "Baigti"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Sveiki, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Pridėti piktogramą prie metainformacijos peržiūros?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Metainformacijos failuose pačiuose nėra programų piktogramų. Ar norėtumėte pasirinkti vieną rankiniu būdu?"
+
+msgid "Skip"
+msgstr "Praleisti"
+
+msgid "Select Icon"
+msgstr "Pasirinkti piktogramą"
+
+msgid "Image Files"
+msgstr "Paveikslėlių failai"
+
+msgid "New Permissions"
+msgstr "Nauji leidimai"
+
+msgid "_Accept"
+msgstr "_Priimti"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Naujas leidimas programai %s"
+msgstr[1] "Nauji leidimai programai %s"
+msgstr[2] "Naujų leidimų programai %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Šiam naujinimui reikalingas toks papildomas leidimas"
+msgstr[1] "Šiam naujinimui reikalingi tokie papildomi leidimai"
+msgstr[2] "Šiam naujinimui reikalingi tokie papildomi leidimai"
+
+msgid "User"
+msgstr "Naudotojas"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Nebepalaikoma"
+
+msgid "Preferences"
+msgstr "Nuostatos"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Ryšys apmokestinamas pagal apimtį – automatinis parduotuvės duomenų atnaujinimas pristabdytas"
+
+msgid "Refresh Manually"
+msgstr "Atnaujinti rankiniu būdu"
+
+msgid "App Updates"
+msgstr "Programų naujinimai"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Apmokestinamuose tinkluose arba įjungus energijos taupymą automatiniai naujinimai bus pristabdyti, kad būtų taupomi duomenys ir akumuliatorius."
+
+msgid "_Automatic"
+msgstr "_Automatinis"
+
+msgid "Automatically check for and download app updates"
+msgstr "Automatiškai tikrinti ir atsisiųsti programų naujinimus"
+
+msgid "_Manual"
+msgstr "_Rankinis"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Programų naujinimus tikrinti ir atsisiųsti reikia rankiniu būdu"
+
+msgid "Automatic Update _Notifications"
+msgstr "Automatinių naujinimų _pranešimai"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Pranešti, kai naujinimai įdiegiami automatiškai"
+
+msgid "Content Filters"
+msgstr "Turinio filtrai"
+
+msgid "_Free Software Only"
+msgstr "Tik _laisva programinė įranga"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Slėpti nuosavybines programas naršant ir ieškant"
+
+msgid "F_lathub Results Only"
+msgstr "Tik F_lathub rezultatai"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Riboti paieškos ir naršymo rezultatus tik programomis, prieinamomis Flathub"
+
+msgid "_Verified Results Only"
+msgstr "Tik _patikrinti rezultatai"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Slėpti rezultatus, kurie nepatikrinti Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Slėpti _nebepalaikomas programas"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "Slėpti programas, kurių kūrėjai nebepalaiko"
+
+msgid "Progress Bar Theme"
+msgstr "Eigos juostos tema"
+
+msgid "Accent Color"
+msgstr "Akcento spalva"
+
+msgid "Pride Colors"
+msgstr "Pasididžiavimo spalvos"
+
+msgid "Lesbian Pride Colors"
+msgstr "Lesbiečių pasididžiavimo spalvos"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Gėjų pasididžiavimo spalvos"
+
+msgid "Transgender Pride Colors"
+msgstr "Translyčių pasididžiavimo spalvos"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Nebinarinių pasididžiavimo spalvos"
+
+msgid "Bisexual Pride Colors"
+msgstr "Biseksualų pasididžiavimo spalvos"
+
+msgid "Asexual Pride Colors"
+msgstr "Aseksualų pasididžiavimo spalvos"
+
+msgid "Pansexual Pride Colors"
+msgstr "Panseksualų pasididžiavimo spalvos"
+
+msgid "Aromantic Pride Colors"
+msgstr "Aromantikų pasididžiavimo spalvos"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Lytiškai kintančių (genderfluid) pasididžiavimo spalvos"
+
+msgid "Polysexual Pride Colors"
+msgstr "Poliseksualų pasididžiavimo spalvos"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Omniseksualų pasididžiavimo spalvos"
+
+msgid "Aroace Pride Colors"
+msgstr "Aroace pasididžiavimo spalvos"
+
+msgid "Agender Pride Colors"
+msgstr "Agenderių pasididžiavimo spalvos"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Genderqueer pasididžiavimo spalvos"
+
+msgid "Intersex Pride Colors"
+msgstr "Interseksualų pasididžiavimo spalvos"
+
+msgid "Demigender Pride Colors"
+msgstr "Demigenderių pasididžiavimo spalvos"
+
+msgid "Biromantic Pride Colors"
+msgstr "Biromantikų pasididžiavimo spalvos"
+
+msgid "Disability Pride Colors"
+msgstr "Neįgaliųjų pasididžiavimo spalvos"
+
+msgid "Femboy Pride Colors"
+msgstr "Femboy pasididžiavimo spalvos"
+
+msgid "Neutrois Pride Colors"
+msgstr "Neutrois pasididžiavimo spalvos"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar turi veikti fone, kad patikrintų programų naujinimus"
+
+msgid "Version History"
+msgstr "Versijų istorija"
+
+msgid "Today"
+msgstr "Šiandien"
+
+msgid "Yesterday"
+msgstr "Vakar"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "Prieš %d dieną"
+msgstr[1] "Prieš %d dienas"
+msgstr[2] "Prieš %d dienų"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "Prieš %d savaitę"
+msgstr[1] "Prieš %d savaites"
+msgstr[2] "Prieš %d savaičių"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "Prieš %d mėnesį"
+msgstr[1] "Prieš %d mėnesius"
+msgstr[2] "Prieš %d mėnesių"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "Prieš %d metus"
+msgstr[1] "Prieš %d metus"
+msgstr[2] "Prieš %d metų"
+
+msgid "%e %B %Y"
+msgstr "%Y m. %B %e d."
+
+#, c-format
+msgid "Version %s"
+msgstr "Versija %s"
+
+msgid "No details for this release"
+msgstr "Šio leidimo išsamios informacijos nėra"
+
+msgid "Get More Information"
+msgstr "Gauti daugiau informacijos"
+
+msgid "_Version History"
+msgstr "_Versijų istorija"
+
+msgid "Remotes"
+msgstr "Saugyklos"
+
+msgid "System Installation"
+msgstr "Sistemos diegtis"
+
+msgid "Available to all users on this computer"
+msgstr "Prieinama visiems šio kompiuterio naudotojams"
+
+msgid "User Installation"
+msgstr "Naudotojo diegtis"
+
+msgid "Only available to you"
+msgstr "Prieinama tik jums"
+
+msgid "Remove Remote"
+msgstr "Pašalinti saugyklą"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Pašalinti %s"
+
+msgid "Unused"
+msgstr "Nenaudojama"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u programa įdiegta"
+msgstr[1] "%u programos įdiegtos"
+msgstr[2] "%u programų įdiegta"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Pašalinti „%s“?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Nebegalėsite diegti programų iš šios naudotojo saugyklos."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Nebegalėsite diegti programų iš šios sistemos saugyklos."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u programa pašalinimui"
+msgstr[1] "%u programos pašalinimui"
+msgstr[2] "%u programų pašalinimui"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Toliau nurodyta programa buvo įdiegta iš šios saugyklos ir kartu su ja bus pašalinta iš jūsų paskyros."
+msgstr[1] "Šios programos buvo įdiegtos iš šios saugyklos ir kartu su ja bus pašalintos iš jūsų paskyros."
+msgstr[2] "Šios programos buvo įdiegtos iš šios saugyklos ir kartu su ja bus pašalintos iš jūsų paskyros."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Toliau nurodyta programa buvo įdiegta iš šios saugyklos ir kartu su ja bus pašalinta visiems naudotojams."
+msgstr[1] "Šios programos buvo įdiegtos iš šios saugyklos ir kartu su ja bus pašalintos visiems naudotojams."
+msgstr[2] "Šios programos buvo įdiegtos iš šios saugyklos ir kartu su ja bus pašalintos visiems naudotojams."
+
+msgid "Uninstall"
+msgstr "Pašalinti"
+
+msgid "Get"
+msgstr "Gauti"
+
+msgid "Arbitrary Permissions"
+msgstr "Savavališki leidimai"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Ši programa turi leidimą, kuris netiesiogiai leidžia jai pačiai suteikti <b>bet kokį kitą norimą leidimą</b>, apeinant Flatpak smėlio dėžę.\n"
+"\n"
+"Todėl ji gali daryti viską, ką gali daryti privilegijuota, nesmėlio dėžėje veikianti programa, pavyzdžiui, pasiekti visus jūsų failus ir jungtis prie interneto.\n"
+"\n"
+"Peržiūrėję kitus leidimus vis tiek galite geriau suprasti, ką programa greičiausiai darys."
+
+msgid "View Other Permissions"
+msgstr "Peržiūrėti kitus leidimus"
+
+msgid "Safe"
+msgstr "Saugi"
+
+msgid "App ID"
+msgstr "Programos ID"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Ši programa naudoja pasenusią programinės įrangos platformos (SDK) versiją ir gali turėti klaidų ar saugumo spragų, kurios nebus ištaisytos."
+
+msgid "Safety"
+msgstr "Sauga"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s yra saugi"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s neturi nesaugių leidimų"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s tikriausiai yra saugi"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s galbūt nesaugi"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s nesaugi"
+
+msgid "Back"
+msgstr "Atgal"
+
+msgid "Previous Screenshot"
+msgstr "Ankstesnė ekrano nuotrauka"
+
+msgid "Next Screenshot"
+msgstr "Kita ekrano nuotrauka"
+
+msgid "Copy Image"
+msgstr "Kopijuoti paveikslėlį"
+
+msgid "Reset View"
+msgstr "Atstatyti rodinį"
+
+msgid "Zoom Out"
+msgstr "Tolinti"
+
+msgid "Zoom In"
+msgstr "Artinti"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u vykdymo aplinkos naujinimas"
+msgstr[1] "%u vykdymo aplinkos naujinimai"
+msgstr[2] "%u vykdymo aplinkos naujinimų"
+
+msgid "Screenshots Carousel"
+msgstr "Ekrano nuotraukų karuselė"
+
+msgid "No Screenshots"
+msgstr "Ekrano nuotraukų nėra"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Ekrano nuotrauka %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Ekrano nuotrauka %u"
+
+msgid "Clear Search"
+msgstr "Išvalyti paiešką"
+
+msgid "Filters"
+msgstr "Filtrai"
+
+msgid "_Verified"
+msgstr "_Patikrintos"
+
+msgid "_Free/Open"
+msgstr "_Laisvos / atviros"
+
+msgid "Non-_EOL"
+msgstr "Ne _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Išfiltruoti nebepalaikomas programas"
+
+msgid "_Mobile Friendly"
+msgstr "_Tinka mobiliesiems"
+
+msgid "Categories"
+msgstr "Kategorijos"
+
+msgid "Search Apps, Games, Software"
+msgstr "Ieškoti programų, žaidimų, programinės įrangos"
+
+msgid "Search Filters"
+msgstr "Paieškos filtrai"
+
+msgid "Browse Categories"
+msgstr "Naršyti kategorijas"
+
+msgid "Categories Unavailable"
+msgstr "Kategorijos nepasiekiamos"
+
+msgid "Search for apps using the search bar above."
+msgstr "Ieškokite programų naudodami paieškos juostą aukščiau."
+
+msgid "No Applications Found"
+msgstr "Programų nerasta"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Flathub nerasta rezultatų užklausai „%s“"
+
+msgid "Browser"
+msgstr "Naršyklė"
+
+msgid "Video"
+msgstr "Vaizdo įrašas"
+
+msgid "Office"
+msgstr "Biuras"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Kalendorius"
+
+msgid "Messaging"
+msgstr "Žinutės"
+
+msgid "Paint"
+msgstr "Piešimas"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Emuliatorius"
+
+msgid "Copy Link"
+msgstr "Kopijuoti nuorodą"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Flathub puslapis"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Projekto svetainė"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Problemų sekimo sistema"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "DUK"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Pagalba"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Paaukoti"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Versti"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Kontaktai"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Šaltinio kodas"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Prisidėti"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifestas"
+
+msgid "Timeline"
+msgstr "Laiko juosta"
+
+msgid "Total"
+msgstr "Iš viso"
+
+msgid "This Week"
+msgstr "Šią savaitę"
+
+msgid "Installs per day"
+msgstr "Diegimų per dieną"
+
+msgid "World"
+msgstr "Pasaulis"
+
+msgid "Installs per country"
+msgstr "Diegimų pagal šalis"
+
+msgid "Since 4/15/2024"
+msgstr "Nuo 2024-04-15"
+
+msgid "No Results Found"
+msgstr "Rezultatų nerasta"
+
+msgid "Search failed"
+msgstr "Paieška nepavyko"
+
+msgid "Unknown"
+msgstr "Nežinoma"
+
+msgid "Keep User Data"
+msgstr "Palikti naudotojo duomenis"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Leisti atkurti asmeninius nustatymus &amp; turinį"
+
+msgid "Delete All Data"
+msgstr "Ištrinti visus duomenis"
+
+msgid "Permanently erase user data to save space"
+msgstr "Visam laikui ištrinti naudotojo duomenis, kad sutaupytumėte vietos"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "Pašalinti %s?"
+
+msgid "Select which version to remove."
+msgstr "Pasirinkite, kurią versiją pašalinti."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "Pašalinus %s, jo naudoti nebus galima."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "„%s“ kelia didelę riziką"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Ši programa turi visišką prieigą prie jūsų sistemos, įskaitant <b>visus jūsų failus, naršyklės istoriją, išsaugotus slaptažodžius</b> ir kt. Ji taip pat turi prieigą prie interneto, vadinasi, galėtų siųsti jūsų duomenis pašaliniams asmenims.\n"
+"\n"
+"Kadangi programa nuosavybinė, negalima patikrinti, ką ji daro su šiais leidimais."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Ši programa naudoja senąją X11 langų sistemą, leidžiančią jai <b>įrašyti visus klavišų paspaudimus, daryti ekrano nuotraukas ir stebėti kitas programas</b>. Ji taip pat turi prieigą prie interneto, vadinasi, galėtų siųsti jūsų duomenis pašaliniams asmenims.\n"
+"\n"
+"Kadangi programa nuosavybinė, negalima patikrinti, ką ji daro su šiais leidimais."
+
+msgid "_Install Anyway"
+msgstr "Vis tiek _įdiegti"
+
+msgid "Failed to load transaction dialog"
+msgstr "Nepavyko įkelti operacijos dialogo"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "Baigta per %.02f s"
+
+msgid "App Add-On"
+msgstr "Programos priedas"
+
+msgid "Runtime"
+msgstr "Vykdymo aplinka"
+
+msgid "In Queue"
+msgstr "Eilėje"
+
+msgid "Finishing Up"
+msgstr "Baigiama"
+
+msgid "Done"
+msgstr "Atlikta"
+
+msgid "Cancelled"
+msgstr "Atšaukta"
+
+msgid "Error"
+msgstr "Klaida"
+
+msgid "Cancel Transaction"
+msgstr "Atšaukti operaciją"
+
+msgid "Show Details"
+msgstr "Rodyti išsamią informaciją"
+
+msgid "Show Error Info"
+msgstr "Rodyti klaidos informaciją"
+
+#, c-format
+msgid "%s Freed"
+msgstr "Atlaisvinta %s"
+
+msgid "Transaction Error"
+msgstr "Operacijos klaida"
+
+msgid "Pending"
+msgstr "Laukiama"
+
+msgid "Installed Updates"
+msgstr "Įdiegti naujinimai"
+
+msgid "Release Notes"
+msgstr "Leidimo pastabos"
+
+msgid "No Release Info"
+msgstr "Leidimo informacijos nėra"
+
+msgid "_Update All"
+msgstr "_Atnaujinti viską"
+
+msgid "This update requests new permissions"
+msgstr "Šis naujinimas prašo naujų leidimų"
+
+msgid "Manage Leftover User Data"
+msgstr "Tvarkyti likusius naudotojo duomenis"
+
+msgid "No Leftover User Data Found"
+msgstr "Likusių naudotojo duomenų nerasta"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Čia bus rodomi asmeniniai duomenys, likę po pašalintų programų"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Išmesti %u programos naudotojo duomenys"
+msgstr[1] "Išmesti %u programų naudotojo duomenys"
+msgstr[2] "Išmesti %u programų naudotojo duomenys"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Išmesti naudotojo duomenys: %s"
+
+msgid "Open User Data Folder"
+msgstr "Atidaryti naudotojo duomenų aplanką"
+
+msgid "Trash User Data"
+msgstr "Išmesti naudotojo duomenis"
+
+msgid "Refreshing"
+msgstr "Atnaujinama"
+
+msgid "Curated"
+msgstr "Atrinktos"
+
+msgid "Explore"
+msgstr "Naršyti"
+
+msgid "Library"
+msgstr "Biblioteka"
+
+msgid "Search"
+msgstr "Paieška"
+
+msgid "Main Menu"
+msgstr "Pagrindinis meniu"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Naudojate naują Bazaar versiją!"
+
+msgid "See What's New"
+msgstr "Žiūrėti, kas naujo"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Turite tinklo ryšį, bet žiūrite podėlyje esančią Flathub versiją"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Ryšys apmokestinamas pagal apimtį – automatinis atnaujinimas išjungtas"
+
+msgid "_Donate to Bazaar"
+msgstr "_Paaukoti Bazaar"
+
+msgid "_Refresh"
+msgstr "_Atnaujinti"
+
+msgid "_Login With Flathub"
+msgstr "_Prisijungti prie Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "_Tvarkyti likusius naudotojo duomenis"
+
+msgid "Manage R_emotes"
+msgstr "Tvarkyti _saugyklas"
+
+msgid "_Preferences"
+msgstr "_Nuostatos"
+
+msgid "_Keyboard Shortcuts"
+msgstr "_Spartieji klavišai"
+
+msgid "_About Bazaar"
+msgstr "_Apie Bazaar"
+
+msgid "_Quit Bazaar"
+msgstr "_Išeiti iš Bazaar"
+
+msgid "Log Out"
+msgstr "Atsijungti"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Nepavyko paleisti programos"
+
+msgid "Could not open link"
+msgstr "Nepavyko atidaryti nuorodos"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Negalite pašalinti Bazaar iš Bazaar!"
+
+msgid "Can't do that right now!"
+msgstr "Šiuo metu to padaryti negalima!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u diegimas"
+msgstr[1] "%s, %'u diegimai"
+msgstr[2] "%s, %'u diegimų"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Daugiausia diegimų iš: %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*f mln."
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "Per paskutinį mėnesį atsisiųsta: %d"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s vykdymo aplinka"
+
+msgid "Size information unavailable"
+msgstr "Dydžio informacijos nėra"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "%s atsisiuntimo dydis"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "%s įdiegtas dydis"
+
+msgid "All Ages"
+msgstr "Visų amžiaus grupių"
+
+msgid "Age rating information unavailable"
+msgstr "Amžiaus reitingo informacijos nėra"
+
+msgid "Suitable for all ages"
+msgstr "Tinka visoms amžiaus grupėms"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "Tinka nuo %d m. amžiaus"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "Laisva programinė įranga, licencijuota pagal %s"
+
+msgid "Free software"
+msgstr "Laisva programinė įranga"
+
+msgid "Proprietary Software"
+msgstr "Nuosavybinė programinė įranga"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Speciali licencija: %s"
+
+msgid "Free Software"
+msgstr "Laisva programinė įranga"
+
+msgid "Adaptive"
+msgstr "Prisitaikanti"
+
+msgid "Desktop Only"
+msgstr "Tik darbalaukiui"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "Veikia darbalaukyje, planšetėse ir telefonuose"
+
+msgid "May not work on mobile devices"
+msgstr "Gali neveikti mobiliuosiuose įrenginiuose"
+
+msgid "Low Risk"
+msgstr "Maža rizika"
+
+msgid "Medium Risk"
+msgstr "Vidutinė rizika"
+
+msgid "High Risk"
+msgstr "Didelė rizika"
+
+msgid "Unknown Permissions"
+msgstr "Nežinomi leidimai"
+
+msgid "Permissions are missing for this app."
+msgstr "Šiai programai trūksta leidimų."
+
+msgid "No Permissions"
+msgstr "Jokių leidimų"
+
+msgid "App is fully sandboxed"
+msgstr "Programa visiškai izoliuota smėlio dėžėje"
+
+msgid "Network Access"
+msgstr "Prieiga prie tinklo"
+
+msgid "Can access the internet"
+msgstr "Gali pasiekti internetą"
+
+msgid "No Network Access"
+msgstr "Jokios prieigos prie tinklo"
+
+msgid "Cannot access the internet"
+msgstr "Negali pasiekti interneto"
+
+msgid "User Device Access"
+msgstr "Prieiga prie naudotojo įrenginių"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Gali pasiekti tokius įrenginius kaip internetinės kameros ar žaidimų valdikliai"
+
+msgid "No User Device Access"
+msgstr "Jokios prieigos prie naudotojo įrenginių"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Negali pasiekti tokių įrenginių kaip internetinės kameros ar žaidimų valdikliai"
+
+msgid "Input Device Access"
+msgstr "Prieiga prie įvesties įrenginių"
+
+msgid "Can access input devices"
+msgstr "Gali pasiekti įvesties įrenginius"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Prieiga prie mikrofono ir garso atkūrimas"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Gali klausytis mikrofonais ir atkurti garsą neprašydama leidimo"
+
+msgid "System Device Access"
+msgstr "Prieiga prie sistemos įrenginių"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Gali pasiekti sistemos įrenginius, kuriems reikalingi padidinti leidimai"
+
+msgid "Screen Contents Access"
+msgstr "Prieiga prie ekrano turinio"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Gali pasiekti ekrano arba kitų langų turinį"
+
+msgid "Legacy Windowing System"
+msgstr "Senoji langų sistema"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Visada naudoja senąją langų sistemą (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Gali gauti savavališkus leidimus"
+
+msgid "User Settings"
+msgstr "Naudotojo nustatymai"
+
+msgid "Can access and change user settings"
+msgstr "Gali pasiekti ir keisti naudotojo nustatymus"
+
+msgid "Full File System Read/Write Access"
+msgstr "Visiška failų sistemos skaitymo ir rašymo prieiga"
+
+msgid "Can read and write all data on the file system"
+msgstr "Gali skaityti ir rašyti visus failų sistemos duomenis"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Namų aplanko skaitymo ir rašymo prieiga"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Gali skaityti ir rašyti visus duomenis jūsų namų aplanke"
+
+msgid "Full File System Read Access"
+msgstr "Visiška failų sistemos skaitymo prieiga"
+
+msgid "Can read all data on the file system"
+msgstr "Gali skaityti visus failų sistemos duomenis"
+
+msgid "Home Folder Read Access"
+msgstr "Namų aplanko skaitymo prieiga"
+
+msgid "Can read all data in your home directory"
+msgstr "Gali skaityti visus duomenis jūsų namų aplanke"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Atsisiuntimų aplanko skaitymo ir rašymo prieiga"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Gali skaityti ir rašyti visus duomenis jūsų atsisiuntimų aplanke"
+
+msgid "Download Folder Read Access"
+msgstr "Atsisiuntimų aplanko skaitymo prieiga"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Gali skaityti visus duomenis jūsų atsisiuntimų aplanke"
+
+msgid "Can read and write all data in the directory"
+msgstr "Gali skaityti ir rašyti visus duomenis aplanke"
+
+msgid "Can read all data in the directory"
+msgstr "Gali skaityti visus duomenis aplanke"
+
+msgid "No File System Access"
+msgstr "Jokios prieigos prie failų sistemos"
+
+msgid "Cannot access the file system at all"
+msgstr "Visai negali pasiekti failų sistemos"
+
+msgid "Uses System Services"
+msgstr "Naudoja sistemos tarnybas"
+
+msgid "Can request data from non-portal system services"
+msgstr "Gali prašyti duomenų iš ne portalo sistemos tarnybų"
+
+msgid "Uses Session Services"
+msgstr "Naudoja seanso tarnybas"
+
+msgid "Can request data from non-portal session services"
+msgstr "Gali prašyti duomenų iš ne portalo seanso tarnybų"
+
+msgid "No Service Access"
+msgstr "Jokios prieigos prie tarnybų"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Visai negali pasiekti ne portalo seanso ar sistemos tarnybų"
+
+msgid "Verified App Developer"
+msgstr "Patikrintas programos kūrėjas"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Šios programos kūrėjas patikrintas – jis yra tas, kuo prisistato"
+
+msgid "Proprietary Code"
+msgstr "Nuosavybinis kodas"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Šaltinio kodas nėra viešas, todėl jo negalima nepriklausomai patikrinti ir jis gali būti nesaugus"
+
+msgid "Auditable Code"
+msgstr "Patikrinamas kodas"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Šaltinio kodas yra viešas ir jį galima nepriklausomai patikrinti, todėl programa labiau tikėtina esanti saugi"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Naudoti %s sistemos tarnybą"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Naudoti %s seanso tarnybą"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Naudoti %s tarnybą"
+
+msgid "Can see the non-portal service"
+msgstr "Gali matyti ne portalo tarnybą"
+
+msgid "Can talk to the non-portal service"
+msgstr "Gali bendrauti su ne portalo tarnyba"
+
+msgid "Can own the non-portal service"
+msgstr "Gali valdyti ne portalo tarnybą"
+
+msgid "Global Menu Integration"
+msgstr "Visuotinio meniu integracija"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Gali rodyti savo meniu visuotinėje meniu juostoje"
+
+msgid "KDE Settings Integration"
+msgstr "KDE nustatymų integracija"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Gali aptikti, kada pasikeičia KDE darbalaukio nustatymai"
+
+msgid "KDE Global Settings"
+msgstr "Visuotiniai KDE nustatymai"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Gali skaityti KDE darbalaukio nuostatas, pavyzdžiui, šriftus ir spalvas"
+
+msgid "Secret Storage Service"
+msgstr "Slaptų duomenų saugyklos tarnyba"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Gali saugoti ir gauti savo slaptažodžius naudodama sistemos raktinę"
+
+msgid "Desktop Notifications Service"
+msgstr "Darbalaukio pranešimų tarnyba"
+
+msgid "Can send desktop notifications"
+msgstr "Gali siųsti darbalaukio pranešimus"
+
+msgid "System Tray Integration"
+msgstr "Sistemos dėklo integracija"
+
+msgid "Can display an icon in the system tray"
+msgstr "Gali rodyti piktogramą sistemos dėkle"
+
+msgid "KDE Connect Integration"
+msgstr "KDE Connect integracija"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Gali sąveikauti su įrenginiais, susietais per KDE Connect"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Naršymas"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Atidaryti naršymo puslapį"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Atidaryti bibliotekos puslapį"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Atidaryti paieškos puslapį"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Saugyklos"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Sinchronizuoti saugyklas"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Bendra"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Atidaryti nuostatas"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Rodyti sparčiuosius klavišus"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Uždaryti langą"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Išeiti iš Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s įdiegta"
+
+msgid "The app is ready to be used"
+msgstr "Programa paruošta naudoti"
+
+msgid "Updates Are Out of Date"
+msgstr "Naujinimai pasenę"
+
+msgid "Please check for available updates"
+msgstr "Patikrinkite, ar yra naujinimų"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "Atnaujinta %u programa"
+msgstr[1] "Atnaujintos %u programos"
+msgstr[2] "Atnaujinta %u programų"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s atnaujinta."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s ir %s atnaujinta."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Apima %s, %s ir %s."

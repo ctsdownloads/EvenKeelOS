@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+msgid "Open in Ghostty"
+msgstr "Кушодан дар Ghostty"
+
+msgid "Find…"
+msgstr "Ёфтан…"
+
+msgid "Previous Match"
+msgstr "Мувофиқати қаблӣ"
+
+msgid "Next Match"
+msgstr "Мувофиқати навбатӣ"
+
+msgid "Close"
+msgstr "Пӯшидан"
+
+msgid "Oh, no."
+msgstr "Вой, не."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "Гирифтани контексти OpenGL барои тасвир имконнопазир аст."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "Ин терминал дар ҳолати танҳо барои хондан аст. Шумо ҳоло ҳам метавонед мундариҷаро бинед, интихоб кунед ва ҳаракат диҳед, аммо ба барномаи дар ҳоли кор буда ягон воқеаи воридот фиристода намешавад."
+
+msgid "Read-only"
+msgstr "Танҳо барои хондан"
+
+msgid "Copy"
+msgstr "Нусха бардоштан"
+
+msgid "Paste"
+msgstr "Гузоштан"
+
+msgid "Notify on Next Command Finish"
+msgstr "Огоҳ кардан дар вақти анҷоми фармони навбатӣ"
+
+msgid "Clear"
+msgstr "Пок кардан"
+
+msgid "Reset"
+msgstr "Аз нав танзим кардан"
+
+msgid "Split"
+msgstr "Ҷудо кардан"
+
+msgid "Change Title…"
+msgstr "Тағйир додани сарлавҳа…"
+
+msgid "Split Up"
+msgstr "Ҷудо кардан ба боло"
+
+msgid "Split Down"
+msgstr "Ҷудо кардан ба поён"
+
+msgid "Split Left"
+msgstr "Ҷудо кардан ба чап"
+
+msgid "Split Right"
+msgstr "Ҷудо кардан ба рост"
+
+msgid "Close Split"
+msgstr "Пӯшидани қисм"
+
+msgid "Tab"
+msgstr "Варақа"
+
+msgid "Change Tab Title…"
+msgstr "Тағйир додани сарлавҳаи варақа…"
+
+msgid "New Tab"
+msgstr "Варақаи нав"
+
+msgid "Close Tab"
+msgstr "Пӯшидани варақа"
+
+msgid "Window"
+msgstr "Равзана"
+
+msgid "Change Window Title…"
+msgstr "Тағйир додани сарлавҳаи равзана…"
+
+msgid "New Window"
+msgstr "Равзанаи нав"
+
+msgid "Close Window"
+msgstr "Пӯшидани равзана"
+
+msgid "Config"
+msgstr "Танзимот"
+
+msgid "Open Configuration in OS Editor"
+msgstr "Кушодани танзимот дар вироишгари система"
+
+msgid "Open Configuration in New Window"
+msgstr "Кушодани танзимот дар равзанаи нав"
+
+msgid "Reload Configuration"
+msgstr "Аз нав бор кардани танзимот"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ Шумо нусхаи debug-и Ghostty-ро иҷро карда истодаед! Суръат паст мешавад."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: Бозрасии терминал"
+
+msgid "New Split"
+msgstr "Қисми нав"
+
+msgid "View Open Tabs"
+msgstr "Дидани варақаҳои кушода"
+
+msgid "Main Menu"
+msgstr "Менюи асосӣ"
+
+msgid "Command Palette"
+msgstr "Палитраи фармонҳо"
+
+msgid "Terminal Inspector"
+msgstr "Бозрасии терминал"
+
+msgid "About Ghostty"
+msgstr "Дар бораи Ghostty"
+
+msgid "Quit"
+msgstr "Баромадан"
+
+msgid "Authorize Clipboard Access"
+msgstr "Иҷозат додани дастрасӣ ба клипборд"
+
+msgid "Deny"
+msgstr "Рад кардан"
+
+msgid "Allow"
+msgstr "Иҷозат додан"
+
+msgid "Remember choice for this split"
+msgstr "Интихобро барои ин қисм дар хотир доштан"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "Барои дубора нишон додани ин савол, танзимотро аз нав бор кунед"
+
+msgid "Cancel"
+msgstr "Бекор кардан"
+
+msgid "Execute a command…"
+msgstr "Иҷрои фармон…"
+
+msgid "Configuration Errors"
+msgstr "Хатогиҳои танзимот"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "Як ё якчанд хатогии танзимот ёфт шуд. Лутфан хатогиҳои зерро баррасӣ намоед ва ё танзимоти худро аз нав бор кунед ё ин хатогиҳоро нодида гиред."
+
+msgid "Ignore"
+msgstr "Нодида гирифтан"
+
+msgid "Leave blank to restore the default title."
+msgstr "Барои барқарор кардани сарлавҳаи пешфарз холӣ монед."
+
+msgid "OK"
+msgstr "Хуб"
+
+msgid "The keybind was revoked by the system."
+msgstr "Тугмаҳои тез аз ҷониби система бекор карда шуд."
+
+msgid "The keybind was denied by the system."
+msgstr "Тугмаҳои тез аз ҷониби система рад карда шуд."
+
+msgid "Global keybind unavailable"
+msgstr "Тугмаҳои тези умумӣ дастрас нестанд"
+
+msgid "Export Terminal IO Events"
+msgstr "Содироти рӯйдодҳои воридот ва хориҷи терминал"
+
+msgid "Export"
+msgstr "Содирот"
+
+msgid "Editing configuration file"
+msgstr "Вироиши файли танзимот"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "Барнома мекӯшад ба клипборд нависад. Мундариҷаи ҷории клипборд дар зер нишон дода шудааст."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "Барнома мекӯшад аз клипборд бихонад. Мундариҷаи ҷории клипборд дар зер нишон дода шудааст."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "Огоҳӣ: гузоштани эҳтимолан ноамн"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "Гузоштани ин матн ба терминал метавонад хатарнок бошад, зеро чунин менамояд, ки баъзе фармонҳо иҷро карда мешаванд."
+
+msgid "Quit Ghostty?"
+msgstr "Аз Ghostty мебароед?"
+
+msgid "Close Tab?"
+msgstr "Варақаро мепӯшед?"
+
+msgid "Close Window?"
+msgstr "Равзанаро мепӯшед?"
+
+msgid "Close Split?"
+msgstr "Қисмро мепӯшед?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "Ҳамаи ҷаласаҳои терминал қатъ карда мешаванд."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "Ҳамаи ҷаласаҳои терминал дар ин варақа қатъ карда мешаванд."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "Ҳамаи ҷаласаҳои терминал дар ин равзана қатъ карда мешаванд."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "Раванди ҷорӣ дар ин қисм қатъ карда мешавад."
+
+msgid "Command Finished"
+msgstr "Фармон анҷом ёфт"
+
+msgid "Command Succeeded"
+msgstr "Фармон бомуваффақият анҷом ёфт"
+
+msgid "Command Failed"
+msgstr "Фармон ноком шуд"
+
+msgid "Change Terminal Title"
+msgstr "Тағйир додани сарлавҳаи терминал"
+
+msgid "Change Tab Title"
+msgstr "Тағйир додани сарлавҳаи варақа"
+
+msgid "Change Window Title"
+msgstr "Тағйир додани сарлавҳаи равзана"
+
+msgid "Reloaded the configuration"
+msgstr "Танзимот аз нав бор карда шуд"
+
+msgid "Copied to clipboard"
+msgstr "Ба клипборд нусха бардошта шуд"
+
+msgid "Cleared clipboard"
+msgstr "Клипборд пок карда шуд"
+
+msgid "Ghostty Developers"
+msgstr "Таҳиягарони Ghostty"
+
+msgid "Reset Terminal"
+msgstr "Аз нав танзим кардани терминал"
+
+msgid "Reset the terminal to a clean state."
+msgstr "Терминалро ба ҳолати тоза баргардонед."
+
+msgid "Copy to Clipboard"
+msgstr "Нусха бардоштан ба клипборд"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "Матни интихобшударо ба клипборд ҳам бо шакли оддӣ ва ҳам бо шакли услубӣ нусха бардоред."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "Нусха бардоштани интихоб ҳамчун матни оддӣ ба клипборд"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "Матни интихобшударо ҳамчун матни оддӣ ба клипборд нусха бардоред."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "Нусха бардоштани интихоб ҳамчун пайдарпаии ANSI ба клипборд"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "Матни интихобшударо ҳамчун пайдарпаии фирор (escape)-и ANSI ба клипборд нусха бардоред."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "Нусха бардоштани интихоб ҳамчун HTML ба клипборд"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "Матни интихобшударо ҳамчун HTML ба клипборд нусха бардоред."
+
+msgid "Copy URL to Clipboard"
+msgstr "Нусха бардоштани URL ба клипборд"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "URL-и таги курсорро ба клипборд нусха бардоред."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "Нусха бардоштани сарлавҳаи терминал ба клипборд"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "Сарлавҳаи терминалро ба клипборд нусха бардоред. Агар сарлавҳаи терминал муқаррар нашуда бошад, ин ҳеҷ таъсире надорад."
+
+msgid "Paste from Clipboard"
+msgstr "Гузоштан аз клипборд"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "Мундариҷаи клипборди асосиро гузоред."
+
+msgid "Paste from Selection"
+msgstr "Гузоштан аз интихоб"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "Мундариҷаи клипборди интихобро гузоред."
+
+msgid "Start Search"
+msgstr "Оғози ҷустуҷӯ"
+
+msgid "Start a search if one isn't already active."
+msgstr "Агар ҷустуҷӯ ҳоло фаъол набошад, онро оғоз кунед."
+
+msgid "Search Selection"
+msgstr "Ҷустуҷӯи интихоб"
+
+msgid "Start a search for the current text selection."
+msgstr "Ҷустуҷӯро барои матни ҳозираи интихобшуда оғоз кунед."
+
+msgid "End Search"
+msgstr "Анҷоми ҷустуҷӯ"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "Ҷустуҷӯи ҷориро, агар бошад, анҷом диҳед ва ҳамаи унсурҳои интерфейсро пинҳон кунед."
+
+msgid "Next Search Result"
+msgstr "Натиҷаи ҷустуҷӯи навбатӣ"
+
+msgid "Navigate to the next search result, if any."
+msgstr "Ба натиҷаи ҷустуҷӯи навбатӣ, агар бошад, гузаред."
+
+msgid "Previous Search Result"
+msgstr "Натиҷаи ҷустуҷӯи қаблӣ"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "Ба натиҷаи ҷустуҷӯи қаблӣ, агар бошад, гузаред."
+
+msgid "Increase Font Size"
+msgstr "Калон кардани андозаи шрифт"
+
+msgid "Increase the font size by 1 point."
+msgstr "Андозаи шрифтро 1 пункт калон кунед."
+
+msgid "Decrease Font Size"
+msgstr "Хурд кардани андозаи шрифт"
+
+msgid "Decrease the font size by 1 point."
+msgstr "Андозаи шрифтро 1 пункт хурд кунед."
+
+msgid "Reset Font Size"
+msgstr "Аз нав танзим кардани андозаи шрифт"
+
+msgid "Reset the font size to the default."
+msgstr "Андозаи шрифтро ба пешфарз баргардонед."
+
+msgid "Clear Screen"
+msgstr "Пок кардани экран"
+
+msgid "Clear the screen and scrollback."
+msgstr "Экран ва таърихи ҳаракатро пок кунед."
+
+msgid "Select All"
+msgstr "Интихоби ҳама"
+
+msgid "Select all text on the screen."
+msgstr "Тамоми матнро дар экран интихоб кунед."
+
+msgid "Scroll to Top"
+msgstr "Ҳаракат ба боло"
+
+msgid "Scroll to the top of the screen."
+msgstr "Ба боло ҳаракат кунед."
+
+msgid "Scroll to Bottom"
+msgstr "Ҳаракат ба поён"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "Ба поёни экран ҳаракат кунед."
+
+msgid "Scroll to Selection"
+msgstr "Ҳаракат ба интихоб"
+
+msgid "Scroll to the selected text."
+msgstr "Ба матни интихобшуда ҳаракат кунед."
+
+msgid "Scroll Page Up"
+msgstr "Ҳаракат як саҳифа ба боло"
+
+msgid "Scroll the screen up by a page."
+msgstr "Экранро як саҳифа ба боло ҳаракат диҳед."
+
+msgid "Scroll Page Down"
+msgstr "Ҳаракат як саҳифа ба поён"
+
+msgid "Scroll the screen down by a page."
+msgstr "Экранро як саҳифа ба поён ҳаракат диҳед."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "Нусха бардоштани экран ба файли муваққатӣ ва нусха бардоштани роҳ"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "Мундариҷаи экранро ба файли муваққатӣ нусха бардоред ва роҳро ба клипборд нусха бардоред."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "Нусха бардоштани экран ба файли муваққатӣ ва гузоштани роҳ"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "Мундариҷаи экранро ба файли муваққатӣ нусха бардоред ва роҳи файлро гузоред."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "Нусха бардоштани экран ба файли муваққатӣ ва кушодан"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "Мундариҷаи экранро ба файли муваққатӣ нусха бардоред ва онро кушоед."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "Нусха бардоштани экран ҳамчун HTML ба файли муваққатӣ ва нусха бардоштани роҳ"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Мундариҷаи экранро ҳамчун HTML ба файли муваққатӣ нусха бардоред ва роҳро ба клипборд нусха бардоред."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "Нусха бардоштани экран ҳамчун HTML ба файли муваққатӣ ва гузоштани роҳ"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "Мундариҷаи экранро ҳамчун HTML ба файли муваққатӣ нусха бардоред ва роҳи файлро гузоред."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "Нусха бардоштани экран ҳамчун HTML ба файли муваққатӣ ва кушодан"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "Мундариҷаи экранро ҳамчун HTML ба файли муваққатӣ нусха бардоред ва онро кушоед."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Нусха бардоштани экран ҳамчун пайдарпаии ANSI ба файли муваққатӣ ва нусха бардоштани роҳ"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Мундариҷаи экранро ҳамчун пайдарпаии фирор (escape)-и ANSI ба файли муваққатӣ нусха бардоред ва роҳро ба клипборд нусха бардоред."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Нусха бардоштани экран ҳамчун пайдарпаии ANSI ба файли муваққатӣ ва гузоштани роҳ"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Мундариҷаи экранро ҳамчун пайдарпаии фирор (escape)-и ANSI ба файли муваққатӣ нусха бардоред ва роҳи файлро гузоред."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "Нусха бардоштани экран ҳамчун пайдарпаии ANSI ба файли муваққатӣ ва кушодан"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Мундариҷаи экранро ҳамчун пайдарпаии фирор (escape)-и ANSI ба файли муваққатӣ нусха бардоред ва онро кушоед."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "Нусха бардоштани интихоб ба файли муваққатӣ ва нусха бардоштани роҳ"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "Мундариҷаи интихобро ба файли муваққатӣ нусха бардоред ва роҳро ба клипборд нусха бардоред."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "Нусха бардоштани интихоб ба файли муваққатӣ ва гузоштани роҳ"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "Мундариҷаи интихобро ба файли муваққатӣ нусха бардоред ва роҳи файлро гузоред."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "Нусха бардоштани интихоб ба файли муваққатӣ ва кушодан"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "Мундариҷаи интихобро ба файли муваққатӣ нусха бардоред ва онро кушоед."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "Нусха бардоштани интихоб ҳамчун HTML ба файли муваққатӣ ва нусха бардоштани роҳ"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Мундариҷаи интихобро ҳамчун HTML ба файли муваққатӣ нусха бардоред ва роҳро ба клипборд нусха бардоред."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "Нусха бардоштани интихоб ҳамчун HTML ба файли муваққатӣ ва гузоштани роҳ"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "Мундариҷаи интихобро ҳамчун HTML ба файли муваққатӣ нусха бардоред ва роҳи файлро гузоред."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "Нусха бардоштани интихоб ҳамчун HTML ба файли муваққатӣ ва кушодан"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "Мундариҷаи интихобро ҳамчун HTML ба файли муваққатӣ нусха бардоред ва онро кушоед."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Нусха бардоштани интихоб ҳамчун пайдарпаии ANSI ба файли муваққатӣ ва нусха бардоштани роҳ"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Мундариҷаи интихобро ҳамчун пайдарпаии фирор (escape)-и ANSI ба файли муваққатӣ нусха бардоред ва роҳро ба клипборд нусха бардоред."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Нусха бардоштани интихоб ҳамчун пайдарпаии ANSI ба файли муваққатӣ ва гузоштани роҳ"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Мундариҷаи интихобро ҳамчун пайдарпаии фирор (escape)-и ANSI ба файли муваққатӣ нусха бардоред ва роҳи файлро гузоред."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "Нусха бардоштани интихоб ҳамчун пайдарпаии ANSI ба файли муваққатӣ ва кушодан"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Мундариҷаи интихобро ҳамчун пайдарпаии фирор (escape)-и ANSI ба файли муваққатӣ нусха бардоред ва онро кушоед."
+
+msgid "Open a new window."
+msgstr "Кушодани равзанаи нав."
+
+msgid "Open a new tab."
+msgstr "Кушодани варақаи нав."
+
+msgid "Move Tab Left"
+msgstr "Ҳаракат додани варақа ба чап"
+
+msgid "Move the current tab to the left."
+msgstr "Варақаи ҷориро ба чап ҳаракат диҳед."
+
+msgid "Move Tab Right"
+msgstr "Ҳаракат додани варақа ба рост"
+
+msgid "Move the current tab to the right."
+msgstr "Варақаи ҷориро ба рост ҳаракат диҳед."
+
+msgid "Move Tab to New Window"
+msgstr "Ҳаракат додани варақа ба равзанаи нав"
+
+msgid "Move the current tab to a new window."
+msgstr "Варақаи ҷориро ба равзанаи нав ҳаракат диҳед."
+
+msgid "Toggle Tab Overview"
+msgstr "Иваз кардани намоиши варақаҳо"
+
+msgid "Toggle the tab overview."
+msgstr "Намоиши варақаҳоро фаъол ё ғайрифаъол кунед."
+
+msgid "Change Terminal Title…"
+msgstr "Тағйир додани сарлавҳаи терминал…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "Сарлавҳаи нав барои терминали ҷориро пурсед."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "Сарлавҳаи нав барои варақаи ҷориро пурсед."
+
+msgid "Split the terminal to the left."
+msgstr "Терминалро ба чап ҷудо кунед."
+
+msgid "Split the terminal to the right."
+msgstr "Терминалро ба рост ҷудо кунед."
+
+msgid "Split the terminal up."
+msgstr "Терминалро ба боло ҷудо кунед."
+
+msgid "Split the terminal down."
+msgstr "Терминалро ба поён ҷудо кунед."
+
+msgid "Focus Split: Previous"
+msgstr "Таваҷҷуҳ ба қисм: қаблӣ"
+
+msgid "Focus the previous split, if any."
+msgstr "Ба қисми қаблӣ, агар бошад, таваҷҷуҳ кунед."
+
+msgid "Focus Split: Next"
+msgstr "Таваҷҷуҳ ба қисм: навбатӣ"
+
+msgid "Focus the next split, if any."
+msgstr "Ба қисми навбатӣ, агар бошад, таваҷҷуҳ кунед."
+
+msgid "Focus Split: Left"
+msgstr "Таваҷҷуҳ ба қисм: чап"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "Ба қисми чап, агар вуҷуд дошта бошад, таваҷҷуҳ кунед."
+
+msgid "Focus Split: Right"
+msgstr "Таваҷҷуҳ ба қисм: рост"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "Ба қисми рост, агар вуҷуд дошта бошад, таваҷҷуҳ кунед."
+
+msgid "Focus Split: Up"
+msgstr "Таваҷҷуҳ ба қисм: боло"
+
+msgid "Focus the split above, if it exists."
+msgstr "Ба қисми болоӣ, агар вуҷуд дошта бошад, таваҷҷуҳ кунед."
+
+msgid "Focus Split: Down"
+msgstr "Таваҷҷуҳ ба қисм: поён"
+
+msgid "Focus the split below, if it exists."
+msgstr "Ба қисми поёнӣ, агар вуҷуд дошта бошад, таваҷҷуҳ кунед."
+
+msgid "Focus Window: Previous"
+msgstr "Таваҷҷуҳ ба равзана: қаблӣ"
+
+msgid "Focus the previous window, if any."
+msgstr "Ба равзанаи қаблӣ, агар бошад, таваҷҷуҳ кунед."
+
+msgid "Focus Window: Next"
+msgstr "Таваҷҷуҳ ба равзана: навбатӣ"
+
+msgid "Focus the next window, if any."
+msgstr "Ба равзанаи навбатӣ, агар бошад, таваҷҷуҳ кунед."
+
+msgid "Toggle Split Zoom"
+msgstr "Иваз кардани масштаби қисм"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "Ҳолати масштаби қисми ҷориро иваз кунед."
+
+msgid "Toggle Read-Only Mode"
+msgstr "Иваз кардани ҳолати танҳо барои хондан"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "Ҳолати танҳо барои хонданро барои сатҳи ҷорӣ иваз кунед."
+
+msgid "Equalize Splits"
+msgstr "Баробар кардани қисмҳо"
+
+msgid "Equalize the size of all splits."
+msgstr "Андозаи ҳамаи қисмҳоро баробар кунед."
+
+msgid "Reset Window Size"
+msgstr "Аз нав танзим кардани андозаи равзана"
+
+msgid "Reset the window size to the default."
+msgstr "Андозаи равзанаро ба пешфарз баргардонед."
+
+msgid "Toggle Inspector"
+msgstr "Иваз кардани бозрас"
+
+msgid "Toggle the inspector."
+msgstr "Бозрасро фаъол ё ғайрифаъол кунед."
+
+msgid "Show the GTK Inspector"
+msgstr "Нишон додани бозрасии GTK"
+
+msgid "Show the GTK inspector."
+msgstr "Бозрасии GTK-ро нишон диҳед."
+
+msgid "Show On-Screen Keyboard"
+msgstr "Нишон додани клавиатураи экранӣ"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "Клавиатураи экраниро, агар бошад, нишон диҳед."
+
+msgid "Open Config Using OS editor"
+msgstr "Кушодани танзимот бо вироишгари система"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "Файли танзиматро бо вироишгари пешфарзи система кушоед."
+
+msgid "Open Config in New Terminal Window"
+msgstr "Кушодани танзимот дар равзанаи нави терминал"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "Файли танзиматро дар равзанаи нав бо $EDITOR ё $VISUAL кушоед."
+
+msgid "Reload Config"
+msgstr "Аз нав бор кардани танзимот"
+
+msgid "Reload the config file."
+msgstr "Файли танзиматро аз нав бор кунед."
+
+msgid "Close Terminal"
+msgstr "Пӯшидани терминал"
+
+msgid "Close the current terminal."
+msgstr "Терминали ҷориро пӯшед."
+
+msgid "Close the current tab."
+msgstr "Варақаи ҷориро пӯшед."
+
+msgid "Close Other Tabs"
+msgstr "Пӯшидани варақаҳои дигар"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "Ҳамаи варақаҳоро дар ин равзана, ба ғайр аз ҷорӣ, пӯшед."
+
+msgid "Close Tabs to the Right"
+msgstr "Пӯшидани варақаҳо дар тарафи рост"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "Ҳамаи варақаҳоро дар тарафи рости варақаи ҷорӣ пӯшед."
+
+msgid "Close the current window."
+msgstr "Равзанаи ҷориро пӯшед."
+
+msgid "Close All Windows"
+msgstr "Пӯшидани ҳамаи равзанаҳо"
+
+msgid "Close all windows."
+msgstr "Ҳамаи равзанаҳоро пӯшед."
+
+msgid "Toggle Maximize"
+msgstr "Иваз кардани калонкунӣ"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "Ҳолати калоншудаи равзанаи ҷориро иваз кунед."
+
+msgid "Toggle Fullscreen"
+msgstr "Иваз кардани экрани пурра"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "Ҳолати экрани пурраи равзанаи ҷориро иваз кунед."
+
+msgid "Toggle Window Decorations"
+msgstr "Иваз кардани ороишоти равзана"
+
+msgid "Toggle the window decorations."
+msgstr "Ороишоти равзанаро иваз кунед."
+
+msgid "Toggle Float on Top"
+msgstr "Иваз кардани «болои ҳама»"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "Ҳолати «болои ҳама»-и равзанаи ҷориро иваз кунед."
+
+msgid "Toggle Secure Input"
+msgstr "Иваз кардани воридоти бехатар"
+
+msgid "Toggle secure input mode."
+msgstr "Ҳолати воридоти бехатарро иваз кунед."
+
+msgid "Toggle Mouse Reporting"
+msgstr "Иваз кардани гузориши муш"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "Иваз кунед, ки оё рӯйдодҳои муш ба барномаҳои терминал гузориш дода мешаванд."
+
+msgid "Toggle Background Opacity"
+msgstr "Иваз кардани шаффофияти замина"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "Шаффофияти заминаи равзанаеро, ки шаффоф оғоз шудааст, иваз кунед."
+
+msgid "Check for Updates"
+msgstr "Санҷидани навсозиҳо"
+
+msgid "Check for updates to the application."
+msgstr "Навсозиҳои барномаро санҷед."
+
+msgid "Undo"
+msgstr "Бекор кардан"
+
+msgid "Undo the last action."
+msgstr "Амали охиринро бекор кунед."
+
+msgid "Redo"
+msgstr "Такрор кардан"
+
+msgid "Redo the last undone action."
+msgstr "Амали охирини бекоршударо такрор кунед."
+
+msgid "Quit the application."
+msgstr "Баромадан аз барнома."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "Ghostty-и хурдакаке ба терминали худ илова кунед."

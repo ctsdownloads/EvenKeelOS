@@ -1,0 +1,1166 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Quit"
+msgstr "Изход"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Затваряне на %d прозорец"
+msgstr[1] "Затваряне на %d прозореца"
+
+msgid "Power options"
+msgstr "Опции за захранване"
+
+msgid "Event logs"
+msgstr "Журнали на събитията"
+
+msgid "System"
+msgstr "Система"
+
+msgid "Device Management"
+msgstr "Управление на устройствата"
+
+msgid "Disk Management"
+msgstr "Управление на дисковете"
+
+msgid "Unlock taskbar"
+msgstr "Отключване на лентата на задачите"
+
+msgid "Lock taskbar"
+msgstr "Заключване на лентата на задачите"
+
+msgid "Gnome Settings"
+msgstr "Настройки на GNOME"
+
+msgid "Dash to Panel Settings"
+msgstr "Настройки на Dash to Panel"
+
+msgid "Restore Windows"
+msgstr "Възстановяване на прозорците"
+
+msgid "Show Desktop"
+msgstr "Показване на работния плот"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel беше обновен!"
+
+msgid "You are now running version"
+msgstr "Сега използвате версия"
+
+msgid "See what's new"
+msgstr "Вижте какво ново"
+
+msgid "Top Bar"
+msgstr "Горна лента"
+
+msgid "Show Desktop button height (px)"
+msgstr "Височина на бутона „Показване на работния плот“ (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Ширина на бутона „Показване на работния плот“ (px)"
+
+msgid "Left"
+msgstr "Вляво"
+
+msgid "Center"
+msgstr "Център"
+
+msgid "Right"
+msgstr "Вдясно"
+
+msgid "Top"
+msgstr "Горе"
+
+msgid "Middle"
+msgstr "По средата"
+
+msgid "Bottom"
+msgstr "Долу"
+
+msgid "Start"
+msgstr "Начало"
+
+msgid "End"
+msgstr "Край"
+
+msgid "Show Applications button"
+msgstr "Бутон „Показване на програмите“"
+
+msgid "Activities button"
+msgstr "Бутон „Дейности“"
+
+msgid "Taskbar"
+msgstr "Лента на задачите"
+
+msgid "Date menu"
+msgstr "Меню за дата"
+
+msgid "System menu"
+msgstr "Системно меню"
+
+msgid "Left box"
+msgstr "Лява кутия"
+
+msgid "Center box"
+msgstr "Централна кутия"
+
+msgid "Right box"
+msgstr "Дясна кутия"
+
+msgid "Desktop button"
+msgstr "Бутон за работния плот"
+
+msgid "Move up"
+msgstr "Преместване нагоре"
+
+msgid "Move down"
+msgstr "Преместване надолу"
+
+msgid "Visible"
+msgstr "Видим"
+
+msgid "Select element position"
+msgstr "Избор на позиция на елемента"
+
+msgid "Stacked to top"
+msgstr "Долепен горе"
+
+msgid "Stacked to left"
+msgstr "Долепен вляво"
+
+msgid "Stacked to bottom"
+msgstr "Долепен долу"
+
+msgid "Stacked to right"
+msgstr "Долепен вдясно"
+
+msgid "Centered"
+msgstr "Центриран"
+
+msgid "Monitor Center"
+msgstr "Център на монитора"
+
+msgid "More options"
+msgstr "Още опции"
+
+msgid "Reset to defaults"
+msgstr "Връщане на стандартните"
+
+msgid "Show Applications options"
+msgstr "Опции за „Показване на програмите“"
+
+msgid "Open icon"
+msgstr "Отваряне на иконка"
+
+msgid "Show Desktop options"
+msgstr "Опции за „Показване на работния плот“"
+
+msgid "Primary monitor"
+msgstr "Основен монитор"
+
+msgid "Monitor "
+msgstr "Монитор "
+
+msgid "Running Indicator Options"
+msgstr "Опции за индикатора за изпълнение"
+
+msgid "Dynamic opacity options"
+msgstr "Опции за динамична прозрачност"
+
+msgid "Intellihide options"
+msgstr "Опции за Intellihide"
+
+msgid "Window preview options"
+msgstr "Опции за прегледа на прозорци"
+
+msgid "Isolate Workspaces options"
+msgstr "Опции за изолиране на работните места"
+
+msgid "Isolate monitors options"
+msgstr "Опции за изолиране на мониторите"
+
+msgid "Ungrouped application options"
+msgstr "Опции за негрупирани програми"
+
+msgid "Customize middle-click behavior"
+msgstr "Персонализиране на поведението на щракването със средния бутон"
+
+msgid "Text"
+msgstr "Текст"
+
+msgid "Command"
+msgstr "Команда"
+
+msgid "Remove"
+msgstr "Премахване"
+
+msgid "Customize panel scroll behavior"
+msgstr "Персонализиране на поведението при превъртане на панела"
+
+msgid "Customize icon scroll behavior"
+msgstr "Персонализиране на поведението при превъртане върху иконка"
+
+msgid "Advanced hotkeys options"
+msgstr "Разширени опции за клавишните комбинации"
+
+msgid "Secondary Menu Options"
+msgstr "Опции за второстепенното меню"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d иконка"
+msgstr[1] "%d иконки"
+
+msgid "App icon animation options"
+msgstr "Опции за анимацията на иконките на програмите"
+
+msgid "App icon highlight options"
+msgstr "Опции за открояването на иконките на програмите"
+
+msgid "Export settings"
+msgstr "Изнасяне на настройките"
+
+msgid "Import settings"
+msgstr "Внасяне на настройки"
+
+msgid "Move to current Workspace"
+msgstr "Преместване в текущото работно място"
+
+msgid "Animation type"
+msgstr "Вид анимация"
+
+msgid "Simple"
+msgstr "Опростена"
+
+msgid "Ripple"
+msgstr "Вълна"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Продължителност"
+
+msgid "Rotation"
+msgstr "Завъртане"
+
+msgid "Travel"
+msgstr "Преместване"
+
+msgid "Zoom"
+msgstr "Мащаб"
+
+msgid "Convexity"
+msgstr "Изпъкналост"
+
+msgid "Extent"
+msgstr "Обхват"
+
+msgid "Highlight focused application"
+msgstr "Открояване на програмата на фокус"
+
+msgid "Icon dominant color"
+msgstr "Доминиращ цвят на иконката"
+
+msgid "Custom color"
+msgstr "Собствен цвят"
+
+msgid "Highlight opacity"
+msgstr "Прозрачност на открояването"
+
+msgid "Indicator size (px)"
+msgstr "Размер на индикатора (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Цвят на индикатора – доминиращ в иконката"
+
+msgid "Indicator color - Override Theme"
+msgstr "Цвят на индикатора – замяна на темата"
+
+msgid "1 window open (or ungrouped)"
+msgstr "1 отворен прозорец (или негрупирани)"
+
+msgid "Apply to all"
+msgstr "Прилагане за всички"
+
+msgid "2 windows open"
+msgstr "2 отворени прозореца"
+
+msgid "3 windows open"
+msgstr "3 отворени прозореца"
+
+msgid "4+ windows open"
+msgstr "4+ отворени прозореца"
+
+msgid "Use different for unfocused"
+msgstr "Различен за програмите без фокус"
+
+msgid "The panel background opacity is affected by"
+msgstr "На прозрачността на фона на панела влияят"
+
+msgid "All windows"
+msgstr "Всички прозорци"
+
+msgid "Focused windows"
+msgstr "Прозорците на фокус"
+
+msgid "Maximized windows"
+msgstr "Максимизираните прозорци"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Промяна на прозрачността, когато прозорец се приближи на по-малко от (px)"
+
+msgid "Change opacity to (%)"
+msgstr "Промяна на прозрачността на (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Продължителност на анимацията при промяна на прозрачността (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Размер на шрифта (px) на заглавията на програмите (стандартно 14)"
+
+msgid "Font weight of application titles"
+msgstr "Дебелина на шрифта на заглавията на програмите"
+
+msgid "inherit from theme"
+msgstr "наследена от темата"
+
+msgid "normal"
+msgstr "нормална"
+
+msgid "lighter"
+msgstr "по-тънка"
+
+msgid "bold"
+msgstr "удебелена"
+
+msgid "bolder"
+msgstr "по-удебелена"
+
+msgid "Font color of the application titles"
+msgstr "Цвят на шрифта на заглавията на програмите"
+
+msgid "Font color of the minimized application titles"
+msgstr "Цвят на шрифта на заглавията на минимизираните програми"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Максимална ширина (px) на заглавията на програмите"
+
+msgid "(default is 160)"
+msgstr "(стандартно 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Постоянна ширина на заглавията на програмите"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Всички заглавия на програмите имат една и съща ширина, дори текстът им да е по-къс от максималната ширина. Като постоянна ширина се използва стойността на максималната ширина."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Показване на индикатори за изпълнение върху програмите без фокус"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Използване на любимите иконки като стартери на програми"
+
+msgid "Highlight AppIcon color"
+msgstr "Цвят на иконката на програмата при открояване"
+
+msgid "Pressed AppIcon color"
+msgstr "Цвят на иконката на програмата при натискане"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Радиус на границата на иконката на програмата при открояване"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Заменя общия радиус на границата (стандартно 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Скриване на панела само от прозорците"
+
+msgid "Overlapping"
+msgstr "Припокриващи се"
+
+msgid "On same monitor"
+msgstr "На същия монитор"
+
+msgid "The panel hides from"
+msgstr "Панелът се скрива от"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Докосването на ръба на монитора с показалеца показва панела"
+
+msgid "Limit to panel length"
+msgstr "Ограничаване до дължината на панела"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Задържането на показалеца над панела го държи показан"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Изискване на натиск при ръба на монитора за показване на панела"
+
+msgid "Required pressure threshold (px)"
+msgstr "Необходим праг на натиск (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Необходимо време за изчакване на натиска (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Позволяване на показването на панела в режим на цял екран"
+
+msgid "(requires multi-monitors option)"
+msgstr "(изисква опцията за няколко монитора)"
+
+msgid "Only hide secondary panels"
+msgstr "Скриване само на второстепенните панели"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Синтаксис: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Клавишна комбинация за показване и задържане на панела"
+
+msgid "e.g. <Super>i"
+msgstr "напр. <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Запомняне на състоянието между рестартиранията"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(съобразява се с режима „Не ме безпокойте“ на GNOME и изисква опцията за значка с брояч на известията)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Показване и задържане на панела при известие"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Продължителност на анимацията за скриване и показване (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Забавяне преди скриване на панела (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Забавяне преди показване на панела (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Забавяне преди включване на Intellihide при стартиране (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Изолиране на мониторите дори при един панел"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Изолиране на работните места в превключвателя на програми на gnome-shell"
+
+msgid "Shift+Click action"
+msgstr "Действие при Shift+щракване"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "Когато е зададено минимизиране, двойното щракване минимизира всички прозорци на програмата."
+
+msgid "Raise windows"
+msgstr "Изнасяне на прозорците най-отпред"
+
+msgid "Minimize window"
+msgstr "Минимизиране на прозореца"
+
+msgid "Launch new instance"
+msgstr "Стартиране на нов екземпляр"
+
+msgid "Cycle through windows"
+msgstr "Обхождане на прозорците"
+
+msgid "Cycle windows + minimize"
+msgstr "Обхождане на прозорците + минимизиране"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Превключване на един / преглед на няколко"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Превключване на един / обхождане на няколко"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Превключване на един / разгръщане на няколко"
+
+msgid "Middle-Click action"
+msgstr "Действие при щракване със средния бутон"
+
+msgid "Behavior for Middle-Click."
+msgstr "Поведение при щракване със средния бутон."
+
+msgid "Shift+Middle-Click action"
+msgstr "Действие при Shift+щракване със средния бутон"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Поведение при Shift+щракване със средния бутон."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Клавишните комбинации ще бъдат или Super+число, или Super+Alt+число"
+
+msgid "Hotkeys prefix"
+msgstr "Префикс на клавишните комбинации"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Временно показване на номерата на програмите върху иконките при използване на клавишните комбинации."
+
+msgid "Number overlay"
+msgstr "Наслагване на номера"
+
+msgid "Never"
+msgstr "Никога"
+
+msgid "Show temporarily"
+msgstr "Показване временно"
+
+msgid "Always visible"
+msgstr "Винаги видимо"
+
+msgid "Hide timeout (ms)"
+msgstr "Време до скриване (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Клавишна комбинация за показване на наслагването за 2 секунди"
+
+msgid "e.g. <Super>q"
+msgstr "напр. <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "На второстепенните монитори да се показва наслагването върху иконките, съответстващи на основния монитор"
+
+msgid "Show the overlay on all monitors"
+msgstr "Показване на наслагването на всички монитори"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Показване на прегледи, когато програмата има няколко екземпляра"
+
+msgid "Show window previews on hotkey"
+msgstr "Показване на прегледи на прозорци при клавишна комбинация"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Изберете кои цифрови клавиши на клавиатурата да активират клавишните комбинации"
+
+msgid "Hotkeys are activated with"
+msgstr "Клавишните комбинации се активират с"
+
+msgid "Number row"
+msgstr "Цифров ред"
+
+msgid "Numeric keypad"
+msgstr "Цифрова клавиатура"
+
+msgid "Both"
+msgstr "И двете"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Забавяне между събитията на превъртане с мишката (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Използвайте тази стойност, за да ограничите броя на прихванатите събития на превъртане с мишката."
+
+msgid "Show popup when changing workspace"
+msgstr "Показване на изскачащ прозорец при смяна на работното място"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Това засяга само изскачащия прозорец за работното място при превъртане върху панела."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "Интегриране на елементите на <i>AppMenu</i>"
+
+msgid "<i>App Details</i> menu item"
+msgstr "Елемент от менюто <i>Подробности за програмата</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Подробности за програмата</i> е налично само когато е инсталиран Gnome Software"
+
+msgid "Show Applications icon"
+msgstr "Иконка „Показване на програмите“"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Страничен отстъп на иконката „Показване на програмите“ (px)"
+
+msgid "Override escape key and return to desktop"
+msgstr "Замяна на клавиша Escape и връщане към работния плот"
+
+msgid "Override Show Desktop line color"
+msgstr "Замяна на цвета на линията „Показване на работния плот“"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Показване на работния плот при посочване на бутона „Показване на работния плот“"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Забавяне преди показване на работния плот (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Продължителност на избледняването (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Време (ms) преди показване"
+
+msgid "(400 is default)"
+msgstr "(стандартно 400)"
+
+msgid "Time (ms) before hiding"
+msgstr "Време (ms) преди скриване"
+
+msgid "(100 is default)"
+msgstr "(стандартно 100)"
+
+msgid "Immediate on application icon click"
+msgstr "Незабавно при щракване върху иконката на програмата"
+
+msgid "Animation time (ms)"
+msgstr "Време на анимацията (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Щракване със средния бутон върху прегледа затваря прозореца"
+
+msgid "Window previews preferred size (px)"
+msgstr "Предпочитан размер (px) на прегледите на прозорци"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Съотношение на страните X (ширина) на прегледите на прозорци"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Фиксирано"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Съотношение на страните Y (височина) на прегледите на прозорци"
+
+msgid "Window previews padding (px)"
+msgstr "Отстъп на прегледите на прозорци (px)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Собствена прозрачност на фона на прегледите"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Ако е изключено, фонът на прегледите има същата прозрачност като панела."
+
+msgid "Close button and header position"
+msgstr "Позиция на бутона за затваряне и заглавната лента"
+
+msgid "Display window preview headers"
+msgstr "Показване на заглавни ленти на прегледите на прозорци"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Размер на иконката (px) в прегледа на прозорец"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Ако е изключено, размерът на иконката в прегледа ще зависи от размера на заглавната лента"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Размер на шрифта (px) на заглавията на прегледите"
+
+msgid "Font weight of the preview titles"
+msgstr "Дебелина на шрифта на заглавията на прегледите"
+
+msgid "Font color of the preview titles"
+msgstr "Цвят на шрифта на заглавията на прегледите"
+
+msgid "Enable window peeking"
+msgstr "Включване на надникването в прозорци"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "При задържане на показалеца над преглед на прозорец за известно време прозорецът се откроява."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Време за влизане в режим на надникване в прозорци (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "Необходимо време без активност при задържане над преглед на прозорец за влизане в режим на надникване."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Прозрачност в режим на надникване в прозорци"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Всички прозорци освен надникнатия получават една и съща прозрачност."
+
+msgid "About"
+msgstr "Относно"
+
+msgid "Info"
+msgstr "Информация"
+
+msgid "Version"
+msgstr "Версия"
+
+msgid "Source"
+msgstr "Изходен код"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Изнасяне и внасяне"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Използвайте бутоните по-долу, за да създадете файл с настройки от текущите си предпочитания, който може да бъде внесен на друг компютър."
+
+msgid "Export and import settings"
+msgstr "Изнасяне и внасяне на настройки"
+
+msgid "Export to file"
+msgstr "Изнасяне във файл"
+
+msgid "Import from file"
+msgstr "Внасяне от файл"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Тази програма се разпространява БЕЗ КАКВАТО И ДА Е ГАРАНЦИЯ.\n"
+"За подробности вижте <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, версия 2 или по-нова</a>.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Спонсорирано и първоначално разработено от"
+
+msgid "Action"
+msgstr "Действие"
+
+msgid "Click action"
+msgstr "Действие при щракване"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "Поведение при щракване върху иконката на работеща програма."
+
+msgid "Toggle windows"
+msgstr "Превключване на прозорците"
+
+msgid "Scroll action"
+msgstr "Действие при превъртане"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Поведение при превъртане с мишката над панела."
+
+msgid "Scroll panel action"
+msgstr "Действие при превъртане над панела"
+
+msgid "Do nothing"
+msgstr "Без действие"
+
+msgid "Switch workspace"
+msgstr "Смяна на работното място"
+
+msgid "Cycle windows"
+msgstr "Обхождане на прозорците"
+
+msgid "Change volume"
+msgstr "Промяна на силата на звука"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Поведение при превъртане с мишката над иконка на програма."
+
+msgid "Scroll icon action"
+msgstr "Действие при превъртане над иконка"
+
+msgid "Same as panel"
+msgstr "Като при панела"
+
+msgid "Hotkey overlay"
+msgstr "Наслагване за клавишните комбинации"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Включване на Super+(0-9) като клавишни комбинации за активиране на програми. Може да се използва и заедно с Shift и Ctrl."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Използване на клавишни комбинации за активиране на програми"
+
+msgid "Application icons context menu"
+msgstr "Контекстно меню на иконките на програмите"
+
+msgid "(right-click menu)"
+msgstr "(меню при щракване с десния бутон)"
+
+msgid "Secondary menu"
+msgstr "Второстепенно меню"
+
+msgid "Panel context menu entries"
+msgstr "Записи в контекстното меню на панела"
+
+msgid "Add entry"
+msgstr "Добавяне на запис"
+
+msgid "Behavior"
+msgstr "Поведение"
+
+msgid "Applications"
+msgstr "Приложения"
+
+msgid "Show favorite applications"
+msgstr "Показване на любимите програми"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Показване на любимите програми на второстепенните панели"
+
+msgid "Show running applications"
+msgstr "Показване на работещите програми"
+
+msgid "Ungroup applications"
+msgstr "Негрупиране на програмите"
+
+msgid "Show notification counter badge"
+msgstr "Показване на значка с брояч на известията"
+
+msgid "Hover"
+msgstr "При посочване"
+
+msgid "Show window previews on hover"
+msgstr "Показване на прегледи на прозорци при посочване"
+
+msgid "Show tooltip on hover"
+msgstr "Показване на подсказка при посочване"
+
+msgid "Isolate"
+msgstr "Изолиране"
+
+msgid "Isolate Workspaces"
+msgstr "Изолиране на работните места"
+
+msgid "Isolate monitors"
+msgstr "Изолиране на мониторите"
+
+msgid "Overview"
+msgstr "Преглед"
+
+msgid "Click empty space to close overview"
+msgstr "Щракване върху празно място затваря прегледа"
+
+msgid "Disable show overview on startup"
+msgstr "Изключване на показването на прегледа при стартиране"
+
+msgid "Fine-Tune"
+msgstr "Фина настройка"
+
+msgid "Font size"
+msgstr "Размер на шрифта"
+
+msgid "(0 = theme default)"
+msgstr "(0 = по подразбиране за темата)"
+
+msgid "Tray Font Size"
+msgstr "Размер на шрифта в областта за известия"
+
+msgid "LeftBox Font Size"
+msgstr "Размер на шрифта в лявата кутия"
+
+msgid "Padding"
+msgstr "Отстъп"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = по подразбиране за темата)"
+
+msgid "Tray Item Padding"
+msgstr "Отстъп на елементите в областта за известия"
+
+msgid "Status Icon Padding"
+msgstr "Отстъп на иконките за състояние"
+
+msgid "LeftBox Padding"
+msgstr "Отстъп на лявата кутия"
+
+msgid "Animate"
+msgstr "Анимация"
+
+msgid "Animate switching applications"
+msgstr "Анимация при превключване на програми"
+
+msgid "Animate launching new windows"
+msgstr "Анимация при стартиране на нови прозорци"
+
+msgid "Gnome functionality"
+msgstr "Функционалност на Gnome"
+
+msgid "(overview)"
+msgstr "(преглед)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Запазване на оригиналното меню dash на gnome-shell"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Запазване на оригиналния горен панел на gnome-shell"
+
+msgid "(e.g. date menu)"
+msgstr "(напр. меню за дата)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Активиране на бутоните на менюто на панела само при щракване"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Принудително използване на горещия ъгъл „Дейности“ на основния монитор"
+
+msgid "Position"
+msgstr "Позиция"
+
+msgid "Panel"
+msgstr "Панел"
+
+msgid "Display the main panel on"
+msgstr "Показване на основния панел на"
+
+msgid "Display panels on all monitors"
+msgstr "Показване на панели на всички монитори"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Скриване и показване на панела според предпочитанията"
+
+msgid "Panel Intellihide"
+msgstr "Intellihide на панела"
+
+msgid "Order and Position on monitors"
+msgstr "Ред и позиция на мониторите"
+
+msgid "Monitor"
+msgstr "Монитор"
+
+msgid "Apply changes to all monitors"
+msgstr "Прилагане на промените към всички монитори"
+
+msgid "Panel monitor position"
+msgstr "Позиция на панела на монитора"
+
+msgid "(default is 48)"
+msgstr "(стандартно 48)"
+
+msgid "Panel thickness"
+msgstr "Дебелина на панела"
+
+msgid "(default is 100)"
+msgstr "(стандартно 100)"
+
+msgid "Panel length"
+msgstr "Дължина на панела"
+
+msgid "Dynamic"
+msgstr "Динамична"
+
+msgid "Anchor"
+msgstr "Котва"
+
+msgid "Taskbar Display"
+msgstr "Показване на лентата на задачите"
+
+msgid "Style"
+msgstr "Стил"
+
+msgid "Global style"
+msgstr "Общ стил"
+
+msgid "Border radius"
+msgstr "Радиус на границата"
+
+msgid "AppIcon style"
+msgstr "Стил на иконката на програмата"
+
+msgid "(default is 8)"
+msgstr "(стандартно 8)"
+
+msgid "App Icon Margin"
+msgstr "Поле на иконката на програмата"
+
+msgid "(default is 4)"
+msgstr "(стандартно 4)"
+
+msgid "App Icon Padding"
+msgstr "Отстъп на иконката на програмата"
+
+msgid "Animate hovering app icons"
+msgstr "Анимация при посочване на иконките на програмите"
+
+msgid "Highlight hovering app icons"
+msgstr "Открояване при посочване на иконките на програмите"
+
+msgid "Icon style"
+msgstr "Стил на иконките"
+
+msgid "Normal"
+msgstr "Нормален"
+
+msgid "Symbolic"
+msgstr "Символен"
+
+msgid "Grayscale"
+msgstr "Нюанси на сивото"
+
+msgid "Running indicator"
+msgstr "Индикатор за изпълнение"
+
+msgid "Running indicator position"
+msgstr "Позиция на индикатора за изпълнение"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Стил на индикатора за изпълнение (програма на фокус)"
+
+msgid "Dots"
+msgstr "Точки"
+
+msgid "Squares"
+msgstr "Квадрати"
+
+msgid "Dashes"
+msgstr "Тирета"
+
+msgid "Segmented"
+msgstr "Сегментиран"
+
+msgid "Solid"
+msgstr "Плътен"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Стил на индикатора за изпълнение (програми без фокус)"
+
+msgid "Panel style"
+msgstr "Стил на панела"
+
+msgid "(default is 0)"
+msgstr "(стандартно 0)"
+
+msgid "Side margins"
+msgstr "Странични полета"
+
+msgid "Top and bottom margins"
+msgstr "Горно и долно поле"
+
+msgid "Side padding"
+msgstr "Страничен отстъп"
+
+msgid "Top and bottom padding"
+msgstr "Горен и долен отстъп"
+
+msgid "Override panel theme background color"
+msgstr "Замяна на цвета на фона от темата на панела"
+
+msgid "Override panel theme background opacity"
+msgstr "Замяна на прозрачността на фона от темата на панела"
+
+msgid "Panel background opacity (%)"
+msgstr "Прозрачност на фона на панела (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Промяна на прозрачността, когато прозорец се приближи до панела"
+
+msgid "Dynamic background opacity"
+msgstr "Динамична прозрачност на фона"
+
+msgid "Override panel theme gradient"
+msgstr "Замяна на градиента от темата на панела"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Цвят и прозрачност (%) на горния край на градиента"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Цвят и прозрачност (%) на долния край на градиента"
+
+msgid "Panel border"
+msgstr "Граница на панела"
+
+msgid "Override border color"
+msgstr "Замяна на цвета на границата"
+
+msgid "Border thickness"
+msgstr "Дебелина на границата"

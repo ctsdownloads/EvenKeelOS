@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
+
+msgid "Open in Ghostty"
+msgstr "Odpri v Ghostty"
+
+msgid "Find…"
+msgstr "Najdi …"
+
+msgid "Previous Match"
+msgstr "Prejšnje ujemanje"
+
+msgid "Next Match"
+msgstr "Naslednje ujemanje"
+
+msgid "Close"
+msgstr "Zapri"
+
+msgid "Oh, no."
+msgstr "Ojoj."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "Pridobitev konteksta OpenGL za izris ni uspela."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "Ta terminal je v načinu samo za branje. Vsebino si še vedno lahko ogledate, izberete in pomikate po njej, vendar se zagnanemu programu ne bodo pošiljali nobeni vhodni dogodki."
+
+msgid "Read-only"
+msgstr "Samo za branje"
+
+msgid "Copy"
+msgstr "Kopiraj"
+
+msgid "Paste"
+msgstr "Prilepi"
+
+msgid "Notify on Next Command Finish"
+msgstr "Obvesti ob koncu naslednjega ukaza"
+
+msgid "Clear"
+msgstr "Počisti"
+
+msgid "Reset"
+msgstr "Ponastavi"
+
+msgid "Split"
+msgstr "Razdeli"
+
+msgid "Change Title…"
+msgstr "Spremeni naslov …"
+
+msgid "Split Up"
+msgstr "Razdeli navzgor"
+
+msgid "Split Down"
+msgstr "Razdeli navzdol"
+
+msgid "Split Left"
+msgstr "Razdeli levo"
+
+msgid "Split Right"
+msgstr "Razdeli desno"
+
+msgid "Close Split"
+msgstr "Zapri razdelitev"
+
+msgid "Tab"
+msgstr "Zavihek"
+
+msgid "Change Tab Title…"
+msgstr "Spremeni naslov zavihka …"
+
+msgid "New Tab"
+msgstr "Nov zavihek"
+
+msgid "Close Tab"
+msgstr "Zapri zavihek"
+
+msgid "Window"
+msgstr "Okno"
+
+msgid "Change Window Title…"
+msgstr "Spremeni naslov okna …"
+
+msgid "New Window"
+msgstr "Novo okno"
+
+msgid "Close Window"
+msgstr "Zapri okno"
+
+msgid "Config"
+msgstr "Nastavitve"
+
+msgid "Open Configuration in OS Editor"
+msgstr "Odpri nastavitve v urejevalniku sistema"
+
+msgid "Open Configuration in New Window"
+msgstr "Odpri nastavitve v novem oknu"
+
+msgid "Reload Configuration"
+msgstr "Znova naloži nastavitve"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ Izvajate razhroščevalno različico programa Ghostty! Zmogljivost bo zmanjšana."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: pregledovalnik terminala"
+
+msgid "New Split"
+msgstr "Nova razdelitev"
+
+msgid "View Open Tabs"
+msgstr "Prikaži odprte zavihke"
+
+msgid "Main Menu"
+msgstr "Glavni meni"
+
+msgid "Command Palette"
+msgstr "Ukazna paleta"
+
+msgid "Terminal Inspector"
+msgstr "Pregledovalnik terminala"
+
+msgid "About Ghostty"
+msgstr "O programu Ghostty"
+
+msgid "Quit"
+msgstr "Končaj"
+
+msgid "Authorize Clipboard Access"
+msgstr "Odobritev dostopa do odložišča"
+
+msgid "Deny"
+msgstr "Zavrni"
+
+msgid "Allow"
+msgstr "Dovoli"
+
+msgid "Remember choice for this split"
+msgstr "Zapomni si izbiro za to razdelitev"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "Znova naložite nastavitve, če želite znova prikazati to vprašanje"
+
+msgid "Cancel"
+msgstr "Prekliči"
+
+msgid "Execute a command…"
+msgstr "Izvedi ukaz …"
+
+msgid "Configuration Errors"
+msgstr "Napake v nastavitvah"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "Najdena je bila ena ali več napak v nastavitvah. Preglejte spodnje napake ter znova naložite nastavitve ali pa napake prezrite."
+
+msgid "Ignore"
+msgstr "Prezri"
+
+msgid "Leave blank to restore the default title."
+msgstr "Pustite prazno za obnovitev privzetega naslova."
+
+msgid "OK"
+msgstr "V redu"
+
+msgid "The keybind was revoked by the system."
+msgstr "Sistem je preklical tipkovno bližnjico."
+
+msgid "The keybind was denied by the system."
+msgstr "Sistem je zavrnil tipkovno bližnjico."
+
+msgid "Global keybind unavailable"
+msgstr "Globalna tipkovna bližnjica ni na voljo"
+
+msgid "Export Terminal IO Events"
+msgstr "Izvozi vhodno-izhodne dogodke terminala"
+
+msgid "Export"
+msgstr "Izvozi"
+
+msgid "Editing configuration file"
+msgstr "Urejanje datoteke z nastavitvami"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "Program poskuša pisati v odložišče. Trenutna vsebina odložišča je prikazana spodaj."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "Program poskuša brati iz odložišča. Trenutna vsebina odložišča je prikazana spodaj."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "Opozorilo: potencialno nevarno lepljenje"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "Lepljenje tega besedila v terminal je lahko nevarno, saj je videti, kot da bi se izvedli nekateri ukazi."
+
+msgid "Quit Ghostty?"
+msgstr "Želite zapreti Ghostty?"
+
+msgid "Close Tab?"
+msgstr "Želite zapreti zavihek?"
+
+msgid "Close Window?"
+msgstr "Želite zapreti okno?"
+
+msgid "Close Split?"
+msgstr "Želite zapreti razdelitev?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "Vse terminalske seje bodo prekinjene."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "Vse terminalske seje v tem zavihku bodo prekinjene."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "Vse terminalske seje v tem oknu bodo prekinjene."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "Trenutno zagnani proces v tej razdelitvi bo prekinjen."
+
+msgid "Command Finished"
+msgstr "Ukaz je končan"
+
+msgid "Command Succeeded"
+msgstr "Ukaz je uspel"
+
+msgid "Command Failed"
+msgstr "Ukaz ni uspel"
+
+msgid "Change Terminal Title"
+msgstr "Spremeni naslov terminala"
+
+msgid "Change Tab Title"
+msgstr "Spremeni naslov zavihka"
+
+msgid "Change Window Title"
+msgstr "Spremeni naslov okna"
+
+msgid "Reloaded the configuration"
+msgstr "Nastavitve so znova naložene"
+
+msgid "Copied to clipboard"
+msgstr "Kopirano v odložišče"
+
+msgid "Cleared clipboard"
+msgstr "Odložišče počiščeno"
+
+msgid "Ghostty Developers"
+msgstr "Razvijalci programa Ghostty"
+
+msgid "Reset Terminal"
+msgstr "Ponastavi terminal"
+
+msgid "Reset the terminal to a clean state."
+msgstr "Ponastavi terminal v čisto stanje."
+
+msgid "Copy to Clipboard"
+msgstr "Kopiraj v odložišče"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "Kopiraj izbrano besedilo v odložišče v navadni in oblikovani obliki."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "Kopiraj izbor kot navadno besedilo v odložišče"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "Kopiraj izbrano besedilo v odložišče kot navadno besedilo."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "Kopiraj izbor kot zaporedja ANSI v odložišče"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "Kopiraj izbrano besedilo v odložišče kot ubežna zaporedja ANSI."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "Kopiraj izbor kot HTML v odložišče"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "Kopiraj izbrano besedilo v odložišče kot HTML."
+
+msgid "Copy URL to Clipboard"
+msgstr "Kopiraj URL v odložišče"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "Kopiraj URL pod kazalcem v odložišče."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "Kopiraj naslov terminala v odložišče"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "Kopiraj naslov terminala v odložišče. Če naslov terminala ni nastavljen, to nima učinka."
+
+msgid "Paste from Clipboard"
+msgstr "Prilepi iz odložišča"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "Prilepi vsebino glavnega odložišča."
+
+msgid "Paste from Selection"
+msgstr "Prilepi iz izbora"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "Prilepi vsebino odložišča izbora."
+
+msgid "Start Search"
+msgstr "Začni iskanje"
+
+msgid "Start a search if one isn't already active."
+msgstr "Začni iskanje, če še ni aktivno."
+
+msgid "Search Selection"
+msgstr "Poišči izbor"
+
+msgid "Start a search for the current text selection."
+msgstr "Začni iskanje trenutno izbranega besedila."
+
+msgid "End Search"
+msgstr "Končaj iskanje"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "Končaj trenutno iskanje, če obstaja, in skrij vse grafične elemente."
+
+msgid "Next Search Result"
+msgstr "Naslednji rezultat iskanja"
+
+msgid "Navigate to the next search result, if any."
+msgstr "Pojdi na naslednji rezultat iskanja, če obstaja."
+
+msgid "Previous Search Result"
+msgstr "Prejšnji rezultat iskanja"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "Pojdi na prejšnji rezultat iskanja, če obstaja."
+
+msgid "Increase Font Size"
+msgstr "Povečaj velikost pisave"
+
+msgid "Increase the font size by 1 point."
+msgstr "Povečaj velikost pisave za 1 točko."
+
+msgid "Decrease Font Size"
+msgstr "Zmanjšaj velikost pisave"
+
+msgid "Decrease the font size by 1 point."
+msgstr "Zmanjšaj velikost pisave za 1 točko."
+
+msgid "Reset Font Size"
+msgstr "Ponastavi velikost pisave"
+
+msgid "Reset the font size to the default."
+msgstr "Ponastavi velikost pisave na privzeto."
+
+msgid "Clear Screen"
+msgstr "Počisti zaslon"
+
+msgid "Clear the screen and scrollback."
+msgstr "Počisti zaslon in zgodovino pomikanja."
+
+msgid "Select All"
+msgstr "Izberi vse"
+
+msgid "Select all text on the screen."
+msgstr "Izberi vse besedilo na zaslonu."
+
+msgid "Scroll to Top"
+msgstr "Pomakni na vrh"
+
+msgid "Scroll to the top of the screen."
+msgstr "Pomakni na vrh zaslona."
+
+msgid "Scroll to Bottom"
+msgstr "Pomakni na dno"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "Pomakni na dno zaslona."
+
+msgid "Scroll to Selection"
+msgstr "Pomakni na izbor"
+
+msgid "Scroll to the selected text."
+msgstr "Pomakni na izbrano besedilo."
+
+msgid "Scroll Page Up"
+msgstr "Pomakni eno stran navzgor"
+
+msgid "Scroll the screen up by a page."
+msgstr "Pomakni zaslon eno stran navzgor."
+
+msgid "Scroll Page Down"
+msgstr "Pomakni eno stran navzdol"
+
+msgid "Scroll the screen down by a page."
+msgstr "Pomakni zaslon eno stran navzdol."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "Kopiraj zaslon v začasno datoteko in kopiraj pot"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "Kopiraj vsebino zaslona v začasno datoteko in kopiraj pot v odložišče."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "Kopiraj zaslon v začasno datoteko in prilepi pot"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "Kopiraj vsebino zaslona v začasno datoteko in prilepi pot do datoteke."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "Kopiraj zaslon v začasno datoteko in odpri"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "Kopiraj vsebino zaslona v začasno datoteko in jo odpri."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "Kopiraj zaslon kot HTML v začasno datoteko in kopiraj pot"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Kopiraj vsebino zaslona kot HTML v začasno datoteko in kopiraj pot v odložišče."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "Kopiraj zaslon kot HTML v začasno datoteko in prilepi pot"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "Kopiraj vsebino zaslona kot HTML v začasno datoteko in prilepi pot do datoteke."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "Kopiraj zaslon kot HTML v začasno datoteko in odpri"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "Kopiraj vsebino zaslona kot HTML v začasno datoteko in jo odpri."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Kopiraj zaslon kot zaporedja ANSI v začasno datoteko in kopiraj pot"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Kopiraj vsebino zaslona kot ubežna zaporedja ANSI v začasno datoteko in kopiraj pot v odložišče."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Kopiraj zaslon kot zaporedja ANSI v začasno datoteko in prilepi pot"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Kopiraj vsebino zaslona kot ubežna zaporedja ANSI v začasno datoteko in prilepi pot do datoteke."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "Kopiraj zaslon kot zaporedja ANSI v začasno datoteko in odpri"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Kopiraj vsebino zaslona kot ubežna zaporedja ANSI v začasno datoteko in jo odpri."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "Kopiraj izbor v začasno datoteko in kopiraj pot"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "Kopiraj vsebino izbora v začasno datoteko in kopiraj pot v odložišče."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "Kopiraj izbor v začasno datoteko in prilepi pot"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "Kopiraj vsebino izbora v začasno datoteko in prilepi pot do datoteke."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "Kopiraj izbor v začasno datoteko in odpri"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "Kopiraj vsebino izbora v začasno datoteko in jo odpri."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "Kopiraj izbor kot HTML v začasno datoteko in kopiraj pot"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Kopiraj vsebino izbora kot HTML v začasno datoteko in kopiraj pot v odložišče."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "Kopiraj izbor kot HTML v začasno datoteko in prilepi pot"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "Kopiraj vsebino izbora kot HTML v začasno datoteko in prilepi pot do datoteke."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "Kopiraj izbor kot HTML v začasno datoteko in odpri"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "Kopiraj vsebino izbora kot HTML v začasno datoteko in jo odpri."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Kopiraj izbor kot zaporedja ANSI v začasno datoteko in kopiraj pot"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Kopiraj vsebino izbora kot ubežna zaporedja ANSI v začasno datoteko in kopiraj pot v odložišče."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Kopiraj izbor kot zaporedja ANSI v začasno datoteko in prilepi pot"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Kopiraj vsebino izbora kot ubežna zaporedja ANSI v začasno datoteko in prilepi pot do datoteke."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "Kopiraj izbor kot zaporedja ANSI v začasno datoteko in odpri"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Kopiraj vsebino izbora kot ubežna zaporedja ANSI v začasno datoteko in jo odpri."
+
+msgid "Open a new window."
+msgstr "Odpri novo okno."
+
+msgid "Open a new tab."
+msgstr "Odpri nov zavihek."
+
+msgid "Move Tab Left"
+msgstr "Premakni zavihek levo"
+
+msgid "Move the current tab to the left."
+msgstr "Premakni trenutni zavihek v levo."
+
+msgid "Move Tab Right"
+msgstr "Premakni zavihek desno"
+
+msgid "Move the current tab to the right."
+msgstr "Premakni trenutni zavihek v desno."
+
+msgid "Move Tab to New Window"
+msgstr "Premakni zavihek v novo okno"
+
+msgid "Move the current tab to a new window."
+msgstr "Premakni trenutni zavihek v novo okno."
+
+msgid "Toggle Tab Overview"
+msgstr "Preklopi pregled zavihkov"
+
+msgid "Toggle the tab overview."
+msgstr "Preklopi pregled zavihkov."
+
+msgid "Change Terminal Title…"
+msgstr "Spremeni naslov terminala …"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "Vprašaj za nov naslov trenutnega terminala."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "Vprašaj za nov naslov trenutnega zavihka."
+
+msgid "Split the terminal to the left."
+msgstr "Razdeli terminal levo."
+
+msgid "Split the terminal to the right."
+msgstr "Razdeli terminal desno."
+
+msgid "Split the terminal up."
+msgstr "Razdeli terminal navzgor."
+
+msgid "Split the terminal down."
+msgstr "Razdeli terminal navzdol."
+
+msgid "Focus Split: Previous"
+msgstr "Fokus na razdelitev: prejšnja"
+
+msgid "Focus the previous split, if any."
+msgstr "Premakni fokus na prejšnjo razdelitev, če obstaja."
+
+msgid "Focus Split: Next"
+msgstr "Fokus na razdelitev: naslednja"
+
+msgid "Focus the next split, if any."
+msgstr "Premakni fokus na naslednjo razdelitev, če obstaja."
+
+msgid "Focus Split: Left"
+msgstr "Fokus na razdelitev: leva"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "Premakni fokus na levo razdelitev, če obstaja."
+
+msgid "Focus Split: Right"
+msgstr "Fokus na razdelitev: desna"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "Premakni fokus na desno razdelitev, če obstaja."
+
+msgid "Focus Split: Up"
+msgstr "Fokus na razdelitev: zgornja"
+
+msgid "Focus the split above, if it exists."
+msgstr "Premakni fokus na razdelitev zgoraj, če obstaja."
+
+msgid "Focus Split: Down"
+msgstr "Fokus na razdelitev: spodnja"
+
+msgid "Focus the split below, if it exists."
+msgstr "Premakni fokus na razdelitev spodaj, če obstaja."
+
+msgid "Focus Window: Previous"
+msgstr "Fokus na okno: prejšnje"
+
+msgid "Focus the previous window, if any."
+msgstr "Premakni fokus na prejšnje okno, če obstaja."
+
+msgid "Focus Window: Next"
+msgstr "Fokus na okno: naslednje"
+
+msgid "Focus the next window, if any."
+msgstr "Premakni fokus na naslednje okno, če obstaja."
+
+msgid "Toggle Split Zoom"
+msgstr "Preklopi povečavo razdelitve"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "Preklopi stanje povečave trenutne razdelitve."
+
+msgid "Toggle Read-Only Mode"
+msgstr "Preklopi način samo za branje"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "Preklopi način samo za branje za trenutno površino."
+
+msgid "Equalize Splits"
+msgstr "Izenači razdelitve"
+
+msgid "Equalize the size of all splits."
+msgstr "Izenači velikost vseh razdelitev."
+
+msgid "Reset Window Size"
+msgstr "Ponastavi velikost okna"
+
+msgid "Reset the window size to the default."
+msgstr "Ponastavi velikost okna na privzeto."
+
+msgid "Toggle Inspector"
+msgstr "Preklopi pregledovalnik"
+
+msgid "Toggle the inspector."
+msgstr "Preklopi pregledovalnik."
+
+msgid "Show the GTK Inspector"
+msgstr "Pokaži pregledovalnik GTK"
+
+msgid "Show the GTK inspector."
+msgstr "Pokaži pregledovalnik GTK."
+
+msgid "Show On-Screen Keyboard"
+msgstr "Pokaži zaslonsko tipkovnico"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "Pokaži zaslonsko tipkovnico, če je na voljo."
+
+msgid "Open Config Using OS editor"
+msgstr "Odpri nastavitve v urejevalniku sistema"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "Odpri datoteko z nastavitvami v privzetem urejevalniku sistema."
+
+msgid "Open Config in New Terminal Window"
+msgstr "Odpri nastavitve v novem oknu terminala"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "Odpri datoteko z nastavitvami v novem oknu z uporabo $EDITOR ali $VISUAL."
+
+msgid "Reload Config"
+msgstr "Znova naloži nastavitve"
+
+msgid "Reload the config file."
+msgstr "Znova naloži datoteko z nastavitvami."
+
+msgid "Close Terminal"
+msgstr "Zapri terminal"
+
+msgid "Close the current terminal."
+msgstr "Zapri trenutni terminal."
+
+msgid "Close the current tab."
+msgstr "Zapri trenutni zavihek."
+
+msgid "Close Other Tabs"
+msgstr "Zapri druge zavihke"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "Zapri vse zavihke v tem oknu razen trenutnega."
+
+msgid "Close Tabs to the Right"
+msgstr "Zapri zavihke na desni"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "Zapri vse zavihke desno od trenutnega."
+
+msgid "Close the current window."
+msgstr "Zapri trenutno okno."
+
+msgid "Close All Windows"
+msgstr "Zapri vsa okna"
+
+msgid "Close all windows."
+msgstr "Zapri vsa okna."
+
+msgid "Toggle Maximize"
+msgstr "Preklopi maksimiranje"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "Preklopi stanje maksimiranosti trenutnega okna."
+
+msgid "Toggle Fullscreen"
+msgstr "Preklopi celozaslonski način"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "Preklopi celozaslonski način trenutnega okna."
+
+msgid "Toggle Window Decorations"
+msgstr "Preklopi okrasitev oken"
+
+msgid "Toggle the window decorations."
+msgstr "Preklopi okrasitev oken."
+
+msgid "Toggle Float on Top"
+msgstr "Preklopi vedno na vrhu"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "Preklopi stanje »vedno na vrhu« trenutnega okna."
+
+msgid "Toggle Secure Input"
+msgstr "Preklopi varen vnos"
+
+msgid "Toggle secure input mode."
+msgstr "Preklopi način varnega vnosa."
+
+msgid "Toggle Mouse Reporting"
+msgstr "Preklopi poročanje miške"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "Preklopi, ali se dogodki miške sporočajo terminalskim programom."
+
+msgid "Toggle Background Opacity"
+msgstr "Preklopi prosojnost ozadja"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "Preklopi prosojnost ozadja okna, ki se je zagnalo prosojno."
+
+msgid "Check for Updates"
+msgstr "Preveri posodobitve"
+
+msgid "Check for updates to the application."
+msgstr "Preveri, ali so na voljo posodobitve programa."
+
+msgid "Undo"
+msgstr "Razveljavi"
+
+msgid "Undo the last action."
+msgstr "Razveljavi zadnje dejanje."
+
+msgid "Redo"
+msgstr "Uveljavi znova"
+
+msgid "Redo the last undone action."
+msgstr "Znova uveljavi zadnje razveljavljeno dejanje."
+
+msgid "Quit the application."
+msgstr "Končaj program."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "Dodajte malo Ghostty v svoj terminal."

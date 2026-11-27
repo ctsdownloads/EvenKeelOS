@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Open in Ghostty"
+msgstr "Ghostty-ში გახსნა"
+
+msgid "Find…"
+msgstr "ძებნა…"
+
+msgid "Previous Match"
+msgstr "წინა დამთხვევა"
+
+msgid "Next Match"
+msgstr "შემდეგი დამთხვევა"
+
+msgid "Close"
+msgstr "დახურვა"
+
+msgid "Oh, no."
+msgstr "ოჰ, არა."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "რენდერისთვის OpenGL-ის კონტექსტის მიღება შეუძლებელია."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "ეს ტერმინალი მხოლოდ კითხვის რეჟიმშია. შეგიძლიათ შიგთავსის ნახვა, მონიშვნა და გადახვევა, თუმცა გაშვებულ აპლიკაციას შეყვანის მოვლენები არ გაეგზავნება."
+
+msgid "Read-only"
+msgstr "მხოლოდ კითხვა"
+
+msgid "Copy"
+msgstr "კოპირება"
+
+msgid "Paste"
+msgstr "ჩასმა"
+
+msgid "Notify on Next Command Finish"
+msgstr "შემდეგი ბრძანების დასრულებისას შეტყობინება"
+
+msgid "Clear"
+msgstr "გასუფთავება"
+
+msgid "Reset"
+msgstr "ჩამოყრა"
+
+msgid "Split"
+msgstr "გაყოფა"
+
+msgid "Change Title…"
+msgstr "სათაურის შეცვლა…"
+
+msgid "Split Up"
+msgstr "გაყოფა ზემოთ"
+
+msgid "Split Down"
+msgstr "გაყოფა ქვემოთ"
+
+msgid "Split Left"
+msgstr "გაყოფა მარცხნივ"
+
+msgid "Split Right"
+msgstr "გაყოფა მარჯვნივ"
+
+msgid "Close Split"
+msgstr "გაყოფის დახურვა"
+
+msgid "Tab"
+msgstr "ჩანართი"
+
+msgid "Change Tab Title…"
+msgstr "ჩანართის სათაურის შეცვლა…"
+
+msgid "New Tab"
+msgstr "ახალი ჩანართი"
+
+msgid "Close Tab"
+msgstr "ჩანართის დახურვა"
+
+msgid "Window"
+msgstr "ფანჯარა"
+
+msgid "Change Window Title…"
+msgstr "ფანჯრის სათაურის შეცვლა…"
+
+msgid "New Window"
+msgstr "ახალი ფანჯარა"
+
+msgid "Close Window"
+msgstr "ფანჯრის დახურვა"
+
+msgid "Config"
+msgstr "კონფიგურაცია"
+
+msgid "Open Configuration in OS Editor"
+msgstr "კონფიგურაციის გახსნა ოპერაციული სისტემის რედაქტორში"
+
+msgid "Open Configuration in New Window"
+msgstr "კონფიგურაციის გახსნა ახალ ფანჯარაში"
+
+msgid "Reload Configuration"
+msgstr "კონფიგურაციის თავიდან ჩატვირთვა"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ თქვენ აწარმოებთ Ghostty-ის გამართვის აგებას! წარმადობა დაქვეითებული იქნება."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: ტერმინალის ინსპექტორი"
+
+msgid "New Split"
+msgstr "ახალი გაყოფა"
+
+msgid "View Open Tabs"
+msgstr "ღია ჩანართების ნახვა"
+
+msgid "Main Menu"
+msgstr "მთავარი მენიუ"
+
+msgid "Command Palette"
+msgstr "ბრძანებების პალიტრა"
+
+msgid "Terminal Inspector"
+msgstr "ტერმინალის ინსპექტორი"
+
+msgid "About Ghostty"
+msgstr "Ghostty-ის შესახებ"
+
+msgid "Quit"
+msgstr "გასვლა"
+
+msgid "Authorize Clipboard Access"
+msgstr "გაცვლის ბუფერზე წვდომის ავტორიზაცია"
+
+msgid "Deny"
+msgstr "აკრძალვა"
+
+msgid "Allow"
+msgstr "დაშვება"
+
+msgid "Remember choice for this split"
+msgstr "არჩევანის დამახსოვრება ამ გაყოფისთვის"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "ამ მოთხოვნის კვლავ საჩვენებლად კონფიგურაცია თავიდან ჩატვირთეთ"
+
+msgid "Cancel"
+msgstr "გაუქმება"
+
+msgid "Execute a command…"
+msgstr "ბრძანების შესრულება…"
+
+msgid "Configuration Errors"
+msgstr "კონფიგურაციის შეცდომები"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "აღმოჩენილია ერთი ან მეტი კონფიგურაციის შეცდომა. გთხოვთ, გადაათვალიეროთ ქვემოთ მოცემული შეცდომები და თავიდან ჩატვირთოთ კონფიგურაცია ან უგულებელყოთ ეს შეცდომები."
+
+msgid "Ignore"
+msgstr "უგულებელყოფა"
+
+msgid "Leave blank to restore the default title."
+msgstr "ნაგულისხმევი სათაურის დასაბრუნებლად დატოვეთ ცარიელი."
+
+msgid "OK"
+msgstr "კარგი"
+
+msgid "The keybind was revoked by the system."
+msgstr "სისტემამ კლავიშთა მიბმა გააუქმა."
+
+msgid "The keybind was denied by the system."
+msgstr "სისტემამ კლავიშთა მიბმა უარყო."
+
+msgid "Global keybind unavailable"
+msgstr "გლობალური კლავიშთა მიბმა მიუწვდომელია"
+
+msgid "Export Terminal IO Events"
+msgstr "ტერმინალის შეყვანა/გამოტანის მოვლენების გატანა"
+
+msgid "Export"
+msgstr "გატანა"
+
+msgid "Editing configuration file"
+msgstr "კონფიგურაციის ფაილის ჩასწორება"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "აპლიკაცია ცდილობს გაცვლის ბუფერში ჩაწერას. გაცვლის ბუფერის მიმდინარე შიგთავსი ნაჩვენებია ქვემოთ."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "აპლიკაცია ცდილობს გაცვლის ბუფერიდან წაკითხვას. გაცვლის ბუფერის მიმდინარე შიგთავსი ნაჩვენებია ქვემოთ."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "გაფრთხილება: პოტენციურად სახიფათო ჩასმა"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "ამ ტექსტის ტერმინალში ჩასმა შეიძლება სახიფათო იყოს, რადგან ჩანს, რომ რამდენიმე ბრძანება შესრულდება."
+
+msgid "Quit Ghostty?"
+msgstr "გსურთ Ghostty-იდან გასვლა?"
+
+msgid "Close Tab?"
+msgstr "გსურთ ჩანართის დახურვა?"
+
+msgid "Close Window?"
+msgstr "გსურთ ფანჯრის დახურვა?"
+
+msgid "Close Split?"
+msgstr "გსურთ გაყოფის დახურვა?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "ყველა ტერმინალური სესია შეწყდება."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "ამ ჩანართში ყველა ტერმინალური სესია შეწყდება."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "ამ ფანჯარაში ყველა ტერმინალური სესია შეწყდება."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "ამ გაყოფაში ამჟამად გაშვებული პროცესი შეწყდება."
+
+msgid "Command Finished"
+msgstr "ბრძანება დასრულდა"
+
+msgid "Command Succeeded"
+msgstr "ბრძანება წარმატებით შესრულდა"
+
+msgid "Command Failed"
+msgstr "ბრძანება ვერ შესრულდა"
+
+msgid "Change Terminal Title"
+msgstr "ტერმინალის სათაურის შეცვლა"
+
+msgid "Change Tab Title"
+msgstr "ჩანართის სათაურის შეცვლა"
+
+msgid "Change Window Title"
+msgstr "ფანჯრის სათაურის შეცვლა"
+
+msgid "Reloaded the configuration"
+msgstr "კონფიგურაცია თავიდან ჩაიტვირთა"
+
+msgid "Copied to clipboard"
+msgstr "დაკოპირდა გაცვლის ბუფერში"
+
+msgid "Cleared clipboard"
+msgstr "გაცვლის ბუფერი გასუფთავდა"
+
+msgid "Ghostty Developers"
+msgstr "Ghostty-ის შემქმნელები"
+
+msgid "Reset Terminal"
+msgstr "ტერმინალის ჩამოყრა"
+
+msgid "Reset the terminal to a clean state."
+msgstr "ტერმინალის სუფთა მდგომარეობაში ჩამოყრა."
+
+msgid "Copy to Clipboard"
+msgstr "გაცვლის ბუფერში კოპირება"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "მონიშნული ტექსტის გაცვლის ბუფერში კოპირება როგორც უბრალო, ასევე სტილიზებული ფორმატით."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "მონიშნულის გაცვლის ბუფერში კოპირება უბრალო ტექსტად"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "მონიშნული ტექსტის გაცვლის ბუფერში კოპირება უბრალო ტექსტად."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "მონიშნულის გაცვლის ბუფერში კოპირება ANSI მიმდევრობებად"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "მონიშნული ტექსტის გაცვლის ბუფერში კოპირება ANSI გასვლის მიმდევრობებად."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "მონიშნულის გაცვლის ბუფერში კოპირება HTML-ად"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "მონიშნული ტექსტის გაცვლის ბუფერში კოპირება HTML-ად."
+
+msgid "Copy URL to Clipboard"
+msgstr "URL-ის გაცვლის ბუფერში კოპირება"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "კურსორის ქვეშ მდებარე URL-ის გაცვლის ბუფერში კოპირება."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "ტერმინალის სათაურის გაცვლის ბუფერში კოპირება"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "ტერმინალის სათაურის გაცვლის ბუფერში კოპირება. თუ ტერმინალის სათაური დაყენებული არაა, ამას ეფექტი არ ექნება."
+
+msgid "Paste from Clipboard"
+msgstr "ჩასმა გაცვლის ბუფერიდან"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "მთავარი გაცვლის ბუფერის შიგთავსის ჩასმა."
+
+msgid "Paste from Selection"
+msgstr "ჩასმა მონიშნულიდან"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "მონიშვნის გაცვლის ბუფერის შიგთავსის ჩასმა."
+
+msgid "Start Search"
+msgstr "ძებნის დაწყება"
+
+msgid "Start a search if one isn't already active."
+msgstr "ძებნის დაწყება, თუ ის უკვე აქტიური არაა."
+
+msgid "Search Selection"
+msgstr "მონიშნულის ძებნა"
+
+msgid "Start a search for the current text selection."
+msgstr "მიმდინარე მონიშნული ტექსტის ძებნის დაწყება."
+
+msgid "End Search"
+msgstr "ძებნის დასრულება"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "მიმდინარე ძებნის დასრულება, ასეთის არსებობის შემთხვევაში, და ყველა გრაფიკული ელემენტის დამალვა."
+
+msgid "Next Search Result"
+msgstr "შემდეგი ძებნის შედეგი"
+
+msgid "Navigate to the next search result, if any."
+msgstr "შემდეგ ძებნის შედეგზე გადასვლა, ასეთის არსებობის შემთხვევაში."
+
+msgid "Previous Search Result"
+msgstr "წინა ძებნის შედეგი"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "წინა ძებნის შედეგზე გადასვლა, ასეთის არსებობის შემთხვევაში."
+
+msgid "Increase Font Size"
+msgstr "შრიფტის ზომის გაზრდა"
+
+msgid "Increase the font size by 1 point."
+msgstr "შრიფტის ზომის 1 პუნქტით გაზრდა."
+
+msgid "Decrease Font Size"
+msgstr "შრიფტის ზომის შემცირება"
+
+msgid "Decrease the font size by 1 point."
+msgstr "შრიფტის ზომის 1 პუნქტით შემცირება."
+
+msgid "Reset Font Size"
+msgstr "შრიფტის ზომის ჩამოყრა"
+
+msgid "Reset the font size to the default."
+msgstr "შრიფტის ზომის ნაგულისხმევზე ჩამოყრა."
+
+msgid "Clear Screen"
+msgstr "ეკრანის გასუფთავება"
+
+msgid "Clear the screen and scrollback."
+msgstr "ეკრანისა და გადახვევის ბუფერის გასუფთავება."
+
+msgid "Select All"
+msgstr "ყველაფრის მონიშვნა"
+
+msgid "Select all text on the screen."
+msgstr "ეკრანზე მთელი ტექსტის მონიშვნა."
+
+msgid "Scroll to Top"
+msgstr "გადახვევა თავში"
+
+msgid "Scroll to the top of the screen."
+msgstr "ეკრანის თავში გადახვევა."
+
+msgid "Scroll to Bottom"
+msgstr "გადახვევა ბოლოში"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "ეკრანის ბოლოში გადახვევა."
+
+msgid "Scroll to Selection"
+msgstr "გადახვევა მონიშნულთან"
+
+msgid "Scroll to the selected text."
+msgstr "მონიშნულ ტექსტთან გადახვევა."
+
+msgid "Scroll Page Up"
+msgstr "გვერდით ზემოთ გადახვევა"
+
+msgid "Scroll the screen up by a page."
+msgstr "ეკრანის ერთი გვერდით ზემოთ გადახვევა."
+
+msgid "Scroll Page Down"
+msgstr "გვერდით ქვემოთ გადახვევა"
+
+msgid "Scroll the screen down by a page."
+msgstr "ეკრანის ერთი გვერდით ქვემოთ გადახვევა."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "ეკრანის დროებით ფაილში კოპირება და მისი ბილიკის კოპირება"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "ეკრანის შიგთავსის დროებით ფაილში კოპირება და ბილიკის გაცვლის ბუფერში კოპირება."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "ეკრანის დროებით ფაილში კოპირება და მისი ბილიკის ჩასმა"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "ეკრანის შიგთავსის დროებით ფაილში კოპირება და ფაილის ბილიკის ჩასმა."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "ეკრანის დროებით ფაილში კოპირება და გახსნა"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "ეკრანის შიგთავსის დროებით ფაილში კოპირება და მისი გახსნა."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "ეკრანის HTML-ად დროებით ფაილში კოპირება და მისი ბილიკის კოპირება"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "ეკრანის შიგთავსის HTML-ად დროებით ფაილში კოპირება და ბილიკის გაცვლის ბუფერში კოპირება."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "ეკრანის HTML-ად დროებით ფაილში კოპირება და მისი ბილიკის ჩასმა"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "ეკრანის შიგთავსის HTML-ად დროებით ფაილში კოპირება და ფაილის ბილიკის ჩასმა."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "ეკრანის HTML-ად დროებით ფაილში კოპირება და გახსნა"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "ეკრანის შიგთავსის HTML-ად დროებით ფაილში კოპირება და მისი გახსნა."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "ეკრანის ANSI მიმდევრობებად დროებით ფაილში კოპირება და მისი ბილიკის კოპირება"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "ეკრანის შიგთავსის ANSI გასვლის მიმდევრობებად დროებით ფაილში კოპირება და ბილიკის გაცვლის ბუფერში კოპირება."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "ეკრანის ANSI მიმდევრობებად დროებით ფაილში კოპირება და მისი ბილიკის ჩასმა"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "ეკრანის შიგთავსის ANSI გასვლის მიმდევრობებად დროებით ფაილში კოპირება და ფაილის ბილიკის ჩასმა."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "ეკრანის ANSI მიმდევრობებად დროებით ფაილში კოპირება და გახსნა"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "ეკრანის შიგთავსის ANSI გასვლის მიმდევრობებად დროებით ფაილში კოპირება და მისი გახსნა."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "მონიშნულის დროებით ფაილში კოპირება და მისი ბილიკის კოპირება"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "მონიშნულის შიგთავსის დროებით ფაილში კოპირება და ბილიკის გაცვლის ბუფერში კოპირება."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "მონიშნულის დროებით ფაილში კოპირება და მისი ბილიკის ჩასმა"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "მონიშნულის შიგთავსის დროებით ფაილში კოპირება და ფაილის ბილიკის ჩასმა."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "მონიშნულის დროებით ფაილში კოპირება და გახსნა"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "მონიშნულის შიგთავსის დროებით ფაილში კოპირება და მისი გახსნა."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "მონიშნულის HTML-ად დროებით ფაილში კოპირება და მისი ბილიკის კოპირება"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "მონიშნულის შიგთავსის HTML-ად დროებით ფაილში კოპირება და ბილიკის გაცვლის ბუფერში კოპირება."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "მონიშნულის HTML-ად დროებით ფაილში კოპირება და მისი ბილიკის ჩასმა"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "მონიშნულის შიგთავსის HTML-ად დროებით ფაილში კოპირება და ფაილის ბილიკის ჩასმა."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "მონიშნულის HTML-ად დროებით ფაილში კოპირება და გახსნა"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "მონიშნულის შიგთავსის HTML-ად დროებით ფაილში კოპირება და მისი გახსნა."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "მონიშნულის ANSI მიმდევრობებად დროებით ფაილში კოპირება და მისი ბილიკის კოპირება"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "მონიშნულის შიგთავსის ANSI გასვლის მიმდევრობებად დროებით ფაილში კოპირება და ბილიკის გაცვლის ბუფერში კოპირება."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "მონიშნულის ANSI მიმდევრობებად დროებით ფაილში კოპირება და მისი ბილიკის ჩასმა"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "მონიშნულის შიგთავსის ANSI გასვლის მიმდევრობებად დროებით ფაილში კოპირება და ფაილის ბილიკის ჩასმა."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "მონიშნულის ANSI მიმდევრობებად დროებით ფაილში კოპირება და გახსნა"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "მონიშნულის შიგთავსის ANSI გასვლის მიმდევრობებად დროებით ფაილში კოპირება და მისი გახსნა."
+
+msgid "Open a new window."
+msgstr "ახალი ფანჯრის გახსნა."
+
+msgid "Open a new tab."
+msgstr "ახალი ჩანართის გახსნა."
+
+msgid "Move Tab Left"
+msgstr "ჩანართის გადატანა მარცხნივ"
+
+msgid "Move the current tab to the left."
+msgstr "მიმდინარე ჩანართის გადატანა მარცხნივ."
+
+msgid "Move Tab Right"
+msgstr "ჩანართის გადატანა მარჯვნივ"
+
+msgid "Move the current tab to the right."
+msgstr "მიმდინარე ჩანართის გადატანა მარჯვნივ."
+
+msgid "Move Tab to New Window"
+msgstr "ჩანართის გადატანა ახალ ფანჯარაში"
+
+msgid "Move the current tab to a new window."
+msgstr "მიმდინარე ჩანართის გადატანა ახალ ფანჯარაში."
+
+msgid "Toggle Tab Overview"
+msgstr "ჩანართების მიმოხილვის გადართვა"
+
+msgid "Toggle the tab overview."
+msgstr "ჩანართების მიმოხილვის გადართვა."
+
+msgid "Change Terminal Title…"
+msgstr "ტერმინალის სათაურის შეცვლა…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "მიმდინარე ტერმინალისთვის ახალი სათაურის მოთხოვნა."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "მიმდინარე ჩანართისთვის ახალი სათაურის მოთხოვნა."
+
+msgid "Split the terminal to the left."
+msgstr "ტერმინალის გაყოფა მარცხნივ."
+
+msgid "Split the terminal to the right."
+msgstr "ტერმინალის გაყოფა მარჯვნივ."
+
+msgid "Split the terminal up."
+msgstr "ტერმინალის გაყოფა ზემოთ."
+
+msgid "Split the terminal down."
+msgstr "ტერმინალის გაყოფა ქვემოთ."
+
+msgid "Focus Split: Previous"
+msgstr "ფოკუსი გაყოფაზე: წინა"
+
+msgid "Focus the previous split, if any."
+msgstr "ფოკუსის გადატანა წინა გაყოფაზე, ასეთის არსებობის შემთხვევაში."
+
+msgid "Focus Split: Next"
+msgstr "ფოკუსი გაყოფაზე: შემდეგი"
+
+msgid "Focus the next split, if any."
+msgstr "ფოკუსის გადატანა შემდეგ გაყოფაზე, ასეთის არსებობის შემთხვევაში."
+
+msgid "Focus Split: Left"
+msgstr "ფოკუსი გაყოფაზე: მარცხენა"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "ფოკუსის გადატანა მარცხენა გაყოფაზე, თუ ის არსებობს."
+
+msgid "Focus Split: Right"
+msgstr "ფოკუსი გაყოფაზე: მარჯვენა"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "ფოკუსის გადატანა მარჯვენა გაყოფაზე, თუ ის არსებობს."
+
+msgid "Focus Split: Up"
+msgstr "ფოკუსი გაყოფაზე: ზედა"
+
+msgid "Focus the split above, if it exists."
+msgstr "ფოკუსის გადატანა ზედა გაყოფაზე, თუ ის არსებობს."
+
+msgid "Focus Split: Down"
+msgstr "ფოკუსი გაყოფაზე: ქვედა"
+
+msgid "Focus the split below, if it exists."
+msgstr "ფოკუსის გადატანა ქვედა გაყოფაზე, თუ ის არსებობს."
+
+msgid "Focus Window: Previous"
+msgstr "ფოკუსი ფანჯარაზე: წინა"
+
+msgid "Focus the previous window, if any."
+msgstr "ფოკუსის გადატანა წინა ფანჯარაზე, ასეთის არსებობის შემთხვევაში."
+
+msgid "Focus Window: Next"
+msgstr "ფოკუსი ფანჯარაზე: შემდეგი"
+
+msgid "Focus the next window, if any."
+msgstr "ფოკუსის გადატანა შემდეგ ფანჯარაზე, ასეთის არსებობის შემთხვევაში."
+
+msgid "Toggle Split Zoom"
+msgstr "გაყოფის გადიდების გადართვა"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "მიმდინარე გაყოფის გადიდების მდგომარეობის გადართვა."
+
+msgid "Toggle Read-Only Mode"
+msgstr "მხოლოდ კითხვის რეჟიმის გადართვა"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "მხოლოდ კითხვის რეჟიმის გადართვა მიმდინარე ზედაპირისთვის."
+
+msgid "Equalize Splits"
+msgstr "გაყოფების გათანაბრება"
+
+msgid "Equalize the size of all splits."
+msgstr "ყველა გაყოფის ზომის გათანაბრება."
+
+msgid "Reset Window Size"
+msgstr "ფანჯრის ზომის ჩამოყრა"
+
+msgid "Reset the window size to the default."
+msgstr "ფანჯრის ზომის ნაგულისხმევზე ჩამოყრა."
+
+msgid "Toggle Inspector"
+msgstr "ინსპექტორის გადართვა"
+
+msgid "Toggle the inspector."
+msgstr "ინსპექტორის გადართვა."
+
+msgid "Show the GTK Inspector"
+msgstr "GTK ინსპექტორის ჩვენება"
+
+msgid "Show the GTK inspector."
+msgstr "GTK ინსპექტორის ჩვენება."
+
+msgid "Show On-Screen Keyboard"
+msgstr "ეკრანული კლავიატურის ჩვენება"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "ეკრანული კლავიატურის ჩვენება, თუ ის არსებობს."
+
+msgid "Open Config Using OS editor"
+msgstr "კონფიგურაციის გახსნა ოპერაციული სისტემის რედაქტორით"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "კონფიგურაციის ფაილის გახსნა ოპერაციული სისტემის ნაგულისხმევი რედაქტორით."
+
+msgid "Open Config in New Terminal Window"
+msgstr "კონფიგურაციის გახსნა ახალ ტერმინალის ფანჯარაში"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "კონფიგურაციის ფაილის გახსნა ახალ ფანჯარაში $EDITOR ან $VISUAL-ის გამოყენებით."
+
+msgid "Reload Config"
+msgstr "კონფიგურაციის თავიდან ჩატვირთვა"
+
+msgid "Reload the config file."
+msgstr "კონფიგურაციის ფაილის თავიდან ჩატვირთვა."
+
+msgid "Close Terminal"
+msgstr "ტერმინალის დახურვა"
+
+msgid "Close the current terminal."
+msgstr "მიმდინარე ტერმინალის დახურვა."
+
+msgid "Close the current tab."
+msgstr "მიმდინარე ჩანართის დახურვა."
+
+msgid "Close Other Tabs"
+msgstr "სხვა ჩანართების დახურვა"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "ამ ფანჯარაში მიმდინარის გარდა ყველა ჩანართის დახურვა."
+
+msgid "Close Tabs to the Right"
+msgstr "მარჯვნივ მდებარე ჩანართების დახურვა"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "მიმდინარე ჩანართის მარჯვნივ მდებარე ყველა ჩანართის დახურვა."
+
+msgid "Close the current window."
+msgstr "მიმდინარე ფანჯრის დახურვა."
+
+msgid "Close All Windows"
+msgstr "ყველა ფანჯრის დახურვა"
+
+msgid "Close all windows."
+msgstr "ყველა ფანჯრის დახურვა."
+
+msgid "Toggle Maximize"
+msgstr "მაქსიმიზაციის გადართვა"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "მიმდინარე ფანჯრის მაქსიმიზაციის მდგომარეობის გადართვა."
+
+msgid "Toggle Fullscreen"
+msgstr "სრულეკრანიანი რეჟიმის გადართვა"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "მიმდინარე ფანჯრის სრულეკრანიანი რეჟიმის მდგომარეობის გადართვა."
+
+msgid "Toggle Window Decorations"
+msgstr "ფანჯრის მორთულობის გადართვა"
+
+msgid "Toggle the window decorations."
+msgstr "ფანჯრის მორთულობის გადართვა."
+
+msgid "Toggle Float on Top"
+msgstr "ყველაფრის ზემოთ ყოფნის გადართვა"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "მიმდინარე ფანჯრის ყველაფრის ზემოთ ყოფნის მდგომარეობის გადართვა."
+
+msgid "Toggle Secure Input"
+msgstr "უსაფრთხო შეყვანის გადართვა"
+
+msgid "Toggle secure input mode."
+msgstr "უსაფრთხო შეყვანის რეჟიმის გადართვა."
+
+msgid "Toggle Mouse Reporting"
+msgstr "თაგუნას მოვლენების შეტყობინების გადართვა"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "იმის გადართვა, ეცნობება თუ არა თაგუნას მოვლენები ტერმინალის აპლიკაციებს."
+
+msgid "Toggle Background Opacity"
+msgstr "ფონის გაუმჭვირვალობის გადართვა"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "გამჭვირვალედ დაწყებული ფანჯრის ფონის გაუმჭვირვალობის გადართვა."
+
+msgid "Check for Updates"
+msgstr "განახლებების შემოწმება"
+
+msgid "Check for updates to the application."
+msgstr "აპლიკაციის განახლებების შემოწმება."
+
+msgid "Undo"
+msgstr "გაუქმება"
+
+msgid "Undo the last action."
+msgstr "ბოლო ქმედების გაუქმება."
+
+msgid "Redo"
+msgstr "გამეორება"
+
+msgid "Redo the last undone action."
+msgstr "ბოლო გაუქმებული ქმედების გამეორება."
+
+msgid "Quit the application."
+msgstr "აპლიკაციიდან გასვლა."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "ჩადეთ ცოტა Ghostty თქვენს ტერმინალში."

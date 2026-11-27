@@ -1,0 +1,153 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Removing remote…"
+msgstr "დაშორებულის წაშლა…"
+
+msgid "Could not remove remote"
+msgstr "დაშორებულის წაშლა ვერ მოხერხდა"
+
+msgid "Remotes"
+msgstr "დაშორებულები"
+
+msgid "System Installation"
+msgstr "სისტემური დაყენება"
+
+msgid "Available to all users on this computer"
+msgstr "ხელმისაწვდომია ამ კომპიუტერის ყველა მომხმარებლისთვის"
+
+msgid "User Installation"
+msgstr "მომხმარებლის დაყენება"
+
+msgid "Only available to you"
+msgstr "ხელმისაწვდომია მხოლოდ თქვენთვის"
+
+msgid "Remove Remote"
+msgstr "დაშორებულის წაშლა"
+
+#, c-format
+msgid "Remove %s"
+msgstr "%s-ის წაშლა"
+
+msgid "Unused"
+msgstr "გამოუყენებელი"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "დაყენებულია %u აპი"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "წავშალო „%s“?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "ამ მომხმარებლის დაშორებულიდან აპების დაყენებას ვეღარ შეძლებთ."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "ამ სისტემური დაშორებულიდან აპების დაყენებას ვეღარ შეძლებთ."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "წასაშლელი აპები: %u"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "ქვემოთ მოცემული აპები დაყენებულია ამ დაშორებულიდან და მასთან ერთად თქვენი ანგარიშიდან წაიშლება."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "ქვემოთ მოცემული აპები დაყენებულია ამ დაშორებულიდან და მასთან ერთად ყველა მომხმარებლისთვის წაიშლება."
+
+msgid "Manage R_emotes"
+msgstr "დაშორებულების _მართვა"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "აპების ჩატვირთვა: %d…"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "დავაყენო აპები: %u?"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "აპლიკაციები: %d"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "ხელმისაწვდომი განახლებები: %u"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "დაყენებული აპები: %u"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "ნაპოვნია აპლიკაციები: %u"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "ახალი ნებართვები: %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "ეს განახლება მოითხოვს შემდეგ დამატებით ნებართვებს"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d დღის წინ"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d კვირის წინ"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d თვის წინ"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d წლის წინ"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "გაშვების გარემოს განახლებები: %u"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "წაშლილი მომხმარებლის მონაცემები აპებისთვის: %u"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u დაყენება"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "განახლებული აპები: %u"

@@ -1,6 +1,7 @@
 #!/usr/bin/python3 -I
 """System Update's helpers: staged, failed-parts, low-battery, progress, whats-new."""
 
+import gettext
 import json
 import os
 import re
@@ -150,8 +151,9 @@ def progress():
                 m = re.search(r"layers needed: (\d+) \(([^)]*)\)", msg)
                 if m:
                     parts += int(m.group(1))
-                    size_text = m.group(2).replace(" ", " ")
-                    size, base = nbytes(size_text), received()
+                    raw = m.group(2).replace(" ", " ")
+                    size, base = nbytes(raw), received()
+                    size_text = human(size / 1e6) if size else raw     # in the person's language
                     text = ngettext("Updating the system: downloading the new version, {size} in {n} parts.",
                                     "Updating the system: downloading the new version, {size} in {n} parts.",
                                     parts).format(size=size_text, n=parts)
@@ -207,9 +209,8 @@ def whats_new():
         ds = json.load(sys.stdin)["deployments"]
         new = next(d for d in ds if d.get("staged"))
         now = next(d for d in ds if d.get("booted"))
-        f = Path("/ostree/deploy/%s/deploy/%s.%s/usr/share/evenkeel-os/changes.txt" % (new["osname"], new["checksum"],
-                                                                                       new["serial"]))
-        lines = f.read_text().splitlines()
+        root = Path("/ostree/deploy/%s/deploy/%s.%s" % (new["osname"], new["checksum"], new["serial"]))
+        lines = (root / "usr/share/evenkeel-os/changes.txt").read_text().splitlines()
     except (ValueError, KeyError, StopIteration, OSError):
         sys.exit()
     try:
@@ -217,12 +218,14 @@ def whats_new():
     except OSError:
         have = set()
     since = time.strftime("%Y-%m-%d", time.gmtime(int(now.get("timestamp", 0))))
+    # The titles' translations come with the new version (po/whats-new.txt), so read them from there.
+    titles = gettext.translation("evenkeel-os", localedir=root / "usr/share/locale", fallback=True)
     out = []
     for line in lines:
         date, _tab, title = line.partition("\t")
         if line in have or date < since or re.match(r"(README|Build)\b", title):
             continue
-        title = re.sub(r"\s*\(#\d+\)$", "", title)
+        title = titles.gettext(re.sub(r"\s*\(#\d+\)$", "", title))
         out.append("- " + title.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
     if out:
         more = len(out) - 8

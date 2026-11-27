@@ -1,0 +1,12 @@
+[Unit]
+Description=Download Flatpak apps' translations for a newly picked language
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+# Not during the pause on updates after an undo.
+ExecCondition=/usr/libexec/evenkeel-os-updates-pause-check
+ExecStart=/usr/libexec/evenkeel-os-flatpak-languages
+Nice=19
+IOSchedulingClass=idle

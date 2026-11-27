@@ -1,0 +1,2608 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "Obchod s aplikáciami"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "Pridávajte, odstraňujte alebo aktualizujte softvér Flatpak v tomto počítači"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Systém;Balík;Správca;Objaviť;Flatpak;Softvér;Aplikácia;Obchod;"
+
+msgid "New Window"
+msgstr "Nové okno"
+
+msgid "Discover and install apps"
+msgstr "Objavujte a inštalujte aplikácie"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Rýchly a moderný obchod s aplikáciami pre Linux zameraný na objavovanie a inštaláciu aplikácií a doplnkov Flatpak, najmä z Flathubu."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Zaraďujte viaceré inštalácie do fronty a pritom pokračujte v prehliadaní"
+
+msgid "Easily view app permissions"
+msgstr "Jednoducho si zobrazte povolenia aplikácií"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Prihláste sa do Flathubu a zobrazujte a spravujte svoje obľúbené"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Vyhľadávajte aplikácie priamo z GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Domovská stránka zobrazujúca aplikácie z Flathubu"
+
+msgid "App page for Exhibit"
+msgstr "Stránka aplikácie Exhibit"
+
+msgid "Library page"
+msgstr "Stránka knižnice"
+
+msgid "Search page"
+msgstr "Stránka hľadania"
+
+msgid "Category page"
+msgstr "Stránka kategórie"
+
+msgid "Stopped Receiving Updates"
+msgstr "Prestalo dostávať aktualizácie"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Odinštalovať"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Nainštalovať"
+
+msgid "Add-on"
+msgstr "Doplnok"
+
+msgid "Manage Add-Ons"
+msgstr "Spravovať doplnky"
+
+msgid "No Add-Ons Visible"
+msgstr "Nie sú viditeľné žiadne doplnky"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "Vaše aktuálne predvoľby filtra skrývajú všetky známe doplnky. Skúste ich upraviť."
+
+msgid "Add-on Page"
+msgstr "Stránka doplnku"
+
+msgid "Download"
+msgstr "Stiahnuť"
+
+msgid "Installed"
+msgstr "Nainštalované"
+
+msgid "Downloads/Month"
+msgstr "Stiahnutí za mesiac"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Prestalo dostávať základné aktualizácie"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Tento doplnok používa runtime, ktorý už nedostáva aktualizácie ani bezpečnostné opravy. Jeho používanie sa môže stať nebezpečným."
+
+msgid "Other Sources"
+msgstr "Iné zdroje"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Doplnok pre %s"
+
+msgid "Show Less"
+msgstr "Zobraziť menej"
+
+msgid "Show More"
+msgstr "Zobraziť viac"
+
+msgid "Download Stats"
+msgstr "Štatistiky sťahovania"
+
+msgid "Age Rating"
+msgstr "Vekové hodnotenie"
+
+msgid "Cartoon Violence"
+msgstr "Kreslené násilie"
+
+msgid "No information regarding cartoon violence"
+msgstr "Žiadne informácie o kreslenom násilí"
+
+msgid "Fantasy Violence"
+msgstr "Fantazijné násilie"
+
+msgid "No information regarding fantasy violence"
+msgstr "Žiadne informácie o fantazijnom násilí"
+
+msgid "Realistic Violence"
+msgstr "Realistické násilie"
+
+msgid "No information regarding realistic violence"
+msgstr "Žiadne informácie o realistickom násilí"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "Násilie zobrazujúce krviprelievanie"
+
+msgid "No information regarding bloodshed"
+msgstr "Žiadne informácie o krviprelievaní"
+
+msgid "Sexual Violence"
+msgstr "Sexuálne násilie"
+
+msgid "No information regarding sexual violence"
+msgstr "Žiadne informácie o sexuálnom násilí"
+
+msgid "Alcohol"
+msgstr "Alkohol"
+
+msgid "No information regarding references to alcohol"
+msgstr "Žiadne informácie o odkazoch na alkohol"
+
+msgid "Narcotics"
+msgstr "Omamné látky"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "Žiadne informácie o odkazoch na nelegálne drogy"
+
+msgid "Tobacco"
+msgstr "Tabak"
+
+msgid "No information regarding references to tobacco products"
+msgstr "Žiadne informácie o odkazoch na tabakové výrobky"
+
+msgid "Nudity"
+msgstr "Nahota"
+
+msgid "No information regarding nudity of any sort"
+msgstr "Žiadne informácie o nahote akéhokoľvek druhu"
+
+msgid "Sexual Themes"
+msgstr "Sexuálne témy"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "Žiadne informácie o odkazoch na sexuálnu povahu alebo jej zobrazeniach"
+
+msgid "Profanity"
+msgstr "Vulgárnosť"
+
+msgid "No information regarding profanity of any kind"
+msgstr "Žiadne informácie o vulgárnosti akéhokoľvek druhu"
+
+msgid "Inappropriate Humor"
+msgstr "Nevhodný humor"
+
+msgid "No information regarding inappropriate humor"
+msgstr "Žiadne informácie o nevhodnom humore"
+
+msgid "Discrimination"
+msgstr "Diskriminácia"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "Žiadne informácie o diskriminačnom jazyku akéhokoľvek druhu"
+
+msgid "Advertising"
+msgstr "Reklama"
+
+msgid "No information regarding advertising of any kind"
+msgstr "Žiadne informácie o reklame akéhokoľvek druhu"
+
+msgid "Gambling"
+msgstr "Hazardné hry"
+
+msgid "No information regarding gambling of any kind"
+msgstr "Žiadne informácie o hazardných hrách akéhokoľvek druhu"
+
+msgid "Purchasing"
+msgstr "Nákupy"
+
+msgid "No information regarding the ability to spend money"
+msgstr "Žiadne informácie o možnosti míňať peniaze"
+
+msgid "Chat Between Users"
+msgstr "Četovanie medzi používateľmi"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "Žiadne informácie o možnostiach četovania s inými používateľmi"
+
+msgid "Audio Chat Between Users"
+msgstr "Zvukový chat medzi používateľmi"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "Žiadne informácie o možnostiach hovoriť s inými používateľmi"
+
+msgid "Contact Details"
+msgstr "Kontaktné údaje"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "Žiadne informácie o zdieľaní používateľských mien zo sociálnych sietí alebo e-mailových adries"
+
+msgid "Identifying Information"
+msgstr "Identifikačné údaje"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "Žiadne informácie o zdieľaní údajov o používateľovi s tretími stranami"
+
+msgid "Location Sharing"
+msgstr "Zdieľanie polohy"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "Žiadne informácie o zdieľaní fyzickej polohy s inými používateľmi"
+
+msgid "Prostitution"
+msgstr "Prostitúcia"
+
+msgid "No information regarding references to prostitution"
+msgstr "Žiadne informácie o odkazoch na prostitúciu"
+
+msgid "Adultery"
+msgstr "Cudzoložstvo"
+
+msgid "No information regarding references to adultery"
+msgstr "Žiadne informácie o odkazoch na cudzoložstvo"
+
+msgid "Sexualized Characters"
+msgstr "Sexualizované postavy"
+
+msgid "No information regarding sexualized characters"
+msgstr "Žiadne informácie o sexualizovaných postavách"
+
+msgid "Desecration"
+msgstr "Znesvätenie"
+
+msgid "No information regarding references to desecration"
+msgstr "Žiadne informácie o odkazoch na znesvätenie"
+
+msgid "Human Remains"
+msgstr "Ľudské pozostatky"
+
+msgid "No information regarding visible dead human remains"
+msgstr "Žiadne informácie o viditeľných mŕtvych ľudských pozostatkoch"
+
+msgid "Slavery"
+msgstr "Otroctvo"
+
+msgid "No information regarding references to slavery"
+msgstr "Žiadne informácie o odkazoch na otroctvo"
+
+msgid "Does not include references to drugs"
+msgstr "Neobsahuje odkazy na drogy"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "Neobsahuje nadávky, vulgarizmy ani iné druhy hrubého jazyka"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "Neobsahuje reklamy ani peňažné transakcie"
+
+msgid "Does not include sex or nudity"
+msgstr "Neobsahuje sex ani nahotu"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "Neobsahuje nekontrolovanú funkciu četovania"
+
+msgid "Does not include violence"
+msgstr "Neobsahuje násilie"
+
+msgid "Drugs"
+msgstr "Drogy"
+
+msgid "Strong Language"
+msgstr "Hrubý jazyk"
+
+msgid "Money"
+msgstr "Peniaze"
+
+msgid "Social"
+msgstr "Sociálne"
+
+msgid "Violence"
+msgstr "Násilie"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "Všetky"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s má neznáme vekové hodnotenie"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s je vhodné pre všetkých"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s je vhodné pre malé deti"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s je vhodné pre deti"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s je vhodné pre tínedžerov"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s je vhodné pre dospelých"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s je vhodné pre %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "Systémový priečinok %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Podpriečinok domovského priečinka %s"
+
+msgid "Host system folders"
+msgstr "Systémové priečinky hostiteľa"
+
+msgid "Host system configuration from /etc"
+msgstr "Konfigurácia hostiteľského systému z /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Podpriečinok plochy %s"
+
+msgid "Desktop folder"
+msgstr "Priečinok plochy"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "Podpriečinok dokumentov %s"
+
+msgid "Documents folder"
+msgstr "Priečinok dokumentov"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "Podpriečinok hudby %s"
+
+msgid "Music folder"
+msgstr "Priečinok hudby"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "Podpriečinok obrázkov %s"
+
+msgid "Pictures folder"
+msgstr "Priečinok obrázkov"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "Podpriečinok verejného zdieľania %s"
+
+msgid "Public Share folder"
+msgstr "Priečinok verejného zdieľania"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "Podpriečinok videí %s"
+
+msgid "Videos folder"
+msgstr "Priečinok videí"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "Podpriečinok šablón %s"
+
+msgid "Templates folder"
+msgstr "Priečinok šablón"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Podpriečinok používateľskej vyrovnávacej pamäte %s"
+
+msgid "User cache folder"
+msgstr "Priečinok používateľskej vyrovnávacej pamäte"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Podpriečinok používateľskej konfigurácie %s"
+
+msgid "User configuration folder"
+msgstr "Priečinok používateľskej konfigurácie"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Podpriečinok používateľských údajov %s"
+
+msgid "User data folder"
+msgstr "Priečinok používateľských údajov"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Podpriečinok používateľského runtime %s"
+
+msgid "User runtime folder"
+msgstr "Priečinok používateľského runtime"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Prístup k súborovému systému: %s"
+
+msgid "Unknown filesystem path"
+msgstr "Neznáma cesta v súborovom systéme"
+
+msgid "Download Size"
+msgstr "Veľkosť sťahovania"
+
+msgid "Installed Size"
+msgstr "Nainštalovaná veľkosť"
+
+msgid "Amount to download from the internet"
+msgstr "Množstvo údajov na stiahnutie z internetu"
+
+msgid "Size on Disk"
+msgstr "Veľkosť na disku"
+
+msgid "Open user data folder"
+msgstr "Otvoriť priečinok používateľských údajov"
+
+msgid "Your User Data"
+msgstr "Vaše používateľské údaje"
+
+msgid "Caches, settings, and other app data"
+msgstr "Vyrovnávacia pamäť, nastavenia a ďalšie údaje aplikácie"
+
+msgid "Cache"
+msgstr "Vyrovnávacia pamäť"
+
+msgid "Temporary cached data"
+msgstr "Dočasné údaje vo vyrovnávacej pamäti"
+
+msgid "Clear Cache"
+msgstr "Vymazať vyrovnávaciu pamäť"
+
+msgid "Installed Runtime Size"
+msgstr "Nainštalovaná veľkosť runtime"
+
+msgid "Runtime Download Size"
+msgstr "Veľkosť sťahovania runtime"
+
+msgid "N/A"
+msgstr "N/A"
+
+msgid "Storage"
+msgstr "Úložisko"
+
+msgid "Verified"
+msgstr "Overené"
+
+msgid "The Bazaar Contributors"
+msgstr "Prispievatelia Bazaar"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "Osobitné poďakovanie"
+
+msgid "Logged Out Successfully!"
+msgstr "Odhlásenie bolo úspešné!"
+
+msgid "Performing setup…"
+msgstr "Vykonáva sa nastavenie…"
+
+msgid "Set Up Flathub?"
+msgstr "Nastaviť Flathub?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub nie je v tomto systéme nastavený. Ak nebude dostupný, nebudete môcť v aplikácii Bazaar prehliadať a inštalovať aplikácie.\n"
+"\n"
+"Aplikáciu Bazaar môžete stále používať na prehliadanie a odstraňovanie už nainštalovaných aplikácií."
+
+msgid "Later"
+msgstr "Neskôr"
+
+msgid "Set Up Flathub"
+msgstr "Nastaviť Flathub"
+
+msgid "A backend error occurred"
+msgstr "Vyskytla sa chyba backendu"
+
+msgid "Refreshing…"
+msgstr "Obnovuje sa…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "Načítava sa %d aplikácií…"
+
+msgid "Failed to open file"
+msgstr "Nepodarilo sa otvoriť súbor"
+
+msgid "Failed to load metainfo"
+msgstr "Nepodarilo sa načítať metainfo"
+
+msgid "An initialization error occurred"
+msgstr "Vyskytla sa chyba inicializácie"
+
+msgid "Checking for updates…"
+msgstr "Kontrolujú sa aktualizácie…"
+
+msgid "Failed to check for updates"
+msgstr "Nepodarilo sa skontrolovať aktualizácie"
+
+msgid "Could not find app"
+msgstr "Aplikáciu sa nepodarilo nájsť"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Načítava sa %d aplikácia…"
+msgstr[1] "Načítavajú sa %d aplikácie…"
+msgstr[2] "Načítava sa %d aplikácií…"
+
+msgid "Writing to cache…"
+msgstr "Zapisuje sa do vyrovnávacej pamäte…"
+
+msgid "Removing remote…"
+msgstr "Odstraňuje sa vzdialený zdroj…"
+
+msgid "Could not remove remote"
+msgstr "Nepodarilo sa odstrániť vzdialený zdroj"
+
+msgid "Show All"
+msgstr "Zobraziť všetko"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Všetky „%s“"
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d aplikácií"
+
+msgid "Failed to Load Article"
+msgstr "Nepodarilo sa načítať článok"
+
+msgid "All apps are already installed"
+msgstr "Všetky aplikácie sú už nainštalované"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Nainštalovať %u aplikáciu?"
+msgstr[1] "Nainštalovať %u aplikácie?"
+msgstr[2] "Nainštalovať %u aplikácií?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Nainštaluje sa nasledujúce. Môžu sa nainštalovať aj ďalšie zdieľané súčasti"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "Nainštaluje sa %d doplnkov."
+
+msgid "Additionally, addons will be installed."
+msgstr "Dodatočne sa nainštalujú doplnky."
+
+msgid "_Cancel"
+msgstr "_Zrušiť"
+
+msgid "_Install All"
+msgstr "_Nainštalovať všetko"
+
+msgid "Bundle Installation"
+msgstr "Inštalácia balíka"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Ďalšie závislosti môžu zabrať dodatočné miesto"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Inštalácia tejto aplikácie môže vyžadovať pridanie nového zdroja softvéru. Ostatné aplikácie z tohto zdroja sa zobrazia v aplikácii Bazaar.\n"
+"\n"
+"Tento zdroj pridajte, iba ak mu dôverujete."
+
+msgid "Successfully Installed!"
+msgstr "Úspešne nainštalované!"
+
+msgid "Open"
+msgstr "Otvoriť"
+
+msgid "Show App Details"
+msgstr "Zobraziť podrobnosti aplikácie"
+
+msgid "Already Installed"
+msgstr "Už nainštalované"
+
+msgid "Installation Failed"
+msgstr "Inštalácia zlyhala"
+
+msgid "Unknown install size"
+msgstr "Neznáma veľkosť inštalácie"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Na inštaláciu približne %s"
+
+msgid "No special permissions"
+msgstr "Žiadne osobitné povolenia"
+
+msgid "Place Applet"
+msgstr "Umiestniť aplet"
+
+msgid "Choose where to add this applet."
+msgstr "Vyberte, kam sa má tento aplet pridať."
+
+msgid "Cancel"
+msgstr "Zrušiť"
+
+msgid "Panel"
+msgstr "Panel"
+
+msgid "Dock"
+msgstr "Dok"
+
+msgid "No Curation"
+msgstr "Žiadna kurácia"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "V tomto systéme nie sú poskytnuté žiadne informácie o kurácii. Aplikácie vo Flathube môžete stále prehliadať"
+
+msgid "Browse Flathub"
+msgstr "Prehliadať Flathub"
+
+msgid "Offline"
+msgstr "Offline"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s až %s, najviac %s s počtom %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*f tis."
+
+msgid "Installs:"
+msgstr "Inštalácie:"
+
+msgid "Not Verified"
+msgstr "Neoverené"
+
+msgid "Developer information not available."
+msgstr "Informácie o vývojárovi nie sú k dispozícii."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "Vlastníctvo ID aplikácie %s nebolo overené a môže ísť o komunitný balík."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "Vlastníctvo ID aplikácie %s bolo manuálne overené tímom Flathub."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "Vlastníctvo ID aplikácie %1$s overil(a) <b>%2$s</b> dňa <b>%3$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Vlastníctvo ID aplikácie %1$s bolo overené pomocou %2$s."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "Vlastníctvo ID aplikácie %s bolo overené."
+
+msgid "Bazaar Release"
+msgstr "Vydanie Bazaar"
+
+msgid "Full Release Notes"
+msgstr "Úplné poznámky k vydaniu"
+
+msgid "This release was made possible by users like you!"
+msgstr "Toto vydanie umožnili používatelia ako vy!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Rád vytváram Bazaar, ale sám to nezvládnem. Podporte ďalší vývoj darom na Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "Prispieť na Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Čo je nové vo verzii %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Vydané %-e. %B %Y"
+
+msgid "Choose an Installation"
+msgstr "Vyberte inštaláciu"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Máte nainštalovaných viac verzií tejto aplikácie. S ktorou chcete pokračovať?"
+
+msgid "Details"
+msgstr "Podrobnosti"
+
+msgid "Copy"
+msgstr "Kopírovať"
+
+msgid "Copied!"
+msgstr "Skopírované!"
+
+msgid "Favorite Count"
+msgstr "Počet obľúbených"
+
+msgid "Failed to update favorite"
+msgstr "Nepodarilo sa aktualizovať obľúbené"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Prihláste sa cez Flathub a spravujte obľúbené"
+
+msgid "Log In"
+msgstr "Prihlásiť sa"
+
+msgid "Favorites"
+msgstr "Obľúbené"
+
+msgid "Install All"
+msgstr "Nainštalovať všetko"
+
+msgid "No Favorites"
+msgstr "Žiadne obľúbené"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Aplikácie, ktoré označíte ako obľúbené, sa zobrazia tu"
+
+msgid "Support This Application"
+msgstr "Podporiť túto aplikáciu"
+
+msgid "Remove From Favorites"
+msgstr "Odstrániť z obľúbených"
+
+msgid "Failed to remove favorite"
+msgstr "Nepodarilo sa odstrániť obľúbené"
+
+msgid "Previous"
+msgstr "Predchádzajúce"
+
+msgid "Next"
+msgstr "Ďalej"
+
+msgid "Editing"
+msgstr "Úpravy"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Mixér"
+
+msgid "Music"
+msgstr "Hudba"
+
+msgid "Player"
+msgstr "Prehrávač"
+
+msgid "Recorder"
+msgstr "Rekordér"
+
+msgid "Sequencer"
+msgstr "Sekvencer"
+
+msgid "Tuner"
+msgstr "Ladička"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "Emulation"
+msgstr "Emulácia"
+
+msgid "Action"
+msgstr "Akčné"
+
+msgid "Adventure"
+msgstr "Dobrodružné"
+
+msgid "Arcade"
+msgstr "Arkádové"
+
+msgid "Blocks"
+msgstr "Bloky"
+
+msgid "Board"
+msgstr "Stolové"
+
+msgid "Card"
+msgstr "Karty"
+
+msgid "Kids"
+msgstr "Pre deti"
+
+msgid "Logic"
+msgstr "Logické"
+
+msgid "Role Playing"
+msgstr "Hry na hrdinov"
+
+msgid "Shooter"
+msgstr "Strieľačky"
+
+msgid "Simulation"
+msgstr "Simulácie"
+
+msgid "Sports"
+msgstr "Šport"
+
+msgid "Strategy"
+msgstr "Stratégie"
+
+msgid "Browsers"
+msgstr "Prehliadače"
+
+msgid "Chat"
+msgstr "Chat"
+
+msgid "Mail"
+msgstr "Pošta"
+
+msgid "File Sharing"
+msgstr "Zdieľanie súborov"
+
+msgid "Audio & Video"
+msgstr "Zvuk a video"
+
+msgid "Media"
+msgstr "Médiá"
+
+msgid "More Audio & Video"
+msgstr "Ďalší zvuk a video"
+
+msgid "Developer Tools"
+msgstr "Vývojárske nástroje"
+
+msgid "Develop"
+msgstr "Vývoj"
+
+msgid "More Developer Tools"
+msgstr "Ďalšie vývojárske nástroje"
+
+msgid "Education"
+msgstr "Vzdelávanie"
+
+msgid "Learn"
+msgstr "Učenie"
+
+msgid "More Education"
+msgstr "Ďalšie vzdelávacie aplikácie"
+
+msgid "Gaming"
+msgstr "Hry"
+
+msgid "Play"
+msgstr "Hranie"
+
+msgid "More Gaming"
+msgstr "Ďalšie hry"
+
+msgid "Graphics & Photography"
+msgstr "Grafika a fotografia"
+
+msgid "Create"
+msgstr "Tvorba"
+
+msgid "More Graphics & Photography"
+msgstr "Ďalšia grafika a fotografia"
+
+msgid "Networking"
+msgstr "Sieť"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "More Networking"
+msgstr "Ďalšie sieťové aplikácie"
+
+msgid "Productivity"
+msgstr "Produktivita"
+
+msgid "Work"
+msgstr "Práca"
+
+msgid "More Productivity"
+msgstr "Ďalšia produktivita"
+
+msgid "Science"
+msgstr "Veda"
+
+msgid "More Science"
+msgstr "Ďalšie vedecké aplikácie"
+
+msgid "System"
+msgstr "Systém"
+
+msgid "More System"
+msgstr "Ďalšie systémové aplikácie"
+
+msgid "Utilities"
+msgstr "Nástroje"
+
+msgid "Tools"
+msgstr "Pomôcky"
+
+msgid "More Utilities"
+msgstr "Ďalšie nástroje"
+
+msgid "Trending"
+msgstr "Trendy"
+
+msgid "More Trending"
+msgstr "Ďalšie trendy"
+
+msgid "Popular"
+msgstr "Populárne"
+
+msgid "More Popular"
+msgstr "Ďalšie populárne"
+
+msgid "Recently Added"
+msgstr "Nedávno pridané"
+
+msgid "New"
+msgstr "Nové"
+
+msgid "More New"
+msgstr "Ďalšie nové"
+
+msgid "Recently Updated"
+msgstr "Nedávno aktualizované"
+
+msgid "Updated"
+msgstr "Aktualizované"
+
+msgid "More Updated"
+msgstr "Ďalšie aktualizované"
+
+msgid "Mobile"
+msgstr "Mobilné"
+
+msgid "More Mobile"
+msgstr "Ďalšie mobilné"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Ďalšie Adwaita"
+
+msgid "KDE Apps"
+msgstr "Aplikácie KDE"
+
+msgid "More KDE Apps"
+msgstr "Ďalšie aplikácie KDE"
+
+msgid "Made for COSMIC™"
+msgstr "Vytvorené pre COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Pre COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Ďalšie aplikácie COSMIC"
+
+msgid "Games"
+msgstr "Hry"
+
+msgid "More Games"
+msgstr "Ďalšie hry"
+
+msgid "Emulators"
+msgstr "Emulátory"
+
+msgid "More Emulators"
+msgstr "Ďalšie emulátory"
+
+msgid "Launchers"
+msgstr "Spúšťače"
+
+msgid "More Game Launchers"
+msgstr "Ďalšie spúšťače hier"
+
+msgid "Game Tools"
+msgstr "Herné nástroje"
+
+msgid "More Game Tools"
+msgstr "Ďalšie herné nástroje"
+
+msgid "New Year, New Workflows"
+msgstr "Nový rok, nové pracovné postupy"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Aplikácie na robenie poznámok, sledovanie úloh a plánovanie"
+
+msgid "Staff Picks"
+msgstr "Výber redakcie"
+
+msgid "Apps we love right now"
+msgstr "Aplikácie, ktoré máme práve radi"
+
+msgid "Get Creative"
+msgstr "Buďte kreatívni"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Základné aplikácie na kreslenie, úpravu fotografií a digitálny dizajn"
+
+msgid "Build Native Apps"
+msgstr "Vytvárajte natívne aplikácie"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Vyvíjajte aplikácie, ktoré do vášho systému zapadnú"
+
+msgid "Stay in Touch"
+msgstr "Zostaňte v kontakte"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Základné aplikácie na spoluprácu a komunikáciu"
+
+msgid "Ready for Vacations"
+msgstr "Pripravení na dovolenku"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Aplikácie pre mapy, dopravu, počasie a plánovanie ciest"
+
+msgid "Smarter Every Day"
+msgstr "Každý deň múdrejší"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Aplikácie, ktoré vám pomôžu pri štúdiu, výskume a písaní"
+
+msgid "Get Cozy"
+msgstr "Užite si pohodlie"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Skvelé aplikácie na čítanie, sledovanie filmov a hranie hier"
+
+msgid "Web Developer Essentials"
+msgstr "Základy pre webových vývojárov"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Tvorba webových stránok je zábavnejšia s týmito aplikáciami"
+
+msgid "Take Better Notes"
+msgstr "Robte lepšie poznámky"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Nájdite svoj nový obľúbený nástroj na poznámky"
+
+msgid "Get Focused"
+msgstr "Sústreďte sa"
+
+msgid "Great apps for task management"
+msgstr "Skvelé aplikácie na správu úloh"
+
+msgid "Make Some Noise"
+msgstr "Urobte trochu hluku"
+
+msgid "Apps for creating and producing music"
+msgstr "Aplikácie na tvorbu a produkciu hudby"
+
+msgid "Get To Work"
+msgstr "Do práce"
+
+msgid "Essential office apps"
+msgstr "Základné kancelárske aplikácie"
+
+msgid "Flathub Not Added"
+msgstr "Flathub nebol pridaný"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Vzdialený zdroj Flathub sa nenašiel v žiadnej z vašich inštalácií Flatpak"
+
+msgid "Can't Reach Flathub"
+msgstr "Flathub nie je dostupný"
+
+msgid "You can still manage and search for apps."
+msgstr "Aplikácie môžete stále spravovať a hľadať."
+
+msgid "Search Apps"
+msgstr "Hľadať aplikácie"
+
+msgid "Reconnect"
+msgstr "Znova pripojiť"
+
+msgid "App of the Day"
+msgstr "Aplikácia dňa"
+
+msgid "On the Go"
+msgstr "Na cestách"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Aplikácie pre vaše telefóny a tablety s Linuxom"
+
+msgid "More Mobile Apps"
+msgstr "Ďalšie mobilné aplikácie"
+
+msgid "We​ ♥​ Games"
+msgstr "Milujeme ♥ hry"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Hry a aplikácie na spúšťanie vašich obľúbených titulov"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Toto je lokálny náhľad, niektoré podrobnosti sa môžu líšiť od zverejneného záznamu"
+
+msgid "Preview Store Appearance"
+msgstr "Náhľad vzhľadu obchodu"
+
+msgid "_Support"
+msgstr "_Podporiť"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Táto aplikácia používa runtime, ktorý už nedostáva aktualizácie ani bezpečnostné opravy. Jej používanie sa môže stať nebezpečným."
+
+msgid "Trash Data"
+msgstr "Presunúť údaje do koša"
+
+msgid "Add-ons"
+msgstr "Doplnky"
+
+msgid "More Add-Ons"
+msgstr "Ďalšie doplnky"
+
+msgid "Links"
+msgstr "Odkazy"
+
+msgid "Similar Apps"
+msgstr "Podobné aplikácie"
+
+msgid "No URL"
+msgstr "Žiadna URL"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Táto aplikácia má licenciu FLOSS, čo znamená, že zdrojový kód je možné auditovať z hľadiska bezpečnosti."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Táto aplikácia má proprietárnu licenciu, čo znamená, že zdrojový kód sa vyvíja súkromne a nemôže ho auditovať nezávislá tretia strana."
+
+msgid "Other Apps From This Developer"
+msgstr "Ďalšie aplikácie od tohto vývojára"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Ďalšie aplikácie od %s"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s nie je nainštalované, ale stále má <b>%s</b> údajov."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Aplikácie od %s"
+
+msgid "Apps by This Developer"
+msgstr "Aplikácie od tohto vývojára"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d aplikácia"
+msgstr[1] "%d aplikácie"
+msgstr[2] "%d aplikácií"
+
+msgid "Failed to Remove User Data"
+msgstr "Nepodarilo sa odstrániť používateľské údaje"
+
+msgid "Hardware Support"
+msgstr "Podpora hardvéru"
+
+msgid "Keyboard support"
+msgstr "Podpora klávesnice"
+
+msgid "Requires keyboards"
+msgstr "Vyžaduje klávesnice"
+
+msgid "Recommends keyboards"
+msgstr "Odporúča klávesnice"
+
+msgid "Supports keyboards"
+msgstr "Podporuje klávesnice"
+
+msgid "Unknown support for keyboards"
+msgstr "Neznáma podpora klávesníc"
+
+msgid "Mouse support"
+msgstr "Podpora myši"
+
+msgid "Requires mice or pointing devices"
+msgstr "Vyžaduje myši alebo ukazovacie zariadenia"
+
+msgid "Recommends mice or pointing devices"
+msgstr "Odporúča myši alebo ukazovacie zariadenia"
+
+msgid "Supports mice or pointing devices"
+msgstr "Podporuje myši alebo ukazovacie zariadenia"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "Neznáma podpora myší alebo ukazovacích zariadení"
+
+msgid "Touchscreen support"
+msgstr "Podpora dotykovej obrazovky"
+
+msgid "Requires touchscreens"
+msgstr "Vyžaduje dotykové obrazovky"
+
+msgid "Recommends touchscreens"
+msgstr "Odporúča dotykové obrazovky"
+
+msgid "Supports touchscreens"
+msgstr "Podporuje dotykové obrazovky"
+
+msgid "Unknown support for touchscreens"
+msgstr "Neznáma podpora dotykových obrazoviek"
+
+msgid "Mobile support"
+msgstr "Podpora mobilných zariadení"
+
+msgid "Works on mobile devices"
+msgstr "Funguje na mobilných zariadeniach"
+
+msgid "May not work well on mobile devices"
+msgstr "Nemusí dobre fungovať na mobilných zariadeniach"
+
+msgid "Desktop support"
+msgstr "Podpora pre počítače"
+
+msgid "Works well on large screens"
+msgstr "Dobre funguje na veľkých obrazovkách"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s funguje najlepšie na konkrétnom hardvéri"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s funguje na väčšine zariadení"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Zrušiť"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Ruší sa"
+
+msgid "_Open"
+msgstr "_Otvoriť"
+
+msgid "Uninstall Application"
+msgstr "Odinštalovať aplikáciu"
+
+msgid "_Remove"
+msgstr "_Odstrániť"
+
+msgid "Update"
+msgstr "Aktualizovať"
+
+msgid "Remove"
+msgstr "Odstrániť"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Nainštalovať %s zo zdroja %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Nainštalovať %s"
+
+msgid "Donate"
+msgstr "Prispieť"
+
+msgid "Search installed apps"
+msgstr "Hľadať v nainštalovaných aplikáciách"
+
+msgid "No Apps Found"
+msgstr "Nenašli sa žiadne aplikácie"
+
+msgid "Search Store Instead"
+msgstr "Hľadať namiesto toho v obchode"
+
+msgid "Pending Updates"
+msgstr "Čakajúce aktualizácie"
+
+msgid "Downloads"
+msgstr "Stiahnuté súbory"
+
+msgid "Recently Uninstalled"
+msgstr "Nedávno odinštalované"
+
+msgid "Clear Finished Tasks"
+msgstr "Vymazať dokončené úlohy"
+
+msgid "Sort Options"
+msgstr "Možnosti zoradenia"
+
+msgid "Sort By"
+msgstr "Zoradiť podľa"
+
+msgid "Name"
+msgstr "Názov"
+
+msgid "Size"
+msgstr "Veľkosť"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "V zozname nainštalovaných aplikácií sa nenašli žiadne zhody pre „%s“"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u dostupná aktualizácia"
+msgstr[1] "%u dostupné aktualizácie"
+msgstr[2] "%u dostupných aktualizácií"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u nainštalovaná aplikácia"
+msgstr[1] "%u nainštalované aplikácie"
+msgstr[2] "%u nainštalovaných aplikácií"
+
+msgid "No applications found"
+msgstr "Nenašli sa žiadne aplikácie"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Nájdená jedna aplikácia"
+msgstr[1] "Nájdené %u aplikácie"
+msgstr[2] "Nájdených %u aplikácií"
+
+msgid "Get Involved"
+msgstr "Zapojte sa"
+
+msgid "Learn More"
+msgstr "Zistiť viac"
+
+msgid "Unknown License"
+msgstr "Neznáma licencia"
+
+msgid "Community Built"
+msgstr "Vytvorené komunitou"
+
+msgid "Proprietary"
+msgstr "Proprietárne"
+
+msgid "Special License"
+msgstr "Osobitná licencia"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Táto aplikácia sa vyvíja otvorene medzinárodnou komunitou.\n"
+"\n"
+"Môžete sa zapojiť a pomôcť ju ešte vylepšiť."
+
+msgid "The license of this app is not known"
+msgstr "Licencia tejto aplikácie nie je známa"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Táto aplikácia sa vyvíja otvorene medzinárodnou komunitou a je vydaná pod licenciou %s.\n"
+"\n"
+"Môžete sa zapojiť a pomôcť ju ešte vylepšiť."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Táto aplikácia sa nevyvíja otvorene, takže iba jej vývojári vedia, ako funguje. Môže byť nezabezpečená spôsobmi, ktoré je ťažké odhaliť, a môže sa meniť bez dohľadu.\n"
+"\n"
+"Možno sa k tejto aplikácii budete môcť podieľať, no nemusí to byť možné."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Táto aplikácia sa vyvíja pod osobitnou licenciou %s.\n"
+"\n"
+"Možno sa k tejto aplikácii budete môcť podieľať, no nemusí to byť možné."
+
+msgid "License"
+msgstr "Licencia"
+
+msgid "Connect to Flathub"
+msgstr "Pripojiť sa k Flathubu"
+
+msgid "Something Went Wrong"
+msgstr "Niečo sa pokazilo"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Prihláste sa, aby sa vaše obľúbené aplikácie synchronizovali medzi zariadeniami"
+
+msgid "Finish"
+msgstr "Dokončiť"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Vitajte, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Pridať ikonu do náhľadu Metainfo?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Súbory Metainfo samy osebe neobsahujú ikony aplikácií. Chcete jednu vybrať ručne?"
+
+msgid "Skip"
+msgstr "Preskočiť"
+
+msgid "Select Icon"
+msgstr "Vybrať ikonu"
+
+msgid "Image Files"
+msgstr "Súbory obrázkov"
+
+msgid "New Permissions"
+msgstr "Nové povolenia"
+
+msgid "_Accept"
+msgstr "_Prijať"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Nové povolenie pre %s"
+msgstr[1] "Nové povolenia pre %s"
+msgstr[2] "Nových povolení pre %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Táto aktualizácia vyžaduje nasledujúce ďalšie povolenie"
+msgstr[1] "Táto aktualizácia vyžaduje nasledujúce ďalšie povolenia"
+msgstr[2] "Táto aktualizácia vyžaduje nasledujúce ďalšie povolenia"
+
+msgid "User"
+msgstr "Používateľ"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Koniec podpory"
+
+msgid "Preferences"
+msgstr "Predvoľby"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Sieťové pripojenie je účtované podľa objemu dát — automatické obnovovanie údajov obchodu je pozastavené"
+
+msgid "Refresh Manually"
+msgstr "Obnoviť ručne"
+
+msgid "App Updates"
+msgstr "Aktualizácie aplikácií"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Automatické aktualizácie sa pozastavia v sieťach s účtovaním podľa objemu dát alebo pri zapnutom šetrení energie, aby sa ušetrili dáta a batéria."
+
+msgid "_Automatic"
+msgstr "_Automaticky"
+
+msgid "Automatically check for and download app updates"
+msgstr "Automaticky kontrolovať a sťahovať aktualizácie aplikácií"
+
+msgid "_Manual"
+msgstr "_Manuálne"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Kontrola a sťahovanie aktualizácií aplikácií sa musia vykonávať ručne"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Upozornenia na automatické aktualizácie"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Upozorniť, keď sa aktualizácie nainštalovali automaticky"
+
+msgid "Content Filters"
+msgstr "Filtre obsahu"
+
+msgid "_Free Software Only"
+msgstr "Iba _slobodný softvér"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Skryť proprietárne aplikácie pri prehliadaní a hľadaní"
+
+msgid "F_lathub Results Only"
+msgstr "Iba výsledky z F_lathubu"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Obmedziť výsledky hľadania a prehliadania na aplikácie dostupné iba vo Flathube"
+
+msgid "_Verified Results Only"
+msgstr "Iba _overené výsledky"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Skryť výsledky, ktoré nie sú vo Flathube overené"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Skryť aplikácie s _ukončenou podporou"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "Skryť aplikácie, ktoré ich vývojári už nepodporujú"
+
+msgid "Progress Bar Theme"
+msgstr "Motív indikátora priebehu"
+
+msgid "Accent Color"
+msgstr "Farba zvýraznenia"
+
+msgid "Pride Colors"
+msgstr "Farby hrdosti"
+
+msgid "Lesbian Pride Colors"
+msgstr "Farby hrdosti lesieb"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Farby hrdosti homosexuálnych mužov"
+
+msgid "Transgender Pride Colors"
+msgstr "Farby hrdosti transrodových ľudí"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Farby hrdosti nebinárnych ľudí"
+
+msgid "Bisexual Pride Colors"
+msgstr "Farby hrdosti bisexuálov"
+
+msgid "Asexual Pride Colors"
+msgstr "Farby hrdosti asexuálov"
+
+msgid "Pansexual Pride Colors"
+msgstr "Farby hrdosti pansexuálov"
+
+msgid "Aromantic Pride Colors"
+msgstr "Farby hrdosti aromantikov"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Farby hrdosti rodovo fluidných ľudí"
+
+msgid "Polysexual Pride Colors"
+msgstr "Farby hrdosti polysexuálov"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Farby hrdosti omnisexuálov"
+
+msgid "Aroace Pride Colors"
+msgstr "Farby hrdosti aroace"
+
+msgid "Agender Pride Colors"
+msgstr "Farby hrdosti agender ľudí"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Farby hrdosti genderqueer ľudí"
+
+msgid "Intersex Pride Colors"
+msgstr "Farby hrdosti intersex ľudí"
+
+msgid "Demigender Pride Colors"
+msgstr "Farby hrdosti demigender ľudí"
+
+msgid "Biromantic Pride Colors"
+msgstr "Farby hrdosti biromantikov"
+
+msgid "Disability Pride Colors"
+msgstr "Farby hrdosti ľudí so zdravotným postihnutím"
+
+msgid "Femboy Pride Colors"
+msgstr "Farby hrdosti femboyov"
+
+msgid "Neutrois Pride Colors"
+msgstr "Farby hrdosti neutrois ľudí"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar musí bežať na pozadí, aby mohol kontrolovať aktualizácie aplikácií"
+
+msgid "Version History"
+msgstr "História verzií"
+
+msgid "Today"
+msgstr "Dnes"
+
+msgid "Yesterday"
+msgstr "Včera"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "Pred %d dňom"
+msgstr[1] "Pred %d dňami"
+msgstr[2] "Pred %d dňami"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "Pred %d týždňom"
+msgstr[1] "Pred %d týždňami"
+msgstr[2] "Pred %d týždňami"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "Pred %d mesiacom"
+msgstr[1] "Pred %d mesiacmi"
+msgstr[2] "Pred %d mesiacmi"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "Pred %d rokom"
+msgstr[1] "Pred %d rokmi"
+msgstr[2] "Pred %d rokmi"
+
+msgid "%e %B %Y"
+msgstr "%e. %B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "Verzia %s"
+
+msgid "No details for this release"
+msgstr "Žiadne podrobnosti k tomuto vydaniu"
+
+msgid "Get More Information"
+msgstr "Získať ďalšie informácie"
+
+msgid "_Version History"
+msgstr "_História verzií"
+
+msgid "Remotes"
+msgstr "Vzdialené zdroje"
+
+msgid "System Installation"
+msgstr "Systémová inštalácia"
+
+msgid "Available to all users on this computer"
+msgstr "Dostupné všetkým používateľom tohto počítača"
+
+msgid "User Installation"
+msgstr "Používateľská inštalácia"
+
+msgid "Only available to you"
+msgstr "Dostupné iba vám"
+
+msgid "Remove Remote"
+msgstr "Odstrániť vzdialený zdroj"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Odstrániť %s"
+
+msgid "Unused"
+msgstr "Nepoužité"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u nainštalovaná aplikácia"
+msgstr[1] "%u nainštalované aplikácie"
+msgstr[2] "%u nainštalovaných aplikácií"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Odstrániť „%s“?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Z tohto používateľského vzdialeného zdroja už nebudete môcť inštalovať aplikácie."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Z tohto systémového vzdialeného zdroja už nebudete môcť inštalovať aplikácie."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u aplikácia na odstránenie"
+msgstr[1] "%u aplikácie na odstránenie"
+msgstr[2] "%u aplikácií na odstránenie"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Nižšie uvedená aplikácia bola nainštalovaná z tohto vzdialeného zdroja a bude spolu s ním odstránená z vášho účtu."
+msgstr[1] "Nižšie uvedené aplikácie boli nainštalované z tohto vzdialeného zdroja a budú spolu s ním odstránené z vášho účtu."
+msgstr[2] "Nižšie uvedené aplikácie boli nainštalované z tohto vzdialeného zdroja a budú spolu s ním odstránené z vášho účtu."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Nižšie uvedená aplikácia bola nainštalovaná z tohto vzdialeného zdroja a bude spolu s ním odstránená pre všetkých používateľov."
+msgstr[1] "Nižšie uvedené aplikácie boli nainštalované z tohto vzdialeného zdroja a budú spolu s ním odstránené pre všetkých používateľov."
+msgstr[2] "Nižšie uvedené aplikácie boli nainštalované z tohto vzdialeného zdroja a budú spolu s ním odstránené pre všetkých používateľov."
+
+msgid "Uninstall"
+msgstr "Odinštalovať"
+
+msgid "Get"
+msgstr "Získať"
+
+msgid "Arbitrary Permissions"
+msgstr "Ľubovoľné povolenia"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Táto aplikácia má povolenie, ktoré jej nepriamo umožňuje udeliť si <b>akékoľvek iné povolenie, ktoré chce</b>, a obísť tak izoláciu Flatpak.\n"
+"\n"
+"Môže preto robiť všetko, čo môže robiť privilegovaná aplikácia bez izolácie, napríklad pristupovať ku všetkým vašim súborom a pripájať sa na internet.\n"
+"\n"
+"Zobrazenie ostatných povolení môže stále poskytnúť lepšiu predstavu o tom, čo bude aplikácia pravdepodobne robiť."
+
+msgid "View Other Permissions"
+msgstr "Zobraziť ostatné povolenia"
+
+msgid "Safe"
+msgstr "Bezpečné"
+
+msgid "App ID"
+msgstr "ID aplikácie"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Táto aplikácia používa zastaranú verziu softvérovej platformy (SDK) a môže obsahovať chyby alebo bezpečnostné zraniteľnosti, ktoré nebudú opravené."
+
+msgid "Safety"
+msgstr "Bezpečnosť"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s je bezpečné"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s nemá žiadne nebezpečné povolenia"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s je pravdepodobne bezpečné"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s je možno nebezpečné"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s je nebezpečné"
+
+msgid "Back"
+msgstr "Späť"
+
+msgid "Previous Screenshot"
+msgstr "Predchádzajúca snímka obrazovky"
+
+msgid "Next Screenshot"
+msgstr "Nasledujúca snímka obrazovky"
+
+msgid "Copy Image"
+msgstr "Kopírovať obrázok"
+
+msgid "Reset View"
+msgstr "Obnoviť zobrazenie"
+
+msgid "Zoom Out"
+msgstr "Oddialiť"
+
+msgid "Zoom In"
+msgstr "Priblížiť"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u aktualizácia runtime"
+msgstr[1] "%u aktualizácie runtime"
+msgstr[2] "%u aktualizácií runtime"
+
+msgid "Screenshots Carousel"
+msgstr "Karusel snímok obrazovky"
+
+msgid "No Screenshots"
+msgstr "Žiadne snímky obrazovky"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Snímka obrazovky %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Snímka obrazovky %u"
+
+msgid "Clear Search"
+msgstr "Vymazať hľadanie"
+
+msgid "Filters"
+msgstr "Filtre"
+
+msgid "_Verified"
+msgstr "_Overené"
+
+msgid "_Free/Open"
+msgstr "_Slobodné/otvorené"
+
+msgid "Non-_EOL"
+msgstr "Bez _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Odfiltrovať aplikácie s ukončenou podporou"
+
+msgid "_Mobile Friendly"
+msgstr "_Vhodné pre mobily"
+
+msgid "Categories"
+msgstr "Kategórie"
+
+msgid "Search Apps, Games, Software"
+msgstr "Hľadať aplikácie, hry, softvér"
+
+msgid "Search Filters"
+msgstr "Filtre hľadania"
+
+msgid "Browse Categories"
+msgstr "Prehliadať kategórie"
+
+msgid "Categories Unavailable"
+msgstr "Kategórie nie sú dostupné"
+
+msgid "Search for apps using the search bar above."
+msgstr "Hľadajte aplikácie pomocou vyhľadávacieho poľa vyššie."
+
+msgid "No Applications Found"
+msgstr "Nenašli sa žiadne aplikácie"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Vo Flathube sa nenašli žiadne výsledky pre „%s“"
+
+msgid "Browser"
+msgstr "Prehliadač"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Office"
+msgstr "Kancelária"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Kalendár"
+
+msgid "Messaging"
+msgstr "Správy"
+
+msgid "Paint"
+msgstr "Kreslenie"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Emulátor"
+
+msgid "Copy Link"
+msgstr "Kopírovať odkaz"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Stránka vo Flathube"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Webová stránka projektu"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Sledovanie problémov"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "Časté otázky"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Pomocník"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Prispieť"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Preložiť"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Kontakt"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Zdrojový kód"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Zapojiť sa"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifest"
+
+msgid "Timeline"
+msgstr "Časová os"
+
+msgid "Total"
+msgstr "Spolu"
+
+msgid "This Week"
+msgstr "Tento týždeň"
+
+msgid "Installs per day"
+msgstr "Inštalácií za deň"
+
+msgid "World"
+msgstr "Svet"
+
+msgid "Installs per country"
+msgstr "Inštalácií podľa krajiny"
+
+msgid "Since 4/15/2024"
+msgstr "Od 15. 4. 2024"
+
+msgid "No Results Found"
+msgstr "Nenašli sa žiadne výsledky"
+
+msgid "Search failed"
+msgstr "Hľadanie zlyhalo"
+
+msgid "Unknown"
+msgstr "Neznáme"
+
+msgid "Keep User Data"
+msgstr "Ponechať používateľské údaje"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Umožniť obnovenie osobných nastavení &amp; obsahu"
+
+msgid "Delete All Data"
+msgstr "Odstrániť všetky údaje"
+
+msgid "Permanently erase user data to save space"
+msgstr "Natrvalo vymazať používateľské údaje a ušetriť miesto"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "Odstrániť %s?"
+
+msgid "Select which version to remove."
+msgstr "Vyberte, ktorú verziu odstrániť."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "Po odinštalovaní nebude možné %s používať."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "„%s“ je vysoko rizikové"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Táto aplikácia má plný prístup k vášmu systému vrátane <b>všetkých vašich súborov, histórie prehliadača, uložených hesiel</b> a ďalšieho. Má tiež prístup na internet, takže by mohla odosielať vaše údaje tretím stranám.\n"
+"\n"
+"Keďže ide o proprietárnu aplikáciu, nie je možné overiť, čo s týmito povoleniami robí."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Táto aplikácia používa staršie okenné prostredie X11, ktoré jej umožňuje <b>zaznamenávať všetky stlačenia klávesov, vytvárať snímky obrazovky a sledovať iné aplikácie</b>. Má tiež prístup na internet, takže by mohla odosielať vaše údaje tretím stranám.\n"
+"\n"
+"Keďže ide o proprietárnu aplikáciu, nie je možné overiť, čo s týmito povoleniami robí."
+
+msgid "_Install Anyway"
+msgstr "_Nainštalovať aj tak"
+
+msgid "Failed to load transaction dialog"
+msgstr "Nepodarilo sa načítať dialóg transakcie"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "Dokončené za %.02f s"
+
+msgid "App Add-On"
+msgstr "Doplnok aplikácie"
+
+msgid "Runtime"
+msgstr "Runtime"
+
+msgid "In Queue"
+msgstr "Vo fronte"
+
+msgid "Finishing Up"
+msgstr "Dokončuje sa"
+
+msgid "Done"
+msgstr "Hotovo"
+
+msgid "Cancelled"
+msgstr "Zrušené"
+
+msgid "Error"
+msgstr "Chyba"
+
+msgid "Cancel Transaction"
+msgstr "Zrušiť transakciu"
+
+msgid "Show Details"
+msgstr "Zobraziť podrobnosti"
+
+msgid "Show Error Info"
+msgstr "Zobraziť informácie o chybe"
+
+#, c-format
+msgid "%s Freed"
+msgstr "Uvoľnené %s"
+
+msgid "Transaction Error"
+msgstr "Chyba transakcie"
+
+msgid "Pending"
+msgstr "Čaká sa"
+
+msgid "Installed Updates"
+msgstr "Nainštalované aktualizácie"
+
+msgid "Release Notes"
+msgstr "Poznámky k vydaniu"
+
+msgid "No Release Info"
+msgstr "Žiadne informácie o vydaní"
+
+msgid "_Update All"
+msgstr "_Aktualizovať všetko"
+
+msgid "This update requests new permissions"
+msgstr "Táto aktualizácia žiada nové povolenia"
+
+msgid "Manage Leftover User Data"
+msgstr "Spravovať zvyšné používateľské údaje"
+
+msgid "No Leftover User Data Found"
+msgstr "Nenašli sa žiadne zvyšné používateľské údaje"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Osobné údaje, ktoré po odstránených aplikáciách zostali, sa zobrazia tu"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Údaje používateľa v koši pre %u aplikáciu"
+msgstr[1] "Údaje používateľa v koši pre %u aplikácie"
+msgstr[2] "Údaje používateľa v koši pre %u aplikácií"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Údaje používateľa v koši pre %s"
+
+msgid "Open User Data Folder"
+msgstr "Otvoriť priečinok používateľských údajov"
+
+msgid "Trash User Data"
+msgstr "Presunúť používateľské údaje do koša"
+
+msgid "Refreshing"
+msgstr "Obnovuje sa"
+
+msgid "Curated"
+msgstr "Vybrané"
+
+msgid "Explore"
+msgstr "Preskúmať"
+
+msgid "Library"
+msgstr "Knižnica"
+
+msgid "Search"
+msgstr "Hľadať"
+
+msgid "Main Menu"
+msgstr "Hlavná ponuka"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Používate novú verziu Bazaar!"
+
+msgid "See What's New"
+msgstr "Zobraziť novinky"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Máte sieťové pripojenie, ale zobrazuje sa verzia Flathubu z vyrovnávacej pamäte"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Sieťové pripojenie je účtované podľa objemu dát — automatické obnovovanie je vypnuté"
+
+msgid "_Donate to Bazaar"
+msgstr "_Prispieť na Bazaar"
+
+msgid "_Refresh"
+msgstr "_Obnoviť"
+
+msgid "_Login With Flathub"
+msgstr "_Prihlásiť sa cez Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "_Spravovať zvyšné používateľské údaje"
+
+msgid "Manage R_emotes"
+msgstr "Spravovať vzdialené _zdroje"
+
+msgid "_Preferences"
+msgstr "_Predvoľby"
+
+msgid "_Keyboard Shortcuts"
+msgstr "_Klávesové skratky"
+
+msgid "_About Bazaar"
+msgstr "_O aplikácii Bazaar"
+
+msgid "_Quit Bazaar"
+msgstr "_Ukončiť Bazaar"
+
+msgid "Log Out"
+msgstr "Odhlásiť sa"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Nepodarilo sa spustiť aplikáciu"
+
+msgid "Could not open link"
+msgstr "Nepodarilo sa otvoriť odkaz"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Bazaar nemôžete odstrániť z Bazaar!"
+
+msgid "Can't do that right now!"
+msgstr "To sa teraz nedá!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u inštalácia"
+msgstr[1] "%s, %'u inštalácie"
+msgstr[2] "%s, %'u inštalácií"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Najviac inštalácií z krajiny %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*f mil."
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d stiahnutí za posledný mesiac"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s Runtime"
+
+msgid "Size information unavailable"
+msgstr "Informácie o veľkosti nie sú k dispozícii"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "Veľkosť sťahovania aplikácie %s"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Nainštalovaná veľkosť aplikácie %s"
+
+msgid "All Ages"
+msgstr "Všetky vekové kategórie"
+
+msgid "Age rating information unavailable"
+msgstr "Informácie o vekovom hodnotení nie sú k dispozícii"
+
+msgid "Suitable for all ages"
+msgstr "Vhodné pre všetky vekové kategórie"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "Vhodné od %d rokov"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "Slobodný softvér s licenciou %s"
+
+msgid "Free software"
+msgstr "Slobodný softvér"
+
+msgid "Proprietary Software"
+msgstr "Proprietárny softvér"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Osobitná licencia: %s"
+
+msgid "Free Software"
+msgstr "Slobodný softvér"
+
+msgid "Adaptive"
+msgstr "Adaptívne"
+
+msgid "Desktop Only"
+msgstr "Iba pre počítače"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "Funguje na počítačoch, tabletoch aj telefónoch"
+
+msgid "May not work on mobile devices"
+msgstr "Nemusí fungovať na mobilných zariadeniach"
+
+msgid "Low Risk"
+msgstr "Nízke riziko"
+
+msgid "Medium Risk"
+msgstr "Stredné riziko"
+
+msgid "High Risk"
+msgstr "Vysoké riziko"
+
+msgid "Unknown Permissions"
+msgstr "Neznáme povolenia"
+
+msgid "Permissions are missing for this app."
+msgstr "Pre túto aplikáciu chýbajú povolenia."
+
+msgid "No Permissions"
+msgstr "Žiadne povolenia"
+
+msgid "App is fully sandboxed"
+msgstr "Aplikácia je plne izolovaná"
+
+msgid "Network Access"
+msgstr "Prístup k sieti"
+
+msgid "Can access the internet"
+msgstr "Má prístup na internet"
+
+msgid "No Network Access"
+msgstr "Žiadny prístup k sieti"
+
+msgid "Cannot access the internet"
+msgstr "Nemá prístup na internet"
+
+msgid "User Device Access"
+msgstr "Prístup k používateľským zariadeniam"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Má prístup k zariadeniam, ako sú webkamery alebo herné ovládače"
+
+msgid "No User Device Access"
+msgstr "Žiadny prístup k používateľským zariadeniam"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Nemá prístup k zariadeniam, ako sú webkamery alebo herné ovládače"
+
+msgid "Input Device Access"
+msgstr "Prístup k vstupným zariadeniam"
+
+msgid "Can access input devices"
+msgstr "Má prístup k vstupným zariadeniam"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Prístup k mikrofónu a prehrávanie zvuku"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Môže počúvať cez mikrofóny a prehrávať zvuk bez vyžiadania povolenia"
+
+msgid "System Device Access"
+msgstr "Prístup k systémovým zariadeniam"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Má prístup k systémovým zariadeniam, ktoré vyžadujú zvýšené oprávnenia"
+
+msgid "Screen Contents Access"
+msgstr "Prístup k obsahu obrazovky"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Má prístup k obsahu obrazovky alebo iných okien"
+
+msgid "Legacy Windowing System"
+msgstr "Staršie okenné prostredie"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Vždy používa staršie okenné prostredie (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Môže získať ľubovoľné povolenia"
+
+msgid "User Settings"
+msgstr "Používateľské nastavenia"
+
+msgid "Can access and change user settings"
+msgstr "Môže pristupovať k používateľským nastaveniam a meniť ich"
+
+msgid "Full File System Read/Write Access"
+msgstr "Úplný prístup na čítanie a zápis v súborovom systéme"
+
+msgid "Can read and write all data on the file system"
+msgstr "Môže čítať a zapisovať všetky údaje v súborovom systéme"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Prístup na čítanie a zápis v domovskom priečinku"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Môže čítať a zapisovať všetky údaje vo vašom domovskom priečinku"
+
+msgid "Full File System Read Access"
+msgstr "Úplný prístup na čítanie v súborovom systéme"
+
+msgid "Can read all data on the file system"
+msgstr "Môže čítať všetky údaje v súborovom systéme"
+
+msgid "Home Folder Read Access"
+msgstr "Prístup na čítanie v domovskom priečinku"
+
+msgid "Can read all data in your home directory"
+msgstr "Môže čítať všetky údaje vo vašom domovskom priečinku"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Prístup na čítanie a zápis v priečinku Stiahnuté"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Môže čítať a zapisovať všetky údaje vo vašom priečinku Stiahnuté"
+
+msgid "Download Folder Read Access"
+msgstr "Prístup na čítanie v priečinku Stiahnuté"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Môže čítať všetky údaje vo vašom priečinku Stiahnuté"
+
+msgid "Can read and write all data in the directory"
+msgstr "Môže čítať a zapisovať všetky údaje v priečinku"
+
+msgid "Can read all data in the directory"
+msgstr "Môže čítať všetky údaje v priečinku"
+
+msgid "No File System Access"
+msgstr "Žiadny prístup k súborovému systému"
+
+msgid "Cannot access the file system at all"
+msgstr "Nemá vôbec žiadny prístup k súborovému systému"
+
+msgid "Uses System Services"
+msgstr "Používa systémové služby"
+
+msgid "Can request data from non-portal system services"
+msgstr "Môže vyžadovať údaje zo systémových služieb mimo portálov"
+
+msgid "Uses Session Services"
+msgstr "Používa služby relácie"
+
+msgid "Can request data from non-portal session services"
+msgstr "Môže vyžadovať údaje zo služieb relácie mimo portálov"
+
+msgid "No Service Access"
+msgstr "Žiadny prístup k službám"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Nemá vôbec žiadny prístup k službám relácie ani systémovým službám mimo portálov"
+
+msgid "Verified App Developer"
+msgstr "Overený vývojár aplikácie"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Bolo overené, že vývojár tejto aplikácie je tým, za koho sa vydáva"
+
+msgid "Proprietary Code"
+msgstr "Proprietárny kód"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Zdrojový kód nie je verejný, takže ho nemožno nezávisle auditovať a môže byť nebezpečný"
+
+msgid "Auditable Code"
+msgstr "Auditovateľný kód"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Zdrojový kód je verejný a možno ho nezávisle auditovať, vďaka čomu je aplikácia pravdepodobnejšie bezpečná"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Používať systémovú službu %s"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Používať službu relácie %s"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Používať službu %s"
+
+msgid "Can see the non-portal service"
+msgstr "Môže vidieť službu mimo portálov"
+
+msgid "Can talk to the non-portal service"
+msgstr "Môže komunikovať so službou mimo portálov"
+
+msgid "Can own the non-portal service"
+msgstr "Môže vlastniť službu mimo portálov"
+
+msgid "Global Menu Integration"
+msgstr "Integrácia globálnej ponuky"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Môže zobrazovať svoje ponuky v globálnom paneli ponúk"
+
+msgid "KDE Settings Integration"
+msgstr "Integrácia nastavení KDE"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Môže zistiť, keď sa zmenia nastavenia pracovnej plochy KDE"
+
+msgid "KDE Global Settings"
+msgstr "Globálne nastavenia KDE"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Môže čítať predvoľby pracovnej plochy KDE, ako sú písma a farby"
+
+msgid "Secret Storage Service"
+msgstr "Služba tajného úložiska"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Môže ukladať a získavať vlastné heslá pomocou systémovej kľúčenky"
+
+msgid "Desktop Notifications Service"
+msgstr "Služba upozornení na ploche"
+
+msgid "Can send desktop notifications"
+msgstr "Môže odosielať upozornenia na ploche"
+
+msgid "System Tray Integration"
+msgstr "Integrácia systémovej oblasti"
+
+msgid "Can display an icon in the system tray"
+msgstr "Môže zobrazovať ikonu v systémovej oblasti"
+
+msgid "KDE Connect Integration"
+msgstr "Integrácia KDE Connect"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Môže komunikovať so zariadeniami spárovanými cez KDE Connect"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigácia"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Otvoriť stránku Preskúmať"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Otvoriť stránku Knižnica"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Otvoriť stránku hľadania"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Vzdialené zdroje"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Synchronizovať vzdialené zdroje"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Všeobecné"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Otvoriť predvoľby"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Zobraziť skratky"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Zavrieť okno"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Ukončiť Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s nainštalované"
+
+msgid "The app is ready to be used"
+msgstr "Aplikácia je pripravená na použitie"
+
+msgid "Updates Are Out of Date"
+msgstr "Aktualizácie sú zastarané"
+
+msgid "Please check for available updates"
+msgstr "Skontrolujte dostupné aktualizácie"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u aplikácia aktualizovaná"
+msgstr[1] "%u aplikácie aktualizované"
+msgstr[2] "%u aplikácií aktualizovaných"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s bolo aktualizované."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s a %s boli aktualizované."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Zahŕňa %s, %s a %s."

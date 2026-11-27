@@ -7397,6 +7397,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "{network} es enregistrat coma {place}."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} Go"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} Mo"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} To"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8559,3 +8574,247 @@ msgstr "escriure de partitions"
 
 msgid "your calendar"
 msgstr "vòstre calendièr"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "Acabar la traduccion de totas las lengas"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "Afichar las datas dins l’òrdre de cada lenga"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "Gardar gettext dins l’imatge"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "Apondre de traduccions per 68 lengas"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "Far que lo tèxte de cada ecran siá traduisible"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "Daissar dintrar d’aplicacions e de pòrts per luòc; Trabalh daissa dintrar pas res"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "Apondre un planning clar e escur, un diaporama e de poliças"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "Renomenar Aisinas sistèma en EvenKeelOS Wheelhouse"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "Afichar los gràfics NVIDIA coma corrèctes dins la verificacion de compatibilitat"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "Cargar los sistèmas de fichièrs abans l’installacion"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "Demandar abans una reaviada automatica"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "Marcar cada version novèla per l’ensag"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "Far un retorn en arrièr d’una mesa a jorn quand quicòm que foncionava se romp"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "Aviar cada compilacion dins una maquina virtuala abans la publicacion"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "Recomandar 8 Go de memòria, sens minimum"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "Verificar l’ordenador abans d’installar dempuèi la clau USB live"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "Demandar utilizaire Windows o Linux dins l’installaire"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "Apondre Aisinas sistèma al menú del lògo"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "Apondre sièis tèmas de mai a la guida d’EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "Cambiar Novèl sus Linux en guida d’EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "Apondre la guida Novèl sus Linux dins Aisinas sistèma e a la connexion"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "Apondre Opcions d’aviada: correccions corrèntas e vòstres paramètres"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "Corregir la verificacion de compilacion de Dorsièrs partejats: cap de dorsièr personal pel moment"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "Apondre Dorsièrs partejats: partejar los dorsièrs personals sus las rets Ostal"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "Apondre Seguretat de la ret: Ostal, Trabalh o Luòc public"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "Reconéisser los pilòts d’imprimenta dins qualsevol dorsièr"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "Afichar las fenèstras d’aisinas dins Aisinas sistèma"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "Dobrir un tiquet quand la compilacion de l’imatge fracassa"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "Blocar los paquets extèrns e l’aisina ISO a de versions exactas"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "Nomenar las fenèstras d’aisinas segon l’aisina, lista de tèstes mai corta"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "Reparar los paramètres sistèma suprimits e alertar suls certificats"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "Metre totas las aisinas dins una sola fenèstra Aisinas sistèma"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "Daissar pas res aprèp la supression d’un VPN"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "Apondre Obténer un VPN, amb de VPN que contunhan de se metre a jorn"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Donar a las reünions Zoom lor pròpria guida"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Dobrir las reünions Zoom dins Chrome, dins la version web de Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "Empachar las installacions d’ArtCraft de copar las installacions de Flathub"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "Reconéisser los installaires per lor nom de fichièr abituau"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Prepausar d’equivalents Linux per de programas Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "Corregir la configuracion de la bóstia: distrobox monta mal los dorsièrs en lectura sola"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Prepausar de versions Fedora o Ubuntu de programas Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Prepausar la version Linux quand un programa Windows es dobèrt"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "Provesir un sol shim, per que lo micrologicial apondèsca pas d’entrada Fedora suplementària"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Tornar metre la zòna de parafuòc de Fedora"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "Renforçar los ajudaires root, lo parafuòc e las mesas a jorn sens senhal"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "Valors per defaut novèlas: rèireplans, dorsièrs color afortida, ecran de verrolhatge"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "Valor per defaut novèla: color afortida torquesa, tanben sus l’ecran de connexion"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "Corregir la nòta de retorn en arrièr, la bocla de connexion e los tèstes blocats"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "Corregir lo retorn en arrièr aprèp blocatge e reduire los ensages a 2"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "Corregir los tèstes del retorn en arrièr automatic"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "Tèstes de fracàs reals pel retorn en arrièr automatic"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "Apondre lo retorn en arrièr automatic amb greenboot"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "Aviar la disposicion Windows sul burèu, mai de pichonas correccions"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "Metre en pausa las mesas a jorn automaticas 3 jorns aprèp una anullacion"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "Apondre una etapa Disposicion del burèu a l’installaire"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "Apondre Disposicion del burèu a Aisinas sistèma"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "Empachar los cambiaments de mòde d’alimentacion d’esperar las mesas a jorn"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "Apondre una disposicion opcionala d’estil Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Corregir los predefinits de Fedora 45 e los camins de politica dels conteneires"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "Legir las fonts de telecargament dins lo dorsièr novèl de Fedora 45"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Passar a Fedora 45"

@@ -6641,6 +6641,21 @@ msgstr "{network}을(를) {place}(으)로 저장할 수 없었습니다. 첫 로
 msgid "{network} is saved as {place}."
 msgstr "{network}이(가) {place}(으)로 저장되었습니다."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n}GB"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n}MB"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n}TB"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -7770,3 +7785,247 @@ msgstr "악보 작성하기"
 
 msgid "your calendar"
 msgstr "내 달력"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "모든 언어 번역 마무리"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "날짜를 각 언어의 고유한 순서로 표시"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "이미지에 gettext 유지"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "68개 언어 번역 추가"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "모든 화면의 텍스트를 번역 가능하게 변경"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "장소별로 앱과 포트 허용, 직장에서는 아무것도 허용하지 않음"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "밝은 테마와 어두운 테마 일정, 슬라이드쇼, 글꼴 추가"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "시스템 도구를 EvenKeelOS Wheelhouse로 이름 변경"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "호환성 확인에서 NVIDIA 그래픽을 정상으로 표시"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "설치 전에 파일 시스템 불러오기"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "자동 다시 시작 전에 확인"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "모든 새 버전을 시험용으로 표시"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "잘 되던 기능이 고장 나면 업데이트 되돌리기"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "게시하기 전에 모든 빌드를 가상 머신에서 시작"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "최소 사양 없이 메모리 8GB 권장"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "라이브 USB로 설치하기 전에 컴퓨터 확인"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "설치 프로그램에서 Windows 사용자인지 Linux 사용자인지 묻기"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "로고 메뉴에 시스템 도구 추가"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "EvenKeelOS 가이드에 주제 6개 추가"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "Linux 입문을 EvenKeelOS 가이드로 변경"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "시스템 도구와 로그인 화면에 Linux 입문 가이드 추가"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "부팅 옵션 추가: 자주 쓰는 해결 방법과 나만의 설정"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "공유 폴더 빌드 검사 수정: 아직 홈 폴더 없음"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "공유 폴더 추가: 집 네트워크에서 홈 폴더 공유"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "네트워크 보안 추가: 집, 직장, 공공장소"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "어떤 폴더에 있어도 프린터 드라이버 인식"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "시스템 도구 안에 도구 창 표시"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "이미지 빌드가 실패하면 이슈 열기"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "외부 패키지와 ISO 도구를 정확한 버전으로 고정"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "도구 창 이름을 도구 이름으로 지정, 테스트 목록 단축"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "삭제된 시스템 설정 복구 및 인증서 알림"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "모든 도구를 시스템 도구 창 하나로 통합"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "VPN을 제거할 때 아무것도 남기지 않기"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "VPN 받기 추가, 계속 업데이트되는 VPN 제공"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Zoom 회의 전용 가이드 추가"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Zoom 회의를 Chrome에서 Zoom 웹 버전으로 열기"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "ArtCraft 설치가 Flathub 설치를 망가뜨리지 않도록 수정"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "일반적인 파일 이름으로 설치 프로그램 인식"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Windows 프로그램을 대신할 Linux 프로그램 추천"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "박스 설정 수정: distrobox가 읽기 전용 폴더를 잘못 마운트하던 문제"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Windows 프로그램의 Fedora 또는 Ubuntu 버전 추천"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Windows 프로그램을 열 때 Linux 버전 추천"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "shim을 하나만 포함해 펌웨어가 Fedora 항목을 추가하지 않도록 변경"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Fedora 방화벽 영역 복원"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "루트 도우미, 방화벽, 비밀번호 없는 업데이트 보안 강화"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "새 기본값: 배경 화면, 강조 색상 폴더, 잠금 화면"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "새 기본값: 청록색 강조 색상, 로그인 화면에도 적용"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "롤백 알림, 로그인 반복, 멈춘 테스트 수정"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "멈춤 시 롤백 수정 및 재시도를 2회로 축소"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "자동 롤백 테스트 수정"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "자동 롤백을 위한 실제 실패 테스트"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "greenboot으로 자동 롤백 추가"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "Windows 레이아웃을 데스크톱에서 시작, 소소한 수정 포함"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "되돌린 후 3일 동안 자동 업데이트 일시 중지"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "설치 프로그램에 데스크톱 레이아웃 단계 추가"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "시스템 도구에 데스크톱 레이아웃 추가"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "전원 모드 전환이 업데이트를 기다리지 않도록 수정"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "선택 사항인 Windows 스타일 레이아웃 추가"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Fedora 45 프리셋과 컨테이너 정책 경로 수정"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "Fedora 45의 새 폴더에서 다운로드 소스 읽기"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Fedora 45로 이동"

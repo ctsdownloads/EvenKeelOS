@@ -1,0 +1,402 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: arcmenu\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Unpin from Folder"
+msgstr "Desfijar de la carpeta"
+
+msgid "Sleek"
+msgstr "Elegante"
+
+msgid "Zest"
+msgstr "Chispa"
+
+msgid "Loading Menu Layout..."
+msgstr "Cargando la disposición del menú..."
+
+msgid "Power Off"
+msgstr "Apagar"
+
+msgid "Try a different search"
+msgstr "Pruebe con otra búsqueda"
+
+msgid "Searching"
+msgstr "Buscando"
+
+msgid "No Results Found"
+msgstr "No se encontraron resultados"
+
+#, javascript-format
+msgid "%d more"
+msgstr "%d más"
+
+#, javascript-format
+msgid "%s Version"
+msgstr "Versión de %s"
+
+#, javascript-format
+msgid "%s - Release Notes"
+msgstr "%s - Notas de la versión"
+
+msgid "What's New"
+msgstr "Novedades"
+
+msgid "Message Tray Update Notification"
+msgstr "Notificación de actualización en la bandeja de mensajes"
+
+#, javascript-format
+msgid "Show a notification when %s receives an update."
+msgstr "Mostrar una notificación cuando %s reciba una actualización."
+
+#, javascript-format
+msgid "%s on GitLab"
+msgstr "%s en GitLab"
+
+msgid "Report an Issue"
+msgstr "Informar de un problema"
+
+#, javascript-format
+msgid "%s Settings"
+msgstr "Configuración de %s"
+
+msgid "Open"
+msgstr "Abrir"
+
+msgid "Brought to you by"
+msgstr "Presentado por"
+
+msgid "History"
+msgstr "Historial"
+
+msgid "Contributions by"
+msgstr "Contribuciones de"
+
+msgid "Contributors"
+msgstr "Colaboradores"
+
+msgid "Translators"
+msgstr "Traductores"
+
+msgid "Artwork by"
+msgstr "Ilustraciones de"
+
+msgid "Legal"
+msgstr "Legal"
+
+msgid "This program comes with absolutely no warranty."
+msgstr "Este programa no tiene absolutamente ninguna garantía."
+
+#, javascript-format
+msgid "See the <a href=\"%s\">%s</a> for details."
+msgstr "Consulte la <a href=\"%s\">%s</a> para más detalles."
+
+msgid "GNU General Public License, version 2 or later"
+msgstr "Licencia Pública General de GNU, versión 2 o posterior"
+
+msgid "Donate"
+msgstr "Donar"
+
+#, javascript-format
+msgid "Help Support %s"
+msgstr "Ayude a apoyar %s"
+
+#, javascript-format
+msgid "Thank you for using %s! If you enjoy it and would like to help support its continued development, please consider making a donation."
+msgstr "¡Gracias por usar %s! Si le gusta y quiere ayudar a apoyar su desarrollo continuo, considere hacer una donación."
+
+msgid "Donate via Buy Me a Coffee"
+msgstr "Donar a través de Buy Me a Coffee"
+
+#, javascript-format
+msgid "A huge thank you to everyone who has supported %s! Your support helps keep %s going. It is truly appreciated!"
+msgstr "¡Muchas gracias a todos los que han apoyado %s! Su apoyo ayuda a que %s siga adelante. ¡Se agradece de verdad!"
+
+msgid "Hide Overview when ArcMenu Opens"
+msgstr "Ocultar la vista general al abrir ArcMenu"
+
+msgid "Disabled"
+msgstr "Desactivado"
+
+msgid "ArcMenu Hotkeys"
+msgstr "Atajos de teclado de ArcMenu"
+
+msgid "Standalone Runner Hotkeys"
+msgstr "Atajos de teclado del Runner independiente"
+
+msgid "Active Hotkeys"
+msgstr "Atajos de teclado activos"
+
+msgid "Hotkey Options"
+msgstr "Opciones de atajos de teclado"
+
+msgid "Super Hotkeys Override GNOME Overview Hotkey"
+msgstr "Los atajos con Super sustituyen el atajo de la vista general de GNOME"
+
+msgid "Type on your keyboard to add a new hotkey."
+msgstr "Escriba en el teclado para añadir un atajo nuevo."
+
+msgid "Add Hotkey"
+msgstr "Añadir atajo de teclado"
+
+#, javascript-format
+msgid "Conflict with <b>%s</b> hotkey"
+msgstr "Conflicto con el atajo de <b>%s</b>"
+
+msgid "Standlone Runner"
+msgstr "Runner independiente"
+
+msgid "Select"
+msgstr "Seleccionar"
+
+msgid "Search icons…"
+msgstr "Buscar iconos…"
+
+msgid "Browse Files..."
+msgstr "Examinar archivos..."
+
+msgid "All"
+msgstr "Todos"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Extension"
+msgstr "Extensión"
+
+msgid "Distros"
+msgstr "Distribuciones"
+
+msgid "Category"
+msgstr "Categoría"
+
+msgid "Filter"
+msgstr "Filtro"
+
+msgid "Appearance"
+msgstr "Apariencia"
+
+msgid "Choose a New Icon"
+msgstr "Elegir un icono nuevo"
+
+msgid "Click Options"
+msgstr "Opciones de clic"
+
+msgid "Context Menu"
+msgstr "Menú contextual"
+
+msgid "None"
+msgstr "Ninguno"
+
+msgid "Left Click"
+msgstr "Clic izquierdo"
+
+msgid "Right Click"
+msgstr "Clic derecho"
+
+msgid "Middle Click"
+msgstr "Clic central"
+
+msgid "Styling"
+msgstr "Estilo"
+
+msgid "Adjust less commonly used settings"
+msgstr "Ajustar opciones menos habituales"
+
+msgid "Show Category Sub Menus"
+msgstr "Mostrar submenús de categorías"
+
+msgid "Show Generic Application Names"
+msgstr "Mostrar nombres genéricos de aplicaciones"
+
+msgid "Show Multi Lined Labels"
+msgstr "Mostrar etiquetas de varias líneas"
+
+msgid "Allow application labels to span multiple lines on grid style layouts"
+msgstr "Permitir que las etiquetas de las aplicaciones ocupen varias líneas en las disposiciones de cuadrícula"
+
+msgid "Show Tooltips"
+msgstr "Mostrar descripciones emergentes"
+
+msgid "Group Apps Alphabetically on List Views"
+msgstr "Agrupar aplicaciones alfabéticamente en las vistas de lista"
+
+msgid "For All Apps sections"
+msgstr "Para las secciones de todas las aplicaciones"
+
+msgid "Group Apps Alphabetically on Grid Views"
+msgstr "Agrupar aplicaciones alfabéticamente en las vistas de cuadrícula"
+
+msgid "Activate App Window on Launch"
+msgstr "Activar la ventana de la aplicación al iniciarla"
+
+msgid "Launching an app activates its existing window if one is open; otherwise, it launches a new instance. Hold Ctrl while launching or middle-click to open a new window."
+msgstr "Al iniciar una aplicación se activa su ventana existente si hay una abierta; de lo contrario, se inicia una instancia nueva. Mantenga pulsado Ctrl al iniciarla o haga clic central para abrir una ventana nueva."
+
+msgid "Keep ArcMenu Open on Ctrl+Click"
+msgstr "Mantener ArcMenu abierto con Ctrl+clic"
+
+msgid "Prevents the menu from closing when activating items while holding Ctrl."
+msgstr "Evita que el menú se cierre al activar elementos mientras se mantiene pulsado Ctrl."
+
+msgid "Scrollview Options"
+msgstr "Opciones de la vista de desplazamiento"
+
+msgid "Scrollview Fade Effects"
+msgstr "Efectos de desvanecimiento de la vista de desplazamiento"
+
+msgid "Show Scrollbars"
+msgstr "Mostrar barras de desplazamiento"
+
+msgid "Overlay Scrollbars"
+msgstr "Barras de desplazamiento superpuestas"
+
+msgid "Icon Style"
+msgstr "Estilo de iconos"
+
+msgid "Category Icons"
+msgstr "Iconos de categorías"
+
+msgid "Shortcut Icons"
+msgstr "Iconos de accesos directos"
+
+msgid "Button Icons"
+msgstr "Iconos de botones"
+
+msgid "New Apps Tracker"
+msgstr "Rastreador de aplicaciones nuevas"
+
+msgid "Enable"
+msgstr "Activar"
+
+msgid "Avatar Shape"
+msgstr "Forma del avatar"
+
+msgid "Show User Avatar"
+msgstr "Mostrar avatar del usuario"
+
+msgid "Merge Top and Bottom Panels"
+msgstr "Combinar los paneles superior e inferior"
+
+msgid "Max Frequent Apps"
+msgstr "Máximo de aplicaciones frecuentes"
+
+msgid "Show Pinned Apps"
+msgstr "Mostrar aplicaciones fijadas"
+
+msgid "Static Height"
+msgstr "Altura estática"
+
+msgid "Default"
+msgstr "Predeterminado"
+
+msgid "Show Configure Runner Button"
+msgstr "Mostrar el botón de configurar Runner"
+
+msgid "Extra Shortcuts Panel Width"
+msgstr "Ancho del panel de accesos directos adicionales"
+
+msgid "Pinned and Frequent Apps"
+msgstr "Aplicaciones fijadas y frecuentes"
+
+msgid "0 = unlimited"
+msgstr "0 = ilimitado"
+
+msgid "'All Apps' Button Action"
+msgstr "Acción del botón «Todas las aplicaciones»"
+
+msgid "Display a category on the default menu view. Category must be enabled in ArcMenu Settings -> Menu -> Extra Categories section."
+msgstr "Muestra una categoría en la vista predeterminada del menú. La categoría debe estar activada en Configuración de ArcMenu -> Menú -> sección Categorías adicionales."
+
+msgid "Spacer"
+msgstr "Espaciador"
+
+msgid "Clear Icon"
+msgstr "Borrar icono"
+
+msgid "Hide Search Bar"
+msgstr "Ocultar la barra de búsqueda"
+
+msgid "The search bar hides when empty and appears when typing."
+msgstr "La barra de búsqueda se oculta cuando está vacía y aparece al escribir."
+
+msgid "Top Left"
+msgstr "Arriba a la izquierda"
+
+msgid "Top Right"
+msgstr "Arriba a la derecha"
+
+msgid "Bottom Left"
+msgstr "Abajo a la izquierda"
+
+msgid "Bottom Right"
+msgstr "Abajo a la derecha"
+
+msgid "Left Centered"
+msgstr "Centrado a la izquierda"
+
+msgid "Right Centered"
+msgstr "Centrado a la derecha"
+
+msgid "Monitor Centered"
+msgstr "Centrado en el monitor"
+
+msgid "Override Menu Item Icon Sizes"
+msgstr "Sustituir los tamaños de icono de los elementos del menú"
+
+msgid "Small Wide"
+msgstr "Pequeño ancho"
+
+msgid "Medium Wide"
+msgstr "Mediano ancho"
+
+msgid "Large Wide"
+msgstr "Grande ancho"
+
+msgid "Menu items displayed in grid style"
+msgstr "Elementos del menú mostrados en estilo de cuadrícula"
+
+msgid "Presets"
+msgstr "Preajustes"
+
+msgid "Grid Icon Size"
+msgstr "Tamaño de icono de la cuadrícula"
+
+msgid "Width, Height, Icon Size"
+msgstr "Ancho, alto, tamaño de icono"
+
+msgid "Applications, pinned apps, and search results"
+msgstr "Aplicaciones, aplicaciones fijadas y resultados de búsqueda"
+
+msgid "Menu items found in side panels on various layouts"
+msgstr "Elementos del menú que se encuentran en los paneles laterales de varias disposiciones"
+
+msgid "Buttons"
+msgstr "Botones"
+
+msgid "Avatar, search icons, navigation icons"
+msgstr "Avatar, iconos de búsqueda, iconos de navegación"
+
+msgid "Hide Icon"
+msgstr "Ocultar icono"
+
+#, javascript-format
+msgid "%s v%s Released!"
+msgstr "¡%s v%s publicado!"
+
+msgid "Check out what's new."
+msgstr "Descubra las novedades."
+
+msgid "What's new?"
+msgstr "¿Qué hay de nuevo?"
+
+msgid "Dismiss"
+msgstr "Descartar"

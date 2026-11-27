@@ -1,0 +1,807 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "System;Package;Manager;Discover;Flatpak;Software;App;Store;Paket;Paketverwaltung;Entdecken;Anwendungen;"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Apps direkt aus der GNOME-Shell suchen"
+
+msgid "App page for Exhibit"
+msgstr "App-Seite für Exhibit"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Erhält keine Core-Aktualisierungen mehr"
+
+msgid "Other Sources"
+msgstr "Andere Quellen"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Unterordner %s im Home-Ordner"
+
+msgid "Host system folders"
+msgstr "Ordner des Host-Systems"
+
+msgid "Host system configuration from /etc"
+msgstr "Konfiguration des Host-Systems aus /etc"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Unterordner %s im Benutzer-Cache"
+
+msgid "User cache folder"
+msgstr "Benutzer-Cache-Ordner"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Unterordner %s in der Benutzerkonfiguration"
+
+msgid "User configuration folder"
+msgstr "Ordner der Benutzerkonfiguration"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Unterordner %s in den Benutzerdaten"
+
+msgid "User data folder"
+msgstr "Ordner der Benutzerdaten"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Unterordner %s in der Benutzer-Laufzeit"
+
+msgid "User runtime folder"
+msgstr "Ordner der Benutzer-Laufzeit"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Dateisystemzugriff auf %s"
+
+msgid "Unknown filesystem path"
+msgstr "Unbekannter Dateisystempfad"
+
+msgid "Amount to download from the internet"
+msgstr "Aus dem Internet herunterzuladende Menge"
+
+msgid "Open user data folder"
+msgstr "Ordner der Benutzerdaten öffnen"
+
+msgid "Caches, settings, and other app data"
+msgstr "Caches, Einstellungen und andere App-Daten"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "%d App wird geladen …"
+msgstr[1] "%d Apps werden geladen …"
+
+msgid "Removing remote…"
+msgstr "Remote wird entfernt …"
+
+msgid "Could not remove remote"
+msgstr "Remote konnte nicht entfernt werden"
+
+msgid "Failed to Load Article"
+msgstr "Artikel konnte nicht geladen werden"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Zusätzliche Abhängigkeiten können zusätzlichen Speicherplatz benötigen"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Zum Installieren dieser App muss möglicherweise eine neue Softwarequelle hinzugefügt werden. Andere Apps aus dieser Quelle werden in Bazaar angezeigt.\n"
+"\n"
+"Fügen Sie diese Quelle nur hinzu, wenn Sie sicher sind, dass Sie ihr vertrauen."
+
+#, c-format
+msgid "About %s to install"
+msgstr "Ca. %s zu installieren"
+
+msgid "Place Applet"
+msgstr "Applet platzieren"
+
+msgid "Choose where to add this applet."
+msgstr "Wählen Sie, wo dieses Applet hinzugefügt werden soll."
+
+msgid "Panel"
+msgstr "Leiste"
+
+msgid "Dock"
+msgstr "Dock"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Auf diesem System sind keine Kurationsinformationen vorhanden. Sie können dennoch Apps auf Flathub durchsuchen"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s bis %s, Höchstwert am %s mit %s"
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "Der Besitz der App-ID %s wurde nicht verifiziert, es kann sich um ein Community-Paket handeln."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "Der Besitz der App-ID %s wurde vom Flathub-Team manuell verifiziert."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "Der Besitz der App-ID %1$s wurde von <b>%2$s</b> auf <b>%3$s</b> verifiziert."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Der Besitz der App-ID %1$s wurde mittels %2$s verifiziert."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "Der Besitz der App-ID %s wurde verifiziert."
+
+msgid "Bazaar Release"
+msgstr "Bazaar-Release"
+
+msgid "Full Release Notes"
+msgstr "Vollständige Versionshinweise"
+
+msgid "Favorite Count"
+msgstr "Anzahl der Favoriten"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Anwendungen, die Sie als Favoriten markieren, erscheinen hier"
+
+msgid "Editing"
+msgstr "Bearbeitung"
+
+msgid "Midi"
+msgstr "MIDI"
+
+msgid "Mixer"
+msgstr "Mixer"
+
+msgid "Player"
+msgstr "Player"
+
+msgid "Recorder"
+msgstr "Recorder"
+
+msgid "Sequencer"
+msgstr "Sequenzer"
+
+msgid "Tuner"
+msgstr "Tuner"
+
+msgid "Made for COSMIC™"
+msgstr "Entwickelt für COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Für COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Weitere COSMIC-Apps"
+
+msgid "Emulators"
+msgstr "Emulatoren"
+
+msgid "More Emulators"
+msgstr "Weitere Emulatoren"
+
+msgid "Launchers"
+msgstr "Launcher"
+
+msgid "More Game Launchers"
+msgstr "Weitere Spiele-Launcher"
+
+msgid "Game Tools"
+msgstr "Spiele-Werkzeuge"
+
+msgid "More Game Tools"
+msgstr "Weitere Spiele-Werkzeuge"
+
+msgid "New Year, New Workflows"
+msgstr "Neues Jahr, neue Arbeitsabläufe"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Apps zum Notieren, für Aufgaben und zum Planen"
+
+msgid "Get Creative"
+msgstr "Werden Sie kreativ"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Unverzichtbare Apps zum Zeichnen, für Fotobearbeitung und digitales Design"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Unverzichtbare Apps für Zusammenarbeit und Kommunikation"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Apps, die Ihnen beim Lernen, Recherchieren und Schreiben helfen"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Großartige Apps zum Lesen, für Filme und zum Spielen"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Mit diesen Apps macht das Erstellen von Websites mehr Spaß"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Finden Sie Ihr neues Lieblingswerkzeug für Notizen"
+
+msgid "Great apps for task management"
+msgstr "Großartige Apps für die Aufgabenverwaltung"
+
+msgid "Make Some Noise"
+msgstr "Machen Sie etwas Lärm"
+
+msgid "Apps for creating and producing music"
+msgstr "Apps zum Erstellen und Produzieren von Musik"
+
+msgid "Get To Work"
+msgstr "Ran an die Arbeit"
+
+msgid "Essential office apps"
+msgstr "Unverzichtbare Office-Apps"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Apps für Ihre Linux-Smartphones und -Tablets"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Spiele und Apps, um Ihre Lieblingstitel auszuführen"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Dies ist eine lokale Vorschau, einige Details können von der veröffentlichten Seite abweichen"
+
+msgid "Trash Data"
+msgstr "Daten im Papierkorb"
+
+msgid "Links"
+msgstr "Links"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Diese App steht unter einer FLOSS-Lizenz, das heißt, der Quellcode kann auf Sicherheit geprüft werden."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Diese App steht unter einer proprietären Lizenz, das heißt, der Quellcode wird privat entwickelt und kann nicht von unabhängigen Dritten geprüft werden."
+
+msgid "Other Apps From This Developer"
+msgstr "Weitere Apps dieses Entwicklers"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Weitere Apps von %s"
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Apps von %s"
+
+msgid "Apps by This Developer"
+msgstr "Apps dieses Entwicklers"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s funktioniert am besten mit bestimmter Hardware"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "%s aus %s installieren"
+
+#, c-format
+msgid "Install %s"
+msgstr "%s installieren"
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Diese App wird nicht offen entwickelt, daher wissen nur ihre Entwickler, wie sie funktioniert. Sie kann auf schwer erkennbare Weise unsicher sein und sich ohne Aufsicht ändern.\n"
+"\n"
+"Möglicherweise können Sie zu dieser App beitragen, möglicherweise aber auch nicht."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Diese App wird unter der besonderen Lizenz %s entwickelt.\n"
+"\n"
+"Möglicherweise können Sie zu dieser App beitragen, möglicherweise aber auch nicht."
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Melden Sie sich an, um Ihre favorisierten Apps geräteübergreifend zu synchronisieren"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Symbol zur Metainfo-Vorschau hinzufügen?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Metainfo-Dateien enthalten von sich aus keine App-Symbole. Möchten Sie eines manuell auswählen?"
+
+msgid "New Permissions"
+msgstr "Neue Berechtigungen"
+
+msgid "_Accept"
+msgstr "_Akzeptieren"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Neue Berechtigung für %s"
+msgstr[1] "Neue Berechtigungen für %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Diese Aktualisierung erfordert die folgende zusätzliche Berechtigung"
+msgstr[1] "Diese Aktualisierung erfordert die folgenden zusätzlichen Berechtigungen"
+
+msgid "User"
+msgstr "Benutzer"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Lebensende"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Die Netzwerkverbindung ist getaktet – die automatische Aktualisierung der Store-Daten ist pausiert"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Automatische Aktualisierungen werden bei getakteten Netzwerken oder aktiviertem Energiesparmodus pausiert, um Daten und Akku zu sparen."
+
+msgid "_Automatic"
+msgstr "_Automatisch"
+
+msgid "Automatically check for and download app updates"
+msgstr "Nach App-Aktualisierungen automatisch suchen und diese herunterladen"
+
+msgid "_Manual"
+msgstr "_Manuell"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Die Suche nach App-Aktualisierungen und deren Download muss manuell erfolgen"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Benachrichtigungen bei automatischen Aktualisierungen"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Benachrichtigen, wenn Aktualisierungen automatisch installiert wurden"
+
+msgid "F_lathub Results Only"
+msgstr "Nur _Flathub-Ergebnisse"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Such- und Stöberergebnisse auf Apps beschränken, die nur auf Flathub verfügbar sind"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Apps am _Lebensende verstecken"
+
+msgid "Remotes"
+msgstr "Remotes"
+
+msgid "System Installation"
+msgstr "Systeminstallation"
+
+msgid "Available to all users on this computer"
+msgstr "Für alle Benutzer dieses Computers verfügbar"
+
+msgid "User Installation"
+msgstr "Benutzerinstallation"
+
+msgid "Only available to you"
+msgstr "Nur für Sie verfügbar"
+
+msgid "Remove Remote"
+msgstr "Remote entfernen"
+
+#, c-format
+msgid "Remove %s"
+msgstr "%s entfernen"
+
+msgid "Unused"
+msgstr "Unbenutzt"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u App installiert"
+msgstr[1] "%u Apps installiert"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "„%s“ entfernen?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Sie können dann keine Apps mehr aus diesem Benutzer-Remote installieren."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Sie können dann keine Apps mehr aus diesem System-Remote installieren."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u App zu entfernen"
+msgstr[1] "%u Apps zu entfernen"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Die folgende App wurde aus diesem Remote installiert und wird zusammen mit ihm aus Ihrem Konto entfernt."
+msgstr[1] "Diese Apps wurden aus diesem Remote installiert und werden zusammen mit ihm aus Ihrem Konto entfernt."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Die folgende App wurde aus diesem Remote installiert und wird zusammen mit ihm für alle Benutzer entfernt."
+msgstr[1] "Diese Apps wurden aus diesem Remote installiert und werden zusammen mit ihm für alle Benutzer entfernt."
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Diese App hat eine Berechtigung, die es ihr indirekt erlaubt, sich <b>jede andere gewünschte Berechtigung selbst zu erteilen</b> und die Flatpak-Sandbox zu umgehen.\n"
+"\n"
+"Sie kann daher alles tun, was eine privilegierte Anwendung ohne Sandbox tun kann, etwa auf alle Ihre Dateien zugreifen und sich mit dem Internet verbinden.\n"
+"\n"
+"Das Ansehen der anderen Berechtigungen kann dennoch eine bessere Vorstellung davon geben, was die App wahrscheinlich tut."
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Diese App verwendet eine veraltete Version der Software-Plattform (SDK) und enthält möglicherweise Fehler oder Sicherheitslücken, die nicht behoben werden."
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u Laufzeitumgebungs-Aktualisierung"
+msgstr[1] "%u Laufzeitumgebungs-Aktualisierungen"
+
+msgid "Screenshots Carousel"
+msgstr "Screenshot-Karussell"
+
+msgid "_Free/Open"
+msgstr "_Frei/Offen"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Apps am Lebensende ausblenden"
+
+msgid "_Mobile Friendly"
+msgstr "_Für Mobilgeräte geeignet"
+
+msgid "Search for apps using the search bar above."
+msgstr "Suchen Sie mit der Suchleiste oben nach Apps."
+
+msgid "Messaging"
+msgstr "Messenger"
+
+msgid "Paint"
+msgstr "Malen"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifest"
+
+msgid "Total"
+msgstr "Gesamt"
+
+msgid "This Week"
+msgstr "Diese Woche"
+
+msgid "Installs per day"
+msgstr "Installationen pro Tag"
+
+msgid "Installs per country"
+msgstr "Installationen pro Land"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Wiederherstellen persönlicher Einstellungen &amp; Inhalte erlauben"
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "„%s“ hat ein hohes Risiko"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Diese App hat vollen Zugriff auf Ihr System, einschließlich aller <b>Ihrer Dateien, des Browserverlaufs, gespeicherter Passwörter</b> und mehr. Sie hat außerdem Zugriff auf das Internet und könnte Ihre Daten daher an Dritte senden.\n"
+"\n"
+"Da die App proprietär ist, kann nicht geprüft werden, was sie mit diesen Berechtigungen macht."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Diese App verwendet das veraltete Fenstersystem X11, das es ihr erlaubt, <b>alle Tastenanschläge aufzuzeichnen, Screenshots aufzunehmen und andere Anwendungen zu überwachen</b>. Sie hat außerdem Zugriff auf das Internet und könnte Ihre Daten daher an Dritte senden.\n"
+"\n"
+"Da die App proprietär ist, kann nicht geprüft werden, was sie mit diesen Berechtigungen macht."
+
+msgid "Failed to load transaction dialog"
+msgstr "Transaktionsdialog konnte nicht geladen werden"
+
+msgid "Finishing Up"
+msgstr "Wird abgeschlossen"
+
+msgid "Installed Updates"
+msgstr "Installierte Aktualisierungen"
+
+msgid "Release Notes"
+msgstr "Versionshinweise"
+
+msgid "No Release Info"
+msgstr "Keine Versionsinformationen"
+
+msgid "This update requests new permissions"
+msgstr "Diese Aktualisierung fordert neue Berechtigungen an"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Persönliche Daten, die von entfernten Apps zurückgelassen wurden, erscheinen hier"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Benutzerdaten von %s im Papierkorb"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Sie haben eine Netzwerkverbindung, sehen aber eine zwischengespeicherte Version von Flathub"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Die Netzwerkverbindung ist getaktet – automatische Aktualisierungen sind deaktiviert"
+
+msgid "Manage R_emotes"
+msgstr "R_emotes verwalten"
+
+msgid "Could not open link"
+msgstr "Link konnte nicht geöffnet werden"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u Installation"
+msgstr[1] "%s, %'u Installationen"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Meiste Installationen aus %s"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s Laufzeitumgebung"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Installierte Größe von %s"
+
+msgid "Free Software"
+msgstr "Freie Software"
+
+msgid "May not work on mobile devices"
+msgstr "Funktioniert möglicherweise nicht auf Mobilgeräten"
+
+msgid "Permissions are missing for this app."
+msgstr "Für diese App fehlen Berechtigungen."
+
+msgid "User Device Access"
+msgstr "Zugriff auf Benutzergeräte"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Kann auf Geräte wie Webcams oder Gamecontroller zugreifen"
+
+msgid "No User Device Access"
+msgstr "Kein Zugriff auf Benutzergeräte"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Kann nicht auf Geräte wie Webcams oder Gamecontroller zugreifen"
+
+msgid "Input Device Access"
+msgstr "Zugriff auf Eingabegeräte"
+
+msgid "Can access input devices"
+msgstr "Kann auf Eingabegeräte zugreifen"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Mikrofonzugriff und Audiowiedergabe"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Kann ohne Nachfrage über Mikrofone zuhören und Audio wiedergeben"
+
+msgid "System Device Access"
+msgstr "Zugriff auf Systemgeräte"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Kann auf Systemgeräte zugreifen, die erhöhte Berechtigungen erfordern"
+
+msgid "Screen Contents Access"
+msgstr "Zugriff auf Bildschirminhalte"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Kann auf den Inhalt des Bildschirms oder anderer Fenster zugreifen"
+
+msgid "Legacy Windowing System"
+msgstr "Veraltetes Fenstersystem"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Verwendet immer ein veraltetes Fenstersystem (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Kann beliebige Berechtigungen erlangen"
+
+msgid "Can access and change user settings"
+msgstr "Kann Benutzereinstellungen lesen und ändern"
+
+msgid "Full File System Read/Write Access"
+msgstr "Voller Lese- und Schreibzugriff auf das Dateisystem"
+
+msgid "Can read and write all data on the file system"
+msgstr "Kann alle Daten im Dateisystem lesen und schreiben"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Lese- und Schreibzugriff auf den Home-Ordner"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Kann alle Daten in Ihrem Home-Verzeichnis lesen und schreiben"
+
+msgid "Full File System Read Access"
+msgstr "Voller Lesezugriff auf das Dateisystem"
+
+msgid "Can read all data on the file system"
+msgstr "Kann alle Daten im Dateisystem lesen"
+
+msgid "Home Folder Read Access"
+msgstr "Lesezugriff auf den Home-Ordner"
+
+msgid "Can read all data in your home directory"
+msgstr "Kann alle Daten in Ihrem Home-Verzeichnis lesen"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Lese- und Schreibzugriff auf den Download-Ordner"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Kann alle Daten in Ihrem Download-Verzeichnis lesen und schreiben"
+
+msgid "Download Folder Read Access"
+msgstr "Lesezugriff auf den Download-Ordner"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Kann alle Daten in Ihrem Download-Verzeichnis lesen"
+
+msgid "Can read and write all data in the directory"
+msgstr "Kann alle Daten im Verzeichnis lesen und schreiben"
+
+msgid "Can read all data in the directory"
+msgstr "Kann alle Daten im Verzeichnis lesen"
+
+msgid "Cannot access the file system at all"
+msgstr "Kann überhaupt nicht auf das Dateisystem zugreifen"
+
+msgid "Uses System Services"
+msgstr "Verwendet Systemdienste"
+
+msgid "Can request data from non-portal system services"
+msgstr "Kann Daten von Systemdiensten anfordern, die nicht Portale sind"
+
+msgid "Uses Session Services"
+msgstr "Verwendet Sitzungsdienste"
+
+msgid "Can request data from non-portal session services"
+msgstr "Kann Daten von Sitzungsdiensten anfordern, die nicht Portale sind"
+
+msgid "No Service Access"
+msgstr "Kein Zugriff auf Dienste"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Kann überhaupt nicht auf Sitzungs- oder Systemdienste zugreifen, die nicht Portale sind"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Es wurde verifiziert, dass der Entwickler dieser App der ist, der er zu sein vorgibt"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Der Quellcode ist nicht öffentlich, daher kann er nicht unabhängig geprüft werden und könnte unsicher sein"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Der Quellcode ist öffentlich und kann unabhängig geprüft werden, wodurch die App wahrscheinlicher sicher ist"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Den Systemdienst %s verwenden"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Den Sitzungsdienst %s verwenden"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Den Dienst %s verwenden"
+
+msgid "Can see the non-portal service"
+msgstr "Kann den Dienst sehen, der kein Portal ist"
+
+msgid "Can talk to the non-portal service"
+msgstr "Kann mit dem Dienst kommunizieren, der kein Portal ist"
+
+msgid "Can own the non-portal service"
+msgstr "Kann den Dienst besitzen, der kein Portal ist"
+
+msgid "Global Menu Integration"
+msgstr "Integration des globalen Menüs"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Kann seine Menüs in einer globalen Menüleiste anzeigen"
+
+msgid "KDE Settings Integration"
+msgstr "Integration der KDE-Einstellungen"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Kann erkennen, wenn sich KDE-Desktop-Einstellungen ändern"
+
+msgid "KDE Global Settings"
+msgstr "Globale KDE-Einstellungen"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Kann KDE-Desktop-Einstellungen wie Schriften und Farben lesen"
+
+msgid "Secret Storage Service"
+msgstr "Dienst für geheime Daten"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Kann eigene Passwörter über den Schlüsselbund des Systems speichern und abrufen"
+
+msgid "Desktop Notifications Service"
+msgstr "Dienst für Desktop-Benachrichtigungen"
+
+msgid "Can send desktop notifications"
+msgstr "Kann Desktop-Benachrichtigungen senden"
+
+msgid "System Tray Integration"
+msgstr "Integration des Systembereichs"
+
+msgid "Can display an icon in the system tray"
+msgstr "Kann ein Symbol im Systembereich anzeigen"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Kann mit über KDE Connect gekoppelten Geräten interagieren"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Remotes"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s installiert"
+
+msgid "The app is ready to be used"
+msgstr "Die App ist einsatzbereit"
+
+msgid "Updates Are Out of Date"
+msgstr "Aktualisierungen sind veraltet"
+
+msgid "Please check for available updates"
+msgstr "Bitte suchen Sie nach verfügbaren Aktualisierungen"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u App aktualisiert"
+msgstr[1] "%u Apps aktualisiert"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s wurde aktualisiert."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s und %s wurden aktualisiert."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Enthält %s, %s und %s."

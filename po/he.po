@@ -7005,6 +7005,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "{network} נשמרה כ„{place}”."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} GB"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} MB"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} TB"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8150,3 +8165,247 @@ msgstr "כתיבת תווים"
 
 msgid "your calendar"
 msgstr "לוח השנה שלך"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "סיום תרגום כל השפות"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "הצגת תאריכים בסדר של כל שפה"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "השארת gettext בתמונה"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "הוספת תרגומים ל-68 שפות"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "הפיכת הטקסט בכל מסך לניתן לתרגום"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "מתן גישה ליישומים ולפורטים לפי מקום; ב„עבודה” שום דבר לא מקבל גישה"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "הוספת לוח זמנים לבהיר וכהה, מצגת וגופנים"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "שינוי השם „כלי מערכת” ל-EvenKeelOS Wheelhouse"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "הצגת גרפיקת NVIDIA כתקינה בבדיקת ההתאמה"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "טעינת מערכות הקבצים לפני ההתקנה"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "שאלה לפני הפעלה מחדש אוטומטית"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "סימון כל גרסה חדשה לניסיון"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "חזרה לאחור מעדכון כשמשהו שעבד מפסיק לעבוד"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "הפעלת כל בנייה במכונה וירטואלית לפני הפרסום"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "המלצה על 8 GB של זיכרון, בלי מינימום"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "בדיקת המחשב לפני התקנה מ-USB חי"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "שאלה בתוכנית ההתקנה אם המשתמש הוא של Windows או של Linux"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "הוספת „כלי מערכת” לתפריט הסמליל"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "הוספת שישה נושאים נוספים למדריך EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "הפיכת „חדשים ב-Linux” למדריך EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "הוספת המדריך „חדשים ב-Linux” ל„כלי מערכת” ולמסך הכניסה"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "הוספת „אפשרויות אתחול”: תיקונים נפוצים והגדרות משלך"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "תיקון בדיקת הבנייה של „תיקיות משותפות”: עדיין אין תיקיות בית"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "הוספת „תיקיות משותפות”: שיתוף תיקיות בית ברשתות „בית”"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "הוספת „אבטחת רשת”: בית, עבודה או מקום ציבורי"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "זיהוי מנהלי התקן למדפסות בכל תיקייה"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "הצגת חלונות הכלים בתוך „כלי מערכת”"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "פתיחת דיווח תקלה כשבניית התמונה נכשלת"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "נעילת חבילות חיצוניות וכלי ה-ISO לגרסאות מדויקות"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "מתן שמות לחלונות הכלים לפי הכלי, רשימת בדיקות קצרה יותר"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "תיקון הגדרות מערכת שנמחקו והתראה על אישורים"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "הכנסת כל הכלים לחלון „כלי מערכת” אחד"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "לא להשאיר שום דבר אחרי הסרת VPN"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "הוספת „השגת VPN”, עם VPN שממשיכים להתעדכן"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "מדריך נפרד לפגישות Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "פתיחת פגישות Zoom ב-Chrome, בגרסת הדפדפן של Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "מניעת התקנות ArtCraft מלשבור התקנות Flathub"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "זיהוי תוכניות התקנה לפי שם הקובץ הרגיל שלהן"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "הצעת תחליפים ב-Linux לתכניות Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "תיקון הגדרת התיבה: distrobox מרכיב תיקיות לקריאה בלבד באופן שגוי"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "הצעת גרסאות Fedora או Ubuntu של תכניות Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "הצעת גרסת Linux כשפותחים תכנית Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "שליחת shim אחד, כדי שהקושחה לא תוסיף רשומת Fedora נוספת"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "החזרת אזור חומת האש של Fedora"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "הקשחת עוזרי root, חומת האש ועדכונים בלי ססמה"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "ברירות מחדל חדשות: רקעים, תיקיות הדגשה, מסך נעילה"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "ברירת מחדל חדשה: צבע הדגשה טורקיז, גם במסך הכניסה"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "תיקון הערת החזרה לאחור, לולאת כניסה ובדיקות תקועות"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "תיקון חזרה לאחור אחרי היתקעות והפחתת הניסיונות ל-2"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "תיקון בדיקות החזרה האוטומטית לאחור"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "בדיקות כשל אמיתיות לחזרה האוטומטית לאחור"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "הוספת חזרה אוטומטית לאחור עם greenboot"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "הפעלת פריסת Windows בשולחן העבודה, ותיקונים קטנים"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "השהיית עדכונים אוטומטיים ל-3 ימים אחרי ביטול"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "הוספת שלב „פריסת שולחן העבודה” לתוכנית ההתקנה"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "הוספת „פריסת שולחן העבודה” ל„כלי מערכת”"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "מניעת המתנה של החלפת מצב צריכת חשמל לעדכונים"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "הוספת פריסה אופציונלית בסגנון Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "תיקון הגדרות מוגדרות מראש של Fedora 45 ונתיבי מדיניות מכולות"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "קריאת מקורות ההורדה בתיקייה החדשה של Fedora 45"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "מעבר ל-Fedora 45"

@@ -1,0 +1,1168 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "Quit"
+msgstr "Выйсці"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Закрыць %d акно"
+msgstr[1] "Закрыць %d акны"
+msgstr[2] "Закрыць %d акон"
+
+msgid "Power options"
+msgstr "Параметры сілкавання"
+
+msgid "Event logs"
+msgstr "Журналы падзей"
+
+msgid "System"
+msgstr "Сістэма"
+
+msgid "Device Management"
+msgstr "Кіраванне прыладамі"
+
+msgid "Disk Management"
+msgstr "Кіраванне дыскамі"
+
+msgid "Unlock taskbar"
+msgstr "Разблакіраваць панэль задач"
+
+msgid "Lock taskbar"
+msgstr "Заблакіраваць панэль задач"
+
+msgid "Gnome Settings"
+msgstr "Налады GNOME"
+
+msgid "Dash to Panel Settings"
+msgstr "Налады Dash to Panel"
+
+msgid "Restore Windows"
+msgstr "Аднавіць вокны"
+
+msgid "Show Desktop"
+msgstr "Паказаць працоўны стол"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel абноўлена!"
+
+msgid "You are now running version"
+msgstr "Цяпер працуе версія"
+
+msgid "See what's new"
+msgstr "Паглядзець, што новага"
+
+msgid "Top Bar"
+msgstr "Верхняя панэль"
+
+msgid "Show Desktop button height (px)"
+msgstr "Вышыня кнопкі «Паказаць працоўны стол» (пкс)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Шырыня кнопкі «Паказаць працоўны стол» (пкс)"
+
+msgid "Left"
+msgstr "Злева"
+
+msgid "Center"
+msgstr "Па цэнтры"
+
+msgid "Right"
+msgstr "Справа"
+
+msgid "Top"
+msgstr "Уверсе"
+
+msgid "Middle"
+msgstr "Пасярэдзіне"
+
+msgid "Bottom"
+msgstr "Унізе"
+
+msgid "Start"
+msgstr "Пачатак"
+
+msgid "End"
+msgstr "Канец"
+
+msgid "Show Applications button"
+msgstr "Кнопка «Паказаць праграмы»"
+
+msgid "Activities button"
+msgstr "Кнопка «Агляд»"
+
+msgid "Taskbar"
+msgstr "Панэль задач"
+
+msgid "Date menu"
+msgstr "Меню даты"
+
+msgid "System menu"
+msgstr "Сістэмнае меню"
+
+msgid "Left box"
+msgstr "Левая вобласць"
+
+msgid "Center box"
+msgstr "Цэнтральная вобласць"
+
+msgid "Right box"
+msgstr "Правая вобласць"
+
+msgid "Desktop button"
+msgstr "Кнопка працоўнага стала"
+
+msgid "Move up"
+msgstr "Перасунуць вышэй"
+
+msgid "Move down"
+msgstr "Перасунуць ніжэй"
+
+msgid "Visible"
+msgstr "Бачны"
+
+msgid "Select element position"
+msgstr "Выберыце размяшчэнне элемента"
+
+msgid "Stacked to top"
+msgstr "Прыціснуты ўверх"
+
+msgid "Stacked to left"
+msgstr "Прыціснуты ўлева"
+
+msgid "Stacked to bottom"
+msgstr "Прыціснуты ўніз"
+
+msgid "Stacked to right"
+msgstr "Прыціснуты ўправа"
+
+msgid "Centered"
+msgstr "Па цэнтры"
+
+msgid "Monitor Center"
+msgstr "Цэнтр манітора"
+
+msgid "More options"
+msgstr "Дадатковыя параметры"
+
+msgid "Reset to defaults"
+msgstr "Скінуць да прадвызначаных"
+
+msgid "Show Applications options"
+msgstr "Параметры кнопкі «Паказаць праграмы»"
+
+msgid "Open icon"
+msgstr "Адкрыць значок"
+
+msgid "Show Desktop options"
+msgstr "Параметры кнопкі «Паказаць працоўны стол»"
+
+msgid "Primary monitor"
+msgstr "Асноўны манітор"
+
+msgid "Monitor "
+msgstr "Манітор "
+
+msgid "Running Indicator Options"
+msgstr "Параметры індыкатара запуску"
+
+msgid "Dynamic opacity options"
+msgstr "Параметры дынамічнай празрыстасці"
+
+msgid "Intellihide options"
+msgstr "Параметры Intellihide"
+
+msgid "Window preview options"
+msgstr "Параметры перадпрагляду вокнаў"
+
+msgid "Isolate Workspaces options"
+msgstr "Параметры ізаляцыі працоўных прастор"
+
+msgid "Isolate monitors options"
+msgstr "Параметры ізаляцыі манітораў"
+
+msgid "Ungrouped application options"
+msgstr "Параметры негрупаваных праграм"
+
+msgid "Customize middle-click behavior"
+msgstr "Наладзіць паводзіны сярэдняй кнопкі мышы"
+
+msgid "Text"
+msgstr "Тэкст"
+
+msgid "Command"
+msgstr "Каманда"
+
+msgid "Remove"
+msgstr "Выдаліць"
+
+msgid "Customize panel scroll behavior"
+msgstr "Наладзіць паводзіны пракруткі на панэлі"
+
+msgid "Customize icon scroll behavior"
+msgstr "Наладзіць паводзіны пракруткі на значку"
+
+msgid "Advanced hotkeys options"
+msgstr "Дадатковыя параметры спалучэнняў клавіш"
+
+msgid "Secondary Menu Options"
+msgstr "Параметры другаснага меню"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d мс"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d значок"
+msgstr[1] "%d значкі"
+msgstr[2] "%d значкоў"
+
+msgid "App icon animation options"
+msgstr "Параметры анімацыі значкоў праграм"
+
+msgid "App icon highlight options"
+msgstr "Параметры вылучэння значкоў праграм"
+
+msgid "Export settings"
+msgstr "Экспартаваць налады"
+
+msgid "Import settings"
+msgstr "Імпартаваць налады"
+
+msgid "Move to current Workspace"
+msgstr "Перамясціць на бягучую працоўную прастору"
+
+msgid "Animation type"
+msgstr "Тып анімацыі"
+
+msgid "Simple"
+msgstr "Простая"
+
+msgid "Ripple"
+msgstr "Рабізна"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Працягласць"
+
+msgid "Rotation"
+msgstr "Паварот"
+
+msgid "Travel"
+msgstr "Перамяшчэнне"
+
+msgid "Zoom"
+msgstr "Маштаб"
+
+msgid "Convexity"
+msgstr "Выпукласць"
+
+msgid "Extent"
+msgstr "Ступень"
+
+msgid "Highlight focused application"
+msgstr "Вылучаць праграму ў фокусе"
+
+msgid "Icon dominant color"
+msgstr "Дамінантны колер значка"
+
+msgid "Custom color"
+msgstr "Уласны колер"
+
+msgid "Highlight opacity"
+msgstr "Празрыстасць вылучэння"
+
+msgid "Indicator size (px)"
+msgstr "Памер індыкатара (пкс)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Колер індыкатара — дамінантны колер значка"
+
+msgid "Indicator color - Override Theme"
+msgstr "Колер індыкатара — перавызначэнне тэмы"
+
+msgid "1 window open (or ungrouped)"
+msgstr "1 акно адкрыта (або негрупаваныя)"
+
+msgid "Apply to all"
+msgstr "Ужыць да ўсіх"
+
+msgid "2 windows open"
+msgstr "2 вокны адкрыта"
+
+msgid "3 windows open"
+msgstr "3 вокны адкрыта"
+
+msgid "4+ windows open"
+msgstr "4 і больш вокнаў адкрыта"
+
+msgid "Use different for unfocused"
+msgstr "Выкарыстоўваць іншы для праграм не ў фокусе"
+
+msgid "The panel background opacity is affected by"
+msgstr "На празрыстасць фону панэлі ўплываюць"
+
+msgid "All windows"
+msgstr "Усе вокны"
+
+msgid "Focused windows"
+msgstr "Вокны ў фокусе"
+
+msgid "Maximized windows"
+msgstr "Разгорнутыя вокны"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Змяняць празрыстасць, калі акно наблізіцца бліжэй чым (пкс)"
+
+msgid "Change opacity to (%)"
+msgstr "Змяніць празрыстасць да (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Працягласць анімацыі змены празрыстасці (мс)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Памер шрыфту (пкс) назваў праграм (прадвызначана 14)"
+
+msgid "Font weight of application titles"
+msgstr "Таўшчыня шрыфту назваў праграм"
+
+msgid "inherit from theme"
+msgstr "успадкаваць ад тэмы"
+
+msgid "normal"
+msgstr "звычайная"
+
+msgid "lighter"
+msgstr "танчэйшая"
+
+msgid "bold"
+msgstr "тоўстая"
+
+msgid "bolder"
+msgstr "таўсцейшая"
+
+msgid "Font color of the application titles"
+msgstr "Колер шрыфту назваў праграм"
+
+msgid "Font color of the minimized application titles"
+msgstr "Колер шрыфту назваў згорнутых праграм"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Максімальная шырыня (пкс) назваў праграм"
+
+msgid "(default is 160)"
+msgstr "(прадвызначана 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Выкарыстоўваць фіксаваную шырыню назваў праграм"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Усе назвы праграм маюць аднолькавую шырыню, нават калі іх тэкст карацейшы за максімальную шырыню. Значэнне максімальнай шырыні выкарыстоўваецца як фіксаваная шырыня."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Паказваць індыкатары запуску для праграм не ў фокусе"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Выкарыстоўваць значкі абраных як запускальнікі праграм"
+
+msgid "Highlight AppIcon color"
+msgstr "Колер вылучэння значка праграмы"
+
+msgid "Pressed AppIcon color"
+msgstr "Колер націснутага значка праграмы"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Радыус межаў вылучэння значка праграмы"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Перавызначае агульны радыус межаў (прадвызначана 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Хаваць панэль толькі ад вокнаў"
+
+msgid "Overlapping"
+msgstr "Перакрыццё"
+
+msgid "On same monitor"
+msgstr "На тым жа маніторы"
+
+msgid "The panel hides from"
+msgstr "Панэль хаваецца ад"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Дакрананне паказальнікам да краю манітора паказвае панэль"
+
+msgid "Limit to panel length"
+msgstr "Абмежаваць даўжынёй панэлі"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Навядзенне на вобласць панэлі трымае панэль паказанай"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Патрабаваць ціск на край манітора, каб паказаць панэль"
+
+msgid "Required pressure threshold (px)"
+msgstr "Неабходны парог ціску (пкс)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Неабходны тайм-аўт ціску (мс)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Дазволіць паказваць панэль у поўнаэкранным рэжыме"
+
+msgid "(requires multi-monitors option)"
+msgstr "(патрабуе параметра некалькіх манітораў)"
+
+msgid "Only hide secondary panels"
+msgstr "Хаваць толькі другасныя панэлі"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Сінтаксіс: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Спалучэнне клавіш, каб паказаць і ўтрымаць панэль"
+
+msgid "e.g. <Super>i"
+msgstr "напр. <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Захоўваць стан паміж перазапускамі"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(улічвае рэжым GNOME «Не турбаваць» і патрабуе параметра паказу лічыльніка апавяшчэнняў)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Паказваць і ўтрымліваць панэль пры апавяшчэнні"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Працягласць анімацыі хавання і паказу (мс)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Затрымка перад хаваннем панэлі (мс)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Затрымка перад паказам панэлі (мс)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Затрымка перад уключэннем Intellihide пры запуску (мс)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Ізаляваць маніторы, нават калі выкарыстоўваецца адна панэль"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Ізаляваць працоўныя прасторы ў пераключальніку праграм gnome-shell"
+
+msgid "Shift+Click action"
+msgstr "Дзеянне пры націску з Shift"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "Калі зададзена згортванне, двайны націск згортвае ўсе вокны праграмы."
+
+msgid "Raise windows"
+msgstr "Паднімаць вокны"
+
+msgid "Minimize window"
+msgstr "Згарнуць акно"
+
+msgid "Launch new instance"
+msgstr "Запусціць новы экзэмпляр"
+
+msgid "Cycle through windows"
+msgstr "Пераключацца паміж вокнамі"
+
+msgid "Cycle windows + minimize"
+msgstr "Пераключацца паміж вокнамі + згортваць"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Адно — пераключэнне / некалькі — перадпрагляд"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Адно — пераключэнне / некалькі — цыклічна"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Адно — пераключэнне / некалькі — раскласці"
+
+msgid "Middle-Click action"
+msgstr "Дзеянне сярэдняй кнопкі мышы"
+
+msgid "Behavior for Middle-Click."
+msgstr "Паводзіны сярэдняй кнопкі мышы."
+
+msgid "Shift+Middle-Click action"
+msgstr "Дзеянне сярэдняй кнопкі мышы з Shift"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Паводзіны сярэдняй кнопкі мышы з Shift."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Спалучэннем клавіш будзе Super+лічба або Super+Alt+лічба"
+
+msgid "Hotkeys prefix"
+msgstr "Прэфікс спалучэнняў клавіш"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Часова паказваць нумары праграм над значкамі пры выкарыстанні спалучэнняў клавіш."
+
+msgid "Number overlay"
+msgstr "Накладанне нумароў"
+
+msgid "Never"
+msgstr "Ніколі"
+
+msgid "Show temporarily"
+msgstr "Паказваць часова"
+
+msgid "Always visible"
+msgstr "Заўсёды бачна"
+
+msgid "Hide timeout (ms)"
+msgstr "Тайм-аўт хавання (мс)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Спалучэнне клавіш, каб паказаць накладанне на 2 секунды"
+
+msgid "e.g. <Super>q"
+msgstr "напр. <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "На другасных маніторах паказваць накладанне на значках, што адпавядаюць асноўнаму манітору"
+
+msgid "Show the overlay on all monitors"
+msgstr "Паказваць накладанне на ўсіх маніторах"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Паказваць перадпрагляды, калі ў праграмы некалькі экзэмпляраў"
+
+msgid "Show window previews on hotkey"
+msgstr "Паказваць перадпрагляд вокнаў па спалучэнні клавіш"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Выберыце, якія лічбавыя клавішы клавіятуры выкарыстоўваюцца для актывацыі спалучэнняў клавіш"
+
+msgid "Hotkeys are activated with"
+msgstr "Спалучэнні клавіш актывуюцца з дапамогай"
+
+msgid "Number row"
+msgstr "Лічбавы рад"
+
+msgid "Numeric keypad"
+msgstr "Лічбавая клавіятура"
+
+msgid "Both"
+msgstr "Абодва"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Затрымка паміж падзеямі пракруткі мышы (мс)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Выкарыстоўвайце гэта значэнне, каб абмежаваць колькасць падзей пракруткі мышы, якія захопліваюцца."
+
+msgid "Show popup when changing workspace"
+msgstr "Паказваць усплывальнае акно пры змене працоўнай прасторы"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Гэта ўплывае толькі на ўсплывальнае акно працоўнай прасторы пры пракрутцы на панэлі."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "Інтэграваць элементы <i>AppMenu</i>"
+
+msgid "<i>App Details</i> menu item"
+msgstr "Пункт меню <i>Падрабязнасці пра праграму</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Падрабязнасці пра праграму</i> даступныя толькі пры ўсталяваным GNOME Software"
+
+msgid "Show Applications icon"
+msgstr "Значок «Паказаць праграмы»"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Бакавы водступ значка «Паказаць праграмы» (пкс)"
+
+msgid "Override escape key and return to desktop"
+msgstr "Перавызначыць клавішу Escape і вяртацца на працоўны стол"
+
+msgid "Override Show Desktop line color"
+msgstr "Перавызначыць колер лініі «Паказаць працоўны стол»"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Паказваць працоўны стол пры навядзенні на кнопку «Паказаць працоўны стол»"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Затрымка перад паказам працоўнага стала (мс)"
+
+msgid "Fade duration (ms)"
+msgstr "Працягласць згасання (мс)"
+
+msgid "Time (ms) before showing"
+msgstr "Час (мс) перад паказам"
+
+msgid "(400 is default)"
+msgstr "(прадвызначана 400)"
+
+msgid "Time (ms) before hiding"
+msgstr "Час (мс) перад хаваннем"
+
+msgid "(100 is default)"
+msgstr "(прадвызначана 100)"
+
+msgid "Immediate on application icon click"
+msgstr "Адразу пры націску на значок праграмы"
+
+msgid "Animation time (ms)"
+msgstr "Час анімацыі (мс)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Націск сярэдняй кнопкай мышы на перадпрагляд закрывае акно"
+
+msgid "Window previews preferred size (px)"
+msgstr "Пераважны памер перадпрагляду вокнаў (пкс)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Суадносіны бакоў перадпрагляду вокнаў па X (шырыня)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Фіксавана"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Суадносіны бакоў перадпрагляду вокнаў па Y (вышыня)"
+
+msgid "Window previews padding (px)"
+msgstr "Водступ перадпрагляду вокнаў (пкс)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Выкарыстоўваць уласную празрыстасць фону перадпрагляду"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Калі выключана, фон перадпрагляду мае такую ж празрыстасць, як і панэль."
+
+msgid "Close button and header position"
+msgstr "Размяшчэнне кнопкі закрыцця і загалоўка"
+
+msgid "Display window preview headers"
+msgstr "Паказваць загалоўкі перадпрагляду вокнаў"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Памер значка (пкс) перадпрагляду акна"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Калі выключана, памер значка перадпрагляду залежыць ад памеру панэлі загалоўка"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Памер шрыфту (пкс) загалоўкаў перадпрагляду"
+
+msgid "Font weight of the preview titles"
+msgstr "Таўшчыня шрыфту загалоўкаў перадпрагляду"
+
+msgid "Font color of the preview titles"
+msgstr "Колер шрыфту загалоўкаў перадпрагляду"
+
+msgid "Enable window peeking"
+msgstr "Уключыць хуткі прагляд акна"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "Калі некаторы час трымаць паказальнік над перадпраглядам акна, гэта акно вылучаецца."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Тайм-аўт уваходу ў рэжым хуткага прагляду акна (мс)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "Час бяздзейнасці пры навядзенні на перадпрагляд акна, неабходны для ўваходу ў рэжым хуткага прагляду акна."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Празрыстасць у рэжыме хуткага прагляду акна"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Усе вокны, акрамя таго, што праглядаецца, атрымліваюць аднолькавае значэнне празрыстасці."
+
+msgid "About"
+msgstr "Пра праграму"
+
+msgid "Info"
+msgstr "Звесткі"
+
+msgid "Version"
+msgstr "Версія"
+
+msgid "Source"
+msgstr "Крыніца"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Экспарт і імпарт"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Выкарыстоўвайце кнопкі ніжэй, каб стварыць файл налад з вашых бягучых параметраў, які можна імпартаваць на іншай машыне."
+
+msgid "Export and import settings"
+msgstr "Экспарт і імпарт налад"
+
+msgid "Export to file"
+msgstr "Экспартаваць у файл"
+
+msgid "Import from file"
+msgstr "Імпартаваць з файла"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Гэта праграма пастаўляецца БЕЗ ЯКІХ-НЕБУДЗЬ ГАРАНТЫЙ.\n"
+"Падрабязнасці глядзіце ў <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License версіі 2 або больш новай</a>.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Спонсар і першапачатковы распрацоўшчык"
+
+msgid "Action"
+msgstr "Дзеянне"
+
+msgid "Click action"
+msgstr "Дзеянне пры націску"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "Паводзіны пры націску на значок запушчанай праграмы."
+
+msgid "Toggle windows"
+msgstr "Пераключаць вокны"
+
+msgid "Scroll action"
+msgstr "Дзеянне пры пракрутцы"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Паводзіны пры пракрутцы мышы над панэллю."
+
+msgid "Scroll panel action"
+msgstr "Дзеянне пракруткі панэлі"
+
+msgid "Do nothing"
+msgstr "Нічога не рабіць"
+
+msgid "Switch workspace"
+msgstr "Пераключаць працоўную прастору"
+
+msgid "Cycle windows"
+msgstr "Пераключацца паміж вокнамі"
+
+msgid "Change volume"
+msgstr "Змяніць гучнасць"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Паводзіны пры пракрутцы мышы над значком праграмы."
+
+msgid "Scroll icon action"
+msgstr "Дзеянне пракруткі значка"
+
+msgid "Same as panel"
+msgstr "Як на панэлі"
+
+msgid "Hotkey overlay"
+msgstr "Накладанне спалучэнняў клавіш"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Уключыць Super+(0-9) як спалучэнні клавіш для актывацыі праграм. Іх таксама можна выкарыстоўваць разам з Shift і Ctrl."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Выкарыстоўваць спалучэнні клавіш для актывацыі праграм"
+
+msgid "Application icons context menu"
+msgstr "Кантэкстнае меню значкоў праграм"
+
+msgid "(right-click menu)"
+msgstr "(меню пры націску правай кнопкай мышы)"
+
+msgid "Secondary menu"
+msgstr "Другаснае меню"
+
+msgid "Panel context menu entries"
+msgstr "Пункты кантэкстнага меню панэлі"
+
+msgid "Add entry"
+msgstr "Дадаць пункт"
+
+msgid "Behavior"
+msgstr "Паводзіны"
+
+msgid "Applications"
+msgstr "Праграмы"
+
+msgid "Show favorite applications"
+msgstr "Паказваць абраныя праграмы"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Паказваць абраныя праграмы на другасных панэлях"
+
+msgid "Show running applications"
+msgstr "Паказваць запушчаныя праграмы"
+
+msgid "Ungroup applications"
+msgstr "Не групаваць праграмы"
+
+msgid "Show notification counter badge"
+msgstr "Паказваць лічыльнік апавяшчэнняў на значку"
+
+msgid "Hover"
+msgstr "Навядзенне"
+
+msgid "Show window previews on hover"
+msgstr "Паказваць перадпрагляд вокнаў пры навядзенні"
+
+msgid "Show tooltip on hover"
+msgstr "Паказваць падказку пры навядзенні"
+
+msgid "Isolate"
+msgstr "Ізаляцыя"
+
+msgid "Isolate Workspaces"
+msgstr "Ізаляваць працоўныя прасторы"
+
+msgid "Isolate monitors"
+msgstr "Ізаляваць маніторы"
+
+msgid "Overview"
+msgstr "Агляд"
+
+msgid "Click empty space to close overview"
+msgstr "Націск на пустое месца закрывае агляд"
+
+msgid "Disable show overview on startup"
+msgstr "Адключыць паказ агляду пры запуску"
+
+msgid "Fine-Tune"
+msgstr "Дакладная налада"
+
+msgid "Font size"
+msgstr "Памер шрыфту"
+
+msgid "(0 = theme default)"
+msgstr "(0 = прадвызначана ў тэме)"
+
+msgid "Tray Font Size"
+msgstr "Памер шрыфту вобласці апавяшчэнняў"
+
+msgid "LeftBox Font Size"
+msgstr "Памер шрыфту левай вобласці"
+
+msgid "Padding"
+msgstr "Водступ"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = прадвызначана ў тэме)"
+
+msgid "Tray Item Padding"
+msgstr "Водступ элементаў вобласці апавяшчэнняў"
+
+msgid "Status Icon Padding"
+msgstr "Водступ значкоў стану"
+
+msgid "LeftBox Padding"
+msgstr "Водступ левай вобласці"
+
+msgid "Animate"
+msgstr "Анімацыя"
+
+msgid "Animate switching applications"
+msgstr "Анімаваць пераключэнне праграм"
+
+msgid "Animate launching new windows"
+msgstr "Анімаваць запуск новых вокнаў"
+
+msgid "Gnome functionality"
+msgstr "Функцыянальнасць GNOME"
+
+msgid "(overview)"
+msgstr "(агляд)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Захоўваць зыходную панэль dash gnome-shell"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Захоўваць зыходную верхнюю панэль gnome-shell"
+
+msgid "(e.g. date menu)"
+msgstr "(напр. меню даты)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Актываваць кнопкі меню панэлі толькі пры націску"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Прымусова пакідаць гарачы вугал «Агляд» на асноўным маніторы"
+
+msgid "Position"
+msgstr "Размяшчэнне"
+
+msgid "Panel"
+msgstr "Панэль"
+
+msgid "Display the main panel on"
+msgstr "Паказваць галоўную панэль на"
+
+msgid "Display panels on all monitors"
+msgstr "Паказваць панэлі на ўсіх маніторах"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Хаваць і паказваць панэль згодна з параметрамі"
+
+msgid "Panel Intellihide"
+msgstr "Intellihide панэлі"
+
+msgid "Order and Position on monitors"
+msgstr "Парадак і размяшчэнне на маніторах"
+
+msgid "Monitor"
+msgstr "Манітор"
+
+msgid "Apply changes to all monitors"
+msgstr "Ужыць змены да ўсіх манітораў"
+
+msgid "Panel monitor position"
+msgstr "Размяшчэнне панэлі на маніторы"
+
+msgid "(default is 48)"
+msgstr "(прадвызначана 48)"
+
+msgid "Panel thickness"
+msgstr "Таўшчыня панэлі"
+
+msgid "(default is 100)"
+msgstr "(прадвызначана 100)"
+
+msgid "Panel length"
+msgstr "Даўжыня панэлі"
+
+msgid "Dynamic"
+msgstr "Дынамічная"
+
+msgid "Anchor"
+msgstr "Прывязка"
+
+msgid "Taskbar Display"
+msgstr "Адлюстраванне панэлі задач"
+
+msgid "Style"
+msgstr "Стыль"
+
+msgid "Global style"
+msgstr "Агульны стыль"
+
+msgid "Border radius"
+msgstr "Радыус межаў"
+
+msgid "AppIcon style"
+msgstr "Стыль значкоў праграм"
+
+msgid "(default is 8)"
+msgstr "(прадвызначана 8)"
+
+msgid "App Icon Margin"
+msgstr "Поле значка праграмы"
+
+msgid "(default is 4)"
+msgstr "(прадвызначана 4)"
+
+msgid "App Icon Padding"
+msgstr "Водступ значка праграмы"
+
+msgid "Animate hovering app icons"
+msgstr "Анімаваць значкі праграм пры навядзенні"
+
+msgid "Highlight hovering app icons"
+msgstr "Вылучаць значкі праграм пры навядзенні"
+
+msgid "Icon style"
+msgstr "Стыль значкоў"
+
+msgid "Normal"
+msgstr "Звычайны"
+
+msgid "Symbolic"
+msgstr "Сімвалічны"
+
+msgid "Grayscale"
+msgstr "Адценні шэрага"
+
+msgid "Running indicator"
+msgstr "Індыкатар запуску"
+
+msgid "Running indicator position"
+msgstr "Размяшчэнне індыкатара запуску"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Стыль індыкатара запуску (праграма ў фокусе)"
+
+msgid "Dots"
+msgstr "Кропкі"
+
+msgid "Squares"
+msgstr "Квадраты"
+
+msgid "Dashes"
+msgstr "Працяжнікі"
+
+msgid "Segmented"
+msgstr "Сегментаваны"
+
+msgid "Solid"
+msgstr "Суцэльны"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Стыль індыкатара запуску (праграмы не ў фокусе)"
+
+msgid "Panel style"
+msgstr "Стыль панэлі"
+
+msgid "(default is 0)"
+msgstr "(прадвызначана 0)"
+
+msgid "Side margins"
+msgstr "Бакавыя палі"
+
+msgid "Top and bottom margins"
+msgstr "Верхняе і ніжняе поле"
+
+msgid "Side padding"
+msgstr "Бакавы водступ"
+
+msgid "Top and bottom padding"
+msgstr "Верхні і ніжні водступ"
+
+msgid "Override panel theme background color"
+msgstr "Перавызначыць колер фону тэмы панэлі"
+
+msgid "Override panel theme background opacity"
+msgstr "Перавызначыць празрыстасць фону тэмы панэлі"
+
+msgid "Panel background opacity (%)"
+msgstr "Празрыстасць фону панэлі (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Змяняць празрыстасць, калі акно набліжаецца да панэлі"
+
+msgid "Dynamic background opacity"
+msgstr "Дынамічная празрыстасць фону"
+
+msgid "Override panel theme gradient"
+msgstr "Перавызначыць градыент тэмы панэлі"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Колер і празрыстасць верхняга градыенту (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Колер і празрыстасць ніжняга градыенту (%)"
+
+msgid "Panel border"
+msgstr "Мяжа панэлі"
+
+msgid "Override border color"
+msgstr "Перавызначыць колер мяжы"
+
+msgid "Border thickness"
+msgstr "Таўшчыня мяжы"

@@ -7251,6 +7251,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "{network} er lagret som {place}."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} GB"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} MB"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} TB"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8411,3 +8426,247 @@ msgstr "noteskriving"
 
 msgid "your calendar"
 msgstr "kalenderen din"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "Fullfør oversettelsen til alle språk"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "Vis datoer i hvert språks egen rekkefølge"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "Ta med gettext i avbildet"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "Legg til oversettelser for 68 språk"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "Gjør teksten på alle skjermbilder oversettbar"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "Slipp inn apper og porter per sted; Jobb slipper ikke inn noe"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "Legg til lyst og mørkt tema etter tidsplan, lysbildevisning og skrifter"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "Gi Systemverktøy nytt navn: EvenKeelOS Wheelhouse"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "Vis NVIDIA-grafikk som i orden i kompatibilitetssjekken"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "Last inn filsystemene før installasjon"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "Spør før en automatisk omstart"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "Merk hver ny versjon for utprøving"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "Rull tilbake en oppdatering når noe som fungerte slutter å virke"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "Start hver bygging i en virtuell maskin før publisering"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "Anbefal 8 GB minne, uten minimumskrav"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "Kontroller datamaskinen før installasjon fra live-USB"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "Spør om Windows- eller Linux-bruker i installasjonsprogrammet"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "Legg til Systemverktøy i logomenyen"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "Legg til seks nye emner i EvenKeelOS-veiledningen"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "Gjør «Ny på Linux» om til EvenKeelOS-veiledningen"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "Legg til veiledningen «Ny på Linux» i Systemverktøy og ved innlogging"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "Legg til Oppstartsalternativer: vanlige rettinger og dine egne innstillinger"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "Rett byggesjekken for Delte mapper: ingen hjemmemapper ennå"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "Legg til Delte mapper: del hjemmemapper på Hjem-nettverk"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "Legg til Nettverkssikkerhet: Hjem, Jobb eller Offentlig sted"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "Gjenkjenn skriverdrivere i alle mapper"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "Vis verktøyvinduer inne i Systemverktøy"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "Opprett en sak når bygging av avbildet mislykkes"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "Lås eksterne pakker og ISO-verktøyet til bestemte versjoner"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "Gi verktøyvinduer navn etter verktøyet, kortere testliste"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "Reparer slettede systeminnstillinger og varsle om sertifikater"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "Samle alle verktøy i ett Systemverktøy-vindu"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "Ikke la noe ligge igjen når et VPN fjernes"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "Legg til Skaff deg et VPN, med VPN-er som holder seg oppdatert"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Gi Zoom-møter en egen veiledning"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Åpne Zoom-møter i Chrome, i Zooms nettversjon"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "Hindre at ArtCraft-installasjoner ødelegger Flathub-installasjoner"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "Gjenkjenn installasjonsprogrammer på det vanlige filnavnet"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Foreslå Linux-alternativer til Windows-programmer"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "Rett oppsett av boks: distrobox monterer skrivebeskyttede mapper feil"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Foreslå Fedora- eller Ubuntu-versjoner av Windows-programmer"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Foreslå Linux-versjonen når et Windows-program åpnes"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "Lever én shim, slik at fastvaren ikke legger til en ekstra Fedora-oppføring"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Sett Fedoras brannmursone tilbake"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "Styrk rothjelpere, brannmur og oppdateringer uten passord"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "Nye standarder: bakgrunnsbilder, systemfargemapper, låseskjerm"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "Ny standard: blågrønn systemfarge, også på innloggingsskjermen"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "Rett merknaden om tilbakerulling, innloggingsløkken og fastlåste tester"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "Rett tilbakerulling ved frysing og kutt forsøk til 2"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "Rett testene for automatisk tilbakerulling"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "Ekte feiltester for automatisk tilbakerulling"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "Legg til automatisk tilbakerulling med greenboot"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "Start Windows-oppsettet på skrivebordet, pluss små rettinger"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "Sett automatiske oppdateringer på pause i 3 dager etter en angring"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "Legg til et trinn for Skrivebordsoppsett i installasjonsprogrammet"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "Legg til Skrivebordsoppsett i Systemverktøy"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "Hindre at bytte av strømmodus venter på oppdateringer"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "Legg til et valgfritt Windows-lignende oppsett"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Rett Fedora 45-forhåndsinnstillinger og containerpolicy-stier"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "Les nedlastingskilder i Fedora 45s nye mappe"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Gå over til Fedora 45"

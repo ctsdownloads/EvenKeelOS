@@ -94,7 +94,7 @@ can't change, so it stays working.
 | File types | Text files open in Text Editor, .rpm and .deb in Install Package File, .exe and .msi in Windows Program, Flatpak files in Bazaar |
 | Login screen and boot menu | EvenKeelOS logo and name, and the teal accent on the login and lock screens. New users get the EvenKeelOS logo as their picture. The live USB and the installed system both work with Secure Boot on, with one shim on the disk, so the firmware adds no extra "Fedora" boot entry |
 | Live USB fit check | The live USB's Welcome window checks the computer before you install: start mode and Secure Boot, the disk (including a disk hidden by the BIOS's RAID setting), Wi-Fi (including Broadcom chips with no driver), graphics (NVIDIA runs on the open-source driver; the proprietary one isn't used), sound, memory, camera, Bluetooth and touchpad, each marked fine, limited or a problem, with plain advice. **Save the results** puts them on a second USB stick. See [Install](docs/install.md#from-the-live-usb) |
-| Languages | The installer, Wheelhouse, the guide, every EvenKeelOS tool, its menu names and its password prompts are in 68 languages, listed in [`po/LINGUAS`](po/LINGUAS). Dates are written in the order and words of the region picked under Formats in Settings, Region & Language. The installer offers only those languages. See [Translations](docs/building.md#translations) |
+| Languages | The installer, Wheelhouse, the guide, every EvenKeelOS tool, its menu names and its password prompts are in 68 languages, listed in [`po/LINGUAS`](po/LINGUAS). Dates are written in the order and words of the region picked under Formats in Settings, Region & Language. Dash to Panel, ArcMenu, Logo Menu, Bazaar and Ghostty are translated into the same languages, as are System Update's "What is new" lines; disk sizes, folder names and spell check follow the language too. The installer offers only those languages. See [Translations](docs/building.md#translations) |
 | fastfetch | Shows the EvenKeelOS logo |
 
 ## System requirements
@@ -143,8 +143,9 @@ other projects, under their own licenses, with their source available there:
   <https://copr.fedorainfracloud.org/coprs/ublue-os/packages/>.
 - **Ghostty:** built in <https://copr.fedorainfracloud.org/coprs/scottames/ghostty/>,
   source at <https://github.com/ghostty-org/ghostty>.
-- **Locked versions:** the Universal Blue and Ghostty packages and the ISO build
-  tool are locked to exact versions and checked daily for newer ones. See
+- **Locked versions:** the Universal Blue and Ghostty packages, Dash to Panel,
+  ArcMenu, Logo Menu and the ISO build tool are locked to exact versions and
+  checked daily for newer ones. See
   [Locked versions](docs/building.md#locked-versions).
 - **Boot test:** every build starts in a virtual machine and must reach the desktop
   before it's published, with its disk made by

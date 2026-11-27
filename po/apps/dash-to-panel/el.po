@@ -1,0 +1,1166 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Quit"
+msgstr "Έξοδος"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Έξοδος από %d παράθυρο"
+msgstr[1] "Έξοδος από %d παράθυρα"
+
+msgid "Power options"
+msgstr "Επιλογές ενέργειας"
+
+msgid "Event logs"
+msgstr "Αρχεία καταγραφής συμβάντων"
+
+msgid "System"
+msgstr "Σύστημα"
+
+msgid "Device Management"
+msgstr "Διαχείριση συσκευών"
+
+msgid "Disk Management"
+msgstr "Διαχείριση δίσκων"
+
+msgid "Unlock taskbar"
+msgstr "Ξεκλείδωμα γραμμής εργασιών"
+
+msgid "Lock taskbar"
+msgstr "Κλείδωμα γραμμής εργασιών"
+
+msgid "Gnome Settings"
+msgstr "Ρυθμίσεις GNOME"
+
+msgid "Dash to Panel Settings"
+msgstr "Ρυθμίσεις Dash to Panel"
+
+msgid "Restore Windows"
+msgstr "Επαναφορά παραθύρων"
+
+msgid "Show Desktop"
+msgstr "Εμφάνιση επιφάνειας εργασίας"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Το Dash to Panel ενημερώθηκε!"
+
+msgid "You are now running version"
+msgstr "Τώρα εκτελείτε την έκδοση"
+
+msgid "See what's new"
+msgstr "Δείτε τι νέο υπάρχει"
+
+msgid "Top Bar"
+msgstr "Επάνω γραμμή"
+
+msgid "Show Desktop button height (px)"
+msgstr "Ύψος κουμπιού Εμφάνιση επιφάνειας εργασίας (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Πλάτος κουμπιού Εμφάνιση επιφάνειας εργασίας (px)"
+
+msgid "Left"
+msgstr "Αριστερά"
+
+msgid "Center"
+msgstr "Κέντρο"
+
+msgid "Right"
+msgstr "Δεξιά"
+
+msgid "Top"
+msgstr "Πάνω"
+
+msgid "Middle"
+msgstr "Μέση"
+
+msgid "Bottom"
+msgstr "Κάτω"
+
+msgid "Start"
+msgstr "Αρχή"
+
+msgid "End"
+msgstr "Τέλος"
+
+msgid "Show Applications button"
+msgstr "Κουμπί Εμφάνιση εφαρμογών"
+
+msgid "Activities button"
+msgstr "Κουμπί Δραστηριοτήτων"
+
+msgid "Taskbar"
+msgstr "Γραμμή εργασιών"
+
+msgid "Date menu"
+msgstr "Μενού ημερομηνίας"
+
+msgid "System menu"
+msgstr "Μενού συστήματος"
+
+msgid "Left box"
+msgstr "Αριστερό πλαίσιο"
+
+msgid "Center box"
+msgstr "Κεντρικό πλαίσιο"
+
+msgid "Right box"
+msgstr "Δεξί πλαίσιο"
+
+msgid "Desktop button"
+msgstr "Κουμπί επιφάνειας εργασίας"
+
+msgid "Move up"
+msgstr "Μετακίνηση πάνω"
+
+msgid "Move down"
+msgstr "Μετακίνηση κάτω"
+
+msgid "Visible"
+msgstr "Ορατό"
+
+msgid "Select element position"
+msgstr "Επιλογή θέσης στοιχείου"
+
+msgid "Stacked to top"
+msgstr "Στοίβαγμα προς τα πάνω"
+
+msgid "Stacked to left"
+msgstr "Στοίβαγμα προς τα αριστερά"
+
+msgid "Stacked to bottom"
+msgstr "Στοίβαγμα προς τα κάτω"
+
+msgid "Stacked to right"
+msgstr "Στοίβαγμα προς τα δεξιά"
+
+msgid "Centered"
+msgstr "Κεντραρισμένο"
+
+msgid "Monitor Center"
+msgstr "Κέντρο οθόνης"
+
+msgid "More options"
+msgstr "Περισσότερες επιλογές"
+
+msgid "Reset to defaults"
+msgstr "Επαναφορά στις προεπιλογές"
+
+msgid "Show Applications options"
+msgstr "Επιλογές Εμφάνιση εφαρμογών"
+
+msgid "Open icon"
+msgstr "Εικονίδιο ανοίγματος"
+
+msgid "Show Desktop options"
+msgstr "Επιλογές Εμφάνιση επιφάνειας εργασίας"
+
+msgid "Primary monitor"
+msgstr "Κύρια οθόνη"
+
+msgid "Monitor "
+msgstr "Οθόνη "
+
+msgid "Running Indicator Options"
+msgstr "Επιλογές δείκτη εκτέλεσης"
+
+msgid "Dynamic opacity options"
+msgstr "Επιλογές δυναμικής αδιαφάνειας"
+
+msgid "Intellihide options"
+msgstr "Επιλογές Intellihide"
+
+msgid "Window preview options"
+msgstr "Επιλογές προεπισκόπησης παραθύρου"
+
+msgid "Isolate Workspaces options"
+msgstr "Επιλογές απομόνωσης χώρων εργασίας"
+
+msgid "Isolate monitors options"
+msgstr "Επιλογές απομόνωσης οθονών"
+
+msgid "Ungrouped application options"
+msgstr "Επιλογές μη ομαδοποιημένων εφαρμογών"
+
+msgid "Customize middle-click behavior"
+msgstr "Προσαρμογή συμπεριφοράς μεσαίου κλικ"
+
+msgid "Text"
+msgstr "Κείμενο"
+
+msgid "Command"
+msgstr "Εντολή"
+
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+msgid "Customize panel scroll behavior"
+msgstr "Προσαρμογή συμπεριφοράς κύλισης πάνελ"
+
+msgid "Customize icon scroll behavior"
+msgstr "Προσαρμογή συμπεριφοράς κύλισης εικονιδίου"
+
+msgid "Advanced hotkeys options"
+msgstr "Επιλογές σύνθετων συντομεύσεων"
+
+msgid "Secondary Menu Options"
+msgstr "Επιλογές δευτερεύοντος μενού"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d εικονίδιο"
+msgstr[1] "%d εικονίδια"
+
+msgid "App icon animation options"
+msgstr "Επιλογές κίνησης εικονιδίου εφαρμογής"
+
+msgid "App icon highlight options"
+msgstr "Επιλογές επισήμανσης εικονιδίου εφαρμογής"
+
+msgid "Export settings"
+msgstr "Εξαγωγή ρυθμίσεων"
+
+msgid "Import settings"
+msgstr "Εισαγωγή ρυθμίσεων"
+
+msgid "Move to current Workspace"
+msgstr "Μετακίνηση στον τρέχοντα χώρο εργασίας"
+
+msgid "Animation type"
+msgstr "Τύπος κίνησης"
+
+msgid "Simple"
+msgstr "Απλή"
+
+msgid "Ripple"
+msgstr "Κυματισμός"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Διάρκεια"
+
+msgid "Rotation"
+msgstr "Περιστροφή"
+
+msgid "Travel"
+msgstr "Μετατόπιση"
+
+msgid "Zoom"
+msgstr "Μεγέθυνση"
+
+msgid "Convexity"
+msgstr "Κυρτότητα"
+
+msgid "Extent"
+msgstr "Έκταση"
+
+msgid "Highlight focused application"
+msgstr "Επισήμανση εστιασμένης εφαρμογής"
+
+msgid "Icon dominant color"
+msgstr "Κυρίαρχο χρώμα εικονιδίου"
+
+msgid "Custom color"
+msgstr "Προσαρμοσμένο χρώμα"
+
+msgid "Highlight opacity"
+msgstr "Αδιαφάνεια επισήμανσης"
+
+msgid "Indicator size (px)"
+msgstr "Μέγεθος δείκτη (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Χρώμα δείκτη - Κυρίαρχο χρώμα εικονιδίου"
+
+msgid "Indicator color - Override Theme"
+msgstr "Χρώμα δείκτη - Παράκαμψη θέματος"
+
+msgid "1 window open (or ungrouped)"
+msgstr "1 ανοιχτό παράθυρο (ή μη ομαδοποιημένο)"
+
+msgid "Apply to all"
+msgstr "Εφαρμογή σε όλα"
+
+msgid "2 windows open"
+msgstr "2 ανοιχτά παράθυρα"
+
+msgid "3 windows open"
+msgstr "3 ανοιχτά παράθυρα"
+
+msgid "4+ windows open"
+msgstr "4+ ανοιχτά παράθυρα"
+
+msgid "Use different for unfocused"
+msgstr "Διαφορετική χρήση για μη εστιασμένα"
+
+msgid "The panel background opacity is affected by"
+msgstr "Η αδιαφάνεια του φόντου του πάνελ επηρεάζεται από"
+
+msgid "All windows"
+msgstr "Όλα τα παράθυρα"
+
+msgid "Focused windows"
+msgstr "Εστιασμένα παράθυρα"
+
+msgid "Maximized windows"
+msgstr "Μεγιστοποιημένα παράθυρα"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Αλλαγή αδιαφάνειας όταν ένα παράθυρο πλησιάσει σε απόσταση μικρότερη από (px)"
+
+msgid "Change opacity to (%)"
+msgstr "Αλλαγή αδιαφάνειας σε (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Διάρκεια κίνησης αλλαγής αδιαφάνειας (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Μέγεθος γραμματοσειράς (px) των τίτλων εφαρμογών (προεπιλογή 14)"
+
+msgid "Font weight of application titles"
+msgstr "Πάχος γραμματοσειράς των τίτλων εφαρμογών"
+
+msgid "inherit from theme"
+msgstr "κληρονομείται από το θέμα"
+
+msgid "normal"
+msgstr "κανονικό"
+
+msgid "lighter"
+msgstr "ελαφρύτερο"
+
+msgid "bold"
+msgstr "έντονο"
+
+msgid "bolder"
+msgstr "εντονότερο"
+
+msgid "Font color of the application titles"
+msgstr "Χρώμα γραμματοσειράς των τίτλων εφαρμογών"
+
+msgid "Font color of the minimized application titles"
+msgstr "Χρώμα γραμματοσειράς των τίτλων ελαχιστοποιημένων εφαρμογών"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Μέγιστο πλάτος (px) των τίτλων εφαρμογών"
+
+msgid "(default is 160)"
+msgstr "(προεπιλογή 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Χρήση σταθερού πλάτους για τους τίτλους εφαρμογών"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Όλοι οι τίτλοι εφαρμογών έχουν το ίδιο πλάτος, ακόμη και αν τα κείμενά τους είναι πιο σύντομα από το μέγιστο πλάτος. Η τιμή του μέγιστου πλάτους χρησιμοποιείται ως σταθερό πλάτος."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Εμφάνιση δεικτών εκτέλεσης σε μη εστιασμένες εφαρμογές"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Χρήση των αγαπημένων εικονιδίων ως εκκινητών εφαρμογών"
+
+msgid "Highlight AppIcon color"
+msgstr "Χρώμα επισήμανσης AppIcon"
+
+msgid "Pressed AppIcon color"
+msgstr "Χρώμα πατημένου AppIcon"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Ακτίνα περιγράμματος επισήμανσης AppIcon"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Παρακάμπτει την καθολική ακτίνα περιγράμματος (προεπιλογή 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Απόκρυψη του πάνελ μόνο από παράθυρα"
+
+msgid "Overlapping"
+msgstr "Επικάλυψη"
+
+msgid "On same monitor"
+msgstr "Στην ίδια οθόνη"
+
+msgid "The panel hides from"
+msgstr "Το πάνελ αποκρύπτεται από"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Το άγγιγμα της άκρης της οθόνης με τον δείκτη εμφανίζει το πάνελ"
+
+msgid "Limit to panel length"
+msgstr "Περιορισμός στο μήκος του πάνελ"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Η τοποθέτηση του δείκτη πάνω από την περιοχή του πάνελ το κρατά εμφανές"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Απαίτηση πίεσης στην άκρη της οθόνης για την εμφάνιση του πάνελ"
+
+msgid "Required pressure threshold (px)"
+msgstr "Απαιτούμενο όριο πίεσης (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Απαιτούμενο χρονικό όριο πίεσης (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Να επιτρέπεται η εμφάνιση του πάνελ σε λειτουργία πλήρους οθόνης"
+
+msgid "(requires multi-monitors option)"
+msgstr "(απαιτεί την επιλογή πολλαπλών οθονών)"
+
+msgid "Only hide secondary panels"
+msgstr "Απόκρυψη μόνο των δευτερευόντων πάνελ"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Σύνταξη: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Συντόμευση πληκτρολογίου για εμφάνιση και κράτημα του πάνελ"
+
+msgid "e.g. <Super>i"
+msgstr "π.χ. <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Διατήρηση κατάστασης μετά από επανεκκινήσεις"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(σέβεται τη λειτουργία «Μην ενοχλείτε» του GNOME και απαιτεί την επιλογή εμφάνισης σήματος μετρητή ειδοποιήσεων)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Εμφάνιση και κράτημα του πάνελ κατά την ειδοποίηση"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Διάρκεια κίνησης απόκρυψης και εμφάνισης (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Καθυστέρηση πριν από την απόκρυψη του πάνελ (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Καθυστέρηση πριν από την εμφάνιση του πάνελ (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Καθυστέρηση πριν από την ενεργοποίηση του intellihide κατά την εκκίνηση (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Απομόνωση οθονών ακόμη και όταν χρησιμοποιείται ένα μόνο πάνελ"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Απομόνωση χώρων εργασίας στον εναλλάκτη εφαρμογών του GNOME Shell"
+
+msgid "Shift+Click action"
+msgstr "Ενέργεια Shift+Κλικ"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "Όταν έχει οριστεί η ελαχιστοποίηση, το διπλό κλικ ελαχιστοποιεί όλα τα παράθυρα της εφαρμογής."
+
+msgid "Raise windows"
+msgstr "Ανύψωση παραθύρων"
+
+msgid "Minimize window"
+msgstr "Ελαχιστοποίηση παραθύρου"
+
+msgid "Launch new instance"
+msgstr "Εκκίνηση νέου στιγμιοτύπου"
+
+msgid "Cycle through windows"
+msgstr "Κυκλική εναλλαγή παραθύρων"
+
+msgid "Cycle windows + minimize"
+msgstr "Κυκλική εναλλαγή παραθύρων + ελαχιστοποίηση"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Εναλλαγή ενός / Προεπισκόπηση πολλών"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Εναλλαγή ενός / Κυκλική εναλλαγή πολλών"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Εναλλαγή ενός / Άπλωμα πολλών"
+
+msgid "Middle-Click action"
+msgstr "Ενέργεια μεσαίου κλικ"
+
+msgid "Behavior for Middle-Click."
+msgstr "Συμπεριφορά για το μεσαίο κλικ."
+
+msgid "Shift+Middle-Click action"
+msgstr "Ενέργεια Shift+Μεσαίο κλικ"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Συμπεριφορά για το Shift+Μεσαίο κλικ."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Οι συντομεύσεις θα είναι είτε Super+Αριθμός είτε Super+Alt+Αριθμός"
+
+msgid "Hotkeys prefix"
+msgstr "Πρόθεμα συντομεύσεων"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Προσωρινή εμφάνιση των αριθμών εφαρμογών πάνω από τα εικονίδια κατά τη χρήση των συντομεύσεων."
+
+msgid "Number overlay"
+msgstr "Επικάλυψη αριθμών"
+
+msgid "Never"
+msgstr "Ποτέ"
+
+msgid "Show temporarily"
+msgstr "Προσωρινή εμφάνιση"
+
+msgid "Always visible"
+msgstr "Πάντα ορατό"
+
+msgid "Hide timeout (ms)"
+msgstr "Χρονικό όριο απόκρυψης (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Συντόμευση για εμφάνιση της επικάλυψης για 2 δευτερόλεπτα"
+
+msgid "e.g. <Super>q"
+msgstr "π.χ. <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Στις δευτερεύουσες οθόνες, εμφάνιση της επικάλυψης στα εικονίδια που αντιστοιχούν στην κύρια οθόνη"
+
+msgid "Show the overlay on all monitors"
+msgstr "Εμφάνιση της επικάλυψης σε όλες τις οθόνες"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Εμφάνιση προεπισκοπήσεων όταν η εφαρμογή έχει πολλαπλά στιγμιότυπα"
+
+msgid "Show window previews on hotkey"
+msgstr "Εμφάνιση προεπισκοπήσεων παραθύρων με συντόμευση"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Επιλέξτε ποια αριθμητικά πλήκτρα του πληκτρολογίου χρησιμοποιούνται για την ενεργοποίηση των συντομεύσεων"
+
+msgid "Hotkeys are activated with"
+msgstr "Οι συντομεύσεις ενεργοποιούνται με"
+
+msgid "Number row"
+msgstr "Σειρά αριθμών"
+
+msgid "Numeric keypad"
+msgstr "Αριθμητικό πληκτρολόγιο"
+
+msgid "Both"
+msgstr "Και τα δύο"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Καθυστέρηση μεταξύ συμβάντων κύλισης του ποντικιού (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Χρησιμοποιήστε αυτή την τιμή για να περιορίσετε τον αριθμό των συμβάντων κύλισης του ποντικιού που καταγράφονται."
+
+msgid "Show popup when changing workspace"
+msgstr "Εμφάνιση αναδυόμενου παραθύρου κατά την αλλαγή χώρου εργασίας"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Αυτό επηρεάζει μόνο το αναδυόμενο παράθυρο χώρου εργασίας κατά την κύλιση στο πάνελ."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "Ενσωμάτωση στοιχείων του <i>AppMenu</i>"
+
+msgid "<i>App Details</i> menu item"
+msgstr "Στοιχείο μενού <i>Λεπτομέρειες εφαρμογής</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "Η επιλογή <i>Λεπτομέρειες εφαρμογής</i> είναι διαθέσιμη μόνο όταν είναι εγκατεστημένο το GNOME Software"
+
+msgid "Show Applications icon"
+msgstr "Εικονίδιο Εμφάνιση εφαρμογών"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Πλευρική απόσταση εικονιδίου Εμφάνιση εφαρμογών (px)"
+
+msgid "Override escape key and return to desktop"
+msgstr "Παράκαμψη του πλήκτρου Escape και επιστροφή στην επιφάνεια εργασίας"
+
+msgid "Override Show Desktop line color"
+msgstr "Παράκαμψη χρώματος γραμμής Εμφάνιση επιφάνειας εργασίας"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Εμφάνιση της επιφάνειας εργασίας κατά την τοποθέτηση του δείκτη πάνω από το κουμπί Εμφάνιση επιφάνειας εργασίας"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Καθυστέρηση πριν από την εμφάνιση της επιφάνειας εργασίας (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Διάρκεια σταδιακής εξαφάνισης (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Χρόνος (ms) πριν από την εμφάνιση"
+
+msgid "(400 is default)"
+msgstr "(προεπιλογή 400)"
+
+msgid "Time (ms) before hiding"
+msgstr "Χρόνος (ms) πριν από την απόκρυψη"
+
+msgid "(100 is default)"
+msgstr "(προεπιλογή 100)"
+
+msgid "Immediate on application icon click"
+msgstr "Άμεσα με κλικ στο εικονίδιο εφαρμογής"
+
+msgid "Animation time (ms)"
+msgstr "Χρόνος κίνησης (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Μεσαίο κλικ στην προεπισκόπηση για κλείσιμο του παραθύρου"
+
+msgid "Window previews preferred size (px)"
+msgstr "Προτιμώμενο μέγεθος προεπισκοπήσεων παραθύρων (px)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Λόγος διαστάσεων προεπισκοπήσεων παραθύρων X (πλάτος)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Σταθερό"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Λόγος διαστάσεων προεπισκοπήσεων παραθύρων Y (ύψος)"
+
+msgid "Window previews padding (px)"
+msgstr "Εσωτερικό περιθώριο προεπισκοπήσεων παραθύρων (px)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Χρήση προσαρμοσμένης αδιαφάνειας για το φόντο των προεπισκοπήσεων"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Αν είναι απενεργοποιημένο, το φόντο των προεπισκοπήσεων έχει την ίδια αδιαφάνεια με το πάνελ."
+
+msgid "Close button and header position"
+msgstr "Θέση κουμπιού κλεισίματος και κεφαλίδας"
+
+msgid "Display window preview headers"
+msgstr "Εμφάνιση κεφαλίδων προεπισκόπησης παραθύρων"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Μέγεθος εικονιδίου (px) της προεπισκόπησης παραθύρου"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Αν είναι απενεργοποιημένο, το μέγεθος του εικονιδίου των προεπισκοπήσεων θα βασίζεται στο μέγεθος της γραμμής κεφαλίδας"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Μέγεθος γραμματοσειράς (px) των τίτλων προεπισκόπησης"
+
+msgid "Font weight of the preview titles"
+msgstr "Πάχος γραμματοσειράς των τίτλων προεπισκόπησης"
+
+msgid "Font color of the preview titles"
+msgstr "Χρώμα γραμματοσειράς των τίτλων προεπισκόπησης"
+
+msgid "Enable window peeking"
+msgstr "Ενεργοποίηση κρυφής ματιάς παραθύρου"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "Όταν ο δείκτης παραμένει για λίγο πάνω από μια προεπισκόπηση παραθύρου, το παράθυρο ξεχωρίζει."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Χρονικό όριο εισόδου στη λειτουργία κρυφής ματιάς παραθύρου (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "Χρόνος αδράνειας πάνω από μια προεπισκόπηση παραθύρου που απαιτείται για είσοδο στη λειτουργία κρυφής ματιάς παραθύρου."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Αδιαφάνεια λειτουργίας κρυφής ματιάς παραθύρου"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Όλα τα παράθυρα εκτός από αυτό που προβάλλεται έχουν την ίδια τιμή αδιαφάνειας."
+
+msgid "About"
+msgstr "Σχετικά"
+
+msgid "Info"
+msgstr "Πληροφορίες"
+
+msgid "Version"
+msgstr "Έκδοση"
+
+msgid "Source"
+msgstr "Πηγή"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Εξαγωγή και εισαγωγή"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Χρησιμοποιήστε τα παρακάτω κουμπιά για να δημιουργήσετε ένα αρχείο ρυθμίσεων από τις τρέχουσες προτιμήσεις σας, το οποίο μπορεί να εισαχθεί σε διαφορετικό μηχάνημα."
+
+msgid "Export and import settings"
+msgstr "Εξαγωγή και εισαγωγή ρυθμίσεων"
+
+msgid "Export to file"
+msgstr "Εξαγωγή σε αρχείο"
+
+msgid "Import from file"
+msgstr "Εισαγωγή από αρχείο"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Αυτό το πρόγραμμα παρέχεται χωρίς ΚΑΜΙΑ ΕΓΓΥΗΣΗ.\n"
+"Δείτε τη <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">Γενική Δημόσια Άδεια GNU, έκδοση 2 ή νεότερη</a> για λεπτομέρειες.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Χορηγός και αρχικός προγραμματιστής"
+
+msgid "Action"
+msgstr "Ενέργεια"
+
+msgid "Click action"
+msgstr "Ενέργεια κλικ"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "Συμπεριφορά κατά το κλικ στο εικονίδιο μιας εκτελούμενης εφαρμογής."
+
+msgid "Toggle windows"
+msgstr "Εναλλαγή παραθύρων"
+
+msgid "Scroll action"
+msgstr "Ενέργεια κύλισης"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Συμπεριφορά κατά την κύλιση του ποντικιού πάνω από το πάνελ."
+
+msgid "Scroll panel action"
+msgstr "Ενέργεια κύλισης πάνελ"
+
+msgid "Do nothing"
+msgstr "Καμία ενέργεια"
+
+msgid "Switch workspace"
+msgstr "Αλλαγή χώρου εργασίας"
+
+msgid "Cycle windows"
+msgstr "Κυκλική εναλλαγή παραθύρων"
+
+msgid "Change volume"
+msgstr "Αλλαγή έντασης ήχου"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Συμπεριφορά κατά την κύλιση του ποντικιού πάνω από ένα εικονίδιο εφαρμογής."
+
+msgid "Scroll icon action"
+msgstr "Ενέργεια κύλισης εικονιδίου"
+
+msgid "Same as panel"
+msgstr "Όπως το πάνελ"
+
+msgid "Hotkey overlay"
+msgstr "Επικάλυψη συντομεύσεων"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Ενεργοποίηση του Super+(0-9) ως συντομεύσεων για την ενεργοποίηση εφαρμογών. Μπορεί να χρησιμοποιηθεί και μαζί με τα Shift και Ctrl."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Χρήση συντομεύσεων για την ενεργοποίηση εφαρμογών"
+
+msgid "Application icons context menu"
+msgstr "Μενού περιεχομένου εικονιδίων εφαρμογών"
+
+msgid "(right-click menu)"
+msgstr "(μενού δεξιού κλικ)"
+
+msgid "Secondary menu"
+msgstr "Δευτερεύον μενού"
+
+msgid "Panel context menu entries"
+msgstr "Καταχωρίσεις μενού περιεχομένου πάνελ"
+
+msgid "Add entry"
+msgstr "Προσθήκη καταχώρισης"
+
+msgid "Behavior"
+msgstr "Συμπεριφορά"
+
+msgid "Applications"
+msgstr "Εφαρμογές"
+
+msgid "Show favorite applications"
+msgstr "Εμφάνιση αγαπημένων εφαρμογών"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Εμφάνιση αγαπημένων εφαρμογών στα δευτερεύοντα πάνελ"
+
+msgid "Show running applications"
+msgstr "Εμφάνιση εκτελούμενων εφαρμογών"
+
+msgid "Ungroup applications"
+msgstr "Αποομαδοποίηση εφαρμογών"
+
+msgid "Show notification counter badge"
+msgstr "Εμφάνιση σήματος μετρητή ειδοποιήσεων"
+
+msgid "Hover"
+msgstr "Τοποθέτηση δείκτη"
+
+msgid "Show window previews on hover"
+msgstr "Εμφάνιση προεπισκοπήσεων παραθύρων κατά την τοποθέτηση δείκτη"
+
+msgid "Show tooltip on hover"
+msgstr "Εμφάνιση επεξήγησης κατά την τοποθέτηση δείκτη"
+
+msgid "Isolate"
+msgstr "Απομόνωση"
+
+msgid "Isolate Workspaces"
+msgstr "Απομόνωση χώρων εργασίας"
+
+msgid "Isolate monitors"
+msgstr "Απομόνωση οθονών"
+
+msgid "Overview"
+msgstr "Επισκόπηση"
+
+msgid "Click empty space to close overview"
+msgstr "Κλικ σε κενό χώρο για κλείσιμο της επισκόπησης"
+
+msgid "Disable show overview on startup"
+msgstr "Απενεργοποίηση εμφάνισης της επισκόπησης κατά την εκκίνηση"
+
+msgid "Fine-Tune"
+msgstr "Λεπτομερής ρύθμιση"
+
+msgid "Font size"
+msgstr "Μέγεθος γραμματοσειράς"
+
+msgid "(0 = theme default)"
+msgstr "(0 = προεπιλογή θέματος)"
+
+msgid "Tray Font Size"
+msgstr "Μέγεθος γραμματοσειράς περιοχής ειδοποιήσεων"
+
+msgid "LeftBox Font Size"
+msgstr "Μέγεθος γραμματοσειράς αριστερού πλαισίου"
+
+msgid "Padding"
+msgstr "Εσωτερικό περιθώριο"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = προεπιλογή θέματος)"
+
+msgid "Tray Item Padding"
+msgstr "Εσωτερικό περιθώριο στοιχείων περιοχής ειδοποιήσεων"
+
+msgid "Status Icon Padding"
+msgstr "Εσωτερικό περιθώριο εικονιδίων κατάστασης"
+
+msgid "LeftBox Padding"
+msgstr "Εσωτερικό περιθώριο αριστερού πλαισίου"
+
+msgid "Animate"
+msgstr "Κίνηση"
+
+msgid "Animate switching applications"
+msgstr "Κίνηση κατά την εναλλαγή εφαρμογών"
+
+msgid "Animate launching new windows"
+msgstr "Κίνηση κατά την εκκίνηση νέων παραθύρων"
+
+msgid "Gnome functionality"
+msgstr "Λειτουργικότητα GNOME"
+
+msgid "(overview)"
+msgstr "(επισκόπηση)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Διατήρηση του αρχικού dash του GNOME Shell"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Διατήρηση της αρχικής πάνω γραμμής του GNOME Shell"
+
+msgid "(e.g. date menu)"
+msgstr "(π.χ. μενού ημερομηνίας)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Ενεργοποίηση των κουμπιών μενού του πάνελ μόνο με κλικ"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Εξαναγκασμός της ενεργής γωνίας Δραστηριοτήτων στην κύρια οθόνη"
+
+msgid "Position"
+msgstr "Θέση"
+
+msgid "Panel"
+msgstr "Πάνελ"
+
+msgid "Display the main panel on"
+msgstr "Εμφάνιση του κύριου πάνελ στην"
+
+msgid "Display panels on all monitors"
+msgstr "Εμφάνιση πάνελ σε όλες τις οθόνες"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Απόκρυψη και εμφάνιση του πάνελ σύμφωνα με τις προτιμήσεις"
+
+msgid "Panel Intellihide"
+msgstr "Intellihide πάνελ"
+
+msgid "Order and Position on monitors"
+msgstr "Σειρά και θέση στις οθόνες"
+
+msgid "Monitor"
+msgstr "Οθόνη"
+
+msgid "Apply changes to all monitors"
+msgstr "Εφαρμογή αλλαγών σε όλες τις οθόνες"
+
+msgid "Panel monitor position"
+msgstr "Θέση πάνελ στην οθόνη"
+
+msgid "(default is 48)"
+msgstr "(προεπιλογή 48)"
+
+msgid "Panel thickness"
+msgstr "Πάχος πάνελ"
+
+msgid "(default is 100)"
+msgstr "(προεπιλογή 100)"
+
+msgid "Panel length"
+msgstr "Μήκος πάνελ"
+
+msgid "Dynamic"
+msgstr "Δυναμικό"
+
+msgid "Anchor"
+msgstr "Άγκυρα"
+
+msgid "Taskbar Display"
+msgstr "Εμφάνιση γραμμής εργασιών"
+
+msgid "Style"
+msgstr "Στυλ"
+
+msgid "Global style"
+msgstr "Καθολικό στυλ"
+
+msgid "Border radius"
+msgstr "Ακτίνα περιγράμματος"
+
+msgid "AppIcon style"
+msgstr "Στυλ AppIcon"
+
+msgid "(default is 8)"
+msgstr "(προεπιλογή 8)"
+
+msgid "App Icon Margin"
+msgstr "Περιθώριο εικονιδίου εφαρμογής"
+
+msgid "(default is 4)"
+msgstr "(προεπιλογή 4)"
+
+msgid "App Icon Padding"
+msgstr "Εσωτερικό περιθώριο εικονιδίου εφαρμογής"
+
+msgid "Animate hovering app icons"
+msgstr "Κίνηση κατά την τοποθέτηση δείκτη πάνω από εικονίδια εφαρμογών"
+
+msgid "Highlight hovering app icons"
+msgstr "Επισήμανση εικονιδίων εφαρμογών κατά την τοποθέτηση δείκτη"
+
+msgid "Icon style"
+msgstr "Στυλ εικονιδίων"
+
+msgid "Normal"
+msgstr "Κανονικό"
+
+msgid "Symbolic"
+msgstr "Συμβολικό"
+
+msgid "Grayscale"
+msgstr "Κλίμακα του γκρι"
+
+msgid "Running indicator"
+msgstr "Δείκτης εκτέλεσης"
+
+msgid "Running indicator position"
+msgstr "Θέση δείκτη εκτέλεσης"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Στυλ δείκτη εκτέλεσης (εστιασμένη εφαρμογή)"
+
+msgid "Dots"
+msgstr "Τελείες"
+
+msgid "Squares"
+msgstr "Τετράγωνα"
+
+msgid "Dashes"
+msgstr "Παύλες"
+
+msgid "Segmented"
+msgstr "Τμηματικό"
+
+msgid "Solid"
+msgstr "Συμπαγές"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Στυλ δείκτη εκτέλεσης (μη εστιασμένες εφαρμογές)"
+
+msgid "Panel style"
+msgstr "Στυλ πάνελ"
+
+msgid "(default is 0)"
+msgstr "(προεπιλογή 0)"
+
+msgid "Side margins"
+msgstr "Πλευρικά περιθώρια"
+
+msgid "Top and bottom margins"
+msgstr "Πάνω και κάτω περιθώρια"
+
+msgid "Side padding"
+msgstr "Πλευρικό εσωτερικό περιθώριο"
+
+msgid "Top and bottom padding"
+msgstr "Πάνω και κάτω εσωτερικό περιθώριο"
+
+msgid "Override panel theme background color"
+msgstr "Παράκαμψη χρώματος φόντου του θέματος του πάνελ"
+
+msgid "Override panel theme background opacity"
+msgstr "Παράκαμψη αδιαφάνειας φόντου του θέματος του πάνελ"
+
+msgid "Panel background opacity (%)"
+msgstr "Αδιαφάνεια φόντου πάνελ (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Αλλαγή αδιαφάνειας όταν ένα παράθυρο πλησιάζει το πάνελ"
+
+msgid "Dynamic background opacity"
+msgstr "Δυναμική αδιαφάνεια φόντου"
+
+msgid "Override panel theme gradient"
+msgstr "Παράκαμψη διαβάθμισης του θέματος του πάνελ"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Πάνω χρώμα διαβάθμισης και αδιαφάνεια (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Κάτω χρώμα διαβάθμισης και αδιαφάνεια (%)"
+
+msgid "Panel border"
+msgstr "Περίγραμμα πάνελ"
+
+msgid "Override border color"
+msgstr "Παράκαμψη χρώματος περιγράμματος"
+
+msgid "Border thickness"
+msgstr "Πάχος περιγράμματος"

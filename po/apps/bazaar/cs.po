@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "Removing remote…"
+msgstr "Odebírání repozitáře…"
+
+msgid "Could not remove remote"
+msgstr "Repozitář se nepodařilo odebrat"
+
+msgid "Remotes"
+msgstr "Repozitáře"
+
+msgid "System Installation"
+msgstr "Systémová instalace"
+
+msgid "Available to all users on this computer"
+msgstr "K dispozici všem uživatelům na tomto počítači"
+
+msgid "User Installation"
+msgstr "Uživatelská instalace"
+
+msgid "Only available to you"
+msgstr "K dispozici pouze vám"
+
+msgid "Remove Remote"
+msgstr "Odebrat repozitář"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Odebrat %s"
+
+msgid "Unused"
+msgstr "Nepoužívaný"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u aplikace nainstalována"
+msgstr[1] "%u aplikace nainstalovány"
+msgstr[2] "%u aplikací nainstalováno"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Odebrat „%s“?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Již nebudete moci instalovat aplikace z tohoto uživatelského repozitáře."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Již nebudete moci instalovat aplikace z tohoto systémového repozitáře."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u aplikace k odebrání"
+msgstr[1] "%u aplikace k odebrání"
+msgstr[2] "%u aplikací k odebrání"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Níže uvedená aplikace byla nainstalována z tohoto repozitáře a bude spolu s ním odebrána z vašeho účtu."
+msgstr[1] "Tyto aplikace byly nainstalovány z tohoto repozitáře a budou spolu s ním odebrány z vašeho účtu."
+msgstr[2] "Tyto aplikace byly nainstalovány z tohoto repozitáře a budou spolu s ním odebrány z vašeho účtu."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Níže uvedená aplikace byla nainstalována z tohoto repozitáře a bude spolu s ním odebrána pro všechny uživatele."
+msgstr[1] "Tyto aplikace byly nainstalovány z tohoto repozitáře a budou spolu s ním odebrány pro všechny uživatele."
+msgstr[2] "Tyto aplikace byly nainstalovány z tohoto repozitáře a budou spolu s ním odebrány pro všechny uživatele."
+
+msgid "Manage R_emotes"
+msgstr "Spravovat _repozitáře"

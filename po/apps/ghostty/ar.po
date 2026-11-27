@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+msgid "Open in Ghostty"
+msgstr "الفتح في Ghostty"
+
+msgid "Find…"
+msgstr "بحث…"
+
+msgid "Previous Match"
+msgstr "المطابقة السابقة"
+
+msgid "Next Match"
+msgstr "المطابقة التالية"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Oh, no."
+msgstr "يا للأسف."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "تعذّر الحصول على سياق OpenGL للعرض."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "هذه الطرفية في وضع القراءة فقط. لا يزال بإمكانك عرض المحتوى وتحديده والتمرير خلاله، لكن لن تُرسل أي أحداث إدخال إلى التطبيق الجاري."
+
+msgid "Read-only"
+msgstr "للقراءة فقط"
+
+msgid "Copy"
+msgstr "نسخ"
+
+msgid "Paste"
+msgstr "لصق"
+
+msgid "Notify on Next Command Finish"
+msgstr "إشعار عند انتهاء الأمر التالي"
+
+msgid "Clear"
+msgstr "مسح"
+
+msgid "Reset"
+msgstr "إعادة تعيين"
+
+msgid "Split"
+msgstr "تقسيم"
+
+msgid "Change Title…"
+msgstr "تغيير العنوان…"
+
+msgid "Split Up"
+msgstr "تقسيم للأعلى"
+
+msgid "Split Down"
+msgstr "تقسيم للأسفل"
+
+msgid "Split Left"
+msgstr "تقسيم لليسار"
+
+msgid "Split Right"
+msgstr "تقسيم لليمين"
+
+msgid "Close Split"
+msgstr "إغلاق التقسيم"
+
+msgid "Tab"
+msgstr "لسان"
+
+msgid "Change Tab Title…"
+msgstr "تغيير عنوان اللسان…"
+
+msgid "New Tab"
+msgstr "لسان جديد"
+
+msgid "Close Tab"
+msgstr "إغلاق اللسان"
+
+msgid "Window"
+msgstr "نافذة"
+
+msgid "Change Window Title…"
+msgstr "تغيير عنوان النافذة…"
+
+msgid "New Window"
+msgstr "نافذة جديدة"
+
+msgid "Close Window"
+msgstr "إغلاق النافذة"
+
+msgid "Config"
+msgstr "الإعدادات"
+
+msgid "Open Configuration in OS Editor"
+msgstr "فتح الإعدادات في محرر النظام"
+
+msgid "Open Configuration in New Window"
+msgstr "فتح الإعدادات في نافذة جديدة"
+
+msgid "Reload Configuration"
+msgstr "إعادة تحميل الإعدادات"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ أنت تشغّل نسخة تصحيح من Ghostty! سيكون الأداء أقل."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: مفتش الطرفية"
+
+msgid "New Split"
+msgstr "تقسيم جديد"
+
+msgid "View Open Tabs"
+msgstr "عرض الألسنة المفتوحة"
+
+msgid "Main Menu"
+msgstr "القائمة الرئيسية"
+
+msgid "Command Palette"
+msgstr "لوحة الأوامر"
+
+msgid "Terminal Inspector"
+msgstr "مفتش الطرفية"
+
+msgid "About Ghostty"
+msgstr "حول Ghostty"
+
+msgid "Quit"
+msgstr "إنهاء"
+
+msgid "Authorize Clipboard Access"
+msgstr "السماح بالوصول إلى الحافظة"
+
+msgid "Deny"
+msgstr "رفض"
+
+msgid "Allow"
+msgstr "سماح"
+
+msgid "Remember choice for this split"
+msgstr "تذكّر الاختيار لهذا التقسيم"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "أعد تحميل الإعدادات لإظهار هذه المطالبة مرة أخرى"
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "Execute a command…"
+msgstr "تنفيذ أمر…"
+
+msgid "Configuration Errors"
+msgstr "أخطاء في الإعدادات"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "عُثر على خطأ واحد أو أكثر في الإعدادات. يرجى مراجعة الأخطاء أدناه، ثم أعد تحميل إعداداتك أو تجاهل هذه الأخطاء."
+
+msgid "Ignore"
+msgstr "تجاهل"
+
+msgid "Leave blank to restore the default title."
+msgstr "اتركه فارغًا لاستعادة العنوان الافتراضي."
+
+msgid "OK"
+msgstr "موافق"
+
+msgid "The keybind was revoked by the system."
+msgstr "أُلغي اختصار لوحة المفاتيح من قِبل النظام."
+
+msgid "The keybind was denied by the system."
+msgstr "رفض النظام اختصار لوحة المفاتيح."
+
+msgid "Global keybind unavailable"
+msgstr "اختصار لوحة المفاتيح العام غير متاح"
+
+msgid "Export Terminal IO Events"
+msgstr "تصدير أحداث إدخال/إخراج الطرفية"
+
+msgid "Export"
+msgstr "تصدير"
+
+msgid "Editing configuration file"
+msgstr "تحرير ملف الإعدادات"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "يحاول أحد التطبيقات الكتابة في الحافظة. محتويات الحافظة الحالية معروضة أدناه."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "يحاول أحد التطبيقات القراءة من الحافظة. محتويات الحافظة الحالية معروضة أدناه."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "تحذير: لصق قد يكون غير آمن"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "قد يكون لصق هذا النص في الطرفية خطيرًا لأنه يبدو أن بعض الأوامر قد تُنفَّذ."
+
+msgid "Quit Ghostty?"
+msgstr "إنهاء Ghostty؟"
+
+msgid "Close Tab?"
+msgstr "إغلاق اللسان؟"
+
+msgid "Close Window?"
+msgstr "إغلاق النافذة؟"
+
+msgid "Close Split?"
+msgstr "إغلاق التقسيم؟"
+
+msgid "All terminal sessions will be terminated."
+msgstr "ستُنهى جميع جلسات الطرفية."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "ستُنهى جميع جلسات الطرفية في هذا اللسان."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "ستُنهى جميع جلسات الطرفية في هذه النافذة."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "ستُنهى العملية الجارية حاليًا في هذا التقسيم."
+
+msgid "Command Finished"
+msgstr "انتهى الأمر"
+
+msgid "Command Succeeded"
+msgstr "نجح الأمر"
+
+msgid "Command Failed"
+msgstr "فشل الأمر"
+
+msgid "Change Terminal Title"
+msgstr "تغيير عنوان الطرفية"
+
+msgid "Change Tab Title"
+msgstr "تغيير عنوان اللسان"
+
+msgid "Change Window Title"
+msgstr "تغيير عنوان النافذة"
+
+msgid "Reloaded the configuration"
+msgstr "أُعيد تحميل الإعدادات"
+
+msgid "Copied to clipboard"
+msgstr "نُسخ إلى الحافظة"
+
+msgid "Cleared clipboard"
+msgstr "مُسحت الحافظة"
+
+msgid "Ghostty Developers"
+msgstr "مطورو Ghostty"
+
+msgid "Reset Terminal"
+msgstr "إعادة تعيين الطرفية"
+
+msgid "Reset the terminal to a clean state."
+msgstr "إعادة تعيين الطرفية إلى حالة نظيفة."
+
+msgid "Copy to Clipboard"
+msgstr "نسخ إلى الحافظة"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "نسخ النص المحدد إلى الحافظة بالتنسيقين العادي والمنسق."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "نسخ التحديد كنص عادي إلى الحافظة"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "نسخ النص المحدد كنص عادي إلى الحافظة."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "نسخ التحديد كتسلسلات ANSI إلى الحافظة"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "نسخ النص المحدد كتسلسلات هروب ANSI إلى الحافظة."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "نسخ التحديد كـ HTML إلى الحافظة"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "نسخ النص المحدد كـ HTML إلى الحافظة."
+
+msgid "Copy URL to Clipboard"
+msgstr "نسخ الرابط إلى الحافظة"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "نسخ الرابط الموجود تحت المؤشر إلى الحافظة."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "نسخ عنوان الطرفية إلى الحافظة"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "نسخ عنوان الطرفية إلى الحافظة. لا يكون لذلك أي تأثير إن لم يكن عنوان الطرفية معيّنًا."
+
+msgid "Paste from Clipboard"
+msgstr "لصق من الحافظة"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "لصق محتويات الحافظة الرئيسية."
+
+msgid "Paste from Selection"
+msgstr "لصق من التحديد"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "لصق محتويات حافظة التحديد."
+
+msgid "Start Search"
+msgstr "بدء البحث"
+
+msgid "Start a search if one isn't already active."
+msgstr "بدء بحث إن لم يكن هناك بحث نشط."
+
+msgid "Search Selection"
+msgstr "البحث عن التحديد"
+
+msgid "Start a search for the current text selection."
+msgstr "بدء بحث عن النص المحدد حاليًا."
+
+msgid "End Search"
+msgstr "إنهاء البحث"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "إنهاء البحث الحالي إن وُجد وإخفاء أي عناصر واجهة رسومية."
+
+msgid "Next Search Result"
+msgstr "نتيجة البحث التالية"
+
+msgid "Navigate to the next search result, if any."
+msgstr "الانتقال إلى نتيجة البحث التالية، إن وُجدت."
+
+msgid "Previous Search Result"
+msgstr "نتيجة البحث السابقة"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "الانتقال إلى نتيجة البحث السابقة، إن وُجدت."
+
+msgid "Increase Font Size"
+msgstr "تكبير حجم الخط"
+
+msgid "Increase the font size by 1 point."
+msgstr "تكبير حجم الخط بمقدار نقطة واحدة."
+
+msgid "Decrease Font Size"
+msgstr "تصغير حجم الخط"
+
+msgid "Decrease the font size by 1 point."
+msgstr "تصغير حجم الخط بمقدار نقطة واحدة."
+
+msgid "Reset Font Size"
+msgstr "إعادة تعيين حجم الخط"
+
+msgid "Reset the font size to the default."
+msgstr "إعادة تعيين حجم الخط إلى الافتراضي."
+
+msgid "Clear Screen"
+msgstr "مسح الشاشة"
+
+msgid "Clear the screen and scrollback."
+msgstr "مسح الشاشة وسجل التمرير."
+
+msgid "Select All"
+msgstr "تحديد الكل"
+
+msgid "Select all text on the screen."
+msgstr "تحديد كل النص على الشاشة."
+
+msgid "Scroll to Top"
+msgstr "التمرير إلى الأعلى"
+
+msgid "Scroll to the top of the screen."
+msgstr "التمرير إلى أعلى الشاشة."
+
+msgid "Scroll to Bottom"
+msgstr "التمرير إلى الأسفل"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "التمرير إلى أسفل الشاشة."
+
+msgid "Scroll to Selection"
+msgstr "التمرير إلى التحديد"
+
+msgid "Scroll to the selected text."
+msgstr "التمرير إلى النص المحدد."
+
+msgid "Scroll Page Up"
+msgstr "التمرير صفحة للأعلى"
+
+msgid "Scroll the screen up by a page."
+msgstr "تمرير الشاشة للأعلى بمقدار صفحة."
+
+msgid "Scroll Page Down"
+msgstr "التمرير صفحة للأسفل"
+
+msgid "Scroll the screen down by a page."
+msgstr "تمرير الشاشة للأسفل بمقدار صفحة."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "نسخ الشاشة إلى ملف مؤقت ونسخ المسار"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "نسخ محتويات الشاشة إلى ملف مؤقت ونسخ المسار إلى الحافظة."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "نسخ الشاشة إلى ملف مؤقت ولصق المسار"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "نسخ محتويات الشاشة إلى ملف مؤقت ولصق مسار الملف."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "نسخ الشاشة إلى ملف مؤقت وفتحه"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "نسخ محتويات الشاشة إلى ملف مؤقت وفتحه."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "نسخ الشاشة كـ HTML إلى ملف مؤقت ونسخ المسار"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "نسخ محتويات الشاشة كـ HTML إلى ملف مؤقت ونسخ المسار إلى الحافظة."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "نسخ الشاشة كـ HTML إلى ملف مؤقت ولصق المسار"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "نسخ محتويات الشاشة كـ HTML إلى ملف مؤقت ولصق مسار الملف."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "نسخ الشاشة كـ HTML إلى ملف مؤقت وفتحه"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "نسخ محتويات الشاشة كـ HTML إلى ملف مؤقت وفتحه."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "نسخ الشاشة كتسلسلات ANSI إلى ملف مؤقت ونسخ المسار"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "نسخ محتويات الشاشة كتسلسلات هروب ANSI إلى ملف مؤقت ونسخ المسار إلى الحافظة."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "نسخ الشاشة كتسلسلات ANSI إلى ملف مؤقت ولصق المسار"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "نسخ محتويات الشاشة كتسلسلات هروب ANSI إلى ملف مؤقت ولصق مسار الملف."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "نسخ الشاشة كتسلسلات ANSI إلى ملف مؤقت وفتحه"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "نسخ محتويات الشاشة كتسلسلات هروب ANSI إلى ملف مؤقت وفتحه."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "نسخ التحديد إلى ملف مؤقت ونسخ المسار"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "نسخ محتويات التحديد إلى ملف مؤقت ونسخ المسار إلى الحافظة."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "نسخ التحديد إلى ملف مؤقت ولصق المسار"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "نسخ محتويات التحديد إلى ملف مؤقت ولصق مسار الملف."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "نسخ التحديد إلى ملف مؤقت وفتحه"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "نسخ محتويات التحديد إلى ملف مؤقت وفتحه."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "نسخ التحديد كـ HTML إلى ملف مؤقت ونسخ المسار"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "نسخ محتويات التحديد كـ HTML إلى ملف مؤقت ونسخ المسار إلى الحافظة."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "نسخ التحديد كـ HTML إلى ملف مؤقت ولصق المسار"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "نسخ محتويات التحديد كـ HTML إلى ملف مؤقت ولصق مسار الملف."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "نسخ التحديد كـ HTML إلى ملف مؤقت وفتحه"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "نسخ محتويات التحديد كـ HTML إلى ملف مؤقت وفتحه."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "نسخ التحديد كتسلسلات ANSI إلى ملف مؤقت ونسخ المسار"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "نسخ محتويات التحديد كتسلسلات هروب ANSI إلى ملف مؤقت ونسخ المسار إلى الحافظة."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "نسخ التحديد كتسلسلات ANSI إلى ملف مؤقت ولصق المسار"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "نسخ محتويات التحديد كتسلسلات هروب ANSI إلى ملف مؤقت ولصق مسار الملف."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "نسخ التحديد كتسلسلات ANSI إلى ملف مؤقت وفتحه"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "نسخ محتويات التحديد كتسلسلات هروب ANSI إلى ملف مؤقت وفتحه."
+
+msgid "Open a new window."
+msgstr "فتح نافذة جديدة."
+
+msgid "Open a new tab."
+msgstr "فتح لسان جديد."
+
+msgid "Move Tab Left"
+msgstr "نقل اللسان لليسار"
+
+msgid "Move the current tab to the left."
+msgstr "نقل اللسان الحالي إلى اليسار."
+
+msgid "Move Tab Right"
+msgstr "نقل اللسان لليمين"
+
+msgid "Move the current tab to the right."
+msgstr "نقل اللسان الحالي إلى اليمين."
+
+msgid "Move Tab to New Window"
+msgstr "نقل اللسان إلى نافذة جديدة"
+
+msgid "Move the current tab to a new window."
+msgstr "نقل اللسان الحالي إلى نافذة جديدة."
+
+msgid "Toggle Tab Overview"
+msgstr "تبديل نظرة عامة على الألسنة"
+
+msgid "Toggle the tab overview."
+msgstr "تبديل نظرة عامة على الألسنة."
+
+msgid "Change Terminal Title…"
+msgstr "تغيير عنوان الطرفية…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "طلب عنوان جديد للطرفية الحالية."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "طلب عنوان جديد للسان الحالي."
+
+msgid "Split the terminal to the left."
+msgstr "تقسيم الطرفية إلى اليسار."
+
+msgid "Split the terminal to the right."
+msgstr "تقسيم الطرفية إلى اليمين."
+
+msgid "Split the terminal up."
+msgstr "تقسيم الطرفية إلى الأعلى."
+
+msgid "Split the terminal down."
+msgstr "تقسيم الطرفية إلى الأسفل."
+
+msgid "Focus Split: Previous"
+msgstr "التركيز على التقسيم: السابق"
+
+msgid "Focus the previous split, if any."
+msgstr "التركيز على التقسيم السابق، إن وُجد."
+
+msgid "Focus Split: Next"
+msgstr "التركيز على التقسيم: التالي"
+
+msgid "Focus the next split, if any."
+msgstr "التركيز على التقسيم التالي، إن وُجد."
+
+msgid "Focus Split: Left"
+msgstr "التركيز على التقسيم: اليسار"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "التركيز على التقسيم الأيسر، إن وُجد."
+
+msgid "Focus Split: Right"
+msgstr "التركيز على التقسيم: اليمين"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "التركيز على التقسيم الأيمن، إن وُجد."
+
+msgid "Focus Split: Up"
+msgstr "التركيز على التقسيم: الأعلى"
+
+msgid "Focus the split above, if it exists."
+msgstr "التركيز على التقسيم الأعلى، إن وُجد."
+
+msgid "Focus Split: Down"
+msgstr "التركيز على التقسيم: الأسفل"
+
+msgid "Focus the split below, if it exists."
+msgstr "التركيز على التقسيم الأسفل، إن وُجد."
+
+msgid "Focus Window: Previous"
+msgstr "التركيز على النافذة: السابقة"
+
+msgid "Focus the previous window, if any."
+msgstr "التركيز على النافذة السابقة، إن وُجدت."
+
+msgid "Focus Window: Next"
+msgstr "التركيز على النافذة: التالية"
+
+msgid "Focus the next window, if any."
+msgstr "التركيز على النافذة التالية، إن وُجدت."
+
+msgid "Toggle Split Zoom"
+msgstr "تبديل تكبير التقسيم"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "تبديل حالة التكبير للتقسيم الحالي."
+
+msgid "Toggle Read-Only Mode"
+msgstr "تبديل وضع القراءة فقط"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "تبديل وضع القراءة فقط للسطح الحالي."
+
+msgid "Equalize Splits"
+msgstr "تسوية التقسيمات"
+
+msgid "Equalize the size of all splits."
+msgstr "تسوية حجم جميع التقسيمات."
+
+msgid "Reset Window Size"
+msgstr "إعادة تعيين حجم النافذة"
+
+msgid "Reset the window size to the default."
+msgstr "إعادة تعيين حجم النافذة إلى الافتراضي."
+
+msgid "Toggle Inspector"
+msgstr "تبديل المفتش"
+
+msgid "Toggle the inspector."
+msgstr "تبديل المفتش."
+
+msgid "Show the GTK Inspector"
+msgstr "إظهار مفتش GTK"
+
+msgid "Show the GTK inspector."
+msgstr "إظهار مفتش GTK."
+
+msgid "Show On-Screen Keyboard"
+msgstr "إظهار لوحة المفاتيح التي على الشاشة"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "إظهار لوحة المفاتيح التي على الشاشة إن وُجدت."
+
+msgid "Open Config Using OS editor"
+msgstr "فتح الإعدادات باستخدام محرر النظام"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "فتح ملف الإعدادات بمحرر النظام الافتراضي."
+
+msgid "Open Config in New Terminal Window"
+msgstr "فتح الإعدادات في نافذة طرفية جديدة"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "فتح ملف الإعدادات في نافذة جديدة باستخدام $EDITOR أو $VISUAL."
+
+msgid "Reload Config"
+msgstr "إعادة تحميل الإعدادات"
+
+msgid "Reload the config file."
+msgstr "إعادة تحميل ملف الإعدادات."
+
+msgid "Close Terminal"
+msgstr "إغلاق الطرفية"
+
+msgid "Close the current terminal."
+msgstr "إغلاق الطرفية الحالية."
+
+msgid "Close the current tab."
+msgstr "إغلاق اللسان الحالي."
+
+msgid "Close Other Tabs"
+msgstr "إغلاق الألسنة الأخرى"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "إغلاق جميع الألسنة في هذه النافذة عدا الحالي."
+
+msgid "Close Tabs to the Right"
+msgstr "إغلاق الألسنة إلى اليمين"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "إغلاق جميع الألسنة على يمين اللسان الحالي."
+
+msgid "Close the current window."
+msgstr "إغلاق النافذة الحالية."
+
+msgid "Close All Windows"
+msgstr "إغلاق كل النوافذ"
+
+msgid "Close all windows."
+msgstr "إغلاق كل النوافذ."
+
+msgid "Toggle Maximize"
+msgstr "تبديل التكبير"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "تبديل حالة التكبير للنافذة الحالية."
+
+msgid "Toggle Fullscreen"
+msgstr "تبديل ملء الشاشة"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "تبديل حالة ملء الشاشة للنافذة الحالية."
+
+msgid "Toggle Window Decorations"
+msgstr "تبديل زخارف النافذة"
+
+msgid "Toggle the window decorations."
+msgstr "تبديل زخارف النافذة."
+
+msgid "Toggle Float on Top"
+msgstr "تبديل البقاء في الأعلى"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "تبديل حالة البقاء في الأعلى للنافذة الحالية."
+
+msgid "Toggle Secure Input"
+msgstr "تبديل الإدخال الآمن"
+
+msgid "Toggle secure input mode."
+msgstr "تبديل وضع الإدخال الآمن."
+
+msgid "Toggle Mouse Reporting"
+msgstr "تبديل إبلاغ الفأرة"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "تبديل ما إذا كانت أحداث الفأرة تُبلَّغ إلى تطبيقات الطرفية."
+
+msgid "Toggle Background Opacity"
+msgstr "تبديل شفافية الخلفية"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "تبديل شفافية خلفية نافذة بدأت شفافة."
+
+msgid "Check for Updates"
+msgstr "التحقق من التحديثات"
+
+msgid "Check for updates to the application."
+msgstr "التحقق من وجود تحديثات للتطبيق."
+
+msgid "Undo"
+msgstr "تراجع"
+
+msgid "Undo the last action."
+msgstr "التراجع عن آخر إجراء."
+
+msgid "Redo"
+msgstr "إعادة"
+
+msgid "Redo the last undone action."
+msgstr "إعادة آخر إجراء تم التراجع عنه."
+
+msgid "Quit the application."
+msgstr "إنهاء التطبيق."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "ضع القليل من Ghostty في طرفيتك."

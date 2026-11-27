@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: si\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Open in Ghostty"
+msgstr "Ghostty තුළ විවෘත කරන්න"
+
+msgid "Find…"
+msgstr "සොයන්න…"
+
+msgid "Previous Match"
+msgstr "පෙර ගැළපීම"
+
+msgid "Next Match"
+msgstr "ඊළඟ ගැළපීම"
+
+msgid "Close"
+msgstr "වසන්න"
+
+msgid "Oh, no."
+msgstr "අහෝ, නැහැ."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "විදැහුම සඳහා OpenGL සන්දර්භයක් ලබා ගැනීමට නොහැකි විය."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "මෙම ටර්මිනලය කියවීමට-පමණක් ප්‍රකාරයේ ඇත. ඔබට තවමත් අන්තර්ගතය බැලීමට, තේරීමට සහ අනුචලනය කිරීමට හැකි නමුත්, ධාවනය වන යෙදුමට කිසිදු ආදාන සිදුවීමක් නොයවනු ඇත."
+
+msgid "Read-only"
+msgstr "කියවීමට-පමණයි"
+
+msgid "Copy"
+msgstr "පිටපත් කරන්න"
+
+msgid "Paste"
+msgstr "අලවන්න"
+
+msgid "Notify on Next Command Finish"
+msgstr "ඊළඟ විධානය අවසන් වූ විට දැනුම් දෙන්න"
+
+msgid "Clear"
+msgstr "හිස් කරන්න"
+
+msgid "Reset"
+msgstr "යළි සකසන්න"
+
+msgid "Split"
+msgstr "බෙදන්න"
+
+msgid "Change Title…"
+msgstr "මාතෘකාව වෙනස් කරන්න…"
+
+msgid "Split Up"
+msgstr "ඉහළට බෙදන්න"
+
+msgid "Split Down"
+msgstr "පහළට බෙදන්න"
+
+msgid "Split Left"
+msgstr "වමට බෙදන්න"
+
+msgid "Split Right"
+msgstr "දකුණට බෙදන්න"
+
+msgid "Close Split"
+msgstr "බෙදුම වසන්න"
+
+msgid "Tab"
+msgstr "ටැබය"
+
+msgid "Change Tab Title…"
+msgstr "ටැබයේ මාතෘකාව වෙනස් කරන්න…"
+
+msgid "New Tab"
+msgstr "නව ටැබය"
+
+msgid "Close Tab"
+msgstr "ටැබය වසන්න"
+
+msgid "Window"
+msgstr "කවුළුව"
+
+msgid "Change Window Title…"
+msgstr "කවුළුවේ මාතෘකාව වෙනස් කරන්න…"
+
+msgid "New Window"
+msgstr "නව කවුළුව"
+
+msgid "Close Window"
+msgstr "කවුළුව වසන්න"
+
+msgid "Config"
+msgstr "වින්‍යාසය"
+
+msgid "Open Configuration in OS Editor"
+msgstr "මෙහෙයුම් පද්ධතියේ සංස්කාරකයෙන් වින්‍යාසය විවෘත කරන්න"
+
+msgid "Open Configuration in New Window"
+msgstr "නව කවුළුවක වින්‍යාසය විවෘත කරන්න"
+
+msgid "Reload Configuration"
+msgstr "වින්‍යාසය යළි පූරණය කරන්න"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ ඔබ Ghostty හි දෝෂහරණ තැනුමක් ධාවනය කරමින් සිටී! කාර්ය සාධනය අඩු වනු ඇත."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: ටර්මිනල පරීක්ෂකය"
+
+msgid "New Split"
+msgstr "නව බෙදුම"
+
+msgid "View Open Tabs"
+msgstr "විවෘත ටැබ බලන්න"
+
+msgid "Main Menu"
+msgstr "ප්‍රධාන වට්ටෝරුව"
+
+msgid "Command Palette"
+msgstr "විධාන පුවරුව"
+
+msgid "Terminal Inspector"
+msgstr "ටර්මිනල පරීක්ෂකය"
+
+msgid "About Ghostty"
+msgstr "Ghostty පිළිබඳව"
+
+msgid "Quit"
+msgstr "ඉවත් වන්න"
+
+msgid "Authorize Clipboard Access"
+msgstr "පසුරු පුවරු ප්‍රවේශයට අවසර දෙන්න"
+
+msgid "Deny"
+msgstr "ප්‍රතික්ෂේප කරන්න"
+
+msgid "Allow"
+msgstr "ඉඩ දෙන්න"
+
+msgid "Remember choice for this split"
+msgstr "මෙම බෙදුම සඳහා තේරීම මතක තබාගන්න"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "මෙම ප්‍රේරකය නැවත පෙන්වීමට වින්‍යාසය යළි පූරණය කරන්න"
+
+msgid "Cancel"
+msgstr "අවලංගු කරන්න"
+
+msgid "Execute a command…"
+msgstr "විධානයක් ක්‍රියාත්මක කරන්න…"
+
+msgid "Configuration Errors"
+msgstr "වින්‍යාස දෝෂ"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "වින්‍යාස දෝෂ එකක් හෝ කිහිපයක් හමු විය. කරුණාකර පහත දෝෂ සමාලෝචනය කර, ඔබේ වින්‍යාසය යළි පූරණය කරන්න, නැතහොත් මෙම දෝෂ නොසලකා හරින්න."
+
+msgid "Ignore"
+msgstr "නොසලකා හරින්න"
+
+msgid "Leave blank to restore the default title."
+msgstr "පෙරනිමි මාතෘකාව යළි පිහිටුවීමට හිස්ව තබන්න."
+
+msgid "OK"
+msgstr "හරි"
+
+msgid "The keybind was revoked by the system."
+msgstr "යතුරු බැඳුම පද්ධතිය විසින් අවලංගු කරන ලදී."
+
+msgid "The keybind was denied by the system."
+msgstr "යතුරු බැඳුම පද්ධතිය විසින් ප්‍රතික්ෂේප කරන ලදී."
+
+msgid "Global keybind unavailable"
+msgstr "ගෝලීය යතුරු බැඳුම ලබා ගත නොහැක"
+
+msgid "Export Terminal IO Events"
+msgstr "ටර්මිනල IO සිදුවීම් අපනයනය කරන්න"
+
+msgid "Export"
+msgstr "අපනයනය කරන්න"
+
+msgid "Editing configuration file"
+msgstr "වින්‍යාස ගොනුව සංස්කරණය කරමින්"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "යෙදුමක් පසුරු පුවරුවට ලිවීමට උත්සාහ කරයි. වත්මන් පසුරු පුවරුවේ අන්තර්ගතය පහත පෙන්වා ඇත."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "යෙදුමක් පසුරු පුවරුවෙන් කියවීමට උත්සාහ කරයි. වත්මන් පසුරු පුවරුවේ අන්තර්ගතය පහත පෙන්වා ඇත."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "අවවාදයයි: අනාරක්ෂිත විය හැකි අලවීමක්"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "මෙම පෙළ ටර්මිනලයට අලවීම අන්තරායකර විය හැක, මන්ද සමහර විධාන ක්‍රියාත්මක වන බව පෙනෙන නිසා."
+
+msgid "Quit Ghostty?"
+msgstr "Ghostty වසා ඉවත් වන්නද?"
+
+msgid "Close Tab?"
+msgstr "ටැබය වසන්නද?"
+
+msgid "Close Window?"
+msgstr "කවුළුව වසන්නද?"
+
+msgid "Close Split?"
+msgstr "බෙදුම වසන්නද?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "සියලුම ටර්මිනල සැසි අවසන් කරනු ලැබේ."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "මෙම ටැබයේ ඇති සියලුම ටර්මිනල සැසි අවසන් කරනු ලැබේ."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "මෙම කවුළුවේ ඇති සියලුම ටර්මිනල සැසි අවසන් කරනු ලැබේ."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "මෙම බෙදුමේ දැනට ධාවනය වන ක්‍රියාවලිය අවසන් කරනු ලැබේ."
+
+msgid "Command Finished"
+msgstr "විධානය අවසන් විය"
+
+msgid "Command Succeeded"
+msgstr "විධානය සාර්ථක විය"
+
+msgid "Command Failed"
+msgstr "විධානය අසාර්ථක විය"
+
+msgid "Change Terminal Title"
+msgstr "ටර්මිනලයේ මාතෘකාව වෙනස් කරන්න"
+
+msgid "Change Tab Title"
+msgstr "ටැබයේ මාතෘකාව වෙනස් කරන්න"
+
+msgid "Change Window Title"
+msgstr "කවුළුවේ මාතෘකාව වෙනස් කරන්න"
+
+msgid "Reloaded the configuration"
+msgstr "වින්‍යාසය යළි පූරණය කරන ලදී"
+
+msgid "Copied to clipboard"
+msgstr "පසුරු පුවරුවට පිටපත් කරන ලදී"
+
+msgid "Cleared clipboard"
+msgstr "පසුරු පුවරුව හිස් කරන ලදී"
+
+msgid "Ghostty Developers"
+msgstr "Ghostty සංවර්ධකයින්"
+
+msgid "Reset Terminal"
+msgstr "ටර්මිනලය යළි සකසන්න"
+
+msgid "Reset the terminal to a clean state."
+msgstr "ටර්මිනලය පිරිසිදු තත්ත්වයකට යළි සකසන්න."
+
+msgid "Copy to Clipboard"
+msgstr "පසුරු පුවරුවට පිටපත් කරන්න"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "තෝරාගත් පෙළ සරල සහ විලාසිත යන ආකෘති දෙකෙන්ම පසුරු පුවරුවට පිටපත් කරන්න."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "තේරීම සරල පෙළක් ලෙස පසුරු පුවරුවට පිටපත් කරන්න"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "තෝරාගත් පෙළ සරල පෙළක් ලෙස පසුරු පුවරුවට පිටපත් කරන්න."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "තේරීම ANSI අනුපිළිවෙල ලෙස පසුරු පුවරුවට පිටපත් කරන්න"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "තෝරාගත් පෙළ ANSI escape අනුපිළිවෙල ලෙස පසුරු පුවරුවට පිටපත් කරන්න."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "තේරීම HTML ලෙස පසුරු පුවරුවට පිටපත් කරන්න"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "තෝරාගත් පෙළ HTML ලෙස පසුරු පුවරුවට පිටපත් කරන්න."
+
+msgid "Copy URL to Clipboard"
+msgstr "URL එක පසුරු පුවරුවට පිටපත් කරන්න"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "ඊතලය යටින් ඇති URL එක පසුරු පුවරුවට පිටපත් කරන්න."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "ටර්මිනලයේ මාතෘකාව පසුරු පුවරුවට පිටපත් කරන්න"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "ටර්මිනලයේ මාතෘකාව පසුරු පුවරුවට පිටපත් කරන්න. ටර්මිනලයේ මාතෘකාව සකසා නොමැති නම් මෙයින් කිසිවක් සිදු නොවේ."
+
+msgid "Paste from Clipboard"
+msgstr "පසුරු පුවරුවෙන් අලවන්න"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "ප්‍රධාන පසුරු පුවරුවේ අන්තර්ගතය අලවන්න."
+
+msgid "Paste from Selection"
+msgstr "තේරීමෙන් අලවන්න"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "තේරීම් පසුරු පුවරුවේ අන්තර්ගතය අලවන්න."
+
+msgid "Start Search"
+msgstr "සෙවීම ආරම්භ කරන්න"
+
+msgid "Start a search if one isn't already active."
+msgstr "සෙවුමක් දැනටමත් සක්‍රියව නොමැති නම් එකක් ආරම්භ කරන්න."
+
+msgid "Search Selection"
+msgstr "තේරීම සොයන්න"
+
+msgid "Start a search for the current text selection."
+msgstr "වත්මන් පෙළ තේරීම සඳහා සෙවුමක් ආරම්භ කරන්න."
+
+msgid "End Search"
+msgstr "සෙවීම අවසන් කරන්න"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "වත්මන් සෙවුම ඇත්නම් එය අවසන් කර සියලුම GUI මූලද්‍රව්‍ය සඟවන්න."
+
+msgid "Next Search Result"
+msgstr "ඊළඟ සෙවුම් ප්‍රතිඵලය"
+
+msgid "Navigate to the next search result, if any."
+msgstr "ඊළඟ සෙවුම් ප්‍රතිඵලයට, ඇත්නම්, යන්න."
+
+msgid "Previous Search Result"
+msgstr "පෙර සෙවුම් ප්‍රතිඵලය"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "පෙර සෙවුම් ප්‍රතිඵලයට, ඇත්නම්, යන්න."
+
+msgid "Increase Font Size"
+msgstr "අකුරු ප්‍රමාණය වැඩි කරන්න"
+
+msgid "Increase the font size by 1 point."
+msgstr "අකුරු ප්‍රමාණය ලක්ෂ්‍ය 1කින් වැඩි කරන්න."
+
+msgid "Decrease Font Size"
+msgstr "අකුරු ප්‍රමාණය අඩු කරන්න"
+
+msgid "Decrease the font size by 1 point."
+msgstr "අකුරු ප්‍රමාණය ලක්ෂ්‍ය 1කින් අඩු කරන්න."
+
+msgid "Reset Font Size"
+msgstr "අකුරු ප්‍රමාණය යළි සකසන්න"
+
+msgid "Reset the font size to the default."
+msgstr "අකුරු ප්‍රමාණය පෙරනිමියට යළි සකසන්න."
+
+msgid "Clear Screen"
+msgstr "තිරය හිස් කරන්න"
+
+msgid "Clear the screen and scrollback."
+msgstr "තිරය සහ පසුපෙළ හිස් කරන්න."
+
+msgid "Select All"
+msgstr "සියල්ල තෝරන්න"
+
+msgid "Select all text on the screen."
+msgstr "තිරයේ ඇති සියලුම පෙළ තෝරන්න."
+
+msgid "Scroll to Top"
+msgstr "මුදුනට අනුචලනය කරන්න"
+
+msgid "Scroll to the top of the screen."
+msgstr "තිරයේ මුදුනට අනුචලනය කරන්න."
+
+msgid "Scroll to Bottom"
+msgstr "පතුලට අනුචලනය කරන්න"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "තිරයේ පතුලට අනුචලනය කරන්න."
+
+msgid "Scroll to Selection"
+msgstr "තේරීමට අනුචලනය කරන්න"
+
+msgid "Scroll to the selected text."
+msgstr "තෝරාගත් පෙළට අනුචලනය කරන්න."
+
+msgid "Scroll Page Up"
+msgstr "පිටුවක් ඉහළට අනුචලනය කරන්න"
+
+msgid "Scroll the screen up by a page."
+msgstr "තිරය පිටුවක් ඉහළට අනුචලනය කරන්න."
+
+msgid "Scroll Page Down"
+msgstr "පිටුවක් පහළට අනුචලනය කරන්න"
+
+msgid "Scroll the screen down by a page."
+msgstr "තිරය පිටුවක් පහළට අනුචලනය කරන්න."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "තිරය තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය පිටපත් කරන්න"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "තිරයේ අන්තර්ගතය තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය පසුරු පුවරුවට පිටපත් කරන්න."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "තිරය තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය අලවන්න"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "තිරයේ අන්තර්ගතය තාවකාලික ගොනුවකට පිටපත් කර ගොනුවේ මාර්ගය අලවන්න."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "තිරය තාවකාලික ගොනුවකට පිටපත් කර විවෘත කරන්න"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "තිරයේ අන්තර්ගතය තාවකාලික ගොනුවකට පිටපත් කර එය විවෘත කරන්න."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "තිරය HTML ලෙස තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය පිටපත් කරන්න"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "තිරයේ අන්තර්ගතය HTML ලෙස තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය පසුරු පුවරුවට පිටපත් කරන්න."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "තිරය HTML ලෙස තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය අලවන්න"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "තිරයේ අන්තර්ගතය HTML ලෙස තාවකාලික ගොනුවකට පිටපත් කර ගොනුවේ මාර්ගය අලවන්න."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "තිරය HTML ලෙස තාවකාලික ගොනුවකට පිටපත් කර විවෘත කරන්න"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "තිරයේ අන්තර්ගතය HTML ලෙස තාවකාලික ගොනුවකට පිටපත් කර එය විවෘත කරන්න."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "තිරය ANSI අනුපිළිවෙල ලෙස තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය පිටපත් කරන්න"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "තිරයේ අන්තර්ගතය ANSI escape අනුපිළිවෙල ලෙස තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය පසුරු පුවරුවට පිටපත් කරන්න."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "තිරය ANSI අනුපිළිවෙල ලෙස තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය අලවන්න"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "තිරයේ අන්තර්ගතය ANSI escape අනුපිළිවෙල ලෙස තාවකාලික ගොනුවකට පිටපත් කර ගොනුවේ මාර්ගය අලවන්න."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "තිරය ANSI අනුපිළිවෙල ලෙස තාවකාලික ගොනුවකට පිටපත් කර විවෘත කරන්න"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "තිරයේ අන්තර්ගතය ANSI escape අනුපිළිවෙල ලෙස තාවකාලික ගොනුවකට පිටපත් කර එය විවෘත කරන්න."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "තේරීම තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය පිටපත් කරන්න"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "තේරීමේ අන්තර්ගතය තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය පසුරු පුවරුවට පිටපත් කරන්න."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "තේරීම තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය අලවන්න"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "තේරීමේ අන්තර්ගතය තාවකාලික ගොනුවකට පිටපත් කර ගොනුවේ මාර්ගය අලවන්න."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "තේරීම තාවකාලික ගොනුවකට පිටපත් කර විවෘත කරන්න"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "තේරීමේ අන්තර්ගතය තාවකාලික ගොනුවකට පිටපත් කර එය විවෘත කරන්න."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "තේරීම HTML ලෙස තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය පිටපත් කරන්න"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "තේරීමේ අන්තර්ගතය HTML ලෙස තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය පසුරු පුවරුවට පිටපත් කරන්න."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "තේරීම HTML ලෙස තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය අලවන්න"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "තේරීමේ අන්තර්ගතය HTML ලෙස තාවකාලික ගොනුවකට පිටපත් කර ගොනුවේ මාර්ගය අලවන්න."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "තේරීම HTML ලෙස තාවකාලික ගොනුවකට පිටපත් කර විවෘත කරන්න"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "තේරීමේ අන්තර්ගතය HTML ලෙස තාවකාලික ගොනුවකට පිටපත් කර එය විවෘත කරන්න."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "තේරීම ANSI අනුපිළිවෙල ලෙස තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය පිටපත් කරන්න"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "තේරීමේ අන්තර්ගතය ANSI escape අනුපිළිවෙල ලෙස තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය පසුරු පුවරුවට පිටපත් කරන්න."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "තේරීම ANSI අනුපිළිවෙල ලෙස තාවකාලික ගොනුවකට පිටපත් කර මාර්ගය අලවන්න"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "තේරීමේ අන්තර්ගතය ANSI escape අනුපිළිවෙල ලෙස තාවකාලික ගොනුවකට පිටපත් කර ගොනුවේ මාර්ගය අලවන්න."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "තේරීම ANSI අනුපිළිවෙල ලෙස තාවකාලික ගොනුවකට පිටපත් කර විවෘත කරන්න"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "තේරීමේ අන්තර්ගතය ANSI escape අනුපිළිවෙල ලෙස තාවකාලික ගොනුවකට පිටපත් කර එය විවෘත කරන්න."
+
+msgid "Open a new window."
+msgstr "නව කවුළුවක් විවෘත කරන්න."
+
+msgid "Open a new tab."
+msgstr "නව ටැබයක් විවෘත කරන්න."
+
+msgid "Move Tab Left"
+msgstr "ටැබය වමට ගෙනයන්න"
+
+msgid "Move the current tab to the left."
+msgstr "වත්මන් ටැබය වමට ගෙනයන්න."
+
+msgid "Move Tab Right"
+msgstr "ටැබය දකුණට ගෙනයන්න"
+
+msgid "Move the current tab to the right."
+msgstr "වත්මන් ටැබය දකුණට ගෙනයන්න."
+
+msgid "Move Tab to New Window"
+msgstr "ටැබය නව කවුළුවකට ගෙනයන්න"
+
+msgid "Move the current tab to a new window."
+msgstr "වත්මන් ටැබය නව කවුළුවකට ගෙනයන්න."
+
+msgid "Toggle Tab Overview"
+msgstr "ටැබ දළ විශ්ලේෂණය ටොගල් කරන්න"
+
+msgid "Toggle the tab overview."
+msgstr "ටැබ දළ විශ්ලේෂණය ටොගල් කරන්න."
+
+msgid "Change Terminal Title…"
+msgstr "ටර්මිනලයේ මාතෘකාව වෙනස් කරන්න…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "වත්මන් ටර්මිනලය සඳහා නව මාතෘකාවක් ඉල්ලන්න."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "වත්මන් ටැබය සඳහා නව මාතෘකාවක් ඉල්ලන්න."
+
+msgid "Split the terminal to the left."
+msgstr "ටර්මිනලය වමට බෙදන්න."
+
+msgid "Split the terminal to the right."
+msgstr "ටර්මිනලය දකුණට බෙදන්න."
+
+msgid "Split the terminal up."
+msgstr "ටර්මිනලය ඉහළට බෙදන්න."
+
+msgid "Split the terminal down."
+msgstr "ටර්මිනලය පහළට බෙදන්න."
+
+msgid "Focus Split: Previous"
+msgstr "බෙදුම නාභිගත කරන්න: පෙර"
+
+msgid "Focus the previous split, if any."
+msgstr "පෙර බෙදුම, ඇත්නම්, නාභිගත කරන්න."
+
+msgid "Focus Split: Next"
+msgstr "බෙදුම නාභිගත කරන්න: ඊළඟ"
+
+msgid "Focus the next split, if any."
+msgstr "ඊළඟ බෙදුම, ඇත්නම්, නාභිගත කරන්න."
+
+msgid "Focus Split: Left"
+msgstr "බෙදුම නාභිගත කරන්න: වම"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "වමෙහි ඇති බෙදුම, ඇත්නම්, නාභිගත කරන්න."
+
+msgid "Focus Split: Right"
+msgstr "බෙදුම නාභිගත කරන්න: දකුණ"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "දකුණෙහි ඇති බෙදුම, ඇත්නම්, නාභිගත කරන්න."
+
+msgid "Focus Split: Up"
+msgstr "බෙදුම නාභිගත කරන්න: ඉහළ"
+
+msgid "Focus the split above, if it exists."
+msgstr "ඉහළ ඇති බෙදුම, ඇත්නම්, නාභිගත කරන්න."
+
+msgid "Focus Split: Down"
+msgstr "බෙදුම නාභිගත කරන්න: පහළ"
+
+msgid "Focus the split below, if it exists."
+msgstr "පහළ ඇති බෙදුම, ඇත්නම්, නාභිගත කරන්න."
+
+msgid "Focus Window: Previous"
+msgstr "කවුළුව නාභිගත කරන්න: පෙර"
+
+msgid "Focus the previous window, if any."
+msgstr "පෙර කවුළුව, ඇත්නම්, නාභිගත කරන්න."
+
+msgid "Focus Window: Next"
+msgstr "කවුළුව නාභිගත කරන්න: ඊළඟ"
+
+msgid "Focus the next window, if any."
+msgstr "ඊළඟ කවුළුව, ඇත්නම්, නාභිගත කරන්න."
+
+msgid "Toggle Split Zoom"
+msgstr "බෙදුම විශාලනය ටොගල් කරන්න"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "වත්මන් බෙදුමේ විශාලන තත්ත්වය ටොගල් කරන්න."
+
+msgid "Toggle Read-Only Mode"
+msgstr "කියවීමට-පමණක් ප්‍රකාරය ටොගල් කරන්න"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "වත්මන් පෘෂ්ඨය සඳහා කියවීමට-පමණක් ප්‍රකාරය ටොගල් කරන්න."
+
+msgid "Equalize Splits"
+msgstr "බෙදුම් සමාන කරන්න"
+
+msgid "Equalize the size of all splits."
+msgstr "සියලුම බෙදුම්වල ප්‍රමාණය සමාන කරන්න."
+
+msgid "Reset Window Size"
+msgstr "කවුළුවේ ප්‍රමාණය යළි සකසන්න"
+
+msgid "Reset the window size to the default."
+msgstr "කවුළුවේ ප්‍රමාණය පෙරනිමියට යළි සකසන්න."
+
+msgid "Toggle Inspector"
+msgstr "පරීක්ෂකය ටොගල් කරන්න"
+
+msgid "Toggle the inspector."
+msgstr "පරීක්ෂකය ටොගල් කරන්න."
+
+msgid "Show the GTK Inspector"
+msgstr "GTK පරීක්ෂකය පෙන්වන්න"
+
+msgid "Show the GTK inspector."
+msgstr "GTK පරීක්ෂකය පෙන්වන්න."
+
+msgid "Show On-Screen Keyboard"
+msgstr "තිරයේ යතුරුපුවරුව පෙන්වන්න"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "තිරයේ යතුරුපුවරුව ඇත්නම් එය පෙන්වන්න."
+
+msgid "Open Config Using OS editor"
+msgstr "මෙහෙයුම් පද්ධතියේ සංස්කාරකය භාවිතයෙන් වින්‍යාසය විවෘත කරන්න"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "වින්‍යාස ගොනුව මෙහෙයුම් පද්ධතියේ පෙරනිමි සංස්කාරකයෙන් විවෘත කරන්න."
+
+msgid "Open Config in New Terminal Window"
+msgstr "වින්‍යාසය නව ටර්මිනල කවුළුවක විවෘත කරන්න"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "$EDITOR හෝ $VISUAL භාවිතයෙන් වින්‍යාස ගොනුව නව කවුළුවක විවෘත කරන්න."
+
+msgid "Reload Config"
+msgstr "වින්‍යාසය යළි පූරණය කරන්න"
+
+msgid "Reload the config file."
+msgstr "වින්‍යාස ගොනුව යළි පූරණය කරන්න."
+
+msgid "Close Terminal"
+msgstr "ටර්මිනලය වසන්න"
+
+msgid "Close the current terminal."
+msgstr "වත්මන් ටර්මිනලය වසන්න."
+
+msgid "Close the current tab."
+msgstr "වත්මන් ටැබය වසන්න."
+
+msgid "Close Other Tabs"
+msgstr "අනෙක් ටැබ වසන්න"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "වත්මන් ටැබය හැර මෙම කවුළුවේ සියලුම ටැබ වසන්න."
+
+msgid "Close Tabs to the Right"
+msgstr "දකුණේ ඇති ටැබ වසන්න"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "වත්මන් ටැබයට දකුණේ ඇති සියලුම ටැබ වසන්න."
+
+msgid "Close the current window."
+msgstr "වත්මන් කවුළුව වසන්න."
+
+msgid "Close All Windows"
+msgstr "සියලුම කවුළු වසන්න"
+
+msgid "Close all windows."
+msgstr "සියලුම කවුළු වසන්න."
+
+msgid "Toggle Maximize"
+msgstr "උපරිම කිරීම ටොගල් කරන්න"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "වත්මන් කවුළුවේ උපරිම කළ තත්ත්වය ටොගල් කරන්න."
+
+msgid "Toggle Fullscreen"
+msgstr "පූර්ණ තිරය ටොගල් කරන්න"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "වත්මන් කවුළුවේ පූර්ණ තිර තත්ත්වය ටොගල් කරන්න."
+
+msgid "Toggle Window Decorations"
+msgstr "කවුළු සැරසිලි ටොගල් කරන්න"
+
+msgid "Toggle the window decorations."
+msgstr "කවුළු සැරසිලි ටොගල් කරන්න."
+
+msgid "Toggle Float on Top"
+msgstr "ඉහළින් පාවීම ටොගල් කරන්න"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "වත්මන් කවුළුවේ ඉහළින් පාවීමේ තත්ත්වය ටොගල් කරන්න."
+
+msgid "Toggle Secure Input"
+msgstr "ආරක්ෂිත ආදානය ටොගල් කරන්න"
+
+msgid "Toggle secure input mode."
+msgstr "ආරක්ෂිත ආදාන ප්‍රකාරය ටොගල් කරන්න."
+
+msgid "Toggle Mouse Reporting"
+msgstr "මූසික වාර්තාකරණය ටොගල් කරන්න"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "මූසික සිදුවීම් ටර්මිනල යෙදුම්වලට වාර්තා කළ යුතුද යන්න ටොගල් කරන්න."
+
+msgid "Toggle Background Opacity"
+msgstr "පසුබිම් පාරාන්ධතාව ටොගල් කරන්න"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "විනිවිදභාවයෙන් ආරම්භ වූ කවුළුවක පසුබිම් පාරාන්ධතාව ටොගල් කරන්න."
+
+msgid "Check for Updates"
+msgstr "යාවත්කාලීන සඳහා පරීක්ෂා කරන්න"
+
+msgid "Check for updates to the application."
+msgstr "යෙදුම සඳහා යාවත්කාලීන ඇත්දැයි පරීක්ෂා කරන්න."
+
+msgid "Undo"
+msgstr "අහෝසි කරන්න"
+
+msgid "Undo the last action."
+msgstr "අවසාන ක්‍රියාව අහෝසි කරන්න."
+
+msgid "Redo"
+msgstr "නැවත කරන්න"
+
+msgid "Redo the last undone action."
+msgstr "අහෝසි කළ අවසාන ක්‍රියාව නැවත කරන්න."
+
+msgid "Quit the application."
+msgstr "යෙදුමෙන් ඉවත් වන්න."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "ඔබේ ටර්මිනලයට Ghostty ටිකක් එක් කරන්න."

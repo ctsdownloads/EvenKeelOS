@@ -1,0 +1,2588 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "ॲप स्टोअर"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "या संगणकावर flatpak सॉफ्टवेअर जोडा, काढून टाका किंवा अपडेट करा"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "सिस्टम;पॅकेज;व्यवस्थापक;शोधा;Flatpak;सॉफ्टवेअर;ॲप;स्टोअर;"
+
+msgid "New Window"
+msgstr "नवीन विंडो"
+
+msgid "Discover and install apps"
+msgstr "ॲप्स शोधा आणि इंस्टॉल करा"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Linux साठी जलद आणि आधुनिक ॲप स्टोअर, ज्याचा भर विशेषतः Flathub वरील Flatpak ॲप्स आणि ॲड-ऑन शोधणे व इंस्टॉल करण्यावर आहे."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "अनेक इंस्टॉल रांगेत लावा आणि ब्राउझिंग सुरू ठेवा"
+
+msgid "Easily view app permissions"
+msgstr "ॲपच्या परवानग्या सहज पहा"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "तुमची आवडती पाहण्यासाठी आणि व्यवस्थापित करण्यासाठी Flathub मध्ये साइन इन करा"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "GNOME Shell मधूनच ॲप्स शोधा"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Flathub ॲप्स दाखवणारे मुख्य पृष्ठ"
+
+msgid "App page for Exhibit"
+msgstr "Exhibit साठी ॲप पृष्ठ"
+
+msgid "Library page"
+msgstr "लायब्ररी पृष्ठ"
+
+msgid "Search page"
+msgstr "शोध पृष्ठ"
+
+msgid "Category page"
+msgstr "वर्ग पृष्ठ"
+
+msgid "Stopped Receiving Updates"
+msgstr "अपडेट्स मिळणे बंद झाले"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "अनइंस्टॉल करा"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "इंस्टॉल करा"
+
+msgid "Add-on"
+msgstr "ॲड-ऑन"
+
+msgid "Manage Add-Ons"
+msgstr "ॲड-ऑन व्यवस्थापित करा"
+
+msgid "No Add-Ons Visible"
+msgstr "कोणतेही ॲड-ऑन दिसत नाहीत"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "तुमच्या सध्याच्या फिल्टर पसंती सर्व ज्ञात ॲड-ऑन लपवत आहेत. त्या बदलून पहा."
+
+msgid "Add-on Page"
+msgstr "ॲड-ऑन पृष्ठ"
+
+msgid "Download"
+msgstr "डाउनलोड करा"
+
+msgid "Installed"
+msgstr "इंस्टॉल केलेले"
+
+msgid "Downloads/Month"
+msgstr "डाउनलोड/महिना"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "मूळ अपडेट्स मिळणे बंद झाले"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "हे ॲड-ऑन अशा रनटाइमचा वापर करते ज्याला आता अपडेट्स किंवा सुरक्षा दुरुस्त्या मिळत नाहीत. ते वापरण्यास असुरक्षित होऊ शकते."
+
+msgid "Other Sources"
+msgstr "इतर स्रोत"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "%s साठी ॲड-ऑन"
+
+msgid "Show Less"
+msgstr "कमी दाखवा"
+
+msgid "Show More"
+msgstr "जास्त दाखवा"
+
+msgid "Download Stats"
+msgstr "डाउनलोड आकडेवारी"
+
+msgid "Age Rating"
+msgstr "वय मानांकन"
+
+msgid "Cartoon Violence"
+msgstr "कार्टूनमधील हिंसा"
+
+msgid "No information regarding cartoon violence"
+msgstr "कार्टूनमधील हिंसेबद्दल कोणतीही माहिती नाही"
+
+msgid "Fantasy Violence"
+msgstr "काल्पनिक हिंसा"
+
+msgid "No information regarding fantasy violence"
+msgstr "काल्पनिक हिंसेबद्दल कोणतीही माहिती नाही"
+
+msgid "Realistic Violence"
+msgstr "वास्तववादी हिंसा"
+
+msgid "No information regarding realistic violence"
+msgstr "वास्तववादी हिंसेबद्दल कोणतीही माहिती नाही"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "रक्तपात दर्शवणारी हिंसा"
+
+msgid "No information regarding bloodshed"
+msgstr "रक्तपाताबद्दल कोणतीही माहिती नाही"
+
+msgid "Sexual Violence"
+msgstr "लैंगिक हिंसा"
+
+msgid "No information regarding sexual violence"
+msgstr "लैंगिक हिंसेबद्दल कोणतीही माहिती नाही"
+
+msgid "Alcohol"
+msgstr "मद्य"
+
+msgid "No information regarding references to alcohol"
+msgstr "मद्याच्या उल्लेखांबद्दल कोणतीही माहिती नाही"
+
+msgid "Narcotics"
+msgstr "अमली पदार्थ"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "बेकायदेशीर अमली पदार्थांच्या उल्लेखांबद्दल कोणतीही माहिती नाही"
+
+msgid "Tobacco"
+msgstr "तंबाखू"
+
+msgid "No information regarding references to tobacco products"
+msgstr "तंबाखू उत्पादनांच्या उल्लेखांबद्दल कोणतीही माहिती नाही"
+
+msgid "Nudity"
+msgstr "नग्नता"
+
+msgid "No information regarding nudity of any sort"
+msgstr "कोणत्याही प्रकारच्या नग्नतेबद्दल कोणतीही माहिती नाही"
+
+msgid "Sexual Themes"
+msgstr "लैंगिक विषय"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "लैंगिक स्वरूपाचे उल्लेख किंवा चित्रणांबद्दल कोणतीही माहिती नाही"
+
+msgid "Profanity"
+msgstr "अश्लील भाषा"
+
+msgid "No information regarding profanity of any kind"
+msgstr "कोणत्याही प्रकारच्या अश्लील भाषेबद्दल कोणतीही माहिती नाही"
+
+msgid "Inappropriate Humor"
+msgstr "अयोग्य विनोद"
+
+msgid "No information regarding inappropriate humor"
+msgstr "अयोग्य विनोदाबद्दल कोणतीही माहिती नाही"
+
+msgid "Discrimination"
+msgstr "भेदभाव"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "कोणत्याही प्रकारच्या भेदभावपूर्ण भाषेबद्दल कोणतीही माहिती नाही"
+
+msgid "Advertising"
+msgstr "जाहिराती"
+
+msgid "No information regarding advertising of any kind"
+msgstr "कोणत्याही प्रकारच्या जाहिरातींबद्दल कोणतीही माहिती नाही"
+
+msgid "Gambling"
+msgstr "जुगार"
+
+msgid "No information regarding gambling of any kind"
+msgstr "कोणत्याही प्रकारच्या जुगाराबद्दल कोणतीही माहिती नाही"
+
+msgid "Purchasing"
+msgstr "खरेदी"
+
+msgid "No information regarding the ability to spend money"
+msgstr "पैसे खर्च करण्याच्या सुविधेबद्दल कोणतीही माहिती नाही"
+
+msgid "Chat Between Users"
+msgstr "वापरकर्त्यांमधील चॅट"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "इतर वापरकर्त्यांशी चॅट करण्याच्या मार्गांबद्दल कोणतीही माहिती नाही"
+
+msgid "Audio Chat Between Users"
+msgstr "वापरकर्त्यांमधील ऑडिओ चॅट"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "इतर वापरकर्त्यांशी बोलण्याच्या मार्गांबद्दल कोणतीही माहिती नाही"
+
+msgid "Contact Details"
+msgstr "संपर्क तपशील"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "सोशल नेटवर्क वापरकर्तानावे किंवा ईमेल पत्ते शेअर करण्याबद्दल कोणतीही माहिती नाही"
+
+msgid "Identifying Information"
+msgstr "ओळख पटवणारी माहिती"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "वापरकर्त्याची माहिती तृतीय पक्षांसोबत शेअर करण्याबद्दल कोणतीही माहिती नाही"
+
+msgid "Location Sharing"
+msgstr "स्थान शेअर करणे"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "इतर वापरकर्त्यांसोबत प्रत्यक्ष स्थान शेअर करण्याबद्दल कोणतीही माहिती नाही"
+
+msgid "Prostitution"
+msgstr "वेश्याव्यवसाय"
+
+msgid "No information regarding references to prostitution"
+msgstr "वेश्याव्यवसायाच्या उल्लेखांबद्दल कोणतीही माहिती नाही"
+
+msgid "Adultery"
+msgstr "व्यभिचार"
+
+msgid "No information regarding references to adultery"
+msgstr "व्यभिचाराच्या उल्लेखांबद्दल कोणतीही माहिती नाही"
+
+msgid "Sexualized Characters"
+msgstr "लैंगिकदृष्ट्या चित्रित केलेली पात्रे"
+
+msgid "No information regarding sexualized characters"
+msgstr "लैंगिकदृष्ट्या चित्रित केलेल्या पात्रांबद्दल कोणतीही माहिती नाही"
+
+msgid "Desecration"
+msgstr "विटंबना"
+
+msgid "No information regarding references to desecration"
+msgstr "विटंबनेच्या उल्लेखांबद्दल कोणतीही माहिती नाही"
+
+msgid "Human Remains"
+msgstr "मानवी अवशेष"
+
+msgid "No information regarding visible dead human remains"
+msgstr "दिसणाऱ्या मृत मानवी अवशेषांबद्दल कोणतीही माहिती नाही"
+
+msgid "Slavery"
+msgstr "गुलामगिरी"
+
+msgid "No information regarding references to slavery"
+msgstr "गुलामगिरीच्या उल्लेखांबद्दल कोणतीही माहिती नाही"
+
+msgid "Does not include references to drugs"
+msgstr "अमली पदार्थांचे उल्लेख नाहीत"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "शिवीगाळ, अश्लील भाषा आणि इतर प्रकारची तीव्र भाषा नाही"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "जाहिराती किंवा आर्थिक व्यवहार नाहीत"
+
+msgid "Does not include sex or nudity"
+msgstr "लैंगिक आशय किंवा नग्नता नाही"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "अनियंत्रित चॅट सुविधा नाही"
+
+msgid "Does not include violence"
+msgstr "हिंसा नाही"
+
+msgid "Drugs"
+msgstr "अमली पदार्थ"
+
+msgid "Strong Language"
+msgstr "तीव्र भाषा"
+
+msgid "Money"
+msgstr "पैसा"
+
+msgid "Social"
+msgstr "सामाजिक"
+
+msgid "Violence"
+msgstr "हिंसा"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "सर्व"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s चे वय मानांकन अज्ञात आहे"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s सर्वांसाठी योग्य आहे"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s लहान मुलांसाठी योग्य आहे"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s मुलांसाठी योग्य आहे"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s किशोरवयीनांसाठी योग्य आहे"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s प्रौढांसाठी योग्य आहे"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s हे %s साठी योग्य आहे"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "सिस्टम फोल्डर %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "होम उप-फोल्डर %s"
+
+msgid "Host system folders"
+msgstr "होस्ट सिस्टम फोल्डर"
+
+msgid "Host system configuration from /etc"
+msgstr "/etc मधील होस्ट सिस्टम कॉन्फिगरेशन"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "डेस्कटॉप उप-फोल्डर %s"
+
+msgid "Desktop folder"
+msgstr "डेस्कटॉप फोल्डर"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "दस्तऐवज उप-फोल्डर %s"
+
+msgid "Documents folder"
+msgstr "दस्तऐवज फोल्डर"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "संगीत उप-फोल्डर %s"
+
+msgid "Music folder"
+msgstr "संगीत फोल्डर"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "चित्रे उप-फोल्डर %s"
+
+msgid "Pictures folder"
+msgstr "चित्रे फोल्डर"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "सार्वजनिक शेअर उप-फोल्डर %s"
+
+msgid "Public Share folder"
+msgstr "सार्वजनिक शेअर फोल्डर"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "व्हिडिओ उप-फोल्डर %s"
+
+msgid "Videos folder"
+msgstr "व्हिडिओ फोल्डर"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "टेम्पलेट उप-फोल्डर %s"
+
+msgid "Templates folder"
+msgstr "टेम्पलेट फोल्डर"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "वापरकर्ता कॅशे उप-फोल्डर %s"
+
+msgid "User cache folder"
+msgstr "वापरकर्ता कॅशे फोल्डर"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "वापरकर्ता कॉन्फिगरेशन उप-फोल्डर %s"
+
+msgid "User configuration folder"
+msgstr "वापरकर्ता कॉन्फिगरेशन फोल्डर"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "वापरकर्ता डेटा उप-फोल्डर %s"
+
+msgid "User data folder"
+msgstr "वापरकर्ता डेटा फोल्डर"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "वापरकर्ता रनटाइम उप-फोल्डर %s"
+
+msgid "User runtime folder"
+msgstr "वापरकर्ता रनटाइम फोल्डर"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "%s वर फाइलसिस्टम प्रवेश"
+
+msgid "Unknown filesystem path"
+msgstr "अज्ञात फाइलसिस्टम पाथ"
+
+msgid "Download Size"
+msgstr "डाउनलोडचा आकार"
+
+msgid "Installed Size"
+msgstr "इंस्टॉल केलेला आकार"
+
+msgid "Amount to download from the internet"
+msgstr "इंटरनेटवरून डाउनलोड करावयाचे प्रमाण"
+
+msgid "Size on Disk"
+msgstr "डिस्कवरील आकार"
+
+msgid "Open user data folder"
+msgstr "वापरकर्ता डेटा फोल्डर उघडा"
+
+msgid "Your User Data"
+msgstr "तुमचा वापरकर्ता डेटा"
+
+msgid "Caches, settings, and other app data"
+msgstr "कॅशे, सेटिंग्ज आणि इतर ॲप डेटा"
+
+msgid "Cache"
+msgstr "कॅशे"
+
+msgid "Temporary cached data"
+msgstr "तात्पुरता कॅशे केलेला डेटा"
+
+msgid "Clear Cache"
+msgstr "कॅशे साफ करा"
+
+msgid "Installed Runtime Size"
+msgstr "इंस्टॉल केलेल्या रनटाइमचा आकार"
+
+msgid "Runtime Download Size"
+msgstr "रनटाइम डाउनलोडचा आकार"
+
+msgid "N/A"
+msgstr "लागू नाही"
+
+msgid "Storage"
+msgstr "संचयन"
+
+msgid "Verified"
+msgstr "सत्यापित"
+
+msgid "The Bazaar Contributors"
+msgstr "Bazaar योगदानकर्ते"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "विशेष आभार"
+
+msgid "Logged Out Successfully!"
+msgstr "यशस्वीरित्या लॉग आउट झाले!"
+
+msgid "Performing setup…"
+msgstr "सेटअप करत आहे…"
+
+msgid "Set Up Flathub?"
+msgstr "Flathub सेट अप करायचे का?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"या सिस्टमवर Flathub सेट अप केलेले नाही. ते उपलब्ध नसल्यास तुम्ही Bazaar मध्ये ॲप्लिकेशन्स ब्राउझ आणि इंस्टॉल करू शकणार नाही.\n"
+"\n"
+"तरीही तुम्ही Bazaar वापरून आधीच इंस्टॉल केलेली ॲप्स ब्राउझ आणि काढून टाकू शकता."
+
+msgid "Later"
+msgstr "नंतर"
+
+msgid "Set Up Flathub"
+msgstr "Flathub सेट अप करा"
+
+msgid "A backend error occurred"
+msgstr "बॅकएंड त्रुटी आली"
+
+msgid "Refreshing…"
+msgstr "रिफ्रेश करत आहे…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "%d ॲप्स लोड होत आहेत…"
+
+msgid "Failed to open file"
+msgstr "फाइल उघडता आली नाही"
+
+msgid "Failed to load metainfo"
+msgstr "मेटाइन्फो लोड करता आली नाही"
+
+msgid "An initialization error occurred"
+msgstr "सुरुवातीची त्रुटी आली"
+
+msgid "Checking for updates…"
+msgstr "अपडेट्स तपासत आहे…"
+
+msgid "Failed to check for updates"
+msgstr "अपडेट्स तपासता आले नाहीत"
+
+msgid "Could not find app"
+msgstr "ॲप सापडले नाही"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "%d ॲप लोड होत आहे…"
+msgstr[1] "%d ॲप्स लोड होत आहेत…"
+
+msgid "Writing to cache…"
+msgstr "कॅशेमध्ये लिहित आहे…"
+
+msgid "Removing remote…"
+msgstr "रिमोट काढून टाकत आहे…"
+
+msgid "Could not remove remote"
+msgstr "रिमोट काढून टाकता आला नाही"
+
+msgid "Show All"
+msgstr "सर्व दाखवा"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "सर्व \"%s\""
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d ॲप्लिकेशन्स"
+
+msgid "Failed to Load Article"
+msgstr "लेख लोड करता आला नाही"
+
+msgid "All apps are already installed"
+msgstr "सर्व ॲप्स आधीच इंस्टॉल केलेली आहेत"
+
+msgid "_OK"
+msgstr "_ठीक आहे"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "%u ॲप इंस्टॉल करायचे का?"
+msgstr[1] "%u ॲप्स इंस्टॉल करायची का?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "खालील इंस्टॉल केले जाईल. अतिरिक्त सामायिक घटकही इंस्टॉल केले जाऊ शकतात"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "%d ॲड-ऑन इंस्टॉल केले जातील."
+
+msgid "Additionally, addons will be installed."
+msgstr "याशिवाय, ॲड-ऑन इंस्टॉल केले जातील."
+
+msgid "_Cancel"
+msgstr "_रद्द करा"
+
+msgid "_Install All"
+msgstr "सर्व _इंस्टॉल करा"
+
+msgid "Bundle Installation"
+msgstr "बंडल इंस्टॉलेशन"
+
+msgid "Additional dependencies may take extra space"
+msgstr "अतिरिक्त अवलंबित्वांसाठी जास्त जागा लागू शकते"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"हे ॲप इंस्टॉल करण्यासाठी नवीन सॉफ्टवेअर स्रोत जोडावा लागू शकतो. या स्रोतातील इतर ॲप्स Bazaar मध्ये दिसतील.\n"
+"\n"
+"तुमचा या स्रोतावर विश्वास असल्याची खात्री असेल तरच हा स्रोत जोडा."
+
+msgid "Successfully Installed!"
+msgstr "यशस्वीरित्या इंस्टॉल झाले!"
+
+msgid "Open"
+msgstr "उघडा"
+
+msgid "Show App Details"
+msgstr "ॲपचा तपशील दाखवा"
+
+msgid "Already Installed"
+msgstr "आधीच इंस्टॉल केलेले"
+
+msgid "Installation Failed"
+msgstr "इंस्टॉलेशन अयशस्वी झाले"
+
+msgid "Unknown install size"
+msgstr "इंस्टॉल आकार अज्ञात"
+
+#, c-format
+msgid "About %s to install"
+msgstr "इंस्टॉल करण्यासाठी सुमारे %s"
+
+msgid "No special permissions"
+msgstr "कोणत्याही विशेष परवानग्या नाहीत"
+
+msgid "Place Applet"
+msgstr "ॲपलेट ठेवा"
+
+msgid "Choose where to add this applet."
+msgstr "हे ॲपलेट कुठे जोडायचे ते निवडा."
+
+msgid "Cancel"
+msgstr "रद्द करा"
+
+msgid "Panel"
+msgstr "पॅनेल"
+
+msgid "Dock"
+msgstr "डॉक"
+
+msgid "No Curation"
+msgstr "कोणतेही क्युरेशन नाही"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "या सिस्टमवर कोणतीही क्युरेशन माहिती दिलेली नाही. तरीही तुम्ही Flathub वरील ॲप्स ब्राउझ करू शकता"
+
+msgid "Browse Flathub"
+msgstr "Flathub ब्राउझ करा"
+
+msgid "Offline"
+msgstr "ऑफलाइन"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s ते %s, सर्वाधिक %s रोजी %s सह"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "इंस्टॉल:"
+
+msgid "Not Verified"
+msgstr "सत्यापित नाही"
+
+msgid "Developer information not available."
+msgstr "डेव्हलपरची माहिती उपलब्ध नाही."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "%s ॲप आयडीची मालकी सत्यापित केलेली नाही आणि हे कदाचित कम्युनिटी पॅकेज असू शकते."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "%s ॲप आयडीची मालकी Flathub टीमने स्वतः सत्यापित केली आहे."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "%1$s ॲप आयडीची मालकी <b>%2$s</b> यांनी <b>%3$s</b> रोजी सत्यापित केली आहे."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "%1$s ॲप आयडीची मालकी %2$s वापरून सत्यापित केली आहे."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "%s ॲप आयडीची मालकी सत्यापित केली आहे."
+
+msgid "Bazaar Release"
+msgstr "Bazaar प्रकाशन"
+
+msgid "Full Release Notes"
+msgstr "संपूर्ण प्रकाशन टिपा"
+
+msgid "This release was made possible by users like you!"
+msgstr "हे प्रकाशन तुमच्यासारख्या वापरकर्त्यांमुळे शक्य झाले!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Bazaar बनवणे मला खूप आवडते, पण ते मी एकटा करू शकत नाही. Ko-Fi वर देणगी देऊन पुढील विकासाला पाठबळ द्या."
+
+msgid "Donate to Bazaar"
+msgstr "Bazaar साठी देणगी द्या"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "%s मध्ये नवीन काय आहे?"
+
+msgid "Released %B %-e, %Y"
+msgstr "%-e %B %Y रोजी प्रकाशित"
+
+msgid "Choose an Installation"
+msgstr "इंस्टॉलेशन निवडा"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "तुमच्याकडे या ॲपच्या अनेक आवृत्त्या इंस्टॉल केलेल्या आहेत. तुम्हाला कोणती वापरून पुढे जायचे आहे?"
+
+msgid "Details"
+msgstr "तपशील"
+
+msgid "Copy"
+msgstr "कॉपी करा"
+
+msgid "Copied!"
+msgstr "कॉपी केले!"
+
+msgid "Favorite Count"
+msgstr "आवडत्यांची संख्या"
+
+msgid "Failed to update favorite"
+msgstr "आवडते अपडेट करता आले नाही"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "आवडते व्यवस्थापित करण्यासाठी Flathub सह लॉग इन करा"
+
+msgid "Log In"
+msgstr "लॉग इन करा"
+
+msgid "Favorites"
+msgstr "आवडते"
+
+msgid "Install All"
+msgstr "सर्व इंस्टॉल करा"
+
+msgid "No Favorites"
+msgstr "कोणतेही आवडते नाहीत"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "तुम्ही आवडते म्हणून चिन्हांकित केलेली ॲप्लिकेशन्स येथे दिसतील"
+
+msgid "Support This Application"
+msgstr "या ॲप्लिकेशनला पाठबळ द्या"
+
+msgid "Remove From Favorites"
+msgstr "आवडत्यांमधून काढून टाका"
+
+msgid "Failed to remove favorite"
+msgstr "आवडते काढून टाकता आले नाही"
+
+msgid "Previous"
+msgstr "मागील"
+
+msgid "Next"
+msgstr "पुढील"
+
+msgid "Editing"
+msgstr "संपादन"
+
+msgid "Midi"
+msgstr "मिडी"
+
+msgid "Mixer"
+msgstr "मिक्सर"
+
+msgid "Music"
+msgstr "संगीत"
+
+msgid "Player"
+msgstr "प्लेअर"
+
+msgid "Recorder"
+msgstr "रेकॉर्डर"
+
+msgid "Sequencer"
+msgstr "सिक्वेन्सर"
+
+msgid "Tuner"
+msgstr "ट्यूनर"
+
+msgid "TV"
+msgstr "टीव्ही"
+
+msgid "Emulation"
+msgstr "एमुलेशन"
+
+msgid "Action"
+msgstr "ॲक्शन"
+
+msgid "Adventure"
+msgstr "साहस"
+
+msgid "Arcade"
+msgstr "आर्केड"
+
+msgid "Blocks"
+msgstr "ब्लॉक्स"
+
+msgid "Board"
+msgstr "बोर्ड"
+
+msgid "Card"
+msgstr "पत्ते"
+
+msgid "Kids"
+msgstr "मुले"
+
+msgid "Logic"
+msgstr "तर्कशास्त्र"
+
+msgid "Role Playing"
+msgstr "भूमिका खेळ"
+
+msgid "Shooter"
+msgstr "शूटर"
+
+msgid "Simulation"
+msgstr "सिम्युलेशन"
+
+msgid "Sports"
+msgstr "क्रीडा"
+
+msgid "Strategy"
+msgstr "रणनीती"
+
+msgid "Browsers"
+msgstr "ब्राउझर"
+
+msgid "Chat"
+msgstr "चॅट"
+
+msgid "Mail"
+msgstr "मेल"
+
+msgid "File Sharing"
+msgstr "फाइल शेअरिंग"
+
+msgid "Audio & Video"
+msgstr "ऑडिओ आणि व्हिडिओ"
+
+msgid "Media"
+msgstr "मीडिया"
+
+msgid "More Audio & Video"
+msgstr "आणखी ऑडिओ आणि व्हिडिओ"
+
+msgid "Developer Tools"
+msgstr "डेव्हलपर साधने"
+
+msgid "Develop"
+msgstr "विकसित करा"
+
+msgid "More Developer Tools"
+msgstr "आणखी डेव्हलपर साधने"
+
+msgid "Education"
+msgstr "शिक्षण"
+
+msgid "Learn"
+msgstr "शिका"
+
+msgid "More Education"
+msgstr "आणखी शिक्षण"
+
+msgid "Gaming"
+msgstr "गेमिंग"
+
+msgid "Play"
+msgstr "खेळा"
+
+msgid "More Gaming"
+msgstr "आणखी गेमिंग"
+
+msgid "Graphics & Photography"
+msgstr "ग्राफिक्स आणि फोटोग्राफी"
+
+msgid "Create"
+msgstr "तयार करा"
+
+msgid "More Graphics & Photography"
+msgstr "आणखी ग्राफिक्स आणि फोटोग्राफी"
+
+msgid "Networking"
+msgstr "नेटवर्किंग"
+
+msgid "Internet"
+msgstr "इंटरनेट"
+
+msgid "More Networking"
+msgstr "आणखी नेटवर्किंग"
+
+msgid "Productivity"
+msgstr "उत्पादकता"
+
+msgid "Work"
+msgstr "काम"
+
+msgid "More Productivity"
+msgstr "आणखी उत्पादकता"
+
+msgid "Science"
+msgstr "विज्ञान"
+
+msgid "More Science"
+msgstr "आणखी विज्ञान"
+
+msgid "System"
+msgstr "सिस्टम"
+
+msgid "More System"
+msgstr "आणखी सिस्टम"
+
+msgid "Utilities"
+msgstr "उपयुक्तता"
+
+msgid "Tools"
+msgstr "साधने"
+
+msgid "More Utilities"
+msgstr "आणखी उपयुक्तता"
+
+msgid "Trending"
+msgstr "ट्रेंडिंग"
+
+msgid "More Trending"
+msgstr "आणखी ट्रेंडिंग"
+
+msgid "Popular"
+msgstr "लोकप्रिय"
+
+msgid "More Popular"
+msgstr "आणखी लोकप्रिय"
+
+msgid "Recently Added"
+msgstr "अलीकडे जोडलेली"
+
+msgid "New"
+msgstr "नवीन"
+
+msgid "More New"
+msgstr "आणखी नवीन"
+
+msgid "Recently Updated"
+msgstr "अलीकडे अपडेट केलेली"
+
+msgid "Updated"
+msgstr "अपडेट केलेली"
+
+msgid "More Updated"
+msgstr "आणखी अपडेट केलेली"
+
+msgid "Mobile"
+msgstr "मोबाइल"
+
+msgid "More Mobile"
+msgstr "आणखी मोबाइल"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "आणखी Adwaita"
+
+msgid "KDE Apps"
+msgstr "KDE ॲप्स"
+
+msgid "More KDE Apps"
+msgstr "आणखी KDE ॲप्स"
+
+msgid "Made for COSMIC™"
+msgstr "COSMIC™ साठी बनवलेली"
+
+msgid "For COSMIC™"
+msgstr "COSMIC™ साठी"
+
+msgid "More COSMIC Apps"
+msgstr "आणखी COSMIC ॲप्स"
+
+msgid "Games"
+msgstr "गेम्स"
+
+msgid "More Games"
+msgstr "आणखी गेम्स"
+
+msgid "Emulators"
+msgstr "एमुलेटर"
+
+msgid "More Emulators"
+msgstr "आणखी एमुलेटर"
+
+msgid "Launchers"
+msgstr "लाँचर"
+
+msgid "More Game Launchers"
+msgstr "आणखी गेम लाँचर"
+
+msgid "Game Tools"
+msgstr "गेम साधने"
+
+msgid "More Game Tools"
+msgstr "आणखी गेम साधने"
+
+msgid "New Year, New Workflows"
+msgstr "नवे वर्ष, नवी कार्यपद्धती"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "नोंदी घेण्यासाठी, कामांचा मागोवा घेण्यासाठी आणि योजना आखण्यासाठी ॲप्स"
+
+msgid "Staff Picks"
+msgstr "संपादकांची निवड"
+
+msgid "Apps we love right now"
+msgstr "आम्हाला सध्या आवडणारी ॲप्स"
+
+msgid "Get Creative"
+msgstr "सर्जनशील व्हा"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "चित्र काढणे, फोटो संपादन आणि डिजिटल डिझाइनसाठी आवश्यक ॲप्स"
+
+msgid "Build Native Apps"
+msgstr "नेटिव्ह ॲप्स बनवा"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "तुमच्या सिस्टमवर घरच्यासारखी वाटणारी ॲप्स विकसित करा"
+
+msgid "Stay in Touch"
+msgstr "संपर्कात रहा"
+
+msgid "Essential collaboration and communication apps"
+msgstr "आवश्यक सहयोग आणि संवाद ॲप्स"
+
+msgid "Ready for Vacations"
+msgstr "सुट्ट्यांसाठी तयार"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "नकाशे, वाहतूक, हवामान आणि सहल नियोजन ॲप्स"
+
+msgid "Smarter Every Day"
+msgstr "दररोज अधिक हुशार"
+
+msgid "Apps to help you study, research, and write"
+msgstr "अभ्यास, संशोधन आणि लेखनात मदत करणारी ॲप्स"
+
+msgid "Get Cozy"
+msgstr "आरामदायी व्हा"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "वाचन, चित्रपट पाहणे आणि गेम खेळण्यासाठी उत्तम ॲप्स"
+
+msgid "Web Developer Essentials"
+msgstr "वेब डेव्हलपरसाठी आवश्यक"
+
+msgid "Making websites is more fun with these apps"
+msgstr "या ॲप्ससह वेबसाइट बनवणे अधिक मजेदार होते"
+
+msgid "Take Better Notes"
+msgstr "चांगल्या नोंदी घ्या"
+
+msgid "Find your new favorite note taking tool"
+msgstr "नोंदी घेण्याचे तुमचे नवे आवडते साधन शोधा"
+
+msgid "Get Focused"
+msgstr "लक्ष केंद्रित करा"
+
+msgid "Great apps for task management"
+msgstr "कार्य व्यवस्थापनासाठी उत्तम ॲप्स"
+
+msgid "Make Some Noise"
+msgstr "थोडा आवाज करा"
+
+msgid "Apps for creating and producing music"
+msgstr "संगीत तयार करण्यासाठी आणि निर्मितीसाठी ॲप्स"
+
+msgid "Get To Work"
+msgstr "कामाला लागा"
+
+msgid "Essential office apps"
+msgstr "आवश्यक ऑफिस ॲप्स"
+
+msgid "Flathub Not Added"
+msgstr "Flathub जोडलेले नाही"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "तुमच्या कोणत्याही Flatpak इंस्टॉलेशनमध्ये Flathub रिमोट सापडला नाही"
+
+msgid "Can't Reach Flathub"
+msgstr "Flathub शी संपर्क होऊ शकत नाही"
+
+msgid "You can still manage and search for apps."
+msgstr "तरीही तुम्ही ॲप्स व्यवस्थापित आणि शोधू शकता."
+
+msgid "Search Apps"
+msgstr "ॲप्स शोधा"
+
+msgid "Reconnect"
+msgstr "पुन्हा जोडा"
+
+msgid "App of the Day"
+msgstr "आजचे ॲप"
+
+msgid "On the Go"
+msgstr "प्रवासात"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "तुमच्या Linux फोन आणि टॅबलेटसाठी ॲप्स"
+
+msgid "More Mobile Apps"
+msgstr "आणखी मोबाइल ॲप्स"
+
+msgid "We​ ♥​ Games"
+msgstr "आम्हाला​ ♥​ गेम्स"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "तुमची आवडती शीर्षके चालवण्यासाठी गेम्स आणि ॲप्स"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "हे स्थानिक पूर्वावलोकन आहे, काही तपशील प्रकाशित सूचीपेक्षा वेगळे असू शकतात"
+
+msgid "Preview Store Appearance"
+msgstr "स्टोअरचे स्वरूप पूर्वावलोकन करा"
+
+msgid "_Support"
+msgstr "_पाठबळ"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "हे ॲप अशा रनटाइमचा वापर करते ज्याला आता अपडेट्स किंवा सुरक्षा दुरुस्त्या मिळत नाहीत. ते वापरण्यास असुरक्षित होऊ शकते."
+
+msgid "Trash Data"
+msgstr "डेटा कचऱ्यात टाका"
+
+msgid "Add-ons"
+msgstr "ॲड-ऑन"
+
+msgid "More Add-Ons"
+msgstr "आणखी ॲड-ऑन"
+
+msgid "Links"
+msgstr "दुवे"
+
+msgid "Similar Apps"
+msgstr "समान ॲप्स"
+
+msgid "No URL"
+msgstr "URL नाही"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "या ॲपला FLOSS परवाना आहे, म्हणजे सुरक्षिततेसाठी सोर्स कोडची तपासणी करता येते."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "या ॲपला मालकी परवाना आहे, म्हणजे सोर्स कोड खाजगीरित्या विकसित केला जातो आणि स्वतंत्र तृतीय पक्षाकडून त्याची तपासणी करता येत नाही."
+
+msgid "Other Apps From This Developer"
+msgstr "या डेव्हलपरची इतर ॲप्स"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "%s ची इतर ॲप्स"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s इंस्टॉल केलेले नाही, परंतु अजूनही त्याचा <b>%s</b> डेटा शिल्लक आहे."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "%s ची ॲप्स"
+
+msgid "Apps by This Developer"
+msgstr "या डेव्हलपरची ॲप्स"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d ॲप्लिकेशन"
+msgstr[1] "%d ॲप्लिकेशन्स"
+
+msgid "Failed to Remove User Data"
+msgstr "वापरकर्ता डेटा काढून टाकता आला नाही"
+
+msgid "Hardware Support"
+msgstr "हार्डवेअर सपोर्ट"
+
+msgid "Keyboard support"
+msgstr "कीबोर्ड सपोर्ट"
+
+msgid "Requires keyboards"
+msgstr "कीबोर्ड आवश्यक"
+
+msgid "Recommends keyboards"
+msgstr "कीबोर्डची शिफारस"
+
+msgid "Supports keyboards"
+msgstr "कीबोर्डला सपोर्ट"
+
+msgid "Unknown support for keyboards"
+msgstr "कीबोर्डसाठी सपोर्ट अज्ञात"
+
+msgid "Mouse support"
+msgstr "माउस सपोर्ट"
+
+msgid "Requires mice or pointing devices"
+msgstr "माउस किंवा पॉइंटिंग डिव्हाइस आवश्यक"
+
+msgid "Recommends mice or pointing devices"
+msgstr "माउस किंवा पॉइंटिंग डिव्हाइसची शिफारस"
+
+msgid "Supports mice or pointing devices"
+msgstr "माउस किंवा पॉइंटिंग डिव्हाइसला सपोर्ट"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "माउस किंवा पॉइंटिंग डिव्हाइससाठी सपोर्ट अज्ञात"
+
+msgid "Touchscreen support"
+msgstr "टचस्क्रीन सपोर्ट"
+
+msgid "Requires touchscreens"
+msgstr "टचस्क्रीन आवश्यक"
+
+msgid "Recommends touchscreens"
+msgstr "टचस्क्रीनची शिफारस"
+
+msgid "Supports touchscreens"
+msgstr "टचस्क्रीनला सपोर्ट"
+
+msgid "Unknown support for touchscreens"
+msgstr "टचस्क्रीनसाठी सपोर्ट अज्ञात"
+
+msgid "Mobile support"
+msgstr "मोबाइल सपोर्ट"
+
+msgid "Works on mobile devices"
+msgstr "मोबाइल डिव्हाइसवर चालते"
+
+msgid "May not work well on mobile devices"
+msgstr "मोबाइल डिव्हाइसवर नीट चालणार नाही"
+
+msgid "Desktop support"
+msgstr "डेस्कटॉप सपोर्ट"
+
+msgid "Works well on large screens"
+msgstr "मोठ्या स्क्रीनवर चांगले चालते"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s विशिष्ट हार्डवेअरवर सर्वोत्तम चालते"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s बहुतेक डिव्हाइसवर चालते"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "रद्द करा"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "रद्द करत आहे"
+
+msgid "_Open"
+msgstr "_उघडा"
+
+msgid "Uninstall Application"
+msgstr "ॲप्लिकेशन अनइंस्टॉल करा"
+
+msgid "_Remove"
+msgstr "_काढून टाका"
+
+msgid "Update"
+msgstr "अपडेट करा"
+
+msgid "Remove"
+msgstr "काढून टाका"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "%s हे %s मधून इंस्टॉल करा"
+
+#, c-format
+msgid "Install %s"
+msgstr "%s इंस्टॉल करा"
+
+msgid "Donate"
+msgstr "देणगी द्या"
+
+msgid "Search installed apps"
+msgstr "इंस्टॉल केलेली ॲप्स शोधा"
+
+msgid "No Apps Found"
+msgstr "कोणतीही ॲप्स सापडली नाहीत"
+
+msgid "Search Store Instead"
+msgstr "त्याऐवजी स्टोअरमध्ये शोधा"
+
+msgid "Pending Updates"
+msgstr "प्रलंबित अपडेट्स"
+
+msgid "Downloads"
+msgstr "डाउनलोड"
+
+msgid "Recently Uninstalled"
+msgstr "अलीकडे अनइंस्टॉल केलेली"
+
+msgid "Clear Finished Tasks"
+msgstr "पूर्ण झालेली कामे साफ करा"
+
+msgid "Sort Options"
+msgstr "क्रमवारी पर्याय"
+
+msgid "Sort By"
+msgstr "यानुसार क्रमवारी लावा"
+
+msgid "Name"
+msgstr "नाव"
+
+msgid "Size"
+msgstr "आकार"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "इंस्टॉल केलेल्या ॲप्सच्या यादीत \"%s\" साठी कोणतीही जुळणी आढळली नाही"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u उपलब्ध अपडेट"
+msgstr[1] "%u उपलब्ध अपडेट्स"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u इंस्टॉल केलेले ॲप"
+msgstr[1] "%u इंस्टॉल केलेली ॲप्स"
+
+msgid "No applications found"
+msgstr "कोणतीही ॲप्लिकेशन्स सापडली नाहीत"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "एक ॲप्लिकेशन सापडले"
+msgstr[1] "%u ॲप्लिकेशन्स सापडली"
+
+msgid "Get Involved"
+msgstr "सहभागी व्हा"
+
+msgid "Learn More"
+msgstr "अधिक जाणून घ्या"
+
+msgid "Unknown License"
+msgstr "अज्ञात परवाना"
+
+msgid "Community Built"
+msgstr "कम्युनिटीने बनवलेले"
+
+msgid "Proprietary"
+msgstr "मालकी हक्काचे"
+
+msgid "Special License"
+msgstr "विशेष परवाना"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"हे ॲप एका आंतरराष्ट्रीय कम्युनिटीद्वारे खुलेपणाने विकसित केले जाते.\n"
+"\n"
+"तुम्ही सहभागी होऊन ते अधिक चांगले बनवण्यास मदत करू शकता."
+
+msgid "The license of this app is not known"
+msgstr "या ॲपचा परवाना ज्ञात नाही"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"हे ॲप एका आंतरराष्ट्रीय कम्युनिटीद्वारे खुलेपणाने विकसित केले जाते आणि %s परवान्याअंतर्गत प्रसिद्ध केले जाते.\n"
+"\n"
+"तुम्ही सहभागी होऊन ते अधिक चांगले बनवण्यास मदत करू शकता."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"हे ॲप खुलेपणाने विकसित केले जात नाही, त्यामुळे ते कसे चालते हे फक्त त्याच्या डेव्हलपर्सनाच माहीत असते. ते शोधण्यास कठीण अशा प्रकारे असुरक्षित असू शकते आणि देखरेखीशिवाय बदलू शकते.\n"
+"\n"
+"तुम्ही या ॲपमध्ये योगदान देऊ शकाल किंवा नाही देखील."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"हे ॲप %s या विशेष परवान्याअंतर्गत विकसित केले जाते.\n"
+"\n"
+"तुम्ही या ॲपमध्ये योगदान देऊ शकाल किंवा नाही देखील."
+
+msgid "License"
+msgstr "परवाना"
+
+msgid "Connect to Flathub"
+msgstr "Flathub शी जोडा"
+
+msgid "Something Went Wrong"
+msgstr "काहीतरी चुकले"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "तुमची आवडती ॲप्स वेगवेगळ्या डिव्हाइसवर सिंक करण्यासाठी लॉग इन करा"
+
+msgid "Finish"
+msgstr "पूर्ण करा"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "नमस्कार, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Metainfo पूर्वावलोकनात आयकॉन जोडायचा का?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Metainfo फाइल्समध्ये स्वतःहून ॲप आयकॉन समाविष्ट नसतात. तुम्हाला एखादा स्वतः निवडायचा आहे का?"
+
+msgid "Skip"
+msgstr "वगळा"
+
+msgid "Select Icon"
+msgstr "आयकॉन निवडा"
+
+msgid "Image Files"
+msgstr "इमेज फाइल्स"
+
+msgid "New Permissions"
+msgstr "नवीन परवानग्या"
+
+msgid "_Accept"
+msgstr "_स्वीकारा"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "%s साठी नवीन परवानगी"
+msgstr[1] "%s साठी नवीन परवानग्या"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "या अपडेटसाठी खालील अतिरिक्त परवानगी आवश्यक आहे"
+msgstr[1] "या अपडेटसाठी खालील अतिरिक्त परवानग्या आवश्यक आहेत"
+
+msgid "User"
+msgstr "वापरकर्ता"
+
+msgid "Beta"
+msgstr "बीटा"
+
+msgid "End-Of-Life"
+msgstr "आयुष्यमान संपलेले"
+
+msgid "Preferences"
+msgstr "प्राधान्ये"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "नेटवर्क कनेक्शन मीटर्ड आहे — स्टोअर डेटाचे स्वयंचलित रिफ्रेश थांबवले आहे"
+
+msgid "Refresh Manually"
+msgstr "स्वतः रिफ्रेश करा"
+
+msgid "App Updates"
+msgstr "ॲप अपडेट्स"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "डेटा आणि बॅटरी वाचवण्यासाठी मीटर्ड नेटवर्कवर किंवा पॉवर सेव्हिंग चालू असताना स्वयंचलित अपडेट्स थांबतील."
+
+msgid "_Automatic"
+msgstr "_स्वयंचलित"
+
+msgid "Automatically check for and download app updates"
+msgstr "ॲप अपडेट्स आपोआप तपासा आणि डाउनलोड करा"
+
+msgid "_Manual"
+msgstr "_स्वतः"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "ॲप अपडेट्स तपासणे आणि डाउनलोड करणे स्वतःच करावे लागेल"
+
+msgid "Automatic Update _Notifications"
+msgstr "स्वयंचलित अपडेट _सूचना"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "अपडेट्स आपोआप इंस्टॉल झाल्यावर सूचित करा"
+
+msgid "Content Filters"
+msgstr "कंटेंट फिल्टर"
+
+msgid "_Free Software Only"
+msgstr "फक्त _मुक्त सॉफ्टवेअर"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "ब्राउझ आणि शोध करताना मालकी हक्काची ॲप्स लपवा"
+
+msgid "F_lathub Results Only"
+msgstr "फक्त F_lathub निकाल"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "शोध आणि ब्राउझ निकाल फक्त Flathub वर उपलब्ध असलेल्या ॲप्सपुरते मर्यादित करा"
+
+msgid "_Verified Results Only"
+msgstr "फक्त _सत्यापित निकाल"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Flathub वर सत्यापित नसलेले निकाल लपवा"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "आयुष्यमान _संपलेली ॲप्स लपवा"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "डेव्हलपर्सकडून यापुढे सपोर्ट नसलेली ॲप्स लपवा"
+
+msgid "Progress Bar Theme"
+msgstr "प्रोग्रेस बार थीम"
+
+msgid "Accent Color"
+msgstr "ॲक्सेंट रंग"
+
+msgid "Pride Colors"
+msgstr "प्राइड रंग"
+
+msgid "Lesbian Pride Colors"
+msgstr "लेस्बियन प्राइड रंग"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "समलिंगी पुरुष प्राइड रंग"
+
+msgid "Transgender Pride Colors"
+msgstr "ट्रान्सजेंडर प्राइड रंग"
+
+msgid "Nonbinary Pride Colors"
+msgstr "नॉनबायनरी प्राइड रंग"
+
+msgid "Bisexual Pride Colors"
+msgstr "बायसेक्शुअल प्राइड रंग"
+
+msgid "Asexual Pride Colors"
+msgstr "असेक्शुअल प्राइड रंग"
+
+msgid "Pansexual Pride Colors"
+msgstr "पॅनसेक्शुअल प्राइड रंग"
+
+msgid "Aromantic Pride Colors"
+msgstr "अरोमँटिक प्राइड रंग"
+
+msgid "Genderfluid Pride Colors"
+msgstr "जेंडरफ्लुइड प्राइड रंग"
+
+msgid "Polysexual Pride Colors"
+msgstr "पॉलिसेक्शुअल प्राइड रंग"
+
+msgid "Omnisexual Pride Colors"
+msgstr "ओम्निसेक्शुअल प्राइड रंग"
+
+msgid "Aroace Pride Colors"
+msgstr "एरोएस प्राइड रंग"
+
+msgid "Agender Pride Colors"
+msgstr "एजेंडर प्राइड रंग"
+
+msgid "Genderqueer Pride Colors"
+msgstr "जेंडरक्वीअर प्राइड रंग"
+
+msgid "Intersex Pride Colors"
+msgstr "इंटरसेक्स प्राइड रंग"
+
+msgid "Demigender Pride Colors"
+msgstr "डेमिजेंडर प्राइड रंग"
+
+msgid "Biromantic Pride Colors"
+msgstr "बायरोमँटिक प्राइड रंग"
+
+msgid "Disability Pride Colors"
+msgstr "दिव्यांगत्व प्राइड रंग"
+
+msgid "Femboy Pride Colors"
+msgstr "फेमबॉय प्राइड रंग"
+
+msgid "Neutrois Pride Colors"
+msgstr "न्यूट्रोइस प्राइड रंग"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "ॲप अपडेट्स तपासण्यासाठी Bazaar ला पार्श्वभूमीत चालणे आवश्यक आहे"
+
+msgid "Version History"
+msgstr "आवृत्ती इतिहास"
+
+msgid "Today"
+msgstr "आज"
+
+msgid "Yesterday"
+msgstr "काल"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d दिवसापूर्वी"
+msgstr[1] "%d दिवसांपूर्वी"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d आठवड्यापूर्वी"
+msgstr[1] "%d आठवड्यांपूर्वी"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d महिन्यापूर्वी"
+msgstr[1] "%d महिन्यांपूर्वी"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d वर्षापूर्वी"
+msgstr[1] "%d वर्षांपूर्वी"
+
+msgid "%e %B %Y"
+msgstr "%e %B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "आवृत्ती %s"
+
+msgid "No details for this release"
+msgstr "या प्रकाशनासाठी तपशील नाहीत"
+
+msgid "Get More Information"
+msgstr "अधिक माहिती मिळवा"
+
+msgid "_Version History"
+msgstr "_आवृत्ती इतिहास"
+
+msgid "Remotes"
+msgstr "रिमोट"
+
+msgid "System Installation"
+msgstr "सिस्टम इंस्टॉलेशन"
+
+msgid "Available to all users on this computer"
+msgstr "या संगणकावरील सर्व वापरकर्त्यांसाठी उपलब्ध"
+
+msgid "User Installation"
+msgstr "वापरकर्ता इंस्टॉलेशन"
+
+msgid "Only available to you"
+msgstr "फक्त तुमच्यासाठी उपलब्ध"
+
+msgid "Remove Remote"
+msgstr "रिमोट काढून टाका"
+
+#, c-format
+msgid "Remove %s"
+msgstr "%s काढून टाका"
+
+msgid "Unused"
+msgstr "न वापरलेले"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u ॲप इंस्टॉल केलेले"
+msgstr[1] "%u ॲप्स इंस्टॉल केलेली"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "“%s” काढून टाकायचे का?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "तुम्ही यापुढे या वापरकर्ता रिमोटवरून ॲप्स इंस्टॉल करू शकणार नाही."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "तुम्ही यापुढे या सिस्टम रिमोटवरून ॲप्स इंस्टॉल करू शकणार नाही."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u काढून टाकायचे ॲप"
+msgstr[1] "%u काढून टाकायची ॲप्स"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "खालील ॲप या रिमोटवरून इंस्टॉल केले होते आणि त्याच्यासोबत तुमच्या खात्यातून काढून टाकले जाईल."
+msgstr[1] "ही ॲप्स या रिमोटवरून इंस्टॉल केली होती आणि त्याच्यासोबत तुमच्या खात्यातून काढून टाकली जातील."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "खालील ॲप या रिमोटवरून इंस्टॉल केले होते आणि त्याच्यासोबत सर्व वापरकर्त्यांसाठी काढून टाकले जाईल."
+msgstr[1] "ही ॲप्स या रिमोटवरून इंस्टॉल केली होती आणि त्याच्यासोबत सर्व वापरकर्त्यांसाठी काढून टाकली जातील."
+
+msgid "Uninstall"
+msgstr "अनइंस्टॉल करा"
+
+msgid "Get"
+msgstr "मिळवा"
+
+msgid "Arbitrary Permissions"
+msgstr "अनियंत्रित परवानग्या"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"या ॲपकडे अशी परवानगी आहे जी अप्रत्यक्षपणे त्याला Flatpak सँडबॉक्स टाळून <b>हवी असलेली कोणतीही इतर परवानगी</b> स्वतःला देण्यास मुभा देते.\n"
+"\n"
+"त्यामुळे विशेषाधिकारप्राप्त, सँडबॉक्स नसलेले ॲप्लिकेशन जे काही करू शकते ते सर्व हे करू शकते, जसे की तुमच्या सर्व फाइल्स पाहणे आणि इंटरनेटशी जोडणे.\n"
+"\n"
+"इतर परवानग्या पाहिल्याने ॲप काय करण्याची शक्यता आहे याची अजूनही चांगली कल्पना येऊ शकते."
+
+msgid "View Other Permissions"
+msgstr "इतर परवानग्या पहा"
+
+msgid "Safe"
+msgstr "सुरक्षित"
+
+msgid "App ID"
+msgstr "ॲप आयडी"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "हे ॲप सॉफ्टवेअर प्लॅटफॉर्मची (SDK) जुनी आवृत्ती वापरते आणि त्यात बग किंवा सुरक्षा त्रुटी असू शकतात ज्या दुरुस्त केल्या जाणार नाहीत."
+
+msgid "Safety"
+msgstr "सुरक्षितता"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s सुरक्षित आहे"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s कडे कोणत्याही असुरक्षित परवानग्या नाहीत"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s बहुधा सुरक्षित आहे"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s कदाचित असुरक्षित आहे"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s असुरक्षित आहे"
+
+msgid "Back"
+msgstr "मागे"
+
+msgid "Previous Screenshot"
+msgstr "मागील स्क्रीनशॉट"
+
+msgid "Next Screenshot"
+msgstr "पुढील स्क्रीनशॉट"
+
+msgid "Copy Image"
+msgstr "इमेज कॉपी करा"
+
+msgid "Reset View"
+msgstr "दृश्य रीसेट करा"
+
+msgid "Zoom Out"
+msgstr "झूम कमी करा"
+
+msgid "Zoom In"
+msgstr "झूम वाढवा"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u रनटाइम अपडेट"
+msgstr[1] "%u रनटाइम अपडेट्स"
+
+msgid "Screenshots Carousel"
+msgstr "स्क्रीनशॉट कॅरोसेल"
+
+msgid "No Screenshots"
+msgstr "स्क्रीनशॉट नाहीत"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "स्क्रीनशॉट %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "स्क्रीनशॉट %u"
+
+msgid "Clear Search"
+msgstr "शोध साफ करा"
+
+msgid "Filters"
+msgstr "फिल्टर"
+
+msgid "_Verified"
+msgstr "_सत्यापित"
+
+msgid "_Free/Open"
+msgstr "_मुक्त/खुले"
+
+msgid "Non-_EOL"
+msgstr "आयुष्यमान संपलेली _नसलेली"
+
+msgid "Filter out End-of-Life apps"
+msgstr "आयुष्यमान संपलेली ॲप्स फिल्टर करून वगळा"
+
+msgid "_Mobile Friendly"
+msgstr "_मोबाइलसाठी अनुकूल"
+
+msgid "Categories"
+msgstr "वर्ग"
+
+msgid "Search Apps, Games, Software"
+msgstr "ॲप्स, गेम्स, सॉफ्टवेअर शोधा"
+
+msgid "Search Filters"
+msgstr "शोध फिल्टर"
+
+msgid "Browse Categories"
+msgstr "वर्ग ब्राउझ करा"
+
+msgid "Categories Unavailable"
+msgstr "वर्ग उपलब्ध नाहीत"
+
+msgid "Search for apps using the search bar above."
+msgstr "वरील शोधपट्टी वापरून ॲप्स शोधा."
+
+msgid "No Applications Found"
+msgstr "कोणतीही ॲप्लिकेशन्स सापडली नाहीत"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Flathub मध्ये \"%s\" साठी कोणतेही निकाल आढळले नाहीत"
+
+msgid "Browser"
+msgstr "ब्राउझर"
+
+msgid "Video"
+msgstr "व्हिडिओ"
+
+msgid "Office"
+msgstr "ऑफिस"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "कॅलेंडर"
+
+msgid "Messaging"
+msgstr "मेसेजिंग"
+
+msgid "Paint"
+msgstr "पेंट"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "टोरेंट"
+
+msgid "Emulator"
+msgstr "एमुलेटर"
+
+msgid "Copy Link"
+msgstr "दुवा कॉपी करा"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Flathub पृष्ठ"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "प्रकल्पाची वेबसाइट"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "समस्या ट्रॅकर"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "FAQ"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "मदत"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "देणगी द्या"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "भाषांतर करा"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "संपर्क"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "सोर्स कोड"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "योगदान द्या"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "मॅनिफेस्ट"
+
+msgid "Timeline"
+msgstr "कालरेषा"
+
+msgid "Total"
+msgstr "एकूण"
+
+msgid "This Week"
+msgstr "या आठवड्यात"
+
+msgid "Installs per day"
+msgstr "दररोजचे इंस्टॉल"
+
+msgid "World"
+msgstr "जग"
+
+msgid "Installs per country"
+msgstr "देशानुसार इंस्टॉल"
+
+msgid "Since 4/15/2024"
+msgstr "15/4/2024 पासून"
+
+msgid "No Results Found"
+msgstr "कोणतेही निकाल आढळले नाहीत"
+
+msgid "Search failed"
+msgstr "शोध अयशस्वी झाला"
+
+msgid "Unknown"
+msgstr "अज्ञात"
+
+msgid "Keep User Data"
+msgstr "वापरकर्ता डेटा ठेवा"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "वैयक्तिक सेटिंग्ज &amp; आशय पुन्हा मिळवण्याची परवानगी द्या"
+
+msgid "Delete All Data"
+msgstr "सर्व डेटा हटवा"
+
+msgid "Permanently erase user data to save space"
+msgstr "जागा वाचवण्यासाठी वापरकर्ता डेटा कायमचा पुसून टाका"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "%s काढून टाकायचे का?"
+
+msgid "Select which version to remove."
+msgstr "काढून टाकायची आवृत्ती निवडा."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "%s अनइंस्टॉल केल्यानंतर ते वापरता येणार नाही."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "“%s” उच्च जोखमीचे आहे"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"या ॲपकडे तुमच्या सिस्टमचा पूर्ण प्रवेश आहे, ज्यात <b>तुमच्या सर्व फाइल्स, ब्राउझर इतिहास, सेव्ह केलेले पासवर्ड</b> आणि बरेच काही समाविष्ट आहे. त्याला इंटरनेटचाही प्रवेश आहे, म्हणजे ते तुमचा डेटा बाहेरील पक्षांना पाठवू शकते.\n"
+"\n"
+"हे ॲप मालकी हक्काचे असल्याने, ते या परवानग्यांसह काय करते याची तपासणी करता येत नाही."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"हे ॲप जुनी X11 विंडोइंग सिस्टम वापरते, ज्यामुळे ते <b>सर्व कीस्ट्रोक रेकॉर्ड करू शकते, स्क्रीनशॉट घेऊ शकते आणि इतर ॲप्लिकेशन्सवर लक्ष ठेवू शकते</b>. त्याला इंटरनेटचाही प्रवेश आहे, म्हणजे ते तुमचा डेटा बाहेरील पक्षांना पाठवू शकते.\n"
+"\n"
+"हे ॲप मालकी हक्काचे असल्याने, ते या परवानग्यांसह काय करते याची तपासणी करता येत नाही."
+
+msgid "_Install Anyway"
+msgstr "तरीही _इंस्टॉल करा"
+
+msgid "Failed to load transaction dialog"
+msgstr "ट्रान्झॅक्शन डायलॉग लोड करता आला नाही"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "%.02f सेकंदांत पूर्ण झाले"
+
+msgid "App Add-On"
+msgstr "ॲप ॲड-ऑन"
+
+msgid "Runtime"
+msgstr "रनटाइम"
+
+msgid "In Queue"
+msgstr "रांगेत"
+
+msgid "Finishing Up"
+msgstr "पूर्ण करत आहे"
+
+msgid "Done"
+msgstr "पूर्ण झाले"
+
+msgid "Cancelled"
+msgstr "रद्द केले"
+
+msgid "Error"
+msgstr "त्रुटी"
+
+msgid "Cancel Transaction"
+msgstr "ट्रान्झॅक्शन रद्द करा"
+
+msgid "Show Details"
+msgstr "तपशील दाखवा"
+
+msgid "Show Error Info"
+msgstr "त्रुटीची माहिती दाखवा"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s जागा मोकळी झाली"
+
+msgid "Transaction Error"
+msgstr "ट्रान्झॅक्शन त्रुटी"
+
+msgid "Pending"
+msgstr "प्रलंबित"
+
+msgid "Installed Updates"
+msgstr "इंस्टॉल केलेले अपडेट्स"
+
+msgid "Release Notes"
+msgstr "प्रकाशन टिपा"
+
+msgid "No Release Info"
+msgstr "प्रकाशनाची माहिती नाही"
+
+msgid "_Update All"
+msgstr "सर्व _अपडेट करा"
+
+msgid "This update requests new permissions"
+msgstr "हे अपडेट नवीन परवानग्या मागते"
+
+msgid "Manage Leftover User Data"
+msgstr "उरलेला वापरकर्ता डेटा व्यवस्थापित करा"
+
+msgid "No Leftover User Data Found"
+msgstr "उरलेला वापरकर्ता डेटा आढळला नाही"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "काढून टाकलेल्या ॲप्सनी मागे ठेवलेला वैयक्तिक डेटा येथे दिसेल"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "%u ॲपचा कचऱ्यात टाकलेला वापरकर्ता डेटा"
+msgstr[1] "%u ॲप्सचा कचऱ्यात टाकलेला वापरकर्ता डेटा"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "%s चा कचऱ्यात टाकलेला वापरकर्ता डेटा"
+
+msgid "Open User Data Folder"
+msgstr "वापरकर्ता डेटा फोल्डर उघडा"
+
+msgid "Trash User Data"
+msgstr "वापरकर्ता डेटा कचऱ्यात टाका"
+
+msgid "Refreshing"
+msgstr "रिफ्रेश करत आहे"
+
+msgid "Curated"
+msgstr "निवडक"
+
+msgid "Explore"
+msgstr "एक्सप्लोर करा"
+
+msgid "Library"
+msgstr "लायब्ररी"
+
+msgid "Search"
+msgstr "शोधा"
+
+msgid "Main Menu"
+msgstr "मुख्य मेनू"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "तुम्ही Bazaar ची नवीन आवृत्ती वापरत आहात!"
+
+msgid "See What's New"
+msgstr "नवीन काय आहे ते पहा"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "तुमच्याकडे नेटवर्क कनेक्शन आहे, परंतु तुम्ही Flathub ची कॅशे केलेली आवृत्ती पाहत आहात"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "नेटवर्क कनेक्शन मीटर्ड आहे — स्वयंचलित रिफ्रेश बंद केले आहे"
+
+msgid "_Donate to Bazaar"
+msgstr "Bazaar साठी _देणगी द्या"
+
+msgid "_Refresh"
+msgstr "_रिफ्रेश करा"
+
+msgid "_Login With Flathub"
+msgstr "Flathub सह _लॉग इन करा"
+
+msgid "_Manage Leftover User Data"
+msgstr "उरलेला वापरकर्ता डेटा _व्यवस्थापित करा"
+
+msgid "Manage R_emotes"
+msgstr "रिमोट _व्यवस्थापित करा"
+
+msgid "_Preferences"
+msgstr "_प्राधान्ये"
+
+msgid "_Keyboard Shortcuts"
+msgstr "_कीबोर्ड शॉर्टकट"
+
+msgid "_About Bazaar"
+msgstr "Bazaar _विषयी"
+
+msgid "_Quit Bazaar"
+msgstr "Bazaar मधून _बाहेर पडा"
+
+msgid "Log Out"
+msgstr "लॉग आउट करा"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "ॲप्लिकेशन सुरू करता आले नाही"
+
+msgid "Could not open link"
+msgstr "दुवा उघडता आला नाही"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "तुम्ही Bazaar मधून Bazaar काढून टाकू शकत नाही!"
+
+msgid "Can't do that right now!"
+msgstr "हे सध्या करता येत नाही!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u इंस्टॉल"
+msgstr[1] "%s, %'u इंस्टॉल्स"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "%s मधून सर्वाधिक इंस्टॉल"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "गेल्या महिन्यात %d डाउनलोड"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s रनटाइम"
+
+msgid "Size information unavailable"
+msgstr "आकाराची माहिती उपलब्ध नाही"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "%s चा डाउनलोड आकार"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "%s चा इंस्टॉल केलेला आकार"
+
+msgid "All Ages"
+msgstr "सर्व वयोगट"
+
+msgid "Age rating information unavailable"
+msgstr "वय मानांकनाची माहिती उपलब्ध नाही"
+
+msgid "Suitable for all ages"
+msgstr "सर्व वयोगटांसाठी योग्य"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "%d आणि त्यावरील वयोगटासाठी योग्य"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "%s परवान्याअंतर्गत मुक्त सॉफ्टवेअर"
+
+msgid "Free software"
+msgstr "मुक्त सॉफ्टवेअर"
+
+msgid "Proprietary Software"
+msgstr "मालकी हक्काचे सॉफ्टवेअर"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "विशेष परवाना: %s"
+
+msgid "Free Software"
+msgstr "मुक्त सॉफ्टवेअर"
+
+msgid "Adaptive"
+msgstr "अनुकूलनशील"
+
+msgid "Desktop Only"
+msgstr "फक्त डेस्कटॉपसाठी"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "डेस्कटॉप, टॅबलेट आणि फोनवर चालते"
+
+msgid "May not work on mobile devices"
+msgstr "मोबाइल डिव्हाइसवर चालणार नाही"
+
+msgid "Low Risk"
+msgstr "कमी जोखीम"
+
+msgid "Medium Risk"
+msgstr "मध्यम जोखीम"
+
+msgid "High Risk"
+msgstr "उच्च जोखीम"
+
+msgid "Unknown Permissions"
+msgstr "अज्ञात परवानग्या"
+
+msgid "Permissions are missing for this app."
+msgstr "या ॲपसाठी परवानग्या उपलब्ध नाहीत."
+
+msgid "No Permissions"
+msgstr "कोणत्याही परवानग्या नाहीत"
+
+msgid "App is fully sandboxed"
+msgstr "ॲप पूर्णपणे सँडबॉक्समध्ये आहे"
+
+msgid "Network Access"
+msgstr "नेटवर्क प्रवेश"
+
+msgid "Can access the internet"
+msgstr "इंटरनेटचा वापर करू शकते"
+
+msgid "No Network Access"
+msgstr "नेटवर्क प्रवेश नाही"
+
+msgid "Cannot access the internet"
+msgstr "इंटरनेटचा वापर करू शकत नाही"
+
+msgid "User Device Access"
+msgstr "वापरकर्ता डिव्हाइस प्रवेश"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "वेबकॅम किंवा गेमिंग कंट्रोलर यांसारख्या डिव्हाइसचा वापर करू शकते"
+
+msgid "No User Device Access"
+msgstr "वापरकर्ता डिव्हाइस प्रवेश नाही"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "वेबकॅम किंवा गेमिंग कंट्रोलर यांसारख्या डिव्हाइसचा वापर करू शकत नाही"
+
+msgid "Input Device Access"
+msgstr "इनपुट डिव्हाइस प्रवेश"
+
+msgid "Can access input devices"
+msgstr "इनपुट डिव्हाइसचा वापर करू शकते"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "मायक्रोफोन प्रवेश आणि ऑडिओ प्लेबॅक"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "परवानगी न विचारता मायक्रोफोनद्वारे ऐकू शकते आणि ऑडिओ प्ले करू शकते"
+
+msgid "System Device Access"
+msgstr "सिस्टम डिव्हाइस प्रवेश"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "उच्च परवानग्या आवश्यक असलेल्या सिस्टम डिव्हाइसचा वापर करू शकते"
+
+msgid "Screen Contents Access"
+msgstr "स्क्रीनवरील मजकूर प्रवेश"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "स्क्रीनवरील किंवा इतर विंडोमधील मजकूर पाहू शकते"
+
+msgid "Legacy Windowing System"
+msgstr "जुनी विंडोइंग सिस्टम"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "नेहमी जुनी विंडोइंग सिस्टम (X11) वापरते"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "अनियंत्रित परवानग्या मिळवू शकते"
+
+msgid "User Settings"
+msgstr "वापरकर्ता सेटिंग्ज"
+
+msgid "Can access and change user settings"
+msgstr "वापरकर्ता सेटिंग्ज पाहू आणि बदलू शकते"
+
+msgid "Full File System Read/Write Access"
+msgstr "संपूर्ण फाइल सिस्टम वाचन/लेखन प्रवेश"
+
+msgid "Can read and write all data on the file system"
+msgstr "फाइल सिस्टमवरील सर्व डेटा वाचू आणि लिहू शकते"
+
+msgid "Home Folder Read/Write Access"
+msgstr "होम फोल्डर वाचन/लेखन प्रवेश"
+
+msgid "Can read and write all data in your home directory"
+msgstr "तुमच्या होम डिरेक्टरीतील सर्व डेटा वाचू आणि लिहू शकते"
+
+msgid "Full File System Read Access"
+msgstr "संपूर्ण फाइल सिस्टम वाचन प्रवेश"
+
+msgid "Can read all data on the file system"
+msgstr "फाइल सिस्टमवरील सर्व डेटा वाचू शकते"
+
+msgid "Home Folder Read Access"
+msgstr "होम फोल्डर वाचन प्रवेश"
+
+msgid "Can read all data in your home directory"
+msgstr "तुमच्या होम डिरेक्टरीतील सर्व डेटा वाचू शकते"
+
+msgid "Download Folder Read/Write Access"
+msgstr "डाउनलोड फोल्डर वाचन/लेखन प्रवेश"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "तुमच्या डाउनलोड डिरेक्टरीतील सर्व डेटा वाचू आणि लिहू शकते"
+
+msgid "Download Folder Read Access"
+msgstr "डाउनलोड फोल्डर वाचन प्रवेश"
+
+msgid "Can read all data in your downloads directory"
+msgstr "तुमच्या डाउनलोड डिरेक्टरीतील सर्व डेटा वाचू शकते"
+
+msgid "Can read and write all data in the directory"
+msgstr "डिरेक्टरीतील सर्व डेटा वाचू आणि लिहू शकते"
+
+msgid "Can read all data in the directory"
+msgstr "डिरेक्टरीतील सर्व डेटा वाचू शकते"
+
+msgid "No File System Access"
+msgstr "फाइल सिस्टम प्रवेश नाही"
+
+msgid "Cannot access the file system at all"
+msgstr "फाइल सिस्टमचा अजिबात वापर करू शकत नाही"
+
+msgid "Uses System Services"
+msgstr "सिस्टम सेवा वापरते"
+
+msgid "Can request data from non-portal system services"
+msgstr "पोर्टल नसलेल्या सिस्टम सेवांकडून डेटा मागवू शकते"
+
+msgid "Uses Session Services"
+msgstr "सत्र सेवा वापरते"
+
+msgid "Can request data from non-portal session services"
+msgstr "पोर्टल नसलेल्या सत्र सेवांकडून डेटा मागवू शकते"
+
+msgid "No Service Access"
+msgstr "सेवा प्रवेश नाही"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "पोर्टल नसलेल्या सत्र किंवा सिस्टम सेवांचा अजिबात वापर करू शकत नाही"
+
+msgid "Verified App Developer"
+msgstr "सत्यापित ॲप डेव्हलपर"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "या ॲपचा डेव्हलपर तो सांगतो तोच असल्याचे सत्यापित केले आहे"
+
+msgid "Proprietary Code"
+msgstr "मालकी हक्काचा कोड"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "सोर्स कोड सार्वजनिक नाही, त्यामुळे त्याची स्वतंत्रपणे तपासणी करता येत नाही आणि तो असुरक्षित असू शकतो"
+
+msgid "Auditable Code"
+msgstr "तपासता येण्याजोगा कोड"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "सोर्स कोड सार्वजनिक आहे आणि त्याची स्वतंत्रपणे तपासणी करता येते, ज्यामुळे ॲप सुरक्षित असण्याची शक्यता वाढते"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "%s सिस्टम सेवा वापरा"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "%s सत्र सेवा वापरा"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "%s सेवा वापरा"
+
+msgid "Can see the non-portal service"
+msgstr "पोर्टल नसलेली सेवा पाहू शकते"
+
+msgid "Can talk to the non-portal service"
+msgstr "पोर्टल नसलेल्या सेवेशी बोलू शकते"
+
+msgid "Can own the non-portal service"
+msgstr "पोर्टल नसलेल्या सेवेची मालक होऊ शकते"
+
+msgid "Global Menu Integration"
+msgstr "ग्लोबल मेनू एकत्रीकरण"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "आपले मेनू ग्लोबल मेनू बारमध्ये दाखवू शकते"
+
+msgid "KDE Settings Integration"
+msgstr "KDE सेटिंग्ज एकत्रीकरण"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "KDE डेस्कटॉप सेटिंग्ज बदलल्याचे ओळखू शकते"
+
+msgid "KDE Global Settings"
+msgstr "KDE ग्लोबल सेटिंग्ज"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "फॉन्ट आणि रंग यांसारख्या KDE डेस्कटॉप पसंती वाचू शकते"
+
+msgid "Secret Storage Service"
+msgstr "गुप्त संचयन सेवा"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "सिस्टम कीरिंग वापरून स्वतःचे पासवर्ड साठवू आणि मिळवू शकते"
+
+msgid "Desktop Notifications Service"
+msgstr "डेस्कटॉप सूचना सेवा"
+
+msgid "Can send desktop notifications"
+msgstr "डेस्कटॉप सूचना पाठवू शकते"
+
+msgid "System Tray Integration"
+msgstr "सिस्टम ट्रे एकत्रीकरण"
+
+msgid "Can display an icon in the system tray"
+msgstr "सिस्टम ट्रेमध्ये आयकॉन दाखवू शकते"
+
+msgid "KDE Connect Integration"
+msgstr "KDE Connect एकत्रीकरण"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "KDE Connect द्वारे जोडलेल्या डिव्हाइसशी संवाद साधू शकते"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "नेव्हिगेशन"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "एक्सप्लोर पृष्ठ उघडा"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "लायब्ररी पृष्ठ उघडा"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "शोध पृष्ठ उघडा"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "रिमोट"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "रिमोट सिंक करा"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "सामान्य"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "प्राधान्ये उघडा"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "शॉर्टकट दाखवा"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "विंडो बंद करा"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Bazaar मधून बाहेर पडा"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s इंस्टॉल झाले"
+
+msgid "The app is ready to be used"
+msgstr "ॲप वापरण्यासाठी तयार आहे"
+
+msgid "Updates Are Out of Date"
+msgstr "अपडेट्स जुने झाले आहेत"
+
+msgid "Please check for available updates"
+msgstr "कृपया उपलब्ध अपडेट्स तपासा"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u ॲप अपडेट केले"
+msgstr[1] "%u ॲप्स अपडेट केली"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s अपडेट केले आहे."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s आणि %s अपडेट केले आहेत."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "यात %s, %s आणि %s समाविष्ट आहेत."

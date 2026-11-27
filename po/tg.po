@@ -7393,6 +7393,21 @@ msgstr ""
 msgid "{network} is saved as {place}."
 msgstr "{network} ҳамчун «{place}» захира шуд."
 
+#. Translators: a size in gigabytes ("1.2 GB"); {n} is the number.
+#, python-brace-format
+msgid "{n} GB"
+msgstr "{n} ГБ"
+
+#. Translators: a size in megabytes ("450 MB"); {n} is the number.
+#, python-brace-format
+msgid "{n} MB"
+msgstr "{n} МБ"
+
+#. Translators: sizes of a disk; {n} is the number.
+#, python-brace-format
+msgid "{n} TB"
+msgstr "{n} ТБ"
+
 #, python-brace-format
 msgid "{n} second so far"
 msgid_plural "{n} seconds so far"
@@ -8552,3 +8567,247 @@ msgstr "навиштани нотаҳои мусиқӣ"
 
 msgid "your calendar"
 msgstr "тақвими шумо"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Finish translating every language"
+msgstr "Анҷом додани тарҷумаи ҳамаи забонҳо"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show dates in each language's own order"
+msgstr "Нишон додани санаҳо бо тартиби хоси ҳар забон"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep gettext in the image"
+msgstr "Нигоҳ доштани gettext дар тасвир"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add translations for 68 languages"
+msgstr "Илова кардани тарҷума ба 68 забон"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Make every screen's text translatable"
+msgstr "Қобили тарҷума кардани матни ҳар экран"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Let apps and ports in per place; Work lets nothing in"
+msgstr "Роҳ додани барномаҳо ва портҳо барои ҳар ҷой; «Кор» ҳеҷ чизро роҳ намедиҳад"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add light and dark schedule, slideshow and fonts"
+msgstr "Илова кардани ҷадвали равшан ва торик, намоиши слайдҳо ва шрифтҳо"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Rename System Tools to EvenKeelOS Wheelhouse"
+msgstr "Иваз кардани номи «Абзорҳои система» ба EvenKeelOS Wheelhouse"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show NVIDIA graphics as fine in the fit check"
+msgstr "Нишон додани графикаи NVIDIA ҳамчун дуруст дар санҷиши мувофиқат"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Load the file systems before installing"
+msgstr "Бор кардани системаҳои файлӣ пеш аз насб"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask before an automatic restart"
+msgstr "Пурсидан пеш аз бозоғозии худкор"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Mark every new version for trial"
+msgstr "Нишон кардани ҳар версияи нав барои озмоиш"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Roll back an update when something that worked breaks"
+msgstr "Бозгардонии навсозӣ, вақте ки чизи кордошта вайрон мешавад"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start every build in a virtual machine before publishing"
+msgstr "Оғоз кардани ҳар сохт дар мошини виртуалӣ пеш аз интишор"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recommend 8 GB of memory, with no minimum"
+msgstr "Тавсияи 8 GB хотира, бе ҳадди ақал"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Check the computer before installing from the live USB"
+msgstr "Санҷидани компютер пеш аз насб аз USB-и зинда"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ask Windows or Linux user in the installer"
+msgstr "Пурсидан дар насбкунанда: корбари Windows ё Linux"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add System Tools to the logo menu"
+msgstr "Илова кардани «Абзорҳои система» ба менюи логотип"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add six more topics to the EvenKeelOS guide"
+msgstr "Илова кардани шаш мавзӯи дигар ба дастури EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Turn New to Linux into the EvenKeelOS guide"
+msgstr "Табдил додани «Нав дар Linux» ба дастури EvenKeelOS"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add the New to Linux guide in System Tools and at login"
+msgstr "Илова кардани дастури «Нав дар Linux» дар «Абзорҳои система» ва ҳангоми воридшавӣ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Boot options: common fixes and your own settings"
+msgstr "Илова кардани «Имконоти оғози кор»: ислоҳҳои маъмул ва танзимоти худатон"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the Shared folders build check: no home folders yet"
+msgstr "Ислоҳи санҷиши сохти «Ҷузвдонҳои муштарак»: ҳанӯз ҷузвдони хонагӣ нест"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Shared folders: share home folders on Home networks"
+msgstr "Илова кардани «Ҷузвдонҳои муштарак»: муштарак кардани ҷузвдонҳои хонагӣ дар шабакаҳои хонагӣ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Network safety: Home, Work or Public place"
+msgstr "Илова кардани «Амнияти шабака»: хона, кор ё ҷои ҷамъиятӣ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize printer drivers in any folder"
+msgstr "Шиносоии драйверҳои принтер дар ҳама гуна ҷузвдон"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Show tool windows inside System Tools"
+msgstr "Нишон додани тирезаҳои абзор дар дохили «Абзорҳои система»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open an issue when the image build fails"
+msgstr "Кушодани масъала ҳангоми ноком шудани сохти тасвир"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Lock outside packages and the ISO tool to exact versions"
+msgstr "Қуфл кардани бастаҳои беруна ва абзори ISO ба версияҳои дақиқ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Name tool windows after the tool, shorter test list"
+msgstr "Номгузории тирезаҳои абзор аз рӯи абзор, рӯйхати кӯтоҳтари озмоишҳо"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Repair deleted system settings and alert on certificates"
+msgstr "Таъмири танзимоти ҳазфшудаи система ва огоҳӣ дар бораи сертификатҳо"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put every tool in one System Tools window"
+msgstr "Ҷойгир кардани ҳамаи абзорҳо дар як тирезаи «Абзорҳои система»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Leave nothing behind when a VPN is removed"
+msgstr "Чизе боқӣ нагузоштан ҳангоми тоза кардани VPN"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Get a VPN, with VPNs that keep updating"
+msgstr "Илова кардани «Гирифтани VPN», бо VPN-ҳое, ки навсозӣ мешаванд"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Give Zoom meetings their own guide"
+msgstr "Додани дастури алоҳида ба вохӯриҳои Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Open Zoom meetings in Chrome, in Zoom's web version"
+msgstr "Кушодани вохӯриҳои Zoom дар Chrome, дар нусхаи веби Zoom"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Stop ArtCraft installs from breaking Flathub installs"
+msgstr "Пешгирии вайрон кардани насбҳои Flathub аз насбҳои ArtCraft"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Recognize installers by their usual file name"
+msgstr "Шиносоии насбкунандаҳо аз рӯи номи маъмулии файлашон"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Linux replacements for Windows programs"
+msgstr "Пешниҳоди ҷойгузинҳои Linux барои барномаҳои Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix box setup: distrobox mounts read-only folders wrong"
+msgstr "Ислоҳи танзими қуттӣ: distrobox ҷузвдонҳои танҳо барои хондан-ро нодуруст васл мекунад"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer Fedora or Ubuntu versions of Windows programs"
+msgstr "Пешниҳоди версияҳои Fedora ё Ubuntu барои барномаҳои Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Offer the Linux version when a Windows program is opened"
+msgstr "Пешниҳоди версияи Linux ҳангоми кушодани барномаи Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Ship one shim, so firmware adds no extra Fedora entry"
+msgstr "Расонидани як shim, то сахтафзор ворудаи иловагии Fedora илова накунад"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Put Fedora's firewall zone back"
+msgstr "Баргардонидани минтақаи девори оташи Fedora"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Harden root helpers, firewall and no-password updates"
+msgstr "Мустаҳкам кардани ёридиҳандаҳои root, девори оташ ва навсозиҳо бе гузарвожа"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New defaults: wallpapers, accent folders, lock screen"
+msgstr "Пешфарзҳои нав: тасвирҳои замина, ҷузвдонҳои ранги таъкидӣ, экрани қулф"
+
+#. Translators: a change in an update, listed under What is new
+msgid "New default: teal accent color, also on the login screen"
+msgstr "Пешфарзи нав: ранги таъкидии фирӯзагӣ, дар экрани воридшавӣ низ"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix rollback note, login-loop and stuck tests"
+msgstr "Ислоҳи ёддошти бозгашт, гардиши воридшавӣ ва озмоишҳои мондашуда"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix freeze rollback and cut retries to 2"
+msgstr "Ислоҳи бозгашт ҳангоми ях задан ва кам кардани кӯшишҳо ба 2"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix the automatic rollback tests"
+msgstr "Ислоҳи озмоишҳои бозгашти худкор"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Real failure tests for automatic rollback"
+msgstr "Озмоишҳои воқеии нокомӣ барои бозгашти худкор"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add automatic rollback with greenboot"
+msgstr "Илова кардани бозгашти худкор бо greenboot"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Start the Windows layout on the desktop, plus small fixes"
+msgstr "Оғоз кардани тарҳи Windows дар мизи корӣ, ва ислоҳҳои хурд"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Pause automatic updates for 3 days after an undo"
+msgstr "Таваққуфи навсозиҳои худкор барои 3 рӯз баъд аз ботил кардан"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add a Desktop layout step to the installer"
+msgstr "Илова кардани марҳилаи «Тарҳи мизи корӣ» ба насбкунанда"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add Desktop layout to System Tools"
+msgstr "Илова кардани «Тарҳи мизи корӣ» ба «Абзорҳои система»"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Keep power-mode switches from waiting on updates"
+msgstr "Интизор нашудани гузариши ҳолати қувват ба навсозиҳо"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Add an optional Windows-style layout"
+msgstr "Илова кардани тарҳи ихтиёрии услуби Windows"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Fix Fedora 45 presets and container policy paths"
+msgstr "Ислоҳи пешсозиҳои Fedora 45 ва роҳҳои сиёсати контейнер"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Read download sources in Fedora 45's new folder"
+msgstr "Хондани манбаъҳои боргирӣ дар ҷузвдони нави Fedora 45"
+
+#. Translators: a change in an update, listed under What is new
+msgid "Move to Fedora 45"
+msgstr "Гузариш ба Fedora 45"

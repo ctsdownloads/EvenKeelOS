@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Open in Ghostty"
+msgstr "Öppna i Ghostty"
+
+msgid "Find…"
+msgstr "Sök…"
+
+msgid "Previous Match"
+msgstr "Föregående träff"
+
+msgid "Next Match"
+msgstr "Nästa träff"
+
+msgid "Close"
+msgstr "Stäng"
+
+msgid "Oh, no."
+msgstr "Åh nej."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "Det gick inte att skaffa en OpenGL-kontext för rendering."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "Den här terminalen är i skrivskyddat läge. Du kan fortfarande visa, markera och rulla i innehållet, men inga indatahändelser skickas till det program som körs."
+
+msgid "Read-only"
+msgstr "Skrivskyddad"
+
+msgid "Copy"
+msgstr "Kopiera"
+
+msgid "Paste"
+msgstr "Klistra in"
+
+msgid "Notify on Next Command Finish"
+msgstr "Avisera när nästa kommando är klart"
+
+msgid "Clear"
+msgstr "Töm"
+
+msgid "Reset"
+msgstr "Återställ"
+
+msgid "Split"
+msgstr "Dela"
+
+msgid "Change Title…"
+msgstr "Ändra titel…"
+
+msgid "Split Up"
+msgstr "Dela uppåt"
+
+msgid "Split Down"
+msgstr "Dela nedåt"
+
+msgid "Split Left"
+msgstr "Dela åt vänster"
+
+msgid "Split Right"
+msgstr "Dela åt höger"
+
+msgid "Close Split"
+msgstr "Stäng delning"
+
+msgid "Tab"
+msgstr "Flik"
+
+msgid "Change Tab Title…"
+msgstr "Ändra fliktitel…"
+
+msgid "New Tab"
+msgstr "Ny flik"
+
+msgid "Close Tab"
+msgstr "Stäng flik"
+
+msgid "Window"
+msgstr "Fönster"
+
+msgid "Change Window Title…"
+msgstr "Ändra fönstertitel…"
+
+msgid "New Window"
+msgstr "Nytt fönster"
+
+msgid "Close Window"
+msgstr "Stäng fönster"
+
+msgid "Config"
+msgstr "Konfiguration"
+
+msgid "Open Configuration in OS Editor"
+msgstr "Öppna konfigurationen i systemets redigerare"
+
+msgid "Open Configuration in New Window"
+msgstr "Öppna konfigurationen i nytt fönster"
+
+msgid "Reload Configuration"
+msgstr "Läs in konfigurationen igen"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ Du kör ett felsökningsbygge av Ghostty! Prestandan kommer att vara försämrad."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: Terminalinspektör"
+
+msgid "New Split"
+msgstr "Ny delning"
+
+msgid "View Open Tabs"
+msgstr "Visa öppna flikar"
+
+msgid "Main Menu"
+msgstr "Huvudmeny"
+
+msgid "Command Palette"
+msgstr "Kommandopalett"
+
+msgid "Terminal Inspector"
+msgstr "Terminalinspektör"
+
+msgid "About Ghostty"
+msgstr "Om Ghostty"
+
+msgid "Quit"
+msgstr "Avsluta"
+
+msgid "Authorize Clipboard Access"
+msgstr "Tillåt åtkomst till urklipp"
+
+msgid "Deny"
+msgstr "Neka"
+
+msgid "Allow"
+msgstr "Tillåt"
+
+msgid "Remember choice for this split"
+msgstr "Kom ihåg valet för den här delningen"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "Läs in konfigurationen igen för att visa den här frågan igen"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Execute a command…"
+msgstr "Kör ett kommando…"
+
+msgid "Configuration Errors"
+msgstr "Konfigurationsfel"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "Ett eller flera konfigurationsfel hittades. Granska felen nedan och läs antingen in konfigurationen igen eller ignorera felen."
+
+msgid "Ignore"
+msgstr "Ignorera"
+
+msgid "Leave blank to restore the default title."
+msgstr "Lämna tomt för att återställa standardtiteln."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "The keybind was revoked by the system."
+msgstr "Tangentbindningen återkallades av systemet."
+
+msgid "The keybind was denied by the system."
+msgstr "Tangentbindningen nekades av systemet."
+
+msgid "Global keybind unavailable"
+msgstr "Global tangentbindning är inte tillgänglig"
+
+msgid "Export Terminal IO Events"
+msgstr "Exportera terminalens IO-händelser"
+
+msgid "Export"
+msgstr "Exportera"
+
+msgid "Editing configuration file"
+msgstr "Redigerar konfigurationsfilen"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "Ett program försöker skriva till urklipp. Det aktuella innehållet i urklipp visas nedan."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "Ett program försöker läsa från urklipp. Det aktuella innehållet i urklipp visas nedan."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "Varning: Potentiellt osäker inklistring"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "Att klistra in den här texten i terminalen kan vara farligt eftersom det ser ut som att vissa kommandon kan komma att köras."
+
+msgid "Quit Ghostty?"
+msgstr "Avsluta Ghostty?"
+
+msgid "Close Tab?"
+msgstr "Stäng flik?"
+
+msgid "Close Window?"
+msgstr "Stäng fönster?"
+
+msgid "Close Split?"
+msgstr "Stäng delning?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "Alla terminalsessioner kommer att avslutas."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "Alla terminalsessioner i den här fliken kommer att avslutas."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "Alla terminalsessioner i det här fönstret kommer att avslutas."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "Den process som körs i den här delningen kommer att avslutas."
+
+msgid "Command Finished"
+msgstr "Kommandot är klart"
+
+msgid "Command Succeeded"
+msgstr "Kommandot lyckades"
+
+msgid "Command Failed"
+msgstr "Kommandot misslyckades"
+
+msgid "Change Terminal Title"
+msgstr "Ändra terminalens titel"
+
+msgid "Change Tab Title"
+msgstr "Ändra fliktitel"
+
+msgid "Change Window Title"
+msgstr "Ändra fönstertitel"
+
+msgid "Reloaded the configuration"
+msgstr "Konfigurationen lästes in igen"
+
+msgid "Copied to clipboard"
+msgstr "Kopierat till urklipp"
+
+msgid "Cleared clipboard"
+msgstr "Urklipp har tömts"
+
+msgid "Ghostty Developers"
+msgstr "Ghostty-utvecklarna"
+
+msgid "Reset Terminal"
+msgstr "Återställ terminal"
+
+msgid "Reset the terminal to a clean state."
+msgstr "Återställ terminalen till ett rent tillstånd."
+
+msgid "Copy to Clipboard"
+msgstr "Kopiera till urklipp"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "Kopiera den markerade texten till urklipp i både oformaterat och formaterat format."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "Kopiera markering som oformaterad text till urklipp"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "Kopiera den markerade texten som oformaterad text till urklipp."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "Kopiera markering som ANSI-sekvenser till urklipp"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "Kopiera den markerade texten som ANSI-escapesekvenser till urklipp."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "Kopiera markering som HTML till urklipp"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "Kopiera den markerade texten som HTML till urklipp."
+
+msgid "Copy URL to Clipboard"
+msgstr "Kopiera URL till urklipp"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "Kopiera URL:en under markören till urklipp."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "Kopiera terminalens titel till urklipp"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "Kopiera terminalens titel till urklipp. Om terminalens titel inte är angiven har detta ingen effekt."
+
+msgid "Paste from Clipboard"
+msgstr "Klistra in från urklipp"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "Klistra in innehållet i det huvudsakliga urklippet."
+
+msgid "Paste from Selection"
+msgstr "Klistra in från markering"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "Klistra in innehållet i markeringsurklippet."
+
+msgid "Start Search"
+msgstr "Starta sökning"
+
+msgid "Start a search if one isn't already active."
+msgstr "Starta en sökning om ingen redan är aktiv."
+
+msgid "Search Selection"
+msgstr "Sök markering"
+
+msgid "Start a search for the current text selection."
+msgstr "Starta en sökning efter den aktuella textmarkeringen."
+
+msgid "End Search"
+msgstr "Avsluta sökning"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "Avsluta den aktuella sökningen, om någon, och dölj alla grafiska element."
+
+msgid "Next Search Result"
+msgstr "Nästa sökresultat"
+
+msgid "Navigate to the next search result, if any."
+msgstr "Gå till nästa sökresultat, om det finns något."
+
+msgid "Previous Search Result"
+msgstr "Föregående sökresultat"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "Gå till föregående sökresultat, om det finns något."
+
+msgid "Increase Font Size"
+msgstr "Öka teckenstorleken"
+
+msgid "Increase the font size by 1 point."
+msgstr "Öka teckenstorleken med 1 punkt."
+
+msgid "Decrease Font Size"
+msgstr "Minska teckenstorleken"
+
+msgid "Decrease the font size by 1 point."
+msgstr "Minska teckenstorleken med 1 punkt."
+
+msgid "Reset Font Size"
+msgstr "Återställ teckenstorleken"
+
+msgid "Reset the font size to the default."
+msgstr "Återställ teckenstorleken till standard."
+
+msgid "Clear Screen"
+msgstr "Töm skärmen"
+
+msgid "Clear the screen and scrollback."
+msgstr "Töm skärmen och rullningshistoriken."
+
+msgid "Select All"
+msgstr "Markera allt"
+
+msgid "Select all text on the screen."
+msgstr "Markera all text på skärmen."
+
+msgid "Scroll to Top"
+msgstr "Rulla till toppen"
+
+msgid "Scroll to the top of the screen."
+msgstr "Rulla till skärmens överkant."
+
+msgid "Scroll to Bottom"
+msgstr "Rulla till botten"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "Rulla till skärmens nederkant."
+
+msgid "Scroll to Selection"
+msgstr "Rulla till markering"
+
+msgid "Scroll to the selected text."
+msgstr "Rulla till den markerade texten."
+
+msgid "Scroll Page Up"
+msgstr "Rulla en sida upp"
+
+msgid "Scroll the screen up by a page."
+msgstr "Rulla skärmen upp en sida."
+
+msgid "Scroll Page Down"
+msgstr "Rulla en sida ned"
+
+msgid "Scroll the screen down by a page."
+msgstr "Rulla skärmen ned en sida."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "Kopiera skärmen till en temporär fil och kopiera sökvägen"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "Kopiera skärmens innehåll till en temporär fil och kopiera sökvägen till urklipp."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "Kopiera skärmen till en temporär fil och klistra in sökvägen"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "Kopiera skärmens innehåll till en temporär fil och klistra in sökvägen till filen."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "Kopiera skärmen till en temporär fil och öppna"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "Kopiera skärmens innehåll till en temporär fil och öppna den."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "Kopiera skärmen som HTML till en temporär fil och kopiera sökvägen"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Kopiera skärmens innehåll som HTML till en temporär fil och kopiera sökvägen till urklipp."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "Kopiera skärmen som HTML till en temporär fil och klistra in sökvägen"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "Kopiera skärmens innehåll som HTML till en temporär fil och klistra in sökvägen till filen."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "Kopiera skärmen som HTML till en temporär fil och öppna"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "Kopiera skärmens innehåll som HTML till en temporär fil och öppna den."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Kopiera skärmen som ANSI-sekvenser till en temporär fil och kopiera sökvägen"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Kopiera skärmens innehåll som ANSI-escapesekvenser till en temporär fil och kopiera sökvägen till urklipp."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Kopiera skärmen som ANSI-sekvenser till en temporär fil och klistra in sökvägen"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Kopiera skärmens innehåll som ANSI-escapesekvenser till en temporär fil och klistra in sökvägen till filen."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "Kopiera skärmen som ANSI-sekvenser till en temporär fil och öppna"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Kopiera skärmens innehåll som ANSI-escapesekvenser till en temporär fil och öppna den."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "Kopiera markeringen till en temporär fil och kopiera sökvägen"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "Kopiera markeringens innehåll till en temporär fil och kopiera sökvägen till urklipp."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "Kopiera markeringen till en temporär fil och klistra in sökvägen"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "Kopiera markeringens innehåll till en temporär fil och klistra in sökvägen till filen."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "Kopiera markeringen till en temporär fil och öppna"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "Kopiera markeringens innehåll till en temporär fil och öppna den."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "Kopiera markeringen som HTML till en temporär fil och kopiera sökvägen"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Kopiera markeringens innehåll som HTML till en temporär fil och kopiera sökvägen till urklipp."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "Kopiera markeringen som HTML till en temporär fil och klistra in sökvägen"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "Kopiera markeringens innehåll som HTML till en temporär fil och klistra in sökvägen till filen."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "Kopiera markeringen som HTML till en temporär fil och öppna"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "Kopiera markeringens innehåll som HTML till en temporär fil och öppna den."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Kopiera markeringen som ANSI-sekvenser till en temporär fil och kopiera sökvägen"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Kopiera markeringens innehåll som ANSI-escapesekvenser till en temporär fil och kopiera sökvägen till urklipp."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Kopiera markeringen som ANSI-sekvenser till en temporär fil och klistra in sökvägen"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Kopiera markeringens innehåll som ANSI-escapesekvenser till en temporär fil och klistra in sökvägen till filen."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "Kopiera markeringen som ANSI-sekvenser till en temporär fil och öppna"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Kopiera markeringens innehåll som ANSI-escapesekvenser till en temporär fil och öppna den."
+
+msgid "Open a new window."
+msgstr "Öppna ett nytt fönster."
+
+msgid "Open a new tab."
+msgstr "Öppna en ny flik."
+
+msgid "Move Tab Left"
+msgstr "Flytta fliken åt vänster"
+
+msgid "Move the current tab to the left."
+msgstr "Flytta den aktuella fliken åt vänster."
+
+msgid "Move Tab Right"
+msgstr "Flytta fliken åt höger"
+
+msgid "Move the current tab to the right."
+msgstr "Flytta den aktuella fliken åt höger."
+
+msgid "Move Tab to New Window"
+msgstr "Flytta fliken till nytt fönster"
+
+msgid "Move the current tab to a new window."
+msgstr "Flytta den aktuella fliken till ett nytt fönster."
+
+msgid "Toggle Tab Overview"
+msgstr "Växla flikövervy"
+
+msgid "Toggle the tab overview."
+msgstr "Växla flikövervyn."
+
+msgid "Change Terminal Title…"
+msgstr "Ändra terminalens titel…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "Fråga efter en ny titel för den aktuella terminalen."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "Fråga efter en ny titel för den aktuella fliken."
+
+msgid "Split the terminal to the left."
+msgstr "Dela terminalen åt vänster."
+
+msgid "Split the terminal to the right."
+msgstr "Dela terminalen åt höger."
+
+msgid "Split the terminal up."
+msgstr "Dela terminalen uppåt."
+
+msgid "Split the terminal down."
+msgstr "Dela terminalen nedåt."
+
+msgid "Focus Split: Previous"
+msgstr "Fokusera delning: föregående"
+
+msgid "Focus the previous split, if any."
+msgstr "Fokusera föregående delning, om det finns någon."
+
+msgid "Focus Split: Next"
+msgstr "Fokusera delning: nästa"
+
+msgid "Focus the next split, if any."
+msgstr "Fokusera nästa delning, om det finns någon."
+
+msgid "Focus Split: Left"
+msgstr "Fokusera delning: vänster"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "Fokusera delningen till vänster, om den finns."
+
+msgid "Focus Split: Right"
+msgstr "Fokusera delning: höger"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "Fokusera delningen till höger, om den finns."
+
+msgid "Focus Split: Up"
+msgstr "Fokusera delning: upp"
+
+msgid "Focus the split above, if it exists."
+msgstr "Fokusera delningen ovanför, om den finns."
+
+msgid "Focus Split: Down"
+msgstr "Fokusera delning: ned"
+
+msgid "Focus the split below, if it exists."
+msgstr "Fokusera delningen nedanför, om den finns."
+
+msgid "Focus Window: Previous"
+msgstr "Fokusera fönster: föregående"
+
+msgid "Focus the previous window, if any."
+msgstr "Fokusera föregående fönster, om det finns något."
+
+msgid "Focus Window: Next"
+msgstr "Fokusera fönster: nästa"
+
+msgid "Focus the next window, if any."
+msgstr "Fokusera nästa fönster, om det finns något."
+
+msgid "Toggle Split Zoom"
+msgstr "Växla delningszoom"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "Växla zoomläget för den aktuella delningen."
+
+msgid "Toggle Read-Only Mode"
+msgstr "Växla skrivskyddat läge"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "Växla skrivskyddat läge för den aktuella ytan."
+
+msgid "Equalize Splits"
+msgstr "Jämna ut delningar"
+
+msgid "Equalize the size of all splits."
+msgstr "Jämna ut storleken på alla delningar."
+
+msgid "Reset Window Size"
+msgstr "Återställ fönsterstorlek"
+
+msgid "Reset the window size to the default."
+msgstr "Återställ fönsterstorleken till standard."
+
+msgid "Toggle Inspector"
+msgstr "Växla inspektör"
+
+msgid "Toggle the inspector."
+msgstr "Växla inspektören."
+
+msgid "Show the GTK Inspector"
+msgstr "Visa GTK-inspektören"
+
+msgid "Show the GTK inspector."
+msgstr "Visa GTK-inspektören."
+
+msgid "Show On-Screen Keyboard"
+msgstr "Visa skärmtangentbordet"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "Visa skärmtangentbordet om det finns."
+
+msgid "Open Config Using OS editor"
+msgstr "Öppna konfigurationen i systemets redigerare"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "Öppna konfigurationsfilen i systemets standardredigerare."
+
+msgid "Open Config in New Terminal Window"
+msgstr "Öppna konfigurationen i nytt terminalfönster"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "Öppna konfigurationsfilen i ett nytt fönster med $EDITOR eller $VISUAL."
+
+msgid "Reload Config"
+msgstr "Läs in konfigurationen igen"
+
+msgid "Reload the config file."
+msgstr "Läs in konfigurationsfilen igen."
+
+msgid "Close Terminal"
+msgstr "Stäng terminal"
+
+msgid "Close the current terminal."
+msgstr "Stäng den aktuella terminalen."
+
+msgid "Close the current tab."
+msgstr "Stäng den aktuella fliken."
+
+msgid "Close Other Tabs"
+msgstr "Stäng övriga flikar"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "Stäng alla flikar i det här fönstret utom den aktuella."
+
+msgid "Close Tabs to the Right"
+msgstr "Stäng flikar till höger"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "Stäng alla flikar till höger om den aktuella."
+
+msgid "Close the current window."
+msgstr "Stäng det aktuella fönstret."
+
+msgid "Close All Windows"
+msgstr "Stäng alla fönster"
+
+msgid "Close all windows."
+msgstr "Stäng alla fönster."
+
+msgid "Toggle Maximize"
+msgstr "Växla maximering"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "Växla maximeringsläget för det aktuella fönstret."
+
+msgid "Toggle Fullscreen"
+msgstr "Växla helskärm"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "Växla helskärmsläget för det aktuella fönstret."
+
+msgid "Toggle Window Decorations"
+msgstr "Växla fönsterdekorationer"
+
+msgid "Toggle the window decorations."
+msgstr "Växla fönsterdekorationerna."
+
+msgid "Toggle Float on Top"
+msgstr "Växla alltid överst"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "Växla läget alltid överst för det aktuella fönstret."
+
+msgid "Toggle Secure Input"
+msgstr "Växla säker inmatning"
+
+msgid "Toggle secure input mode."
+msgstr "Växla läget för säker inmatning."
+
+msgid "Toggle Mouse Reporting"
+msgstr "Växla musrapportering"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "Växla om mushändelser rapporteras till terminalprogram."
+
+msgid "Toggle Background Opacity"
+msgstr "Växla bakgrundens opacitet"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "Växla bakgrundsopaciteten för ett fönster som startade transparent."
+
+msgid "Check for Updates"
+msgstr "Sök efter uppdateringar"
+
+msgid "Check for updates to the application."
+msgstr "Sök efter uppdateringar till programmet."
+
+msgid "Undo"
+msgstr "Ångra"
+
+msgid "Undo the last action."
+msgstr "Ångra den senaste åtgärden."
+
+msgid "Redo"
+msgstr "Gör om"
+
+msgid "Redo the last undone action."
+msgstr "Gör om den senast ångrade åtgärden."
+
+msgid "Quit the application."
+msgstr "Avsluta programmet."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "Ha lite Ghostty i din terminal."

@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Open in Ghostty"
+msgstr "Ghosttyలో తెరవండి"
+
+msgid "Find…"
+msgstr "కనుగొనండి…"
+
+msgid "Previous Match"
+msgstr "మునుపటి సరిపోలిక"
+
+msgid "Next Match"
+msgstr "తదుపరి సరిపోలిక"
+
+msgid "Close"
+msgstr "మూసివేయండి"
+
+msgid "Oh, no."
+msgstr "అయ్యో."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "రెండరింగ్ కోసం OpenGL కాంటెక్స్ట్‌ను పొందలేకపోయింది."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "ఈ టెర్మినల్ చదవడానికి మాత్రమే మోడ్‌లో ఉంది. మీరు ఇప్పటికీ కంటెంట్‌ను చూడవచ్చు, ఎంచుకోవచ్చు మరియు స్క్రోల్ చేయవచ్చు, కానీ నడుస్తున్న అప్లికేషన్‌కు ఎలాంటి ఇన్‌పుట్ ఈవెంట్‌లు పంపబడవు."
+
+msgid "Read-only"
+msgstr "చదవడానికి మాత్రమే"
+
+msgid "Copy"
+msgstr "కాపీ చేయండి"
+
+msgid "Paste"
+msgstr "అతికించండి"
+
+msgid "Notify on Next Command Finish"
+msgstr "తదుపరి కమాండ్ పూర్తయినప్పుడు తెలియజేయండి"
+
+msgid "Clear"
+msgstr "తుడిచివేయండి"
+
+msgid "Reset"
+msgstr "రీసెట్ చేయండి"
+
+msgid "Split"
+msgstr "స్ప్లిట్"
+
+msgid "Change Title…"
+msgstr "శీర్షికను మార్చండి…"
+
+msgid "Split Up"
+msgstr "పైకి స్ప్లిట్ చేయండి"
+
+msgid "Split Down"
+msgstr "కిందికి స్ప్లిట్ చేయండి"
+
+msgid "Split Left"
+msgstr "ఎడమవైపు స్ప్లిట్ చేయండి"
+
+msgid "Split Right"
+msgstr "కుడివైపు స్ప్లిట్ చేయండి"
+
+msgid "Close Split"
+msgstr "స్ప్లిట్‌ను మూసివేయండి"
+
+msgid "Tab"
+msgstr "ట్యాబ్"
+
+msgid "Change Tab Title…"
+msgstr "ట్యాబ్ శీర్షికను మార్చండి…"
+
+msgid "New Tab"
+msgstr "కొత్త ట్యాబ్"
+
+msgid "Close Tab"
+msgstr "ట్యాబ్‌ను మూసివేయండి"
+
+msgid "Window"
+msgstr "విండో"
+
+msgid "Change Window Title…"
+msgstr "విండో శీర్షికను మార్చండి…"
+
+msgid "New Window"
+msgstr "కొత్త విండో"
+
+msgid "Close Window"
+msgstr "విండోను మూసివేయండి"
+
+msgid "Config"
+msgstr "కాన్ఫిగ్"
+
+msgid "Open Configuration in OS Editor"
+msgstr "కాన్ఫిగరేషన్‌ను OS ఎడిటర్‌లో తెరవండి"
+
+msgid "Open Configuration in New Window"
+msgstr "కాన్ఫిగరేషన్‌ను కొత్త విండోలో తెరవండి"
+
+msgid "Reload Configuration"
+msgstr "కాన్ఫిగరేషన్‌ను రీలోడ్ చేయండి"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ మీరు Ghostty యొక్క డీబగ్ బిల్డ్‌ను నడుపుతున్నారు! పనితీరు తగ్గుతుంది."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: టెర్మినల్ ఇన్‌స్పెక్టర్"
+
+msgid "New Split"
+msgstr "కొత్త స్ప్లిట్"
+
+msgid "View Open Tabs"
+msgstr "తెరిచి ఉన్న ట్యాబ్‌లను చూడండి"
+
+msgid "Main Menu"
+msgstr "ప్రధాన మెనూ"
+
+msgid "Command Palette"
+msgstr "కమాండ్ పాలెట్"
+
+msgid "Terminal Inspector"
+msgstr "టెర్మినల్ ఇన్‌స్పెక్టర్"
+
+msgid "About Ghostty"
+msgstr "Ghostty గురించి"
+
+msgid "Quit"
+msgstr "నిష్క్రమించండి"
+
+msgid "Authorize Clipboard Access"
+msgstr "క్లిప్‌బోర్డ్ యాక్సెస్‌ను అనుమతించండి"
+
+msgid "Deny"
+msgstr "తిరస్కరించండి"
+
+msgid "Allow"
+msgstr "అనుమతించండి"
+
+msgid "Remember choice for this split"
+msgstr "ఈ స్ప్లిట్ కోసం ఎంపికను గుర్తుంచుకోండి"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "ఈ ప్రాంప్ట్‌ను మళ్లీ చూపడానికి కాన్ఫిగరేషన్‌ను రీలోడ్ చేయండి"
+
+msgid "Cancel"
+msgstr "రద్దు చేయండి"
+
+msgid "Execute a command…"
+msgstr "కమాండ్‌ను అమలు చేయండి…"
+
+msgid "Configuration Errors"
+msgstr "కాన్ఫిగరేషన్ లోపాలు"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "ఒకటి లేదా అంతకంటే ఎక్కువ కాన్ఫిగరేషన్ లోపాలు కనుగొనబడ్డాయి. దయచేసి కింది లోపాలను సమీక్షించి, మీ కాన్ఫిగరేషన్‌ను రీలోడ్ చేయండి లేదా ఈ లోపాలను విస్మరించండి."
+
+msgid "Ignore"
+msgstr "విస్మరించండి"
+
+msgid "Leave blank to restore the default title."
+msgstr "డిఫాల్ట్ శీర్షికను పునరుద్ధరించడానికి ఖాళీగా వదిలివేయండి."
+
+msgid "OK"
+msgstr "సరే"
+
+msgid "The keybind was revoked by the system."
+msgstr "కీబైండ్‌ను సిస్టమ్ రద్దు చేసింది."
+
+msgid "The keybind was denied by the system."
+msgstr "కీబైండ్‌ను సిస్టమ్ తిరస్కరించింది."
+
+msgid "Global keybind unavailable"
+msgstr "గ్లోబల్ కీబైండ్ అందుబాటులో లేదు"
+
+msgid "Export Terminal IO Events"
+msgstr "టెర్మినల్ IO ఈవెంట్‌లను ఎగుమతి చేయండి"
+
+msgid "Export"
+msgstr "ఎగుమతి చేయండి"
+
+msgid "Editing configuration file"
+msgstr "కాన్ఫిగరేషన్ ఫైల్‌ను సవరిస్తున్నారు"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "ఒక అప్లికేషన్ క్లిప్‌బోర్డ్‌కు రాయడానికి ప్రయత్నిస్తోంది. ప్రస్తుత క్లిప్‌బోర్డ్ కంటెంట్ కింద చూపబడింది."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "ఒక అప్లికేషన్ క్లిప్‌బోర్డ్ నుండి చదవడానికి ప్రయత్నిస్తోంది. ప్రస్తుత క్లిప్‌బోర్డ్ కంటెంట్ కింద చూపబడింది."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "హెచ్చరిక: ప్రమాదకరమైన అవకాశం ఉన్న అతికింపు"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "ఈ టెక్స్ట్‌ను టెర్మినల్‌లో అతికించడం ప్రమాదకరం కావచ్చు, ఎందుకంటే కొన్ని కమాండ్‌లు అమలయ్యేలా కనిపిస్తోంది."
+
+msgid "Quit Ghostty?"
+msgstr "Ghosttyని మూసివేయాలా?"
+
+msgid "Close Tab?"
+msgstr "ట్యాబ్‌ను మూసివేయాలా?"
+
+msgid "Close Window?"
+msgstr "విండోను మూసివేయాలా?"
+
+msgid "Close Split?"
+msgstr "స్ప్లిట్‌ను మూసివేయాలా?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "అన్ని టెర్మినల్ సెషన్‌లు ముగించబడతాయి."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "ఈ ట్యాబ్‌లోని అన్ని టెర్మినల్ సెషన్‌లు ముగించబడతాయి."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "ఈ విండోలోని అన్ని టెర్మినల్ సెషన్‌లు ముగించబడతాయి."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "ఈ స్ప్లిట్‌లో ప్రస్తుతం నడుస్తున్న ప్రాసెస్ ముగించబడుతుంది."
+
+msgid "Command Finished"
+msgstr "కమాండ్ పూర్తయింది"
+
+msgid "Command Succeeded"
+msgstr "కమాండ్ విజయవంతమైంది"
+
+msgid "Command Failed"
+msgstr "కమాండ్ విఫలమైంది"
+
+msgid "Change Terminal Title"
+msgstr "టెర్మినల్ శీర్షికను మార్చండి"
+
+msgid "Change Tab Title"
+msgstr "ట్యాబ్ శీర్షికను మార్చండి"
+
+msgid "Change Window Title"
+msgstr "విండో శీర్షికను మార్చండి"
+
+msgid "Reloaded the configuration"
+msgstr "కాన్ఫిగరేషన్ రీలోడ్ చేయబడింది"
+
+msgid "Copied to clipboard"
+msgstr "క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది"
+
+msgid "Cleared clipboard"
+msgstr "క్లిప్‌బోర్డ్ ఖాళీ చేయబడింది"
+
+msgid "Ghostty Developers"
+msgstr "Ghostty డెవలపర్‌లు"
+
+msgid "Reset Terminal"
+msgstr "టెర్మినల్‌ను రీసెట్ చేయండి"
+
+msgid "Reset the terminal to a clean state."
+msgstr "టెర్మినల్‌ను శుభ్రమైన స్థితికి రీసెట్ చేయండి."
+
+msgid "Copy to Clipboard"
+msgstr "క్లిప్‌బోర్డ్‌కు కాపీ చేయండి"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "ఎంచుకున్న టెక్స్ట్‌ను సాధారణ మరియు స్టైల్ చేసిన రెండు ఫార్మాట్‌లలో క్లిప్‌బోర్డ్‌కు కాపీ చేయండి."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "ఎంపికను సాధారణ టెక్స్ట్‌గా క్లిప్‌బోర్డ్‌కు కాపీ చేయండి"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "ఎంచుకున్న టెక్స్ట్‌ను సాధారణ టెక్స్ట్‌గా క్లిప్‌బోర్డ్‌కు కాపీ చేయండి."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "ఎంపికను ANSI సీక్వెన్స్‌లుగా క్లిప్‌బోర్డ్‌కు కాపీ చేయండి"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "ఎంచుకున్న టెక్స్ట్‌ను ANSI ఎస్కేప్ సీక్వెన్స్‌లుగా క్లిప్‌బోర్డ్‌కు కాపీ చేయండి."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "ఎంపికను HTMLగా క్లిప్‌బోర్డ్‌కు కాపీ చేయండి"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "ఎంచుకున్న టెక్స్ట్‌ను HTMLగా క్లిప్‌బోర్డ్‌కు కాపీ చేయండి."
+
+msgid "Copy URL to Clipboard"
+msgstr "URLను క్లిప్‌బోర్డ్‌కు కాపీ చేయండి"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "కర్సర్ కింద ఉన్న URLను క్లిప్‌బోర్డ్‌కు కాపీ చేయండి."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "టెర్మినల్ శీర్షికను క్లిప్‌బోర్డ్‌కు కాపీ చేయండి"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "టెర్మినల్ శీర్షికను క్లిప్‌బోర్డ్‌కు కాపీ చేయండి. టెర్మినల్ శీర్షిక సెట్ చేయకపోతే దీని ప్రభావం ఉండదు."
+
+msgid "Paste from Clipboard"
+msgstr "క్లిప్‌బోర్డ్ నుండి అతికించండి"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "ప్రధాన క్లిప్‌బోర్డ్ కంటెంట్‌ను అతికించండి."
+
+msgid "Paste from Selection"
+msgstr "ఎంపిక నుండి అతికించండి"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "ఎంపిక క్లిప్‌బోర్డ్ కంటెంట్‌ను అతికించండి."
+
+msgid "Start Search"
+msgstr "శోధనను ప్రారంభించండి"
+
+msgid "Start a search if one isn't already active."
+msgstr "ఇప్పటికే శోధన క్రియాశీలంగా లేకపోతే శోధనను ప్రారంభించండి."
+
+msgid "Search Selection"
+msgstr "ఎంపికను శోధించండి"
+
+msgid "Start a search for the current text selection."
+msgstr "ప్రస్తుత టెక్స్ట్ ఎంపిక కోసం శోధనను ప్రారంభించండి."
+
+msgid "End Search"
+msgstr "శోధనను ముగించండి"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "ప్రస్తుత శోధన ఏదైనా ఉంటే ముగించి, అన్ని GUI అంశాలను దాచండి."
+
+msgid "Next Search Result"
+msgstr "తదుపరి శోధన ఫలితం"
+
+msgid "Navigate to the next search result, if any."
+msgstr "తదుపరి శోధన ఫలితానికి వెళ్లండి, ఏదైనా ఉంటే."
+
+msgid "Previous Search Result"
+msgstr "మునుపటి శోధన ఫలితం"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "మునుపటి శోధన ఫలితానికి వెళ్లండి, ఏదైనా ఉంటే."
+
+msgid "Increase Font Size"
+msgstr "ఫాంట్ సైజును పెంచండి"
+
+msgid "Increase the font size by 1 point."
+msgstr "ఫాంట్ సైజును 1 పాయింట్ పెంచండి."
+
+msgid "Decrease Font Size"
+msgstr "ఫాంట్ సైజును తగ్గించండి"
+
+msgid "Decrease the font size by 1 point."
+msgstr "ఫాంట్ సైజును 1 పాయింట్ తగ్గించండి."
+
+msgid "Reset Font Size"
+msgstr "ఫాంట్ సైజును రీసెట్ చేయండి"
+
+msgid "Reset the font size to the default."
+msgstr "ఫాంట్ సైజును డిఫాల్ట్‌కు రీసెట్ చేయండి."
+
+msgid "Clear Screen"
+msgstr "స్క్రీన్‌ను తుడిచివేయండి"
+
+msgid "Clear the screen and scrollback."
+msgstr "స్క్రీన్ మరియు స్క్రోల్‌బ్యాక్‌ను తుడిచివేయండి."
+
+msgid "Select All"
+msgstr "అన్నీ ఎంచుకోండి"
+
+msgid "Select all text on the screen."
+msgstr "స్క్రీన్‌పై ఉన్న టెక్స్ట్ మొత్తాన్ని ఎంచుకోండి."
+
+msgid "Scroll to Top"
+msgstr "పైకి స్క్రోల్ చేయండి"
+
+msgid "Scroll to the top of the screen."
+msgstr "స్క్రీన్ పైభాగానికి స్క్రోల్ చేయండి."
+
+msgid "Scroll to Bottom"
+msgstr "కిందికి స్క్రోల్ చేయండి"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "స్క్రీన్ దిగువకు స్క్రోల్ చేయండి."
+
+msgid "Scroll to Selection"
+msgstr "ఎంపిక వద్దకు స్క్రోల్ చేయండి"
+
+msgid "Scroll to the selected text."
+msgstr "ఎంచుకున్న టెక్స్ట్ వద్దకు స్క్రోల్ చేయండి."
+
+msgid "Scroll Page Up"
+msgstr "ఒక పేజీ పైకి స్క్రోల్ చేయండి"
+
+msgid "Scroll the screen up by a page."
+msgstr "స్క్రీన్‌ను ఒక పేజీ పైకి స్క్రోల్ చేయండి."
+
+msgid "Scroll Page Down"
+msgstr "ఒక పేజీ కిందికి స్క్రోల్ చేయండి"
+
+msgid "Scroll the screen down by a page."
+msgstr "స్క్రీన్‌ను ఒక పేజీ కిందికి స్క్రోల్ చేయండి."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "స్క్రీన్‌ను తాత్కాలిక ఫైల్‌కు కాపీ చేసి పాత్‌ను కాపీ చేయండి"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "స్క్రీన్ కంటెంట్‌ను తాత్కాలిక ఫైల్‌కు కాపీ చేసి, పాత్‌ను క్లిప్‌బోర్డ్‌కు కాపీ చేయండి."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "స్క్రీన్‌ను తాత్కాలిక ఫైల్‌కు కాపీ చేసి పాత్‌ను అతికించండి"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "స్క్రీన్ కంటెంట్‌ను తాత్కాలిక ఫైల్‌కు కాపీ చేసి, ఆ ఫైల్ పాత్‌ను అతికించండి."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "స్క్రీన్‌ను తాత్కాలిక ఫైల్‌కు కాపీ చేసి తెరవండి"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "స్క్రీన్ కంటెంట్‌ను తాత్కాలిక ఫైల్‌కు కాపీ చేసి, దాన్ని తెరవండి."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "స్క్రీన్‌ను HTMLగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి పాత్‌ను కాపీ చేయండి"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "స్క్రీన్ కంటెంట్‌ను HTMLగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి, పాత్‌ను క్లిప్‌బోర్డ్‌కు కాపీ చేయండి."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "స్క్రీన్‌ను HTMLగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి పాత్‌ను అతికించండి"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "స్క్రీన్ కంటెంట్‌ను HTMLగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి, ఆ ఫైల్ పాత్‌ను అతికించండి."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "స్క్రీన్‌ను HTMLగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి తెరవండి"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "స్క్రీన్ కంటెంట్‌ను HTMLగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి, దాన్ని తెరవండి."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "స్క్రీన్‌ను ANSI సీక్వెన్స్‌లుగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి పాత్‌ను కాపీ చేయండి"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "స్క్రీన్ కంటెంట్‌ను ANSI ఎస్కేప్ సీక్వెన్స్‌లుగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి, పాత్‌ను క్లిప్‌బోర్డ్‌కు కాపీ చేయండి."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "స్క్రీన్‌ను ANSI సీక్వెన్స్‌లుగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి పాత్‌ను అతికించండి"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "స్క్రీన్ కంటెంట్‌ను ANSI ఎస్కేప్ సీక్వెన్స్‌లుగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి, ఆ ఫైల్ పాత్‌ను అతికించండి."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "స్క్రీన్‌ను ANSI సీక్వెన్స్‌లుగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి తెరవండి"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "స్క్రీన్ కంటెంట్‌ను ANSI ఎస్కేప్ సీక్వెన్స్‌లుగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి, దాన్ని తెరవండి."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "ఎంపికను తాత్కాలిక ఫైల్‌కు కాపీ చేసి పాత్‌ను కాపీ చేయండి"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "ఎంపిక కంటెంట్‌ను తాత్కాలిక ఫైల్‌కు కాపీ చేసి, పాత్‌ను క్లిప్‌బోర్డ్‌కు కాపీ చేయండి."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "ఎంపికను తాత్కాలిక ఫైల్‌కు కాపీ చేసి పాత్‌ను అతికించండి"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "ఎంపిక కంటెంట్‌ను తాత్కాలిక ఫైల్‌కు కాపీ చేసి, ఆ ఫైల్ పాత్‌ను అతికించండి."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "ఎంపికను తాత్కాలిక ఫైల్‌కు కాపీ చేసి తెరవండి"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "ఎంపిక కంటెంట్‌ను తాత్కాలిక ఫైల్‌కు కాపీ చేసి, దాన్ని తెరవండి."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "ఎంపికను HTMLగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి పాత్‌ను కాపీ చేయండి"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "ఎంపిక కంటెంట్‌ను HTMLగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి, పాత్‌ను క్లిప్‌బోర్డ్‌కు కాపీ చేయండి."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "ఎంపికను HTMLగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి పాత్‌ను అతికించండి"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "ఎంపిక కంటెంట్‌ను HTMLగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి, ఆ ఫైల్ పాత్‌ను అతికించండి."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "ఎంపికను HTMLగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి తెరవండి"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "ఎంపిక కంటెంట్‌ను HTMLగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి, దాన్ని తెరవండి."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "ఎంపికను ANSI సీక్వెన్స్‌లుగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి పాత్‌ను కాపీ చేయండి"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "ఎంపిక కంటెంట్‌ను ANSI ఎస్కేప్ సీక్వెన్స్‌లుగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి, పాత్‌ను క్లిప్‌బోర్డ్‌కు కాపీ చేయండి."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "ఎంపికను ANSI సీక్వెన్స్‌లుగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి పాత్‌ను అతికించండి"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "ఎంపిక కంటెంట్‌ను ANSI ఎస్కేప్ సీక్వెన్స్‌లుగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి, ఆ ఫైల్ పాత్‌ను అతికించండి."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "ఎంపికను ANSI సీక్వెన్స్‌లుగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి తెరవండి"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "ఎంపిక కంటెంట్‌ను ANSI ఎస్కేప్ సీక్వెన్స్‌లుగా తాత్కాలిక ఫైల్‌కు కాపీ చేసి, దాన్ని తెరవండి."
+
+msgid "Open a new window."
+msgstr "కొత్త విండోను తెరవండి."
+
+msgid "Open a new tab."
+msgstr "కొత్త ట్యాబ్‌ను తెరవండి."
+
+msgid "Move Tab Left"
+msgstr "ట్యాబ్‌ను ఎడమకు జరపండి"
+
+msgid "Move the current tab to the left."
+msgstr "ప్రస్తుత ట్యాబ్‌ను ఎడమవైపుకు జరపండి."
+
+msgid "Move Tab Right"
+msgstr "ట్యాబ్‌ను కుడికి జరపండి"
+
+msgid "Move the current tab to the right."
+msgstr "ప్రస్తుత ట్యాబ్‌ను కుడివైపుకు జరపండి."
+
+msgid "Move Tab to New Window"
+msgstr "ట్యాబ్‌ను కొత్త విండోకు జరపండి"
+
+msgid "Move the current tab to a new window."
+msgstr "ప్రస్తుత ట్యాబ్‌ను కొత్త విండోకు జరపండి."
+
+msgid "Toggle Tab Overview"
+msgstr "ట్యాబ్ ఓవర్‌వ్యూను టోగుల్ చేయండి"
+
+msgid "Toggle the tab overview."
+msgstr "ట్యాబ్ ఓవర్‌వ్యూను టోగుల్ చేయండి."
+
+msgid "Change Terminal Title…"
+msgstr "టెర్మినల్ శీర్షికను మార్చండి…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "ప్రస్తుత టెర్మినల్‌కు కొత్త శీర్షికను అడగండి."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "ప్రస్తుత ట్యాబ్‌కు కొత్త శీర్షికను అడగండి."
+
+msgid "Split the terminal to the left."
+msgstr "టెర్మినల్‌ను ఎడమవైపు స్ప్లిట్ చేయండి."
+
+msgid "Split the terminal to the right."
+msgstr "టెర్మినల్‌ను కుడివైపు స్ప్లిట్ చేయండి."
+
+msgid "Split the terminal up."
+msgstr "టెర్మినల్‌ను పైకి స్ప్లిట్ చేయండి."
+
+msgid "Split the terminal down."
+msgstr "టెర్మినల్‌ను కిందికి స్ప్లిట్ చేయండి."
+
+msgid "Focus Split: Previous"
+msgstr "స్ప్లిట్‌పై ఫోకస్: మునుపటిది"
+
+msgid "Focus the previous split, if any."
+msgstr "మునుపటి స్ప్లిట్ ఉంటే దానిపై ఫోకస్ చేయండి."
+
+msgid "Focus Split: Next"
+msgstr "స్ప్లిట్‌పై ఫోకస్: తదుపరిది"
+
+msgid "Focus the next split, if any."
+msgstr "తదుపరి స్ప్లిట్ ఉంటే దానిపై ఫోకస్ చేయండి."
+
+msgid "Focus Split: Left"
+msgstr "స్ప్లిట్‌పై ఫోకస్: ఎడమ"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "ఎడమవైపు స్ప్లిట్ ఉంటే దానిపై ఫోకస్ చేయండి."
+
+msgid "Focus Split: Right"
+msgstr "స్ప్లిట్‌పై ఫోకస్: కుడి"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "కుడివైపు స్ప్లిట్ ఉంటే దానిపై ఫోకస్ చేయండి."
+
+msgid "Focus Split: Up"
+msgstr "స్ప్లిట్‌పై ఫోకస్: పైది"
+
+msgid "Focus the split above, if it exists."
+msgstr "పైన స్ప్లిట్ ఉంటే దానిపై ఫోకస్ చేయండి."
+
+msgid "Focus Split: Down"
+msgstr "స్ప్లిట్‌పై ఫోకస్: కిందిది"
+
+msgid "Focus the split below, if it exists."
+msgstr "కింద స్ప్లిట్ ఉంటే దానిపై ఫోకస్ చేయండి."
+
+msgid "Focus Window: Previous"
+msgstr "విండోపై ఫోకస్: మునుపటిది"
+
+msgid "Focus the previous window, if any."
+msgstr "మునుపటి విండో ఉంటే దానిపై ఫోకస్ చేయండి."
+
+msgid "Focus Window: Next"
+msgstr "విండోపై ఫోకస్: తదుపరిది"
+
+msgid "Focus the next window, if any."
+msgstr "తదుపరి విండో ఉంటే దానిపై ఫోకస్ చేయండి."
+
+msgid "Toggle Split Zoom"
+msgstr "స్ప్లిట్ జూమ్‌ను టోగుల్ చేయండి"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "ప్రస్తుత స్ప్లిట్ యొక్క జూమ్ స్థితిని టోగుల్ చేయండి."
+
+msgid "Toggle Read-Only Mode"
+msgstr "చదవడానికి మాత్రమే మోడ్‌ను టోగుల్ చేయండి"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "ప్రస్తుత సర్ఫేస్‌కు చదవడానికి మాత్రమే మోడ్‌ను టోగుల్ చేయండి."
+
+msgid "Equalize Splits"
+msgstr "స్ప్లిట్‌లను సమానం చేయండి"
+
+msgid "Equalize the size of all splits."
+msgstr "అన్ని స్ప్లిట్‌ల పరిమాణాన్ని సమానం చేయండి."
+
+msgid "Reset Window Size"
+msgstr "విండో సైజును రీసెట్ చేయండి"
+
+msgid "Reset the window size to the default."
+msgstr "విండో సైజును డిఫాల్ట్‌కు రీసెట్ చేయండి."
+
+msgid "Toggle Inspector"
+msgstr "ఇన్‌స్పెక్టర్‌ను టోగుల్ చేయండి"
+
+msgid "Toggle the inspector."
+msgstr "ఇన్‌స్పెక్టర్‌ను టోగుల్ చేయండి."
+
+msgid "Show the GTK Inspector"
+msgstr "GTK ఇన్‌స్పెక్టర్‌ను చూపించండి"
+
+msgid "Show the GTK inspector."
+msgstr "GTK ఇన్‌స్పెక్టర్‌ను చూపించండి."
+
+msgid "Show On-Screen Keyboard"
+msgstr "ఆన్-స్క్రీన్ కీబోర్డ్‌ను చూపించండి"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "ఆన్-స్క్రీన్ కీబోర్డ్ ఉంటే దాన్ని చూపించండి."
+
+msgid "Open Config Using OS editor"
+msgstr "కాన్ఫిగ్‌ను OS ఎడిటర్‌తో తెరవండి"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "కాన్ఫిగ్ ఫైల్‌ను OS డిఫాల్ట్ ఎడిటర్‌తో తెరవండి."
+
+msgid "Open Config in New Terminal Window"
+msgstr "కాన్ఫిగ్‌ను కొత్త టెర్మినల్ విండోలో తెరవండి"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "$EDITOR లేదా $VISUAL ఉపయోగించి కాన్ఫిగ్ ఫైల్‌ను కొత్త విండోలో తెరవండి."
+
+msgid "Reload Config"
+msgstr "కాన్ఫిగ్‌ను రీలోడ్ చేయండి"
+
+msgid "Reload the config file."
+msgstr "కాన్ఫిగ్ ఫైల్‌ను రీలోడ్ చేయండి."
+
+msgid "Close Terminal"
+msgstr "టెర్మినల్‌ను మూసివేయండి"
+
+msgid "Close the current terminal."
+msgstr "ప్రస్తుత టెర్మినల్‌ను మూసివేయండి."
+
+msgid "Close the current tab."
+msgstr "ప్రస్తుత ట్యాబ్‌ను మూసివేయండి."
+
+msgid "Close Other Tabs"
+msgstr "ఇతర ట్యాబ్‌లను మూసివేయండి"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "ప్రస్తుతది తప్ప ఈ విండోలోని అన్ని ట్యాబ్‌లను మూసివేయండి."
+
+msgid "Close Tabs to the Right"
+msgstr "కుడివైపు ఉన్న ట్యాబ్‌లను మూసివేయండి"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "ప్రస్తుత ట్యాబ్‌కు కుడివైపు ఉన్న అన్ని ట్యాబ్‌లను మూసివేయండి."
+
+msgid "Close the current window."
+msgstr "ప్రస్తుత విండోను మూసివేయండి."
+
+msgid "Close All Windows"
+msgstr "అన్ని విండోలను మూసివేయండి"
+
+msgid "Close all windows."
+msgstr "అన్ని విండోలను మూసివేయండి."
+
+msgid "Toggle Maximize"
+msgstr "గరిష్టీకరణను టోగుల్ చేయండి"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "ప్రస్తుత విండో యొక్క గరిష్టీకరణ స్థితిని టోగుల్ చేయండి."
+
+msgid "Toggle Fullscreen"
+msgstr "పూర్తి స్క్రీన్‌ను టోగుల్ చేయండి"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "ప్రస్తుత విండో యొక్క పూర్తి స్క్రీన్ స్థితిని టోగుల్ చేయండి."
+
+msgid "Toggle Window Decorations"
+msgstr "విండో అలంకరణలను టోగుల్ చేయండి"
+
+msgid "Toggle the window decorations."
+msgstr "విండో అలంకరణలను టోగుల్ చేయండి."
+
+msgid "Toggle Float on Top"
+msgstr "పైన తేలియాడేలా టోగుల్ చేయండి"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "ప్రస్తుత విండో యొక్క పైన తేలియాడే స్థితిని టోగుల్ చేయండి."
+
+msgid "Toggle Secure Input"
+msgstr "సురక్షిత ఇన్‌పుట్‌ను టోగుల్ చేయండి"
+
+msgid "Toggle secure input mode."
+msgstr "సురక్షిత ఇన్‌పుట్ మోడ్‌ను టోగుల్ చేయండి."
+
+msgid "Toggle Mouse Reporting"
+msgstr "మౌస్ రిపోర్టింగ్‌ను టోగుల్ చేయండి"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "మౌస్ ఈవెంట్‌లు టెర్మినల్ అప్లికేషన్‌లకు నివేదించబడాలో లేదో టోగుల్ చేయండి."
+
+msgid "Toggle Background Opacity"
+msgstr "నేపథ్య అపారదర్శకతను టోగుల్ చేయండి"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "పారదర్శకంగా మొదలైన విండో యొక్క నేపథ్య అపారదర్శకతను టోగుల్ చేయండి."
+
+msgid "Check for Updates"
+msgstr "అప్‌డేట్‌ల కోసం తనిఖీ చేయండి"
+
+msgid "Check for updates to the application."
+msgstr "అప్లికేషన్ అప్‌డేట్‌ల కోసం తనిఖీ చేయండి."
+
+msgid "Undo"
+msgstr "చర్యను రద్దు చేయండి"
+
+msgid "Undo the last action."
+msgstr "చివరి చర్యను రద్దు చేయండి."
+
+msgid "Redo"
+msgstr "మళ్లీ చేయండి"
+
+msgid "Redo the last undone action."
+msgstr "చివరిగా రద్దు చేసిన చర్యను మళ్లీ చేయండి."
+
+msgid "Quit the application."
+msgstr "అప్లికేషన్ నుండి నిష్క్రమించండి."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "మీ టెర్మినల్‌లో కొంచెం Ghostty ఉంచండి."

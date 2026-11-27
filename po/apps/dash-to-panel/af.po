@@ -1,0 +1,1166 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Quit"
+msgstr "Verlaat"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Sluit %d venster af"
+msgstr[1] "Sluit %d vensters af"
+
+msgid "Power options"
+msgstr "Kragopsies"
+
+msgid "Event logs"
+msgstr "Gebeurtenislogboeke"
+
+msgid "System"
+msgstr "Stelsel"
+
+msgid "Device Management"
+msgstr "Toestelbestuur"
+
+msgid "Disk Management"
+msgstr "Skyfbestuur"
+
+msgid "Unlock taskbar"
+msgstr "Ontsluit taakbalk"
+
+msgid "Lock taskbar"
+msgstr "Sluit taakbalk vas"
+
+msgid "Gnome Settings"
+msgstr "GNOME-instellings"
+
+msgid "Dash to Panel Settings"
+msgstr "Dash to Panel-instellings"
+
+msgid "Restore Windows"
+msgstr "Herstel vensters"
+
+msgid "Show Desktop"
+msgstr "Wys werkskerm"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel is opgedateer!"
+
+msgid "You are now running version"
+msgstr "U gebruik nou weergawe"
+
+msgid "See what's new"
+msgstr "Kyk wat nuut is"
+
+msgid "Top Bar"
+msgstr "Boonste balk"
+
+msgid "Show Desktop button height (px)"
+msgstr "Hoogte van Wys werkskerm-knoppie (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Wydte van Wys werkskerm-knoppie (px)"
+
+msgid "Left"
+msgstr "Links"
+
+msgid "Center"
+msgstr "Middel"
+
+msgid "Right"
+msgstr "Regs"
+
+msgid "Top"
+msgstr "Bo"
+
+msgid "Middle"
+msgstr "Middel"
+
+msgid "Bottom"
+msgstr "Onder"
+
+msgid "Start"
+msgstr "Begin"
+
+msgid "End"
+msgstr "Einde"
+
+msgid "Show Applications button"
+msgstr "Wys toepassings-knoppie"
+
+msgid "Activities button"
+msgstr "Aktiwiteite-knoppie"
+
+msgid "Taskbar"
+msgstr "Taakbalk"
+
+msgid "Date menu"
+msgstr "Datumkieslys"
+
+msgid "System menu"
+msgstr "Stelselkieslys"
+
+msgid "Left box"
+msgstr "Linkerkassie"
+
+msgid "Center box"
+msgstr "Middelkassie"
+
+msgid "Right box"
+msgstr "Regterkassie"
+
+msgid "Desktop button"
+msgstr "Werkskermknoppie"
+
+msgid "Move up"
+msgstr "Skuif op"
+
+msgid "Move down"
+msgstr "Skuif af"
+
+msgid "Visible"
+msgstr "Sigbaar"
+
+msgid "Select element position"
+msgstr "Kies elementposisie"
+
+msgid "Stacked to top"
+msgstr "Gestapel na bo"
+
+msgid "Stacked to left"
+msgstr "Gestapel na links"
+
+msgid "Stacked to bottom"
+msgstr "Gestapel na onder"
+
+msgid "Stacked to right"
+msgstr "Gestapel na regs"
+
+msgid "Centered"
+msgstr "Gesentreer"
+
+msgid "Monitor Center"
+msgstr "Monitorsentrum"
+
+msgid "More options"
+msgstr "Meer opsies"
+
+msgid "Reset to defaults"
+msgstr "Stel terug na verstekke"
+
+msgid "Show Applications options"
+msgstr "Wys toepassings-opsies"
+
+msgid "Open icon"
+msgstr "Maak ikoon oop"
+
+msgid "Show Desktop options"
+msgstr "Wys werkskerm-opsies"
+
+msgid "Primary monitor"
+msgstr "Primêre monitor"
+
+msgid "Monitor "
+msgstr "Monitor "
+
+msgid "Running Indicator Options"
+msgstr "Opsies vir lopende aanwyser"
+
+msgid "Dynamic opacity options"
+msgstr "Opsies vir dinamiese deursigtigheid"
+
+msgid "Intellihide options"
+msgstr "Intellihide-opsies"
+
+msgid "Window preview options"
+msgstr "Opsies vir venstervoorskou"
+
+msgid "Isolate Workspaces options"
+msgstr "Opsies vir geïsoleerde werkruimtes"
+
+msgid "Isolate monitors options"
+msgstr "Opsies vir geïsoleerde monitors"
+
+msgid "Ungrouped application options"
+msgstr "Opsies vir ongegroepeerde toepassings"
+
+msgid "Customize middle-click behavior"
+msgstr "Pas middelklik-gedrag aan"
+
+msgid "Text"
+msgstr "Teks"
+
+msgid "Command"
+msgstr "Opdrag"
+
+msgid "Remove"
+msgstr "Verwyder"
+
+msgid "Customize panel scroll behavior"
+msgstr "Pas paneelrolgedrag aan"
+
+msgid "Customize icon scroll behavior"
+msgstr "Pas ikoonrolgedrag aan"
+
+msgid "Advanced hotkeys options"
+msgstr "Gevorderde sneltoetsopsies"
+
+msgid "Secondary Menu Options"
+msgstr "Opsies vir sekondêre kieslys"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d ikoon"
+msgstr[1] "%d ikone"
+
+msgid "App icon animation options"
+msgstr "Opsies vir toepassingsikoon-animasie"
+
+msgid "App icon highlight options"
+msgstr "Opsies vir toepassingsikoon-uitligting"
+
+msgid "Export settings"
+msgstr "Voer instellings uit"
+
+msgid "Import settings"
+msgstr "Voer instellings in"
+
+msgid "Move to current Workspace"
+msgstr "Skuif na huidige werkruimte"
+
+msgid "Animation type"
+msgstr "Animasietipe"
+
+msgid "Simple"
+msgstr "Eenvoudig"
+
+msgid "Ripple"
+msgstr "Rimpeling"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Duur"
+
+msgid "Rotation"
+msgstr "Rotasie"
+
+msgid "Travel"
+msgstr "Beweging"
+
+msgid "Zoom"
+msgstr "Zoem"
+
+msgid "Convexity"
+msgstr "Konveksiteit"
+
+msgid "Extent"
+msgstr "Omvang"
+
+msgid "Highlight focused application"
+msgstr "Lig die gefokusde toepassing uit"
+
+msgid "Icon dominant color"
+msgstr "Ikoon se oorheersende kleur"
+
+msgid "Custom color"
+msgstr "Eie kleur"
+
+msgid "Highlight opacity"
+msgstr "Uitligtingsdeursigtigheid"
+
+msgid "Indicator size (px)"
+msgstr "Aanwysergrootte (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Aanwyserkleur - ikoon se oorheersende kleur"
+
+msgid "Indicator color - Override Theme"
+msgstr "Aanwyserkleur - oorskryf tema"
+
+msgid "1 window open (or ungrouped)"
+msgstr "1 venster oop (of ongegroepeer)"
+
+msgid "Apply to all"
+msgstr "Pas op almal toe"
+
+msgid "2 windows open"
+msgstr "2 vensters oop"
+
+msgid "3 windows open"
+msgstr "3 vensters oop"
+
+msgid "4+ windows open"
+msgstr "4+ vensters oop"
+
+msgid "Use different for unfocused"
+msgstr "Gebruik 'n ander vir ongefokusde"
+
+msgid "The panel background opacity is affected by"
+msgstr "Die paneel se agtergronddeursigtigheid word beïnvloed deur"
+
+msgid "All windows"
+msgstr "Alle vensters"
+
+msgid "Focused windows"
+msgstr "Gefokusde vensters"
+
+msgid "Maximized windows"
+msgstr "Gemaksimeerde vensters"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Verander deursigtigheid wanneer 'n venster nader as (px) kom"
+
+msgid "Change opacity to (%)"
+msgstr "Verander deursigtigheid na (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Duur van deursigtigheidsverandering-animasie (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Lettergrootte (px) van die toepassingstitels (verstek is 14)"
+
+msgid "Font weight of application titles"
+msgstr "Lettergewig van toepassingstitels"
+
+msgid "inherit from theme"
+msgstr "erf van tema"
+
+msgid "normal"
+msgstr "normaal"
+
+msgid "lighter"
+msgstr "ligter"
+
+msgid "bold"
+msgstr "vet"
+
+msgid "bolder"
+msgstr "vetter"
+
+msgid "Font color of the application titles"
+msgstr "Letterkleur van die toepassingstitels"
+
+msgid "Font color of the minimized application titles"
+msgstr "Letterkleur van die geminimeerde toepassingstitels"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Maksimum wydte (px) van die toepassingstitels"
+
+msgid "(default is 160)"
+msgstr "(verstek is 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Gebruik 'n vaste wydte vir die toepassingstitels"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Die toepassingstitels het almal dieselfde wydte, selfs al is hul tekste korter as die maksimum wydte. Die maksimum wydtewaarde word as die vaste wydte gebruik."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Wys lopende aanwysers op ongefokusde toepassings"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Gebruik die gunstelingikone as toepassingslanseerders"
+
+msgid "Highlight AppIcon color"
+msgstr "Uitligting-toepassingsikoonkleur"
+
+msgid "Pressed AppIcon color"
+msgstr "Gedrukte toepassingsikoonkleur"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Uitligting-toepassingsikoon se randradius"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Oorskryf globale randradius (verstek is 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Versteek die paneel slegs van vensters"
+
+msgid "Overlapping"
+msgstr "Oorvleuelend"
+
+msgid "On same monitor"
+msgstr "Op dieselfde monitor"
+
+msgid "The panel hides from"
+msgstr "Die paneel versteek van"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Die paneel word onthul as die wyser die monitor se rand raak"
+
+msgid "Limit to panel length"
+msgstr "Beperk tot paneellengte"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Die paneel bly onthul solank die wyser oor die paneelarea sweef"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Vereis druk by die monitor se rand om die paneel te onthul"
+
+msgid "Required pressure threshold (px)"
+msgstr "Vereiste drukdrempel (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Vereiste druktydsverstryking (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Laat toe dat die paneel onthul word in volskermmodus"
+
+msgid "(requires multi-monitors option)"
+msgstr "(vereis die multi-monitor-opsie)"
+
+msgid "Only hide secondary panels"
+msgstr "Versteek slegs sekondêre panele"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Sintaksis: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Sneltoets om die paneel te onthul en te hou"
+
+msgid "e.g. <Super>i"
+msgstr "bv. <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Behou toestand oor herlaaie heen"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(respekteer GNOME se \"Moenie steur nie\" en vereis die opsie om die kennisgewingtellerbadge te wys)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Onthul en hou die paneel by kennisgewing"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Duur van versteek-en-onthul-animasie (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Vertraging voordat die paneel versteek word (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Vertraging voordat die paneel onthul word (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Vertraging voordat Intellihide met die begin geaktiveer word (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Isoleer monitors selfs wanneer 'n enkele paneel gebruik word"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Isoleer werkruimtes in gnome-shell se toepassingskakelaar"
+
+msgid "Shift+Click action"
+msgstr "Shift+klik-handeling"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "As dit op minimeer gestel is, minimeer dubbelklik al die toepassing se vensters."
+
+msgid "Raise windows"
+msgstr "Bring vensters na vore"
+
+msgid "Minimize window"
+msgstr "Minimeer venster"
+
+msgid "Launch new instance"
+msgstr "Begin nuwe instansie"
+
+msgid "Cycle through windows"
+msgstr "Wissel deur vensters"
+
+msgid "Cycle windows + minimize"
+msgstr "Wissel deur vensters + minimeer"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Wissel enkel / Voorskou veelvoudig"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Wissel enkel / Wissel deur veelvoudig"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Wissel enkel / Sprei veelvoudig"
+
+msgid "Middle-Click action"
+msgstr "Middelklik-handeling"
+
+msgid "Behavior for Middle-Click."
+msgstr "Gedrag vir middelklik."
+
+msgid "Shift+Middle-Click action"
+msgstr "Shift+middelklik-handeling"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Gedrag vir Shift+middelklik."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Sneltoetse sal Super+nommer of Super+Alt+nommer wees"
+
+msgid "Hotkeys prefix"
+msgstr "Sneltoetsvoorvoegsel"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Wys die toepassingsnommers tydelik bo-oor die ikone wanneer die sneltoetse gebruik word."
+
+msgid "Number overlay"
+msgstr "Nommerlaag"
+
+msgid "Never"
+msgstr "Nooit"
+
+msgid "Show temporarily"
+msgstr "Wys tydelik"
+
+msgid "Always visible"
+msgstr "Altyd sigbaar"
+
+msgid "Hide timeout (ms)"
+msgstr "Versteek-tydsverstryking (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Kortpad om die laag vir 2 sekondes te wys"
+
+msgid "e.g. <Super>q"
+msgstr "bv. <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Wys op sekondêre monitors die laag op ikone wat met die primêre monitor ooreenstem"
+
+msgid "Show the overlay on all monitors"
+msgstr "Wys die laag op alle monitors"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Wys voorskoue wanneer die toepassing veelvuldige instansies het"
+
+msgid "Show window previews on hotkey"
+msgstr "Wys venstervoorskoue by sneltoets"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Kies watter sleutelbordnommersleutels gebruik word om die sneltoetse te aktiveer"
+
+msgid "Hotkeys are activated with"
+msgstr "Sneltoetse word geaktiveer met"
+
+msgid "Number row"
+msgstr "Nommerry"
+
+msgid "Numeric keypad"
+msgstr "Numeriese sleutelbord"
+
+msgid "Both"
+msgstr "Albei"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Vertraging tussen muisrolgebeure (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Gebruik hierdie waarde om die aantal vasgelegde muisrolgebeure te beperk."
+
+msgid "Show popup when changing workspace"
+msgstr "Wys opspringer wanneer werkruimte verander"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Dit raak slegs die werkruimte-opspringer wanneer op die paneel gerol word."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "Integreer <i>AppMenu</i>-items"
+
+msgid "<i>App Details</i> menu item"
+msgstr "<i>Toepassingbesonderhede</i>-kieslysitem"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Toepassingbesonderhede</i> is slegs beskikbaar wanneer GNOME Software geïnstalleer is"
+
+msgid "Show Applications icon"
+msgstr "Wys toepassings-ikoon"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Syvulsel (px) vir Wys toepassings-ikoon"
+
+msgid "Override escape key and return to desktop"
+msgstr "Oorskryf die ontsnapsleutel en keer terug na die werkskerm"
+
+msgid "Override Show Desktop line color"
+msgstr "Oorskryf lynkleur van Wys werkskerm"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Onthul die werkskerm wanneer die muis oor die Wys werkskerm-knoppie sweef"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Vertraging voordat die werkskerm onthul word (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Verdowingsduur (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Tyd (ms) voordat dit gewys word"
+
+msgid "(400 is default)"
+msgstr "(400 is die verstek)"
+
+msgid "Time (ms) before hiding"
+msgstr "Tyd (ms) voordat dit versteek word"
+
+msgid "(100 is default)"
+msgstr "(100 is die verstek)"
+
+msgid "Immediate on application icon click"
+msgstr "Onmiddellik by klik op toepassingsikoon"
+
+msgid "Animation time (ms)"
+msgstr "Animasietyd (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Middelklik op die voorskou om die venster te sluit"
+
+msgid "Window previews preferred size (px)"
+msgstr "Voorkeurgrootte (px) van venstervoorskoue"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Aspekverhouding X (wydte) van venstervoorskoue"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Vas"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Aspekverhouding Y (hoogte) van venstervoorskoue"
+
+msgid "Window previews padding (px)"
+msgstr "Opvulling (px) van venstervoorskoue"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Gebruik eie deursigtigheid vir die voorskou-agtergrond"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "As dit afgeskakel is, het die voorskou-agtergrond dieselfde deursigtigheid as die paneel."
+
+msgid "Close button and header position"
+msgstr "Posisie van sluitknoppie en opskrif"
+
+msgid "Display window preview headers"
+msgstr "Wys venstervoorskou-opskrifte"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Ikoongrootte (px) van die venstervoorskou"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "As dit afgeskakel is, sal die voorskou se ikoongrootte op die opskrifbalk se grootte gebaseer wees"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Lettergrootte (px) van die voorskoutitels"
+
+msgid "Font weight of the preview titles"
+msgstr "Lettergewig van die voorskoutitels"
+
+msgid "Font color of the preview titles"
+msgstr "Letterkleur van die voorskoutitels"
+
+msgid "Enable window peeking"
+msgstr "Skakel venster-loergluur aan"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "As u 'n rukkie oor 'n venstervoorskou sweef, word die venster onderskei."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Tydsverstryking om venster-loergluurmodus te betree (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "Tyd van onaktiwiteit terwyl daar oor 'n venstervoorskou gesweef word wat nodig is om venster-loergluurmodus te betree."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Deursigtigheid in venster-loergluurmodus"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Alle vensters behalwe die een waarin geloer word, het hul deursigtigheid op dieselfde waarde gestel."
+
+msgid "About"
+msgstr "Oor"
+
+msgid "Info"
+msgstr "Inligting"
+
+msgid "Version"
+msgstr "Weergawe"
+
+msgid "Source"
+msgstr "Bron"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Voer uit en voer in"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Gebruik die knoppies hieronder om 'n instellingslêer van u huidige voorkeure te skep wat op 'n ander rekenaar ingevoer kan word."
+
+msgid "Export and import settings"
+msgstr "Voer instellings uit en in"
+
+msgid "Export to file"
+msgstr "Voer uit na lêer"
+
+msgid "Import from file"
+msgstr "Voer in vanaf lêer"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Hierdie program kom met ABSOLUUT GEEN WAARBORG nie.\n"
+"Sien die <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, weergawe 2 of later</a> vir besonderhede.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Geborg en oorspronklik ontwikkel deur"
+
+msgid "Action"
+msgstr "Handeling"
+
+msgid "Click action"
+msgstr "Klikhandeling"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "Gedrag wanneer op die ikoon van 'n lopende toepassing geklik word."
+
+msgid "Toggle windows"
+msgstr "Wissel vensters"
+
+msgid "Scroll action"
+msgstr "Rolhandeling"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Gedrag wanneer die muis oor die paneel gerol word."
+
+msgid "Scroll panel action"
+msgstr "Paneelrolhandeling"
+
+msgid "Do nothing"
+msgstr "Doen niks"
+
+msgid "Switch workspace"
+msgstr "Wissel werkruimte"
+
+msgid "Cycle windows"
+msgstr "Wissel deur vensters"
+
+msgid "Change volume"
+msgstr "Verander volume"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Gedrag wanneer die muis oor 'n toepassingsikoon gerol word."
+
+msgid "Scroll icon action"
+msgstr "Ikoonrolhandeling"
+
+msgid "Same as panel"
+msgstr "Dieselfde as paneel"
+
+msgid "Hotkey overlay"
+msgstr "Sneltoetslaag"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Aktiveer Super+(0-9) as kortpaaie om toepassings te aktiveer. Dit kan ook saam met Shift en Ctrl gebruik word."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Gebruik sneltoetse om toepassings te aktiveer"
+
+msgid "Application icons context menu"
+msgstr "Kontekskieslys van toepassingsikone"
+
+msgid "(right-click menu)"
+msgstr "(regterklikkieslys)"
+
+msgid "Secondary menu"
+msgstr "Sekondêre kieslys"
+
+msgid "Panel context menu entries"
+msgstr "Inskrywings in paneelkontekskieslys"
+
+msgid "Add entry"
+msgstr "Voeg inskrywing by"
+
+msgid "Behavior"
+msgstr "Gedrag"
+
+msgid "Applications"
+msgstr "Toepassings"
+
+msgid "Show favorite applications"
+msgstr "Wys gunstelingtoepassings"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Wys gunstelingtoepassings op sekondêre panele"
+
+msgid "Show running applications"
+msgstr "Wys lopende toepassings"
+
+msgid "Ungroup applications"
+msgstr "Groepeer toepassings uit"
+
+msgid "Show notification counter badge"
+msgstr "Wys kennisgewingtellerbadge"
+
+msgid "Hover"
+msgstr "Sweef"
+
+msgid "Show window previews on hover"
+msgstr "Wys venstervoorskoue by sweef"
+
+msgid "Show tooltip on hover"
+msgstr "Wys nutswenk by sweef"
+
+msgid "Isolate"
+msgstr "Isoleer"
+
+msgid "Isolate Workspaces"
+msgstr "Isoleer werkruimtes"
+
+msgid "Isolate monitors"
+msgstr "Isoleer monitors"
+
+msgid "Overview"
+msgstr "Oorsig"
+
+msgid "Click empty space to close overview"
+msgstr "Klik op leë spasie om oorsig te sluit"
+
+msgid "Disable show overview on startup"
+msgstr "Skakel wys oorsig met opstart af"
+
+msgid "Fine-Tune"
+msgstr "Fyninstelling"
+
+msgid "Font size"
+msgstr "Lettergrootte"
+
+msgid "(0 = theme default)"
+msgstr "(0 = temaverstek)"
+
+msgid "Tray Font Size"
+msgstr "Lettergrootte van skinkbord"
+
+msgid "LeftBox Font Size"
+msgstr "Lettergrootte van linkerkassie"
+
+msgid "Padding"
+msgstr "Opvulling"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = temaverstek)"
+
+msgid "Tray Item Padding"
+msgstr "Opvulling van skinkborditems"
+
+msgid "Status Icon Padding"
+msgstr "Opvulling van statusikone"
+
+msgid "LeftBox Padding"
+msgstr "Opvulling van linkerkassie"
+
+msgid "Animate"
+msgstr "Animeer"
+
+msgid "Animate switching applications"
+msgstr "Animeer wisseling van toepassings"
+
+msgid "Animate launching new windows"
+msgstr "Animeer lansering van nuwe vensters"
+
+msgid "Gnome functionality"
+msgstr "GNOME-funksionaliteit"
+
+msgid "(overview)"
+msgstr "(oorsig)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Behou die oorspronklike gnome-shell-dash"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Behou die oorspronklike boonste paneel van gnome-shell"
+
+msgid "(e.g. date menu)"
+msgstr "(bv. datumkieslys)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Aktiveer paneelkieslysknoppies slegs by klik"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Forseer Aktiwiteite-warmhoek op primêre monitor"
+
+msgid "Position"
+msgstr "Posisie"
+
+msgid "Panel"
+msgstr "Paneel"
+
+msgid "Display the main panel on"
+msgstr "Wys die hoofpaneel op"
+
+msgid "Display panels on all monitors"
+msgstr "Wys panele op alle monitors"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Versteek en onthul die paneel volgens voorkeure"
+
+msgid "Panel Intellihide"
+msgstr "Paneel-Intellihide"
+
+msgid "Order and Position on monitors"
+msgstr "Volgorde en posisie op monitors"
+
+msgid "Monitor"
+msgstr "Monitor"
+
+msgid "Apply changes to all monitors"
+msgstr "Pas veranderings op alle monitors toe"
+
+msgid "Panel monitor position"
+msgstr "Paneel se monitorposisie"
+
+msgid "(default is 48)"
+msgstr "(verstek is 48)"
+
+msgid "Panel thickness"
+msgstr "Paneeldikte"
+
+msgid "(default is 100)"
+msgstr "(verstek is 100)"
+
+msgid "Panel length"
+msgstr "Paneellengte"
+
+msgid "Dynamic"
+msgstr "Dinamies"
+
+msgid "Anchor"
+msgstr "Anker"
+
+msgid "Taskbar Display"
+msgstr "Taakbalkvertoning"
+
+msgid "Style"
+msgstr "Styl"
+
+msgid "Global style"
+msgstr "Globale styl"
+
+msgid "Border radius"
+msgstr "Randradius"
+
+msgid "AppIcon style"
+msgstr "Toepassingsikoonstyl"
+
+msgid "(default is 8)"
+msgstr "(verstek is 8)"
+
+msgid "App Icon Margin"
+msgstr "Toepassingsikoon-marge"
+
+msgid "(default is 4)"
+msgstr "(verstek is 4)"
+
+msgid "App Icon Padding"
+msgstr "Toepassingsikoon-opvulling"
+
+msgid "Animate hovering app icons"
+msgstr "Animeer sweef oor toepassingsikone"
+
+msgid "Highlight hovering app icons"
+msgstr "Lig toepassingsikone uit wanneer daaroor gesweef word"
+
+msgid "Icon style"
+msgstr "Ikoonstyl"
+
+msgid "Normal"
+msgstr "Normaal"
+
+msgid "Symbolic"
+msgstr "Simbolies"
+
+msgid "Grayscale"
+msgstr "Gryskaal"
+
+msgid "Running indicator"
+msgstr "Lopende aanwyser"
+
+msgid "Running indicator position"
+msgstr "Posisie van lopende aanwyser"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Styl van lopende aanwyser (gefokusde toepassing)"
+
+msgid "Dots"
+msgstr "Kolletjies"
+
+msgid "Squares"
+msgstr "Vierkante"
+
+msgid "Dashes"
+msgstr "Strepies"
+
+msgid "Segmented"
+msgstr "Gesegmenteer"
+
+msgid "Solid"
+msgstr "Soliede"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Styl van lopende aanwyser (ongefokusde toepassings)"
+
+msgid "Panel style"
+msgstr "Paneelstyl"
+
+msgid "(default is 0)"
+msgstr "(verstek is 0)"
+
+msgid "Side margins"
+msgstr "Syrande"
+
+msgid "Top and bottom margins"
+msgstr "Boonste en onderste rande"
+
+msgid "Side padding"
+msgstr "Syvulsel"
+
+msgid "Top and bottom padding"
+msgstr "Boonste en onderste opvulling"
+
+msgid "Override panel theme background color"
+msgstr "Oorskryf paneeltema se agtergrondkleur"
+
+msgid "Override panel theme background opacity"
+msgstr "Oorskryf paneeltema se agtergronddeursigtigheid"
+
+msgid "Panel background opacity (%)"
+msgstr "Paneel se agtergronddeursigtigheid (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Verander deursigtigheid wanneer 'n venster naby die paneel kom"
+
+msgid "Dynamic background opacity"
+msgstr "Dinamiese agtergronddeursigtigheid"
+
+msgid "Override panel theme gradient"
+msgstr "Oorskryf paneeltema se gradiënt"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Gradiënt se boonste kleur en deursigtigheid (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Gradiënt se onderste kleur en deursigtigheid (%)"
+
+msgid "Panel border"
+msgstr "Paneelrand"
+
+msgid "Override border color"
+msgstr "Oorskryf randkleur"
+
+msgid "Border thickness"
+msgstr "Randdikte"

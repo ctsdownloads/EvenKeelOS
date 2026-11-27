@@ -1,0 +1,2568 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "앱 스토어"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "이 컴퓨터에서 Flatpak 소프트웨어를 추가, 제거 또는 업데이트합니다"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "System;Package;Manager;Discover;Flatpak;Software;App;Store;시스템;패키지;관리자;탐색;소프트웨어;앱;스토어;"
+
+msgid "New Window"
+msgstr "새 창"
+
+msgid "Discover and install apps"
+msgstr "앱 찾아보고 설치하기"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Flatpak 앱과 애드온, 특히 Flathub의 앱과 애드온을 찾고 설치하는 데 중점을 둔 빠르고 현대적인 Linux용 앱 스토어입니다."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "여러 설치를 대기열에 추가하고 계속 둘러보기"
+
+msgid "Easily view app permissions"
+msgstr "앱 권한을 쉽게 확인"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Flathub에 로그인하여 즐겨찾기를 보고 관리"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "GNOME Shell에서 바로 앱 검색"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Flathub 앱이 표시된 홈 페이지"
+
+msgid "App page for Exhibit"
+msgstr "Exhibit의 앱 페이지"
+
+msgid "Library page"
+msgstr "라이브러리 페이지"
+
+msgid "Search page"
+msgstr "검색 페이지"
+
+msgid "Category page"
+msgstr "분류 페이지"
+
+msgid "Stopped Receiving Updates"
+msgstr "업데이트 수신 중단됨"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "제거"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "설치"
+
+msgid "Add-on"
+msgstr "애드온"
+
+msgid "Manage Add-Ons"
+msgstr "애드온 관리"
+
+msgid "No Add-Ons Visible"
+msgstr "표시되는 애드온 없음"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "현재 필터 설정이 알려진 모든 애드온을 숨기고 있습니다. 필터를 조정해 보십시오."
+
+msgid "Add-on Page"
+msgstr "애드온 페이지"
+
+msgid "Download"
+msgstr "다운로드"
+
+msgid "Installed"
+msgstr "설치됨"
+
+msgid "Downloads/Month"
+msgstr "월간 다운로드"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "핵심 업데이트 수신 중단됨"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "이 애드온은 더 이상 업데이트나 보안 수정을 받지 않는 런타임을 사용합니다. 사용하기에 안전하지 않게 될 수 있습니다."
+
+msgid "Other Sources"
+msgstr "다른 소스"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "%s용 애드온"
+
+msgid "Show Less"
+msgstr "간략히 보기"
+
+msgid "Show More"
+msgstr "더 보기"
+
+msgid "Download Stats"
+msgstr "다운로드 통계"
+
+msgid "Age Rating"
+msgstr "연령 등급"
+
+msgid "Cartoon Violence"
+msgstr "만화 폭력"
+
+msgid "No information regarding cartoon violence"
+msgstr "만화 폭력에 대한 정보 없음"
+
+msgid "Fantasy Violence"
+msgstr "판타지 폭력"
+
+msgid "No information regarding fantasy violence"
+msgstr "판타지 폭력에 대한 정보 없음"
+
+msgid "Realistic Violence"
+msgstr "사실적인 폭력"
+
+msgid "No information regarding realistic violence"
+msgstr "사실적인 폭력에 대한 정보 없음"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "유혈이 묘사된 폭력"
+
+msgid "No information regarding bloodshed"
+msgstr "유혈에 대한 정보 없음"
+
+msgid "Sexual Violence"
+msgstr "성폭력"
+
+msgid "No information regarding sexual violence"
+msgstr "성폭력에 대한 정보 없음"
+
+msgid "Alcohol"
+msgstr "술"
+
+msgid "No information regarding references to alcohol"
+msgstr "술 관련 표현에 대한 정보 없음"
+
+msgid "Narcotics"
+msgstr "마약"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "불법 약물 관련 표현에 대한 정보 없음"
+
+msgid "Tobacco"
+msgstr "담배"
+
+msgid "No information regarding references to tobacco products"
+msgstr "담배 제품 관련 표현에 대한 정보 없음"
+
+msgid "Nudity"
+msgstr "노출"
+
+msgid "No information regarding nudity of any sort"
+msgstr "어떤 종류의 노출에 대해서도 정보 없음"
+
+msgid "Sexual Themes"
+msgstr "선정적인 주제"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "성적인 성격의 표현이나 묘사에 대한 정보 없음"
+
+msgid "Profanity"
+msgstr "욕설"
+
+msgid "No information regarding profanity of any kind"
+msgstr "어떤 종류의 욕설에 대해서도 정보 없음"
+
+msgid "Inappropriate Humor"
+msgstr "부적절한 유머"
+
+msgid "No information regarding inappropriate humor"
+msgstr "부적절한 유머에 대한 정보 없음"
+
+msgid "Discrimination"
+msgstr "차별"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "어떤 종류의 차별적인 언어에 대해서도 정보 없음"
+
+msgid "Advertising"
+msgstr "광고"
+
+msgid "No information regarding advertising of any kind"
+msgstr "어떤 종류의 광고에 대해서도 정보 없음"
+
+msgid "Gambling"
+msgstr "도박"
+
+msgid "No information regarding gambling of any kind"
+msgstr "어떤 종류의 도박에 대해서도 정보 없음"
+
+msgid "Purchasing"
+msgstr "구매"
+
+msgid "No information regarding the ability to spend money"
+msgstr "금전을 지출할 수 있는 기능에 대한 정보 없음"
+
+msgid "Chat Between Users"
+msgstr "사용자 간 채팅"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "다른 사용자와 채팅하는 방법에 대한 정보 없음"
+
+msgid "Audio Chat Between Users"
+msgstr "사용자 간 음성 채팅"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "다른 사용자와 대화하는 방법에 대한 정보 없음"
+
+msgid "Contact Details"
+msgstr "연락처 정보"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "소셜 네트워크 사용자 이름이나 이메일 주소 공유에 대한 정보 없음"
+
+msgid "Identifying Information"
+msgstr "식별 정보"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "사용자 정보를 제3자와 공유하는 것에 대한 정보 없음"
+
+msgid "Location Sharing"
+msgstr "위치 공유"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "실제 위치를 다른 사용자와 공유하는 것에 대한 정보 없음"
+
+msgid "Prostitution"
+msgstr "매춘"
+
+msgid "No information regarding references to prostitution"
+msgstr "매춘 관련 표현에 대한 정보 없음"
+
+msgid "Adultery"
+msgstr "불륜"
+
+msgid "No information regarding references to adultery"
+msgstr "불륜 관련 표현에 대한 정보 없음"
+
+msgid "Sexualized Characters"
+msgstr "성적으로 묘사된 캐릭터"
+
+msgid "No information regarding sexualized characters"
+msgstr "성적으로 묘사된 캐릭터에 대한 정보 없음"
+
+msgid "Desecration"
+msgstr "신성 모독"
+
+msgid "No information regarding references to desecration"
+msgstr "신성 모독 관련 표현에 대한 정보 없음"
+
+msgid "Human Remains"
+msgstr "사람의 시신"
+
+msgid "No information regarding visible dead human remains"
+msgstr "눈에 보이는 사람의 시신에 대한 정보 없음"
+
+msgid "Slavery"
+msgstr "노예제"
+
+msgid "No information regarding references to slavery"
+msgstr "노예제 관련 표현에 대한 정보 없음"
+
+msgid "Does not include references to drugs"
+msgstr "약물 관련 내용을 포함하지 않음"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "욕설, 비속어 및 기타 강한 표현을 포함하지 않음"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "광고나 금전 거래를 포함하지 않음"
+
+msgid "Does not include sex or nudity"
+msgstr "성적인 내용이나 노출을 포함하지 않음"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "통제되지 않는 채팅 기능을 포함하지 않음"
+
+msgid "Does not include violence"
+msgstr "폭력을 포함하지 않음"
+
+msgid "Drugs"
+msgstr "약물"
+
+msgid "Strong Language"
+msgstr "강한 표현"
+
+msgid "Money"
+msgstr "금전"
+
+msgid "Social"
+msgstr "소셜"
+
+msgid "Violence"
+msgstr "폭력"
+
+#, c-format
+msgid "%d+"
+msgstr "%d세 이상"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "전체"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s의 연령 등급을 알 수 없습니다"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s은(는) 모든 사람에게 적합합니다"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s은(는) 어린 자녀에게 적합합니다"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s은(는) 어린이에게 적합합니다"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s은(는) 청소년에게 적합합니다"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s은(는) 성인에게 적합합니다"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s은(는) %s에게 적합합니다"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "시스템 폴더 %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "홈 하위 폴더 %s"
+
+msgid "Host system folders"
+msgstr "호스트 시스템 폴더"
+
+msgid "Host system configuration from /etc"
+msgstr "/etc의 호스트 시스템 설정"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "바탕화면 하위 폴더 %s"
+
+msgid "Desktop folder"
+msgstr "바탕화면 폴더"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "문서 하위 폴더 %s"
+
+msgid "Documents folder"
+msgstr "문서 폴더"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "음악 하위 폴더 %s"
+
+msgid "Music folder"
+msgstr "음악 폴더"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "사진 하위 폴더 %s"
+
+msgid "Pictures folder"
+msgstr "사진 폴더"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "공개 공유 하위 폴더 %s"
+
+msgid "Public Share folder"
+msgstr "공개 공유 폴더"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "비디오 하위 폴더 %s"
+
+msgid "Videos folder"
+msgstr "비디오 폴더"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "템플릿 하위 폴더 %s"
+
+msgid "Templates folder"
+msgstr "템플릿 폴더"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "사용자 캐시 하위 폴더 %s"
+
+msgid "User cache folder"
+msgstr "사용자 캐시 폴더"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "사용자 설정 하위 폴더 %s"
+
+msgid "User configuration folder"
+msgstr "사용자 설정 폴더"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "사용자 데이터 하위 폴더 %s"
+
+msgid "User data folder"
+msgstr "사용자 데이터 폴더"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "사용자 런타임 하위 폴더 %s"
+
+msgid "User runtime folder"
+msgstr "사용자 런타임 폴더"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "%s에 대한 파일 시스템 접근"
+
+msgid "Unknown filesystem path"
+msgstr "알 수 없는 파일 시스템 경로"
+
+msgid "Download Size"
+msgstr "다운로드 크기"
+
+msgid "Installed Size"
+msgstr "설치된 크기"
+
+msgid "Amount to download from the internet"
+msgstr "인터넷에서 내려받을 양"
+
+msgid "Size on Disk"
+msgstr "디스크 사용량"
+
+msgid "Open user data folder"
+msgstr "사용자 데이터 폴더 열기"
+
+msgid "Your User Data"
+msgstr "사용자 데이터"
+
+msgid "Caches, settings, and other app data"
+msgstr "캐시, 설정 및 기타 앱 데이터"
+
+msgid "Cache"
+msgstr "캐시"
+
+msgid "Temporary cached data"
+msgstr "임시 캐시 데이터"
+
+msgid "Clear Cache"
+msgstr "캐시 지우기"
+
+msgid "Installed Runtime Size"
+msgstr "설치된 런타임 크기"
+
+msgid "Runtime Download Size"
+msgstr "런타임 다운로드 크기"
+
+msgid "N/A"
+msgstr "해당 없음"
+
+msgid "Storage"
+msgstr "저장 공간"
+
+msgid "Verified"
+msgstr "확인됨"
+
+msgid "The Bazaar Contributors"
+msgstr "Bazaar 기여자"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "특별히 감사드립니다"
+
+msgid "Logged Out Successfully!"
+msgstr "로그아웃했습니다!"
+
+msgid "Performing setup…"
+msgstr "설정을 수행하는 중…"
+
+msgid "Set Up Flathub?"
+msgstr "Flathub를 설정하시겠습니까?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"이 시스템에는 Flathub가 설정되어 있지 않습니다. Flathub를 사용할 수 없으면 Bazaar에서 애플리케이션을 찾아보고 설치할 수 없습니다.\n"
+"\n"
+"그래도 Bazaar로 이미 설치된 앱을 찾아보고 제거할 수는 있습니다."
+
+msgid "Later"
+msgstr "나중에"
+
+msgid "Set Up Flathub"
+msgstr "Flathub 설정"
+
+msgid "A backend error occurred"
+msgstr "백엔드 오류가 발생했습니다"
+
+msgid "Refreshing…"
+msgstr "새로 고치는 중…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "앱 %d개 불러오는 중…"
+
+msgid "Failed to open file"
+msgstr "파일을 열지 못했습니다"
+
+msgid "Failed to load metainfo"
+msgstr "메타인포를 불러오지 못했습니다"
+
+msgid "An initialization error occurred"
+msgstr "초기화 오류가 발생했습니다"
+
+msgid "Checking for updates…"
+msgstr "업데이트 확인 중…"
+
+msgid "Failed to check for updates"
+msgstr "업데이트를 확인하지 못했습니다"
+
+msgid "Could not find app"
+msgstr "앱을 찾을 수 없습니다"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "앱 %d개 불러오는 중…"
+
+msgid "Writing to cache…"
+msgstr "캐시에 쓰는 중…"
+
+msgid "Removing remote…"
+msgstr "원격 저장소 제거 중…"
+
+msgid "Could not remove remote"
+msgstr "원격 저장소를 제거할 수 없습니다"
+
+msgid "Show All"
+msgstr "모두 보기"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "모든 \"%s\""
+
+#, c-format
+msgid "%d Applications"
+msgstr "앱 %d개"
+
+msgid "Failed to Load Article"
+msgstr "글을 불러오지 못했습니다"
+
+msgid "All apps are already installed"
+msgstr "모든 앱이 이미 설치되어 있습니다"
+
+msgid "_OK"
+msgstr "확인(_O)"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "앱 %u개를 설치하시겠습니까?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "다음 항목이 설치됩니다. 추가 공유 구성 요소가 함께 설치될 수도 있습니다"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "애드온 %d개가 설치됩니다."
+
+msgid "Additionally, addons will be installed."
+msgstr "추가로 애드온이 설치됩니다."
+
+msgid "_Cancel"
+msgstr "취소(_C)"
+
+msgid "_Install All"
+msgstr "모두 설치(_I)"
+
+msgid "Bundle Installation"
+msgstr "번들 설치"
+
+msgid "Additional dependencies may take extra space"
+msgstr "추가 종속성으로 인해 공간이 더 필요할 수 있습니다"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"이 앱을 설치하려면 새 소프트웨어 소스를 추가해야 할 수 있습니다. 이 소스의 다른 앱이 Bazaar에 표시됩니다.\n"
+"\n"
+"신뢰할 수 있는 소스인 경우에만 추가하십시오."
+
+msgid "Successfully Installed!"
+msgstr "설치했습니다!"
+
+msgid "Open"
+msgstr "열기"
+
+msgid "Show App Details"
+msgstr "앱 상세 정보 보기"
+
+msgid "Already Installed"
+msgstr "이미 설치됨"
+
+msgid "Installation Failed"
+msgstr "설치하지 못했습니다"
+
+msgid "Unknown install size"
+msgstr "설치 크기를 알 수 없음"
+
+#, c-format
+msgid "About %s to install"
+msgstr "설치에 약 %s 필요"
+
+msgid "No special permissions"
+msgstr "특별한 권한 없음"
+
+msgid "Place Applet"
+msgstr "애플릿 배치"
+
+msgid "Choose where to add this applet."
+msgstr "이 애플릿을 추가할 위치를 선택하십시오."
+
+msgid "Cancel"
+msgstr "취소"
+
+msgid "Panel"
+msgstr "패널"
+
+msgid "Dock"
+msgstr "독"
+
+msgid "No Curation"
+msgstr "큐레이션 없음"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "이 시스템에는 큐레이션 정보가 없습니다. 그래도 Flathub에서 앱을 찾아볼 수 있습니다"
+
+msgid "Browse Flathub"
+msgstr "Flathub 둘러보기"
+
+msgid "Offline"
+msgstr "오프라인"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s부터 %s까지, %s에 %s로 최고치"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "설치 수:"
+
+msgid "Not Verified"
+msgstr "확인되지 않음"
+
+msgid "Developer information not available."
+msgstr "개발자 정보를 사용할 수 없습니다."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "%s 앱 ID의 소유권이 확인되지 않았으며 커뮤니티 패키지일 수 있습니다."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "%s 앱 ID의 소유권이 Flathub 팀에 의해 수동으로 확인되었습니다."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "%1$s 앱 ID의 소유권이 <b>%3$s</b>에 <b>%2$s</b>이(가) 확인했습니다."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "%1$s 앱 ID의 소유권이 %2$s을(를) 통해 확인되었습니다."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "%s 앱 ID의 소유권이 확인되었습니다."
+
+msgid "Bazaar Release"
+msgstr "Bazaar 릴리스"
+
+msgid "Full Release Notes"
+msgstr "전체 릴리스 노트"
+
+msgid "This release was made possible by users like you!"
+msgstr "이번 릴리스는 여러분 같은 사용자 덕분에 만들어졌습니다!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "저는 Bazaar를 만드는 일이 즐겁지만 혼자서는 할 수 없습니다. Ko-Fi에서 후원하여 계속되는 개발을 도와주십시오."
+
+msgid "Donate to Bazaar"
+msgstr "Bazaar 후원하기"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "%s의 새로운 기능"
+
+msgid "Released %B %-e, %Y"
+msgstr "%Y년 %B %-e일 출시"
+
+msgid "Choose an Installation"
+msgstr "설치 항목 선택"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "이 앱의 여러 버전이 설치되어 있습니다. 어느 것으로 진행하시겠습니까?"
+
+msgid "Details"
+msgstr "상세 정보"
+
+msgid "Copy"
+msgstr "복사"
+
+msgid "Copied!"
+msgstr "복사했습니다!"
+
+msgid "Favorite Count"
+msgstr "즐겨찾기 수"
+
+msgid "Failed to update favorite"
+msgstr "즐겨찾기를 업데이트하지 못했습니다"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Flathub로 로그인하여 즐겨찾기 관리"
+
+msgid "Log In"
+msgstr "로그인"
+
+msgid "Favorites"
+msgstr "즐겨찾기"
+
+msgid "Install All"
+msgstr "모두 설치"
+
+msgid "No Favorites"
+msgstr "즐겨찾기 없음"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "즐겨찾기로 표시한 애플리케이션이 여기에 나타납니다"
+
+msgid "Support This Application"
+msgstr "이 애플리케이션 후원"
+
+msgid "Remove From Favorites"
+msgstr "즐겨찾기에서 제거"
+
+msgid "Failed to remove favorite"
+msgstr "즐겨찾기를 제거하지 못했습니다"
+
+msgid "Previous"
+msgstr "이전"
+
+msgid "Next"
+msgstr "다음"
+
+msgid "Editing"
+msgstr "편집"
+
+msgid "Midi"
+msgstr "MIDI"
+
+msgid "Mixer"
+msgstr "믹서"
+
+msgid "Music"
+msgstr "음악"
+
+msgid "Player"
+msgstr "플레이어"
+
+msgid "Recorder"
+msgstr "녹음기"
+
+msgid "Sequencer"
+msgstr "시퀀서"
+
+msgid "Tuner"
+msgstr "튜너"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "Emulation"
+msgstr "에뮬레이션"
+
+msgid "Action"
+msgstr "액션"
+
+msgid "Adventure"
+msgstr "어드벤처"
+
+msgid "Arcade"
+msgstr "아케이드"
+
+msgid "Blocks"
+msgstr "블록"
+
+msgid "Board"
+msgstr "보드"
+
+msgid "Card"
+msgstr "카드"
+
+msgid "Kids"
+msgstr "어린이"
+
+msgid "Logic"
+msgstr "논리"
+
+msgid "Role Playing"
+msgstr "롤플레잉"
+
+msgid "Shooter"
+msgstr "슈팅"
+
+msgid "Simulation"
+msgstr "시뮬레이션"
+
+msgid "Sports"
+msgstr "스포츠"
+
+msgid "Strategy"
+msgstr "전략"
+
+msgid "Browsers"
+msgstr "브라우저"
+
+msgid "Chat"
+msgstr "채팅"
+
+msgid "Mail"
+msgstr "메일"
+
+msgid "File Sharing"
+msgstr "파일 공유"
+
+msgid "Audio & Video"
+msgstr "오디오 및 비디오"
+
+msgid "Media"
+msgstr "미디어"
+
+msgid "More Audio & Video"
+msgstr "오디오 및 비디오 더 보기"
+
+msgid "Developer Tools"
+msgstr "개발자 도구"
+
+msgid "Develop"
+msgstr "개발"
+
+msgid "More Developer Tools"
+msgstr "개발자 도구 더 보기"
+
+msgid "Education"
+msgstr "교육"
+
+msgid "Learn"
+msgstr "학습"
+
+msgid "More Education"
+msgstr "교육 더 보기"
+
+msgid "Gaming"
+msgstr "게임"
+
+msgid "Play"
+msgstr "플레이"
+
+msgid "More Gaming"
+msgstr "게임 더 보기"
+
+msgid "Graphics & Photography"
+msgstr "그래픽 및 사진"
+
+msgid "Create"
+msgstr "만들기"
+
+msgid "More Graphics & Photography"
+msgstr "그래픽 및 사진 더 보기"
+
+msgid "Networking"
+msgstr "네트워킹"
+
+msgid "Internet"
+msgstr "인터넷"
+
+msgid "More Networking"
+msgstr "네트워킹 더 보기"
+
+msgid "Productivity"
+msgstr "생산성"
+
+msgid "Work"
+msgstr "업무"
+
+msgid "More Productivity"
+msgstr "생산성 더 보기"
+
+msgid "Science"
+msgstr "과학"
+
+msgid "More Science"
+msgstr "과학 더 보기"
+
+msgid "System"
+msgstr "시스템"
+
+msgid "More System"
+msgstr "시스템 더 보기"
+
+msgid "Utilities"
+msgstr "유틸리티"
+
+msgid "Tools"
+msgstr "도구"
+
+msgid "More Utilities"
+msgstr "유틸리티 더 보기"
+
+msgid "Trending"
+msgstr "인기 급상승"
+
+msgid "More Trending"
+msgstr "인기 급상승 더 보기"
+
+msgid "Popular"
+msgstr "인기"
+
+msgid "More Popular"
+msgstr "인기 더 보기"
+
+msgid "Recently Added"
+msgstr "최근 추가됨"
+
+msgid "New"
+msgstr "신규"
+
+msgid "More New"
+msgstr "신규 더 보기"
+
+msgid "Recently Updated"
+msgstr "최근 업데이트됨"
+
+msgid "Updated"
+msgstr "업데이트됨"
+
+msgid "More Updated"
+msgstr "업데이트됨 더 보기"
+
+msgid "Mobile"
+msgstr "모바일"
+
+msgid "More Mobile"
+msgstr "모바일 더 보기"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Adwaita 더 보기"
+
+msgid "KDE Apps"
+msgstr "KDE 앱"
+
+msgid "More KDE Apps"
+msgstr "KDE 앱 더 보기"
+
+msgid "Made for COSMIC™"
+msgstr "COSMIC™용으로 제작"
+
+msgid "For COSMIC™"
+msgstr "COSMIC™용"
+
+msgid "More COSMIC Apps"
+msgstr "COSMIC 앱 더 보기"
+
+msgid "Games"
+msgstr "게임"
+
+msgid "More Games"
+msgstr "게임 더 보기"
+
+msgid "Emulators"
+msgstr "에뮬레이터"
+
+msgid "More Emulators"
+msgstr "에뮬레이터 더 보기"
+
+msgid "Launchers"
+msgstr "런처"
+
+msgid "More Game Launchers"
+msgstr "게임 런처 더 보기"
+
+msgid "Game Tools"
+msgstr "게임 도구"
+
+msgid "More Game Tools"
+msgstr "게임 도구 더 보기"
+
+msgid "New Year, New Workflows"
+msgstr "새해, 새로운 작업 방식"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "메모하고, 할 일을 관리하고, 계획을 세우는 앱"
+
+msgid "Staff Picks"
+msgstr "편집자 추천"
+
+msgid "Apps we love right now"
+msgstr "지금 우리가 좋아하는 앱"
+
+msgid "Get Creative"
+msgstr "창의력 발휘하기"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "그림 그리기, 사진 편집, 디지털 디자인을 위한 필수 앱"
+
+msgid "Build Native Apps"
+msgstr "네이티브 앱 만들기"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "시스템에 자연스럽게 어울리는 앱 개발"
+
+msgid "Stay in Touch"
+msgstr "연락 유지하기"
+
+msgid "Essential collaboration and communication apps"
+msgstr "협업과 소통을 위한 필수 앱"
+
+msgid "Ready for Vacations"
+msgstr "휴가 준비"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "지도, 대중교통, 날씨, 여행 계획 앱"
+
+msgid "Smarter Every Day"
+msgstr "매일 더 똑똑하게"
+
+msgid "Apps to help you study, research, and write"
+msgstr "공부하고, 조사하고, 글을 쓰는 데 도움이 되는 앱"
+
+msgid "Get Cozy"
+msgstr "아늑한 시간 보내기"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "독서, 영화 감상, 게임을 위한 훌륭한 앱"
+
+msgid "Web Developer Essentials"
+msgstr "웹 개발자 필수 앱"
+
+msgid "Making websites is more fun with these apps"
+msgstr "이 앱들로 웹사이트 만들기가 더 즐거워집니다"
+
+msgid "Take Better Notes"
+msgstr "더 좋은 메모"
+
+msgid "Find your new favorite note taking tool"
+msgstr "새로 즐겨 쓸 메모 도구 찾기"
+
+msgid "Get Focused"
+msgstr "집중하기"
+
+msgid "Great apps for task management"
+msgstr "작업 관리를 위한 훌륭한 앱"
+
+msgid "Make Some Noise"
+msgstr "소리 만들기"
+
+msgid "Apps for creating and producing music"
+msgstr "음악을 만들고 제작하는 앱"
+
+msgid "Get To Work"
+msgstr "일 시작하기"
+
+msgid "Essential office apps"
+msgstr "필수 사무용 앱"
+
+msgid "Flathub Not Added"
+msgstr "Flathub가 추가되지 않음"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Flatpak 설치 어디에서도 Flathub 원격 저장소를 찾을 수 없습니다"
+
+msgid "Can't Reach Flathub"
+msgstr "Flathub에 연결할 수 없음"
+
+msgid "You can still manage and search for apps."
+msgstr "그래도 앱을 관리하고 검색할 수 있습니다."
+
+msgid "Search Apps"
+msgstr "앱 검색"
+
+msgid "Reconnect"
+msgstr "다시 연결"
+
+msgid "App of the Day"
+msgstr "오늘의 앱"
+
+msgid "On the Go"
+msgstr "이동 중에"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Linux 휴대폰과 태블릿용 앱"
+
+msgid "More Mobile Apps"
+msgstr "모바일 앱 더 보기"
+
+msgid "We​ ♥​ Games"
+msgstr "우리는 ♥ 게임"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "좋아하는 타이틀을 실행하는 게임과 앱"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "이것은 로컬 미리보기이며 일부 세부 정보가 게시된 목록과 다를 수 있습니다"
+
+msgid "Preview Store Appearance"
+msgstr "스토어 모양 미리보기"
+
+msgid "_Support"
+msgstr "후원(_S)"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "이 앱은 더 이상 업데이트나 보안 수정을 받지 않는 런타임을 사용합니다. 사용하기에 안전하지 않게 될 수 있습니다."
+
+msgid "Trash Data"
+msgstr "데이터 휴지통으로 이동"
+
+msgid "Add-ons"
+msgstr "애드온"
+
+msgid "More Add-Ons"
+msgstr "애드온 더 보기"
+
+msgid "Links"
+msgstr "링크"
+
+msgid "Similar Apps"
+msgstr "비슷한 앱"
+
+msgid "No URL"
+msgstr "URL 없음"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "이 앱은 FLOSS 라이선스이므로 소스 코드의 안전성을 감사할 수 있습니다."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "이 앱은 독점 라이선스이므로 소스 코드가 비공개로 개발되며 독립적인 제3자가 감사할 수 없습니다."
+
+msgid "Other Apps From This Developer"
+msgstr "이 개발자의 다른 앱"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "%s의 다른 앱"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s이(가) 설치되어 있지 않지만 데이터 <b>%s</b>이(가) 남아 있습니다."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "%s의 앱"
+
+msgid "Apps by This Developer"
+msgstr "이 개발자의 앱"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "앱 %d개"
+
+msgid "Failed to Remove User Data"
+msgstr "사용자 데이터를 제거하지 못했습니다"
+
+msgid "Hardware Support"
+msgstr "하드웨어 지원"
+
+msgid "Keyboard support"
+msgstr "키보드 지원"
+
+msgid "Requires keyboards"
+msgstr "키보드 필요"
+
+msgid "Recommends keyboards"
+msgstr "키보드 권장"
+
+msgid "Supports keyboards"
+msgstr "키보드 지원함"
+
+msgid "Unknown support for keyboards"
+msgstr "키보드 지원 여부를 알 수 없음"
+
+msgid "Mouse support"
+msgstr "마우스 지원"
+
+msgid "Requires mice or pointing devices"
+msgstr "마우스 또는 포인팅 장치 필요"
+
+msgid "Recommends mice or pointing devices"
+msgstr "마우스 또는 포인팅 장치 권장"
+
+msgid "Supports mice or pointing devices"
+msgstr "마우스 또는 포인팅 장치 지원함"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "마우스 또는 포인팅 장치 지원 여부를 알 수 없음"
+
+msgid "Touchscreen support"
+msgstr "터치스크린 지원"
+
+msgid "Requires touchscreens"
+msgstr "터치스크린 필요"
+
+msgid "Recommends touchscreens"
+msgstr "터치스크린 권장"
+
+msgid "Supports touchscreens"
+msgstr "터치스크린 지원함"
+
+msgid "Unknown support for touchscreens"
+msgstr "터치스크린 지원 여부를 알 수 없음"
+
+msgid "Mobile support"
+msgstr "모바일 지원"
+
+msgid "Works on mobile devices"
+msgstr "모바일 장치에서 작동함"
+
+msgid "May not work well on mobile devices"
+msgstr "모바일 장치에서 잘 작동하지 않을 수 있음"
+
+msgid "Desktop support"
+msgstr "데스크톱 지원"
+
+msgid "Works well on large screens"
+msgstr "대형 화면에서 잘 작동함"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s은(는) 특정 하드웨어에서 가장 잘 작동합니다"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s은(는) 대부분의 장치에서 작동합니다"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "취소"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "취소하는 중"
+
+msgid "_Open"
+msgstr "열기(_O)"
+
+msgid "Uninstall Application"
+msgstr "애플리케이션 제거"
+
+msgid "_Remove"
+msgstr "제거(_R)"
+
+msgid "Update"
+msgstr "업데이트"
+
+msgid "Remove"
+msgstr "제거"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "%s을(를) %s에서 설치"
+
+#, c-format
+msgid "Install %s"
+msgstr "%s 설치"
+
+msgid "Donate"
+msgstr "기부"
+
+msgid "Search installed apps"
+msgstr "설치된 앱 검색"
+
+msgid "No Apps Found"
+msgstr "앱을 찾을 수 없음"
+
+msgid "Search Store Instead"
+msgstr "대신 스토어에서 검색"
+
+msgid "Pending Updates"
+msgstr "대기 중인 업데이트"
+
+msgid "Downloads"
+msgstr "다운로드"
+
+msgid "Recently Uninstalled"
+msgstr "최근 제거됨"
+
+msgid "Clear Finished Tasks"
+msgstr "완료된 작업 지우기"
+
+msgid "Sort Options"
+msgstr "정렬 옵션"
+
+msgid "Sort By"
+msgstr "정렬 기준"
+
+msgid "Name"
+msgstr "이름"
+
+msgid "Size"
+msgstr "크기"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "설치된 앱 목록에서 \"%s\"에 대한 일치 항목을 찾을 수 없습니다"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "사용 가능한 업데이트 %u개"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "설치된 앱 %u개"
+
+msgid "No applications found"
+msgstr "애플리케이션을 찾을 수 없음"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "애플리케이션 %u개를 찾았습니다"
+
+msgid "Get Involved"
+msgstr "참여하기"
+
+msgid "Learn More"
+msgstr "더 알아보기"
+
+msgid "Unknown License"
+msgstr "알 수 없는 라이선스"
+
+msgid "Community Built"
+msgstr "커뮤니티 제작"
+
+msgid "Proprietary"
+msgstr "독점"
+
+msgid "Special License"
+msgstr "특수 라이선스"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"이 앱은 국제 커뮤니티가 공개적으로 개발합니다.\n"
+"\n"
+"여러분도 참여하여 더 나은 앱으로 만드는 데 도움을 줄 수 있습니다."
+
+msgid "The license of this app is not known"
+msgstr "이 앱의 라이선스를 알 수 없습니다"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"이 앱은 국제 커뮤니티가 공개적으로 개발하며 %s 라이선스로 배포됩니다.\n"
+"\n"
+"여러분도 참여하여 더 나은 앱으로 만드는 데 도움을 줄 수 있습니다."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"이 앱은 공개적으로 개발되지 않으므로 개발자만 작동 방식을 알고 있습니다. 발견하기 어려운 방식으로 안전하지 않을 수 있으며 감독 없이 변경될 수 있습니다.\n"
+"\n"
+"이 앱에 기여할 수 있을 수도 있고 없을 수도 있습니다."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"이 앱은 특수 라이선스 %s에 따라 개발됩니다.\n"
+"\n"
+"이 앱에 기여할 수 있을 수도 있고 없을 수도 있습니다."
+
+msgid "License"
+msgstr "라이선스"
+
+msgid "Connect to Flathub"
+msgstr "Flathub에 연결"
+
+msgid "Something Went Wrong"
+msgstr "문제가 발생했습니다"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "로그인하여 기기 간에 즐겨찾기한 앱 동기화"
+
+msgid "Finish"
+msgstr "마침"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "%s님, 안녕하세요!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "메타인포 미리보기에 아이콘을 추가하시겠습니까?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "메타인포 파일에는 앱 아이콘이 기본으로 포함되어 있지 않습니다. 직접 선택하시겠습니까?"
+
+msgid "Skip"
+msgstr "건너뛰기"
+
+msgid "Select Icon"
+msgstr "아이콘 선택"
+
+msgid "Image Files"
+msgstr "이미지 파일"
+
+msgid "New Permissions"
+msgstr "새 권한"
+
+msgid "_Accept"
+msgstr "수락(_A)"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "%s의 새 권한"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "이 업데이트에는 다음 추가 권한이 필요합니다"
+
+msgid "User"
+msgstr "사용자"
+
+msgid "Beta"
+msgstr "베타"
+
+msgid "End-Of-Life"
+msgstr "지원 종료"
+
+msgid "Preferences"
+msgstr "기본 설정"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "네트워크 연결이 종량제입니다. 스토어 데이터 자동 새로 고침이 일시 중지되었습니다"
+
+msgid "Refresh Manually"
+msgstr "수동으로 새로 고침"
+
+msgid "App Updates"
+msgstr "앱 업데이트"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "데이터와 배터리를 절약하기 위해 종량제 네트워크이거나 절전 모드일 때는 자동 업데이트가 일시 중지됩니다."
+
+msgid "_Automatic"
+msgstr "자동(_A)"
+
+msgid "Automatically check for and download app updates"
+msgstr "앱 업데이트를 자동으로 확인하고 다운로드합니다"
+
+msgid "_Manual"
+msgstr "수동(_M)"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "앱 업데이트 확인과 다운로드를 수동으로 해야 합니다"
+
+msgid "Automatic Update _Notifications"
+msgstr "자동 업데이트 알림(_N)"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "업데이트가 자동으로 설치되면 알립니다"
+
+msgid "Content Filters"
+msgstr "콘텐츠 필터"
+
+msgid "_Free Software Only"
+msgstr "자유 소프트웨어만(_F)"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "찾아보기와 검색 시 독점 앱 숨기기"
+
+msgid "F_lathub Results Only"
+msgstr "Flathub 결과만(_L)"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "검색 및 찾아보기 결과를 Flathub에서만 제공되는 앱으로 제한합니다"
+
+msgid "_Verified Results Only"
+msgstr "확인된 결과만(_V)"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Flathub에서 확인되지 않은 결과 숨기기"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "지원 종료 앱 숨기기(_E)"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "개발자가 더 이상 지원하지 않는 앱 숨기기"
+
+msgid "Progress Bar Theme"
+msgstr "진행률 막대 테마"
+
+msgid "Accent Color"
+msgstr "강조 색상"
+
+msgid "Pride Colors"
+msgstr "프라이드 색상"
+
+msgid "Lesbian Pride Colors"
+msgstr "레즈비언 프라이드 색상"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "남성 동성애자 프라이드 색상"
+
+msgid "Transgender Pride Colors"
+msgstr "트랜스젠더 프라이드 색상"
+
+msgid "Nonbinary Pride Colors"
+msgstr "논바이너리 프라이드 색상"
+
+msgid "Bisexual Pride Colors"
+msgstr "양성애자 프라이드 색상"
+
+msgid "Asexual Pride Colors"
+msgstr "무성애자 프라이드 색상"
+
+msgid "Pansexual Pride Colors"
+msgstr "범성애자 프라이드 색상"
+
+msgid "Aromantic Pride Colors"
+msgstr "에이로맨틱 프라이드 색상"
+
+msgid "Genderfluid Pride Colors"
+msgstr "젠더플루이드 프라이드 색상"
+
+msgid "Polysexual Pride Colors"
+msgstr "폴리섹슈얼 프라이드 색상"
+
+msgid "Omnisexual Pride Colors"
+msgstr "옴니섹슈얼 프라이드 색상"
+
+msgid "Aroace Pride Colors"
+msgstr "에이로에이스 프라이드 색상"
+
+msgid "Agender Pride Colors"
+msgstr "에이젠더 프라이드 색상"
+
+msgid "Genderqueer Pride Colors"
+msgstr "젠더퀴어 프라이드 색상"
+
+msgid "Intersex Pride Colors"
+msgstr "인터섹스 프라이드 색상"
+
+msgid "Demigender Pride Colors"
+msgstr "데미젠더 프라이드 색상"
+
+msgid "Biromantic Pride Colors"
+msgstr "바이로맨틱 프라이드 색상"
+
+msgid "Disability Pride Colors"
+msgstr "장애인 프라이드 색상"
+
+msgid "Femboy Pride Colors"
+msgstr "펨보이 프라이드 색상"
+
+msgid "Neutrois Pride Colors"
+msgstr "뉴트로이스 프라이드 색상"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar가 앱 업데이트를 확인하려면 백그라운드에서 실행되어야 합니다"
+
+msgid "Version History"
+msgstr "버전 기록"
+
+msgid "Today"
+msgstr "오늘"
+
+msgid "Yesterday"
+msgstr "어제"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d일 전"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d주 전"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d개월 전"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d년 전"
+
+msgid "%e %B %Y"
+msgstr "%Y년 %B %e일"
+
+#, c-format
+msgid "Version %s"
+msgstr "버전 %s"
+
+msgid "No details for this release"
+msgstr "이 릴리스에 대한 상세 정보 없음"
+
+msgid "Get More Information"
+msgstr "자세한 정보 보기"
+
+msgid "_Version History"
+msgstr "버전 기록(_V)"
+
+msgid "Remotes"
+msgstr "원격 저장소"
+
+msgid "System Installation"
+msgstr "시스템 설치"
+
+msgid "Available to all users on this computer"
+msgstr "이 컴퓨터의 모든 사용자가 사용할 수 있음"
+
+msgid "User Installation"
+msgstr "사용자 설치"
+
+msgid "Only available to you"
+msgstr "나만 사용할 수 있음"
+
+msgid "Remove Remote"
+msgstr "원격 저장소 제거"
+
+#, c-format
+msgid "Remove %s"
+msgstr "%s 제거"
+
+msgid "Unused"
+msgstr "사용 안 함"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "앱 %u개 설치됨"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "“%s”을(를) 제거하시겠습니까?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "이 사용자 원격 저장소에서는 더 이상 앱을 설치할 수 없게 됩니다."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "이 시스템 원격 저장소에서는 더 이상 앱을 설치할 수 없게 됩니다."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "제거할 앱 %u개"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "아래 앱은 이 원격 저장소에서 설치되었으며 함께 계정에서 제거됩니다."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "아래 앱은 이 원격 저장소에서 설치되었으며 함께 모든 사용자에게서 제거됩니다."
+
+msgid "Uninstall"
+msgstr "제거"
+
+msgid "Get"
+msgstr "받기"
+
+msgid "Arbitrary Permissions"
+msgstr "임의 권한"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"이 앱에는 원하는 <b>다른 모든 권한</b>을 스스로 부여할 수 있게 해 주는 간접 권한이 있어 Flatpak 샌드박스를 우회합니다.\n"
+"\n"
+"따라서 모든 파일에 접근하고 인터넷에 연결하는 등 권한이 높은 비샌드박스 애플리케이션이 할 수 있는 모든 일을 할 수 있습니다.\n"
+"\n"
+"다른 권한을 확인하면 앱이 어떤 일을 할 가능성이 있는지 더 잘 파악할 수 있습니다."
+
+msgid "View Other Permissions"
+msgstr "다른 권한 보기"
+
+msgid "Safe"
+msgstr "안전"
+
+msgid "App ID"
+msgstr "앱 ID"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "이 앱은 오래된 버전의 소프트웨어 플랫폼(SDK)을 사용하며 수정되지 않는 버그나 보안 취약점이 있을 수 있습니다."
+
+msgid "Safety"
+msgstr "안전성"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s은(는) 안전합니다"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s에는 안전하지 않은 권한이 없습니다"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s은(는) 아마도 안전합니다"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s은(는) 안전하지 않을 수 있습니다"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s은(는) 안전하지 않습니다"
+
+msgid "Back"
+msgstr "뒤로"
+
+msgid "Previous Screenshot"
+msgstr "이전 스크린샷"
+
+msgid "Next Screenshot"
+msgstr "다음 스크린샷"
+
+msgid "Copy Image"
+msgstr "이미지 복사"
+
+msgid "Reset View"
+msgstr "보기 초기화"
+
+msgid "Zoom Out"
+msgstr "축소"
+
+msgid "Zoom In"
+msgstr "확대"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "런타임 업데이트 %u개"
+
+msgid "Screenshots Carousel"
+msgstr "스크린샷 캐러셀"
+
+msgid "No Screenshots"
+msgstr "스크린샷 없음"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "스크린샷 %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "스크린샷 %u"
+
+msgid "Clear Search"
+msgstr "검색 지우기"
+
+msgid "Filters"
+msgstr "필터"
+
+msgid "_Verified"
+msgstr "확인됨(_V)"
+
+msgid "_Free/Open"
+msgstr "자유/오픈(_F)"
+
+msgid "Non-_EOL"
+msgstr "지원 종료 제외(_E)"
+
+msgid "Filter out End-of-Life apps"
+msgstr "지원 종료 앱 걸러내기"
+
+msgid "_Mobile Friendly"
+msgstr "모바일 친화(_M)"
+
+msgid "Categories"
+msgstr "분류"
+
+msgid "Search Apps, Games, Software"
+msgstr "앱, 게임, 소프트웨어 검색"
+
+msgid "Search Filters"
+msgstr "검색 필터"
+
+msgid "Browse Categories"
+msgstr "분류 둘러보기"
+
+msgid "Categories Unavailable"
+msgstr "분류를 사용할 수 없음"
+
+msgid "Search for apps using the search bar above."
+msgstr "위의 검색 막대를 사용하여 앱을 검색하십시오."
+
+msgid "No Applications Found"
+msgstr "애플리케이션을 찾을 수 없음"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Flathub에서 \"%s\"에 대한 결과를 찾을 수 없습니다"
+
+msgid "Browser"
+msgstr "브라우저"
+
+msgid "Video"
+msgstr "비디오"
+
+msgid "Office"
+msgstr "오피스"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "캘린더"
+
+msgid "Messaging"
+msgstr "메신저"
+
+msgid "Paint"
+msgstr "그림판"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "토렌트"
+
+msgid "Emulator"
+msgstr "에뮬레이터"
+
+msgid "Copy Link"
+msgstr "링크 복사"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Flathub 페이지"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "프로젝트 웹사이트"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "이슈 추적기"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "FAQ"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "도움말"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "기부"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "번역"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "연락처"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "소스 코드"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "기여"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "매니페스트"
+
+msgid "Timeline"
+msgstr "타임라인"
+
+msgid "Total"
+msgstr "합계"
+
+msgid "This Week"
+msgstr "이번 주"
+
+msgid "Installs per day"
+msgstr "일별 설치 수"
+
+msgid "World"
+msgstr "세계"
+
+msgid "Installs per country"
+msgstr "국가별 설치 수"
+
+msgid "Since 4/15/2024"
+msgstr "2024/4/15부터"
+
+msgid "No Results Found"
+msgstr "결과를 찾을 수 없음"
+
+msgid "Search failed"
+msgstr "검색하지 못했습니다"
+
+msgid "Unknown"
+msgstr "알 수 없음"
+
+msgid "Keep User Data"
+msgstr "사용자 데이터 유지"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "개인 설정 &amp; 콘텐츠 복원을 허용합니다"
+
+msgid "Delete All Data"
+msgstr "모든 데이터 삭제"
+
+msgid "Permanently erase user data to save space"
+msgstr "공간을 확보하기 위해 사용자 데이터를 영구적으로 삭제합니다"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "%s을(를) 제거하시겠습니까?"
+
+msgid "Select which version to remove."
+msgstr "제거할 버전을 선택하십시오."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "%s은(는) 제거한 후에는 사용할 수 없습니다."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "“%s”은(는) 고위험입니다"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"이 앱은 <b>모든 파일, 브라우저 기록, 저장된 암호</b> 등을 포함하여 시스템에 대한 전체 접근 권한이 있습니다. 또한 인터넷에 접근할 수 있으므로 데이터를 외부에 보낼 수 있습니다.\n"
+"\n"
+"이 앱은 독점 소프트웨어이므로 이러한 권한으로 무엇을 하는지 감사할 수 없습니다."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"이 앱은 <b>모든 키 입력 기록, 스크린샷 캡처, 다른 애플리케이션 감시</b>가 가능한 레거시 X11 윈도잉 시스템을 사용합니다. 또한 인터넷에 접근할 수 있으므로 데이터를 외부에 보낼 수 있습니다.\n"
+"\n"
+"이 앱은 독점 소프트웨어이므로 이러한 권한으로 무엇을 하는지 감사할 수 없습니다."
+
+msgid "_Install Anyway"
+msgstr "그래도 설치(_I)"
+
+msgid "Failed to load transaction dialog"
+msgstr "트랜잭션 대화 상자를 불러오지 못했습니다"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "%.02f초 만에 완료됨"
+
+msgid "App Add-On"
+msgstr "앱 애드온"
+
+msgid "Runtime"
+msgstr "런타임"
+
+msgid "In Queue"
+msgstr "대기열에 있음"
+
+msgid "Finishing Up"
+msgstr "마무리하는 중"
+
+msgid "Done"
+msgstr "완료"
+
+msgid "Cancelled"
+msgstr "취소됨"
+
+msgid "Error"
+msgstr "오류"
+
+msgid "Cancel Transaction"
+msgstr "트랜잭션 취소"
+
+msgid "Show Details"
+msgstr "상세 정보 보기"
+
+msgid "Show Error Info"
+msgstr "오류 정보 보기"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s 확보됨"
+
+msgid "Transaction Error"
+msgstr "트랜잭션 오류"
+
+msgid "Pending"
+msgstr "대기 중"
+
+msgid "Installed Updates"
+msgstr "설치된 업데이트"
+
+msgid "Release Notes"
+msgstr "릴리스 노트"
+
+msgid "No Release Info"
+msgstr "릴리스 정보 없음"
+
+msgid "_Update All"
+msgstr "모두 업데이트(_U)"
+
+msgid "This update requests new permissions"
+msgstr "이 업데이트는 새 권한을 요청합니다"
+
+msgid "Manage Leftover User Data"
+msgstr "남은 사용자 데이터 관리"
+
+msgid "No Leftover User Data Found"
+msgstr "남은 사용자 데이터를 찾을 수 없음"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "제거된 앱이 남긴 개인 데이터가 여기에 표시됩니다"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "앱 %u개의 휴지통 사용자 데이터"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "%s의 휴지통 사용자 데이터"
+
+msgid "Open User Data Folder"
+msgstr "사용자 데이터 폴더 열기"
+
+msgid "Trash User Data"
+msgstr "사용자 데이터 휴지통으로 이동"
+
+msgid "Refreshing"
+msgstr "새로 고치는 중"
+
+msgid "Curated"
+msgstr "큐레이션됨"
+
+msgid "Explore"
+msgstr "탐색"
+
+msgid "Library"
+msgstr "라이브러리"
+
+msgid "Search"
+msgstr "검색"
+
+msgid "Main Menu"
+msgstr "주 메뉴"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "새 버전의 Bazaar를 실행하고 있습니다!"
+
+msgid "See What's New"
+msgstr "새로운 기능 보기"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "네트워크에 연결되어 있지만 캐시된 Flathub 버전을 보고 있습니다"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "네트워크 연결이 종량제입니다. 자동 새로 고침이 비활성화되었습니다"
+
+msgid "_Donate to Bazaar"
+msgstr "Bazaar 후원(_D)"
+
+msgid "_Refresh"
+msgstr "새로 고침(_R)"
+
+msgid "_Login With Flathub"
+msgstr "Flathub로 로그인(_L)"
+
+msgid "_Manage Leftover User Data"
+msgstr "남은 사용자 데이터 관리(_M)"
+
+msgid "Manage R_emotes"
+msgstr "원격 저장소 관리(_E)"
+
+msgid "_Preferences"
+msgstr "기본 설정(_P)"
+
+msgid "_Keyboard Shortcuts"
+msgstr "키보드 단축키(_K)"
+
+msgid "_About Bazaar"
+msgstr "Bazaar 정보(_A)"
+
+msgid "_Quit Bazaar"
+msgstr "Bazaar 종료(_Q)"
+
+msgid "Log Out"
+msgstr "로그아웃"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "애플리케이션을 실행하지 못했습니다"
+
+msgid "Could not open link"
+msgstr "링크를 열 수 없습니다"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Bazaar에서 Bazaar를 제거할 수 없습니다!"
+
+msgid "Can't do that right now!"
+msgstr "지금은 할 수 없습니다!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, 설치 %'u회"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "설치 수가 가장 많은 곳: %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "지난달 다운로드 %d회"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s 런타임"
+
+msgid "Size information unavailable"
+msgstr "크기 정보를 사용할 수 없음"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "%s의 다운로드 크기"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "%s의 설치된 크기"
+
+msgid "All Ages"
+msgstr "전체 연령"
+
+msgid "Age rating information unavailable"
+msgstr "연령 등급 정보를 사용할 수 없음"
+
+msgid "Suitable for all ages"
+msgstr "전체 연령 이용가"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "%d세 이상 이용가"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "%s 라이선스의 자유 소프트웨어"
+
+msgid "Free software"
+msgstr "자유 소프트웨어"
+
+msgid "Proprietary Software"
+msgstr "독점 소프트웨어"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "특수 라이선스: %s"
+
+msgid "Free Software"
+msgstr "자유 소프트웨어"
+
+msgid "Adaptive"
+msgstr "적응형"
+
+msgid "Desktop Only"
+msgstr "데스크톱 전용"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "데스크톱, 태블릿, 휴대폰에서 작동함"
+
+msgid "May not work on mobile devices"
+msgstr "모바일 장치에서 작동하지 않을 수 있음"
+
+msgid "Low Risk"
+msgstr "낮은 위험"
+
+msgid "Medium Risk"
+msgstr "중간 위험"
+
+msgid "High Risk"
+msgstr "높은 위험"
+
+msgid "Unknown Permissions"
+msgstr "알 수 없는 권한"
+
+msgid "Permissions are missing for this app."
+msgstr "이 앱의 권한 정보가 없습니다."
+
+msgid "No Permissions"
+msgstr "권한 없음"
+
+msgid "App is fully sandboxed"
+msgstr "앱이 완전히 샌드박스 처리됨"
+
+msgid "Network Access"
+msgstr "네트워크 접근"
+
+msgid "Can access the internet"
+msgstr "인터넷에 접근할 수 있음"
+
+msgid "No Network Access"
+msgstr "네트워크 접근 없음"
+
+msgid "Cannot access the internet"
+msgstr "인터넷에 접근할 수 없음"
+
+msgid "User Device Access"
+msgstr "사용자 장치 접근"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "웹캠이나 게임 컨트롤러 같은 장치에 접근할 수 있음"
+
+msgid "No User Device Access"
+msgstr "사용자 장치 접근 없음"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "웹캠이나 게임 컨트롤러 같은 장치에 접근할 수 없음"
+
+msgid "Input Device Access"
+msgstr "입력 장치 접근"
+
+msgid "Can access input devices"
+msgstr "입력 장치에 접근할 수 있음"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "마이크 접근 및 오디오 재생"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "허락을 받지 않고 마이크로 듣고 오디오를 재생할 수 있음"
+
+msgid "System Device Access"
+msgstr "시스템 장치 접근"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "상승된 권한이 필요한 시스템 장치에 접근할 수 있음"
+
+msgid "Screen Contents Access"
+msgstr "화면 내용 접근"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "화면이나 다른 창의 내용에 접근할 수 있음"
+
+msgid "Legacy Windowing System"
+msgstr "레거시 윈도잉 시스템"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "항상 레거시 윈도잉 시스템(X11)을 사용함"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "임의의 권한을 얻을 수 있음"
+
+msgid "User Settings"
+msgstr "사용자 설정"
+
+msgid "Can access and change user settings"
+msgstr "사용자 설정에 접근하고 변경할 수 있음"
+
+msgid "Full File System Read/Write Access"
+msgstr "전체 파일 시스템 읽기/쓰기 접근"
+
+msgid "Can read and write all data on the file system"
+msgstr "파일 시스템의 모든 데이터를 읽고 쓸 수 있음"
+
+msgid "Home Folder Read/Write Access"
+msgstr "홈 폴더 읽기/쓰기 접근"
+
+msgid "Can read and write all data in your home directory"
+msgstr "홈 디렉터리의 모든 데이터를 읽고 쓸 수 있음"
+
+msgid "Full File System Read Access"
+msgstr "전체 파일 시스템 읽기 접근"
+
+msgid "Can read all data on the file system"
+msgstr "파일 시스템의 모든 데이터를 읽을 수 있음"
+
+msgid "Home Folder Read Access"
+msgstr "홈 폴더 읽기 접근"
+
+msgid "Can read all data in your home directory"
+msgstr "홈 디렉터리의 모든 데이터를 읽을 수 있음"
+
+msgid "Download Folder Read/Write Access"
+msgstr "다운로드 폴더 읽기/쓰기 접근"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "다운로드 디렉터리의 모든 데이터를 읽고 쓸 수 있음"
+
+msgid "Download Folder Read Access"
+msgstr "다운로드 폴더 읽기 접근"
+
+msgid "Can read all data in your downloads directory"
+msgstr "다운로드 디렉터리의 모든 데이터를 읽을 수 있음"
+
+msgid "Can read and write all data in the directory"
+msgstr "디렉터리의 모든 데이터를 읽고 쓸 수 있음"
+
+msgid "Can read all data in the directory"
+msgstr "디렉터리의 모든 데이터를 읽을 수 있음"
+
+msgid "No File System Access"
+msgstr "파일 시스템 접근 없음"
+
+msgid "Cannot access the file system at all"
+msgstr "파일 시스템에 전혀 접근할 수 없음"
+
+msgid "Uses System Services"
+msgstr "시스템 서비스 사용"
+
+msgid "Can request data from non-portal system services"
+msgstr "포털이 아닌 시스템 서비스에 데이터를 요청할 수 있음"
+
+msgid "Uses Session Services"
+msgstr "세션 서비스 사용"
+
+msgid "Can request data from non-portal session services"
+msgstr "포털이 아닌 세션 서비스에 데이터를 요청할 수 있음"
+
+msgid "No Service Access"
+msgstr "서비스 접근 없음"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "포털이 아닌 세션 또는 시스템 서비스에 전혀 접근할 수 없음"
+
+msgid "Verified App Developer"
+msgstr "확인된 앱 개발자"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "이 앱의 개발자가 본인이 주장하는 사람임이 확인되었습니다"
+
+msgid "Proprietary Code"
+msgstr "독점 코드"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "소스 코드가 공개되지 않아 독립적으로 감사할 수 없으며 안전하지 않을 수 있습니다"
+
+msgid "Auditable Code"
+msgstr "감사 가능한 코드"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "소스 코드가 공개되어 독립적으로 감사할 수 있으므로 앱이 안전할 가능성이 더 높습니다"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "%s 시스템 서비스 사용"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "%s 세션 서비스 사용"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "%s 서비스 사용"
+
+msgid "Can see the non-portal service"
+msgstr "포털이 아닌 서비스를 볼 수 있음"
+
+msgid "Can talk to the non-portal service"
+msgstr "포털이 아닌 서비스와 통신할 수 있음"
+
+msgid "Can own the non-portal service"
+msgstr "포털이 아닌 서비스를 소유할 수 있음"
+
+msgid "Global Menu Integration"
+msgstr "글로벌 메뉴 통합"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "글로벌 메뉴 막대에 메뉴를 표시할 수 있음"
+
+msgid "KDE Settings Integration"
+msgstr "KDE 설정 통합"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "KDE 데스크톱 설정이 바뀔 때를 감지할 수 있음"
+
+msgid "KDE Global Settings"
+msgstr "KDE 전역 설정"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "글꼴과 색상 같은 KDE 데스크톱 기본 설정을 읽을 수 있음"
+
+msgid "Secret Storage Service"
+msgstr "비밀 저장소 서비스"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "시스템 키링을 사용하여 자체 암호를 저장하고 가져올 수 있음"
+
+msgid "Desktop Notifications Service"
+msgstr "데스크톱 알림 서비스"
+
+msgid "Can send desktop notifications"
+msgstr "데스크톱 알림을 보낼 수 있음"
+
+msgid "System Tray Integration"
+msgstr "시스템 트레이 통합"
+
+msgid "Can display an icon in the system tray"
+msgstr "시스템 트레이에 아이콘을 표시할 수 있음"
+
+msgid "KDE Connect Integration"
+msgstr "KDE Connect 통합"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "KDE Connect로 페어링된 장치와 상호작용할 수 있음"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "탐색"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "탐색 페이지 열기"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "라이브러리 페이지 열기"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "검색 페이지 열기"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "원격 저장소"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "원격 저장소 동기화"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "일반"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "기본 설정 열기"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "단축키 표시"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "창 닫기"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Bazaar 종료"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s 설치됨"
+
+msgid "The app is ready to be used"
+msgstr "앱을 사용할 준비가 되었습니다"
+
+msgid "Updates Are Out of Date"
+msgstr "업데이트가 오래되었습니다"
+
+msgid "Please check for available updates"
+msgstr "사용 가능한 업데이트를 확인하십시오"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "앱 %u개 업데이트됨"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s이(가) 업데이트되었습니다."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s 및 %s이(가) 업데이트되었습니다."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "%s, %s 및 %s 포함."

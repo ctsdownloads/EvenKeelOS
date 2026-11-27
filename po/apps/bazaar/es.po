@@ -1,0 +1,424 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "App Store"
+msgstr "Tienda de aplicaciones"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Sistema;Paquete;Gestor;Descubrir;Flatpak;Software;Aplicación;Tienda;"
+
+msgid "App page for Exhibit"
+msgstr "Página de la aplicación para Exhibit"
+
+msgid "Add-on"
+msgstr "Complemento"
+
+msgid "Other Sources"
+msgstr "Otras fuentes"
+
+msgid "Storage"
+msgstr "Almacenamiento"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Cargando %d aplicación…"
+msgstr[1] "Cargando %d aplicaciones…"
+
+msgid "Removing remote…"
+msgstr "Eliminando repositorio remoto…"
+
+msgid "Could not remove remote"
+msgstr "No se pudo eliminar el repositorio remoto"
+
+msgid "Place Applet"
+msgstr "Colocar applet"
+
+msgid "Choose where to add this applet."
+msgstr "Elija dónde añadir este applet."
+
+msgid "Panel"
+msgstr "Panel"
+
+msgid "Dock"
+msgstr "Dock"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s a %s, máximo el %s con %s"
+
+msgid "Bazaar Release"
+msgstr "Versión de Bazaar"
+
+msgid "Made for COSMIC™"
+msgstr "Hecho para COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Para COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Más aplicaciones de COSMIC"
+
+msgid "New Year, New Workflows"
+msgstr "Año nuevo, flujos de trabajo nuevos"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Aplicaciones para tomar notas, seguir tareas y hacer planes"
+
+msgid "Staff Picks"
+msgstr "Selección del equipo"
+
+msgid "Apps we love right now"
+msgstr "Aplicaciones que nos encantan ahora mismo"
+
+msgid "Get Creative"
+msgstr "Despierte su creatividad"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Aplicaciones esenciales para dibujar, editar fotos y diseñar en digital"
+
+msgid "Build Native Apps"
+msgstr "Cree aplicaciones nativas"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Desarrolle aplicaciones que se sientan como en casa en su sistema"
+
+msgid "Stay in Touch"
+msgstr "Manténgase en contacto"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Aplicaciones esenciales de colaboración y comunicación"
+
+msgid "Ready for Vacations"
+msgstr "Listo para las vacaciones"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Aplicaciones de mapas, transporte, tiempo y planificación de viajes"
+
+msgid "Smarter Every Day"
+msgstr "Más inteligente cada día"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Aplicaciones para ayudarle a estudiar, investigar y escribir"
+
+msgid "Get Cozy"
+msgstr "Póngase cómodo"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Aplicaciones estupendas para leer, ver películas y jugar"
+
+msgid "Web Developer Essentials"
+msgstr "Imprescindibles para el desarrollo web"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Crear sitios web es más divertido con estas aplicaciones"
+
+msgid "Take Better Notes"
+msgstr "Tome mejores notas"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Encuentre su nueva herramienta favorita para tomar notas"
+
+msgid "Get Focused"
+msgstr "Concéntrese"
+
+msgid "Great apps for task management"
+msgstr "Aplicaciones estupendas para la gestión de tareas"
+
+msgid "Make Some Noise"
+msgstr "Haga algo de ruido"
+
+msgid "Apps for creating and producing music"
+msgstr "Aplicaciones para crear y producir música"
+
+msgid "Get To Work"
+msgstr "Póngase manos a la obra"
+
+msgid "Essential office apps"
+msgstr "Aplicaciones de oficina esenciales"
+
+msgid "Similar Apps"
+msgstr "Aplicaciones similares"
+
+msgid "Other Apps From This Developer"
+msgstr "Otras aplicaciones de este desarrollador"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Otras aplicaciones de %s"
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Aplicaciones de %s"
+
+msgid "Apps by This Developer"
+msgstr "Aplicaciones de este desarrollador"
+
+msgid "Donate"
+msgstr "Donar"
+
+msgid "No applications found"
+msgstr "No se encontraron aplicaciones"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Se encontró una aplicación"
+msgstr[1] "Se encontraron %u aplicaciones"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "¿Añadir un icono a la vista previa de Metainfo?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Los archivos Metainfo no incluyen iconos de aplicación por sí solos. ¿Quiere seleccionar uno manualmente?"
+
+msgid "Skip"
+msgstr "Omitir"
+
+msgid "Select Icon"
+msgstr "Seleccionar icono"
+
+msgid "New Permissions"
+msgstr "Permisos nuevos"
+
+msgid "_Accept"
+msgstr "_Aceptar"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Permiso nuevo para %s"
+msgstr[1] "Permisos nuevos para %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Esta actualización requiere el siguiente permiso adicional"
+msgstr[1] "Esta actualización requiere los siguientes permisos adicionales"
+
+msgid "User"
+msgstr "Usuario"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Fin de vida útil"
+
+msgid "App Updates"
+msgstr "Actualizaciones de aplicaciones"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Las actualizaciones automáticas se pausarán en redes con tarifa limitada o cuando el ahorro de energía esté activado, para ahorrar datos y batería."
+
+msgid "_Automatic"
+msgstr "_Automático"
+
+msgid "Automatically check for and download app updates"
+msgstr "Buscar y descargar actualizaciones de aplicaciones automáticamente"
+
+msgid "_Manual"
+msgstr "_Manual"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "La búsqueda y descarga de actualizaciones de aplicaciones debe hacerse manualmente"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Notificaciones de actualización automática"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Notificar cuando las actualizaciones se hayan instalado automáticamente"
+
+msgid "_Free Software Only"
+msgstr "Solo _software libre"
+
+msgid "F_lathub Results Only"
+msgstr "Solo resultados de F_lathub"
+
+msgid "_Verified Results Only"
+msgstr "Solo resultados _verificados"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Ocultar aplicaciones al final de su _vida útil"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar necesita ejecutarse en segundo plano para buscar actualizaciones de aplicaciones"
+
+msgid "Remotes"
+msgstr "Repositorios remotos"
+
+msgid "System Installation"
+msgstr "Instalación del sistema"
+
+msgid "Available to all users on this computer"
+msgstr "Disponible para todos los usuarios de este equipo"
+
+msgid "User Installation"
+msgstr "Instalación de usuario"
+
+msgid "Only available to you"
+msgstr "Disponible solo para usted"
+
+msgid "Remove Remote"
+msgstr "Eliminar repositorio remoto"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Eliminar %s"
+
+msgid "Unused"
+msgstr "Sin usar"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u aplicación instalada"
+msgstr[1] "%u aplicaciones instaladas"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "¿Eliminar «%s»?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Ya no podrá instalar aplicaciones desde este repositorio remoto de usuario."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Ya no podrá instalar aplicaciones desde este repositorio remoto del sistema."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u aplicación por eliminar"
+msgstr[1] "%u aplicaciones por eliminar"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "La aplicación siguiente se instaló desde este repositorio remoto y se eliminará de su cuenta junto con él."
+msgstr[1] "Las aplicaciones siguientes se instalaron desde este repositorio remoto y se eliminarán de su cuenta junto con él."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "La aplicación siguiente se instaló desde este repositorio remoto y se eliminará para todos los usuarios junto con él."
+msgstr[1] "Las aplicaciones siguientes se instalaron desde este repositorio remoto y se eliminarán para todos los usuarios junto con él."
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Esta aplicación tiene un permiso que le permite concederse indirectamente <b>cualquier otro permiso que quiera</b>, eludiendo el entorno aislado de Flatpak.\n"
+"\n"
+"Por lo tanto, puede hacer todo lo que puede hacer una aplicación con privilegios y sin aislamiento, como acceder a todos sus archivos y conectarse a internet.\n"
+"\n"
+"Ver los demás permisos aún puede dar una mejor idea de lo que es probable que haga la aplicación."
+
+msgid "Back"
+msgstr "Atrás"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "This Week"
+msgstr "Esta semana"
+
+msgid "Installs per day"
+msgstr "Instalaciones por día"
+
+msgid "Installs per country"
+msgstr "Instalaciones por país"
+
+msgid "Finishing Up"
+msgstr "Terminando"
+
+msgid "Installed Updates"
+msgstr "Actualizaciones instaladas"
+
+msgid "Release Notes"
+msgstr "Notas de la versión"
+
+msgid "No Release Info"
+msgstr "Sin información de la versión"
+
+msgid "This update requests new permissions"
+msgstr "Esta actualización solicita permisos nuevos"
+
+msgid "No Leftover User Data Found"
+msgstr "No se encontraron datos de usuario sobrantes"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Aquí aparecerán los datos personales que dejaron las aplicaciones eliminadas"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Datos de usuario en la papelera de %u aplicación"
+msgstr[1] "Datos de usuario en la papelera de %u aplicaciones"
+
+msgid "Open User Data Folder"
+msgstr "Abrir carpeta de datos de usuario"
+
+msgid "Manage R_emotes"
+msgstr "Gestionar repositorios r_emotos"
+
+msgid "Could not open link"
+msgstr "No se pudo abrir el enlace"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u instalación"
+msgstr[1] "%s, %'u instalaciones"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Más instalaciones desde %s"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s de entorno de ejecución"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Tamaño instalado de %s"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s instalado"
+
+msgid "The app is ready to be used"
+msgstr "La aplicación está lista para usarse"
+
+msgid "Updates Are Out of Date"
+msgstr "Las actualizaciones están desactualizadas"
+
+msgid "Please check for available updates"
+msgstr "Busque las actualizaciones disponibles"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u aplicación actualizada"
+msgstr[1] "%u aplicaciones actualizadas"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s se ha actualizado."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s y %s se han actualizado."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Incluye %s, %s y %s."

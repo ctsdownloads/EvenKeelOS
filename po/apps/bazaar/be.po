@@ -1,0 +1,825 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "App Store"
+msgstr "Крама праграм"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "System;Package;Manager;Discover;Flatpak;Software;App;Store;Сістэма;Пакет;Менеджар;Праграмы;Крама;Флатпак;"
+
+msgid "Discover and install apps"
+msgstr "Знаходзьце і ўсталёўвайце праграмы"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Хуткая і сучасная крама праграм для Linux, арыентаваная на пошук і ўсталёўванне праграм і дадаткаў Flatpak, асабліва з Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Ставьце ў чаргу некалькі ўсталёвак і працягвайце агляд"
+
+msgid "Easily view app permissions"
+msgstr "Зручны прагляд дазволаў праграм"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Увайдзіце ў Flathub, каб праглядаць і кіраваць абраным"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Шукайце праграмы наўпрост з GNOME Shell"
+
+msgid "App page for Exhibit"
+msgstr "Старонка праграмы Exhibit"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Выдаліць"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Усталяваць"
+
+msgid "Add-on"
+msgstr "Дадатак"
+
+msgid "No Add-Ons Visible"
+msgstr "Няма бачных дадаткаў"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "Бягучыя параметры фільтра хаваюць усе вядомыя дадаткі. Паспрабуйце змяніць іх."
+
+msgid "Add-on Page"
+msgstr "Старонка дадатку"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Гэты дадатак выкарыстоўвае асяроддзе выканання, якое больш не атрымлівае абнаўленняў і выпраўленняў бяспекі. Ім можа стаць небяспечна карыстацца."
+
+msgid "Other Sources"
+msgstr "Іншыя крыніцы"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Дадатак для %s"
+
+msgid "Download Stats"
+msgstr "Статыстыка загрузак"
+
+msgid "Your User Data"
+msgstr "Вашы даныя карыстальніка"
+
+msgid "Cache"
+msgstr "Кэш"
+
+msgid "Temporary cached data"
+msgstr "Часовыя кэшаваныя даныя"
+
+msgid "Clear Cache"
+msgstr "Ачысціць кэш"
+
+msgid "Storage"
+msgstr "Сховішча"
+
+msgid "The Bazaar Contributors"
+msgstr "Удзельнікі праекта Bazaar"
+
+msgid "Failed to open file"
+msgstr "Не ўдалося адкрыць файл"
+
+msgid "Failed to load metainfo"
+msgstr "Не ўдалося загрузіць metainfo"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Загрузка праграм: %d…"
+msgstr[1] "Загрузка праграм: %d…"
+msgstr[2] "Загрузка праграм: %d…"
+
+msgid "Removing remote…"
+msgstr "Выдаленне аддаленага сховішча…"
+
+msgid "Could not remove remote"
+msgstr "Не ўдалося выдаліць аддаленае сховішча"
+
+msgid "Failed to Load Article"
+msgstr "Не ўдалося загрузіць артыкул"
+
+msgid "_OK"
+msgstr "_Добра"
+
+msgid "_Cancel"
+msgstr "_Скасаваць"
+
+msgid "_Install All"
+msgstr "_Усталяваць усе"
+
+msgid "Bundle Installation"
+msgstr "Усталёўванне пакета"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Дадатковым залежнасцям можа спатрэбіцца больш месца"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Для ўсталёўвання гэтай праграмы можа спатрэбіцца дадаць новую крыніцу праграм. Іншыя праграмы з гэтай крыніцы будуць паказвацца ў Bazaar.\n"
+"\n"
+"Дадавайце гэтую крыніцу, толькі калі ўпэўнены, што давяраеце ёй."
+
+msgid "Successfully Installed!"
+msgstr "Паспяхова ўсталявана!"
+
+msgid "Show App Details"
+msgstr "Паказаць падрабязнасці пра праграму"
+
+msgid "Already Installed"
+msgstr "Ужо ўсталявана"
+
+msgid "Installation Failed"
+msgstr "Не ўдалося ўсталяваць"
+
+msgid "Unknown install size"
+msgstr "Невядомы памер усталёўвання"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Будзе ўсталявана каля %s"
+
+msgid "No special permissions"
+msgstr "Няма адмысловых дазволаў"
+
+msgid "Place Applet"
+msgstr "Размясціць апплет"
+
+msgid "Choose where to add this applet."
+msgstr "Выберыце, куды дадаць гэты апплет."
+
+msgid "Panel"
+msgstr "Панэль"
+
+msgid "Dock"
+msgstr "Док"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "У гэтай сістэме няма звестак пра курыраванне. Вы ўсё роўна можаце праглядаць праграмы на Flathub"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s — %s, найбольш %s: %s"
+
+msgid "Bazaar Release"
+msgstr "Выпуск Bazaar"
+
+msgid "Browsers"
+msgstr "Браўзеры"
+
+msgid "Chat"
+msgstr "Чат"
+
+msgid "Mail"
+msgstr "Пошта"
+
+msgid "File Sharing"
+msgstr "Абмен файламі"
+
+msgid "Made for COSMIC™"
+msgstr "Створана для COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Для COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Больш праграм COSMIC"
+
+msgid "Games"
+msgstr "Гульні"
+
+msgid "Emulators"
+msgstr "Эмулятары"
+
+msgid "More Emulators"
+msgstr "Больш эмулятараў"
+
+msgid "Launchers"
+msgstr "Запускальнікі"
+
+msgid "More Game Launchers"
+msgstr "Больш запускальнікаў гульняў"
+
+msgid "Game Tools"
+msgstr "Інструменты для гульняў"
+
+msgid "More Game Tools"
+msgstr "Больш інструментаў для гульняў"
+
+msgid "New Year, New Workflows"
+msgstr "Новы год, новыя працоўныя працэсы"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Праграмы для нататак, задач і планавання"
+
+msgid "Staff Picks"
+msgstr "Выбар рэдакцыі"
+
+msgid "Apps we love right now"
+msgstr "Праграмы, якія нам цяпер падабаюцца"
+
+msgid "Get Creative"
+msgstr "Праяўляйце творчасць"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Асноўныя праграмы для малявання, апрацоўкі фота і лічбавага дызайну"
+
+msgid "Build Native Apps"
+msgstr "Стварайце натыўныя праграмы"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Распрацоўвайце праграмы, якія добра адчуваюць сябе ў вашай сістэме"
+
+msgid "Stay in Touch"
+msgstr "Заставайцеся на сувязі"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Асноўныя праграмы для супрацоўніцтва і зносін"
+
+msgid "Ready for Vacations"
+msgstr "Гатовы да адпачынку"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Карты, транспарт, надвор'е і планаванне паездак"
+
+msgid "Smarter Every Day"
+msgstr "Разумейце больш з кожным днём"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Праграмы, якія дапамогуць вучыцца, даследаваць і пісаць"
+
+msgid "Get Cozy"
+msgstr "Стварыце ўтульнасць"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Выдатныя праграмы для чытання, прагляду фільмаў і гульняў"
+
+msgid "Web Developer Essentials"
+msgstr "Неабходныя інструменты вэб-распрацоўшчыка"
+
+msgid "Making websites is more fun with these apps"
+msgstr "З гэтымі праграмамі ствараць вэб-сайты весялей"
+
+msgid "Take Better Notes"
+msgstr "Рабіце нататкі лепш"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Знайдзіце новы ўлюбёны інструмент для нататак"
+
+msgid "Get Focused"
+msgstr "Сканцэнтруйцеся"
+
+msgid "Great apps for task management"
+msgstr "Выдатныя праграмы для кіравання задачамі"
+
+msgid "Make Some Noise"
+msgstr "Зрабіце крыху шуму"
+
+msgid "Apps for creating and producing music"
+msgstr "Праграмы для стварэння і вытворчасці музыкі"
+
+msgid "Get To Work"
+msgstr "Прыступайце да працы"
+
+msgid "Essential office apps"
+msgstr "Асноўныя офісныя праграмы"
+
+msgid "Can't Reach Flathub"
+msgstr "Не ўдаецца далучыцца да Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "Вы ўсё яшчэ можаце кіраваць праграмамі і шукаць іх."
+
+msgid "Reconnect"
+msgstr "Злучыцца зноў"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Гэта лакальны перадпрагляд, некаторыя падрабязнасці могуць адрознівацца ад апублікаванага апісання"
+
+msgid "Preview Store Appearance"
+msgstr "Перадпрагляд выгляду крамы"
+
+msgid "_Support"
+msgstr "_Падтрымаць"
+
+msgid "Add-ons"
+msgstr "Дадаткі"
+
+msgid "More Add-Ons"
+msgstr "Больш дадаткаў"
+
+msgid "Links"
+msgstr "Спасылкі"
+
+msgid "Similar Apps"
+msgstr "Падобныя праграмы"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Гэта праграма мае свабодную ліцэнзію (FLOSS), таму яе зыходны код можна праверыць на бяспеку."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Гэта праграма мае прыватную ліцэнзію: яе зыходны код распрацоўваецца закрыта, і незалежная трэцяя старана не можа яго праверыць."
+
+msgid "Other Apps From This Developer"
+msgstr "Іншыя праграмы ад гэтага распрацоўшчыка"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Іншыя праграмы ад %s"
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Праграмы ад %s"
+
+msgid "Apps by This Developer"
+msgstr "Праграмы ад гэтага распрацоўшчыка"
+
+msgid "Failed to Remove User Data"
+msgstr "Не ўдалося выдаліць даныя карыстальніка"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Скасаваць"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Скасаванне"
+
+msgid "_Open"
+msgstr "_Адкрыць"
+
+msgid "_Remove"
+msgstr "_Выдаліць"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Усталяваць %s з %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Усталяваць %s"
+
+msgid "Donate"
+msgstr "Ахвяраваць"
+
+msgid "Search Store Instead"
+msgstr "Шукаць у краме"
+
+msgid "Sort Options"
+msgstr "Параметры сартавання"
+
+msgid "Sort By"
+msgstr "Сартаваць па"
+
+msgid "Name"
+msgstr "Назва"
+
+msgid "Size"
+msgstr "Памер"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u усталяваная праграма"
+msgstr[1] "%u усталяваныя праграмы"
+msgstr[2] "%u усталяваных праграм"
+
+msgid "No applications found"
+msgstr "Праграмы не знойдзены"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Знойдзена %u праграма"
+msgstr[1] "Знойдзена %u праграмы"
+msgstr[2] "Знойдзена %u праграм"
+
+msgid "Learn More"
+msgstr "Даведацца больш"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Увайдзіце, каб сінхранізаваць абраныя праграмы паміж прыладамі"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Дадаць значок да перадпрагляду metainfo?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Файлы metainfo самі па сабе не ўтрымліваюць значкоў праграм. Жадаеце выбраць яго ўручную?"
+
+msgid "Skip"
+msgstr "Прапусціць"
+
+msgid "Select Icon"
+msgstr "Выбраць значок"
+
+msgid "Image Files"
+msgstr "Файлы відарысаў"
+
+msgid "New Permissions"
+msgstr "Новыя дазволы"
+
+msgid "_Accept"
+msgstr "_Прыняць"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Новы дазвол для %s"
+msgstr[1] "Новыя дазволы для %s"
+msgstr[2] "Новыя дазволы для %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Для гэтага абнаўлення патрабуецца наступны дадатковы дазвол"
+msgstr[1] "Для гэтага абнаўлення патрабуюцца наступныя дадатковыя дазволы"
+msgstr[2] "Для гэтага абнаўлення патрабуюцца наступныя дадатковыя дазволы"
+
+msgid "User"
+msgstr "Карыстальнік"
+
+msgid "Beta"
+msgstr "Бэта"
+
+msgid "End-Of-Life"
+msgstr "Падтрымка завершана"
+
+msgid "App Updates"
+msgstr "Абнаўленні праграм"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Каб эканоміць трафік і зарад акумулятара, аўтаматычныя абнаўленні прыпыняюцца ў сетках з абмежаваным трафікам або пры ўключаным рэжыме эканоміі энергіі."
+
+msgid "_Automatic"
+msgstr "_Аўтаматычна"
+
+msgid "Automatically check for and download app updates"
+msgstr "Аўтаматычна правяраць наяўнасць абнаўленняў праграм і спампоўваць іх"
+
+msgid "_Manual"
+msgstr "_Уручную"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Правяраць наяўнасць абнаўленняў праграм і спампоўваць іх трэба ўручную"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Апавяшчэнні пра аўтаматычныя абнаўленні"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Апавяшчаць, калі абнаўленні ўсталяваны аўтаматычна"
+
+msgid "_Free Software Only"
+msgstr "Толькі _свабоднае ПЗ"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Хаваць прапрыетарныя праграмы пры праглядзе і пошуку"
+
+msgid "F_lathub Results Only"
+msgstr "Толькі вынікі з _Flathub"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Абмежаваць вынікі пошуку і прагляду праграмамі, даступнымі толькі на Flathub"
+
+msgid "_Verified Results Only"
+msgstr "Толькі _спраўджаныя вынікі"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Хаваць праграмы з _завершанай падтрымкай"
+
+msgid "Progress Bar Theme"
+msgstr "Тэма індыкатара выканання"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar павінен працаваць у фонавым рэжыме, каб правяраць наяўнасць абнаўленняў праграм"
+
+msgid "Today"
+msgstr "Сёння"
+
+msgid "Yesterday"
+msgstr "Учора"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d дзень таму"
+msgstr[1] "%d дні таму"
+msgstr[2] "%d дзён таму"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d тыдзень таму"
+msgstr[1] "%d тыдні таму"
+msgstr[2] "%d тыдняў таму"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d месяц таму"
+msgstr[1] "%d месяцы таму"
+msgstr[2] "%d месяцаў таму"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d год таму"
+msgstr[1] "%d гады таму"
+msgstr[2] "%d гадоў таму"
+
+msgid "_Version History"
+msgstr "_Гісторыя версій"
+
+msgid "Remotes"
+msgstr "Аддаленыя сховішчы"
+
+msgid "System Installation"
+msgstr "Сістэмнае ўсталёўванне"
+
+msgid "Available to all users on this computer"
+msgstr "Даступна ўсім карыстальнікам гэтага камп'ютара"
+
+msgid "User Installation"
+msgstr "Карыстальніцкае ўсталёўванне"
+
+msgid "Only available to you"
+msgstr "Даступна толькі вам"
+
+msgid "Remove Remote"
+msgstr "Выдаліць аддаленае сховішча"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Выдаліць %s"
+
+msgid "Unused"
+msgstr "Не выкарыстоўваецца"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u праграма ўсталявана"
+msgstr[1] "%u праграмы ўсталяваны"
+msgstr[2] "%u праграм усталявана"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Выдаліць «%s»?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Вы больш не зможаце ўсталёўваць праграмы з гэтага карыстальніцкага аддаленага сховішча."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Вы больш не зможаце ўсталёўваць праграмы з гэтага сістэмнага аддаленага сховішча."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u праграма для выдалення"
+msgstr[1] "%u праграмы для выдалення"
+msgstr[2] "%u праграм для выдалення"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Гэтая праграма была ўсталявана з гэтага аддаленага сховішча і будзе выдалена з вашага ўліковага запісу разам з ім."
+msgstr[1] "Гэтыя праграмы былі ўсталяваны з гэтага аддаленага сховішча і будуць выдалены з вашага ўліковага запісу разам з ім."
+msgstr[2] "Гэтыя праграмы былі ўсталяваны з гэтага аддаленага сховішча і будуць выдалены з вашага ўліковага запісу разам з ім."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Гэтая праграма была ўсталявана з гэтага аддаленага сховішча і будзе выдалена для ўсіх карыстальнікаў разам з ім."
+msgstr[1] "Гэтыя праграмы былі ўсталяваны з гэтага аддаленага сховішча і будуць выдалены для ўсіх карыстальнікаў разам з ім."
+msgstr[2] "Гэтыя праграмы былі ўсталяваны з гэтага аддаленага сховішча і будуць выдалены для ўсіх карыстальнікаў разам з ім."
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Гэта праграма мае дазвол, які ўскосна дазваляе ёй выдаваць сабе <b>любы іншы патрэбны дазвол</b>, абыходзячы пясочніцу Flatpak.\n"
+"\n"
+"Таму яна можа рабіць усё, што можа прывілеяваная праграма без пясочніцы, напрыклад, атрымліваць доступ да ўсіх вашых файлаў і падключацца да інтэрнэту.\n"
+"\n"
+"Прагляд іншых дазволаў усё роўна можа даць лепшае ўяўленне пра тое, што, імаверна, будзе рабіць праграма."
+
+msgid "View Other Permissions"
+msgstr "Праглядзець іншыя дазволы"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "No Screenshots"
+msgstr "Няма здымкаў экрана"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Здымак экрана %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Здымак экрана %u"
+
+msgid "Filters"
+msgstr "Фільтры"
+
+msgid "_Verified"
+msgstr "_Спраўджаныя"
+
+msgid "_Free/Open"
+msgstr "_Свабодныя/адкрытыя"
+
+msgid "Non-_EOL"
+msgstr "Без _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Адфільтраваць праграмы з завершанай падтрымкай"
+
+msgid "_Mobile Friendly"
+msgstr "Для _мабільных"
+
+msgid "Categories"
+msgstr "Катэгорыі"
+
+msgid "Search Filters"
+msgstr "Фільтры пошуку"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Маніфест"
+
+msgid "Total"
+msgstr "Усяго"
+
+msgid "This Week"
+msgstr "Гэты тыдзень"
+
+msgid "Installs per day"
+msgstr "Усталёвак за дзень"
+
+msgid "Installs per country"
+msgstr "Усталёвак па краінах"
+
+msgid "Since 4/15/2024"
+msgstr "З 15.04.2024"
+
+msgid "_Install Anyway"
+msgstr "_Усталяваць усё роўна"
+
+msgid "Finishing Up"
+msgstr "Завяршэнне"
+
+msgid "Cancelled"
+msgstr "Скасавана"
+
+msgid "Show Details"
+msgstr "Паказаць падрабязнасці"
+
+msgid "Installed Updates"
+msgstr "Усталяваныя абнаўленні"
+
+msgid "Release Notes"
+msgstr "Заўвагі да выпуску"
+
+msgid "No Release Info"
+msgstr "Няма звестак пра выпуск"
+
+msgid "_Update All"
+msgstr "_Абнавіць усе"
+
+msgid "This update requests new permissions"
+msgstr "Гэтае абнаўленне запытвае новыя дазволы"
+
+msgid "No Leftover User Data Found"
+msgstr "Рэшткі даных карыстальніка не знойдзены"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Тут будуць паказвацца асабістыя даныя, якія засталіся пасля выдалення праграм"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Выдаленыя даныя карыстальніка для %u праграмы"
+msgstr[1] "Выдаленыя даныя карыстальніка для %u праграм"
+msgstr[2] "Выдаленыя даныя карыстальніка для %u праграм"
+
+msgid "Open User Data Folder"
+msgstr "Адкрыць папку даных карыстальніка"
+
+msgid "Refreshing"
+msgstr "Абнаўленне спісу"
+
+msgid "Explore"
+msgstr "Даследаваць"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Злучэнне з сеткай з абмежаваным трафікам — аўтаматычнае абнаўленне спісу адключана"
+
+msgid "_Donate to Bazaar"
+msgstr "Па_дтрымаць Bazaar"
+
+msgid "Manage R_emotes"
+msgstr "Кіраваць аддаленымі _сховішчамі"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Could not open link"
+msgstr "Не ўдалося адкрыць спасылку"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u усталёўка"
+msgstr[1] "%s, %'u усталёўкі"
+msgstr[2] "%s, %'u усталёвак"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Больш за ўсё ўсталёвак з %s"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d загрузак за апошні месяц"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s асяроддзя выканання"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Усталяваны памер %s"
+
+msgid "Free Software"
+msgstr "Свабоднае ПЗ"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Навігацыя"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Адкрыць старонку «Даследаваць»"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Адкрыць старонку бібліятэкі"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Адкрыць старонку пошуку"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Аддаленыя сховішчы"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Сінхранізаваць аддаленыя сховішчы"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s усталявана"
+
+msgid "The app is ready to be used"
+msgstr "Праграма гатовая да выкарыстання"
+
+msgid "Updates Are Out of Date"
+msgstr "Абнаўленні састарэлі"
+
+msgid "Please check for available updates"
+msgstr "Праверце наяўнасць даступных абнаўленняў"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "Абноўлена %u праграма"
+msgstr[1] "Абноўлена %u праграмы"
+msgstr[2] "Абноўлена %u праграм"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s абноўлена."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s і %s абноўлены."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Уключае %s, %s і %s."

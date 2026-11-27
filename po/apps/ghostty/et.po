@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Open in Ghostty"
+msgstr "Ava rakenduses Ghostty"
+
+msgid "Find…"
+msgstr "Otsi…"
+
+msgid "Previous Match"
+msgstr "Eelmine vaste"
+
+msgid "Next Match"
+msgstr "Järgmine vaste"
+
+msgid "Close"
+msgstr "Sulge"
+
+msgid "Oh, no."
+msgstr "Oh ei."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "Renderdamiseks ei õnnestunud OpenGL-i konteksti hankida."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "See terminal on kirjutuskaitstud režiimis. Sisu saab endiselt vaadata, valida ja kerida, kuid töötavale rakendusele sisendsündmusi ei saadeta."
+
+msgid "Read-only"
+msgstr "Kirjutuskaitstud"
+
+msgid "Copy"
+msgstr "Kopeeri"
+
+msgid "Paste"
+msgstr "Aseta"
+
+msgid "Notify on Next Command Finish"
+msgstr "Teavita järgmise käsu lõppemisel"
+
+msgid "Clear"
+msgstr "Tühjenda"
+
+msgid "Reset"
+msgstr "Lähtesta"
+
+msgid "Split"
+msgstr "Poolda"
+
+msgid "Change Title…"
+msgstr "Muuda pealkirja…"
+
+msgid "Split Up"
+msgstr "Poolda ülespoole"
+
+msgid "Split Down"
+msgstr "Poolda allapoole"
+
+msgid "Split Left"
+msgstr "Poolda vasakule"
+
+msgid "Split Right"
+msgstr "Poolda paremale"
+
+msgid "Close Split"
+msgstr "Sulge jaotis"
+
+msgid "Tab"
+msgstr "Kaart"
+
+msgid "Change Tab Title…"
+msgstr "Muuda kaardi pealkirja…"
+
+msgid "New Tab"
+msgstr "Uus kaart"
+
+msgid "Close Tab"
+msgstr "Sulge kaart"
+
+msgid "Window"
+msgstr "Aken"
+
+msgid "Change Window Title…"
+msgstr "Muuda akna pealkirja…"
+
+msgid "New Window"
+msgstr "Uus aken"
+
+msgid "Close Window"
+msgstr "Sulge aken"
+
+msgid "Config"
+msgstr "Seadistus"
+
+msgid "Open Configuration in OS Editor"
+msgstr "Ava seadistus süsteemi redaktoris"
+
+msgid "Open Configuration in New Window"
+msgstr "Ava seadistus uues aknas"
+
+msgid "Reload Configuration"
+msgstr "Laadi seadistus uuesti"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ Käivitasid Ghostty silumisversiooni! Jõudlus on halvenenud."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: terminali inspektor"
+
+msgid "New Split"
+msgstr "Uus jaotis"
+
+msgid "View Open Tabs"
+msgstr "Vaata avatud kaarte"
+
+msgid "Main Menu"
+msgstr "Peamenüü"
+
+msgid "Command Palette"
+msgstr "Käsupalett"
+
+msgid "Terminal Inspector"
+msgstr "Terminali inspektor"
+
+msgid "About Ghostty"
+msgstr "Ghostty info"
+
+msgid "Quit"
+msgstr "Välju"
+
+msgid "Authorize Clipboard Access"
+msgstr "Luba lõikelauale juurdepääs"
+
+msgid "Deny"
+msgstr "Keeldu"
+
+msgid "Allow"
+msgstr "Luba"
+
+msgid "Remember choice for this split"
+msgstr "Jäta valik selle jaotise jaoks meelde"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "Selle viiba uuesti kuvamiseks laadi seadistus uuesti"
+
+msgid "Cancel"
+msgstr "Loobu"
+
+msgid "Execute a command…"
+msgstr "Käivita käsk…"
+
+msgid "Configuration Errors"
+msgstr "Seadistuse vead"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "Leiti üks või mitu seadistusviga. Vaata allolevad vead üle ning laadi seadistus uuesti või eira need vead."
+
+msgid "Ignore"
+msgstr "Eira"
+
+msgid "Leave blank to restore the default title."
+msgstr "Vaiketiitli taastamiseks jäta tühjaks."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "The keybind was revoked by the system."
+msgstr "Süsteem tühistas klahvikombinatsiooni."
+
+msgid "The keybind was denied by the system."
+msgstr "Süsteem keelas klahvikombinatsiooni."
+
+msgid "Global keybind unavailable"
+msgstr "Globaalne klahvikombinatsioon pole saadaval"
+
+msgid "Export Terminal IO Events"
+msgstr "Ekspordi terminali sisend-väljundsündmused"
+
+msgid "Export"
+msgstr "Ekspordi"
+
+msgid "Editing configuration file"
+msgstr "Seadistusfaili muutmine"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "Rakendus üritab lõikelauale kirjutada. Lõikelaua praegune sisu on allpool."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "Rakendus üritab lõikelaualt lugeda. Lõikelaua praegune sisu on allpool."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "Hoiatus: potentsiaalselt ohtlik asetamine"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "Selle teksti asetamine terminali võib olla ohtlik, kuna see näeb välja, nagu käivitataks mõni käsk."
+
+msgid "Quit Ghostty?"
+msgstr "Kas väljuda Ghostty'st?"
+
+msgid "Close Tab?"
+msgstr "Kas sulgeda kaart?"
+
+msgid "Close Window?"
+msgstr "Kas sulgeda aken?"
+
+msgid "Close Split?"
+msgstr "Kas sulgeda jaotis?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "Kõik terminaliseansid lõpetatakse."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "Kõik selle kaardi terminaliseansid lõpetatakse."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "Kõik selle akna terminaliseansid lõpetatakse."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "Selles jaotises praegu töötav protsess lõpetatakse."
+
+msgid "Command Finished"
+msgstr "Käsk lõppes"
+
+msgid "Command Succeeded"
+msgstr "Käsk õnnestus"
+
+msgid "Command Failed"
+msgstr "Käsk ebaõnnestus"
+
+msgid "Change Terminal Title"
+msgstr "Muuda terminali pealkirja"
+
+msgid "Change Tab Title"
+msgstr "Muuda kaardi pealkirja"
+
+msgid "Change Window Title"
+msgstr "Muuda akna pealkirja"
+
+msgid "Reloaded the configuration"
+msgstr "Seadistus laaditi uuesti"
+
+msgid "Copied to clipboard"
+msgstr "Kopeeritud lõikelauale"
+
+msgid "Cleared clipboard"
+msgstr "Lõikelaud tühjendati"
+
+msgid "Ghostty Developers"
+msgstr "Ghostty arendajad"
+
+msgid "Reset Terminal"
+msgstr "Lähtesta terminal"
+
+msgid "Reset the terminal to a clean state."
+msgstr "Lähtesta terminal puhtasse olekusse."
+
+msgid "Copy to Clipboard"
+msgstr "Kopeeri lõikelauale"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "Kopeeri valitud tekst lõikelauale nii lihtteksti kui ka vormindatud kujul."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "Kopeeri valik lihtteksti lõikelauale"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "Kopeeri valitud tekst lihttekstina lõikelauale."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "Kopeeri valik ANSI jadadena lõikelauale"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "Kopeeri valitud tekst ANSI paojadadena lõikelauale."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "Kopeeri valik HTML-ina lõikelauale"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "Kopeeri valitud tekst HTML-ina lõikelauale."
+
+msgid "Copy URL to Clipboard"
+msgstr "Kopeeri URL lõikelauale"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "Kopeeri kursori all olev URL lõikelauale."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "Kopeeri terminali pealkiri lõikelauale"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "Kopeeri terminali pealkiri lõikelauale. Kui terminali pealkirja pole määratud, ei ole sellel mõju."
+
+msgid "Paste from Clipboard"
+msgstr "Aseta lõikelaualt"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "Aseta põhilõikelaua sisu."
+
+msgid "Paste from Selection"
+msgstr "Aseta valikust"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "Aseta valiku lõikelaua sisu."
+
+msgid "Start Search"
+msgstr "Alusta otsingut"
+
+msgid "Start a search if one isn't already active."
+msgstr "Alusta otsingut, kui see pole juba aktiivne."
+
+msgid "Search Selection"
+msgstr "Otsi valikut"
+
+msgid "Start a search for the current text selection."
+msgstr "Alusta praegu valitud teksti otsimist."
+
+msgid "End Search"
+msgstr "Lõpeta otsing"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "Lõpeta praegune otsing, kui see on olemas, ja peida kõik graafilise kasutajaliidese elemendid."
+
+msgid "Next Search Result"
+msgstr "Järgmine otsingutulemus"
+
+msgid "Navigate to the next search result, if any."
+msgstr "Liigu järgmise otsingutulemuse juurde, kui see on olemas."
+
+msgid "Previous Search Result"
+msgstr "Eelmine otsingutulemus"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "Liigu eelmise otsingutulemuse juurde, kui see on olemas."
+
+msgid "Increase Font Size"
+msgstr "Suurenda tähesuurust"
+
+msgid "Increase the font size by 1 point."
+msgstr "Suurenda tähesuurust 1 punkti võrra."
+
+msgid "Decrease Font Size"
+msgstr "Vähenda tähesuurust"
+
+msgid "Decrease the font size by 1 point."
+msgstr "Vähenda tähesuurust 1 punkti võrra."
+
+msgid "Reset Font Size"
+msgstr "Lähtesta tähesuurus"
+
+msgid "Reset the font size to the default."
+msgstr "Lähtesta tähesuurus vaikeväärtusele."
+
+msgid "Clear Screen"
+msgstr "Tühjenda ekraan"
+
+msgid "Clear the screen and scrollback."
+msgstr "Tühjenda ekraan ja kerimisajalugu."
+
+msgid "Select All"
+msgstr "Vali kõik"
+
+msgid "Select all text on the screen."
+msgstr "Vali kogu tekst ekraanil."
+
+msgid "Scroll to Top"
+msgstr "Keri algusesse"
+
+msgid "Scroll to the top of the screen."
+msgstr "Keri ekraani algusesse."
+
+msgid "Scroll to Bottom"
+msgstr "Keri lõppu"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "Keri ekraani lõppu."
+
+msgid "Scroll to Selection"
+msgstr "Keri valikuni"
+
+msgid "Scroll to the selected text."
+msgstr "Keri valitud tekstini."
+
+msgid "Scroll Page Up"
+msgstr "Keri lehekülg üles"
+
+msgid "Scroll the screen up by a page."
+msgstr "Keri ekraani lehekülje võrra üles."
+
+msgid "Scroll Page Down"
+msgstr "Keri lehekülg alla"
+
+msgid "Scroll the screen down by a page."
+msgstr "Keri ekraani lehekülje võrra alla."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "Kopeeri ekraan ajutisse faili ja kopeeri tee"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "Kopeeri ekraani sisu ajutisse faili ja kopeeri tee lõikelauale."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "Kopeeri ekraan ajutisse faili ja aseta tee"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "Kopeeri ekraani sisu ajutisse faili ja aseta faili tee."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "Kopeeri ekraan ajutisse faili ja ava"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "Kopeeri ekraani sisu ajutisse faili ja ava see."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "Kopeeri ekraan HTML-ina ajutisse faili ja kopeeri tee"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Kopeeri ekraani sisu HTML-ina ajutisse faili ja kopeeri tee lõikelauale."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "Kopeeri ekraan HTML-ina ajutisse faili ja aseta tee"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "Kopeeri ekraani sisu HTML-ina ajutisse faili ja aseta faili tee."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "Kopeeri ekraan HTML-ina ajutisse faili ja ava"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "Kopeeri ekraani sisu HTML-ina ajutisse faili ja ava see."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Kopeeri ekraan ANSI jadadena ajutisse faili ja kopeeri tee"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Kopeeri ekraani sisu ANSI paojadadena ajutisse faili ja kopeeri tee lõikelauale."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Kopeeri ekraan ANSI jadadena ajutisse faili ja aseta tee"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Kopeeri ekraani sisu ANSI paojadadena ajutisse faili ja aseta faili tee."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "Kopeeri ekraan ANSI jadadena ajutisse faili ja ava"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Kopeeri ekraani sisu ANSI paojadadena ajutisse faili ja ava see."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "Kopeeri valik ajutisse faili ja kopeeri tee"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "Kopeeri valiku sisu ajutisse faili ja kopeeri tee lõikelauale."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "Kopeeri valik ajutisse faili ja aseta tee"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "Kopeeri valiku sisu ajutisse faili ja aseta faili tee."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "Kopeeri valik ajutisse faili ja ava"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "Kopeeri valiku sisu ajutisse faili ja ava see."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "Kopeeri valik HTML-ina ajutisse faili ja kopeeri tee"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Kopeeri valiku sisu HTML-ina ajutisse faili ja kopeeri tee lõikelauale."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "Kopeeri valik HTML-ina ajutisse faili ja aseta tee"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "Kopeeri valiku sisu HTML-ina ajutisse faili ja aseta faili tee."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "Kopeeri valik HTML-ina ajutisse faili ja ava"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "Kopeeri valiku sisu HTML-ina ajutisse faili ja ava see."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Kopeeri valik ANSI jadadena ajutisse faili ja kopeeri tee"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Kopeeri valiku sisu ANSI paojadadena ajutisse faili ja kopeeri tee lõikelauale."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Kopeeri valik ANSI jadadena ajutisse faili ja aseta tee"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Kopeeri valiku sisu ANSI paojadadena ajutisse faili ja aseta faili tee."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "Kopeeri valik ANSI jadadena ajutisse faili ja ava"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Kopeeri valiku sisu ANSI paojadadena ajutisse faili ja ava see."
+
+msgid "Open a new window."
+msgstr "Ava uus aken."
+
+msgid "Open a new tab."
+msgstr "Ava uus kaart."
+
+msgid "Move Tab Left"
+msgstr "Liiguta kaart vasakule"
+
+msgid "Move the current tab to the left."
+msgstr "Liiguta praegune kaart vasakule."
+
+msgid "Move Tab Right"
+msgstr "Liiguta kaart paremale"
+
+msgid "Move the current tab to the right."
+msgstr "Liiguta praegune kaart paremale."
+
+msgid "Move Tab to New Window"
+msgstr "Liiguta kaart uude aknasse"
+
+msgid "Move the current tab to a new window."
+msgstr "Liiguta praegune kaart uude aknasse."
+
+msgid "Toggle Tab Overview"
+msgstr "Lülita kaartide ülevaade sisse/välja"
+
+msgid "Toggle the tab overview."
+msgstr "Lülita kaartide ülevaade sisse või välja."
+
+msgid "Change Terminal Title…"
+msgstr "Muuda terminali pealkirja…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "Küsi praegusele terminalile uut pealkirja."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "Küsi praegusele kaardile uut pealkirja."
+
+msgid "Split the terminal to the left."
+msgstr "Poolda terminal vasakule."
+
+msgid "Split the terminal to the right."
+msgstr "Poolda terminal paremale."
+
+msgid "Split the terminal up."
+msgstr "Poolda terminal ülespoole."
+
+msgid "Split the terminal down."
+msgstr "Poolda terminal allapoole."
+
+msgid "Focus Split: Previous"
+msgstr "Fookus jaotisele: eelmine"
+
+msgid "Focus the previous split, if any."
+msgstr "Pane fookus eelmisele jaotisele, kui see on olemas."
+
+msgid "Focus Split: Next"
+msgstr "Fookus jaotisele: järgmine"
+
+msgid "Focus the next split, if any."
+msgstr "Pane fookus järgmisele jaotisele, kui see on olemas."
+
+msgid "Focus Split: Left"
+msgstr "Fookus jaotisele: vasak"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "Pane fookus vasakpoolsele jaotisele, kui see on olemas."
+
+msgid "Focus Split: Right"
+msgstr "Fookus jaotisele: parem"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "Pane fookus parempoolsele jaotisele, kui see on olemas."
+
+msgid "Focus Split: Up"
+msgstr "Fookus jaotisele: ülemine"
+
+msgid "Focus the split above, if it exists."
+msgstr "Pane fookus ülal olevale jaotisele, kui see on olemas."
+
+msgid "Focus Split: Down"
+msgstr "Fookus jaotisele: alumine"
+
+msgid "Focus the split below, if it exists."
+msgstr "Pane fookus all olevale jaotisele, kui see on olemas."
+
+msgid "Focus Window: Previous"
+msgstr "Fookus aknale: eelmine"
+
+msgid "Focus the previous window, if any."
+msgstr "Pane fookus eelmisele aknale, kui see on olemas."
+
+msgid "Focus Window: Next"
+msgstr "Fookus aknale: järgmine"
+
+msgid "Focus the next window, if any."
+msgstr "Pane fookus järgmisele aknale, kui see on olemas."
+
+msgid "Toggle Split Zoom"
+msgstr "Lülita jaotise suurendus sisse/välja"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "Lülita praeguse jaotise suurendusolek sisse või välja."
+
+msgid "Toggle Read-Only Mode"
+msgstr "Lülita kirjutuskaitstud režiim sisse/välja"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "Lülita praeguse pinna kirjutuskaitstud režiim sisse või välja."
+
+msgid "Equalize Splits"
+msgstr "Võrdsusta jaotised"
+
+msgid "Equalize the size of all splits."
+msgstr "Võrdsusta kõigi jaotiste suurus."
+
+msgid "Reset Window Size"
+msgstr "Lähtesta akna suurus"
+
+msgid "Reset the window size to the default."
+msgstr "Lähtesta akna suurus vaikeväärtusele."
+
+msgid "Toggle Inspector"
+msgstr "Lülita inspektor sisse/välja"
+
+msgid "Toggle the inspector."
+msgstr "Lülita inspektor sisse või välja."
+
+msgid "Show the GTK Inspector"
+msgstr "Kuva GTK inspektor"
+
+msgid "Show the GTK inspector."
+msgstr "Kuva GTK inspektor."
+
+msgid "Show On-Screen Keyboard"
+msgstr "Kuva ekraaniklaviatuur"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "Kuva ekraaniklaviatuur, kui see on olemas."
+
+msgid "Open Config Using OS editor"
+msgstr "Ava seadistus süsteemi redaktoriga"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "Ava seadistusfail süsteemi vaikeredaktoriga."
+
+msgid "Open Config in New Terminal Window"
+msgstr "Ava seadistus uues terminaliaknas"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "Ava seadistusfail uues aknas, kasutades muutujat $EDITOR või $VISUAL."
+
+msgid "Reload Config"
+msgstr "Laadi seadistus uuesti"
+
+msgid "Reload the config file."
+msgstr "Laadi seadistusfail uuesti."
+
+msgid "Close Terminal"
+msgstr "Sulge terminal"
+
+msgid "Close the current terminal."
+msgstr "Sulge praegune terminal."
+
+msgid "Close the current tab."
+msgstr "Sulge praegune kaart."
+
+msgid "Close Other Tabs"
+msgstr "Sulge teised kaardid"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "Sulge kõik selle akna kaardid peale praeguse."
+
+msgid "Close Tabs to the Right"
+msgstr "Sulge paremal olevad kaardid"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "Sulge kõik praegusest kaardist paremal olevad kaardid."
+
+msgid "Close the current window."
+msgstr "Sulge praegune aken."
+
+msgid "Close All Windows"
+msgstr "Sulge kõik aknad"
+
+msgid "Close all windows."
+msgstr "Sulge kõik aknad."
+
+msgid "Toggle Maximize"
+msgstr "Lülita maksimeerimine sisse/välja"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "Lülita praeguse akna maksimeeritud olek sisse või välja."
+
+msgid "Toggle Fullscreen"
+msgstr "Lülita täisekraan sisse/välja"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "Lülita praeguse akna täisekraanirežiim sisse või välja."
+
+msgid "Toggle Window Decorations"
+msgstr "Lülita akna dekoratsioonid sisse/välja"
+
+msgid "Toggle the window decorations."
+msgstr "Lülita akna dekoratsioonid sisse või välja."
+
+msgid "Toggle Float on Top"
+msgstr "Lülita alati peal olek sisse/välja"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "Lülita praeguse akna alati peal olek sisse või välja."
+
+msgid "Toggle Secure Input"
+msgstr "Lülita turvasisend sisse/välja"
+
+msgid "Toggle secure input mode."
+msgstr "Lülita turvasisendi režiim sisse või välja."
+
+msgid "Toggle Mouse Reporting"
+msgstr "Lülita hiiresündmuste edastamine sisse/välja"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "Lülita sisse või välja, kas hiiresündmustest teavitatakse terminalirakendusi."
+
+msgid "Toggle Background Opacity"
+msgstr "Lülita tausta läbipaistmatus sisse/välja"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "Lülita sisse või välja läbipaistvana käivitatud akna tausta läbipaistmatus."
+
+msgid "Check for Updates"
+msgstr "Otsi uuendusi"
+
+msgid "Check for updates to the application."
+msgstr "Otsi rakenduse uuendusi."
+
+msgid "Undo"
+msgstr "Võta tagasi"
+
+msgid "Undo the last action."
+msgstr "Võta viimane toiming tagasi."
+
+msgid "Redo"
+msgstr "Tee uuesti"
+
+msgid "Redo the last undone action."
+msgstr "Tee viimati tagasi võetud toiming uuesti."
+
+msgid "Quit the application."
+msgstr "Sulge rakendus."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "Pane väike Ghostty oma terminali."

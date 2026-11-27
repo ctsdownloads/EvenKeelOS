@@ -1,0 +1,1727 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "App Store"
+msgstr "Cửa hàng ứng dụng"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Hệ thống;Gói;Trình quản lý;Khám phá;Flatpak;Phần mềm;Ứng dụng;Cửa hàng;"
+
+msgid "New Window"
+msgstr "Cửa sổ mới"
+
+msgid "Discover and install apps"
+msgstr "Khám phá và cài đặt ứng dụng"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "Một cửa hàng ứng dụng nhanh và hiện đại cho Linux, tập trung vào việc khám phá và cài đặt các ứng dụng và tiện ích mở rộng Flatpak, đặc biệt là từ Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Xếp hàng nhiều lượt cài đặt và tiếp tục duyệt"
+
+msgid "Easily view app permissions"
+msgstr "Dễ dàng xem quyền của ứng dụng"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Đăng nhập vào Flathub để xem và quản lý mục yêu thích của bạn"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Tìm kiếm ứng dụng trực tiếp từ GNOME Shell"
+
+msgid "App page for Exhibit"
+msgstr "Trang ứng dụng của Exhibit"
+
+msgid "Library page"
+msgstr "Trang thư viện"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Gỡ cài đặt"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Cài đặt"
+
+msgid "Add-on"
+msgstr "Tiện ích mở rộng"
+
+msgid "Manage Add-Ons"
+msgstr "Quản lý tiện ích mở rộng"
+
+msgid "No Add-Ons Visible"
+msgstr "Không có tiện ích mở rộng nào hiển thị"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "Tùy chọn bộ lọc hiện tại của bạn đang ẩn tất cả tiện ích mở rộng đã biết. Hãy thử điều chỉnh chúng."
+
+msgid "Add-on Page"
+msgstr "Trang tiện ích mở rộng"
+
+msgid "Download"
+msgstr "Tải xuống"
+
+msgid "Downloads/Month"
+msgstr "Lượt tải/tháng"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Tiện ích mở rộng này dùng một runtime không còn nhận được bản cập nhật hoặc bản vá bảo mật. Việc sử dụng có thể trở nên không an toàn."
+
+msgid "Other Sources"
+msgstr "Nguồn khác"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Tiện ích mở rộng cho %s"
+
+msgid "Download Stats"
+msgstr "Thống kê tải xuống"
+
+#, c-format
+msgid "System folder %s"
+msgstr "Thư mục hệ thống %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Thư mục con của thư mục riêng %s"
+
+msgid "Host system folders"
+msgstr "Các thư mục của hệ thống máy chủ"
+
+msgid "Host system configuration from /etc"
+msgstr "Cấu hình hệ thống máy chủ từ /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Thư mục con của Màn hình nền %s"
+
+msgid "Desktop folder"
+msgstr "Thư mục Màn hình nền"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "Thư mục con của Tài liệu %s"
+
+msgid "Documents folder"
+msgstr "Thư mục Tài liệu"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "Thư mục con của Nhạc %s"
+
+msgid "Music folder"
+msgstr "Thư mục Nhạc"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "Thư mục con của Ảnh %s"
+
+msgid "Pictures folder"
+msgstr "Thư mục Ảnh"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "Thư mục con của Chia sẻ công khai %s"
+
+msgid "Public Share folder"
+msgstr "Thư mục Chia sẻ công khai"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "Thư mục con của Video %s"
+
+msgid "Videos folder"
+msgstr "Thư mục Video"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "Thư mục con của Mẫu %s"
+
+msgid "Templates folder"
+msgstr "Thư mục Mẫu"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Thư mục con của bộ nhớ đệm người dùng %s"
+
+msgid "User cache folder"
+msgstr "Thư mục bộ nhớ đệm người dùng"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Thư mục con của cấu hình người dùng %s"
+
+msgid "User configuration folder"
+msgstr "Thư mục cấu hình người dùng"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Thư mục con của dữ liệu người dùng %s"
+
+msgid "User data folder"
+msgstr "Thư mục dữ liệu người dùng"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Thư mục con của runtime người dùng %s"
+
+msgid "User runtime folder"
+msgstr "Thư mục runtime người dùng"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Quyền truy cập hệ thống tập tin tới %s"
+
+msgid "Unknown filesystem path"
+msgstr "Đường dẫn hệ thống tập tin không xác định"
+
+msgid "Installed Size"
+msgstr "Kích thước đã cài đặt"
+
+msgid "Amount to download from the internet"
+msgstr "Dung lượng cần tải từ internet"
+
+msgid "Size on Disk"
+msgstr "Kích thước trên đĩa"
+
+msgid "Open user data folder"
+msgstr "Mở thư mục dữ liệu người dùng"
+
+msgid "Your User Data"
+msgstr "Dữ liệu người dùng của bạn"
+
+msgid "Caches, settings, and other app data"
+msgstr "Bộ nhớ đệm, cài đặt và dữ liệu ứng dụng khác"
+
+msgid "Cache"
+msgstr "Bộ nhớ đệm"
+
+msgid "Temporary cached data"
+msgstr "Dữ liệu tạm thời được lưu đệm"
+
+msgid "Clear Cache"
+msgstr "Xóa bộ nhớ đệm"
+
+msgid "Installed Runtime Size"
+msgstr "Kích thước runtime đã cài đặt"
+
+msgid "Runtime Download Size"
+msgstr "Kích thước tải xuống của runtime"
+
+msgid "N/A"
+msgstr "Không có"
+
+msgid "Storage"
+msgstr "Lưu trữ"
+
+msgid "Verified"
+msgstr "Đã xác minh"
+
+msgid "The Bazaar Contributors"
+msgstr "Những người đóng góp cho Bazaar"
+
+msgid "Special Thanks"
+msgstr "Lời cảm ơn đặc biệt"
+
+msgid "Logged Out Successfully!"
+msgstr "Đã đăng xuất thành công!"
+
+msgid "Performing setup…"
+msgstr "Đang thực hiện thiết lập…"
+
+msgid "Set Up Flathub?"
+msgstr "Thiết lập Flathub?"
+
+msgid "A backend error occurred"
+msgstr "Đã xảy ra lỗi phần phụ trợ"
+
+msgid "Refreshing…"
+msgstr "Đang làm mới…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "Đang tải %d ứng dụng…"
+
+msgid "Failed to open file"
+msgstr "Không thể mở tập tin"
+
+msgid "Failed to load metainfo"
+msgstr "Không thể tải metainfo"
+
+msgid "An initialization error occurred"
+msgstr "Đã xảy ra lỗi khởi tạo"
+
+msgid "Checking for updates…"
+msgstr "Đang kiểm tra bản cập nhật…"
+
+msgid "Failed to check for updates"
+msgstr "Không thể kiểm tra bản cập nhật"
+
+msgid "Could not find app"
+msgstr "Không tìm thấy ứng dụng"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Đang tải %d ứng dụng…"
+
+msgid "Writing to cache…"
+msgstr "Đang ghi vào bộ nhớ đệm…"
+
+msgid "Removing remote…"
+msgstr "Đang gỡ bỏ remote…"
+
+msgid "Could not remove remote"
+msgstr "Không thể gỡ bỏ remote"
+
+msgid "Show All"
+msgstr "Hiển thị tất cả"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Tất cả \"%s\""
+
+msgid "Failed to Load Article"
+msgstr "Không thể tải bài viết"
+
+msgid "All apps are already installed"
+msgstr "Tất cả ứng dụng đã được cài đặt"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Cài đặt %u ứng dụng?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Những mục sau sẽ được cài đặt. Các thành phần dùng chung bổ sung cũng có thể được cài đặt"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "%d tiện ích mở rộng sẽ được cài đặt."
+
+msgid "Additionally, addons will be installed."
+msgstr "Ngoài ra, các tiện ích mở rộng sẽ được cài đặt."
+
+msgid "_Cancel"
+msgstr "_Hủy"
+
+msgid "_Install All"
+msgstr "_Cài đặt tất cả"
+
+msgid "Bundle Installation"
+msgstr "Cài đặt gói"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Các phần phụ thuộc bổ sung có thể chiếm thêm dung lượng"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Việc cài đặt ứng dụng này có thể yêu cầu thêm một nguồn phần mềm mới. Các ứng dụng khác từ nguồn này sẽ xuất hiện trong Bazaar.\n"
+"\n"
+"Chỉ thêm nguồn này nếu bạn chắc chắn tin tưởng nó."
+
+msgid "Successfully Installed!"
+msgstr "Đã cài đặt thành công!"
+
+msgid "Show App Details"
+msgstr "Hiện chi tiết ứng dụng"
+
+msgid "Already Installed"
+msgstr "Đã được cài đặt"
+
+msgid "Installation Failed"
+msgstr "Cài đặt không thành công"
+
+msgid "Unknown install size"
+msgstr "Kích thước cài đặt không xác định"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Khoảng %s để cài đặt"
+
+msgid "No special permissions"
+msgstr "Không có quyền đặc biệt"
+
+msgid "Place Applet"
+msgstr "Đặt applet"
+
+msgid "Choose where to add this applet."
+msgstr "Chọn nơi thêm applet này."
+
+msgid "Panel"
+msgstr "Bảng điều khiển"
+
+msgid "Dock"
+msgstr "Dock"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Hệ thống này không cung cấp thông tin chọn lọc. Bạn vẫn có thể duyệt các ứng dụng trên Flathub"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s đến %s, cao nhất vào %s với %s"
+
+msgid "Not Verified"
+msgstr "Chưa xác minh"
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "Quyền sở hữu ID ứng dụng %1$s đã được <b>%2$s</b> xác minh vào <b>%3$s</b>."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Quyền sở hữu ID ứng dụng %1$s đã được xác minh bằng %2$s."
+
+msgid "Bazaar Release"
+msgstr "Bản phát hành Bazaar"
+
+msgid "Full Release Notes"
+msgstr "Ghi chú phát hành đầy đủ"
+
+msgid "This release was made possible by users like you!"
+msgstr "Bản phát hành này có được là nhờ những người dùng như bạn!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Tôi thích làm ra Bazaar, nhưng không thể làm một mình. Hãy hỗ trợ việc phát triển tiếp theo bằng cách quyên góp trên Ko-Fi."
+
+msgid "Donate to Bazaar"
+msgstr "Quyên góp cho Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Có gì mới trong %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Phát hành ngày %-e %B, %Y"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "Bạn đã cài đặt nhiều phiên bản của ứng dụng này. Bạn muốn tiếp tục với phiên bản nào?"
+
+msgid "Details"
+msgstr "Chi tiết"
+
+msgid "Copy"
+msgstr "Sao chép"
+
+msgid "Favorite Count"
+msgstr "Số lượt yêu thích"
+
+msgid "Failed to update favorite"
+msgstr "Không thể cập nhật mục yêu thích"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Đăng nhập bằng Flathub để quản lý mục yêu thích"
+
+msgid "Log In"
+msgstr "Đăng nhập"
+
+msgid "Favorites"
+msgstr "Yêu thích"
+
+msgid "Install All"
+msgstr "Cài đặt tất cả"
+
+msgid "No Favorites"
+msgstr "Không có mục yêu thích"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Các ứng dụng bạn đánh dấu yêu thích sẽ xuất hiện ở đây"
+
+msgid "Support This Application"
+msgstr "Ủng hộ ứng dụng này"
+
+msgid "Remove From Favorites"
+msgstr "Gỡ khỏi mục yêu thích"
+
+msgid "Failed to remove favorite"
+msgstr "Không thể gỡ mục yêu thích"
+
+msgid "Previous"
+msgstr "Trước"
+
+msgid "Next"
+msgstr "Tiếp theo"
+
+msgid "Editing"
+msgstr "Chỉnh sửa"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Bộ trộn âm"
+
+msgid "Music"
+msgstr "Âm nhạc"
+
+msgid "Player"
+msgstr "Trình phát"
+
+msgid "Recorder"
+msgstr "Trình ghi âm"
+
+msgid "Sequencer"
+msgstr "Sequencer"
+
+msgid "Tuner"
+msgstr "Bộ chỉnh dây"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "Emulation"
+msgstr "Giả lập"
+
+msgid "Action"
+msgstr "Hành động"
+
+msgid "Adventure"
+msgstr "Phiêu lưu"
+
+msgid "Arcade"
+msgstr "Arcade"
+
+msgid "Blocks"
+msgstr "Xếp khối"
+
+msgid "Board"
+msgstr "Cờ bàn"
+
+msgid "Card"
+msgstr "Bài"
+
+msgid "Kids"
+msgstr "Trẻ em"
+
+msgid "Logic"
+msgstr "Logic"
+
+msgid "Role Playing"
+msgstr "Nhập vai"
+
+msgid "Shooter"
+msgstr "Bắn súng"
+
+msgid "Simulation"
+msgstr "Mô phỏng"
+
+msgid "Sports"
+msgstr "Thể thao"
+
+msgid "Strategy"
+msgstr "Chiến thuật"
+
+msgid "Browsers"
+msgstr "Trình duyệt"
+
+msgid "Chat"
+msgstr "Trò chuyện"
+
+msgid "Mail"
+msgstr "Thư"
+
+msgid "File Sharing"
+msgstr "Chia sẻ tập tin"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Thêm Adwaita"
+
+msgid "KDE Apps"
+msgstr "Ứng dụng KDE"
+
+msgid "More KDE Apps"
+msgstr "Thêm ứng dụng KDE"
+
+msgid "Made for COSMIC™"
+msgstr "Dành cho COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Cho COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Thêm ứng dụng COSMIC"
+
+msgid "Games"
+msgstr "Trò chơi"
+
+msgid "Emulators"
+msgstr "Trình giả lập"
+
+msgid "More Emulators"
+msgstr "Thêm trình giả lập"
+
+msgid "Launchers"
+msgstr "Trình khởi chạy"
+
+msgid "More Game Launchers"
+msgstr "Thêm trình khởi chạy trò chơi"
+
+msgid "Game Tools"
+msgstr "Công cụ chơi game"
+
+msgid "More Game Tools"
+msgstr "Thêm công cụ chơi game"
+
+msgid "New Year, New Workflows"
+msgstr "Năm mới, quy trình mới"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Ứng dụng để ghi chú, theo dõi công việc và lập kế hoạch"
+
+msgid "Staff Picks"
+msgstr "Biên tập viên chọn"
+
+msgid "Apps we love right now"
+msgstr "Những ứng dụng chúng tôi đang yêu thích"
+
+msgid "Get Creative"
+msgstr "Sáng tạo nào"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Ứng dụng thiết yếu để vẽ, chỉnh sửa ảnh và thiết kế kỹ thuật số"
+
+msgid "Build Native Apps"
+msgstr "Xây dựng ứng dụng gốc"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Phát triển các ứng dụng hòa hợp với hệ thống của bạn"
+
+msgid "Stay in Touch"
+msgstr "Giữ liên lạc"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Ứng dụng cộng tác và giao tiếp thiết yếu"
+
+msgid "Ready for Vacations"
+msgstr "Sẵn sàng cho kỳ nghỉ"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Ứng dụng bản đồ, phương tiện công cộng, thời tiết và lập kế hoạch chuyến đi"
+
+msgid "Smarter Every Day"
+msgstr "Mỗi ngày thông minh hơn"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Ứng dụng giúp bạn học tập, nghiên cứu và viết"
+
+msgid "Get Cozy"
+msgstr "Thư giãn nào"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Ứng dụng tuyệt vời để đọc sách, xem phim và chơi game"
+
+msgid "Web Developer Essentials"
+msgstr "Thiết yếu cho nhà phát triển web"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Làm web thú vị hơn với các ứng dụng này"
+
+msgid "Take Better Notes"
+msgstr "Ghi chú tốt hơn"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Tìm công cụ ghi chú yêu thích mới của bạn"
+
+msgid "Get Focused"
+msgstr "Tập trung nào"
+
+msgid "Great apps for task management"
+msgstr "Ứng dụng tuyệt vời để quản lý công việc"
+
+msgid "Make Some Noise"
+msgstr "Tạo chút âm thanh"
+
+msgid "Apps for creating and producing music"
+msgstr "Ứng dụng để sáng tác và sản xuất âm nhạc"
+
+msgid "Get To Work"
+msgstr "Bắt tay vào việc"
+
+msgid "Essential office apps"
+msgstr "Ứng dụng văn phòng thiết yếu"
+
+msgid "Can't Reach Flathub"
+msgstr "Không thể kết nối Flathub"
+
+msgid "You can still manage and search for apps."
+msgstr "Bạn vẫn có thể quản lý và tìm kiếm ứng dụng."
+
+msgid "Reconnect"
+msgstr "Kết nối lại"
+
+msgid "We​ ♥​ Games"
+msgstr "Chúng tôi ♥ Trò chơi"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Đây là bản xem trước cục bộ, một số chi tiết có thể khác với trang đã xuất bản"
+
+msgid "Preview Store Appearance"
+msgstr "Xem trước giao diện cửa hàng"
+
+msgid "_Support"
+msgstr "_Ủng hộ"
+
+msgid "Trash Data"
+msgstr "Bỏ dữ liệu vào thùng rác"
+
+msgid "Add-ons"
+msgstr "Tiện ích mở rộng"
+
+msgid "More Add-Ons"
+msgstr "Thêm tiện ích mở rộng"
+
+msgid "Links"
+msgstr "Liên kết"
+
+msgid "Similar Apps"
+msgstr "Ứng dụng tương tự"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Ứng dụng này có giấy phép FLOSS, nghĩa là mã nguồn có thể được kiểm tra về độ an toàn."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Ứng dụng này có giấy phép độc quyền, nghĩa là mã nguồn được phát triển riêng tư và không thể được bên thứ ba độc lập kiểm tra."
+
+msgid "Other Apps From This Developer"
+msgstr "Các ứng dụng khác của nhà phát triển này"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Các ứng dụng khác của %s"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s chưa được cài đặt, nhưng vẫn còn <b>%s</b> dữ liệu."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Ứng dụng của %s"
+
+msgid "Apps by This Developer"
+msgstr "Ứng dụng của nhà phát triển này"
+
+msgid "Failed to Remove User Data"
+msgstr "Không thể xóa dữ liệu người dùng"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Hủy"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Đang hủy"
+
+msgid "_Open"
+msgstr "_Mở"
+
+msgid "_Remove"
+msgstr "_Gỡ bỏ"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Cài đặt %s từ %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Cài đặt %s"
+
+msgid "Donate"
+msgstr "Quyên góp"
+
+msgid "Search installed apps"
+msgstr "Tìm kiếm ứng dụng đã cài đặt"
+
+msgid "No Apps Found"
+msgstr "Không tìm thấy ứng dụng nào"
+
+msgid "Search Store Instead"
+msgstr "Tìm trong cửa hàng"
+
+msgid "Pending Updates"
+msgstr "Bản cập nhật đang chờ"
+
+msgid "Downloads"
+msgstr "Tải xuống"
+
+msgid "Recently Uninstalled"
+msgstr "Đã gỡ cài đặt gần đây"
+
+msgid "Clear Finished Tasks"
+msgstr "Xóa các tác vụ đã hoàn tất"
+
+msgid "Sort Options"
+msgstr "Tùy chọn sắp xếp"
+
+msgid "Sort By"
+msgstr "Sắp xếp theo"
+
+msgid "Name"
+msgstr "Tên"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "Không tìm thấy kết quả nào cho \"%s\" trong danh sách ứng dụng đã cài đặt"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u bản cập nhật khả dụng"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u ứng dụng đã cài đặt"
+
+msgid "No applications found"
+msgstr "Không tìm thấy ứng dụng nào"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Tìm thấy %u ứng dụng"
+
+msgid "Learn More"
+msgstr "Tìm hiểu thêm"
+
+msgid "Unknown License"
+msgstr "Giấy phép không xác định"
+
+msgid "Special License"
+msgstr "Giấy phép đặc biệt"
+
+msgid "The license of this app is not known"
+msgstr "Giấy phép của ứng dụng này không được biết"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Ứng dụng này được cộng đồng quốc tế phát triển công khai và phát hành theo giấy phép %s.\n"
+"\n"
+"Bạn có thể tham gia và giúp ứng dụng tốt hơn nữa."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Ứng dụng này không được phát triển công khai, nên chỉ nhà phát triển biết nó hoạt động như thế nào. Nó có thể không an toàn theo những cách khó phát hiện, và có thể thay đổi mà không có sự giám sát.\n"
+"\n"
+"Bạn có thể hoặc không thể đóng góp cho ứng dụng này."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Ứng dụng này được phát triển theo giấy phép đặc biệt %s.\n"
+"\n"
+"Bạn có thể hoặc không thể đóng góp cho ứng dụng này."
+
+msgid "License"
+msgstr "Giấy phép"
+
+msgid "Connect to Flathub"
+msgstr "Kết nối với Flathub"
+
+msgid "Something Went Wrong"
+msgstr "Đã xảy ra lỗi"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Đăng nhập để đồng bộ các ứng dụng yêu thích giữa các thiết bị"
+
+msgid "Finish"
+msgstr "Hoàn tất"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Xin chào, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Thêm biểu tượng vào bản xem trước Metainfo?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Tập tin Metainfo tự nó không bao gồm biểu tượng ứng dụng. Bạn có muốn chọn một biểu tượng thủ công không?"
+
+msgid "Skip"
+msgstr "Bỏ qua"
+
+msgid "Select Icon"
+msgstr "Chọn biểu tượng"
+
+msgid "Image Files"
+msgstr "Tập tin ảnh"
+
+msgid "New Permissions"
+msgstr "Quyền mới"
+
+msgid "_Accept"
+msgstr "_Chấp nhận"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Quyền mới cho %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Bản cập nhật này yêu cầu quyền bổ sung sau"
+
+msgid "User"
+msgstr "Người dùng"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Hết hỗ trợ"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Kết nối mạng được tính phí theo dung lượng — tự động làm mới dữ liệu cửa hàng đã tạm dừng"
+
+msgid "Refresh Manually"
+msgstr "Làm mới thủ công"
+
+msgid "App Updates"
+msgstr "Cập nhật ứng dụng"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Cập nhật tự động sẽ tạm dừng trên mạng tính phí theo dung lượng hoặc khi bật tiết kiệm điện để tiết kiệm dữ liệu và pin."
+
+msgid "_Automatic"
+msgstr "_Tự động"
+
+msgid "Automatically check for and download app updates"
+msgstr "Tự động kiểm tra và tải xuống bản cập nhật ứng dụng"
+
+msgid "_Manual"
+msgstr "_Thủ công"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Việc kiểm tra và tải xuống bản cập nhật ứng dụng phải được thực hiện thủ công"
+
+msgid "Automatic Update _Notifications"
+msgstr "_Thông báo cập nhật tự động"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Thông báo khi bản cập nhật đã được tự động cài đặt"
+
+msgid "_Free Software Only"
+msgstr "_Chỉ phần mềm tự do"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Ẩn ứng dụng độc quyền khi duyệt và tìm kiếm"
+
+msgid "F_lathub Results Only"
+msgstr "Chỉ kết quả F_lathub"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Giới hạn kết quả tìm kiếm và duyệt chỉ ở các ứng dụng có trên Flathub"
+
+msgid "_Verified Results Only"
+msgstr "Chỉ kết quả đã _xác minh"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Ẩn các kết quả chưa được xác minh trên Flathub"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Ẩn ứng dụng đã _hết hỗ trợ"
+
+msgid "Progress Bar Theme"
+msgstr "Chủ đề thanh tiến trình"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Màu cờ đồng tính nam"
+
+msgid "Disability Pride Colors"
+msgstr "Màu cờ người khuyết tật"
+
+msgid "Femboy Pride Colors"
+msgstr "Màu cờ Femboy"
+
+msgid "Neutrois Pride Colors"
+msgstr "Màu cờ Neutrois"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar cần chạy nền để kiểm tra bản cập nhật ứng dụng"
+
+msgid "Today"
+msgstr "Hôm nay"
+
+msgid "Yesterday"
+msgstr "Hôm qua"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d ngày trước"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d tuần trước"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d tháng trước"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d năm trước"
+
+msgid "%e %B %Y"
+msgstr "%e %B %Y"
+
+msgid "Get More Information"
+msgstr "Xem thêm thông tin"
+
+msgid "_Version History"
+msgstr "_Lịch sử phiên bản"
+
+msgid "Remotes"
+msgstr "Remote"
+
+msgid "System Installation"
+msgstr "Cài đặt hệ thống"
+
+msgid "Available to all users on this computer"
+msgstr "Khả dụng cho mọi người dùng trên máy tính này"
+
+msgid "User Installation"
+msgstr "Cài đặt người dùng"
+
+msgid "Only available to you"
+msgstr "Chỉ khả dụng cho bạn"
+
+msgid "Remove Remote"
+msgstr "Gỡ bỏ remote"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Gỡ bỏ %s"
+
+msgid "Unused"
+msgstr "Không dùng"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "Đã cài đặt %u ứng dụng"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Gỡ bỏ “%s”?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "Bạn sẽ không thể cài đặt ứng dụng từ remote người dùng này nữa."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "Bạn sẽ không thể cài đặt ứng dụng từ remote hệ thống này nữa."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u ứng dụng cần gỡ bỏ"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Ứng dụng bên dưới đã được cài đặt từ remote này và sẽ bị gỡ khỏi tài khoản của bạn cùng với nó."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Ứng dụng bên dưới đã được cài đặt từ remote này và sẽ bị gỡ khỏi tất cả người dùng cùng với nó."
+
+msgid "Uninstall"
+msgstr "Gỡ cài đặt"
+
+msgid "Arbitrary Permissions"
+msgstr "Quyền tùy ý"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Ứng dụng này có một quyền gián tiếp cho phép nó tự cấp cho mình <b>bất kỳ quyền nào khác mà nó muốn</b>, bỏ qua hộp cát của Flatpak.\n"
+"\n"
+"Do đó, nó có thể làm mọi việc mà một ứng dụng có đặc quyền, không dùng hộp cát có thể làm, chẳng hạn như truy cập tất cả tập tin của bạn và kết nối internet.\n"
+"\n"
+"Xem các quyền khác vẫn có thể giúp hình dung rõ hơn về những gì ứng dụng có khả năng làm."
+
+msgid "View Other Permissions"
+msgstr "Xem các quyền khác"
+
+msgid "Safe"
+msgstr "An toàn"
+
+msgid "App ID"
+msgstr "ID ứng dụng"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Ứng dụng này dùng phiên bản lỗi thời của nền tảng phần mềm (SDK) và có thể chứa lỗi hoặc lỗ hổng bảo mật sẽ không được sửa."
+
+msgid "Safety"
+msgstr "An toàn"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s an toàn"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s không có quyền không an toàn"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s có thể an toàn"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s có thể không an toàn"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s không an toàn"
+
+msgid "Back"
+msgstr "Quay lại"
+
+msgid "Previous Screenshot"
+msgstr "Ảnh chụp màn hình trước"
+
+msgid "Next Screenshot"
+msgstr "Ảnh chụp màn hình tiếp theo"
+
+msgid "Copy Image"
+msgstr "Sao chép ảnh"
+
+msgid "Reset View"
+msgstr "Đặt lại chế độ xem"
+
+msgid "Zoom Out"
+msgstr "Thu nhỏ"
+
+msgid "Zoom In"
+msgstr "Phóng to"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u bản cập nhật runtime"
+
+msgid "Screenshots Carousel"
+msgstr "Băng chuyền ảnh chụp màn hình"
+
+msgid "No Screenshots"
+msgstr "Không có ảnh chụp màn hình"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Ảnh chụp màn hình %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Ảnh chụp màn hình %u"
+
+msgid "Clear Search"
+msgstr "Xóa tìm kiếm"
+
+msgid "Filters"
+msgstr "Bộ lọc"
+
+msgid "_Verified"
+msgstr "Đã _xác minh"
+
+msgid "_Free/Open"
+msgstr "Tự _do/Mã nguồn mở"
+
+msgid "Non-_EOL"
+msgstr "Không _EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Lọc bỏ các ứng dụng đã hết hỗ trợ"
+
+msgid "_Mobile Friendly"
+msgstr "Thân thiện với _thiết bị di động"
+
+msgid "Categories"
+msgstr "Danh mục"
+
+msgid "Search Filters"
+msgstr "Bộ lọc tìm kiếm"
+
+msgid "Browse Categories"
+msgstr "Duyệt danh mục"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Office"
+msgstr "Văn phòng"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Lịch"
+
+msgid "Messaging"
+msgstr "Nhắn tin"
+
+msgid "Paint"
+msgstr "Vẽ"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Trình giả lập"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifest"
+
+msgid "Total"
+msgstr "Tổng cộng"
+
+msgid "This Week"
+msgstr "Tuần này"
+
+msgid "Installs per day"
+msgstr "Lượt cài đặt mỗi ngày"
+
+msgid "Installs per country"
+msgstr "Lượt cài đặt theo quốc gia"
+
+msgid "Since 4/15/2024"
+msgstr "Kể từ 15/4/2024"
+
+msgid "Keep User Data"
+msgstr "Giữ dữ liệu người dùng"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Cho phép khôi phục cài đặt &amp; nội dung cá nhân"
+
+msgid "Delete All Data"
+msgstr "Xóa tất cả dữ liệu"
+
+msgid "Permanently erase user data to save space"
+msgstr "Xóa vĩnh viễn dữ liệu người dùng để tiết kiệm dung lượng"
+
+msgid "Select which version to remove."
+msgstr "Chọn phiên bản cần gỡ bỏ."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "Sẽ không thể sử dụng %s sau khi gỡ cài đặt."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "“%s” có rủi ro cao"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Ứng dụng này có toàn quyền truy cập hệ thống của bạn, bao gồm tất cả <b>tập tin, lịch sử trình duyệt, mật khẩu đã lưu của bạn</b> và nhiều thứ khác. Nó cũng có quyền truy cập internet, nghĩa là nó có thể gửi dữ liệu của bạn cho bên ngoài.\n"
+"\n"
+"Vì ứng dụng là độc quyền nên không thể kiểm tra xem nó làm gì với các quyền này."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Ứng dụng này dùng hệ thống cửa sổ X11 cũ, cho phép nó <b>ghi lại mọi thao tác gõ phím, chụp ảnh màn hình và giám sát các ứng dụng khác</b>. Nó cũng có quyền truy cập internet, nghĩa là nó có thể gửi dữ liệu của bạn cho bên ngoài.\n"
+"\n"
+"Vì ứng dụng là độc quyền nên không thể kiểm tra xem nó làm gì với các quyền này."
+
+msgid "_Install Anyway"
+msgstr "_Vẫn cài đặt"
+
+msgid "Failed to load transaction dialog"
+msgstr "Không thể tải hộp thoại giao dịch"
+
+msgid "App Add-On"
+msgstr "Tiện ích mở rộng ứng dụng"
+
+msgid "In Queue"
+msgstr "Trong hàng đợi"
+
+msgid "Finishing Up"
+msgstr "Đang hoàn tất"
+
+msgid "Done"
+msgstr "Hoàn tất"
+
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+msgid "Error"
+msgstr "Lỗi"
+
+msgid "Cancel Transaction"
+msgstr "Hủy giao dịch"
+
+msgid "Show Details"
+msgstr "Hiện chi tiết"
+
+msgid "Show Error Info"
+msgstr "Hiện thông tin lỗi"
+
+#, c-format
+msgid "%s Freed"
+msgstr "Đã giải phóng %s"
+
+msgid "Transaction Error"
+msgstr "Lỗi giao dịch"
+
+msgid "Installed Updates"
+msgstr "Bản cập nhật đã cài đặt"
+
+msgid "Release Notes"
+msgstr "Ghi chú phát hành"
+
+msgid "No Release Info"
+msgstr "Không có thông tin phát hành"
+
+msgid "_Update All"
+msgstr "_Cập nhật tất cả"
+
+msgid "This update requests new permissions"
+msgstr "Bản cập nhật này yêu cầu quyền mới"
+
+msgid "Manage Leftover User Data"
+msgstr "Quản lý dữ liệu người dùng còn sót lại"
+
+msgid "No Leftover User Data Found"
+msgstr "Không tìm thấy dữ liệu người dùng còn sót lại"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Dữ liệu cá nhân do các ứng dụng đã gỡ bỏ để lại sẽ hiện ở đây"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Dữ liệu người dùng đã bỏ vào thùng rác của %u ứng dụng"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Dữ liệu người dùng đã bỏ vào thùng rác của %s"
+
+msgid "Open User Data Folder"
+msgstr "Mở thư mục dữ liệu người dùng"
+
+msgid "Trash User Data"
+msgstr "Bỏ dữ liệu người dùng vào thùng rác"
+
+msgid "Refreshing"
+msgstr "Đang làm mới"
+
+msgid "Explore"
+msgstr "Khám phá"
+
+msgid "Library"
+msgstr "Thư viện"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "Bạn đang chạy phiên bản Bazaar mới!"
+
+msgid "See What's New"
+msgstr "Xem có gì mới"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "Bạn có kết nối mạng nhưng đang xem phiên bản được lưu đệm của Flathub"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Kết nối mạng được tính phí theo dung lượng — đã tắt tự động làm mới"
+
+msgid "_Donate to Bazaar"
+msgstr "_Quyên góp cho Bazaar"
+
+msgid "_Refresh"
+msgstr "_Làm mới"
+
+msgid "_Login With Flathub"
+msgstr "_Đăng nhập bằng Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "Quản lý dữ liệu người dùng còn sót _lại"
+
+msgid "Manage R_emotes"
+msgstr "Quản lý R_emote"
+
+msgid "Log Out"
+msgstr "Đăng xuất"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Không thể khởi chạy ứng dụng"
+
+msgid "Could not open link"
+msgstr "Không thể mở liên kết"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "Bạn không thể gỡ bỏ Bazaar từ chính Bazaar!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u lượt cài đặt"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Nhiều lượt cài đặt nhất từ %s"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d lượt tải trong tháng qua"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s Runtime"
+
+msgid "Size information unavailable"
+msgstr "Không có thông tin về kích thước"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Kích thước đã cài đặt của %s"
+
+msgid "Free software"
+msgstr "Phần mềm tự do"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Giấy phép đặc biệt: %s"
+
+msgid "Free Software"
+msgstr "Phần mềm tự do"
+
+msgid "Low Risk"
+msgstr "Rủi ro thấp"
+
+msgid "Medium Risk"
+msgstr "Rủi ro trung bình"
+
+msgid "High Risk"
+msgstr "Rủi ro cao"
+
+msgid "Unknown Permissions"
+msgstr "Quyền không xác định"
+
+msgid "Permissions are missing for this app."
+msgstr "Thiếu thông tin quyền của ứng dụng này."
+
+msgid "No Permissions"
+msgstr "Không có quyền"
+
+msgid "App is fully sandboxed"
+msgstr "Ứng dụng được cô lập hoàn toàn trong hộp cát"
+
+msgid "Network Access"
+msgstr "Truy cập mạng"
+
+msgid "Can access the internet"
+msgstr "Có thể truy cập internet"
+
+msgid "No Network Access"
+msgstr "Không truy cập mạng"
+
+msgid "Cannot access the internet"
+msgstr "Không thể truy cập internet"
+
+msgid "User Device Access"
+msgstr "Truy cập thiết bị người dùng"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Có thể truy cập các thiết bị như webcam hoặc tay cầm chơi game"
+
+msgid "No User Device Access"
+msgstr "Không truy cập thiết bị người dùng"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Không thể truy cập các thiết bị như webcam hoặc tay cầm chơi game"
+
+msgid "Input Device Access"
+msgstr "Truy cập thiết bị nhập"
+
+msgid "Can access input devices"
+msgstr "Có thể truy cập các thiết bị nhập"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Truy cập micrô và phát âm thanh"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Có thể nghe bằng micrô và phát âm thanh mà không cần xin phép"
+
+msgid "System Device Access"
+msgstr "Truy cập thiết bị hệ thống"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Có thể truy cập các thiết bị hệ thống yêu cầu quyền nâng cao"
+
+msgid "Screen Contents Access"
+msgstr "Truy cập nội dung màn hình"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Có thể truy cập nội dung của màn hình hoặc các cửa sổ khác"
+
+msgid "Legacy Windowing System"
+msgstr "Hệ thống cửa sổ cũ"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Luôn dùng hệ thống cửa sổ cũ (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Có thể giành được quyền tùy ý"
+
+msgid "User Settings"
+msgstr "Cài đặt người dùng"
+
+msgid "Can access and change user settings"
+msgstr "Có thể truy cập và thay đổi cài đặt người dùng"
+
+msgid "Full File System Read/Write Access"
+msgstr "Toàn quyền đọc/ghi hệ thống tập tin"
+
+msgid "Can read and write all data on the file system"
+msgstr "Có thể đọc và ghi tất cả dữ liệu trên hệ thống tập tin"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Quyền đọc/ghi thư mục riêng"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Có thể đọc và ghi tất cả dữ liệu trong thư mục riêng của bạn"
+
+msgid "Full File System Read Access"
+msgstr "Toàn quyền đọc hệ thống tập tin"
+
+msgid "Can read all data on the file system"
+msgstr "Có thể đọc tất cả dữ liệu trên hệ thống tập tin"
+
+msgid "Home Folder Read Access"
+msgstr "Quyền đọc thư mục riêng"
+
+msgid "Can read all data in your home directory"
+msgstr "Có thể đọc tất cả dữ liệu trong thư mục riêng của bạn"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Quyền đọc/ghi thư mục Tải về"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Có thể đọc và ghi tất cả dữ liệu trong thư mục tải về của bạn"
+
+msgid "Download Folder Read Access"
+msgstr "Quyền đọc thư mục Tải về"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Có thể đọc tất cả dữ liệu trong thư mục tải về của bạn"
+
+msgid "Can read and write all data in the directory"
+msgstr "Có thể đọc và ghi tất cả dữ liệu trong thư mục"
+
+msgid "Can read all data in the directory"
+msgstr "Có thể đọc tất cả dữ liệu trong thư mục"
+
+msgid "No File System Access"
+msgstr "Không truy cập hệ thống tập tin"
+
+msgid "Cannot access the file system at all"
+msgstr "Hoàn toàn không thể truy cập hệ thống tập tin"
+
+msgid "Uses System Services"
+msgstr "Dùng dịch vụ hệ thống"
+
+msgid "Can request data from non-portal system services"
+msgstr "Có thể yêu cầu dữ liệu từ các dịch vụ hệ thống không thuộc portal"
+
+msgid "Uses Session Services"
+msgstr "Dùng dịch vụ phiên làm việc"
+
+msgid "Can request data from non-portal session services"
+msgstr "Có thể yêu cầu dữ liệu từ các dịch vụ phiên làm việc không thuộc portal"
+
+msgid "No Service Access"
+msgstr "Không truy cập dịch vụ"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Hoàn toàn không thể truy cập các dịch vụ phiên làm việc hoặc hệ thống không thuộc portal"
+
+msgid "Verified App Developer"
+msgstr "Nhà phát triển ứng dụng đã xác minh"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Nhà phát triển của ứng dụng này đã được xác minh đúng như họ nói"
+
+msgid "Proprietary Code"
+msgstr "Mã độc quyền"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Mã nguồn không công khai nên không thể được kiểm tra độc lập và có thể không an toàn"
+
+msgid "Auditable Code"
+msgstr "Mã có thể kiểm tra"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Mã nguồn công khai và có thể được kiểm tra độc lập, giúp ứng dụng có nhiều khả năng an toàn hơn"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Dùng dịch vụ hệ thống %s"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Dùng dịch vụ phiên làm việc %s"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Dùng dịch vụ %s"
+
+msgid "Can see the non-portal service"
+msgstr "Có thể thấy dịch vụ không thuộc portal"
+
+msgid "Can talk to the non-portal service"
+msgstr "Có thể giao tiếp với dịch vụ không thuộc portal"
+
+msgid "Can own the non-portal service"
+msgstr "Có thể sở hữu dịch vụ không thuộc portal"
+
+msgid "Global Menu Integration"
+msgstr "Tích hợp menu toàn cục"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Có thể hiển thị menu của mình trong thanh menu toàn cục"
+
+msgid "KDE Settings Integration"
+msgstr "Tích hợp cài đặt KDE"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Có thể phát hiện khi cài đặt máy tính để bàn KDE thay đổi"
+
+msgid "KDE Global Settings"
+msgstr "Cài đặt toàn cục KDE"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Có thể đọc các tùy chọn máy tính để bàn KDE như phông chữ và màu sắc"
+
+msgid "Secret Storage Service"
+msgstr "Dịch vụ lưu trữ bí mật"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Có thể lưu và truy xuất mật khẩu của chính nó bằng chùm khóa của hệ thống"
+
+msgid "Desktop Notifications Service"
+msgstr "Dịch vụ thông báo trên màn hình nền"
+
+msgid "Can send desktop notifications"
+msgstr "Có thể gửi thông báo trên màn hình nền"
+
+msgid "System Tray Integration"
+msgstr "Tích hợp khay hệ thống"
+
+msgid "Can display an icon in the system tray"
+msgstr "Có thể hiển thị biểu tượng trong khay hệ thống"
+
+msgid "KDE Connect Integration"
+msgstr "Tích hợp KDE Connect"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Có thể tương tác với các thiết bị đã ghép nối qua KDE Connect"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Điều hướng"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Mở trang Khám phá"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Mở trang Thư viện"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Mở trang Tìm kiếm"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Remote"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Đồng bộ remote"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Đóng cửa sổ"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Thoát Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "Đã cài đặt %s"
+
+msgid "The app is ready to be used"
+msgstr "Ứng dụng đã sẵn sàng để sử dụng"
+
+msgid "Updates Are Out of Date"
+msgstr "Bản cập nhật đã lỗi thời"
+
+msgid "Please check for available updates"
+msgstr "Vui lòng kiểm tra bản cập nhật khả dụng"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "Đã cập nhật %u ứng dụng"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s đã được cập nhật."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s và %s đã được cập nhật."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Bao gồm %s, %s và %s."

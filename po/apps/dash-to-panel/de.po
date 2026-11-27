@@ -1,0 +1,198 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Gnome Settings"
+msgstr "GNOME-Einstellungen"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel wurde aktualisiert!"
+
+msgid "You are now running version"
+msgstr "Sie verwenden jetzt Version"
+
+msgid "See what's new"
+msgstr "Neuerungen ansehen"
+
+msgid "Top Bar"
+msgstr "Obere Leiste"
+
+msgid "Isolate Workspaces options"
+msgstr "Optionen für isolierte Arbeitsflächen"
+
+msgid "Isolate monitors options"
+msgstr "Optionen für isolierte Bildschirme"
+
+msgid "Text"
+msgstr "Text"
+
+msgid "Command"
+msgstr "Befehl"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "App icon highlight options"
+msgstr "Optionen für die Hervorhebung von Anwendungssymbolen"
+
+msgid "Move to current Workspace"
+msgstr "Auf aktuelle Arbeitsfläche verschieben"
+
+msgid "Highlight AppIcon color"
+msgstr "Farbe der Anwendungssymbol-Hervorhebung"
+
+msgid "Pressed AppIcon color"
+msgstr "Farbe des gedrückten Anwendungssymbols"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Eckenabrundung der Anwendungssymbol-Hervorhebung"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Überschreibt die globale Eckenabrundung (Standard ist 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Leiste nur vor Fenstern verstecken"
+
+msgid "Overlapping"
+msgstr "Überlappend"
+
+msgid "On same monitor"
+msgstr "Auf demselben Bildschirm"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Das Berühren des Bildschirmrands mit dem Zeiger blendet die Leiste ein"
+
+msgid "Limit to panel length"
+msgstr "Auf Länge der Leiste beschränken"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Mit dem Zeiger über dem Leistenbereich bleibt die Leiste eingeblendet"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Druck am Bildschirmrand zum Einblenden der Leiste erforderlich"
+
+msgid "Persist state across restarts"
+msgstr "Zustand über Neustarts hinweg beibehalten"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(berücksichtigt »Nicht stören« von GNOME und erfordert die Option »Zähler für Benachrichtigungen anzeigen«)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Leiste bei Benachrichtigung einblenden und halten"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Verzögerung vor dem Einblenden der Leiste (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Bildschirme auch bei einer einzelnen Leiste isolieren"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Arbeitsflächen im Anwendungswechsler der GNOME-Shell isolieren"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Einzelnes umschalten / Mehrere in Vorschau"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Einzelnes umschalten / Durch mehrere wechseln"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Einzelnes umschalten / Mehrere ausbreiten"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Auf sekundären Bildschirmen die Überlagerung auf Symbolen anzeigen, die dem Hauptbildschirm entsprechen"
+
+msgid "Show the overlay on all monitors"
+msgstr "Überlagerung auf allen Bildschirmen anzeigen"
+
+msgid "<i>App Details</i> menu item"
+msgstr "Menüeintrag <i>Anwendungsdetails</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Anwendungsdetails</i> ist nur verfügbar, wenn GNOME Software installiert ist"
+
+msgid "Sponsored and originally developed by"
+msgstr "Gesponsert und ursprünglich entwickelt von"
+
+msgid "Application icons context menu"
+msgstr "Kontextmenü der Anwendungssymbole"
+
+msgid "Secondary menu"
+msgstr "Sekundäres Menü"
+
+msgid "Panel context menu entries"
+msgstr "Einträge des Leisten-Kontextmenüs"
+
+msgid "Add entry"
+msgstr "Eintrag hinzufügen"
+
+msgid "Tray Font Size"
+msgstr "Schriftgröße im Systembereich"
+
+msgid "Tray Item Padding"
+msgstr "Abstand der Einträge im Systembereich"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Menüknöpfe der Leiste nur per Klick aktivieren"
+
+msgid "Panel monitor position"
+msgstr "Position der Leiste auf dem Bildschirm"
+
+msgid "Panel length"
+msgstr "Länge der Leiste"
+
+msgid "Dynamic"
+msgstr "Dynamisch"
+
+msgid "Taskbar Display"
+msgstr "Anzeige der Taskleiste"
+
+msgid "Global style"
+msgstr "Globaler Stil"
+
+msgid "Border radius"
+msgstr "Eckenabrundung"
+
+msgid "App Icon Margin"
+msgstr "Außenabstand der Anwendungssymbole"
+
+msgid "App Icon Padding"
+msgstr "Innenabstand der Anwendungssymbole"
+
+msgid "Highlight hovering app icons"
+msgstr "Anwendungssymbole beim Darüberfahren hervorheben"
+
+msgid "Grayscale"
+msgstr "Graustufen"
+
+msgid "(default is 0)"
+msgstr "(Standard ist 0)"
+
+msgid "Side margins"
+msgstr "Seitliche Außenabstände"
+
+msgid "Top and bottom margins"
+msgstr "Außenabstände oben und unten"
+
+msgid "Side padding"
+msgstr "Seitlicher Innenabstand"
+
+msgid "Top and bottom padding"
+msgstr "Innenabstand oben und unten"
+
+msgid "Panel border"
+msgstr "Rand der Leiste"
+
+msgid "Override border color"
+msgstr "Randfarbe überschreiben"
+
+msgid "Border thickness"
+msgstr "Randstärke"

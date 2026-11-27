@@ -3,7 +3,7 @@ import os
 import platform
 import tarfile
 
-from evenkeel_os_ui import GUI, _, ask, choose, notify, say, zenity
+from evenkeel_os_ui import GUI, _, ask, choose, notify, say, user_folder, zenity
 from evenkeel_os_packages import (
     app_list, boxes, common, flathub, installed, printers, reading, sources, targets, update_notes, vpn,
 )
@@ -15,7 +15,7 @@ def plain_list(items):
 
 def pick_file():
     found = []
-    for d in (common.HOME / "Downloads", common.HOME / "Desktop", common.HOME):
+    for d in (user_folder("DOWNLOAD"), user_folder("DESKTOP"), common.HOME):
         if d.is_dir():
             found += [p for p in d.iterdir() if p.is_file() and p.suffix.lower() in (".rpm", ".deb")]
     found = sorted(set(found), key=lambda p: p.stat().st_mtime, reverse=True)[:30]

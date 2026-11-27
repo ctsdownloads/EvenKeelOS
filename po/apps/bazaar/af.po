@@ -1,0 +1,2588 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bazaar\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Bazaar"
+msgstr "Bazaar"
+
+msgid "App Store"
+msgstr "Toepassingswinkel"
+
+msgid "Add, remove or update flatpak software on this computer"
+msgstr "Voeg flatpak-sagteware op hierdie rekenaar by, verwyder dit of werk dit by"
+
+msgid "System;Package;Manager;Discover;Flatpak;Software;App;Store;"
+msgstr "Stelsel;Pakket;Bestuurder;Ontdek;Flatpak;Sagteware;Toepassing;Winkel;"
+
+msgid "New Window"
+msgstr "Nuwe venster"
+
+msgid "Discover and install apps"
+msgstr "Ontdek en installeer toepassings"
+
+msgid "A fast and modern app store for Linux with a focus on discovering and installing Flatpak apps and add-ons, particularly from Flathub."
+msgstr "'n Vinnige en moderne toepassingswinkel vir Linux met 'n fokus op die ontdekking en installering van Flatpak-toepassings en byvoegings, veral vanaf Flathub."
+
+msgid "Queue multiple installs and keep browsing"
+msgstr "Plaas verskeie installerings in 'n tou en gaan voort om te blaai"
+
+msgid "Easily view app permissions"
+msgstr "Sien maklik toepassingstoestemmings"
+
+msgid "Sign in to Flathub to view and manage your favorites"
+msgstr "Meld by Flathub aan om u gunstelinge te sien en te bestuur"
+
+msgid "Search apps directly from GNOME Shell"
+msgstr "Soek toepassings direk vanuit GNOME Shell"
+
+msgid "The home page displaying Flathub apps"
+msgstr "Die tuisblad wat Flathub-toepassings wys"
+
+msgid "App page for Exhibit"
+msgstr "Toepassingsbladsy vir Exhibit"
+
+msgid "Library page"
+msgstr "Biblioteekbladsy"
+
+msgid "Search page"
+msgstr "Soekbladsy"
+
+msgid "Category page"
+msgstr "Kategorie-bladsy"
+
+msgid "Stopped Receiving Updates"
+msgstr "Ontvang nie meer opdaterings nie"
+
+msgctxt "Install Controls"
+msgid "Uninstall"
+msgstr "Deïnstalleer"
+
+msgctxt "Install Controls"
+msgid "Install"
+msgstr "Installeer"
+
+msgid "Add-on"
+msgstr "Byvoegsel"
+
+msgid "Manage Add-Ons"
+msgstr "Bestuur byvoegsels"
+
+msgid "No Add-Ons Visible"
+msgstr "Geen byvoegsels sigbaar nie"
+
+msgid "Your current filter preferences are hiding all known add-ons. Try adjusting them."
+msgstr "U huidige filtervoorkeure versteek alle bekende byvoegsels. Probeer om dit aan te pas."
+
+msgid "Add-on Page"
+msgstr "Byvoegselbladsy"
+
+msgid "Download"
+msgstr "Laai af"
+
+msgid "Installed"
+msgstr "Geïnstalleer"
+
+msgid "Downloads/Month"
+msgstr "Aflaaie/maand"
+
+msgid "Stopped Receiving Core Updates"
+msgstr "Ontvang nie meer kernopdaterings nie"
+
+msgid "This add-on uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Hierdie byvoegsel gebruik 'n looptyd wat nie meer opdaterings of sekuriteitsregstellings ontvang nie. Dit kan onveilig word om te gebruik."
+
+msgid "Other Sources"
+msgstr "Ander bronne"
+
+#, c-format
+msgid "Add-on for %s"
+msgstr "Byvoegsel vir %s"
+
+msgid "Show Less"
+msgstr "Wys minder"
+
+msgid "Show More"
+msgstr "Wys meer"
+
+msgid "Download Stats"
+msgstr "Aflaaistatistiek"
+
+msgid "Age Rating"
+msgstr "Ouderdomgradering"
+
+msgid "Cartoon Violence"
+msgstr "Spotprentgeweld"
+
+msgid "No information regarding cartoon violence"
+msgstr "Geen inligting oor spotprentgeweld nie"
+
+msgid "Fantasy Violence"
+msgstr "Fantasiegeweld"
+
+msgid "No information regarding fantasy violence"
+msgstr "Geen inligting oor fantasiegeweld nie"
+
+msgid "Realistic Violence"
+msgstr "Realistiese geweld"
+
+msgid "No information regarding realistic violence"
+msgstr "Geen inligting oor realistiese geweld nie"
+
+msgid "Violence Depicting Bloodshed"
+msgstr "Geweld wat bloedvergieting uitbeeld"
+
+msgid "No information regarding bloodshed"
+msgstr "Geen inligting oor bloedvergieting nie"
+
+msgid "Sexual Violence"
+msgstr "Seksuele geweld"
+
+msgid "No information regarding sexual violence"
+msgstr "Geen inligting oor seksuele geweld nie"
+
+msgid "Alcohol"
+msgstr "Alkohol"
+
+msgid "No information regarding references to alcohol"
+msgstr "Geen inligting oor verwysings na alkohol nie"
+
+msgid "Narcotics"
+msgstr "Verdowingsmiddels"
+
+msgid "No information regarding references to illicit drugs"
+msgstr "Geen inligting oor verwysings na onwettige dwelms nie"
+
+msgid "Tobacco"
+msgstr "Tabak"
+
+msgid "No information regarding references to tobacco products"
+msgstr "Geen inligting oor verwysings na tabakprodukte nie"
+
+msgid "Nudity"
+msgstr "Naaktheid"
+
+msgid "No information regarding nudity of any sort"
+msgstr "Geen inligting oor naaktheid van enige aard nie"
+
+msgid "Sexual Themes"
+msgstr "Seksuele temas"
+
+msgid "No information regarding references to or depictions of sexual nature"
+msgstr "Geen inligting oor verwysings na of uitbeeldings van seksuele aard nie"
+
+msgid "Profanity"
+msgstr "Vloektaal"
+
+msgid "No information regarding profanity of any kind"
+msgstr "Geen inligting oor vloektaal van enige aard nie"
+
+msgid "Inappropriate Humor"
+msgstr "Ontoepaslike humor"
+
+msgid "No information regarding inappropriate humor"
+msgstr "Geen inligting oor ontoepaslike humor nie"
+
+msgid "Discrimination"
+msgstr "Diskriminasie"
+
+msgid "No information regarding discriminatory language of any kind"
+msgstr "Geen inligting oor diskriminerende taal van enige aard nie"
+
+msgid "Advertising"
+msgstr "Advertensies"
+
+msgid "No information regarding advertising of any kind"
+msgstr "Geen inligting oor advertensies van enige aard nie"
+
+msgid "Gambling"
+msgstr "Dobbel"
+
+msgid "No information regarding gambling of any kind"
+msgstr "Geen inligting oor dobbel van enige aard nie"
+
+msgid "Purchasing"
+msgstr "Aankope"
+
+msgid "No information regarding the ability to spend money"
+msgstr "Geen inligting oor die vermoë om geld te spandeer nie"
+
+msgid "Chat Between Users"
+msgstr "Klets tussen gebruikers"
+
+msgid "No information regarding ways to chat with other users"
+msgstr "Geen inligting oor maniere om met ander gebruikers te klets nie"
+
+msgid "Audio Chat Between Users"
+msgstr "Oudioklets tussen gebruikers"
+
+msgid "No information regarding ways to talk with other users"
+msgstr "Geen inligting oor maniere om met ander gebruikers te praat nie"
+
+msgid "Contact Details"
+msgstr "Kontakbesonderhede"
+
+msgid "No information regarding sharing of social network usernames or email addresses"
+msgstr "Geen inligting oor die deel van sosialenetwerk-gebruikersname of e-posadresse nie"
+
+msgid "Identifying Information"
+msgstr "Identifiserende inligting"
+
+msgid "No information regarding sharing of user information with third parties"
+msgstr "Geen inligting oor die deel van gebruikersinligting met derde partye nie"
+
+msgid "Location Sharing"
+msgstr "Liggingdeling"
+
+msgid "No information regarding sharing of physical location with other users"
+msgstr "Geen inligting oor die deel van fisiese ligging met ander gebruikers nie"
+
+msgid "Prostitution"
+msgstr "Prostitusie"
+
+msgid "No information regarding references to prostitution"
+msgstr "Geen inligting oor verwysings na prostitusie nie"
+
+msgid "Adultery"
+msgstr "Owerspel"
+
+msgid "No information regarding references to adultery"
+msgstr "Geen inligting oor verwysings na owerspel nie"
+
+msgid "Sexualized Characters"
+msgstr "Geseksualiseerde karakters"
+
+msgid "No information regarding sexualized characters"
+msgstr "Geen inligting oor geseksualiseerde karakters nie"
+
+msgid "Desecration"
+msgstr "Ontheiliging"
+
+msgid "No information regarding references to desecration"
+msgstr "Geen inligting oor verwysings na ontheiliging nie"
+
+msgid "Human Remains"
+msgstr "Menslike oorskot"
+
+msgid "No information regarding visible dead human remains"
+msgstr "Geen inligting oor sigbare dooie menslike oorskot nie"
+
+msgid "Slavery"
+msgstr "Slawerny"
+
+msgid "No information regarding references to slavery"
+msgstr "Geen inligting oor verwysings na slawerny nie"
+
+msgid "Does not include references to drugs"
+msgstr "Bevat nie verwysings na dwelms nie"
+
+msgid "Does not include swearing, profanity, and other kinds of strong language"
+msgstr "Bevat nie vloekery, vloektaal en ander soorte growwe taal nie"
+
+msgid "Does not include ads or monetary transactions"
+msgstr "Bevat nie advertensies of geldelike transaksies nie"
+
+msgid "Does not include sex or nudity"
+msgstr "Bevat nie seks of naaktheid nie"
+
+msgid "Does not include uncontrolled chat functionality"
+msgstr "Bevat nie onbeheerde kletsfunksionaliteit nie"
+
+msgid "Does not include violence"
+msgstr "Bevat nie geweld nie"
+
+msgid "Drugs"
+msgstr "Dwelms"
+
+msgid "Strong Language"
+msgstr "Growwe taal"
+
+msgid "Money"
+msgstr "Geld"
+
+msgid "Social"
+msgstr "Sosiaal"
+
+msgid "Violence"
+msgstr "Geweld"
+
+#, c-format
+msgid "%d+"
+msgstr "%d+"
+
+msgctxt "Age rating"
+msgid "All"
+msgstr "Almal"
+
+#, c-format
+msgid "%s has an unknown age rating"
+msgstr "%s het 'n onbekende ouderdomgradering"
+
+#, c-format
+msgid "%s is suitable for everyone"
+msgstr "%s is geskik vir almal"
+
+#, c-format
+msgid "%s is suitable for young children"
+msgstr "%s is geskik vir klein kinders"
+
+#, c-format
+msgid "%s is suitable for children"
+msgstr "%s is geskik vir kinders"
+
+#, c-format
+msgid "%s is suitable for teenagers"
+msgstr "%s is geskik vir tieners"
+
+#, c-format
+msgid "%s is suitable for adults"
+msgstr "%s is geskik vir volwassenes"
+
+#, c-format
+msgid "%s is suitable for %s"
+msgstr "%s is geskik vir %s"
+
+#, c-format
+msgid "%s • %s"
+msgstr "%s • %s"
+
+#, c-format
+msgid "System folder %s"
+msgstr "Stelselvouer %s"
+
+#, c-format
+msgid "Home subfolder %s"
+msgstr "Tuis-subvouer %s"
+
+msgid "Host system folders"
+msgstr "Gasheerstelsel-vouers"
+
+msgid "Host system configuration from /etc"
+msgstr "Gasheerstelsel-opstelling vanaf /etc"
+
+#, c-format
+msgid "Desktop subfolder %s"
+msgstr "Werkskerm-subvouer %s"
+
+msgid "Desktop folder"
+msgstr "Werkskermvouer"
+
+#, c-format
+msgid "Documents subfolder %s"
+msgstr "Dokumente-subvouer %s"
+
+msgid "Documents folder"
+msgstr "Dokumentevouer"
+
+#, c-format
+msgid "Music subfolder %s"
+msgstr "Musiek-subvouer %s"
+
+msgid "Music folder"
+msgstr "Musiekvouer"
+
+#, c-format
+msgid "Pictures subfolder %s"
+msgstr "Beelde-subvouer %s"
+
+msgid "Pictures folder"
+msgstr "Beeldevouer"
+
+#, c-format
+msgid "Public Share subfolder %s"
+msgstr "Openbare deel-subvouer %s"
+
+msgid "Public Share folder"
+msgstr "Openbare deel-vouer"
+
+#, c-format
+msgid "Videos subfolder %s"
+msgstr "Video's-subvouer %s"
+
+msgid "Videos folder"
+msgstr "Video's-vouer"
+
+#, c-format
+msgid "Templates subfolder %s"
+msgstr "Sjablone-subvouer %s"
+
+msgid "Templates folder"
+msgstr "Sjablonevouer"
+
+#, c-format
+msgid "User cache subfolder %s"
+msgstr "Gebruikerskas-subvouer %s"
+
+msgid "User cache folder"
+msgstr "Gebruikerskasvouer"
+
+#, c-format
+msgid "User configuration subfolder %s"
+msgstr "Gebruikeropstelling-subvouer %s"
+
+msgid "User configuration folder"
+msgstr "Gebruikeropstellingvouer"
+
+#, c-format
+msgid "User data subfolder %s"
+msgstr "Gebruikerdata-subvouer %s"
+
+msgid "User data folder"
+msgstr "Gebruikerdatavouer"
+
+#, c-format
+msgid "User runtime subfolder %s"
+msgstr "Gebruikerlooptyd-subvouer %s"
+
+msgid "User runtime folder"
+msgstr "Gebruikerlooptydvouer"
+
+#, c-format
+msgid "Filesystem access to %s"
+msgstr "Lêerstelseltoegang tot %s"
+
+msgid "Unknown filesystem path"
+msgstr "Onbekende lêerstelselpad"
+
+msgid "Download Size"
+msgstr "Aflaaigrootte"
+
+msgid "Installed Size"
+msgstr "Geïnstalleerde grootte"
+
+msgid "Amount to download from the internet"
+msgstr "Hoeveelheid om vanaf die internet af te laai"
+
+msgid "Size on Disk"
+msgstr "Grootte op skyf"
+
+msgid "Open user data folder"
+msgstr "Maak gebruikerdatavouer oop"
+
+msgid "Your User Data"
+msgstr "U gebruikerdata"
+
+msgid "Caches, settings, and other app data"
+msgstr "Kaste, instellings en ander toepassingsdata"
+
+msgid "Cache"
+msgstr "Kas"
+
+msgid "Temporary cached data"
+msgstr "Tydelike gekaste data"
+
+msgid "Clear Cache"
+msgstr "Maak kas skoon"
+
+msgid "Installed Runtime Size"
+msgstr "Geïnstalleerde looptydgrootte"
+
+msgid "Runtime Download Size"
+msgstr "Looptyd-aflaaigrootte"
+
+msgid "N/A"
+msgstr "N/B"
+
+msgid "Storage"
+msgstr "Berging"
+
+msgid "Verified"
+msgstr "Geverifieer"
+
+msgid "The Bazaar Contributors"
+msgstr "Die Bazaar-bydraers"
+
+msgid "translator-credits"
+msgstr "EvenKeelOS"
+
+msgid "Special Thanks"
+msgstr "Spesiale dank"
+
+msgid "Logged Out Successfully!"
+msgstr "Suksesvol afgemeld!"
+
+msgid "Performing setup…"
+msgstr "Voer tans opstelling uit…"
+
+msgid "Set Up Flathub?"
+msgstr "Stel Flathub op?"
+
+msgid ""
+"Flathub is not set up on this system. You will not be able to browse and install applications in Bazaar if its unavailable.\n"
+"\n"
+"You can still use Bazaar to browse and remove already installed apps."
+msgstr ""
+"Flathub is nie op hierdie stelsel opgestel nie. U sal nie toepassings in Bazaar kan deursoek en installeer as dit nie beskikbaar is nie.\n"
+"\n"
+"U kan Bazaar steeds gebruik om reeds geïnstalleerde toepassings te deursoek en te verwyder."
+
+msgid "Later"
+msgstr "Later"
+
+msgid "Set Up Flathub"
+msgstr "Stel Flathub op"
+
+msgid "A backend error occurred"
+msgstr "'n Agtergrondfout het voorgekom"
+
+msgid "Refreshing…"
+msgstr "Verfris tans…"
+
+#, c-format
+msgid "Loading %d apps…"
+msgstr "Laai tans %d toepassings…"
+
+msgid "Failed to open file"
+msgstr "Kon nie lêer oopmaak nie"
+
+msgid "Failed to load metainfo"
+msgstr "Kon nie metainfo laai nie"
+
+msgid "An initialization error occurred"
+msgstr "'n Inisialiseringsfout het voorgekom"
+
+msgid "Checking for updates…"
+msgstr "Kyk tans vir opdaterings…"
+
+msgid "Failed to check for updates"
+msgstr "Kon nie vir opdaterings kyk nie"
+
+msgid "Could not find app"
+msgstr "Kon nie toepassing vind nie"
+
+#, c-format
+msgid "Loading %d app…"
+msgid_plural "Loading %d apps…"
+msgstr[0] "Laai tans %d toepassing…"
+msgstr[1] "Laai tans %d toepassings…"
+
+msgid "Writing to cache…"
+msgstr "Skryf tans na kas…"
+
+msgid "Removing remote…"
+msgstr "Verwyder tans afstandbron…"
+
+msgid "Could not remove remote"
+msgstr "Kon nie afstandbron verwyder nie"
+
+msgid "Show All"
+msgstr "Wys alles"
+
+#, c-format
+msgid "All \"%s\""
+msgstr "Alle \"%s\""
+
+#, c-format
+msgid "%d Applications"
+msgstr "%d toepassings"
+
+msgid "Failed to Load Article"
+msgstr "Kon nie artikel laai nie"
+
+msgid "All apps are already installed"
+msgstr "Alle toepassings is reeds geïnstalleer"
+
+msgid "_OK"
+msgstr "_OK"
+
+#, c-format
+msgid "Install %u App?"
+msgid_plural "Install %u Apps?"
+msgstr[0] "Installeer %u toepassing?"
+msgstr[1] "Installeer %u toepassings?"
+
+msgid "The following will be installed. Additional shared components may also be installed"
+msgstr "Die volgende sal geïnstalleer word. Bykomende gedeelde komponente kan ook geïnstalleer word"
+
+#, c-format
+msgid "%d addons will be installed."
+msgstr "%d byvoegsels sal geïnstalleer word."
+
+msgid "Additionally, addons will be installed."
+msgstr "Daarbenewens sal byvoegsels geïnstalleer word."
+
+msgid "_Cancel"
+msgstr "_Kanselleer"
+
+msgid "_Install All"
+msgstr "_Installeer alles"
+
+msgid "Bundle Installation"
+msgstr "Bundelinstallering"
+
+msgid "Additional dependencies may take extra space"
+msgstr "Bykomende afhanklikhede kan ekstra spasie neem"
+
+msgid ""
+"Installing this app may require adding a new software source. Other apps from this source will show up in Bazaar.\n"
+"\n"
+"Only add this source if you're sure you trust it."
+msgstr ""
+"Om hierdie toepassing te installeer, moet moontlik 'n nuwe sagtewarebron bygevoeg word. Ander toepassings van hierdie bron sal in Bazaar verskyn.\n"
+"\n"
+"Voeg slegs hierdie bron by as u seker is dat u dit vertrou."
+
+msgid "Successfully Installed!"
+msgstr "Suksesvol geïnstalleer!"
+
+msgid "Open"
+msgstr "Maak oop"
+
+msgid "Show App Details"
+msgstr "Wys toepassingsbesonderhede"
+
+msgid "Already Installed"
+msgstr "Reeds geïnstalleer"
+
+msgid "Installation Failed"
+msgstr "Installering het misluk"
+
+msgid "Unknown install size"
+msgstr "Onbekende installeringsgrootte"
+
+#, c-format
+msgid "About %s to install"
+msgstr "Ongeveer %s om te installeer"
+
+msgid "No special permissions"
+msgstr "Geen spesiale toestemmings nie"
+
+msgid "Place Applet"
+msgstr "Plaas applet"
+
+msgid "Choose where to add this applet."
+msgstr "Kies waar om hierdie applet by te voeg."
+
+msgid "Cancel"
+msgstr "Kanselleer"
+
+msgid "Panel"
+msgstr "Paneel"
+
+msgid "Dock"
+msgstr "Dok"
+
+msgid "No Curation"
+msgstr "Geen kuratering nie"
+
+msgid "There is no curation information provided on this system. You can still browse apps on Flathub"
+msgstr "Daar is geen kurateringsinligting op hierdie stelsel verskaf nie. U kan steeds toepassings op Flathub deursoek"
+
+msgid "Browse Flathub"
+msgstr "Deursoek Flathub"
+
+msgid "Offline"
+msgstr "Aflyn"
+
+#, c-format
+msgid "%s to %s, highest on %s with %s"
+msgstr "%s tot %s, hoogste op %s met %s"
+
+#, c-format
+msgid "%.*fK"
+msgstr "%.*fK"
+
+msgid "Installs:"
+msgstr "Installerings:"
+
+msgid "Not Verified"
+msgstr "Nie geverifieer nie"
+
+msgid "Developer information not available."
+msgstr "Ontwikkelaarinligting nie beskikbaar nie."
+
+#, c-format
+msgid "The ownership of the %s app ID has not been verified and it may be a community package."
+msgstr "Die eienaarskap van die %s-toepassing-ID is nie geverifieer nie en dit kan 'n gemeenskapspakket wees."
+
+#, c-format
+msgid "The ownership of the %s app ID has been manually verified by the Flathub team."
+msgstr "Die eienaarskap van die %s-toepassing-ID is met die hand deur die Flathub-span geverifieer."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified by <b>%2$s</b> on <b>%3$s</b>."
+msgstr "Die eienaarskap van die %1$s-toepassing-ID is deur <b>%2$s</b> op <b>%3$s</b> geverifieer."
+
+#, c-format
+msgid "The ownership of the %1$s app ID has been verified using %2$s."
+msgstr "Die eienaarskap van die %1$s-toepassing-ID is met %2$s geverifieer."
+
+#, c-format
+msgid "The ownership of the %s app ID has been verified."
+msgstr "Die eienaarskap van die %s-toepassing-ID is geverifieer."
+
+msgid "Bazaar Release"
+msgstr "Bazaar-vrystelling"
+
+msgid "Full Release Notes"
+msgstr "Volledige vrystellingsnotas"
+
+msgid "This release was made possible by users like you!"
+msgstr "Hierdie vrystelling is moontlik gemaak deur gebruikers soos u!"
+
+msgid "I love making Bazaar, but I cannot do it alone. Help support further development by donating on Ko-Fi."
+msgstr "Ek hou daarvan om Bazaar te maak, maar ek kan dit nie alleen doen nie. Help om verdere ontwikkeling te ondersteun deur op Ko-Fi te skenk."
+
+msgid "Donate to Bazaar"
+msgstr "Skenk aan Bazaar"
+
+#, c-format
+msgid "What's New in %s?"
+msgstr "Wat is nuut in %s?"
+
+msgid "Released %B %-e, %Y"
+msgstr "Vrygestel %B %-e, %Y"
+
+msgid "Choose an Installation"
+msgstr "Kies 'n installering"
+
+msgid "You have multiple versions of this app installed. Which one would you like to proceed with?"
+msgstr "U het verskeie weergawes van hierdie toepassing geïnstalleer. Met watter een wil u voortgaan?"
+
+msgid "Details"
+msgstr "Besonderhede"
+
+msgid "Copy"
+msgstr "Kopieer"
+
+msgid "Copied!"
+msgstr "Gekopieer!"
+
+msgid "Favorite Count"
+msgstr "Aantal gunstelinge"
+
+msgid "Failed to update favorite"
+msgstr "Kon nie gunsteling opdateer nie"
+
+msgid "Log in with Flathub to manage favorites"
+msgstr "Meld by Flathub aan om gunstelinge te bestuur"
+
+msgid "Log In"
+msgstr "Meld aan"
+
+msgid "Favorites"
+msgstr "Gunstelinge"
+
+msgid "Install All"
+msgstr "Installeer alles"
+
+msgid "No Favorites"
+msgstr "Geen gunstelinge nie"
+
+msgid "Applications you mark as favorite will appear here"
+msgstr "Toepassings wat u as gunsteling merk, sal hier verskyn"
+
+msgid "Support This Application"
+msgstr "Ondersteun hierdie toepassing"
+
+msgid "Remove From Favorites"
+msgstr "Verwyder uit gunstelinge"
+
+msgid "Failed to remove favorite"
+msgstr "Kon nie gunsteling verwyder nie"
+
+msgid "Previous"
+msgstr "Vorige"
+
+msgid "Next"
+msgstr "Volgende"
+
+msgid "Editing"
+msgstr "Redigering"
+
+msgid "Midi"
+msgstr "Midi"
+
+msgid "Mixer"
+msgstr "Mengpaneel"
+
+msgid "Music"
+msgstr "Musiek"
+
+msgid "Player"
+msgstr "Speler"
+
+msgid "Recorder"
+msgstr "Opnemer"
+
+msgid "Sequencer"
+msgstr "Sequencer"
+
+msgid "Tuner"
+msgstr "Stemmer"
+
+msgid "TV"
+msgstr "TV"
+
+msgid "Emulation"
+msgstr "Emulasie"
+
+msgid "Action"
+msgstr "Aksie"
+
+msgid "Adventure"
+msgstr "Avontuur"
+
+msgid "Arcade"
+msgstr "Arkade"
+
+msgid "Blocks"
+msgstr "Blokke"
+
+msgid "Board"
+msgstr "Bord"
+
+msgid "Card"
+msgstr "Kaart"
+
+msgid "Kids"
+msgstr "Kinders"
+
+msgid "Logic"
+msgstr "Logika"
+
+msgid "Role Playing"
+msgstr "Rolspel"
+
+msgid "Shooter"
+msgstr "Skiet"
+
+msgid "Simulation"
+msgstr "Simulasie"
+
+msgid "Sports"
+msgstr "Sport"
+
+msgid "Strategy"
+msgstr "Strategie"
+
+msgid "Browsers"
+msgstr "Blaaiers"
+
+msgid "Chat"
+msgstr "Klets"
+
+msgid "Mail"
+msgstr "Pos"
+
+msgid "File Sharing"
+msgstr "Lêerdeling"
+
+msgid "Audio & Video"
+msgstr "Oudio en video"
+
+msgid "Media"
+msgstr "Media"
+
+msgid "More Audio & Video"
+msgstr "Meer oudio en video"
+
+msgid "Developer Tools"
+msgstr "Ontwikkelaarnutsgoed"
+
+msgid "Develop"
+msgstr "Ontwikkel"
+
+msgid "More Developer Tools"
+msgstr "Meer ontwikkelaarnutsgoed"
+
+msgid "Education"
+msgstr "Onderwys"
+
+msgid "Learn"
+msgstr "Leer"
+
+msgid "More Education"
+msgstr "Meer onderwys"
+
+msgid "Gaming"
+msgstr "Speletjies"
+
+msgid "Play"
+msgstr "Speel"
+
+msgid "More Gaming"
+msgstr "Meer speletjies"
+
+msgid "Graphics & Photography"
+msgstr "Grafika en fotografie"
+
+msgid "Create"
+msgstr "Skep"
+
+msgid "More Graphics & Photography"
+msgstr "Meer grafika en fotografie"
+
+msgid "Networking"
+msgstr "Netwerk"
+
+msgid "Internet"
+msgstr "Internet"
+
+msgid "More Networking"
+msgstr "Meer netwerk"
+
+msgid "Productivity"
+msgstr "Produktiwiteit"
+
+msgid "Work"
+msgstr "Werk"
+
+msgid "More Productivity"
+msgstr "Meer produktiwiteit"
+
+msgid "Science"
+msgstr "Wetenskap"
+
+msgid "More Science"
+msgstr "Meer wetenskap"
+
+msgid "System"
+msgstr "Stelsel"
+
+msgid "More System"
+msgstr "Meer stelsel"
+
+msgid "Utilities"
+msgstr "Nutsprogramme"
+
+msgid "Tools"
+msgstr "Nutsgoed"
+
+msgid "More Utilities"
+msgstr "Meer nutsprogramme"
+
+msgid "Trending"
+msgstr "Gewild nou"
+
+msgid "More Trending"
+msgstr "Meer gewild nou"
+
+msgid "Popular"
+msgstr "Gewild"
+
+msgid "More Popular"
+msgstr "Meer gewild"
+
+msgid "Recently Added"
+msgstr "Onlangs bygevoeg"
+
+msgid "New"
+msgstr "Nuut"
+
+msgid "More New"
+msgstr "Meer nuut"
+
+msgid "Recently Updated"
+msgstr "Onlangs opgedateer"
+
+msgid "Updated"
+msgstr "Opgedateer"
+
+msgid "More Updated"
+msgstr "Meer opgedateer"
+
+msgid "Mobile"
+msgstr "Mobiel"
+
+msgid "More Mobile"
+msgstr "Meer mobiel"
+
+msgid "Adwaita"
+msgstr "Adwaita"
+
+msgid "More Adwaita"
+msgstr "Meer Adwaita"
+
+msgid "KDE Apps"
+msgstr "KDE-toepassings"
+
+msgid "More KDE Apps"
+msgstr "Meer KDE-toepassings"
+
+msgid "Made for COSMIC™"
+msgstr "Gemaak vir COSMIC™"
+
+msgid "For COSMIC™"
+msgstr "Vir COSMIC™"
+
+msgid "More COSMIC Apps"
+msgstr "Meer COSMIC-toepassings"
+
+msgid "Games"
+msgstr "Speletjies"
+
+msgid "More Games"
+msgstr "Meer speletjies"
+
+msgid "Emulators"
+msgstr "Emuleerders"
+
+msgid "More Emulators"
+msgstr "Meer emuleerders"
+
+msgid "Launchers"
+msgstr "Lanseerders"
+
+msgid "More Game Launchers"
+msgstr "Meer speletjie-lanseerders"
+
+msgid "Game Tools"
+msgstr "Speletjienutsgoed"
+
+msgid "More Game Tools"
+msgstr "Meer speletjienutsgoed"
+
+msgid "New Year, New Workflows"
+msgstr "Nuwe jaar, nuwe werkvloeie"
+
+msgid "Apps to take notes, track tasks, and make plans"
+msgstr "Toepassings om notas te neem, take op te spoor en planne te maak"
+
+msgid "Staff Picks"
+msgstr "Personeelkeuses"
+
+msgid "Apps we love right now"
+msgstr "Toepassings waarvan ons nou hou"
+
+msgid "Get Creative"
+msgstr "Raak kreatief"
+
+msgid "Essential apps for drawing, editing photos, and digital design"
+msgstr "Noodsaaklike toepassings vir teken, foto's redigeer en digitale ontwerp"
+
+msgid "Build Native Apps"
+msgstr "Bou inheemse toepassings"
+
+msgid "Develop apps that feel at home on your system"
+msgstr "Ontwikkel toepassings wat tuis voel op u stelsel"
+
+msgid "Stay in Touch"
+msgstr "Bly in kontak"
+
+msgid "Essential collaboration and communication apps"
+msgstr "Noodsaaklike samewerkings- en kommunikasietoepassings"
+
+msgid "Ready for Vacations"
+msgstr "Gereed vir vakansies"
+
+msgid "Maps, transit, weather, and trip planning apps"
+msgstr "Toepassings vir kaarte, vervoer, weer en reisbeplanning"
+
+msgid "Smarter Every Day"
+msgstr "Slimmer elke dag"
+
+msgid "Apps to help you study, research, and write"
+msgstr "Toepassings om u te help studeer, navorsing doen en skryf"
+
+msgid "Get Cozy"
+msgstr "Raak gesellig"
+
+msgid "Great apps for reading, watching movies, and playing games"
+msgstr "Goeie toepassings om te lees, flieks te kyk en speletjies te speel"
+
+msgid "Web Developer Essentials"
+msgstr "Noodsaaklikhede vir webontwikkelaars"
+
+msgid "Making websites is more fun with these apps"
+msgstr "Webwerwe maak is lekkerder met hierdie toepassings"
+
+msgid "Take Better Notes"
+msgstr "Neem beter notas"
+
+msgid "Find your new favorite note taking tool"
+msgstr "Vind u nuwe gunsteling-notaneemgereedskap"
+
+msgid "Get Focused"
+msgstr "Bly gefokus"
+
+msgid "Great apps for task management"
+msgstr "Goeie toepassings vir taakbestuur"
+
+msgid "Make Some Noise"
+msgstr "Maak 'n bietjie geraas"
+
+msgid "Apps for creating and producing music"
+msgstr "Toepassings om musiek te skep en te produseer"
+
+msgid "Get To Work"
+msgstr "Gaan aan die werk"
+
+msgid "Essential office apps"
+msgstr "Noodsaaklike kantoortoepassings"
+
+msgid "Flathub Not Added"
+msgstr "Flathub nie bygevoeg nie"
+
+msgid "The Flathub remote was not found on any of your Flatpak installations"
+msgstr "Die Flathub-afstandbron is nie in enige van u Flatpak-installerings gevind nie"
+
+msgid "Can't Reach Flathub"
+msgstr "Kan nie Flathub bereik nie"
+
+msgid "You can still manage and search for apps."
+msgstr "U kan steeds toepassings bestuur en soek."
+
+msgid "Search Apps"
+msgstr "Soek toepassings"
+
+msgid "Reconnect"
+msgstr "Koppel weer"
+
+msgid "App of the Day"
+msgstr "Toepassing van die dag"
+
+msgid "On the Go"
+msgstr "Op die pad"
+
+msgid "Apps for your Linux phones and tablets"
+msgstr "Toepassings vir u Linux-fone en -tablette"
+
+msgid "More Mobile Apps"
+msgstr "Meer mobiele toepassings"
+
+msgid "We​ ♥​ Games"
+msgstr "Ons ♥ speletjies"
+
+msgid "Games and apps to run your favorite titles"
+msgstr "Speletjies en toepassings om u gunstelingtitels te laat loop"
+
+msgid "This is a local preview, some details may differ from the published listing"
+msgstr "Dit is 'n plaaslike voorskou, sommige besonderhede kan van die gepubliseerde lys verskil"
+
+msgid "Preview Store Appearance"
+msgstr "Voorskou winkelvoorkoms"
+
+msgid "_Support"
+msgstr "_Ondersteun"
+
+msgid "This app uses a runtime that no longer receives updates or security fixes. It may become unsafe to use."
+msgstr "Hierdie toepassing gebruik 'n looptyd wat nie meer opdaterings of sekuriteitsregstellings ontvang nie. Dit kan onveilig word om te gebruik."
+
+msgid "Trash Data"
+msgstr "Gooi data weg"
+
+msgid "Add-ons"
+msgstr "Byvoegsels"
+
+msgid "More Add-Ons"
+msgstr "Meer byvoegsels"
+
+msgid "Links"
+msgstr "Skakels"
+
+msgid "Similar Apps"
+msgstr "Soortgelyke toepassings"
+
+msgid "No URL"
+msgstr "Geen URL nie"
+
+msgid "This app has a FLOSS license, meaning the source code can be audited for safety."
+msgstr "Hierdie toepassing het 'n FLOSS-lisensie, wat beteken dat die bronkode vir veiligheid geoudit kan word."
+
+msgid "This app has a proprietary license, meaning the source code is developed privately and cannot be audited by an independent third party."
+msgstr "Hierdie toepassing het 'n eiendomslisensie, wat beteken dat die bronkode privaat ontwikkel word en nie deur 'n onafhanklike derde party geoudit kan word nie."
+
+msgid "Other Apps From This Developer"
+msgstr "Ander toepassings van hierdie ontwikkelaar"
+
+#, c-format
+msgid "Other Apps From %s"
+msgstr "Ander toepassings van %s"
+
+#, c-format
+msgid "%s is not installed, but it still has <b>%s</b> of data present."
+msgstr "%s is nie geïnstalleer nie, maar daar is steeds <b>%s</b> data aanwesig."
+
+#, c-format
+msgid "Apps by %s"
+msgstr "Toepassings deur %s"
+
+msgid "Apps by This Developer"
+msgstr "Toepassings deur hierdie ontwikkelaar"
+
+#, c-format
+msgid "%d Application"
+msgid_plural "%d Applications"
+msgstr[0] "%d toepassing"
+msgstr[1] "%d toepassings"
+
+msgid "Failed to Remove User Data"
+msgstr "Kon nie gebruikerdata verwyder nie"
+
+msgid "Hardware Support"
+msgstr "Hardewareondersteuning"
+
+msgid "Keyboard support"
+msgstr "Sleutelbordondersteuning"
+
+msgid "Requires keyboards"
+msgstr "Vereis sleutelborde"
+
+msgid "Recommends keyboards"
+msgstr "Beveel sleutelborde aan"
+
+msgid "Supports keyboards"
+msgstr "Ondersteun sleutelborde"
+
+msgid "Unknown support for keyboards"
+msgstr "Onbekende ondersteuning vir sleutelborde"
+
+msgid "Mouse support"
+msgstr "Muisondersteuning"
+
+msgid "Requires mice or pointing devices"
+msgstr "Vereis muise of wysertoestelle"
+
+msgid "Recommends mice or pointing devices"
+msgstr "Beveel muise of wysertoestelle aan"
+
+msgid "Supports mice or pointing devices"
+msgstr "Ondersteun muise of wysertoestelle"
+
+msgid "Unknown support for mice or pointing devices"
+msgstr "Onbekende ondersteuning vir muise of wysertoestelle"
+
+msgid "Touchscreen support"
+msgstr "Raakskermondersteuning"
+
+msgid "Requires touchscreens"
+msgstr "Vereis raakskerms"
+
+msgid "Recommends touchscreens"
+msgstr "Beveel raakskerms aan"
+
+msgid "Supports touchscreens"
+msgstr "Ondersteun raakskerms"
+
+msgid "Unknown support for touchscreens"
+msgstr "Onbekende ondersteuning vir raakskerms"
+
+msgid "Mobile support"
+msgstr "Mobiele ondersteuning"
+
+msgid "Works on mobile devices"
+msgstr "Werk op mobiele toestelle"
+
+msgid "May not work well on mobile devices"
+msgstr "Werk dalk nie goed op mobiele toestelle nie"
+
+msgid "Desktop support"
+msgstr "Werkskermondersteuning"
+
+msgid "Works well on large screens"
+msgstr "Werk goed op groot skerms"
+
+#, c-format
+msgid "%s works best on specific hardware"
+msgstr "%s werk die beste op spesifieke hardeware"
+
+#, c-format
+msgid "%s works on most devices"
+msgstr "%s werk op die meeste toestelle"
+
+msgctxt "Install Controls"
+msgid "Cancel"
+msgstr "Kanselleer"
+
+msgctxt "Install Controls"
+msgid "Cancelling"
+msgstr "Kanselleer tans"
+
+msgid "_Open"
+msgstr "_Maak oop"
+
+msgid "Uninstall Application"
+msgstr "Deïnstalleer toepassing"
+
+msgid "_Remove"
+msgstr "_Verwyder"
+
+msgid "Update"
+msgstr "Werk by"
+
+msgid "Remove"
+msgstr "Verwyder"
+
+#, c-format
+msgid "Install %s from %s"
+msgstr "Installeer %s vanaf %s"
+
+#, c-format
+msgid "Install %s"
+msgstr "Installeer %s"
+
+msgid "Donate"
+msgstr "Skenk"
+
+msgid "Search installed apps"
+msgstr "Soek geïnstalleerde toepassings"
+
+msgid "No Apps Found"
+msgstr "Geen toepassings gevind nie"
+
+msgid "Search Store Instead"
+msgstr "Soek eerder in die winkel"
+
+msgid "Pending Updates"
+msgstr "Hangende opdaterings"
+
+msgid "Downloads"
+msgstr "Aflaaie"
+
+msgid "Recently Uninstalled"
+msgstr "Onlangs gedeïnstalleer"
+
+msgid "Clear Finished Tasks"
+msgstr "Maak voltooide take skoon"
+
+msgid "Sort Options"
+msgstr "Sorteeropsies"
+
+msgid "Sort By"
+msgstr "Sorteer volgens"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Size"
+msgstr "Grootte"
+
+#, c-format
+msgid "No matches found for \"%s\" in the list of installed apps"
+msgstr "Geen passings gevind vir \"%s\" in die lys geïnstalleerde toepassings nie"
+
+#, c-format
+msgid "%u Available Update"
+msgid_plural "%u Available Updates"
+msgstr[0] "%u beskikbare opdatering"
+msgstr[1] "%u beskikbare opdaterings"
+
+#, c-format
+msgid "%u Installed App"
+msgid_plural "%u Installed Apps"
+msgstr[0] "%u geïnstalleerde toepassing"
+msgstr[1] "%u geïnstalleerde toepassings"
+
+msgid "No applications found"
+msgstr "Geen toepassings gevind nie"
+
+#, c-format
+msgid "One application found"
+msgid_plural "%u applications found"
+msgstr[0] "Een toepassing gevind"
+msgstr[1] "%u toepassings gevind"
+
+msgid "Get Involved"
+msgstr "Raak betrokke"
+
+msgid "Learn More"
+msgstr "Leer meer"
+
+msgid "Unknown License"
+msgstr "Onbekende lisensie"
+
+msgid "Community Built"
+msgstr "Gemeenskapsgebou"
+
+msgid "Proprietary"
+msgstr "Eiendoms"
+
+msgid "Special License"
+msgstr "Spesiale lisensie"
+
+msgid ""
+"This app is developed in the open by an international community.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Hierdie toepassing word openlik deur 'n internasionale gemeenskap ontwikkel.\n"
+"\n"
+"U kan deelneem en help om dit nog beter te maak."
+
+msgid "The license of this app is not known"
+msgstr "Die lisensie van hierdie toepassing is nie bekend nie"
+
+#, c-format
+msgid ""
+"This app is developed in the open by an international community, and released under the %s license.\n"
+"\n"
+"You can participate and help make it even better."
+msgstr ""
+"Hierdie toepassing word openlik deur 'n internasionale gemeenskap ontwikkel en onder die %s-lisensie vrygestel.\n"
+"\n"
+"U kan deelneem en help om dit nog beter te maak."
+
+msgid ""
+"This app is not developed in the open, so only its developers know how it works. It may be insecure in ways that are hard to detect, and it may change without oversight.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Hierdie toepassing word nie openlik ontwikkel nie, dus weet slegs sy ontwikkelaars hoe dit werk. Dit kan onveilig wees op maniere wat moeilik is om op te spoor, en dit kan sonder toesig verander.\n"
+"\n"
+"U kan dalk, of dalk nie, tot hierdie toepassing bydra nie."
+
+#, c-format
+msgid ""
+"This app is developed under the special license %s.\n"
+"\n"
+"You may or may not be able to contribute to this app."
+msgstr ""
+"Hierdie toepassing word onder die spesiale lisensie %s ontwikkel.\n"
+"\n"
+"U kan dalk, of dalk nie, tot hierdie toepassing bydra nie."
+
+msgid "License"
+msgstr "Lisensie"
+
+msgid "Connect to Flathub"
+msgstr "Koppel aan Flathub"
+
+msgid "Something Went Wrong"
+msgstr "Iets het skeefgeloop"
+
+msgid "Log in to sync your favorited apps across devices"
+msgstr "Meld aan om u gunstelingtoepassings oor toestelle te sinkroniseer"
+
+msgid "Finish"
+msgstr "Voltooi"
+
+#, c-format
+msgid "Hello, %s!"
+msgstr "Hallo, %s!"
+
+msgid "Add Icon to Metainfo Preview?"
+msgstr "Voeg ikoon by metainfo-voorskou?"
+
+msgid "Metainfo files don't include app icons by themselves. Would you like to select one manually?"
+msgstr "Metainfo-lêers sluit nie self toepassingsikone in nie. Wil u een met die hand kies?"
+
+msgid "Skip"
+msgstr "Slaan oor"
+
+msgid "Select Icon"
+msgstr "Kies ikoon"
+
+msgid "Image Files"
+msgstr "Beeldlêers"
+
+msgid "New Permissions"
+msgstr "Nuwe toestemmings"
+
+msgid "_Accept"
+msgstr "_Aanvaar"
+
+#, c-format
+msgid "New Permission for %s"
+msgid_plural "New Permissions for %s"
+msgstr[0] "Nuwe toestemming vir %s"
+msgstr[1] "Nuwe toestemmings vir %s"
+
+msgid "This update requires the following additional permission"
+msgid_plural "This update requires the following additional permissions"
+msgstr[0] "Hierdie opdatering vereis die volgende bykomende toestemming"
+msgstr[1] "Hierdie opdatering vereis die volgende bykomende toestemmings"
+
+msgid "User"
+msgstr "Gebruiker"
+
+msgid "Beta"
+msgstr "Beta"
+
+msgid "End-Of-Life"
+msgstr "Einde van lewe"
+
+msgid "Preferences"
+msgstr "Voorkeure"
+
+msgid "Network connection is metered — automatic store data refresh is paused"
+msgstr "Netwerkverbinding is gemeterd — outomatiese verfrissing van winkeldata is onderbreek"
+
+msgid "Refresh Manually"
+msgstr "Verfris met die hand"
+
+msgid "App Updates"
+msgstr "Toepassingopdaterings"
+
+msgid "Auto-updates will pause on metered networks or when power saving is on to save data and battery."
+msgstr "Outomatiese opdaterings sal op gemeterde netwerke of wanneer kragbesparing aan is, onderbreek om data en battery te spaar."
+
+msgid "_Automatic"
+msgstr "_Outomaties"
+
+msgid "Automatically check for and download app updates"
+msgstr "Kyk outomaties vir toepassingopdaterings en laai dit af"
+
+msgid "_Manual"
+msgstr "_Handmatig"
+
+msgid "Checking for and downloading app updates must be done manually"
+msgstr "Om vir toepassingopdaterings te kyk en dit af te laai, moet met die hand gedoen word"
+
+msgid "Automatic Update _Notifications"
+msgstr "Outomatiese opdaterings_kennisgewings"
+
+msgid "Notify when updates have been automatically installed"
+msgstr "Stel in kennis wanneer opdaterings outomaties geïnstalleer is"
+
+msgid "Content Filters"
+msgstr "Inhoudfilters"
+
+msgid "_Free Software Only"
+msgstr "_Slegs vrye sagteware"
+
+msgid "Hide proprietary apps when browsing and searching"
+msgstr "Versteek eiendomstoepassings tydens deursoek en soek"
+
+msgid "F_lathub Results Only"
+msgstr "Slegs F_lathub-resultate"
+
+msgid "Limit search and browse results to apps only available on Flathub"
+msgstr "Beperk soek- en deursoekresultate tot toepassings wat slegs op Flathub beskikbaar is"
+
+msgid "_Verified Results Only"
+msgstr "Slegs _geverifieerde resultate"
+
+msgid "Hide results that are not verified on Flathub"
+msgstr "Versteek resultate wat nie op Flathub geverifieer is nie"
+
+msgid "Hide _End-of-Life Apps"
+msgstr "Versteek _einde-van-lewe-toepassings"
+
+msgid "Hide apps which are no longer supported by their developers"
+msgstr "Versteek toepassings wat nie meer deur hul ontwikkelaars ondersteun word nie"
+
+msgid "Progress Bar Theme"
+msgstr "Vorderingsbalktema"
+
+msgid "Accent Color"
+msgstr "Aksentkleur"
+
+msgid "Pride Colors"
+msgstr "Trotskleure"
+
+msgid "Lesbian Pride Colors"
+msgstr "Lesbiese trotskleure"
+
+msgid "Male Homosexual Pride Colors"
+msgstr "Manlike homoseksuele trotskleure"
+
+msgid "Transgender Pride Colors"
+msgstr "Transgender-trotskleure"
+
+msgid "Nonbinary Pride Colors"
+msgstr "Nie-binêre trotskleure"
+
+msgid "Bisexual Pride Colors"
+msgstr "Biseksuele trotskleure"
+
+msgid "Asexual Pride Colors"
+msgstr "Aseksuele trotskleure"
+
+msgid "Pansexual Pride Colors"
+msgstr "Panseksuele trotskleure"
+
+msgid "Aromantic Pride Colors"
+msgstr "Aromantiese trotskleure"
+
+msgid "Genderfluid Pride Colors"
+msgstr "Genderfluïede trotskleure"
+
+msgid "Polysexual Pride Colors"
+msgstr "Poliseksuele trotskleure"
+
+msgid "Omnisexual Pride Colors"
+msgstr "Omniseksuele trotskleure"
+
+msgid "Aroace Pride Colors"
+msgstr "Aroace-trotskleure"
+
+msgid "Agender Pride Colors"
+msgstr "Agender-trotskleure"
+
+msgid "Genderqueer Pride Colors"
+msgstr "Genderqueer-trotskleure"
+
+msgid "Intersex Pride Colors"
+msgstr "Interseks-trotskleure"
+
+msgid "Demigender Pride Colors"
+msgstr "Demigender-trotskleure"
+
+msgid "Biromantic Pride Colors"
+msgstr "Biromantiese trotskleure"
+
+msgid "Disability Pride Colors"
+msgstr "Gestremdheid-trotskleure"
+
+msgid "Femboy Pride Colors"
+msgstr "Femboy-trotskleure"
+
+msgid "Neutrois Pride Colors"
+msgstr "Neutrois-trotskleure"
+
+msgid "Bazaar needs to run in the background to check for app updates"
+msgstr "Bazaar moet in die agtergrond loop om vir toepassingopdaterings te kyk"
+
+msgid "Version History"
+msgstr "Weergawegeskiedenis"
+
+msgid "Today"
+msgstr "Vandag"
+
+msgid "Yesterday"
+msgstr "Gister"
+
+#, c-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d dag gelede"
+msgstr[1] "%d dae gelede"
+
+#, c-format
+msgid "%d week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "%d week gelede"
+msgstr[1] "%d weke gelede"
+
+#, c-format
+msgid "%d month ago"
+msgid_plural "%d months ago"
+msgstr[0] "%d maand gelede"
+msgstr[1] "%d maande gelede"
+
+#, c-format
+msgid "%d year ago"
+msgid_plural "%d years ago"
+msgstr[0] "%d jaar gelede"
+msgstr[1] "%d jaar gelede"
+
+msgid "%e %B %Y"
+msgstr "%e %B %Y"
+
+#, c-format
+msgid "Version %s"
+msgstr "Weergawe %s"
+
+msgid "No details for this release"
+msgstr "Geen besonderhede vir hierdie vrystelling nie"
+
+msgid "Get More Information"
+msgstr "Kry meer inligting"
+
+msgid "_Version History"
+msgstr "_Weergawegeskiedenis"
+
+msgid "Remotes"
+msgstr "Afstandbronne"
+
+msgid "System Installation"
+msgstr "Stelselinstallering"
+
+msgid "Available to all users on this computer"
+msgstr "Beskikbaar vir alle gebruikers op hierdie rekenaar"
+
+msgid "User Installation"
+msgstr "Gebruikerinstallering"
+
+msgid "Only available to you"
+msgstr "Slegs vir u beskikbaar"
+
+msgid "Remove Remote"
+msgstr "Verwyder afstandbron"
+
+#, c-format
+msgid "Remove %s"
+msgstr "Verwyder %s"
+
+msgid "Unused"
+msgstr "Ongebruik"
+
+#, c-format
+msgid "%u app installed"
+msgid_plural "%u apps installed"
+msgstr[0] "%u toepassing geïnstalleer"
+msgstr[1] "%u toepassings geïnstalleer"
+
+#, c-format
+msgid "Remove “%s”?"
+msgstr "Verwyder “%s”?"
+
+msgid "You will no longer be able to install apps from this user remote."
+msgstr "U sal nie meer toepassings vanaf hierdie gebruikerafstandbron kan installeer nie."
+
+msgid "You will no longer be able to install apps from this system remote."
+msgstr "U sal nie meer toepassings vanaf hierdie stelselafstandbron kan installeer nie."
+
+#, c-format
+msgid "%u App to Remove"
+msgid_plural "%u Apps to Remove"
+msgstr[0] "%u toepassing om te verwyder"
+msgstr[1] "%u toepassings om te verwyder"
+
+msgid "The app below was installed from this remote and will be removed from your account along with it."
+msgid_plural "These apps were installed from this remote and will be removed from your account along with it."
+msgstr[0] "Die toepassing hieronder is vanaf hierdie afstandbron geïnstalleer en sal saam daarmee van u rekening verwyder word."
+msgstr[1] "Hierdie toepassings is vanaf hierdie afstandbron geïnstalleer en sal saam daarmee van u rekening verwyder word."
+
+msgid "The app below was installed from this remote and will be removed for all users along with it."
+msgid_plural "These apps were installed from this remote and will be removed for all users along with it."
+msgstr[0] "Die toepassing hieronder is vanaf hierdie afstandbron geïnstalleer en sal saam daarmee vir alle gebruikers verwyder word."
+msgstr[1] "Hierdie toepassings is vanaf hierdie afstandbron geïnstalleer en sal saam daarmee vir alle gebruikers verwyder word."
+
+msgid "Uninstall"
+msgstr "Deïnstalleer"
+
+msgid "Get"
+msgstr "Kry"
+
+msgid "Arbitrary Permissions"
+msgstr "Arbitrêre toestemmings"
+
+msgid ""
+"This app has a permission that indirectly allows it to grant itself <b>any other permission it wants</b>, bypassing the Flatpak sandbox.\n"
+"\n"
+"It can therefore do anything a privileged, non-sandboxed application can do, such as accessing all your files and connecting to the internet.\n"
+"\n"
+"Viewing the other permissions may still give a better idea of what the app is likely to do."
+msgstr ""
+"Hierdie toepassing het 'n toestemming wat dit indirek toelaat om homself <b>enige ander toestemming wat dit wil hê</b> te gee, en die Flatpak-sandkas te omseil.\n"
+"\n"
+"Dit kan dus enigiets doen wat 'n bevoorregte, nie-gesandkaste toepassing kan doen, soos om toegang tot al u lêers te kry en met die internet te koppel.\n"
+"\n"
+"Om na die ander toestemmings te kyk, kan steeds 'n beter idee gee van wat die toepassing waarskynlik sal doen."
+
+msgid "View Other Permissions"
+msgstr "Bekyk ander toestemmings"
+
+msgid "Safe"
+msgstr "Veilig"
+
+msgid "App ID"
+msgstr "Toepassing-ID"
+
+msgid "SDK"
+msgstr "SDK"
+
+msgid "This app uses an outdated version of the software platform (SDK) and might contain bugs or security vulnerabilities which will not be fixed."
+msgstr "Hierdie toepassing gebruik 'n verouderde weergawe van die sagtewareplatform (SDK) en kan foute of sekuriteitskwesbaarhede bevat wat nie reggestel sal word nie."
+
+msgid "Safety"
+msgstr "Veiligheid"
+
+#, c-format
+msgid "%s is Safe"
+msgstr "%s is veilig"
+
+#, c-format
+msgid "%s has no Unsafe Permissions"
+msgstr "%s het geen onveilige toestemmings nie"
+
+#, c-format
+msgid "%s is Probably Safe"
+msgstr "%s is waarskynlik veilig"
+
+#, c-format
+msgid "%s is Possibly Unsafe"
+msgstr "%s is moontlik onveilig"
+
+#, c-format
+msgid "%s is Unsafe"
+msgstr "%s is onveilig"
+
+msgid "Back"
+msgstr "Terug"
+
+msgid "Previous Screenshot"
+msgstr "Vorige skermkiekie"
+
+msgid "Next Screenshot"
+msgstr "Volgende skermkiekie"
+
+msgid "Copy Image"
+msgstr "Kopieer beeld"
+
+msgid "Reset View"
+msgstr "Stel aansig terug"
+
+msgid "Zoom Out"
+msgstr "Zoem uit"
+
+msgid "Zoom In"
+msgstr "Zoem in"
+
+#, c-format
+msgid "%u Runtime Update"
+msgid_plural "%u Runtime Updates"
+msgstr[0] "%u looptydopdatering"
+msgstr[1] "%u looptydopdaterings"
+
+msgid "Screenshots Carousel"
+msgstr "Skermkiekie-karrousel"
+
+msgid "No Screenshots"
+msgstr "Geen skermkiekies nie"
+
+#, c-format
+msgid "Screenshot %u %s"
+msgstr "Skermkiekie %u %s"
+
+#, c-format
+msgid "Screenshot %u"
+msgstr "Skermkiekie %u"
+
+msgid "Clear Search"
+msgstr "Maak soektog skoon"
+
+msgid "Filters"
+msgstr "Filters"
+
+msgid "_Verified"
+msgstr "_Geverifieer"
+
+msgid "_Free/Open"
+msgstr "_Vry/oop"
+
+msgid "Non-_EOL"
+msgstr "Nie-_EOL"
+
+msgid "Filter out End-of-Life apps"
+msgstr "Filtreer einde-van-lewe-toepassings uit"
+
+msgid "_Mobile Friendly"
+msgstr "_Mobielvriendelik"
+
+msgid "Categories"
+msgstr "Kategorieë"
+
+msgid "Search Apps, Games, Software"
+msgstr "Soek toepassings, speletjies, sagteware"
+
+msgid "Search Filters"
+msgstr "Soekfilters"
+
+msgid "Browse Categories"
+msgstr "Deursoek kategorieë"
+
+msgid "Categories Unavailable"
+msgstr "Kategorieë nie beskikbaar nie"
+
+msgid "Search for apps using the search bar above."
+msgstr "Soek toepassings met die soekbalk hierbo."
+
+msgid "No Applications Found"
+msgstr "Geen toepassings gevind nie"
+
+#, c-format
+msgid "No results found for \"%s\" in Flathub"
+msgstr "Geen resultate gevind vir \"%s\" in Flathub nie"
+
+msgid "Browser"
+msgstr "Blaaier"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "Office"
+msgstr "Kantoor"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "Calendar"
+msgstr "Kalender"
+
+msgid "Messaging"
+msgstr "Boodskappe"
+
+msgid "Paint"
+msgstr "Verf"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid "Torrent"
+msgstr "Torrent"
+
+msgid "Emulator"
+msgstr "Emuleerder"
+
+msgid "Copy Link"
+msgstr "Kopieer skakel"
+
+msgctxt "Project URL Type"
+msgid "Flathub Page"
+msgstr "Flathub-bladsy"
+
+msgctxt "Project URL Type"
+msgid "Project Website"
+msgstr "Projekwebwerf"
+
+msgctxt "Project URL Type"
+msgid "Issue Tracker"
+msgstr "Probleemopspoorder"
+
+msgctxt "Project URL Type"
+msgid "FAQ"
+msgstr "Gewilde vrae"
+
+msgctxt "Project URL Type"
+msgid "Help"
+msgstr "Hulp"
+
+msgctxt "Project URL Type"
+msgid "Donate"
+msgstr "Skenk"
+
+msgctxt "Project URL Type"
+msgid "Translate"
+msgstr "Vertaal"
+
+msgctxt "Project URL Type"
+msgid "Contact"
+msgstr "Kontak"
+
+msgctxt "Project URL Type"
+msgid "Source Code"
+msgstr "Bronkode"
+
+msgctxt "Project URL Type"
+msgid "Contribute"
+msgstr "Dra by"
+
+msgctxt "Project URL Type"
+msgid "Manifest"
+msgstr "Manifes"
+
+msgid "Timeline"
+msgstr "Tydlyn"
+
+msgid "Total"
+msgstr "Totaal"
+
+msgid "This Week"
+msgstr "Hierdie week"
+
+msgid "Installs per day"
+msgstr "Installerings per dag"
+
+msgid "World"
+msgstr "Wêreld"
+
+msgid "Installs per country"
+msgstr "Installerings per land"
+
+msgid "Since 4/15/2024"
+msgstr "Sedert 4/15/2024"
+
+msgid "No Results Found"
+msgstr "Geen resultate gevind nie"
+
+msgid "Search failed"
+msgstr "Soektog het misluk"
+
+msgid "Unknown"
+msgstr "Onbekend"
+
+msgid "Keep User Data"
+msgstr "Behou gebruikerdata"
+
+msgid "Allow restoring personal settings &amp; content"
+msgstr "Laat herstel van persoonlike instellings &amp; inhoud toe"
+
+msgid "Delete All Data"
+msgstr "Vee alle data uit"
+
+msgid "Permanently erase user data to save space"
+msgstr "Vee gebruikerdata permanent uit om spasie te bespaar"
+
+#, c-format
+msgid "Remove %s?"
+msgstr "Verwyder %s?"
+
+msgid "Select which version to remove."
+msgstr "Kies watter weergawe om te verwyder."
+
+#, c-format
+msgid "It will not be possible to use %s after it is uninstalled."
+msgstr "Dit sal nie moontlik wees om %s te gebruik nadat dit gedeïnstalleer is nie."
+
+#, c-format
+msgid "“%s” is High Risk"
+msgstr "“%s” is hoë risiko"
+
+msgid ""
+"This app has full access to your system, including all <b>your files, browser history, saved passwords</b>, and more. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Hierdie toepassing het volle toegang tot u stelsel, insluitend al <b>u lêers, blaaiergeskiedenis, gestoorde wagwoorde</b> en meer. Dit het ook toegang tot die internet, wat beteken dat dit u data aan buitestaanders kan stuur.\n"
+"\n"
+"Omdat die toepassing eiendoms is, kan dit nie geoudit word vir wat dit met hierdie toestemmings doen nie."
+
+msgid ""
+"This app uses the legacy X11 windowing system, which allows it to <b>record all keystrokes, capture screenshots, and monitor other applications</b>. It also has access to the internet, meaning it could send your data to outside parties.\n"
+"\n"
+"Because the app is proprietary, it can not be audited for what it does with these permissions."
+msgstr ""
+"Hierdie toepassing gebruik die ou X11-vensterstelsel, wat dit toelaat om <b>alle sleutelaanslae op te neem, skermkiekies te neem en ander toepassings te monitor</b>. Dit het ook toegang tot die internet, wat beteken dat dit u data aan buitestaanders kan stuur.\n"
+"\n"
+"Omdat die toepassing eiendoms is, kan dit nie geoudit word vir wat dit met hierdie toestemmings doen nie."
+
+msgid "_Install Anyway"
+msgstr "_Installeer tog"
+
+msgid "Failed to load transaction dialog"
+msgstr "Kon nie transaksiedialoog laai nie"
+
+#, c-format
+msgid "Finished in %.02f seconds"
+msgstr "Voltooi in %.02f sekondes"
+
+msgid "App Add-On"
+msgstr "Toepassingbyvoegsel"
+
+msgid "Runtime"
+msgstr "Looptyd"
+
+msgid "In Queue"
+msgstr "In tou"
+
+msgid "Finishing Up"
+msgstr "Rond af"
+
+msgid "Done"
+msgstr "Klaar"
+
+msgid "Cancelled"
+msgstr "Gekanselleer"
+
+msgid "Error"
+msgstr "Fout"
+
+msgid "Cancel Transaction"
+msgstr "Kanselleer transaksie"
+
+msgid "Show Details"
+msgstr "Wys besonderhede"
+
+msgid "Show Error Info"
+msgstr "Wys foutinligting"
+
+#, c-format
+msgid "%s Freed"
+msgstr "%s vrygemaak"
+
+msgid "Transaction Error"
+msgstr "Transaksiefout"
+
+msgid "Pending"
+msgstr "Hangend"
+
+msgid "Installed Updates"
+msgstr "Geïnstalleerde opdaterings"
+
+msgid "Release Notes"
+msgstr "Vrystellingsnotas"
+
+msgid "No Release Info"
+msgstr "Geen vrystellinginligting nie"
+
+msgid "_Update All"
+msgstr "_Werk alles by"
+
+msgid "This update requests new permissions"
+msgstr "Hierdie opdatering vra nuwe toestemmings"
+
+msgid "Manage Leftover User Data"
+msgstr "Bestuur oorblywende gebruikerdata"
+
+msgid "No Leftover User Data Found"
+msgstr "Geen oorblywende gebruikerdata gevind nie"
+
+msgid "Personal data left behind by apps that were removed will show up here"
+msgstr "Persoonlike data wat deur verwyderde toepassings agtergelaat is, sal hier verskyn"
+
+#, c-format
+msgid "Trashed User Data for %u App"
+msgid_plural "Trashed User Data for %u Apps"
+msgstr[0] "Weggegooide gebruikerdata vir %u toepassing"
+msgstr[1] "Weggegooide gebruikerdata vir %u toepassings"
+
+#, c-format
+msgid "Trashed User Data for %s"
+msgstr "Weggegooide gebruikerdata vir %s"
+
+msgid "Open User Data Folder"
+msgstr "Maak gebruikerdatavouer oop"
+
+msgid "Trash User Data"
+msgstr "Gooi gebruikerdata weg"
+
+msgid "Refreshing"
+msgstr "Verfris tans"
+
+msgid "Curated"
+msgstr "Gekuratoreer"
+
+msgid "Explore"
+msgstr "Verken"
+
+msgid "Library"
+msgstr "Biblioteek"
+
+msgid "Search"
+msgstr "Soek"
+
+msgid "Main Menu"
+msgstr "Hoofkieslys"
+
+msgid "You are running a new version of Bazaar!"
+msgstr "U gebruik 'n nuwe weergawe van Bazaar!"
+
+msgid "See What's New"
+msgstr "Sien wat nuut is"
+
+msgid "You have a network connection but are viewing a cached version of Flathub"
+msgstr "U het 'n netwerkverbinding, maar kyk na 'n gekaste weergawe van Flathub"
+
+msgid "Network connection is metered — automatic refreshes disabled"
+msgstr "Netwerkverbinding is gemeterd — outomatiese verfrissings is gedeaktiveer"
+
+msgid "_Donate to Bazaar"
+msgstr "_Skenk aan Bazaar"
+
+msgid "_Refresh"
+msgstr "_Verfris"
+
+msgid "_Login With Flathub"
+msgstr "_Meld aan met Flathub"
+
+msgid "_Manage Leftover User Data"
+msgstr "_Bestuur oorblywende gebruikerdata"
+
+msgid "Manage R_emotes"
+msgstr "Bestuur afstan_dbronne"
+
+msgid "_Preferences"
+msgstr "_Voorkeure"
+
+msgid "_Keyboard Shortcuts"
+msgstr "_Sleutelbordkortpaaie"
+
+msgid "_About Bazaar"
+msgstr "_Oor Bazaar"
+
+msgid "_Quit Bazaar"
+msgstr "_Verlaat Bazaar"
+
+msgid "Log Out"
+msgstr "Meld af"
+
+#, c-format
+msgid "Bazaar — %s"
+msgstr "Bazaar — %s"
+
+msgid "Failed to launch application"
+msgstr "Kon nie toepassing begin nie"
+
+msgid "Could not open link"
+msgstr "Kon nie skakel oopmaak nie"
+
+msgid "You can't remove Bazaar from Bazaar!"
+msgstr "U kan nie Bazaar uit Bazaar verwyder nie!"
+
+msgid "Can't do that right now!"
+msgstr "Dit kan nie nou gedoen word nie!"
+
+#, c-format
+msgid "%s, %'u install"
+msgid_plural "%s, %'u installs"
+msgstr[0] "%s, %'u installering"
+msgstr[1] "%s, %'u installerings"
+
+#, c-format
+msgid "Most installs from %s"
+msgstr "Meeste installerings vanaf %s"
+
+msgid "---"
+msgstr "---"
+
+#, c-format
+msgid "%.*fM"
+msgstr "%.*fM"
+
+#, c-format
+msgid "%d downloads in the last month"
+msgstr "%d aflaaie in die afgelope maand"
+
+#, c-format
+msgid "+%s Runtime"
+msgstr "+%s looptyd"
+
+msgid "Size information unavailable"
+msgstr "Grootte-inligting nie beskikbaar nie"
+
+#, c-format
+msgid "Download size of %s"
+msgstr "Aflaaigrootte van %s"
+
+#, c-format
+msgid "Installed size of %s"
+msgstr "Geïnstalleerde grootte van %s"
+
+msgid "All Ages"
+msgstr "Alle ouderdomme"
+
+msgid "Age rating information unavailable"
+msgstr "Ouderdomgradering-inligting nie beskikbaar nie"
+
+msgid "Suitable for all ages"
+msgstr "Geskik vir alle ouderdomme"
+
+#, c-format
+msgid "Suitable for ages %d and up"
+msgstr "Geskik vir ouderdomme %d en ouer"
+
+#, c-format
+msgid "Free software licensed under %s"
+msgstr "Vrye sagteware onder die %s-lisensie"
+
+msgid "Free software"
+msgstr "Vrye sagteware"
+
+msgid "Proprietary Software"
+msgstr "Eiendomsagteware"
+
+#, c-format
+msgid "Special License: %s"
+msgstr "Spesiale lisensie: %s"
+
+msgid "Free Software"
+msgstr "Vrye sagteware"
+
+msgid "Adaptive"
+msgstr "Aanpasbaar"
+
+msgid "Desktop Only"
+msgstr "Slegs werkskerm"
+
+msgid "Works on desktop, tablets, and phones"
+msgstr "Werk op werkskerms, tablette en fone"
+
+msgid "May not work on mobile devices"
+msgstr "Werk dalk nie op mobiele toestelle nie"
+
+msgid "Low Risk"
+msgstr "Lae risiko"
+
+msgid "Medium Risk"
+msgstr "Medium risiko"
+
+msgid "High Risk"
+msgstr "Hoë risiko"
+
+msgid "Unknown Permissions"
+msgstr "Onbekende toestemmings"
+
+msgid "Permissions are missing for this app."
+msgstr "Toestemmings ontbreek vir hierdie toepassing."
+
+msgid "No Permissions"
+msgstr "Geen toestemmings"
+
+msgid "App is fully sandboxed"
+msgstr "Toepassing is ten volle gesandkas"
+
+msgid "Network Access"
+msgstr "Netwerktoegang"
+
+msgid "Can access the internet"
+msgstr "Kan toegang tot die internet kry"
+
+msgid "No Network Access"
+msgstr "Geen netwerktoegang"
+
+msgid "Cannot access the internet"
+msgstr "Kan nie toegang tot die internet kry nie"
+
+msgid "User Device Access"
+msgstr "Gebruikertoestel-toegang"
+
+msgid "Can access devices such as webcams or gaming controllers"
+msgstr "Kan toegang kry tot toestelle soos webkameras of speletjiebeheerders"
+
+msgid "No User Device Access"
+msgstr "Geen gebruikertoestel-toegang"
+
+msgid "Cannot access devices such as webcams or gaming controllers"
+msgstr "Kan nie toegang kry tot toestelle soos webkameras of speletjiebeheerders nie"
+
+msgid "Input Device Access"
+msgstr "Invoertoestel-toegang"
+
+msgid "Can access input devices"
+msgstr "Kan toegang kry tot invoertoestelle"
+
+msgid "Microphone Access and Audio Playback"
+msgstr "Mikrofoontoegang en oudiospeel"
+
+msgid "Can listen using microphones and play audio without asking permission"
+msgstr "Kan met mikrofone luister en oudio speel sonder om toestemming te vra"
+
+msgid "System Device Access"
+msgstr "Stelseltoestel-toegang"
+
+msgid "Can access system devices which require elevated permissions"
+msgstr "Kan toegang kry tot stelseltoestelle wat verhoogde toestemmings vereis"
+
+msgid "Screen Contents Access"
+msgstr "Skerminhoud-toegang"
+
+msgid "Can access the contents of the screen or other windows"
+msgstr "Kan toegang kry tot die inhoud van die skerm of ander vensters"
+
+msgid "Legacy Windowing System"
+msgstr "Ou vensterstelsel"
+
+msgid "Always uses a legacy windowing system (X11)"
+msgstr "Gebruik altyd 'n ou vensterstelsel (X11)"
+
+msgid "Can acquire arbitrary permissions"
+msgstr "Kan arbitrêre toestemmings verkry"
+
+msgid "User Settings"
+msgstr "Gebruikerinstellings"
+
+msgid "Can access and change user settings"
+msgstr "Kan gebruikerinstellings sien en verander"
+
+msgid "Full File System Read/Write Access"
+msgstr "Volle lêerstelsel lees-/skryftoegang"
+
+msgid "Can read and write all data on the file system"
+msgstr "Kan alle data op die lêerstelsel lees en skryf"
+
+msgid "Home Folder Read/Write Access"
+msgstr "Tuisvouer lees-/skryftoegang"
+
+msgid "Can read and write all data in your home directory"
+msgstr "Kan alle data in u tuisgids lees en skryf"
+
+msgid "Full File System Read Access"
+msgstr "Volle lêerstelsel leestoegang"
+
+msgid "Can read all data on the file system"
+msgstr "Kan alle data op die lêerstelsel lees"
+
+msgid "Home Folder Read Access"
+msgstr "Tuisvouer leestoegang"
+
+msgid "Can read all data in your home directory"
+msgstr "Kan alle data in u tuisgids lees"
+
+msgid "Download Folder Read/Write Access"
+msgstr "Aflaaivouer lees-/skryftoegang"
+
+msgid "Can read and write all data in your downloads directory"
+msgstr "Kan alle data in u aflaaigids lees en skryf"
+
+msgid "Download Folder Read Access"
+msgstr "Aflaaivouer leestoegang"
+
+msgid "Can read all data in your downloads directory"
+msgstr "Kan alle data in u aflaaigids lees"
+
+msgid "Can read and write all data in the directory"
+msgstr "Kan alle data in die gids lees en skryf"
+
+msgid "Can read all data in the directory"
+msgstr "Kan alle data in die gids lees"
+
+msgid "No File System Access"
+msgstr "Geen lêerstelseltoegang"
+
+msgid "Cannot access the file system at all"
+msgstr "Kan glad nie toegang tot die lêerstelsel kry nie"
+
+msgid "Uses System Services"
+msgstr "Gebruik stelseldienste"
+
+msgid "Can request data from non-portal system services"
+msgstr "Kan data aanvra van stelseldienste wat nie portale is nie"
+
+msgid "Uses Session Services"
+msgstr "Gebruik sessiedienste"
+
+msgid "Can request data from non-portal session services"
+msgstr "Kan data aanvra van sessiedienste wat nie portale is nie"
+
+msgid "No Service Access"
+msgstr "Geen diensttoegang"
+
+msgid "Cannot access non-portal session or system services at all"
+msgstr "Kan glad nie toegang tot sessie- of stelseldienste wat nie portale is nie kry nie"
+
+msgid "Verified App Developer"
+msgstr "Geverifieerde toepassingontwikkelaar"
+
+msgid "The developer of this app has been verified to be who they say they are"
+msgstr "Daar is geverifieer dat die ontwikkelaar van hierdie toepassing is wie hulle sê hulle is"
+
+msgid "Proprietary Code"
+msgstr "Eiendomskode"
+
+msgid "The source code is not public, so it cannot be independently audited and might be unsafe"
+msgstr "Die bronkode is nie openbaar nie, dus kan dit nie onafhanklik geoudit word nie en kan dit onveilig wees"
+
+msgid "Auditable Code"
+msgstr "Ouditeerbare kode"
+
+msgid "The source code is public and can be independently audited, which makes the app more likely to be safe"
+msgstr "Die bronkode is openbaar en kan onafhanklik geoudit word, wat die toepassing meer waarskynlik veilig maak"
+
+#, c-format
+msgid "Use the %s System Service"
+msgstr "Gebruik die %s-stelseldiens"
+
+#, c-format
+msgid "Use the %s Session Service"
+msgstr "Gebruik die %s-sessiediens"
+
+#, c-format
+msgid "Use the %s Service"
+msgstr "Gebruik die %s-diens"
+
+msgid "Can see the non-portal service"
+msgstr "Kan die diens sien wat nie 'n portaal is nie"
+
+msgid "Can talk to the non-portal service"
+msgstr "Kan met die diens praat wat nie 'n portaal is nie"
+
+msgid "Can own the non-portal service"
+msgstr "Kan die diens besit wat nie 'n portaal is nie"
+
+msgid "Global Menu Integration"
+msgstr "Globale kieslysintegrasie"
+
+msgid "Can display its menus in a global menu bar"
+msgstr "Kan sy kieslyste in 'n globale kieslysbalk wys"
+
+msgid "KDE Settings Integration"
+msgstr "KDE-instellingsintegrasie"
+
+msgid "Can detect when KDE desktop settings change"
+msgstr "Kan opspoor wanneer KDE-werkskerminstellings verander"
+
+msgid "KDE Global Settings"
+msgstr "KDE se globale instellings"
+
+msgid "Can read KDE desktop preferences like fonts and colors"
+msgstr "Kan KDE-werkskermvoorkeure soos lettertipes en kleure lees"
+
+msgid "Secret Storage Service"
+msgstr "Geheimberging-diens"
+
+msgid "Can store and retrieve its own passwords using the system keyring"
+msgstr "Kan sy eie wagwoorde met die stelsel se sleutelring stoor en haal"
+
+msgid "Desktop Notifications Service"
+msgstr "Werkskerm-kennisgewingsdiens"
+
+msgid "Can send desktop notifications"
+msgstr "Kan werkskermkennisgewings stuur"
+
+msgid "System Tray Integration"
+msgstr "Stelselbakkie-integrasie"
+
+msgid "Can display an icon in the system tray"
+msgstr "Kan 'n ikoon in die stelselbakkie wys"
+
+msgid "KDE Connect Integration"
+msgstr "KDE Connect-integrasie"
+
+msgid "Can interact with devices paired via KDE Connect"
+msgstr "Kan interaksie hê met toestelle wat via KDE Connect gepaar is"
+
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigasie"
+
+msgctxt "shortcut window"
+msgid "Open Explore Page"
+msgstr "Maak Verken-bladsy oop"
+
+msgctxt "shortcut window"
+msgid "Open Library Page"
+msgstr "Maak Biblioteek-bladsy oop"
+
+msgctxt "shortcut window"
+msgid "Open Search Page"
+msgstr "Maak Soek-bladsy oop"
+
+msgctxt "shortcut window"
+msgid "Remotes"
+msgstr "Afstandbronne"
+
+msgctxt "shortcut window"
+msgid "Sync Remotes"
+msgstr "Sinkroniseer afstandbronne"
+
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Algemeen"
+
+msgctxt "shortcut window"
+msgid "Open Preferences"
+msgstr "Maak voorkeure oop"
+
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Wys kortpaaie"
+
+msgctxt "shortcut window"
+msgid "Close Window"
+msgstr "Sluit venster"
+
+msgctxt "shortcut window"
+msgid "Quit Bazaar"
+msgstr "Verlaat Bazaar"
+
+#, c-format
+msgid "%s Installed"
+msgstr "%s geïnstalleer"
+
+msgid "The app is ready to be used"
+msgstr "Die toepassing is gereed om gebruik te word"
+
+msgid "Updates Are Out of Date"
+msgstr "Opdaterings is verouderd"
+
+msgid "Please check for available updates"
+msgstr "Kyk asseblief vir beskikbare opdaterings"
+
+#, c-format
+msgid "%u App Updated"
+msgid_plural "%u Apps Updated"
+msgstr[0] "%u toepassing opgedateer"
+msgstr[1] "%u toepassings opgedateer"
+
+#, c-format
+msgid "%s has been updated."
+msgstr "%s is opgedateer."
+
+#, c-format
+msgid "%s and %s have been updated."
+msgstr "%s en %s is opgedateer."
+
+#, c-format
+msgid "Includes %s, %s and %s."
+msgstr "Sluit %s, %s en %s in."

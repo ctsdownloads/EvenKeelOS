@@ -1,0 +1,1168 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dash-to-panel\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);\n"
+
+msgid "Quit"
+msgstr "Išeiti"
+
+#, javascript-format
+msgid "Quit %d Window"
+msgid_plural "Quit %d Windows"
+msgstr[0] "Uždaryti %d langą"
+msgstr[1] "Uždaryti %d langus"
+msgstr[2] "Uždaryti %d langų"
+
+msgid "Power options"
+msgstr "Energijos parinktys"
+
+msgid "Event logs"
+msgstr "Įvykių žurnalai"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "Device Management"
+msgstr "Įrenginių tvarkymas"
+
+msgid "Disk Management"
+msgstr "Diskų tvarkymas"
+
+msgid "Unlock taskbar"
+msgstr "Atrakinti užduočių juostą"
+
+msgid "Lock taskbar"
+msgstr "Užrakinti užduočių juostą"
+
+msgid "Gnome Settings"
+msgstr "GNOME nustatymai"
+
+msgid "Dash to Panel Settings"
+msgstr "Dash to Panel nustatymai"
+
+msgid "Restore Windows"
+msgstr "Atkurti langus"
+
+msgid "Show Desktop"
+msgstr "Rodyti darbalaukį"
+
+msgid "Dash to Panel has been updated!"
+msgstr "Dash to Panel atnaujintas!"
+
+msgid "You are now running version"
+msgstr "Dabar naudojate versiją"
+
+msgid "See what's new"
+msgstr "Žiūrėti, kas naujo"
+
+msgid "Top Bar"
+msgstr "Viršutinė juosta"
+
+msgid "Show Desktop button height (px)"
+msgstr "Darbalaukio rodymo mygtuko aukštis (px)"
+
+msgid "Show Desktop button width (px)"
+msgstr "Darbalaukio rodymo mygtuko plotis (px)"
+
+msgid "Left"
+msgstr "Kairėje"
+
+msgid "Center"
+msgstr "Centre"
+
+msgid "Right"
+msgstr "Dešinėje"
+
+msgid "Top"
+msgstr "Viršuje"
+
+msgid "Middle"
+msgstr "Viduryje"
+
+msgid "Bottom"
+msgstr "Apačioje"
+
+msgid "Start"
+msgstr "Pradžia"
+
+msgid "End"
+msgstr "Pabaiga"
+
+msgid "Show Applications button"
+msgstr "Programų rodymo mygtukas"
+
+msgid "Activities button"
+msgstr "Veiklų mygtukas"
+
+msgid "Taskbar"
+msgstr "Užduočių juosta"
+
+msgid "Date menu"
+msgstr "Datos meniu"
+
+msgid "System menu"
+msgstr "Sistemos meniu"
+
+msgid "Left box"
+msgstr "Kairysis blokas"
+
+msgid "Center box"
+msgstr "Centrinis blokas"
+
+msgid "Right box"
+msgstr "Dešinysis blokas"
+
+msgid "Desktop button"
+msgstr "Darbalaukio mygtukas"
+
+msgid "Move up"
+msgstr "Perkelti aukštyn"
+
+msgid "Move down"
+msgstr "Perkelti žemyn"
+
+msgid "Visible"
+msgstr "Matomas"
+
+msgid "Select element position"
+msgstr "Pasirinkti elemento vietą"
+
+msgid "Stacked to top"
+msgstr "Sukrauta viršuje"
+
+msgid "Stacked to left"
+msgstr "Sukrauta kairėje"
+
+msgid "Stacked to bottom"
+msgstr "Sukrauta apačioje"
+
+msgid "Stacked to right"
+msgstr "Sukrauta dešinėje"
+
+msgid "Centered"
+msgstr "Centre"
+
+msgid "Monitor Center"
+msgstr "Monitoriaus centras"
+
+msgid "More options"
+msgstr "Daugiau parinkčių"
+
+msgid "Reset to defaults"
+msgstr "Atstatyti numatytuosius"
+
+msgid "Show Applications options"
+msgstr "Programų rodymo parinktys"
+
+msgid "Open icon"
+msgstr "Atidaryti piktogramą"
+
+msgid "Show Desktop options"
+msgstr "Darbalaukio rodymo parinktys"
+
+msgid "Primary monitor"
+msgstr "Pagrindinis monitorius"
+
+msgid "Monitor "
+msgstr "Monitorius "
+
+msgid "Running Indicator Options"
+msgstr "Veikimo indikatoriaus parinktys"
+
+msgid "Dynamic opacity options"
+msgstr "Dinaminio skaidrumo parinktys"
+
+msgid "Intellihide options"
+msgstr "Išmaniojo slėpimo parinktys"
+
+msgid "Window preview options"
+msgstr "Langų peržiūros parinktys"
+
+msgid "Isolate Workspaces options"
+msgstr "Darbalaukių izoliavimo parinktys"
+
+msgid "Isolate monitors options"
+msgstr "Monitorių izoliavimo parinktys"
+
+msgid "Ungrouped application options"
+msgstr "Nesugrupuotų programų parinktys"
+
+msgid "Customize middle-click behavior"
+msgstr "Tinkinti vidurinio spustelėjimo elgseną"
+
+msgid "Text"
+msgstr "Tekstas"
+
+msgid "Command"
+msgstr "Komanda"
+
+msgid "Remove"
+msgstr "Pašalinti"
+
+msgid "Customize panel scroll behavior"
+msgstr "Tinkinti skydelio slinkimo elgseną"
+
+msgid "Customize icon scroll behavior"
+msgstr "Tinkinti piktogramų slinkimo elgseną"
+
+msgid "Advanced hotkeys options"
+msgstr "Papildomų spartųjų klavišų parinktys"
+
+msgid "Secondary Menu Options"
+msgstr "Antrinio meniu parinktys"
+
+#, javascript-format
+msgid "%d ms"
+msgstr "%d ms"
+
+#, javascript-format
+msgid "%d °"
+msgstr "%d °"
+
+#, javascript-format
+msgid "%d %%"
+msgstr "%d %%"
+
+#, javascript-format
+msgid "%.1f"
+msgstr "%.1f"
+
+#, javascript-format
+msgid "%d icon"
+msgid_plural "%d icons"
+msgstr[0] "%d piktograma"
+msgstr[1] "%d piktogramos"
+msgstr[2] "%d piktogramų"
+
+msgid "App icon animation options"
+msgstr "Programų piktogramų animacijos parinktys"
+
+msgid "App icon highlight options"
+msgstr "Programų piktogramų paryškinimo parinktys"
+
+msgid "Export settings"
+msgstr "Eksportuoti nustatymus"
+
+msgid "Import settings"
+msgstr "Importuoti nustatymus"
+
+msgid "Move to current Workspace"
+msgstr "Perkelti į dabartinį darbalaukį"
+
+msgid "Animation type"
+msgstr "Animacijos tipas"
+
+msgid "Simple"
+msgstr "Paprasta"
+
+msgid "Ripple"
+msgstr "Bangavimas"
+
+msgid "Plank"
+msgstr "Plank"
+
+msgid "Duration"
+msgstr "Trukmė"
+
+msgid "Rotation"
+msgstr "Sukimas"
+
+msgid "Travel"
+msgstr "Poslinkis"
+
+msgid "Zoom"
+msgstr "Didinimas"
+
+msgid "Convexity"
+msgstr "Išgaubtumas"
+
+msgid "Extent"
+msgstr "Mastas"
+
+msgid "Highlight focused application"
+msgstr "Paryškinti aktyvią programą"
+
+msgid "Icon dominant color"
+msgstr "Dominuojanti piktogramos spalva"
+
+msgid "Custom color"
+msgstr "Pasirinkta spalva"
+
+msgid "Highlight opacity"
+msgstr "Paryškinimo skaidrumas"
+
+msgid "Indicator size (px)"
+msgstr "Indikatoriaus dydis (px)"
+
+msgid "Indicator color - Icon Dominant"
+msgstr "Indikatoriaus spalva – dominuojanti piktogramos spalva"
+
+msgid "Indicator color - Override Theme"
+msgstr "Indikatoriaus spalva – temos nepaisymas"
+
+msgid "1 window open (or ungrouped)"
+msgstr "Atidarytas 1 langas (arba nesugrupuota)"
+
+msgid "Apply to all"
+msgstr "Taikyti visiems"
+
+msgid "2 windows open"
+msgstr "Atidaryti 2 langai"
+
+msgid "3 windows open"
+msgstr "Atidaryti 3 langai"
+
+msgid "4+ windows open"
+msgstr "Atidaryti 4 ir daugiau langų"
+
+msgid "Use different for unfocused"
+msgstr "Naudoti kitokią neaktyviems"
+
+msgid "The panel background opacity is affected by"
+msgstr "Skydelio fono skaidrumui įtakos turi"
+
+msgid "All windows"
+msgstr "Visi langai"
+
+msgid "Focused windows"
+msgstr "Aktyvūs langai"
+
+msgid "Maximized windows"
+msgstr "Išdidinti langai"
+
+msgid "Change opacity when a window gets closer than (px)"
+msgstr "Keisti skaidrumą, kai langas priartėja arčiau nei (px)"
+
+msgid "Change opacity to (%)"
+msgstr "Keisti skaidrumą į (%)"
+
+msgid "0"
+msgstr "0"
+
+msgid "Opacity change animation duration (ms)"
+msgstr "Skaidrumo keitimo animacijos trukmė (ms)"
+
+msgid "Font size (px) of the application titles (default is 14)"
+msgstr "Programų pavadinimų šrifto dydis (px) (numatytasis 14)"
+
+msgid "Font weight of application titles"
+msgstr "Programų pavadinimų šrifto storis"
+
+msgid "inherit from theme"
+msgstr "paveldėti iš temos"
+
+msgid "normal"
+msgstr "įprastas"
+
+msgid "lighter"
+msgstr "plonesnis"
+
+msgid "bold"
+msgstr "pusjuodis"
+
+msgid "bolder"
+msgstr "storesnis"
+
+msgid "Font color of the application titles"
+msgstr "Programų pavadinimų šrifto spalva"
+
+msgid "Font color of the minimized application titles"
+msgstr "Sumažintų programų pavadinimų šrifto spalva"
+
+msgid "Maximum width (px) of the application titles"
+msgstr "Didžiausias programų pavadinimų plotis (px)"
+
+msgid "(default is 160)"
+msgstr "(numatytasis 160)"
+
+msgid "Use a fixed width for the application titles"
+msgstr "Naudoti pastovų programų pavadinimų plotį"
+
+msgid "The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width."
+msgstr "Visų programų pavadinimų plotis vienodas, net jei jų tekstas trumpesnis už didžiausią plotį. Didžiausio pločio reikšmė naudojama kaip pastovus plotis."
+
+msgid "Display running indicators on unfocused applications"
+msgstr "Rodyti veikimo indikatorius neaktyvioms programoms"
+
+msgid "Use the favorite icons as application launchers"
+msgstr "Naudoti mėgstamų programų piktogramas kaip programų paleidiklius"
+
+msgid "Highlight AppIcon color"
+msgstr "Paryškinta programos piktogramos spalva"
+
+msgid "Pressed AppIcon color"
+msgstr "Paspaustos programos piktogramos spalva"
+
+msgid "Highlight AppIcon border radius"
+msgstr "Paryškintos programos piktogramos kampų apvalinimas"
+
+msgid "Overrides global border radius (default is 0)"
+msgstr "Nepaisoma bendro kampų apvalinimo (numatytasis 0)"
+
+msgid "Only hide the panel from windows"
+msgstr "Slėpti skydelį tik nuo langų"
+
+msgid "Overlapping"
+msgstr "Persidengia"
+
+msgid "On same monitor"
+msgstr "Tame pačiame monitoriuje"
+
+msgid "The panel hides from"
+msgstr "Skydelis slepiasi nuo"
+
+msgid "Touching the monitor's edge with the pointer reveals the panel"
+msgstr "Pelės žymekliu palietus monitoriaus kraštą, skydelis parodomas"
+
+msgid "Limit to panel length"
+msgstr "Riboti iki skydelio ilgio"
+
+msgid "Hovering the panel area keeps the panel revealed"
+msgstr "Užvedus žymeklį ant skydelio srities, skydelis lieka parodytas"
+
+msgid "Require pressure at the edge of the monitor to reveal the panel"
+msgstr "Reikalauti spaudimo monitoriaus krašte skydeliui parodyti"
+
+msgid "Required pressure threshold (px)"
+msgstr "Reikiamo spaudimo riba (px)"
+
+msgid "Required pressure timeout (ms)"
+msgstr "Reikiamo spaudimo skirtasis laikas (ms)"
+
+msgid "Allow the panel to be revealed while in fullscreen mode"
+msgstr "Leisti parodyti skydelį viso ekrano režimu"
+
+msgid "(requires multi-monitors option)"
+msgstr "(reikalinga kelių monitorių parinktis)"
+
+msgid "Only hide secondary panels"
+msgstr "Slėpti tik antrinius skydelius"
+
+msgid "Syntax: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+msgstr "Sintaksė: &lt;Shift&gt;, &lt;Ctrl&gt;, &lt;Alt&gt;, &lt;Super&gt;"
+
+msgid "Keyboard shortcut to reveal and hold the panel"
+msgstr "Spartusis klavišas skydeliui parodyti ir išlaikyti"
+
+msgid "e.g. <Super>i"
+msgstr "pvz., <Super>i"
+
+msgid "Persist state across restarts"
+msgstr "Išlaikyti būseną po paleidimo iš naujo"
+
+msgid "(respects Gnome \"Do Not Disturb\" and requires show notification counter badge option)"
+msgstr "(atsižvelgiama į GNOME režimą „Netrukdyti“, reikalinga parinktis rodyti pranešimų skaitiklio ženkliuką)"
+
+msgid "Reveal and hold the panel on notification"
+msgstr "Gavus pranešimą parodyti ir išlaikyti skydelį"
+
+msgid "Hide and reveal animation duration (ms)"
+msgstr "Slėpimo ir rodymo animacijos trukmė (ms)"
+
+msgid "Delay before hiding the panel (ms)"
+msgstr "Delsa prieš slepiant skydelį (ms)"
+
+msgid "Delay before revealing the panel (ms)"
+msgstr "Delsa prieš rodant skydelį (ms)"
+
+msgid "Delay before enabling intellihide on start (ms)"
+msgstr "Delsa prieš įjungiant išmanųjį slėpimą paleidus (ms)"
+
+msgid "Isolate monitors even when using a single panel"
+msgstr "Izoliuoti monitorius net naudojant vieną skydelį"
+
+msgid "Isolate workspaces in gnome-shell Application Switcher"
+msgstr "Izoliuoti darbalaukius gnome-shell programų perjungiklyje"
+
+msgid "Shift+Click action"
+msgstr "Veiksmas su Shift + spustelėjimu"
+
+msgid "When set to minimize, double clicking minimizes all the windows of the application."
+msgstr "Kai nustatyta sumažinti, dukart spustelėjus sumažinami visi programos langai."
+
+msgid "Raise windows"
+msgstr "Iškelti langus"
+
+msgid "Minimize window"
+msgstr "Sumažinti langą"
+
+msgid "Launch new instance"
+msgstr "Paleisti naują egzempliorių"
+
+msgid "Cycle through windows"
+msgstr "Pereiti ratu per langus"
+
+msgid "Cycle windows + minimize"
+msgstr "Pereiti ratu per langus + sumažinti"
+
+msgid "Toggle single / Preview multiple"
+msgstr "Perjungti vieną / peržiūrėti kelis"
+
+msgid "Toggle single / Cycle multiple"
+msgstr "Perjungti vieną / pereiti ratu per kelis"
+
+msgid "Toggle single / Spread multiple"
+msgstr "Perjungti vieną / išskleisti kelis"
+
+msgid "Middle-Click action"
+msgstr "Veiksmas su vidurinio mygtuko spustelėjimu"
+
+msgid "Behavior for Middle-Click."
+msgstr "Elgsena spustelėjus vidurinįjį mygtuką."
+
+msgid "Shift+Middle-Click action"
+msgstr "Veiksmas su Shift + vidurinio mygtuko spustelėjimu"
+
+msgid "Behavior for Shift+Middle-Click."
+msgstr "Elgsena spustelėjus Shift + vidurinįjį mygtuką."
+
+msgid "Hotkeys will either be Super+Number or Super+Alt+Num"
+msgstr "Spartieji klavišai bus arba Super + skaičius, arba Super + Alt + skaičius"
+
+msgid "Hotkeys prefix"
+msgstr "Spartųjų klavišų priešdėlis"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Super + Alt"
+msgstr "Super + Alt"
+
+msgid "Temporarily show the application numbers over the icons when using the hotkeys."
+msgstr "Naudojant spartuosius klavišus, laikinai rodyti programų numerius virš piktogramų."
+
+msgid "Number overlay"
+msgstr "Numerių uždanga"
+
+msgid "Never"
+msgstr "Niekada"
+
+msgid "Show temporarily"
+msgstr "Rodyti laikinai"
+
+msgid "Always visible"
+msgstr "Visada matoma"
+
+msgid "Hide timeout (ms)"
+msgstr "Slėpimo skirtasis laikas (ms)"
+
+msgid "Shortcut to show the overlay for 2 seconds"
+msgstr "Spartusis klavišas uždangai parodyti 2 sekundėms"
+
+msgid "e.g. <Super>q"
+msgstr "pvz., <Super>q"
+
+msgid "On secondary monitors, show the overlay on icons matching the primary monitor"
+msgstr "Antriniuose monitoriuose rodyti uždangą ant piktogramų, atitinkančių pagrindinį monitorių"
+
+msgid "Show the overlay on all monitors"
+msgstr "Rodyti uždangą visuose monitoriuose"
+
+msgid "Show previews when the application have multiple instances"
+msgstr "Rodyti peržiūras, kai programa turi kelis egzempliorius"
+
+msgid "Show window previews on hotkey"
+msgstr "Spartuoju klavišu rodyti langų peržiūras"
+
+msgid "Select which keyboard number keys are used to activate the hotkeys"
+msgstr "Pasirinkite, kurie klaviatūros skaičių klavišai naudojami spartiesiems klavišams aktyvinti"
+
+msgid "Hotkeys are activated with"
+msgstr "Spartieji klavišai aktyvinami naudojant"
+
+msgid "Number row"
+msgstr "Skaičių eilutė"
+
+msgid "Numeric keypad"
+msgstr "Skaitmeninė klaviatūros dalis"
+
+msgid "Both"
+msgstr "Abu"
+
+msgid "Delay between mouse scroll events (ms)"
+msgstr "Delsa tarp pelės slinkimo įvykių (ms)"
+
+msgid "Use this value to limit the number of captured mouse scroll events."
+msgstr "Naudokite šią reikšmę, kad apribotumėte užfiksuojamų pelės slinkimo įvykių skaičių."
+
+msgid "Show popup when changing workspace"
+msgstr "Rodyti iškylantįjį langą keičiant darbalaukį"
+
+msgid "This affects workspace popup when scrolling on the panel only."
+msgstr "Tai veikia tik darbalaukio iškylantįjį langą slenkant skydelyje."
+
+msgid "Integrate <i>AppMenu</i> items"
+msgstr "Integruoti <i>AppMenu</i> elementus"
+
+msgid "<i>App Details</i> menu item"
+msgstr "Meniu elementas <i>Programos informacija</i>"
+
+msgid "<i>App Details</i> is only available when Gnome Software is installed"
+msgstr "<i>Programos informacija</i> pasiekiama tik įdiegus GNOME programinę įrangą"
+
+msgid "Show Applications icon"
+msgstr "Programų rodymo piktograma"
+
+msgid "Show Applications icon side padding (px)"
+msgstr "Programų rodymo piktogramos šoninis tarpas (px)"
+
+msgid "Override escape key and return to desktop"
+msgstr "Nepaisyti klavišo Escape ir grįžti į darbalaukį"
+
+msgid "Override Show Desktop line color"
+msgstr "Nepaisyti darbalaukio rodymo linijos spalvos"
+
+msgid "Reveal the desktop when hovering the Show Desktop button"
+msgstr "Užvedus žymeklį ant darbalaukio rodymo mygtuko, parodyti darbalaukį"
+
+msgid "Delay before revealing the desktop (ms)"
+msgstr "Delsa prieš rodant darbalaukį (ms)"
+
+msgid "Fade duration (ms)"
+msgstr "Išblėsimo trukmė (ms)"
+
+msgid "Time (ms) before showing"
+msgstr "Laikas (ms) prieš rodant"
+
+msgid "(400 is default)"
+msgstr "(numatytasis 400)"
+
+msgid "Time (ms) before hiding"
+msgstr "Laikas (ms) prieš slepiant"
+
+msgid "(100 is default)"
+msgstr "(numatytasis 100)"
+
+msgid "Immediate on application icon click"
+msgstr "Iš karto spustelėjus programos piktogramą"
+
+msgid "Animation time (ms)"
+msgstr "Animacijos laikas (ms)"
+
+msgid "Middle click on the preview to close the window"
+msgstr "Vidurinio mygtuko spustelėjimu peržiūroje uždaryti langą"
+
+msgid "Window previews preferred size (px)"
+msgstr "Pageidaujamas langų peržiūrų dydis (px)"
+
+msgid "Window previews aspect ratio X (width)"
+msgstr "Langų peržiūrų kraštinių santykis X (plotis)"
+
+msgid "1"
+msgstr "1"
+
+msgid "2"
+msgstr "2"
+
+msgid "3"
+msgstr "3"
+
+msgid "4"
+msgstr "4"
+
+msgid "5"
+msgstr "5"
+
+msgid "6"
+msgstr "6"
+
+msgid "7"
+msgstr "7"
+
+msgid "8"
+msgstr "8"
+
+msgid "9"
+msgstr "9"
+
+msgid "10"
+msgstr "10"
+
+msgid "11"
+msgstr "11"
+
+msgid "12"
+msgstr "12"
+
+msgid "13"
+msgstr "13"
+
+msgid "14"
+msgstr "14"
+
+msgid "15"
+msgstr "15"
+
+msgid "16"
+msgstr "16"
+
+msgid "17"
+msgstr "17"
+
+msgid "18"
+msgstr "18"
+
+msgid "19"
+msgstr "19"
+
+msgid "20"
+msgstr "20"
+
+msgid "21"
+msgstr "21"
+
+msgid "Fixed"
+msgstr "Pastovus"
+
+msgid "Window previews aspect ratio Y (height)"
+msgstr "Langų peržiūrų kraštinių santykis Y (aukštis)"
+
+msgid "Window previews padding (px)"
+msgstr "Langų peržiūrų tarpai (px)"
+
+msgid "Use custom opacity for the previews background"
+msgstr "Naudoti pasirinktą peržiūrų fono skaidrumą"
+
+msgid "If disabled, the previews background have the same opacity as the panel."
+msgstr "Jei išjungta, peržiūrų fonas turi tokį patį skaidrumą kaip skydelis."
+
+msgid "Close button and header position"
+msgstr "Užvėrimo mygtuko ir antraštės padėtis"
+
+msgid "Display window preview headers"
+msgstr "Rodyti langų peržiūrų antraštes"
+
+msgid "Icon size (px) of the window preview"
+msgstr "Langų peržiūros piktogramos dydis (px)"
+
+msgid "If disabled, the previews icon size will be based on headerbar size"
+msgstr "Jei išjungta, peržiūrų piktogramos dydis priklausys nuo antraštės juostos dydžio"
+
+msgid "Font size (px) of the preview titles"
+msgstr "Peržiūrų pavadinimų šrifto dydis (px)"
+
+msgid "Font weight of the preview titles"
+msgstr "Peržiūrų pavadinimų šrifto storis"
+
+msgid "Font color of the preview titles"
+msgstr "Peržiūrų pavadinimų šrifto spalva"
+
+msgid "Enable window peeking"
+msgstr "Įjungti langų pasidairymą"
+
+msgid "When hovering over a window preview for some time, the window gets distinguished."
+msgstr "Kurį laiką laikant žymeklį ant langų peržiūros, langas išryškinamas."
+
+msgid "Enter window peeking mode timeout (ms)"
+msgstr "Įėjimo į langų pasidairymo režimą skirtasis laikas (ms)"
+
+msgid "Time of inactivity while hovering over a window preview needed to enter the window peeking mode."
+msgstr "Neveiklumo laikas laikant žymeklį ant langų peržiūros, reikalingas norint įjungti langų pasidairymo režimą."
+
+msgid "50"
+msgstr "50"
+
+msgid "Window peeking mode opacity"
+msgstr "Langų pasidairymo režimo skaidrumas"
+
+msgid "All windows except for the peeked one have their opacity set to the same value."
+msgstr "Visų langų, išskyrus apžiūrimą, skaidrumas nustatomas į tą pačią reikšmę."
+
+msgid "About"
+msgstr "Apie"
+
+msgid "Info"
+msgstr "Informacija"
+
+msgid "Version"
+msgstr "Versija"
+
+msgid "Source"
+msgstr "Šaltinis"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Export and Import"
+msgstr "Eksportas ir importas"
+
+msgid "Use the buttons below to create a settings file from your current preferences that can be imported on a different machine."
+msgstr "Naudokite toliau esančius mygtukus, kad iš dabartinių nuostatų sukurtumėte nustatymų failą, kurį būtų galima importuoti kitame kompiuteryje."
+
+msgid "Export and import settings"
+msgstr "Eksportuoti ir importuoti nustatymus"
+
+msgid "Export to file"
+msgstr "Eksportuoti į failą"
+
+msgid "Import from file"
+msgstr "Importuoti iš failo"
+
+msgid ""
+"<span size=\"small\">This program comes with ABSOLUTELY NO WARRANTY.\n"
+"See the <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU General Public License, version 2 or later</a> for details.</span>"
+msgstr ""
+"<span size=\"small\">Ši programa tiekiama be JOKIOS GARANTIJOS.\n"
+"Išsamiau žr. <a href=\"https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GNU bendrąją viešąją licenciją, 2 versiją arba naujesnę</a>.</span>"
+
+msgid "Sponsored and originally developed by"
+msgstr "Rėmė ir iš pradžių sukūrė"
+
+msgid "Action"
+msgstr "Veiksmas"
+
+msgid "Click action"
+msgstr "Spustelėjimo veiksmas"
+
+msgid "Behaviour when clicking on the icon of a running application."
+msgstr "Elgsena spustelėjus veikiančios programos piktogramą."
+
+msgid "Toggle windows"
+msgstr "Perjungti langus"
+
+msgid "Scroll action"
+msgstr "Slinkimo veiksmas"
+
+msgid "Behavior when mouse scrolling over the panel."
+msgstr "Elgsena slenkant pele virš skydelio."
+
+msgid "Scroll panel action"
+msgstr "Skydelio slinkimo veiksmas"
+
+msgid "Do nothing"
+msgstr "Nieko nedaryti"
+
+msgid "Switch workspace"
+msgstr "Perjungti darbalaukį"
+
+msgid "Cycle windows"
+msgstr "Pereiti ratu per langus"
+
+msgid "Change volume"
+msgstr "Keisti garsumą"
+
+msgid "Behavior when mouse scrolling over an application icon."
+msgstr "Elgsena slenkant pele virš programos piktogramos."
+
+msgid "Scroll icon action"
+msgstr "Piktogramos slinkimo veiksmas"
+
+msgid "Same as panel"
+msgstr "Kaip skydelio"
+
+msgid "Hotkey overlay"
+msgstr "Spartųjų klavišų uždanga"
+
+msgid "Enable Super+(0-9) as shortcuts to activate apps. It can also be used together with Shift and Ctrl."
+msgstr "Įjungti Super + (0–9) kaip sparčiuosius klavišus programoms aktyvinti. Taip pat galima naudoti kartu su Shift ir Ctrl."
+
+msgid "Use hotkeys to activate apps"
+msgstr "Naudoti spartuosius klavišus programoms aktyvinti"
+
+msgid "Application icons context menu"
+msgstr "Programų piktogramų kontekstinis meniu"
+
+msgid "(right-click menu)"
+msgstr "(dešiniojo mygtuko meniu)"
+
+msgid "Secondary menu"
+msgstr "Antrinis meniu"
+
+msgid "Panel context menu entries"
+msgstr "Skydelio kontekstinio meniu įrašai"
+
+msgid "Add entry"
+msgstr "Pridėti įrašą"
+
+msgid "Behavior"
+msgstr "Elgsena"
+
+msgid "Applications"
+msgstr "Programos"
+
+msgid "Show favorite applications"
+msgstr "Rodyti mėgstamas programas"
+
+msgid "Show favorite applications on secondary panels"
+msgstr "Rodyti mėgstamas programas antriniuose skydeliuose"
+
+msgid "Show running applications"
+msgstr "Rodyti veikiančias programas"
+
+msgid "Ungroup applications"
+msgstr "Išgrupuoti programas"
+
+msgid "Show notification counter badge"
+msgstr "Rodyti pranešimų skaitiklio ženkliuką"
+
+msgid "Hover"
+msgstr "Užvedimas"
+
+msgid "Show window previews on hover"
+msgstr "Rodyti langų peržiūras užvedus žymeklį"
+
+msgid "Show tooltip on hover"
+msgstr "Rodyti paaiškinimą užvedus žymeklį"
+
+msgid "Isolate"
+msgstr "Izoliuoti"
+
+msgid "Isolate Workspaces"
+msgstr "Izoliuoti darbalaukius"
+
+msgid "Isolate monitors"
+msgstr "Izoliuoti monitorius"
+
+msgid "Overview"
+msgstr "Apžvalga"
+
+msgid "Click empty space to close overview"
+msgstr "Spustelėti tuščią vietą apžvalgai uždaryti"
+
+msgid "Disable show overview on startup"
+msgstr "Išjungti apžvalgos rodymą paleidžiant"
+
+msgid "Fine-Tune"
+msgstr "Tikslus derinimas"
+
+msgid "Font size"
+msgstr "Šrifto dydis"
+
+msgid "(0 = theme default)"
+msgstr "(0 = temos numatytasis)"
+
+msgid "Tray Font Size"
+msgstr "Dėklo šrifto dydis"
+
+msgid "LeftBox Font Size"
+msgstr "Kairiojo bloko šrifto dydis"
+
+msgid "Padding"
+msgstr "Tarpai"
+
+msgid "(-1 = theme default)"
+msgstr "(-1 = temos numatytasis)"
+
+msgid "Tray Item Padding"
+msgstr "Dėklo elementų tarpai"
+
+msgid "Status Icon Padding"
+msgstr "Būsenos piktogramų tarpai"
+
+msgid "LeftBox Padding"
+msgstr "Kairiojo bloko tarpai"
+
+msgid "Animate"
+msgstr "Animuoti"
+
+msgid "Animate switching applications"
+msgstr "Animuoti programų perjungimą"
+
+msgid "Animate launching new windows"
+msgstr "Animuoti naujų langų paleidimą"
+
+msgid "Gnome functionality"
+msgstr "GNOME funkcionalumas"
+
+msgid "(overview)"
+msgstr "(apžvalga)"
+
+msgid "Keep original gnome-shell dash"
+msgstr "Palikti originalų gnome-shell doką"
+
+msgid "Keep original gnome-shell top panel"
+msgstr "Palikti originalų gnome-shell viršutinį skydelį"
+
+msgid "(e.g. date menu)"
+msgstr "(pvz., datos meniu)"
+
+msgid "Activate panel menu buttons on click only"
+msgstr "Skydelio meniu mygtukus aktyvinti tik spustelėjus"
+
+msgid "Force Activities hot corner on primary monitor"
+msgstr "Priverstinai naudoti veiklų aktyvųjį kampą pagrindiniame monitoriuje"
+
+msgid "Position"
+msgstr "Padėtis"
+
+msgid "Panel"
+msgstr "Skydelis"
+
+msgid "Display the main panel on"
+msgstr "Rodyti pagrindinį skydelį monitoriuje"
+
+msgid "Display panels on all monitors"
+msgstr "Rodyti skydelius visuose monitoriuose"
+
+msgid "Hide and reveal the panel according to preferences"
+msgstr "Slėpti ir rodyti skydelį pagal nuostatas"
+
+msgid "Panel Intellihide"
+msgstr "Skydelio išmanusis slėpimas"
+
+msgid "Order and Position on monitors"
+msgstr "Tvarka ir padėtis monitoriuose"
+
+msgid "Monitor"
+msgstr "Monitorius"
+
+msgid "Apply changes to all monitors"
+msgstr "Taikyti pakeitimus visiems monitoriams"
+
+msgid "Panel monitor position"
+msgstr "Skydelio padėtis monitoriuje"
+
+msgid "(default is 48)"
+msgstr "(numatytasis 48)"
+
+msgid "Panel thickness"
+msgstr "Skydelio storis"
+
+msgid "(default is 100)"
+msgstr "(numatytasis 100)"
+
+msgid "Panel length"
+msgstr "Skydelio ilgis"
+
+msgid "Dynamic"
+msgstr "Dinaminis"
+
+msgid "Anchor"
+msgstr "Prikabinimo taškas"
+
+msgid "Taskbar Display"
+msgstr "Užduočių juostos rodymas"
+
+msgid "Style"
+msgstr "Stilius"
+
+msgid "Global style"
+msgstr "Bendras stilius"
+
+msgid "Border radius"
+msgstr "Kampų apvalinimas"
+
+msgid "AppIcon style"
+msgstr "Programos piktogramos stilius"
+
+msgid "(default is 8)"
+msgstr "(numatytasis 8)"
+
+msgid "App Icon Margin"
+msgstr "Programos piktogramos paraštė"
+
+msgid "(default is 4)"
+msgstr "(numatytasis 4)"
+
+msgid "App Icon Padding"
+msgstr "Programos piktogramos tarpai"
+
+msgid "Animate hovering app icons"
+msgstr "Animuoti užvedamas programų piktogramas"
+
+msgid "Highlight hovering app icons"
+msgstr "Paryškinti užvedamas programų piktogramas"
+
+msgid "Icon style"
+msgstr "Piktogramų stilius"
+
+msgid "Normal"
+msgstr "Įprastas"
+
+msgid "Symbolic"
+msgstr "Simbolinis"
+
+msgid "Grayscale"
+msgstr "Pilkos spalvos atspalviai"
+
+msgid "Running indicator"
+msgstr "Veikimo indikatorius"
+
+msgid "Running indicator position"
+msgstr "Veikimo indikatoriaus padėtis"
+
+msgid "Running indicator style (Focused app)"
+msgstr "Veikimo indikatoriaus stilius (aktyvi programa)"
+
+msgid "Dots"
+msgstr "Taškai"
+
+msgid "Squares"
+msgstr "Kvadratai"
+
+msgid "Dashes"
+msgstr "Brūkšniai"
+
+msgid "Segmented"
+msgstr "Segmentuotas"
+
+msgid "Solid"
+msgstr "Vientisas"
+
+msgid "Ciliora"
+msgstr "Ciliora"
+
+msgid "Metro"
+msgstr "Metro"
+
+msgid "Running indicator style (Unfocused apps)"
+msgstr "Veikimo indikatoriaus stilius (neaktyvios programos)"
+
+msgid "Panel style"
+msgstr "Skydelio stilius"
+
+msgid "(default is 0)"
+msgstr "(numatytasis 0)"
+
+msgid "Side margins"
+msgstr "Šoninės paraštės"
+
+msgid "Top and bottom margins"
+msgstr "Viršutinė ir apatinė paraštės"
+
+msgid "Side padding"
+msgstr "Šoniniai tarpai"
+
+msgid "Top and bottom padding"
+msgstr "Viršutinis ir apatinis tarpai"
+
+msgid "Override panel theme background color"
+msgstr "Nepaisyti skydelio temos fono spalvos"
+
+msgid "Override panel theme background opacity"
+msgstr "Nepaisyti skydelio temos fono skaidrumo"
+
+msgid "Panel background opacity (%)"
+msgstr "Skydelio fono skaidrumas (%)"
+
+msgid "Change opacity when a window gets close to the panel"
+msgstr "Keisti skaidrumą, kai langas priartėja prie skydelio"
+
+msgid "Dynamic background opacity"
+msgstr "Dinaminis fono skaidrumas"
+
+msgid "Override panel theme gradient"
+msgstr "Nepaisyti skydelio temos gradiento"
+
+msgid "Gradient top color and opacity (%)"
+msgstr "Gradiento viršutinė spalva ir skaidrumas (%)"
+
+msgid "Gradient bottom color and opacity (%)"
+msgstr "Gradiento apatinė spalva ir skaidrumas (%)"
+
+msgid "Panel border"
+msgstr "Skydelio kraštinė"
+
+msgid "Override border color"
+msgstr "Nepaisyti kraštinės spalvos"
+
+msgid "Border thickness"
+msgstr "Kraštinės storis"

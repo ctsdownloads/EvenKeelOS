@@ -1,0 +1,768 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ghostty\n"
+"PO-Revision-Date: 2026-11-27 00:00+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Open in Ghostty"
+msgstr "Ghostty-da ochish"
+
+msgid "Find…"
+msgstr "Topish…"
+
+msgid "Previous Match"
+msgstr "Oldingi mos kelish"
+
+msgid "Next Match"
+msgstr "Keyingi mos kelish"
+
+msgid "Close"
+msgstr "Yopish"
+
+msgid "Oh, no."
+msgstr "Voy, yoʻq."
+
+msgid "Unable to acquire an OpenGL context for rendering."
+msgstr "Chizish uchun OpenGL kontekstini olib boʻlmadi."
+
+msgid "This terminal is in read-only mode. You can still view, select, and scroll through the content, but no input events will be sent to the running application."
+msgstr "Bu terminal faqat oʻqish rejimida. Mazmunni hali ham koʻrish, belgilash va aylantirish mumkin, lekin ishlayotgan ilovaga hech qanday kiritish hodisalari yuborilmaydi."
+
+msgid "Read-only"
+msgstr "Faqat oʻqish"
+
+msgid "Copy"
+msgstr "Nusxalash"
+
+msgid "Paste"
+msgstr "Joylashtirish"
+
+msgid "Notify on Next Command Finish"
+msgstr "Keyingi buyruq tugaganda xabar berish"
+
+msgid "Clear"
+msgstr "Tozalash"
+
+msgid "Reset"
+msgstr "Asliga qaytarish"
+
+msgid "Split"
+msgstr "Boʻlish"
+
+msgid "Change Title…"
+msgstr "Sarlavhani oʻzgartirish…"
+
+msgid "Split Up"
+msgstr "Tepaga boʻlish"
+
+msgid "Split Down"
+msgstr "Pastga boʻlish"
+
+msgid "Split Left"
+msgstr "Chapga boʻlish"
+
+msgid "Split Right"
+msgstr "Oʻngga boʻlish"
+
+msgid "Close Split"
+msgstr "Boʻlinmani yopish"
+
+msgid "Tab"
+msgstr "Yorliq"
+
+msgid "Change Tab Title…"
+msgstr "Yorliq sarlavhasini oʻzgartirish…"
+
+msgid "New Tab"
+msgstr "Yangi yorliq"
+
+msgid "Close Tab"
+msgstr "Yorliqni yopish"
+
+msgid "Window"
+msgstr "Oyna"
+
+msgid "Change Window Title…"
+msgstr "Oyna sarlavhasini oʻzgartirish…"
+
+msgid "New Window"
+msgstr "Yangi oyna"
+
+msgid "Close Window"
+msgstr "Oynani yopish"
+
+msgid "Config"
+msgstr "Sozlama"
+
+msgid "Open Configuration in OS Editor"
+msgstr "Sozlamani tizim muharririda ochish"
+
+msgid "Open Configuration in New Window"
+msgstr "Sozlamani yangi oynada ochish"
+
+msgid "Reload Configuration"
+msgstr "Sozlamani qayta yuklash"
+
+msgid "⚠️ You're running a debug build of Ghostty! Performance will be degraded."
+msgstr "⚠️ Siz Ghostty-ning nosozliklarni tuzatish tuzilmasini ishga tushirdingiz! Unumdorlik pasayadi."
+
+msgid "Ghostty: Terminal Inspector"
+msgstr "Ghostty: terminal inspektori"
+
+msgid "New Split"
+msgstr "Yangi boʻlinma"
+
+msgid "View Open Tabs"
+msgstr "Ochiq yorliqlarni koʻrish"
+
+msgid "Main Menu"
+msgstr "Asosiy menyu"
+
+msgid "Command Palette"
+msgstr "Buyruqlar paneli"
+
+msgid "Terminal Inspector"
+msgstr "Terminal inspektori"
+
+msgid "About Ghostty"
+msgstr "Ghostty haqida"
+
+msgid "Quit"
+msgstr "Chiqish"
+
+msgid "Authorize Clipboard Access"
+msgstr "Almashish buferiga kirishga ruxsat berish"
+
+msgid "Deny"
+msgstr "Rad etish"
+
+msgid "Allow"
+msgstr "Ruxsat berish"
+
+msgid "Remember choice for this split"
+msgstr "Bu boʻlinma uchun tanlovni eslab qolish"
+
+msgid "Reload configuration to show this prompt again"
+msgstr "Bu soʻrovni yana koʻrsatish uchun sozlamani qayta yuklang"
+
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+msgid "Execute a command…"
+msgstr "Buyruqni bajarish…"
+
+msgid "Configuration Errors"
+msgstr "Sozlama xatolari"
+
+msgid "One or more configuration errors were found. Please review the errors below, and either reload your configuration or ignore these errors."
+msgstr "Bir yoki bir nechta sozlama xatosi topildi. Quyidagi xatolarni koʻrib chiqing va sozlamani qayta yuklang yoki bu xatolarni eʼtiborsiz qoldiring."
+
+msgid "Ignore"
+msgstr "Eʼtiborsiz qoldirish"
+
+msgid "Leave blank to restore the default title."
+msgstr "Standart sarlavhani tiklash uchun boʻsh qoldiring."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "The keybind was revoked by the system."
+msgstr "Tugmalar birikmasi tizim tomonidan bekor qilindi."
+
+msgid "The keybind was denied by the system."
+msgstr "Tugmalar birikmasi tizim tomonidan rad etildi."
+
+msgid "Global keybind unavailable"
+msgstr "Umumiy tugmalar birikmasi mavjud emas"
+
+msgid "Export Terminal IO Events"
+msgstr "Terminal kiritish-chiqarish hodisalarini eksport qilish"
+
+msgid "Export"
+msgstr "Eksport qilish"
+
+msgid "Editing configuration file"
+msgstr "Sozlama fayli tahrirlanmoqda"
+
+msgid "An application is attempting to write to the clipboard. The current clipboard contents are shown below."
+msgstr "Ilova almashish buferiga yozishga urinmoqda. Almashish buferining joriy mazmuni quyida koʻrsatilgan."
+
+msgid "An application is attempting to read from the clipboard. The current clipboard contents are shown below."
+msgstr "Ilova almashish buferidan oʻqishga urinmoqda. Almashish buferining joriy mazmuni quyida koʻrsatilgan."
+
+msgid "Warning: Potentially Unsafe Paste"
+msgstr "Ogohlantirish: xavfsiz boʻlmasligi mumkin boʻlgan joylashtirish"
+
+msgid "Pasting this text into the terminal may be dangerous as it looks like some commands may be executed."
+msgstr "Bu matnni terminalga joylashtirish xavfli boʻlishi mumkin, chunki bu orqali baʼzi buyruqlar bajarilishi mumkin."
+
+msgid "Quit Ghostty?"
+msgstr "Ghostty-dan chiqilsinmi?"
+
+msgid "Close Tab?"
+msgstr "Yorliq yopilsinmi?"
+
+msgid "Close Window?"
+msgstr "Oyna yopilsinmi?"
+
+msgid "Close Split?"
+msgstr "Boʻlinma yopilsinmi?"
+
+msgid "All terminal sessions will be terminated."
+msgstr "Barcha terminal seanslari toʻxtatiladi."
+
+msgid "All terminal sessions in this tab will be terminated."
+msgstr "Bu yorliqdagi barcha terminal seanslari toʻxtatiladi."
+
+msgid "All terminal sessions in this window will be terminated."
+msgstr "Bu oynadagi barcha terminal seanslari toʻxtatiladi."
+
+msgid "The currently running process in this split will be terminated."
+msgstr "Bu boʻlinmada hozir ishlayotgan jarayon toʻxtatiladi."
+
+msgid "Command Finished"
+msgstr "Buyruq tugadi"
+
+msgid "Command Succeeded"
+msgstr "Buyruq muvaffaqiyatli bajarildi"
+
+msgid "Command Failed"
+msgstr "Buyruq bajarilmadi"
+
+msgid "Change Terminal Title"
+msgstr "Terminal sarlavhasini oʻzgartirish"
+
+msgid "Change Tab Title"
+msgstr "Yorliq sarlavhasini oʻzgartirish"
+
+msgid "Change Window Title"
+msgstr "Oyna sarlavhasini oʻzgartirish"
+
+msgid "Reloaded the configuration"
+msgstr "Sozlama qayta yuklandi"
+
+msgid "Copied to clipboard"
+msgstr "Almashish buferiga nusxa olindi"
+
+msgid "Cleared clipboard"
+msgstr "Almashish buferi tozalandi"
+
+msgid "Ghostty Developers"
+msgstr "Ghostty ishlab chiquvchilari"
+
+msgid "Reset Terminal"
+msgstr "Terminalni asliga qaytarish"
+
+msgid "Reset the terminal to a clean state."
+msgstr "Terminalni toza holatga qaytarish."
+
+msgid "Copy to Clipboard"
+msgstr "Almashish buferiga nusxalash"
+
+msgid "Copy the selected text to the clipboard in both plain and styled formats."
+msgstr "Tanlangan matnni almashish buferiga oddiy va uslubli koʻrinishda nusxalash."
+
+msgid "Copy Selection as Plain Text to Clipboard"
+msgstr "Tanlovni oddiy matn sifatida almashish buferiga nusxalash"
+
+msgid "Copy the selected text as plain text to the clipboard."
+msgstr "Tanlangan matnni almashish buferiga oddiy matn sifatida nusxalash."
+
+msgid "Copy Selection as ANSI Sequences to Clipboard"
+msgstr "Tanlovni ANSI ketma-ketliklari sifatida almashish buferiga nusxalash"
+
+msgid "Copy the selected text as ANSI escape sequences to the clipboard."
+msgstr "Tanlangan matnni almashish buferiga ANSI boshqaruv ketma-ketliklari sifatida nusxalash."
+
+msgid "Copy Selection as HTML to Clipboard"
+msgstr "Tanlovni HTML sifatida almashish buferiga nusxalash"
+
+msgid "Copy the selected text as HTML to the clipboard."
+msgstr "Tanlangan matnni almashish buferiga HTML sifatida nusxalash."
+
+msgid "Copy URL to Clipboard"
+msgstr "URL manzilni almashish buferiga nusxalash"
+
+msgid "Copy the URL under the cursor to the clipboard."
+msgstr "Kursor ostidagi URL manzilni almashish buferiga nusxalash."
+
+msgid "Copy Terminal Title to Clipboard"
+msgstr "Terminal sarlavhasini almashish buferiga nusxalash"
+
+msgid "Copy the terminal title to the clipboard. If the terminal title is not set this has no effect."
+msgstr "Terminal sarlavhasini almashish buferiga nusxalash. Terminal sarlavhasi oʻrnatilmagan boʻlsa, hech narsa sodir boʻlmaydi."
+
+msgid "Paste from Clipboard"
+msgstr "Almashish buferidan joylashtirish"
+
+msgid "Paste the contents of the main clipboard."
+msgstr "Asosiy almashish buferining mazmunini joylashtirish."
+
+msgid "Paste from Selection"
+msgstr "Tanlovdan joylashtirish"
+
+msgid "Paste the contents of the selection clipboard."
+msgstr "Tanlov almashish buferining mazmunini joylashtirish."
+
+msgid "Start Search"
+msgstr "Qidiruvni boshlash"
+
+msgid "Start a search if one isn't already active."
+msgstr "Qidiruv hali faol boʻlmasa, qidiruvni boshlash."
+
+msgid "Search Selection"
+msgstr "Tanlovni qidirish"
+
+msgid "Start a search for the current text selection."
+msgstr "Joriy tanlangan matn boʻyicha qidiruvni boshlash."
+
+msgid "End Search"
+msgstr "Qidiruvni tugatish"
+
+msgid "End the current search if any and hide any GUI elements."
+msgstr "Joriy qidiruvni (agar boʻlsa) tugatish va barcha grafik interfeys elementlarini yashirish."
+
+msgid "Next Search Result"
+msgstr "Keyingi qidiruv natijasi"
+
+msgid "Navigate to the next search result, if any."
+msgstr "Keyingi qidiruv natijasiga (agar boʻlsa) oʻtish."
+
+msgid "Previous Search Result"
+msgstr "Oldingi qidiruv natijasi"
+
+msgid "Navigate to the previous search result, if any."
+msgstr "Oldingi qidiruv natijasiga (agar boʻlsa) oʻtish."
+
+msgid "Increase Font Size"
+msgstr "Shrift oʻlchamini oshirish"
+
+msgid "Increase the font size by 1 point."
+msgstr "Shrift oʻlchamini 1 punktga oshirish."
+
+msgid "Decrease Font Size"
+msgstr "Shrift oʻlchamini kamaytirish"
+
+msgid "Decrease the font size by 1 point."
+msgstr "Shrift oʻlchamini 1 punktga kamaytirish."
+
+msgid "Reset Font Size"
+msgstr "Shrift oʻlchamini asliga qaytarish"
+
+msgid "Reset the font size to the default."
+msgstr "Shrift oʻlchamini standart qiymatga qaytarish."
+
+msgid "Clear Screen"
+msgstr "Ekranni tozalash"
+
+msgid "Clear the screen and scrollback."
+msgstr "Ekran va orqaga aylantirish tarixini tozalash."
+
+msgid "Select All"
+msgstr "Hammasini tanlash"
+
+msgid "Select all text on the screen."
+msgstr "Ekrandagi barcha matnni tanlash."
+
+msgid "Scroll to Top"
+msgstr "Tepaga aylantirish"
+
+msgid "Scroll to the top of the screen."
+msgstr "Ekranning tepasiga aylantirish."
+
+msgid "Scroll to Bottom"
+msgstr "Pastga aylantirish"
+
+msgid "Scroll to the bottom of the screen."
+msgstr "Ekranning pastiga aylantirish."
+
+msgid "Scroll to Selection"
+msgstr "Tanlovga aylantirish"
+
+msgid "Scroll to the selected text."
+msgstr "Tanlangan matnga aylantirish."
+
+msgid "Scroll Page Up"
+msgstr "Bir sahifa tepaga aylantirish"
+
+msgid "Scroll the screen up by a page."
+msgstr "Ekranni bir sahifa tepaga aylantirish."
+
+msgid "Scroll Page Down"
+msgstr "Bir sahifa pastga aylantirish"
+
+msgid "Scroll the screen down by a page."
+msgstr "Ekranni bir sahifa pastga aylantirish."
+
+msgid "Copy Screen to Temporary File and Copy Path"
+msgstr "Ekranni vaqtinchalik faylga nusxalash va yoʻlni nusxalash"
+
+msgid "Copy the screen contents to a temporary file and copy the path to the clipboard."
+msgstr "Ekran mazmunini vaqtinchalik faylga nusxalash va yoʻlni almashish buferiga nusxalash."
+
+msgid "Copy Screen to Temporary File and Paste Path"
+msgstr "Ekranni vaqtinchalik faylga nusxalash va yoʻlni joylashtirish"
+
+msgid "Copy the screen contents to a temporary file and paste the path to the file."
+msgstr "Ekran mazmunini vaqtinchalik faylga nusxalash va fayl yoʻlini joylashtirish."
+
+msgid "Copy Screen to Temporary File and Open"
+msgstr "Ekranni vaqtinchalik faylga nusxalash va ochish"
+
+msgid "Copy the screen contents to a temporary file and open it."
+msgstr "Ekran mazmunini vaqtinchalik faylga nusxalash va uni ochish."
+
+msgid "Copy Screen as HTML to Temporary File and Copy Path"
+msgstr "Ekranni HTML sifatida vaqtinchalik faylga nusxalash va yoʻlni nusxalash"
+
+msgid "Copy the screen contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Ekran mazmunini HTML sifatida vaqtinchalik faylga nusxalash va yoʻlni almashish buferiga nusxalash."
+
+msgid "Copy Screen as HTML to Temporary File and Paste Path"
+msgstr "Ekranni HTML sifatida vaqtinchalik faylga nusxalash va yoʻlni joylashtirish"
+
+msgid "Copy the screen contents as HTML to a temporary file and paste the path to the file."
+msgstr "Ekran mazmunini HTML sifatida vaqtinchalik faylga nusxalash va fayl yoʻlini joylashtirish."
+
+msgid "Copy Screen as HTML to Temporary File and Open"
+msgstr "Ekranni HTML sifatida vaqtinchalik faylga nusxalash va ochish"
+
+msgid "Copy the screen contents as HTML to a temporary file and open it."
+msgstr "Ekran mazmunini HTML sifatida vaqtinchalik faylga nusxalash va uni ochish."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Ekranni ANSI ketma-ketliklari sifatida vaqtinchalik faylga nusxalash va yoʻlni nusxalash"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Ekran mazmunini ANSI boshqaruv ketma-ketliklari sifatida vaqtinchalik faylga nusxalash va yoʻlni almashish buferiga nusxalash."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Ekranni ANSI ketma-ketliklari sifatida vaqtinchalik faylga nusxalash va yoʻlni joylashtirish"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Ekran mazmunini ANSI boshqaruv ketma-ketliklari sifatida vaqtinchalik faylga nusxalash va fayl yoʻlini joylashtirish."
+
+msgid "Copy Screen as ANSI Sequences to Temporary File and Open"
+msgstr "Ekranni ANSI ketma-ketliklari sifatida vaqtinchalik faylga nusxalash va ochish"
+
+msgid "Copy the screen contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Ekran mazmunini ANSI boshqaruv ketma-ketliklari sifatida vaqtinchalik faylga nusxalash va uni ochish."
+
+msgid "Copy Selection to Temporary File and Copy Path"
+msgstr "Tanlovni vaqtinchalik faylga nusxalash va yoʻlni nusxalash"
+
+msgid "Copy the selection contents to a temporary file and copy the path to the clipboard."
+msgstr "Tanlov mazmunini vaqtinchalik faylga nusxalash va yoʻlni almashish buferiga nusxalash."
+
+msgid "Copy Selection to Temporary File and Paste Path"
+msgstr "Tanlovni vaqtinchalik faylga nusxalash va yoʻlni joylashtirish"
+
+msgid "Copy the selection contents to a temporary file and paste the path to the file."
+msgstr "Tanlov mazmunini vaqtinchalik faylga nusxalash va fayl yoʻlini joylashtirish."
+
+msgid "Copy Selection to Temporary File and Open"
+msgstr "Tanlovni vaqtinchalik faylga nusxalash va ochish"
+
+msgid "Copy the selection contents to a temporary file and open it."
+msgstr "Tanlov mazmunini vaqtinchalik faylga nusxalash va uni ochish."
+
+msgid "Copy Selection as HTML to Temporary File and Copy Path"
+msgstr "Tanlovni HTML sifatida vaqtinchalik faylga nusxalash va yoʻlni nusxalash"
+
+msgid "Copy the selection contents as HTML to a temporary file and copy the path to the clipboard."
+msgstr "Tanlov mazmunini HTML sifatida vaqtinchalik faylga nusxalash va yoʻlni almashish buferiga nusxalash."
+
+msgid "Copy Selection as HTML to Temporary File and Paste Path"
+msgstr "Tanlovni HTML sifatida vaqtinchalik faylga nusxalash va yoʻlni joylashtirish"
+
+msgid "Copy the selection contents as HTML to a temporary file and paste the path to the file."
+msgstr "Tanlov mazmunini HTML sifatida vaqtinchalik faylga nusxalash va fayl yoʻlini joylashtirish."
+
+msgid "Copy Selection as HTML to Temporary File and Open"
+msgstr "Tanlovni HTML sifatida vaqtinchalik faylga nusxalash va ochish"
+
+msgid "Copy the selection contents as HTML to a temporary file and open it."
+msgstr "Tanlov mazmunini HTML sifatida vaqtinchalik faylga nusxalash va uni ochish."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Copy Path"
+msgstr "Tanlovni ANSI ketma-ketliklari sifatida vaqtinchalik faylga nusxalash va yoʻlni nusxalash"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and copy the path to the clipboard."
+msgstr "Tanlov mazmunini ANSI boshqaruv ketma-ketliklari sifatida vaqtinchalik faylga nusxalash va yoʻlni almashish buferiga nusxalash."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Paste Path"
+msgstr "Tanlovni ANSI ketma-ketliklari sifatida vaqtinchalik faylga nusxalash va yoʻlni joylashtirish"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and paste the path to the file."
+msgstr "Tanlov mazmunini ANSI boshqaruv ketma-ketliklari sifatida vaqtinchalik faylga nusxalash va fayl yoʻlini joylashtirish."
+
+msgid "Copy Selection as ANSI Sequences to Temporary File and Open"
+msgstr "Tanlovni ANSI ketma-ketliklari sifatida vaqtinchalik faylga nusxalash va ochish"
+
+msgid "Copy the selection contents as ANSI escape sequences to a temporary file and open it."
+msgstr "Tanlov mazmunini ANSI boshqaruv ketma-ketliklari sifatida vaqtinchalik faylga nusxalash va uni ochish."
+
+msgid "Open a new window."
+msgstr "Yangi oyna ochish."
+
+msgid "Open a new tab."
+msgstr "Yangi yorliq ochish."
+
+msgid "Move Tab Left"
+msgstr "Yorliqni chapga siljitish"
+
+msgid "Move the current tab to the left."
+msgstr "Joriy yorliqni chapga siljitish."
+
+msgid "Move Tab Right"
+msgstr "Yorliqni oʻngga siljitish"
+
+msgid "Move the current tab to the right."
+msgstr "Joriy yorliqni oʻngga siljitish."
+
+msgid "Move Tab to New Window"
+msgstr "Yorliqni yangi oynaga siljitish"
+
+msgid "Move the current tab to a new window."
+msgstr "Joriy yorliqni yangi oynaga siljitish."
+
+msgid "Toggle Tab Overview"
+msgstr "Yorliqlar koʻrinishini almashtirish"
+
+msgid "Toggle the tab overview."
+msgstr "Yorliqlar koʻrinishini almashtirish."
+
+msgid "Change Terminal Title…"
+msgstr "Terminal sarlavhasini oʻzgartirish…"
+
+msgid "Prompt for a new title for the current terminal."
+msgstr "Joriy terminal uchun yangi sarlavha soʻrash."
+
+msgid "Prompt for a new title for the current tab."
+msgstr "Joriy yorliq uchun yangi sarlavha soʻrash."
+
+msgid "Split the terminal to the left."
+msgstr "Terminalni chapga boʻlish."
+
+msgid "Split the terminal to the right."
+msgstr "Terminalni oʻngga boʻlish."
+
+msgid "Split the terminal up."
+msgstr "Terminalni tepaga boʻlish."
+
+msgid "Split the terminal down."
+msgstr "Terminalni pastga boʻlish."
+
+msgid "Focus Split: Previous"
+msgstr "Boʻlinmaga fokus: oldingi"
+
+msgid "Focus the previous split, if any."
+msgstr "Oldingi boʻlinmaga (agar boʻlsa) fokus berish."
+
+msgid "Focus Split: Next"
+msgstr "Boʻlinmaga fokus: keyingi"
+
+msgid "Focus the next split, if any."
+msgstr "Keyingi boʻlinmaga (agar boʻlsa) fokus berish."
+
+msgid "Focus Split: Left"
+msgstr "Boʻlinmaga fokus: chap"
+
+msgid "Focus the split to the left, if it exists."
+msgstr "Chapdagi boʻlinmaga (agar mavjud boʻlsa) fokus berish."
+
+msgid "Focus Split: Right"
+msgstr "Boʻlinmaga fokus: oʻng"
+
+msgid "Focus the split to the right, if it exists."
+msgstr "Oʻngdagi boʻlinmaga (agar mavjud boʻlsa) fokus berish."
+
+msgid "Focus Split: Up"
+msgstr "Boʻlinmaga fokus: tepa"
+
+msgid "Focus the split above, if it exists."
+msgstr "Yuqoridagi boʻlinmaga (agar mavjud boʻlsa) fokus berish."
+
+msgid "Focus Split: Down"
+msgstr "Boʻlinmaga fokus: past"
+
+msgid "Focus the split below, if it exists."
+msgstr "Pastdagi boʻlinmaga (agar mavjud boʻlsa) fokus berish."
+
+msgid "Focus Window: Previous"
+msgstr "Oynaga fokus: oldingi"
+
+msgid "Focus the previous window, if any."
+msgstr "Oldingi oynaga (agar boʻlsa) fokus berish."
+
+msgid "Focus Window: Next"
+msgstr "Oynaga fokus: keyingi"
+
+msgid "Focus the next window, if any."
+msgstr "Keyingi oynaga (agar boʻlsa) fokus berish."
+
+msgid "Toggle Split Zoom"
+msgstr "Boʻlinma kattalashtirishni almashtirish"
+
+msgid "Toggle the zoom state of the current split."
+msgstr "Joriy boʻlinmaning kattalashtirish holatini almashtirish."
+
+msgid "Toggle Read-Only Mode"
+msgstr "Faqat oʻqish rejimini almashtirish"
+
+msgid "Toggle read-only mode for the current surface."
+msgstr "Joriy sirt uchun faqat oʻqish rejimini almashtirish."
+
+msgid "Equalize Splits"
+msgstr "Boʻlinmalarni tenglashtirish"
+
+msgid "Equalize the size of all splits."
+msgstr "Barcha boʻlinmalar oʻlchamini tenglashtirish."
+
+msgid "Reset Window Size"
+msgstr "Oyna oʻlchamini asliga qaytarish"
+
+msgid "Reset the window size to the default."
+msgstr "Oyna oʻlchamini standart qiymatga qaytarish."
+
+msgid "Toggle Inspector"
+msgstr "Inspektorni almashtirish"
+
+msgid "Toggle the inspector."
+msgstr "Inspektorni almashtirish."
+
+msgid "Show the GTK Inspector"
+msgstr "GTK inspektorini koʻrsatish"
+
+msgid "Show the GTK inspector."
+msgstr "GTK inspektorini koʻrsatish."
+
+msgid "Show On-Screen Keyboard"
+msgstr "Ekrandagi klaviaturani koʻrsatish"
+
+msgid "Show the on-screen keyboard if present."
+msgstr "Ekrandagi klaviaturani (agar mavjud boʻlsa) koʻrsatish."
+
+msgid "Open Config Using OS editor"
+msgstr "Sozlamani tizim muharriri bilan ochish"
+
+msgid "Open the config file with the OS's default editor."
+msgstr "Sozlama faylini tizimning standart muharriri bilan ochish."
+
+msgid "Open Config in New Terminal Window"
+msgstr "Sozlamani yangi terminal oynasida ochish"
+
+msgid "Open the config file in a new window using $EDITOR or $VISUAL."
+msgstr "Sozlama faylini $EDITOR yoki $VISUAL yordamida yangi oynada ochish."
+
+msgid "Reload Config"
+msgstr "Sozlamani qayta yuklash"
+
+msgid "Reload the config file."
+msgstr "Sozlama faylini qayta yuklash."
+
+msgid "Close Terminal"
+msgstr "Terminalni yopish"
+
+msgid "Close the current terminal."
+msgstr "Joriy terminalni yopish."
+
+msgid "Close the current tab."
+msgstr "Joriy yorliqni yopish."
+
+msgid "Close Other Tabs"
+msgstr "Boshqa yorliqlarni yopish"
+
+msgid "Close all tabs in this window except the current one."
+msgstr "Bu oynadagi joriy yorliqdan tashqari barcha yorliqlarni yopish."
+
+msgid "Close Tabs to the Right"
+msgstr "Oʻngdagi yorliqlarni yopish"
+
+msgid "Close all tabs to the right of the current one."
+msgstr "Joriy yorliqning oʻng tomonidagi barcha yorliqlarni yopish."
+
+msgid "Close the current window."
+msgstr "Joriy oynani yopish."
+
+msgid "Close All Windows"
+msgstr "Barcha oynalarni yopish"
+
+msgid "Close all windows."
+msgstr "Barcha oynalarni yopish."
+
+msgid "Toggle Maximize"
+msgstr "Kattalashtirishni almashtirish"
+
+msgid "Toggle the maximized state of the current window."
+msgstr "Joriy oynaning kattalashtirilgan holatini almashtirish."
+
+msgid "Toggle Fullscreen"
+msgstr "Butun ekran rejimini almashtirish"
+
+msgid "Toggle the fullscreen state of the current window."
+msgstr "Joriy oynaning butun ekran holatini almashtirish."
+
+msgid "Toggle Window Decorations"
+msgstr "Oyna bezaklarini almashtirish"
+
+msgid "Toggle the window decorations."
+msgstr "Oyna bezaklarini almashtirish."
+
+msgid "Toggle Float on Top"
+msgstr "Doim tepada turishni almashtirish"
+
+msgid "Toggle the float on top state of the current window."
+msgstr "Joriy oynaning doim tepada turish holatini almashtirish."
+
+msgid "Toggle Secure Input"
+msgstr "Xavfsiz kiritishni almashtirish"
+
+msgid "Toggle secure input mode."
+msgstr "Xavfsiz kiritish rejimini almashtirish."
+
+msgid "Toggle Mouse Reporting"
+msgstr "Sichqoncha xabarini almashtirish"
+
+msgid "Toggle whether mouse events are reported to terminal applications."
+msgstr "Sichqoncha hodisalari terminal ilovalariga xabar qilinishini almashtirish."
+
+msgid "Toggle Background Opacity"
+msgstr "Fon shaffofligini almashtirish"
+
+msgid "Toggle the background opacity of a window that started transparent."
+msgstr "Shaffof holatda ishga tushgan oynaning fon shaffofligini almashtirish."
+
+msgid "Check for Updates"
+msgstr "Yangilanishlarni tekshirish"
+
+msgid "Check for updates to the application."
+msgstr "Ilova yangilanishlarini tekshirish."
+
+msgid "Undo"
+msgstr "Bekor qilish"
+
+msgid "Undo the last action."
+msgstr "Oxirgi amalni bekor qilish."
+
+msgid "Redo"
+msgstr "Qaytarish"
+
+msgid "Redo the last undone action."
+msgstr "Oxirgi bekor qilingan amalni qaytarish."
+
+msgid "Quit the application."
+msgstr "Ilovadan chiqish."
+
+msgid "Ghostty"
+msgstr "Ghostty"
+
+msgid "Put a little Ghostty in your terminal."
+msgstr "Terminalingizga ozgina Ghostty qoʻshing."

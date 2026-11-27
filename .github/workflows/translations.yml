@@ -1,7 +1,9 @@
-# The list of words to translate is up to date, no screen text skips it, and every language is complete. Builds nothing.
+# Every language is complete: EvenKeelOS's own text, the outside apps it translates and each PR's title.
+# Builds nothing.
 name: Check the translatable text
 on:
   pull_request:
+    types: [opened, edited, synchronize, reopened]   # edited: a renamed PR is checked again
     branches:
       - main
   push:
@@ -22,7 +24,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Install gettext
-        run: sudo apt-get update -q && sudo apt-get install -y --no-install-recommends gettext
+        run: sudo apt-get update -q && sudo apt-get install -y --no-install-recommends gettext rpm2cpio cpio jq
 
       - name: Screen text goes through translation
         run: python3 build_files/check-translatable.py
@@ -32,3 +34,19 @@ jobs:
 
       - name: Every language is complete
         run: build_files/check-translations.sh
+
+      - name: The outside apps' text is what we translated
+        run: build_files/check-app-texts.sh
+
+      - name: This PR's title is translated
+        if: github.event_name == 'pull_request'
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+        # Not shown under "What is new", so not translated: README and Build changes, and upkeep by Dependabot,
+        # Renovate and the daily version check (the build lists none of these).
+        run: |
+          hidden='^(README|Build)\b'
+          case $AUTHOR in dependabot\[bot\] | renovate\[bot\] | github-actions\[bot\]) exit 0 ;; esac
+          [[ $TITLE =~ $hidden || $TITLE == "Update locked versions" ]] || grep -Fxq -- "$TITLE" po/whats-new.txt \
+            || { echo "ERROR: add this PR's title to po/whats-new.txt and translate it"; exit 1; }
