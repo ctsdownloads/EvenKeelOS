@@ -6,7 +6,7 @@ gi.require_version("Adw", "1")
 from gi.repository import Adw, Gtk  # noqa: E402
 import evenkeel_os_letin as letin  # noqa: E402
 import evenkeel_os_network as net  # noqa: E402
-from evenkeel_os_ui import _, N_  # noqa: E402
+from evenkeel_os_ui import _, N_, icon_button  # noqa: E402
 
 KEYS = {net.HOME: "home", net.WORK: "work", net.PUBLIC: "public"}
 # Translators: Home, Work and Public place are the names of kinds of network place; one whole sentence for each.
@@ -64,12 +64,10 @@ class LetIn:
         for e in self.state.get(zone, []):
             ports = ", ".join(e["ports"]) or _("Fedora's {service} app").format(service=e["service"])
             row = Adw.ActionRow(title=e["label"], subtitle=ports, use_markup=False)
-            remove = Gtk.Button(icon_name="user-trash-symbolic", tooltip_text=_("Close it again"),
-                                valign=Gtk.Align.CENTER, css_classes=["flat"])
-            remove.update_property([Gtk.AccessibleProperty.LABEL], [_("Close {name} again").format(name=e["label"])])
-            remove.connect("clicked", lambda *_args, e=e: self.window.admin_reply(
-                ["let-in", KEYS[zone], "remove", e["id"]], _(CLOSED_AGAIN[zone]).format(name=e["label"])))
-            row.add_suffix(remove)
+            row.add_suffix(icon_button(
+                "user-trash-symbolic", _("Close it again"), _("Close {name} again").format(name=e["label"]),
+                lambda e=e: self.window.admin_reply(["let-in", KEYS[zone], "remove", e["id"]],
+                                                    _(CLOSED_AGAIN[zone]).format(name=e["label"]))))
             self.group.add(row)
             self.rows.append(row)
         if not self.rows:
@@ -150,8 +148,8 @@ class LetIn:
 
         def answered(_dialog, response):
             if response == "open":
-                self.confirm(zone, letin.label(name.get_text()),
-                             ["let-in", KEYS[zone], "ports", letin.label(name.get_text()), *letin.ports(specs())])
+                label = letin.label(name.get_text())
+                self.confirm(zone, label, ["let-in", KEYS[zone], "ports", label, *letin.ports(specs())])
         d.connect("response", answered)
         d.present(self.window)
 

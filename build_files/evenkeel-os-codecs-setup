@@ -5,14 +5,15 @@ export TEXTDOMAIN=evenkeel-os
 . /usr/libexec/evenkeel-os-codecs-lib.sh
 need_root
 
-if [ "$#" -ne 1 ]; then echo "usage: evenkeel-os-codecs-setup web|full|skip"; exit 2; fi
+usage() { echo "usage: evenkeel-os-codecs-setup web|full|skip"; exit 2; }
+[ "$#" -eq 1 ] || usage
 
 case "$1" in
   --open)   # run by a system service at boot: open the window once, never again
     if [ ! -e "$DONE" ] && [ ! -e "$OPEN" ]; then mkdir -p "$STATE" && : > "$OPEN"; log "setup window opened"; fi
     exit 0 ;;
   web|full|skip) ;;
-  *) echo "usage: evenkeel-os-codecs-setup web|full|skip"; exit 2 ;;
+  *) usage ;;
 esac
 
 if [ "$1" = skip ] && ! window_open; then

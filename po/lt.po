@@ -3724,26 +3724,6 @@ msgstr "Skaitomas programų sąrašas iš naujo atsisiuntimo šaltinio"
 msgid "Recommended"
 msgstr "Rekomenduojama"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Rekomenduojama: „Ištrinti konteinerį“. Taip atlaisvinama apie {size}, o kitą "
-"kartą diegiant {apps} jis vėl atsiranda savaime. Viskas, kas į konteinerį "
-"įtraukta kitu būdu, taip pat ištrinama. Jūsų failai neliečiami."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Rekomenduojama: „Ištrinti konteinerį“. Taip atlaisvinama jo užimama disko "
-"vieta, o kitą kartą diegiant {apps} jis vėl atsiranda savaime. Viskas, kas į "
-"konteinerį įtraukta kitu būdu, taip pat ištrinama. Jūsų failai neliečiami."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3847,13 +3827,6 @@ msgstr "Pašalinti medijos kodekus?"
 
 msgid "Remove the test marker"
 msgstr "Pašalinti bandomąją žymę"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Pirmiausia juos pašalinkite: paleiskite  codecs remove , paleiskite "
-"kompiuterį iš naujo, tada vėl pasirinkite „Viskas“."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Pašalinti tai, ko kompiuteriui nebereikia"
@@ -6776,12 +6749,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "išvalyti saugyklą"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"kodekai iš ankstesnės šios sistemos versijos (negativo17) vis dar įdiegti."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;kodekai;kodekas;ffmpeg;h264;video;audio;media;install;vaizdas;garsas;medija;įdiegti;"
@@ -7216,16 +7183,6 @@ msgstr "{name} nepasileido."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} yra „Viešoji vieta“"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} jau įdiegta iš programų parduotuvės „Bazaar“.\n"
-"\n"
-"Rekomenduojama: „Atidaryti“."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8841,3 +8798,14 @@ msgstr "Skaityti atsisiuntimo šaltinius naujame „Fedora 45“ aplanke"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Pereiti prie „Fedora 45“"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Šriftai ir teksto dydis grąžinti į EvenKeelOS pradinius."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Rekomenduojama: „Ištrinti konteinerį“. Kitą kartą diegiant {apps} jis vėl atsiranda savaime. Viskas, kas į konteinerį įtraukta kitu būdu, taip pat ištrinama. Jūsų failai neliečiami."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Jį ištrynus atlaisvinama apie {size}."

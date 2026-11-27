@@ -61,7 +61,7 @@ class Request:
                 print(f"Wheelhouse: closing a tool's connection: {e}", file=sys.stderr)
         self.dialogs.done(self)
 
-    # ---------------------------------------------------------------- the view for this request
+    # The view for this request
 
     def build(self, window):
         r, kind = self.req, self.kind
@@ -162,7 +162,7 @@ class Request:
         if target:
             target.grab_focus()
 
-    # ---------------------------------------------------------------- progress and files
+    # Progress and files
 
     def on_pulse(self):
         self.bar.pulse()
@@ -285,6 +285,5 @@ class Dialogs:
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=18, margin_top=72, valign=Gtk.Align.START)
         box.append(Adw.Spinner(width_request=32, height_request=32))
         box.append(Gtk.Label(label=_("{title}: working…").format(title=self.title) if self.title else _("Working…"),
-                             wrap=True,
-                             css_classes=["title-4"]))
+                             wrap=True, css_classes=["title-4"]))
         self.view.set_child(box)

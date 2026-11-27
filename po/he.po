@@ -3496,25 +3496,6 @@ msgstr "קריאת רשימת היישומים ממקור ההורדה החדש"
 msgid "Recommended"
 msgstr "מומלץ"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"מומלץ: „מחיקת התיבה”. היא מפנה כ-{size}, וחוזרת מעצמה בפעם הבאה שמתקינים את "
-"{apps}. גם כל מה שנוסף לתיבה בדרך אחרת יימחק. הקבצים שלך לא נפגעים."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"מומלץ: „מחיקת התיבה”. היא מפנה את המקום שלה בדיסק, וחוזרת מעצמה בפעם הבאה "
-"שמתקינים את {apps}. גם כל מה שנוסף לתיבה בדרך אחרת יימחק. הקבצים שלך לא "
-"נפגעים."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3611,12 +3592,6 @@ msgstr "להסיר את מקודדי המדיה?"
 
 msgid "Remove the test marker"
 msgstr "הסרת סמן הבדיקה"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"יש להסיר אותם קודם: להריץ  codecs remove , להפעיל מחדש, ואז לבחור שוב „הכול”."
 
 msgid "Remove things the computer no longer needs"
 msgstr "הסרת דברים שהמחשב כבר לא צריך"
@@ -6374,11 +6349,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage ניקוי אחסון"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "מקודדים מגרסה קודמת של המערכת הזו (negativo17) עדיין מותקנים."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;מקודדים;מקודד;וידאו;שמע;מדיה;התקנה;"
@@ -6812,16 +6782,6 @@ msgstr "{name} לא עלה."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} היא „מקום ציבורי”"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} כבר מותקן מ-Bazaar, חנות היישומים.\n"
-"\n"
-"מומלץ: „פתיחה”."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8417,3 +8377,14 @@ msgstr "קריאת מקורות ההורדה בתיקייה החדשה של Fedo
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "מעבר ל-Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "הגופנים וגודל הטקסט חזרו להגדרות של EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "מומלץ: „מחיקת התיבה”. התיבה חוזרת מעצמה בפעם הבאה שמתקינים את {apps}. גם כל מה שנוסף לתיבה בדרך אחרת יימחק. הקבצים שלך לא נפגעים."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "מחיקתה מפנה כ-{size}."

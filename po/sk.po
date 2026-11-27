@@ -3661,26 +3661,6 @@ msgstr "Načítava sa zoznam aplikácií z nového zdroja na stiahnutie"
 msgid "Recommended"
 msgstr "Odporúčané"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Odporúčané: Odstrániť kontajner. Uvoľní približne {size} a sám sa vráti pri "
-"ďalšej inštalácii {apps}. Všetko, čo bolo do kontajnera pridané iným "
-"spôsobom, sa tiež odstráni. Vaše súbory zostanú nedotknuté."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Odporúčané: Odstrániť kontajner. Uvoľní jeho miesto na disku a sám sa vráti "
-"pri ďalšej inštalácii {apps}. Všetko, čo bolo do kontajnera pridané iným "
-"spôsobom, sa tiež odstráni. Vaše súbory zostanú nedotknuté."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3782,13 +3762,6 @@ msgstr "Odstrániť kodeky médií?"
 
 msgid "Remove the test marker"
 msgstr "Odstrániť značku testu"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Najprv ich odstráňte: spustite  codecs remove , reštartujte a potom znova "
-"vyberte Všetko."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Odstrániť veci, ktoré počítač už nepotrebuje"
@@ -6688,13 +6661,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage vyčistiť úložisko miesto"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"kodeky z predchádzajúcej verzie tohto systému (negativo17) sú stále "
-"nainštalované."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;kodeky;kodek;zvuk;médiá;inštalovať;"
@@ -7134,16 +7100,6 @@ msgstr "{name} sa nespustilo."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} je Verejné miesto"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} je už nainštalované z obchodu s aplikáciami Bazaar.\n"
-"\n"
-"Odporúčané: Otvoriť."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8763,3 +8719,14 @@ msgstr "Čítať zdroje sťahovania v novom priečinku Fedory 45"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Prejsť na Fedoru 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Písma a veľkosť textu sú späť na pôvodných hodnotách EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Odporúčané: Odstrániť kontajner. Sám sa vráti pri ďalšej inštalácii {apps}. Všetko, čo bolo do kontajnera pridané iným spôsobom, sa tiež odstráni. Vaše súbory zostanú nedotknuté."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Jeho odstránením sa uvoľní približne {size}."

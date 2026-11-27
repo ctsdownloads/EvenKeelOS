@@ -3761,26 +3761,6 @@ msgstr "Az alkalmazások listájának beolvasása az új letöltési forrásból
 msgid "Recommended"
 msgstr "Ajánlott"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Ajánlott: A doboz törlése. Körülbelül {size} helyet szabadít fel, és magától "
-"visszajön, amikor legközelebb ezt telepíti: {apps}. Minden, amit más módon "
-"adtak a dobozhoz, szintén törlődik. A fájljait nem érinti."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Ajánlott: A doboz törlése. Felszabadítja a lemezterületét, és magától "
-"visszajön, amikor legközelebb ezt telepíti: {apps}. Minden, amit más módon "
-"adtak a dobozhoz, szintén törlődik. A fájljait nem érinti."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3884,13 +3864,6 @@ msgstr "Eltávolítja a médiakodekeket?"
 
 msgid "Remove the test marker"
 msgstr "Tesztjelölő eltávolítása"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Először távolítsa el őket: futtassa a  codecs remove  parancsot, indítsa újra"
-" a gépet, majd válassza újra a Minden lehetőséget."
 
 msgid "Remove things the computer no longer needs"
 msgstr "A számítógép számára már szükségtelen dolgok eltávolítása"
@@ -6817,13 +6790,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "tárhely tisztítása"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"A rendszer egy korábbi verziójából (negativo17) származó kodekek még mindig "
-"telepítve vannak."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;kodekek;kodek;videó;hang;média;telepítés;"
@@ -7252,16 +7218,6 @@ msgstr "A(z) {name} nem indult el."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "A(z) {name} Nyilvános hely típusú"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"A(z) {name} már telepítve van a Bazaarból, az alkalmazásboltból.\n"
-"\n"
-"Ajánlott: Megnyitás."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8883,3 +8839,14 @@ msgstr "A letöltési források olvasása a Fedora 45 új mappájából"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Átállás a Fedora 45-re"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "A betűtípusok és a szövegméret visszaálltak az EvenKeelOS saját beállításaira."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Ajánlott: A doboz törlése. Magától visszajön, amikor legközelebb ezt telepíti: {apps}. Minden, amit más módon adtak a dobozhoz, szintén törlődik. A fájljait nem érinti."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "A törlése körülbelül {size} helyet szabadít fel."

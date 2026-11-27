@@ -1,7 +1,5 @@
 #!/usr/bin/python3 -I
 """Build check: the root helpers refuse hostile input, and no-password permissions stay at the computer only."""
-import importlib.machinery
-import importlib.util
 import os
 import re
 import signal
@@ -9,6 +7,9 @@ import subprocess
 import sys
 import tempfile
 from pathlib import Path
+
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+from evenkeel_os_ui import load_program  # noqa: E402
 
 LIBEXEC = Path("/usr/libexec")
 RULES_D = Path("/usr/share/polkit-1/rules.d")
@@ -19,16 +20,12 @@ signal.signal(signal.SIGALRM, lambda *_: sys.exit("ERROR: a root helper hung on 
 signal.alarm(300)
 
 
-def bad(msg):
-    problems.append(msg)
-
-
 def refuses(helper, args, codes=(2,)):
     """The helper exits with a refusal code before doing anything."""
     r = subprocess.run([str(LIBEXEC / helper), *args], capture_output=True, text=True, stdin=subprocess.DEVNULL,
                        timeout=60)
     if r.returncode not in codes:
-        bad(f"{helper} {args!r} exited {r.returncode}, not {codes}: it didn't refuse")
+        problems.append(f"{helper} {args!r} exited {r.returncode}, not {codes}: it didn't refuse")
 
 
 HOSTILE = ["", "x", "--help", "-rf /", "a b", "../../etc/shadow", "$(id)", "`id`", "; id", "| id", "&& id",
@@ -107,7 +104,7 @@ for args in (["sharing", "password"], ["sharing", "add", "/root", "rw"], ["shari
     r = subprocess.run([str(LIBEXEC / "evenkeel-os-tools-admin"), *args], capture_output=True, text=True,
                        stdin=subprocess.DEVNULL, env={**os.environ, "PKEXEC_UID": "0"}, timeout=60)
     if r.returncode != 1:
-        bad(f"evenkeel-os-tools-admin {args!r} as root exited {r.returncode}: root could share folders")
+        problems.append(f"evenkeel-os-tools-admin {args!r} as root exited {r.returncode}: root could share folders")
 refuses("evenkeel-os-settings", ["check", "--own-namespace"])
 refuses("evenkeel-os-settings", ["test-delete", "extra"])
 refuses("evenkeel-os-cert-remove", ["no-such-certificate.pem", "a" * 64], codes=(1,))
@@ -148,7 +145,7 @@ def cert_remove_refusals():
         refuses("evenkeel-os-cert-remove", ["evenkeel-check-link.pem", fp], codes=(1,))
         refuses("evenkeel-os-cert-remove", ["evenkeel-check-pipe.pem", fp], codes=(1,))
         if not all((anchors / n).exists() for n in made) or not (anchors / "evenkeel-check-link.pem").is_symlink():
-            bad("evenkeel-os-cert-remove removed a file it should have left alone")
+            problems.append("evenkeel-os-cert-remove removed a file it should have left alone")
     finally:
         for n in (*made, "evenkeel-check-link.pem", "evenkeel-check-pipe.pem"):
             (anchors / n).unlink(missing_ok=True)
@@ -159,7 +156,7 @@ cert_remove_refusals()
 patterns = [re.search(r'(?m)^(?:CERT_FILE|NAME) = re\.compile\((r".*?")\)', Path(f).read_text())
             for f in ("/usr/bin/evenkeel-os-tools", "/usr/libexec/evenkeel-os-cert-remove")]
 if not all(patterns) or patterns[0].group(1) != patterns[1].group(1):
-    bad("Wheelhouse and evenkeel-os-cert-remove don't take the same certificate file names")
+    problems.append("Wheelhouse and evenkeel-os-cert-remove don't take the same certificate file names")
 refuses("evenkeel-os-tools-admin", ["cert-remove", "a.pem"])
 refuses("evenkeel-os-codecs-setup", ["web", "full"])
 refuses("evenkeel-os-hwrules", ["add", "pkg"])
@@ -168,9 +165,7 @@ refuses("evenkeel-os-vpn", ["services", "pkg", "extra"])
 refuses("evenkeel-os-vpn", ["services", "not-added-to-the-system"], codes=(1,))
 
 # The hardware-rules helper, loaded as a module with its rule folder pointed at a scratch folder.
-loader = importlib.machinery.SourceFileLoader("hwrules", str(LIBEXEC / "evenkeel-os-hwrules"))
-hw = importlib.util.module_from_spec(importlib.util.spec_from_loader(loader.name, loader))
-loader.exec_module(hw)
+hw = load_program(LIBEXEC / "evenkeel-os-hwrules", "hwrules")
 hw.reload = lambda: None
 with tempfile.TemporaryDirectory() as d:
     hw.RULES = Path(d, "rules.d")
@@ -225,7 +220,7 @@ with tempfile.TemporaryDirectory() as d:
     }
     for why, (name, text, link, fifo) in must_refuse.items():
         if add(name, text, link, fifo):
-            bad(f"the hardware-rules helper added {why}")
+            problems.append(f"the hardware-rules helper added {why}")
     must_take = {
         "a USB device for its users": ('SUBSYSTEM=="usb", ATTR{idVendor}=="1234", MODE="0666"\n'),
         "a controller for the logged-in user": ('SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", TAG+="uaccess"\n'),
@@ -243,33 +238,34 @@ with tempfile.TemporaryDirectory() as d:
     }
     for i, (why, text) in enumerate(must_take.items()):
         if not add(f"ok{i}.rules", text):
-            bad(f"the hardware-rules helper refused {why}")
+            problems.append(f"the hardware-rules helper refused {why}")
     if any(p.is_symlink() for p in hw.RULES.glob("*")) or not all(
             p.read_text().startswith("# evenkeel-os-package: test-pkg\n") for p in hw.RULES.glob("*.rules")):
-        bad("the hardware-rules helper wrote something other than marked rule files")
+        problems.append("the hardware-rules helper wrote something other than marked rule files")
 
 # Permissions: anything that needs no password is for the person at the computer only.
 for f in sorted(RULES_D.glob("*evenkeel-os*.rules")):
     t = f.read_text()
     if "Result.YES" in t and not re.search(r"subject\.local\s*&&\s*subject\.active", t):
-        bad(f"{f.name} lets someone not at the computer act without a password")
+        problems.append(f"{f.name} lets someone not at the computer act without a password")
 uupd = RULES_D / "uupd.rules"
 guard = RULES_D / "40-evenkeel-os-uupd.rules"
 if uupd.exists():
     if not guard.exists() or not guard.name < uupd.name:
-        bad("uupd's rule (any account starts, stops or restarts updates) isn't narrowed by 40-evenkeel-os-uupd.rules")
+        problems.append("uupd's rule (any account starts, stops or restarts updates) isn't narrowed by "
+                        "40-evenkeel-os-uupd.rules")
     elif not all(k in guard.read_text() for k in ('subject.local && subject.active', 'verb == "start"',
-                                                   'verb == "stop"', "Result.AUTH_ADMIN")):
-        bad("40-evenkeel-os-uupd.rules no longer limits updates to start and stop at the computer")
+                                                  'verb == "stop"', "Result.AUTH_ADMIN")):
+        problems.append("40-evenkeel-os-uupd.rules no longer limits updates to start and stop at the computer")
 for f in sorted(ACTIONS.glob("io.github.ctsdownloads.evenkeel-os.*.policy")):
     t = f.read_text()
     for kind in ("allow_any", "allow_inactive"):
         for v in re.findall(rf"<{kind}>([^<]*)</{kind}>", t):
             if v not in ("no", "auth_admin", "auth_admin_keep"):
-                bad(f"{f.name}: {kind} is {v}, so someone not at the computer could act")
+                problems.append(f"{f.name}: {kind} is {v}, so someone not at the computer could act")
     for v in re.findall(r"<allow_active>([^<]*)</allow_active>", t):
         if v not in ("auth_admin", "auth_admin_keep"):
-            bad(f"{f.name}: allow_active is {v}; a no-password action needs a rule limited to the computer")
+            problems.append(f"{f.name}: allow_active is {v}; a no-password action needs a rule limited to the computer")
 
 # Settings test, certificate removal and boot options: no rule may skip the password.
 policy = (ACTIONS / "io.github.ctsdownloads.evenkeel-os.tools.policy").read_text()
@@ -277,24 +273,24 @@ for name, helper in (("settings-test", "evenkeel-os-settings-test"), ("cert-remo
                      ("boot-options", "evenkeel-os-boot-options")):
     m = re.search(rf'<action id="io\.github\.ctsdownloads\.evenkeel-os\.{name}">(.*?)</action>', policy, re.S)
     if not m or f"/usr/libexec/{helper}</annotate>" not in m.group(1):
-        bad(f"{helper} has no polkit action of its own")
+        problems.append(f"{helper} has no polkit action of its own")
     elif sorted(re.findall(r"<allow_\w+>([^<]*)</allow_\w+>", m.group(1))) != ["auth_admin"] * 3:
-        bad(f"{helper}'s polkit action doesn't ask for the admin password every time")
+        problems.append(f"{helper}'s polkit action doesn't ask for the admin password every time")
 RULE_FILES = sorted([*RULES_D.glob("*.rules"), *Path("/etc/polkit-1/rules.d").glob("*.rules")])
 for f in RULE_FILES:
     t = f.read_text()
     # Our actions may only be named whole (action.id == "..."); any other use could match several at once.
     rest = re.sub(r'action\.id\s*===?\s*"io\.github\.ctsdownloads\.evenkeel-os\.[a-z0-9.-]+"', "", t)
     if "settings-test" in t or "cert-remove" in t or "boot-options" in t or "ctsdownloads" in rest:
-        bad(f"{f} could cover the settings test's, certificate removal's or boot options' polkit action")
+        problems.append(f"{f} could cover the settings test's, certificate removal's or boot options' polkit action")
     # A rule that says yes without naming any action says yes to everything, ours included.
     if "Result.YES" in t and "action.id" not in t and f.name != "empower.rules":
-        bad(f"{f} says yes to every action")
+        problems.append(f"{f} says yes to every action")
 # systemd's empower.rules says yes to everything for its "empower" group (run0 --empower): nobody may be in it.
 for line in [*Path("/etc/group").read_text().splitlines(), *Path("/usr/lib/group").read_text().splitlines()]:
     f = line.split(":")
     if f[0] == "empower" and len(f) > 3 and f[3].strip():
-        bad(f"the empower group has members ({f[3]}): they could do anything without a password")
+        problems.append(f"the empower group has members ({f[3]}): they could do anything without a password")
 
 if problems:
     print("ERROR: root helper or permission check failed:")

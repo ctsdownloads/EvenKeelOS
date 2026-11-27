@@ -3695,26 +3695,6 @@ msgstr "Luetaan sovellusluetteloa uudesta latauslähteestä"
 msgid "Recommended"
 msgstr "Suositeltu"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Suositus: Poista laatikko. Se vapauttaa noin {size} ja palaa itsestään, kun "
-"seuraavan kerran asennat: {apps}. Myös kaikki muulla tavalla laatikkoon "
-"lisätty poistetaan. Tiedostoihisi ei kosketa."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Suositus: Poista laatikko. Se vapauttaa käyttämänsä levytilan ja palaa "
-"itsestään, kun seuraavan kerran asennat: {apps}. Myös kaikki muulla tavalla "
-"laatikkoon lisätty poistetaan. Tiedostoihisi ei kosketa."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3820,13 +3800,6 @@ msgstr "Poistetaanko mediakoodekit?"
 
 msgid "Remove the test marker"
 msgstr "Poista testimerkintä"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Poista ne ensin: suorita  codecs remove , käynnistä uudelleen ja valitse "
-"sitten uudelleen Kaikki."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Poista asiat, joita tietokone ei enää tarvitse"
@@ -6722,13 +6695,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "puhdista tallennustila"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"tämän järjestelmän aiemman version (negativo17) koodekkeja on yhä "
-"asennettuna."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;koodekit;koodekki;ääni;asenna;"
@@ -7161,16 +7127,6 @@ msgstr "{name} ei käynnistynyt."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} on julkinen paikka"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} on jo asennettu Bazaarista, sovelluskaupasta.\n"
-"\n"
-"Suositus: Avaa se."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8784,3 +8740,14 @@ msgstr "Lue latauslähteet Fedora 45:n uudesta kansiosta"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Siirry Fedora 45:een"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Fontit ja tekstin koko ovat taas EvenKeelOS:n omat."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Suositus: Poista laatikko. Se palaa itsestään, kun seuraavan kerran asennat: {apps}. Myös kaikki muulla tavalla laatikkoon lisätty poistetaan. Tiedostoihisi ei kosketa."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Sen poistaminen vapauttaa noin {size}."

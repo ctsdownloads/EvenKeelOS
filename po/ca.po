@@ -3709,26 +3709,6 @@ msgstr "S'està llegint la llista d'aplicacions de la font de baixada nova"
 msgid "Recommended"
 msgstr "Recomanat"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Recomanat: «Suprimeix la caixa». Allibera uns {size}, i torna sola la propera"
-" vegada que instal·leu {apps}. També se suprimeix tot el que s'hagi afegit a "
-"la caixa d'una altra manera. Els vostres fitxers no es toquen."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Recomanat: «Suprimeix la caixa». N'allibera l'espai al disc, i torna sola la "
-"propera vegada que instal·leu {apps}. També se suprimeix tot el que s'hagi "
-"afegit a la caixa d'una altra manera. Els vostres fitxers no es toquen."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3833,13 +3813,6 @@ msgstr "Voleu eliminar els còdecs multimèdia?"
 
 msgid "Remove the test marker"
 msgstr "Elimina el marcador de prova"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Elimineu-los primer: executeu  codecs remove , reinicieu, i després torneu a "
-"triar «Tot»."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Elimina les coses que l'ordinador ja no necessita"
@@ -6775,13 +6748,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "neteja emmagatzematge"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"encara hi ha instal·lats còdecs d'una versió anterior d'aquest sistema "
-"(negativo17)."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;còdecs;còdec;vídeo;àudio;multimèdia;instal·la;"
@@ -7215,16 +7181,6 @@ msgstr "{name} no s'ha iniciat."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} és «Lloc públic»"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} ja està instal·lat des del Bazaar, la botiga d'aplicacions.\n"
-"\n"
-"Recomanat: «Obre-ho»."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8840,3 +8796,14 @@ msgstr "Llegeix les fonts de baixada a la carpeta nova de Fedora 45"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Passa a Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Els tipus de lletra i la mida del text han tornat als propis d'EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Recomanat: «Suprimeix la caixa». Torna sola la propera vegada que instal·leu {apps}. També se suprimeix tot el que s'hagi afegit a la caixa d'una altra manera. Els vostres fitxers no es toquen."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Suprimir-la allibera uns {size}."

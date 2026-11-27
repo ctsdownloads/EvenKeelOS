@@ -4,7 +4,7 @@ Before=graphical-session.target io.github.kolunmi.Bazaar.service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/libexec/evenkeel-os-bazaar-language
+ExecStart=/usr/libexec/evenkeel-os-language-follow bazaar
 
 [Install]
 WantedBy=graphical-session-pre.target

@@ -66,6 +66,7 @@ with tempfile.TemporaryDirectory() as tmp:
     def keep(req, _lines):
         seen.update(req)
         return {"button": "ok"}
+
     def progress(_req, lines):
         return {"button": "ok"} if lines == [{"line": "# Step one"}, {"line": "50"}, {"end": True}] else {}
     checks = [

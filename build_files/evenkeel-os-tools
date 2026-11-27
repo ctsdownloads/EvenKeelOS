@@ -64,7 +64,7 @@ SETTINGS_SHOWN = STATE / "settings-repaired-shown"   # the settings repair note 
 CERT_ALERTS = STATE / "cert-alerts.json"      # written by evenkeel-os-certs
 
 
-# ---------------------------------------------------------------- windows
+# Windows
 
 def password(text):
     """The disk password, typed. None when cancelled."""
@@ -109,27 +109,7 @@ def run(text, cmd, stdin=None, title=None):
     return rc
 
 
-def output(cmd):
-    try:
-        return subprocess.run(cmd, capture_output=True, text=True, timeout=120)
-    except (OSError, subprocess.TimeoutExpired):
-        return None
-
-
-# ---------------------------------------------------------------- state
-
-def luks_uuid():
-    """The encrypted system disk's UUID, from the kernel command line, or None when the disk is not encrypted."""
-    try:
-        args = Path("/proc/cmdline").read_text().split()
-    except OSError:
-        return None
-    for a in args:
-        if a.startswith("rd.luks.uuid="):
-            v = a.split("=", 1)[1]
-            return v[5:] if v.startswith("luks-") else v
-    return None
-
+# State
 
 def has_tpm():
     return Path("/dev/tpmrm0").exists()
@@ -147,7 +127,7 @@ def secure_boot_on():
 
 
 def updates_on():
-    r = output(["systemctl", "is-enabled", "uupd.timer"])
+    r = ui.answer(["systemctl", "is-enabled", "uupd.timer"], 120)
     return bool(r) and r.stdout.strip() == "enabled"
 
 
@@ -177,16 +157,17 @@ def pause_updates(w):
              "themselves.").format(day=day(until))
 
 
-# ---------------------------------------------------------------- tools
+# Tools
 
 def firmware():
     w = _("Update firmware")
-    if run(N_("Checking for firmware updates."), ["fwupdmgr", "refresh", "--force", "--no-remote-check",
-                                              "--no-metadata-check", "--no-unreported-check"], title=w) not in (0, 2):
+    up_to_date = _("Your computer's firmware is up to date.")
+    refresh = ["fwupdmgr", "refresh", "--force", "--no-remote-check", "--no-metadata-check", "--no-unreported-check"]
+    if run(N_("Checking for firmware updates."), refresh, title=w) not in (0, 2):
         say(_("Couldn't check for firmware updates. Check your internet connection and try again."), "warning",
             title=w)
         return 1
-    r = output(["fwupdmgr", "get-updates", "--json", "--no-unreported-check", "--no-metadata-check"])
+    r = ui.answer(["fwupdmgr", "get-updates", "--json", "--no-unreported-check", "--no-metadata-check"], 120)
     if not r or r.returncode not in (0, 2):     # 2: no updates
         say(_("Couldn't check for firmware updates. Try again later."), "warning", title=w)
         return 1
@@ -200,12 +181,12 @@ def firmware():
         except (ValueError, AttributeError):
             devices = []
     if not devices:
-        say(_("Your computer's firmware is up to date."), title=w)
+        say(up_to_date, title=w)
         return 0
     note = ""
     if DISK_UNLOCK_ON.exists():
         note = "\n\n" + _("Unlock disk automatically is on. After some firmware updates, the computer asks for the "
-                           "disk password once. Then turn Unlock disk automatically on again in Wheelhouse.")
+                          "disk password once. Then turn Unlock disk automatically on again in Wheelhouse.")
     if ask(_("Firmware updates are available for:") + "\n" + "\n".join(devices) + "\n\n" +
            _("Firmware is the software built into the computer's own parts, like the BIOS.") + "\n\n" +
            _("Recommended: Update. Keep the computer plugged in. Some updates finish while the computer restarts.") +
@@ -215,7 +196,7 @@ def firmware():
              ["fwupdmgr", "update", "--assume-yes", "--no-reboot-check", "--no-remote-check", "--no-metadata-check",
               "--no-unreported-check"], title=w)
     if rc == 2:     # nothing to do after all
-        say(_("Your computer's firmware is up to date."), title=w)
+        say(up_to_date, title=w)
         return 0
     if rc != 0:
         say(_("The firmware update didn't finish. Try again later."), "warning", title=w)
@@ -227,8 +208,7 @@ def firmware():
 
 def disk_unlock(in_checklist=False):
     w = _("Unlock disk automatically")
-    uuid = luks_uuid()
-    if not uuid:
+    if not health.luks_uuids():
         say(_("Your disk isn't encrypted, so there's no disk password to skip. Nothing to do."), title=w)
         return 0
     if not has_tpm():
@@ -269,6 +249,12 @@ def disk_unlock(in_checklist=False):
             offer_restart(_("It's on. From your next restart, the disk unlocks by itself."))
         return 0
     return done_disk(rc, "", w)
+
+
+def not_changed(w, rc=1):
+    """A job that stopped without changing anything: no administrator password, or a failure in the log."""
+    say(_("The administrator password wasn't given, so nothing was changed.") if rc in (126, 127) else
+        _("It didn't work, and nothing was changed.\n\nThe details are in {log}").format(log=LOG), "warning", title=w)
 
 
 def done_disk(rc, text, w):
@@ -319,18 +305,18 @@ def free_space():
 
 def bios():
     w = _("Restart into BIOS settings")
+    no_menu = _("This computer can't open its BIOS settings from here. Press the BIOS key while it starts (often "
+                "F2, F10, F12 or Delete).")
     if not Path("/sys/firmware/efi").is_dir():
-        say(_("This computer can't open its BIOS settings from here. Press the BIOS key while it starts (often F2, "
-              "F10, F12 or Delete)."), title=w)
+        say(no_menu, title=w)
         return 0
     if ask(_("The computer restarts and opens its BIOS settings screen. Save your work first.\n\nThe BIOS settings "
              "are used with the keyboard. When you're done, choose Save and Exit, or Exit, to start the computer "
              "again."), ok=_("Restart now"), title=w) != "ok":
         return 1
-    r = output(["systemctl", "reboot", "--firmware-setup"])
+    r = ui.answer(["systemctl", "reboot", "--firmware-setup"], 120)
     if not r or r.returncode != 0:
-        say(_("This computer can't open its BIOS settings from here. Press the BIOS key while it starts (often F2, "
-              "F10, F12 or Delete)."), title=w)
+        say(no_menu, title=w)
         return 1
     return 0
 
@@ -370,20 +356,8 @@ def updates():
     if rc == 0:
         say(text, title=w)
         return 0
-    say(_("The administrator password wasn't given, so nothing was changed.") if rc in (126, 127) else
-        _("It didn't work, and nothing was changed.\n\nThe details are in {log}").format(log=LOG), "warning", title=w)
+    not_changed(w, rc)
     return 1
-
-
-def deployments():
-    """The system versions on disk, newest first (rpm-ostree status --json), or None."""
-    r = output(["rpm-ostree", "status", "--json"])
-    if not r or r.returncode != 0:
-        return None
-    try:
-        return json.loads(r.stdout)["deployments"]
-    except (ValueError, KeyError):
-        return None
 
 
 def built(d):
@@ -405,15 +379,15 @@ def when(d, other=None):
 
 def undo_update():
     w = _("Undo the last update")
-    ds = deployments()
+    ds = health.deployments()
     if ds is None:
         say(_("Couldn't read which system versions are on this computer. Try again later."), "warning", title=w)
         return 1
     booted = next((d for d in ds if d.get("booted")), None)
     staged = next((d for d in ds if d.get("staged")), None)
     later = ("\n\n" + _("Automatic updates then pause for 3 days, so the bad update doesn't come straight back. If "
-                         "the problem returns after that, turn off Automatic updates in Wheelhouse and tell your "
-                         "helper.") if updates_on() else "")
+                        "the problem returns after that, turn off Automatic updates in Wheelhouse and tell your "
+                        "helper.") if updates_on() else "")
     nxt = ds[0] if ds and not ds[0].get("booted") else None
     if nxt and booted and nxt.get("checksum") == booted.get("checksum") and \
             int(nxt.get("serial", 0)) > int(booted.get("serial", 0)):
@@ -425,8 +399,7 @@ def undo_update():
             return 1
         drop = ["rpm-ostree", "cleanup", "-p"] if nxt.get("staged") else ["rpm-ostree", "rollback"]
         if run(N_("Removing the waiting change."), drop, title=w) != 0:
-            say(_("It didn't work, and nothing was changed.\n\nThe details are in {log}").format(log=LOG),
-                "warning", title=w)
+            not_changed(w)
             return 1
         say(_("Done. The computer starts with the boot options it has now."), title=w)
         return 0
@@ -441,8 +414,7 @@ def undo_update():
             return 1
         rc = run(N_("Removing the waiting update."), ["rpm-ostree", "cleanup", "-p"], title=w)
         if rc != 0:
-            say(_("It didn't work, and nothing was changed.\n\nThe details are in {log}").format(log=LOG),
-                "warning", title=w)
+            not_changed(w)
             return 1
         note = pause_updates(w)
         say(_("Done. Your computer keeps the version it has now.") + (f"\n\n{note}" if note else ""), title=w)
@@ -457,7 +429,7 @@ def undo_update():
             say(_("You're using the version from {current}, picked when the computer started. At your next restart "
                   "the newer version, from {newer}, starts again.\n\nTo stay on this one, pick it again when the "
                   "computer starts, and tell your helper.").format(current=when(booted, ds[0]),
-                                                                    newer=when(ds[0], booted)), title=w)
+                                                                   newer=when(ds[0], booted)), title=w)
         return 0
     older = next((d for d in ds if not d.get("booted") and not d.get("staged")), None)
     if older is None:
@@ -474,9 +446,7 @@ def undo_update():
             return 1
         rc = run(N_("Setting the newer version to start next time."), ["rpm-ostree", "rollback"], title=w)
         if rc != 0:
-            say(_("The administrator password wasn't given, so nothing was changed.") if rc in (126, 127) else
-                _("It didn't work, and nothing was changed.\n\nThe details are in {log}").format(log=LOG), "warning",
-                title=w)
+            not_changed(w, rc)
             return 1
         back = ""
         if paused_until():
@@ -495,8 +465,7 @@ def undo_update():
             return 1
         if run(N_("Setting the earlier boot options to start next time."), ["rpm-ostree", "rollback"],
                title=w) != 0:
-            say(_("It didn't work, and nothing was changed.\n\nThe details are in {log}").format(log=LOG),
-                "warning", title=w)
+            not_changed(w)
             return 1
         offer_restart(_("Done. The earlier boot options start at your next restart."))
         return 0
@@ -510,9 +479,7 @@ def undo_update():
         return 1
     rc = run(N_("Setting the earlier version to start next time."), ["rpm-ostree", "rollback"], title=w)
     if rc != 0:
-        say(_("The administrator password wasn't given, so nothing was changed.") if rc in (126, 127) else
-            _("It didn't work, and nothing was changed.\n\nThe details are in {log}").format(log=LOG), "warning",
-            title=w)
+        not_changed(w, rc)
         return 1
     offer_restart(_("Done. The version from {date} starts at your next restart.").format(
         date=when(older, booted)), pause_updates(w))
@@ -520,7 +487,7 @@ def undo_update():
 
 
 def documents():
-    r = output(["xdg-user-dir", "DOCUMENTS"])
+    r = ui.answer(["xdg-user-dir", "DOCUMENTS"], 120)
     d = Path(r.stdout.strip()) if r and r.returncode == 0 and r.stdout.strip() else Path.home() / "Documents"
     return d if d != Path.home() else Path.home() / "Documents"
 
@@ -559,7 +526,7 @@ def problem_details():
     bar = busy(_("Collecting the problem details."), w)
     parts = [f"Problem details from EvenKeelOS, {time.strftime('%Y-%m-%d %H:%M')}"]
     for heading, cmd, n in DETAILS:
-        r = output(cmd) if shutil.which(cmd[0]) else None
+        r = ui.answer(cmd, 120) if shutil.which(cmd[0]) else None
         text = (r.stdout + r.stderr).strip() if r else "(not available)"
         parts.append(f"\n===== {heading} =====\n{tail(text, n) or '(nothing)'}")
     # Our tools' logs; box apps' own logs stay out (they hold addresses and file names).
@@ -593,7 +560,7 @@ def problem_details():
     return 0
 
 
-# ---------------------------------------------------------------- setup checklist
+# Setup checklist
 
 def codecs_added():
     return any(subprocess.run(["rpm", "-q", "--quiet", p]).returncode == 0
@@ -614,7 +581,7 @@ def codecs_step(w):
 
 
 def disk_step(w):
-    if not luks_uuid() or not has_tpm() or DISK_UNLOCK_ON.exists():
+    if not health.luks_uuids() or not has_tpm() or DISK_UNLOCK_ON.exists():
         return          # nothing to unlock, nothing to unlock it with, or already on
     if ask(_("This computer asks for the disk password every time it starts. The computer's security chip can "
              "unlock the disk instead.\n\nThis needs the disk password, so it's one for your "
@@ -668,12 +635,12 @@ def setup_checklist(first_login=False):
     if a != "ok":
         return 1
     disk_before = DISK_UNLOCK_ON.exists()
-    waiting_before = any(d.get("staged") for d in (deployments() or []))
+    waiting_before = any(d.get("staged") for d in (health.deployments() or []))
     for step in (codecs_step, disk_step, apps_step):
         step(w)
     # One restart at the end, for codecs and disk unlock.
     disk_now = DISK_UNLOCK_ON.exists() and not disk_before
-    waiting = any(d.get("staged") for d in (deployments() or []))
+    waiting = any(d.get("staged") for d in (health.deployments() or []))
     later = []
     if waiting and not waiting_before:
         later.append(_("The media codecs start working after a restart."))
@@ -700,8 +667,7 @@ def layout():
            ok=_("Switch"), cancel=_("Keep it"), title=w) != "ok":
         return 1
     if run(N_("Switching the desktop layout."), [LAYOUT, new], title=w) != 0:
-        say(_("It didn't work, and nothing was changed.\n\nThe details are in {log}").format(log=LOG), "warning",
-            title=w)
+        not_changed(w)
         return 1
     say(_("Done. Log out and back in to see the new layout."), title=w)
     return 0
@@ -769,17 +735,17 @@ SETTINGS_NAMES = {"/etc/passwd": N_("user accounts"), "/etc/shadow": N_("passwor
                   "/etc/nsswitch.conf": N_("account lookup")}
 
 
-def running_test():
-    """The test this start is running (its kernel argument), or None."""
-    for arg in Path("/proc/cmdline").read_text().split():
-        if arg.startswith("evenkeel_os.test_rollback="):
-            return arg.split("=", 1)[1]
-    return None
+def test_refusals():
+    """Why either kind of test won't start, by the helpers' exit codes."""
+    return {4: _("This computer can't go back by itself: it was installed before automatic rollback was added, or "
+                 "automatic rollback was switched off. Computers installed from a newer USB have it."),
+            5: _("An update is waiting for a restart. Restart first, then run the test."),
+            6: _("This computer is running a test copy. Open Test automatic rollback again to remove its marker.")}
 
 
 def test_rollback():
     w = _("Test automatic rollback")
-    kind = running_test()
+    kind = health.running_test()
     if kind:
         name = _(next((t for k, t, _see in ROLLBACK_TESTS if k == kind), kind))
         if ask(_("This computer is running a test copy ({name}) as its normal version, so a new test can't start "
@@ -788,9 +754,7 @@ def test_rollback():
             return 1
         rc = run(N_("Removing the test marker."), ["pkexec", ADMIN, "test-rollback", "clear"], title=w)
         if rc != 0:
-            say(_("The administrator password wasn't given, so nothing was changed.") if rc in (126, 127) else
-                _("It didn't work, and nothing was changed.\n\nThe details are in {log}").format(log=LOG), "warning",
-                title=w)
+            not_changed(w, rc)
             return 1
         offer_restart(_("The test marker is removed. The version without it starts at your next restart."))
         return 0
@@ -817,19 +781,8 @@ def test_rollback():
            ok=_("Start the test"), title=w) != "ok":
         return 1
     rc = run(N_("Making the test copy."), ["pkexec", ADMIN, "test-rollback", kind], title=w)
-    if rc == 4:
-        say(_("This computer can't go back by itself: it was installed before automatic rollback was added, or "
-              "automatic rollback was switched off. Computers installed from a newer USB have it."), "warning",
-            title=w)
-        return 1
-    if rc == 5:
-        say(_("An update is waiting for a restart. Restart first, then run the test."), title=w)
-        return 1
-    if rc == 6:
-        say(_("This computer is running a test copy. Open Test automatic rollback again to remove its marker."),
-            "warning", title=w)
-        return 1
     problems = {
+        **test_refusals(),
         7: _("Your computer saves its list of what works 4 minutes after a good start, and it hasn't saved one yet. "
              "Wait a few minutes and try again."),
         8: _("{name} can't run here: this computer doesn't have it, or it wasn't working at this start, so there's "
@@ -839,9 +792,7 @@ def test_rollback():
         say(problems[rc], "warning", title=w)
         return 1
     if rc != 0:
-        say(_("The administrator password wasn't given, so nothing was changed.") if rc in (126, 127) else
-            _("It didn't work, and nothing was changed.\n\nThe details are in {log}").format(log=LOG), "warning",
-            title=w)
+        not_changed(w, rc)
         return 1
     offer_restart(_("The test copy ({name}) is ready. It starts at your next restart.").format(name=name), see)
     return 0
@@ -861,10 +812,7 @@ def test_settings(w):
         return 1
     rc = run(N_("Deleting the settings."), ["pkexec", SETTINGS_TEST], title=w)
     problems = {
-        4: _("This computer can't go back by itself: it was installed before automatic rollback was added, or "
-             "automatic rollback was switched off. Computers installed from a newer USB have it."),
-        5: _("An update is waiting for a restart. Restart first, then run the test."),
-        6: _("This computer is running a test copy. Open Test automatic rollback again to remove its marker."),
+        **test_refusals(),
         7: _("The computer hasn't saved a copy of its settings since this start yet. Wait a few minutes and try "
              "again. If it keeps saying this, tell your helper: the copy isn't being saved."),
         8: _("There's no earlier version to fall back to if putting the settings back doesn't work, so the test "
@@ -939,9 +887,7 @@ def what_broke(stamp):
     # Written by the failed start, shortly before the rollback's note.
     if not 0 <= int(stamp) - found <= 86400 or len(lines) < 2:
         return ""
-    names = list(dict.fromkeys(n for n in lines[1:] if n))
-    more = "\n  " + _("and {n} more").format(n=len(names) - 12) if len(names) > 12 else ""
-    return "\n".join(f"  \u2022 {health.display(n)}" for n in names[:12]) + more
+    return bullets(list(dict.fromkeys(n for n in lines[1:] if n)))
 
 
 def rolled_back_note():
@@ -959,24 +905,24 @@ def rolled_back_note():
         return 0
     if ROLLED_BACK_SHOWN.is_file() and ROLLED_BACK_SHOWN.read_text().strip() == stamp:
         return 0
-    ds = deployments() or []
+    ds = health.deployments() or []
     booted = next((d for d in ds if d.get("booted")), None)
     # Translators: {since} is a date such as "Oct 14", or the words "before the update" when the date isn't known.
     since = when(booted) if booted else _("before the update")
+    went_back = _("Your computer went back to the previous version.")
+    notify({"settings-test": _("The settings repair test didn't work."),
+            "test": _("The automatic rollback test worked.")}.get(kind, went_back))
     if kind == "settings-test":
-        notify(_("The settings repair test didn't work."))
         say(_("The settings repair test didn't work: your computer couldn't put the deleted settings back, so it went "
               "back to the version from {since}, which has its own settings. Your files and apps aren't touched, "
               "and automatic updates aren't paused.\n\nTell your helper. Save problem details in Wheelhouse makes "
               "a file to send them.").format(since=since), "warning", title=w)
     elif kind == "settings-failed":
-        notify(_("Your computer went back to the previous version."))
         say(_("Some important system settings were broken, and putting them back didn't fix the start, so your "
               "computer went back to the version from {since}, which has its own settings. Your files and apps "
               "aren't touched, and automatic updates aren't paused.\n\nTell your helper. Save problem details in "
               "Wheelhouse makes a file to send them.").format(since=since), "warning", title=w)
     elif kind == "boot-options":
-        notify(_("Your computer went back to the previous version."))
         broke = what_broke(stamp)
         say(_("The computer didn't start properly with the boot options changed in Wheelhouse, so it went back to "
               "the version from {since}, with the boot options it had before.").format(since=since) +
@@ -985,7 +931,6 @@ def rolled_back_note():
               "it isn't in use. Disk and startup, Boot options in Wheelhouse shows what's in use now."), "warning",
             title=w)
     elif kind == "test":
-        notify(_("The automatic rollback test worked."))
         broke = what_broke(stamp)
         say(_("The test worked. Your computer went back by itself to the version from {since}, and the test copy is "
               "removed.").format(since=since) +
@@ -994,7 +939,6 @@ def rolled_back_note():
         until = paused_until()
         pause = (_("Automatic updates are paused until {day}, so the same update doesn't come straight back. They "
                    "turn back on by themselves.").format(day=day(until)) if until else "")
-        notify(_("Your computer went back to the previous version."))
         broke = what_broke(stamp)
         if broke:
             why = _("Your computer went back to the version from {since}, because these stopped working on the newer "
@@ -1004,14 +948,19 @@ def rolled_back_note():
                     "properly. Your files and your apps aren't touched.").format(since=since)
         say(why + (f"\n\n{pause}" if pause else "") +
             "\n\n" + _("If it happens again, tell your helper. Save problem details in Wheelhouse makes a file to "
-                         "send them."), "warning", title=w)
+                       "send them."), "warning", title=w)
     STATE.mkdir(parents=True, exist_ok=True)
     ROLLED_BACK_SHOWN.write_text(stamp)
     return 0
 
 
-RESTART_WAIT = 120      # seconds a real problem waits for an answer (evenkeel_os_health.COUNTDOWN)
-RESTART_QUESTION = Path("/run/evenkeel-os/restart-question")   # the boot ID, then what broke (evenkeel_os_health)
+RESTART_QUESTION = Path(health.QUESTION)    # the boot ID, then what broke
+
+
+def bullets(names):
+    """Saved item names as a list in the person's language, at most 12 and a count of the rest."""
+    more = "\n  " + _("and {n} more").format(n=len(names) - 12) if len(names) > 12 else ""
+    return "\n".join(f"  \u2022 {health.display(n)}" for n in names[:12]) + more
 
 
 def restart_question(kind, start):
@@ -1020,8 +969,7 @@ def restart_question(kind, start):
         names = [n[:200] for n in RESTART_QUESTION.read_text().splitlines()[1:] if n]
     except OSError:
         return 1
-    more = "\n  " + _("and {n} more").format(n=len(names) - 12) if len(names) > 12 else ""
-    broke = "\n".join(f"  • {health.display(n)}" for n in names[:12]) + more
+    broke = bullets(names)
     test = next((_(t) for k, t, _see in ROLLBACK_TESTS if k == kind and k in AFTER_LOGIN_TESTS), None)
     last = start == "last"
     if test:
@@ -1036,7 +984,7 @@ def restart_question(kind, start):
                 _("Not yet: nothing restarts until you click Restart now, so you can save your work first."))
         if kind == "graphics":
             text += "\n\n" + _("No answer in 2 minutes: it restarts by itself, because this test can leave the "
-                                 "screen black.")
+                               "screen black.")
         ok, other, timed = _("Restart now"), _("Not yet"), kind == "graphics"
     elif kind in ("update", "boot-options"):
         if last:
@@ -1073,7 +1021,7 @@ def restart_question(kind, start):
     # zenity's own exit code 1 is a window that couldn't open or lost the screen; Esc opens it again.
     os.environ.update(ZENITY_CANCEL="4", ZENITY_ESC="9")
     notify(_("Your computer needs an answer before it restarts."))
-    end = time.monotonic() + RESTART_WAIT if timed else None
+    end = time.monotonic() + health.COUNTDOWN if timed else None
     quick = 0
     waiting = False
     while True:

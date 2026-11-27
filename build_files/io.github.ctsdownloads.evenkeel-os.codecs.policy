@@ -2,9 +2,9 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD polkit Policy Configuration 1.0//EN" "http://www.freedesktop.org/software/polkit/policyconfig-1.dtd">
 <policyconfig>
   <vendor>EvenKeelOS</vendor>
-  <vendor_url>https://github.com/ctsdownloads/evenkeel-os</vendor_url>
+  <vendor_url>https://github.com/ctsdownloads/EvenKeelOS</vendor_url>
 
-  <!-- Adding codecs: 50-evenkeel-os-codecs.rules lets an admin at the computer skip the password. -->
+  <!-- Adding codecs: 50-evenkeel-os.rules lets an admin at the computer skip the password. -->
   <action id="io.github.ctsdownloads.evenkeel-os.codecs.setup">
     <description>Add the media codecs</description>
     <message>Add the media codecs</message>

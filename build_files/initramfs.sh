@@ -25,7 +25,6 @@ blank('/usr/share/pixmaps/fedora-logo.png', 240, 310)
 blank('/usr/share/pixmaps/fedora-logo-small.png', 128, 128)
 PY
 # EvenKeelOS logo at the bottom of the boot and unlock screens.
-[ -f /ctx/branding/boot-watermark.png ] || { echo 'ERROR: /ctx/branding/boot-watermark.png is missing'; exit 1; }
 install -Dm644 /ctx/branding/boot-watermark.png /usr/share/plymouth/themes/spinner/watermark.png
 
 export DRACUT_NO_XATTR=1

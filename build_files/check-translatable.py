@@ -10,7 +10,7 @@ KEYWORDS = {"label", "title", "subtitle", "heading", "body", "description", "too
             "text", "secondary_text", "ok", "cancel", "extra", "rest", "button_label"}
 METHODS = {"set_label", "set_title", "set_subtitle", "set_text", "set_markup", "set_tooltip_text",
            "set_placeholder_text", "set_description", "set_heading", "set_body", "set_button_label",
-           "say", "ask", "notify", "offer_restart", "choose", "add_toast", "add_response", "Toast"}
+           "say", "ask", "notify", "offer_restart", "choose", "add_toast", "add_response", "Toast", "toast"}
 WORDS = re.compile(r"[A-Za-z]{2,}[ .,:?!'…]")      # a word followed by a space or punctuation: a sentence
 SHELL = re.compile(r"""(notify-send|zenity|evenkeel-os-dialog|--text=|--title=)[^#\n]*?["'][A-Z][a-z]+[ .,]""")
 

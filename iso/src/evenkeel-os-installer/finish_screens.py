@@ -52,12 +52,12 @@ class InstallingScreen(screens.Screen):
 
     def start(self):
         c = self.c
-        h24 = c.clock_24 if c.clock_24 is not None else not data.uses_12_hour(c.locale)
         choices = {"disk": c.disk["path"], "disk_identity": c.disk["identity"], "encrypt": c.encrypt,
                    "disk_password": c.disk_password,
                    "locale": c.locale, "layouts": c.layouts, "boot_layout": c.boot_layout or c.layouts[0],
                    "timezone": c.timezone, "time_automatic": c.time_automatic,
-                   "manual_time": c.manual_time.isoformat(), "time_servers": c.time_servers, "clock_24": h24,
+                   "manual_time": c.manual_time.isoformat(), "time_servers": c.time_servers,
+                   "clock_24": c.uses_24_hour(),
                    "hostname": c.hostname, "root_password": c.root_password if c.root_enabled else None,
                    "full_name": c.full_name, "username": c.username, "admin": c.admin,
                    "user_password": c.user_password, "layout": c.layout, "experience": c.experience}
@@ -167,8 +167,7 @@ class DoneScreen(LogScreen):
 class ErrorScreen(LogScreen):
     """The install stopped: save the log to a stick, show a QR code, or open a report in Firefox."""
     title = N_("The install stopped")
-    next_label = None
-    ISSUES = "https://github.com/ctsdownloads/evenkeel-os/issues/new"
+    ISSUES = "https://github.com/ctsdownloads/EvenKeelOS/issues/new"
     BODY_MAX = 7000              # the body length Anaconda's GitHub report links were limited to
     QR_URL_MAX = 1800            # a denser code is harder for a phone to read off a screen
 

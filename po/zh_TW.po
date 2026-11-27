@@ -3221,22 +3221,6 @@ msgstr "正在從新的下載來源讀取應用程式清單"
 msgid "Recommended"
 msgstr "建議"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"建議：「刪除容器」。它會釋放約 {size}，並在您下次安裝 {apps} 時自動回來。以其他方式加入容器的任何東西也會一併刪除。您的檔案不會受到影響。"
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"建議：「刪除容器」。它會釋放所佔的磁碟空間，並在您下次安裝 {apps} 時自動回來。以其他方式加入容器的任何東西也會一併刪除。您的檔案不會受到影響。"
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3325,11 +3309,6 @@ msgstr "要移除媒體編解碼器嗎？"
 
 msgid "Remove the test marker"
 msgstr "移除測試標記"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr "請先移除它們：執行  codecs remove ，重新啟動，然後再次選擇「全部」。"
 
 msgid "Remove things the computer no longer needs"
 msgstr "移除電腦不再需要的東西"
@@ -5888,11 +5867,6 @@ msgstr "chrome 瀏覽器"
 msgid "clean storage"
 msgstr "clean storage 清理 儲存空間 磁碟空間"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "此系統舊版的編解碼器 (negativo17) 仍然安裝著。"
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr "codecs;codec;ffmpeg;h264;video;audio;media;install;編解碼器;影片;音訊;媒體;安裝;"
 
@@ -6302,16 +6276,6 @@ msgstr "{name} 沒有啟動。"
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} 是公共場所"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} 已從應用程式商店 Bazaar 安裝。\n"
-"\n"
-"建議：「開啟」。"
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -7885,3 +7849,14 @@ msgstr "從 Fedora 45 的新資料夾讀取下載來源"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "升級到 Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "字型與文字大小已回到 EvenKeelOS 原本的樣子。"
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "建議：「刪除容器」。它會在您下次安裝 {apps} 時自動回來。以其他方式加入容器的任何東西也會一併刪除。您的檔案不會受到影響。"
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "刪除它會釋放約 {size}。"

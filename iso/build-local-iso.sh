@@ -31,14 +31,7 @@ else
   # No cache: podman misses changed build files.
   sudo podman build --no-cache -t localhost/evenkeel-os -f Containerfile .
   # Small layers, as on GitHub, or the install runs out of memory.
-  graphroot=$(sudo podman info --format '{{.Store.GraphRoot}}')
-  sudo podman run --rm --pull=never --privileged \
-    --mount=type=image,src=localhost/evenkeel-os,target=/rpm-ostree \
-    --mount=type=bind,src="$graphroot",target=/run/host-container-storage,rw \
-    --mount=type=tmpfs,target=/run/rpm-ostree-storage \
-    --entrypoint /usr/bin/rpm-ostree localhost/evenkeel-os \
-    compose build-chunked-oci --max-layers 127 --format-version=2 --bootc --rootfs /rpm-ostree \
-    --output "containers-storage:[overlay@/run/host-container-storage+/run/rpm-ostree-storage]localhost/evenkeel-os:latest"
+  sudo build_files/rechunk.sh evenkeel-os latest
   sudo podman image prune -f >/dev/null      # the unsplit copy
   mkdir -p "$(dirname "$stamp")" && echo "$src" > "$stamp"
 fi

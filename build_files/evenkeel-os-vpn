@@ -18,6 +18,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_health as health  # noqa: E402
 from evenkeel_os_ui import _  # noqa: E402
 
 LIST = Path("/usr/share/evenkeel-os/vpns.json")
@@ -74,16 +75,10 @@ def ours(path, name):
 
 def requested(booted=True):
     """Package names added to the running system (or, booted=False, to the version that starts next)."""
-    r = subprocess.run(["rpm-ostree", "status", "--json", *(["--booted"] if booted else [])], capture_output=True,
-                       text=True)
-    try:
-        d = json.loads(r.stdout)["deployments"][0]
-    except (ValueError, KeyError, IndexError):
+    ds = health.deployments(*(["--booted"] if booted else []))
+    if not ds:
         fail(_("Couldn't read the system's state."))
-    names = set(d.get("requested-packages", []))
-    for nevra in d.get("requested-local-packages", []):
-        names.add(re.sub(r"-[^-]+-[^-]+$", "", nevra))
-    return names
+    return health.requested(ds[0])
 
 
 def installed(package):
@@ -193,8 +188,9 @@ def remove(name, v):
             (UNITS / unit).unlink()
     systemctl("daemon-reload")
     # the version that starts next: an app installed and removed before a restart is only there
-    added = [p for p in v["packages"] if p in requested(booted=False)]
-    if added and subprocess.run(["rpm-ostree", "uninstall", *added]).returncode != 0:
+    next_start = requested(booted=False)
+    layered = [p for p in v["packages"] if p in next_start]
+    if layered and subprocess.run(["rpm-ostree", "uninstall", *layered]).returncode != 0:
         fail(f"{v['title']} was not removed.")
     if ours(repo_file(name), name):
         repo_file(name).unlink()

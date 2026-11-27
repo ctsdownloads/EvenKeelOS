@@ -19,11 +19,6 @@ WEB="openh264 mozilla-openh264 gstreamer1-plugin-openh264"
 # Fedora's OpenH264 stand-in: web removes it in the same step, remove puts it back.
 STAND_IN="noopenh264"
 
-# Earlier EvenKeelOS builds used negativo17. These are only used to remove that setup cleanly.
-OLD_REPO=/etc/yum.repos.d/negativo17-multimedia.repo
-OLD_FULL="ffmpeg ffmpeg-libs libavcodec libavdevice libavfilter libavformat libavutil libswresample libswscale x264-libs x265-libs"
-OLD_REPLACE="xevd-libs xeve-libs"
-
 log()    { logger -t evenkeel-os-codecs -- "$*"; }
 caller() { printf '%s' "${PKEXEC_UID:-unknown}"; }
 present() { local p; for p in "$@"; do rpm -q "$p" >/dev/null 2>&1 && printf '%s ' "$p"; done; }
@@ -37,12 +32,6 @@ import json, sys
 d = json.load(sys.stdin)["deployments"][0]
 want = set(sys.argv[2:])
 print(" ".join(sorted(set(d.get(sys.argv[1], [])) & want)))' "$field" "$@"
-}
-
-old_setup_present() {   # anything left from the negativo17 version
-  [ -e "$OLD_REPO" ] && return 0
-  [ "$(rpm -q --qf '%{EPOCH}' xevd-libs 2>/dev/null)" = 1 ] && return 0
-  [ -n "$(requested requested-packages libavcodec libavfilter libavformat libavutil libswresample libswscale)" ]
 }
 
 repos_on()  { local r; for r in $REPOS; do install -m 0644 "$REPO_DIR/$r" "/etc/yum.repos.d/$r" || return 1; done; }
@@ -67,11 +56,6 @@ do_web() {
 }
 
 do_full() {
-  if old_setup_present; then
-    echo "error: $(gettext "codecs from an earlier version of this system (negativo17) are still installed.")"
-    gettext "Remove them first: run  codecs remove , restart, then choose Everything again."; echo
-    return 1
-  fi
   if [ -n "$(requested requested-base-removals ffmpeg-free)" ]; then   # already chosen, booted or pending
     gettext "The full codecs are already installed. Restart if you have not yet."; echo; return 0
   fi
@@ -87,13 +71,12 @@ do_full() {
 }
 
 do_remove() {
-  local uninstall resets old_replaced="" p cmd
-  uninstall=$(requested requested-packages $FULL $OLD_FULL $WEB)
+  local uninstall resets p cmd
+  uninstall=$(requested requested-packages $FULL $WEB)
   resets=$(requested requested-base-removals $FREE $STAND_IN)
-  [ "$(rpm -q --qf '%{EPOCH}' xevd-libs 2>/dev/null)" = 1 ] && old_replaced="$OLD_REPLACE"
-  if [ -n "$resets$old_replaced" ]; then
+  if [ -n "$resets" ]; then
     local -a reset_list
-    read -ra reset_list <<<"$resets $old_replaced"
+    read -ra reset_list <<<"$resets"
     cmd=(override reset "${reset_list[@]}")
     for p in $uninstall; do cmd+=(--uninstall "$p"); done
     run_logged rpm-ostree "${cmd[@]}" || return 1
@@ -101,6 +84,5 @@ do_remove() {
     run_logged rpm-ostree uninstall $uninstall || return 1
   fi
   repos_off
-  rm -f "$OLD_REPO"
   gettext "Removed. Restart to finish."; echo
 }

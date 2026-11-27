@@ -37,9 +37,9 @@ cases = [
     ("an app with an example printer file in its docs", False, package("pdf-tool", [
         "/usr/bin/pdf-tool", "/usr/share/doc/pdf-tool/examples/generic.ppd"])),
     ("an app that only adds you to the printer admin group", False, package("print-helper", ["/usr/bin/print-helper"],
-                                                                             "getent group lpadmin >/dev/null && "
-                                                                             "usermod -a -g lpadmin user\n"
-                                                                             "# lpadmin -p old -e")),
+                                                                            "getent group lpadmin >/dev/null && "
+                                                                            "usermod -a -g lpadmin user\n"
+                                                                            "# lpadmin -p old -e")),
 ]
 problems = []
 for label, want, pkg in cases:

@@ -1,4 +1,4 @@
-"""Windows, notices and disk sizes shared by Wheelhouse and Install Package File."""
+"""Windows, notices, buttons, program answers and disk sizes shared by every EvenKeelOS tool."""
 
 import gettext
 import locale
@@ -7,6 +7,7 @@ import os
 import shutil
 import subprocess
 import time
+import types
 from pathlib import Path
 
 GUI = bool(shutil.which("zenity")) and bool(os.environ.get("WAYLAND_DISPLAY") or os.environ.get("DISPLAY"))
@@ -29,6 +30,14 @@ except locale.Error:
 # Date patterns follow the Formats region in Settings, like the month and day names they hold.
 _dates = gettext.translation("evenkeel-os", languages=[TIME_LOCALE], fallback=True).gettext
 HAS_AM_PM = bool(time.strftime("%p", time.struct_time((2000, 1, 1, 13, 0, 0, 5, 1, -1))))
+
+
+def answer(cmd, timeout=20, **kw):
+    """A program's result (subprocess.CompletedProcess), or None when it is missing or hangs."""
+    try:
+        return subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, **kw)
+    except (OSError, subprocess.TimeoutExpired):
+        return None
 
 
 def clock_24h():
@@ -59,6 +68,14 @@ def day_text(t):
     """A day (a time.struct_time) with its weekday, in the person's language and order."""
     # Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
     return time.strftime(_dates("%A, %B %-d"), t)
+
+
+def load_program(path, name):
+    """A program file with no .py ending (like /usr/bin/evenkeel-os-tools), loaded as a module, leaving no cache."""
+    module = types.ModuleType(name)
+    module.__file__ = str(path)
+    exec(compile(Path(path).read_text(), str(path), "exec"), module.__dict__)
+    return module
 
 
 def N_(text):
@@ -172,6 +189,22 @@ def user_folder(kind):
     except OSError:
         return Path.home()
     return Path(r.stdout.strip() or Path.home())
+
+
+def icon_button(icon, tooltip, label, clicked, sensitive=True):
+    """A small flat button showing only an icon; label says what it does to a screen reader."""
+    from gi.repository import Gtk      # only Wheelhouse's window, which loaded GTK 4 already, uses it
+    b = Gtk.Button(icon_name=icon, tooltip_text=tooltip, valign=Gtk.Align.CENTER, css_classes=["flat"],
+                   sensitive=sensitive)
+    b.update_property([Gtk.AccessibleProperty.LABEL], [label])
+    b.connect("clicked", lambda *_args: clicked())
+    return b
+
+
+def short_home(path):
+    """A path with the home folder written as ~, as people see it in Files."""
+    path, home = str(path), str(Path.home())
+    return "~" + path[len(home):] if path == home or path.startswith(home + "/") else path
 
 
 def free_mb(where=None):

@@ -43,9 +43,7 @@ def signed_by_artcraft(signature, path):
 
 
 def run(text, steps, quiet):
-    if quiet:
-        return all(subprocess.run(cmd, capture_output=True).returncode == 0 for label, cmd in steps)
-    return windows.run_steps(text, steps)
+    return windows.run_quietly(steps) if quiet else windows.run_steps(text, steps)
 
 
 def fetch_and_install(app, version, quiet=False):

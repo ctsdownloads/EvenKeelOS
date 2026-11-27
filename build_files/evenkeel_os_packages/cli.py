@@ -98,22 +98,20 @@ def main(argv):
         return check(argv[2])
     if argv[1] == "check-windows":
         return windows_file.check(argv[2])
-    if argv[1] == "zoom":       # a meeting opens at once; Chrome is offered only while no other tool is installing
-        ui.TITLE = "Zoom"
-        common.CACHE.mkdir(parents=True, exist_ok=True)
-        lock = open(common.CACHE / ".lock", "w")
-        return zoom.open_link(argv[2], may_install=try_lock(lock))
     if argv[1] == "after-restart" and not after_restart.pending() and not after_restart.boxes_missing_helpers() \
             and not launchers.launchers_to_fix() and not login_apps.app_login_files_to_fix() \
             and not artcraft.update_due():
         return 0
+    common.CACHE.mkdir(parents=True, exist_ok=True)
+    lock = open(common.CACHE / ".lock", "w")
+    if argv[1] == "zoom":       # a meeting opens at once; Chrome is offered only while no other tool is installing
+        ui.TITLE = "Zoom"
+        return zoom.open_link(argv[2], may_install=try_lock(lock))
     # each window carries the name of what it is part of
     titles = {"remove": N_("Remove Apps"), "repair": N_("Repair App Boxes"), "login": N_("Start Apps at Login"),
               "windows": N_("Windows Program"), "vpn": N_("Get a VPN")}
     if argv[1] in titles:
         ui.TITLE = _(titles[argv[1]])
-    common.CACHE.mkdir(parents=True, exist_ok=True)
-    lock = open(common.CACHE / ".lock", "w")
     if not take_lock(lock, quiet=argv[1] == "after-restart"):
         return 1
     busy = {"install": N_("Install Package File is open"), "remove": N_("Remove Apps is open"),

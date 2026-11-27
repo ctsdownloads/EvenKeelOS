@@ -14,6 +14,10 @@ import evenkeel_os_health as health  # noqa: E402
 PCI = "sys/devices/pci0000:00"
 
 
+def die(msg):
+    sys.exit(f"ERROR: trial check: {msg}")
+
+
 class Computer:
     """A made-up computer: sysfs files and links, and the answers its programs give."""
 
@@ -215,8 +219,8 @@ def case(title, change, broken, must=None):
     names = [n for _, n in found]
     keys = [k for k, _ in found]
     if bool(found) != broken or (must and not any(must in k for k in keys)):
-        sys.exit(f"ERROR: trial check, {title}: found {names or 'nothing'}, expected "
-                 f"{'something broken' + (' (' + must + ')' if must else '') if broken else 'nothing'}")
+        die(f"{title}: found {names or 'nothing'}, expected "
+            f"{'something broken' + (' (' + must + ')' if must else '') if broken else 'nothing'}")
     shutil.rmtree(c.root)
     return names
 
@@ -253,9 +257,9 @@ def ask_first(c):
         before = len(seen)
         c.file("var/lib/evenkeel-os/health-lost", "1\nSound (snd_hda_intel)\n")
         if health.ask_first() != want:
-            sys.exit(f"ERROR: trial check, asking first: {what} doesn't give {want}")
+            die(f"asking first: {what} doesn't give {want}")
         if (c.root / "run/evenkeel-os/restart-question").exists() or (c.root / "run/evenkeel-os/restart-keep").exists():
-            sys.exit(f"ERROR: trial check, asking first: {what} leaves the question or the answer behind")
+            die(f"asking first: {what} leaves the question or the answer behind")
         return seen[before:]
 
     health.run = run
@@ -268,26 +272,26 @@ def ask_first(c):
     asked = trial(1, "a test's Restart now")
     cmd, q, cap = asked[0]
     if cap is not None:
-        sys.exit("ERROR: trial check, asking first: a test's window has a time limit, so Not yet can't hold")
+        die("asking first: a test's window has a time limit, so Not yet can't hold")
     if cmd[:3] != ["systemd-run", "--machine=root@.host", "--user"] or cmd[-2:] != ["sound", "last"]:
-        sys.exit(f"ERROR: trial check, asking first: the window runs as {cmd}")
+        die(f"asking first: the window runs as {cmd}")
     if "--setenv=WAYLAND_DISPLAY=wayland-0" not in cmd or "--wait" not in cmd or q != "b00t\nSound (snd_hda_intel)\n":
-        sys.exit(f"ERROR: trial check, asking first: display, waiting or question wrong: {asked}")
+        die(f"asking first: display, waiting or question wrong: {asked}")
     if any(a.startswith("--property=RuntimeMaxSec") for a in cmd):
-        sys.exit("ERROR: trial check, asking first: a test's window has a time limit, so Not yet can't hold")
+        die("asking first: a test's window has a time limit, so Not yet can't hold")
     c.answers["grub2-editenv"] = (0, "greenboot_next_deployment_id=abc\n")
     c.cmdline = "root=x evenkeel_os.test_rollback=graphics"
     cmdline(c)
     if trial(1, "the Graphics test")[0][0][-1] != "first":
-        sys.exit("ERROR: trial check, asking first: a first bad start isn't asked as one")
+        die("asking first: a first bad start isn't asked as one")
     c.cmdline = "root=x"
     cmdline(c)
     window(3, "b00t\n")
     kept = trial(0, "Keep with the password")
     if kept[0][0][-2] != "update" or (c.root / "var/lib/evenkeel-os/health-lost").exists():
-        sys.exit("ERROR: trial check, asking first: Keep on an update leaves the list for a rollback note")
+        die("asking first: Keep on an update leaves the list for a rollback note")
     if f"--property=RuntimeMaxSec={health.COUNTDOWN + 120}" not in kept[0][0] or kept[0][2] != health.COUNTDOWN + 180:
-        sys.exit("ERROR: trial check, asking first: a real problem's window has no time limit behind its countdown")
+        die("asking first: a real problem's window has no time limit behind its countdown")
     window(3)
     trial(1, "Keep without the answer from the admin helper")
     window(3, "other-start\n")
@@ -297,18 +301,18 @@ def ask_first(c):
     status["deployments"][1]["checksum"] = "new"
     window(0)
     if trial(1, "Boot options")[0][0][-2] != "boot-options":
-        sys.exit("ERROR: trial check, asking first: the same system with other boot options isn't Boot options")
+        die("asking first: the same system with other boot options isn't Boot options")
     c.remove("run/user/0/wayland-0")
     if trial(1, "no Wayland display"):
-        sys.exit("ERROR: trial check, asking first: a session with no Wayland display still opens a window")
+        die("asking first: a session with no Wayland display still opens a window")
     c.file("run/user/0/wayland-0", "")
     good = session
     session = good.replace("Type=wayland", "Type=x11")
     if trial(1, "an X11 session"):
-        sys.exit("ERROR: trial check, asking first: an X11 session still opens a window")
+        die("asking first: an X11 session still opens a window")
     session = ""
     if trial(1, "nobody on the screen"):
-        sys.exit("ERROR: trial check, asking first: nobody on the screen still opens a window")
+        die("asking first: nobody on the screen still opens a window")
     session = good
 
     def broken(*_):
@@ -320,13 +324,13 @@ def ask_first(c):
     session = ""
     started = time.monotonic()
     if health.question(["sleep", "60"], "root", None) != 1 or time.monotonic() - started > 30:
-        sys.exit("ERROR: trial check, asking first: a window left open at logout keeps the start waiting")
+        die("asking first: a window left open at logout keeps the start waiting")
     if stopped[-1:] != [["systemctl", "--machine=root@.host", "--user", "stop",
                          "evenkeel-os-restart-question.service"]]:
-        sys.exit(f"ERROR: trial check, asking first: a window given up on isn't closed: {stopped}")
+        die(f"asking first: a window given up on isn't closed: {stopped}")
     session = good
     if health.question(["sleep", "60"], "root", 6) != 1 or health.question(["sh", "-c", "exit 3"], "root", 6) != 3:
-        sys.exit("ERROR: trial check, asking first: the time limit or the window's answer is lost")
+        die("asking first: the time limit or the window's answer is lost")
     health.run = plain
 
 
@@ -342,34 +346,34 @@ def main():
             "network-places", "selinux", "clock-sync", "dns", "disk-unlock", "boot-options",
             "shared-folders", "service:ModemManager.service", "driver:pci:0000:00:1f.3", "driver:usb:8087:0033:1.0"}
     if want - set(rec["items"]):
-        sys.exit(f"ERROR: trial check: a working made-up computer's record lacks {sorted(want - set(rec['items']))}")
+        die(f"a working made-up computer's record lacks {sorted(want - set(rec['items']))}")
     if any("0a12:0001" in k or "046d:085e" in k for k in rec["items"]):
-        sys.exit("ERROR: trial check: a USB device in a removable or unmarked (hub or dock) port was recorded")
+        die("a USB device in a removable or unmarked (hub or dock) port was recorded")
     if health.lost(rec):
-        sys.exit(f"ERROR: trial check: an unchanged computer counts as broken: {health.lost(rec)}")
+        die(f"an unchanged computer counts as broken: {health.lost(rec)}")
     # compare: exit codes, the note's file, and the cases where there's nothing to compare
     if health.compare(0) != 0 or (c.root / "var/lib/evenkeel-os/health-lost").exists():
-        sys.exit("ERROR: trial check: an unchanged computer fails compare, or leaves a note")
+        die("an unchanged computer fails compare, or leaves a note")
     c.remove("sys/class/sound/card0")
     if health.compare(0) != 1 or (c.root / "var/lib/evenkeel-os/health-lost").exists():
-        sys.exit("ERROR: trial check: lost sound doesn't fail a check by hand, or that leaves a list for the note")
+        die("lost sound doesn't fail a check by hand, or that leaves a list for the note")
     c.answers["grub2-editenv"] = (0, "boot_success=0\n")
     if health.main(["", "trial"]) != 0:
-        sys.exit("ERROR: trial check: a start that isn't on trial is compared")
+        die("a start that isn't on trial is compared")
     c.answers["grub2-editenv"] = (0, "greenboot_next_deployment_id=abc\nboot_counter=-1\n")
     if health.main(["", "trial"]) != 0:
-        sys.exit("ERROR: trial check: a fallback to the previous version is compared")
+        die("a fallback to the previous version is compared")
     health.WAIT = 0
     c.answers["grub2-editenv"] = (0, "greenboot_next_deployment_id=abc\nboot_counter=0\n")
     c.answers["loginctl"] = (1, "")      # nobody on the screen: it restarts without asking, as before
     if health.main(["", "trial"]) != 1 or "Sound" not in (c.root / "var/lib/evenkeel-os/health-lost").read_text():
-        sys.exit("ERROR: trial check: lost sound doesn't fail the trial, or isn't in the note")
+        die("lost sound doesn't fail the trial, or isn't in the note")
     ask_first(c)
     if health.compare(0, "/var/lib/evenkeel-os/none.json") != 0:
-        sys.exit("ERROR: trial check: no saved list fails compare")
+        die("no saved list fails compare")
     c.file("sys/class/dmi/id/product_uuid", "other-computer")
     if health.compare(0) != 0:
-        sys.exit("ERROR: trial check: a list from another computer fails compare")
+        die("a list from another computer fails compare")
     shutil.rmtree(c.root)
 
     pci = f"{PCI}/0000:01:00.0"
@@ -472,7 +476,7 @@ def main():
         ("a one-time job failed offline", lambda c: c.answers.update(
             failed=(0, "NetworkManager-wait-online.service loaded failed failed Wait\n")), False),
         ("a new kernel crash", lambda c: c.answers.update({"kernel log": (0, "Oops: general protection fault, "
-                                                                              "probably for address\n")}), True,
+                                                                          "probably for address\n")}), True,
          "crash:oops"),
         ("an app's own protection fault", lambda c: c.answers.update(
             {"kernel log": (0, "traps: wine64[4242] general protection fault ip:7f sp:7f error:0\n")}), False),
@@ -496,22 +500,25 @@ def main():
           "should be; test copies get the right driver blocks")
 
 
-def options_change(c):
-    """The same version with other boot options (Wheelhouse, Boot options): nomodeset and selinux=0."""
-    c.answers["rpm-ostree"] = (0, json.dumps({"deployments": [{"booted": True, "checksum": "aaa"},
-                                                                  {"booted": False, "checksum": "aaa"}]}))
+def basic_graphics(c):
+    """The graphics driver and the brightness control gone, as nomodeset leaves them."""
     c.remove("sys/class/drm/card1")
     c.remove(f"{PCI}/0000:00:02.0/driver")
     c.remove("sys/class/backlight/intel_backlight")
+
+
+def options_change(c):
+    """The same version with other boot options (Wheelhouse, Boot options): nomodeset and selinux=0."""
+    c.answers["rpm-ostree"] = (0, json.dumps({"deployments": [{"booted": True, "checksum": "aaa"},
+                                                              {"booted": False, "checksum": "aaa"}]}))
+    basic_graphics(c)
     c.file("sys/fs/selinux/enforce", "0")
 
 
 def options_with_update(c):
     """A Boot options change (nomodeset) made while an update was waiting: the start is the update's trial."""
     setattr(c, "cmdline", c.cmdline + " nomodeset")
-    c.remove("sys/class/drm/card1")
-    c.remove(f"{PCI}/0000:00:02.0/driver")
-    c.remove("sys/class/backlight/intel_backlight")
+    basic_graphics(c)
 
 
 def move_touchpad(c):
@@ -549,7 +556,7 @@ def service_name():
     c.answers["running"] = (0, "switcheroo-control.service loaded active running Switcheroo Control Proxy service\n")
     name = health.services()["service:switcheroo-control.service"]["name"]
     if name != "The Switcheroo Control Proxy service (switcheroo-control.service)":
-        sys.exit(f"ERROR: trial check: a service's note reads {name!r}")
+        die(f"a service's note reads {name!r}")
     shutil.rmtree(c.root)
 
 
@@ -563,7 +570,7 @@ def own_mistake():
         raise RuntimeError("made-up mistake")
     health.run = broken
     if health.compare(0) != 0:
-        sys.exit("ERROR: trial check: a mistake in the check fails the start")
+        die("a mistake in the check fails the start")
     shutil.rmtree(c.root)
 
 
@@ -573,16 +580,16 @@ def crash_seen_before():
     cmdline(c)
     health.record(0)
     if health.lost(health.load()):
-        sys.exit("ERROR: trial check: a crash kind already seen at the last good start counts as new")
+        die("a crash kind already seen at the last good start counts as new")
     shutil.rmtree(c.root)
 
 
 def test_args():
     c = setup()
     if health.test_args("sound") != 7:
-        sys.exit("ERROR: trial check: a test runs with no saved list of what works")
+        die("a test runs with no saved list of what works")
     if health.test_args("quick") != []:
-        sys.exit("ERROR: trial check: the first six rollback tests need a saved list of what works")
+        die("the first six rollback tests need a saved list of what works")
     # A second sound card on the same chip with its own driver: both are blocked.
     audio = f"{PCI}/0000:00:1f.3"
     c.device(f"{audio}/hdmi", "platform")
@@ -596,11 +603,11 @@ def test_args():
             "bluetooth": ["module_blacklist=btusb"], "graphics": ["module_blacklist=i915"], "printing": [],
             "service": []}
     if got != want:
-        sys.exit(f"ERROR: trial check: test copies would block {got}, not {want}")
+        die(f"test copies would block {got}, not {want}")
     c.cmdline += " module_blacklist=nouveau"       # the owner's own block stays in the test copy's
     cmdline(c)
     if health.test_args("graphics") != ["module_blacklist=nouveau,i915"]:
-        sys.exit(f"ERROR: trial check: the owner's own driver block is dropped: {health.test_args('graphics')}")
+        die(f"the owner's own driver block is dropped: {health.test_args('graphics')}")
     # A basic startup screen with a built-in driver next to the real one: only the real one is blocked.
     simple = "sys/devices/platform/simple-framebuffer.0"
     c.device(simple, "platform")
@@ -609,20 +616,20 @@ def test_args():
     c.driver(simple, "platform", "simpledrm", builtin=True)
     health.record(0)
     if health.test_args("graphics") != ["module_blacklist=nouveau,i915"]:
-        sys.exit(f"ERROR: trial check: a startup screen stops the graphics test: {health.test_args('graphics')}")
+        die(f"a startup screen stops the graphics test: {health.test_args('graphics')}")
     c.remove("sys/bus/pci/drivers/i915/module")   # a driver without a module link is found by its name
     if health.test_args("graphics") != ["module_blacklist=nouveau,i915"]:
-        sys.exit(f"ERROR: trial check: a driver without a module link isn't found: {health.test_args('graphics')}")
+        die(f"a driver without a module link isn't found: {health.test_args('graphics')}")
     c.remove("sys/module/i915/initstate")         # now every graphics driver is built in: can't be blocked
     if health.test_args("graphics") != 9:
-        sys.exit("ERROR: trial check: built-in graphics drivers aren't refused")
+        die("built-in graphics drivers aren't refused")
     c.answers["running"] = (0, "")
     c.answers["lpstat -r"] = (1, "scheduler is not running\n")
     c.remove("sys/class/net/wlp1s0")
     health.record(0)
     for kind in ("wifi", "printing", "service"):
         if health.test_args(kind) != 8:
-            sys.exit(f"ERROR: trial check: the {kind} test runs on a computer without it working")
+            die(f"the {kind} test runs on a computer without it working")
     shutil.rmtree(c.root)
 
 

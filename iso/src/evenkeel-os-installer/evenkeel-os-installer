@@ -72,7 +72,7 @@ class InstallerWindow(Adw.ApplicationWindow):
         self.connect("close-request", self.closing)
         self.show_screen(STEPS[0])
 
-    # ------------------------------------------------------------------ navigation
+    # Navigation
 
     def screen(self, cls):
         if cls not in self.made:
@@ -149,11 +149,9 @@ class InstallerWindow(Adw.ApplicationWindow):
 
     def closing(self, *_):
         """The window can't be closed while the disk is being written."""
-        if self.installing:
-            return True
-        return False
+        return self.installing
 
-    # ------------------------------------------------------------------ what is shown
+    # What is shown
 
     def update(self):
         s = self.current
@@ -163,7 +161,7 @@ class InstallerWindow(Adw.ApplicationWindow):
         s.relabel()
         if cls in STEPS:
             self.step.set_text(_("Step {number} of {total}: {name}").format(number=STEPS.index(cls) + 1,
-                                                                             total=len(STEPS), name=_(s.step)))
+                                                                            total=len(STEPS), name=_(s.step)))
         else:
             self.step.set_text("")
         self.heading.set_text(_(s.title))

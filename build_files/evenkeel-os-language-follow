@@ -1,17 +1,32 @@
 #!/bin/bash
-# After a language change in Settings, date and number formats are set back to follow the language.
+# After a language change: formats follow it (whole session); "bazaar" (at login) clears Bazaar's old-language copy.
 set -u
 user=/org/freedesktop/Accounts/User$(id -u)
-mark=${XDG_STATE_HOME:-$HOME/.local/state}/evenkeel-os/language
+state=${XDG_STATE_HOME:-$HOME/.local/state}/evenkeel-os
+language() {
+  gdbus call --system --dest org.freedesktop.Accounts --object-path "$user" \
+    --method org.freedesktop.DBus.Properties.Get org.freedesktop.Accounts.User Language \
+    | sed -n "s/^(<'\(.*\)'>,)$/\1/p"
+}
+changed() {     # $1: mark file, $2: language; true when it differs from the one marked
+  [ -n "$2" ] && ! { [ -f "$1" ] && [ "$(cat "$1")" = "$2" ]; }
+}
+mark() { mkdir -p "$state" && printf '%s\n' "$2" > "$1"; }
+if [ "${1:-}" = bazaar ]; then
+  now=$(language)
+  [ -n "$now" ] || [ ! -f /etc/locale.conf ] || now=$(sed -n 's/^LANG="\{0,1\}\([^"]*\)"\{0,1\}$/\1/p' /etc/locale.conf)
+  changed "$state/bazaar-language" "$now" || exit 0
+  pgrep -u "$(id -u)" -x bazaar-daemon >/dev/null && exit 0     # in use by another session: next login
+  rm -rf "${XDG_CACHE_HOME:-$HOME/.cache}/io.github.kolunmi.Bazaar"
+  mark "$state/bazaar-language" "$now"
+  exit 0
+fi
 follow() {
   local now
-  now=$(gdbus call --system --dest org.freedesktop.Accounts --object-path "$user" \
-    --method org.freedesktop.DBus.Properties.Get org.freedesktop.Accounts.User Language \
-    | sed -n "s/^(<'\(.*\)'>,)$/\1/p")
-  [ -n "$now" ] || return 0     # empty: the account follows the computer's language
-  [ -f "$mark" ] && [ "$(cat "$mark")" = "$now" ] && return 0
+  now=$(language)
+  changed "$state/language" "$now" || return 0
   gsettings reset org.gnome.system.locale region
-  mkdir -p "${mark%/*}" && printf '%s\n' "$now" > "$mark"
+  mark "$state/language" "$now"
 }
 follow
 gdbus monitor --system --dest org.freedesktop.Accounts --object-path "$user" | while read -r _; do follow; done

@@ -3,7 +3,7 @@ import os
 import platform
 import tarfile
 
-from evenkeel_os_ui import GUI, _, ask, choose, notify, say, user_folder, zenity
+from evenkeel_os_ui import GUI, _, ask, choose, notify, say, short_home, user_folder, zenity
 from evenkeel_os_packages import (
     app_list, boxes, common, flathub, installed, printers, reading, sources, targets, update_notes, vpn,
 )
@@ -19,7 +19,7 @@ def pick_file():
         if d.is_dir():
             found += [p for p in d.iterdir() if p.is_file() and p.suffix.lower() in (".rpm", ".deb")]
     found = sorted(set(found), key=lambda p: p.stat().st_mtime, reverse=True)[:30]
-    rows = [[p.name, str(p.parent).replace(str(common.HOME), "~", 1)] for p in found]
+    rows = [[p.name, short_home(p.parent)] for p in found]
     if not rows:
         if GUI:
             r = zenity("--file-selection", "--file-filter=" + _("Packages (.rpm, .deb)") + " | *.rpm *.deb")
@@ -82,11 +82,8 @@ def install(path):
     match = None if info["rules_only"] or pkg.name in sources.SOURCED else flathub.flathub_match(pkg, info)
     if match and installed.flatpak_installed(match[0]):
         app_id, name = match
-        a = ask(_("{name} is already installed from Bazaar, the app store.\n\nRecommended: Open it.").format(name=name)
-                + "\n\n" + update_notes.second_copy(pkg, info, _("Install the file too")),
-                ok=_("Open it"), extra=_("Install the file too"))
+        a = installed.from_bazaar(pkg, info, name, {"where": "flathub", "package": app_id, "title": name})
         if a == "ok":
-            installed.open_app({"where": "flathub", "package": app_id})
             return 0
         if a != "extra":
             return 1

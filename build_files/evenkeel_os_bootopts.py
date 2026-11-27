@@ -1,10 +1,9 @@
 """Boot options: kernel settings the computer starts with, changed in Wheelhouse."""
 import json
 import re
-import subprocess
 from pathlib import Path
 
-from evenkeel_os_ui import _, N_
+from evenkeel_os_ui import _, N_, answer
 
 # The settings Wheelhouse added, so it can take them out; in /var, the same for every version.
 STATE = Path("/var/lib/evenkeel-os/boot-options.json")
@@ -123,7 +122,8 @@ def risk(setting):
 
 def merged(current, adding):
     """current with adding put in: a setting with the same name replaces the old one, and none is doubled."""
-    out = [s for s in current if name(s) not in {name(a) for a in adding}]
+    replaced = {name(a) for a in adding}
+    out = [s for s in current if name(s) not in replaced]
     for s in adding:
         if name(s) not in {name(x) for x in out}:
             out.append(s)
@@ -141,11 +141,8 @@ def added():
 
 def next_start():
     """The settings the next start uses (a waiting version's, or this one's), or None when unreadable."""
-    try:
-        r = subprocess.run(["/usr/bin/rpm-ostree", "kargs"], capture_output=True, text=True, timeout=60)
-    except (OSError, subprocess.TimeoutExpired):
-        return None
-    return r.stdout.split() if r.returncode == 0 else None
+    r = answer(["/usr/bin/rpm-ostree", "kargs"], 60)
+    return r.stdout.split() if r and r.returncode == 0 else None
 
 
 def running():

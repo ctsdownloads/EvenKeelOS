@@ -229,10 +229,10 @@ def open_file(path):
     elif where == "artcraft":
         source, how = "ArtCraft", _("ArtCraft's signature is checked first, and it updates once a day.")
     else:
-        distro, label = boxes.box_words(where)[0], _(boxes.box_words(where)[2])
         first = "" if boxes.box_exists(common.BOXES[where]["name"]) else " " + boxes.first_time(where)[0]
-        source = distro
-        how = _("It goes in the {label} and updates with System Update.").format(label=label) + first
+        source = "Fedora" if where == "rpm" else "Ubuntu"
+        how = _("It goes in the {label} and updates with System Update.").format(
+            label=_(common.BOXES[where]["label"])) + first
     if ask(new.format(source=source, **shows) + "\n\n" + _("Recommended: Install {name}.").format(name=name) + " " +
            how, ok=_("Install {name}").format(name=name), cancel=_("Cancel")) != "ok":
         return 1

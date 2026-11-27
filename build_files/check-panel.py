@@ -1,7 +1,5 @@
 #!/usr/bin/python3 -I
 """Build check for the Wheelhouse window: every tool is on a real page with an icon and a command."""
-import importlib.machinery
-import importlib.util
 import shutil
 import sys
 from pathlib import Path
@@ -10,6 +8,7 @@ sys.path.insert(0, "/usr/lib/evenkeel-os")
 import evenkeel_os_dialogs as dialogs  # noqa: E402
 import evenkeel_os_guide as guide  # noqa: E402
 import evenkeel_os_panel as panel  # noqa: E402
+from evenkeel_os_ui import load_program  # noqa: E402
 
 ICONS = [Path("/usr/share/icons/Adwaita"), Path("/usr/share/icons/hicolor")]
 problems = []
@@ -38,10 +37,7 @@ for t in tools:
     if isinstance(t.run, list) and not shutil.which(t.run[0]):
         problems.append(f"{t.title} runs {t.run[0]}, which isn't in this image")
 # Every Wheelhouse job and every Install Package File job has a row in the window.
-loader = importlib.machinery.SourceFileLoader("tools", "/usr/bin/evenkeel-os-tools")
-spec = importlib.util.spec_from_loader(loader.name, loader)
-tools_module = importlib.util.module_from_spec(spec)
-loader.exec_module(tools_module)
+tools_module = load_program("/usr/bin/evenkeel-os-tools", "tools")
 jobs = {key for key, _, _, _ in tools_module.TOOLS} - {"layout", "vpn"}     # layout: its picker; vpn: Get a VPN
 runs = {" ".join(t.run[:2]) for t in tools if isinstance(t.run, list)}
 for job in sorted(jobs):

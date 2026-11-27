@@ -71,14 +71,10 @@ class LanguageScreen(screens.ListScreen):
         self.choose()
 
     def status(self):
-        return _("Chosen: {name}.").format(name=language_name(self.c.locale))
+        return _("Chosen: {name}.").format(name=i18n.language(self.c.locale))
 
 
-def language_name(loc):
-    return i18n.language(loc)
-
-
-# ---------------------------------------------------------------------------------------------------- 2 Keyboard
+# 2 Keyboard
 
 class KeyboardScreen(screens.ListScreen):
     title = N_("Keyboard layout")
@@ -122,7 +118,7 @@ class KeyboardScreen(screens.ListScreen):
         return _("Chosen: {names}.").format(names=", ".join(self.name(k) for k in self.c.layouts))
 
 
-# ------------------------------------------------------------------------------------- 3 Keyboard at start
+# 3 Keyboard at start
 
 class BootKeyboardScreen(screens.ListScreen):
     """Layouts the text console has, for typing the disk password."""
@@ -171,12 +167,7 @@ class BootKeyboardScreen(screens.ListScreen):
         return missing + _("Chosen: {name}.").format(name=self.name(k))
 
 
-# ---------------------------------------------------------------------------------------------------- 4 Network
-
-PLACE_CHOICES = [(net.HOME, N_("Your own home network")),
-                 (net.WORK, N_("An office. Nothing gets in, and your folders aren't shared.")),
-                 (net.PUBLIC, N_("A café, hotel, airport, or anywhere else. Nothing gets in."))]
-
+# 4 Network
 
 class NetworkScreen(screens.ListScreen):
     title = N_("Network")
@@ -213,7 +204,7 @@ class NetworkScreen(screens.ListScreen):
 
     def items(self):
         if self.placing:
-            return [(_(net.PLACES[z]), _(about), z == net.PUBLIC) for z, about in PLACE_CHOICES]
+            return [(_(net.PLACES[z]), _(about), z == net.PUBLIC) for z, about in net.ABOUT.items()]
         if self.chosen and self.chosen["secured"]:
             return []
         return [(w["ssid"], (_("Signal {percent}%, password needed") if w["secured"] else
@@ -227,7 +218,7 @@ class NetworkScreen(screens.ListScreen):
 
     def pick(self, i):
         if self.placing:
-            zone, network = PLACE_CHOICES[i][0], self.placing
+            zone, network = list(net.ABOUT)[i], self.placing
             saved = net.set_place(network, zone)
             place = _(net.PLACES[zone])
             self.busy = (_("{network} is saved as {place}.").format(network=network.name, place=place) if saved else
@@ -298,7 +289,7 @@ class NetworkScreen(screens.ListScreen):
         return _("Wired network: not connected.") + ("" if self.wifi else " " + _("No Wi-Fi networks found."))
 
 
-# ---------------------------------------------------------------------------------------------------- 5 Time zone
+# 5 Time zone
 
 class TimeZoneScreen(screens.ListScreen):
     title = N_("Time zone")
@@ -356,7 +347,7 @@ class TimeZoneScreen(screens.ListScreen):
                                            _("Automatic"))
 
 
-# ---------------------------------------------------------------------------------------------------- 6 Date and time
+# 6 Date and time
 
 class DateTimeScreen(screens.ListScreen):
     title = N_("Date and time")
@@ -409,18 +400,14 @@ class DateTimeScreen(screens.ListScreen):
         t = self.c.manual_time
         if self.stage == "servers":
             return [(s, "", False) for s in self.c.time_servers]
+        now = {"Year": str(t.year), "Month": MONTHS[t.month - 1], "Day": str(t.day), "Hour": f"{t.hour:02d}",
+               "Minute": f"{t.minute:02d}"}
         if self.stage in self.FIELDS:
-            now = {"Year": str(t.year), "Month": MONTHS[t.month - 1], "Day": str(t.day), "Hour": f"{t.hour:02d}",
-                   "Minute": f"{t.minute:02d}"}[self.stage]
-            return [(_(v) if self.stage == "Month" else v, "", v == now) for v in self.values()]
+            return [(_(v) if self.stage == "Month" else v, "", v == now[self.stage]) for v in self.values()]
         out = [(_("Automatic"), _("From time servers on the internet (recommended)"), self.c.time_automatic),
                (_("Set it myself"), "", not self.c.time_automatic)]
         if not self.c.time_automatic:
-            out += [(_(self.FIELD_NAMES["Year"]), str(t.year), False),
-                    (_(self.FIELD_NAMES["Month"]), _(MONTHS[t.month - 1]), False),
-                    (_(self.FIELD_NAMES["Day"]), str(t.day), False),
-                    (_(self.FIELD_NAMES["Hour"]), f"{t.hour:02d}", False),
-                    (_(self.FIELD_NAMES["Minute"]), f"{t.minute:02d}", False)]
+            out += [(_(self.FIELD_NAMES[f]), _(now[f]) if f == "Month" else now[f], False) for f in self.FIELDS]
         return out
 
     def refresh(self, to_chosen=True):
@@ -479,7 +466,7 @@ class DateTimeScreen(screens.ListScreen):
         return _("Chosen: {time}.").format(time=time_text(self.c.manual_time))
 
 
-# ---------------------------------------------------------------------------------------------------- 7 Clock
+# 7 Clock
 
 class ClockScreen(screens.ListScreen):
     title = N_("Clock")
@@ -490,7 +477,7 @@ class ClockScreen(screens.ListScreen):
         return _("How should the clock show the time?")
 
     def items(self):
-        h24 = self.c.clock_24 if self.c.clock_24 is not None else not data.uses_12_hour(self.c.locale)
+        h24 = self.c.uses_24_hour()
         return [(_("12 hour"), "3:30 PM", not h24), (_("24 hour"), "15:30", h24)]
 
     def pick(self, i):
