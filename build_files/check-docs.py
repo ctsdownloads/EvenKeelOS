@@ -1,8 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build test: the README's contents list and every link in the README and guides are right.
-
-Run from the repository root:  python3 build_files/check-docs.py
-"""
+"""Build test: the README's contents list and every link in the README and guides are right."""
 import re
 import sys
 from pathlib import Path

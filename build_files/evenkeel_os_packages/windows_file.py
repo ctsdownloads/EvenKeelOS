@@ -107,8 +107,7 @@ def same_maker(maker, prog):
 
 
 def rank(prog):
-    """In the browser (chosen over its app) or its company's own Linux version, then its own Linux version from
-    Flathub, Fedora or Ubuntu, a hand-picked replacement, an app of its kind."""
+    """Sort order of an offer: the browser or the company's own Linux version first, an app of its kind last."""
     offer = prog["offer"]
     return -1 if offer.get("web") or offer.get("vpn") else 2 if offer.get("kind") else 1 if offer.get("job") else 0
 

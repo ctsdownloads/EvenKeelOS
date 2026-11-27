@@ -295,8 +295,7 @@ def sharing_stop():
 
 
 def sharing_sync(close=None):
-    """Samba gets the folder list and runs only while a Home network is connected; Windows finds it only there.
-    close: a share taken out or changed, so connections already open to it are dropped."""
+    """Samba runs only on a Home network; close: a share was taken out or changed, so drop its connections."""
     if not sharing.set_up():          # smb.conf was replaced: stop only what Shared folders started
         sharing_stop()
         return
@@ -417,8 +416,7 @@ OLD_WORK = (["--remove-port=1025-65535/tcp", "--remove-port=1025-65535/udp", "--
 
 
 def firewall_change(zone, flags, mend=()):
-    """Saved changes to one zone, then reloaded; "" when it worked. Already there, or already gone, is fine.
-    mend: changes made even when one of flags failed, so the saved settings never keep a hole."""
+    """Saved changes to one zone, then reloaded; "" when it worked. mend: made even when a flag failed."""
     problem = ""
     for flag in [*flags, *mend]:
         if problem and flag not in mend:
@@ -441,8 +439,7 @@ def save_let_in(state):
 
 
 def still_open(zone, entries):
-    """Adds back every port the place itself and these entries use. firewalld merges and splits port ranges, so taking
-    a port out can cut a hole in a range something else needs; adding them all back mends it."""
+    """Adds back every port in use, since firewalld splits port ranges when one port is taken out."""
     unused, base_ports = letin.zone_base(zone)
     return [f"--add-port={p}" for p in sorted(base_ports | {p for e in entries for p in e["ports"]})]
 

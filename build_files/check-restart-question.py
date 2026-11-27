@@ -1,8 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check: the window before an automatic restart gives each answer the startup check expects.
-
-Runs Wheelhouse's restart-question against a made-up zenity and pkexec: no window opens and nothing restarts.
-"""
+"""Build check: the window before an automatic restart gives each answer the startup check expects."""
 import importlib.machinery
 import importlib.util
 import os

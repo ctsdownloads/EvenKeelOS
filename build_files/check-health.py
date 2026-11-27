@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-"""Build check: the trial check (evenkeel_os_health) against a made-up computer, working and then broken.
-
-Each case changes one thing from a working computer and says whether the check must call it broken. Unplugged,
-switched-off and removed things must never count, so a new version is never rolled back for them.
-Usage: check-health.py [FOLDER WITH evenkeel_os_health.py]   (default: /usr/lib/evenkeel-os)
-"""
+"""Build check: the trial check (evenkeel_os_health) against a made-up computer, working and then broken."""
 import json
 import os
 import shutil

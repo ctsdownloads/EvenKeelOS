@@ -1,9 +1,4 @@
-"""Network safety, Let in: apps and ports a place lets in, on top of what the place itself allows.
-
-The list lives in STATE (root writes it through evenkeel-os-tools-admin; anyone may read it), and each entry is also
-in the place's firewall zone. APPS is the list to pick from, made when the image is built from three sources:
-firewalld's own services, IANA's port list (/etc/services) and CHECKED, apps checked by hand against their own docs.
-"""
+"""Network safety, Let in: apps and ports a place lets in, on top of what the place itself allows."""
 import json
 import re
 from pathlib import Path

@@ -1,9 +1,4 @@
-"""Shared folders: folders in your home folder that computers on a Home network can open, with one password.
-
-The list lives in STATE (root writes it through evenkeel-os-tools-admin; anyone may read it). Samba serves it from
-SHARES, which smb.conf includes. Everything another computer does in a folder is done as the folder's owner, so it
-can reach nothing the owner couldn't.
-"""
+"""Shared folders: folders in your home folder that computers on a Home network can open, with one password."""
 import json
 import os
 import pwd

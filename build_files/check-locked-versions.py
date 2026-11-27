@@ -1,7 +1,4 @@
-"""Build check: every package not signed by Fedora's key is on the locked list, at exactly that version.
-
-Usage: check-locked-versions.py locked-versions.txt FEDORA-KEY-FILE [rpm options, such as --dbpath DIR]
-"""
+"""Build check: every package not signed by Fedora's key is on the locked list, at exactly that version."""
 import os
 import subprocess
 import sys

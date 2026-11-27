@@ -50,8 +50,7 @@ CACHE = Path.home() / ".cache" / "evenkeel-os"
 LOG = CACHE / "tools.log"
 DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
 PAUSE = Path("/var/lib/evenkeel-os/updates-paused-until")      # set by evenkeel-os-tools-safe after an undo
-# "update|test|boot-options|settings-test|settings-failed <time>", written by greenboot's green.d
-# (90-evenkeel-os-rolled-back.sh)
+# "update|test|boot-options|settings-test|settings-failed <time>", written by greenboot (90-evenkeel-os-rolled-back.sh)
 ROLLED_BACK = Path("/var/lib/evenkeel-os/rolled-back")
 ROLLED_BACK_WHY = Path("/var/lib/evenkeel-os/rolled-back-why")   # what the trial check found broken, for this note
 STATE = Path(os.environ.get("XDG_STATE_HOME") or Path.home() / ".local" / "state") / "evenkeel-os"
@@ -432,7 +431,6 @@ def undo_update():
         say(_("Done. The computer starts with the boot options it has now."), title=w)
         return 0
     if staged:
-        # An update is downloaded but not in use yet: the version running now is not the new one.
         # Translators: {booted} is a date such as "Oct 14", or the words "before it" when the date isn't known.
         if ask(_("An update from {staged} is waiting. It starts at your next restart. The version you're using now "
                  "is from {booted}.\n\nIf you don't want it: Don't use it. Your computer keeps the version it has "
@@ -709,10 +707,7 @@ def layout():
     return 0
 
 
-# What each test breaks, and what you see. Kinds match TEST_KINDS in evenkeel-os-tools-admin, in order; the
-# breaking is in build_files/greenboot (check-rollback-tests.py checks both at build time).
-# In every test the computer has 2 bad starts in a row, and the 3rd start is back on this version.
-# The tests from Sound on break something that worked, checked after a login (their story gets AFTER_LOGIN).
+# Kinds match TEST_KINDS in evenkeel-os-tools-admin, in order; the tests from Sound on are checked after a login.
 AFTER_LOGIN_TESTS = ("sound", "wifi", "bluetooth", "graphics", "printing", "firewall", "update-program", "service")
 AFTER_LOGIN = N_("Log in when the login screen shows. About 3 minutes after you log in, a window asks before the "
                  "computer restarts. That happens on 2 starts, and the third start is back on this version. If "
@@ -753,8 +748,6 @@ ROLLBACK_TESTS = [
 ]
 
 
-# Not a test copy: really deletes settings in /etc (evenkeel-os-settings-test).
-# What each test does, short enough for the list; the full story comes when one is picked.
 TEST_SHORT = {"quick": N_("A start-up check fails"), "no-login-screen": N_("The login screen doesn't start"),
               "no-networking": N_("Networking doesn't start"), "stuck": N_("Starting hangs (about 7 minutes)"),
               "login-loop": N_("Logging in drops you back"), "freeze": N_("The computer locks up"),
@@ -762,6 +755,7 @@ TEST_SHORT = {"quick": N_("A start-up check fails"), "no-login-screen": N_("The 
               "graphics": N_("Basic graphics only"), "printing": N_("Printing doesn't start"),
               "firewall": N_("The firewall doesn't start"), "update-program": N_("Updates can't run"),
               "service": N_("A background service fails"), "settings": N_("Settings are really deleted")}
+# Not a test copy: really deletes settings in /etc (evenkeel-os-settings-test).
 SETTINGS_TEST_ROW = (N_("Important settings deleted"),
                      N_("Important system settings are really deleted, and the computer restarts right away. The "
                         "next start finds them missing, puts them back from the copy it saved, and restarts once "
@@ -906,11 +900,8 @@ def settings_note():
     # Only soon after: an account made later doesn't get an old message.
     if time.time() - int(stamp) > 3 * 86400:
         return 0
-    try:
-        if SETTINGS_SHOWN.read_text().strip() == stamp:
-            return 0
-    except OSError:
-        pass
+    if SETTINGS_SHOWN.is_file() and SETTINGS_SHOWN.read_text().strip() == stamp:
+        return 0
     paths = lines[1:]
     named = [_(SETTINGS_NAMES[p]) for p in paths if p in SETTINGS_NAMES]
     rest = [p for p in paths if p not in SETTINGS_NAMES]
@@ -966,11 +957,8 @@ def rolled_back_note():
         kind, stamp = ROLLED_BACK.read_text().split()
     except (OSError, ValueError):
         return 0
-    try:
-        if ROLLED_BACK_SHOWN.read_text().strip() == stamp:
-            return 0
-    except OSError:
-        pass
+    if ROLLED_BACK_SHOWN.is_file() and ROLLED_BACK_SHOWN.read_text().strip() == stamp:
+        return 0
     ds = deployments() or []
     booted = next((d for d in ds if d.get("booted")), None)
     # Translators: {since} is a date such as "Oct 14", or the words "before the update" when the date isn't known.
@@ -1027,8 +1015,7 @@ RESTART_QUESTION = Path("/run/evenkeel-os/restart-question")   # the boot ID, th
 
 
 def restart_question(kind, start):
-    """The window before an automatic restart, opened by the startup check (evenkeel_os_health.ask_first): 0 restart
-    now, 3 keep (the password was given), 1 the window couldn't show."""
+    """Ask before an automatic restart: 0 restart now, 3 keep (password given), 1 window couldn't show."""
     try:
         names = [n[:200] for n in RESTART_QUESTION.read_text().splitlines()[1:] if n]
     except OSError:

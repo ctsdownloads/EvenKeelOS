@@ -1,9 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check for Shared folders: Samba shares nothing as a guest and only what Wheelhouse lists, it starts
-off, Windows and Macs can find it once it runs, and only folders inside your own home folder can be shared.
-
-Usage: check-sharing.py   (in the image, after build.sh has set Shared folders up)
-"""
+"""Build check for Shared folders: Samba shares only what Wheelhouse lists, and only from the home folder."""
 import os
 import stat
 import subprocess

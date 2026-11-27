@@ -166,7 +166,6 @@ def install_system(pkg, title, printer=False, update=False, services=False):
             windows.failed(_("Adding {title} to the system").format(title=title))
         return 1
     app_list.remember({"title": title, "package": pkg.name, "nevra": pkg.nevra, "where": "system", "version": pkg.evr})
-    # checked once at the next login: is it really there, and for a printer driver, add the printer
     # this system ignores an install script turning on a service, so it is done after the restart
     after_restart.add_pending({"title": title, "package": pkg.name, "printer": printer and not update,
                                "version": pkg.evr, "services": services and not update})

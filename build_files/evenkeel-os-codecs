@@ -75,7 +75,7 @@ gui() {
   command -v zenity >/dev/null 2>&1 || { say "$(gettext "zenity is missing. Use the typed commands instead: run  codecs")"; exit 1; }
   local choice; choice=$(ask)
   if [ -n "$choice" ]; then install_with_window "$choice"
-  elif window_open; then run_helper skip >/dev/null 2>&1; fi      # "Not now" closes the setup window
+  elif window_open; then run_helper skip >/dev/null; fi      # "Not now" closes the setup window
   return 0
 }
 

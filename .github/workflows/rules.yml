@@ -1,0 +1,25 @@
+# The code rules: one-line comments, no except that does nothing, no forbidden words.
+name: Check the code rules
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rules:
+    name: Check the code rules
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Code follows the rules
+        run: python3 build_files/check-rules.py

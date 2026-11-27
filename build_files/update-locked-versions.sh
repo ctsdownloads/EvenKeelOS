@@ -1,6 +1,5 @@
 #!/bin/bash
-# Daily version check: writes the newest versions into locked-versions.txt and lists each change in the notes file.
-# Run from the repository root:  build_files/update-locked-versions.sh NOTES-FILE
+# Daily version check: writes the newest versions into locked-versions.txt; run from the repo root with NOTES-FILE.
 set -euo pipefail
 
 lock=build_files/locked-versions.txt

@@ -153,6 +153,10 @@ other projects, under their own licenses, with their source available there:
   one version. See [Boot test](docs/building.md#boot-test). Every Test automatic
   rollback test can also run for real in that virtual machine when a build is
   started by hand. See [Rollback tests](docs/building.md#rollback-tests).
+- **Code rules:** every change is checked for one-line comments, no Python
+  error dropped without a word (`except: pass`, `suppress`) and no forbidden
+  words. See
+  [How it's built](docs/building.md#how-its-built).
 - **Boot files:** before making them, the build matches the zstd tool to its
   library version, since a Fedora update can bring one without the other. See
   [How it's built](docs/building.md#how-its-built).

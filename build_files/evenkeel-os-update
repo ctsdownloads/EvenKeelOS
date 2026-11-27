@@ -10,52 +10,53 @@ HELPER=/usr/libexec/evenkeel-os-update-helper
 zenity=zenity; [ -n "${EVENKEEL_OS_PANEL:-}" ] && zenity=/usr/libexec/evenkeel-os-dialog
 
 staged() {   # is a new system image waiting for a restart?
-  rpm-ostree status --json 2>/dev/null | "$HELPER" staged
+  rpm-ostree status --json | "$HELPER" staged
 }
 
 # The updater's own summary of what failed, from this run's log ("1 update module(s) failed: ...").
 failed_parts() {
-  journalctl -u "$SERVICE" --since "$1" -o cat 2>/dev/null | "$HELPER" failed-parts
+  can_read_log || return 0
+  journalctl -u "$SERVICE" --since "$1" -o cat | "$HELPER" failed-parts
 }
 
 can_read_log() { id -nG | grep -qwE 'wheel|adm|systemd-journal'; }
 
 # Is the automatic update running? (A service waiting to retry after a failure is not running.)
 auto_running() {
-  [ "$(systemctl show -p ActiveState --value "$AUTO" 2>/dev/null)" = activating ] &&
-    [ "$(systemctl show -p SubState --value "$AUTO" 2>/dev/null)" != auto-restart ]
+  [ "$(systemctl show -p ActiveState --value "$AUTO")" = activating ] &&
+    [ "$(systemctl show -p SubState --value "$AUTO")" != auto-restart ]
 }
 # Did our start fail because the automatic update held uupd's lock?
 lost_to_auto() {
   auto_running && return 0
-  journalctl -u uupd-manual.service --since "$1" -o cat 2>/dev/null | grep -q 'already running'
+  can_read_log && journalctl -u uupd-manual.service --since "$1" -o cat | grep -q 'already running'
 }
 # Wait for the automatic update to finish; its result as an exit code.
 follow_auto() {
   while auto_running; do sleep 2; done
-  [ "$(systemctl show -p Result --value "$AUTO" 2>/dev/null)" = success ]
+  [ "$(systemctl show -p Result --value "$AUTO")" = success ]
 }
 # The manual service retries on failure, so start it without waiting and watch its start job.
-manual_job() { [ -n "$(systemctl show -p Job --value uupd-manual.service 2>/dev/null)" ]; }
-manual_retrying() { [ "$(systemctl show -p SubState --value uupd-manual.service 2>/dev/null)" = auto-restart ]; }
+manual_job() { [ -n "$(systemctl show -p Job --value uupd-manual.service)" ]; }
+manual_retrying() { [ "$(systemctl show -p SubState --value uupd-manual.service)" = auto-restart ]; }
 # Start the update, or follow the automatic one; sets SERVICE.
 run_update() {
   if ! auto_running; then
-    systemctl start --no-block uupd-manual.service >/dev/null 2>&1 || return 1
+    systemctl start --no-block uupd-manual.service || return 1
     lost=""
     while manual_job; do
       if manual_retrying && lost_to_auto "$1"; then
         # the automatic update holds the lock and is doing the same work: cancel the manual retry, follow it
-        systemctl stop uupd-manual.service >/dev/null 2>&1
+        systemctl stop uupd-manual.service
         lost=1; break
       fi
       sleep 2
     done
     if [ -z "$lost" ]; then
-      [ "$(systemctl show -p Result --value uupd-manual.service 2>/dev/null)" = success ] && return 0
+      [ "$(systemctl show -p Result --value uupd-manual.service)" = success ] && return 0
       # (systemd versions that end the start job at the first failure, before the retry)
       lost_to_auto "$1" || return 1
-      systemctl stop uupd-manual.service >/dev/null 2>&1
+      systemctl stop uupd-manual.service
     fi
   fi
   SERVICE=$AUTO
@@ -63,13 +64,9 @@ run_update() {
   follow_auto
 }
 
-# Battery charge, if on battery and below uupd's bat-min-percent (default 20).
-low_battery() {
-  "$HELPER" low-battery
-}
-
 start=$(date '+%Y-%m-%d %H:%M:%S')
-battery=""; auto_running || battery=$(low_battery)
+# Battery charge, if on battery and below uupd's bat-min-percent (default 20).
+battery=""; auto_running || battery=$("$HELPER" low-battery)
 
 if ! command -v zenity >/dev/null 2>&1 || [ -z "${WAYLAND_DISPLAY:-}${DISPLAY:-}" ]; then
   [ -n "$battery" ] && printf '%s\n' "$(printf "$(gettext "The battery is at %s%%. Plug the computer in: if it runs out during the update, the update is lost.")" "$battery")"
@@ -88,7 +85,7 @@ fi
 
 # Turn uupd's and rpm-ostree's log lines into plain progress text and bar moves.
 steps() {   # $1: the updater service to follow
-  journalctl -f -n 0 -o cat -u "$1" 2>/dev/null | "$HELPER" progress
+  journalctl -f -n 0 -o cat -u "$1" | "$HELPER" progress
 }
 
 if [ -n "$battery" ]; then
@@ -125,12 +122,12 @@ auto_running && text=$(gettext "The automatic update is already running, so this
   echo 100
 ) | "$zenity" --progress "${pulse[@]}" --auto-close --no-cancel --title="$title" --width=480 \
       --text="$text"
-rc=$(cat "$rcfile" 2>/dev/null || echo 1); rm -f "$rcfile"
+rc=1; [ -s "$rcfile" ] && rc=$(cat "$rcfile"); rm -f "$rcfile"
 [ -s "$followfile" ] && SERVICE=$AUTO; rm -f "$followfile"
 
 # What the new version changes: titles from its changes.txt, minus what's already here, at most 8.
 whats_new() {
-  rpm-ostree status --json 2>/dev/null | "$HELPER" whats-new
+  rpm-ostree status --json | "$HELPER" whats-new
 }
 
 # Also notify, in case the window is behind others.

@@ -1,7 +1,5 @@
 #!/usr/bin/bash
-# One-time repair of boot menus written before EvenKeelOS fixed greenboot's file: bootupd joins the boot menu files
-# without line breaks, and greenboot's has no final one, so "save_env boot_success" ran into the next line and the
-# retry counter never counted. Only that exact text is changed, after a backup and GRUB's own syntax check.
+# Repairs old boot menus where greenboot's file had no final line break and ran into the next line.
 cfg=/boot/grub2/grub.cfg
 bad='save_env boot_success### END'
 grep -qF "$bad" "$cfg" || exit 0

@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""The EvenKeelOS installer on the live USB.
-
-One window, one screen at a time (the *screens.py files). At the top: the EvenKeelOS name and logo, the
-Alpha badge and which step this is. At the bottom: the buttons.
-"""
+"""The EvenKeelOS installer on the live USB: one window, one screen at a time (the *screens.py files)."""
 import os
 import sys
 

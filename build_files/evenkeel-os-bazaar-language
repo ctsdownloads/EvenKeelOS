@@ -1,18 +1,15 @@
 #!/bin/bash
-# Runs at login, before the desktop starts (evenkeel-os-bazaar-language.service). Bazaar saves app names and
-# descriptions in the language of the moment and keeps them until Bazaar itself updates, so after a language change
-# it would show the old language. When the account's language differs from last time, Bazaar's saved copy is deleted
-# and Bazaar fetches it again. Nothing else is touched.
+# Deletes Bazaar's cached app names when the account language changed, since Bazaar keeps the old language.
 set -u
 cache=${XDG_CACHE_HOME:-$HOME/.cache}
 mark=$cache/evenkeel-os/bazaar-language
 # The account's language as Settings saved it (AccountsService); empty means the computer's (/etc/locale.conf).
 now=$(gdbus call --system --dest org.freedesktop.Accounts --object-path "/org/freedesktop/Accounts/User$(id -u)" \
-  --method org.freedesktop.DBus.Properties.Get org.freedesktop.Accounts.User Language 2>/dev/null \
+  --method org.freedesktop.DBus.Properties.Get org.freedesktop.Accounts.User Language \
   | sed -n "s/^(<'\(.*\)'>,)$/\1/p")
-[ -n "$now" ] || now=$(sed -n 's/^LANG="\{0,1\}\([^"]*\)"\{0,1\}$/\1/p' /etc/locale.conf 2>/dev/null)
+[ -n "$now" ] || [ ! -f /etc/locale.conf ] || now=$(sed -n 's/^LANG="\{0,1\}\([^"]*\)"\{0,1\}$/\1/p' /etc/locale.conf)
 [ -n "$now" ] || exit 0
-[ "$(cat "$mark" 2>/dev/null)" = "$now" ] && exit 0
+[ -f "$mark" ] && [ "$(cat "$mark")" = "$now" ] && exit 0
 # Bazaar still running from another session: try again at the next login rather than pull files from under it.
 pgrep -u "$(id -u)" -x bazaar-daemon >/dev/null && exit 0
 rm -rf "$cache/io.github.kolunmi.Bazaar"

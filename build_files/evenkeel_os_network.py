@@ -1,8 +1,4 @@
-"""Network safety: whether each saved network is Home, Work or a Public place, and what that lets in.
-
-The place is the network's firewall zone, saved in its own NetworkManager profile (connection.zone), so it follows
-that one network. A network with no zone gets the default, Public place.
-"""
+"""Network safety: whether each saved network is Home, Work or a Public place, and what that lets in."""
 import subprocess
 
 from evenkeel_os_ui import N_
@@ -60,15 +56,12 @@ class Network:
 
     @property
     def needs_asking(self):
-        """Joined (password accepted), a password Wi-Fi, and never asked. A wired profile isn't asked: it
-        matches every cable you plug in, so it stays a Public place unless set in Wheelhouse."""
+        """Joined, a password Wi-Fi, and never asked; a wired profile stays a Public place unless set in Wheelhouse."""
         return bool(self.device) and not self.zone and self.kind == "Wi-Fi" and self.secured
 
 
 def networks():
-    """Saved Wi-Fi and wired networks, the connected ones first; [] when NetworkManager can't be asked.
-    A network counts as connected only once it is fully joined. Hotspots this computer makes are left out: they
-    keep NetworkManager's own sharing zone."""
+    """Saved Wi-Fi and wired networks, the connected ones first; [] when NetworkManager can't be asked."""
     joined = {}
     for line in nmcli("-f", "UUID,DEVICE,STATE", "connection", "show", "--active") or []:
         f = fields(line)
@@ -97,8 +90,7 @@ def networks():
 
 
 def set_place(network, zone):
-    """Save the place in the network's profile. "now": saved and in effect; "later": saved, in effect from the
-    next time it connects; "": not saved."""
+    """Save the place in the network's profile; returns "now", "later" (in effect at next connect) or "" (not saved)."""
     if zone not in PLACES or (network.fixed_public and zone != PUBLIC):
         return ""
     if nmcli("connection", "modify", "uuid", network.uuid, "connection.zone", zone) is None:

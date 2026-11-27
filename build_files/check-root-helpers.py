@@ -1,9 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check: the root helpers refuse hostile input, and no-password permissions stay at the computer only.
-
-Runs in the image build, as root, against the installed helpers. Nothing here changes the system: helper calls
-use input each helper must refuse before doing anything, and rule files go to a scratch folder.
-"""
+"""Build check: the root helpers refuse hostile input, and no-password permissions stay at the computer only."""
 import importlib.machinery
 import importlib.util
 import os
@@ -275,8 +271,7 @@ for f in sorted(ACTIONS.glob("io.github.ctsdownloads.evenkeel-os.*.policy")):
         if v not in ("auth_admin", "auth_admin_keep"):
             bad(f"{f.name}: allow_active is {v}; a no-password action needs a rule limited to the computer")
 
-# The settings test, certificate removal and boot options: each its own action, the password every time, no rule
-# may skip it.
+# Settings test, certificate removal and boot options: no rule may skip the password.
 policy = (ACTIONS / "io.github.ctsdownloads.evenkeel-os.tools.policy").read_text()
 for name, helper in (("settings-test", "evenkeel-os-settings-test"), ("cert-remove", "evenkeel-os-cert-remove"),
                      ("boot-options", "evenkeel-os-boot-options")):

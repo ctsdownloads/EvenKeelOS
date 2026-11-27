@@ -1,12 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build step: the list Network safety's Let an app in picks from, written to evenkeel_os_letin.APPS.
-
-Three sources: the apps checked by hand (let-in-checked.txt, each with the page that states its ports), firewalld's
-own services in this image, and IANA's port list in this image's /etc/services. Fails the build when a source is
-missing or a checked app's ports aren't valid.
-
-Run as:  python3 -I make-let-in-apps.py LIBDIR CHECKED_LIST
-"""
+"""Build step: writes the list Network safety's Let an app in picks from to evenkeel_os_letin.APPS."""
 import json
 import re
 import sys

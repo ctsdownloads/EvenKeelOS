@@ -1,10 +1,5 @@
 #!/usr/bin/python3 -I
-"""Daily: stage newer versions of apps added to the system, from their own download sources.
-
-System Update looks for a new EvenKeelOS version, so an app from a company's own download source (a VPN) would
-otherwise wait for the next one. This asks the download sources directly, and runs the upgrade only when an app
-has a newer version. Like any system update, the new version starts at the next restart.
-"""
+"""Daily: stage newer versions of apps added from their own download sources, which System Update doesn't check."""
 import json
 import re
 import subprocess

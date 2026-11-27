@@ -1349,8 +1349,7 @@ class Window(Adw.ApplicationWindow):
 
 
 def run(tools_module, page="overview", first_login=False):
-    """Open the window (or bring it to the front, on the page asked for). first_login: the guide at login, with
-    its "Don't show this again" box."""
+    """Open the window, or bring it to the front on the page asked for; first_login shows the guide."""
     app = Adw.Application(application_id=APP_ID, flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
     provider = Gtk.CssProvider()
     provider.load_from_data(CSS)

@@ -1,9 +1,5 @@
 #!/usr/bin/python3 -I
-"""Shows a tool's question, message, list, password box or progress inside the Wheelhouse window.
-
-Takes the same options as the zenity calls in EvenKeelOS's tools and answers the same way (exit code and output),
-so a tool started from Wheelhouse runs unchanged. EVENKEEL_OS_PANEL names the window's socket.
-"""
+"""Shows a tool's question, message, list, password box or progress inside the Wheelhouse window."""
 import json
 import os
 import re
@@ -82,8 +78,8 @@ def feed(f):
         for line in sys.stdin:
             send(f, {"line": line.rstrip("\n")})
         send(f, {"end": True})
-    except (OSError, ValueError):
-        pass        # the window closed the progress view
+    except (OSError, ValueError) as e:
+        print(f"The window closed the progress view: {e}", file=sys.stderr)
 
 
 if __name__ == "__main__":

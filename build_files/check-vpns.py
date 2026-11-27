@@ -1,9 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check for Get a VPN: every VPN is complete, its signing key is the pinned one, its download source file
-is right, and the helper finds the services real install scripts turn on.
-
-Runs in the image build, against the installed list, keys and helper. Changes nothing on the system.
-"""
+"""Build check for Get a VPN: each VPN is complete, with the pinned signing key and the right download source."""
 import importlib.machinery
 import importlib.util
 import json

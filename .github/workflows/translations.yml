@@ -1,5 +1,4 @@
-# Every language is complete: EvenKeelOS's own text, the outside apps it translates and each PR's title.
-# Builds nothing.
+# Checks every language is complete: EvenKeelOS's own text, the outside apps' text and each PR's title.
 name: Check the translatable text
 on:
   pull_request:
@@ -43,8 +42,7 @@ jobs:
         env:
           TITLE: ${{ github.event.pull_request.title }}
           AUTHOR: ${{ github.event.pull_request.user.login }}
-        # Not shown under "What is new", so not translated: README and Build changes, and upkeep by Dependabot,
-        # Renovate and the daily version check (the build lists none of these).
+        # README, Build and bot upkeep PRs aren't shown under "What is new", so they need no translation.
         run: |
           hidden='^(README|Build)\b'
           case $AUTHOR in dependabot\[bot\] | renovate\[bot\] | github-actions\[bot\]) exit 0 ;; esac

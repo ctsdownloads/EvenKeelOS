@@ -76,8 +76,7 @@ jobs:
         run: |
           just check
 
-      # Last 60 change titles go into the image for System Update's what's new. Upkeep by Dependabot, Renovate and
-      # the daily version check isn't listed.
+      # Last 60 change titles for System Update's what's new, leaving out bot and version-check upkeep.
       - name: List of changes
         run: |
           git log -60 --format='%cs%x09%s' --perl-regexp --author='^(?!(dependabot|renovate|github-actions)\[bot\])' \

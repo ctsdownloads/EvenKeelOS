@@ -1,8 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build test: every flatpak install and uninstall in our tools names the system or the person's own apps.
-
-Usage: check-flatpak-places.py DIR... (each file in each DIR: Python by its AST, shell scripts line by line)
-"""
+"""Build test: every flatpak install and uninstall names --system or --user."""
 import ast
 import re
 import sys

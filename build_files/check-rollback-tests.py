@@ -1,12 +1,5 @@
 #!/usr/bin/python3
-"""Build check: every test in Wheelhouse's Test automatic rollback list reaches the piece that breaks that thing.
-
-The list in evenkeel-os-tools must name the same tests, in the same order, as evenkeel-os-tools-admin accepts, each
-under its own name; each test's breaking piece must be in the image; and evenkeel-os-test-fail must fail only for its
-own test.
-Also: the settings test's names cover what it deletes, a later rollback's note replaces an earlier one, no test
-piece makes greenboot wait for the login screen, and the login-loop check reads the logind records it depends on.
-"""
+"""Build check: every test in Wheelhouse's Test automatic rollback list reaches the piece that breaks that thing."""
 import re
 import ast
 import subprocess

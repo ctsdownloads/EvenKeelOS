@@ -1,7 +1,4 @@
-"""The fit check on the live USB: whether this computer's parts will work with EvenKeelOS, read from the kernel.
-
-Each result is (level, part, what it found, what to do): level is "good", "limited" or "bad".
-"""
+"""The fit check on the live USB: whether this computer's parts will work with EvenKeelOS, read from the kernel."""
 import glob
 import math
 import os
@@ -86,8 +83,7 @@ def kernel_log():
 
 
 def raid_hidden(log=None):
-    """Whether the BIOS's RAID (Intel RST) setting hides a disk from Linux: the kernel says so, or, when its
-    messages can't be read, an Intel SATA controller runs in RAID mode and no disk inside the computer shows."""
+    """Whether the BIOS's RAID (Intel RST) setting hides a disk from Linux."""
     if log is not None:
         return bool(RAID_HIDDEN.search(log))
     log = kernel_log()

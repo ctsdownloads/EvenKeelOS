@@ -1,10 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check: the settings repair finds broken important settings and puts back exactly those.
-
-Runs evenkeel-os-settings' check and restore against a made-up /etc, saved copy, default settings and systemd
-factory files in a scratch folder (systemd copies its generic files in at boot, before greenboot), then checks that
-greenboot runs each step from the right folder.
-"""
+"""Build check: the settings repair finds broken important settings and puts back exactly those."""
 import importlib.machinery
 import importlib.util
 import os
