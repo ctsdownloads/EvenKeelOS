@@ -90,6 +90,14 @@ install -Dm644 /ctx/evenkeel-os-app-updates.timer /usr/lib/systemd/system/evenke
 install -Dm755 /ctx/evenkeel-os-flatpak-languages /usr/libexec/evenkeel-os-flatpak-languages
 install -Dm644 -t /usr/lib/systemd/system \
   /ctx/evenkeel-os-flatpak-languages.service /ctx/evenkeel-os-flatpak-languages.timer
+# Bazaar shows app details in the current language after a language change: its saved copy is cleared at login.
+install -Dm755 /ctx/evenkeel-os-bazaar-language /usr/libexec/evenkeel-os-bazaar-language
+install -Dm644 -t /usr/lib/systemd/user /ctx/evenkeel-os-bazaar-language.service
+mkdir -p /usr/lib/systemd/user/graphical-session-pre.target.wants
+ln -sfn ../evenkeel-os-bazaar-language.service \
+  /usr/lib/systemd/user/graphical-session-pre.target.wants/evenkeel-os-bazaar-language.service
+[ -f /usr/lib/systemd/user/graphical-session-pre.target.wants/evenkeel-os-bazaar-language.service ] \
+  || { echo "ERROR: Bazaar's language step is not set to run at login"; exit 1; }
 # Wheelhouse, with a root helper for the jobs that change the system.
 install -Dm755 /ctx/evenkeel-os-tools /usr/bin/evenkeel-os-tools
 install -Dm755 /ctx/evenkeel-os-tools-admin /usr/libexec/evenkeel-os-tools-admin
