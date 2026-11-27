@@ -651,6 +651,30 @@ install -Dm644 /ctx/fastfetch-config.jsonc /etc/xdg/fastfetch/config.jsonc
 out=$(HOME=/tmp fastfetch --pipe false -s OS 2>&1)
 printf '%s' "$out" | grep -qF '_____________________' && printf '%s' "$out" | grep -qF 'EvenKeelOS' || { echo "ERROR: fastfetch does not show the EvenKeelOS logo"; printf '%s\n' "$out" | head -5; exit 1; }
 
+# EvenKeelOS's own translations (po/): message files, plus the translated names in its launchers and password prompts.
+dnf5 -y install gettext
+while read -r lang; do
+  install -d "/usr/share/locale/$lang/LC_MESSAGES"
+  msgfmt -c -o "/usr/share/locale/$lang/LC_MESSAGES/evenkeel-os.mo" "/ctx/po/$lang.po"
+done < /ctx/po/LINGUAS
+for f in /usr/share/applications/evenkeel-os-*.desktop /etc/xdg/autostart/evenkeel-os-*.desktop; do
+  msgfmt --desktop -d /ctx/po --template="$f" -o "$f.new" || exit 1
+  mv "$f.new" "$f"
+done
+for f in /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.*.policy; do
+  GETTEXTDATADIRS=/ctx/po msgfmt --xml -d /ctx/po --template="$f" -o "$f.new" || exit 1
+  mv "$f.new" "$f"
+done
+dnf5 -y remove gettext
+command -v gettext >/dev/null || { echo "ERROR: removing the translation tools took gettext with them"; exit 1; }
+langs=$(grep -c . /ctx/po/LINGUAS)
+[ "$(ls /usr/share/locale/*/LC_MESSAGES/evenkeel-os.mo | wc -l)" -eq "$langs" ] \
+  || { echo "ERROR: not every language in po/LINGUAS has its messages"; exit 1; }
+grep -q '^Name\[de\]=' /usr/share/applications/evenkeel-os-tools.desktop \
+  || { echo "ERROR: the launchers have no translated names"; exit 1; }
+grep -q 'xml:lang="de"' /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.tools.policy \
+  || { echo "ERROR: the password prompts have no translated text"; exit 1; }
+
 install -Dm644 /ctx/$NAME.pub /etc/pki/containers/$NAME.pub
 mkdir -p /etc/containers/registries.d
 printf 'docker:\n  ghcr.io/ctsdownloads/%s:\n    use-sigstore-attachments: true\n' "$NAME" > /etc/containers/registries.d/$NAME.yaml

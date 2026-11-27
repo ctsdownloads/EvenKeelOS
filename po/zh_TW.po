@@ -1,0 +1,7604 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: EvenKeelOS\n"
+"Report-Msgid-Bugs-To: https://github.com/ctsdownloads/EvenKeelOS/issues\n"
+"POT-Creation-Date: 2026-11-26 19:00+0000\n"
+"PO-Revision-Date: 2026-11-26 19:01+0000\n"
+"Last-Translator: EvenKeelOS <ctsdownloads@users.noreply.github.com>\n"
+"Language-Team: EvenKeelOS\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid ""
+"  codecs web   Web video in Firefox only. Replaces Fedora's empty OpenH264 stand-in with\n"
+"               Cisco's OpenH264 from Fedora's Cisco repository, under Cisco's own H.264\n"
+"               patent license.\n"
+"  codecs full  Everything. Replaces Fedora's free ffmpeg libraries with the full ffmpeg,\n"
+"               x264 and x265 from RPM Fusion, the source standard Fedora uses."
+msgstr ""
+"  codecs web   僅用於 Firefox 中的網路影片。將 Fedora 內建的空 OpenH264 替代品換成\n"
+"               Fedora 的 Cisco 軟體庫中的 Cisco OpenH264，採用 Cisco 自己的 H.264\n"
+"               專利授權。\n"
+"  codecs full  全部。將 Fedora 的自由 ffmpeg 函式庫換成完整版 ffmpeg，\n"
+"               以及 RPM Fusion 的 x264 和 x265；RPM Fusion 是標準 Fedora 使用的來源。"
+
+msgid ""
+"  evenkeel-os-packages install [FILE]   install an .rpm or .deb (no FILE: pick one from Downloads)\n"
+"  evenkeel-os-packages remove           remove an app installed this way\n"
+"  evenkeel-os-packages check FILE       say what a package needs, without installing anything\n"
+"  evenkeel-os-packages repair           set a broken app box up again (--if-broken: only if one does not work)\n"
+"  evenkeel-os-packages login            choose box apps that start when you log in\n"
+"  evenkeel-os-packages windows FILE     a Windows .exe or .msi: offer a Linux app that does its job\n"
+"  evenkeel-os-packages check-windows FILE  say what a Windows file is and what would be offered, without any window\n"
+"  evenkeel-os-packages zoom LINK        a Zoom \"open the app\" link: open the meeting in Zoom's web version, in Chrome\n"
+"  evenkeel-os-packages vpn [NAME]       add a VPN from its company's own download source (mullvad, proton, ivpn,\n"
+"                                        nordvpn; no NAME: pick one)"
+msgstr ""
+"  evenkeel-os-packages install [FILE]   安裝 .rpm 或 .deb（未指定 FILE：從「下載」中選擇一個）\n"
+"  evenkeel-os-packages remove           移除以這種方式安裝的應用程式\n"
+"  evenkeel-os-packages check FILE       說明套件需要什麼，不會安裝任何東西\n"
+"  evenkeel-os-packages repair           重新設定損壞的應用程式容器（--if-broken：只在有容器無法運作時）\n"
+"  evenkeel-os-packages login            選擇登入時啟動的容器應用程式\n"
+"  evenkeel-os-packages windows FILE     Windows 的 .exe 或 .msi：提供能完成相同工作的 Linux 應用程式\n"
+"  evenkeel-os-packages check-windows FILE  說明 Windows 檔案是什麼、會提供什麼，不開啟任何視窗\n"
+"  evenkeel-os-packages zoom LINK        Zoom 的「開啟應用程式」連結：在 Chrome 中以 Zoom 網頁版開啟會議\n"
+"  evenkeel-os-packages vpn [NAME]       從該公司自己的下載來源新增 VPN（mullvad、proton、ivpn、\n"
+"                                        nordvpn；未指定 NAME：從中選擇一個）"
+
+#, python-brace-format
+msgid ""
+"\"{name}\" comes with Fedora. The trusted list is rebuilt from Fedora's "
+"current list at every start, so an update replaces or drops it; keep "
+"automatic updates on. If this alert stays after updating and restarting, tell"
+" your helper."
+msgstr ""
+"「{name}」隨附於 Fedora。每次開機時，信任清單都會根據 Fedora "
+"的最新清單重新建立，因此更新會替換或移除該清單；請保持自動更新開啟。如果更新並重新啟動後此警示仍存在，請告知您的協助者。"
+
+#, python-brace-format
+msgid ""
+"\"{name}\" has expired, but its file ({file}) holds {n} certificate, and "
+"removing it would remove them all, the good ones too. Tell your helper."
+msgid_plural ""
+"\"{name}\" has expired, but its file ({file}) holds {n} certificates, and "
+"removing it would remove them all, the good ones too. Tell your helper."
+msgstr[0] ""
+"「{name}」已過期，但其檔案 ({file}) 包含 {n} 個憑證，若將其移除，所有憑證都會被一併移除，包括有效的憑證。請告知您的協助者。"
+
+#, python-brace-format
+msgid ""
+"\"{name}\" has expired. It was added in a way Wheelhouse can't remove; tell "
+"your helper."
+msgstr "「{name}」已過期。它的新增方式讓 Wheelhouse 無法將它移除；請告知您的協助者。"
+
+#, python-brace-format
+msgid "\"{name}\" is removed and no longer trusted."
+msgstr "「{name}」已移除，不再受信任。"
+
+#, python-brace-format
+msgid ""
+"\"{name}\" was added to this computer and expired on {date}. An expired "
+"certificate shouldn't be relied on. Remove it if you no longer need it; if "
+"you do, ask whoever gave it to you for a new one. Removing it needs your "
+"password."
+msgstr ""
+"「{name}」已新增至這台電腦，並已於 {date} "
+"到期。不應信任已過期的憑證。如果您不再需要它，請將它移除；如果您還需要，請向提供它的人索取新的。移除它需要您的密碼。"
+
+#, python-brace-format
+msgid ""
+"\"{name}\" was added to this computer and expires on {date}. Ask whoever gave"
+" it to you for a new one before then."
+msgstr "已將「{name}」新增至這台電腦，並將於 {date} 到期。到期前，請向提供給您的人索取新的憑證。"
+
+msgid "(nothing was printed)"
+msgstr "（沒有任何輸出）"
+
+#, python-brace-format
+msgid "- and {n} more"
+msgid_plural "- and {n} more"
+msgstr[0] "- 還有 {n} 個"
+
+msgid ""
+"1.00 is the normal size. Large text in Settings, Accessibility sets 1.25."
+msgstr "1.00 是正常大小。「設定」>「無障礙輔助」中的「大型文字」會設為 1.25。"
+
+msgid "12 hour"
+msgstr "12 小時制"
+
+msgid "24 hour"
+msgstr "24 小時制"
+
+msgid ""
+"A .deb driver can't be installed. The window says how to get the .rpm from "
+"the maker."
+msgstr "無法安裝 .deb 驅動程式。視窗說明如何從製造商那裡取得 .rpm 檔案。"
+
+msgid "A USB mouse works."
+msgstr "USB 滑鼠可以使用。"
+
+msgid "A USB webcam works."
+msgstr "USB 網路攝影機可以正常運作。"
+
+msgid "A VPN"
+msgstr "VPN"
+
+msgid "A Windows program you downloaded (.exe or .msi)"
+msgstr "您下載的 Windows 程式（.exe 或 .msi）"
+
+msgid "A background service fails"
+msgstr "背景服務發生錯誤"
+
+msgid ""
+"A background service that runs on this computer fails to start (the mobile "
+"broadband service, or the graphics switching service)."
+msgstr "這台電腦上執行的某個背景服務無法啟動（行動寬頻服務或顯示卡切換服務）。"
+
+msgid "A bottom bar, with a start menu on the logo"
+msgstr "底部列，按標誌即可開啟開始選單"
+
+msgid "A broken app box"
+msgstr "損壞的應用程式容器"
+
+msgid "A built-in camera of the newer laptop kind was found."
+msgstr "偵測到新型筆電的內建相機。"
+
+msgid "A café, hotel, airport, or anywhere else. Nothing gets in."
+msgstr "咖啡廳、飯店、機場或其他任何地方。任何連線都無法進入。"
+
+#, python-brace-format
+msgid "A certificate needs attention"
+msgid_plural "{n} certificates need attention"
+msgstr[0] "{n} 個憑證需要留意"
+
+msgid ""
+"A change to the boot options is waiting. It starts at your next restart. It isn't an update.\n"
+"\n"
+"If you don't want it: Don't use it. The computer starts with the boot options it has now, and automatic updates aren't paused.\n"
+"\n"
+"Or Keep it."
+msgstr ""
+"有一項開機選項變更正在等待套用，會在您下次重新啟動時生效。這不是更新。\n"
+"\n"
+"如果您不想要它：「不要使用」。電腦會以目前的開機選項啟動，自動更新也不會暫停。\n"
+"\n"
+"或者「保留」。"
+
+msgid "A device"
+msgstr "某個裝置"
+
+#, python-brace-format
+msgid "A device lost its driver ({driver})"
+msgstr "某個裝置失去了驅動程式 ({driver})"
+
+msgid "A disk is hidden."
+msgstr "有一個磁碟被隱藏了。"
+
+msgid "A driver file from the maker"
+msgstr "來自製造商的驅動程式檔案"
+
+msgid "A file of recent errors to email to your helper"
+msgstr "一份包含近期錯誤的檔案，可透過電子郵件傳送給您的協助者"
+
+msgid "A full name can't have : or , in it."
+msgstr "全名不能包含「:」或「,」。"
+
+msgid "A graphics chip has no driver."
+msgstr "有一個顯示晶片沒有驅動程式。"
+
+msgid ""
+"A network is only needed for automatic time and time zone. To use Wi-Fi, "
+"click a network. Or click Next to go on without it."
+msgstr "只有自動設定時間和時區才需要網路。若要使用 Wi-Fi，請按一下網路。或按一下「下一步」，不連網直接繼續。"
+
+msgid ""
+"A new layout shows after you log out and back in. It changes only your own "
+"desktop."
+msgstr "新的版面配置會在您登出再重新登入後出現。這只會變更您自己的桌面。"
+
+msgid "A new system is ready."
+msgstr "新系統已準備就緒。"
+
+msgid "A new system is ready. Restart to use it."
+msgstr "新系統已準備就緒。請重新啟動以使用。"
+
+msgid ""
+"A new system version is used from the next restart. Keep working, and restart"
+" when it suits you."
+msgstr "從下次重新啟動開始，將使用新的系統版本。繼續工作，並在方便時重新啟動。"
+
+msgid ""
+"A new version also goes back if something that worked before is broken after "
+"you log in, like sound, Wi-Fi, Bluetooth, the camera or printing. Unplugged "
+"or switched-off things don't count."
+msgstr "如果登入後，原本能正常運作的功能（像是聲音、Wi-Fi、藍牙、相機或列印）發生問題，系統也會自動切回舊版本。未插電或已關閉的裝置不計入。"
+
+msgid "A new version is ready"
+msgstr "新版本已準備就緒"
+
+msgid ""
+"A note at the next login says so and names what broke, and automatic updates "
+"pause for 3 days."
+msgstr "下次登入時會顯示一則訊息說明此事，並指明哪些功能出了問題；自動更新會暫停 3 天。"
+
+msgid ""
+"A rollback test copy is running. Restart first, so the computer goes back to "
+"the usual version."
+msgstr "正在執行回復測試副本。請先重新啟動，讓電腦回到平常的版本。"
+
+msgid "A security certificate expired, expires within 30 days, or was removed."
+msgstr "安全性憑證已過期、將在 30 天內過期，或已被移除。"
+
+msgid "A slideshow of your own pictures"
+msgstr "您自己的圖片投影片"
+
+msgid "A sound chip was found, but it didn't start."
+msgstr "找到音效晶片，但它沒有啟動。"
+
+msgid "A start-up check fails"
+msgstr "啟動檢查失敗"
+
+msgid ""
+"A start-up check fails on purpose. The computer restarts by itself within "
+"seconds, twice, and the third start is back on this version."
+msgstr "故意讓啟動檢查失敗。電腦會在幾秒內自動重新啟動兩次，第三次啟動時會回到這個版本。"
+
+msgid "A system service fails"
+msgstr "系統服務發生錯誤"
+
+msgid "A system update is also waiting for a restart."
+msgstr "系統更新也正在等待重新啟動。"
+
+msgid "A tool"
+msgstr "工具"
+
+msgid "A top bar, with the logo menu at the top left"
+msgstr "頂端列，左上角有標誌選單"
+
+msgid ""
+"A user name uses small letters, digits, - and _, and starts with a letter."
+msgstr "使用者名稱使用小寫字母、數字、- 和 _，並以字母開頭。"
+
+msgid ""
+"A wired network is set to Home, so this happens on any cable you plug in."
+msgstr "有一個有線網路設為「家用」，因此您插上任何網路線都會這樣。"
+
+msgid "A wireless chip was found, but it didn't start."
+msgstr "找到無線晶片，但它沒有啟動。"
+
+msgid "A wireless chip was found, with no driver for it."
+msgstr "找到無線晶片，但沒有對應的驅動程式。"
+
+msgid "AMD: flicker, turn off Panel Replay"
+msgstr "AMD：畫面閃爍，請關閉「面板重播」"
+
+msgid "AMD: flicker, turn off Panel Self Refresh"
+msgstr "AMD：畫面閃爍，請關閉「面板自我更新」"
+
+msgid "AMD: flicker, turn off both"
+msgstr "AMD：畫面閃爍，請關閉兩者"
+
+msgid "AMD: screen dims or shifts colors on its own"
+msgstr "AMD：畫面自行變暗或顏色改變"
+
+msgid "AMD: white flickering"
+msgstr "AMD：白色閃爍"
+
+msgid ""
+"About 20 seconds after the login screen shows, the computer locks up. Hold "
+"the power button until it turns off, then turn it on. After the second "
+"freeze, the next start is back on this version."
+msgstr "登入畫面顯示後約 20 秒，電腦就會當機。長按電源按鈕直到電腦關機，然後再開機。在第二次當機後，下次開機時會回到這個版本。"
+
+msgid "About it"
+msgstr "關於此項目"
+
+msgid "About this driver"
+msgstr "關於此驅動程式"
+
+msgid "Accent color and wallpaper"
+msgstr "強調色與桌布"
+
+msgid "Account"
+msgstr "帳號"
+
+msgid "Add"
+msgstr "新增"
+
+msgid "Add a folder"
+msgstr "新增資料夾"
+
+msgid "Add a folder and set the sharing password below."
+msgstr "新增資料夾，並在下方設定共享密碼。"
+
+msgid "Add a folder from your home folder."
+msgstr "從您的家目錄新增資料夾。"
+
+msgid "Add a printer"
+msgstr "新增印表機"
+
+msgid "Add a setting, like amdgpu.abmlevel=0"
+msgstr "新增設定，例如 amdgpu.abmlevel=0"
+
+msgid "Add anyway"
+msgstr "仍要新增"
+
+msgid "Add it"
+msgstr "新增"
+
+msgid ""
+"Add it only if you know you need it. If the computer then won't start, "
+"automatic rollback goes back to the version before."
+msgstr "只有在您確定需要時才新增它。如果電腦之後無法啟動，自動回復會回到上一個版本。"
+
+msgid "Add or remove an app's hardware rules"
+msgstr "新增或移除應用程式的硬體規則"
+
+msgid "Add or remove media codecs"
+msgstr "新增或移除媒體編解碼器"
+
+msgid "Add the media codecs"
+msgstr "新增媒體編解碼器"
+
+msgid "Add to the system"
+msgstr "新增至系統"
+
+msgid "Add video and audio codecs"
+msgstr "新增視訊與音訊編解碼器"
+
+msgid "Add, turn on or remove a VPN or an app's background service"
+msgstr "新增、開啟或移除 VPN 或應用程式的背景服務"
+
+msgid "Added by you"
+msgstr "由您新增"
+
+msgid "Added to this computer"
+msgstr "已新增至這台電腦"
+
+msgid "Adding a printer, and printer driver files from the maker"
+msgstr "新增印表機，以及來自製造商的印表機驅動程式檔案"
+
+msgid ""
+"Adding the desktop parts apps expect (progress windows and notifications)"
+msgstr "正在新增應用程式所需的桌面元件（進度視窗和通知）"
+
+#, python-brace-format
+msgid "Adding the download source {name}"
+msgstr "正在新增下載來源 {name}"
+
+#, python-brace-format
+msgid "Adding {title} to the system"
+msgstr "正在將 {title} 新增至系統"
+
+#, python-brace-format
+msgid "Adding {title} to the system from Fedora. A progress window shows it."
+msgstr "正在從 Fedora 將 {title} 新增至系統。進度視窗會顯示進度。"
+
+#, python-brace-format
+msgid "Adding {title} to the system from Fedora. This can take a few minutes."
+msgstr "正在從 Fedora 將 {title} 新增到系統。這可能需要幾分鐘時間。"
+
+#, python-brace-format
+msgid "Adding {title} to the system. A progress window shows it."
+msgstr "正在將 {title} 新增至系統。進度視窗會顯示進度。"
+
+#, python-brace-format
+msgid "Adding {title} to the system. This can take a few minutes."
+msgstr "正在將 {title} 新增到系統。這可能需要幾分鐘時間。"
+
+msgid "Administrator"
+msgstr "管理員"
+
+msgid "Administrator account (root)"
+msgstr "管理員帳號 (root)"
+
+msgid "Administrator: no."
+msgstr "管理員：否。"
+
+msgid "Administrator: yes."
+msgstr "管理員：是。"
+
+msgid ""
+"After a BIOS update, it may ask for the disk password again. Turn it on again"
+" here."
+msgstr "更新 BIOS 後，系統可能會再次要求輸入磁碟密碼。請在這裡重新開啟它。"
+
+msgid ""
+"After an undo, so the same update doesn't come straight back. They turn back "
+"on by themselves."
+msgstr "在復原更新之後暫停，讓同一個更新不會馬上又回來。自動更新會自行重新開啟。"
+
+msgid "After the restart, you will be asked to add your printer."
+msgstr "重新啟動後，系統會請您新增印表機。"
+
+msgid ""
+"After the restart, you'll be asked for your password once, to turn it on."
+msgstr "重新啟動後，系統會要求您輸入一次密碼，以將其開啟。"
+
+msgid "After the restart, you'll get a message when it's ready."
+msgstr "重新啟動後，系統準備就緒時會顯示訊息。"
+
+msgid "Alpha"
+msgstr "Alpha"
+
+msgid "Also let in, on Home"
+msgstr "也在家用網路上允許連入"
+
+msgid ""
+"Alt+Tab switches between apps. Alt and the key above Tab switches between "
+"windows of the same app."
+msgstr "按 Alt+Tab 可以在應用程式之間切換。按住 Alt 再按 Tab 上方的按鍵，即可在同一個應用程式的視窗之間切換。"
+
+msgid ""
+"An .rpm or .deb installs the app. An .exe or .msi gets its Linux version."
+msgstr "使用 .rpm 或 .deb 檔案即可安裝應用程式。.exe 或 .msi 會取得其 Linux 版本。"
+
+msgid "An app that comes as a .rpm or .deb file"
+msgstr "以 .rpm 或 .deb 檔案形式提供的應用程式"
+
+msgid "An office. Nothing gets in, and your folders aren't shared."
+msgstr "辦公室。任何連線都無法進入，您的資料夾也不會共享。"
+
+#, python-brace-format
+msgid ""
+"An update from {staged} is waiting. It starts at your next restart. The version you're using now is from {booted}.\n"
+"\n"
+"If you don't want it: Don't use it. Your computer keeps the version it has now. A boot options change made since the update came is dropped with it."
+msgstr ""
+"有一個來自 {staged} 的更新正在等待，會在您下次重新啟動時生效。您現在使用的版本來自 {booted}。\n"
+"\n"
+"如果您不想要它：「不要使用」。您的電腦會保留目前的版本。更新送達後所做的開機選項變更也會一併捨棄。"
+
+msgid "An update is waiting for a restart. Restart first, then run the test."
+msgstr "有更新正在等待重新啟動。請先重新啟動，然後再執行測試。"
+
+msgid "Another disk is hidden by a BIOS setting."
+msgstr "另一個磁碟因 BIOS 設定而被隱藏。"
+
+#, python-brace-format
+msgid ""
+"Another install or removal is running ({doing}). This waits for it to finish,"
+" then goes on."
+msgstr "另一個安裝或移除作業正在進行 ({doing})。會等它完成後再繼續。"
+
+msgid ""
+"Another version is set to start at your next restart (after Undo the last "
+"update, or picking a version in the boot menu), so the test wouldn't test "
+"anything. Restart first, then run the test."
+msgstr ""
+"另一個版本已設定為在下次重新啟動時啟動（在「復原上一次更新」之後，或在開機選單中選擇版本之後），因此測試不會測試任何內容。請先重新啟動，然後再執行測試。"
+
+msgid "App"
+msgstr "應用程式"
+
+msgid "App, game or port number"
+msgstr "應用程式、遊戲或連接埠號碼"
+
+msgid ""
+"Applies them at login: the next slide for \"at each login\", and dark or "
+"light for the time of day"
+msgstr "在登入時套用：「每次登入」會換到下一張投影片，並依當下時段套用深色或淺色"
+
+msgid "Apps"
+msgstr "應用程式"
+
+msgid "Apps and ports let in"
+msgstr "已允許連入的應用程式和連接埠"
+
+msgid "Apps from Bazaar have this setting inside the app."
+msgstr "來自 Bazaar 的應用程式會在應用程式內部提供此設定。"
+
+msgid "Apps from Bazaar update on their own. Remove them in Bazaar too."
+msgstr "來自 Bazaar 的應用程式會自行更新。也請在 Bazaar 中將它們移除。"
+
+msgid "Apps from Bazaar: open Bazaar and remove it there."
+msgstr "來自 Bazaar 的應用程式：請開啟 Bazaar，並在其中將它移除。"
+
+msgid ""
+"Apps from a file, Get a VPN or a Windows program: Wheelhouse, Apps, Remove "
+"apps."
+msgstr "來自檔案、「取得 VPN」或「Windows 程式」的應用程式：Wheelhouse >「應用程式」>「移除應用程式」。"
+
+msgid ""
+"Apps from a file: open Wheelhouse, Apps, Start apps at login, and pick the "
+"app. Picking it again stops it."
+msgstr "來自檔案的應用程式：開啟 Wheelhouse >「應用程式」>「登入時啟動應用程式」，然後選取該應用程式。再選一次就會取消。"
+
+msgid "Apps from package files"
+msgstr "來自套件檔案的應用程式"
+
+msgid "Apps from their own download sources"
+msgstr "來自其專屬下載來源的應用程式"
+
+msgid "Apps you added from files, Get a VPN or Windows programs"
+msgstr "您從檔案、「取得 VPN」或「Windows 程式」新增的應用程式"
+
+msgid "April"
+msgstr "四月"
+
+msgid ""
+"ArtCraft's downloads can't be reached right now. Check the internet "
+"connection and try again."
+msgstr "目前無法存取 ArtCraft 的下載內容。請檢查網路連線，然後再試一次。"
+
+msgid "ArtCraft's signature is checked first, and it updates once a day."
+msgstr "會先檢查 ArtCraft 的簽章，而且它每天更新一次。"
+
+msgid ""
+"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
+" place"
+msgstr "會詢問一次：需要密碼的 Wi-Fi 或有線網路是「家用」、「工作」還是「公共場所」"
+
+msgid "At each login"
+msgstr "每次登入時"
+
+msgid "August"
+msgstr "八月"
+
+msgid "Authentication is required to add or remove an app's hardware rules"
+msgstr "需要驗證才能新增或移除應用程式的硬體規則"
+
+msgid "Authentication is required to add or remove media codecs"
+msgstr "需要驗證才能新增或移除媒體編解碼器"
+
+msgid ""
+"Authentication is required to add, turn on or remove a VPN or an app's "
+"background service"
+msgstr "需要驗證才能新增、開啟或移除 VPN 或應用程式的背景服務"
+
+msgid "Authentication is required to change a Wheelhouse setting"
+msgstr "需要驗證才能變更 Wheelhouse 設定"
+
+msgid "Authentication is required to change the boot options"
+msgstr "需要驗證才能變更開機選項"
+
+msgid ""
+"Authentication is required to delete important settings for the repair test"
+msgstr "需要驗證才能刪除修復測試的重要設定"
+
+msgid "Authentication is required to install EvenKeelOS"
+msgstr "需要驗證才能安裝 EvenKeelOS"
+
+msgid "Authentication is required to remove a trusted certificate"
+msgstr "需要驗證才能移除受信任的憑證"
+
+msgid "Automatic"
+msgstr "自動"
+
+msgid "Automatic disk unlock"
+msgstr "自動解鎖磁碟"
+
+msgid "Automatic rollback"
+msgstr "自動回復"
+
+msgid "Automatic rollback note"
+msgstr "自動回復通知"
+
+msgid "Automatic updates"
+msgstr "自動更新"
+
+msgid "Automatic updates are back on."
+msgstr "自動更新已重新開啟。"
+
+msgid "Automatic updates are back on. The next daily update runs as normal."
+msgstr "自動更新已重新開啟。下一次的每日更新會照常執行。"
+
+msgid "Automatic updates are off"
+msgstr "自動更新已關閉"
+
+msgid "Automatic updates are off. Run System Update yourself to update."
+msgstr "自動更新已關閉。請自行執行「系統更新」來進行更新。"
+
+msgid ""
+"Automatic updates are off: nothing updates until you run System Update yourself.\n"
+"\n"
+"Recommended: Turn on. Everything then updates by itself every day at 4 am, and updates fix security problems."
+msgstr ""
+"自動更新已關閉：在您自行執行「系統更新」之前，不會更新任何東西。\n"
+"\n"
+"建議：「開啟」。之後所有項目每天凌晨 4 點都會自動更新，而更新能修補安全性問題。"
+
+msgid "Automatic updates are on."
+msgstr "自動更新已開啟。"
+
+msgid ""
+"Automatic updates are on: everything updates by itself every day at 4 am.\n"
+"\n"
+"Recommended: Keep them on. Updates fix security problems.\n"
+"\n"
+"Or Turn off: nothing updates until you run System Update yourself."
+msgstr ""
+"自動更新已開啟：所有項目每天凌晨 4 點都會自動更新。\n"
+"\n"
+"建議：「保持開啟」。更新能修補安全性問題。\n"
+"\n"
+"或者「關閉」：在您自行執行「系統更新」之前，不會更新任何東西。"
+
+#, python-brace-format
+msgid "Automatic updates are paused until {day}"
+msgstr "自動更新已暫停，直到 {day} 為止"
+
+#, python-brace-format
+msgid ""
+"Automatic updates are paused until {day}, after an undo, so the bad update doesn't come back. They turn back on by themselves.\n"
+"\n"
+"Recommended: Keep the pause.\n"
+"\n"
+"Or Resume now: the next daily update runs as normal. Or Turn off: nothing updates until you run System Update yourself."
+msgstr ""
+"復原更新後，自動更新會暫停到 {day}，讓有問題的更新不會再回來。它們會自行重新開啟。\n"
+"\n"
+"建議：「保持暫停」。\n"
+"\n"
+"或者「立即繼續」：下一次的每日更新會照常執行。或者「關閉」：在您自行執行「系統更新」之前，不會更新任何東西。"
+
+#, python-brace-format
+msgid ""
+"Automatic updates are paused until {day}, so the bad update doesn't come "
+"back. They turn back on by themselves."
+msgstr "自動更新已暫停至 {day}，以免有問題的更新再次出現。它們會自動重新開啟。"
+
+#, python-brace-format
+msgid ""
+"Automatic updates are paused until {day}, so the same update doesn't come "
+"straight back. They turn back on by themselves."
+msgstr "自動更新已暫停至 {day}，這樣同一個更新就不會馬上又回來。它們會自動重新開啟。"
+
+msgid ""
+"Automatic updates are still paused after the undo. Resume them in Automatic "
+"updates."
+msgstr "復原更新後，自動更新仍在暫停。請在「自動更新」中重新開啟。"
+
+msgid ""
+"Automatic updates could not be paused, so the next one may bring the update "
+"back. If it does, turn off Automatic updates in Wheelhouse and tell your "
+"helper."
+msgstr "無法暫停自動更新，因此下一次更新可能會再次安裝該更新。如果發生這種情況，請在 Wheelhouse 中關閉「自動更新」，並告訴您的協助者。"
+
+msgid ""
+"Automatic updates pause for 3 days, so the same update doesn't come straight "
+"back. They turn back on by themselves."
+msgstr "自動更新會暫停 3 天，因此同一個更新不會馬上又回來。它們會自動重新開啟。"
+
+msgid ""
+"Automatic updates then pause for 3 days, so the bad update doesn't come "
+"straight back. If the problem returns after that, turn off Automatic updates "
+"in Wheelhouse and tell your helper."
+msgstr ""
+"接著，自動更新會暫停 3 天，這樣有問題的更新就不會馬上又回來。如果之後問題又發生，請在 Wheelhouse 中關閉「自動更新」，並告訴您的協助者。"
+
+msgid "Automatic updates, undoing an update, firmware and certificate alerts"
+msgstr "自動更新、復原更新、韌體與憑證警示"
+
+msgid ""
+"Away from home, the switch shows off: sharing only runs on a Home network, "
+"and comes back by itself there."
+msgstr "不在家時，開關會顯示為關閉：共享只在「家用」網路上執行，回到那裡就會自動恢復。"
+
+msgid "BIOS settings"
+msgstr "BIOS 設定"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Back to the original"
+msgstr "回到原本的樣子"
+
+msgid "Background: click a picture. To use your own photo, click Add Picture."
+msgstr "背景：按一下圖片。若要使用您自己的相片，請按一下「加入圖片」。"
+
+msgid "Basic graphics only"
+msgstr "僅基本顯示功能"
+
+msgid "Battery status"
+msgstr "電池狀態"
+
+msgid "Bazaar is open. Close it when you're done looking."
+msgstr "Bazaar 已開啟。瀏覽完畢後，請關閉它。"
+
+msgid "Bazaar, the app store (Flathub)"
+msgstr "Bazaar，應用程式商店 (Flathub)"
+
+msgid ""
+"Before you unplug it, click the eject button next to its name, and wait until"
+" it's gone from the list."
+msgstr "拔除之前，請按一下名稱旁邊的退出按鈕，並等它從清單中消失。"
+
+msgid "Bluetooth"
+msgstr "藍牙"
+
+msgid "Bluetooth driver blocked"
+msgstr "藍牙驅動程式被封鎖"
+
+msgid "Bluetooth found."
+msgstr "已找到藍牙。"
+
+msgid "Boot entries that will be renamed to \"%s\":"
+msgstr "將重新命名為「%s」的開機項目："
+
+msgid "Boot options"
+msgstr "開機選項"
+
+msgid "Boot options in Wheelhouse can change them back later."
+msgstr "之後可以在 Wheelhouse 的「開機選項」中改回來。"
+
+msgid "Both"
+msgstr "兩者"
+
+msgid "Both ask for your password, and work only on Home."
+msgstr "兩者都會要求您輸入密碼，而且只在「家用」網路上運作。"
+
+msgid "Bottom bar and a start menu"
+msgstr "底部列和開始選單"
+
+msgid "Box"
+msgstr "容器"
+
+msgid "Broadcom Wi-Fi chip found. Its driver or firmware can't be included."
+msgstr "偵測到 Broadcom Wi-Fi 晶片。無法包含其驅動程式或韌體。"
+
+msgid "Browse and install apps in Bazaar. They update on their own."
+msgstr "在 Bazaar 中瀏覽並安裝應用程式。它們會自行更新。"
+
+msgid "Camera"
+msgstr "相機"
+
+msgid "Camera found."
+msgstr "已找到相機。"
+
+msgid "Can install software and change system settings. Click to turn it off."
+msgstr "可以安裝軟體並變更系統設定。按一下即可關閉。"
+
+msgid "Can install software and change system settings. Click to turn it on."
+msgstr "可以安裝軟體並變更系統設定。按一下即可開啟。"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Certificate"
+msgstr "憑證"
+
+msgid "Certificate alert"
+msgstr "憑證警示"
+
+msgid "Certificate alerts"
+msgstr "憑證警示"
+
+msgid ""
+"Certificates are how the computer knows a secure website is real. An alert "
+"shows when one has expired, expires soon, or was removed."
+msgstr "電腦靠憑證確認安全網站是真的。憑證已過期、即將過期或被移除時，會顯示警示。"
+
+msgid "Change"
+msgstr "變更"
+
+msgid "Change Scale. A bigger number makes everything bigger."
+msgstr "變更「縮放」。數字越大，所有東西就越大。"
+
+msgid "Change a Wheelhouse setting"
+msgstr "變更 Wheelhouse 設定"
+
+msgid "Change it"
+msgstr "變更"
+
+msgid "Change the kernel settings the computer starts with"
+msgstr "變更電腦啟動時使用的核心設定"
+
+msgid "Change the layout"
+msgstr "變更版面配置"
+
+msgid "Change the wallpaper to the next picture in a folder"
+msgstr "將桌布換成資料夾中的下一張圖片"
+
+msgid ""
+"Changed your mind? Open Undo the last update again and click Use the newer "
+"version."
+msgstr "改變主意了嗎？請再次開啟「復原上一次更新」，然後按一下「使用較新版本」。"
+
+#, python-brace-format
+msgid "Changing {title}"
+msgstr "正在變更 {title}"
+
+msgid ""
+"Check everything. Click a line to change it, or click Install to put "
+"EvenKeelOS on the disk."
+msgstr "檢查所有項目。按一下某一行即可變更，或按一下「安裝」即可將 EvenKeelOS 安裝到磁碟上。"
+
+msgid "Check that automatic rollback works"
+msgstr "檢查自動回復是否正常運作"
+
+msgid "Check that it can't break"
+msgstr "確認它不會壞掉"
+
+msgid ""
+"Check that the computer goes back by itself when a new version won't start, "
+"and puts back deleted settings"
+msgstr "確認新版本無法啟動時，電腦會自行回到原本的版本，並把刪除的設定放回去"
+
+msgid "Check the BIOS's storage settings."
+msgstr "檢查 BIOS 的儲存設定。"
+
+msgid "Check the boxes"
+msgstr "檢查容器"
+
+msgid "Checked against its own docs"
+msgstr "已比對其官方文件"
+
+msgid "Checked every day too"
+msgstr "也會每天檢查"
+
+msgid "Checking for firmware updates."
+msgstr "正在檢查是否有韌體更新。"
+
+msgid "Checking sharing…"
+msgstr "正在檢查共享…"
+
+msgid "Checking the network…"
+msgstr "正在檢查網路…"
+
+msgid "Checking this computer's parts..."
+msgstr "正在檢查這台電腦的硬體…"
+
+#, python-brace-format
+msgid "Checking whether Fedora has {name}."
+msgstr "正在檢查 Fedora 是否有 {name}。"
+
+msgid "Checking…"
+msgstr "正在檢查…"
+
+msgid "Choose"
+msgstr "選擇"
+
+msgid "Choose apps from .rpm or .deb files that start when you log in"
+msgstr "從 .rpm 或 .deb 檔案中選擇登入時會啟動的應用程式"
+
+msgid "Choose which app opens a file"
+msgstr "選擇用哪個應用程式開啟檔案"
+
+#, python-brace-format
+msgid "Chosen: automatic, from {servers}."
+msgstr "已選擇：自動，來自 {servers}。"
+
+msgid "Chosen: don't encrypt."
+msgstr "已選擇：不加密。"
+
+msgid "Chosen: enabled."
+msgstr "已選擇：已啟用。"
+
+msgid "Chosen: encrypt."
+msgstr "已選擇：加密。"
+
+msgid "Chosen: locked."
+msgstr "已選擇：已鎖定。"
+
+#, python-brace-format
+msgid "Chosen: {disk}."
+msgstr "已選擇：{disk}。"
+
+#, python-brace-format
+msgid "Chosen: {names}."
+msgstr "已選擇：{names}。"
+
+#, python-brace-format
+msgid "Chosen: {name}."
+msgstr "已選擇：{name}。"
+
+#, python-brace-format
+msgid "Chosen: {time}."
+msgstr "已選擇：{time}。"
+
+msgid ""
+"Click Add a folder and pick it. It starts as Read only: change it to Read and"
+" write if the other computer should save there too."
+msgstr "按一下「新增資料夾」，然後選取該資料夾。一開始是「唯讀」：如果希望另一台電腦也能在那裡儲存檔案，請將它變更為「讀取與寫入」。"
+
+msgid "Click Apply, then Keep Changes if it looks right."
+msgstr "按一下「套用」，如果看起來沒問題，再按一下「保留」。"
+
+msgid "Click Back to the original to undo all of it."
+msgstr "按一下「回到原本的樣子」，即可全部復原。"
+
+msgid ""
+"Click Free up disk space, then Free up space. Your files and apps aren't "
+"touched."
+msgstr "按一下「釋放磁碟空間」，然後按一下「釋放空間」。您的檔案和應用程式不會受到影響。"
+
+msgid ""
+"Click Install the driver, type your password, and restart. Then add the "
+"printer."
+msgstr "按一下「安裝驅動程式」，輸入您的密碼，然後重新啟動。接著新增印表機。"
+
+msgid "Click Install, and it installs that instead."
+msgstr "按一下「安裝」，系統就會改為安裝該項目。"
+
+msgid ""
+"Click Let an app in, type its name, like Minecraft or Jellyfin, and click it."
+msgstr "按一下「允許應用程式連入」，輸入它的名稱（例如 Minecraft 或 Jellyfin），然後按一下它。"
+
+msgid ""
+"Click Restart to start EvenKeelOS. Click Save the log to put the details of "
+"this install on a second USB stick."
+msgstr "按一下「重新啟動」來啟動 EvenKeelOS。按一下「儲存記錄檔」，可將這次安裝的詳細資訊存到第二支 USB 隨身碟。"
+
+msgid ""
+"Click Save details. It makes one file of recent errors, in Documents. Nothing"
+" is sent anywhere."
+msgstr "按一下「儲存詳細資訊」。它會在「文件」中建立一個包含近期錯誤的檔案。不會傳送任何東西。"
+
+msgid "Click Show the file, then attach it to an email to your helper."
+msgstr "按一下「顯示檔案」，然後將檔案附加到寄給協助者的電子郵件中。"
+
+msgid "Click Test to hear each speaker."
+msgstr "按一下「測試」，即可聽到每個喇叭的聲音。"
+
+msgid "Click Turn off or Turn on. Turning them off asks for your password."
+msgstr "按一下「關閉」或「開啟」。關閉這些功能時，系統會要求您輸入密碼。"
+
+msgid "Click Turn on, type the disk password once, and restart."
+msgstr "按一下「開啟」，輸入一次磁碟密碼，然後重新啟動。"
+
+msgid ""
+"Click Undo the update, type your password, and restart. Your files and apps "
+"aren't touched."
+msgstr "按一下「復原更新」，輸入您的密碼，然後重新啟動。您的檔案和應用程式不會受到影響。"
+
+msgid ""
+"Click a font to pick another, or change Text size. 1.00 is the normal size."
+msgstr "按一下字型即可選擇其他字型，或變更「文字大小」。1.00 是正常大小。"
+
+msgid "Click the USB stick to save them on."
+msgstr "按一下要儲存到的 USB 隨身碟。"
+
+msgid ""
+"Click the clock to see your notifications and the calendar. Or press Windows "
+"key + V."
+msgstr "按一下時鐘即可查看通知和行事曆。或按 Windows 鍵 + V。"
+
+msgid "Click the copy button next to a command, then paste it in Terminal."
+msgstr "按一下指令旁邊的「複製」按鈕，然後貼到「終端機」中。"
+
+msgid "Click the device's name when it shows in the list."
+msgstr "當裝置名稱出現在清單中時，請按一下該名稱。"
+
+msgid ""
+"Click the icons at the end of the bar, then the arrow next to Wi-Fi. Or open "
+"Settings, Wi-Fi."
+msgstr "按一下列尾端的圖示，再按 Wi-Fi 旁邊的箭頭。或開啟「設定」>「Wi-Fi」。"
+
+msgid ""
+"Click the icons at the end of the bar: the bottom right with the Windows-"
+"style layout, the top right with the standard one. Or press Windows key + S."
+msgstr "按一下列尾端的圖示：Windows 風格版面配置在右下角，標準版面配置在右上角。或按 Windows 鍵 + S。"
+
+msgid ""
+"Click the magnifying glass, or press Ctrl+F, and type to search this folder "
+"and the folders in it."
+msgstr "按一下放大鏡圖示，或按 Ctrl+F，然後輸入關鍵字，即可搜尋此資料夾及其內含的資料夾。"
+
+msgid "Click the meeting link you were sent."
+msgstr "按一下您收到的會議連結。"
+
+msgid "Click the network's name, type its password, and press Enter."
+msgstr "按一下網路名稱，輸入密碼，然後按 Enter 鍵。"
+
+msgid ""
+"Click the printer when it shows, then Add. Most printers need nothing else."
+msgstr "印表機出現時，按一下它，然後按「加入」。大多數印表機不需要其他設定。"
+
+msgid "Clock"
+msgstr "時鐘"
+
+msgid "Clock sync"
+msgstr "時鐘同步"
+
+msgid "Close"
+msgstr "關閉"
+
+msgid "Close it again"
+msgstr "再關閉一次"
+
+#, python-brace-format
+msgid "Close {name} again"
+msgstr "再次關閉 {name}"
+
+msgid "Code and terminal"
+msgstr "程式碼與終端機"
+
+msgid "Collecting the problem details."
+msgstr "正在收集問題詳細資訊。"
+
+msgid "Colors and wallpaper"
+msgstr "顏色與桌布"
+
+msgid "Comes with the system"
+msgstr "系統內建"
+
+msgid "Coming from Windows"
+msgstr "從 Windows 切換過來"
+
+msgid "Coming from Windows: where things are, and what's different"
+msgstr "從 Windows 切換過來：各項功能的位置，以及有哪些不同之處"
+
+msgid "Coming from Windows?"
+msgstr "您是從 Windows 切換過來的嗎？"
+
+msgid "Common fixes"
+msgstr "常見修正"
+
+msgid "Computer name"
+msgstr "電腦名稱"
+
+#, python-brace-format
+msgid "Computer name: {name}."
+msgstr "電腦名稱：{name}。"
+
+msgid "Connect"
+msgstr "連線"
+
+msgid "Connect a Bluetooth device"
+msgstr "連線到藍牙裝置"
+
+#, python-brace-format
+msgid "Connected to {network}."
+msgstr "已連線至 {network}。"
+
+#, python-brace-format
+msgid "Connecting to {network}..."
+msgstr "正在連線到 {network}…"
+
+msgid ""
+"Control Panel: Settings, for Wi-Fi, screens, sound, printers and accounts. "
+"Wheelhouse, for updates, apps and fixes. A ship is steered from its "
+"wheelhouse; this is where you steer your computer."
+msgstr ""
+"控制台：「設定」，用於 Wi-"
+"Fi、螢幕、音效、印表機和帳號。Wheelhouse，用於更新、應用程式和修正。船隻在駕駛艙（wheelhouse）裡掌舵；這裡就是您掌控電腦的地方。"
+
+#, python-brace-format
+msgid "Copied: {command}"
+msgstr "已複製：{command}"
+
+msgid "Copy files by dragging them onto it, or with Ctrl+C and Ctrl+V."
+msgstr "把檔案拖曳到它上面即可複製，或使用 Ctrl+C 和 Ctrl+V。"
+
+msgid "Copy the command"
+msgstr "複製指令"
+
+#, python-brace-format
+msgid "Copy {command}"
+msgstr "複製 {command}"
+
+msgid "Copying EvenKeelOS to the disk"
+msgstr "正在將 EvenKeelOS 複製到磁碟"
+
+msgid "Copying EvenKeelOS to the disk failed."
+msgstr "將 EvenKeelOS 複製到磁碟失敗。"
+
+#, python-brace-format
+msgid "Could not connect to {network}. Check the password."
+msgstr "無法連線到 {network}。請檢查密碼。"
+
+msgid ""
+"Couldn't check for firmware updates. Check your internet connection and try "
+"again."
+msgstr "無法檢查韌體更新。請檢查您的網路連線，然後再試一次。"
+
+msgid "Couldn't check for firmware updates. Try again later."
+msgstr "無法檢查韌體更新。請稍後再試一次。"
+
+msgid "Couldn't read the system's state."
+msgstr "無法讀取系統的狀態。"
+
+msgid ""
+"Couldn't read which system versions are on this computer. Try again later."
+msgstr "無法讀取這台電腦上有哪些系統版本。請稍後再試。"
+
+#, python-brace-format
+msgid ""
+"Couldn't save the file in {folder}. Check that there's free disk space and "
+"try again."
+msgstr "無法將檔案儲存到 {folder}。請檢查是否有足夠的可用磁碟空間，然後再試一次。"
+
+#, python-brace-format
+msgid "Creating the {label}"
+msgstr "正在建立 {label}"
+
+msgid "Creating your account"
+msgstr "正在建立您的帳號"
+
+msgid ""
+"Ctrl+H shows hidden files and folders, whose names start with a dot. Most "
+"hold app settings: leave them alone."
+msgstr "Ctrl+H 會顯示名稱以點開頭的隱藏檔案和資料夾。大多數存放應用程式設定：請不要動它們。"
+
+msgid "Custom times"
+msgstr "自訂時間"
+
+msgid "Dark at night, light in the day"
+msgstr "夜間深色，白天淺色"
+
+msgid "Dark from"
+msgstr "深色開始時間"
+
+#, python-brace-format
+msgid ""
+"Dark from {start} to {end} today, worked out for {city} (your time zone's "
+"city)."
+msgstr "今天從 {start} 到 {end} 使用深色，依 {city}（您所在時區的城市）計算。"
+
+#, python-brace-format
+msgid "Dark from {start} to {end}."
+msgstr "從 {start} 到 {end} 使用深色。"
+
+msgid "Dark style"
+msgstr "深色模式"
+
+msgid "Date and time"
+msgstr "日期與時間"
+
+msgid "Day"
+msgstr "日"
+
+msgid "December"
+msgstr "十二月"
+
+msgid "Default apps"
+msgstr "預設應用程式"
+
+msgid "Delete a file, or get it back"
+msgstr "刪除檔案，或將它找回"
+
+msgid "Delete and restart"
+msgstr "刪除並重新啟動"
+
+msgid "Delete important settings to test the settings repair"
+msgstr "刪除重要設定，以測試設定修復功能"
+
+msgid "Delete the box"
+msgstr "刪除容器"
+
+msgid "Deleting the settings."
+msgstr "正在刪除設定。"
+
+#, python-brace-format
+msgid "Deleting the {label}"
+msgstr "正在刪除 {label}"
+
+#, python-brace-format
+msgid "Deleting the {label}."
+msgstr "正在刪除 {label}。"
+
+msgid "Desktop layout"
+msgstr "桌面版面配置"
+
+msgid "Details"
+msgstr "詳細資訊"
+
+msgid "Didn't help? Turn it off again, and restart."
+msgstr "沒有幫助嗎？請再關閉一次，然後重新啟動。"
+
+msgid "Disk"
+msgstr "磁碟"
+
+msgid "Disk and startup"
+msgstr "磁碟與啟動"
+
+#, python-brace-format
+msgid "Disk found, {gb} GB."
+msgstr "已找到磁碟，{gb} GB。"
+
+msgid "Disk password"
+msgstr "磁碟密碼"
+
+msgid "Disk space"
+msgstr "磁碟空間"
+
+msgid ""
+"Do Not Disturb, in the same place, keeps notifications quiet until you turn "
+"it off."
+msgstr "「不要打擾」也在同一個位置，開啟後會讓通知保持安靜，直到您關閉它。"
+
+msgid "Documents"
+msgstr "文件"
+
+msgid ""
+"Documents, Downloads, Pictures, Music and Videos are there, as on Windows."
+msgstr "「文件」、「下載」、「圖片」、「音樂」和「影片」都在那裡，和 Windows 一樣。"
+
+msgid "Don't encrypt"
+msgstr "不要加密"
+
+msgid "Don't show again"
+msgstr "不要再顯示"
+
+msgid "Don't show this again at login"
+msgstr "登入時不要再顯示此訊息"
+
+msgid "Don't use it"
+msgstr "不要使用"
+
+msgid "Done"
+msgstr "完成"
+
+msgid "Done."
+msgstr "完成。"
+
+msgid "Done. Everything is up to date."
+msgstr "完成。所有項目都已是最新版本。"
+
+msgid "Done. Log out and back in to see the new layout."
+msgstr "完成。請登出再登入，即可看到新的版面配置。"
+
+msgid "Done. The computer starts with the boot options it has now."
+msgstr "完成。電腦會以目前設定的開機選項啟動。"
+
+msgid "Done. The earlier boot options start at your next restart."
+msgstr "完成。您下次重新啟動時，會使用先前的開機選項。"
+
+msgid "Done. The next Zoom meeting asks about Chrome again."
+msgstr "完成。下次開 Zoom 會議時，會再次詢問是否使用 Chrome。"
+
+#, python-brace-format
+msgid "Done. The version from {date} starts at your next restart."
+msgstr "完成。{date} 的版本會在您下次重新啟動時啟用。"
+
+msgid "Done. Your computer keeps the version it has now."
+msgstr "完成。您的電腦會保留目前的版本。"
+
+#, python-brace-format
+msgid "Done. {freed} freed. {free} is free now."
+msgstr "完成。已釋放 {freed}。現在有 {free} 可用空間。"
+
+msgid "Downloading its signature"
+msgstr "正在下載其簽章"
+
+#, python-brace-format
+msgid "Downloading the {label}"
+msgstr "正在下載 {label}"
+
+#, python-brace-format
+msgid "Downloading the {label} (about {size} MB)"
+msgstr "正在下載 {label}（約 {size} MB）"
+
+#, python-brace-format
+msgid "Downloading {name}"
+msgstr "正在下載 {name}"
+
+#, python-brace-format
+msgid "Downloading {name}."
+msgstr "正在下載 {name}。"
+
+#, python-brace-format
+msgid "Downloading {title}"
+msgstr "正在下載 {title}"
+
+#, python-brace-format
+msgid "Downloading {title} from ArtCraft."
+msgstr "正在從 ArtCraft 下載 {title}。"
+
+msgid ""
+"Drag a window to the top of the screen to fill the screen. Drag it to the "
+"left or right edge to fill that half."
+msgstr "將視窗拖曳到畫面頂端即可填滿畫面。拖曳到左側或右側邊緣即可填滿那一半。"
+
+msgid "Drive freezes or disappears"
+msgstr "磁碟機卡住或消失"
+
+msgid "Drop a file here"
+msgstr "將檔案拖曳到這裡"
+
+msgid "Drop an .rpm, .deb, .exe or .msi file."
+msgstr "拖放 .rpm、.deb、.exe 或 .msi 檔案到這裡。"
+
+msgid "Dry run only. To make the change run:  sudo %s --apply"
+msgstr "僅為模擬執行。若要實際套用變更，請執行：sudo %s --apply"
+
+msgid ""
+"Either choice installs with no password on an administrator account. Taking them out asks for it.\n"
+"Restart afterwards. To take them out again: codecs remove"
+msgstr ""
+"在管理員帳號上，兩種選擇都不需要密碼就能安裝。移除時會要求輸入密碼。\n"
+"之後請重新啟動。若要再次移除：codecs remove"
+
+msgid "Either choice installs with no password."
+msgstr "兩種選擇都不需要密碼就能安裝。"
+
+msgid "Enabled"
+msgstr "已啟用"
+
+msgid "Enabled, with a password"
+msgstr "已啟用，並設有密碼"
+
+msgid "Encrypt the disk"
+msgstr "加密磁碟"
+
+msgid "Encrypted"
+msgstr "已加密"
+
+msgid ""
+"Encrypting keeps the files on this disk private if the computer is lost or "
+"stolen. The disk password is typed at every start, until automatic unlock is "
+"turned on in Wheelhouse."
+msgstr ""
+"如果電腦遺失或遭竊，加密功能可保護此磁碟上的檔案不被他人存取。每次開機時都需要輸入磁碟密碼，直到在 Wheelhouse 中開啟自動解鎖為止。"
+
+msgid "Encrypting the disk"
+msgstr "正在加密磁碟"
+
+msgid "Encryption"
+msgstr "加密"
+
+msgid "Erase"
+msgstr "清除"
+
+msgid "Erase and install"
+msgstr "清除並安裝"
+
+msgid "Erase the disk?"
+msgstr "要清除磁碟嗎？"
+
+msgid "Erasing the disk"
+msgstr "正在清除磁碟"
+
+msgid "EvenKeelOS Wheelhouse"
+msgstr "EvenKeelOS Wheelhouse"
+
+msgid "EvenKeelOS guide"
+msgstr "EvenKeelOS 指南"
+
+msgid "EvenKeelOS is installed"
+msgstr "已安裝 EvenKeelOS"
+
+msgid ""
+"EvenKeelOS needs UEFI. Turn on UEFI in the BIOS, then start from the USB "
+"stick again."
+msgstr "EvenKeelOS 需要 UEFI。請在 BIOS 中開啟 UEFI，然後再從 USB 隨身碟重新啟動。"
+
+msgid "EvenKeelOS needs at least 20 GB."
+msgstr "EvenKeelOS 需要至少 20 GB 的空間。"
+
+msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
+msgstr "EvenKeelOS 在 8 GB 或以上的記憶體下運作最佳，因此可能會比較慢。"
+
+msgid ""
+"Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
+"layout, and help"
+msgstr "所有 EvenKeelOS 工具集中一處：更新、應用程式、VPN、磁碟與啟動、版面配置，以及說明"
+
+msgid "Every day"
+msgstr "每天"
+
+msgid ""
+"Every day at 4 am, or at the next start, the system, your apps and app boxes "
+"update."
+msgstr "每天凌晨 4 點或下次開機時，系統、您的應用程式和應用程式容器都會更新。"
+
+msgid "Every hour"
+msgstr "每小時"
+
+msgid ""
+"Every network is Home, Work or a Public place. A new one is a Public place, "
+"where nothing can reach your computer."
+msgstr "每個網路都是「家用」、「工作」或「公共場所」。新網路會是「公共場所」，任何東西都無法連到您的電腦。"
+
+msgid ""
+"Every tool here has a command. The copy button puts it on the clipboard, to "
+"paste in a terminal."
+msgstr "這裡的每個工具都有對應的指令。複製按鈕會把它放到剪貼簿，供您貼到終端機中。"
+
+msgid "Everything"
+msgstr "全部"
+
+#, python-brace-format
+msgid "Everything on {disk} will be erased, including encrypted data."
+msgstr "{disk} 上的所有內容都會被清除，包括加密的資料。"
+
+#, python-brace-format
+msgid "Everything on {disk} will be erased."
+msgstr "{disk} 上的所有內容都會被清除。"
+
+msgid "Everything updated except: %s"
+msgstr "除了以下項目，其餘都已更新：%s"
+
+msgid "Everything updated except: %s."
+msgstr "除了 %s，其餘都已更新。"
+
+msgid ""
+"Everything updated except: %s. Nothing is broken. It tries again at the next "
+"update."
+msgstr "除了 %s，其餘都已更新。沒有東西損壞。下次更新時會再試一次。"
+
+msgid "Experience"
+msgstr "使用習慣"
+
+#, python-brace-format
+msgid "Expired {date}"
+msgstr "已於 {date} 過期"
+
+#, python-brace-format
+msgid "Expires {date}"
+msgstr "將於 {date} 到期"
+
+msgid "Fair"
+msgstr "普通"
+
+msgid "February"
+msgstr "二月"
+
+msgid "Fedora box"
+msgstr "Fedora 容器"
+
+#, python-brace-format
+msgid ""
+"Fedora has {title}.\n"
+"\n"
+"Recommended: Install from Fedora. System Update keeps it up to date.\n"
+"\n"
+"Or Use the file: installs your download. It never updates."
+msgstr ""
+"Fedora 有 {title}。\n"
+"\n"
+"建議：「從 Fedora 安裝」。「系統更新」會讓它保持最新。\n"
+"\n"
+"或者「使用此檔案」：安裝您下載的檔案。它永遠不會更新。"
+
+msgid "Fedora's firewall list"
+msgstr "Fedora 的防火牆清單"
+
+msgid "Fedora's time servers"
+msgstr "Fedora 的時間伺服器"
+
+#, python-brace-format
+msgid "Fedora's {service} app"
+msgstr "Fedora 的 {service} 應用程式"
+
+msgid "File"
+msgstr "檔案"
+
+msgid "File Explorer: Files."
+msgstr "檔案總管：「檔案」。"
+
+msgid "Files"
+msgstr "檔案"
+
+msgid "Find it in Show Apps."
+msgstr "在「顯示程式」中可以找到它。"
+
+msgid "Find the Linux version of a Windows .exe or .msi"
+msgstr "尋找 Windows .exe 或 .msi 的 Linux 版本"
+
+msgid "Find your files"
+msgstr "尋找您的檔案"
+
+msgid "Finishing"
+msgstr "正在完成"
+
+msgid "Firewall off"
+msgstr "防火牆已關閉"
+
+msgid ""
+"Firmware is the software built into the computer's own parts, like the BIOS."
+msgstr "韌體是內建在電腦各個零件中的軟體，例如 BIOS。"
+
+msgid "Firmware updated."
+msgstr "韌體已更新。"
+
+msgid "Firmware updated. Some updates finish while the computer restarts."
+msgstr "韌體已更新。部分更新會在電腦重新啟動時完成。"
+
+msgid "Firmware updates are available for:"
+msgstr "以下裝置有可用的韌體更新："
+
+#, python-brace-format
+msgid ""
+"First time only: downloads a few hundred MB and uses about {disk} of disk "
+"space."
+msgstr "僅限第一次：會下載幾百 MB 的檔案，並使用大約 {disk} 的磁碟空間。"
+
+#, python-brace-format
+msgid ""
+"First time only: downloads about {size} MB and uses about {disk} of disk "
+"space."
+msgstr "僅限第一次：下載約 {size} MB，並使用約 {disk} 的磁碟空間。"
+
+#, python-brace-format
+msgid ""
+"First time only: sets up the box, which takes a minute or two and uses about "
+"{disk} of disk space."
+msgstr "僅限第一次：設定容器，約需一兩分鐘，並使用約 {disk} 的磁碟空間。"
+
+msgid "Fit check"
+msgstr "相容性檢查"
+
+msgid "Fix"
+msgstr "修復"
+
+msgid "Fix screen flicker or a drive that freezes"
+msgstr "修正畫面閃爍或磁碟機卡住"
+
+msgid "Fixes and extras"
+msgstr "修正與額外功能"
+
+msgid "Fixes for screen flicker and drive freezes, or your own kernel settings"
+msgstr "修正畫面閃爍和磁碟機卡住的問題，或您自己的核心設定"
+
+msgid ""
+"Fixes many people use. Each one can cost a little battery, so turn one on "
+"only for a problem you have."
+msgstr "許多人使用的修正。每一項都可能多耗一點電池，所以只針對您遇到的問題開啟。"
+
+msgid ""
+"Flicker or glitches when the picture is still. The usual fix to try first"
+msgstr "畫面靜止時閃爍或出現異常。通常最先嘗試的修正"
+
+msgid "Folder"
+msgstr "資料夾"
+
+msgid "Folder icon color"
+msgstr "資料夾圖示顏色"
+
+msgid "Folders"
+msgstr "資料夾"
+
+msgid "Fonts and text"
+msgstr "字型與文字"
+
+msgid "Fonts and text size"
+msgstr "字型與文字大小"
+
+msgid ""
+"For a network with a password, a small window then asks where it is: Home, "
+"Work or Public place. Not sure? Keep Public place."
+msgstr "如果網路需要密碼，接著會有一個小視窗詢問它在哪裡：「家用」、「工作」或「公共場所」。不確定嗎？請保留「公共場所」。"
+
+msgid ""
+"For an expired one that was added to this computer, it offers Remove it. "
+"Fedora's own ones are replaced by updates, so keep automatic updates on."
+msgstr "如果是新增到這台電腦且已過期的憑證，會提供「移除」。Fedora 自己的憑證會由更新取代，所以請保持自動更新開啟。"
+
+msgid ""
+"For everyone on this computer, on Home networks only, never on Work or a "
+"Public place. Changes ask for an administrator password."
+msgstr "適用於這台電腦上的所有人，只在「家用」網路上，絕不在「工作」或「公共場所」。變更需要管理員密碼。"
+
+msgid ""
+"For the tests that break one thing, like Sound driver blocked, log in when "
+"the login screen shows."
+msgstr "若是只弄壞一項功能的測試（例如「音效驅動程式被封鎖」），請在登入畫面出現時登入。"
+
+msgid ""
+"For the web browser, email, calendar, music, videos and photos: Settings, "
+"Apps, Default Apps."
+msgstr "網路瀏覽器、電子郵件、行事曆、音樂、影片和相片：「設定」>「應用程式」>「預設應用程式」。"
+
+msgid ""
+"For those, a window asks before each restart. Click Restart now, or Not yet "
+"to save your work first."
+msgstr "這些項目每次重新啟動前都會有視窗詢問。請按一下「立即重新啟動」，或按「先不要」，先儲存您的工作。"
+
+msgid "Formatting"
+msgstr "正在格式化"
+
+msgid "Free up disk space"
+msgstr "釋放磁碟空間"
+
+msgid "Free up space"
+msgstr "釋放空間"
+
+msgid "Freeing space, the disk password, boot options and BIOS settings"
+msgstr "釋放空間、磁碟密碼、開機選項和 BIOS 設定"
+
+msgid "Freeing the disk"
+msgstr "正在釋放磁碟空間"
+
+msgid "Freeze"
+msgstr "當機"
+
+msgid "From the computer's location (recommended)"
+msgstr "從電腦所在位置（建議）"
+
+msgid "From time servers on the internet (recommended)"
+msgstr "從網路上的時間伺服器取得（建議）"
+
+msgid "From your next restart, the disk unlocks by itself."
+msgstr "從下次重新啟動起，磁碟會自動解鎖。"
+
+msgid "Full name"
+msgstr "全名"
+
+#, python-brace-format
+msgid "Full name: {name}. User name: {username}."
+msgstr "全名：{name}。使用者名稱：{username}。"
+
+msgid "Get a VPN"
+msgstr "取得 VPN"
+
+msgid "Get a VPN is open"
+msgstr "「取得 VPN」已開啟"
+
+msgid "Get an app"
+msgstr "取得應用程式"
+
+msgid "Get apps"
+msgstr "取得應用程式"
+
+msgid "Get help"
+msgstr "取得協助"
+
+msgid "Getting Ubuntu's list of packages"
+msgstr "正在取得 Ubuntu 的套件清單"
+
+msgid ""
+"Getting apps, Windows programs, package files, removing apps, default apps, "
+"Zoom, VPNs and codecs"
+msgstr "取得應用程式、Windows 程式、套件檔案、移除應用程式、預設應用程式、Zoom、VPN 和編解碼器"
+
+msgid ""
+"Getting apps:\n"
+"\n"
+"- Most apps: Bazaar, the app store. Find the app there and install it.\n"
+"- An app that comes as a file (.rpm or .deb): open the file, or open Install Package File, which lists the files in your Downloads folder. It's in Wheelhouse, Apps.\n"
+"- Removing those apps: Wheelhouse, Apps, Remove apps.\n"
+"\n"
+"Wheelhouse has the rest: updates, disk space, undoing an update, and saving problem details for your helper.\n"
+"\n"
+"Recommended: Open Bazaar, to see it. Or Open Install Package File. Or Next."
+msgstr ""
+"取得應用程式：\n"
+"\n"
+"- 大多數應用程式：應用程式商店 Bazaar。在那裡找到應用程式並安裝。\n"
+"- 以檔案形式提供的應用程式（.rpm 或 .deb）：開啟該檔案，或開啟「安裝套件檔案」，它會列出您「下載」資料夾中的檔案。它位於 Wheelhouse >「應用程式」。\n"
+"- 移除這些應用程式：Wheelhouse >「應用程式」>「移除應用程式」。\n"
+"\n"
+"其他功能都在 Wheelhouse：更新、磁碟空間、復原更新，以及為協助者儲存問題詳細資訊。\n"
+"\n"
+"建議：「開啟 Bazaar」，看看它的樣子。或者「開啟安裝套件檔案」。或者「下一步」。"
+
+msgid "Getting help"
+msgstr "取得協助"
+
+msgid "Getting ready"
+msgstr "正在準備"
+
+msgid "Getting started"
+msgstr "開始使用"
+
+msgid "Getting the list of apps from the new download source."
+msgstr "正在從新的下載來源取得應用程式清單。"
+
+#, python-brace-format
+msgid "Getting the {label} ready. The first time takes a few minutes."
+msgstr "正在準備 {label}。第一次需要幾分鐘的時間。"
+
+msgid "Getting what it runs on from Flathub"
+msgstr "從 Flathub 取得它運作所需的環境"
+
+#, python-brace-format
+msgid "Give it a name of 1 to {max} characters."
+msgstr "請為它取一個 1 到 {max} 個字元的名稱。"
+
+msgid "Glitches on newer AMD chips"
+msgstr "較新 AMD 晶片上的畫面異常"
+
+msgid "Go back now"
+msgstr "立即回復"
+
+msgid "Go back to the version from before the last update"
+msgstr "回到上次更新之前的版本"
+
+msgid ""
+"Go back to the version from before the last update. Automatic updates then "
+"pause for 3 days."
+msgstr "回到上次更新之前的版本。自動更新接著會暫停 3 天。"
+
+msgid "Good"
+msgstr "良好"
+
+msgid "Graphics"
+msgstr "顯示晶片"
+
+#, python-brace-format
+msgid "Graphics ({driver})"
+msgstr "顯示晶片 ({driver})"
+
+msgid "Graphics driver blocked"
+msgstr "顯示晶片驅動程式被封鎖"
+
+msgid "Hardware rule"
+msgstr "硬體規則"
+
+msgid "Hidden folders hold settings and keys. They can't be shared."
+msgstr "隱藏資料夾存放設定和金鑰。它們無法共享。"
+
+msgid "Home"
+msgstr "家用"
+
+msgid ""
+"Home lets in phones, file sharing and apps you run. Work and a Public place "
+"let nothing in."
+msgstr "「家用」允許手機、檔案共享和您執行的應用程式連入。「工作」和「公共場所」不允許任何連入。"
+
+msgid "Home, Work or Public place"
+msgstr "家用、工作或公共場所"
+
+msgid "Home, Work or Public place, and what each lets in"
+msgstr "家用、工作或公共場所，以及各自允許哪些連入"
+
+msgid ""
+"Home: your phone and other computers can reach apps that ask for it, like "
+"file sharing."
+msgstr "家用：您的手機和其他電腦可以連到需要連入的應用程式，例如檔案共享。"
+
+msgid "Hour"
+msgstr "小時"
+
+msgid "How should the clock show the time?"
+msgstr "時鐘要如何顯示時間？"
+
+msgid ""
+"How should the desktop look? Click one. You can switch later in Wheelhouse."
+msgstr "桌面要長什麼樣子？請按一下其中一個。之後可以在 Wheelhouse 中切換。"
+
+msgid "How to do things"
+msgstr "如何操作"
+
+msgid "How to do things on EvenKeelOS, step by step."
+msgstr "EvenKeelOS 的操作方法逐步說明。"
+
+msgid "How to do things, step by step"
+msgstr "操作方法逐步說明"
+
+msgid "How to do things, step by step: the desktop, files, apps and more"
+msgstr "操作方法逐步說明：桌面、檔案、應用程式等"
+
+msgid "I already use Linux"
+msgstr "我已經在使用 Linux 了"
+
+msgid "IANA port list"
+msgstr "IANA 連接埠清單"
+
+msgid ""
+"If it happens again, tell your helper. Save problem details in Wheelhouse "
+"makes a file to send them."
+msgstr "如果再次發生，請告知您的協助者。Wheelhouse 中的「儲存問題詳細資訊」會建立一個檔案，方便您傳送給他們。"
+
+msgid "If it started after an update, go back to the version from before it"
+msgstr "如果是在更新後開始的，請回到更新前的版本"
+
+msgid ""
+"If something stopped working after an update, open Wheelhouse, Updates, Undo "
+"the last update."
+msgstr "如果更新後有東西無法運作，請開啟 Wheelhouse >「更新」>「復原上一次更新」。"
+
+msgid "If something went wrong"
+msgstr "如果發生問題"
+
+msgid "If the computer won't start properly"
+msgstr "如果電腦無法正常啟動"
+
+msgid ""
+"If the disk is encrypted, its password is typed when the computer starts, "
+"before EvenKeelOS loads. Which keyboard layout is used then?"
+msgstr "如果磁碟有加密，就要在電腦啟動時、EvenKeelOS 載入之前輸入密碼。那時要使用哪一種鍵盤配置？"
+
+msgid ""
+"If updates are listed, click Update and type your password. Some finish while"
+" the computer restarts."
+msgstr "如果列出了更新，請按一下「更新」，然後輸入您的密碼。有些更新會在電腦重新啟動時完成。"
+
+msgid ""
+"If you type a disk password every time the computer starts, it can unlock by "
+"itself with the computer's security chip."
+msgstr "如果您每次開機時都會輸入磁碟密碼，電腦就能透過內建的安全晶片自動解鎖。"
+
+msgid ""
+"If yours does, download the maker's .rpm file and open it from Downloads. "
+"Wheelhouse sees that it's a printer driver."
+msgstr "如果您的印表機需要，請下載製造商的 .rpm 檔案，並從「下載」中開啟它。Wheelhouse 會辨識出它是印表機驅動程式。"
+
+msgid "Important settings deleted"
+msgstr "重要設定已刪除"
+
+msgid ""
+"Important system settings are really deleted, and the computer restarts right"
+" away. The next start finds them missing, puts them back from the copy it "
+"saved, and restarts once more by itself. A message at login then lists what "
+"was put back."
+msgstr ""
+"重要的系統設定真的被刪除了，電腦會立刻重新啟動。下次啟動時，系統會發現這些設定遺失，從先前儲存的備份中將它們復原，然後再次自動重新啟動。接著，登入時會出現一則訊息，列出哪些項目已復原。"
+
+msgid ""
+"In a box it updates with System Update; added to the system it never updates."
+msgstr "放在容器中時，它會隨「系統更新」一起更新；新增到系統中則永遠不會更新。"
+
+msgid "In the box, these won't work:"
+msgstr "在容器中，以下功能無法運作："
+
+msgid "In use"
+msgstr "使用中"
+
+msgid "Install"
+msgstr "安裝"
+
+msgid "Install Chrome"
+msgstr "安裝 Chrome"
+
+msgid "Install EvenKeelOS"
+msgstr "安裝 EvenKeelOS"
+
+msgid "Install EvenKeelOS on this computer"
+msgstr "在這台電腦上安裝 EvenKeelOS"
+
+msgid ""
+"Install EvenKeelOS puts it on this computer. Or Try it first: Install "
+"EvenKeelOS is also in the dock."
+msgstr "「安裝 EvenKeelOS」會把它裝到這台電腦上。或者「先試試看」：Dock 中也有「安裝 EvenKeelOS」。"
+
+msgid "Install EvenKeelOS, or try it first"
+msgstr "安裝 EvenKeelOS，或先試試看"
+
+msgid "Install Media Codecs"
+msgstr "安裝媒體編解碼器"
+
+msgid "Install Package File"
+msgstr "安裝套件檔案"
+
+msgid "Install Package File is open"
+msgstr "「安裝套件檔案」已開啟"
+
+msgid "Install Package File is open. Cancel it when you're done looking."
+msgstr "「安裝套件檔案」已開啟。看完後請按「取消」。"
+
+msgid "Install Package File: after restart"
+msgstr "安裝套件檔案：重新啟動後"
+
+msgid "Install a package file"
+msgstr "安裝套件檔案"
+
+msgid "Install an app from an .rpm or .deb file"
+msgstr "從 .rpm 或 .deb 檔案安裝應用程式"
+
+msgid "Install from Fedora"
+msgstr "從 Fedora 安裝"
+
+msgid "Install it here too"
+msgstr "也安裝在這裡"
+
+msgid "Install the driver"
+msgstr "安裝驅動程式"
+
+msgid "Install the file too"
+msgstr "也安裝這個檔案"
+
+msgid "Install the older version"
+msgstr "安裝舊版本"
+
+#, python-brace-format
+msgid "Install {name}"
+msgstr "安裝 {name}"
+
+#, python-brace-format
+msgid "Install {title}"
+msgstr "安裝 {title}"
+
+#, python-brace-format
+msgid ""
+"Install {title}\n"
+"\n"
+"In a box, these parts of {title} won't work:\n"
+"{notes}\n"
+"A .deb file can't go on the system. For everything to work, look for {title} as an .rpm file or in Bazaar, the app store.\n"
+"\n"
+"{setup}: puts it in a box anyway, without those parts."
+msgstr ""
+"安裝 {title}\n"
+"\n"
+"在容器中，{title} 的這些部分無法運作：\n"
+"{notes}\n"
+".deb 檔案無法裝到系統上。若要讓所有功能都能運作，請尋找 .rpm 檔案形式的 {title}，或在應用程式商店 Bazaar 中尋找。\n"
+"\n"
+"「{setup}」：仍然把它裝進容器，但不含那些部分。"
+
+#, python-brace-format
+msgid ""
+"Install {title}\n"
+"\n"
+"It comes from {maker}'s own download source, which is added to the system so {title} keeps updating. Needs your password and a restart.\n"
+"\n"
+"To connect, you need a {maker} account."
+msgstr ""
+"安裝 {title}\n"
+"\n"
+"它來自 {maker} 自己的下載來源，該來源會新增到系統中，讓 {title} 持續更新。需要您的密碼並重新啟動。\n"
+"\n"
+"若要連線，您需要 {maker} 帳號。"
+
+#, python-brace-format
+msgid ""
+"Install {title}\n"
+"\n"
+"Recommended: Add to the system. In a box, these parts of {title} won't work:\n"
+"{notes}\n"
+"On the system, everything works. Needs your password and a restart.\n"
+"\n"
+"Or {setup}: puts it in a separate box. It's easier to remove, but those parts won't work."
+msgstr ""
+"安裝 {title}\n"
+"\n"
+"建議：「新增至系統」。在容器中，{title} 的這些部分無法運作：\n"
+"{notes}\n"
+"在系統上，一切都能運作。需要您的密碼並重新啟動。\n"
+"\n"
+"或者「{setup}」：把它放在另一個容器中。移除比較容易，但那些部分無法運作。"
+
+#, python-brace-format
+msgid ""
+"Install {title}\n"
+"\n"
+"{setup}: puts it in a separate box. Your system isn't changed, and Remove Apps takes it out cleanly."
+msgstr ""
+"安裝 {title}\n"
+"\n"
+"「{setup}」：把它放在另一個容器中。您的系統不會變動，而「移除應用程式」可以把它乾淨地移除。"
+
+msgid "Installed"
+msgstr "已安裝"
+
+msgid "Installed in"
+msgstr "已安裝於"
+
+msgid "Installing EvenKeelOS"
+msgstr "正在安裝 EvenKeelOS"
+
+msgid "Installing the codecs. This can take a few minutes."
+msgstr "正在安裝編解碼器。這可能需要幾分鐘時間。"
+
+#, python-brace-format
+msgid "Installing the older version of {title}"
+msgstr "正在安裝舊版 {title}"
+
+#, python-brace-format
+msgid "Installing the older version of {title} in the {label}."
+msgstr "正在 {label} 中安裝舊版 {title}。"
+
+#, python-brace-format
+msgid "Installing {name}"
+msgstr "正在安裝 {name}"
+
+#, python-brace-format
+msgid "Installing {name} from Flathub."
+msgstr "正在從 Flathub 安裝 {name}。"
+
+#, python-brace-format
+msgid "Installing {title}"
+msgstr "正在安裝 {title}"
+
+#, python-brace-format
+msgid "Installing {title} in the {label}."
+msgstr "正在將 {title} 安裝到 {label}。"
+
+#, python-brace-format
+msgid "Installing {title}."
+msgstr "正在安裝 {title}。"
+
+msgid "Intel (newest chips): flicker or black flashes"
+msgstr "Intel（最新晶片）：畫面閃爍或出現黑屏閃爍"
+
+msgid "Intel (older chips): flicker or freezes"
+msgstr "Intel（舊款晶片）：畫面閃爍或凍結"
+
+msgid "Internet and networks"
+msgstr "網路與連線"
+
+msgid "It adds its maker's download source, so it updates with System Update."
+msgstr "它會新增製造商的下載來源，因此會透過「系統更新」進行更新。"
+
+msgid ""
+"It also has a device rule. That goes on the system, so you will be asked for "
+"your password."
+msgstr "它還有一個裝置規則。這會安裝到系統上，因此系統會要求您輸入密碼。"
+
+msgid "It comes back on by itself on a Home network."
+msgstr "在「家用」網路上，它會自動重新開啟。"
+
+msgid "It could not reach the internet. Check the connection, then try again."
+msgstr "它無法連上網路。請檢查網路連線，然後再試一次。"
+
+msgid "It didn't work, and nothing was changed."
+msgstr "沒有成功，也沒有任何變更。"
+
+#, python-brace-format
+msgid ""
+"It didn't work, and nothing was changed.\n"
+"\n"
+"The details are in {log}"
+msgstr ""
+"沒有成功，也沒有任何變更。\n"
+"\n"
+"詳細資訊請見 {log}"
+
+#, python-brace-format
+msgid ""
+"It didn't work, and nothing was changed. Try again later.\n"
+"\n"
+"The details are in {log}"
+msgstr ""
+"沒有成功，也沒有任何變更。請稍後再試一次。\n"
+"\n"
+"詳細資訊請見 {log}"
+
+#, python-brace-format
+msgid ""
+"It didn't work.\n"
+"\n"
+"The details are in {log}"
+msgstr ""
+"沒有成功。\n"
+"\n"
+"詳細資訊請見 {log}"
+
+msgid ""
+"It gives anyone at the keyboard a shell with full control, with no password."
+msgstr "它會讓任何坐在鍵盤前的人不需密碼就取得具完整控制權的 shell。"
+
+#, python-brace-format
+msgid "It goes in the {label} and updates with System Update."
+msgstr "它會放在 {label} 中，並透過「系統更新」進行更新。"
+
+msgid "It has no app of its own; other apps in the box use it."
+msgstr "它沒有自己的應用程式；容器中的其他應用程式會使用它。"
+
+msgid "It has no window of its own in Show Apps."
+msgstr "它在「顯示程式」中沒有自己的視窗。"
+
+msgid "It is a command-line tool, so it has no window in Show Apps."
+msgstr "這是一個命令列工具，因此在「顯示程式」中不會有視窗。"
+
+msgid "It is made for a different kind of processor than this computer has."
+msgstr "它是為不同於這台電腦的處理器類型所製作的。"
+
+msgid ""
+"It may not work yet. When it does, it works in Firefox and the Camera app, "
+"not every app."
+msgstr "它可能還無法運作。可以運作時，也只在 Firefox 和「相機」應用程式中運作，不是每個應用程式都行。"
+
+msgid ""
+"It needs parts that the Ubuntu box (Ubuntu 24.04) does not have. It may be "
+"made for a newer or older Ubuntu."
+msgstr "它需要 Ubuntu 容器（Ubuntu 24.04）沒有的元件。它可能是為較新或較舊的 Ubuntu 所製作。"
+
+#, python-brace-format
+msgid ""
+"It needs {name}, which Fedora {version} does not have. It may be made for a "
+"different Fedora version."
+msgstr "它需要 {name}，但 Fedora {version} 沒有。它可能是為其他 Fedora 版本設計的。"
+
+#, python-brace-format
+msgid ""
+"It needs {name}, which the Ubuntu box (Ubuntu 24.04) does not have. It may be"
+" made for a newer or older Ubuntu."
+msgstr "它需要 {name}，但 Ubuntu 容器（Ubuntu 24.04）沒有。它可能是為較新或較舊的 Ubuntu 所製作。"
+
+msgid "It never updates."
+msgstr "它永遠不會更新。"
+
+msgid ""
+"It opens file sharing ports: folders are shared only on Home networks, in "
+"Shared folders."
+msgstr "它會開啟檔案共享連接埠：資料夾只在「家用」網路上透過「共享資料夾」共享。"
+
+msgid "It says first whether the app keeps itself updated, then installs it."
+msgstr "它會先說明該應用程式是否會自行更新，然後再進行安裝。"
+
+msgid "It starts when you restart the computer."
+msgstr "當您重新啟動電腦時，它就會啟動。"
+
+msgid ""
+"It stops a driver from loading. If it's the drive's or the screen's driver, "
+"the computer won't start."
+msgstr "它會阻止驅動程式載入。如果是磁碟機或螢幕的驅動程式，電腦將無法啟動。"
+
+msgid ""
+"It tells you whether there's a version for EvenKeelOS, or a replacement that "
+"does the same job."
+msgstr "它會告訴您是否有適用於 EvenKeelOS 的版本，或者是否有能執行相同功能的替代方案。"
+
+msgid ""
+"It turns off SELinux, which keeps apps and services from reaching what they "
+"shouldn't."
+msgstr "它會關閉 SELinux，SELinux 能防止應用程式和服務存取它們不該存取的內容。"
+
+msgid "It turns off or weakens a security protection."
+msgstr "它會關閉或削弱某項安全防護。"
+
+msgid "It turns off protection against processor security flaws."
+msgstr "它會關閉針對處理器安全漏洞的防護。"
+
+msgid ""
+"It turns off the graphics driver: low resolution, no outside screens, and "
+"sleep may not work."
+msgstr "它會關閉顯示晶片驅動程式：解析度變低、無法使用外接螢幕，睡眠也可能無法運作。"
+
+msgid "It updates by itself."
+msgstr "它會自動更新。"
+
+msgid ""
+"It would replace a file that belongs to the system, so it was not added."
+msgstr "這會取代屬於系統的檔案，因此並未新增。"
+
+#, python-brace-format
+msgid "It's already set: the version from {date} starts at your next restart."
+msgstr "已經設定好了：{date} 的版本會在您下次重新啟動時啟用。"
+
+msgid "It's in Wheelhouse if you want it again."
+msgstr "如果您想再次使用，可以在 Wheelhouse 中找到它。"
+
+msgid "It's on. From your next restart, the disk unlocks by itself."
+msgstr "已開啟。從下次重新啟動起，磁碟會自動解鎖。"
+
+msgid ""
+"Its file changed or holds more than one certificate, so nothing was removed. "
+"Tell your helper."
+msgstr "它的檔案已變更或包含多個憑證，因此沒有移除任何東西。請告知您的協助者。"
+
+#, python-brace-format
+msgid ""
+"Its file is removed, but \"{name}\" is still trusted: it was added somewhere "
+"else too. Tell your helper."
+msgstr "它的檔案已移除，但「{name}」仍受信任：它也被新增到其他地方。請告知您的協助者。"
+
+msgid "January"
+msgstr "一月"
+
+msgid "Join a Wi-Fi network"
+msgstr "連線到 Wi-Fi 網路"
+
+msgid "July"
+msgstr "七月"
+
+msgid "June"
+msgstr "六月"
+
+msgid "Keep it"
+msgstr "保留"
+
+msgid "Keep it on"
+msgstr "保持開啟"
+
+msgid "Keep the clock right automatically, or set the date and time yourself."
+msgstr "自動保持時鐘準確，或自行設定日期和時間。"
+
+msgid "Keep the pause"
+msgstr "保持暫停"
+
+msgid "Keep them off"
+msgstr "保持關閉"
+
+msgid "Keep them on"
+msgstr "保持開啟"
+
+msgid "Keep these options"
+msgstr "保留這些選項"
+
+msgid "Keep this update"
+msgstr "保留此更新"
+
+msgid "Keeping it in its sandbox"
+msgstr "讓它留在沙箱中"
+
+msgid "Keeps the drive out of its deepest power saving"
+msgstr "讓磁碟機不進入最深層的省電模式"
+
+msgid ""
+"Keeps the folder icons in the accent color picked in Settings, Appearance"
+msgstr "讓資料夾圖示使用「設定」>「外觀」中選擇的強調色"
+
+msgid "Keyboard"
+msgstr "鍵盤"
+
+msgid "Keyboard at start"
+msgstr "開機時的鍵盤"
+
+msgid "Keyboard for the disk password"
+msgstr "輸入磁碟密碼時的鍵盤"
+
+msgid "Keyboard layout"
+msgstr "鍵盤配置"
+
+msgid "Language"
+msgstr "語言"
+
+msgid "Later"
+msgstr "稍後"
+
+msgid "Layout"
+msgstr "版面配置"
+
+#, python-brace-format
+msgid "Layout set to {layout}. Log out and back in to finish."
+msgstr "版面配置已設為 {layout}。請登出再重新登入以完成。"
+
+msgid "Let an app in"
+msgstr "允許應用程式連入"
+
+msgid "Let an app in on Home"
+msgstr "在「家用」網路上允許應用程式連入"
+
+msgid "Let an app in on Work"
+msgstr "在「工作」網路上允許應用程式連入"
+
+msgid "Let an app in on a Public place"
+msgstr "在「公共場所」允許應用程式連入"
+
+msgid "Let an app or game in"
+msgstr "允許應用程式或遊戲連入"
+
+msgid ""
+"Let computers on your Home network open folders you pick, with a password"
+msgstr "讓您「家用」網路上的電腦用密碼開啟您選定的資料夾"
+
+msgid "Let in a port by its number, with a name for it"
+msgstr "依號碼開放連接埠，並為它命名"
+
+msgid "Let it in"
+msgstr "允許連入"
+
+msgid "Let other computers in"
+msgstr "允許其他電腦連入"
+
+#, python-brace-format
+msgid "Let {name} in on a Public place?"
+msgstr "要在「公共場所」允許 {name} 連入嗎？"
+
+msgid "Light and dark"
+msgstr "淺色與深色"
+
+msgid "Light and dark schedule and wallpaper slideshow"
+msgstr "淺色與深色排程，以及桌布投影片播放"
+
+msgid "Light from"
+msgstr "淺色開始時間"
+
+msgid "Locked"
+msgstr "已鎖定"
+
+msgid "Log in from another computer (SSH)"
+msgstr "從其他電腦登入 (SSH)"
+
+msgid ""
+"Log in from another computer (SSH): for people who use a terminal. Leave it "
+"off if you don't know it."
+msgstr "從其他電腦登入 (SSH)：給使用終端機的人。如果您不熟悉，請保持關閉。"
+
+msgid ""
+"Log in when the login screen shows. About 3 minutes after you log in, a "
+"window asks before the computer restarts. That happens on 2 starts, and the "
+"third start is back on this version. If nobody logs in, each start waits 15 "
+"minutes first, then restarts by itself."
+msgstr ""
+"登入畫面出現時請登入。登入約 3 分鐘後，電腦重新啟動前會有視窗詢問您。這會發生在 2 次開機中，第 3 "
+"次開機就會回到這個版本。如果沒有人登入，每次開機會先等待 15 分鐘，然後自動重新啟動。"
+
+#, python-brace-format
+msgid "Log out and back in once, so {title} lets your account use it."
+msgstr "請登出再登入一次，讓 {title} 允許您的帳號使用它。"
+
+msgid "Log out and back in to see it."
+msgstr "登出再登入即可看到。"
+
+msgid "Log out and back in to see the new layout."
+msgstr "登出再登入，即可看到新的版面配置。"
+
+msgid "Logging in drops you back"
+msgstr "登入後又回到登入畫面"
+
+msgid "Login loop"
+msgstr "登入迴圈"
+
+msgid "Looking up website names (DNS)"
+msgstr "正在查詢網站名稱 (DNS)"
+
+msgid "Make everything bigger or smaller"
+msgstr "將所有內容放大或縮小"
+
+msgid "Make it a Public place"
+msgstr "設為「公共場所」"
+
+msgid "Make it yours"
+msgstr "個人化"
+
+msgid "Makes one file of recent errors. Email it to your helper."
+msgstr "建立一個包含最近錯誤的檔案。用電子郵件傳送給您的協助者。"
+
+msgid "Making it yours"
+msgstr "個人化"
+
+msgid "Making the partitions"
+msgstr "正在建立分割區"
+
+msgid "Making the test copy."
+msgstr "正在建立測試副本。"
+
+msgid "March"
+msgstr "三月"
+
+msgid "Matching tools"
+msgstr "符合的工具"
+
+msgid "May"
+msgstr "五月"
+
+msgid "Media codecs"
+msgstr "媒體編解碼器"
+
+msgid "Media codecs, disk unlock and getting apps, one at a time"
+msgstr "媒體編解碼器、磁碟解鎖和取得應用程式，一次一個"
+
+msgid "Media codecs, for some videos"
+msgstr "媒體編解碼器，適用於部分影片"
+
+msgid "Memory"
+msgstr "記憶體"
+
+msgid "Menus and windows"
+msgstr "選單和視窗"
+
+msgid "Minute"
+msgstr "分鐘"
+
+msgid "Month"
+msgstr "月"
+
+msgid "More ways to get apps"
+msgstr "更多取得應用程式的方式"
+
+msgid "Most printers don't need one. Try Add a printer first."
+msgstr "大多數印表機都不需要。請先試試「新增印表機」。"
+
+msgid "Move and arrange windows"
+msgstr "移動與排列視窗"
+
+msgid "Mullvad, Proton, IVPN or NordVPN, kept up to date"
+msgstr "Mullvad、Proton、IVPN 或 NordVPN，隨時保持最新版本"
+
+msgid "Name, so you know what it's for"
+msgstr "名稱，讓您知道它的用途"
+
+msgid "Network"
+msgstr "網路"
+
+msgid "Network places (Home, Work, Public place)"
+msgstr "網路位置（家用、工作、公共場所）"
+
+msgid "Network safety"
+msgstr "網路安全"
+
+msgid ""
+"Network safety can't check or change it right now. Restart the computer. If "
+"this stays, use Save problem details in Get help."
+msgstr "「網路安全」目前無法檢查或變更它。請重新啟動電腦。如果持續發生，請使用「取得協助」中的「儲存問題詳細資訊」。"
+
+msgid "Network safety question"
+msgstr "網路安全問題"
+
+msgid "Networking doesn't start"
+msgstr "網路無法啟動"
+
+msgid ""
+"Networking fails to start. The computer restarts by itself within seconds, "
+"usually before the login screen shows, twice, and the third start is back on "
+"this version."
+msgstr "網路無法啟動。電腦會在幾秒內自動重新啟動兩次（通常在登入畫面出現之前），第三次啟動時會回到這個版本。"
+
+msgid "New networks are a Public place now."
+msgstr "新網路現在是「公共場所」。"
+
+msgid "New networks on this computer aren't a Public place yet. Fix sets that."
+msgstr "這台電腦上的新網路還不是「公共場所」。「修復」會把它設定好。"
+
+msgid "New to EvenKeelOS at login"
+msgstr "登入時顯示「第一次使用 EvenKeelOS 嗎？」"
+
+msgid "New to EvenKeelOS?"
+msgstr "第一次使用 EvenKeelOS 嗎？"
+
+msgid "New to EvenKeelOS? opens at login, with the Windows-style desktop"
+msgstr "登入時會開啟「第一次使用 EvenKeelOS 嗎？」，並使用 Windows 風格桌面"
+
+msgid "Next"
+msgstr "下一步"
+
+msgid "Night light"
+msgstr "夜光模式"
+
+msgid ""
+"Night light makes the screen warmer in the evening, which is easier on the "
+"eyes."
+msgstr "「夜光模式」會在晚上讓螢幕顏色變暖，眼睛比較舒服。"
+
+msgid "No"
+msgstr "否"
+
+msgid ""
+"No .rpm or .deb files in Downloads. Give the file's path:  evenkeel-os-"
+"packages install FILE"
+msgstr "「下載」資料夾中沒有 .rpm 或 .deb 檔案。請提供檔案的路徑：evenkeel-os-packages install FILE"
+
+msgid "No Bluetooth"
+msgstr "沒有藍牙"
+
+msgid "No Bluetooth found."
+msgstr "找不到藍牙。"
+
+msgid "No USB stick found. Plug one in, then try again."
+msgstr "找不到 USB 隨身碟。請插入一個，然後再試一次。"
+
+msgid "No Wi-Fi"
+msgstr "沒有 Wi-Fi"
+
+msgid "No Wi-Fi found."
+msgstr "找不到 Wi-Fi。"
+
+msgid "No Wi-Fi networks found."
+msgstr "找不到 Wi-Fi 網路。"
+
+msgid ""
+"No alerts: no security certificate this computer trusts has expired, expires "
+"within 30 days, or was removed."
+msgstr "沒有警示：這台電腦信任的安全憑證都沒有過期、30 天內不會過期，也沒有被移除。"
+
+msgid "No answer in 2 minutes: it goes back by itself."
+msgstr "2 分鐘內沒有回應：它會自動恢復原狀。"
+
+msgid ""
+"No answer in 2 minutes: it restarts by itself, because this test can leave "
+"the screen black."
+msgstr "2 分鐘內沒有回應：系統會自動重新啟動，因為此測試可能會導致畫面變黑。"
+
+msgid "No answer in 2 minutes: it restarts by itself."
+msgstr "2 分鐘內沒有回應：它會自動重新啟動。"
+
+msgid "No boot options added"
+msgstr "未新增開機選項"
+
+msgid "No camera found."
+msgstr "找不到相機。"
+
+msgid "No disk chosen yet."
+msgstr "尚未選擇任何磁碟。"
+
+msgid "No disk inside the computer was found."
+msgstr "在電腦內部找不到任何磁碟。"
+
+msgid "No disk was found. Connect one and click Refresh."
+msgstr "找不到磁碟。請先連接一個，然後按一下「重新整理」。"
+
+msgid ""
+"No downloaded apps that can start at login are installed. Apps from Bazaar, "
+"the app store, have this setting inside the app."
+msgstr "尚未安裝任何可以在登入時啟動的已下載應用程式。來自應用程式商店 Bazaar 的應用程式，在應用程式內部就有這項設定。"
+
+msgid "No folders shared yet"
+msgstr "尚未有任何共享資料夾"
+
+msgid "No graphics chip found."
+msgstr "找不到顯示晶片。"
+
+#, python-brace-format
+msgid "No group {group}, or no user to add to it."
+msgstr "沒有群組 {group}，或沒有可加入該群組的使用者。"
+
+msgid "No guide at login, with the Standard desktop"
+msgstr "登入時不顯示引導，使用標準桌面"
+
+msgid "No login screen"
+msgstr "沒有登入畫面"
+
+msgid "No networking"
+msgstr "沒有網路連線"
+
+msgid "No ports of its own"
+msgstr "沒有自己的連接埠"
+
+msgid "No rule files given."
+msgstr "未提供規則檔案。"
+
+msgid "No saved networks yet"
+msgstr "還沒有已儲存的網路"
+
+msgid "No sound"
+msgstr "沒有聲音"
+
+msgid "No sound found."
+msgstr "找不到音效裝置。"
+
+msgid "No tool matches. Try another word."
+msgstr "沒有符合的工具。請嘗試其他字詞。"
+
+msgid "No touchpad found."
+msgstr "找不到觸控板。"
+
+msgid "None picked yet."
+msgstr "尚未選擇任何項目。"
+
+#, python-brace-format
+msgid "Not a rule file name: {name}"
+msgstr "不是規則檔案名稱：{name}"
+
+msgid "Not chosen"
+msgstr "尚未選擇"
+
+msgid "Not connected"
+msgstr "未連線"
+
+msgid "Not connected."
+msgstr "未連線。"
+
+msgid "Not encrypted"
+msgstr "未加密"
+
+#, python-brace-format
+msgid ""
+"Not enough free space. This needs about {needed}, and {free} is free.\n"
+"\n"
+"Recommended: Cancel, then empty the Trash or remove apps you don't use, and try again.\n"
+"\n"
+"Or Try anyway: if space runs out, it stops safely and nothing is lost."
+msgstr ""
+"可用空間不足。這需要大約 {needed}，目前有 {free} 可用。\n"
+"\n"
+"建議：「取消」，然後清空垃圾桶或移除不用的應用程式，再試一次。\n"
+"\n"
+"或者「仍要嘗試」：如果空間用完，它會安全地停止，不會遺失任何東西。"
+
+msgid ""
+"Not in the list? Click Open a port and type the number the app's own "
+"instructions give."
+msgstr "不在清單中嗎？按一下「開放連接埠」，然後輸入應用程式本身說明中提供的號碼。"
+
+msgid "Not now"
+msgstr "現在不要"
+
+msgid "Not on Work or a Public place. Each change asks for your password."
+msgstr "不包括「工作」或「公共場所」。每次變更都會要求您輸入密碼。"
+
+#, python-brace-format
+msgid "Not put back (open their files again to install them): {apps}."
+msgstr "沒有放回去（請再次開啟它們的檔案來安裝）：{apps}。"
+
+#, python-brace-format
+msgid "Not saved: {problem}"
+msgstr "未儲存：{problem}"
+
+msgid "Not set yet."
+msgstr "尚未設定。"
+
+msgid "Not yet"
+msgstr "先不要"
+
+msgid ""
+"Not yet: nothing restarts until you click Restart now, so you can save your "
+"work first."
+msgstr "「先不要」：在您按一下「立即重新啟動」之前不會重新啟動，因此您可以先儲存工作。"
+
+msgid ""
+"Notepad: Text Editor. Photos: Image Viewer. Videos: Celluloid. Music: "
+"Lollypop. PDFs: Papers."
+msgstr "記事本：文字編輯器。相片：圖片檢視器。影片：Celluloid。音樂：Lollypop。PDF：Papers。"
+
+msgid ""
+"Nothing can reach this computer from the network, and your folders aren't "
+"shared. Office shared drives and printers still work."
+msgstr "網路上的任何東西都無法存取這台電腦，您的資料夾也沒有被共享。辦公室的共享磁碟機和印表機仍然可以使用。"
+
+msgid ""
+"Nothing can reach this computer from the network. Finding printers still "
+"works."
+msgstr "網路上的任何東西都無法存取這台電腦。搜尋印表機的功能仍然正常運作。"
+
+msgid "Nothing changed."
+msgstr "沒有任何變更。"
+
+msgid "Nothing extra on Home"
+msgstr "「家用」沒有額外允許的項目"
+
+msgid "Nothing extra on Work"
+msgstr "「工作」沒有額外允許的項目"
+
+msgid "Nothing extra on a Public place"
+msgstr "「公共場所」沒有額外允許的項目"
+
+msgid "Nothing has been installed with Install Package File yet."
+msgstr "還沒有使用「安裝套件檔案」安裝任何項目。"
+
+msgid "Nothing is shared yet"
+msgstr "尚未共享任何東西"
+
+msgid "Nothing matches"
+msgstr "沒有任何相符的項目"
+
+msgid ""
+"Nothing more was changed on the disk. Save the log puts the details on a USB "
+"stick for your helper; no account is needed. Show a QR code sends a report "
+"from your phone, and Report on GitHub sends it from Firefox; both need a free"
+" GitHub account. Or click Restart."
+msgstr ""
+"磁碟上沒有其他變更。「儲存記錄檔」會把詳細資訊存到 USB 隨身碟給您的協助者，不需要帳號。「顯示 QR 碼」可從您的手機傳送報告，「在 GitHub "
+"上回報」則從 Firefox 傳送；兩者都需要免費的 GitHub 帳號。或者按一下「重新啟動」。"
+
+msgid "Nothing to change: Zoom meetings open in Chrome, or the first one asks."
+msgstr "沒有需要變更的項目：Zoom 會議會在 Chrome 中開啟，或者第一次開啟時會詢問您。"
+
+msgid "Nothing updates until you run System Update."
+msgstr "在您執行「系統更新」之前，不會有任何項目更新。"
+
+msgid "Notifications"
+msgstr "通知"
+
+msgid "November"
+msgstr "十一月"
+
+msgid "OK"
+msgstr "確定"
+
+msgid "October"
+msgstr "十月"
+
+msgid "Off"
+msgstr "關閉"
+
+#, python-brace-format
+msgid "Off here: {name} is {place}."
+msgstr "此處已關閉：{name} 是{place}。"
+
+msgid "Off unless you need it"
+msgstr "除非有需要，否則關閉"
+
+msgid "Off. Skip the disk password at startup."
+msgstr "已關閉。開機時略過磁碟密碼。"
+
+msgid "Off. Turn them on or off."
+msgstr "已關閉。可將它們開啟或關閉。"
+
+msgid "On Home, use the switch for it above."
+msgstr "在「家用」網路上，請使用上方對應的開關。"
+
+msgid "On a Mac: Finder, Network. On another Linux computer: Files, Network."
+msgstr "在 Mac 上：Finder >「網路」。在另一台 Linux 電腦上：「檔案」>「網路」。"
+
+msgid ""
+"On a Public place it asks first, because strangers could reach it too. The "
+"bin next to it closes it again."
+msgstr "在「公共場所」會先詢問，因為陌生人也可能連到它。旁邊的垃圾桶圖示可再次關閉它。"
+
+msgid ""
+"On a Windows PC: File Explorer, Network. The Windows PC's own network must be"
+" set to Private."
+msgstr "在 Windows 電腦上：檔案總管 >「網路」。該 Windows 電腦本身的網路必須設為「私人」。"
+
+msgid ""
+"On top of what the place itself lets in. Each change asks for your password."
+msgstr "這是在該位置本身允許的連入之外另外加上的。每次變更都會要求您輸入密碼。"
+
+msgid "On. Skip the disk password at startup."
+msgstr "已開啟。開機時略過磁碟密碼。"
+
+msgid "On. Turn them on or off."
+msgstr "已開啟。可將它們開啟或關閉。"
+
+msgid "One file at a time: the first one is opening."
+msgstr "一次處理一個檔案：正在開啟第一個檔案。"
+
+msgid "Open"
+msgstr "開啟"
+
+msgid "Open Bazaar"
+msgstr "開啟 Bazaar"
+
+msgid "Open Bazaar, the app store, from the start menu or the dock."
+msgstr "從開始選單或 Dock 開啟應用程式商店 Bazaar。"
+
+msgid ""
+"Open Files from the start menu or the dock. It opens on your home folder."
+msgstr "從開始選單或 Dock 開啟「檔案」。它會開啟在您的家目錄。"
+
+msgid "Open Install Package File"
+msgstr "開啟安裝套件檔案"
+
+msgid "Open Printers"
+msgstr "開啟「印表機」"
+
+msgid "Open Settings, Appearance."
+msgstr "開啟「設定」>「外觀」。"
+
+msgid "Open Settings, Apps, Default Apps."
+msgstr "開啟「設定」>「應用程式」>「預設應用程式」。"
+
+msgid "Open Settings, Bluetooth, and turn on the switch at the top."
+msgstr "開啟「設定」>「藍牙」，然後開啟最上方的開關。"
+
+msgid ""
+"Open Settings, Displays, Night Light, and turn it on. It follows sunset and "
+"sunrise, or set your own times."
+msgstr "開啟「設定」>「顯示器」>「夜光模式」，然後開啟它。它會依照日落和日出，或由您自訂時間。"
+
+msgid "Open Settings, Displays."
+msgstr "開啟「設定」>「顯示器」。"
+
+msgid "Open Settings, Printers, and click Add Printer."
+msgstr "開啟「設定」>「印表機」，然後按一下「加入印表機」。"
+
+msgid "Open Settings, Sound."
+msgstr "開啟「設定」>「音效」。"
+
+msgid "Open Settings, System, Users."
+msgstr "開啟「設定」>「系統」>「使用者」。"
+
+msgid "Open Wheelhouse"
+msgstr "開啟 Wheelhouse"
+
+msgid "Open Wheelhouse on its Updates page"
+msgstr "開啟 Wheelhouse 的「更新」頁面"
+
+msgid "Open Wheelhouse, Apps, Get a VPN."
+msgstr "開啟 Wheelhouse >「應用程式」>「取得 VPN」。"
+
+msgid "Open Wheelhouse, Apps, Media codecs."
+msgstr "開啟 Wheelhouse >「應用程式」>「媒體編解碼器」。"
+
+msgid "Open Wheelhouse, Disk and startup, Restart into BIOS settings."
+msgstr "開啟 Wheelhouse >「磁碟與啟動」>「重新啟動並進入 BIOS 設定」。"
+
+msgid "Open Wheelhouse, Disk and startup, Unlock disk automatically."
+msgstr "開啟 Wheelhouse >「磁碟與啟動」>「自動解鎖磁碟」。"
+
+msgid "Open Wheelhouse, Disk and startup. The bar shows how much is free."
+msgstr "開啟 Wheelhouse >「磁碟與啟動」。長條會顯示還有多少可用空間。"
+
+msgid ""
+"Open Wheelhouse, Disk and startup. Under Common fixes, turn on the one that "
+"matches the problem."
+msgstr "開啟 Wheelhouse >「磁碟與啟動」。在「常見修正」下，開啟符合問題的那一項。"
+
+msgid "Open Wheelhouse, Get help, Certificate alerts to see them."
+msgstr "開啟 Wheelhouse >「取得協助」>「憑證警示」即可查看。"
+
+msgid "Open Wheelhouse, Get help, Save problem details."
+msgstr "開啟 Wheelhouse >「取得協助」>「儲存問題詳細資訊」。"
+
+msgid ""
+"Open Wheelhouse, Get help, Test automatic rollback. Save your work first."
+msgstr "開啟 Wheelhouse >「取得協助」>「測試自動回復」。請先儲存您的工作。"
+
+msgid ""
+"Open Wheelhouse, Get help, and scroll to the end. Every tool has its command "
+"there."
+msgstr "開啟 Wheelhouse >「取得協助」，然後捲動到最下方。每個工具的指令都在那裡。"
+
+msgid "Open Wheelhouse, Make it yours, Desktop layout."
+msgstr "開啟 Wheelhouse >「個人化」>「桌面版面配置」。"
+
+msgid "Open Wheelhouse, Make it yours, Fonts and text."
+msgstr "開啟 Wheelhouse >「個人化」>「字型與文字」。"
+
+msgid "Open Wheelhouse, Make it yours, Light and dark."
+msgstr "開啟 Wheelhouse >「個人化」>「淺色與深色」。"
+
+msgid "Open Wheelhouse, Make it yours, Wallpaper slideshow, and click Choose."
+msgstr "開啟 Wheelhouse >「個人化」>「桌布投影片播放」，然後按一下「選擇」。"
+
+msgid "Open Wheelhouse, Make it yours."
+msgstr "開啟 Wheelhouse >「個人化」。"
+
+msgid ""
+"Open Wheelhouse, Network safety. Under Also let in, on Home, there are two "
+"switches."
+msgstr "開啟 Wheelhouse >「網路安全」。「也在家用網路上允許連入」下方有兩個開關。"
+
+msgid ""
+"Open Wheelhouse, Network safety. Under Apps and ports let in, pick the place."
+msgstr "開啟 Wheelhouse >「網路安全」。在「已允許連入的應用程式和連接埠」下方選擇位置。"
+
+msgid ""
+"Open Wheelhouse, Network safety. Your networks lists every network this "
+"computer has joined."
+msgstr "開啟 Wheelhouse >「網路安全」。「您的網路」會列出這台電腦連過的所有網路。"
+
+msgid "Open Wheelhouse, Shared folders."
+msgstr "開啟 Wheelhouse >「共享資料夾」。"
+
+msgid "Open Wheelhouse, Updates, Automatic updates. On is recommended."
+msgstr "開啟 Wheelhouse >「更新」>「自動更新」。建議開啟。"
+
+msgid ""
+"Open Wi-Fi, with no password, is always a Public place, because anyone can "
+"make one with the same name."
+msgstr "沒有密碼的開放 Wi-Fi 一律是「公共場所」，因為任何人都能建立同名的 Wi-Fi。"
+
+msgid "Open a port"
+msgstr "開放連接埠"
+
+msgid "Open a port on Home"
+msgstr "在「家用」網路上開放連接埠"
+
+msgid "Open a port on Work"
+msgstr "在「工作」網路上開放連接埠"
+
+msgid "Open a port on a Public place"
+msgstr "在「公共場所」開放連接埠"
+
+msgid "Open an app"
+msgstr "開啟應用程式"
+
+msgid "Open it"
+msgstr "開啟"
+
+msgid "Open the computer's BIOS settings screen"
+msgstr "開啟電腦的 BIOS 設定畫面"
+
+msgid "Open the computer's own settings screen"
+msgstr "開啟電腦本身的設定畫面"
+
+msgid "Open the file again to install it."
+msgstr "請再次開啟檔案以進行安裝。"
+
+msgid "Open the file, or drop it on Wheelhouse, Apps."
+msgstr "開啟檔案，或將它拖放到 Wheelhouse 的「應用程式」上。"
+
+msgid "Open the file, or use Install a package file in Wheelhouse, Apps."
+msgstr "開啟檔案，或使用 Wheelhouse >「應用程式」中的「安裝套件檔案」。"
+
+msgid ""
+"Open this computer, type your user name and the sharing password, and the "
+"folders are there."
+msgstr "開啟這台電腦，輸入您的使用者名稱和共享密碼，資料夾就在那裡。"
+
+msgid "Open your folders from another computer at home"
+msgstr "從家裡的另一台電腦開啟您的資料夾"
+
+#, python-brace-format
+msgid "Open {name}"
+msgstr "開啟 {name}"
+
+msgid ""
+"Opens New to EvenKeelOS at login, after the setup checklist, until its Don't "
+"show this again box is ticked"
+msgstr "在登入時、完成設定檢查清單之後開啟「第一次使用 EvenKeelOS 嗎？」，直到勾選其中的「登入時不要再顯示此訊息」為止"
+
+msgid "Opens a Zoom meeting in Zoom's web version, in Chrome"
+msgstr "在 Chrome 中以 Zoom 網頁版開啟 Zoom 會議"
+
+msgid "Opens the setup checklist once, the first time a user logs in"
+msgstr "使用者第一次登入時，會開啟一次設定檢查清單"
+
+msgid "Optional formats left out for legal reasons"
+msgstr "因法律原因而未納入的選用格式"
+
+msgid "Optional: add the media codecs that are left out for legal reasons"
+msgstr "選用：新增因法律原因而未包含的媒體編解碼器"
+
+msgid "Or Cancel."
+msgstr "或者「取消」。"
+
+msgid "Or Keep it."
+msgstr "或者「保留」。"
+
+#, python-brace-format
+msgid "Or Keep it: saves setup time if you'll install another {kind} app soon."
+msgstr "或者「保留」：如果您很快會再安裝另一個 {kind} 應用程式，可以省下設定時間。"
+
+msgid ""
+"Or use the keyboard: Windows key + Up fills the screen, Windows key + Left or"
+" Right fills a half, and Windows key + H minimizes."
+msgstr ""
+"或者使用鍵盤：按 Windows 鍵 + 上箭頭鍵可全螢幕顯示，按 Windows 鍵 + 左箭頭鍵或右箭頭鍵可半螢幕顯示，按 Windows 鍵 + H"
+" 則可將視窗最小化。"
+
+#, python-brace-format
+msgid ""
+"Or {button}: adds a second copy. {note} You would have two of the same app."
+msgstr "或者「{button}」：新增第二份。{note} 您會有兩個相同的應用程式。"
+
+#, python-brace-format
+msgid "Other ({zone})"
+msgstr "其他 ({zone})"
+
+#, python-brace-format
+msgid ""
+"Other computers ask for your user name, {user}, and this password. It isn't "
+"your login password."
+msgstr "其他電腦會要求您提供使用者名稱 {user} 和此密碼。這不是您的登入密碼。"
+
+#, python-brace-format
+msgid ""
+"Other computers ask for your user name, {user}, and this password. Use at "
+"least {n} character. Your login password doesn't change."
+msgid_plural ""
+"Other computers ask for your user name, {user}, and this password. Use at "
+"least {n} characters. Your login password doesn't change."
+msgstr[0] "其他電腦會要求您輸入使用者名稱 {user} 和此密碼。請至少使用 {n} 個字元。您的登入密碼不會變更。"
+
+#, python-brace-format
+msgid ""
+"Other computers find this one as {host}: in Files under Network on Linux, in "
+"Finder under Network on a Mac, and under Network in File Explorer on Windows."
+msgstr ""
+"其他電腦會看到這台電腦的名稱為 {host}：Linux 上在「檔案」的「網路」中，Mac 上在 Finder 的「網路」中，Windows "
+"上在檔案總管的「網路」中。"
+
+msgid ""
+"Other computers open these as you, so whatever they save belongs to you."
+msgstr "其他電腦會以您的身分開啟這些項目，因此它們儲存的任何內容都屬於您。"
+
+msgid "Other computers print to a printer plugged into this one"
+msgstr "讓其他電腦使用接在這台電腦上的印表機列印"
+
+msgid "Overview"
+msgstr "概覽"
+
+msgid "Packages (.rpm, .deb)"
+msgstr "套件（.rpm、.deb）"
+
+msgid "Password"
+msgstr "密碼"
+
+msgid "Paused. Turn them on or off."
+msgstr "已暫停。可將它們開啟或關閉。"
+
+msgid "Pausing automatic updates."
+msgstr "正在暫停自動更新。"
+
+msgid ""
+"Phones, file sharing and apps you run can reach this computer. System "
+"services stay closed unless switched on below."
+msgstr "手機、檔案共享和您執行的應用程式可以連到這台電腦。除非在下方開啟，否則系統服務保持關閉。"
+
+msgid "Pick Home, Work or Public place for it below."
+msgstr "請在下方為它選擇「家用」、「工作」或「公共場所」。"
+
+msgid ""
+"Pick Mullvad, Proton, IVPN or NordVPN. It's added from that company's own "
+"download source, and kept up to date."
+msgstr "選擇 Mullvad、Proton、IVPN 或 NordVPN。它會從該公司的專屬下載來源新增，並持續保持最新狀態。"
+
+msgid ""
+"Pick Sunset to sunrise, or Custom times and pick when dark starts and ends."
+msgstr "選擇「日落到日出」，或選擇「自訂時間」並選取深色開始和結束的時間。"
+
+msgid ""
+"Pick Windows-style (a bar at the bottom and a start menu) or Standard (a bar "
+"at the top and a dock)."
+msgstr "選擇「Windows 風格」（底部有一條列和開始選單）或「標準」（頂端有一條列和 Dock）。"
+
+msgid "Pick Windows-style or Standard, click Switch, then log out and back in."
+msgstr "選擇「Windows 風格」或「標準」，按一下「切換」，然後登出再登入。"
+
+msgid "Pick a Windows program"
+msgstr "選擇一個 Windows 程式"
+
+msgid "Pick a file"
+msgstr "選擇一個檔案"
+
+msgid "Pick a folder inside your home folder."
+msgstr "請選擇您家目錄中的資料夾。"
+
+msgid "Pick a folder of pictures"
+msgstr "選擇一個圖片資料夾"
+
+msgid "Pick a folder to share"
+msgstr "選擇要共享的資料夾"
+
+msgid "Pick a folder, not a file."
+msgstr "請選擇資料夾，而不是檔案。"
+
+msgid "Pick a problem to test. Your computer should fix it by itself."
+msgstr "選擇一個要測試的問題。您的電腦應該會自行修復。"
+
+msgid "Pick a test, click Start the test, and type your password."
+msgstr "選擇一個測試，按一下「開始測試」，然後輸入您的密碼。"
+
+msgid "Pick an .exe or .msi to get its Linux version"
+msgstr "選擇一個 .exe 或 .msi 檔案，以取得其 Linux 版本"
+
+msgid "Pick an .rpm or .deb file from Downloads"
+msgstr "從「下載」中選取一個 .rpm 或 .deb 檔案"
+
+msgid "Pick an app or game so other computers can reach it"
+msgstr "選擇一個應用程式或遊戲，讓其他電腦可以存取它"
+
+msgid "Pick it again in Get a VPN."
+msgstr "請在「取得 VPN」中再次選擇它。"
+
+msgid "Pick one."
+msgstr "請選一個。"
+
+msgid "Pick the app for the web, mail, calendar, music, videos and photos."
+msgstr "選擇用於網路、郵件、行事曆、音樂、影片和相片的應用程式。"
+
+msgid ""
+"Pick the app. To use it every time for that kind of file, turn on Always use "
+"for this file type first."
+msgstr "選擇應用程式。若要每次都用它開啟這類檔案，請先開啟「永遠用於開啟該類型的檔案」。"
+
+msgid ""
+"Pick the box. It's set up again, with its apps. Your files aren't touched."
+msgstr "選擇容器。它會連同其應用程式重新設定。您的檔案不會被動到。"
+
+msgid "Pick the day. Back keeps it as it is."
+msgstr "選擇日期。按「返回」會維持原狀。"
+
+msgid ""
+"Pick the folder, then how often it changes: every hour, every day or at each "
+"login."
+msgstr "選擇資料夾，然後選擇變更的頻率：每小時、每天或每次登入。"
+
+msgid "Pick the fonts for menus, documents and code"
+msgstr "選擇選單、文件和程式碼的字型"
+
+msgid "Pick the hour. Back keeps it as it is."
+msgstr "選擇小時。按「返回」會維持原狀。"
+
+msgid "Pick the minute. Back keeps it as it is."
+msgstr "選擇分鐘。按「返回」會維持原狀。"
+
+msgid "Pick the month. Back keeps it as it is."
+msgstr "選擇月份。按「返回」會維持原狀。"
+
+msgid "Pick the place next to a network. It changes at once."
+msgstr "在網路旁邊選擇位置。會立即變更。"
+
+msgid ""
+"Pick the speakers or headphones under Output Device, and the microphone under"
+" Input Device."
+msgstr "在「輸出裝置」下方選擇喇叭或耳機，在「輸入裝置」下方選擇麥克風。"
+
+msgid "Pick the year. Back keeps it as it is."
+msgstr "選擇年份。按「返回」會維持原狀。"
+
+msgid "Pick what you need. It explains each choice."
+msgstr "選擇您需要的項目。它會說明每個選項。"
+
+msgid "Pick which ones open when you log in"
+msgstr "選擇登入時要開啟的項目"
+
+msgid "Place"
+msgstr "位置"
+
+msgid ""
+"Plug in a USB stick, then click it to save the log on it. Click Refresh if it"
+" isn't listed, or Back."
+msgstr "插入 USB 隨身碟，然後按一下它，將記錄檔存到上面。如果沒有列出，請按「重新整理」，或按「返回」。"
+
+msgid "Plug in a second USB stick, then click Save the results again."
+msgstr "插入第二支 USB 隨身碟，然後再按一次「儲存結果」。"
+
+msgid ""
+"Plug in a second USB stick, then click it to save the log on it. Or click "
+"Back."
+msgstr "插入第二支 USB 隨身碟，然後按一下它，將記錄檔存到上面。或者按「返回」。"
+
+msgid "Plug it in. It shows in the left side of Files."
+msgstr "插上它。它會出現在「檔案」的左側。"
+
+msgid "Plug the computer in. Open Wheelhouse, Updates, Update firmware."
+msgstr "將電腦接上電源。開啟 Wheelhouse >「更新」>「更新韌體」。"
+
+msgid ""
+"Point your phone's camera at the code. It opens the report on GitHub with the"
+" details filled in. To send it, sign in to GitHub, or make a free account if "
+"you don't have one. It carries the end of the log; the whole log can go on a "
+"USB stick. Click Back when done."
+msgstr ""
+"將手機相機對準 QR 碼。它會在 GitHub 上開啟已填好詳細資訊的報告。若要傳送，請登入 "
+"GitHub；如果沒有帳號，請建立免費帳號。報告包含記錄檔的最後部分；完整記錄檔可以存到 USB 隨身碟。完成後請按「返回」。"
+
+msgid "Port, like 8080, or a range, like 2456-2458"
+msgstr "連接埠，例如 8080，或連接埠範圍，例如 2456-2458"
+
+msgid "Power modes"
+msgstr "電源模式"
+
+msgid "Prefer the terminal?"
+msgstr "比較喜歡用終端機嗎？"
+
+#, python-brace-format
+msgid "Preparing the {label}."
+msgstr "正在準備 {label}。"
+
+msgid ""
+"Press Print Screen. Pick the whole screen, a window, or drag over an area, "
+"then click the round button."
+msgstr "按 Print Screen 鍵。選擇整個畫面、一個視窗，或拖曳選取一個區域，然後按一下圓形按鈕。"
+
+msgid "Printers didn't open. Open Settings, then Printers."
+msgstr "「印表機」沒有開啟。請開啟「設定」>「印表機」。"
+
+msgid ""
+"Printers is open. Choose Add Printer.\n"
+"\n"
+"If your printer isn't there or doesn't print right, open this file again and choose Install the driver."
+msgstr ""
+"「印表機」已開啟。請選擇「加入印表機」。\n"
+"\n"
+"如果找不到您的印表機，或印表機無法正常列印，請再次開啟此檔案，然後選擇「安裝驅動程式」。"
+
+msgid ""
+"Printers is open. Choose Add Printer.\n"
+"\n"
+"If your printer isn't there or doesn't print right, open this file again to see how to get the driver."
+msgstr ""
+"「印表機」已開啟。請選擇「加入印表機」。\n"
+"\n"
+"如果找不到您的印表機，或印表機無法正常列印，請再次開啟此檔案，查看如何取得驅動程式。"
+
+msgid "Printing"
+msgstr "正在列印"
+
+msgid "Printing doesn't start"
+msgstr "列印無法啟動"
+
+msgid "Printing service off"
+msgstr "列印服務已關閉"
+
+msgid "Problem"
+msgstr "問題"
+
+msgid "Protocol"
+msgstr "通訊協定"
+
+msgid "Public place"
+msgstr "公共場所"
+
+msgid ""
+"Public place: nothing on the network can reach your computer. Pick it for "
+"cafes, hotels and airports."
+msgstr "公共場所：網路上的任何裝置都無法連上您的電腦。適合在咖啡廳、飯店和機場使用。"
+
+msgid "Put EvenKeelOS on this computer"
+msgstr "將 EvenKeelOS 安裝到這台電腦上"
+
+#, python-brace-format
+msgid "Put back: {apps}."
+msgstr "已放回：{apps}。"
+
+msgid ""
+"Put the device in pairing mode. Its instructions say how, often by holding "
+"its power button."
+msgstr "將裝置切換至配對模式。說明書會告訴您怎麼做，通常是長按電源鍵。"
+
+msgid "Put the pictures in one folder, for example in Pictures."
+msgstr "將圖片放在同一個資料夾中，例如「圖片」資料夾。"
+
+msgid "Quick fixes"
+msgstr "快速修正"
+
+msgid "Quick test"
+msgstr "快速測試"
+
+#, python-brace-format
+msgid "Quit {app}"
+msgstr "結束 {app}"
+
+msgid "Quitting %s"
+msgstr "正在結束 %s"
+
+msgid "Read and write"
+msgstr "讀取與寫入"
+
+msgid "Read only"
+msgstr "唯讀"
+
+msgid "Reading the disk"
+msgstr "正在讀取磁碟"
+
+#, python-brace-format
+msgid "Reading the download source {name}"
+msgstr "正在讀取下載來源 {name}"
+
+msgid "Reading the list of apps from the new download source"
+msgstr "正在從新的下載來源讀取應用程式清單"
+
+msgid "Recommended"
+msgstr "建議"
+
+#, python-brace-format
+msgid ""
+"Recommended: Delete the box. It frees about {size}, and comes back by itself "
+"the next time you install {apps}. Anything added to the box another way is "
+"deleted too. Your files are not touched."
+msgstr ""
+"建議：「刪除容器」。它會釋放約 {size}，並在您下次安裝 {apps} 時自動回來。以其他方式加入容器的任何東西也會一併刪除。您的檔案不會受到影響。"
+
+#, python-brace-format
+msgid ""
+"Recommended: Delete the box. It frees its disk space, and comes back by "
+"itself the next time you install {apps}. Anything added to the box another "
+"way is deleted too. Your files are not touched."
+msgstr ""
+"建議：「刪除容器」。它會釋放所佔的磁碟空間，並在您下次安裝 {apps} 時自動回來。以其他方式加入容器的任何東西也會一併刪除。您的檔案不會受到影響。"
+
+msgid ""
+"Recommended: Go back now. The computer restarts on the version that worked "
+"before. Your files and apps aren't touched. If automatic updates are on, they"
+" pause for 3 days, so the same update doesn't come straight back."
+msgstr ""
+"建議：「立即回復」。電腦會以之前正常運作的版本重新啟動。您的檔案和應用程式不會受到影響。如果自動更新已開啟，它會暫停 3 天，讓同一個更新不會馬上又回來。"
+
+msgid ""
+"Recommended: Go back now. The computer restarts with the boot options you had"
+" before."
+msgstr "建議：「立即回復」。電腦會以您之前的開機選項重新啟動。"
+
+#, python-brace-format
+msgid "Recommended: Install {name}."
+msgstr "建議：「安裝 {name}」。"
+
+msgid "Recommended: Open it."
+msgstr "建議：「開啟」。"
+
+msgid ""
+"Recommended: Restart now to start using it. Or Later, if you're in the middle"
+" of something."
+msgstr "建議：「立即重新啟動」，即可開始使用。或者「稍後」，如果您正在忙。"
+
+msgid ""
+"Recommended: Restart now. Or Later, if you're in the middle of something."
+msgstr "建議：「立即重新啟動」。或者「稍後」，如果您正在忙。"
+
+msgid ""
+"Recommended: Restart now. The computer restarts and tries once more. If it's "
+"still broken, this window asks once more about 3 minutes after you log in, "
+"and then it can go back."
+msgstr "建議：「立即重新啟動」。電腦會重新啟動並再試一次。如果仍有問題，這個視窗會在您登入約 3 分鐘後再詢問一次，到時就可以回到之前的版本。"
+
+msgid ""
+"Recommended: Update. Keep the computer plugged in. Some updates finish while "
+"the computer restarts."
+msgstr "建議：「更新」。請讓電腦保持接上電源。有些更新會在電腦重新啟動時完成。"
+
+msgid "Refresh"
+msgstr "重新整理"
+
+msgid "Reinstall"
+msgstr "重新安裝"
+
+#, python-brace-format
+msgid "Reinstalling {title}"
+msgstr "正在重新安裝 {title}"
+
+#, python-brace-format
+msgid "Reinstalling {title} in the {label}."
+msgstr "正在 {label} 中重新安裝 {title}。"
+
+msgid "Remove"
+msgstr "移除"
+
+msgid "Remove Apps"
+msgstr "移除應用程式"
+
+msgid "Remove Apps is open"
+msgstr "「移除應用程式」已開啟"
+
+msgid "Remove a certificate added to this computer from its trusted list"
+msgstr "從這台電腦的信任清單中移除已新增的憑證"
+
+msgid "Remove an app"
+msgstr "移除應用程式"
+
+msgid "Remove apps"
+msgstr "移除應用程式"
+
+msgid "Remove apps installed from .rpm or .deb files"
+msgstr "移除從 .rpm 或 .deb 檔案安裝的應用程式"
+
+msgid "Remove it"
+msgstr "移除"
+
+msgid "Remove media codecs"
+msgstr "移除媒體編解碼器"
+
+msgid "Remove old system versions and unused app parts"
+msgstr "移除舊版系統和未使用的應用程式元件"
+
+msgid "Remove the media codecs?"
+msgstr "要移除媒體編解碼器嗎？"
+
+msgid "Remove the test marker"
+msgstr "移除測試標記"
+
+msgid ""
+"Remove them first: run  codecs remove , restart, then choose Everything "
+"again."
+msgstr "請先移除它們：執行  codecs remove ，重新啟動，然後再次選擇「全部」。"
+
+msgid "Remove things the computer no longer needs"
+msgstr "移除電腦不再需要的東西"
+
+#, python-brace-format
+msgid "Remove {title}?"
+msgstr "要移除 {title} 嗎？"
+
+msgid "Removed"
+msgstr "已移除"
+
+msgid "Removed. Restart to finish."
+msgstr "已移除。請重新啟動以完成。"
+
+msgid "Removing old command-line tool downloads."
+msgstr "正在移除舊的命令列工具下載項目。"
+
+msgid "Removing old system update files and unused app parts."
+msgstr "正在移除舊的系統更新檔案和未使用的應用程式元件。"
+
+msgid "Removing the certificate."
+msgstr "正在移除憑證。"
+
+msgid "Removing the test marker."
+msgstr "正在移除測試標記。"
+
+msgid "Removing the waiting change."
+msgstr "正在移除待處理的變更。"
+
+msgid "Removing the waiting update."
+msgstr "正在移除待處理的更新。"
+
+msgid "Removing unused command-line tools."
+msgstr "正在移除未使用的命令列工具。"
+
+msgid "Removing unused container images."
+msgstr "正在移除未使用的容器映像。"
+
+msgid "Removing your unused app parts."
+msgstr "正在移除您未使用的應用程式元件。"
+
+#, python-brace-format
+msgid "Removing {title}"
+msgstr "正在移除 {title}"
+
+#, python-brace-format
+msgid "Removing {title} from the system."
+msgstr "正在從系統中移除 {title}。"
+
+#, python-brace-format
+msgid "Removing {title}."
+msgstr "正在移除 {title}。"
+
+msgid "Renamed Boot%s to Boot%s (\"%s\")."
+msgstr "已將 Boot%s 改名為 Boot%s（「%s」）。"
+
+msgid "Repair"
+msgstr "修復"
+
+msgid "Repair App Boxes"
+msgstr "修復應用程式容器"
+
+msgid "Repair App Boxes is open"
+msgstr "「修復應用程式容器」已開啟"
+
+msgid "Repair app boxes"
+msgstr "修復應用程式容器"
+
+msgid "Repair the box"
+msgstr "修復容器"
+
+#, python-brace-format
+msgid "Repair the {label}? Use this if apps in it no longer open or update."
+msgstr "要修復 {label} 嗎？如果裡面的應用程式無法開啟或更新，請使用此選項。"
+
+#, python-brace-format
+msgid ""
+"Repair: rebuilds it (downloads about {size} MB) and puts back its apps: "
+"{names}."
+msgstr "修復：重新建置它（下載約 {size} MB），並將其應用程式放回：{names}。"
+
+#, python-brace-format
+msgid "Repair: rebuilds it and puts back its apps: {names}."
+msgstr "修復：重新建置它，並將其應用程式放回原處：{names}。"
+
+msgid "Report on GitHub"
+msgstr "在 GitHub 上回報"
+
+msgid "Restart"
+msgstr "重新啟動"
+
+msgid "Restart into BIOS settings"
+msgstr "重新啟動並進入 BIOS 設定"
+
+msgid "Restart now"
+msgstr "立即重新啟動"
+
+msgid "Restart now is waiting: click it once your work is saved."
+msgstr "「立即重新啟動」正在等待：儲存好您的工作後再按一下它。"
+
+msgid ""
+"Restart now: the computer restarts and tries the test copy once more. About 3"
+" minutes after you log in, this window shows once more, and the start after "
+"that is back on this version, with the test copy removed."
+msgstr ""
+"「立即重新啟動」：電腦會重新啟動，並再試一次測試副本。登入約 3 分鐘後，這個視窗會再出現一次，之後的那次啟動會回到這個版本，並移除測試副本。"
+
+msgid ""
+"Restart now: the computer restarts back on this version, and the test copy is"
+" removed. At login, a note says the test worked."
+msgstr "「立即重新啟動」：電腦會重新啟動回到這個版本，並移除測試副本。登入時會有一則通知說明測試成功。"
+
+msgid "Restart to use the changes"
+msgstr "重新啟動以套用變更"
+
+msgid "Restart, then sign in with your account from that company."
+msgstr "請重新啟動，然後用您在該公司的帳號登入。"
+
+msgid "Resume now"
+msgstr "立即繼續"
+
+msgid "Review"
+msgstr "檢閱"
+
+msgid ""
+"Right now you type the disk password every time the computer starts.\n"
+"\n"
+"Recommended: Turn on. The computer's security chip unlocks the disk for you. If the disk is ever taken out of this computer, or its startup settings change, it asks for the password as before.\n"
+"\n"
+"Needs the disk password one last time, then a restart."
+msgstr ""
+"目前，每次電腦啟動時，您都需要輸入磁碟密碼。\n"
+"\n"
+"建議：「開啟」。電腦的安全晶片會為您解鎖磁碟。如果磁碟被取出這台電腦，或電腦的啟動設定變更，就會像以前一樣要求輸入密碼。\n"
+"\n"
+"需要最後一次輸入磁碟密碼，然後重新啟動。"
+
+msgid ""
+"Right now you type the disk password every time the computer starts.\n"
+"\n"
+"Secure Boot is off on this computer, so this would be less safe: someone could change how the computer starts and still get the disk unlocked.\n"
+"\n"
+"Recommended: Cancel, then turn Secure Boot on in the BIOS settings first (Restart into BIOS settings, in Wheelhouse).\n"
+"\n"
+"Or Turn on anyway."
+msgstr ""
+"目前，每次電腦啟動時，您都需要輸入磁碟密碼。\n"
+"\n"
+"這台電腦的「安全開機」已關閉，因此這樣會比較不安全：有人可能變更電腦的啟動方式，卻仍能讓磁碟解鎖。\n"
+"\n"
+"建議：「取消」，然後先在 BIOS 設定中開啟「安全開機」（Wheelhouse 中的「重新啟動並進入 BIOS 設定」）。\n"
+"\n"
+"或者「仍要開啟」。"
+
+msgid "Right-click the file and choose Open With."
+msgstr "在檔案上按右鍵，然後選擇「開啟使用」。"
+
+msgid "Root"
+msgstr "Root 帳號"
+
+msgid "Root password"
+msgstr "Root 密碼"
+
+msgid "SELinux security"
+msgstr "SELinux 安全性"
+
+msgid "SELinux would stop blocking anything."
+msgstr "SELinux 將不再封鎖任何內容。"
+
+msgid "Same as above"
+msgstr "與上方相同"
+
+msgid "Save"
+msgstr "儲存"
+
+msgid "Save details"
+msgstr "儲存詳細資訊"
+
+msgid "Save problem details"
+msgstr "儲存問題詳細資訊"
+
+msgid "Save the file to your computer first, then drop it here."
+msgstr "請先將檔案儲存到您的電腦，然後再拖曳到這裡。"
+
+msgid "Save the log"
+msgstr "儲存記錄檔"
+
+msgid "Save the results"
+msgstr "儲存結果"
+
+msgid "Save the results for your helper."
+msgstr "將結果儲存起來，提供給您的協助者。"
+
+msgid "Save your work first."
+msgstr "請先儲存您的工作。"
+
+msgid ""
+"Save your work first: once it starts, it can't be stopped. It breaks the "
+"start before there's a desktop to ask on, so it restarts without asking and "
+"ends by itself."
+msgstr "請先儲存您的工作：一旦開始就無法停止。它會在桌面出現之前就讓啟動失敗，沒有地方可以詢問，因此會不經詢問就重新啟動，並自行結束。"
+
+msgid "Save your work, then click Restart now."
+msgstr "請先儲存您的工作，然後按一下「立即重新啟動」。"
+
+#, python-brace-format
+msgid "Saved on {stick} as {name}."
+msgstr "已儲存到 {stick}，檔名為 {name}。"
+
+#, python-brace-format
+msgid "Saved on {stick} as {name}. You can take the stick out now."
+msgstr "已儲存到 {stick}，檔名為 {name}。您現在可以拔出隨身碟了。"
+
+#, python-brace-format
+msgid ""
+"Saved: {name}, in your Documents folder.\n"
+"\n"
+"Email it to your helper: attach it like any other file.\n"
+"\n"
+"Recommended: Show the file, to see where it is. Or Close."
+msgstr ""
+"已儲存：{name}，位於您的「文件」資料夾中。\n"
+"\n"
+"用電子郵件傳送給您的協助者：像附加其他檔案一樣附上它。\n"
+"\n"
+"建議：「顯示檔案」，看看它在哪裡。或者「關閉」。"
+
+msgid ""
+"Says once at login that the computer went back to the previous version or put"
+" back settings by itself"
+msgstr "登入時告知一次：電腦已自行回到先前的版本，或已自行放回設定"
+
+msgid ""
+"Says once whether a package added to the system is ready, offers to add a "
+"printer, and updates ArtCraft apps"
+msgstr "告知一次新增到系統的套件是否已就緒、提供新增印表機的選項，並更新 ArtCraft 應用程式"
+
+msgid "Screen brightness control"
+msgstr "螢幕亮度控制"
+
+msgid "Search"
+msgstr "搜尋"
+
+msgid "Search for the app, open it, and click Install."
+msgstr "搜尋該應用程式，開啟它，然後按一下「安裝」。"
+
+msgid "Search tools"
+msgstr "搜尋工具"
+
+msgid "Secure Boot"
+msgstr "安全開機"
+
+msgid "Secure Boot is off."
+msgstr "安全開機已關閉。"
+
+msgid "Secure Boot is on."
+msgstr "安全開機已開啟。"
+
+msgid "Secure Boot on or off is fine."
+msgstr "安全開機開啟或關閉都可以。"
+
+msgid "Security certificates that expired, expire soon or were removed"
+msgstr "已過期、即將過期或已被移除的安全憑證"
+
+msgid ""
+"Security certificates that expired, expire within 30 days or were removed"
+msgstr "已過期、將在 30 天內過期或已被移除的安全憑證"
+
+msgid "Select it and press Delete. It goes to the Trash."
+msgstr "選取它，然後按 Delete 鍵。它會移到「垃圾桶」。"
+
+msgid "Send details to your helper"
+msgstr "將詳細資訊傳送給您的協助者"
+
+msgid ""
+"Sending details to your helper, checking rollback, and terminal commands"
+msgstr "將詳細資訊傳送給您的協助者、檢查自動回復，以及終端機指令"
+
+msgid "September"
+msgstr "九月"
+
+msgid "Set"
+msgstr "設定"
+
+msgid "Set a broken box up again. Your files aren't touched."
+msgstr "重新設定損壞的容器。您的檔案不會被動到。"
+
+msgid "Set a sharing password first."
+msgstr "請先設定共享密碼。"
+
+msgid "Set a sharing password, then turn on Share folders on Home networks."
+msgstr "先設定共享密碼，然後開啟「在家用網路中共享資料夾」。"
+
+msgid "Set it myself"
+msgstr "我自己設定"
+
+msgid "Set it up"
+msgstr "進行設定"
+
+msgid "Set the time zone automatically, or pick a region, then a city."
+msgstr "自動設定時區，或先選取地區，再選取城市。"
+
+msgid "Set up a broken app box again and put its apps back"
+msgstr "重新設定損壞的應用程式容器，並將其應用程式放回去"
+
+msgid "Set up and add it"
+msgstr "設定並新增"
+
+msgid "Set up and install"
+msgstr "設定並安裝"
+
+msgid "Setting the earlier boot options to start next time."
+msgstr "正在將先前的開機選項設為下次啟動時使用。"
+
+msgid "Setting the earlier version to start next time."
+msgstr "正在將較早的版本設為下次啟動時使用。"
+
+msgid "Setting the newer version to start next time."
+msgstr "正在將較新的版本設為下次啟動時使用。"
+
+msgid "Setting up the new system"
+msgstr "正在設定新系統"
+
+#, python-brace-format
+msgid "Setting up the {label}"
+msgstr "正在設定 {label}"
+
+#, python-brace-format
+msgid "Setting up the {label} again."
+msgstr "正在再次設定 {label}。"
+
+#, python-brace-format
+msgid "Setting up the {label} was stopped. Nothing was installed."
+msgstr "{label} 的設定已中止。沒有安裝任何東西。"
+
+#, python-brace-format
+msgid "Setting up the {label}. This happens only once."
+msgstr "正在設定 {label}。這只會發生一次。"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Settings are really deleted"
+msgstr "設定真的已刪除"
+
+msgid "Settings didn't open."
+msgstr "「設定」沒有開啟。"
+
+msgid "Settings put back"
+msgstr "設定已放回"
+
+msgid ""
+"Settings the computer starts with. Each change makes a new version, and the "
+"one before stays as the fallback. Changes ask for an administrator password "
+"and start at the next restart."
+msgstr "電腦啟動時使用的設定。每次變更都會產生一個新版本，而前一個版本會保留下來作為備用版本。變更會要求輸入管理員密碼，並在下次重新啟動時生效。"
+
+msgid "Settings with quotes or spaces in their value can't be added here."
+msgstr "值中含有引號或空格的設定無法在此新增。"
+
+msgid "Setup checklist"
+msgstr "設定檢查清單"
+
+msgid "Setup checklist at first login"
+msgstr "首次登入時的設定檢查清單"
+
+msgid "Setup is done."
+msgstr "設定已完成。"
+
+msgid "Share folders on Home networks"
+msgstr "在家用網路中共享資料夾"
+
+msgid "Share my printer"
+msgstr "共享我的印表機"
+
+msgid ""
+"Share my printer: lets other computers use a printer plugged into this one."
+msgstr "共享我的印表機：讓其他電腦也能使用這台電腦上接好的印表機。"
+
+msgid "Shared folders"
+msgstr "共享資料夾"
+
+msgid "Shared folders can't start"
+msgstr "共享資料夾無法啟動"
+
+msgid "Sharing"
+msgstr "共享"
+
+msgid "Sharing didn't start"
+msgstr "共享沒有啟動"
+
+msgid "Sharing is off"
+msgstr "共享已關閉"
+
+msgid "Sharing is off."
+msgstr "共享已關閉。"
+
+msgid "Sharing is on."
+msgstr "共享已開啟。"
+
+#, python-brace-format
+msgid "Sharing on {networks}"
+msgstr "正在 {networks} 上共享"
+
+msgid "Sharing password"
+msgstr "共享密碼"
+
+msgid "Sharing password saved."
+msgstr "已儲存共享密碼。"
+
+msgid "Sharing starts by itself on a Home network."
+msgstr "在家用網路中，共享會自動開始。"
+
+msgid "Sharing waits for a Home network"
+msgstr "共享正在等待家用網路"
+
+msgid "Shift+Print Screen takes a picture of the whole screen straight away."
+msgstr "按下 Shift+Print Screen 即可立即截取整個畫面的截圖。"
+
+msgid "Show"
+msgstr "顯示"
+
+msgid "Show a QR code"
+msgstr "顯示 QR 碼"
+
+msgid "Show me"
+msgstr "顯示給我看"
+
+#, python-brace-format
+msgid "Show me: {target}"
+msgstr "顯示給我看：{target}"
+
+msgid "Show the file"
+msgstr "顯示檔案"
+
+#, python-brace-format
+msgid "Signal {percent}%"
+msgstr "訊號 {percent}%"
+
+#, python-brace-format
+msgid "Signal {percent}%, password needed"
+msgstr "訊號 {percent}%，需要密碼"
+
+msgid "Skip"
+msgstr "略過"
+
+msgid "Skip the disk password at startup"
+msgstr "開機時略過磁碟密碼"
+
+msgid "Skip the disk password at startup. Uses the computer's security chip."
+msgstr "開機時略過磁碟密碼。使用電腦的安全晶片。"
+
+msgid "Slideshow"
+msgstr "投影片播放"
+
+msgid ""
+"Some app boxes didn't update.\\n\\nRecommended: Check the boxes. It checks "
+"them and repairs one that's broken. Your files aren't touched.\\n\\nOr Not "
+"now."
+msgstr "有些應用程式容器沒有更新。\\n\\n建議：「檢查容器」。它會檢查容器並修復損壞的那一個。您的檔案不會被動到。\\n\\n或者「現在不要」。"
+
+msgid ""
+"Some apps from .rpm or .deb files run in an app box. If one stops starting, "
+"open Wheelhouse, Apps, Repair app boxes."
+msgstr ""
+"來自 .rpm 或 .deb 檔案的部分應用程式會在應用程式容器中執行。如果其中一個無法啟動，請開啟 Wheelhouse "
+">「應用程式」>「修復應用程式容器」。"
+
+msgid ""
+"Some audio and video formats are covered by patents in some countries.\n"
+"Fedora, and this image, leave them out. Installing them is your choice and your\n"
+"responsibility."
+msgstr ""
+"在某些國家／地區，部分音訊和視訊格式受專利保護。\n"
+"Fedora 和這個映像都不包含它們。是否安裝由您自行決定，並由您\n"
+"自行負責。"
+
+#, python-brace-format
+msgid ""
+"Some important system settings were broken, and putting them back didn't fix the start, so your computer went back to the version from {since}, which has its own settings. Your files and apps aren't touched, and automatic updates aren't paused.\n"
+"\n"
+"Tell your helper. Save problem details in Wheelhouse makes a file to send them."
+msgstr ""
+"一些重要的系統設定損壞了，而放回這些設定也沒能修好啟動，因此您的電腦已回到 {since} 的版本，該版本有自己的設定。您的檔案和應用程式不會受到影響，自動更新也沒有暫停。\n"
+"\n"
+"請告知您的協助者。Wheelhouse 中的「儲存問題詳細資訊」會建立一個檔案，方便您傳送給他們。"
+
+msgid ""
+"Some video formats (like most web video) need extra codecs that Fedora, and "
+"this system, leave out because of patents in some countries. Installing them "
+"is your choice and your responsibility.\\n\\nWeb video only: lets Firefox "
+"play most web video. A small addition to the system.\\n\\nEverything: plays "
+"all common video and audio, in every app. It replaces some parts of the "
+"system, so system updates take a little longer.\\n\\nNot now: they're in "
+"Wheelhouse, Apps, Media codecs, any time.\\n\\nPick by what you need. If you "
+"only watch video in Firefox, Web video only is enough."
+msgstr ""
+"有些影片格式（例如大多數網路影片）需要額外的編解碼器，但由於某些國家的專利，Fedora "
+"和這個系統沒有包含它們。是否安裝由您自行決定，並由您自行負責。\\n\\n僅限網路影片：讓 Firefox "
+"能播放大多數網路影片。只會在系統中加入一小部分。\\n\\n全部：在每個應用程式中都能播放所有常見的影片和音訊。它會取代系統的部分元件，因此系統更新會稍微久一點。\\n\\n現在不要：隨時可在"
+" Wheelhouse >「應用程式」>「媒體編解碼器」中找到它們。\\n\\n依您的需求選擇。如果您只在 Firefox "
+"中看影片，「僅限網路影片」就夠了。"
+
+msgid ""
+"Some video formats, like most web video, need media codecs that aren't part of the system. The next window explains the choices.\n"
+"\n"
+"Recommended: Next. Or Skip: they're in Wheelhouse, Apps, Media codecs, any time."
+msgstr ""
+"有些影片格式（例如大多數網路影片）需要系統沒有內建的媒體編解碼器。下一個視窗會說明各個選擇。\n"
+"\n"
+"建議：「下一步」。或者「略過」：隨時可在 Wheelhouse >「應用程式」>「媒體編解碼器」中找到它們。"
+
+msgid ""
+"Some, like printer drivers, are added to the system: they're ready after the "
+"next restart."
+msgstr "有些項目（例如印表機驅動程式）會被新增到系統中：下次重新啟動後即可使用。"
+
+msgid "Something here won't work. Read it before installing."
+msgstr "這裡有東西無法運作。安裝前請先閱讀。"
+
+msgid "Something not right?"
+msgstr "有什麼不對勁嗎？"
+
+msgid "Something stopped working after an update"
+msgstr "更新後有東西停止運作"
+
+#, python-brace-format
+msgid ""
+"Something stopped working after the Boot options change.\n"
+"\n"
+"These worked before the Boot options change and don't now:\n"
+"{broke}"
+msgstr ""
+"變更開機選項後，有東西不再運作了。\n"
+"\n"
+"這些項目在變更開機選項之前可以正常運作，但現在不行：\n"
+"{broke}"
+
+#, python-brace-format
+msgid ""
+"Something stopped working after the update.\n"
+"\n"
+"These worked before the update and don't now:\n"
+"{broke}"
+msgstr ""
+"更新後，有些功能無法正常運作。\n"
+"\n"
+"這些在更新前可以正常運作，但現在不行了：\n"
+"{broke}"
+
+#, python-brace-format
+msgid "Something unexpected went wrong: {error}"
+msgstr "發生了意料之外的錯誤：{error}"
+
+msgid "Sound"
+msgstr "音效"
+
+msgid "Sound driver blocked"
+msgstr "音效驅動程式被封鎖"
+
+msgid "Sound found."
+msgstr "已找到音效裝置。"
+
+#, python-brace-format
+msgid "Space used: {sizes}."
+msgstr "已用空間：{sizes}。"
+
+msgid "Standard"
+msgstr "標準"
+
+msgid "Standard top bar, or Windows-style bottom bar and start menu"
+msgstr "標準頂端列，或 Windows 風格的底部列和開始選單"
+
+msgid "Start"
+msgstr "開始"
+
+msgid "Start Apps at Login"
+msgstr "登入時啟動應用程式"
+
+msgid "Start Apps at Login is open"
+msgstr "「登入時啟動應用程式」已開啟"
+
+msgid "Start an app when you log in"
+msgstr "登入時啟動應用程式"
+
+msgid "Start apps at login"
+msgstr "登入時啟動應用程式"
+
+msgid ""
+"Start menu: with the Windows-style layout, the sailboat button at the bottom "
+"left. With the standard layout, press the Windows key."
+msgstr "開始選單：使用 Windows 風格版面配置時，是左下角的帆船按鈕。使用標準版面配置時，請按 Windows 鍵。"
+
+msgid "Start mode"
+msgstr "啟動模式"
+
+msgid "Start the USB stick again with the first entry, EvenKeelOS Live."
+msgstr "請再次從 USB 隨身碟啟動，並選擇第一個項目 EvenKeelOS Live。"
+
+msgid "Start the test"
+msgstr "開始測試"
+
+msgid "Started in UEFI mode."
+msgstr "已在 UEFI 模式下啟動。"
+
+msgid "Started in basic graphics mode, so graphics can't be checked."
+msgstr "以基本顯示模式啟動，因此無法檢查顯示晶片。"
+
+msgid "Starting"
+msgstr "正在啟動"
+
+msgid "Starting hangs (about 7 minutes)"
+msgstr "啟動時卡住（大約 7 分鐘）"
+
+msgid ""
+"Starting hangs on the startup screen and the login screen never shows. After "
+"3 minutes the computer restarts by itself. That happens twice (about 7 "
+"minutes), and the third start is back on this version."
+msgstr "啟動時卡在啟動畫面，登入畫面一直不出現。3 分鐘後電腦會自動重新啟動。這會發生兩次（約 7 分鐘），第三次啟動就會回到這個版本。"
+
+msgid "Starting the computer"
+msgstr "正在啟動電腦"
+
+msgid "Starts at login"
+msgstr "登入時啟動"
+
+msgid "Status"
+msgstr "狀態"
+
+#, python-brace-format
+msgid "Step {number} of {total}: {name}"
+msgstr "第 {number} 步，共 {total} 步：{name}"
+
+#, python-brace-format
+msgid ""
+"Still not working after a restart.\n"
+"\n"
+"These still don't work since the Boot options change:\n"
+"{broke}"
+msgstr ""
+"重新啟動後仍無法運作。\n"
+"\n"
+"自從變更開機選項後，這些還是無法正常運作：\n"
+"{broke}"
+
+#, python-brace-format
+msgid ""
+"Still not working after a restart.\n"
+"\n"
+"These still don't work since the update:\n"
+"{broke}"
+msgstr ""
+"重新啟動後還是無法正常運作。\n"
+"\n"
+"自從更新後，這些還是無法正常運作：\n"
+"{broke}"
+
+msgid "Stop sharing it"
+msgstr "停止共享"
+
+#, python-brace-format
+msgid "Stop sharing {name}"
+msgstr "停止共享 {name}"
+
+msgid ""
+"Stopping %s in its box. This takes a few seconds. If GNOME shows a Force Quit"
+" / Wait window, you do not need to press anything: %s closes on its own."
+msgstr "正在停止容器中的 %s。這需要幾秒鐘。如果 GNOME 顯示「強制退出」／「等待」視窗，您不需要按任何按鈕：%s 會自行關閉。"
+
+msgid ""
+"Strangers on the same network, in a café, hotel or airport, could reach it "
+"too. Only do this if you need it here, and close it again when you're done."
+msgstr "同一個網路上的陌生人（例如在咖啡廳、飯店或機場）也可能連到它。只有在這裡需要時才這麼做，用完後請再關閉。"
+
+#, python-brace-format
+msgid "Strength: {strength}."
+msgstr "強度：{strength}。"
+
+msgid "Strong"
+msgstr "強"
+
+msgid "Stuck while starting"
+msgstr "啟動時卡住"
+
+msgid ""
+"Style: Default (light) or Dark. Accent Color: the color of buttons and folder"
+" icons."
+msgstr "風格：預設（淺色）或深色。強調色：按鈕和資料夾圖示的顏色。"
+
+msgid "Suggested"
+msgstr "建議"
+
+msgid ""
+"Sunset and sunrise can't be worked out for this time zone. Use Custom times."
+msgstr "無法為此時區計算日落和日出時間。請使用「自訂時間」。"
+
+msgid "Sunset to sunrise"
+msgstr "日落到日出"
+
+msgid "Switch"
+msgstr "切換"
+
+msgid ""
+"Switch between light and dark yourself, in Settings or the quick settings "
+"menu."
+msgstr "您可以在「設定」或「快速設定」選單中自行切換淺色與深色模式。"
+
+msgid "Switch to the dark style at sunset, or at times you pick"
+msgstr "在日落時或您選擇的時間切換為深色模式"
+
+msgid ""
+"Switches the dark style for you. Night Light in Settings only warms the "
+"colors. You can still switch it yourself any time."
+msgstr "自動為您切換深色模式。「設定」中的「夜光模式」只會讓顏色變暖。您隨時仍可以自行切換。"
+
+msgid "Switching the desktop layout."
+msgstr "正在切換桌面版面配置。"
+
+msgid "System"
+msgstr "系統"
+
+msgid "System Update"
+msgstr "系統更新"
+
+msgid "Take a screenshot or record the screen"
+msgstr "截圖或錄製畫面"
+
+msgid "Take it out"
+msgstr "移除"
+
+#, python-brace-format
+msgid "Take out {setting}"
+msgstr "移除 {setting}"
+
+msgid "Take the extra formats out again"
+msgstr "再次移除額外的格式"
+
+msgid "Task Manager: Resources. Find it in the start menu."
+msgstr "工作管理員：「資源」。可以在開始選單中找到它。"
+
+msgid "Teal to start. Folder icons follow whatever color you pick."
+msgstr "一開始是青藍色。資料夾圖示會跟著您選的顏色變。"
+
+msgid "Test automatic rollback"
+msgstr "測試自動回復"
+
+msgid "Text size"
+msgstr "文字大小"
+
+msgid "That couldn't be saved."
+msgstr "無法儲存。"
+
+msgid "That didn't save. Try again in Wheelhouse, Network safety."
+msgstr "沒有儲存成功。請在 Wheelhouse >「網路安全」中再試一次。"
+
+msgid "That folder belongs to someone else."
+msgstr "該資料夾屬於其他人。"
+
+msgid "That folder has no pictures in it (JPEG, PNG or WebP)."
+msgstr "該資料夾內沒有圖片（JPEG、PNG 或 WebP）。"
+
+#, python-brace-format
+msgid "That folder is already shared, as {name}."
+msgstr "該資料夾已經以「{name}」的名稱共享。"
+
+msgid "That folder isn't shared."
+msgstr "該資料夾未共享。"
+
+msgid "That folder wasn't found."
+msgstr "找不到該資料夾。"
+
+msgid "That folder's name can't be shared. Rename it or pick another."
+msgstr "該資料夾的名稱無法共享。請重新命名或選擇另一個。"
+
+msgid "That isn't let in here."
+msgstr "這裡不允許它連入。"
+
+msgid "That isn't the disk password, so nothing was changed. Try again."
+msgstr "那不是磁碟密碼，所以沒有變更任何內容。請再試一次。"
+
+msgid ""
+"That was the wrong disk password too many times, so it's locked for an hour. "
+"Nothing was changed. Try again after that."
+msgstr "磁碟密碼輸入錯誤次數過多，因此已鎖定一小時。沒有任何變更。請在那之後再試一次。"
+
+msgid ""
+"The BIOS screen uses the keyboard. When you're done, choose Save and Exit, or"
+" Exit."
+msgstr "BIOS 畫面使用鍵盤操作。完成後，請選擇「Save and Exit」（儲存並離開）或「Exit」（離開）。"
+
+msgid ""
+"The BIOS's RAID setting (Intel RST) hides the disk. Restart into the BIOS and"
+" set the storage mode (often called SATA mode or SATA operation) to AHCI. "
+"Windows on this disk won't start after that change, but installing EvenKeelOS"
+" erases it anyway."
+msgstr ""
+"BIOS 的 RAID 設定（Intel RST）會隱藏該磁碟。重新啟動並進入 BIOS，然後將儲存模式（通常稱為 SATA 模式或 SATA "
+"運作模式）設為 AHCI。進行該變更後，此磁碟上的 Windows 將無法啟動，但無論如何，安裝 EvenKeelOS 都會將其抹除。"
+
+msgid "The Bluetooth driver is blocked, so there's no Bluetooth."
+msgstr "藍牙驅動程式被封鎖，因此沒有藍牙功能。"
+
+msgid ""
+"The NVIDIA card runs on the open-source driver built into EvenKeelOS. The "
+"proprietary NVIDIA driver isn't used: it breaks too often to keep the promise"
+" that EvenKeelOS just works. If you need it, use Bazzite or Bluefin's NVIDIA "
+"editions instead."
+msgstr ""
+"NVIDIA 顯示卡使用內建於 EvenKeelOS 的開放原始碼驅動程式。未採用 NVIDIA 的專有驅動程式：它出錯的頻率太高，無法兌現 "
+"EvenKeelOS「就是能用」的承諾。如果您有需要，請改用 Bazzite 或 Bluefin 的 NVIDIA 版本。"
+
+msgid "The QR code could not be made. Save the log to a stick instead."
+msgstr "無法產生 QR 碼。請改用「儲存記錄檔」存到隨身碟。"
+
+msgid "The USB stick could not be opened."
+msgstr "無法開啟 USB 隨身碟。"
+
+msgid "The VPN list is missing."
+msgstr "VPN 清單遺失。"
+
+msgid "The Wi-Fi card's driver is blocked, so there's no Wi-Fi."
+msgstr "Wi-Fi 卡的驅動程式被封鎖，因此沒有 Wi-Fi。"
+
+msgid "The administrator password was not given, so nothing was changed."
+msgstr "未提供管理員密碼，因此沒有變更任何內容。"
+
+msgid "The administrator password wasn't given, so nothing was changed."
+msgstr "未提供管理員密碼，因此沒有變更任何內容。"
+
+msgid "The app system (Flatpak)"
+msgstr "應用程式系統 (Flatpak)"
+
+msgid "The app's instructions say TCP, UDP or both"
+msgstr "應用程式的說明會寫 TCP、UDP 或兩者"
+
+msgid "The automatic rollback test worked."
+msgstr "自動回復測試成功。"
+
+msgid ""
+"The automatic update is already running, so this window follows it until it's"
+" done. You can keep working."
+msgstr "自動更新已經在進行中，所以這個視窗會跟著它，直到更新完成。您可以繼續工作。"
+
+msgid ""
+"The battery is at %s%% and the computer isn't plugged in. If the battery runs"
+" out during the update, the update is lost and has to start "
+"again.\\n\\nRecommended: Not now. Plug the computer in, then start System "
+"Update again.\\n\\nOr Update anyway."
+msgstr ""
+"電池電量為 "
+"%s%%，而且電腦沒有接上電源。如果更新期間電池沒電，更新就會白費，必須重新開始。\\n\\n建議：「現在不要」。請將電腦接上電源，然後再次啟動「系統更新」。\\n\\n或者「仍要更新」。"
+
+msgid ""
+"The battery is at %s%%. Plug the computer in: if it runs out during the "
+"update, the update is lost."
+msgstr "電池電量為 %s%%。請將電腦接上電源：如果更新期間電池沒電，更新就會白費。"
+
+#, python-brace-format
+msgid "The biggest disk holds {gb} GB."
+msgstr "最大的磁碟容量為 {gb} GB。"
+
+msgid "The boot entry is already named %s. Nothing to do."
+msgstr "開機項目已命名為 %s。沒有需要執行的動作。"
+
+msgid "The boot options can't be read right now"
+msgstr "目前無法讀取開機選項"
+
+#, python-brace-format
+msgid "The boot options didn't change: {reason}"
+msgstr "開機選項沒有變更：{reason}"
+
+msgid "The boot options the computer starts with couldn't be read."
+msgstr "無法讀取電腦啟動時使用的開機選項。"
+
+msgid "The box is missing or broken."
+msgstr "容器遺失或損壞。"
+
+msgid ""
+"The buttons at a window's top right minimize, maximize and close it, as on "
+"Windows."
+msgstr "視窗右上角的按鈕可以將視窗最小化、最大化和關閉，和 Windows 一樣。"
+
+#, python-brace-format
+msgid "The camera ({device})"
+msgstr "相機 ({device})"
+
+#, python-brace-format
+msgid ""
+"The certificate \"{name}\" was added to this computer and has been removed, "
+"so it's no longer trusted. If you didn't remove it, tell your helper."
+msgstr "憑證「{name}」曾新增至這台電腦，但後來已移除，因此不再受信任。如果您沒有移除它，請告訴您的協助者。"
+
+msgid "The certificates couldn't be checked."
+msgstr "無法檢查憑證。"
+
+msgid "The change was not made, and nothing was left behind."
+msgstr "沒有進行變更，也沒有留下任何東西。"
+
+msgid "The check couldn't finish."
+msgstr "無法完成檢查。"
+
+msgid "The clock and time zone settings could not be saved."
+msgstr "無法儲存時鐘和時區設定。"
+
+msgid ""
+"The codecs are installed. They start working after a restart, which the setup"
+" checklist offers at its end."
+msgstr "已安裝編解碼器。它們會在重新啟動後開始運作，而設定檢查清單會在最後提供重新啟動的選項。"
+
+msgid ""
+"The codecs are installed.\\n\\nRecommended: Restart now to start using them. "
+"Or Later."
+msgstr "已安裝編解碼器。\\n\\n建議：「立即重新啟動」以開始使用。或者「稍後」。"
+
+msgid "The codecs are removed. Restart to finish."
+msgstr "已移除編解碼器。請重新啟動以完成。"
+
+msgid "The codecs weren't removed."
+msgstr "編解碼器沒有被移除。"
+
+#, python-brace-format
+msgid ""
+"The computer didn't start properly with the boot options changed in "
+"Wheelhouse, so it went back to the version from {since}, with the boot "
+"options it had before."
+msgstr "在 Wheelhouse 中變更開機選項後，電腦無法正常啟動，因此系統已回復至 {since} 的版本，並使用先前的開機選項。"
+
+msgid ""
+"The computer hasn't saved a copy of its settings since this start yet. Wait a"
+" few minutes and try again. If it keeps saying this, tell your helper: the "
+"copy isn't being saved."
+msgstr "自這次開機以來，電腦還沒有儲存過設定的備份。請稍等幾分鐘，然後再試一次。如果一直顯示這段訊息，請告訴您的協助者：系統沒有在儲存副本。"
+
+msgid "The computer locks up"
+msgstr "電腦當機了"
+
+msgid ""
+"The computer may not start, or may lose its drive, memory or processors."
+msgstr "電腦可能無法啟動，或可能無法使用磁碟機、記憶體或處理器。"
+
+msgid ""
+"The computer restarts and opens its BIOS settings screen. Save your work first.\n"
+"\n"
+"The BIOS settings are used with the keyboard. When you're done, choose Save and Exit, or Exit, to start the computer again."
+msgstr ""
+"電腦會重新啟動並開啟 BIOS 設定畫面。請先儲存您的工作。\n"
+"\n"
+"BIOS 設定要用鍵盤操作。完成後，請選擇「Save and Exit」（儲存並離開）或「Exit」（離開），讓電腦重新啟動。"
+
+msgid ""
+"The computer restarts, fails on purpose, then goes back by itself. A note at "
+"login says the test worked and what the test copy found broken."
+msgstr "電腦會重新啟動、故意失敗，然後自行回到這個版本。登入時會有一則通知說明測試成功，以及測試副本發現哪些東西壞了。"
+
+msgid "The computer starts with the usual settings."
+msgstr "電腦以平常的設定啟動。"
+
+msgid ""
+"The computer would start without the desktop: a text screen or a rescue "
+"shell."
+msgstr "電腦會在沒有桌面的情況下啟動：只有文字畫面或救援 shell。"
+
+msgid "The desktop"
+msgstr "桌面"
+
+#, python-brace-format
+msgid ""
+"The device rule wasn't added, so the device may not work.\n"
+"\n"
+"{details}"
+msgstr ""
+"未新增裝置規則，因此裝置可能無法運作。\n"
+"\n"
+"{details}"
+
+#, python-brace-format
+msgid ""
+"The device rule wasn't added, so the device may not work.\n"
+"{details}"
+msgstr ""
+"未新增裝置規則，因此裝置可能無法運作。\n"
+"{details}"
+
+msgid "The disk is full. Free some space, then try again."
+msgstr "磁碟已滿。請釋放一些空間，然後再試一次。"
+
+msgid "The disk is hidden by a BIOS setting."
+msgstr "磁碟因 BIOS 設定而被隱藏。"
+
+#, python-brace-format
+msgid "The disk {disk} was not found, or can't be written to."
+msgstr "找不到磁碟 {disk}，或者無法寫入資料。"
+
+#, python-brace-format
+msgid ""
+"The download source stays. Open {filename} again to pick an app, or remove it"
+" in Wheelhouse, Apps, Remove apps."
+msgstr ""
+"下載來源會保留下來。請再次開啟 {filename} 以選擇應用程式，或在 Wheelhouse 的「應用程式」>「移除應用程式」中將其移除。"
+
+#, python-brace-format
+msgid ""
+"The download source was added, but it has no apps to show right now. Check "
+"your internet connection, then open {filename} again."
+msgstr "已新增下載來源，但目前沒有可顯示的應用程式。請檢查您的網路連線，然後再開啟 {filename}。"
+
+msgid ""
+"The earlier version doesn't have the settings repair yet, so if the repair "
+"didn't work, going back to it would give a wrong message. Run the test after "
+"the next update."
+msgstr "較早的版本還沒有設定修復功能，所以如果修復沒有成功，回到該版本會顯示錯誤的訊息。請在下次更新後再執行測試。"
+
+#, python-brace-format
+msgid "The file could not be written: {error}."
+msgstr "無法寫入檔案：{error}。"
+
+msgid "The fingerprint reader"
+msgstr "指紋辨識器"
+
+msgid "The firewall"
+msgstr "防火牆"
+
+msgid "The firewall didn't reload."
+msgstr "防火牆沒有重新載入。"
+
+#, python-brace-format
+msgid "The firewall didn't take the change: {reason}"
+msgstr "防火牆沒有套用變更：{reason}"
+
+msgid "The firewall doesn't start"
+msgstr "防火牆無法啟動"
+
+msgid ""
+"The firewall fails to start, so during the test the computer has no firewall."
+msgstr "防火牆無法啟動，因此在測試期間，電腦沒有防火牆。"
+
+msgid "The firewall isn't answering"
+msgstr "防火牆沒有回應"
+
+msgid "The firmware update didn't finish. Try again later."
+msgstr "韌體更新未完成。請稍後再試一次。"
+
+msgid "The firmware updater"
+msgstr "韌體更新程式"
+
+msgid ""
+"The first meeting asks whether to install Chrome or use your usual browser."
+msgstr "第一次會議會詢問您要安裝 Chrome 還是使用您平常的瀏覽器。"
+
+msgid ""
+"The first time, choose Install Chrome or Use the usual browser. The meeting "
+"opens in Zoom's web version."
+msgstr "第一次時，請選擇「安裝 Chrome」或「使用平常的瀏覽器」。會議會在 Zoom 的網頁版中開啟。"
+
+msgid "The full codecs are already installed. Restart if you have not yet."
+msgstr "完整編解碼器已經安裝。如果還沒重新啟動，請重新啟動。"
+
+msgid "The full guide"
+msgstr "完整指南"
+
+msgid "The full name is empty."
+msgstr "全名是空的。"
+
+msgid ""
+"The graphics driver is blocked, so the screen runs in a basic mode: it may "
+"look blurry or slow, or stay black (then just wait)."
+msgstr "顯示晶片驅動程式被封鎖，因此畫面以基本模式運作：可能看起來模糊或緩慢，也可能一直是黑的（此時請稍候）。"
+
+msgid "The install could not be finished."
+msgstr "無法完成安裝。"
+
+msgid "The install stopped"
+msgstr "安裝已停止"
+
+#, python-brace-format
+msgid "The installer could not start: {error}"
+msgstr "安裝程式無法啟動：{error}"
+
+msgid "The installer couldn't open. Use Install EvenKeelOS in the dock."
+msgstr "安裝程式無法開啟。請使用 Dock 中的「安裝 EvenKeelOS」。"
+
+msgid "The installer stopped unexpectedly."
+msgstr "安裝程式意外停止。"
+
+#, python-brace-format
+msgid "The keyboard ({device})"
+msgstr "鍵盤 ({device})"
+
+msgid "The last lines of the log:"
+msgstr "記錄檔的最後幾行："
+
+#, python-brace-format
+msgid ""
+"The last start failed its start-up checks, and some system settings were missing or replaced. Your computer put back {n} from the copy it saved {saved}, then restarted. Your files and apps aren't touched.\n"
+"\n"
+"Put back: {what}.\n"
+"\n"
+"If it happens again, tell your helper. Save problem details in Wheelhouse makes a file to send them."
+msgid_plural ""
+"The last start failed its start-up checks, and some system settings were missing or replaced. Your computer put back {n} from the copy it saved {saved}, then restarted. Your files and apps aren't touched.\n"
+"\n"
+"Put back: {what}.\n"
+"\n"
+"If it happens again, tell your helper. Save problem details in Wheelhouse makes a file to send them."
+msgstr[0] ""
+"上次啟動沒有通過啟動檢查，而且部分系統設定遺失或被取代。您的電腦從 {saved} 儲存的備份中放回了 {n} 項設定，然後重新啟動。您的檔案和應用程式不會受到影響。\n"
+"\n"
+"已放回：{what}。\n"
+"\n"
+"如果再次發生，請告知您的協助者。Wheelhouse 中的「儲存問題詳細資訊」會建立一個檔案，方便您傳送給他們。"
+
+msgid "The layout didn't change."
+msgstr "版面配置沒有變更。"
+
+msgid ""
+"The layout, colors, wallpaper, dark at night, fonts, screen size, night "
+"light, sound and accounts"
+msgstr "版面配置、色彩、桌布、夜間深色、字型、螢幕大小、夜光模式、音效和帳號"
+
+msgid "The login screen doesn't start"
+msgstr "登入畫面無法啟動"
+
+msgid ""
+"The login screen fails to start, so you never see it. The computer restarts "
+"by itself within seconds, twice, and the third start is back on this version."
+msgstr "登入畫面無法啟動，所以您根本不會看到它。電腦會在幾秒內自動重新啟動兩次，第三次啟動時會回到這個版本。"
+
+msgid ""
+"The login screen works, but logging in drops you back to it. Log in a second "
+"time; after the second drop the computer restarts by itself. Do that on 2 "
+"starts, and the third start is back on this version."
+msgstr ""
+"登入畫面正常運作，但登入後又會回到登入畫面。請再登入一次；第二次被退回後，電腦會自動重新啟動。在 2 次啟動中都這麼做，第 3 次啟動就會回到這個版本。"
+
+msgid "The media codecs start working after a restart."
+msgstr "重新啟動後，媒體編解碼器就會開始運作。"
+
+msgid ""
+"The menu that opens has Wi-Fi, Bluetooth, the sound volume, the screen "
+"brightness, the power mode, dark style and night light."
+msgstr "開啟的選單中有 Wi-Fi、藍牙、音量、螢幕亮度、電源模式、深色模式和夜光模式。"
+
+msgid "The new files could not be labelled."
+msgstr "無法為新檔案加上標籤。"
+
+msgid "The new partitions did not show up."
+msgstr "新的分割區沒有顯示出來。"
+
+msgid "The new system could not be set to take signed updates."
+msgstr "無法將新系統設定為接受已簽署的更新。"
+
+#, python-brace-format
+msgid "The new system has no {name} group."
+msgstr "新系統沒有 {name} 群組。"
+
+msgid "The new system's desktop layouts could not be found."
+msgstr "找不到新系統的桌面版面配置。"
+
+msgid "The new system's settings database could not be found."
+msgstr "找不到新系統的設定資料庫。"
+
+msgid "The next network you join starts as a Public place."
+msgstr "您下一個連上的網路一開始會是「公共場所」。"
+
+#, python-brace-format
+msgid "The next start uses: {settings}"
+msgstr "下次啟動將使用：{settings}"
+
+msgid "The one-time setup window is already closed."
+msgstr "一次性設定視窗已關閉。"
+
+msgid "The password is typed and matches."
+msgstr "已輸入密碼，且密碼相符。"
+
+#, python-brace-format
+msgid "The password wasn't saved: {reason}"
+msgstr "密碼未儲存：{reason}"
+
+msgid ""
+"The picture is copied, ready to paste, and saved in Pictures, Screenshots."
+msgstr "圖片已複製，可以直接貼上，並已儲存在「圖片」>「螢幕快照」中。"
+
+msgid ""
+"The power button in that menu has Suspend, Restart, Power Off and Log Out."
+msgstr "該選單中的電源按鈕有「暫停」、「重新啟動」、「關閉電源」和「登出」。"
+
+#, python-brace-format
+msgid "The printer driver {title} is ready."
+msgstr "印表機驅動程式 {title} 已準備就緒。"
+
+#, python-brace-format
+msgid ""
+"The printer driver {title} is ready.\n"
+"\n"
+"Open Printers: choose Add Printer, then your printer."
+msgstr ""
+"印表機驅動程式 {title} 已準備就緒。\n"
+"\n"
+"開啟「印表機」：選擇「加入印表機」，然後選擇您的印表機。"
+
+msgid "The printing service fails to start."
+msgstr "列印服務無法啟動。"
+
+msgid "The restart didn't start"
+msgstr "重新啟動沒有開始"
+
+#, python-brace-format
+msgid ""
+"The restart said:\n"
+"\n"
+"{message}\n"
+"\n"
+"Exit code: {code}"
+msgstr ""
+"重新啟動時顯示：\n"
+"\n"
+"{message}\n"
+"\n"
+"結束代碼：{code}"
+
+msgid ""
+"The root account is the system's own administrator. Most people never need "
+"it: your own account can be an administrator instead."
+msgstr "root 帳號是系統本身的管理員。大多數人從來不需要它：您可以改用自己的帳號當管理員。"
+
+msgid "The root password could not be set."
+msgstr "無法設定 root 密碼。"
+
+msgid "The screen flashes white, often with an outside display"
+msgstr "畫面閃白光，通常是在接外接顯示器時"
+
+msgid ""
+"The settings are deleted, but the computer didn't restart. Restart it now: "
+"the next start puts them back."
+msgstr "設定已刪除，但電腦沒有重新啟動。請現在重新啟動：下次啟動時會把它們放回去。"
+
+msgid "The settings repair test didn't work."
+msgstr "設定修復測試沒有成功。"
+
+#, python-brace-format
+msgid ""
+"The settings repair test didn't work: your computer couldn't put the deleted settings back, so it went back to the version from {since}, which has its own settings. Your files and apps aren't touched, and automatic updates aren't paused.\n"
+"\n"
+"Tell your helper. Save problem details in Wheelhouse makes a file to send them."
+msgstr ""
+"設定修復測試沒有成功：您的電腦無法把刪除的設定放回去，因此已回到 {since} 的版本，該版本有自己的設定。您的檔案和應用程式不會受到影響，自動更新也沒有暫停。\n"
+"\n"
+"請告知您的協助者。Wheelhouse 中的「儲存問題詳細資訊」會建立一個檔案，方便您傳送給他們。"
+
+msgid "The settings repair test worked."
+msgstr "設定修復測試成功了。"
+
+msgid "The sound chip's driver is blocked, so there's no sound."
+msgstr "音效晶片的驅動程式被封鎖，所以沒有聲音。"
+
+msgid ""
+"The start menu, windows, the menu at the end of the bar, notifications, "
+"screenshots and shortcuts"
+msgstr "開始選單、視窗、列尾端的選單、通知、螢幕截圖和快速鍵"
+
+msgid "The sun doesn't set or rise here today, so it's dark until it rises."
+msgstr "今天這裡太陽不會落下也不會升起，所以會一直使用深色，直到日出。"
+
+msgid "The sun doesn't set or rise here today, so it's light until it sets."
+msgstr "今天這裡太陽不會落下也不會升起，所以會一直使用淺色，直到日落。"
+
+msgid "The system core crashed (a protection fault)"
+msgstr "系統核心當機（保護錯誤）"
+
+msgid "The system core crashed (an oops)"
+msgstr "系統核心當機（oops 錯誤）"
+
+msgid "The system core reported a bug"
+msgstr "系統核心回報了一個錯誤"
+
+msgid ""
+"The system itself can't be changed by apps or by mistake. Each update "
+"replaces it whole."
+msgstr "系統本身不會被應用程式或誤操作更改。每次更新都會整個取代它。"
+
+#, python-brace-format
+msgid "The test copy ({name}) is ready. It starts at your next restart."
+msgstr "測試副本 ({name}) 已準備就緒。它會在您下次重新啟動時啟用。"
+
+msgid ""
+"The test marker is removed. The version without it starts at your next "
+"restart."
+msgstr "測試標記已移除。沒有標記的版本會在您下次重新啟動時啟用。"
+
+#, python-brace-format
+msgid ""
+"The test worked. At the next start your computer found important settings missing, put back {n} setting from the copy it saved {saved}, and restarted by itself.\n"
+"\n"
+"Put back: {what}."
+msgid_plural ""
+"The test worked. At the next start your computer found important settings missing, put back {n} settings from the copy it saved {saved}, and restarted by itself.\n"
+"\n"
+"Put back: {what}."
+msgstr[0] ""
+"測試成功。下次啟動時，您的電腦發現缺少重要設定，從 {saved} 儲存的備份中放回了 {n} 項設定，並自行重新啟動。\n"
+"\n"
+"已放回：{what}。"
+
+#, python-brace-format
+msgid ""
+"The test worked. Your computer went back by itself to the version from "
+"{since}, and the test copy is removed."
+msgstr "測試成功。您的電腦已自動回復至 {since} 的版本，測試副本已移除。"
+
+#, python-brace-format
+msgid "The touchpad ({device})"
+msgstr "觸控板 ({device})"
+
+msgid "The two don't match yet."
+msgstr "這兩者還不相符。"
+
+msgid "The update did not finish. Details: journalctl -u %s"
+msgstr "更新未完成。詳細資訊：journalctl -u %s"
+
+msgid "The update didn't finish."
+msgstr "更新沒有完成。"
+
+msgid ""
+"The update didn't finish. Nothing is broken: your computer keeps running the "
+"version it has.\\n\\nTry again later."
+msgstr "更新沒有完成。沒有任何問題：您的電腦會繼續執行目前的版本。\\n\\n請稍後再試一次。"
+
+msgid "The update program"
+msgstr "更新程式"
+
+msgid ""
+"The update program is swapped for one that always fails (until the next "
+"restart; nothing on the disk changes)."
+msgstr "更新程式已被替換成一個總是會失敗的程式（直到下次重新啟動為止；磁碟上的內容不會有任何變更）。"
+
+msgid "The user name is empty."
+msgstr "使用者名稱是空的。"
+
+#, python-brace-format
+msgid ""
+"The version you're using now is from {current}. The one from before it, from {older}, is still on this computer.\n"
+"\n"
+"If something stopped working after the last update: Undo the update. The version from {older} starts at your next restart. Your files and your apps aren't touched."
+msgstr ""
+"您現在使用的是 {current} 的版本。之前那個 {older} 的版本仍在這台電腦上。\n"
+"\n"
+"如果上次更新後有東西無法運作：「復原更新」。{older} 的版本會在您下次重新啟動時啟用。您的檔案和應用程式不會受到影響。"
+
+msgid ""
+"The version you're using now is the one before it with boot options changed in Wheelhouse.\n"
+"\n"
+"Undo the change: the computer starts with the boot options it had before, at your next restart. Automatic updates aren't paused.\n"
+"\n"
+"Or Cancel."
+msgstr ""
+"您現在使用的版本，是前一個版本加上在 Wheelhouse 中變更的開機選項。\n"
+"\n"
+"「復原變更」：下次重新啟動時，電腦會以先前的開機選項啟動。自動更新不會暫停。\n"
+"\n"
+"或者「取消」。"
+
+msgid "The wallpaper changes to the next picture in a folder of yours."
+msgstr "桌布會換成您某個資料夾中的下一張圖片。"
+
+#, python-brace-format
+msgid ""
+"The {fs} file system could not be loaded, so the disk can't be prepared."
+msgstr "無法載入 {fs} 檔案系統，因此無法準備磁碟。"
+
+#, python-brace-format
+msgid "The {label} is deleted."
+msgstr "{label} 已刪除。"
+
+#, python-brace-format
+msgid "The {label} is not working."
+msgstr "{label} 無法正常運作。"
+
+#, python-brace-format
+msgid "The {label} is repaired."
+msgstr "{label} 已修復。"
+
+#, python-brace-format
+msgid ""
+"The {label} isn't working.\n"
+"\n"
+"Recommended: Repair the box. It rebuilds the box, puts your apps back, then installs {title}. Your files aren't touched."
+msgstr ""
+"{label} 無法運作。\n"
+"\n"
+"建議：「修復容器」。它會重建容器、把您的應用程式放回去，然後安裝 {title}。您的檔案不會被動到。"
+
+#, python-brace-format
+msgid "The {name} ({unit})"
+msgstr "{name} ({unit})"
+
+#, python-brace-format
+msgid "The {name} graphics drive the screen."
+msgstr "{name} 顯示晶片負責驅動螢幕。"
+
+#, python-brace-format
+msgid "The {name} service ({unit})"
+msgstr "{name} 服務 ({unit})"
+
+#, python-brace-format
+msgid "The {title} download isn't signed by ArtCraft, so it was not installed."
+msgstr "{title} 的下載檔案沒有 ArtCraft 的簽章，因此沒有安裝。"
+
+msgid "There are no app boxes to repair."
+msgstr "沒有需要修復的應用程式容器。"
+
+#, python-brace-format
+msgid "There is no start-up keyboard layout for {layout}."
+msgstr "{layout} 沒有啟動時的鍵盤配置。"
+
+msgid ""
+"There's no earlier version on this computer to go back to. Only the version "
+"you're using now is kept."
+msgstr "這台電腦上沒有可以回復的舊版本。只會保留您現在正在使用的版本。"
+
+msgid ""
+"There's no earlier version to fall back to if putting the settings back "
+"doesn't work, so the test doesn't run. Try it after the next update."
+msgstr "如果放回設定沒有用，就沒有較早的版本可以退回，因此不會執行測試。請在下次更新後再試。"
+
+msgid "These security certificates need attention. Pick one to see what to do."
+msgstr "這些安全性憑證需要留意。請選取一個，看看該怎麼做。"
+
+msgid "They open in Chrome."
+msgstr "它們會在 Chrome 中開啟。"
+
+msgid "They open in your usual browser. Choose to be asked about Chrome again."
+msgstr "它們會在您平常的瀏覽器中開啟。選擇此項，下次會再詢問是否使用 Chrome。"
+
+msgid "This account can't share folders."
+msgstr "此帳號無法共享資料夾。"
+
+msgid ""
+"This computer asks for the disk password every time it starts. The computer's security chip can unlock the disk instead.\n"
+"\n"
+"This needs the disk password, so it's one for your helper.\n"
+"\n"
+"Recommended: Set it up. Or Skip: it's in Wheelhouse any time."
+msgstr ""
+"這台電腦每次啟動時都會要求輸入磁碟密碼。電腦的安全晶片可以改為自動解鎖磁碟。\n"
+"\n"
+"這需要磁碟密碼，所以最好交給您的協助者處理。\n"
+"\n"
+"建議：「進行設定」。或者「略過」：隨時可在 Wheelhouse 中找到。"
+
+msgid ""
+"This computer can't go back by itself: it was installed before automatic "
+"rollback was added, or automatic rollback was switched off. Computers "
+"installed from a newer USB have it."
+msgstr "這台電腦無法自行回到舊版本：它是在加入自動回復功能之前安裝的，或者自動回復已被關閉。用較新的 USB 隨身碟安裝的電腦才有這項功能。"
+
+msgid ""
+"This computer can't open its BIOS settings from here. Press the BIOS key "
+"while it starts (often F2, F10, F12 or Delete)."
+msgstr "這台電腦無法從這裡開啟 BIOS 設定。請在電腦啟動時按 BIOS 鍵（通常是 F2、F10、F12 或 Delete）。"
+
+msgid ""
+"This computer has no security chip (TPM) that can do this, so the disk "
+"password stays."
+msgstr "這台電腦沒有能執行此操作的安全晶片 (TPM)，因此磁碟密碼會保留。"
+
+#, python-brace-format
+msgid ""
+"This computer is running a test copy ({name}) as its normal version, so a new test can't start from it.\n"
+"\n"
+"Recommended: Remove the test marker. The version without it starts at your next restart. Needs your password."
+msgstr ""
+"這台電腦正以測試副本 ({name}) 作為正常版本執行，因此無法從它開始新的測試。\n"
+"\n"
+"建議：「移除測試標記」。沒有標記的版本會在您下次重新啟動時啟用。需要您的密碼。"
+
+msgid ""
+"This computer is running a test copy. Open Test automatic rollback again to "
+"remove its marker."
+msgstr "這台電腦正在執行測試副本。請再次開啟「測試自動回復」以移除它的標記。"
+
+msgid "This computer started the USB stick in old BIOS (legacy) mode."
+msgstr "這台電腦以舊版 BIOS（傳統）模式啟動了 USB 隨身碟。"
+
+#, python-brace-format
+msgid ""
+"This desktop uses {now}.\n"
+"\n"
+"Switch to {new}? It takes effect after you log out and back in.\n"
+"\n"
+"Or Keep it."
+msgstr ""
+"這個桌面使用「{now}」。\n"
+"\n"
+"要切換到「{new}」嗎？登出再重新登入後生效。\n"
+"\n"
+"或者「保留」。"
+
+#, python-brace-format
+msgid ""
+"This file can't be installed. It may be damaged or not fully downloaded. Download it again and retry.\n"
+"\n"
+"(Details: {details})"
+msgstr ""
+"無法安裝此檔案。檔案可能已損壞，或未完整下載。請重新下載，然後再試一次。\n"
+"\n"
+"（詳細資訊：{details}）"
+
+#, python-brace-format
+msgid ""
+"This file is an older version of {title} than the one you have.\n"
+"\n"
+"Install the older version: replaces yours. Only do this if the newer one has a problem."
+msgstr ""
+"這個檔案是比您現有版本還舊的 {title}。\n"
+"\n"
+"「安裝舊版本」：會取代您現有的版本。只有在新版本有問題時才這麼做。"
+
+msgid ""
+"This is a live session: it runs from the USB stick, nothing here is saved, "
+"and the computer's disk isn't touched."
+msgstr "這是 Live 工作階段：它從 USB 隨身碟執行，這裡的任何東西都不會儲存，也不會動到電腦的磁碟。"
+
+msgid ""
+"This is how the computer shows up on your network. Keep the suggestion, or "
+"type a new one."
+msgstr "這是這台電腦在您網路上顯示的名稱。保留建議的名稱，或輸入新的名稱。"
+
+#, python-brace-format
+msgid ""
+"This is the 32-bit version of {title}, for older computers. Download the "
+"64-bit version instead (often called amd64 or x86_64)."
+msgstr "這是 {title} 的 32 位元版本，適用於較舊的電腦。請改為下載 64 位元版本（通常稱為 amd64 或 x86_64）。"
+
+msgid "This network"
+msgstr "此網路"
+
+msgid ""
+"This removes things the computer no longer needs: unused app parts, old "
+"system update files, and unused container images. Your files and your apps "
+"aren't touched."
+msgstr "這會移除電腦不再需要的項目：未使用的應用程式元件、舊的系統更新檔案，以及未使用的容器映像。您的檔案和應用程式不會受到影響。"
+
+#, python-brace-format
+msgid ""
+"This saves the computer's recent error messages, its system version and the list of your apps to one file, {name}, in your Documents folder. What your apps showed or opened isn't in it.\n"
+"\n"
+"Then email that file to your helper. They can see what went wrong without being here.\n"
+"\n"
+"Nothing is sent anywhere by itself."
+msgstr ""
+"這會將電腦的近期錯誤訊息、系統版本以及您的應用程式清單，儲存成一個檔案 {name}，放在您的「文件」資料夾中。檔案中不會包含您的應用程式顯示或開啟的內容。\n"
+"\n"
+"接著，請將該檔案以電子郵件傳送給您的協助者。他們不用到現場就能看到出了什麼問題。\n"
+"\n"
+"不會有任何東西自行傳送到任何地方。"
+
+msgid ""
+"This sets what other devices on this network can reach. Pick Public place "
+"anywhere you're not sure. You can change it later in Wheelhouse, Network "
+"safety."
+msgstr "這會設定此網路上的其他裝置可以連到什麼。不確定時一律選擇「公共場所」。之後可以在 Wheelhouse >「網路安全」中變更。"
+
+msgid ""
+"This sets what you see at first. The next step suggests a desktop layout to "
+"match, and the guide is in Wheelhouse, Get help, either way."
+msgstr "這會設定您一開始看到的樣子。下一步會建議相符的桌面版面配置；無論選哪一個，指南都在 Wheelhouse >「取得協助」中。"
+
+msgid "This setting is risky"
+msgstr "此設定有風險"
+
+msgid "This start found these broken, as the test expects:"
+msgstr "這次啟動發現這些項目已損壞，與測試的預期相符："
+
+msgid "This start found these still broken, as the test expects:"
+msgstr "這次啟動發現這些項目仍有問題，與測試的預期相符："
+
+msgid "This system's EFI partition: %s (disk %s, partition %s)"
+msgstr "此系統的 EFI 分割區：%s（磁碟 %s，分割區 %s）"
+
+msgid "This takes a while."
+msgstr "這需要一點時間。"
+
+#, python-brace-format
+msgid "This version is from {when}."
+msgstr "此版本來自 {when}。"
+
+#, python-brace-format
+msgid ""
+"This {title} file is for a different kind of computer. Download the version "
+"for this one (often called {names})."
+msgstr "這個 {title} 檔案是給另一種電腦用的。請下載適用於這台電腦的版本（通常稱為 {names}）。"
+
+msgid ""
+"Those are file sharing ports: folders are shared only on Home networks, in "
+"Shared folders."
+msgstr "這些是檔案共享連接埠：資料夾只在「家用」網路上透過「共享資料夾」共享。"
+
+msgid "Thunderbolt or USB4 ports"
+msgstr "Thunderbolt 或 USB4 連接埠"
+
+msgid "Time server name"
+msgstr "時間伺服器名稱"
+
+msgid "Time servers"
+msgstr "時間伺服器"
+
+msgid ""
+"Time servers to use instead of Fedora's. Type a name and click Add. Click a "
+"server to take it off. Click Back when done."
+msgstr "用來取代 Fedora 的時間伺服器。輸入名稱，然後按一下「新增」。按一下伺服器即可移除它。完成後請按「返回」。"
+
+msgid "Time zone"
+msgstr "時區"
+
+msgid "To be asked again: Wheelhouse, Apps, Zoom meetings."
+msgstr "若要再次被詢問：Wheelhouse >「應用程式」>「Zoom 會議」。"
+
+msgid "To change your password, click Password."
+msgstr "若要變更密碼，請按一下「密碼」。"
+
+msgid "To check that this works on your computer, see Getting help."
+msgstr "若要確認這在您的電腦上是否正常運作，請參閱「取得協助」。"
+
+msgid "To choose which apps can notify you: Settings, Notifications."
+msgstr "若要選擇哪些應用程式可以傳送通知給您：請前往「設定」>「通知」。"
+
+msgid "To free the space for good: open Trash and click Empty."
+msgstr "若要永久釋放空間：請開啟「垃圾桶」，然後按一下「清空」。"
+
+msgid ""
+"To get it back: open Trash in the left side of Files, right-click the file, "
+"and choose Restore From Trash."
+msgstr "若要找回檔案：在「檔案」左側開啟「垃圾桶」，在檔案上按右鍵，然後選擇「從垃圾桶還原」。"
+
+msgid ""
+"To give someone their own account, click Add User. Leave Administrator off "
+"for children and guests."
+msgstr "若要讓某人有自己的帳號，請按一下「加入使用者」。兒童和訪客請不要開啟「管理員」。"
+
+msgid "To go on, click Erase and install. To pick another disk, click Back."
+msgstr "若要繼續，請按一下「清除並安裝」。若要選擇其他磁碟，請按一下「返回」。"
+
+msgid ""
+"To make one: select the files, right-click, choose Compress, give it a name, "
+"and click Create."
+msgstr "若要建立壓縮檔：選取檔案，按右鍵，選擇「壓縮」，取個名稱，然後按一下「建立」。"
+
+msgid ""
+"To open one: right-click it and choose Extract. The files go in a folder next"
+" to it."
+msgstr "若要開啟壓縮檔：在它上面按右鍵，然後選擇「取出」。檔案會放在旁邊的資料夾中。"
+
+msgid "To print, press Ctrl+P in any app."
+msgstr "若要列印，請在任何應用程式中按下 Ctrl+P。"
+
+msgid ""
+"To record a video instead, click the video camera icon in the same tool "
+"before you start. Recordings go to Videos, Screencasts."
+msgstr "若要改為錄影，請在開始前按一下同一個工具中的攝影機圖示。錄影會存到「影片」>「螢幕錄影」。"
+
+msgid "To update now: open Wheelhouse, Updates, System Update."
+msgstr "若要立即更新：開啟 Wheelhouse >「更新」>「系統更新」。"
+
+msgid ""
+"Told to add a setting by a helper? Type it under Your own settings. Risky "
+"ones are explained first."
+msgstr "協助者要您新增某個設定嗎？請在「您的個人設定」下方輸入。有風險的設定會先說明。"
+
+msgid "Too weak"
+msgstr "太弱了"
+
+msgid "Tool"
+msgstr "工具"
+
+msgid "Top bar, apps from the bottom dock"
+msgstr "頂端列，從底部 Dock 開啟應用程式"
+
+msgid "Touchpad"
+msgstr "觸控板"
+
+msgid "Touchpad found."
+msgstr "已找到觸控板。"
+
+msgid ""
+"Try again in a minute. If this stays, use Save problem details in Get help."
+msgstr "請稍等一分鐘再試一次。如果問題持續存在，請在「取得協助」中選取「儲存問題詳細資訊」。"
+
+msgid "Try again later."
+msgstr "請稍後再試一次。"
+
+msgid "Try anyway"
+msgstr "仍要嘗試"
+
+msgid "Try it first"
+msgstr "先試試看"
+
+msgid "Turn automatic updates off or on"
+msgstr "關閉或開啟自動更新"
+
+msgid "Turn it on"
+msgstr "開啟"
+
+msgid ""
+"Turn it on below, and computers on your Home network can open the folders you"
+" pick."
+msgstr "在下方開啟它，您「家用」網路上的電腦就能開啟您選定的資料夾。"
+
+msgid "Turn it on from a Home network."
+msgstr "請在連上「家用」網路時開啟它。"
+
+msgid "Turn off"
+msgstr "關閉"
+
+msgid "Turn on"
+msgstr "開啟"
+
+msgid "Turn on anyway"
+msgstr "仍要開啟"
+
+msgid ""
+"Turn on automatic updates or automatic disk unlock, or free up disk space"
+msgstr "開啟自動更新或自動解鎖磁碟，或釋放磁碟空間"
+
+msgid ""
+"Turn sharing off and on again. If this stays, use Save problem details in Get"
+" help."
+msgstr "先關閉共享再重新開啟。如果持續發生，請使用「取得協助」中的「儲存問題詳細資訊」。"
+
+msgid ""
+"Turn the printer on. Plug it in with its cable, or join it to the same Wi-Fi."
+msgstr "開啟印表機。用它的線接上，或讓它連上同一個 Wi-Fi。"
+
+msgid "Turn them on or off"
+msgstr "開啟或關閉它們"
+
+msgid "Turning automatic updates back on."
+msgstr "正在重新開啟自動更新。"
+
+msgid "Turning off automatic disk unlock."
+msgstr "正在關閉自動解鎖磁碟。"
+
+msgid "Turning off automatic updates."
+msgstr "正在關閉自動更新。"
+
+msgid "Turning on automatic disk unlock."
+msgstr "正在開啟自動解鎖磁碟。"
+
+msgid "Turning on automatic updates."
+msgstr "正在開啟自動更新。"
+
+msgid "Turns off Panel Self Refresh"
+msgstr "關閉面板自我更新"
+
+msgid "Turns off Panel Self Refresh and Panel Replay"
+msgstr "關閉面板自我更新與面板重播"
+
+msgid "Turns off adaptive backlight"
+msgstr "關閉自適應背光"
+
+msgid "Two choices:"
+msgstr "兩種選擇："
+
+msgid "Type a setting first."
+msgstr "請先輸入一個設定。"
+
+msgid "Type it again"
+msgstr "再輸入一次"
+
+msgid "Type it, then type it again below."
+msgstr "請輸入一次，然後在下方再輸入一次。"
+
+msgid "Type the disk password (the one you type when the computer starts):"
+msgstr "請輸入磁碟密碼（也就是電腦啟動時您輸入的密碼）："
+
+msgid "Type the disk password twice."
+msgstr "請輸入磁碟密碼兩次。"
+
+#, python-brace-format
+msgid ""
+"Type the password for {network}, then click Connect. Back goes to the list."
+msgstr "請輸入 {network} 的密碼，然後按一下「連線」。按「返回」會回到清單。"
+
+msgid "Type the password twice."
+msgstr "請輸入密碼兩次。"
+
+msgid ""
+"Type your full name. Your user name is made from it; type over it to change "
+"it."
+msgstr "請輸入您的全名。使用者名稱會依此產生；直接改寫即可變更。"
+
+msgid "Type your password, then restart. The fix starts at the restart."
+msgstr "請輸入您的密碼，然後重新啟動。修復會在重新啟動時開始。"
+
+msgid "USB drives and memory cards"
+msgstr "USB 隨身碟和記憶卡"
+
+msgid "USB or Bluetooth headphones may still work."
+msgstr "USB 或藍牙耳機可能仍能正常使用。"
+
+msgid "USB stick"
+msgstr "USB 隨身碟"
+
+msgid "Ubuntu box"
+msgstr "Ubuntu 容器"
+
+msgid "Undo it. See Updates and safety."
+msgstr "可以復原。請參閱「更新與安全性」。"
+
+msgid "Undo the change"
+msgstr "復原變更"
+
+msgid "Undo the last update"
+msgstr "復原上一次更新"
+
+msgid "Undo the last update in Wheelhouse can still take you back later."
+msgstr "之後仍可用 Wheelhouse 中的「復原上一次更新」回到之前的版本。"
+
+msgid "Undo the update"
+msgstr "復原更新"
+
+msgid "Unknown"
+msgstr "未知"
+
+#, python-brace-format
+msgid "Unknown desktop layout {layout}."
+msgstr "未知的桌面版面配置 {layout}。"
+
+#, python-brace-format
+msgid "Unknown experience {experience}."
+msgstr "未知的使用習慣 {experience}。"
+
+msgid "Unknown option: %s. Run  codecs  to see the choices."
+msgstr "未知的選項：%s。請執行  codecs  以查看可選項目。"
+
+#, python-brace-format
+msgid "Unknown time zone {timezone}."
+msgstr "未知的時區 {timezone}。"
+
+msgid "Unlock disk automatically"
+msgstr "自動解鎖磁碟"
+
+msgid ""
+"Unlock disk automatically is off. From your next start, the computer asks for"
+" the disk password again."
+msgstr "「自動解鎖磁碟」已關閉。從下次啟動起，電腦會再次要求輸入磁碟密碼。"
+
+msgid ""
+"Unlock disk automatically is on. After some firmware updates, the computer "
+"asks for the disk password once. Then turn Unlock disk automatically on again"
+" in Wheelhouse."
+msgstr "「自動解鎖磁碟」已開啟。某些韌體更新後，電腦會要求輸入一次磁碟密碼。之後請在 Wheelhouse 中再次開啟「自動解鎖磁碟」。"
+
+msgid ""
+"Unlock disk automatically is on: the disk unlocks by itself when the computer starts.\n"
+"\n"
+"Turn off: you type the disk password at every start again."
+msgstr ""
+"「自動解鎖磁碟」已開啟：電腦啟動時，磁碟會自動解鎖。\n"
+"\n"
+"「關閉」：每次啟動時，您都要再次輸入磁碟密碼。"
+
+msgid "Unplug the device and plug it back in so it works."
+msgstr "請拔下裝置，然後再插回去，讓它能正常運作。"
+
+msgid "Unsigned kernel drivers could load."
+msgstr "未簽署的核心驅動程式將可以載入。"
+
+#, python-brace-format
+msgid "Up to {max} settings, each name once."
+msgstr "最多 {max} 個設定，每個名稱只能用一次。"
+
+msgid "Update"
+msgstr "更新"
+
+msgid "Update anyway"
+msgstr "仍要更新"
+
+msgid "Update firmware"
+msgstr "更新韌體"
+
+msgid "Update now"
+msgstr "立即更新"
+
+msgid "Update program broken"
+msgstr "更新程式損壞"
+
+msgid "Update the system, apps, app boxes and Homebrew now"
+msgstr "立即更新系統、應用程式、應用程式容器和 Homebrew"
+
+#, python-brace-format
+msgid "Update {title} to the newer version in this file?"
+msgstr "要將 {title} 更新為此檔案中的較新版本嗎？"
+
+#, python-brace-format
+msgid ""
+"Update {title} to the newer version in this file?\n"
+"\n"
+"Needs your password and a restart."
+msgstr ""
+"要將 {title} 更新為此檔案中的較新版本嗎？\n"
+"\n"
+"需要您的密碼，並需要重新啟動。"
+
+msgid "Updated, except: %s"
+msgstr "已更新，但以下項目除外：%s"
+
+msgid "Updates"
+msgstr "更新"
+
+msgid "Updates and safety"
+msgstr "更新與安全性"
+
+msgid "Updates can't run"
+msgstr "無法執行更新"
+
+msgid "Updates for the computer's own parts, like the BIOS"
+msgstr "電腦內部元件的更新，例如 BIOS"
+
+msgid "Updates happen on their own"
+msgstr "更新會自動進行"
+
+msgid ""
+"Updates install on their own. If one stops the computer starting properly, it"
+" goes back to the version before by itself and tells you."
+msgstr "更新會自動安裝。如果某個更新讓電腦無法正常啟動，它會自行回到上一個版本並通知您。"
+
+#, python-brace-format
+msgid ""
+"Updates: automatic, from {maker}'s own download source. A daily check finds "
+"new versions, which start at the next restart."
+msgstr "更新：自動，來自 {maker} 自己的下載來源。每天的檢查會找到新版本，新版本會在下次重新啟動時啟用。"
+
+msgid "Updates: automatic, with System Update."
+msgstr "更新：自動，透過「系統更新」。"
+
+msgid "Updates: automatic."
+msgstr "更新：自動。"
+
+msgid ""
+"Updates: none, because it came from a file. To update, install a newer file. "
+"(Some apps, like Discord, update themselves.)"
+msgstr "更新：沒有，因為它是從檔案安裝的。若要更新，請安裝較新的檔案。（有些應用程式，像是 Discord，會自行更新。）"
+
+#, python-brace-format
+msgid "Updates: {how}"
+msgstr "更新：{how}"
+
+msgid "Updating"
+msgstr "正在更新"
+
+msgid ""
+"Updating everything: the system, your apps and the app boxes. This can take a"
+" while. You can keep working."
+msgstr "正在更新所有項目：系統、您的應用程式以及應用程式容器。這可能需要一點時間。您可以繼續工作。"
+
+msgid "Updating firmware. Keep the computer plugged in."
+msgstr "正在更新韌體。請讓電腦保持接上電源。"
+
+msgid "Updating the system, apps and containers. This can take a while."
+msgstr "正在更新系統、應用程式和容器。這可能需要一點時間。"
+
+msgid "Updating the system: checking for a new version."
+msgstr "正在更新系統：正在檢查是否有新版本。"
+
+#, python-brace-format
+msgid "Updating the system: downloaded part {done} of {total}."
+msgstr "正在更新系統：已下載第 {done} 部分，共 {total} 部分。"
+
+#, python-brace-format
+msgid ""
+"Updating the system: downloading part {part} of {total}, about {got} of "
+"{size} so far."
+msgstr "正在更新系統：正在下載第 {part} 部分，共 {total} 部分；目前已下載約 {got}，共 {size}。"
+
+#, python-brace-format
+msgid "Updating the system: downloading the new version, {size} in {n} parts."
+msgid_plural ""
+"Updating the system: downloading the new version, {size} in {n} parts."
+msgstr[0] "正在更新系統：正在下載新版本，共 {size}，分成 {n} 個部分。"
+
+msgid "Updating the system: it is already up to date."
+msgstr "正在更新系統：系統已是最新版本。"
+
+#, python-brace-format
+msgid "Updating the system: step {step} of {total}, {stage} ({elapsed})."
+msgstr "正在更新系統：第 {step} 步，共 {total} 步，{stage} ({elapsed})。"
+
+#, python-brace-format
+msgid "Updating the system: step {step} of {total}, {stage}."
+msgstr "正在更新系統：第 {step} 步，共 {total} 步，{stage}。"
+
+msgid ""
+"Updating the system: the new version is installed. It starts at your next "
+"restart."
+msgstr "正在更新系統：已安裝新版本。它會在您下次重新啟動時啟用。"
+
+#, python-brace-format
+msgid "Updating {title}"
+msgstr "正在更新 {title}"
+
+#, python-brace-format
+msgid "Updating {title} in the {label}."
+msgstr "正在 {label} 中更新 {title}。"
+
+#, python-brace-format
+msgid "Updating {title} on the system"
+msgstr "正在系統上更新 {title}"
+
+#, python-brace-format
+msgid "Updating {title} on the system. A progress window shows it."
+msgstr "正在系統上更新 {title}。進度視窗會顯示進度。"
+
+#, python-brace-format
+msgid "Updating {title} on the system. This can take a few minutes."
+msgstr "正在系統上更新 {title}。這可能需要幾分鐘時間。"
+
+#, python-brace-format
+msgid "Updating {title}: {description}"
+msgstr "正在更新 {title}：{description}"
+
+#, python-brace-format
+msgid ""
+"Use 1 to {max} ports from 1 to 65535, each as 8096/tcp or 2456-2458/udp."
+msgstr "使用 1 到 {max} 個連接埠，範圍從 1 到 65535，每個連接埠的格式為 8096/tcp 或 2456-2458/udp。"
+
+msgid "Use Flathub"
+msgstr "使用 Flathub"
+
+msgid "Use Open a port with its number."
+msgstr "使用「開放連接埠」並輸入它的號碼。"
+
+msgid "Use a network cable, or a USB Wi-Fi adapter that works with Linux."
+msgstr "使用網路線，或使用與 Linux 相容的 USB Wi-Fi 網路卡。"
+
+msgid "Use a network cable."
+msgstr "使用網路線。"
+
+msgid "Use letters, digits and -, not at the start or end."
+msgstr "請使用字母、數字和 -，但不要出現在開頭或結尾。"
+
+msgid "Use the file"
+msgstr "使用此檔案"
+
+msgid "Use the newer version"
+msgstr "使用較新版本"
+
+msgid "Use the number the app's own instructions give."
+msgstr "請使用應用程式說明中提供的號碼。"
+
+msgid "Use the usual browser"
+msgstr "使用平常的瀏覽器"
+
+#, python-brace-format
+msgid "Use {min} to 127 characters, on one line."
+msgstr "請使用 {min} 到 127 個字元，且只能一行。"
+
+msgid "User name"
+msgstr "使用者名稱"
+
+msgid "VPN"
+msgstr "VPN"
+
+msgid ""
+"VPNs, codecs and apps added to the system, while automatic updates are on. "
+"New versions start at the next restart."
+msgstr "VPN、編解碼器，以及新增到系統的應用程式，會在自動更新開啟時更新。新版本會在下次重新啟動時啟用。"
+
+msgid ""
+"Video and audio that need them stop playing. Needs your password and a "
+"restart."
+msgstr "需要這些元件的影片和音訊會停止播放。需要您的密碼，並需要重新啟動。"
+
+#, python-brace-format
+msgid "Waiting for the other install or removal to finish ({doing})."
+msgstr "正在等待另一個安裝或移除作業完成 ({doing})。"
+
+msgid "Wallpaper slideshow"
+msgstr "桌布投影片播放"
+
+msgid "Weak"
+msgstr "弱"
+
+msgid "Web video is already installed. Restart if you have not yet."
+msgstr "網路影片編解碼器已經安裝。如果還沒重新啟動，請重新啟動。"
+
+msgid "Web video only"
+msgstr "僅限網路影片"
+
+msgid "Welcome to EvenKeelOS"
+msgstr "歡迎來到 EvenKeelOS"
+
+msgid ""
+"Welcome. A few things to set up, one at a time.\n"
+"\n"
+"1. Media codecs, for web video\n"
+"2. Skip the disk password at startup\n"
+"3. How to get apps\n"
+"\n"
+"Each can be skipped.\n"
+"\n"
+"Recommended: Start. Or Later: this opens again at the next login. Or Don't show again: it's in Wheelhouse any time."
+msgstr ""
+"歡迎。有幾件事要設定，一次一件。\n"
+"\n"
+"1. 媒體編解碼器，用於網路影片\n"
+"2. 開機時略過磁碟密碼\n"
+"3. 如何取得應用程式\n"
+"\n"
+"每一項都可以略過。\n"
+"\n"
+"建議：「開始」。或者「稍後」：下次登入時會再次開啟。或者「不要再顯示」：隨時可在 Wheelhouse 中找到。"
+
+msgid "What happens"
+msgstr "會發生什麼事"
+
+msgid "What is new:"
+msgstr "新增內容："
+
+msgid "What it does"
+msgstr "它有什麼功能"
+
+msgid "What stopped working with them:"
+msgstr "使用它們後停止運作的項目："
+
+msgid "What the test copy found broken:"
+msgstr "測試副本發現壞掉的項目："
+
+msgid "What's different"
+msgstr "有什麼不同"
+
+msgid "Wheelhouse"
+msgstr "Wheelhouse"
+
+msgid "When neither of the two above is enough"
+msgstr "上面兩個都不夠用時"
+
+#, python-brace-format
+msgid "Where is {name}?"
+msgstr "{name} 在哪裡？"
+
+#, python-brace-format
+msgid ""
+"Where is {network}? This sets what other devices on it can reach once "
+"EvenKeelOS is installed. Pick Public place anywhere you're not sure."
+msgstr "{network} 在哪裡？這會設定 EvenKeelOS 安裝後，此網路上的其他裝置可以連到什麼。不確定時一律選擇「公共場所」。"
+
+msgid "Where it's from"
+msgstr "來源"
+
+msgid "Where things are"
+msgstr "東西在哪裡"
+
+msgid ""
+"Which VPN do you want? Each one comes from its company's own download source "
+"and keeps updating. To connect, you need an account with that company."
+msgstr "您想要哪一個 VPN？每個 VPN 都來自其公司自己的下載來源，並會持續更新。若要連線，您需要該公司的帳號。"
+
+msgid "Which app do you want to remove?"
+msgstr "您想移除哪一個應用程式？"
+
+msgid "Which app do you want? Start typing its name."
+msgstr "您想要哪一個應用程式？開始輸入它的名稱。"
+
+msgid "Which app should start, or stop starting, when you log in?"
+msgstr "登入時應該啟動哪個應用程式，或不再啟動哪個？"
+
+msgid "Which box do you want to repair?"
+msgstr "您想修復哪一個容器？"
+
+#, python-brace-format
+msgid "Which city in {region} has your time? Back goes to the regions."
+msgstr "{region} 中哪個城市和您的時間相同？按「返回」會回到地區清單。"
+
+msgid ""
+"Which disk should EvenKeelOS go on? Everything on it will be erased. The USB "
+"stick this runs from is not listed."
+msgstr "要將 EvenKeelOS 安裝到哪個磁碟？上面的所有內容都會被清除。正在執行此程式的 USB 隨身碟不會列出。"
+
+msgid "Which file do you want to install?"
+msgstr "您想安裝哪個檔案？"
+
+msgid ""
+"Which keyboard layouts do you use? Click one to add it, or click it again to "
+"take it off. The first one is used unless you switch."
+msgstr "您使用哪些鍵盤配置？按一下即可新增，再按一下即可移除。除非您切換，否則會使用第一個。"
+
+msgid "Which language should EvenKeelOS use?"
+msgstr "EvenKeelOS 應該使用哪一種語言？"
+
+msgid "Which one? Back goes to the list of languages."
+msgstr "哪一個？按「返回」即可回到語言清單。"
+
+msgid "Which tool do you want?"
+msgstr "您想要哪一種工具？"
+
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+msgid "Wi-Fi driver blocked"
+msgstr "Wi-Fi 驅動程式被封鎖"
+
+msgid "Wi-Fi found."
+msgstr "已找到 Wi-Fi。"
+
+msgid "Wi-Fi password"
+msgstr "Wi-Fi 密碼"
+
+msgid "Wi-Fi, how safe each network is, and Bluetooth"
+msgstr "Wi-Fi、各個網路的安全程度，以及藍牙"
+
+msgid "Wi-Fi, sound, brightness and power"
+msgstr "Wi-Fi、音效、亮度與電源"
+
+msgid "Will this computer work?"
+msgstr "這台電腦能用嗎？"
+
+msgid "Windows Program"
+msgstr "Windows 程式"
+
+msgid "Windows Program is open"
+msgstr "「Windows 程式」已開啟"
+
+msgid "Windows key + L locks the screen."
+msgstr "按下 Windows 鍵 + L 即可鎖定螢幕。"
+
+msgid "Windows programs"
+msgstr "Windows 程式"
+
+msgid ""
+"Windows programs (.exe and .msi) don't run here. Open one anyway: Wheelhouse "
+"tells you the version for EvenKeelOS, or a replacement when there is one, and"
+" installs it."
+msgstr ""
+"Windows 程式（.exe 和 .msi）無法在這裡執行。仍然可以開啟它：Wheelhouse 會告訴您適用於 EvenKeelOS "
+"的版本，或在有替代方案時告訴您替代方案，並幫您安裝。"
+
+msgid "Windows programs (.exe, .msi)"
+msgstr "Windows 程式（.exe、.msi）"
+
+msgid "Windows-style"
+msgstr "Windows 風格"
+
+msgid "Windows-style bottom bar or the standard top bar"
+msgstr "Windows 風格的底部列或標準的頂端列"
+
+msgid "Wired"
+msgstr "有線"
+
+msgid "Wired network"
+msgstr "有線網路"
+
+msgid "Wired network: connected."
+msgstr "有線網路：已連線。"
+
+msgid "Wired network: not connected."
+msgstr "有線網路：未連線。"
+
+msgid ""
+"With the Windows-style layout: click the sailboat button at the bottom left, "
+"then Wheelhouse."
+msgstr "使用 Windows 風格版面配置時：按一下左下角的帆船按鈕，然後按 Wheelhouse。"
+
+msgid ""
+"With the Windows-style layout: click the sailboat button at the bottom left, "
+"then click the app, or start typing its name and press Enter."
+msgstr "使用 Windows 風格版面配置時：按一下左下角的帆船按鈕，然後按一下應用程式，或開始輸入它的名稱並按 Enter 鍵。"
+
+msgid ""
+"With the standard layout: click the logo at the top left, then Wheelhouse."
+msgstr "使用標準版面配置時：按一下左上角的標誌，然後按 Wheelhouse。"
+
+msgid ""
+"With the standard layout: press the Windows key, start typing the app's name,"
+" and press Enter. Or press Windows key + A to see every app."
+msgstr ""
+"使用標準版面配置時：按 Windows 鍵，開始輸入應用程式的名稱，然後按 Enter 鍵。或按 Windows 鍵 + A 查看所有應用程式。"
+
+msgid ""
+"Word, Excel and PowerPoint: LibreOffice Writer, Calc and Impress. They open "
+"and save Office files."
+msgstr ""
+"Word、Excel 和 PowerPoint：LibreOffice Writer、Calc 和 Impress。它們可以開啟和儲存 Office "
+"檔案。"
+
+msgid "Work"
+msgstr "工作"
+
+msgid ""
+"Work: like a Public place, nothing gets in and your folders aren't shared. "
+"The office's own shared drives still open."
+msgstr "工作：和「公共場所」一樣，任何連線都無法進入，您的資料夾也不會共享。辦公室本身的共享磁碟機仍然可以開啟。"
+
+msgid "Working…"
+msgstr "正在處理中…"
+
+msgid "Year"
+msgstr "年份"
+
+msgid "Yes"
+msgstr "是"
+
+msgid ""
+"You can still switch it yourself. It stays that way until the next change."
+msgstr "您還是可以自己切換。它會一直保持這種狀態，直到下次變更為止。"
+
+msgid ""
+"You don't need to do anything. If a new version fails to start twice in a "
+"row, the computer goes back to the version before by itself."
+msgstr "您不用做任何事。如果新版本連續兩次都無法啟動，電腦會自動切換回上一個版本。"
+
+#, python-brace-format
+msgid ""
+"You're using an earlier version, from {current}, after an undo. The newer one, from {newer}, is still on this computer.\n"
+"\n"
+"If the problem is fixed or you want it back: Use the newer version. It starts at your next restart.\n"
+"\n"
+"Or Cancel: the newer version comes back with the next update after the pause."
+msgstr ""
+"您在復原更新後正在使用 {current} 的較舊版本。{newer} 的較新版本仍在這台電腦上。\n"
+"\n"
+"如果問題已解決，或您想用回它：「使用較新版本」。它會在您下次重新啟動時啟用。\n"
+"\n"
+"或者「取消」：暫停結束後，較新版本會隨下一次更新回來。"
+
+#, python-brace-format
+msgid ""
+"You're using the version from {current}, picked when the computer started. At your next restart the newer version, from {newer}, starts again.\n"
+"\n"
+"To stay on this one, pick it again when the computer starts, and tell your helper."
+msgstr ""
+"您正在使用 {current} 的版本，這是在電腦啟動時選擇的。下次重新啟動時，{newer} 的較新版本會再次啟用。\n"
+"\n"
+"若要繼續使用這個版本，請在電腦啟動時再次選擇它，並告知您的協助者。"
+
+msgid "Your Boot options settings"
+msgstr "您的開機選項設定"
+
+msgid "Your account"
+msgstr "您的帳號"
+
+msgid "Your account could not be found."
+msgstr "找不到您的帳號。"
+
+msgid "Your account could not be made."
+msgstr "無法建立您的帳號。"
+
+msgid "Your account's home folder could not be found."
+msgstr "找不到您帳號的家目錄。"
+
+msgid "Your account's home folder could not be set up."
+msgstr "無法設定您帳號的家目錄。"
+
+msgid "Your account's password could not be set."
+msgstr "無法設定您帳號的密碼。"
+
+msgid ""
+"Your app boxes are working. The box that did not update was made outside "
+"Install Package File, so Repair cannot fix it."
+msgstr "您的應用程式容器運作正常。沒有更新的那個容器不是透過「安裝套件檔案」建立的，因此「修復」無法修好它。"
+
+msgid "Your computer is in good shape"
+msgstr "您的電腦狀況良好"
+
+msgid "Your computer needs an answer before it restarts."
+msgstr "您的電腦在重新啟動前需要您回答。"
+
+msgid "Your computer put back missing system settings."
+msgstr "您的電腦已放回遺失的系統設定。"
+
+msgid ""
+"Your computer saves its list of what works 4 minutes after a good start, and "
+"it hasn't saved one yet. Wait a few minutes and try again."
+msgstr "您的電腦會在順利啟動 4 分鐘後儲存可運作項目的清單，但還沒有儲存過。請稍等幾分鐘，然後再試一次。"
+
+msgid "Your computer went back to the previous version."
+msgstr "您的電腦已回復到上一個版本。"
+
+#, python-brace-format
+msgid ""
+"Your computer went back to the version from {since}, because the newer "
+"version didn't start properly. Your files and your apps aren't touched."
+msgstr "由於較新版本無法正常啟動，您的電腦已回復到 {since} 的版本。您的檔案和應用程式都沒有受到影響。"
+
+#, python-brace-format
+msgid ""
+"Your computer went back to the version from {since}, because these stopped working on the newer version:\n"
+"{broke}\n"
+"\n"
+"Your files and your apps aren't touched."
+msgstr ""
+"您的電腦已回復到 {since} 的版本，因為以下項目在新版本中無法運作：\n"
+"{broke}\n"
+"\n"
+"您的檔案和應用程式都沒有受到影響。"
+
+msgid "Your computer's firmware is up to date."
+msgstr "您的電腦韌體已是最新版本。"
+
+msgid ""
+"Your disk isn't encrypted, so there's no disk password to skip. Nothing to "
+"do."
+msgstr "您的磁碟沒有加密，因此沒有磁碟密碼可以略過。沒有需要做的事。"
+
+msgid ""
+"Your file is newer than Fedora's. Use the file only if you need that newer "
+"version now."
+msgstr "您的檔案比 Fedora 的還要新。只有在您現在需要該較新版本時，才使用此檔案。"
+
+msgid ""
+"Your files and apps aren't touched, and automatic updates aren't paused.\n"
+"\n"
+"The setting that caused it isn't in use. Disk and startup, Boot options in Wheelhouse shows what's in use now."
+msgstr ""
+"您的檔案和應用程式不會受到影響，自動更新也不會暫停。\n"
+"\n"
+"造成問題的設定目前沒有使用。Wheelhouse >「磁碟與啟動」>「開機選項」會顯示目前使用的設定。"
+
+msgid ""
+"Your files are not touched. Anything added to the box another way is not put "
+"back."
+msgstr "您的檔案不會受到影響。以其他方式新增到容器的任何內容都不會被放回去。"
+
+msgid ""
+"Your folders, USB drives, the trash, searching, zip files and sharing with "
+"other computers"
+msgstr "您的資料夾、USB 隨身碟、垃圾桶、搜尋、ZIP 壓縮檔，以及與其他電腦共享"
+
+msgid "Your networks"
+msgstr "您的網路"
+
+msgid "Your own home network"
+msgstr "您自己的家用網路"
+
+msgid "Your own settings"
+msgstr "您的個人設定"
+
+msgid "Your password and other people's accounts"
+msgstr "您的密碼和其他人的帳號"
+
+msgid "Zip files"
+msgstr "ZIP 壓縮檔"
+
+msgid "Zoom meeting in the browser"
+msgstr "在瀏覽器中進行 Zoom 會議"
+
+msgid "Zoom meetings"
+msgstr "Zoom 會議"
+
+msgid ""
+"Zoom meetings work best in Google Chrome: it can also share a browser tab with its sound.\n"
+"\n"
+"Recommended: Install Chrome, from Flathub. It updates by itself.\n"
+"\n"
+"Or Use the usual browser: the meeting works, but tab sound can't be shared. This is remembered."
+msgstr ""
+"Zoom 會議在 Google Chrome 中運作最佳：它還能共享瀏覽器分頁連同聲音。\n"
+"\n"
+"建議：「安裝 Chrome」，從 Flathub 安裝。它會自動更新。\n"
+"\n"
+"或者「使用平常的瀏覽器」：會議可以進行，但無法共享分頁的聲音。系統會記住您的選擇。"
+
+msgid "a .deb app"
+msgstr ".deb 應用程式"
+
+msgid "a Public place"
+msgstr "公共場所"
+
+msgid "a Work network"
+msgstr "工作網路"
+
+msgid "a background service for your account (in a box it does not start)"
+msgstr "您帳號的背景服務（在容器中不會啟動）"
+
+msgid "a background service that starts with the computer"
+msgstr "隨電腦啟動的背景服務"
+
+msgid "a background service the app needs, which cannot run in a box"
+msgstr "應用程式需要的背景服務，無法在容器中執行"
+
+msgid "a driver (kernel module)"
+msgstr "驅動程式（核心模組）"
+
+msgid "a hardware rule that runs a program"
+msgstr "執行程式的硬體規則"
+
+msgid "a network or VPN plugin for the system"
+msgstr "系統用的網路或 VPN 外掛程式"
+
+msgid "a printer driver"
+msgstr "印表機驅動程式"
+
+msgid "a scanner driver"
+msgstr "掃描器驅動程式"
+
+#, python-brace-format
+msgid "about {n} min so far"
+msgid_plural "about {n} min so far"
+msgstr[0] "目前大約 {n} 分鐘"
+
+msgid "account lookup"
+msgstr "帳號查詢"
+
+msgid "adding the apps you put on the system to the new version"
+msgstr "將您安裝在系統上的應用程式新增至新版本"
+
+msgid "administrator rules"
+msgstr "管理員規則"
+
+msgid ""
+"allow open firewall game server steam minecraft jellyfin plex syncthing "
+"localsend"
+msgstr ""
+"allow open firewall game server steam minecraft jellyfin plex syncthing "
+"localsend 允許 開放 防火牆 遊戲 伺服器"
+
+msgid "an .rpm app"
+msgstr ".rpm 應用程式"
+
+msgid "an earlier date"
+msgstr "較早的日期"
+
+#, python-brace-format
+msgid "and {n} more"
+msgstr "還有 {n} 個"
+
+msgid "automatic, with System Update."
+msgstr "自動，透過「系統更新」。"
+
+msgid "autostart"
+msgstr "autostart 自動啟動 登入"
+
+msgid "autostart;startup;login;distrobox;box;rpm;deb;"
+msgstr "autostart;startup;login;distrobox;box;rpm;deb;自動啟動;啟動;登入;容器;"
+
+msgid "background pictures photos rotate change"
+msgstr "background pictures photos rotate change 背景 桌布 圖片 相片 輪播 更換"
+
+msgid "bazaar store flathub"
+msgstr "bazaar store flathub 商店 應用程式"
+
+msgid "before it"
+msgstr "更早之前"
+
+msgid "before the update"
+msgstr "更新之前"
+
+msgid "built in"
+msgstr "內建"
+
+msgid "certificate ssl tls https trust expire"
+msgstr "certificate ssl tls https trust expire 憑證 信任 到期 過期"
+
+msgid "chrome"
+msgstr "chrome 瀏覽器"
+
+msgid "clean storage"
+msgstr "clean storage 清理 儲存空間 磁碟空間"
+
+msgid ""
+"codecs from an earlier version of this system (negativo17) are still "
+"installed."
+msgstr "此系統舊版的編解碼器 (negativo17) 仍然安裝著。"
+
+msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
+msgstr "codecs;codec;ffmpeg;h264;video;audio;media;install;編解碼器;影片;音訊;媒體;安裝;"
+
+msgid "dark mode light mode schedule night sunset sunrise theme"
+msgstr ""
+"dark mode light mode schedule night sunset sunrise theme 深色模式 淺色模式 排程 夜間 日落 "
+"日出 主題"
+
+msgid "device firmware"
+msgstr "device firmware 裝置 韌體"
+
+msgid "distrobox fix"
+msgstr "distrobox fix 修復 容器"
+
+msgid "distrobox;box;repair;fix;rpm;deb;"
+msgstr "distrobox;box;repair;fix;rpm;deb;容器;修復;修正;"
+
+msgid "exe msi"
+msgstr "exe msi Windows 程式"
+
+msgid "firewall wifi wi-fi wired zone home work public ssh printer ports"
+msgstr ""
+"firewall wifi wi-fi wired zone home work public ssh printer ports 防火牆 無線網路 有線"
+" 家用 工作 公共場所 印表機 連接埠"
+
+msgid ""
+"firmware;bios;uefi;tpm;disk;unlock;space;clean;updates;update;upgrade;ujust;rollback;undo;logs;problem;report;rpm;deb;install;remove;apps;codecs;vpn;layout;control;panel;settings;system;tools;wheelhouse;evenkeelos;"
+msgstr ""
+"firmware;bios;uefi;tpm;disk;unlock;space;clean;updates;update;upgrade;ujust;rollback;undo;logs;problem;report;rpm;deb;install;remove;apps;codecs;vpn;layout;control;panel;settings;system;tools;wheelhouse;evenkeelos;韌體;磁碟;解鎖;空間;清理;更新;升級;回復;復原;記錄;問題;報告;安裝;移除;應用程式;編解碼器;版面配置;控制台;設定;系統;工具;"
+
+msgid "first start"
+msgstr "first start 首次啟動 設定"
+
+msgid "font typeface bigger smaller text scaling large text"
+msgstr ""
+"font typeface bigger smaller text scaling large text 字型 字體 放大 縮小 文字 縮放 大型文字"
+
+msgid "fwupd uefi"
+msgstr "fwupd uefi 韌體"
+
+msgid "greenboot repair settings"
+msgstr "greenboot repair settings 修復 設定"
+
+msgid "group passwords"
+msgstr "群組密碼"
+
+msgid "groups"
+msgstr "群組"
+
+msgid "guide manual help how to tutorial windows beginner"
+msgstr "guide manual help how to tutorial windows beginner 指南 手冊 說明 教學 初學者"
+
+msgid "h264 video audio"
+msgstr "h264 video audio 影片 音訊"
+
+msgid "it is not a .deb package"
+msgstr "這不是 .deb 套件"
+
+msgid "it is not an .rpm or .deb package"
+msgstr "這不是 .rpm 或 .deb 套件"
+
+msgid ""
+"kernel arguments karg kargs grub flicker psr panel replay amdgpu i915 xe nvme"
+" freeze"
+msgstr ""
+"kernel arguments karg kargs grub flicker psr panel replay amdgpu i915 xe nvme"
+" freeze 核心參數 閃爍 面板重播 當機 卡住"
+
+msgid "login limits"
+msgstr "登入限制"
+
+msgid "login or security settings"
+msgstr "登入或安全性設定"
+
+msgid "login rules"
+msgstr "登入規則"
+
+msgid "login setup"
+msgstr "登入設定"
+
+msgid "logs report error"
+msgstr "logs report error 記錄 報告 錯誤"
+
+msgid "mullvad proton ivpn nordvpn"
+msgstr "mullvad proton ivpn nordvpn"
+
+msgid "no boot options"
+msgstr "沒有開機選項"
+
+msgid "none"
+msgstr "無"
+
+msgid "none, because it came from a file. To update, install a newer file."
+msgstr "沒有，因為它是從檔案安裝的。若要更新，請安裝較新的檔案。"
+
+msgid "not a Home network"
+msgstr "非家用網路"
+
+msgid "not set yet"
+msgstr "尚未設定"
+
+msgid "parts that need administrator rights (these may not work)"
+msgstr "需要管理員權限的部分（這些可能無法運作）"
+
+msgid "passwords"
+msgstr "密碼"
+
+msgid "pause resume"
+msgstr "pause resume 暫停 繼續"
+
+msgid "pkexec is missing. Run this with sudo instead."
+msgstr "找不到 pkexec。請改用 sudo 來執行。"
+
+msgid "port number tcp udp allow open firewall forward"
+msgstr "port number tcp udp allow open firewall forward 連接埠 號碼 允許 開放 防火牆 轉送"
+
+msgid "rollback revert"
+msgstr "rollback revert 回復 復原 還原"
+
+msgid "rpm could not read it"
+msgstr "rpm 無法讀取它"
+
+msgid "rpm deb"
+msgstr "rpm deb 套件"
+
+msgid "rpm;deb;package;install;distrobox;"
+msgstr "rpm;deb;package;install;distrobox;套件;安裝;"
+
+msgid "rpm;deb;package;uninstall;remove;distrobox;"
+msgstr "rpm;deb;package;uninstall;remove;distrobox;套件;解除安裝;移除;"
+
+msgid "samba smb share sharing windows mac network folder files nas"
+msgstr ""
+"samba smb share sharing windows mac network folder files nas 共享 網路 資料夾 檔案"
+
+msgid "saving the new version so it starts at your next restart"
+msgstr "正在儲存新版本，讓它在您下次重新啟動時啟用"
+
+#, python-brace-format
+msgid "signal {number}"
+msgstr "訊號 {number}"
+
+msgid "system settings (these will not apply)"
+msgstr "系統設定（這些不會套用）"
+
+msgid "taskbar start menu windows-style dock top bar"
+msgstr "taskbar start menu windows-style dock top bar 工作列 開始選單 Windows 風格 頂端列"
+
+msgid "the .deb has no package name"
+msgstr "此 .deb 沒有套件名稱"
+
+msgid "the .deb is incomplete"
+msgstr ".deb 檔案不完整"
+
+msgid "the SELinux security policy"
+msgstr "SELinux 安全性政策"
+
+msgid "the Windows-style layout: a bottom bar and a start menu"
+msgstr "Windows 風格版面配置：底部列和開始選單"
+
+msgid "the computer's ID"
+msgstr "電腦的 ID"
+
+msgid "the last update"
+msgstr "上次更新"
+
+msgid "the list of disks"
+msgstr "磁碟清單"
+
+msgid "the printer maker's support site"
+msgstr "印表機製造商的支援網站"
+
+msgid "the standard layout: a top bar and the logo menu"
+msgstr "標準版面配置：頂端列和標誌選單"
+
+msgid "theme folder appearance background"
+msgstr "theme folder appearance background 主題 資料夾 外觀 背景"
+
+msgid "tpm luks encryption"
+msgstr "tpm luks encryption 加密 磁碟 解鎖"
+
+msgid "uefi firmware setup"
+msgstr "uefi firmware setup 韌體 設定 BIOS"
+
+msgid "uninstall delete"
+msgstr "uninstall delete 解除安裝 刪除 移除"
+
+msgid "uninstall h264"
+msgstr "uninstall h264 解除安裝 移除"
+
+msgid "unpacking the new version"
+msgstr "正在解壓縮新版本"
+
+msgid "update;upgrade;uupd;"
+msgstr "update;upgrade;uupd;更新;升級;"
+
+msgid "upgrade uupd"
+msgstr "upgrade uupd 升級 更新"
+
+msgid "user accounts"
+msgstr "使用者帳號"
+
+msgid "zenity is missing. Use the typed commands instead: run  codecs"
+msgstr "找不到 zenity。請改用輸入指令的方式：執行  codecs"
+
+#, python-brace-format
+msgid "{about}. Applies to every cable you plug in, not only this one"
+msgstr "{about}。套用到您插上的每一條網路線，不只這一條"
+
+#, python-brace-format
+msgid "{about}. Open Wi-Fi is always a Public place."
+msgstr "{about}。開放 Wi-Fi 一律是「公共場所」。"
+
+#, python-brace-format
+msgid ""
+"{about}. Open Wi-Fi, but set to {place}. Anyone can make a network with its "
+"name."
+msgstr "{about}。開放 Wi-Fi，卻設為「{place}」。任何人都能建立同名的網路。"
+
+#, python-brace-format
+msgid "{command} did not finish."
+msgstr "{command} 沒有完成。"
+
+#, python-brace-format
+msgid "{command} did not finish: {reason}"
+msgstr "{command} 沒有完成：{reason}"
+
+#, python-brace-format
+msgid "{day} {month} {year}, {time}"
+msgstr "{year} 年{month} {day} 日 {time}"
+
+#, python-brace-format
+msgid ""
+"{disk} is not the disk that was chosen any more. Go back and choose the disk "
+"again."
+msgstr "{disk} 已不再是之前選擇的磁碟。請返回並再次選擇磁碟。"
+
+#, python-brace-format
+msgid "{disk}, erased"
+msgstr "{disk}，已清除"
+
+#, python-brace-format
+msgid ""
+"{filename} has no app in it. It adds a place to download apps from:\n"
+"{sources}\n"
+"\n"
+"Add it: adds it to the {label}, then you pick an app from it. Apps from it update automatically."
+msgstr ""
+"{filename} 裡面沒有應用程式。它會新增一個下載應用程式的來源：\n"
+"{sources}\n"
+"\n"
+"「新增」：把它加入 {label}，然後您可以從中選擇應用程式。來自它的應用程式會自動更新。"
+
+#, python-brace-format
+msgid ""
+"{filename} is a Windows program, and Windows programs can't run here. For "
+"{job}, {name} does the same job on Linux, and it is already installed."
+msgstr ""
+"{filename} 是 Windows 程式，而 Windows 程式無法在這裡執行。在「{job}」方面，{name} 可以在 Linux "
+"上做同樣的事，而且已經安裝好了。"
+
+#, python-brace-format
+msgid ""
+"{filename} is a Windows program, and Windows programs can't run here. For "
+"{job}, {name} does the same job on Linux. It comes from {source}."
+msgstr ""
+"{filename} 是 Windows 程式，而 Windows 程式無法在這裡執行。在「{job}」方面，{name} 可以在 Linux "
+"上做同樣的事。它來自 {source}。"
+
+#, python-brace-format
+msgid ""
+"{filename} is a Windows program. Windows programs can't run here.\n"
+"\n"
+"Look for a Linux version on the maker's website, or search Bazaar, the app store."
+msgstr ""
+"{filename} 是 Windows 程式。Windows 程式在這裡無法執行。\n"
+"\n"
+"請到開發商的網站找找看有沒有 Linux 版本，或者在應用程式商店 Bazaar 中搜尋。"
+
+#, python-brace-format
+msgid ""
+"{filename} is the Windows version of {name}. Here, {name} runs in the web browser instead of its own app.\n"
+"\n"
+"Recommended: Open {name} in the browser."
+msgstr ""
+"{filename} 是 {name} 的 Windows 版本。在這裡，{name} 是在網頁瀏覽器中執行，而不是使用自己的應用程式。\n"
+"\n"
+"建議：在瀏覽器中開啟 {name}。"
+
+#, python-brace-format
+msgid ""
+"{filename} is the Windows version of {name}. Its Linux version is already "
+"installed. Find it in Show Apps."
+msgstr "{filename} 是 {name} 的 Windows 版本。它的 Linux 版本已經安裝好了。可以在「顯示程式」中找到它。"
+
+#, python-brace-format
+msgid ""
+"{filename} is the Windows version of {name}. Windows programs can't run here,"
+" but {name} has a Linux version, and it is already installed."
+msgstr ""
+"{filename} 是 {name} 的 Windows 版本。這裡無法執行 Windows 程式，但 {name} 有 Linux "
+"版本，而且已經安裝好了。"
+
+#, python-brace-format
+msgid ""
+"{filename} is the Windows version of {name}. Windows programs can't run here,"
+" but {name} has a Linux version."
+msgstr ""
+"{filename} 是 {name} 的 Windows 版本。Windows 程式在這裡無法執行，但 {name} 有 Linux 版本。"
+
+#, python-brace-format
+msgid ""
+"{filename} is the Windows version of {name}. Windows programs can't run here,"
+" but {name} has a Linux version. It comes from {source}."
+msgstr ""
+"{filename} 是 {name} 的 Windows 版本。Windows 程式在這裡無法執行，但 {name} 有 Linux 版本。它來自 "
+"{source}。"
+
+#, python-brace-format
+msgid ""
+"{filename} is {title}. It's installed from {maker}'s own download source "
+"instead of the file, so it keeps updating."
+msgstr "{filename} 是 {title}。它不是從檔案安裝，而是從 {maker} 的專屬下載來源安裝，因此會持續更新。"
+
+#, python-brace-format
+msgid "{gb} GB of memory."
+msgstr "{gb} GB 記憶體。"
+
+#, python-brace-format
+msgid "{heading} It takes a few minutes; a progress window shows each step."
+msgstr "{heading} 這需要幾分鐘時間；進度視窗會顯示每個步驟。"
+
+#, python-brace-format
+msgid "{kind}, connected now"
+msgstr "{kind}，現在已連線"
+
+#, python-brace-format
+msgid "{label}  ({mins} min so far)"
+msgstr "{label}（目前已 {mins} 分鐘）"
+
+#, python-brace-format
+msgid "{label} is already let in here."
+msgstr "{label} 已經允許在這裡連入。"
+
+#, python-brace-format
+msgid "{layout} can't be used before EvenKeelOS loads."
+msgstr "在 EvenKeelOS 載入之前，{layout} 無法使用。"
+
+#, python-brace-format
+msgid "{maker}'s support site"
+msgstr "{maker} 的支援網站"
+
+#, python-brace-format
+msgid "{names} and {last} graphics found."
+msgstr "找到 {names} 和 {last} 顯示晶片。"
+
+#, python-brace-format
+msgid "{names} graphics found."
+msgstr "找到 {names} 顯示晶片。"
+
+#, python-brace-format
+msgid "{name} (download source)"
+msgstr "{name}（下載來源）"
+
+#, python-brace-format
+msgid "{name} ({username})"
+msgstr "{name} ({username})"
+
+#, python-brace-format
+msgid "{name} ({username}), administrator"
+msgstr "{name} ({username})，管理員"
+
+#, python-brace-format
+msgid "{name} can't be read, or is a shortcut to another file."
+msgstr "{name} 無法讀取，或是指向其他檔案的捷徑。"
+
+#, python-brace-format
+msgid ""
+"{name} can't run here: the driver is built into the system, so it can't be "
+"blocked."
+msgstr "{name} 不能在這裡執行：驅動程式內建於系統中，因此無法封鎖。"
+
+#, python-brace-format
+msgid ""
+"{name} can't run here: this computer doesn't have it, or it wasn't working at"
+" this start, so there's nothing for the test to break."
+msgstr "{name} 無法在此執行：這台電腦沒有該項目，或者該項目在這次啟動時沒有運作，因此測試沒有東西可以讓它出錯。"
+
+#, python-brace-format
+msgid ""
+"{name} could give access to disks, other system devices or every keyboard, so"
+" it is not added."
+msgstr "{name} 可能會讓別人存取磁碟、其他系統裝置或所有鍵盤，因此不會被加入。"
+
+#, python-brace-format
+msgid "{name} could not be downloaded from the source."
+msgstr "無法從來源下載 {name}。"
+
+#, python-brace-format
+msgid "{name} didn't change. Try again."
+msgstr "{name} 沒有變更。請再試一次。"
+
+#, python-brace-format
+msgid "{name} didn't start."
+msgstr "{name} 沒有啟動。"
+
+#, python-brace-format
+msgid "{name} is a public place"
+msgstr "{name} 是公共場所"
+
+#, python-brace-format
+msgid ""
+"{name} is already installed from Bazaar, the app store.\n"
+"\n"
+"Recommended: Open it."
+msgstr ""
+"{name} 已從應用程式商店 Bazaar 安裝。\n"
+"\n"
+"建議：「開啟」。"
+
+#, python-brace-format
+msgid "{name} is closed again on Home."
+msgstr "{name} 已在「家用」網路上再次關閉。"
+
+#, python-brace-format
+msgid "{name} is closed again on Work."
+msgstr "{name} 已在「工作」網路上再次關閉。"
+
+#, python-brace-format
+msgid "{name} is closed again on a Public place."
+msgstr "{name} 已在「公共場所」再次關閉。"
+
+#, python-brace-format
+msgid ""
+"{name} is in Bazaar, the app store (Flathub).\n"
+"\n"
+"Recommended: Use Flathub. It updates by itself and is made for this kind of system.\n"
+"\n"
+"Or Use the file: installs your download."
+msgstr ""
+"{name} 在應用程式商店 Bazaar (Flathub) 中。\n"
+"\n"
+"建議：「使用 Flathub」。它會自動更新，而且是為這類系統打造的。\n"
+"\n"
+"或者「使用此檔案」：安裝您下載的檔案。"
+
+#, python-brace-format
+msgid "{name} is let in on Home."
+msgstr "{name} 已允許在「家用」網路上連入。"
+
+#, python-brace-format
+msgid "{name} is let in on Work."
+msgstr "{name} 已允許在「工作」網路上連入。"
+
+#, python-brace-format
+msgid "{name} is let in on a Public place."
+msgstr "{name} 已允許在「公共場所」連入。"
+
+#, python-brace-format
+msgid "{name} is not a plain file."
+msgstr "{name} 不是一般檔案。"
+
+#, python-brace-format
+msgid "{name} is not a text file."
+msgstr "{name} 不是文字檔案。"
+
+#, python-brace-format
+msgid "{name} is shared, read only. Change it in the list."
+msgstr "{name} 已共享，唯讀。可在清單中變更。"
+
+#, python-brace-format
+msgid "{name} is still open. Close Wheelhouse once it's done."
+msgstr "{name} 仍開著。完成後請關閉 Wheelhouse。"
+
+#, python-brace-format
+msgid "{name} is still open. Finish it first."
+msgstr "{name} 仍開著。請先完成它。"
+
+#, python-brace-format
+msgid "{name} is still working."
+msgstr "{name} 仍在處理中。"
+
+#, python-brace-format
+msgid "{name} is too large for a hardware rule."
+msgstr "{name} 對於硬體規則來說太大了。"
+
+#, python-brace-format
+msgid "{name} is used by the system. Choose another user name."
+msgstr "{name} 已被系統使用。請選擇其他使用者名稱。"
+
+#, python-brace-format
+msgid "{name} is waiting for an answer."
+msgstr "{name} 正在等待回覆。"
+
+#, python-brace-format
+msgid "{name} is your home network"
+msgstr "{name} 是您的家用網路"
+
+#, python-brace-format
+msgid "{name} is your work network"
+msgstr "{name} 是您的工作網路"
+
+#, python-brace-format
+msgid "{name} is {place} from the next time it connects."
+msgstr "從下次連線開始，{name} 會是「{place}」。"
+
+#, python-brace-format
+msgid "{name} is {place} now."
+msgstr "{name} 現在是「{place}」。"
+
+#, python-brace-format
+msgid "{name} is {place}, so nothing is shared here."
+msgstr "{name} 是{place}，所以這裡沒有共享任何內容。"
+
+#, python-brace-format
+msgid "{name} isn't shared now."
+msgstr "{name} 目前沒有共享。"
+
+#, python-brace-format
+msgid "{name} runs a program, so it is not added."
+msgstr "{name} 會執行程式，因此不會加入。"
+
+#, python-brace-format
+msgid "{name} uses another firewall setting: {zone}"
+msgstr "{name} 使用另一個防火牆設定：{zone}"
+
+#, python-brace-format
+msgid "{name}, {size}"
+msgstr "{name}，{size}"
+
+#, python-brace-format
+msgid "{name}: off from the next restart."
+msgstr "{name}：下次重新啟動後關閉。"
+
+#, python-brace-format
+msgid "{name}: off."
+msgstr "{name}：已關閉。"
+
+#, python-brace-format
+msgid "{name}: on from the next restart."
+msgstr "{name}：下次重新啟動後開啟。"
+
+#, python-brace-format
+msgid "{name}: on."
+msgstr "{name}：已開啟。"
+
+#, python-brace-format
+msgid "{name}: {mode}."
+msgstr "{name}：{mode}。"
+
+#, python-brace-format
+msgid "{name}: {old} to {new}"
+msgstr "{name}：從 {old} 到 {new}"
+
+#, python-brace-format
+msgid ""
+"{name}: {steps}\n"
+"\n"
+"This really deletes these files from this computer: the user accounts and passwords (/etc/passwd, /etc/shadow, /etc/group, /etc/gshadow), the list of disks (/etc/fstab), the login rules (/etc/pam.d) and the administrator rules (/etc/sudoers). Your own files and apps aren't touched.\n"
+"\n"
+"Save your work and close your apps first: the computer restarts as soon as they're deleted.\n"
+"\n"
+"If putting them back doesn't work: when a start hangs or stays broken, hold the power button until the computer turns off, then turn it on. After 2 bad starts, the next start is the earlier version kept for Undo the last update, which has its own copy of these settings."
+msgstr ""
+"{name}：{steps}\n"
+"\n"
+"這會真的從這台電腦刪除以下檔案：使用者帳號和密碼（/etc/passwd、/etc/shadow、/etc/group、/etc/gshadow）、磁碟清單（/etc/fstab）、登入規則（/etc/pam.d）和管理員規則（/etc/sudoers）。您自己的檔案和應用程式不會受到影響。\n"
+"\n"
+"請先儲存您的工作並關閉應用程式：這些檔案一刪除，電腦就會立即重新啟動。\n"
+"\n"
+"如果放回去沒有用：當某次啟動卡住或一直有問題時，請長按電源按鈕直到電腦關機，然後再開機。2 次失敗的啟動後，下一次啟動會使用為「復原上一次更新」保留的較早版本，該版本有自己的一份這些設定。"
+
+#, python-brace-format
+msgid ""
+"{name}: {steps}\n"
+"\n"
+"When it comes back, a message says the test worked, and the test copy is removed. Don't turn the computer off during the test unless the steps say to. {save}\n"
+"\n"
+"The test copy takes the place of the earlier version kept for Undo the last update, so Undo has nothing to go back to until the next update."
+msgstr ""
+"{name}：{steps}\n"
+"\n"
+"回來後，會有一則訊息說明測試成功，並移除測試副本。除非步驟有指示，否則請勿在測試期間關閉電腦。{save}\n"
+"\n"
+"測試副本會取代為「復原上一次更新」保留的較早版本，因此在下次更新之前，「復原」沒有可以回去的版本。"
+
+#, python-brace-format
+msgid "{name}: {value}."
+msgstr "{name}：{value}。"
+
+#, python-brace-format
+msgid ""
+"{network} couldn't be saved as {place}. EvenKeelOS asks again at the first "
+"login."
+msgstr "{network} 無法儲存為「{place}」。EvenKeelOS 會在第一次登入時再次詢問。"
+
+#, python-brace-format
+msgid "{network} is saved as {place}."
+msgstr "{network} 已儲存為「{place}」。"
+
+#, python-brace-format
+msgid "{n} second so far"
+msgid_plural "{n} seconds so far"
+msgstr[0] "目前已過 {n} 秒"
+
+#, python-brace-format
+msgid ""
+"{n} security certificate expired, expire within 30 days or were removed. Open"
+" Wheelhouse to see which."
+msgid_plural ""
+"{n} security certificates expired, expire within 30 days or were removed. "
+"Open Wheelhouse to see which."
+msgstr[0] "{n} 個安全性憑證已過期、將在 30 天內過期或已被移除。請開啟 Wheelhouse 查看是哪些。"
+
+#, python-brace-format
+msgid ""
+"{other}: no more automatic restarts, and what broke stays broken. Needs an "
+"administrator to approve it."
+msgstr "{other}：不再自動重新啟動，壞掉的東西還是壞掉。需要管理員核准。"
+
+#, python-brace-format
+msgid "{package} wasn't added to the system."
+msgstr "{package} 未新增至系統。"
+
+#, python-brace-format
+msgid "{package}'s background service didn't turn on."
+msgstr "{package} 的背景服務沒有開啟。"
+
+#, python-brace-format
+msgid "{password}, again"
+msgstr "{password}（再次輸入）"
+
+#, python-brace-format
+msgid "{path} already exists and belongs to something else."
+msgstr "{path} 已存在，且屬於其他項目。"
+
+#, python-brace-format
+msgid "{path} doesn't belong to an installed package."
+msgstr "{path} 不屬於已安裝的套件。"
+
+#, python-brace-format
+msgid "{path} is in use and could not be closed."
+msgstr "{path} 正在使用中，無法關閉。"
+
+#, python-brace-format
+msgid "{path} is in use and could not be stopped."
+msgstr "{path} 正在使用中，無法停止。"
+
+#, python-brace-format
+msgid "{path} is in use as swap and could not be freed."
+msgstr "{path} 目前正用作交換空間，無法釋放。"
+
+#, python-brace-format
+msgid "{path} is open and could not be closed."
+msgstr "{path} 已開啟，無法關閉。"
+
+#, python-brace-format
+msgid "{path} on this disk is in use and could not be freed."
+msgstr "此磁碟上的 {path} 正在使用中，無法釋放。"
+
+#, python-brace-format
+msgid ""
+"{path} was changed on this computer and no longer reads the shared folders "
+"list."
+msgstr "{path} 已在此電腦上變更，不再讀取共享資料夾清單。"
+
+#, python-brace-format
+msgid ""
+"{path} was changed on this computer. Put back the EvenKeelOS version to use "
+"Shared folders."
+msgstr "{path} 已在這台電腦上變更。請改回 EvenKeelOS 版本，才能使用共享資料夾。"
+
+#, python-brace-format
+msgid "{path}, has encrypted data"
+msgstr "{path}，含有加密的資料"
+
+#, python-brace-format
+msgid "{path}. Folder not found: it was moved or deleted."
+msgstr "{path}。找不到資料夾：它已被移動或刪除。"
+
+#, no-python-format, python-brace-format
+msgid "{percent}% done. {step}..."
+msgstr "已完成 {percent}%。{step}…"
+
+#, python-brace-format
+msgid "{ports}. {source}"
+msgstr "{ports}。{source}"
+
+#, python-brace-format
+msgid "{service} is always let in here."
+msgstr "{service} 在這裡一律允許連入。"
+
+#, python-brace-format
+msgid "{service} isn't an app on this computer's list."
+msgstr "{service} 不是這台電腦清單上的應用程式。"
+
+#, python-brace-format
+msgid "{settings} is added from the next restart."
+msgstr "{settings} 會從下次重新啟動起加入。"
+
+#, python-brace-format
+msgid "{setting} is for Wheelhouse's own tests (Test automatic rollback)."
+msgstr "{setting} 是 Wheelhouse 自己的測試（「測試自動回復」）用的。"
+
+#, python-brace-format
+msgid ""
+"{setting} is set by the system itself. Changing it would stop the computer "
+"starting."
+msgstr "{setting} 是由系統自己設定的。如果變更它，電腦將無法啟動。"
+
+#, python-brace-format
+msgid "{setting} is taken out from the next restart."
+msgstr "{setting} 會從下次重新啟動起移除。"
+
+#, python-brace-format
+msgid ""
+"{setting} isn't a kernel setting. Use letters, numbers and . _ - like "
+"amdgpu.abmlevel=0."
+msgstr "{setting} 不是核心設定。請使用字母、數字以及 . _ -，例如 amdgpu.abmlevel=0。"
+
+#, python-brace-format
+msgid ""
+"{setting} runs a program with full control while the computer starts, so it "
+"can't be added here."
+msgstr "{setting} 會在電腦啟動時以完全控制權執行某個程式，因此無法在此新增。"
+
+#, python-brace-format
+msgid "{size} free"
+msgstr "{size} 可用"
+
+#, python-brace-format
+msgid "{size} is free now."
+msgstr "現在有 {size} 可用空間。"
+
+#, python-brace-format
+msgid "{step}  (still working, {n} min so far)"
+msgstr "{step}（仍在執行中，目前已 {n} 分鐘）"
+
+#, python-brace-format
+msgid "{step}. This is the longest step..."
+msgstr "{step}。這是最長的步驟…"
+
+#, python-brace-format
+msgid "{summary}."
+msgstr "{summary}。"
+
+#, python-brace-format
+msgid "{test}: the test is working."
+msgstr "{test}：測試正在進行中。"
+
+#, python-brace-format
+msgid ""
+"{title} can't be installed from this file. It has:\n"
+"{reasons}\n"
+"\n"
+"These have to go on the system, and the system only takes .rpm files. Look for {title} as an .rpm for Fedora {version}, or in Bazaar, the app store."
+msgstr ""
+"無法從這個檔案安裝 {title}。它有：\n"
+"{reasons}\n"
+"\n"
+"這些必須安裝到系統上，而系統只接受 .rpm 檔案。請尋找適用於 Fedora {version} 的 {title} .rpm 檔案，或在應用程式商店 Bazaar 中搜尋。"
+
+#, python-brace-format
+msgid ""
+"{title} can't be installed. It needs full control of the system to run, which downloaded apps don't get here.\n"
+"\n"
+"Nothing was installed."
+msgstr ""
+"{title} 無法安裝。它需要完全掌控系統才能運作，而從網路下載的應用程式在這裡無法取得這種權限。\n"
+"\n"
+"沒有安裝任何東西。"
+
+#, python-brace-format
+msgid "{title} did not get installed."
+msgstr "{title} 未能安裝。"
+
+#, python-brace-format
+msgid ""
+"{title} did not get installed. The computer may have started an older version"
+" of the system."
+msgstr "{title} 未能安裝。電腦可能啟動了舊版的系統。"
+
+#, python-brace-format
+msgid "{title} didn't open."
+msgstr "{title} 沒有開啟。"
+
+#, python-brace-format
+msgid "{title} has no window to open. It is a tool other apps use."
+msgstr "{title} 沒有可以開啟的視窗。這是其他應用程式會用到的工具。"
+
+#, python-brace-format
+msgid ""
+"{title} has to go on the system. It has:\n"
+"{reasons}\n"
+"These can't work in a box.\n"
+"\n"
+"Add to the system: everything works. Needs your password and a restart. You can remove it any time in Wheelhouse, Apps, Remove apps."
+msgstr ""
+"{title} 必須裝到系統上。它有：\n"
+"{reasons}\n"
+"這些在容器中無法運作。\n"
+"\n"
+"「新增至系統」：一切都能運作。需要您的密碼並重新啟動。您隨時可以在 Wheelhouse >「應用程式」>「移除應用程式」中移除它。"
+
+#, python-brace-format
+msgid ""
+"{title} is a printer driver made for Ubuntu and Debian (.deb). This system takes printer drivers only as .rpm files.\n"
+"\n"
+"What to do:\n"
+"  1. Go to {site} and find the driver for your printer.\n"
+"  2. When it asks for your system, choose the .rpm version (it may be called Fedora, Red Hat or RPM).\n"
+"  3. Open that .rpm file here.\n"
+"\n"
+"Or try your printer without a driver first."
+msgstr ""
+"{title} 是專為 Ubuntu 和 Debian (.deb) 設計的印表機驅動程式。此系統只接受 .rpm 格式的印表機驅動程式。\n"
+"\n"
+"該怎麼做：\n"
+"  1. 前往 {site}，找到您印表機的驅動程式。\n"
+"  2. 當系統詢問您的作業系統時，請選擇 .rpm 版本（可能稱為 Fedora、Red Hat 或 RPM）。\n"
+"  3. 在這裡開啟該 .rpm 檔案。\n"
+"\n"
+"或者先試試在沒有驅動程式的情況下使用您的印表機。"
+
+#, python-brace-format
+msgid ""
+"{title} is a printer driver. Most printers work without one.\n"
+"\n"
+"Recommended: Open Printers, and add your printer there first.\n"
+"\n"
+"Or {extra}: only if your printer doesn't work without it."
+msgstr ""
+"{title} 是印表機驅動程式。大多數印表機不需要驅動程式就能運作。\n"
+"\n"
+"建議：開啟「印表機」，先在那裡加入您的印表機。\n"
+"\n"
+"或者「{extra}」：只有在您的印表機沒有它就無法運作時才使用。"
+
+#, python-brace-format
+msgid ""
+"{title} is already installed from Bazaar, the app store.\n"
+"\n"
+"Recommended: Open it."
+msgstr ""
+"{title} 已從應用程式商店 Bazaar 安裝。\n"
+"\n"
+"建議：「開啟」。"
+
+#, python-brace-format
+msgid ""
+"{title} is already installed from Fedora and stays up to date. You don't need"
+" this file."
+msgstr "{title} 已從 Fedora 安裝，並會保持最新狀態。您不需要這個檔案。"
+
+#, python-brace-format
+msgid "{title} is already installed from a .deb file."
+msgstr "{title} 已從 .deb 檔案安裝。"
+
+#, python-brace-format
+msgid "{title} is already installed from an .rpm file."
+msgstr "{title} 已從 .rpm 檔案安裝。"
+
+#, python-brace-format
+msgid ""
+"{title} is already installed.\n"
+"\n"
+"Recommended: Open it.\n"
+"\n"
+"Or Reinstall: installs it again from this file. Only needed if it isn't working."
+msgstr ""
+"{title} 已安裝。\n"
+"\n"
+"建議：「開啟」。\n"
+"\n"
+"或者「重新安裝」：從此檔案再安裝一次。只有在它無法運作時才需要。"
+
+#, python-brace-format
+msgid "{title} is already installed. Find it in Show Apps."
+msgstr "{title} 已安裝。可以在「顯示程式」中找到它。"
+
+#, python-brace-format
+msgid ""
+"{title} is already installed. This file is older than the one installed."
+msgstr "{title} 已安裝。此檔案比已安裝的版本舊。"
+
+#, python-brace-format
+msgid "{title} is already installed. This file is the same version."
+msgstr "{title} 已安裝。此檔案是相同的版本。"
+
+#, python-brace-format
+msgid "{title} is already part of EvenKeelOS. Nothing to install."
+msgstr "{title} 已經是 EvenKeelOS 的一部分。沒有需要安裝的項目。"
+
+#, python-brace-format
+msgid "{title} is installed in the {label}."
+msgstr "{title} 已安裝在 {label} 中。"
+
+#, python-brace-format
+msgid ""
+"{title} is installed, but its background service didn't turn on, so it may not connect.\n"
+"\n"
+"{details}"
+msgstr ""
+"{title} 已安裝，但其背景服務未開啟，因此可能無法連線。\n"
+"\n"
+"{details}"
+
+#, python-brace-format
+msgid ""
+"{title} is installed, but its background service didn't turn on.\n"
+"\n"
+"{details}"
+msgstr ""
+"{title} 已安裝，但其背景服務未開啟。\n"
+"\n"
+"{details}"
+
+#, python-brace-format
+msgid "{title} is installed."
+msgstr "{title} 已安裝。"
+
+#, python-brace-format
+msgid "{title} is installed. Find it in Show Apps."
+msgstr "{title} 已安裝。可以在「顯示程式」中找到它。"
+
+#, python-brace-format
+msgid ""
+"{title} is installed. Find it in Show Apps.\n"
+"\n"
+"Updates: checked once a day, straight from ArtCraft."
+msgstr ""
+"{title} 已安裝。可以在「顯示程式」中找到它。\n"
+"\n"
+"更新：每天檢查一次，直接來自 ArtCraft。"
+
+#, python-brace-format
+msgid ""
+"{title} is installed. It has a background service that needs turning on. "
+"Needs your password."
+msgstr "{title} 已安裝。它有一個背景服務需要開啟。需要您的密碼。"
+
+#, python-brace-format
+msgid "{title} is installed. Restart to start using it."
+msgstr "{title} 已安裝。請重新啟動以開始使用。"
+
+#, python-brace-format
+msgid "{title} is installed. Restart to use it."
+msgstr "{title} 已安裝。請重新啟動以開始使用。"
+
+#, python-brace-format
+msgid ""
+"{title} is installed. Turn it on: its background service starts now and with "
+"the computer. Needs your password."
+msgstr "{title} 已安裝。「開啟」：它的背景服務會立即啟動，並隨電腦啟動。需要您的密碼。"
+
+#, python-brace-format
+msgid "{title} is installed. Unplug the device and plug it back in."
+msgstr "{title} 已安裝。請拔下裝置，然後再插回去。"
+
+#, python-brace-format
+msgid "{title} is missing from Show Apps. Install it again to put it back."
+msgstr "「顯示程式」中找不到 {title}。請重新安裝來把它放回去。"
+
+#, python-brace-format
+msgid "{title} is missing parts of its background service: {parts}"
+msgstr "{title} 的背景服務缺少部分元件：{parts}"
+
+#, python-brace-format
+msgid "{title} is now version {version}."
+msgstr "{title} 現在是版本 {version}。"
+
+#, python-brace-format
+msgid "{title} is ready."
+msgstr "{title} 已準備就緒。"
+
+#, python-brace-format
+msgid "{title} is ready. Find it in Show Apps."
+msgstr "{title} 已準備就緒。可以在「顯示程式」中找到它。"
+
+#, python-brace-format
+msgid "{title} is reinstalled."
+msgstr "{title} 已重新安裝。"
+
+#, python-brace-format
+msgid "{title} is removed, and the {label} is now empty."
+msgstr "{title} 已移除，{label} 現在是空的。"
+
+#, python-brace-format
+msgid "{title} is removed."
+msgstr "{title} 已移除。"
+
+#, python-brace-format
+msgid "{title} is removed. Restart to finish."
+msgstr "{title} 已移除。請重新啟動以完成。"
+
+#, python-brace-format
+msgid "{title} is updated to version {version}."
+msgstr "{title} 已更新至版本 {version}。"
+
+#, python-brace-format
+msgid "{title} is updated. Restart to use the new version."
+msgstr "{title} 已更新。請重新啟動以使用新版本。"
+
+#, python-brace-format
+msgid ""
+"{title} isn't available for Fedora {version} yet. Check again after the next "
+"System Update."
+msgstr "{title} 目前還沒有適用於 Fedora {version} 的版本。請在下一次「系統更新」後再檢查。"
+
+#, python-brace-format
+msgid "{title} isn't installed yet. Restart first."
+msgstr "{title} 尚未安裝。請先重新啟動。"
+
+#, python-brace-format
+msgid ""
+"{title} only lets your account use a device.\n"
+"\n"
+"Add it: needs your password."
+msgstr ""
+"{title} 只是讓您的帳號可以使用某個裝置。\n"
+"\n"
+"「新增」：需要您的密碼。"
+
+#, python-brace-format
+msgid "{title} will no longer start when you log in."
+msgstr "{title} 將不會在您登入時啟動。"
+
+#, python-brace-format
+msgid "{title} will start when you log in."
+msgstr "{title} 會在您登入時啟動。"
+
+#, python-brace-format
+msgid "{title}'s background service didn't turn on."
+msgstr "{title} 的背景服務沒有開啟。"
+
+#, python-brace-format
+msgid "{title}: working…"
+msgstr "{title}：正在處理中…"
+
+#, python-brace-format
+msgid "{used} of {total} used"
+msgstr "已使用 {used}（共 {total}）"
+
+#, python-brace-format
+msgid "{what} did not work."
+msgstr "{what} 無法運作。"
+
+#, python-brace-format
+msgid ""
+"{what} did not work.\n"
+"\n"
+"{reason}\n"
+"\n"
+"The full details are in {log}"
+msgstr ""
+"{what} 無法運作。\n"
+"\n"
+"{reason}\n"
+"\n"
+"完整詳情請見 {log}"
+
+#, python-brace-format
+msgid "{where}, {count} picture"
+msgid_plural "{where}, {count} pictures"
+msgstr[0] "{where}，{count} 張圖片"
+
+msgid "2D animation"
+msgstr "2D 動畫"
+
+msgid "2d animation"
+msgstr "2D 動畫"
+
+msgid "2d drafting"
+msgstr "2D 製圖"
+
+msgid "3D modelling"
+msgstr "3D 建模"
+
+msgid "3D texture painting"
+msgstr "3D 貼圖繪製"
+
+msgid "3d landscapes"
+msgstr "3D 風景"
+
+msgid "3d mechanical design"
+msgstr "3D 機械設計"
+
+msgid "3d modeling"
+msgstr "3D 建模"
+
+msgid "3d modeling and animation"
+msgstr "3D 建模與動畫"
+
+msgid "3d printing"
+msgstr "3D 列印"
+
+msgid "CAD drawing"
+msgstr "CAD 圖面"
+
+msgid "a VPN"
+msgstr "VPN"
+
+msgid "an encyclopedia"
+msgstr "百科全書"
+
+msgid "backing up files"
+msgstr "備份檔案"
+
+msgid "backups"
+msgstr "備份"
+
+msgid "browsing fonts"
+msgstr "瀏覽字型"
+
+msgid "browsing the web"
+msgstr "瀏覽網頁"
+
+msgid "budgeting money"
+msgstr "規劃預算"
+
+msgid "building a family tree"
+msgstr "建立家譜"
+
+msgid "building databases"
+msgstr "建立資料庫"
+
+msgid "building web pages"
+msgstr "建立網頁"
+
+msgid "burning disc images"
+msgstr "燒錄光碟映像檔"
+
+msgid "burning discs"
+msgstr "燒錄光碟"
+
+msgid "burning dvds"
+msgstr "燒錄 DVD"
+
+msgid "chatting"
+msgstr "聊天"
+
+msgid "chatting on irc"
+msgstr "在 IRC 上聊天"
+
+msgid "chatting with friends"
+msgstr "與朋友聊天"
+
+msgid "checking hardware details"
+msgstr "查看硬體詳細資訊"
+
+msgid "cleaning junk files"
+msgstr "清理垃圾檔案"
+
+msgid "clipboard history"
+msgstr "剪貼簿歷程記錄"
+
+msgid "comparing files"
+msgstr "比較檔案"
+
+msgid "configuring gaming mice"
+msgstr "設定遊戲滑鼠"
+
+msgid "configuring logitech mice"
+msgstr "設定羅技滑鼠"
+
+msgid "controlling rgb lighting"
+msgstr "控制 RGB 燈光"
+
+msgid "converting media files"
+msgstr "轉換媒體檔案"
+
+msgid "converting video files"
+msgstr "轉換影片檔案"
+
+msgid "copying files to phones"
+msgstr "將檔案複製到手機"
+
+msgid "copying photos from cameras"
+msgstr "從相機複製相片"
+
+msgid "cutting mp3 files"
+msgstr "剪輯 MP3 檔案"
+
+msgid "designing apps and websites"
+msgstr "設計應用程式和網站"
+
+msgid "designing circuit boards"
+msgstr "設計電路板"
+
+msgid "designing home layouts"
+msgstr "設計居家格局"
+
+msgid "designing interfaces"
+msgstr "設計介面"
+
+msgid "diagrams and flowcharts"
+msgstr "圖表和流程圖"
+
+msgid "dictating by voice"
+msgstr "語音聽寫"
+
+msgid "digital painting"
+msgstr "數位繪畫"
+
+msgid "digital sculpting"
+msgstr "數位雕塑"
+
+msgid "direct connect file sharing"
+msgstr "直接連線檔案共享"
+
+msgid "distraction-free writing"
+msgstr "無干擾寫作模式"
+
+msgid "downloading files"
+msgstr "下載檔案"
+
+msgid "downloading online videos"
+msgstr "下載線上影片"
+
+msgid "downloading torrents"
+msgstr "下載 Torrent 檔案"
+
+msgid "drawing and painting"
+msgstr "繪畫與塗鴉"
+
+msgid "drawing chemical structures"
+msgstr "繪製化學結構"
+
+msgid "drawing for kids"
+msgstr "兒童繪畫"
+
+msgid "editing action camera videos"
+msgstr "編輯運動相機影片"
+
+msgid "editing audio"
+msgstr "編輯音訊"
+
+msgid "editing home videos"
+msgstr "編輯家庭影片"
+
+msgid "editing music tags"
+msgstr "編輯音樂標籤"
+
+msgid "editing pdf files"
+msgstr "編輯 PDF 檔案"
+
+msgid "editing photos"
+msgstr "編輯相片"
+
+msgid "editing pictures"
+msgstr "編輯圖片"
+
+msgid "editing raw photos"
+msgstr "編輯 RAW 相片"
+
+msgid "editing subtitles"
+msgstr "編輯字幕"
+
+msgid "editing text"
+msgstr "編輯文字"
+
+msgid "editing text and code"
+msgstr "編輯文字和程式碼"
+
+msgid "editing video files"
+msgstr "編輯影片檔案"
+
+msgid "editing videos"
+msgstr "編輯影片"
+
+msgid "email"
+msgstr "電子郵件"
+
+msgid "email and calendar"
+msgstr "電子郵件和行事曆"
+
+msgid "equalizing your sound"
+msgstr "調整音效等化器"
+
+msgid "extracting archives"
+msgstr "解壓縮封存檔"
+
+msgid "file sharing"
+msgstr "檔案共享"
+
+msgid "finding duplicate files"
+msgstr "尋找重複檔案"
+
+msgid "finding files fast"
+msgstr "快速尋找檔案"
+
+msgid "game libraries"
+msgstr "遊戲庫"
+
+msgid "graphing math"
+msgstr "數學繪圖"
+
+msgid "group voice and video chat"
+msgstr "群組語音與視訊聊天"
+
+msgid "guitar tabs"
+msgstr "吉他譜"
+
+msgid "hand drawn animation"
+msgstr "手繪動畫"
+
+msgid "hex editing"
+msgstr "十六進位編輯"
+
+msgid "improving sound quality"
+msgstr "提升音質"
+
+msgid "keeping passwords"
+msgstr "保管密碼"
+
+msgid "learning to type"
+msgstr "學習打字"
+
+msgid "lighting and gaming gear"
+msgstr "燈光與遊戲設備"
+
+msgid "listening to internet radio"
+msgstr "收聽網路廣播"
+
+msgid "live streaming"
+msgstr "即時串流"
+
+msgid "looking up words"
+msgstr "查詢字詞"
+
+msgid "making 3D materials"
+msgstr "製作 3D 素材"
+
+msgid "making animated gifs"
+msgstr "製作動畫 GIF"
+
+msgid "making archives"
+msgstr "建立封存檔"
+
+msgid "making bootable usb drives"
+msgstr "製作可開機的 USB 隨身碟"
+
+msgid "making fonts"
+msgstr "製作字型"
+
+msgid "making hdr photos"
+msgstr "製作 HDR 相片"
+
+msgid "making music"
+msgstr "製作音樂"
+
+msgid "managing databases"
+msgstr "管理資料庫"
+
+msgid "managing ebooks"
+msgstr "管理電子書"
+
+msgid "managing git repositories"
+msgstr "管理 Git 儲存庫"
+
+msgid "managing money"
+msgstr "管理金錢"
+
+msgid "managing music players"
+msgstr "管理音樂播放器"
+
+msgid "managing references"
+msgstr "管理參考資料"
+
+msgid "managing running programs"
+msgstr "管理正在執行的程式"
+
+msgid "mapping geographic data"
+msgstr "繪製地理資料"
+
+msgid "maps and directions"
+msgstr "地圖與路線指引"
+
+msgid "marking up pdfs"
+msgstr "在 PDF 上標記"
+
+msgid "memorizing flashcards"
+msgstr "背誦學習卡"
+
+msgid "mind maps"
+msgstr "心智圖"
+
+msgid "mixing music as a dj"
+msgstr "DJ 混音"
+
+msgid "monitoring game performance"
+msgstr "監控遊戲效能"
+
+msgid "motion graphics and effects"
+msgstr "動態圖像與特效"
+
+msgid "office documents"
+msgstr "Office 文件"
+
+msgid "opening newer office files"
+msgstr "開啟較新的 Office 檔案"
+
+msgid "opening spreadsheets"
+msgstr "開啟試算表"
+
+msgid "opening word documents"
+msgstr "開啟 Word 文件"
+
+msgid "opening zip and ace files"
+msgstr "開啟 ZIP 和 ACE 檔案"
+
+msgid "opening zip and other archives"
+msgstr "開啟 ZIP 和其他壓縮檔"
+
+msgid "opening zip and rar files"
+msgstr "開啟 ZIP 和 RAR 檔案"
+
+msgid "opening zip and sit files"
+msgstr "開啟 ZIP 和 SIT 檔案"
+
+msgid "opening zip files"
+msgstr "開啟 ZIP 檔案"
+
+msgid "organising and developing photos"
+msgstr "整理與後製相片"
+
+msgid "organising photos"
+msgstr "整理相片"
+
+msgid "organizing music"
+msgstr "整理音樂"
+
+msgid "organizing photos"
+msgstr "整理相片"
+
+msgid "page layout"
+msgstr "頁面版面配置"
+
+msgid "personal finance"
+msgstr "個人理財"
+
+msgid "photo editing and Adobe's other creative apps"
+msgstr "相片編輯與 Adobe 的其他創意應用程式"
+
+msgid "photo slideshows"
+msgstr "相片投影片放映"
+
+msgid "pixel art"
+msgstr "像素藝術"
+
+msgid "plain text notes"
+msgstr "純文字記事"
+
+msgid "planning gps routes"
+msgstr "規劃 GPS 路線"
+
+msgid "playing and organizing music"
+msgstr "播放和整理音樂"
+
+msgid "playing any video file"
+msgstr "播放任何影片檔案"
+
+msgid "playing dvds"
+msgstr "播放 DVD"
+
+msgid "playing dvds and blu-rays"
+msgstr "播放 DVD 和藍光光碟"
+
+msgid "playing music"
+msgstr "播放音樂"
+
+msgid "playing music and video"
+msgstr "播放音樂和影片"
+
+msgid "playing videos"
+msgstr "播放影片"
+
+msgid "printing disc labels"
+msgstr "列印光碟標籤"
+
+msgid "printing labels"
+msgstr "列印標籤"
+
+msgid "reading PDFs"
+msgstr "閱讀 PDF"
+
+msgid "reading and sending email"
+msgstr "閱讀和傳送電子郵件"
+
+msgid "reading comic books"
+msgstr "閱讀漫畫"
+
+msgid "reading djvu files"
+msgstr "閱讀 DjVu 檔案"
+
+msgid "reading ebooks"
+msgstr "閱讀電子書"
+
+msgid "reading pdfs"
+msgstr "閱讀 PDF 檔案"
+
+msgid "reading pdfs and djvu"
+msgstr "閱讀 PDF 和 DjVu 檔案"
+
+msgid "reading text aloud"
+msgstr "朗讀文字"
+
+msgid "recording games"
+msgstr "遊戲錄影"
+
+msgid "recording music"
+msgstr "錄製音樂"
+
+msgid "recording the screen"
+msgstr "錄製畫面"
+
+msgid "recording your screen"
+msgstr "錄製您的畫面"
+
+msgid "recording your voice"
+msgstr "錄製您的聲音"
+
+msgid "remote desktop"
+msgstr "遠端桌面"
+
+msgid "renaming many files"
+msgstr "重新命名多個檔案"
+
+msgid "ripping audio cds"
+msgstr "從音樂 CD 擷取音訊"
+
+msgid "ripping dvds"
+msgstr "從 DVD 擷取內容"
+
+msgid "ripping dvds and blu-rays"
+msgstr "擷取 DVD 和藍光光碟"
+
+msgid "running virtual machines"
+msgstr "執行虛擬機器"
+
+msgid "scanning"
+msgstr "掃描"
+
+msgid "scanning and text recognition"
+msgstr "掃描與文字辨識"
+
+msgid "scanning documents"
+msgstr "掃描文件"
+
+msgid "scanning your network"
+msgstr "掃描您的網路"
+
+msgid "searching your files"
+msgstr "搜尋您的檔案"
+
+msgid "seeing disk space usage"
+msgstr "查看磁碟空間使用情況"
+
+msgid "seeing what fills the disk"
+msgstr "查看哪些內容佔用了磁碟空間"
+
+msgid "sending files nearby"
+msgstr "傳送檔案到附近的裝置"
+
+msgid "serial and telnet terminal"
+msgstr "序列埠與 Telnet 終端機"
+
+msgid "sharing music files"
+msgstr "共享音樂檔案"
+
+msgid "shredding files"
+msgstr "徹底銷毀檔案"
+
+msgid "simple drawing"
+msgstr "簡單的繪圖"
+
+msgid "simulating circuits"
+msgstr "模擬電路"
+
+msgid "slide presentations"
+msgstr "投影片簡報"
+
+msgid "small business accounting"
+msgstr "小型企業會計"
+
+msgid "sticky notes"
+msgstr "便利貼"
+
+msgid "stitching panoramas"
+msgstr "拼接全景"
+
+msgid "storing passwords"
+msgstr "儲存密碼"
+
+msgid "streaming media at home"
+msgstr "在家串流媒體"
+
+msgid "studying the bible"
+msgstr "研讀聖經"
+
+msgid "syncing folders"
+msgstr "同步資料夾"
+
+msgid "syncing folders between pcs"
+msgstr "在多台電腦之間同步資料夾"
+
+msgid "taking notes"
+msgstr "做筆記"
+
+msgid "taking screenshots"
+msgstr "擷取螢幕畫面"
+
+msgid "testing disk speed"
+msgstr "測試磁碟速度"
+
+msgid "to-do lists"
+msgstr "待辦事項清單"
+
+msgid "transcribing recordings"
+msgstr "將錄音轉寫成文字"
+
+msgid "transferring files by ftp"
+msgstr "透過 FTP 傳輸檔案"
+
+msgid "transferring files by sftp"
+msgstr "透過 SFTP 傳輸檔案"
+
+msgid "transferring files with FTP"
+msgstr "使用 FTP 傳輸檔案"
+
+msgid "translating and looking up words"
+msgstr "翻譯和查詢單字"
+
+msgid "typing text shortcuts"
+msgstr "文字快速輸入"
+
+msgid "using the webcam"
+msgstr "使用網路攝影機"
+
+msgid "using your webcam"
+msgstr "使用您的網路攝影機"
+
+msgid "vector drawing"
+msgstr "向量繪圖"
+
+msgid "vector illustration"
+msgstr "向量插圖"
+
+msgid "video calls"
+msgstr "視訊通話"
+
+msgid "video chat rooms"
+msgstr "視訊聊天室"
+
+msgid "video meetings"
+msgstr "視訊會議"
+
+msgid "viewing and organizing photos"
+msgstr "檢視和整理相片"
+
+msgid "viewing diagrams"
+msgstr "檢視圖表"
+
+msgid "viewing dwg drawings"
+msgstr "檢視 DWG 圖面"
+
+msgid "viewing pictures"
+msgstr "檢視圖片"
+
+msgid "viewing slide shows"
+msgstr "觀看投影片放映"
+
+msgid "viewing the night sky"
+msgstr "觀賞夜空"
+
+msgid "virus scanning"
+msgstr "病毒掃描"
+
+msgid "watching and recording tv"
+msgstr "觀看和錄製電視"
+
+msgid "watching cpu temperature"
+msgstr "查看 CPU 溫度"
+
+msgid "watching hardware sensors"
+msgstr "監控硬體感測器"
+
+msgid "watching what the computer is doing"
+msgstr "監看電腦正在做什麼"
+
+msgid "webcam effects"
+msgstr "網路攝影機效果"
+
+msgid "working with PDFs"
+msgstr "使用 PDF"
+
+msgid "working with spreadsheets"
+msgstr "使用試算表"
+
+msgid "writing books"
+msgstr "寫書"
+
+msgid "writing c++ programs"
+msgstr "撰寫 C++ 程式"
+
+msgid "writing code"
+msgstr "寫程式碼"
+
+msgid "writing disk images"
+msgstr "寫入磁碟映像"
+
+msgid "writing documents"
+msgstr "撰寫文件"
+
+msgid "writing latex documents"
+msgstr "撰寫 LaTeX 文件"
+
+msgid "writing screenplays"
+msgstr "撰寫劇本"
+
+msgid "writing sheet music"
+msgstr "撰寫樂譜"
+
+msgid "your calendar"
+msgstr "您的行事曆"

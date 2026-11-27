@@ -126,7 +126,7 @@ TOPICS = [
              (N_("Click Add a folder and pick it. It starts as Read only: change it to Read and write if the other "
                  "computer should save there too."), ""),
              (N_("On a Windows PC: File Explorer, Network. The Windows PC's own network must be set to Private."), ""),
-             (N_("On a Mac: Finder, Network. On another Linux computer: Files, Other Locations."), ""),
+             (N_("On a Mac: Finder, Network. On another Linux computer: Files, Network."), ""),
              (N_("Open this computer, type your user name and the sharing password, and the folders are there."), ""),
              (N_("Away from home, the switch shows off: sharing only runs on a Home network, and comes back by itself "
                  "there."), ""),

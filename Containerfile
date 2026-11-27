@@ -2,6 +2,7 @@
 FROM scratch AS ctx
 COPY build_files /
 COPY system_files /system_files
+COPY po /po
 
 FROM quay.io/fedora-ostree-desktops/silverblue:45
 
