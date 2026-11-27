@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 # Keeps the folder icons in the accent color picked in Settings, Appearance (blue is GNOME's own icons).
-# Only switches between GNOME's own icons and our colored copies of them; any other icon theme is left alone.
-# --once: match once and exit (the build test); otherwise match at login and whenever the accent color changes.
 match() {
   local cur acc want
   cur=$(gsettings get org.gnome.desktop.interface icon-theme | tr -d "'")

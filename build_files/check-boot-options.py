@@ -1,10 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check for Boot options: rpm-ostree can make the changes, the common fixes are all allowed with no warning,
-risky settings get a warning however they're written, and settings the system sets itself, settings that run a
-program while starting, and text that isn't a setting are refused.
-
-Usage: check-boot-options.py   (in the image, after build.sh has installed Boot options)
-"""
+"""Build check for Boot options, run in the image after build.sh has installed them."""
 import subprocess
 import sys
 

@@ -35,8 +35,7 @@ def language(code):
 
 
 def place(zone):
-    """A time zone or region ("Europe/Berlin", "Europe") in the installer's language, as langtable names it.
-    In English, as the time zone database writes it."""
+    """A time zone or region ("Europe/Berlin", "Europe") in the installer's language, as langtable names it."""
     if _locale.startswith("en"):
         return zone.replace("_", " ")
     return (langtable.timezone_name(timezoneId=zone, languageIdQuery=_locale) or zone).replace("_", " ")
@@ -55,8 +54,7 @@ def number(value, digits):
 
 
 def translated(locale):
-    """True when EvenKeelOS has a translation that a locale such as "sr_RS.UTF-8@latin" would use. A locale
-    with a script (@latin, @cyrillic) needs a translation in that script, not the language's usual one."""
+    """True when EvenKeelOS has a translation a locale would use; a script locale (@latin) needs one in that script."""
     if locale.startswith("en"):
         return True
     found = gettext.find(DOMAIN, languages=[locale])

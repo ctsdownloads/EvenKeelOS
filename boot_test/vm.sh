@@ -1,5 +1,5 @@
 # shellcheck shell=bash
-# The test virtual machine, shared by the boot test and the rollback tests (sourced; needs OUT set).
+# The test virtual machine, for the boot and rollback tests; sourced, needs OUT set.
 VM=${RUNNER_TEMP:-/tmp}/boot-test-vm
 DISK=$VM/output/qcow2/disk.qcow2
 SSH=(ssh -i "$VM/key" -p 2222 -o BatchMode=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null

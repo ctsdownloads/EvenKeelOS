@@ -20,8 +20,7 @@ TZ_REGIONS = ["Africa", "America", "Antarctica", "Arctic", "Asia", "Atlantic", "
 
 
 def languages():
-    """[(language id, English name, native name)], by English name: English and the ones EvenKeelOS is
-    translated into."""
+    """[(language id, English name, native name)] by English name: English and the ones we have translations for."""
     ids = {langtable.parse_locale(name).language for name in i18n.translations()} | {"en"}
     found = []
     for lang in ids:
@@ -33,8 +32,7 @@ def languages():
 
 
 def locales(lang):
-    """[(locale, English name, native name)] for a language, most likely first (langtable's order); only
-    the ones EvenKeelOS is translated into."""
+    """[(locale, English name, native name)] for a language, most likely first, only the translated ones."""
     return [(loc, langtable.language_name(languageId=loc, languageIdQuery="en"),
              langtable.language_name(languageId=loc)) for loc in langtable.list_locales(languageId=lang)
             if i18n.translated(loc)]

@@ -1,12 +1,10 @@
-"""A tool's questions, messages, lists, password box and progress, shown inside the Wheelhouse window.
-
-Tools started from the window get EVENKEEL_OS_PANEL, the path of a socket here; evenkeel-os-dialog connects to it
-with one request per question and waits for the answer.
-"""
+"""A tool's questions, messages, lists, password box and progress, shown inside the Wheelhouse window."""
+import errno
 import json
 import os
 import shutil
 import socket
+import sys
 import tempfile
 import threading
 
@@ -29,8 +27,8 @@ def set_text(label, text, markup):
             Pango.parse_markup(text, -1, "\0")
             label.set_markup(text)
             return
-        except GLib.Error:
-            pass
+        except GLib.Error as e:
+            print(f"Wheelhouse: shown as plain text, the markup doesn't parse: {e.message}", file=sys.stderr)
     label.set_text(text)
 
 
@@ -54,12 +52,13 @@ class Request:
         try:
             self.f.write(json.dumps({"button": button, **extra}) + "\n")
             self.f.flush()
-        except (OSError, ValueError):
-            pass        # the tool already stopped
+        except (OSError, ValueError) as e:
+            print(f"Wheelhouse: the tool stopped before its answer: {e}", file=sys.stderr)
         try:
             self.conn.shutdown(socket.SHUT_RDWR)
-        except OSError:
-            pass
+        except OSError as e:
+            if e.errno != errno.ENOTCONN:      # not connected: the tool already closed its end
+                print(f"Wheelhouse: closing a tool's connection: {e}", file=sys.stderr)
         self.dialogs.done(self)
 
     # ---------------------------------------------------------------- the view for this request
@@ -255,14 +254,14 @@ class Dialogs:
         try:
             for line in f:
                 GLib.idle_add(request.progress, json.loads(line))
-        except (OSError, ValueError):
-            pass
+        except (OSError, ValueError) as e:
+            print(f"Wheelhouse: a tool's request ended early: {e}", file=sys.stderr)
         GLib.idle_add(request.reply, "cancel")      # the tool stopped, or the request was answered
         for closing in (f, conn):
             try:
                 closing.close()
-            except OSError:
-                pass
+            except OSError as e:
+                print(f"Wheelhouse: closing a tool's connection: {e}", file=sys.stderr)
 
     def add(self, request):
         self.open.append(request)

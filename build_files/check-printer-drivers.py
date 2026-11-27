@@ -1,9 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check: printer drivers are recognized wherever the maker puts their files, so they are added to the system
-and not put in an app box. Made-up packages laid out like real ones; nothing is downloaded.
-
-Usage: check-printer-drivers.py FOLDER_WITH_evenkeel_os_packages
-"""
+"""Build check: printer drivers laid out like real ones are added to the system, not put in an app box."""
 import sys
 
 sys.path.insert(0, sys.argv[1])

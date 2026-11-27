@@ -1,6 +1,5 @@
 #!/usr/bin/bash
-# Lock screen: the password box's outline in the accent color, as on the login screen (GNOME draws it white there).
-# Adds one rule to GNOME Shell's own style file, rebuilt from Fedora's current copy every build; nothing else changes.
+# Lock screen: the password box's outline in the accent color, as on the login screen.
 set -euo pipefail
 G=/usr/share/gnome-shell/gnome-shell-theme.gresource
 d=$(mktemp -d)

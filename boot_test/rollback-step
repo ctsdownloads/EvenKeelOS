@@ -8,8 +8,7 @@ case "${1:-}" in
   log-in-again) exec systemctl restart gdm.service ;;
   # Important settings deleted: deletes them for real and restarts, as Wheelhouse does.
   settings-test) exec /usr/libexec/evenkeel-os-settings-test ;;
-  # A real update staged by bootc, as automatic updates stage it on an install with no added packages: this image
-  # plus one file, made here.
+  # A real update staged by bootc: this image plus one file, made here.
   bootc-update)
     bootc image copy-to-storage
     dir=$(mktemp -d)

@@ -75,8 +75,7 @@ def install(name, intro=""):
 
 
 def offer_for_file(name, pkg):
-    """A downloaded VPN file: install from its company's own download source, so it keeps updating. A file alone
-    would never update, and some are only part of the app (IVPN's) or only add the source (Proton's, NordVPN's)."""
+    """A downloaded VPN file: install from its company's own download source, so it keeps updating."""
     v = load()[name]
     return install(name, intro=_("{filename} is {title}. It's installed from {maker}'s own download source instead "
                                  "of the file, so it keeps updating.").format(

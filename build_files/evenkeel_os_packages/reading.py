@@ -164,8 +164,7 @@ def rule_runs_program(text):
     return any(RUNS_PROGRAM.search(line) for line in joined.splitlines() if not line.lstrip().startswith("#"))
 
 
-# A printer description file, a printing filter (cups filter or backend, lpd filter, cupswrapper, printfilter) or a
-# cups driver file; docs and examples don't count. An install script line (not a comment) that adds a printer.
+# Printer description, filter or driver files, not docs or examples; ADDS_PRINTER matches an install script's lpadmin.
 PRINTER_FILE = re.compile(r"\.ppd(\.gz|\.bz2)?$|/cups/(lib/)?(filter|backend)/[^/]+$|/lpd/[^/]*filter[^/]*$|"
                           r"/cupswrapper/[^/]+$|/[^/]*printfilter[^/]*$|/(cups|ppds?)/.*\.drv(\.gz)?$", re.I)
 NOT_PRINTER = re.compile(r"/(doc|docs|examples?|samples?)/", re.I)

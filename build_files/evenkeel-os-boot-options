@@ -35,7 +35,6 @@ def change(settings):
     before = bootopts.next_start()
     if before is None:
         fail(_("The boot options the computer starts with couldn't be read."))
-    # Out: what Wheelhouse added before and any common fix not wanted now; in: everything wanted, if missing.
     # A setting the computer already had (like quiet) isn't recorded as added, so it's never taken out.
     out = [s for s in dict.fromkeys(bootopts.added() + sorted(bootopts.COMMON_SETTINGS)) if s not in settings]
     mine = [s for s in settings if s not in before or s in bootopts.added()]

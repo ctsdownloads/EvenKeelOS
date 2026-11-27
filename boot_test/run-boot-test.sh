@@ -1,6 +1,5 @@
 #!/usr/bin/bash
 # Boot test: start the new image in a virtual machine on the build machine and check it reaches the desktop.
-# Usage: boot_test/run-boot-test.sh IMAGE   (IMAGE in this user's podman storage; results in boot-test-results/)
 set -euo pipefail
 
 IMAGE=$1

@@ -1,9 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check: certificate alerts catch expired, soon-expiring and removed certificates, and nothing else.
-
-Runs evenkeel-os-certs against made-up certificates in a scratch folder, then against this image's own trusted list
-(its alerts are printed as warnings: a new install shows them on its first day).
-"""
+"""Build check: certificate alerts catch expired, soon-expiring and removed certificates, and nothing else."""
 import datetime
 import importlib.machinery
 import importlib.util

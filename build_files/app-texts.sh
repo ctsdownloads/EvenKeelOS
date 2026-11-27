@@ -1,7 +1,5 @@
 #!/bin/bash
-# The text of an outside app EvenKeelOS translates, at its locked version, as a gettext template.
-# Usage: build_files/app-texts.sh APP OUT.pot   (APP: dash-to-panel, arcmenu, logo-menu, bazaar, ghostty)
-# Needs curl, jq, rpm2cpio, cpio and gettext. Run from the repository root.
+# An outside app's text at its locked version, as a template; from the repo root: app-texts.sh APP OUT.pot
 set -euo pipefail
 export LC_ALL=C.UTF-8
 app=$1 out=$2
@@ -38,7 +36,7 @@ ${version%-*}/${version##*-}/noarch/gnome-shell-extension-dash-to-panel-$version
     # Bazaar uses "Install" both with and without a plural: xgettext reports it, still writes the list, and exits 1.
     (cd "$src" && xgettext --no-location --from-code=UTF-8 --add-comments -k_ -kN_ -kC_:1c,2 -kNC_:1c,2 \
       -kngettext:1,2 -kg_ngettext:1,2 -kg_dngettext:2,3 -kg_dpgettext2:2c,3 -kQ_ -kg_dcgettext:2 \
-      -o "$out" -f "$work/files" 2>/dev/null) || [ -s "$out" ]
+      -o "$out" -f "$work/files") || [ -s "$out" ]
     # Keep that line once, without the plural, as Bazaar's own translations have it.
     awk -v RS= -v ORS='\n\n' '!/(^|\n)msgid "Install"\nmsgid_plural "Installs"/' "$out" > "$work/p"
     mv "$work/p" "$out" ;;

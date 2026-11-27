@@ -1,5 +1,4 @@
-# Apps for Network safety's Let an app in that firewalld has no service for, each checked against its own docs.
-# NAME | PORTS | LINK (the page stating the ports) | ABOUT
+# Apps firewalld has no service for, ports checked in their docs: NAME | PORTS | LINK | ABOUT
 Jellyfin | 8096/tcp 7359/udp | https://jellyfin.org/docs/general/post-install/networking/ | Media server: its web page and phones and TVs finding it
 LocalSend | 53317/tcp 53317/udp | https://github.com/localsend/protocol | Send files to nearby phones and computers
 Sunshine | 47984/tcp 47989/tcp 48010/tcp 47998-48000/udp | https://docs.lizardbyte.dev/projects/sunshine/v0.22.2/about/advanced_usage.html | Stream games from this computer to Moonlight; its settings page stays on this computer

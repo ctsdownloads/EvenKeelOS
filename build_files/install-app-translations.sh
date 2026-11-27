@@ -1,7 +1,5 @@
 #!/bin/bash
-# Outside apps' translations: each maker's own, with ours (po/apps/APP/LANG.po) filling every line they lack.
-# Fails if any language in po/LINGUAS is missing a line of an app's text (po/apps/APP.pot).
-# Usage: install-app-translations.sh PO-DIR
+# Installs outside apps' translations, filling gaps from po/apps/APP/LANG.po; fails on any missing line. Usage: PO-DIR
 set -euo pipefail
 export LC_ALL=C.UTF-8
 po=$1
@@ -58,8 +56,7 @@ for row in "${apps[@]}"; do
     fi
     msgmerge -q --no-fuzzy-matching -o "$out" "$work/all.po" "$pot"
     [ "$lang" = de_CH ] && sed -i '/^msgstr/,/^$/ s/ß/ss/g' "$out"
-    # Every line translated: msgfmt counts fuzzy and untranslated lines (a long line spans several in the file).
-    # Its last line is the count ("N translated messages."); warnings before it are kept in the error.
+    # msgfmt's last line is the count ("N translated messages."); warnings before it stay in the error.
     stats=$(msgfmt -c --statistics -o "$work/out.mo" "$out" 2>&1) || stats+=$'\nfailed'
     [[ ${stats##*$'\n'} =~ ^[0-9]+\ translated\ messages?\.$ ]] || { echo "ERROR: $app in $lang: $stats"; exit 1; }
     install -Dm644 "$work/out.mo" "$dir/$lang/LC_MESSAGES/$domain.mo"

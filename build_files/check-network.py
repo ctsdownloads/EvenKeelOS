@@ -1,10 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check for Network safety: a new network is a Public place that lets nothing in, Work lets nothing in
-either, Home keeps apps reachable, SSH starts off everywhere, open Wi-Fi can't be made Home, the question is asked only
-where it should be, and Let in reads ports, names and the app list right.
-
-Usage: check-network.py   (in the image, after build.sh has set the firewall up)
-"""
+"""Build check for Network safety: zones, SSH, open Wi-Fi and Let in behave as promised."""
 import subprocess
 import sys
 from pathlib import Path

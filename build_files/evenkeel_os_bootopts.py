@@ -1,8 +1,4 @@
-"""Boot options: kernel settings the computer starts with, changed in Wheelhouse.
-
-rpm-ostree changes them on the version that starts next (a waiting update keeps them), and every update after
-carries them forward. Each change makes a new version, so the one before stays as the fallback.
-"""
+"""Boot options: kernel settings the computer starts with, changed in Wheelhouse."""
 import json
 import re
 import subprocess
@@ -144,8 +140,7 @@ def added():
 
 
 def next_start():
-    """The settings the next start uses (a waiting version's, or this one's), or None when they can't be read.
-    rpm-ostree tells anyone this, with no password."""
+    """The settings the next start uses (a waiting version's, or this one's), or None when unreadable."""
     try:
         r = subprocess.run(["/usr/bin/rpm-ostree", "kargs"], capture_output=True, text=True, timeout=60)
     except (OSError, subprocess.TimeoutExpired):

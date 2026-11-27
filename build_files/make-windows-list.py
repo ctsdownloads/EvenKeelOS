@@ -1,10 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build step: what to offer for each Windows program: its own Linux version, or a Linux app that does its job.
-
-Usage: make-windows-list.py WINGET.DB FLATHUB.XML.GZ FEDORA.XML.GZ REPLACEMENTS.JSON UBUNTU.YML.GZ... OUT.JSON
-Same app: sure matches only, the same name from the same maker. Then the hand-picked replacements, then a Linux
-app of the same kind for any other program winget knows.
-"""
+"""Build step: what to offer for each Windows program: its own Linux version, or a Linux app that does its job."""
 import collections
 import gzip
 import json

@@ -1,9 +1,4 @@
-"""Make it yours: light and dark on a schedule, and a wallpaper slideshow from a folder of the person's own pictures.
-
-Settings are the person's own, in STATE. evenkeel-os-appearance applies them at login and every few minutes; it only
-changes GNOME's own settings (dark style and wallpaper), and only when a period or a slide has changed, so a switch
-made by hand stays until the next one.
-"""
+"""Make it yours: light and dark on a schedule, and a wallpaper slideshow from the person's own pictures."""
 import datetime
 import json
 import math
@@ -74,10 +69,7 @@ def time_zone():
 
 
 def place(zone, tables=ZONES):
-    """(latitude, longitude) of a time zone's city, from the time zone list's own coordinates, or None.
-
-    An old name, like NZ or US/Arizona, isn't in the list; the time zone database's own links (tzdata.zi) say which
-    zone it stands for."""
+    """(latitude, longitude) of a time zone's city, or None; old names like NZ go through tzdata.zi links."""
     listed = listed_zone(zone, tables)
     return city(listed, tables) if listed else None
 
@@ -152,8 +144,7 @@ def sun_up(lat, lon, when):
 
 
 def sun_period(lat, lon, now):
-    """"dark" or "light" and when it began, on a fixed 5-minute grid so every run agrees; "dark long" (or light) in a
-    polar night or day, so a switch by hand stays until the sun really rises or sets."""
+    """"dark" or "light" and when it began, on a 5-minute grid; "dark long" (or light) in a polar night or day."""
     step = datetime.timedelta(minutes=5)
     utc = now.astimezone(datetime.timezone.utc)
     t = utc.replace(minute=utc.minute - utc.minute % 5, second=0, microsecond=0)

@@ -1,6 +1,5 @@
 #!/usr/bin/bash
-# Runs at shutdown right after greenboot marks a newly installed version for trial. greenboot only starts its retry
-# counter after the first failed check, so a version that freezes on its first start would never count; start it now.
+# Starts greenboot's retry counter now: it only starts after a failed check, so a first-boot freeze never counted.
 env=/boot/grub2/grubenv
 vars=$(grub2-editenv "$env" list) || { echo "Can't read $env"; exit 1; }
 grep -q '^greenboot_next_deployment_id=' <<<"$vars" || exit 0

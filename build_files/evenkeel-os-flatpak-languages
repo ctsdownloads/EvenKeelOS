@@ -1,12 +1,12 @@
 #!/bin/bash
-# A new language was picked in Settings or for the computer: fetch Flatpak apps' translations for it now,
-# not at the next daily update.
+# Fetches Flatpak apps' translations for a newly picked language now, not at the next daily update.
 set -euo pipefail
 state=/var/lib/evenkeel-os/flatpak-languages
 # Each account's language, and the computer's (Flatpak reads both); either may be missing.
-now=$({ sed -n 's/^Language=//p' /var/lib/AccountsService/users/* 2>/dev/null || true
-        sed -n 's/^LANG=//p' /etc/locale.conf 2>/dev/null || true; } | sort -u | tr '\n' ' ')
-[ "$now" != "$(cat "$state" 2>/dev/null)" ] || exit 0
+shopt -s nullglob
+now=$({ for f in /var/lib/AccountsService/users/*; do sed -n 's/^Language=//p' "$f"; done
+        if [ -f /etc/locale.conf ]; then sed -n 's/^LANG=//p' /etc/locale.conf; fi; } | sort -u | tr '\n' ' ')
+[ -f "$state" ] && [ "$now" = "$(cat "$state")" ] && exit 0
 mapfile -t refs < <(flatpak list --system --columns=ref | grep '\.Locale/' || true)
 # Updating a translations package adds the languages Flatpak now reads from every account's settings.
 [ "${#refs[@]}" -eq 0 ] || flatpak update --system --noninteractive "${refs[@]}"

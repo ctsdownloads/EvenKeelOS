@@ -1,7 +1,4 @@
-"""What works on this computer, saved after each good start; a new version on trial must keep all of it working.
-
-Each item lists what must still be there for its loss to count, so unplugged or switched-off hardware never counts.
-"""
+"""What works on this computer, saved after each good start; a new version on trial must keep all of it working."""
 import json
 import os
 import re
@@ -30,8 +27,7 @@ WAIT = 120                              # seconds a trial start waits for slow d
 QUESTION = "/run/evenkeel-os/restart-question"
 KEEP = "/run/evenkeel-os/restart-keep"
 COUNTDOWN = 120                         # seconds a real problem waits for an answer (evenkeel-os-tools too)
-# Crash messages of the system core itself: a kind seen now but not at the last good start counts. An app's own
-# fault ("traps: app[pid] general protection fault"), GPU hangs (often one app's) and firmware restarts don't.
+# Only the system core's own crashes count: not an app's fault (traps: ...), GPU hangs or firmware restarts.
 CRASHES = {"kernel-bug": re.compile(r"\bBUG: |kernel BUG at "), "oops": re.compile(r"\bOops: "),
            "gpf": re.compile(r"^(?!traps: ).*general protection fault")}
 CRASH_NAMES = {"kernel-bug": N_("The system core reported a bug"),
@@ -462,8 +458,7 @@ def holds(n):
     return not status.isdigit() or bool(int(status) & present)
 
 
-# What a start that only changed boot options (Wheelhouse, Boot options) still checks: those may switch hardware or
-# SELinux off on purpose (nomodeset, module_blacklist=, selinux=0), so hardware items are left to that choice.
+# Boot options may switch hardware or SELinux off on purpose, so a start that only changed them checks just these.
 SOFTWARE_KEYS = {"service", "printing", "power-modes", "update-program", "flatpak", "firmware-updater", "firewall",
                  "network-places", "clock-sync", "dns", "boot-options", "shared-folders"}
 
@@ -475,8 +470,7 @@ def own_kargs():
 
 
 def options_only(record=None):
-    """Whether this start's boot options differ from the last good start's (Wheelhouse, Boot options, also with an
-    update waiting), or it's the previous version with other boot options; never for a rollback test copy."""
+    """Whether this start only changed boot options from the last good start's; never for a rollback test copy."""
     if "evenkeel_os.test_rollback=" in read("/proc/cmdline"):
         return False
     if record and isinstance(record.get("kargs"), list) and record["kargs"] != own_kargs():
@@ -549,8 +543,7 @@ def loadable(mod):
 
 
 def test_args(kind):
-    """The extra kernel arguments a rollback test needs here, or an exit code: 7 no list of what works saved yet,
-    8 this computer doesn't have the thing the test breaks, 9 none of its drivers can be blocked (built in)."""
+    """Kernel arguments a rollback test needs, or an exit code: 7 no saved list, 8 nothing to break, 9 built in."""
     if kind not in DRIVER_TESTS and kind not in SOFTWARE_TESTS and kind != "service":
         return []
     rec = load()
@@ -689,8 +682,7 @@ def desktop_user():
 
 
 def question(cmd, name, cap):
-    """Runs the window and waits for it: its exit code (0 restart now, 3 keep), or 1 when it can't start, the person
-    logs out or it runs past cap seconds (None: no limit)."""
+    """Window exit code (0 restart, 3 keep); 1 if it can't start, on logout or after cap seconds (None: no limit)."""
     try:
         p = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except OSError:

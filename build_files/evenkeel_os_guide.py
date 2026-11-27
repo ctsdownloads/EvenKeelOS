@@ -1,9 +1,4 @@
-"""The EvenKeelOS guide: how to do things, step by step, in Wheelhouse and in docs/guide.md.
-
-A topic is (key, title, icon, what it covers, articles); an article is (title, steps); a step is (text, show), where
-show is "" or what its Show me button opens: "page:KEY" (a Wheelhouse page), "settings:PANEL" (a Settings page),
-or "topic:KEY" (another topic of this guide).
-"""
+"""Guide topics as (key, title, icon, covers, articles); a step's show is "", page:KEY, settings:PANEL or topic:KEY."""
 
 from evenkeel_os_ui import N_
 

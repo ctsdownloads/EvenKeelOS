@@ -1,6 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check for the Wheelhouse window: every tool is in it, on a real page, with an icon this image has and a
-command that exists. Runs in the image build; opens no window."""
+"""Build check for the Wheelhouse window: every tool is on a real page with an icon and a command."""
 import importlib.machinery
 import importlib.util
 import shutil

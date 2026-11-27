@@ -161,8 +161,7 @@ def turn_on(name, v):
 
 
 def add_to_group(group):
-    """The person who asked joins the app's group. The app's group lives in the system image, where the
-    group-changing tools can't see it, so it is copied to /etc/group first."""
+    """The person who asked joins the app's group, copied to /etc/group first: groupmod can't see the image's."""
     try:
         user = pwd.getpwuid(int(os.environ["PKEXEC_UID"])).pw_name
         g = grp.getgrnam(group)

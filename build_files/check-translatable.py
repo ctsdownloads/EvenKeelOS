@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-"""Fails when words that go on screen are written straight into a window instead of through _().
-
-Python: text given to a window, a button, a row or a message (label=, title=, set_label(), say(), ...), and a
-throwaway variable named _ where _() is used, which would hide the translation.
-Shell: text given to notify-send, zenity or evenkeel-os-dialog without $(gettext ...).
-"""
+"""Fails when words that go on screen are written straight into a window instead of through _()."""
 import ast
 import re
 import sys

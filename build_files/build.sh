@@ -200,8 +200,7 @@ python3 -I /ctx/check-network.py
 for f in /usr/bin/firewall-cmd /usr/bin/cupsctl /usr/lib/systemd/system/sshd.service; do
   [ -e "$f" ] || { echo "ERROR: Network safety needs $f"; exit 1; }
 done
-# Shared folders: Samba serves only the folders picked in Wheelhouse, on Home networks only; Macs and Linux find
-# it through Avahi, Windows through wsdd. Off until turned on there.
+# Shared folders: Samba, found through Avahi (Macs, Linux) and wsdd (Windows); off until turned on.
 dnf5 -y install samba avahi wsdd policycoreutils
 install -Dm644 /ctx/samba/smb.conf /etc/samba/smb.conf
 install -Dm644 /dev/null /etc/samba/evenkeel-shares.conf
@@ -245,8 +244,7 @@ for t in x-scheme-handler/zoommtg x-scheme-handler/zoomus; do
 done
 python3 -I /ctx/check-zoom-links.py || { echo 'ERROR: Zoom links do not turn into the right web addresses'; exit 1; }
 for c in distrobox podman flatpak rpm2archive pkexec zenity dnf5; do command -v "$c" >/dev/null || { echo "ERROR: Install Package File needs $c"; exit 1; }; done
-# distrobox 1.8.2.5 mounts read-only folders as "ro:rslave", which podman rejects, so no box can be made;
-# podman wants "ro,rslave". Fixed here until distrobox fixes it; the check fails when that line changes.
+# distrobox 1.8.2.5 writes "ro:rslave", which podman rejects; the check fails when that line changes.
 sed -i 's/:ro${rslave}"/:ro${rslave:+,rslave}"/' /usr/bin/distrobox-create
 grep -qF ':ro${rslave:+,rslave}"' /usr/bin/distrobox-create && ! grep -qF ':ro${rslave}"' /usr/bin/distrobox-create \
   || { echo "ERROR: distrobox-create changed; check whether the ro,rslave fix is still needed"; exit 1; }
@@ -256,9 +254,7 @@ python3 -I /ctx/check-printer-drivers.py /usr/lib/evenkeel-os || { echo 'ERROR: 
 python3 -I /ctx/check-flatpak-places.py /usr/lib/evenkeel-os/evenkeel_os_packages /usr/bin /usr/libexec \
   || { echo 'ERROR: a flatpak install or uninstall does not say where it goes'; exit 1; }
 rm -rf /tmp/pkgtest
-# Windows Program: an .exe or .msi offers its Linux version or a Linux app that does its job, from a list made
-# fresh each build out of winget's program index (Microsoft), the app lists of Flathub, Fedora and Ubuntu, and
-# the hand-picked replacements.
+# Windows Program: an .exe or .msi offers a Linux replacement, from a list made fresh each build.
 dnf5 -y install msitools python3-pefile
 mkdir -p /tmp/winlist /usr/share/evenkeel-os
 # ArtCraft apps install only when signed by ArtCraft's release key, pinned here by its fingerprint.
@@ -292,8 +288,7 @@ dnf5 -y install greenboot
 # 2 bad starts in a row, then back to the previous version (greenboot's default is 4).
 sed -i 's/^GREENBOOT_MAX_BOOT_ATTEMPTS=.*/GREENBOOT_MAX_BOOT_ATTEMPTS=1/' /etc/greenboot/greenboot.conf
 grep -qx 'GREENBOOT_MAX_BOOT_ATTEMPTS=1' /etc/greenboot/greenboot.conf || { echo "ERROR: greenboot's retry count isn't 1"; exit 1; }
-# greenboot's boot menu file has no final line break, and bootupd joins the files without one, so its last command
-# ran into the next line and the counter never counted; give it the line break.
+# greenboot's boot menu file lacks a final line break, so bootupd joins its last command to the next line.
 gbcfg=/usr/lib/bootupd/grub2-static/configs.d/08_greenboot.cfg
 [ -z "$(tail -c1 "$gbcfg")" ] || echo >>"$gbcfg"
 # Build the boot menu the way bootupd does at install, and check it.
@@ -311,8 +306,7 @@ install -Dm755 -t /usr/lib/greenboot/check/required.d /ctx/greenboot/00-evenkeel
   /ctx/greenboot/05-evenkeel-os-settings.sh /ctx/greenboot/10-evenkeel-os-login-screen.sh \
   /ctx/greenboot/20-evenkeel-os-networking.sh /ctx/greenboot/30-evenkeel-os-desktop.sh \
   /ctx/greenboot/40-evenkeel-os-still-works.sh
-# The save runs last: the rollback note (90) reads the settings test's marker, which the save clears.
-# 93 starts saving the list of what works, 4 minutes into the start, for the next new version's trial (40).
+# The save (95) runs last: the rollback note (90) reads the settings test's marker, which the save clears.
 install -Dm755 -t /usr/lib/greenboot/green.d /ctx/greenboot/90-evenkeel-os-rolled-back.sh \
   /ctx/greenboot/93-evenkeel-os-health-record.sh /ctx/greenboot/95-evenkeel-os-settings-save.sh
 install -Dm644 /ctx/evenkeel_os_health.py /usr/lib/evenkeel-os/evenkeel_os_health.py
@@ -433,8 +427,7 @@ done
 # TPM support in the boot image, for automatic disk unlock.
 dnf5 -y install tpm2-tss
 printf 'add_dracutmodules+=" tpm2-tss "\n' > /usr/lib/dracut/dracut.conf.d/90-evenkeel-os-tpm.conf
-# The zstd tool runs only with its own library version, and the boot files are compressed with it. An update can
-# bring a newer library without the tool (Fedora's zstd 1.6.0), so the tool is matched to the library first.
+# An update can bring a newer libzstd without the matching zstd tool (Fedora's 1.6.0); match the tool first.
 zv=$(rpm -q --qf '%{version}-%{release}\n' libzstd | head -1)
 [ "$(rpm -q --qf '%{version}-%{release}\n' zstd | head -1)" = "$zv" ] || dnf5 -y install "zstd-$zv"
 [ "$(echo ok | zstd -q | zstd -dq)" = ok ] || { echo "ERROR: zstd $zv does not run: no boot files"; exit 1; }
@@ -492,8 +485,7 @@ install -Dm644 /ctx/rpmfusion-free-updates.repo /usr/share/evenkeel-os/rpmfusion
 install -Dm644 /ctx/RPM-GPG-KEY-negativo17 /usr/share/evenkeel-os/RPM-GPG-KEY-negativo17
 install -Dm644 /ctx/evenkeel-os-codecs-setup.service /usr/lib/systemd/system/evenkeel-os-codecs-setup.service
 systemctl enable evenkeel-os-flathub.service evenkeel-os-flatpak-apps.service evenkeel-os-codecs-setup.service
-# Wallpapers: 7 in Settings, Appearance, each with a day picture for light mode and a night one for dark mode;
-# the default is Main (sorts after Fedora's overrides). The old one stays for anyone who picked it.
+# Wallpapers: 7, each with a day and a night picture; the default is Main (sorts after Fedora's overrides).
 install -Dm644 /ctx/branding/wallpaper.png /usr/share/backgrounds/evenkeel-os/wallpaper.png
 install -Dm644 -t /usr/share/backgrounds/evenkeel-os /ctx/branding/wallpapers/*.jpg
 install -Dm644 /ctx/branding/evenkeel-os.xml /usr/share/gnome-background-properties/evenkeel-os.xml
@@ -538,8 +530,7 @@ got=$(GSETTINGS_BACKEND=memory gsettings get org.gnome.desktop.interface show-ba
 got=$(GSETTINGS_BACKEND=memory gsettings get org.gnome.login-screen logo)
 [ "$got" = "'/usr/share/pixmaps/evenkeel-os-gdm-logo.png'" ] && [ -s /usr/share/pixmaps/evenkeel-os-gdm-logo.png ] || { echo "ERROR: the login screen does not show the EvenKeelOS logo ($got)"; exit 1; }
 
-# Folder icons in the accent color (teal by default): Adwaita Colors at a pinned commit, built from Fedora's own
-# Adwaita icons; the helper switches sets when the accent color changes in Settings, Appearance.
+# Folder icons in the accent color (teal by default): Adwaita Colors at a pinned commit.
 git clone --quiet https://github.com/dpejoh/Adwaita-colors /tmp/adwaita-colors
 git -C /tmp/adwaita-colors -c advice.detachedHead=false checkout --quiet 7d838af258da4ca05040760301d05140aa858145
 [ "$(git -C /tmp/adwaita-colors rev-parse HEAD)" = 7d838af258da4ca05040760301d05140aa858145 ] \
@@ -587,8 +578,7 @@ install -Dm644 /ctx/branding/logo-EvenKeel-mark.svg /usr/share/evenkeel-os/logo-
 install -Dm644 /ctx/evenkeel-os-logo-menu.dconf /etc/dconf/db/distro.d/50-evenkeel-os-logo-menu
 command -v bazaar >/dev/null && command -v ghostty >/dev/null || { echo "ERROR: Logo Menu's software center (bazaar) or terminal (ghostty) is missing"; exit 1; }
 
-# Windows-style layout: Dash to Panel and ArcMenu at their locked versions, so their text matches our translations.
-# Dash to Panel comes from Fedora's build archive, which keeps every version, and must carry Fedora's signature.
+# Windows-style layout: Dash to Panel (from Fedora's build archive, signature checked) and ArcMenu, at locked versions.
 d2p=$(awk '$1 == "fedora" && $3 == "gnome-shell-extension-dash-to-panel" {print $4}' /ctx/locked-versions.txt)
 # gpg needs a home folder; the image's /root doesn't exist during the build, so it gets a temporary one.
 GNUPGHOME=$(mktemp -d)
@@ -621,8 +611,7 @@ done
 install -Dm644 /ctx/evenkeel-os-windows-layout.dconf /etc/dconf/db/distro.d/50-evenkeel-os-windows-layout
 install -Dm755 /ctx/evenkeel-os-layout /usr/bin/evenkeel-os-layout
 
-# Wheelhouse in Show Apps' Utilities folder; the other tools live inside it, so their launchers are hidden
-# (they still open .rpm, .deb, .exe and .msi files).
+# Wheelhouse in Show Apps' Utilities folder; the other tools' launchers are hidden but still open their files.
 install -Dm644 /ctx/evenkeel-os-app-folders.dconf /etc/dconf/db/distro.d/50-evenkeel-os-app-folders
 dconf update
 HOME=/tmp dconf read /org/gnome/desktop/app-folders/folders/Utilities/apps | grep -q "'evenkeel-os-tools.desktop'" \
@@ -749,8 +738,7 @@ jq --arg n "ghcr.io/ctsdownloads/$NAME" --arg k "/etc/pki/containers/$NAME.pub" 
 mv /tmp/policy.json /etc/containers/policy.json
 jq -e --arg n "ghcr.io/ctsdownloads/$NAME" '(.default | length == 1 and .[0].type == "reject") and (.transports.docker[$n][0].type == "sigstoreSigned") and (.transports.docker[""][0].type == "insecureAcceptAnything")' /etc/containers/policy.json > /dev/null || { echo "ERROR: the container policy is not what the signed rebase needs"; exit 1; }
 
-# One shim on the disk: Fedora ships shimx64.efi twice (also as shim.efi), and some PCs' firmware turns the copy into
-# an extra "Fedora" boot entry. bootupd and the USB boot from shimx64.efi only.
+# Fedora ships shim twice; some firmware makes shim.efi an extra boot entry. bootupd and the USB use shimx64.efi.
 rm -f /usr/lib/efi/shim/*/EFI/fedora/shim.efi
 ls /usr/lib/efi/shim/*/EFI/fedora/shimx64.efi >/dev/null || { echo "ERROR: Fedora's signed shim is missing"; exit 1; }
 [ -z "$(ls /usr/lib/efi/shim/*/EFI/fedora/shim.efi 2>/dev/null)" ] || { echo "ERROR: the second shim (shim.efi) is still there"; exit 1; }

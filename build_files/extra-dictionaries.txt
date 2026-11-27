@@ -1,5 +1,4 @@
-# Spell-check dictionaries Fedora doesn't package, at exact versions: <file> <sha256> <address>
-# Tajik, from Chromium's dictionaries (Apache-2.0, see tg_TG-README.txt); Chromium serves these files base64-encoded
+# Dictionaries Fedora doesn't package: <file> <sha256> <address>; Chromium's (Tajik) are base64.
 tg_TG.aff 385a26f32f1959ac161f42cf9aaa929a8bac5b4e706283b2077dbb353b0e003d https://chromium.googlesource.com/chromium/deps/hunspell_dictionaries/+/00f6e69c905b30fdf701cdcef6a517582d7e0028/tg_TG.aff?format=TEXT
 tg_TG.dic 09928d98af12676919fac1bb6d41120dd5117cd8caf8a6ee89feb25b979c25eb https://chromium.googlesource.com/chromium/deps/hunspell_dictionaries/+/00f6e69c905b30fdf701cdcef6a517582d7e0028/tg_TG.dic?format=TEXT
 tg_TG-README.txt 89d9367af0a3defe237403f2ddf322612853d1d1f3ddd305d249735accbf6d8b https://chromium.googlesource.com/chromium/deps/hunspell_dictionaries/+/00f6e69c905b30fdf701cdcef6a517582d7e0028/README_tg_TG.txt?format=TEXT
