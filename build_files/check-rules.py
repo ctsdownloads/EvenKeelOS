@@ -81,7 +81,10 @@ for path in tracked():
         problems += [(path, i, "divider comment") for i in sorted(rows) if DIVIDER.search(lines[i - 1])]
     if k == "python":
         problems += [(path, i, why) for i, why in python_problems(path, text)]
-found = subprocess.run(["git", "grep", "-nIiE", *WORDS, "--", ".", f":!{SELF}", ":!po"], capture_output=True, text=True)
+found = subprocess.run(["git", "grep", "--full-name", "-nIiE", *WORDS, "--", ":(top)", f":(top,exclude){SELF}",
+                        ":(top,exclude)po"], capture_output=True, text=True)
+if found.returncode > 1:     # 1: nothing found
+    sys.exit(f"ERROR: git grep failed: {found.stderr}")
 problems += [(line.split(":", 2)[0], line.split(":", 2)[1], "forbidden word") for line in found.stdout.splitlines()]
 for path, line, why in problems:
     print(f"{path}:{line}: {why}")

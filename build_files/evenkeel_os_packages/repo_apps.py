@@ -33,7 +33,7 @@ def install(kind, name, title):
     app_list.remember({"title": title, "package": name, "where": box, "apps": apps, "bins": bins,
                        "version": installed.box_version(kind, name), "updates": True})
     notify(_("{title} is installed.").format(title=title))
-    where = _("Find it in Show Apps.") if apps else _("It is a command-line tool, so it has no window in Show Apps.")
+    where = update_notes.where_to_find(apps, True, "")
     say(_("{title} is installed in the {label}.").format(title=title, label=label) + " " + where + "\n\n" +
-        _(update_notes.UPDATES_YES))
+        update_notes.updates_line(update_notes.UPDATES_FEDORA))
     return 0

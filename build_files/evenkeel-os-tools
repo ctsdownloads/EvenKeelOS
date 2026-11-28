@@ -1,7 +1,8 @@
 #!/usr/bin/python3 -I
 """Wheelhouse: every EvenKeelOS tool in one window, from Show Apps; each job also runs on its own.
 
-  evenkeel-os-tools                 the Wheelhouse window (--page=updates, apps, disk, yours or help)
+  evenkeel-os-tools                 the Wheelhouse window (--page=overview, updates, apps, disk, network,
+                                    sharing, yours or help)
   evenkeel-os-tools firmware        update firmware
   evenkeel-os-tools disk-unlock     unlock the disk automatically at startup (TPM)
   evenkeel-os-tools free-space      free up disk space
@@ -18,6 +19,7 @@
   evenkeel-os-tools certificates    security certificates that expired, expire within 30 days or were removed
   evenkeel-os-tools setup           the setup checklist: media codecs, disk unlock, getting apps
   evenkeel-os-tools setup --first-login   the same, once, at a new user's first login
+  evenkeel-os-tools guide --first-login   New to EvenKeelOS?, at login until "Don't show this again" is ticked
 """
 import json
 import os
@@ -48,14 +50,14 @@ LAYOUTS = {"current": N_("the standard layout: a top bar and the logo menu"),
            "windows": N_("the Windows-style layout: a bottom bar and a start menu")}
 CACHE = Path.home() / ".cache" / "evenkeel-os"
 LOG = CACHE / "tools.log"
-DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
-PAUSE = Path("/var/lib/evenkeel-os/updates-paused-until")      # set by evenkeel-os-tools-safe after an undo
+DISK_UNLOCK_ON = Path(health.DISK_UNLOCK_ON)
+PAUSE = Path(health.PAUSE)
 # "update|test|boot-options|settings-test|settings-failed <time>", written by greenboot (90-evenkeel-os-rolled-back.sh)
 ROLLED_BACK = Path("/var/lib/evenkeel-os/rolled-back")
 ROLLED_BACK_WHY = Path("/var/lib/evenkeel-os/rolled-back-why")   # what the trial check found broken, for this note
 STATE = Path(os.environ.get("XDG_STATE_HOME") or Path.home() / ".local" / "state") / "evenkeel-os"
 SETUP_SHOWN = STATE / "setup-shown"      # the setup checklist has opened at login once
-CODECS_ASKED = STATE / "codecs-asked"    # from the old codecs first-login question
+CODECS_ASKED = STATE / "codecs-asked"    # the setup checklist's codecs step was answered
 GUIDE_HIDDEN = STATE / "guide-hidden"     # "Don't show this again" ticked in New to EvenKeelOS?
 ROLLED_BACK_SHOWN = STATE / "rolled-back-shown"     # the automatic rollback note this user has seen
 # "repair|test <time> <saved time>", then the paths put back; written by evenkeel-os-settings in greenboot's red.d
@@ -63,8 +65,6 @@ SETTINGS_REPAIRED = Path("/var/lib/evenkeel-os/settings-repaired")
 SETTINGS_SHOWN = STATE / "settings-repaired-shown"   # the settings repair note this user has seen
 CERT_ALERTS = STATE / "cert-alerts.json"      # written by evenkeel-os-certs
 
-
-# Windows
 
 def password(text):
     """The disk password, typed. None when cancelled."""
@@ -80,17 +80,11 @@ def password(text):
 
 
 def busy(text, title=None):
-    """Show a moving progress window with this text (or print it without a desktop). Close it with done(bar)."""
+    """Show a moving progress window with this text (or print it without a desktop). Close it with ui.finish."""
     if not GUI:
         print(text)
         return None
-    return subprocess.Popen([ui.DIALOGS, f"--title={title or ui.TITLE}", "--progress", "--pulsate", "--auto-close",
-                             "--no-cancel", "--width=480", f"--text={text}"], stdin=subprocess.PIPE, text=True)
-
-
-def done(bar):
-    if bar:
-        ui.finish(bar)
+    return ui.progress(text, title=title)
 
 
 def run(text, cmd, stdin=None, title=None):
@@ -105,25 +99,8 @@ def run(text, cmd, stdin=None, title=None):
         except OSError as e:
             log.write(f"{e}\n")
             rc = 127
-        done(bar)
+        ui.finish(bar)
     return rc
-
-
-# State
-
-def has_tpm():
-    return Path("/dev/tpmrm0").exists()
-
-
-def secure_boot_on():
-    """True, False, or None when it cannot be told."""
-    for f in Path("/sys/firmware/efi/efivars").glob("SecureBoot-*"):
-        try:
-            data = f.read_bytes()
-            return len(data) >= 5 and data[4] == 1
-        except OSError:
-            return None
-    return None
 
 
 def updates_on():
@@ -140,10 +117,6 @@ def paused_until():
     return until if until > time.time() else None
 
 
-def day(t):
-    return ui.day_text(time.localtime(t))
-
-
 def pause_updates(w):
     """After an undo: pause automatic updates, so the next one doesn't bring the update straight back."""
     if not updates_on():
@@ -154,10 +127,8 @@ def pause_updates(w):
         return _("Automatic updates could not be paused, so the next one may bring the update back. If it does, turn "
                  "off Automatic updates in Wheelhouse and tell your helper.")
     return _("Automatic updates are paused until {day}, so the bad update doesn't come back. They turn back on by "
-             "themselves.").format(day=day(until))
+             "themselves.").format(day=ui.day_text(until))
 
-
-# Tools
 
 def firmware():
     w = _("Update firmware")
@@ -168,18 +139,16 @@ def firmware():
             title=w)
         return 1
     r = ui.answer(["fwupdmgr", "get-updates", "--json", "--no-unreported-check", "--no-metadata-check"], 120)
+    try:
+        found = json.loads(r.stdout).get("Devices", []) if r and r.returncode == 0 else []
+        devices = ["  - " + _("{name}: {old} to {new}").format(
+            name=d.get("Name", _("A device")), old=d.get("Version", "?"),
+            new=(d.get("Releases") or [{}])[0].get("Version", "?")) for d in found]
+    except (ValueError, AttributeError):
+        r = None
     if not r or r.returncode not in (0, 2):     # 2: no updates
         say(_("Couldn't check for firmware updates. Try again later."), "warning", title=w)
         return 1
-    devices = []
-    if r.returncode == 0:
-        try:
-            for d in json.loads(r.stdout).get("Devices", []):
-                rel = (d.get("Releases") or [{}])[0]
-                devices.append("  - " + _("{name}: {old} to {new}").format(
-                    name=d.get("Name", _("A device")), old=d.get("Version", "?"), new=rel.get("Version", "?")))
-        except (ValueError, AttributeError):
-            devices = []
     if not devices:
         say(up_to_date, title=w)
         return 0
@@ -211,7 +180,7 @@ def disk_unlock(in_checklist=False):
     if not health.luks_uuids():
         say(_("Your disk isn't encrypted, so there's no disk password to skip. Nothing to do."), title=w)
         return 0
-    if not has_tpm():
+    if not health.has_tpm():
         say(_("This computer has no security chip (TPM) that can do this, so the disk password stays."), title=w)
         return 0
     if DISK_UNLOCK_ON.exists():
@@ -225,7 +194,7 @@ def disk_unlock(in_checklist=False):
         rc = run(N_("Turning off automatic disk unlock."), ["pkexec", SAFE, "disk-unlock", "off"], stdin=pw, title=w)
         return done_disk(rc, _("Unlock disk automatically is off. From your next start, the computer asks for the "
                                "disk password again."), w)
-    if secure_boot_on() is False:
+    if health.secure_boot_on() is False:
         a = ask(_("Right now you type the disk password every time the computer starts.\n\nSecure Boot is off on "
                   "this computer, so this would be less safe: someone could change how the computer starts and still "
                   "get the disk unlocked.\n\nRecommended: Cancel, then turn Secure Boot on in the BIOS settings first "
@@ -251,10 +220,15 @@ def disk_unlock(in_checklist=False):
     return done_disk(rc, "", w)
 
 
+def failure(rc, other):
+    """What to say when a job run through pkexec stopped: the password wasn't given (126, 127), or other."""
+    return _("The administrator password wasn't given, so nothing was changed.") if rc in (126, 127) else other
+
+
 def not_changed(w, rc=1):
     """A job that stopped without changing anything: no administrator password, or a failure in the log."""
-    say(_("The administrator password wasn't given, so nothing was changed.") if rc in (126, 127) else
-        _("It didn't work, and nothing was changed.\n\nThe details are in {log}").format(log=LOG), "warning", title=w)
+    say(failure(rc, _("It didn't work, and nothing was changed.\n\nThe details are in {log}").format(log=LOG)),
+        "warning", title=w)
 
 
 def done_disk(rc, text, w):
@@ -266,11 +240,9 @@ def done_disk(rc, text, w):
     elif rc == 4:
         say(_("That was the wrong disk password too many times, so it's locked for an hour. Nothing was changed. "
               "Try again after that."), "warning", title=w)
-    elif rc in (126, 127):
-        say(_("The administrator password wasn't given, so nothing was changed."), "warning", title=w)
     else:
-        say(_("It didn't work, and nothing was changed. Try again later.\n\nThe details are in {log}").format(
-            log=LOG), "warning", title=w)
+        say(failure(rc, _("It didn't work, and nothing was changed. Try again later.\n\nThe details are in {log}")
+                    .format(log=LOG)), "warning", title=w)
     return 1
 
 
@@ -330,7 +302,7 @@ def updates():
         answer = ask(_("Automatic updates are paused until {day}, after an undo, so the bad update doesn't come back. "
                        "They turn back on by themselves.\n\nRecommended: Keep the pause.\n\nOr Resume now: the next "
                        "daily update runs as normal. Or Turn off: nothing updates until you run System Update "
-                       "yourself.").format(day=day(until)),
+                       "yourself.").format(day=ui.day_text(until)),
                      ok=_("Resume now"), cancel=_("Keep the pause"), extra=_("Turn off"), title=w)
         if answer == "ok":
             step, cmd, text = (N_("Turning automatic updates back on."), ["pkexec", SAFE, "updates", "resume"],
@@ -487,9 +459,8 @@ def undo_update():
 
 
 def documents():
-    r = ui.answer(["xdg-user-dir", "DOCUMENTS"], 120)
-    d = Path(r.stdout.strip()) if r and r.returncode == 0 and r.stdout.strip() else Path.home() / "Documents"
-    return d if d != Path.home() else Path.home() / "Documents"
+    d = ui.user_folder("DOCUMENTS")
+    return d if d != Path.home() else d / "Documents"
 
 
 # Problem details: (heading, command, last lines kept); errors and warnings only, small enough to email.
@@ -543,7 +514,7 @@ def problem_details():
         ok = True
     except OSError:
         ok = False
-    done(bar)
+    ui.finish(bar)
     if not ok:
         say(_("Couldn't save the file in {folder}. Check that there's free disk space and try again.").format(
             folder=folder), "warning", title=w)
@@ -551,16 +522,9 @@ def problem_details():
     if ask(_("Saved: {name}, in your Documents folder.\n\nEmail it to your helper: attach it like any other "
              "file.\n\nRecommended: Show the file, to see where it is. Or Close.").format(name=name),
            ok=_("Show the file"), cancel=_("Close"), title=w) == "ok":
-        if shutil.which("nautilus"):
-            subprocess.Popen(["nautilus", "--select", str(path)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                             env=ui.LAUNCH_ENV)
-        else:
-            subprocess.Popen(["xdg-open", str(folder)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                             env=ui.LAUNCH_ENV)
+        ui.launch(["nautilus", "--select", str(path)] if shutil.which("nautilus") else ["xdg-open", str(folder)])
     return 0
 
-
-# Setup checklist
 
 def codecs_added():
     return any(subprocess.run(["rpm", "-q", "--quiet", p]).returncode == 0
@@ -581,7 +545,7 @@ def codecs_step(w):
 
 
 def disk_step(w):
-    if not health.luks_uuids() or not has_tpm() or DISK_UNLOCK_ON.exists():
+    if not health.luks_uuids() or not health.has_tpm() or DISK_UNLOCK_ON.exists():
         return          # nothing to unlock, nothing to unlock it with, or already on
     if ask(_("This computer asks for the disk password every time it starts. The computer's security chip can "
              "unlock the disk instead.\n\nThis needs the disk password, so it's one for your "
@@ -604,8 +568,7 @@ def apps_step(w):
                            "Package File. Or Next."),
                 ok=_("Open Bazaar"), cancel=_("Next"), extra=_("Open Install Package File"), title=w)
         if a == "ok":
-            subprocess.Popen(["gtk-launch", "io.github.kolunmi.Bazaar"], stdout=subprocess.DEVNULL,
-                             stderr=subprocess.DEVNULL, env=ui.LAUNCH_ENV)
+            ui.launch(["gtk-launch", "io.github.kolunmi.Bazaar"])
             opened = _("Bazaar is open. Close it when you're done looking.") + "\n\n"
         elif a == "extra":
             p = subprocess.Popen(["/usr/bin/evenkeel-os-packages", "install"], stdout=subprocess.DEVNULL,
@@ -827,17 +790,21 @@ def test_settings(w):
         say(problems[rc], "warning", title=w)
         return 1
     if rc != 0:
-        say(_("The administrator password wasn't given, so nothing was changed.") if rc in (126, 127) else
-            _("It didn't work.\n\nThe details are in {log}").format(log=LOG), "warning", title=w)
+        say(failure(rc, _("It didn't work.\n\nThe details are in {log}").format(log=LOG)), "warning", title=w)
         return 1
     return 0
+
+
+def greenboot_state():
+    """Whether greenboot's start-up checks are "active" (done and passed), "activating" (running), or neither."""
+    r = ui.answer(["systemctl", "is-active", "greenboot-healthcheck.service"])
+    return r.stdout.strip() if r else ""
 
 
 def settings_note():
     """Say once, at login, that missing settings were put back (only once this start passed its checks)."""
     w = _("Settings put back")
-    r = subprocess.run(["systemctl", "is-active", "greenboot-healthcheck.service"], capture_output=True, text=True)
-    if r.stdout.strip() != "active":
+    if greenboot_state() != "active":
         return 0
     try:
         lines = SETTINGS_REPAIRED.read_text().splitlines()
@@ -895,8 +862,7 @@ def rolled_back_note():
     w = _("Automatic rollback")
     # greenboot may still be checking this start (it waits for a login); the note is written when it's done.
     for _wait in range(240):
-        r = subprocess.run(["systemctl", "is-active", "greenboot-healthcheck.service"], capture_output=True, text=True)
-        if r.stdout.strip() != "activating":
+        if greenboot_state() != "activating":
             break
         time.sleep(5)
     try:
@@ -938,7 +904,7 @@ def rolled_back_note():
     else:
         until = paused_until()
         pause = (_("Automatic updates are paused until {day}, so the same update doesn't come straight back. They "
-                   "turn back on by themselves.").format(day=day(until)) if until else "")
+                   "turn back on by themselves.").format(day=ui.day_text(until)) if until else "")
         broke = what_broke(stamp)
         if broke:
             why = _("Your computer went back to the version from {since}, because these stopped working on the newer "
@@ -1057,10 +1023,10 @@ def restart_question(kind, start):
         # The password wasn't given: the same question again, and the countdown carries on.
 
 
-def cert_alerts(check=True):
-    """The certificate alerts (see evenkeel-os-certs), checked now; None when they can't be read."""
-    if check:
-        subprocess.run([CERTS, "check"], capture_output=True)
+def cert_alerts():
+    """The certificate alerts (see evenkeel-os-certs), checked now; None when they can't be checked or read."""
+    if subprocess.run([CERTS, "check"], capture_output=True).returncode != 0:
+        return None
     try:
         return json.loads(CERT_ALERTS.read_text())
     except (OSError, ValueError):
@@ -1077,10 +1043,10 @@ def certificates():
         say(_("No alerts: no security certificate this computer trusts has expired, expires within 30 days, or was "
               "removed."), title=w)
         return 0
-    problem = {"expired": lambda a: _("Expired {date}").format(date=a["ends"][:10]),
-               "expiring": lambda a: _("Expires {date}").format(date=a["ends"][:10]),
-               "removed": lambda a: _("Removed")}
-    rows = [(a["name"], problem[a["kind"]](a),
+    status = {"expired": lambda a: _("Expired {date}").format(date=a["ends"][:10]),
+              "expiring": lambda a: _("Expires {date}").format(date=a["ends"][:10]),
+              "removed": lambda a: _("Removed")}
+    rows = [(a["name"], status[a["kind"]](a),
              _("Added to this computer") if a["added"] else _("Comes with the system")) for a in alerts]
     i = choose(_("These security certificates need attention. Pick one to see what to do."),
                [_("Certificate"), _("Problem"), _("Where it's from")], rows, width=760, height=420)
@@ -1091,7 +1057,7 @@ def certificates():
     if a["kind"] == "removed":
         say(_("The certificate \"{name}\" was added to this computer and has been removed, so it's no longer "
               "trusted. If you didn't remove it, tell your helper.").format(name=name), "warning", title=w)
-        subprocess.run([CERTS, "seen", a["fingerprint"]], capture_output=True)
+        subprocess.run([CERTS, "seen", a["fingerprint"]], capture_output=True)    # if it fails, it's shown again
         return 0
     if not a["added"]:
         say(_("\"{name}\" comes with Fedora. The trusted list is rebuilt from Fedora's current list at every start, "
@@ -1120,14 +1086,17 @@ def certificates():
         return 0
     rc = run(N_("Removing the certificate."), ["pkexec", CERT_REMOVE, a["file"], a["fingerprint"]], title=w)
     if rc != 0:
-        problem = (_("The administrator password wasn't given, so nothing was changed.") if rc in (126, 127) else
-                   _("Its file changed or holds more than one certificate, so nothing was removed. Tell your "
-                     "helper.") if rc == 3 else _("It didn't work.\n\nThe details are in {log}").format(log=LOG))
-        say(problem, "warning", title=w)
+        say(failure(rc, _("Its file changed or holds more than one certificate, so nothing was removed. Tell "
+                          "your helper.") if rc == 3 else _("It didn't work.\n\nThe details are in {log}").format(
+                              log=LOG)), "warning", title=w)
         return 1
     cert_alerts()
     subprocess.run([CERTS, "seen", a["fingerprint"]], capture_output=True)    # removed here: no "removed" alert
-    if subprocess.run([CERTS, "trusted", a["fingerprint"]], capture_output=True).returncode == 0:
+    still = subprocess.run([CERTS, "trusted", a["fingerprint"]], capture_output=True).returncode
+    if still == 2:
+        say(_("The certificates couldn't be checked."), "warning", title=w)
+        return 1
+    if still == 0:
         say(_("Its file is removed, but \"{name}\" is still trusted: it was added somewhere else too. Tell your "
               "helper.").format(name=name), "warning", title=w)
         return 1

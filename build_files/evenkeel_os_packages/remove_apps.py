@@ -41,7 +41,8 @@ def remove():
         if ok and where == "artcraft":      # the sandbox setting made at install goes too
             subprocess.run(["flatpak", "override", "--user", "--reset", entry["package"]], capture_output=True)
     elif where == "system" and entry.get("vpn"):     # its services and download source go too
-        ok = windows.run_steps(_("Removing {title} from the system.").format(title=title), vpn.remove_steps(entry))
+        ok = windows.run_steps(_("Removing {title} from the system.").format(title=title),
+                               [["pkexec", vpn.HELPER, "remove", entry["vpn"]]])
     elif where == "system":
         ok = windows.run_steps(_("Removing {title} from the system.").format(title=title),
                                [["rpm-ostree", "uninstall", entry["package"]]])

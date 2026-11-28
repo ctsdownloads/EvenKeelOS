@@ -4,11 +4,12 @@ import shlex
 import subprocess
 
 import evenkeel_os_health as health
-from evenkeel_os_ui import LAUNCH_ENV, _, ask, say
+from evenkeel_os_ui import _, ask, launch, say
 from evenkeel_os_packages import app_list, boxes, common, update_notes
 
 # Only version characters: a version is read from the downloaded file and goes into rpm's Lua below.
 VERSION = re.compile(r"^[\w.+~^:-]+$")
+RPM_VERSION = "%{EPOCHNUM}:%{VERSION}-%{RELEASE}"          # epoch:version-release, as compare() takes it
 
 
 def box_version(kind, name):
@@ -17,7 +18,7 @@ def box_version(kind, name):
     if not boxes.box_exists(box):
         return ""
     if kind == "rpm":
-        cmd = f"rpm -q --qf '%{{EPOCHNUM}}:%{{VERSION}}-%{{RELEASE}}' {shlex.quote(name)}"
+        cmd = f"rpm -q --qf '{RPM_VERSION}' {shlex.quote(name)}"
     else:
         cmd = f"dpkg-query -W -f='${{db:Status-Status}} ${{Version}}' {shlex.quote(name)}"
     r = subprocess.run(boxes.in_box(box, "sh", "-c", cmd), capture_output=True, text=True)
@@ -31,7 +32,7 @@ def box_version(kind, name):
 
 
 def host_version(name):
-    r = subprocess.run(["rpm", "-q", "--qf", "%{EPOCHNUM}:%{VERSION}-%{RELEASE}", name], capture_output=True, text=True)
+    r = subprocess.run(["rpm", "-q", "--qf", RPM_VERSION, name], capture_output=True, text=True)
     return r.stdout.strip() if r.returncode == 0 else ""
 
 
@@ -55,7 +56,7 @@ def compare(kind, a, b):
 
 
 def plain_version(v):
-    """Version without the leading epoch and release noise people do not need to see ('0:1.2-3' -> '1.2-3')."""
+    """A version without its leading epoch, which people don't need to see ('0:1.2-3' -> '1.2-3')."""
     return re.sub(r"^\d+:", "", v)
 
 
@@ -84,8 +85,7 @@ def open_app(entry):
             return False
         cmd = ["gio", "launch", str(f)]
     try:
-        subprocess.Popen(cmd, start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                         env=LAUNCH_ENV)
+        launch(cmd)
     except OSError:
         say(_("{title} didn't open.").format(title=entry["title"]), kind="error")
     return True

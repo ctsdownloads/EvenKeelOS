@@ -593,13 +593,6 @@ msgstr ""
 msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr "החתימה של ArtCraft נבדקת קודם, והוא מתעדכן פעם ביום."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"שואל פעם אחת אם רשת אלחוטית עם ססמה או רשת קווית היא „בית”, „עבודה” או „מקום "
-"ציבורי”"
-
 msgid "At each login"
 msgstr "בכל כניסה"
 
@@ -1491,12 +1484,6 @@ msgid ""
 "stick again."
 msgstr ""
 "EvenKeelOS דורשת UEFI. יש להפעיל UEFI ב-BIOS, ואז להפעיל שוב מהדיסק און קי."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS דורשת לפחות 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "EvenKeelOS עובדת הכי טוב עם 8 GB ומעלה, ולכן היא עלולה להיות איטית."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -5683,9 +5670,6 @@ msgstr ""
 "עדכונים: אוטומטיים, ממקור ההורדה של {maker} עצמה. בדיקה יומית מוצאת גרסאות "
 "חדשות, שנכנסות לשימוש בהפעלה מחדש הבאה."
 
-msgid "Updates: automatic, with System Update."
-msgstr "עדכונים: אוטומטיים, עם „עדכון מערכת”."
-
 msgid "Updates: automatic."
 msgstr "עדכונים: אוטומטיים."
 
@@ -7823,12 +7807,6 @@ msgstr "פתיחת קובצי ZIP ו-SIT"
 msgid "opening zip files"
 msgstr "פתיחת קובצי ZIP"
 
-msgid "organising and developing photos"
-msgstr "סידור ופיתוח תמונות"
-
-msgid "organising photos"
-msgstr "סידור תמונות"
-
 msgid "organizing music"
 msgstr "סידור מוזיקה"
 
@@ -8388,3 +8366,29 @@ msgstr "מומלץ: „מחיקת התיבה”. התיבה חוזרת מעצמ�
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "מחיקתה מפנה כ-{size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "שואל פעם אחת אם רשת אלחוטית עם ססמה היא „בית”, „עבודה” או „מקום ציבורי”"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS דורשת לפחות {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS עובדת הכי טוב עם {gb} GB ומעלה, ולכן היא עלולה להיות איטית."
+
+msgid "organizing and developing photos"
+msgstr "סידור ופיתוח תמונות"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "ל-{title} עדיין אין מפתח חתימה עבור Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} לא נוסף, ולכן מקור ההורדה שלו הוסר שוב."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} לא הוסר."

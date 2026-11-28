@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Codecs helper that always asks for the admin password: web, full or remove only.
 set -uo pipefail
 . /usr/libexec/evenkeel-os-codecs-lib.sh
 need_root
 [ "$#" -eq 1 ] && [[ $1 =~ ^(web|full|remove)$ ]] || { echo "usage: evenkeel-os-codecs-admin web|full|remove"; exit 2; }
-log "admin choice '$1' requested by uid $(caller)"
+log "admin choice '$1' requested by uid $(requester)"
 "do_$1"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Collects every line people see into po/evenkeel-os.pot for translators; --check fails if that file is out of date.
 set -euo pipefail
 cd "$(dirname "$0")/.."

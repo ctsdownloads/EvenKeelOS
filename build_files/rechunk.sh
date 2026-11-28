@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Splits a built image into small layers, for smaller updates and an install that fits a live USB: rechunk.sh IMAGE TAG
 set -euo pipefail
 image=localhost/$1:$2

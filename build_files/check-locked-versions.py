@@ -1,3 +1,4 @@
+#!/usr/bin/python3 -I
 """Build check: every package not signed by Fedora's key is on the locked list, at exactly that version."""
 import os
 import subprocess

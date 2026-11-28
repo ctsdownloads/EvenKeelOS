@@ -6,7 +6,7 @@ import shlex
 import subprocess
 from pathlib import Path
 
-from evenkeel_os_ui import LAUNCH_ENV, _, choose, say
+from evenkeel_os_ui import _, choose, launch, say
 from evenkeel_os_packages import app_list, boxes, common, launchers, windows
 
 
@@ -134,8 +134,7 @@ def fix_app_login_files():
         f.write_text(new)
         fixed += 1
         if not app_running(os.path.basename(first)):
-            subprocess.Popen(["gio", "launch", str(f)], start_new_session=True,
-                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, env=LAUNCH_ENV)
+            launch(["gio", "launch", str(f)])
     return fixed
 
 

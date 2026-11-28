@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Daily version check: writes the newest versions into locked-versions.txt; run from the repo root with NOTES-FILE.
 set -euo pipefail
 
@@ -31,7 +31,7 @@ gnome=${newest[gnome-shell]%%.*}
 : > "$notes"
 new_lock=$(mktemp)
 while IFS= read -r line; do
-  read -r kind source name version _ <<< "$line" || true
+  read -r kind source name version _ <<< "$line"
   case $kind in
     copr) new=${newest[$name]:-}; label=$name; link="https://copr.fedorainfracloud.org/coprs/$source/package/$name/" ;;
     fedora) new=${newest[$name]:-}; label=$name

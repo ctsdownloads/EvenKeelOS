@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Rename this system's firmware boot entry to EvenKeelOS. Dry run unless --apply.
 set -euo pipefail
 export TEXTDOMAIN=evenkeel-os

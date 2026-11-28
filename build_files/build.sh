@@ -1,10 +1,9 @@
-#!/bin/bash
+#!/usr/bin/bash
 set -ouex pipefail
 
-NAME=evenkeel-os
 fail() { echo "ERROR: $*"; exit 1; }
 
-dnf5 -y install firefox v4l-utils xdg-terminal-exec
+dnf5 -y install firefox v4l-utils
 xargs -a /ctx/bluefin-packages.txt dnf5 -y install
 # Default apps from Fedora (default-apps.txt); fails if any is missing.
 grep -v '^#' /ctx/default-apps.txt | xargs dnf5 -y install
@@ -23,7 +22,8 @@ for d in bs_BA tg_TG; do [ -f "/usr/share/hunspell/$d.dic" ] || fail "no $d spel
 # Ghostty (scottames/ghostty COPR) replaces Ptyxis as the default terminal.
 curl -fsSL --retry 3 "https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-$(rpm -E %fedora)/scottames-ghostty-fedora-$(rpm -E %fedora).repo" -o /etc/yum.repos.d/ghostty.repo
 # Outside packages install at the exact versions in locked-versions.txt.
-locked() { awk -v p="$1" '$1 == "copr" && $2 == p {print $3 "-" $4}' /ctx/locked-versions.txt; }
+# shellcheck source=build_files/locked.sh
+. /ctx/locked.sh /ctx/locked-versions.txt
 locked_failed() { fail "$1 did not install at its locked version (see docs/building.md)"; }
 user_unit() {     # $1: target; the rest: user units, on for every account from /usr (not /etc)
   local target=$1 u
@@ -32,7 +32,14 @@ user_unit() {     # $1: target; the rest: user units, on for every account from 
   mkdir -p "/usr/lib/systemd/user/$target.wants"
   for u in "$@"; do ln -sfn "../$u" "/usr/lib/systemd/user/$target.wants/$u"; done
 }
-mapfile -t pkgs < <(locked scottames/ghostty)
+gpg_home() {      # runs a command with a temporary gpg home folder: the image's /root doesn't exist during the build
+  local home rc=0
+  home=$(mktemp -d)
+  GNUPGHOME=$home "$@" || rc=$?
+  rm -rf "$home"
+  return $rc
+}
+mapfile -t pkgs < <(locked copr scottames/ghostty | tr ' ' -)
 dnf5 -y install "${pkgs[@]}" || locked_failed Ghostty
 rm -f /etc/yum.repos.d/ghostty.repo
 dnf5 -y remove ptyxis
@@ -44,7 +51,7 @@ for p in $(grep -v '^#' /ctx/default-apps.txt) firefox nautilus ghostty nautilus
 done
 # uupd, Homebrew and Bazaar from Universal Blue; Bazaar replaces GNOME Software.
 curl -fsSL --retry 3 "https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-$(rpm -E %fedora)/ublue-os-packages-fedora-$(rpm -E %fedora).repo" -o /etc/yum.repos.d/ublue-os-packages.repo
-mapfile -t pkgs < <(locked ublue-os/packages)
+mapfile -t pkgs < <(locked copr ublue-os/packages | tr ' ' -)
 dnf5 -y install "${pkgs[@]}" || locked_failed "uupd, Homebrew, ujust or Bazaar"
 rm -f /etc/yum.repos.d/ublue-os-packages.repo
 dnf5 -y remove gnome-software gnome-software-rpm-ostree
@@ -55,7 +62,7 @@ rpm -q bazaar >/dev/null || fail "Bazaar is not installed"
 [ -f /usr/share/gnome-shell/search-providers/io.github.kolunmi.Bazaar.search-provider.ini ] && [ -f /usr/share/dbus-1/services/io.github.kolunmi.Bazaar.SearchProvider.service ] || fail "Bazaar's Super-search provider is missing"
 command -v ujust >/dev/null || fail 'ujust is missing'
 # The shell tools show their words through gettext, in the person's language (domain evenkeel-os).
-dnf5 -y install /usr/bin/gettext
+dnf5 -y install /usr/bin/gettext /usr/bin/msgfmt
 command -v gettext >/dev/null || fail "gettext is missing: the shell tools can't show their words"
 # Shared modules: windows and notices, network places, and what works on this computer (system versions too).
 install -Dm644 -t /usr/lib/evenkeel-os /ctx/evenkeel_os_ui.py /ctx/evenkeel_os_network.py /ctx/evenkeel_os_health.py
@@ -68,8 +75,7 @@ python3 -I /ctx/check-dialogs.py /ctx /usr/libexec/evenkeel-os-dialog
 install -Dm644 /ctx/40-evenkeel-os-uupd.rules /usr/share/polkit-1/rules.d/40-evenkeel-os-uupd.rules
 install -Dm755 /ctx/evenkeel-os-update /usr/bin/evenkeel-os-update
 install -Dm755 /ctx/evenkeel-os-update-helper /usr/libexec/evenkeel-os-update-helper
-echo '{"deployments": [{"staged": true}]}' | /usr/libexec/evenkeel-os-update-helper staged \
-  || fail "the System Update helper does not run"
+/usr/libexec/evenkeel-os-update-helper failed-parts </dev/null || fail "the System Update helper does not run"
 install -Dm644 /ctx/evenkeel-os-update.desktop /usr/share/applications/evenkeel-os-update.desktop
 # Install Package File: .rpm and .deb apps go into Fedora and Ubuntu boxes.
 install -Dm755 /ctx/evenkeel-os-packages /usr/bin/evenkeel-os-packages
@@ -89,8 +95,7 @@ install -Dm644 /ctx/vpns.json /usr/share/evenkeel-os/vpns.json
 install -Dm644 -t /usr/share/evenkeel-os/vpn-keys /ctx/vpn-keys/*.asc
 install -Dm644 /ctx/io.github.ctsdownloads.evenkeel-os.vpn.policy \
   /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.vpn.policy
-(GNUPGHOME=$(mktemp -d); export GNUPGHOME; python3 -I /ctx/check-vpns.py; rc=$?; rm -rf "$GNUPGHOME"; exit $rc) \
-  || fail 'Get a VPN is not set up right'
+gpg_home python3 -I /ctx/check-vpns.py || fail 'Get a VPN is not set up right'
 # Apps added to the system by name (VPNs, codecs) are checked daily for newer versions in their download sources.
 install -Dm755 /ctx/evenkeel-os-app-updates /usr/libexec/evenkeel-os-app-updates
 install -Dm644 /ctx/evenkeel-os-app-updates.service /usr/lib/systemd/system/evenkeel-os-app-updates.service
@@ -152,7 +157,6 @@ grep -qx "Icon=evenkeel-os-wheelhouse" /usr/share/applications/evenkeel-os-tools
 # The setup checklist opens once at a new user's first login.
 install -Dm644 /ctx/evenkeel-os-setup-checklist.desktop /etc/xdg/autostart/evenkeel-os-setup-checklist.desktop
 install -Dm644 /ctx/evenkeel-os-rolled-back.desktop /etc/xdg/autostart/evenkeel-os-rolled-back.desktop
-rm -f /etc/xdg/autostart/evenkeel-os-codecs-prompt.desktop
 # Change list for System Update (empty in local builds).
 install -Dm644 /dev/null /usr/share/evenkeel-os/changes.txt
 [ -f /ctx/changes.txt ] && install -Dm644 /ctx/changes.txt /usr/share/evenkeel-os/changes.txt
@@ -193,7 +197,7 @@ for f in /usr/bin/firewall-cmd /usr/bin/cupsctl /usr/lib/systemd/system/sshd.ser
   [ -e "$f" ] || fail "Network safety needs $f"
 done
 # Shared folders: Samba, found through Avahi (Macs, Linux) and wsdd (Windows); off until turned on.
-dnf5 -y install samba avahi wsdd policycoreutils
+dnf5 -y install avahi wsdd policycoreutils
 install -Dm644 /ctx/samba/smb.conf /etc/samba/smb.conf
 install -Dm644 /dev/null /etc/samba/evenkeel-shares.conf
 install -Dm644 /ctx/firewall/evenkeel-sharing.xml /usr/lib/firewalld/services/evenkeel-sharing.xml
@@ -247,15 +251,11 @@ rm -rf /tmp/pkgtest
 dnf5 -y install msitools python3-pefile
 mkdir -p /tmp/winlist /usr/share/evenkeel-os
 # ArtCraft apps install only when signed by ArtCraft's release key, pinned here by its fingerprint.
-GNUPGHOME=$(mktemp -d)
-export GNUPGHOME
-gpg --batch --quiet --dearmor -o /usr/share/evenkeel-os/artcraft-keyring.gpg /ctx/artcraft-release-key.asc
-gpg --batch --show-keys --with-colons /usr/share/evenkeel-os/artcraft-keyring.gpg \
+gpg_home gpg --batch --quiet --dearmor -o /usr/share/evenkeel-os/artcraft-keyring.gpg /ctx/artcraft-release-key.asc
+gpg_home gpg --batch --show-keys --with-colons /usr/share/evenkeel-os/artcraft-keyring.gpg \
   | grep -qx "fpr:::::::::$(python3 -I -c 'import sys; sys.path.insert(0, "/usr/lib/evenkeel-os")
 from evenkeel_os_packages.artcraft import FINGERPRINT; print(FINGERPRINT)'):" \
   || fail "the ArtCraft release key is not the pinned one"
-rm -rf "$GNUPGHOME"
-unset GNUPGHOME
 # The workflow downloads these (keeping the last copy if a site is down); a local build downloads them here.
 data=/ctx/windows-data
 [ -d "$data" ] || { data=/tmp/winlist/data; /ctx/fetch-windows-data.sh "$data"; }
@@ -266,12 +266,15 @@ python3 -I /ctx/make-windows-list.py /tmp/winlist/msix/Public/index.db "$data/fl
 python3 -I /ctx/check-windows-programs.py "$data" \
   || fail 'Windows Program does not read installers correctly'
 rm -rf /tmp/winlist
-# Services on by default, including after the first boot.
-printf 'enable brew-setup.service\nenable evenkeel-os-codecs-setup.service\nenable evenkeel-os-flathub.service\nenable evenkeel-os-flatpak-apps.service\ndisable flatpak-add-fedora-repos.service\nenable evenkeel-os-disk-unlock-check.service\nenable tailscaled.service\nenable podman-auto-update.timer\nenable uupd.timer\nenable greenboot-healthcheck.service\nenable greenboot-set-rollback-trigger.service\nenable evenkeel-os-app-updates.timer\nenable evenkeel-os-flatpak-languages.timer\nenable evenkeel-os-flatpak-languages.path\n' > /usr/lib/systemd/system-preset/80-evenkeel-os.preset
-systemctl enable tailscaled.service podman-auto-update.timer uupd.timer brew-setup.service evenkeel-os-app-updates.timer \
-  evenkeel-os-flatpak-languages.timer evenkeel-os-flatpak-languages.path
-for u in tailscaled.service uupd.timer brew-setup.service evenkeel-os-app-updates.timer evenkeel-os-flatpak-languages.timer \
-         evenkeel-os-flatpak-languages.path; do [ "$(systemctl is-enabled "$u")" = enabled ] || fail "$u is not enabled"; done
+# Services on by default, including after the first boot; the ones below are switched on where they are installed.
+units=(tailscaled.service podman-auto-update.timer uupd.timer brew-setup.service evenkeel-os-app-updates.timer
+       evenkeel-os-flatpak-languages.timer evenkeel-os-flatpak-languages.path)
+{ printf 'enable %s\n' "${units[@]}" evenkeel-os-codecs-setup.service evenkeel-os-flathub.service \
+    evenkeel-os-flatpak-apps.service evenkeel-os-disk-unlock-check.service greenboot-healthcheck.service \
+    greenboot-set-rollback-trigger.service
+  echo 'disable flatpak-add-fedora-repos.service'; } > /usr/lib/systemd/system-preset/80-evenkeel-os.preset
+systemctl enable "${units[@]}"
+for u in "${units[@]}"; do [ "$(systemctl is-enabled "$u")" = enabled ] || fail "$u is not enabled"; done
 bash /ctx/rebrand.sh
 # Automatic rollback: greenboot with our own checks. Fedora's default checks fail offline, so they stay out.
 dnf5 -y install greenboot
@@ -338,6 +341,7 @@ grep -aqF /etc/motd.d/boot-status /usr/libexec/greenboot/greenboot \
   || fail "greenboot no longer writes /etc/motd.d/boot-status; check 50-evenkeel-os-greenboot.conf"
 install -Dm644 /ctx/greenboot/50-evenkeel-os-greenboot.conf /usr/lib/systemd/system/greenboot-healthcheck.service.d/50-evenkeel-os.conf
 install -Dm755 /ctx/greenboot/evenkeel-os-greenboot-arm /usr/libexec/evenkeel-os-greenboot-arm
+install -Dm755 /ctx/greenboot/evenkeel-os-boot-writable /usr/libexec/evenkeel-os-boot-writable
 # Boot menus written before the fix above get the line break once, at the next start.
 install -Dm755 /ctx/greenboot/evenkeel-os-boot-menu-repair /usr/libexec/evenkeel-os-boot-menu-repair
 install -Dm644 /ctx/greenboot/evenkeel-os-boot-menu-repair.service /usr/lib/systemd/system/evenkeel-os-boot-menu-repair.service
@@ -360,19 +364,22 @@ install -Dm644 /ctx/greenboot/50-evenkeel-os-test-cups.conf \
   /usr/lib/systemd/system/cups.service.d/50-evenkeel-os-test.conf
 install -Dm644 /ctx/greenboot/50-evenkeel-os-test-firewalld.conf \
   /usr/lib/systemd/system/firewalld.service.d/50-evenkeel-os-test.conf
-for u in ModemManager.service switcheroo-control.service; do
+mapfile -t test_services < <(python3 -I -c 'import sys; sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_health as h; print(*h.TEST_SERVICES, sep="\n")')
+[ "${#test_services[@]}" -gt 0 ] || fail "the trial check's list of test services couldn't be read"
+for u in "${test_services[@]}"; do
   install -Dm644 /ctx/greenboot/50-evenkeel-os-test-service.conf "/usr/lib/systemd/system/$u.d/50-evenkeel-os-test.conf"
 done
 # The "A system service fails" test breaks one of these, whichever runs; one must be switched on.
-systemctl -q is-enabled ModemManager.service || systemctl -q is-enabled switcheroo-control.service \
-  || fail "neither ModemManager nor switcheroo-control is switched on; pick another test service"
+for u in "${test_services[@]}"; do systemctl -q is-enabled "$u" && break; done \
+  || fail "none of ${test_services[*]} is switched on; pick another test service"
 install -Dm644 -t /usr/lib/systemd/system /ctx/greenboot/evenkeel-os-test-stuck.service \
   /ctx/greenboot/evenkeel-os-test-freeze.service /ctx/greenboot/evenkeel-os-test-update.service
 systemctl enable evenkeel-os-test-stuck.service evenkeel-os-test-freeze.service evenkeel-os-test-update.service
 [ -x /usr/bin/false ] && [ -x /usr/bin/uupd ] \
   || fail "the update program test needs /usr/bin/false and /usr/bin/uupd"
 for u in gdm.service NetworkManager.service evenkeel-os-test-stuck.service evenkeel-os-test-freeze.service \
-         greenboot-healthcheck.service cups.service firewalld.service ModemManager.service switcheroo-control.service \
+         greenboot-healthcheck.service cups.service firewalld.service "${test_services[@]}" \
          evenkeel-os-test-update.service evenkeel-os-health-record.service; do
   systemd-analyze verify "$u" 2>&1 | grep -iE "evenkeel|greenboot" && fail "$u has a unit problem"
 done
@@ -400,7 +407,7 @@ python3 -I /ctx/check-rollback-tests.py
 for f in /usr/lib/greenboot/check/required.d/*-evenkeel-os-*.sh /usr/lib/greenboot/green.d/*-evenkeel-os-*.sh \
          /usr/lib/greenboot/red.d/*-evenkeel-os-*.sh \
          /usr/libexec/evenkeel-os-test-fail /usr/libexec/evenkeel-os-greenboot-arm /usr/libexec/evenkeel-os-boot-menu-repair \
-         /usr/libexec/evenkeel-os-wait-started; do
+         /usr/libexec/evenkeel-os-wait-started /usr/libexec/evenkeel-os-boot-writable; do
   bash -n "$f" || fail "$f has a syntax error"
 done
 systemctl enable greenboot-healthcheck.service
@@ -429,7 +436,7 @@ authselect enable-feature with-fingerprint
 mkdir -p /usr/lib/systemd/system/fprintd.service.d
 printf '[Install]\nWantedBy=graphical.target\n' > /usr/lib/systemd/system/fprintd.service.d/10-evenkeel-os-enable.conf
 systemctl enable fprintd.service
-dnf5 -y remove fedora-flathub-remote || echo "note: fedora-flathub-remote was not removed"
+if rpm -q fedora-flathub-remote >/dev/null 2>&1; then dnf5 -y remove fedora-flathub-remote; fi
 install -Dm644 /ctx/flathub.flatpakrepo /usr/share/evenkeel-os/flathub.flatpakrepo
 install -Dm644 /ctx/evenkeel-os-flathub.service /usr/lib/systemd/system/evenkeel-os-flathub.service
 # Default apps from Flathub, installed on the first start with internet.
@@ -456,13 +463,14 @@ install -Dm644 /ctx/rpmfusion-free-updates.repo /usr/share/evenkeel-os/rpmfusion
   keys_before=$(rpm -qa gpg-pubkey --qf '%{VERSION}\n')
   cp /usr/share/evenkeel-os/rpmfusion-free.repo /usr/share/evenkeel-os/rpmfusion-free-updates.repo /etc/yum.repos.d/
   swap_ok=1
-  dnf5 -y --setopt=tsflags=test --setopt=clean_requirements_on_remove=0 do \
-    --action=remove $(present $FREE) \
+  read -ra free_now <<< "$(present $FREE)"
+  dnf5 -y --setopt=tsflags=test --setopt=clean_requirements_on_remove=0 'do' \
+    --action=remove "${free_now[@]}" \
     --action=install --from-repo=rpmfusion-free,rpmfusion-free-updates $FULL || swap_ok=0
   rm -f /etc/yum.repos.d/rpmfusion-free.repo /etc/yum.repos.d/rpmfusion-free-updates.repo
   # Same test for Web video only.
   web_ok=1
-  rpm -q $STAND_IN >/dev/null && dnf5 -y --setopt=tsflags=test do --action=remove $STAND_IN --action=install $WEB \
+  rpm -q $STAND_IN >/dev/null && dnf5 -y --setopt=tsflags=test 'do' --action=remove $STAND_IN --action=install $WEB \
     || web_ok=0
   for k in $(rpm -qa gpg-pubkey --qf '%{VERSION}\n'); do
     grep -qx "$k" <<<"$keys_before" || rpmkeys --delete "$k"
@@ -472,7 +480,7 @@ install -Dm644 /ctx/rpmfusion-free-updates.repo /usr/share/evenkeel-os/rpmfusion
 install -Dm644 /ctx/evenkeel-os-codecs-setup.service /usr/lib/systemd/system/evenkeel-os-codecs-setup.service
 systemctl enable evenkeel-os-flathub.service evenkeel-os-flatpak-apps.service evenkeel-os-codecs-setup.service
 # Wallpapers: 7, each with a day and a night picture; the default is Main (sorts after Fedora's overrides).
-install -Dm644 /ctx/branding/wallpaper.png /usr/share/backgrounds/evenkeel-os/wallpaper.png
+install -Dm644 /ctx/branding/wallpaper.png /usr/share/backgrounds/evenkeel-os/wallpaper.png  # the default before Nov 16, 2026
 install -Dm644 -t /usr/share/backgrounds/evenkeel-os /ctx/branding/wallpapers/*.jpg
 install -Dm644 /ctx/branding/evenkeel-os.xml /usr/share/gnome-background-properties/evenkeel-os.xml
 for f in $(grep -o '/usr/share/backgrounds/[^<]*' /usr/share/gnome-background-properties/evenkeel-os.xml); do
@@ -529,14 +537,10 @@ install -Dm644 /ctx/evenkeel-os-accent-icons.desktop /etc/xdg/autostart/evenkeel
 bash /ctx/check-accent-icons.sh
 
 # Logo Menu, sha256-checked; its own schemas/ folder must go or it fails to load.
-extension() {     # $1: uuid, $2: its schema file; extensions.gnome.org's zip at its locked version and sha256
-  local dir=/usr/share/gnome-shell/extensions/$1 version sha
-  read -r version sha < <(awk -v u="$1" '$1 == "gnome-extension" && $2 == u {print $3, $4}' /ctx/locked-versions.txt)
-  curl -fsSL --retry 3 -o /tmp/extension.zip "https://extensions.gnome.org/extension-data/${1//@/}.v$version.shell-extension.zip"
-  echo "$sha  /tmp/extension.zip" | sha256sum -c -
+extension() {     # $1: uuid, $2: its schema file
+  local dir=/usr/share/gnome-shell/extensions/$1
   install -d "$dir"
-  python3 -I -m zipfile -e /tmp/extension.zip "$dir"
-  rm /tmp/extension.zip
+  extension_zip "$1" "$dir"
   chmod -R u=rwX,go=rX "$dir"
   install -Dm644 "$dir/schemas/$2" "/usr/share/glib-2.0/schemas/$2"
   rm -r "$dir/schemas"
@@ -557,7 +561,6 @@ with open(path, "w") as f:
 PY
 grep -qF "new MenuItem('Wheelhouse'," /usr/share/gnome-shell/extensions/logomenu@aryan_k/extension.js \
   || fail 'the Logo Menu has no Wheelhouse entry'
-glib-compile-schemas /usr/share/glib-2.0/schemas 2>&1 | { grep -v 'deprecated' || true; }
 gnome_shell=$(rpm -q --qf '%{VERSION}' gnome-shell | cut -d. -f1)
 grep -q "\"$gnome_shell\"" /usr/share/gnome-shell/extensions/logomenu@aryan_k/metadata.json || fail "Logo Menu does not support GNOME $gnome_shell"
 install -Dm644 /ctx/branding/logo-EvenKeel-mark.svg /usr/share/evenkeel-os/logo-menu-icon.svg
@@ -565,14 +568,9 @@ install -Dm644 /ctx/evenkeel-os-logo-menu.dconf /etc/dconf/db/distro.d/50-evenke
 command -v bazaar >/dev/null && command -v ghostty >/dev/null || fail "Logo Menu's software center (bazaar) or terminal (ghostty) is missing"
 
 # Windows-style layout: Dash to Panel (from Fedora's build archive, signature checked) and ArcMenu, at locked versions.
-d2p=$(awk '$1 == "fedora" && $3 == "gnome-shell-extension-dash-to-panel" {print $4}' /ctx/locked-versions.txt)
-# gpg needs a home folder; the image's /root doesn't exist during the build, so it gets a temporary one.
-GNUPGHOME=$(mktemp -d)
-export GNUPGHOME
-key=$(gpg --batch --show-keys --with-colons "/usr/share/pki/rpm-gpg/RPM-GPG-KEY-fedora-$(rpm -E %fedora)-primary" \
+read -r _ d2p < <(locked fedora gnome-shell-extension-dash-to-panel)
+key=$(gpg_home gpg --batch --show-keys --with-colons "/usr/share/pki/rpm-gpg/RPM-GPG-KEY-fedora-$(rpm -E %fedora)-primary" \
   | awk -F: '/^fpr/ {print tolower(substr($10, 33)); exit}')
-rm -rf "$GNUPGHOME"
-unset GNUPGHOME
 [[ $key =~ ^[0-9a-f]{8}$ ]] || fail "can't read the Fedora signing key's id (got '$key')"
 curl -fsSL --retry 3 -o /tmp/dash-to-panel.rpm "https://kojipkgs.fedoraproject.org/packages/\
 gnome-shell-extension-dash-to-panel/${d2p%-*}/${d2p##*-}/data/signed/$key/noarch/gnome-shell-extension-dash-to-panel-$d2p.noarch.rpm"
@@ -677,20 +675,20 @@ grep -qi '^about=.*fedora' "$ffdist" && fail "Firefox's About window still says 
 install -Dm644 /ctx/fastfetch-logo.txt /usr/share/evenkeel-os/fastfetch-logo.txt
 install -Dm644 /ctx/fastfetch-config.jsonc /etc/xdg/fastfetch/config.jsonc
 out=$(HOME=/tmp fastfetch --pipe false -s OS 2>&1)
-printf '%s' "$out" | grep -qF '_____________________' && printf '%s' "$out" | grep -qF 'EvenKeelOS' || { echo "ERROR: fastfetch does not show the EvenKeelOS logo"; printf '%s\n' "$out" | head -5; exit 1; }
+printf '%s' "$out" | grep -qF '_____________________' && printf '%s' "$out" | grep -qF 'EvenKeelOS' \
+  || fail "fastfetch does not show the EvenKeelOS logo: $(head -5 <<<"$out")"
 
 # EvenKeelOS's own translations (po/): message files, plus the translated names in its launchers and password prompts.
-dnf5 -y install gettext
 while read -r lang; do
   install -d "/usr/share/locale/$lang/LC_MESSAGES"
   msgfmt -c -o "/usr/share/locale/$lang/LC_MESSAGES/evenkeel-os.mo" "/ctx/po/$lang.po"
 done < /ctx/po/LINGUAS
 for f in /usr/share/applications/evenkeel-os-*.desktop /etc/xdg/autostart/evenkeel-os-*.desktop; do
-  msgfmt --desktop -d /ctx/po --template="$f" -o "$f.new" || exit 1
+  msgfmt --desktop -d /ctx/po --template="$f" -o "$f.new"
   mv "$f.new" "$f"
 done
 for f in /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.*.policy; do
-  GETTEXTDATADIRS=/ctx/po msgfmt --xml -d /ctx/po --template="$f" -o "$f.new" || exit 1
+  GETTEXTDATADIRS=/ctx/po msgfmt --xml -d /ctx/po --template="$f" -o "$f.new"
   mv "$f.new" "$f"
 done
 # Dash to Panel, ArcMenu, Logo Menu, Bazaar and Ghostty: their makers' translations, with ours filling the gaps.
@@ -703,6 +701,8 @@ grep -q '^Name\[de\]=' /usr/share/applications/evenkeel-os-tools.desktop \
 grep -q 'xml:lang="de"' /usr/share/polkit-1/actions/io.github.ctsdownloads.evenkeel-os.tools.policy \
   || fail "the password prompts have no translated text"
 
+# Updates must carry our signature.
+NAME=evenkeel-os
 install -Dm644 /ctx/$NAME.pub /etc/pki/containers/$NAME.pub
 mkdir -p /etc/containers/registries.d
 printf 'docker:\n  ghcr.io/ctsdownloads/%s:\n    use-sigstore-attachments: true\n' "$NAME" > /etc/containers/registries.d/$NAME.yaml

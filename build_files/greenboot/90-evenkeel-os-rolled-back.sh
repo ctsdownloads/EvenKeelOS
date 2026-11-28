@@ -4,7 +4,6 @@ repaired=/var/lib/evenkeel-os/settings-repaired
 used=""; [ -f "$repaired" ] && used=$(awk 'NR == 1 {print $3}' "$repaired")
 latest=""; [ -f /sysroot/evenkeel-os/settings/saved ] && latest=$(awk '{print $2}' /sysroot/evenkeel-os/settings/saved)
 note=/var/lib/evenkeel-os/rolled-back
-pause=/var/lib/evenkeel-os/updates-paused-until
 rolled=0
 fellback=0    # the boot menu fell back by itself, not greenboot's rollback of a new version on trial
 journalctl -b -u greenboot-healthcheck.service -o cat --no-pager \
@@ -40,7 +39,7 @@ elif [ -n "$booted_sum" ] && [ "$booted_sum" = "$other_sum" ]; then
   # The same system with other boot options (Wheelhouse, Boot options): the update wasn't the cause, no pause.
   echo "boot-options $(date +%s)" >|"$note"
 else
-  systemctl -q is-enabled uupd.timer && echo $(( $(date +%s) + 3 * 86400 )) >|"$pause"
+  if systemctl -q is-enabled uupd.timer; then /usr/libexec/evenkeel-os-tools-safe updates pause; fi
   echo "update $(date +%s)" >|"$note"
 fi
 chmod 644 "$note"

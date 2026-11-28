@@ -19,7 +19,7 @@ import evenkeel_os_network as net  # noqa: E402
 import evenkeel_os_sharing as sharing  # noqa: E402
 import evenkeel_os_yours as yours  # noqa: E402
 from evenkeel_os_dialogs import Dialogs  # noqa: E402
-from evenkeel_os_ui import N_, _, icon_button, ngettext, short_home, user_folder  # noqa: E402
+from evenkeel_os_ui import N_, _, day_text, human, icon_button, ngettext, short_home, user_folder  # noqa: E402
 from evenkeel_os_packages import zoom  # noqa: E402
 
 APP_ID = "io.github.ctsdownloads.evenkeel-os.Tools"
@@ -102,12 +102,9 @@ def current_layout():
     return subprocess.run([LAYOUT], capture_output=True, text=True).stdout.strip()
 
 
-def zoom_usual_browser():
-    """True when Zoom meetings were set to open in the usual browser (zoom.py's own choice file)."""
-    try:
-        return zoom.CHOICE.read_text().strip() == "default"
-    except OSError:
-        return False
+def restart_now():
+    """Restart the way the top bar's menu does: open apps are asked to close first."""
+    spawn(["gnome-session-quit", "--reboot"])
 
 
 class Tool:
@@ -261,6 +258,7 @@ class Window(Adw.ApplicationWindow):
         self.before = "overview"     # the page to go back to from the tool page
         self.dialogs = Dialogs(self, self.on_dialogs)
         self.banner = None
+        self.usual = False           # Zoom meetings open in the usual browser; read with the rest of the state
         self.stack = Gtk.Stack(transition_type=Gtk.StackTransitionType.CROSSFADE)
         for key, _name, _icon in PAGES:
             self.stack.add_named(self.page(key), key)
@@ -275,18 +273,18 @@ class Window(Adw.ApplicationWindow):
         self.content_title = Adw.WindowTitle(title=_("Overview"))
         content_bar = Adw.HeaderBar(title_widget=self.content_title)
         self.back = Gtk.Button(icon_name="go-previous-symbolic", tooltip_text=_("Back"), visible=False)
-        self.back.connect("clicked", lambda *_: self.go_back())
+        self.back.connect("clicked", lambda *_args: self.go_back())
         content_bar.pack_start(self.back)
         content = Adw.ToolbarView(content=self.stack)
         content.add_top_bar(content_bar)
         self.waiting = Adw.Banner(button_label=_("Show"))     # a tool is open while another page is shown
-        self.waiting.connect("button-clicked", lambda *_: self.show_tool())
+        self.waiting.connect("button-clicked", lambda *_args: self.show_tool())
         content.add_top_bar(self.waiting)
 
         self.search = Gtk.SearchEntry(placeholder_text=_("Search tools"), margin_start=10, margin_end=10,
                                       margin_bottom=6)
         self.search.connect("search-changed", self.on_search)
-        self.search.connect("activate", lambda *_: self.split.set_show_content(True))
+        self.search.connect("activate", lambda *_args: self.split.set_show_content(True))
         self.sidebar = Gtk.ListBox(css_classes=["navigation-sidebar"])
         for key, name, icon in PAGES:
             box = Gtk.Box(spacing=12, margin_top=8, margin_bottom=8, margin_start=6)
@@ -315,8 +313,6 @@ class Window(Adw.ApplicationWindow):
         self.connect("close-request", self.on_close)
         self.refresh()
 
-    # Pages
-
     def page(self, key):
         page = Adw.PreferencesPage()
         if key == "overview":
@@ -325,8 +321,7 @@ class Window(Adw.ApplicationWindow):
             page.add(self.drop_zone())
         groups = {}
         if key == "disk":
-            groups["Disk space"] = self.disk_space()
-            page.add(groups["Disk space"])
+            page.add(self.disk_space())
         if key == "yours":
             page.add(self.layout_picker())
         if key == "network":
@@ -360,7 +355,7 @@ class Window(Adw.ApplicationWindow):
         r = Adw.ActionRow(title=tr(tool.title), subtitle=where or tr(tool.about), activatable=True)
         r.add_prefix(Gtk.Image.new_from_icon_name(tool.icon))
         r.add_suffix(Gtk.Image.new_from_icon_name("go-next-symbolic"))
-        r.connect("activated", lambda *_: self.activate_tool(tool))
+        r.connect("activated", lambda *_args: self.activate_tool(tool))
         if not where:
             self.subtitles.setdefault(tool.title, []).append(r)
         return r
@@ -385,8 +380,8 @@ class Window(Adw.ApplicationWindow):
         box.append(Gtk.Label(label=_("An .rpm or .deb installs the app. An .exe or .msi gets its Linux version."),
                              wrap=True, justify=Gtk.Justification.CENTER, css_classes=["dim-label"]))
         target = Gtk.DropTarget.new(Gdk.FileList, Gdk.DragAction.COPY)
-        target.connect("enter", lambda *_: box.add_css_class("ek-over") or Gdk.DragAction.COPY)
-        target.connect("leave", lambda *_: box.remove_css_class("ek-over"))
+        target.connect("enter", lambda *_args: box.add_css_class("ek-over") or Gdk.DragAction.COPY)
+        target.connect("leave", lambda *_args: box.remove_css_class("ek-over"))
         target.connect("drop", self.on_drop, box)
         box.add_controller(target)
         g.add(box)
@@ -462,7 +457,7 @@ class Window(Adw.ApplicationWindow):
                 more = Adw.ActionRow(title=_("The full guide"), subtitle=_("How to do things, step by step"),
                                      activatable=True)
                 more.add_suffix(Gtk.Image.new_from_icon_name("go-next-symbolic"))
-                more.connect("activated", lambda *_: self.go("guide"))
+                more.connect("activated", lambda *_args: self.go("guide"))
                 g.add(more)
                 self.guide_hide = Gtk.CheckButton(label=_("Don't show this again at login"), visible=False,
                                                   margin_top=12)
@@ -604,8 +599,8 @@ class Window(Adw.ApplicationWindow):
                         "{about}. Open Wi-Fi is always a Public place.").format(about=about))
                     row.add_suffix(Gtk.Label(label=_(net.PLACES[net.PUBLIC]), css_classes=["dim-label"]))
                 else:       # set another way (a terminal); open Wi-Fi shouldn't let anything in
-                    # Translators: {place} is Home, Work or Public place.
                     row = Adw.ActionRow(title=n.name, use_markup=False, subtitle=_(
+                        # Translators: {place} is Home, Work or Public place.
                         "{about}. Open Wi-Fi, but set to {place}. Anyone can make a network with its name.").format(
                             about=about, place=_(net.PLACES.get(zone, zone))))
                     fix = Gtk.Button(label=_("Make it a Public place"), valign=Gtk.Align.CENTER)
@@ -641,9 +636,11 @@ class Window(Adw.ApplicationWindow):
     def save_place(self, network, zone):
         def save():
             done = net.set_place(network, zone)
-            place = _(net.PLACES[zone])     # Translators: {place} is Home, Work or Public place.
+            place = _(net.PLACES[zone])
             GLib.idle_add(self.toast, {
+                # Translators: {place} is Home, Work or Public place.
                 "now": _("{name} is {place} now.").format(name=network.name, place=place),
+                # Translators: {place} is Home, Work or Public place.
                 "later": _("{name} is {place} from the next time it connects.").format(name=network.name,
                                                                                        place=place),
             }.get(done, _("{name} didn't change. Try again.").format(name=network.name)))
@@ -680,14 +677,14 @@ class Window(Adw.ApplicationWindow):
         g.add(self.share_switch)
         self.share_pw = Adw.ActionRow(title=_("Sharing password"))
         self.share_pw_button = Gtk.Button(label=_("Set"), valign=Gtk.Align.CENTER)
-        self.share_pw_button.connect("clicked", lambda *_: self.ask_share_password(False))
+        self.share_pw_button.connect("clicked", lambda *_args: self.ask_share_password(False))
         self.share_pw.add_suffix(self.share_pw_button)
         g.add(self.share_pw)
         page.add(g)
         self.share_list = Adw.PreferencesGroup(title=_("Folders"), description=_(
             "Other computers open these as you, so whatever they save belongs to you."))
         add = Gtk.Button(label=_("Add a folder"), valign=Gtk.Align.CENTER)
-        add.connect("clicked", lambda *_: self.pick_share_folder())
+        add.connect("clicked", lambda *_args: self.pick_share_folder())
         self.share_list.set_header_suffix(add)
         page.add(self.share_list)
         self.share_rows = []
@@ -711,8 +708,8 @@ class Window(Adw.ApplicationWindow):
         away = on is not None and not home
         self.share_switch.set_sensitive(not away and (ready or state["on"]))   # off works where smb.conf was replaced
         self.share_switch.set_active(state["on"] and not away)
-        # Translators: {place} is a phrase such as "a Work network" or "a Public place".
         self.share_switch.set_subtitle(
+            # Translators: {place} is a phrase such as "a Work network" or "a Public place".
             _("Off here: {name} is {place}.").format(name=on.name, place=place_words(on.zone or net.PUBLIC)) + " " +
             (_("It comes back on by itself on a Home network.") if state["on"] else
              _("Turn it on from a Home network.")) if away else "")
@@ -758,8 +755,8 @@ class Window(Adw.ApplicationWindow):
         if not home:
             on = next((n for n in nets if n.device), None)
             place = place_words(on.zone or net.PUBLIC) if on else ""
-            # Translators: {place} is a phrase such as "a Work network" or "a Public place".
             return (_("Sharing waits for a Home network"),
+                    # Translators: {place} is a phrase such as "a Work network" or "a Public place".
                     (_("{name} is {place}, so nothing is shared here.").format(name=on.name, place=place) if on
                      else _("Not connected.")) + " " + _("Sharing starts by itself on a Home network."), False)
         if not shared:
@@ -861,7 +858,10 @@ class Window(Adw.ApplicationWindow):
                 out = ""
             rc = p.get_exit_status() if p.get_if_exited() else 1
             lines = (out or "").strip().splitlines()
-            self.toast(done_text if rc == 0 else lines[-1] if rc in (1, 3, 4) and lines else _("Nothing changed."))
+            if rc == 0:
+                self.toast(done_text)
+            else:            # the helper's own reason, when it gave one
+                self.toast(lines[-1] if rc in (1, 3, 4) and lines else _("Nothing changed."))
             if rc == 0 and after:
                 after()
             if after_any:
@@ -942,7 +942,7 @@ class Window(Adw.ApplicationWindow):
         self.boot_updating = False
 
     def on_boot_button(self, _button):
-        spawn(["gnome-session-quit", "--reboot"])
+        restart_now()
 
     def on_boot_switch(self, row, _param, settings):
         if self.boot_updating or self.boot_busy:
@@ -1018,9 +1018,7 @@ class Window(Adw.ApplicationWindow):
         self.get_clipboard().set(command)
         self.toast(_("Copied: {command}").format(command=command))
 
-    # State
-
-    def refresh(self, *_):
+    def refresh(self, *_args):
         threading.Thread(target=self.read_state, daemon=True).start()
         threading.Thread(target=self.read_network, daemon=True).start()
         threading.Thread(target=self.read_boot, daemon=True).start()
@@ -1041,7 +1039,7 @@ class Window(Adw.ApplicationWindow):
         on = self.t.updates_on()
         state = {"on": on, "paused": on and self.t.paused_until(), "unlock": self.t.DISK_UNLOCK_ON.exists(),
                  "disk": shutil.disk_usage("/var/home" if os.path.isdir("/var/home") else str(Path.home())),
-                 "chrome": bool(zoom.chrome_command()), "usual": zoom_usual_browser()}
+                 "chrome": bool(zoom.chrome_command()), "usual": zoom.uses_usual_browser()}
         ds = health.deployments() or []
         state["staged"] = next((d for d in ds if d.get("staged")), None)
         booted = next((d for d in ds if d.get("booted")), None)
@@ -1052,39 +1050,40 @@ class Window(Adw.ApplicationWindow):
     def show_state(self, s):
         if s["staged"]:
             title, sub, button, warn = (_("A new version is ready"), _("It starts when you restart the computer."),
-                                        N_("Restart now"), False)
+                                        ("restart", N_("Restart now")), False)
         elif s["paused"]:
             title, sub, button, warn = (_("Automatic updates are paused until {day}").format(
-                                            day=self.t.day(s["paused"])),
+                                            day=day_text(s["paused"])),
                                         _("After an undo, so the same update doesn't come straight back. They turn "
-                                          "back on by themselves."), N_("Resume now"), True)
+                                          "back on by themselves."), ("updates", N_("Resume now")), True)
         elif not s["on"]:
             title, sub, button, warn = (_("Automatic updates are off"),
-                                        _("Nothing updates until you run System Update."), N_("Turn on"), True)
+                                        _("Nothing updates until you run System Update."), ("updates", N_("Turn on")),
+                                        True)
         elif s["certs"]:
             n = s["certs"]
             title, sub, button, warn = (ngettext("A certificate needs attention", "{n} certificates need attention",
                                                  n).format(n=n),
                                         _("A security certificate expired, expires within 30 days, or was removed."),
-                                        N_("Details"), True)
+                                        ("certificates", N_("Details")), True)
         else:
             title, sub, button, warn = (_("Your computer is in good shape"), _("Automatic updates are on."),
-                                        N_("Update now"), False)
+                                        ("update", N_("Update now")), False)
         if s["since"]:
             sub += " " + _("This version is from {when}.").format(when=s["since"])
         self.banner_title.set_label(title)
         self.banner_sub.set_label(sub)
-        self.banner_action = button      # the English label says which button this is
-        self.banner_button.set_label(_(button))
+        self.banner_action, label = button
+        self.banner_button.set_label(_(label))
         self.banner.remove_css_class("ek-warn")
         self.banner_icon.set_from_icon_name("emblem-important-symbolic" if warn else "object-select-symbolic")
         if warn:
             self.banner.add_css_class("ek-warn")
         self.banner_button.set_visible(True)
         d, mb = s["disk"], 1_000_000
-        self.disk_row.set_title(_("{size} free").format(size=self.t.human(d.free // mb)))
-        self.disk_row.set_subtitle(_("{used} of {total} used").format(used=self.t.human(d.used // mb),
-                                                                      total=self.t.human(d.total // mb)))
+        self.disk_row.set_title(_("{size} free").format(size=human(d.free // mb)))
+        self.disk_row.set_subtitle(_("{used} of {total} used").format(used=human(d.used // mb),
+                                                                      total=human(d.total // mb)))
         self.disk_bar.set_value(d.used / d.total if d.total else 0)
         self.set_subtitle(N_("Automatic updates"), _("On. Turn them on or off.") if s["on"] and not s["paused"] else
                           _("Paused. Turn them on or off.") if s["paused"] else _("Off. Turn them on or off."))
@@ -1099,8 +1098,6 @@ class Window(Adw.ApplicationWindow):
     def set_subtitle(self, title, text):
         for r in self.subtitles.get(title, []):
             r.set_subtitle(text)
-
-    # Actions
 
     def activate_tool(self, tool):
         if tool.run == "windows":
@@ -1212,15 +1209,15 @@ class Window(Adw.ApplicationWindow):
         d.present(self)
 
     def on_banner_button(self, button):
-        label = self.banner_action
-        if label == "Restart now":
-            spawn(["gnome-session-quit", "--reboot"])
-        elif label in ("Resume now", "Turn on"):
+        action = self.banner_action
+        if action == "restart":
+            restart_now()
+        elif action == "updates":
             self.run_tool(N_("Automatic updates"), [TOOLS, "updates"])
-        elif label == "Details":
+        elif action == "certificates":
             self.run_tool(N_("Certificate alerts"), [TOOLS, "certificates"])
         else:
-            self.activate_tool(next(t for t in self.tools if t.title == "System Update"))
+            self.activate_tool(next(t for t in self.tools if t.command == "evenkeel-os-update"))
 
     def on_page(self, box, row):
         if row is None:
@@ -1299,7 +1296,7 @@ class Window(Adw.ApplicationWindow):
         dialog.open(self, None, picked)
 
     def zoom_choice(self):
-        if not getattr(self, "usual", False):
+        if not self.usual:
             self.toast(_("Nothing to change: Zoom meetings open in Chrome, or the first one asks."))
             return
         zoom.CHOICE.unlink(missing_ok=True)

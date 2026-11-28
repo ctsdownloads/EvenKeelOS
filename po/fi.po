@@ -638,13 +638,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "ArtCraftin allekirjoitus tarkistetaan ensin, ja se päivittyy kerran päivässä."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Kysyy kerran, onko salasanalla suojattu Wi-Fi- tai langallinen verkko Koti, "
-"Työ vai Julkinen paikka"
-
 msgid "At each login"
 msgstr "Jokaisella kirjautumiskerralla"
 
@@ -1581,14 +1574,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS tarvitsee UEFI:n. Ota UEFI käyttöön BIOS-asetuksissa ja käynnistä "
 "sitten uudelleen USB-tikulta."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS tarvitsee vähintään 20 Gt."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS toimii parhaiten vähintään 8 Gt:n muistilla, joten se voi olla "
-"hidas."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -6001,9 +5986,6 @@ msgstr ""
 "Päivittäinen tarkistus löytää uudet versiot, jotka otetaan käyttöön "
 "seuraavalla uudelleenkäynnistyksellä."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Päivitykset: automaattiset, Järjestelmäpäivityksen kautta."
-
 msgid "Updates: automatic."
 msgstr "Päivitykset: automaattiset."
 
@@ -8186,12 +8168,6 @@ msgstr "zip- ja sit-tiedostojen avaaminen"
 msgid "opening zip files"
 msgstr "zip-tiedostojen avaaminen"
 
-msgid "organising and developing photos"
-msgstr "valokuvien järjestäminen ja käsittely"
-
-msgid "organising photos"
-msgstr "valokuvien järjestäminen"
-
 msgid "organizing music"
 msgstr "musiikin järjestäminen"
 
@@ -8751,3 +8727,29 @@ msgstr "Suositus: Poista laatikko. Se palaa itsestään, kun seuraavan kerran as
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Sen poistaminen vapauttaa noin {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Kysyy kerran, onko salasanalla suojattu Wi-Fi-verkko Koti, Työ vai Julkinen paikka"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS tarvitsee vähintään {gb} Gt."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS toimii parhaiten vähintään {gb} Gt:n muistilla, joten se voi olla hidas."
+
+msgid "organizing and developing photos"
+msgstr "valokuvien järjestäminen ja käsittely"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "Kohteella {title} ei ole vielä allekirjoitusavainta Fedora {version} -versiolle."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "Kohdetta {title} ei lisätty, joten sen latauslähde poistettiin uudelleen."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "Kohdetta {title} ei poistettu."

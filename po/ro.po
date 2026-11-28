@@ -641,13 +641,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "Semnătura ArtCraft este verificată mai întâi și se actualizează o dată pe zi."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Întreabă o singură dată dacă o rețea Wi-Fi cu parolă sau o rețea prin cablu "
-"este Acasă, Serviciu sau Loc public"
-
 msgid "At each login"
 msgstr "La fiecare autentificare"
 
@@ -1582,14 +1575,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS are nevoie de UEFI. Activează UEFI în BIOS, apoi pornește din nou "
 "de pe stickul USB."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS are nevoie de cel puțin 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS funcționează cel mai bine cu 8 GB sau mai mult, așa că s-ar putea "
-"să fie lent."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -6022,9 +6007,6 @@ msgstr ""
 "verificare zilnică găsește versiunile noi, care se aplică la următoarea "
 "repornire."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Actualizări: automate, prin Actualizare de sistem."
-
 msgid "Updates: automatic."
 msgstr "Actualizări: automate."
 
@@ -8222,12 +8204,6 @@ msgstr "deschiderea fișierelor zip și sit"
 msgid "opening zip files"
 msgstr "deschiderea fișierelor zip"
 
-msgid "organising and developing photos"
-msgstr "organizarea și prelucrarea fotografiilor"
-
-msgid "organising photos"
-msgstr "organizarea fotografiilor"
-
 msgid "organizing music"
 msgstr "organizarea muzicii"
 
@@ -8787,3 +8763,29 @@ msgstr "Recomandat: Șterge cutia. Revine singură data viitoare când instalezi
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Ștergerea ei eliberează aproximativ {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Întreabă o singură dată dacă o rețea Wi-Fi cu parolă este Acasă, Serviciu sau Loc public"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS are nevoie de cel puțin {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS funcționează cel mai bine cu {gb} GB sau mai mult, așa că s-ar putea să fie lent."
+
+msgid "organizing and developing photos"
+msgstr "organizarea și prelucrarea fotografiilor"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} nu are încă o cheie de semnare pentru Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} nu a fost adăugat, așa că sursa sa de descărcare a fost eliminată din nou."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} nu a fost eliminat."

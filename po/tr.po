@@ -634,13 +634,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "Önce ArtCraft'ın imzası kontrol edilir ve bu imza günde bir kez güncellenir."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Parolalı bir Wi-Fi veya kablolu ağın Ev mi, İş mi yoksa Halka açık yer mi "
-"olduğunu bir kez sorar"
-
 msgid "At each login"
 msgstr "Her oturum açışta"
 
@@ -1581,14 +1574,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS için UEFI gerekiyor. BIOS'ta UEFI'yi açın, ardından USB bellekten "
 "tekrar başlatın."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS için en az 20 GB gerekir."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS en iyi 8 GB veya daha fazla bellekle çalışır, bu yüzden yavaş "
-"olabilir."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -5976,9 +5961,6 @@ msgstr ""
 " bir denetim yeni sürümleri bulur; bunlar bir sonraki yeniden başlatmada "
 "başlar."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Güncellemeler: otomatik, Sistem Güncellemesi ile."
-
 msgid "Updates: automatic."
 msgstr "Güncellemeler: otomatik."
 
@@ -8165,12 +8147,6 @@ msgstr "zip ve sit dosyalarını açma"
 msgid "opening zip files"
 msgstr "zip dosyalarını açma"
 
-msgid "organising and developing photos"
-msgstr "fotoğrafları yönetme ve işleme"
-
-msgid "organising photos"
-msgstr "fotoğrafları yönetme"
-
 msgid "organizing music"
 msgstr "müzik arşivini düzenleme"
 
@@ -8730,3 +8706,29 @@ msgstr "Önerilen: Kutuyu sil. Bir sonraki sefer {apps} kurduğunuzda kendiliği
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Silmek yaklaşık {size} yer açar."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Parolalı bir Wi-Fi ağının Ev mi, İş mi yoksa Halka açık yer mi olduğunu bir kez sorar"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS için en az {gb} GB gerekir."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS en iyi {gb} GB veya daha fazla bellekle çalışır, bu yüzden yavaş olabilir."
+
+msgid "organizing and developing photos"
+msgstr "fotoğrafları yönetme ve işleme"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} için henüz Fedora {version} imzalama anahtarı yok."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} eklenmedi, bu yüzden indirme kaynağı yeniden kaldırıldı."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} kaldırılmadı."

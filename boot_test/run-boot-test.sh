@@ -75,7 +75,7 @@ attempt() {
   rc=1
   local deadline=$((SECONDS + SSH_WAIT))
   while [ "$SECONDS" -lt "$deadline" ]; do
-    if "${SSH[@]}" true 2>/dev/null; then rc=0; break; fi
+    if on true; then rc=0; break; fi
     sleep 5
   done
   if [ "$rc" -ne 0 ]; then
@@ -88,7 +88,7 @@ attempt() {
   vm_monitor "screendump $OUT/desktop-$n.png -f png" || true
   sleep 2
   [ -s "$OUT/desktop-$n.png" ] || say "Note: the screenshot of start $n couldn't be taken."
-  vm_stop || true
+  vm_stop
   return "$rc"
 }
 

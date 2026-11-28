@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # No-password codecs helper for an admin at the computer: web, full or skip only.
 set -uo pipefail
 export TEXTDOMAIN=evenkeel-os
@@ -21,7 +21,7 @@ if [ "$1" = skip ] && ! window_open; then
   exit 3
 fi
 
-log "setup choice '$1' requested by uid $(caller)"
+log "setup choice '$1' requested by uid $(requester)"
 rc=0
 case "$1" in
   web)  do_web  || rc=$? ;;

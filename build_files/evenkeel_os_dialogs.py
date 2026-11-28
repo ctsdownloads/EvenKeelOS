@@ -61,15 +61,13 @@ class Request:
                 print(f"Wheelhouse: closing a tool's connection: {e}", file=sys.stderr)
         self.dialogs.done(self)
 
-    # The view for this request
-
     def build(self, window):
         r, kind = self.req, self.kind
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=18, margin_top=36, margin_bottom=36,
                       margin_start=12, margin_end=12)
         head = Gtk.Box(spacing=14)
         head.append(Gtk.Image(icon_name=ICONS[kind], pixel_size=32, valign=Gtk.Align.START))
-        head.append(Gtk.Label(label=r.get("title") or "EvenKeelOS Wheelhouse", wrap=True, xalign=0, hexpand=True,
+        head.append(Gtk.Label(label=r.get("title") or _("EvenKeelOS Wheelhouse"), wrap=True, xalign=0, hexpand=True,
                               css_classes=["title-2"]))
         box.append(head)
         self.label = Gtk.Label(wrap=True, wrap_mode=Pango.WrapMode.WORD_CHAR, xalign=0, selectable=True,
@@ -117,7 +115,7 @@ class Request:
 
     def password_box(self):
         self.entry = Adw.PasswordEntryRow(title=_("Password"))
-        self.entry.connect("entry-activated", lambda *_: self.reply("ok", value=self.entry.get_text()))
+        self.entry.connect("entry-activated", lambda *_args: self.reply("ok", value=self.entry.get_text()))
         box = Gtk.ListBox(css_classes=["boxed-list"], selection_mode=Gtk.SelectionMode.NONE)
         box.append(self.entry)
         return box
@@ -161,8 +159,6 @@ class Request:
         target = {"password": getattr(self, "entry", None), "list": getattr(self, "rows", None)}.get(self.kind, self.ok)
         if target:
             target.grab_focus()
-
-    # Progress and files
 
     def on_pulse(self):
         self.bar.pulse()

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Start a box app with its output in a log (so it can't crash on a closed link), or --stop it.
 set -u
 export TEXTDOMAIN=evenkeel-os

@@ -2,8 +2,6 @@
 import fcntl
 import html
 import json
-import subprocess
-import sys
 import time
 
 import evenkeel_os_ui as ui
@@ -58,9 +56,7 @@ def take_lock(lock, quiet=False):
         fcntl.flock(lock, fcntl.LOCK_EX)
         return True
     text = waiting_text(doing_now())
-    bar = subprocess.Popen([ui.DIALOGS, f"--title={ui.TITLE}", "--width=520", "--progress", "--pulsate", "--auto-close",
-                            f"--text={html.escape(text)}"], stdin=subprocess.PIPE, text=True,
-                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    bar = ui.progress(text, cancel=True)
     shown = None
     while True:
         got = try_lock(lock)
@@ -135,7 +131,3 @@ def main(argv):
             return 2
         return vpn.install(argv[2]) if len(argv) > 2 else vpn.pick()
     return remove_apps.remove()
-
-
-if __name__ == "__main__":
-    sys.exit(main(sys.argv))

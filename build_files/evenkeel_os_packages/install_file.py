@@ -9,10 +9,6 @@ from evenkeel_os_packages import (
 )
 
 
-def plain_list(items):
-    return "\n".join("  - " + _(i) for i in items)
-
-
 def pick_file():
     found = []
     for d in (user_folder("DOWNLOAD"), user_folder("DESKTOP"), common.HOME):
@@ -68,18 +64,18 @@ def install(path):
         return 1
 
     if info["source_only"]:        # (opened again: offers its apps again, rather than "already installed")
-        return sources.install_source(pkg, info)
+        return sources.install_source(pkg, info, install)
 
     go_on, mode, code = installed.already_installed(pkg, info, title)
     if not go_on:
         return code
     if mode == "system-update":
-        return targets.install_system(pkg, title, "a printer driver" in info["blocking"], update=True)
+        return targets.install_system(pkg, title, reading.NEEDS["printer"] in info["blocking"], update=True)
     if mode != "install":
         return targets.box_install(pkg, info, title, mode=mode)
 
     # (not for an app just chosen from a download source: the person picked that source on purpose)
-    match = None if info["rules_only"] or pkg.name in sources.SOURCED else flathub.flathub_match(pkg, info)
+    match = None if info["rules_only"] or pkg.name in common.SOURCED else flathub.flathub_match(pkg, info)
     if match and installed.flatpak_installed(match[0]):
         app_id, name = match
         a = installed.from_bazaar(pkg, info, name, {"where": "flathub", "package": app_id, "title": name})
@@ -114,8 +110,8 @@ def install(path):
         return 0
 
     if info["blocking"]:
-        reasons = plain_list(info["blocking"])
-        printer = "a printer driver" in info["blocking"]
+        reasons = common.plain_list(info["blocking"])
+        printer = reading.NEEDS["printer"] in info["blocking"]
         if printer:
             choice = printers.try_driverless(title, pkg.kind)
             if choice != "driver":
@@ -158,7 +154,8 @@ def install(path):
         answer = ask(_("Install {title}\n\nRecommended: Add to the system. In a box, these parts of {title} won't "
                        "work:\n{notes}\nOn the system, everything works. Needs your password and a "
                        "restart.\n\nOr {setup}: puts it in a separate box. It's easier to remove, but those parts "
-                       "won't work.").format(title=title, notes=plain_list(info["notes"]), setup=setup) + first + rule,
+                       "won't work.").format(title=title, notes=common.plain_list(info["notes"]), setup=setup)
+                     + first + rule,
                      ok=_("Add to the system"), extra=setup)
         if answer == "ok":
             return targets.install_system(pkg, title, services=info["turns_on"])
@@ -169,7 +166,7 @@ def install(path):
         if ask(_("Install {title}\n\nIn a box, these parts of {title} won't work:\n{notes}\n"
                  "A .deb file can't go on the system. For everything to work, look for {title} as an .rpm file or in "
                  "Bazaar, the app store.\n\n{setup}: puts it in a box anyway, without those parts.")
-               .format(title=title, notes=plain_list(info["notes"]), setup=setup) + first + rule,
+               .format(title=title, notes=common.plain_list(info["notes"]), setup=setup) + first + rule,
                ok=setup) != "ok":
             return 1
     elif ask(_("Install {title}\n\n{setup}: puts it in a separate box. Your system isn't changed, and Remove Apps "

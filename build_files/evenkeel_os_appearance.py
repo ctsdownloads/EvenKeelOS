@@ -6,14 +6,15 @@ import os
 import zoneinfo
 from pathlib import Path
 
-from evenkeel_os_ui import N_, answer
+from evenkeel_os_ui import N_, answer, save_json
 
 STATE = Path.home() / ".config/evenkeel-os/appearance.json"
 ZONES = ("/usr/share/zoneinfo/zone.tab", "/usr/share/zoneinfo/zone1970.tab")   # every city, then the newer list
 PICTURES = (".jpg", ".jpeg", ".png", ".webp")
 SCHEDULES = {"off": N_("Off"), "sun": N_("Sunset to sunrise"), "custom": N_("Custom times")}
 EVERY = {"hour": N_("Every hour"), "day": N_("Every day"), "login": N_("At each login")}
-FONT_KEYS = ("font-name", "document-font-name", "monospace-font-name", "text-scaling-factor")
+FONT_NAMES = ("font-name", "document-font-name", "monospace-font-name")
+FONT_KEYS = (*FONT_NAMES, "text-scaling-factor")
 
 
 def load():
@@ -42,10 +43,7 @@ def clock_time(value):
 
 
 def save(state):
-    STATE.parent.mkdir(parents=True, exist_ok=True)
-    tmp = STATE.with_suffix(".tmp")
-    tmp.write_text(json.dumps(state, indent=1))
-    tmp.replace(STATE)
+    save_json(STATE, state)
 
 
 def gsettings(*args):

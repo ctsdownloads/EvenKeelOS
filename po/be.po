@@ -640,13 +640,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "Спачатку правяраецца подпіс ArtCraft, і праграма абнаўляецца раз на дзень."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Адзін раз пытаецца, чым з'яўляецца Wi-Fi або правадная сетка з паролем: "
-"«Дом», «Праца» ці «Грамадскае месца»"
-
 msgid "At each login"
 msgstr "Пры кожным уваходзе ў сістэму"
 
@@ -1578,13 +1571,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS патрабуе UEFI. Уключыце UEFI ў BIOS, а потым зноў запусціцеся з "
 "USB-флэшкі."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS патрабуе не менш за 20 ГБ."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS лепш за ўсё працуе з 8 ГБ або больш, таму можа працаваць павольна."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -5980,9 +5966,6 @@ msgstr ""
 "праверка знаходзіць новыя версіі, якія пачынаюць дзейнічаць пасля наступнага "
 "перазапуску."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Абнаўленні: аўтаматычныя, праз «Абнаўленне сістэмы»."
-
 msgid "Updates: automatic."
 msgstr "Абнаўленні: аўтаматычныя."
 
@@ -8179,12 +8162,6 @@ msgstr "адкрыццё файлаў ZIP і SIT"
 msgid "opening zip files"
 msgstr "адкрыццё ZIP-файлаў"
 
-msgid "organising and developing photos"
-msgstr "упарадкаванне і апрацоўка фатаграфій"
-
-msgid "organising photos"
-msgstr "упарадкаванне фатаграфій"
-
 msgid "organizing music"
 msgstr "упарадкаванне музыкі"
 
@@ -8744,3 +8721,29 @@ msgstr "Рэкамендуецца: «Выдаліць скрыню». Скры�
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Выдаленне вызваляе каля {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Адзін раз пытаецца, чым з'яўляецца сетка Wi-Fi з паролем: «Дом», «Праца» ці «Грамадскае месца»"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS патрабуе не менш за {gb} ГБ."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS лепш за ўсё працуе з {gb} ГБ або больш, таму можа працаваць павольна."
+
+msgid "organizing and developing photos"
+msgstr "упарадкаванне і апрацоўка фатаграфій"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "Для {title} пакуль няма ключа подпісу для Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "Дадаванне {title} не адбылося, таму крыніцу спампоўвання зноў выдалілі."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "Выдаленне {title} не адбылося."

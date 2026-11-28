@@ -636,13 +636,6 @@ msgstr ""
 msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr "Avval ArtCraft imzosi tekshiriladi, u kuniga bir marta yangilanadi."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Parolli Wi-Fi yoki simli tarmoq Uy, Ish yoki Jamoat joyi ekanini bir marta "
-"soʻraydi"
-
 msgid "At each login"
 msgstr "Har bir kirishda"
 
@@ -1594,14 +1587,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS uchun UEFI kerak. BIOS-da UEFI-ni yoqing, soʻng USB fleshkadan "
 "qayta ishga tushiring."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS uchun kamida 20 GB kerak."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS 8 GB yoki undan koʻp xotira bilan eng yaxshi ishlaydi, shuning "
-"uchun u sekin ishlashi mumkin."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -6055,9 +6040,6 @@ msgstr ""
 " tekshiruv yangi versiyalarni topadi, ular keyingi qayta ishga tushirishda "
 "kuchga kiradi."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Yangilanishlar: avtomatik, “Tizim yangilanishi” bilan."
-
 msgid "Updates: automatic."
 msgstr "Yangilanishlar: avtomatik."
 
@@ -8263,12 +8245,6 @@ msgstr "zip va sit fayllarni ochish"
 msgid "opening zip files"
 msgstr "zip fayllarni ochish"
 
-msgid "organising and developing photos"
-msgstr "fotosuratlarni tartibga solish va qayta ishlash"
-
-msgid "organising photos"
-msgstr "fotosuratlarni tartibga solish"
-
 msgid "organizing music"
 msgstr "musiqani tartibga solish"
 
@@ -8828,3 +8804,29 @@ msgstr "Tavsiya etiladi: “Qutini oʻchirish”. U keyingi safar {apps} ni oʻr
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Uni oʻchirish taxminan {size} joy boʻshatadi."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Parolli Wi-Fi tarmoq Uy, Ish yoki Jamoat joyi ekanini bir marta soʻraydi"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS uchun kamida {gb} GB kerak."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS {gb} GB yoki undan koʻp xotira bilan eng yaxshi ishlaydi, shuning uchun u sekin ishlashi mumkin."
+
+msgid "organizing and developing photos"
+msgstr "fotosuratlarni tartibga solish va qayta ishlash"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} uchun Fedora {version} imzo kaliti hali yoʻq."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} qoʻshilmadi, shuning uchun uning yuklab olish manbasi yana olib tashlandi."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} olib tashlanmadi."

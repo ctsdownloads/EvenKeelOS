@@ -635,13 +635,6 @@ msgstr ""
 "Tandatangan ArtCraft disemak terlebih dahulu, dan ia dikemas kini sekali "
 "sehari."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Bertanya sekali sama ada rangkaian Wi-Fi berkata laluan atau rangkaian "
-"berwayar ialah Rumah, Tempat Kerja atau Tempat Awam"
-
 msgid "At each login"
 msgstr "Setiap kali log masuk"
 
@@ -1578,14 +1571,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS memerlukan UEFI. Hidupkan UEFI dalam BIOS, kemudian mulakan sekali"
 " lagi daripada pemacu kilat USB."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS memerlukan sekurang-kurangnya 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS berfungsi paling baik dengan 8 GB atau lebih, jadi ia mungkin "
-"lambat."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -6022,9 +6007,6 @@ msgstr ""
 "harian mencari versi baharu, yang akan mula digunakan selepas komputer "
 "dimulakan semula seterusnya."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Kemas kini: automatik, melalui Kemas Kini Sistem."
-
 msgid "Updates: automatic."
 msgstr "Kemas kini: automatik."
 
@@ -8227,12 +8209,6 @@ msgstr "membuka fail zip dan sit"
 msgid "opening zip files"
 msgstr "membuka fail zip"
 
-msgid "organising and developing photos"
-msgstr "menyusun dan memproses foto"
-
-msgid "organising photos"
-msgstr "menyusun foto"
-
 msgid "organizing music"
 msgstr "menyusun muzik"
 
@@ -8792,3 +8768,29 @@ msgstr "Disyorkan: Hapuskan kotak. Kotak akan muncul semula dengan sendirinya pa
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Menghapuskannya membebaskan kira-kira {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Bertanya sekali sama ada rangkaian Wi-Fi berkata laluan ialah Rumah, Tempat Kerja atau Tempat Awam"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS memerlukan sekurang-kurangnya {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS berfungsi paling baik dengan {gb} GB atau lebih, jadi ia mungkin lambat."
+
+msgid "organizing and developing photos"
+msgstr "menyusun dan memproses foto"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} belum mempunyai kunci penandatanganan untuk Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} tidak ditambah, jadi sumber muat turunnya dibuang semula."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} tidak dibuang."

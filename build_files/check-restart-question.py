@@ -32,7 +32,7 @@ class Fake:
         self.windows = []
         self.asked = 0
 
-    def zenity(self, *args, title=None, **_):
+    def zenity(self, *args, title=None, **_kw):
         self.windows.append(dict(a[2:].split("=", 1) for a in args if "=" in a) | {"title": title})
         if not self.answers:
             die(f"the window opened again after the last answer: {self.windows[-1]}")
@@ -70,7 +70,7 @@ def ask(kind, start, answers, passwords=(), names=("Sound (snd_hda_intel)",)):
 if set(tools.AFTER_LOGIN_TESTS) != set(health.TRIAL_TESTS):
     die(f"Wheelhouse's after-login tests {tools.AFTER_LOGIN_TESTS} aren't the trial's {health.TRIAL_TESTS}")
 # Every after-login test: its own name, what broke, Restart now or Not yet, no countdown but for Graphics.
-for kind, name, _ in tools.ROLLBACK_TESTS:
+for kind, name, _about in tools.ROLLBACK_TESTS:
     if kind not in tools.AFTER_LOGIN_TESTS:
         if ask(kind, "first", [])[0] != 1:
             die(f"{kind} breaks the start before the desktop, but has a window")

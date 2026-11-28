@@ -624,13 +624,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "Chữ ký của ArtCraft được kiểm tra trước và được cập nhật mỗi ngày một lần."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Hỏi một lần xem mạng Wi-Fi có mật khẩu hoặc mạng có dây là Nhà, Nơi làm việc "
-"hay Nơi công cộng"
-
 msgid "At each login"
 msgstr "Mỗi lần đăng nhập"
 
@@ -1539,14 +1532,6 @@ msgid ""
 "stick again."
 msgstr ""
 "EvenKeelOS cần UEFI. Hãy bật UEFI trong BIOS, sau đó khởi động lại từ USB."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS cần ít nhất 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS hoạt động tốt nhất khi có từ 8 GB trở lên, nên có thể sẽ chạy "
-"chậm."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -5909,9 +5894,6 @@ msgstr ""
 "sẽ tìm thấy các phiên bản mới, và các phiên bản này sẽ được áp dụng khi khởi "
 "động lại lần tiếp theo."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Cập nhật: tự động, bằng Cập nhật hệ thống."
-
 msgid "Updates: automatic."
 msgstr "Cập nhật: tự động."
 
@@ -8094,12 +8076,6 @@ msgstr "mở các tệp zip và sit"
 msgid "opening zip files"
 msgstr "mở các tệp zip"
 
-msgid "organising and developing photos"
-msgstr "sắp xếp và chỉnh sửa ảnh"
-
-msgid "organising photos"
-msgstr "sắp xếp ảnh"
-
 msgid "organizing music"
 msgstr "sắp xếp nhạc"
 
@@ -8659,3 +8635,29 @@ msgstr "Đề xuất: Xóa hộp. Hộp sẽ tự xuất hiện lại vào lần
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Việc xóa sẽ giải phóng khoảng {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Hỏi một lần xem mạng Wi-Fi có mật khẩu là Nhà, Nơi làm việc hay Nơi công cộng"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS cần ít nhất {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS hoạt động tốt nhất khi có từ {gb} GB trở lên, nên có thể sẽ chạy chậm."
+
+msgid "organizing and developing photos"
+msgstr "sắp xếp và chỉnh sửa ảnh"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} chưa có khóa ký cho Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} không được thêm, nên nguồn tải xuống của nó đã được gỡ bỏ lại."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} không được gỡ."

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # From the repo root: fails when a locked app version brings untranslated text (docs/building.md#translations).
 set -euo pipefail
 export LC_ALL=C.UTF-8

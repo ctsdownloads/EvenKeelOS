@@ -18,8 +18,8 @@ def testparm(conf):
     r = subprocess.run(["testparm", "-s", "-v", str(conf)], capture_output=True, text=True)
     if r.returncode != 0 or "Unknown parameter" in r.stderr or "Ignoring unknown" in r.stderr:
         problems.append(f"testparm doesn't take {conf}: {r.stderr.strip()}")
-    return {k.strip().lower(): v.strip() for k, _, v in (line.partition("=") for line in r.stdout.splitlines())
-            if _}
+    return {k.strip().lower(): v.strip() for k, eq, v in (line.partition("=") for line in r.stdout.splitlines())
+            if eq}
 
 
 if not sharing.set_up():
@@ -40,7 +40,7 @@ if subprocess.run(["systemctl", "is-enabled", "avahi-daemon.service"], capture_o
 
 r = subprocess.run(["firewall-offline-cmd", f"--info-service={sharing.FIREWALL_SERVICE}"], capture_output=True,
                    text=True)
-info = {k.strip(): v.strip() for k, _, v in (line.partition(":") for line in r.stdout.splitlines()) if _}
+info = {k.strip(): v.strip() for k, colon, v in (line.partition(":") for line in r.stdout.splitlines()) if colon}
 if info.get("ports") != "445/tcp" or info.get("includes") != "wsdd":
     problems.append(f"the {sharing.FIREWALL_SERVICE} firewall service is {info}, not 445/tcp plus wsdd")
 

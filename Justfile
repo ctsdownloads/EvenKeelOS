@@ -3,6 +3,7 @@ set dotenv-load
 
 export image_name := env_var("IMAGE_NAME")
 export repo_organization := env_var("REPO_ORGANIZATION")
+export repo_name := env_var("REPO_NAME")
 export image_desc := env_var("IMAGE_DESC")
 export default_tag := env_var("DEFAULT_TAG")
 
@@ -26,9 +27,9 @@ build $target_image=image_name $tag=default_tag:
     LABELS=()
     GIT_SHA="{{ git_sha }}"
     if [[ -n "${GIT_SHA}" ]]; then
-        LABELS+=("--label" "org.opencontainers.image.documentation=https://raw.githubusercontent.com/{{ repo_organization }}/{{ image_name }}/${GIT_SHA}/README.md")
-        LABELS+=("--label" "org.opencontainers.image.source=https://github.com/{{ repo_organization }}/{{ image_name }}/blob/${GIT_SHA}/Containerfile")
-        LABELS+=("--label" "org.opencontainers.image.url=https://github.com/{{ repo_organization }}/{{ image_name }}/tree/${GIT_SHA}")
+        LABELS+=("--label" "org.opencontainers.image.documentation=https://raw.githubusercontent.com/{{ repo_organization }}/{{ repo_name }}/${GIT_SHA}/README.md")
+        LABELS+=("--label" "org.opencontainers.image.source=https://github.com/{{ repo_organization }}/{{ repo_name }}/blob/${GIT_SHA}/Containerfile")
+        LABELS+=("--label" "org.opencontainers.image.url=https://github.com/{{ repo_organization }}/{{ repo_name }}/tree/${GIT_SHA}")
         LABELS+=("--label" "org.opencontainers.image.version={{ default_tag }}.$(date +%Y%m%d)-${GIT_SHA}")
     fi
 
@@ -44,12 +45,9 @@ build $target_image=image_name $tag=default_tag:
 ostree-rechunk $target_image=image_name $tag=default_tag:
     build_files/rechunk.sh "${target_image}" "${tag}"
 
-generate-default-tag $tag=default_tag:
-    @echo "${tag}"
-
 generate-build-tags $target_image=image_name $tag=default_tag:
     #!/usr/bin/env bash
-    set -eoux pipefail
+    set -euox pipefail
 
     DATE=$(date +%Y%m%d)
     BUILD_TAGS=()
@@ -68,7 +66,7 @@ generate-build-tags $target_image=image_name $tag=default_tag:
 
 tag-images $target_image=image_name $tag=default_tag tags="":
     #!/usr/bin/env bash
-    set -eoux pipefail
+    set -euox pipefail
 
     IMAGE=$(podman inspect ${target_image}:${tag} | jq -r .[].Id)
     podman untag ${IMAGE}
@@ -78,7 +76,3 @@ tag-images $target_image=image_name $tag=default_tag tags="":
     done
 
     podman images
-
-[private]
-image_name:
-    @echo "${image_name}"

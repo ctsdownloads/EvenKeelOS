@@ -629,13 +629,6 @@ msgstr ""
 "Vispirms tiek pārbaudīts ArtCraft paraksts, un lietotne tiek atjaunināta "
 "reizi dienā."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Vienreiz pajautā, vai ar paroli aizsargāts Wi-Fi vai vadu tīkls ir “Mājas”, "
-"“Darbs” vai “Publiska vieta”"
-
 msgid "At each login"
 msgstr "Katrā ierakstīšanās reizē"
 
@@ -1581,14 +1574,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS nepieciešams UEFI. Ieslēdziet UEFI BIOS iestatījumos, pēc tam "
 "vēlreiz startējiet no USB zibatmiņas."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS ir nepieciešami vismaz 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS vislabāk darbojas ar 8 GB vai vairāk, tāpēc tas var darboties "
-"lēni."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -6006,9 +5991,6 @@ msgstr ""
 "Atjauninājumi: automātiski, no {maker} lejupielādes avota. Ikdienas pārbaude "
 "atrod jaunas versijas, kas tiek palaistas nākamajā pārstartēšanas reizē."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Atjauninājumi: automātiski, ar rīku “Sistēmas atjaunināšana”."
-
 msgid "Updates: automatic."
 msgstr "Atjauninājumi: automātiski."
 
@@ -8194,12 +8176,6 @@ msgstr "zip un sit failu atvēršana"
 msgid "opening zip files"
 msgstr "ZIP failu atvēršana"
 
-msgid "organising and developing photos"
-msgstr "fotoattēlu kārtošana un apstrāde"
-
-msgid "organising photos"
-msgstr "fotoattēlu kārtošana"
-
 msgid "organizing music"
 msgstr "mūzikas kārtošana"
 
@@ -8759,3 +8735,29 @@ msgstr "Ieteicams: Dzēst konteineru. Tas pats atgriezīsies nākamreiz, kad ins
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Dzēšana atbrīvo aptuveni {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Vienreiz pajautā, vai ar paroli aizsargāts Wi-Fi tīkls ir “Mājas”, “Darbs” vai “Publiska vieta”"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS ir nepieciešami vismaz {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS vislabāk darbojas ar {gb} GB vai vairāk, tāpēc tas var darboties lēni."
+
+msgid "organizing and developing photos"
+msgstr "fotoattēlu kārtošana un apstrāde"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "Lietotnei {title} vēl nav Fedora {version} paraksta atslēgas."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} netika pievienots, tāpēc tā lejupielādes avots atkal tika noņemts."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} netika noņemts."

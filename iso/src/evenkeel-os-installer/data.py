@@ -1,9 +1,11 @@
 """What the installer offers: languages, keyboards, time zones, disks and networks."""
+import functools
 import json
 import locale
 import os
 import re
 import subprocess
+import sys
 import xml.etree.ElementTree as ET
 import zoneinfo
 
@@ -11,6 +13,9 @@ import langtable
 
 import i18n
 from i18n import N_, _
+
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_network as net  # noqa: E402
 
 EVDEV = "/usr/share/X11/xkb/rules/evdev.xml"
 LOG = "/tmp/evenkeel-os-install.log"                     # the install engine's log
@@ -38,6 +43,7 @@ def locales(lang):
             if i18n.translated(loc)]
 
 
+@functools.cache
 def keyboards():
     """{layout id: description}, ids as "us" or "us(intl)", for every XKB layout and variant."""
     out = {}
@@ -49,6 +55,11 @@ def keyboards():
         for variant in layout.iter("variant"):
             out[f"{name}({variant.findtext('configItem/name')})"] = variant.findtext("configItem/description")
     return out
+
+
+def keyboard_name(k):
+    """A layout id's name in the installer's language: "de(nodeadkeys)" is "German (no dead keys)"."""
+    return i18n.keyboard(keyboards()[k])
 
 
 KEYMAPS = "/usr/lib/kbd/keymaps/xkb"         # kbd's text-console keymaps made from XKB layouts
@@ -82,14 +93,11 @@ def timezones():
 
 def uses_12_hour(loc):
     """Whether the locale writes times with AM/PM, as GNOME's clock decides it."""
-    before = locale.setlocale(locale.LC_TIME)
     try:
-        locale.setlocale(locale.LC_TIME, loc)
-        return "%p" in locale.nl_langinfo(locale.T_FMT) or "%r" in locale.nl_langinfo(locale.T_FMT)
+        with i18n.in_locale(locale.LC_TIME, loc):
+            return "%p" in locale.nl_langinfo(locale.T_FMT) or "%r" in locale.nl_langinfo(locale.T_FMT)
     except locale.Error:
         return False
-    finally:
-        locale.setlocale(locale.LC_TIME, before)
 
 
 def size_text(size):
@@ -181,15 +189,11 @@ def save_to_stick(path, source, name):
 
 def network():
     """(wired connected?, [{"ssid", "signal", "secured"}]) from NetworkManager, strongest Wi-Fi first."""
-    def nmcli(*args):
-        r = subprocess.run(["nmcli", "-t", *args], capture_output=True, text=True)
-        return r.stdout.splitlines() if r.returncode == 0 else []
-
-    wired = any(line.split(":")[:2] == ["ethernet", "connected"] for line in nmcli("-f", "TYPE,STATE", "device"))
+    wired = any(net.fields(line)[:2] == ["ethernet", "connected"]
+                for line in net.nmcli("-f", "TYPE,STATE", "device") or [])
     seen, wifi = set(), []
-    for line in nmcli("-f", "SSID,SIGNAL,SECURITY", "device", "wifi", "list"):
-        ssid, signal, security = re.split(r"(?<!\\):", line)[:3]
-        ssid = ssid.replace("\\:", ":")
+    for line in net.nmcli("-f", "SSID,SIGNAL,SECURITY", "device", "wifi", "list") or []:
+        ssid, signal, security = (net.fields(line) + ["", "", ""])[:3]
         if ssid and ssid not in seen:
             seen.add(ssid)
             wifi.append({"ssid": ssid, "signal": int(signal or 0), "secured": security not in ("", "--")})

@@ -1,11 +1,14 @@
 """The installer's screen building blocks and what the person chose."""
 import datetime
+import os
 
 from gi.repository import Gtk
 
 import data
 from i18n import N_
 from widgets import ChoiceList, PasswordPair
+
+HERE = os.path.dirname(os.path.realpath(__file__))     # the installer's folder, with its pictures
 
 
 class Choices:
@@ -68,7 +71,7 @@ class Screen:
         pass
 
     def relabel(self):
-        """Called each time the window shows this screen: set again any text built into its widgets."""
+        """Called each time the window updates this screen: set again any text built into its widgets."""
 
     def pick(self, i):
         pass

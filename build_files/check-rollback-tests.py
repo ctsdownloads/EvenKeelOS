@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3 -I
 """Build check: every test in Wheelhouse's Test automatic rollback list reaches the piece that breaks that thing."""
 import ast
 import re
@@ -11,7 +11,7 @@ GB = "/usr/lib/greenboot/check/required.d"
 HEALTH = "/usr/lib/evenkeel-os/evenkeel_os_health.py"
 # test: (the name shown in Wheelhouse, file that breaks it, text that file must contain)
 PIECES = {
-    "quick": ("Quick test", f"{GB}/00-evenkeel-os-test-quick.sh", "evenkeel_os.test_rollback=quick"),
+    "quick": ("Quick test", f"{GB}/00-evenkeel-os-test-quick.sh", "evenkeel-os-test-fail quick"),
     "no-login-screen": ("No login screen", "/usr/lib/systemd/system/gdm.service.d/50-evenkeel-os-test.conf",
                         "evenkeel-os-test-fail no-login-screen"),
     "no-networking": ("No networking", "/usr/lib/systemd/system/NetworkManager.service.d/50-evenkeel-os-test.conf",
@@ -57,7 +57,7 @@ def assigned(path, name):
 def later_checks():
     # greenboot runs green.d scripts with noclobber: a plain > can't replace the note of an earlier rollback.
     rolled = Path("/usr/lib/greenboot/green.d/90-evenkeel-os-rolled-back.sh").read_text()
-    if re.search(r'(?<!>)>"\$(note|pause)"', rolled):
+    if re.search(r'(?<!>)>"\$note"', rolled):
         sys.exit("ERROR: 90-evenkeel-os-rolled-back.sh writes its note with > instead of >|, so only the first "
                  "rollback ever gets a message")
     with tempfile.TemporaryDirectory() as d:
@@ -93,10 +93,10 @@ def main():
         sys.exit(f"ERROR: the Wheelhouse list {listed} doesn't match what the admin helper accepts {accepted}")
     if sorted(listed) != sorted(PIECES):
         sys.exit(f"ERROR: tests without a breaking piece checked here: {sorted(set(listed) ^ set(PIECES))}")
-    for kind, name, _ in tests:
+    for kind, name, _about in tests:
         if name != PIECES[kind][0]:
             sys.exit(f"ERROR: test {kind} is shown as {name!r}, not {PIECES[kind][0]!r}")
-    for kind, (_, path, text) in PIECES.items():
+    for kind, (_name, path, text) in PIECES.items():
         if text not in Path(path).read_text():
             sys.exit(f"ERROR: test {kind}: {path} doesn't contain {text!r}")
     # Switched on from /usr, which systemctl is-enabled doesn't read: deleting /etc can't switch them off.

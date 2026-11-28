@@ -69,7 +69,7 @@ def launchers_to_fix():
     """App grid entries made before evenkeel-os-box-run existed, or before the dock showed box apps' icons."""
     out = []
     for r in app_list.load():
-        if r["where"] in common.WHERE and r["where"].startswith("evenkeel-"):
+        if r["where"] in {b["name"] for b in common.BOXES.values()}:
             for a in r.get("apps", []):
                 f = common.launcher(r["where"], a)
                 if f.exists():

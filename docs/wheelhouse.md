@@ -5,7 +5,7 @@
 ## Wheelhouse
 
 **EvenKeelOS Wheelhouse** (just **Wheelhouse** under its icon) is one window with a sidebar. A ship is
-steered from its wheelhouse; this is where you steer your computer. It used to be called System Tools.
+steered from its wheelhouse; this is where you steer your computer.
 A search box at the top of the sidebar finds any tool by its name, what it does, or its command. Show Apps has only Wheelhouse for these tools: Install Package File, Remove Apps,
 Start Apps at Login, Repair App Boxes, Install Media Codecs and System Update no longer have their own icons, because
 they are inside it. Double-clicking an .rpm, .deb, .exe or .msi file still opens the right tool. The Windows-style
@@ -69,9 +69,9 @@ network. A network with no place set is a Public place.
   65535 (for example phones, file sharing, web development test servers). System services below 1025 stay closed.
   Unlike Fedora, SSH is off. Turning on [Shared folders](#shared-folders) also lets file sharing in on Home.
 
-Before this, every network used Fedora's FedoraWorkstation zone, which leaves ports 1025 to 65535 open on every
-network, including public Wi-Fi. That is now only on Home. Work let them in too until it was made like a Public
-place; a computer installed before that is changed once, at its next start (`evenkeel-os-work-update.service`).
+Fedora's own FedoraWorkstation zone leaves ports 1025 to 65535 open on every network, including public Wi-Fi; here
+that is only on Home. A computer whose Work zone still lets them in is changed once, at its next start
+(`evenkeel-os-work-update.service`).
 
 **Let in, by app or port.** Each place can let in more than its own settings, one app or port at a time:
 
@@ -149,7 +149,7 @@ Linux computers on another network connected at the same time may still see its 
 sharing on lets file sharing (port 445) into the Home firewall zone only, and turning it off takes it back out. The ports Windows
 uses to find the computer are already open on Home. The switch is for everyone on this computer.
 
-A wired network set to Home counts as Home on any cable you plug in, so the banner turns orange as a reminder when
+A wired network set to Home counts as Home on any cable you plug in, so the banner turns amber as a reminder when
 sharing runs over a wired Home network.
 
 **Passwords.** Other computers ask for your user name (your login name on this computer) and the sharing password.
@@ -171,7 +171,7 @@ folder that point outside it don't open.
 
 | Item | What it does |
 |------|--------------|
-| Banner | Says whether sharing is off, on (**Sharing on NETWORK**, and the name other computers see), waiting (**Sharing waits for a Home network**, on a Work network, a Public place or not connected), or **Nothing is shared yet** (no folder, or no sharing password). It turns orange for **Sharing didn't start**, for sharing over a wired Home network, and for **Shared folders can't start**, when `/etc/samba/smb.conf` was changed on the computer so it no longer includes the shared folders list (the switch can still turn sharing off) |
+| Banner | Says whether sharing is off, on (**Sharing on NETWORK**, and the name other computers see), waiting (**Sharing waits for a Home network**, on a Work network, a Public place or not connected), or **Nothing is shared yet** (no folder, or no sharing password). It turns amber for **Sharing didn't start**, for sharing over a wired Home network, and for **Shared folders can't start**, when `/etc/samba/smb.conf` was changed on the computer so it no longer includes the shared folders list (the switch can still turn sharing off) |
 | Share folders on Home networks | A switch in the **Sharing** group. Turns sharing on or off. On a Work network or a Public place it shows off and greyed out, with **Off here:** and the network's name: sharing never runs there. If you turned it on, it comes back on by itself on a Home network; change it from a Home network |
 | Sharing password | A row in the **Sharing** group with a **Set** or **Change** button |
 | Add a folder | In the **Folders** group. Pick a folder in your home folder to share |
@@ -430,5 +430,5 @@ you pick one. After the restart it asks **Turn it on** at login. Also `evenkeel-
 
 **Save problem details.** Saves `problem-details-<date>.txt` to Documents:
 system version and hardware, recent warnings and errors, the last 3 days of
-updates, Flatpaks and boxes, and the logs of Install a package file and System
-Tools. Box apps' own logs stay out. Nothing is sent anywhere.
+updates, Flatpaks and boxes, and the logs of Install a package file and
+Wheelhouse. Box apps' own logs stay out. Nothing is sent anywhere.

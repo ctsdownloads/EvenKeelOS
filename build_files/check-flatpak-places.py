@@ -37,8 +37,8 @@ def shell_problems(path, text):
 
 bad = []
 for folder in sys.argv[1:]:
-    for path in sorted(p for p in Path(folder).iterdir() if p.is_file() and "evenkeel" in p.name or
-                       p.suffix == ".py" and p.parent.name == "evenkeel_os_packages"):
+    for path in sorted(p for p in Path(folder).iterdir() if (p.is_file() and "evenkeel" in p.name) or
+                       (p.suffix == ".py" and p.parent.name == "evenkeel_os_packages")):
         text = path.read_text(errors="replace")
         if "flatpak" not in text:
             continue

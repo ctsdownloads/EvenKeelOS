@@ -7,11 +7,10 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gio, GLib, Gtk, Pango  # noqa: E402
 import evenkeel_os_appearance as appearance  # noqa: E402
-from evenkeel_os_ui import _, N_, ngettext, short_home  # noqa: E402
+from evenkeel_os_ui import _, N_, ngettext, short_home, time_format  # noqa: E402
 
 TIMES = [f"{h:02d}:{m:02d}" for h in range(24) for m in (0, 30)]
-FONTS = (("font-name", N_("Menus and windows")), ("document-font-name", N_("Documents")),
-         ("monospace-font-name", N_("Code and terminal")))
+FONTS = tuple(zip(appearance.FONT_NAMES, (N_("Menus and windows"), N_("Documents"), N_("Code and terminal"))))
 
 
 def combo(title, names, selected):
@@ -29,12 +28,13 @@ class Yours:
         self.window = window
         self.state = appearance.load()
         self.ui = Gio.Settings(schema_id="org.gnome.desktop.interface")
+        self.time_format = time_format()
 
     def groups(self):
         return [self.schedule_group(), self.slideshow_group(), self.fonts_group()]
 
     def clock(self, t):
-        return t.strftime("%H:%M" if self.ui.get_string("clock-format") == "24h" else "%-I:%M %p")
+        return t.strftime(self.time_format)
 
     def fresh(self):
         """The settings as saved now: the timer may have moved on since this page opened."""
@@ -44,8 +44,6 @@ class Yours:
     def save_and_apply(self):
         appearance.apply(self.state)
         appearance.save(self.state)
-
-    # Light and dark
 
     def schedule_group(self):
         g = Adw.PreferencesGroup(title=_("Light and dark"),
@@ -104,8 +102,6 @@ class Yours:
         self.state.pop("period", None)
         self.save_and_apply()
         self.show_schedule()
-
-    # Wallpaper slideshow
 
     def slideshow_group(self):
         g = Adw.PreferencesGroup(title=_("Wallpaper slideshow"),
@@ -166,8 +162,6 @@ class Yours:
         self.fresh()["every"] = list(appearance.EVERY)[row.get_selected()]
         self.state.pop("slot", None)
         self.save_and_apply()
-
-    # Fonts and text size
 
     def fonts_group(self):
         g = Adw.PreferencesGroup(title=_("Fonts and text"))

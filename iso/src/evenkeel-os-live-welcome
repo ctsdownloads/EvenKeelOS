@@ -96,10 +96,14 @@ class Welcome(Adw.ApplicationWindow):
 
     def find_sticks(self):
         try:
-            sticks = data.sticks()
-        except (OSError, ValueError, subprocess.SubprocessError):
-            sticks = []
-        GLib.idle_add(self.pick_stick, sticks)
+            GLib.idle_add(self.pick_stick, data.sticks())
+        except (OSError, ValueError, subprocess.SubprocessError) as e:
+            GLib.idle_add(self.not_saved, str(e))
+
+    def not_saved(self, problem):
+        self.save.set_sensitive(True)
+        self.toasts.add_toast(Adw.Toast(title=_("Not saved: {problem}").format(problem=problem)))
+        return False
 
     def pick_stick(self, sticks):
         self.save.set_sensitive(True)
@@ -110,7 +114,7 @@ class Welcome(Adw.ApplicationWindow):
         dialog = Adw.AlertDialog(heading=_("Save the results"), body=_("Click the USB stick to save them on."))
         dialog.add_response("cancel", _("Cancel"))
         dialog.set_close_response("cancel")
-        for i, s in enumerate(sticks[:4]):
+        for i, s in enumerate(sticks):
             dialog.add_response(str(i), _("{name}, {size}").format(name=s["name"], size=s["size"]))
         dialog.connect("response", self.on_stick, sticks)
         dialog.present(self)

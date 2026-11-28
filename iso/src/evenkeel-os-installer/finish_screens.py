@@ -150,7 +150,6 @@ class LogScreen(screens.ListScreen):
 
 class DoneScreen(LogScreen):
     title = N_("EvenKeelOS is installed")
-    back = False
     main = N_("Restart")
 
     @property

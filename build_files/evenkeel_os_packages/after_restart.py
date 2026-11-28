@@ -3,7 +3,8 @@ import json
 import subprocess
 
 from evenkeel_os_ui import _, ask, notify, offer_restart, say
-from evenkeel_os_packages import boxes, common, installed, launchers, login_apps, printers, targets, vpn
+from evenkeel_os_packages import (boxes, common, installed, launchers, login_apps, printers, targets, update_notes,
+                                  vpn)
 
 
 PENDING = common.STATE.with_name("pending.json")
@@ -47,11 +48,9 @@ def where_line(package):
     """Where to find a package added to the system, from the files it installed."""
     r = subprocess.run(["rpm", "-ql", package], capture_output=True, text=True)
     files = r.stdout.splitlines() if r.returncode == 0 else []
-    if any(f.startswith("/usr/share/applications/") and f.endswith(".desktop") for f in files):
-        return _("Find it in Show Apps.")
-    if any(f.startswith(("/usr/bin/", "/usr/sbin/")) for f in files):
-        return _("It is a command-line tool, so it has no window in Show Apps.")
-    return _("It has no window of its own in Show Apps.")
+    return update_notes.where_to_find(
+        any(f.startswith("/usr/share/applications/") and f.endswith(".desktop") for f in files),
+        any(f.startswith(("/usr/bin/", "/usr/sbin/")) for f in files), _("It has no window of its own in Show Apps."))
 
 
 def boxes_missing_helpers():

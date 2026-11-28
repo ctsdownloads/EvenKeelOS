@@ -6,7 +6,6 @@
                                               (exit 3: refused; 4: a rollback test copy is running)
 """
 import fcntl
-import json
 import os
 import subprocess
 import sys
@@ -14,14 +13,10 @@ from pathlib import Path
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
 import evenkeel_os_bootopts as bootopts  # noqa: E402
-from evenkeel_os_ui import _  # noqa: E402
+import evenkeel_os_health as health  # noqa: E402
+from evenkeel_os_ui import _, fail, save_json  # noqa: E402
 
 LOCK = Path("/run/evenkeel-os/boot-options.lock")
-
-
-def fail(msg, code=1):
-    print(msg)
-    sys.exit(code)
 
 
 def change(settings):
@@ -30,7 +25,7 @@ def change(settings):
             fail(bootopts.problem(s), 3)
     if len(settings) > bootopts.MAX or len({bootopts.name(s) for s in settings}) != len(settings):
         fail(_("Up to {max} settings, each name once.").format(max=bootopts.MAX), 3)
-    if any(a.startswith("evenkeel_os.test_rollback=") for a in bootopts.running()):
+    if health.running_test() is not None:
         fail(_("A rollback test copy is running. Restart first, so the computer goes back to the usual version."), 4)
     before = bootopts.next_start()
     if before is None:
@@ -43,11 +38,7 @@ def change(settings):
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode not in (0, 77):
         fail(_("The boot options didn't change: {reason}").format(reason=" ".join((r.stderr or r.stdout).split())))
-    tmp = bootopts.STATE.with_suffix(".tmp")
-    tmp.parent.mkdir(parents=True, exist_ok=True)
-    tmp.write_text(json.dumps({"options": mine}) + "\n")
-    tmp.chmod(0o644)
-    os.replace(tmp, bootopts.STATE)
+    save_json(bootopts.STATE, {"options": mine})
 
 
 def main(argv):

@@ -635,13 +635,6 @@ msgstr ""
 "Първо се проверява подписът на ArtCraft, а приложението се актуализира веднъж"
 " дневно."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Пита веднъж дали Wi-Fi или кабелна мрежа с парола е „Дом“, „Работа“ или "
-"„Обществено място“"
-
 msgid "At each login"
 msgstr "При всяко влизане"
 
@@ -1585,13 +1578,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS изисква UEFI. Включете UEFI в BIOS, след което стартирайте отново "
 "от USB флашката."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS се нуждае от поне 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS работи най-добре с 8 GB или повече, така че може да работи бавно."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -6039,9 +6025,6 @@ msgstr ""
 "Ежедневна проверка открива нови версии, които влизат в сила при следващото "
 "рестартиране."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Актуализации: автоматични, чрез „Актуализация на системата“."
-
 msgid "Updates: automatic."
 msgstr "Актуализации: автоматични."
 
@@ -8232,12 +8215,6 @@ msgstr "отваряне на ZIP и SIT файлове"
 msgid "opening zip files"
 msgstr "отваряне на ZIP файлове"
 
-msgid "organising and developing photos"
-msgstr "подреждане и обработка на снимки"
-
-msgid "organising photos"
-msgstr "подреждане на снимки"
-
 msgid "organizing music"
 msgstr "подреждане на музика"
 
@@ -8797,3 +8774,29 @@ msgstr "Препоръчително: „Изтриване на кутията�
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Изтриването ѝ освобождава около {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Пита веднъж дали Wi-Fi мрежа с парола е „Дом“, „Работа“ или „Обществено място“"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS се нуждае от поне {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS работи най-добре с {gb} GB или повече, така че може да работи бавно."
+
+msgid "organizing and developing photos"
+msgstr "подреждане и обработка на снимки"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} все още няма ключ за подписване за Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} не беше добавен, затова източникът за изтегляне беше премахнат отново."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} не беше премахнат."

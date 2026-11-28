@@ -22,8 +22,8 @@ def image_size(image):
     """Download size of a box image in MB: 0 if it is already on this computer, None if it cannot be found out."""
     if subprocess.run(["podman", "image", "exists", image], capture_output=True).returncode == 0:
         return 0
-    reg, _, rest = image.partition("/")
-    repo, _, tag = rest.rpartition(":")
+    reg, _slash, rest = image.partition("/")
+    repo, _colon, tag = rest.rpartition(":")
     arch = {"x86_64": "amd64", "aarch64": "arm64"}.get(platform.machine(), platform.machine())
     lists = "application/vnd.oci.image.index.v1+json,application/vnd.docker.distribution.manifest.list.v2+json"
     single = "application/vnd.oci.image.manifest.v1+json,application/vnd.docker.distribution.manifest.v2+json"
@@ -42,7 +42,7 @@ def image_size(image):
             digest = next(m["digest"] for m in man["manifests"] if m.get("platform", {}).get("architecture") == arch)
             man = get(digest, single)
         return max(1, sum(layer["size"] for layer in man["layers"]) // 1_000_000)
-    except Exception:
+    except (OSError, ValueError, KeyError, TypeError, StopIteration):     # offline, or an answer it can't read
         return None
 
 
@@ -156,12 +156,8 @@ def ensure_helpers(kind, quiet=False):
     if helpers_mark(kind).exists() or not box_exists(box):
         return True
     if subprocess.run(in_box(box, "sh", "-c", HELPER_CHECK), capture_output=True).returncode != 0:
-        if quiet:
-            ok = windows.run_quietly(helper_steps(kind))
-        else:
-            ok = windows.run_steps(_("Preparing the {label}.").format(label=_(common.BOXES[kind]["label"])),
-                                   helper_steps(kind))
-        if not ok:
+        if not windows.run_steps(_("Preparing the {label}.").format(label=_(common.BOXES[kind]["label"])),
+                                 helper_steps(kind), quiet=quiet):
             return False
     helpers_added(kind)
     return True

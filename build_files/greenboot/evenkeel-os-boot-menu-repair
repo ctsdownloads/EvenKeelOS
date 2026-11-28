@@ -10,15 +10,10 @@ if grep -qF "$bad" "$tmp" || ! grub2-script-check "$tmp"; then
   rm -f "$tmp"
   exit 1
 fi
-remount=0
-if findmnt -no OPTIONS /boot | tr ',' '\n' | grep -qx ro; then
-  mount -o remount,rw /boot || { echo "Can't make /boot writable"; rm -f "$tmp"; exit 1; }
-  remount=1
-fi
-cp -p "$cfg" "$cfg.before-evenkeel-os-repair" && cat "$tmp" >"$cfg.new" && sync "$cfg.new" && mv "$cfg.new" "$cfg"
+# shellcheck disable=SC2016  # $1 and $2 belong to the inner shell
+/usr/libexec/evenkeel-os-boot-writable bash -c \
+  'cp -p "$1" "$1.before-evenkeel-os-repair" && cat "$2" >"$1.new" && sync "$1.new" && mv "$1.new" "$1"' _ "$cfg" "$tmp"
 rc=$?
 rm -f "$tmp"
-# bind: read-only again for this service only, as greenboot does (not the whole /boot file system).
-[ "$remount" = 1 ] && mount -o remount,bind,ro /boot
 [ "$rc" = 0 ] && echo "Boot menu repaired: the automatic rollback counter now counts."
 exit "$rc"

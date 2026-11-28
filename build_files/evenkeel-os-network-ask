@@ -22,7 +22,8 @@ def watch():
         try:
             monitor = subprocess.Popen(["nmcli", "monitor"], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
                                        text=True)
-        except OSError:
+        except OSError as e:
+            print(f"nmcli couldn't start, so new networks aren't asked about: {e}", file=sys.stderr)
             return
         while True:
             for n in net.networks():

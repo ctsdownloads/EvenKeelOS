@@ -17,7 +17,7 @@ def parse(args):
     """The request for the window, or None for an option this program doesn't know."""
     req = {"kind": None, "columns": [], "flags": []}
     for a in args:
-        name, _, value = a[2:].partition("=") if a.startswith("--") else ("", "", "")
+        name, _eq, value = a[2:].partition("=") if a.startswith("--") else ("", "", "")
         if name in KINDS and not value and req["kind"] is None:
             req["kind"] = name
         elif name in FLAGS and not value:

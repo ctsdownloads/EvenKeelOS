@@ -395,5 +395,5 @@ def markdown():
     for _key, title, _icon, about, articles in TOPICS:
         out += [f"## {title}", "", f"{about}.", ""]
         for heading, steps in articles:
-            out += [f"### {heading}", ""] + [f"{n}. {text}" for n, (text, _) in enumerate(steps, 1)] + [""]
+            out += [f"### {heading}", ""] + [f"{n}. {text}" for n, (text, _show) in enumerate(steps, 1)] + [""]
     return "\n".join(out)

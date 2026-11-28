@@ -16,7 +16,7 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/evenkeel_os_ui.py` | Windows, notices and disk sizes shared by Wheelhouse and Install Package File, and its translation (`_`) |
 | `build_files/make-pot.sh`, `po/`, `build_files/check-translatable.py`, `build_files/check-translations.sh` | [Translations](#translations): the list of words to translate, every language's file, and the checks that no screen text skips it and every language is complete |
 | `build_files/check-rules.py`, `.github/workflows/rules.yml` | The code rules, checked on every change: comments and docstrings one line (shell, Python, YAML, polkit rules, config and list files), no Python `except` that does nothing and no `contextlib.suppress`, none of the forbidden words in any file. A program's help text, printed from its docstring, may be longer. Shell `2>/dev/null` isn't checked: it's often a fair yes/no test |
-| `boot_test/run-boot-test.sh`, `boot_test/boot-check`, `boot_test/boot-check-root`, `boot_test/Containerfile` | The [boot test](#boot-test): starts each new build in a virtual machine before it's published |
+| `boot_test/run-boot-test.sh`, `boot_test/boot-check`, `boot_test/boot-check-root`, `boot_test/check-lib.sh`, `boot_test/Containerfile` | The [boot test](#boot-test): starts each new build in a virtual machine before it's published |
 | `boot_test/run-rollback-tests.sh`, `boot_test/rollback-step` | The [rollback tests](#rollback-tests), when asked for |
 | `build_files/evenkeel_os_health.py`, `greenboot/evenkeel-os-health`, `greenboot/40-evenkeel-os-still-works.sh`, `greenboot/93-evenkeel-os-health-record.sh`, `greenboot/evenkeel-os-health-record.service` | The trial check: after each good start (4 minutes in) a list of what works is saved to `/var/lib/evenkeel-os/health-record.json`; while a new version is on trial, after a login, anything on that list that's broken now fails the start (it waits 2 minutes for slow devices first). Hardware counts only if it's still there (unplugged, switched off in the BIOS or by a privacy switch doesn't count); only USB devices in fixed ports are listed; things switched off by their owner aren't asked for; a start that only changed boot options checks programs only; a mistake in the check itself never fails a start. What broke goes to `/var/lib/evenkeel-os/health-lost`, and to `rolled-back-why` with the next rollback's note. `sudo /usr/libexec/evenkeel-os-health compare --no-wait` runs the comparison by hand |
 | `build_files/check-health.py` | Build check: the trial check against a made-up computer, with each of 58 changes counted as broken, or not, as it should be, and the driver each rollback test copy blocks; and who it asks before a restart, with what, and which answers keep the version |
@@ -56,7 +56,7 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
 | `build_files/evenkeel-os-shell-theme.sh` | Adds one rule to GNOME Shell's own style file at build time so the lock screen's password box uses the accent color; fails the build if GNOME renames that part |
 | `build_files/evenkeel-os-no-bootc.tuned.conf` | Keeps tuned from running bootc, and waiting on updates, at every power-mode switch |
 | `build_files/check-*.py` | Build tests: packages are read correctly, printer drivers are recognized in any folder (`check-printer-drivers.py`), power modes skip bootc, docs keep up, and (`check-root-helpers.py`) every root helper refuses hostile input, bad device rules are refused and no-password rules stay at the computer. The build workflow also runs shellcheck and bandit on the root helpers |
-| `build_files/locked-versions.txt`, `check-locked-versions.py`, `update-locked-versions.sh`, `.github/workflows/check-versions.yml` | The exact versions of the outside packages and the ISO build tool, the build check that they match, and the daily check for newer ones (see [Locked versions](#locked-versions)) |
+| `build_files/locked-versions.txt`, `locked.sh`, `check-locked-versions.py`, `update-locked-versions.sh`, `.github/workflows/check-versions.yml` | The exact versions of the outside packages and the ISO build tool, the build check that they match, and the daily check for newer ones (see [Locked versions](#locked-versions)) |
 | `iso/` | The live USB and its installer. `iso/build-local-iso.sh` builds a test ISO locally; `iso/verify-image.sh` checks the built images |
 | `system_files/` | Files copied into the image |
 | `cosign.pub` | Public key for verifying the image |
@@ -80,7 +80,7 @@ Fedora Silverblue 45, and publishes it to `ghcr.io/ctsdownloads/evenkeel-os`.
   isn't translated (see [Translations](#translations));
 - Install Package File misreads four real Fedora packages;
 - a tool would open its windows outside Wheelhouse, or answer differently there;
-- Network safety isn't set up right (a new network isn't a Public place, Work lets anything in, or Home lets in SSH), or the app list for Let an app in can't be made.
+- Network safety isn't set up right (a new network isn't a Public place, Work lets anything in, or Home lets in SSH), or the app list for Let an app in can't be made;
 - Shared folders isn't set up right (guest access is on, Samba or wsdd starts on its own, the firewall service is wrong,
   a hidden folder or another user's folder is accepted, or the shares written don't match the list), or Samba,
   smbpasswd, testparm, setsebool, avahi-daemon or wsdd is missing.
@@ -346,7 +346,7 @@ language. The titles are in `po/whats-new.txt`, translated like any other line,
 and System Update reads their translations from the new version it downloaded.
 The translation check fails a PR whose title isn't in that file, and checks
 again when a PR is renamed. Not shown, so not translated: titles starting with
-README or Build, and upkeep by Dependabot, Renovate and the daily version check
+README or Build, and upkeep by Dependabot and the daily version check
 ("Update locked versions").
 
 Disk sizes use each language's units and the region's decimal mark ("1,2 Go"
@@ -362,6 +362,7 @@ copy of app names and descriptions in the language it was using; when the
 account's language changes, `evenkeel-os-bazaar-language.service` deletes that
 copy at the next login, before the desktop starts, so Bazaar fetches them again
 in the new language.
+
 Spell check: Fedora's
 dictionary for every language that has one (`spellcheck-packages.txt`), Voikko
 for Finnish in GNOME apps, Bosnian from `hunspell-sr`, and a Tajik dictionary

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Add or remove the media codecs Fedora leaves out (patents). Run codecs with no option to see the choices.
 set -uo pipefail
 export TEXTDOMAIN=evenkeel-os
@@ -7,7 +7,6 @@ title=$(gettext "Install Media Codecs")
 . /usr/libexec/evenkeel-os-codecs-lib.sh
 SETUP=/usr/libexec/evenkeel-os-codecs-setup
 ADMIN=/usr/libexec/evenkeel-os-codecs-admin
-USTATE="${XDG_STATE_HOME:-$HOME/.local/state}/evenkeel-os"
 # Started from Wheelhouse: windows show inside it, through the same options and answers as zenity's.
 zenity=zenity; [ -n "${EVENKEEL_OS_PANEL:-}" ] && zenity=/usr/libexec/evenkeel-os-dialog
 ARGS=("$@")
@@ -42,7 +41,7 @@ Restart afterwards. To take them out again: codecs remove")"
 }
 
 ask() {   # prints web or full, or nothing for "Not now"
-  local note out rc
+  local note out rc everything
   note=$(gettext "Either choice installs with no password.")
   everything=$(gettext "Everything")
   out=$("$zenity" --question --title="$title" --width=600 \
@@ -79,19 +78,11 @@ gui() {
   return 0
 }
 
-first_login() {
-  command -v zenity >/dev/null 2>&1 || exit 0
-  window_open || exit 0
-  [ -e "$USTATE/codecs-asked" ] && exit 0
-  mkdir -p "$USTATE" && : > "$USTATE/codecs-asked"
-  gui
-}
-
 mode=explain
 for a in "${ARGS[@]}"; do
   case "$a" in
     web|--web) mode=web ;; full|--full) mode=full ;; remove|--remove) mode=remove ;;
-    gui|--gui) mode=gui ;; --first-login) mode=first ;; --no-restart) NO_RESTART=1 ;; --apply) ;; -h|--help|help) mode=explain ;;
+    gui|--gui) mode=gui ;; --no-restart) NO_RESTART=1 ;; -h|--help|help) mode=explain ;;
     *) say "$(printf "$(gettext "Unknown option: %s. Run  codecs  to see the choices.")" "$a")"; exit 2 ;;
   esac
 done
@@ -101,5 +92,4 @@ case "$mode" in
   full)    run_helper full ;;
   remove)  run_helper remove ;;
   gui)     gui ;;
-  first)   first_login ;;
 esac

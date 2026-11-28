@@ -8,16 +8,17 @@ import time
 from pathlib import Path
 
 import evenkeel_os_network as net
-from evenkeel_os_ui import _, N_, answer
+from evenkeel_os_ui import _, N_, answer, write_file
 
 ROOT = Path("/")                       # the build checks point this at a made-up computer
 RECORD = "/var/lib/evenkeel-os/health-record.json"
 LOST = "/var/lib/evenkeel-os/health-lost"
 DISK_UNLOCK_ON = "/var/lib/evenkeel-os/disk-unlock-on"
+PAUSE = "/var/lib/evenkeel-os/updates-paused-until"   # after an undo; read by evenkeel-os-updates-pause-check
 BOOT_OPTIONS = "/var/lib/evenkeel-os/boot-options.json"
 SHARED_FOLDERS = "/etc/evenkeel-os/shared-folders.json"
 SHARES = "/etc/samba/evenkeel-shares.conf"     # the shares Samba is given (folders with a sharing password)
-TPM_PCRS = ("7", "14")                          # what automatic disk unlock is tied to (evenkeel-os-tools-admin)
+TPM_PCRS = ("7", "14")                          # what automatic disk unlock is tied to
 PLACES = (net.PUBLIC, net.HOME, net.WORK)
 # Real services the "A system service fails" test may break (each has the test drop-in); the first one running.
 TEST_SERVICES = ("ModemManager.service", "switcheroo-control.service")
@@ -44,11 +45,17 @@ def rel(p):
     return "/" + str(Path(p).relative_to(ROOT))
 
 
-def read(path, default=""):
+def text(path, default=""):
+    """A file's text, stripped; default when it can't be read."""
     try:
-        return P(path).read_text().strip()
+        return Path(path).read_text().strip()
     except (OSError, UnicodeDecodeError):
         return default
+
+
+def read(path, default=""):
+    """A file of this computer (under ROOT, which the build checks point at a made-up computer)."""
+    return text(P(path), default)
 
 
 def run(cmd, timeout=30):
@@ -65,10 +72,7 @@ def link_name(p):
 
 def attr(d, name):
     """A sysfs attribute of a device folder."""
-    try:
-        return (Path(d) / name).read_text().strip()
-    except (OSError, UnicodeDecodeError):
-        return ""
+    return text(Path(d) / name)
 
 
 def subsystem(d):
@@ -152,8 +156,8 @@ def hardware(prefix, name, devices):
         if a is None or removable(a):
             continue
         item = items.setdefault(f"{prefix}:{akey(a)}", {"name": name, "needs": [need(a)], "modules": []})
-        if module(dev) not in item["modules"]:
-            item["modules"].append(module(dev))
+        if (m := module(dev)) not in item["modules"]:
+            item["modules"].append(m)
     return items
 
 
@@ -280,7 +284,8 @@ def fingerprint():
                    "net.reactivated.Fprint.Manager", "GetDevices"])
     if rc != 0 or len(out.split()) < 2 or out.split()[1] == "0":
         return {}
-    readers = [d for i, d in usb_devices().items() if i in fprint_ids() and not removable(d)]
+    supported = fprint_ids()
+    readers = [d for i, d in usb_devices().items() if i in supported and not removable(d)]
     if not readers:
         return {}
     return {"fingerprint": {"name": N_("The fingerprint reader"), "needs": [need(d) for d in readers]}}
@@ -461,15 +466,35 @@ SOFTWARE_KEYS = {"service", "printing", "power-modes", "update-program", "flatpa
                  "network-places", "clock-sync", "dns", "boot-options", "shared-folders"}
 
 
+def has_tpm():
+    """Whether there is a security chip (TPM) that automatic disk unlock can use."""
+    return Path("/dev/tpmrm0").exists()
+
+
+def secure_boot_on(sysfs="/sys"):
+    """True, False, or None when it can't be told (the firmware's SecureBoot setting: 4 bytes of flags, then 1 or 0)."""
+    for f in Path(sysfs, "firmware/efi/efivars").glob("SecureBoot-*"):
+        try:
+            data = f.read_bytes()
+        except OSError:
+            return None
+        return len(data) >= 5 and data[4] == 1
+    return None
+
+
+def own_args(args):
+    """Boot options without the boot menu's own entries, sorted."""
+    return sorted(a for a in args if a.split("=", 1)[0] not in ("BOOT_IMAGE", "initrd", "ostree"))
+
+
 def own_kargs():
     """This start's boot options, without the boot menu's own entries."""
-    return sorted(a for a in read("/proc/cmdline").split()
-                  if a.split("=", 1)[0] not in ("BOOT_IMAGE", "initrd", "ostree"))
+    return own_args(read("/proc/cmdline").split())
 
 
 def options_only(record=None):
     """Whether this start only changed boot options from the last good start's; never for a rollback test copy."""
-    if "evenkeel_os.test_rollback=" in read("/proc/cmdline"):
+    if running_test() is not None:
         return False
     if record and isinstance(record.get("kargs"), list) and record["kargs"] != own_kargs():
         return True
@@ -583,9 +608,7 @@ def test_args(kind):
         return [f"module_blacklist={','.join(dict.fromkeys(own + sorted(mods)))}"]
     if kind in SOFTWARE_TESTS:
         return [] if SOFTWARE_TESTS[kind] in rec["items"] else 8
-    if kind == "service":
-        return [] if any(f"service:{u}" in rec["items"] for u in TEST_SERVICES) else 8
-    return []
+    return [] if any(f"service:{u}" in rec["items"] for u in TEST_SERVICES) else 8
 
 
 def load(path=RECORD):
@@ -596,13 +619,8 @@ def load(path=RECORD):
     return r if isinstance(r, dict) and r.get("format") == FORMAT and isinstance(r.get("items"), dict) else None
 
 
-def write(path, text):
-    p = P(path)
-    p.parent.mkdir(parents=True, exist_ok=True)
-    tmp = p.with_name(p.name + ".tmp")
-    tmp.write_text(text)
-    tmp.chmod(0o644)
-    os.replace(tmp, p)
+def write(path, content):
+    write_file(P(path), content)
 
 
 def record(settle=240):

@@ -624,13 +624,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "ArtCrafts signatur kontrolleres først, og den oppdateres én gang i døgnet."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Spør én gang om et Wi-Fi- eller kablet nettverk med passord er Hjem, Jobb "
-"eller Offentlig sted"
-
 msgid "At each login"
 msgstr "Ved hver innlogging"
 
@@ -1555,12 +1548,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS trenger UEFI. Slå på UEFI i BIOS, og start deretter på nytt fra "
 "USB-minnepinnen."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS trenger minst 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "EvenKeelOS fungerer best med 8 GB eller mer, så det kan være tregt."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -5912,9 +5899,6 @@ msgstr ""
 "Oppdateringer: automatiske, fra {maker}s egen nedlastingskilde. En daglig "
 "sjekk finner nye versjoner, som tas i bruk ved neste omstart."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Oppdateringer: automatisk, med Systemoppdatering."
-
 msgid "Updates: automatic."
 msgstr "Oppdateringer: automatisk."
 
@@ -8080,12 +8064,6 @@ msgstr "åpning av zip- og sit-filer"
 msgid "opening zip files"
 msgstr "åpning av zip-filer"
 
-msgid "organising and developing photos"
-msgstr "organisering og fremkalling av bilder"
-
-msgid "organising photos"
-msgstr "organisering av bilder"
-
 msgid "organizing music"
 msgstr "organisering av musikk"
 
@@ -8645,3 +8623,29 @@ msgstr "Anbefalt: Slett boksen. Den kommer tilbake av seg selv neste gang du ins
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Å slette den frigjør omtrent {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Spør én gang om et Wi-Fi-nettverk med passord er Hjem, Jobb eller Offentlig sted"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS trenger minst {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS fungerer best med {gb} GB eller mer, så det kan være tregt."
+
+msgid "organizing and developing photos"
+msgstr "organisering og fremkalling av bilder"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} har ikke signeringsnøkkel for Fedora {version} ennå."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} ble ikke lagt til, så nedlastingskilden ble fjernet igjen."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} ble ikke fjernet."

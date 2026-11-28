@@ -652,13 +652,6 @@ msgstr ""
 "Η υπογραφή του ArtCraft ελέγχεται πρώτα, και η εφαρμογή ενημερώνεται μία φορά"
 " την ημέρα."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Ρωτά μία φορά αν ένα δίκτυο Wi-Fi με κωδικό ή ένα ενσύρματο δίκτυο είναι "
-"Σπίτι, Εργασία ή Δημόσιος χώρος"
-
 msgid "At each login"
 msgstr "Σε κάθε σύνδεση"
 
@@ -1617,14 +1610,6 @@ msgid ""
 msgstr ""
 "Το EvenKeelOS χρειάζεται UEFI. Ενεργοποιήστε το UEFI στο BIOS και, στη "
 "συνέχεια, ξεκινήστε ξανά από το φλασάκι USB."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "Το EvenKeelOS χρειάζεται τουλάχιστον 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"Το EvenKeelOS λειτουργεί καλύτερα με 8 GB ή περισσότερα, οπότε μπορεί να "
-"είναι αργό."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -6173,9 +6158,6 @@ msgstr ""
 "καθημερινός έλεγχος βρίσκει νέες εκδόσεις, οι οποίες ισχύουν από την επόμενη "
 "επανεκκίνηση."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Ενημερώσεις: αυτόματες, με την Ενημέρωση συστήματος."
-
 msgid "Updates: automatic."
 msgstr "Ενημερώσεις: αυτόματες."
 
@@ -8417,12 +8399,6 @@ msgstr "άνοιγμα αρχείων zip και sit"
 msgid "opening zip files"
 msgstr "άνοιγμα αρχείων zip"
 
-msgid "organising and developing photos"
-msgstr "οργάνωση και επεξεργασία φωτογραφιών"
-
-msgid "organising photos"
-msgstr "τακτοποίηση φωτογραφιών"
-
 msgid "organizing music"
 msgstr "οργάνωση μουσικής"
 
@@ -8982,3 +8958,29 @@ msgstr "Συνιστάται: Διαγραφή του κουτιού. Δημιο
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Η διαγραφή του απελευθερώνει περίπου {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Ρωτά μία φορά αν ένα δίκτυο Wi-Fi με κωδικό είναι Σπίτι, Εργασία ή Δημόσιος χώρος"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "Το EvenKeelOS χρειάζεται τουλάχιστον {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "Το EvenKeelOS λειτουργεί καλύτερα με {gb} GB ή περισσότερα, οπότε μπορεί να είναι αργό."
+
+msgid "organizing and developing photos"
+msgstr "οργάνωση και επεξεργασία φωτογραφιών"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "Το {title} δεν έχει ακόμα κλειδί υπογραφής για το Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "Το {title} δεν προστέθηκε, γι' αυτό η πηγή λήψης του αφαιρέθηκε ξανά."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "Το {title} δεν αφαιρέθηκε."

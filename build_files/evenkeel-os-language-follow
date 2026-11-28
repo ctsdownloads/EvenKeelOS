@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # After a language change: formats follow it (whole session); "bazaar" (at login) clears Bazaar's old-language copy.
 set -u
 user=/org/freedesktop/Accounts/User$(id -u)

@@ -8,6 +8,7 @@ import sys
 from i18n import _, N_
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
+from evenkeel_os_health import read, secure_boot_on  # noqa: E402
 from evenkeel_os_ui import answer  # noqa: E402
 
 SYS = "/sys"
@@ -21,9 +22,9 @@ NVIDIA = N_("The NVIDIA card runs on the open-source driver built into EvenKeelO
             "Bazzite or Bluefin's NVIDIA editions instead.")
 NO_FIRMWARE = ("b43", "b43legacy")           # Broadcom drivers whose firmware Fedora can't include
 RAID_HIDDEN = re.compile(r"remapped NVMe devices|Switch your BIOS from RAID to AHCI")
-EFI_GLOBAL = "8be4df61-93ca-11d2-aa0d-00e098032b8c"
 MIN_DISK = 20 * 10 ** 9                      # Fedora Workstation's minimum disk
 MIN_MEMORY_GB = 8                            # the README's recommended amount
+HELD_BACK_GB = 1                             # memory the firmware and built-in graphics keep, so it isn't counted
 TOUCHPADS = ("touchpad", "trackpad", "glidepoint", "synaptics", "bcm5974")
 
 
@@ -44,14 +45,6 @@ def joined(*parts):
     text = Text(" ".join(parts))
     text.english = " ".join(getattr(p, "english", p) for p in parts)
     return text
-
-
-def read(path, default=""):
-    try:
-        with open(path) as f:
-            return f.read().strip()
-    except OSError:
-        return default
 
 
 def pci_devices():
@@ -146,7 +139,7 @@ def disks(raid):
                 joined(words(N_("Check the BIOS's storage settings.")), save_results()))
     if not found:
         return (BAD, part, words(N_("The biggest disk holds {gb} GB."), gb=f"{max(internal_disks()) / 10 ** 9:.0f}"),
-                words(N_("EvenKeelOS needs at least 20 GB.")))
+                words(N_("EvenKeelOS needs at least {gb} GB."), gb=MIN_DISK // 10 ** 9))
     return (GOOD, part, words(N_("Disk found, {gb} GB."), gb=f"{max(found) / 10 ** 9:.0f}"), "")
 
 
@@ -222,13 +215,8 @@ def start_mode():
         return (BAD, words(N_("Start mode")),
                 words(N_("This computer started the USB stick in old BIOS (legacy) mode.")),
                 words(N_("EvenKeelOS needs UEFI. Turn on UEFI in the BIOS, then start from the USB stick again.")))
-    try:
-        with open(f"{SYS}/firmware/efi/efivars/SecureBoot-{EFI_GLOBAL}", "rb") as f:
-            state = "on" if f.read()[-1:] == b"\x01" else "off"
-    except OSError:
-        state = "unknown"
-    found = {"on": N_("Secure Boot is on."), "off": N_("Secure Boot is off."),
-             "unknown": N_("Started in UEFI mode.")}[state]
+    found = {True: N_("Secure Boot is on."), False: N_("Secure Boot is off."),
+             None: N_("Started in UEFI mode.")}[secure_boot_on(SYS)]
     return (GOOD, words(N_("Secure Boot")), words(found), words(N_("Secure Boot on or off is fine.")))
 
 
@@ -238,9 +226,9 @@ def memory():
         return None
     gb = int(kb.group(1)) / 1024 ** 2
     shown = words(N_("{gb} GB of memory."), gb=math.ceil(gb))
-    if gb < MIN_MEMORY_GB - 1:          # firmware and built-in graphics keep some back
+    if gb < MIN_MEMORY_GB - HELD_BACK_GB:
         return (LIMITED, words(N_("Memory")), shown,
-                words(N_("EvenKeelOS works best with 8 GB or more, so it may be slow.")))
+                words(N_("EvenKeelOS works best with {gb} GB or more, so it may be slow."), gb=MIN_MEMORY_GB))
     return (GOOD, words(N_("Memory")), shown, "")
 
 

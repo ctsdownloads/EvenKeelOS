@@ -626,13 +626,6 @@ msgstr ""
 msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr "يتم التحقق من توقيع ArtCraft أولاً، ويتم تحديثه مرة واحدة في اليوم."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"يسأل مرة واحدة عمّا إذا كانت شبكة واي فاي أو شبكة سلكية محمية بكلمة سر هي "
-"\"المنزل\" أو \"العمل\" أو \"مكان عام\""
-
 msgid "At each login"
 msgstr "عند كل تسجيل دخول"
 
@@ -1532,12 +1525,6 @@ msgid ""
 msgstr ""
 "يحتاج EvenKeelOS إلى UEFI. فعّل UEFI في الـ BIOS، ثم ابدأ التشغيل من ذاكرة "
 "USB مرة أخرى."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "يحتاج EvenKeelOS إلى 20 غيغابايت على الأقل."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "يعمل EvenKeelOS بشكل أفضل مع 8 غيغابايت أو أكثر، لذا قد يكون بطيئًا."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -5855,9 +5842,6 @@ msgstr ""
 "التحديثات: تلقائية، من مصدر التنزيل الخاص بـ {maker}. يكتشف فحص يومي "
 "الإصدارات الجديدة، والتي تبدأ عند إعادة التشغيل التالية."
 
-msgid "Updates: automatic, with System Update."
-msgstr "التحديثات: تلقائية، مع \"تحديث النظام\"."
-
 msgid "Updates: automatic."
 msgstr "التحديثات: تلقائية."
 
@@ -8026,12 +8010,6 @@ msgstr "فتح ملفات ZIP وSIT"
 msgid "opening zip files"
 msgstr "فتح ملفات ZIP"
 
-msgid "organising and developing photos"
-msgstr "تنظيم الصور وتحسينها"
-
-msgid "organising photos"
-msgstr "تنظيم الصور"
-
 msgid "organizing music"
 msgstr "تنظيم الموسيقى"
 
@@ -8591,3 +8569,29 @@ msgstr "موصى به: \"حذف الصندوق\". يعود الصندوق من �
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "يحرّر حذفه نحو {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "يسأل مرة واحدة عمّا إذا كانت شبكة واي فاي محمية بكلمة سر هي \"المنزل\" أو \"العمل\" أو \"مكان عام\""
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "يحتاج EvenKeelOS إلى {gb} غيغابايت على الأقل."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "يعمل EvenKeelOS بشكل أفضل مع {gb} غيغابايت أو أكثر، لذا قد يكون بطيئًا."
+
+msgid "organizing and developing photos"
+msgstr "تنظيم الصور وتحسينها"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "ليس لدى {title} مفتاح توقيع لـ Fedora {version} بعد."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "لم تتم إضافة {title}، لذا أُزيل مصدر التنزيل الخاص به مرة أخرى."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "لم تتم إزالة {title}."

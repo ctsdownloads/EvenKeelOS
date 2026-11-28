@@ -14,18 +14,12 @@ import sys
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
 import evenkeel_os_health as health  # noqa: E402
+from evenkeel_os_ui import fail  # noqa: E402
 
 SETTINGS = "/usr/libexec/evenkeel-os-settings"
 # Starts greenboot's retry counter, so a start that hangs before the checks still counts (see start_counter).
-ARM = ('ro=0; findmnt -no OPTIONS /boot | tr , "\\n" | grep -qx ro && ro=1; '
-       '[ "$ro" = 0 ] || mount -o remount,rw /boot || exit 1; '
-       'grub2-editenv /boot/grub2/grubenv set boot_counter=1; rc=$?; '
-       '[ "$ro" = 0 ] || mount -o remount,bind,ro /boot; exit "$rc"')
-
-
-def fail(msg, code=1):
-    print(msg)
-    sys.exit(code)
+ARM = ["/usr/libexec/evenkeel-os-boot-writable", "/usr/bin/grub2-editenv", "/boot/grub2/grubenv", "set",
+       "boot_counter=1"]
 
 
 def check_ready():
@@ -57,8 +51,7 @@ def main(argv):
     rc = subprocess.run([SETTINGS, "fresh"]).returncode
     if rc != 0:
         sys.exit(7 if rc == 7 else 1)
-    if subprocess.run(["/usr/bin/unshare", "--mount", "--propagation", "private", "/usr/bin/bash", "-c",
-                       ARM]).returncode != 0:
+    if subprocess.run(["/usr/bin/unshare", "--mount", "--propagation", "private", *ARM]).returncode != 0:
         fail("The retry counter couldn't be started; nothing was deleted.")
     rc = subprocess.run([SETTINGS, "test-delete"]).returncode
     if rc == 10:

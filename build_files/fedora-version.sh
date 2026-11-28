@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # The Fedora version the image is built on, read from the Containerfile; run from the repo root.
 set -euo pipefail
 v=$(sed -n 's|^FROM quay.io/fedora-ostree-desktops/silverblue:\([0-9][0-9]*\)$|\1|p' Containerfile)

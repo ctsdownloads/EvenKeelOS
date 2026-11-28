@@ -15,16 +15,14 @@ ICONS = [Path("/usr/share/icons/Adwaita"), Path("/usr/share/icons/hicolor")]
 problems = []
 tools = panel.tool_list()
 pages = {k for k, _, _ in panel.PAGES}
-icons = {t.icon for t in tools} | {i for _, _, i in panel.PAGES} | {"object-select-symbolic",
-                                                                    "emblem-important-symbolic", "go-next-symbolic",
-                                                                    "document-send-symbolic", "view-refresh-symbolic",
-                                                                    "edit-copy-symbolic", "go-previous-symbolic"}
-icons |= set(dialogs.ICONS.values()) | {"help-about-symbolic"}
+SHOWN = {"object-select-symbolic", "emblem-important-symbolic", "go-next-symbolic", "document-send-symbolic",
+         "view-refresh-symbolic", "edit-copy-symbolic", "go-previous-symbolic", "help-about-symbolic"}
+icons = {t.icon for t in tools} | {i for _, _, i in panel.PAGES} | set(dialogs.ICONS.values()) | SHOWN
 for i in sorted(icons):
     if not any(next(d.rglob(f"{i}.svg"), None) for d in ICONS):
         problems.append(f"icon {i} is not in this image")
 topics = {t[0] for t in guide.TOPICS}
-for _, title, _, _, articles in guide.TOPICS:
+for _key, title, _icon, _about, articles in guide.TOPICS:
     for heading, steps in articles:
         for text, show in steps:
             kind, _, key = show.partition(":")
@@ -47,6 +45,9 @@ for job in sorted(jobs):
 for job in ("install", "remove", "login", "repair", "vpn"):
     if f"/usr/bin/evenkeel-os-packages {job}" not in runs:
         problems.append(f"evenkeel-os-packages {job} has no row in the window")
+# The dialog program takes the same kinds of window the Wheelhouse window can show.
+if set(load_program("/usr/libexec/evenkeel-os-dialog", "dialog").KINDS) != set(dialogs.ICONS):
+    problems.append("evenkeel-os-dialog's KINDS and evenkeel_os_dialogs.ICONS name different kinds of window")
 # Every evenkeel-os-tools name the window code calls is still in evenkeel-os-tools.
 for f in sorted(Path("/usr/lib/evenkeel-os").glob("*.py")):
     for name in sorted(set(re.findall(r"\bself\.t\.(\w+)", f.read_text()))):

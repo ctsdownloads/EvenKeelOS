@@ -45,6 +45,6 @@ jobs:
         # README, Build and bot upkeep PRs aren't shown under "What is new", so they need no translation.
         run: |
           hidden='^(README|Build)\b'
-          case $AUTHOR in dependabot\[bot\] | renovate\[bot\] | github-actions\[bot\]) exit 0 ;; esac
+          case $AUTHOR in dependabot\[bot\] | github-actions\[bot\]) exit 0 ;; esac
           [[ $TITLE =~ $hidden || $TITLE == "Update locked versions" ]] || grep -Fxq -- "$TITLE" po/whats-new.txt \
             || { echo "ERROR: add this PR's title to po/whats-new.txt and translate it"; exit 1; }

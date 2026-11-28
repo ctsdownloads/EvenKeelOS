@@ -58,7 +58,7 @@ def opens(link, chrome=None, choice=None, answer=None, may_install=True, zoom_ap
         zoom.chrome_command = lambda: chrome
         zoom.ask = lambda *a, **k: asked.append(a) or answer
         zoom.flathub = types.SimpleNamespace(install=lambda *a, **k: 1)
-        zoom.start = ran.append
+        zoom.launch = ran.append
         zoom.open_link(link, may_install)
         remembered = zoom.CHOICE.read_text() if zoom.CHOICE.exists() else ""
         command = [("ZOOMAPP" if w == str(app) else w) for w in ran[0]] if ran else None

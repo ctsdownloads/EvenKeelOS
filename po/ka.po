@@ -619,13 +619,6 @@ msgstr ""
 msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr "ჯერ ArtCraft-ის ხელმოწერა მოწმდება, და ის დღეში ერთხელ ახლდება."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"ერთხელ გეკითხებათ, პაროლიანი Wi-Fi ან სადენიანი ქსელი „სახლია“, „სამსახური“ "
-"თუ „საჯარო ადგილი“"
-
 msgid "At each login"
 msgstr "ყოველ შესვლისას"
 
@@ -1563,13 +1556,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS-ს UEFI სჭირდება. ჩართეთ UEFI BIOS-ში, შემდეგ კი ისევ ჩატვირთეთ "
 "კომპიუტერი USB-ფლეშკიდან."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS-ს სჭირდება მინიმუმ 20 გბ."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS საუკეთესოდ მუშაობს 8 გბ-ით ან მეტით, ამიტომ შეიძლება ნელა იმუშაოს."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -5960,9 +5946,6 @@ msgstr ""
 "ყოველდღიური შემოწმება პოულობს ახალ ვერსიებს, რომლებიც მომდევნო გადატვირთვისას"
 " ამოქმედდება."
 
-msgid "Updates: automatic, with System Update."
-msgstr "განახლებები: ავტომატური, „სისტემის განახლება“-ით."
-
 msgid "Updates: automatic."
 msgstr "განახლებები: ავტომატური."
 
@@ -8140,12 +8123,6 @@ msgstr "zip და sit ფაილების გახსნა"
 msgid "opening zip files"
 msgstr "ZIP ფაილების გახსნა"
 
-msgid "organising and developing photos"
-msgstr "ფოტოების დალაგება და დამუშავება"
-
-msgid "organising photos"
-msgstr "ფოტოების დალაგება"
-
 msgid "organizing music"
 msgstr "მუსიკის დალაგება"
 
@@ -8705,3 +8682,29 @@ msgstr "რეკომენდებულია: „ყუთის წაშ
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "მისი წაშლა დაახლოებით {size}-ს გაათავისუფლებს."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "ერთხელ გეკითხებათ, პაროლიანი Wi-Fi ქსელი „სახლია“, „სამსახური“ თუ „საჯარო ადგილი“"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS-ს სჭირდება მინიმუმ {gb} გბ."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS საუკეთესოდ მუშაობს {gb} გბ-ით ან მეტით, ამიტომ შეიძლება ნელა იმუშაოს."
+
+msgid "organizing and developing photos"
+msgstr "ფოტოების დალაგება და დამუშავება"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title}-ს Fedora {version}-ისთვის ხელმოწერის გასაღები ჯერ არ აქვს."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} არ დაემატა, ამიტომ მისი ჩამოტვირთვის წყარო ისევ წაიშალა."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} არ წაიშალა."

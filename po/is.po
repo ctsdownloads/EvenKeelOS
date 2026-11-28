@@ -619,13 +619,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "Undirskrift ArtCraft er athuguð fyrst og forritið uppfærist einu sinni á dag."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Spyr einu sinni hvort þráðlaust net eða snúrutengt net með lykilorði sé "
-"Heimili, Vinnustaður eða Almenningsstaður"
-
 msgid "At each login"
 msgstr "Við hverja innskráningu"
 
@@ -1553,12 +1546,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS þarf UEFI. Kveiktu á UEFI í BIOS og ræstu svo aftur af USB-"
 "lyklinum."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS þarf að minnsta kosti 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "EvenKeelOS virkar best með 8 GB eða meira, svo kerfið gæti verið hægt."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -5912,9 +5899,6 @@ msgstr ""
 "Uppfærslur: sjálfvirkar, frá eigin niðurhalsstað {maker}. Dagleg athugun "
 "finnur nýjar útgáfur, sem taka gildi við næstu endurræsingu."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Uppfærslur: sjálfvirkar, með „Kerfisuppfærsla“."
-
 msgid "Updates: automatic."
 msgstr "Uppfærslur: sjálfvirkar."
 
@@ -8072,12 +8056,6 @@ msgstr "opna zip- og sit-skrár"
 msgid "opening zip files"
 msgstr "opna zip-skrár"
 
-msgid "organising and developing photos"
-msgstr "raða og framkalla ljósmyndir"
-
-msgid "organising photos"
-msgstr "raða myndum"
-
 msgid "organizing music"
 msgstr "skipuleggja tónlist"
 
@@ -8637,3 +8615,29 @@ msgstr "Ráðlagt: „Eyða kassanum“. Hann kemur sjálfkrafa aftur næst þeg
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Með því að eyða honum losnar um {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Spyr einu sinni hvort þráðlaust net með lykilorði sé Heimili, Vinnustaður eða Almenningsstaður"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS þarf að minnsta kosti {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS virkar best með {gb} GB eða meira, svo kerfið gæti verið hægt."
+
+msgid "organizing and developing photos"
+msgstr "raða og framkalla ljósmyndir"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} er ekki enn með undirritunarlykil fyrir Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} var ekki bætt við, þannig að niðurhalsuppspretta þess var fjarlægð aftur."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} var ekki fjarlægt."

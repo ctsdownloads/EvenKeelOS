@@ -5,7 +5,7 @@ import re
 import subprocess
 from urllib.parse import urlsplit
 
-from evenkeel_os_ui import LAUNCH_ENV, _, ask, say
+from evenkeel_os_ui import _, ask, launch, say
 from evenkeel_os_packages import app_list, artcraft, boxes, common, flathub, installed, repo_apps, vpn, zoom
 
 LIST = "/usr/share/evenkeel-os/windows-apps.json"
@@ -13,6 +13,7 @@ JUNK = ("the", "team", "software", "inc", "llc", "ltd", "limited", "corporation"
         "foundation", "developers", "developer", "contributors", "community", "org", "labs")
 FILE_WORDS = r"(x86_64|x64|win64|win32|64bit|32bit|amd64|x86|setup|installer|install|windows|win|gui|full|offline|" \
              r"standalone|silent|user|enterprise)"
+GLUED_WORDS = r"(setup|installer|install|full|standalone|offline|silent|user|win|enterprise)$"
 
 
 def norm(s):
@@ -48,9 +49,11 @@ def norm_maker(s):
 def file_stem(path):
     """The program's name from its file name: 'putty-64bit-0.85-installer.msi' -> 'putty'."""
     n = re.sub(r"\.(exe|msi)$", "", os.path.basename(path).lower())
-    n = re.sub(FILE_WORDS, "", n)
-    n = re.sub(r"v?\d+([._-]\d+)*", "", n)
-    return re.sub(r"[^a-z]+", "", n)
+    n = re.sub(rf"(?<![a-z]){FILE_WORDS}(?![a-z])", "", n)
+    n = re.sub(r"[^a-z]+", "", re.sub(r"v?\d+([._-]\d+)*", "", n))
+    while (end := re.search(GLUED_WORDS, n)) and end.start() >= 3:      # 'ZoomInstallerFull' -> 'zoom'
+        n = n[:end.start()]
+    return n
 
 
 def read_msi(path):
@@ -109,7 +112,11 @@ def same_maker(maker, prog):
 def rank(prog):
     """Sort order of an offer: the browser or the company's own Linux version first, an app of its kind last."""
     offer = prog["offer"]
-    return -1 if offer.get("web") or offer.get("vpn") else 2 if offer.get("kind") else 1 if offer.get("job") else 0
+    if offer.get("web") or offer.get("vpn"):
+        return -1
+    if offer.get("kind"):
+        return 2
+    return 1 if offer.get("job") else 0
 
 
 def identify(path, programs, info):
@@ -135,7 +142,7 @@ def kind_from_words(info, kinds):
     return next((k["offer"] for k in kinds if any(f" {w} " in text for w in k["words"])), None)
 
 
-def choose(path):
+def match(path):
     """(offer, how, info) for a Windows installer: what to offer, how it was worked out, what the file says."""
     programs, kinds = load_list()
     info = read_installer(path)
@@ -157,11 +164,12 @@ def offer(o):
 
 def check(path):
     """For build tests: what a file is and what would be offered, without any window."""
-    o, how, info = choose(path)
+    o, how, info = match(path)
     where, package = offer(o or {})
+    kind = next((k for key, k in (("web", "browser"), ("kind", "same kind"), ("job", "replacement")) if o.get(key)),
+                "same app") if o else None
     print(json.dumps({"file": os.path.basename(path), "name": info["name"], "maker": info["maker"], "how": how,
-                      "where": where, "package": package, "kind": None if not o else "browser" if o.get("web")
-                      else "same kind" if o.get("kind") else "replacement" if o.get("job") else "same app"}))
+                      "where": where, "package": package, "kind": kind}))
     return 0
 
 
@@ -178,7 +186,7 @@ def installed_record(where, package):
 
 
 def open_file(path):
-    o = choose(path)[0]
+    o = match(path)[0]
     shown = os.path.basename(path)
     if not o:
         say(_("{filename} is a Windows program. Windows programs can't run here.\n\n"
@@ -194,8 +202,7 @@ def open_file(path):
             return 1
         if zoom.zoom_host(urlsplit(package).hostname or ""):
             return zoom.open_page(package)
-        subprocess.Popen(["gio", "open", package], start_new_session=True,
-                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, env=LAUNCH_ENV)
+        launch(["gio", "open", package])
         return 0
     if where == "vpn":
         if installed_record(where, package):

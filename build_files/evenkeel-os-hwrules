@@ -12,10 +12,9 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
-from evenkeel_os_ui import _  # noqa: E402
+from evenkeel_os_ui import PACKAGE_NAME, _, fail, first_line, write_file  # noqa: E402
 
 RULES = Path("/etc/udev/rules.d")
-PKG = re.compile(r"^[A-Za-z0-9][A-Za-z0-9.+_-]{0,127}$")
 FILE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._+-]{0,127}\.rules$")
 RUNS_PROGRAM = re.compile(r"\bRUN\b(?!\{builtin\})|\bPROGRAM\b|IMPORT\{program\}")   # RUN{builtin} stays in udev
 # Access changes (MODE, OWNER, GROUP, uaccess) are allowed only for these device kinds: never disks or memory.
@@ -37,10 +36,14 @@ GUARD = re.compile(r'\bSUBSYSTEM\s*!=\s*"([^"]*)"\s*,.*\bGOTO\s*=\s*"([^"]+)"')
 LABEL = re.compile(r'\bLABEL\s*=\s*"([^"]+)"')
 
 
+def unwrapped(text):
+    """A rule file with its continued lines (ending in a backslash) joined."""
+    return re.sub(r"\\\n", " ", text)
+
+
 def runs_program(text):
     """Whether a rule file starts a program (Install Package File asks this too)."""
-    joined = re.sub(r"\\\n", " ", text)
-    return any(RUNS_PROGRAM.search(line) for line in joined.splitlines() if not line.lstrip().startswith("#"))
+    return any(RUNS_PROGRAM.search(line) for line in unwrapped(text).splitlines() if not line.lstrip().startswith("#"))
 
 
 def kinds_ok(subsystems, kernels):
@@ -91,21 +94,15 @@ def marker(pkg):
 
 
 def ours(path, pkg):
-    try:
-        with open(path, encoding="utf-8", errors="replace") as f:
-            return f.readline() == marker(pkg)
-    except OSError:
-        return False
-
-
-def fail(msg):
-    print(msg)
-    sys.exit(1)
+    return first_line(path) == marker(pkg)
 
 
 def reload():
-    subprocess.run(["/usr/bin/udevadm", "control", "--reload"], check=False)
-    subprocess.run(["/usr/bin/udevadm", "trigger", "--action=change"], check=False)
+    """Apply the rules now; when udev can't, they still apply from the next start."""
+    for args in (["control", "--reload"], ["trigger", "--action=change"]):
+        if subprocess.run(["/usr/bin/udevadm", *args]).returncode != 0:
+            print(f"udevadm {args[0]} failed; the rules apply from the next start")
+            return
 
 
 def add(pkg, files):
@@ -130,7 +127,7 @@ def add(pkg, files):
                 fail(_("{name} is not a text file.").format(name=name))
         if runs_program(text):
             fail(_("{name} runs a program, so it is not added.").format(name=name))
-        if grants_storage(re.sub(r"\\\n", " ", text)):
+        if grants_storage(unwrapped(text)):
             fail(_("{name} could give access to disks, other system devices or every keyboard, "
                    "so it is not added.").format(name=name))
         target = RULES / name
@@ -139,12 +136,8 @@ def add(pkg, files):
         texts[name] = text
     if not texts:
         fail(_("No rule files given."))
-    RULES.mkdir(parents=True, exist_ok=True)
     for name, text in texts.items():
-        tmp = RULES / f".{name}.tmp"
-        tmp.write_text(marker(pkg) + "# Added by Install Package File. Remove it with Remove Apps.\n" + text)
-        os.chmod(tmp, 0o644)
-        tmp.replace(RULES / name)
+        write_file(RULES / name, marker(pkg) + "# Added by Install Package File. Remove it with Remove Apps.\n" + text)
         print(f"Added {RULES / name}")
     reload()
 
@@ -160,7 +153,7 @@ def remove(pkg):
 def main(argv):
     if os.geteuid() != 0:
         fail("This helper runs through polkit (pkexec).")
-    if len(argv) >= 3 and argv[1] in ("add", "remove") and PKG.match(argv[2]):
+    if len(argv) >= 3 and argv[1] in ("add", "remove") and PACKAGE_NAME.fullmatch(argv[2]):
         if argv[1] == "add" and len(argv) > 3:
             add(argv[2], argv[3:])
             return 0

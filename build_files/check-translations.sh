@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Every language in po/LINGUAS has a complete, valid translation of po/evenkeel-os.pot.
 set -euo pipefail
 cd "$(dirname "$0")/.."

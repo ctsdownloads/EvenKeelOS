@@ -557,11 +557,6 @@ msgstr "지금은 ArtCraft의 다운로드에 접속할 수 없습니다. 인터
 msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr "먼저 ArtCraft의 서명을 확인하며, 앱은 하루에 한 번 업데이트됩니다."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr "비밀번호가 있는 와이파이 또는 유선 네트워크가 '집', '직장', '공공장소' 중 어디인지 한 번 물어봅니다"
-
 msgid "At each login"
 msgstr "로그인할 때마다"
 
@@ -1399,12 +1394,6 @@ msgid ""
 "EvenKeelOS needs UEFI. Turn on UEFI in the BIOS, then start from the USB "
 "stick again."
 msgstr "EvenKeelOS에는 UEFI가 필요합니다. BIOS에서 UEFI를 켠 다음 USB 메모리로 다시 시작하십시오."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS에는 최소 20GB가 필요합니다."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "EvenKeelOS는 8GB 이상일 때 가장 잘 작동하므로, 속도가 느릴 수 있습니다."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -5364,9 +5353,6 @@ msgid ""
 msgstr ""
 "업데이트: {maker} 자체 다운로드 소스에서 자동으로. 매일 확인하여 새 버전을 찾으며, 새 버전은 다음에 다시 시작할 때 시작됩니다."
 
-msgid "Updates: automatic, with System Update."
-msgstr "업데이트: 자동, '시스템 업데이트'로."
-
 msgid "Updates: automatic."
 msgstr "업데이트: 자동."
 
@@ -7445,12 +7431,6 @@ msgstr "ZIP 및 SIT 파일 열기"
 msgid "opening zip files"
 msgstr "ZIP 파일 열기"
 
-msgid "organising and developing photos"
-msgstr "사진 정리 및 보정"
-
-msgid "organising photos"
-msgstr "사진 정리하기"
-
 msgid "organizing music"
 msgstr "음악 정리하기"
 
@@ -8010,3 +7990,29 @@ msgstr "권장: '상자 삭제'. 다음에 {apps}을(를) 설치하면 저절로
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "삭제하면 약 {size}을(를) 확보합니다."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "비밀번호가 있는 와이파이 네트워크가 '집', '직장', '공공장소' 중 어디인지 한 번 물어봅니다"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS에는 최소 {gb}GB가 필요합니다."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS는 {gb}GB 이상일 때 가장 잘 작동하므로, 속도가 느릴 수 있습니다."
+
+msgid "organizing and developing photos"
+msgstr "사진 정리 및 보정"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title}에는 아직 Fedora {version}용 서명 키가 없습니다."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title}을(를) 추가하지 못해 해당 다운로드 소스를 다시 제거했습니다."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title}을(를) 제거하지 않았습니다."

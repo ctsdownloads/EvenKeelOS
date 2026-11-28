@@ -2,9 +2,8 @@
 # Root checks of the trial check, run by boot-check through sudo in the test copy only; each break is put back.
 set -uo pipefail
 
-failed=0
-pass() { echo "PASS: $1"; }
-fail() { echo "FAIL: $1"; failed=1; }
+# shellcheck source=boot_test/check-lib.sh
+. /usr/libexec/evenkeel-os-boot-check-lib.sh
 H=/usr/libexec/evenkeel-os-health
 REC=/var/lib/evenkeel-os/health-record.json
 started() {
@@ -23,8 +22,7 @@ broken() {
   fi
 }
 
-for _ in $(seq 120); do started && break; sleep 1; done
-if started; then pass "greenboot started saving the list of what works after the good start"
+if wait_for 120 started; then pass "greenboot started saving the list of what works after the good start"
 else fail "greenboot didn't start saving the list of what works after the good start"; fi
 # Saved now instead of 4 minutes in, and not again while things are broken on purpose below.
 systemctl stop evenkeel-os-health-record.service

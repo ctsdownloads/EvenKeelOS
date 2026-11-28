@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
 from evenkeel_os_packages.artcraft import APPS as ARTCRAFT  # noqa: E402
-from evenkeel_os_packages.windows_file import makers_overlap, norm, norm_maker, trim  # noqa: E402
+from evenkeel_os_packages.windows_file import file_stem, makers_overlap, norm, norm_maker, trim  # noqa: E402
 
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "vpns.json")) as f:
     VPNS = json.load(f)
@@ -140,7 +140,7 @@ def find(pkgs, apps):
 
 
 def program(names, aliases, makers, codes, offer):
-    return {"names": sorted({norm(n) for n in names} - {""}), "aliases": sorted(set(aliases) - {""}),
+    return {"names": sorted({norm(n) for n in names} - {""}), "aliases": sorted({file_stem(a) for a in aliases} - {""}),
             "pub": sorted(makers), "codes": sorted(codes), "offer": offer}
 
 
@@ -193,12 +193,12 @@ def main(db_path, flathub_path, fedora_path, replacements_path, *ubuntu_paths_an
     # 3. any other known program: a Linux app of the same kind, from its tags
     kinds = [(k, replacement_offer(k["use"], k["job"], titles)) for k in listed["kinds"]]
     kinds = [(k, {**offer, "kind": True}) for k, offer in kinds if offer]
-    # 4. a program nobody lists: the words its installer uses to describe itself
-    by_words = [{"words": k["words"], "offer": offer} for k, offer in kinds]
     for pid, p in pkgs.items():
         kind = next((offer for k, offer in kinds if set(k["tags"]) & p["tags"]), None) if pid not in programs else None
         if kind:
             programs[pid] = program([p["name"]], [norm(p["moniker"])], p["pub"], p["codes"], kind)
+    # 4. a program nobody lists: the words its installer uses to describe itself
+    by_words = [{"words": k["words"], "offer": offer} for k, offer in kinds]
     with open(out_path, "w") as f:
         json.dump({"programs": programs, "kinds": by_words}, f, separators=(",", ":"), sort_keys=True)
     for where in sources:

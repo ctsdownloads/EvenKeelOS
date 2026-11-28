@@ -12,8 +12,6 @@ import locale_screens
 import screens
 from i18n import _, N_
 
-HERE = os.path.dirname(os.path.realpath(__file__))
-
 
 def disk_name(disk):
     return f"{disk['model']}, {disk['size']}"
@@ -59,8 +57,6 @@ class DiskScreen(screens.ListScreen):
                 _("No disk chosen yet.")) + advice
 
 
-# 9 Erase warning
-
 class EraseScreen(screens.Screen):
     title = N_("Erase the disk?")
     step = N_("Erase")
@@ -84,9 +80,6 @@ class EraseScreen(screens.Screen):
     def status(self):
         return (_("Everything on {disk} will be erased, including encrypted data.") if self.c.disk["encrypted"] else
                 _("Everything on {disk} will be erased.")).format(disk=disk_name(self.c.disk))
-
-
-# 10 Encryption
 
 
 class EncryptionScreen(screens.PasswordChoiceScreen):
@@ -120,8 +113,6 @@ class EncryptionScreen(screens.PasswordChoiceScreen):
                                               _("Type the disk password twice."))
 
 
-# 11 Root
-
 class RootScreen(screens.PasswordChoiceScreen):
     title = N_("Administrator account (root)")
     step = N_("Root")
@@ -149,8 +140,6 @@ class RootScreen(screens.PasswordChoiceScreen):
     def status(self):
         return _("Chosen: enabled.") if self.c.root_enabled else _("Chosen: locked.")
 
-
-# 12 User
 
 def system_names():
     """The user and group names the system already has: the installed system is the one this USB stick runs."""
@@ -200,7 +189,7 @@ class UserScreen(screens.ListScreen):
         super().enter()
         self.full.grab_focus()
 
-    def _full_changed(self, *_):
+    def _full_changed(self, *_args):
         self.c.full_name = " ".join(self.full.get_text().split())
         if not self.c.username_by_hand:
             first = re.sub(r"[^a-z0-9]", "", (self.c.full_name.split() or [""])[0].lower())
@@ -209,7 +198,7 @@ class UserScreen(screens.ListScreen):
             self.setting = False
         self.changed()
 
-    def _user_changed(self, *_):
+    def _user_changed(self, *_args):
         self.c.username = self.user.get_text().strip()
         if not self.setting:
             self.c.username_by_hand = True
@@ -255,8 +244,6 @@ class UserScreen(screens.ListScreen):
                 + (_("The password is typed and matches.") if self.pair.ready() else _("Type the password twice.")))
 
 
-# 13 Computer name
-
 class ComputerNameScreen(screens.Screen):
     title = N_("Computer name")
     step = N_("Computer name")
@@ -284,7 +271,7 @@ class ComputerNameScreen(screens.Screen):
             self.setting = False
         self.entry.grab_focus()
 
-    def _changed(self, *_):
+    def _changed(self, *_args):
         self.c.hostname = self.entry.get_text().strip().lower()
         if not self.setting:
             self.c.hostname_by_hand = True
@@ -297,8 +284,6 @@ class ComputerNameScreen(screens.Screen):
         return _("Computer name: {name}.").format(name=self.c.hostname) + (
             "" if self.ready() else " " + _("Use letters, digits and -, not at the start or end."))
 
-
-# 14 Experience
 
 class ExperienceScreen(screens.ListScreen):
     title = N_("Coming from Windows?")
@@ -330,8 +315,6 @@ class ExperienceScreen(screens.ListScreen):
         return _("Chosen: {name}.").format(name=choice_name(ExperienceScreen.CHOICES, self.c.experience))
 
 
-# 15 Desktop layout
-
 class LayoutScreen(screens.Screen):
     title = N_("Desktop layout")
     step = N_("Desktop layout")
@@ -352,7 +335,7 @@ class LayoutScreen(screens.Screen):
         self.cards, self.names, self.abouts = {}, {}, {}
         for key, name, about in self.CHOICES:
             card = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6, margin_top=6, margin_bottom=6)
-            picture = Gtk.Picture.new_for_filename(os.path.join(HERE, f"layout-{key}.png"))
+            picture = Gtk.Picture.new_for_filename(os.path.join(screens.HERE, f"layout-{key}.png"))
             picture.set_size_request(320, 213)
             card.append(picture)
             self.names[key] = Gtk.Label(css_classes=["title-4"])
@@ -384,8 +367,6 @@ def choice_name(choices, key):
     return _(next(name for k, name, _a in choices if k == key))
 
 
-# 16 Review
-
 class ReviewScreen(screens.ListScreen):
     title = N_("Review")
     step = N_("Review")
@@ -397,14 +378,14 @@ class ReviewScreen(screens.ListScreen):
         return _("Check everything. Click a line to change it, or click Install to put EvenKeelOS on the disk.")
 
     def summary(self):
-        c, kb = self.c, data.keyboards()
+        c = self.c
         clock = _("24 hour") if c.uses_24_hour() else _("12 hour")
         user = (_("{name} ({username}), administrator") if c.admin else _("{name} ({username})")).format(
             name=c.full_name, username=c.username)
         return [
             (_("Language"), i18n.language(c.locale), locale_screens.LanguageScreen),
-            (_("Keyboard"), ", ".join(i18n.keyboard(kb[k]) for k in c.layouts), locale_screens.KeyboardScreen),
-            (_("Keyboard at start"), i18n.keyboard(kb[c.boot_layout or c.layouts[0]]),
+            (_("Keyboard"), ", ".join(data.keyboard_name(k) for k in c.layouts), locale_screens.KeyboardScreen),
+            (_("Keyboard at start"), data.keyboard_name(c.boot_layout or c.layouts[0]),
              locale_screens.BootKeyboardScreen),
             (_("Time zone"), i18n.place(c.timezone) if c.timezone else _("Automatic"),
              locale_screens.TimeZoneScreen),

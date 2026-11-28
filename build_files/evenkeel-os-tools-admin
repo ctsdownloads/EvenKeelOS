@@ -39,18 +39,13 @@ import evenkeel_os_health as health  # noqa: E402
 import evenkeel_os_letin as letin  # noqa: E402
 import evenkeel_os_network as net  # noqa: E402
 import evenkeel_os_sharing as sharing  # noqa: E402
-from evenkeel_os_ui import _  # noqa: E402
+from evenkeel_os_ui import _, fail, save_json  # noqa: E402
 
-DISK_UNLOCK_ON = Path("/var/lib/evenkeel-os/disk-unlock-on")
+DISK_UNLOCK_ON = Path(health.DISK_UNLOCK_ON)
 # Extra kernel arguments the running test copy was made with (a driver block), taken off with its marker.
 TEST_ARGS = Path("/var/lib/evenkeel-os/test-rollback-args")
 UUID = re.compile(r"^[0-9a-fA-F-]{36}$")
 FIREWALL_SERVICES = ("ssh", "ipp")             # the Network safety switches: SSH, Share my printer
-
-
-def fail(msg, code=1):
-    print(msg)
-    sys.exit(code)
 
 
 def luks_device():
@@ -118,10 +113,11 @@ def disk_unlock(state):
         fail("That is not the disk password.", 3)
     env = {"PATH": "/usr/sbin:/usr/bin", "PASSWORD": pw}
     if state == "on":
-        if not Path("/dev/tpmrm0").exists():
+        if not health.has_tpm():
             fail("This computer has no TPM.")
         # Enrolls the TPM, then wipes any older TPM enrollment (the new one is kept).
-        cmd = ["/usr/bin/systemd-cryptenroll", "--wipe-slot=tpm2", "--tpm2-device=auto", "--tpm2-pcrs=7+14", dev]
+        cmd = ["/usr/bin/systemd-cryptenroll", "--wipe-slot=tpm2", "--tpm2-device=auto",
+               "--tpm2-pcrs=" + "+".join(health.TPM_PCRS), dev]
     else:
         cmd = ["/usr/bin/systemd-cryptenroll", "--wipe-slot=tpm2", dev]
     r = subprocess.run(cmd, env=env, stdin=subprocess.DEVNULL)
@@ -190,23 +186,23 @@ def keep_update():
     print("done")
 
 
-def let_in(service, state):
+def home_lets_in(service, state):
     """Home networks let the service in (on) or keep it out (off); saved and reloaded. "" when it worked."""
     return firewall_change(net.HOME, [f"--{'add' if state == 'on' else 'remove'}-service={service}"])
 
 
 def firewall(service, state):
     """Switch a service on (it runs, and Home networks let it in) or off; both or neither."""
-    problem = let_in(service, state)
+    problem = home_lets_in(service, state)
     if problem:
         fail(problem)
     if service == "ssh":        # the SSH server, off in Fedora until switched on
-        run = ["/usr/bin/systemctl", "enable" if state == "on" else "disable", "--now", "sshd.service"]
+        cmd = ["/usr/bin/systemctl", "enable" if state == "on" else "disable", "--now", "sshd.service"]
     else:                       # printers plugged into this computer, shared with the network or not
-        run = ["/usr/bin/cupsctl", "--share-printers" if state == "on" else "--no-share-printers"]
-    r = subprocess.run(run, capture_output=True, text=True)
+        cmd = ["/usr/bin/cupsctl", "--share-printers" if state == "on" else "--no-share-printers"]
+    r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0:
-        let_in(service, "off" if state == "on" else "on")       # put the firewall back as it was
+        home_lets_in(service, "off" if state == "on" else "on")       # put the firewall back as it was
         fail(f"{service} didn't change, so the firewall was left as it was: {(r.stderr or r.stdout).strip()}")
 
 
@@ -234,16 +230,15 @@ def caller():
     return user.pw_name
 
 
-def save_json(path, state):
-    tmp = path.with_suffix(".tmp")
-    tmp.parent.mkdir(parents=True, exist_ok=True)
-    tmp.write_text(json.dumps(state, indent=1) + "\n")
-    tmp.chmod(0o644)
-    os.replace(tmp, path)
+SHARING_FAILED = []      # what Shared folders couldn't do this run; the run then exits 1
 
 
-def systemctl(*args):
-    return subprocess.run(["/usr/bin/systemctl", *args], capture_output=True, text=True).returncode == 0
+def system(*cmd):
+    """Run a Shared folders step; what fails is printed (the caller keeps it in its log) and remembered."""
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode != 0:
+        SHARING_FAILED.append(cmd[0])
+        print(f"{' '.join(cmd)} failed: {(r.stderr or r.stdout).strip()}")
 
 
 def home_devices():
@@ -253,8 +248,8 @@ def home_devices():
 def sharing_stop():
     """Stop what Shared folders started; a Samba set up by hand (not started here) is left alone."""
     if WSDD_OPTIONS.exists():
-        systemctl("stop", "--no-block", "wsdd.service", "smb.service")
-        subprocess.run(["/usr/sbin/setsebool", "samba_enable_home_dirs", "off"], capture_output=True)
+        system("/usr/bin/systemctl", "stop", "--no-block", "wsdd.service", "smb.service")
+        system("/usr/sbin/setsebool", "samba_enable_home_dirs", "off")
         WSDD_OPTIONS.unlink()
 
 
@@ -275,15 +270,15 @@ def sharing_sync(close=None):
     moved = not WSDD_OPTIONS.exists() or WSDD_OPTIONS.read_text() != options
     WSDD_OPTIONS.parent.mkdir(parents=True, exist_ok=True)
     WSDD_OPTIONS.write_text(options)
-    subprocess.run(["/usr/sbin/setsebool", "samba_enable_home_dirs", "on"], capture_output=True)   # until restart
-    systemctl("start", "--no-block", "avahi-daemon.service")
+    system("/usr/sbin/setsebool", "samba_enable_home_dirs", "on")      # until restart
+    system("/usr/bin/systemctl", "start", "--no-block", "avahi-daemon.service")
     if sharing.running():
-        subprocess.run(["/usr/bin/smbcontrol", "smbd", "reload-config"], capture_output=True)
+        system("/usr/bin/smbcontrol", "smbd", "reload-config")
         if close:
-            subprocess.run(["/usr/bin/smbcontrol", "smbd", "close-share", close], capture_output=True)
+            system("/usr/bin/smbcontrol", "smbd", "close-share", close)
     else:                              # first start, or it stopped: start it again
-        systemctl("start", "--no-block", "smb.service")
-    systemctl("restart" if moved else "start", "--no-block", "wsdd.service")      # wsdd on the Home network only
+        system("/usr/bin/systemctl", "start", "--no-block", "smb.service")
+    system("/usr/bin/systemctl", "restart" if moved else "start", "--no-block", "wsdd.service")   # Home network only
 
 
 def sharing_switch(want):
@@ -295,7 +290,7 @@ def sharing_switch(want):
             path=sharing.SMB_CONF))
     if on and caller() not in state["passwords"]:
         fail(_("Set a sharing password first."), 3)
-    problem = let_in(sharing.FIREWALL_SERVICE, want)
+    problem = home_lets_in(sharing.FIREWALL_SERVICE, want)
     if problem:
         fail(problem)
     state["on"] = on
@@ -365,14 +360,16 @@ def sharing_command(args):
             sharing_password()
         elif args == ["sync"]:
             sharing_sync()
+    if SHARING_FAILED:
+        sys.exit(1)
 
 
 LET_IN_LOCK = Path("/run/evenkeel-os/let-in.lock")
 LET_IN_ZONES = {"home": net.HOME, "work": net.WORK, "public": net.PUBLIC}
 # Done once: before this, Work let in ports 1025 to 65535 and the SSH and printer switches, like Home.
 WORK_UPDATED = Path("/var/lib/evenkeel-os/work-lets-nothing-in")
-OLD_WORK = (["--remove-port=1025-65535/tcp", "--remove-port=1025-65535/udp", "--remove-service=ssh",
-             "--remove-service=ipp"])
+OLD_WORK = ["--remove-port=1025-65535/tcp", "--remove-port=1025-65535/udp", "--remove-service=ssh",
+            "--remove-service=ipp"]
 
 
 def firewall_change(zone, flags, mend=()):

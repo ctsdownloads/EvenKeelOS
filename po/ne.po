@@ -622,13 +622,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "पहिले ArtCraft को हस्ताक्षर जाँच गरिन्छ, र यो दिनमा एक पटक अपडेट हुन्छ।"
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"पासवर्ड भएको Wi-Fi वा तारयुक्त नेटवर्क घर, कार्यस्थल वा सार्वजनिक स्थानमध्ये "
-"कुन हो भनेर एक पटक सोध्छ"
-
 msgid "At each login"
 msgstr "प्रत्येक पटक लगइन गर्दा"
 
@@ -1558,14 +1551,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS लाई UEFI चाहिन्छ। BIOS मा UEFI चालू गर्नुहोस्, त्यसपछि फेरि USB "
 "स्टिकबाट सुरु गर्नुहोस्।"
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS लाई कम्तीमा 20 GB चाहिन्छ।"
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS ले 8 GB वा सोभन्दा बढीमा सबैभन्दा राम्रोसँग काम गर्छ, त्यसैले यो "
-"ढिलो हुन सक्छ।"
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -5961,9 +5946,6 @@ msgstr ""
 "अपडेटहरू: स्वचालित, {maker} को आफ्नै डाउनलोड स्रोतबाट। दैनिक जाँचले नयाँ "
 "संस्करणहरू फेला पार्छ, जुन अर्को पटक रिस्टार्ट गर्दा सुरु हुन्छन्।"
 
-msgid "Updates: automatic, with System Update."
-msgstr "अपडेटहरू: स्वचालित, सिस्टम अपडेटको साथ।"
-
 msgid "Updates: automatic."
 msgstr "अपडेटहरू: स्वचालित।"
 
@@ -8152,12 +8134,6 @@ msgstr "zip र sit फाइलहरू खोल्ने"
 msgid "opening zip files"
 msgstr "जिप फाइलहरू खोल्ने"
 
-msgid "organising and developing photos"
-msgstr "तस्बिरहरू मिलाउने र सम्पादन गर्ने"
-
-msgid "organising photos"
-msgstr "तस्बिरहरू मिलाउने"
-
 msgid "organizing music"
 msgstr "सङ्गीत व्यवस्थित गर्ने"
 
@@ -8717,3 +8693,29 @@ msgstr "सिफारिस: बक्स मेटाउनुहोस्।
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "यसलाई मेटाउँदा करिब {size} खाली हुन्छ।"
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "पासवर्ड भएको Wi-Fi नेटवर्क घर, कार्यस्थल वा सार्वजनिक स्थानमध्ये कुन हो भनेर एक पटक सोध्छ"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS लाई कम्तीमा {gb} GB चाहिन्छ।"
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS ले {gb} GB वा सोभन्दा बढीमा सबैभन्दा राम्रोसँग काम गर्छ, त्यसैले यो ढिलो हुन सक्छ।"
+
+msgid "organizing and developing photos"
+msgstr "तस्बिरहरू मिलाउने र सम्पादन गर्ने"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} को लागि Fedora {version} को साइनिङ की अझै छैन।"
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} थपिएन, त्यसैले यसको डाउनलोड स्रोत फेरि हटाइयो।"
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} हटाइएन।"

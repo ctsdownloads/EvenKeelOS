@@ -543,11 +543,6 @@ msgstr "目前無法連接 ArtCraft 的下載伺服器。請檢查互聯網連�
 msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr "系統會先檢查 ArtCraft 的簽名，並每日更新一次。"
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr "會詢問一次需要密碼的 Wi-Fi 或有線網絡是「家居」、「工作」還是「公共場所」"
-
 msgid "At each login"
 msgstr "每次登入時"
 
@@ -1372,12 +1367,6 @@ msgid ""
 "EvenKeelOS needs UEFI. Turn on UEFI in the BIOS, then start from the USB "
 "stick again."
 msgstr "EvenKeelOS 需要 UEFI。請在 BIOS 中開啟 UEFI，然後再從 USB 手指重新啟動。"
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS 需要最少 20 GB。"
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "EvenKeelOS 在 8 GB 或以上記憶體下運作最佳，因此可能會較慢。"
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -5242,9 +5231,6 @@ msgid ""
 "new versions, which start at the next restart."
 msgstr "更新：自動進行，來自 {maker} 的專屬下載來源。每日檢查會尋找新版本，並會在下次重新啟動時開始使用。"
 
-msgid "Updates: automatic, with System Update."
-msgstr "更新：自動，透過「系統更新」。"
-
 msgid "Updates: automatic."
 msgstr "更新：自動。"
 
@@ -7297,12 +7283,6 @@ msgstr "開啟 ZIP 和 SIT 檔案"
 msgid "opening zip files"
 msgstr "開啟 ZIP 檔案"
 
-msgid "organising and developing photos"
-msgstr "整理和沖曬相片"
-
-msgid "organising photos"
-msgstr "整理相片"
-
 msgid "organizing music"
 msgstr "整理音樂"
 
@@ -7862,3 +7842,29 @@ msgstr "建議：「刪除容器」。下次你安裝 {apps} 時，它會自動�
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "刪除它會釋放約 {size}。"
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "會詢問一次需要密碼的 Wi-Fi 網絡是「家居」、「工作」還是「公共場所」"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS 需要最少 {gb} GB。"
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS 在 {gb} GB 或以上記憶體下運作最佳，因此可能會較慢。"
+
+msgid "organizing and developing photos"
+msgstr "整理和沖曬相片"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} 暫時未有適用於 Fedora {version} 的簽署金鑰。"
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} 未有新增，因此已再次移除其下載來源。"
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} 未有移除。"

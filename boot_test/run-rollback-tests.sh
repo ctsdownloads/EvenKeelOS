@@ -5,13 +5,14 @@ set -uo pipefail
 OUT=${RUNNER_TEMP:-/tmp}/rollback-test-results
 HERE=$(dirname "$0")
 . "$HERE/vm.sh"
-# The names in a list assigned in a Python file: $1 the file, $2 the list.
+# The names in a list assigned in a Python file: $1 the file, $2 the list (read the way the build check reads it).
 assigned() {
-  python3 -I - "$1" "$2" <<'PY'
-import ast, sys
-for n in ast.parse(open(sys.argv[1]).read()).body:
-    if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == sys.argv[2]:
-        print("\n".join(ast.literal_eval(n.value)))
+  python3 -I - "$HERE/../build_files/check-rollback-tests.py" "$1" "$2" <<'PY'
+import importlib.util, sys
+spec = importlib.util.spec_from_file_location("check", sys.argv[1])
+check = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(check)
+print(*check.assigned(sys.argv[2], sys.argv[3]), sep="\n")
 PY
 }
 # Wheelhouse's tests, less the two a virtual machine has no chip for: Wi-Fi and Bluetooth.
@@ -280,7 +281,7 @@ say "Test: Keep, on a Boot options change that breaks printing"
 if keep_test; then say "PASS: Esc opened the window again, and Keep with the password kept the change."
 else fail "Keep: $why"; fi
 on "journalctl -b -u greenboot-healthcheck -o short --no-pager" > "$OUT/greenboot-keep.txt"
-vm_stop || true
+vm_stop
 if [ "$failed" = 0 ]; then say "Rollback tests passed: the 3 update checks, all $((${#TESTS[@]} + 1)) tests and Keep."
 else say "Rollback tests failed."; fi
 [ -n "${GITHUB_STEP_SUMMARY:-}" ] && tail -n 1 "$OUT/report.txt" >> "$GITHUB_STEP_SUMMARY"

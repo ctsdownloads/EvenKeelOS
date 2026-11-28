@@ -122,7 +122,3 @@ def turn_on_services(entry):
         say(_("{title} is installed, but its background service didn't turn on.\n\n{details}")
             .format(title=title, details=r.stdout.strip()), "warning")
     return True
-
-
-def remove_steps(entry):
-    return [["pkexec", HELPER, "remove", entry["vpn"]]]

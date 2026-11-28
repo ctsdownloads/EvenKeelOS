@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Installs outside apps' translations, filling gaps from po/apps/APP/LANG.po; fails on any missing line. Usage: PO-DIR
 set -euo pipefail
 export LC_ALL=C.UTF-8

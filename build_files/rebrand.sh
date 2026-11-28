@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Swap Fedora's branding for generic packages (Fedora trademark rules); fails on anything wrong.
 set -euo pipefail
 

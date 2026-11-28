@@ -633,13 +633,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "Аввал имзои ArtCraft санҷида мешавад ва он рӯзе як бор навсозӣ мешавад."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Як бор мепурсад, ки шабакаи Wi-Fi-и паролдор ё шабакаи симӣ «Хона», «Кор» ё "
-"«Ҷои ҷамъиятӣ» аст"
-
 msgid "At each login"
 msgstr "Ҳангоми ҳар як воридшавӣ"
 
@@ -1577,14 +1570,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS ба UEFI ниёз дорад. UEFI-ро дар BIOS фаъол кунед, сипас бори дигар"
 " аз флешкаи USB оғоз кунед."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS ақаллан 20 ГБ талаб мекунад."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS бо 8 ГБ ё бештар беҳтар кор мекунад, бинобар ин он метавонад суст "
-"бошад."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -6024,9 +6009,6 @@ msgstr ""
 "Навсозиҳо: худкор, аз манбаи боргирии худи {maker}. Санҷиши ҳаррӯза версияҳои"
 " навро меёбад, ки аз бозоғозии навбатӣ оғоз мешаванд."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Навсозиҳо: худкор, бо «Навсозии система»."
-
 msgid "Updates: automatic."
 msgstr "Навсозиҳо: худкор."
 
@@ -8220,12 +8202,6 @@ msgstr "кушодани файлҳои zip ва sit"
 msgid "opening zip files"
 msgstr "кушодани файлҳои zip"
 
-msgid "organising and developing photos"
-msgstr "тартиб додан ва коркарди аксҳо"
-
-msgid "organising photos"
-msgstr "тартиб додани аксҳо"
-
 msgid "organizing music"
 msgstr "тартиб додани мусиқӣ"
 
@@ -8785,3 +8761,29 @@ msgstr "Тавсия: «Нест кардани қуттӣ». Дафъаи ди�
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "Нест кардани он тақрибан {size} озод мекунад."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Як бор мепурсад, ки шабакаи Wi-Fi-и паролдор «Хона», «Кор» ё «Ҷои ҷамъиятӣ» аст"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS ақаллан {gb} ГБ талаб мекунад."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS бо {gb} ГБ ё бештар беҳтар кор мекунад, бинобар ин он метавонад суст бошад."
+
+msgid "organizing and developing photos"
+msgstr "тартиб додан ва коркарди аксҳо"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} ҳанӯз калиди имзо барои Fedora {version} надорад."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} илова карда нашуд, бинобар ин сарчашмаи боргирии он дубора тоза карда шуд."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} тоза карда нашуд."

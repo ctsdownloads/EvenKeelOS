@@ -28,9 +28,15 @@ BOXES = {
     "deb": {"name": "evenkeel-ubuntu", "label": N_("Ubuntu box"),
             "image": "quay.io/toolbx/ubuntu-toolbox:24.04"},
 }
+SOURCED = set()      # packages installed from a download source in this run: System Update keeps them current
 FLATPAK_PLACES = ("flathub", "artcraft")     # apps installed as Flatpaks: from Flathub, or ArtCraft's own
 WHERE = {"evenkeel-fedora": N_("Fedora box"), "evenkeel-ubuntu": N_("Ubuntu box"), "system": N_("System"),
          "flathub": "Flathub", "artcraft": "ArtCraft", "rules": N_("Hardware rule")}
+
+
+def plain_list(items):
+    """Untranslated names (N_), one per line, translated."""
+    return "\n".join("  - " + _(i) for i in items)
 
 
 def launcher(where, app):

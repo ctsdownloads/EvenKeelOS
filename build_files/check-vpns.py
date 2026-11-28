@@ -9,11 +9,9 @@ import tempfile
 from pathlib import Path
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
-from evenkeel_os_ui import load_program  # noqa: E402
+from evenkeel_os_ui import PACKAGE_NAME, load_program  # noqa: E402
 
 NAME = re.compile(r"^[a-z0-9-]+$")
-PKG = re.compile(r"^[A-Za-z0-9][A-Za-z0-9.+_-]{0,127}$")
-UNIT = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._@-]{0,127}\.(service|socket|timer|path)$")
 problems, warnings = [], []
 fedora = platform.freedesktop_os_release()["VERSION_ID"]
 
@@ -26,9 +24,9 @@ for name, v in vpns.items():
     for field in ("title", "maker", "packages", "files", "keys", "repos", "enable"):
         if not v.get(field):
             problems.append(f"{name}: no {field}")
-    if not all(PKG.match(p) for p in v.get("packages", []) + v.get("files", [])):
+    if not all(PACKAGE_NAME.fullmatch(p) for p in v.get("packages", []) + v.get("files", [])):
         problems.append(f"{name}: a package name has characters that aren't allowed")
-    if not all(UNIT.match(u) for u in v.get("enable", []) + list(v.get("copy_units", {}))):
+    if not all(helper.UNIT.match(u) for u in v.get("enable", []) + list(v.get("copy_units", {}))):
         problems.append(f"{name}: a service name has characters that aren't allowed")
     if not set(v.get("start", [])) <= set(v.get("enable", [])):
         problems.append(f"{name}: a service is started but never turned on")

@@ -19,7 +19,6 @@ path = [
     "image-template.env",
     ".gitignore",
     ".github/dependabot.yml",
-    ".github/renovate.json5",
     ".github/workflows/build.yml",
 ]
 precedence = "override"

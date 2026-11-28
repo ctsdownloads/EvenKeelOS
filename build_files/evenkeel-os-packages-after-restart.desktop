@@ -4,3 +4,6 @@ Name=Install Package File: after restart
 Comment=Says once whether a package added to the system is ready, offers to add a printer, and updates ArtCraft apps
 Exec=/usr/bin/evenkeel-os-packages after-restart
 NoDisplay=true
+Terminal=false
+OnlyShowIn=GNOME;
+X-GNOME-Autostart-enabled=true

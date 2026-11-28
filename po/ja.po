@@ -554,11 +554,6 @@ msgstr "現在、ArtCraft のダウンロードにアクセスできません。
 msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr "先に ArtCraft の署名が確認されます。更新は1日1回です。"
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr "パスワード付きの Wi-Fi または有線ネットワークが「ホーム」、「職場」、「公共の場所」のどれかを1回だけ尋ねます"
-
 msgid "At each login"
 msgstr "ログインするたびに"
 
@@ -1398,12 +1393,6 @@ msgid ""
 "EvenKeelOS needs UEFI. Turn on UEFI in the BIOS, then start from the USB "
 "stick again."
 msgstr "EvenKeelOS には UEFI が必要です。BIOS で UEFI を有効にしてから、USB メモリからもう一度起動してください。"
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS には少なくとも 20 GB が必要です。"
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "EvenKeelOS は 8 GB 以上で最も快適に動作するため、これより少ない場合は動作が遅くなることがあります。"
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -5343,9 +5332,6 @@ msgid ""
 "new versions, which start at the next restart."
 msgstr "アップデート：自動（{maker} 独自のダウンロード元から）。毎日の確認で新しいバージョンが見つかると、次回の再起動から使われます。"
 
-msgid "Updates: automatic, with System Update."
-msgstr "アップデート：自動（「システムアップデート」で）。"
-
 msgid "Updates: automatic."
 msgstr "アップデート：自動。"
 
@@ -7422,12 +7408,6 @@ msgstr "ZIP ファイルと SIT ファイルを開く"
 msgid "opening zip files"
 msgstr "ZIP ファイルを開く"
 
-msgid "organising and developing photos"
-msgstr "写真の整理と現像"
-
-msgid "organising photos"
-msgstr "写真の整理"
-
 msgid "organizing music"
 msgstr "音楽を整理する"
 
@@ -7987,3 +7967,29 @@ msgstr "おすすめ：「ボックスを削除」。次に{apps}をインスト
 #, python-brace-format
 msgid "Deleting it frees about {size}."
 msgstr "削除すると約{size}の空き容量ができます。"
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "パスワード付きの Wi-Fi ネットワークが「ホーム」、「職場」、「公共の場所」のどれかを1回だけ尋ねます"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS には少なくとも {gb} GB が必要です。"
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS は {gb} GB 以上で最も快適に動作するため、これより少ない場合は動作が遅くなることがあります。"
+
+msgid "organizing and developing photos"
+msgstr "写真の整理と現像"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title}には、Fedora {version} 用の署名キーがまだありません。"
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title}は追加されなかったため、そのダウンロード元は削除されました。"
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title}は削除されませんでした。"

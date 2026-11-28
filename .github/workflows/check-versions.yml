@@ -3,7 +3,7 @@
 name: Check for newer versions
 on:
   schedule:
-    - cron: '35 9 * * *'  # 9:35am UTC everyday, before the daily build
+    - cron: '35 9 * * *'  # before the daily build
   workflow_dispatch:
 
 permissions: {}

@@ -20,9 +20,9 @@ keepalive=$!
 trap 'kill $keepalive 2>/dev/null; sudo rm -f "$payload"' EXIT
 
 # Step 1 is skipped when its files are unchanged; sudo podman rmi localhost/evenkeel-os to force it.
-stamp="$HOME/.cache/evenkeel-os-local-image-v2"   # v2: images built before --no-cache are not trusted
-src=$(git ls-files -s Containerfile build_files system_files | sha256sum | cut -c1-16)
-git diff --quiet HEAD -- Containerfile build_files system_files || src="changed-$(date +%s)"
+stamp="$HOME/.cache/evenkeel-os-local-image-v2"
+src=$(git ls-files -s Containerfile cosign.pub build_files system_files | sha256sum | cut -c1-16)
+git diff --quiet HEAD -- Containerfile cosign.pub build_files system_files || src="changed-$(date +%s)"
 if [ "$(cat "$stamp" 2>/dev/null)" = "$src" ] && sudo podman image exists localhost/evenkeel-os; then
   echo "== 1 of 3: the EvenKeelOS image: unchanged since the last build here, using that one"
 else

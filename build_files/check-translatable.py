@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3 -I
 """Fails when words that go on screen are written straight into a window instead of through _()."""
 import ast
 import re
@@ -93,4 +93,5 @@ def main():
     print("Every line of screen text can be translated.")
 
 
-main()
+if __name__ == "__main__":
+    main()

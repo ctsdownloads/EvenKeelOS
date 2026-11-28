@@ -74,8 +74,6 @@ class LanguageScreen(screens.ListScreen):
         return _("Chosen: {name}.").format(name=i18n.language(self.c.locale))
 
 
-# 2 Keyboard
-
 class KeyboardScreen(screens.ListScreen):
     title = N_("Keyboard layout")
     step = N_("Keyboard")
@@ -93,16 +91,13 @@ class KeyboardScreen(screens.ListScreen):
         self.suggested = [k for k in data.suggested_keyboards(self.c.locale) if k in self.all]
         if not self.c.layouts_chosen_by_hand:
             self.c.layouts = self.suggested[:1]
-        rest = sorted((k for k in self.all if k not in self.suggested), key=lambda k: self.name(k).lower())
+        rest = sorted((k for k in self.all if k not in self.suggested), key=lambda k: data.keyboard_name(k).lower())
         self.order = self.suggested + rest
         super().enter()
 
     def items(self):
-        return [(self.name(k), _("Suggested") if k in self.suggested else "", k in self.c.layouts)
+        return [(data.keyboard_name(k), _("Suggested") if k in self.suggested else "", k in self.c.layouts)
                 for k in self.order]
-
-    def name(self, k):
-        return i18n.keyboard(self.all[k])
 
     def pick(self, i):
         k = self.order[i]
@@ -115,10 +110,8 @@ class KeyboardScreen(screens.ListScreen):
         self.choose()
 
     def status(self):
-        return _("Chosen: {names}.").format(names=", ".join(self.name(k) for k in self.c.layouts))
+        return _("Chosen: {names}.").format(names=", ".join(data.keyboard_name(k) for k in self.c.layouts))
 
-
-# 3 Keyboard at start
 
 class BootKeyboardScreen(screens.ListScreen):
     """Layouts the text console has, for typing the disk password."""
@@ -135,22 +128,19 @@ class BootKeyboardScreen(screens.ListScreen):
         self.all = data.keyboards()
         self.offered = [k for k in self.all if data.has_console_keymap(k)]
 
-    def name(self, k):
-        return i18n.keyboard(self.all[k])
-
     def same_offered(self):
         return self.c.layouts[0] in self.offered
 
     def enter(self):
         if self.c.boot_layout is None and not self.same_offered():
             self.c.boot_layout = "us"
-        self.order = sorted(self.offered, key=lambda k: self.name(k).lower())
+        self.order = sorted(self.offered, key=lambda k: data.keyboard_name(k).lower())
         super().enter()
 
     def items(self):
-        first = self.name(self.c.layouts[0])
+        first = data.keyboard_name(self.c.layouts[0])
         same = [(_("Same as above"), first, self.c.boot_layout is None)] if self.same_offered() else []
-        return same + [(self.name(k), "", self.c.boot_layout == k) for k in self.order]
+        return same + [(data.keyboard_name(k), "", self.c.boot_layout == k) for k in self.order]
 
     def pick(self, i):
         if self.same_offered():
@@ -161,13 +151,11 @@ class BootKeyboardScreen(screens.ListScreen):
 
     def status(self):
         k = self.c.boot_layout or self.c.layouts[0]
-        first = self.name(self.c.layouts[0])
+        first = data.keyboard_name(self.c.layouts[0])
         missing = "" if self.same_offered() else _("{layout} can't be used before EvenKeelOS loads.").format(
             layout=first) + " "
-        return missing + _("Chosen: {name}.").format(name=self.name(k))
+        return missing + _("Chosen: {name}.").format(name=data.keyboard_name(k))
 
-
-# 4 Network
 
 class NetworkScreen(screens.ListScreen):
     title = N_("Network")
@@ -176,7 +164,7 @@ class NetworkScreen(screens.ListScreen):
     def build(self):
         super().build()
         self.password = Adw.PasswordEntryRow()
-        self.password.connect("entry-activated", lambda *_: self.connect_wifi())
+        self.password.connect("entry-activated", lambda *_args: self.connect_wifi())
         self.password_box = Gtk.ListBox(selection_mode=Gtk.SelectionMode.NONE, css_classes=["boxed-list"],
                                         visible=False)
         self.password_box.append(self.password)
@@ -289,8 +277,6 @@ class NetworkScreen(screens.ListScreen):
         return _("Wired network: not connected.") + ("" if self.wifi else " " + _("No Wi-Fi networks found."))
 
 
-# 5 Time zone
-
 class TimeZoneScreen(screens.ListScreen):
     title = N_("Time zone")
     step = N_("Time zone")
@@ -347,8 +333,6 @@ class TimeZoneScreen(screens.ListScreen):
                                            _("Automatic"))
 
 
-# 6 Date and time
-
 class DateTimeScreen(screens.ListScreen):
     title = N_("Date and time")
     step = N_("Date and time")
@@ -364,7 +348,7 @@ class DateTimeScreen(screens.ListScreen):
 
     def build(self):
         self.server = Adw.EntryRow()
-        self.server.connect("entry-activated", lambda *_: self.add_server())
+        self.server.connect("entry-activated", lambda *_args: self.add_server())
         self.server_box = Gtk.ListBox(selection_mode=Gtk.SelectionMode.NONE, css_classes=["boxed-list"],
                                       visible=False)
         self.server_box.append(self.server)
@@ -465,8 +449,6 @@ class DateTimeScreen(screens.ListScreen):
             return _("Chosen: automatic, from {servers}.").format(servers=servers)
         return _("Chosen: {time}.").format(time=time_text(self.c.manual_time))
 
-
-# 7 Clock
 
 class ClockScreen(screens.ListScreen):
     title = N_("Clock")

@@ -42,10 +42,6 @@ def signed_by_artcraft(signature, path):
     return r.returncode == 0 and re.search(rf"^\[GNUPG:\] VALIDSIG .* {FINGERPRINT}$", r.stdout, re.M) is not None
 
 
-def run(text, steps, quiet):
-    return windows.run_quietly(steps) if quiet else windows.run_steps(text, steps)
-
-
 def fetch_and_install(app, version, quiet=False):
     """Download one release, check ArtCraft's signature, then install it: 'ok', 'unsigned' or 'failed'."""
     title = APPS[app]
@@ -55,11 +51,11 @@ def fetch_and_install(app, version, quiet=False):
     bundle, signature = folder / name, folder / f"{name}.asc"
     url = f"https://github.com/storytold/{app}/releases/download/v{version}/{name}"
     try:
-        if not run(_("Downloading {title} from ArtCraft.").format(title=title),
-                   [(_("Downloading {title}").format(title=title),
+        download = [(_("Downloading {title}").format(title=title),
                      ["curl", "-fsSL", "--retry", "3", "-o", str(bundle), url]),
-                    (_("Downloading its signature"), ["curl", "-fsSL", "--retry", "3", "-o", str(signature),
-                                                      f"{url}.asc"])], quiet):
+                    (_("Downloading its signature"),
+                     ["curl", "-fsSL", "--retry", "3", "-o", str(signature), f"{url}.asc"])]
+        if not windows.run_steps(_("Downloading {title} from ArtCraft.").format(title=title), download, quiet=quiet):
             return "failed"
         if not signed_by_artcraft(signature, bundle):
             return "unsigned"
@@ -67,15 +63,17 @@ def fetch_and_install(app, version, quiet=False):
         if not found:
             return "failed"
         # the runtime comes from the system's Flathub, so the bundle (--no-deps) adds no second Flathub of its own
-        if not run(_("Installing {title}.").format(title=title), [
-                (_("Getting what it runs on from Flathub"), ["flatpak", "install", "--system", "-y", "--noninteractive",
-                                                             "flathub", f"runtime/{found.group(1).decode()}"]),
-                (_("Installing {title}").format(title=title),
-                 ["flatpak", "install", "--user", "--reinstall", "--no-deps", "-y", "--noninteractive", "--bundle",
-                  str(bundle)]),
-                # ArtCraft's apps ask to run programs outside their sandbox (talking to org.freedesktop.Flatpak)
-                (_("Keeping it in its sandbox"), ["flatpak", "override", "--user",
-                                                  "--no-talk-name=org.freedesktop.Flatpak", app_id(app)])], quiet):
+        install = [
+            (_("Getting what it runs on from Flathub"),
+             ["flatpak", "install", "--system", "-y", "--noninteractive", "flathub",
+              f"runtime/{found.group(1).decode()}"]),
+            (_("Installing {title}").format(title=title),
+             ["flatpak", "install", "--user", "--reinstall", "--no-deps", "-y", "--noninteractive", "--bundle",
+              str(bundle)]),
+            # ArtCraft's apps ask to run programs outside their sandbox (talking to org.freedesktop.Flatpak)
+            (_("Keeping it in its sandbox"),
+             ["flatpak", "override", "--user", "--no-talk-name=org.freedesktop.Flatpak", app_id(app)])]
+        if not windows.run_steps(_("Installing {title}.").format(title=title), install, quiet=quiet):
             return "failed"
     finally:
         bundle.unlink(missing_ok=True)

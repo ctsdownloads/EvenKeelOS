@@ -63,7 +63,10 @@ def tmpfiles(etc, factory):
     for rel in ("pam.d", "nsswitch.conf", "locale.conf", "vconsole.conf"):
         if not os.path.lexists(etc / rel):
             src = factory / rel
-            shutil.copytree(src, etc / rel) if src.is_dir() else shutil.copy2(src, etc / rel)
+            if src.is_dir():
+                shutil.copytree(src, etc / rel)
+            else:
+                shutil.copy2(src, etc / rel)
 
 
 def main():

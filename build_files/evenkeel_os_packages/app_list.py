@@ -1,6 +1,7 @@
 """The record of what was installed, for Remove Apps."""
 import json
 from evenkeel_os_packages import common
+from evenkeel_os_ui import save_json
 
 
 def load():
@@ -11,10 +12,7 @@ def load():
 
 
 def save(records):
-    common.STATE.parent.mkdir(parents=True, exist_ok=True)
-    tmp = common.STATE.with_suffix(".tmp")
-    tmp.write_text(json.dumps(records, indent=1))
-    tmp.replace(common.STATE)
+    save_json(common.STATE, records)
 
 
 def others(entry):

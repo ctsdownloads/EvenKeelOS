@@ -71,7 +71,7 @@ def main():
         m.check(False)
         if ("Mine removed", "removed", True) not in kinds(m):
             die("a removed certificate's alert goes away by itself before it's read")
-        gone = read_removed(m)
+        read_removed(m)
         m.check(False)
         if kinds(m) != want:
             die("a removed certificate's alert stays after it was read")
@@ -110,7 +110,7 @@ def main():
         m.BUILT_IN = real
         m.check(False)
         alerts = json.loads(m.ALERTS.read_text())
-        if not m.certs(m.read(real)):
+        if not m.certs(real.read_bytes()):
             die(f"no certificates read from {real}")
         # Not a build failure: Fedora's list is Fedora's; people with this version see the alert, as they should.
         for a in alerts:

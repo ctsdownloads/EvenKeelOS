@@ -21,7 +21,7 @@ def box_repos(box, kind):
                        capture_output=True, text=True)
     out = {}
     for part in r.stdout.split("\n==> ")[1:]:
-        name, _, text = part.partition("\n")
+        name, _newline, text = part.partition("\n")
         out[name.strip()] = text
     return out
 
@@ -49,13 +49,26 @@ def second_copy(pkg, info, button):
         button=button, note=file_note(pkg, info))
 
 
-UPDATES_YES = N_("Updates: automatic, with System Update.")
 UPDATES_NO = N_("Updates: none, because it came from a file. To update, install a newer file. (Some apps, like "
                 "Discord, update themselves.)")
 UPDATES_FLATHUB = N_("Updates: automatic.")
-# A package added from a file stays at that file's version, even with a download source.
 UPDATES_FEDORA = N_("automatic, with System Update.")
+# A package added from a file stays at that file's version, even with a download source.
 UPDATES_SYSTEM = N_("none, because it came from a file. To update, install a newer file.")
+
+
+def updates_line(how):
+    """'Updates: ' and how it keeps updating (UPDATES_FEDORA or UPDATES_SYSTEM)."""
+    return _("Updates: {how}").format(how=_(how))
+
+
+def where_to_find(apps, bins, otherwise):
+    """Where to find what was installed: its window in Show Apps, or why it has none."""
+    if apps:
+        return _("Find it in Show Apps.")
+    if bins:
+        return _("It is a command-line tool, so it has no window in Show Apps.")
+    return otherwise
 
 
 def add_rules(pkg, info):

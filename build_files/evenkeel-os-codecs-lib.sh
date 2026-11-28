@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # Shared by the codecs tool and its root helpers; sourced only. Nothing here comes from the caller.
 export PATH=/usr/sbin:/usr/bin:/sbin:/bin
 export TEXTDOMAIN=evenkeel-os     # messages shown in the codecs windows, in the person's language
@@ -20,7 +21,7 @@ WEB="openh264 mozilla-openh264 gstreamer1-plugin-openh264"
 STAND_IN="noopenh264"
 
 log()    { logger -t evenkeel-os-codecs -- "$*"; }
-caller() { printf '%s' "${PKEXEC_UID:-unknown}"; }
+requester() { printf '%s' "${PKEXEC_UID:-unknown}"; }
 present() { local p; for p in "$@"; do rpm -q "$p" >/dev/null 2>&1 && printf '%s ' "$p"; done; }
 need_root() { [ "$(id -u)" -eq 0 ] || { echo "This helper must run as root, through polkit."; exit 1; }; }
 

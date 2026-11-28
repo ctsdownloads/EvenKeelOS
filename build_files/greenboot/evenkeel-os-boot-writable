@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+# Runs a command with /boot writable, then makes it read-only again; only in the caller's own private mount space.
+remount=0
+if findmnt -no OPTIONS /boot | tr ',' '\n' | grep -qx ro; then
+  mount -o remount,rw /boot || { echo "Can't make /boot writable"; exit 1; }
+  remount=1
+fi
+"$@"
+rc=$?
+# bind: read-only again for this mount space only, as greenboot does (not the whole /boot file system).
+[ "$remount" = 1 ] && mount -o remount,bind,ro /boot
+exit "$rc"

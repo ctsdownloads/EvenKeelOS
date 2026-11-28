@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Rebuild the initramfs with the EvenKeelOS logo; fail if anything needed to boot or unlock is missing.
 set -euo pipefail
 

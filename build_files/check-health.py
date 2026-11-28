@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3 -I
 """Build check: the trial check (evenkeel_os_health) against a made-up computer, working and then broken."""
 import json
 import os
@@ -315,7 +315,7 @@ def ask_first(c):
         die("asking first: nobody on the screen still opens a window")
     session = good
 
-    def broken(*_):
+    def broken(*_args):
         raise RuntimeError("made up")
     health.question = broken
     trial(1, "a mistake while asking")
@@ -517,7 +517,7 @@ def options_change(c):
 
 def options_with_update(c):
     """A Boot options change (nomodeset) made while an update was waiting: the start is the update's trial."""
-    setattr(c, "cmdline", c.cmdline + " nomodeset")
+    c.cmdline += " nomodeset"
     basic_graphics(c)
 
 

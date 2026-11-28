@@ -9,14 +9,14 @@ import tempfile
 from pathlib import Path
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
-from evenkeel_os_ui import load_program  # noqa: E402
+from evenkeel_os_ui import PACKAGE_NAME, load_program  # noqa: E402
 
 LIBEXEC = Path("/usr/libexec")
 RULES_D = Path("/usr/share/polkit-1/rules.d")
 ACTIONS = Path("/usr/share/polkit-1/actions")
 problems = []
 # A helper that hangs (on a pipe, say) fails the build instead of stalling it.
-signal.signal(signal.SIGALRM, lambda *_: sys.exit("ERROR: a root helper hung on hostile input"))
+signal.signal(signal.SIGALRM, lambda *_args: sys.exit("ERROR: a root helper hung on hostile input"))
 signal.alarm(300)
 
 
@@ -30,7 +30,7 @@ def refuses(helper, args, codes=(2,)):
 
 HOSTILE = ["", "x", "--help", "-rf /", "a b", "../../etc/shadow", "$(id)", "`id`", "; id", "| id", "&& id",
            "\nid", "quick;id", "quick id", "QUICK", "on;id", "on off", "é", "a" * 5000]
-BAD_NAMES = [h for h in HOSTILE if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9.+_-]{0,127}", h)]
+BAD_NAMES = [h for h in HOSTILE if not PACKAGE_NAME.fullmatch(h)]
 for h in HOSTILE:
     refuses("evenkeel-os-tools-admin", [h])
     refuses("evenkeel-os-tools-admin", ["updates", h])
@@ -42,7 +42,6 @@ for h in HOSTILE:
     refuses("evenkeel-os-tools-admin", ["sharing", "add", "/root", h])
     refuses("evenkeel-os-tools-admin", ["sharing", "add", h, "ro"], codes=(1,))     # no caller: refused first
     refuses("evenkeel-os-tools-admin", ["sharing", "remove", h], codes=(1,))
-    refuses("evenkeel-os-tools-admin", ["test-settings"])
     refuses("evenkeel-os-settings-test", [h])
     refuses("evenkeel-os-cert-remove", [h, "a" * 64], codes=(1, 2))    # names that pass are files that don't exist
     refuses("evenkeel-os-cert-remove", ["a.pem", h])
@@ -61,6 +60,7 @@ for h in BAD_NAMES:
     refuses("evenkeel-os-hwrules", ["remove", h])
     refuses("evenkeel-os-hwrules", ["add", h, "/dev/null"])
 refuses("evenkeel-os-hwrules", ["add", "pkg", "/dev/null"], codes=(1,))
+refuses("evenkeel-os-tools-admin", ["test-settings"])
 refuses("evenkeel-os-tools-admin", ["updates", "on", "extra"])
 refuses("evenkeel-os-tools-admin", ["test-rollback", "quick", "extra"])
 refuses("evenkeel-os-tools-admin", ["keep-update", "extra"])
@@ -116,21 +116,10 @@ refuses("evenkeel-os-cert-remove", ["a.pem", "a" * 64 + "\n"])
 
 def cert_remove_refusals():
     """What evenkeel-os-cert-remove must leave alone, set up in the real anchors folder and taken out again."""
-    import datetime
     import hashlib
-    from cryptography import x509
-    from cryptography.hazmat.primitives import hashes
-    from cryptography.hazmat.primitives.asymmetric import ec
     from cryptography.hazmat.primitives.serialization import Encoding
-
-    def make(n):
-        key = ec.generate_private_key(ec.SECP256R1())
-        name = x509.Name([x509.NameAttribute(x509.NameOID.COMMON_NAME, n)])
-        now = datetime.datetime.now(datetime.timezone.utc)
-        return (x509.CertificateBuilder().subject_name(name).issuer_name(name).public_key(key.public_key())
-                .serial_number(1).not_valid_before(now).not_valid_after(now + datetime.timedelta(days=1))
-                .sign(key, hashes.SHA256()))
-    one, two = make("Check one"), make("Check two")
+    make = load_program(Path(__file__).with_name("check-certs.py"), "check_certs").make
+    one, two = make("Check one", 1), make("Check two", 1)
     fp = hashlib.sha256(one.public_bytes(Encoding.DER)).hexdigest()
     anchors = Path("/etc/pki/ca-trust/source/anchors")
     made = {"evenkeel-check-two.pem": one.public_bytes(Encoding.PEM) + two.public_bytes(Encoding.PEM),
