@@ -12,6 +12,7 @@ gi.require_version("Adw", "1")
 from gi.repository import Adw, Gdk, Gio, GLib, Gtk  # noqa: E402
 import evenkeel_os_bootopts as bootopts  # noqa: E402
 import evenkeel_os_guide as guide  # noqa: E402
+import evenkeel_os_health as health  # noqa: E402
 import evenkeel_os_letin as letin  # noqa: E402
 import evenkeel_os_letin_page as letin_page  # noqa: E402
 import evenkeel_os_network as net  # noqa: E402
@@ -1041,7 +1042,7 @@ class Window(Adw.ApplicationWindow):
         state = {"on": on, "paused": on and self.t.paused_until(), "unlock": self.t.DISK_UNLOCK_ON.exists(),
                  "disk": shutil.disk_usage("/var/home" if os.path.isdir("/var/home") else str(Path.home())),
                  "chrome": bool(zoom.chrome_command()), "usual": zoom_usual_browser()}
-        ds = self.t.deployments() or []
+        ds = health.deployments() or []
         state["staged"] = next((d for d in ds if d.get("staged")), None)
         booted = next((d for d in ds if d.get("booted")), None)
         state["since"] = self.t.when(booted) if booted else ""

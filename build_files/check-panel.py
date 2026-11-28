@@ -1,5 +1,6 @@
 #!/usr/bin/python3 -I
 """Build check for the Wheelhouse window: every tool is on a real page with an icon and a command."""
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -46,6 +47,11 @@ for job in sorted(jobs):
 for job in ("install", "remove", "login", "repair", "vpn"):
     if f"/usr/bin/evenkeel-os-packages {job}" not in runs:
         problems.append(f"evenkeel-os-packages {job} has no row in the window")
+# Every evenkeel-os-tools name the window code calls is still in evenkeel-os-tools.
+for f in sorted(Path("/usr/lib/evenkeel-os").glob("*.py")):
+    for name in sorted(set(re.findall(r"\bself\.t\.(\w+)", f.read_text()))):
+        if not hasattr(tools_module, name):
+            problems.append(f"{f.name} calls evenkeel-os-tools {name}, which isn't there")
 for special in ("windows", "zoom"):
     if not any(t.run == special for t in tools):
         problems.append(f"the window has no {special} row")
