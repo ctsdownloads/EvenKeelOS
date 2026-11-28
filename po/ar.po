@@ -626,13 +626,6 @@ msgstr ""
 msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr "يتم التحقق من توقيع ArtCraft أولاً، ويتم تحديثه مرة واحدة في اليوم."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"يسأل مرة واحدة عمّا إذا كانت شبكة واي فاي أو شبكة سلكية محمية بكلمة سر هي "
-"\"المنزل\" أو \"العمل\" أو \"مكان عام\""
-
 msgid "At each login"
 msgstr "عند كل تسجيل دخول"
 
@@ -1532,12 +1525,6 @@ msgid ""
 msgstr ""
 "يحتاج EvenKeelOS إلى UEFI. فعّل UEFI في الـ BIOS، ثم ابدأ التشغيل من ذاكرة "
 "USB مرة أخرى."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "يحتاج EvenKeelOS إلى 20 غيغابايت على الأقل."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "يعمل EvenKeelOS بشكل أفضل مع 8 غيغابايت أو أكثر، لذا قد يكون بطيئًا."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3593,26 +3580,6 @@ msgstr "جارٍ قراءة قائمة التطبيقات من مصدر التن
 msgid "Recommended"
 msgstr "موصى به"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"موصى به: \"حذف الصندوق\". يحرّر نحو {size}، ويعود من تلقاء نفسه في المرة "
-"التالية التي تثبّت فيها {apps}. ويُحذف أيضًا أي شيء أُضيف إلى الصندوق بطريقة "
-"أخرى. لن تُمَسّ ملفاتك."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"موصى به: \"حذف الصندوق\". يحرّر مساحة القرص التي يشغلها، ويعود من تلقاء نفسه "
-"في المرة التالية التي تثبّت فيها {apps}. ويُحذف أيضًا أي شيء أُضيف إلى "
-"الصندوق بطريقة أخرى. لن تُمَسّ ملفاتك."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3712,13 +3679,6 @@ msgstr "هل تريد إزالة برامج ترميز الوسائط؟"
 
 msgid "Remove the test marker"
 msgstr "إزالة علامة الاختبار"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"أزلها أولاً: شغّل  codecs remove ، ثم أعد التشغيل، ثم اختر \"كل شيء\" مرة "
-"أخرى."
 
 msgid "Remove things the computer no longer needs"
 msgstr "إزالة الأشياء التي لم يعد الكمبيوتر بحاجة إليها"
@@ -5882,9 +5842,6 @@ msgstr ""
 "التحديثات: تلقائية، من مصدر التنزيل الخاص بـ {maker}. يكتشف فحص يومي "
 "الإصدارات الجديدة، والتي تبدأ عند إعادة التشغيل التالية."
 
-msgid "Updates: automatic, with System Update."
-msgstr "التحديثات: تلقائية، مع \"تحديث النظام\"."
-
 msgid "Updates: automatic."
 msgstr "التحديثات: تلقائية."
 
@@ -6564,11 +6521,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "تنظيف التخزين clean storage"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "لا تزال برامج الترميز من إصدار أقدم من هذا النظام (negativo17) مثبتة."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;برامج "
@@ -6994,16 +6946,6 @@ msgstr "لم يبدأ {name}."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} مكان عام"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} مثبّت بالفعل من Bazaar، متجر التطبيقات.\n"
-"\n"
-"موصى به: \"افتحه\"."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8068,12 +8010,6 @@ msgstr "فتح ملفات ZIP وSIT"
 msgid "opening zip files"
 msgstr "فتح ملفات ZIP"
 
-msgid "organising and developing photos"
-msgstr "تنظيم الصور وتحسينها"
-
-msgid "organising photos"
-msgstr "تنظيم الصور"
-
 msgid "organizing music"
 msgstr "تنظيم الموسيقى"
 
@@ -8622,3 +8558,40 @@ msgstr "قراءة مصادر التنزيل في مجلد Fedora 45 الجدي�
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "الانتقال إلى Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "الخطوط وحجم النص عادت إلى إعدادات EvenKeelOS الأصلية."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "موصى به: \"حذف الصندوق\". يعود الصندوق من تلقاء نفسه في المرة التالية التي تثبّت فيها {apps}. ويُحذف أيضًا أي شيء أُضيف إلى الصندوق بطريقة أخرى. لن تُمَسّ ملفاتك."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "يحرّر حذفه نحو {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "يسأل مرة واحدة عمّا إذا كانت شبكة واي فاي محمية بكلمة سر هي \"المنزل\" أو \"العمل\" أو \"مكان عام\""
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "يحتاج EvenKeelOS إلى {gb} غيغابايت على الأقل."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "يعمل EvenKeelOS بشكل أفضل مع {gb} غيغابايت أو أكثر، لذا قد يكون بطيئًا."
+
+msgid "organizing and developing photos"
+msgstr "تنظيم الصور وتحسينها"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "ليس لدى {title} مفتاح توقيع لـ Fedora {version} بعد."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "لم تتم إضافة {title}، لذا أُزيل مصدر التنزيل الخاص به مرة أخرى."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "لم تتم إزالة {title}."

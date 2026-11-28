@@ -1,5 +1,4 @@
-# Outside software, locked to exact versions. check-versions.yml opens a PR when a newer one is out.
-# copr <project> <package> <version-release>: build.sh installs it; check-locked-versions.py fails on a mismatch.
+# Outside software at exact versions; copr <project> <package> <version-release>, checked by build.sh.
 copr ublue-os/packages uupd 1.5.7-1.fc45
 copr ublue-os/packages bazaar 0.10.0-6.fc45
 copr ublue-os/packages ublue-brew 0.1.13-1.fc44

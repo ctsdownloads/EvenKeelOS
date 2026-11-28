@@ -2,12 +2,11 @@
 # Live USB image with the installer. Based on titanoboa's Bazzite example (Apache-2.0).
 set -exo pipefail
 
+fail() { echo "ERROR: $*"; exit 1; }
 IMAGE=ghcr.io/ctsdownloads/evenkeel-os:latest
 
 # Directory that /root links to.
 mkdir -p "$(realpath /root)"
-
-# ---------------------------------------------------------------- the live session
 
 # No updates, setup, first-login questions or rollback checks in the live session.
 for s in uupd.timer brew-setup.service podman-auto-update.timer tailscaled.service \
@@ -27,8 +26,6 @@ systemctl enable livesys.service livesys-late.service
 # Welcome window: the fit check for this computer, then Install EvenKeelOS or Try it first.
 install -Dm755 /src/evenkeel-os-live-welcome /usr/libexec/evenkeel-os-live-welcome
 install -Dm644 /src/evenkeel-os-live-welcome.desktop /etc/xdg/autostart/evenkeel-os-live-welcome.desktop
-
-# ---------------------------------------------------------------- the installer
 
 # The installer: screens as the live user, disk work as root through pkexec (live USB only).
 dnf install -y python3-gobject gtk4 libadwaita python3-langtable python3-pwquality qrencode xkeyboard-config \
@@ -51,7 +48,6 @@ install -Dm644 /build-branding/logo-EvenKeel-wide.svg /usr/share/evenkeel-os-ins
 cat > /usr/share/glib-2.0/schemas/zz2-evenkeel-os-live.gschema.override <<'OVR'
 [org.gnome.shell]
 favorite-apps=['io.github.ctsdownloads.EvenKeelOS.Installer.desktop', 'org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'io.github.kolunmi.Bazaar.desktop']
-welcome-dialog-last-shown-version='4294967295'
 
 [org.gnome.desktop.session]
 idle-delay=uint32 0
@@ -68,14 +64,14 @@ OVR
 sed -i "s|^menu-button-system-monitor=.*|menu-button-system-monitor='gnome-system-monitor'|" \
   /etc/dconf/db/distro.d/50-evenkeel-os-logo-menu
 grep -qx "menu-button-system-monitor='gnome-system-monitor'" /etc/dconf/db/distro.d/50-evenkeel-os-logo-menu \
-  || { echo "ERROR: the live USB's Logo Menu system monitor was not set to gnome-system-monitor"; exit 1; }
+  || fail "the live USB's Logo Menu system monitor was not set to gnome-system-monitor"
 dconf update
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
 # Install from the copy on the USB; updates then come from the signed image on GitHub.
 if [ -f /src/payload.oci.tar ]; then
   loaded=$(podman load -q -i /src/payload.oci.tar | sed -n 's/^Loaded image: //p' | tail -1)
-  [ -n "$loaded" ] || { echo "ERROR: the local copy of EvenKeelOS could not be loaded"; exit 1; }
+  [ -n "$loaded" ] || fail "the local copy of EvenKeelOS could not be loaded"
   podman tag "$loaded" "$IMAGE"
   [ "$loaded" = "$IMAGE" ] || podman untag "$IMAGE" "$loaded"
   echo "payload: the locally built image (test build)"
@@ -83,8 +79,7 @@ else
   podman pull "$IMAGE"
 fi
 
-# ---------------------------------------------------------------- live boot
-
+# Starting from the USB.
 dnf install -y dracut-live
 kernel=$(kernel-install list --json pretty | jq -r '.[] | select(.has_kernel == true) | .version')
 DRACUT_NO_XATTR=1 dracut -v --force --zstd --reproducible --no-hostonly \
@@ -106,9 +101,7 @@ cp /src/iso.yaml /usr/lib/bootc-image-builder/iso.yaml
 
 dnf clean all
 
-# ---------------------------------------------------------------- checks: fail the build, never ship it wrong
-
-fail() { echo "ERROR: $*"; exit 1; }
+# Checks: fail the build, never ship it wrong.
 rpm -q anaconda-core >/dev/null 2>&1 && fail "Fedora's installer (Anaconda) is still on the USB"
 for f in /usr/bin/evenkeel-os-installer /usr/libexec/evenkeel-os-install-engine; do
   [ -x "$f" ] || fail "$f is missing"
@@ -132,17 +125,16 @@ done
 # "I already use Linux" writes the file that keeps New to EvenKeelOS? closed at login, where Wheelhouse looks for it.
 linux_choice="the installer's Linux choice wouldn't stop New to EvenKeelOS? at login"
 env -u XDG_STATE_HOME HOME=/h python3 -I - <<'PY' || fail "$linux_choice"
-import importlib.machinery, importlib.util, runpy, sys
+import runpy, sys
 sys.path.insert(0, "/usr/lib/evenkeel-os")
-loader = importlib.machinery.SourceFileLoader("tools", "/usr/bin/evenkeel-os-tools")
-tools = importlib.util.module_from_spec(importlib.util.spec_from_loader("tools", loader))
-loader.exec_module(tools)
+from evenkeel_os_ui import load_program
+tools = load_program("/usr/bin/evenkeel-os-tools", "tools")
 engine = runpy.run_path("/usr/libexec/evenkeel-os-install-engine")["GUIDE_HIDDEN"]
 sys.exit(str(tools.GUIDE_HIDDEN) != "/h/" + engine)
 PY
-# The installer lists only languages EvenKeelOS is translated into (from the image's evenkeel-os.mo files).
+# The installer lists only languages EvenKeelOS is translated into (the system image's build checks each is there).
 mo=(/usr/share/locale/*/LC_MESSAGES/evenkeel-os.mo)
-[ -f "${mo[0]}" ] && [ "${#mo[@]}" -ge 66 ] || fail "EvenKeelOS's translations are missing"
+[ -f "${mo[0]}" ] || fail "EvenKeelOS's translations are missing"
 [ -f /usr/share/locale/de/LC_MESSAGES/xkeyboard-config.mo ] || fail "keyboard names have no translations"
 # The fit check runs, and knows the kernel's message for a disk hidden by the BIOS's RAID setting.
 python3 -I - <<'PY' || fail "the live USB's fit check doesn't work"
@@ -172,17 +164,17 @@ for tool in mdadm dmsetup cryptsetup mkfs.fat mkfs.ext4 mkfs.xfs sfdisk wipefs h
   command -v "$tool" >/dev/null || fail "$tool is missing (the install engine uses it)"
 done
 # Live session never dims, locks or suspends (read through the schemas).
-for setting in "org.gnome.desktop.session idle-delay uint32 0" \
-               "org.gnome.settings-daemon.plugins.power ambient-enabled false" \
-               "org.gnome.settings-daemon.plugins.power idle-dim false" \
-               "org.gnome.settings-daemon.plugins.power power-saver-profile-on-low-battery false" \
-               "org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'" \
-               "org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'"; do
-  set -- $setting
-  schema=$1 key=$2
-  shift 2
-  [ "$(gsettings get "$schema" "$key")" = "$*" ] || fail "the live session's $key is not $*, so an install nobody touches could be interrupted"
-done
+while read -r schema key value; do
+  [ "$(HOME=/tmp gsettings get "$schema" "$key")" = "$value" ] \
+    || fail "the live session's $key is not $value, so an install nobody touches could be interrupted"
+done <<'EOF'
+org.gnome.desktop.session idle-delay uint32 0
+org.gnome.settings-daemon.plugins.power ambient-enabled false
+org.gnome.settings-daemon.plugins.power idle-dim false
+org.gnome.settings-daemon.plugins.power power-saver-profile-on-low-battery false
+org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
+EOF
 # Live Logo Menu opens gnome-system-monitor.
 [ "$(HOME=/tmp gsettings get org.gnome.shell.extensions.logo-menu menu-button-system-monitor)" = "'gnome-system-monitor'" ] \
   || fail "the live USB's Logo Menu system monitor is not gnome-system-monitor"

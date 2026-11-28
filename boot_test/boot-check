@@ -2,18 +2,8 @@
 # Boot test checks, run as the test user over SSH inside the test copy. One PASS or FAIL line each.
 set -uo pipefail
 
-failed=0
-pass() { echo "PASS: $1"; }
-fail() { echo "FAIL: $1"; failed=1; }
-wait_for() {
-  local seconds=$1
-  shift
-  for _ in $(seq "$seconds"); do
-    "$@" && return 0
-    sleep 1
-  done
-  return 1
-}
+# shellcheck source=boot_test/check-lib.sh
+. /usr/libexec/evenkeel-os-boot-check-lib.sh
 
 uid=$(id -u)
 export XDG_RUNTIME_DIR="/run/user/$uid" DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$uid/bus"

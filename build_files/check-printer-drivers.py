@@ -1,9 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check: printer drivers are recognized wherever the maker puts their files, so they are added to the system
-and not put in an app box. Made-up packages laid out like real ones; nothing is downloaded.
-
-Usage: check-printer-drivers.py FOLDER_WITH_evenkeel_os_packages
-"""
+"""Build check: printer drivers laid out like real ones are added to the system, not put in an app box."""
 import sys
 
 sys.path.insert(0, sys.argv[1])
@@ -41,9 +37,9 @@ cases = [
     ("an app with an example printer file in its docs", False, package("pdf-tool", [
         "/usr/bin/pdf-tool", "/usr/share/doc/pdf-tool/examples/generic.ppd"])),
     ("an app that only adds you to the printer admin group", False, package("print-helper", ["/usr/bin/print-helper"],
-                                                                             "getent group lpadmin >/dev/null && "
-                                                                             "usermod -a -g lpadmin user\n"
-                                                                             "# lpadmin -p old -e")),
+                                                                            "getent group lpadmin >/dev/null && "
+                                                                            "usermod -a -g lpadmin user\n"
+                                                                            "# lpadmin -p old -e")),
 ]
 problems = []
 for label, want, pkg in cases:

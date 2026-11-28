@@ -640,13 +640,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "Спачатку правяраецца подпіс ArtCraft, і праграма абнаўляецца раз на дзень."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Адзін раз пытаецца, чым з'яўляецца Wi-Fi або правадная сетка з паролем: "
-"«Дом», «Праца» ці «Грамадскае месца»"
-
 msgid "At each login"
 msgstr "Пры кожным уваходзе ў сістэму"
 
@@ -1578,13 +1571,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS патрабуе UEFI. Уключыце UEFI ў BIOS, а потым зноў запусціцеся з "
 "USB-флэшкі."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS патрабуе не менш за 20 ГБ."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS лепш за ўсё працуе з 8 ГБ або больш, таму можа працаваць павольна."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3684,27 +3670,6 @@ msgstr "Чытанне спісу праграм з новай крыніцы с
 msgid "Recommended"
 msgstr "Рэкамендуецца"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Рэкамендуецца: «Выдаліць скрыню». Гэта вызваляе каля {size}, а скрыня сама "
-"вернецца, калі вы наступным разам усталюеце {apps}. Усё, што было дададзена ў"
-" скрыню іншым спосабам, таксама выдаляецца. Вашы файлы не закранаюцца."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Рэкамендуецца: «Выдаліць скрыню». Гэта вызваляе яе месца на дыску, а скрыня "
-"сама вернецца, калі вы наступным разам усталюеце {apps}. Усё, што было "
-"дададзена ў скрыню іншым спосабам, таксама выдаляецца. Вашы файлы не "
-"закранаюцца."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3806,13 +3771,6 @@ msgstr "Выдаліць медыякодэкі?"
 
 msgid "Remove the test marker"
 msgstr "Выдаліць пазнаку тэставання"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Спачатку выдаліце іх: выканайце  codecs remove , перазапусціце камп'ютар, а "
-"потым зноў выберыце «Усё»."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Выдаліць тое, што камп'ютару больш не патрэбна"
@@ -6008,9 +5966,6 @@ msgstr ""
 "праверка знаходзіць новыя версіі, якія пачынаюць дзейнічаць пасля наступнага "
 "перазапуску."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Абнаўленні: аўтаматычныя, праз «Абнаўленне сістэмы»."
-
 msgid "Updates: automatic."
 msgstr "Абнаўленні: аўтаматычныя."
 
@@ -6705,12 +6660,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage ачысціць сховішча месца"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"Кодэкі з папярэдняй версіі гэтай сістэмы (negativo17) усё яшчэ ўсталяваныя."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;кодэкі;кодэк;відэа;аўдыя;аўдыё;медыя;усталяваць;"
@@ -7153,16 +7102,6 @@ msgstr "Не ўдалося запусціць «{name}»."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} мае тып «Грамадскае месца»"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} ужо ўсталявана з Bazaar, крамы праграм.\n"
-"\n"
-"Рэкамендуецца: «Адкрыць»."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8223,12 +8162,6 @@ msgstr "адкрыццё файлаў ZIP і SIT"
 msgid "opening zip files"
 msgstr "адкрыццё ZIP-файлаў"
 
-msgid "organising and developing photos"
-msgstr "упарадкаванне і апрацоўка фатаграфій"
-
-msgid "organising photos"
-msgstr "упарадкаванне фатаграфій"
-
 msgid "organizing music"
 msgstr "упарадкаванне музыкі"
 
@@ -8777,3 +8710,40 @@ msgstr "Чытаць крыніцы загрузкі ў новай папцы Fe
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Перайсці на Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Шрыфты і памер тэксту вернуты да ўласных налад EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Рэкамендуецца: «Выдаліць скрыню». Скрыня сама вернецца, калі вы наступным разам усталюеце {apps}. Усё, што было дададзена ў скрыню іншым спосабам, таксама выдаляецца. Вашы файлы не закранаюцца."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Выдаленне вызваляе каля {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Адзін раз пытаецца, чым з'яўляецца сетка Wi-Fi з паролем: «Дом», «Праца» ці «Грамадскае месца»"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS патрабуе не менш за {gb} ГБ."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS лепш за ўсё працуе з {gb} ГБ або больш, таму можа працаваць павольна."
+
+msgid "organizing and developing photos"
+msgstr "упарадкаванне і апрацоўка фатаграфій"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "Для {title} пакуль няма ключа подпісу для Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "Дадаванне {title} не адбылося, таму крыніцу спампоўвання зноў выдалілі."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "Выдаленне {title} не адбылося."

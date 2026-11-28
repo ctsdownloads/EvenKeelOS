@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Network safety question
-Comment=Asks once whether a password Wi-Fi or wired network is Home, Work or a Public place
+Comment=Asks once whether a password Wi-Fi network is Home, Work or a Public place
 Exec=/usr/libexec/evenkeel-os-network-ask --watch
 Terminal=false
 NoDisplay=true

@@ -642,13 +642,6 @@ msgstr ""
 "Lehenik ArtCraft-en sinadura egiaztatzen da, eta egunean behin eguneratzen "
 "da."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Behin galdetzen du pasahitza duen wifi-sare edo kable bidezko sare bat Etxea,"
-" Lana edo Leku publikoa den"
-
 msgid "At each login"
 msgstr "Saio-hasiera bakoitzean"
 
@@ -1584,14 +1577,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS-ek UEFI behar du. Aktibatu UEFI BIOSean, eta gero abiarazi berriro"
 " USB memoriatik."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS-ek gutxienez 20 GB behar ditu."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS-ek ondoen 8 GB edo gehiagorekin funtzionatzen du, beraz, baliteke "
-"motela izatea."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3711,26 +3696,6 @@ msgstr "Deskarga-iturri berriko aplikazioen zerrenda irakurtzen"
 msgid "Recommended"
 msgstr "Gomendatua"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Gomendatua: Ezabatu kutxa. {size} inguru askatzen ditu, eta bere kabuz "
-"itzuliko da {apps} instalatzen duzun hurrengo aldian. Kutxan beste modu "
-"batean gehitutako guztia ere ezabatzen da. Zure fitxategiak ez dira ukitzen."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Gomendatua: Ezabatu kutxa. Bere disko-lekua askatzen du, eta bere kabuz "
-"itzuliko da {apps} instalatzen duzun hurrengo aldian. Kutxan beste modu "
-"batean gehitutako guztia ere ezabatzen da. Zure fitxategiak ez dira ukitzen."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3834,13 +3799,6 @@ msgstr "Kendu multimedia kodekak?"
 
 msgid "Remove the test marker"
 msgstr "Kendu proba-markagailua"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Kendu lehenengo hauek: exekutatu  codecs remove , berrabiarazi, eta gero "
-"aukeratu berriro Dena."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Kendu ordenagailuak jada behar ez dituen gauzak"
@@ -6060,9 +6018,6 @@ msgstr ""
 " egiaztapen batek bertsio berriak aurkitzen ditu, eta hurrengo "
 "berrabiaraztean hasten dira."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Eguneratzeak: automatikoak, Sistemaren eguneratzearekin."
-
 msgid "Updates: automatic."
 msgstr "Eguneratzeak: automatikoak."
 
@@ -6762,13 +6717,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage garbitu biltegiratzea lekua"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"Sistema honen aurreko bertsio bateko kodekak (negativo17) oraindik "
-"instalatuta daude."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;kodekak;kodeka;bideoa;audioa;multimedia;instalatu;"
@@ -7215,16 +7163,6 @@ msgstr "{name} ez da abiatu."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} Leku publiko bat da"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} dagoeneko instalatuta dago Bazaar-etik, aplikazio-dendatik.\n"
-"\n"
-"Gomendatua: Ireki ezazu."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8286,12 +8224,6 @@ msgstr "zip eta sit fitxategiak irekitzea"
 msgid "opening zip files"
 msgstr "zip fitxategiak irekitzea"
 
-msgid "organising and developing photos"
-msgstr "argazkiak antolatzea eta errebelatzea"
-
-msgid "organising photos"
-msgstr "argazkiak antolatzea"
-
 msgid "organizing music"
 msgstr "musika antolatzea"
 
@@ -8840,3 +8772,40 @@ msgstr "Irakurri deskarga-iturriak Fedora 45eko karpeta berrian"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Aldatu Fedora 45era"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Letra-tipoak eta testu-tamaina EvenKeelOS-enak izatera itzuli dira."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Gomendatua: Ezabatu kutxa. Bere kabuz itzuliko da {apps} instalatzen duzun hurrengo aldian. Kutxan beste modu batean gehitutako guztia ere ezabatzen da. Zure fitxategiak ez dira ukitzen."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Ezabatzeak {size} inguru askatzen ditu."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Behin galdetzen du pasahitza duen wifi-sare bat Etxea, Lana edo Leku publikoa den"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS-ek gutxienez {gb} GB behar ditu."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS-ek ondoen {gb} GB edo gehiagorekin funtzionatzen du, beraz, baliteke motela izatea."
+
+msgid "organizing and developing photos"
+msgstr "argazkiak antolatzea eta errebelatzea"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title}(e)k ez du oraindik sinadura-gakorik Fedora {version}(e)rako."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} ez da gehitu, beraz, haren deskarga-iturburua kendu egin da berriro."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} ez da kendu."

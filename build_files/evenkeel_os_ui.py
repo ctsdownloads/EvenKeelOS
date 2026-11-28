@@ -1,12 +1,17 @@
-"""Windows, notices and disk sizes shared by Wheelhouse and Install Package File."""
+"""Windows, notices, buttons, program answers and disk sizes shared by every EvenKeelOS tool."""
 
 import gettext
+import html
+import json
 import locale
 import math
 import os
+import re
 import shutil
 import subprocess
+import sys
 import time
+import types
 from pathlib import Path
 
 GUI = bool(shutil.which("zenity")) and bool(os.environ.get("WAYLAND_DISPLAY") or os.environ.get("DISPLAY"))
@@ -15,6 +20,7 @@ IN_PANEL = bool(os.environ.get("EVENKEEL_OS_PANEL"))
 DIALOGS = "/usr/libexec/evenkeel-os-dialog" if IN_PANEL else "zenity"
 # For apps and file windows a tool opens: what they start later opens its own windows, not Wheelhouse's.
 LAUNCH_ENV = {k: v for k, v in os.environ.items() if k != "EVENKEEL_OS_PANEL"}
+PACKAGE_NAME = re.compile(r"[A-Za-z0-9][A-Za-z0-9.+_-]{0,127}")      # what the root helpers take as a package name
 
 _translation = gettext.translation("evenkeel-os", fallback=True)
 _ = _translation.gettext
@@ -31,14 +37,18 @@ _dates = gettext.translation("evenkeel-os", languages=[TIME_LOCALE], fallback=Tr
 HAS_AM_PM = bool(time.strftime("%p", time.struct_time((2000, 1, 1, 13, 0, 0, 5, 1, -1))))
 
 
+def answer(cmd, timeout=20, **kw):
+    """A program's result (subprocess.CompletedProcess), or None when it is missing or hangs."""
+    try:
+        return subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, **kw)
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+
+
 def clock_24h():
     """Whether the clock in Settings is set to 24-hour (as the top bar shows it)."""
-    try:
-        r = subprocess.run(["gsettings", "get", "org.gnome.desktop.interface", "clock-format"],
-                           capture_output=True, text=True)
-    except OSError:
-        return True
-    return r.stdout.strip() != "'12h'"
+    r = answer(["gsettings", "get", "org.gnome.desktop.interface", "clock-format"])
+    return not r or r.stdout.strip() != "'12h'"
 
 
 def date_text(t, with_time=False):
@@ -55,10 +65,23 @@ def date_text(t, with_time=False):
     return time.strftime(fmt, t)
 
 
-def day_text(t):
-    """A day (a time.struct_time) with its weekday, in the person's language and order."""
+def time_format():
+    """How a time of day is written: 24-hour, as the clock in Settings is set, or with AM/PM (a strftime format)."""
+    return "%H:%M" if clock_24h() or not HAS_AM_PM else "%-I:%M %p"
+
+
+def day_text(seconds):
+    """A day (seconds since 1970) with its weekday, in the person's language and order."""
     # Translators: a weekday and date ("Thursday, November 26"). Uses strftime codes.
-    return time.strftime(_dates("%A, %B %-d"), t)
+    return time.strftime(_dates("%A, %B %-d"), time.localtime(seconds))
+
+
+def load_program(path, name):
+    """A program file with no .py ending (like /usr/bin/evenkeel-os-tools), loaded as a module, leaving no cache."""
+    module = types.ModuleType(name)
+    module.__file__ = str(path)
+    exec(compile(Path(path).read_text(), str(path), "exec"), module.__dict__)
+    return module
 
 
 def N_(text):
@@ -73,6 +96,14 @@ ICON = ""
 def zenity(*args, stdin=None, title=None, width=520):
     return subprocess.run([DIALOGS, f"--title={title or TITLE}", f"--width={width}", *args], input=stdin,
                           capture_output=True, text=True)
+
+
+def progress(text, pulsate=True, cancel=False, title=None):
+    """A progress window to feed() and finish(); pulsate when there is no percentage to show."""
+    return subprocess.Popen([DIALOGS, f"--title={title or TITLE}", "--width=520", "--progress", "--auto-close",
+                             *(["--pulsate"] if pulsate else []), *([] if cancel else ["--no-cancel"]),
+                             f"--text={html.escape(text)}"], stdin=subprocess.PIPE, text=True,
+                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
 def notify(text):
@@ -117,7 +148,9 @@ def feed(bar, *lines):
 
 
 def finish(bar):
-    """Fill a zenity progress window and wait for it to close."""
+    """Fill a zenity progress window and wait for it to close; nothing to do for None (no desktop)."""
+    if bar is None:
+        return
     if bar.poll() is None and feed(bar, "100"):
         bar.stdin.close()
     bar.wait()
@@ -167,11 +200,24 @@ def human(mb):
 
 def user_folder(kind):
     """A person's own folder under the name their language gives it: "DOWNLOAD" is ~/Téléchargements in French."""
-    try:
-        r = subprocess.run(["xdg-user-dir", kind], capture_output=True, text=True)
-    except OSError:
-        return Path.home()
-    return Path(r.stdout.strip() or Path.home())
+    r = answer(["xdg-user-dir", kind])
+    return Path(r.stdout.strip() if r and r.stdout.strip() else Path.home())
+
+
+def icon_button(icon, tooltip, label, clicked, sensitive=True):
+    """A small flat button showing only an icon; label says what it does to a screen reader."""
+    from gi.repository import Gtk      # only Wheelhouse's window, which loaded GTK 4 already, uses it
+    b = Gtk.Button(icon_name=icon, tooltip_text=tooltip, valign=Gtk.Align.CENTER, css_classes=["flat"],
+                   sensitive=sensitive)
+    b.update_property([Gtk.AccessibleProperty.LABEL], [label])
+    b.connect("clicked", lambda *_args: clicked())
+    return b
+
+
+def short_home(path):
+    """A path with the home folder written as ~, as people see it in Files."""
+    path, home = str(path), str(Path.home())
+    return "~" + path[len(home):] if path == home or path.startswith(home + "/") else path
 
 
 def free_mb(where=None):
@@ -179,3 +225,37 @@ def free_mb(where=None):
         return shutil.disk_usage(where or Path.home()).free // 1_000_000
     except OSError:
         return None
+
+
+def fail(msg, code=1):
+    """For a helper: say why (the window that started it shows it), then stop."""
+    print(msg)
+    sys.exit(code)
+
+
+def write_file(path, text):
+    """Replace a file in one step, so a crash or power cut never leaves half of it."""
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_name(f".{path.name}.tmp")
+    tmp.write_text(text)
+    tmp.chmod(0o644)
+    os.replace(tmp, path)
+
+
+def launch(cmd):
+    """Start an app on its own, as if from Show Apps: it outlives this tool and opens its own windows."""
+    subprocess.Popen(cmd, start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, env=LAUNCH_ENV)
+
+
+def first_line(path):
+    """A file's first line, or "" when it can't be read."""
+    try:
+        with open(path, encoding="utf-8", errors="replace") as f:
+            return f.readline()
+    except OSError:
+        return ""
+
+
+def save_json(path, data):
+    write_file(path, json.dumps(data, indent=1) + "\n")

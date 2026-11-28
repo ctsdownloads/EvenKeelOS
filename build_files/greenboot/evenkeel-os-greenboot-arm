@@ -1,20 +1,12 @@
 #!/usr/bin/bash
-# Runs at shutdown right after greenboot marks a newly installed version for trial. greenboot only starts its retry
-# counter after the first failed check, so a version that freezes on its first start would never count; start it now.
+# Starts greenboot's retry counter now: it only starts after a failed check, so a first-boot freeze never counted.
 env=/boot/grub2/grubenv
 vars=$(grub2-editenv "$env" list) || { echo "Can't read $env"; exit 1; }
 grep -q '^greenboot_next_deployment_id=' <<<"$vars" || exit 0
 grep -q '^boot_counter=' <<<"$vars" && exit 0
 # Without greenboot.conf (deleted with /etc): 1 retry, as the image sets it, not greenboot's 3.
 max=$(sed -n 's/^GREENBOOT_MAX_BOOT_ATTEMPTS=\([0-9][0-9]*\).*/\1/p' /etc/greenboot/greenboot.conf 2>/dev/null)
-remount=0
-if findmnt -no OPTIONS /boot | tr ',' '\n' | grep -qx ro; then
-  mount -o remount,rw /boot || { echo "Can't make /boot writable"; exit 1; }
-  remount=1
-fi
-grub2-editenv "$env" set "boot_counter=${max:-1}"
+/usr/libexec/evenkeel-os-boot-writable grub2-editenv "$env" set "boot_counter=${max:-1}"
 rc=$?
-# bind: read-only again for this service only, as greenboot does (not the whole /boot file system).
-[ "$remount" = 1 ] && mount -o remount,bind,ro /boot
 [ "$rc" = 0 ] && echo "Retry counter started at ${max:-1} for the new version."
 exit "$rc"

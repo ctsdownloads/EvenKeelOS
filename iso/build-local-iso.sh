@@ -20,9 +20,9 @@ keepalive=$!
 trap 'kill $keepalive 2>/dev/null; sudo rm -f "$payload"' EXIT
 
 # Step 1 is skipped when its files are unchanged; sudo podman rmi localhost/evenkeel-os to force it.
-stamp="$HOME/.cache/evenkeel-os-local-image-v2"   # v2: images built before --no-cache are not trusted
-src=$(git ls-files -s Containerfile build_files system_files | sha256sum | cut -c1-16)
-git diff --quiet HEAD -- Containerfile build_files system_files || src="changed-$(date +%s)"
+stamp="$HOME/.cache/evenkeel-os-local-image-v2"
+src=$(git ls-files -s Containerfile cosign.pub build_files system_files | sha256sum | cut -c1-16)
+git diff --quiet HEAD -- Containerfile cosign.pub build_files system_files || src="changed-$(date +%s)"
 if [ "$(cat "$stamp" 2>/dev/null)" = "$src" ] && sudo podman image exists localhost/evenkeel-os; then
   echo "== 1 of 3: the EvenKeelOS image: unchanged since the last build here, using that one"
 else
@@ -31,14 +31,7 @@ else
   # No cache: podman misses changed build files.
   sudo podman build --no-cache -t localhost/evenkeel-os -f Containerfile .
   # Small layers, as on GitHub, or the install runs out of memory.
-  graphroot=$(sudo podman info --format '{{.Store.GraphRoot}}')
-  sudo podman run --rm --pull=never --privileged \
-    --mount=type=image,src=localhost/evenkeel-os,target=/rpm-ostree \
-    --mount=type=bind,src="$graphroot",target=/run/host-container-storage,rw \
-    --mount=type=tmpfs,target=/run/rpm-ostree-storage \
-    --entrypoint /usr/bin/rpm-ostree localhost/evenkeel-os \
-    compose build-chunked-oci --max-layers 127 --format-version=2 --bootc --rootfs /rpm-ostree \
-    --output "containers-storage:[overlay@/run/host-container-storage+/run/rpm-ostree-storage]localhost/evenkeel-os:latest"
+  sudo build_files/rechunk.sh evenkeel-os latest
   sudo podman image prune -f >/dev/null      # the unsplit copy
   mkdir -p "$(dirname "$stamp")" && echo "$src" > "$stamp"
 fi

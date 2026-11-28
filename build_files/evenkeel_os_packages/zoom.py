@@ -1,11 +1,10 @@
 """Zoom meetings in the browser: Zoom's "open the Zoom app" links turned into Zoom's web version, in Chrome."""
 import re
 import shutil
-import subprocess
 from pathlib import Path
 from urllib.parse import parse_qs, urlencode, urlsplit
 
-from evenkeel_os_ui import LAUNCH_ENV, _, ask
+from evenkeel_os_ui import _, ask, launch
 from evenkeel_os_packages import common, flathub, installed
 
 CHROME = "com.google.Chrome"
@@ -47,15 +46,18 @@ def chrome_command():
     return [found] if found else None
 
 
-def start(command):
-    subprocess.Popen(command, start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                     env=LAUNCH_ENV)
+def uses_usual_browser():
+    """Whether Zoom meetings were set to open in the usual browser, not Chrome."""
+    try:
+        return CHOICE.read_text().strip() == "default"
+    except OSError:
+        return False
 
 
 def open_page(address, may_install=True):
     """Open a Zoom page in Chrome; the first time Chrome is missing, offer to install it, or use the usual browser."""
     command = chrome_command()
-    if not command and may_install and not (CHOICE.exists() and CHOICE.read_text().strip() == "default"):
+    if not command and may_install and not uses_usual_browser():
         answer = ask(_("Zoom meetings work best in Google Chrome: it can also share a browser tab with its "
                        "sound.\n\nRecommended: Install Chrome, from Flathub. It updates by itself.\n\n"
                        "Or Use the usual browser: the meeting works, but tab sound can't be shared. This is "
@@ -68,7 +70,7 @@ def open_page(address, may_install=True):
         else:       # if Chrome can't be installed, the meeting still opens in the usual browser
             flathub.install(CHROME, "Google Chrome", announce=False)
         command = chrome_command()
-    start((command or ["gio", "open"]) + [address])
+    launch((command or ["gio", "open"]) + [address])
     return 0
 
 
@@ -76,6 +78,6 @@ def open_link(link, may_install=True):
     """Zoom's page asked to open the Zoom app: the Zoom app if someone installed it, else the web version."""
     app = next((f for f in ZOOM_APP if f.exists()), None)
     if app:
-        start(["gio", "launch", str(app), link])
+        launch(["gio", "launch", str(app), link])
         return 0
     return open_page(web_address(link), may_install)

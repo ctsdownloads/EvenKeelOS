@@ -1,10 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check: the window before an automatic restart gives each answer the startup check expects.
-
-Runs Wheelhouse's restart-question against a made-up zenity and pkexec: no window opens and nothing restarts.
-"""
-import importlib.machinery
-import importlib.util
+"""Build check: the window before an automatic restart gives each answer the startup check expects."""
 import os
 import subprocess
 import sys
@@ -16,14 +11,15 @@ LIB = sys.argv[2] if len(sys.argv) > 2 else "/usr/lib/evenkeel-os"
 os.environ["WAYLAND_DISPLAY"] = "wayland-0"     # a desktop, so the window is shown (to the made-up zenity)
 sys.path.insert(0, LIB)
 import evenkeel_os_health as health  # noqa: E402
+from evenkeel_os_ui import load_program  # noqa: E402
 
-loader = importlib.machinery.SourceFileLoader("tools", TOOLS)
-spec = importlib.util.spec_from_loader("tools", loader)
-tools = importlib.util.module_from_spec(spec)
-loader.exec_module(tools)
+
+def die(msg):
+    sys.exit(f"ERROR: restart question: {msg}")
+
+
+tools = load_program(TOOLS, "tools")
 real_run = subprocess.run
-if str(tools.RESTART_QUESTION) != health.QUESTION:
-    sys.exit(f"ERROR: restart question: the window reads {tools.RESTART_QUESTION}, the check writes {health.QUESTION}")
 tools.RESTART_QUESTION = Path(tempfile.mkdtemp(), "restart-question")
 
 
@@ -36,19 +32,19 @@ class Fake:
         self.windows = []
         self.asked = 0
 
-    def zenity(self, *args, title=None, **_):
+    def zenity(self, *args, title=None, **_kw):
         self.windows.append(dict(a[2:].split("=", 1) for a in args if "=" in a) | {"title": title})
         if not self.answers:
-            sys.exit(f"ERROR: restart question: the window opened again after the last answer: {self.windows[-1]}")
+            die(f"the window opened again after the last answer: {self.windows[-1]}")
         return subprocess.CompletedProcess(args, self.answers.pop(0), "", "")
 
     def run(self, cmd, *args, **kw):
         if cmd[0] == "pkexec":
             if cmd[1:] != [tools.ADMIN, "keep-update"]:
-                sys.exit(f"ERROR: restart question: Keep runs {cmd}")
+                die(f"Keep runs {cmd}")
             self.asked += 1
             if not 60 <= kw.get("timeout", 0) <= 120:
-                sys.exit(f"ERROR: restart question: the password window gets {kw.get('timeout')} seconds")
+                die(f"the password window gets {kw.get('timeout')} seconds")
             rc = self.passwords.pop(0)
             if rc == "slow":
                 raise subprocess.TimeoutExpired(cmd, kw["timeout"])
@@ -67,20 +63,14 @@ def ask(kind, start, answers, passwords=(), names=("Sound (snd_hda_intel)",)):
     finally:
         tools.subprocess.run = real_run
     if f.answers or f.passwords:
-        sys.exit(f"ERROR: restart question {kind} {start}: answers left over {f.answers} {f.passwords}")
+        die(f"{kind} {start}: answers left over {f.answers} {f.passwords}")
     return rc, f
 
 
-def die(msg):
-    sys.exit(f"ERROR: restart question: {msg}")
-
-
-if tools.RESTART_WAIT != health.COUNTDOWN:
-    die(f"the window counts down {tools.RESTART_WAIT} seconds, the startup check {health.COUNTDOWN}")
 if set(tools.AFTER_LOGIN_TESTS) != set(health.TRIAL_TESTS):
     die(f"Wheelhouse's after-login tests {tools.AFTER_LOGIN_TESTS} aren't the trial's {health.TRIAL_TESTS}")
 # Every after-login test: its own name, what broke, Restart now or Not yet, no countdown but for Graphics.
-for kind, name, _ in tools.ROLLBACK_TESTS:
+for kind, name, _about in tools.ROLLBACK_TESTS:
     if kind not in tools.AFTER_LOGIN_TESTS:
         if ask(kind, "first", [])[0] != 1:
             die(f"{kind} breaks the start before the desktop, but has a window")

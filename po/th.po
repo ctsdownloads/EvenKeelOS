@@ -608,14 +608,6 @@ msgstr ""
 msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr "ระบบจะตรวจสอบลายเซ็นของ ArtCraft ก่อน และจะอัปเดตวันละครั้ง"
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"ถามเพียงครั้งเดียวว่าเครือข่าย Wi-Fi "
-"หรือเครือข่ายแบบใช้สายที่ต้องใช้รหัสผ่านเป็นเครือข่ายที่บ้าน ที่ทำงาน "
-"หรือสถานที่สาธารณะ"
-
 msgid "At each login"
 msgstr "ทุกครั้งที่เข้าสู่ระบบ"
 
@@ -1519,14 +1511,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS ต้องใช้ UEFI เปิดใช้งาน UEFI ใน BIOS จากนั้นเริ่มจากแฟลชไดรฟ์ USB "
 "อีกครั้ง"
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS ต้องการพื้นที่อย่างน้อย 20 GB"
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS ทำงานได้ดีที่สุดกับหน่วยความจำ 8 GB ขึ้นไป "
-"เครื่องนี้จึงอาจทำงานช้า"
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3588,26 +3572,6 @@ msgstr "กำลังอ่านรายการแอปจากแหล
 msgid "Recommended"
 msgstr "แนะนำ"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"แนะนำ: \"ลบกล่อง\" จะได้พื้นที่คืนประมาณ {size} "
-"และกล่องจะกลับมาเองในครั้งถัดไปที่คุณติดตั้ง {apps} "
-"สิ่งที่เพิ่มลงในกล่องด้วยวิธีอื่นจะถูกลบไปด้วย ไฟล์ของคุณจะไม่ได้รับผลกระทบ"
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"แนะนำ: \"ลบกล่อง\" จะได้พื้นที่ดิสก์ของกล่องคืน "
-"และกล่องจะกลับมาเองในครั้งถัดไปที่คุณติดตั้ง {apps} "
-"สิ่งที่เพิ่มลงในกล่องด้วยวิธีอื่นจะถูกลบไปด้วย ไฟล์ของคุณจะไม่ได้รับผลกระทบ"
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3706,13 +3670,6 @@ msgstr "ลบตัวแปลงสัญญาณสื่อไหม?"
 
 msgid "Remove the test marker"
 msgstr "ลบเครื่องหมายการทดสอบ"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"ลบสิ่งเหล่านั้นออกก่อน: เรียกใช้  codecs remove  รีสตาร์ท แล้วเลือก "
-"\"ทุกอย่าง\" อีกครั้ง"
 
 msgid "Remove things the computer no longer needs"
 msgstr "ลบสิ่งที่คอมพิวเตอร์ไม่ต้องใช้อีกต่อไป"
@@ -5846,9 +5803,6 @@ msgstr ""
 "การอัปเดต: อัตโนมัติ จากแหล่งดาวน์โหลดของ {maker} เอง "
 "การตรวจสอบรายวันจะค้นหาเวอร์ชันใหม่ ซึ่งจะเริ่มทำงานเมื่อรีสตาร์ทครั้งถัดไป"
 
-msgid "Updates: automatic, with System Update."
-msgstr "การอัปเดต: อัตโนมัติ ด้วย \"อัปเดตระบบ\""
-
 msgid "Updates: automatic."
 msgstr "การอัปเดต: อัตโนมัติ"
 
@@ -6528,11 +6482,6 @@ msgstr "chrome โครม"
 msgid "clean storage"
 msgstr "clean storage ล้าง พื้นที่เก็บข้อมูล"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "ยังมีตัวแปลงสัญญาณจากระบบเวอร์ชันก่อนหน้า (negativo17) ติดตั้งอยู่"
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;ตัวแปลงสัญญาณ;โคเดก;วิดีโอ;เสียง;สื่อ;ติดตั้ง;"
@@ -6962,16 +6911,6 @@ msgstr "{name} ไม่ได้เริ่มทำงาน"
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} เป็นสถานที่สาธารณะ"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} ติดตั้งจาก Bazaar ร้านค้าแอป อยู่แล้ว\n"
-"\n"
-"แนะนำ: \"เปิด\""
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8017,12 +7956,6 @@ msgstr "การเปิดไฟล์ ZIP และ SIT"
 msgid "opening zip files"
 msgstr "การเปิดไฟล์ ZIP"
 
-msgid "organising and developing photos"
-msgstr "การจัดระเบียบและปรับแต่งรูปภาพ"
-
-msgid "organising photos"
-msgstr "การจัดระเบียบรูปภาพ"
-
 msgid "organizing music"
 msgstr "การจัดระเบียบเพลง"
 
@@ -8571,3 +8504,40 @@ msgstr "อ่านแหล่งดาวน์โหลดในโฟลเ
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "ย้ายไปใช้ Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "แบบอักษรและขนาดข้อความกลับเป็นค่าของ EvenKeelOS แล้ว"
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "แนะนำ: \"ลบกล่อง\" กล่องจะกลับมาเองในครั้งถัดไปที่คุณติดตั้ง {apps} สิ่งที่เพิ่มลงในกล่องด้วยวิธีอื่นจะถูกลบไปด้วย ไฟล์ของคุณจะไม่ได้รับผลกระทบ"
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "การลบจะได้พื้นที่คืนประมาณ {size}"
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "ถามเพียงครั้งเดียวว่าเครือข่าย Wi-Fi ที่ต้องใช้รหัสผ่านเป็นเครือข่ายที่บ้าน ที่ทำงาน หรือสถานที่สาธารณะ"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS ต้องการพื้นที่อย่างน้อย {gb} GB"
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS ทำงานได้ดีที่สุดกับหน่วยความจำ {gb} GB ขึ้นไป เครื่องนี้จึงอาจทำงานช้า"
+
+msgid "organizing and developing photos"
+msgstr "การจัดระเบียบและปรับแต่งรูปภาพ"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} ยังไม่มีคีย์ลงนามสำหรับ Fedora {version}"
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "ไม่ได้เพิ่ม {title} จึงนำแหล่งดาวน์โหลดออกไปอีกครั้ง"
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "ไม่ได้ลบ {title}"

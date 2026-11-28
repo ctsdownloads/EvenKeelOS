@@ -1,6 +1,7 @@
 # Allow build scripts to be referenced without being copied into the final image
 FROM scratch AS ctx
 COPY build_files /
+COPY cosign.pub /evenkeel-os.pub
 COPY system_files /system_files
 COPY po /po
 
@@ -12,7 +13,6 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh
 
-LABEL org.opencontainers.image.description="EvenKeelOS: a derivative of Fedora® that just works. Not Fedora, and not provided or supported by the Fedora Project. Official Fedora: https://fedoraproject.org/ Fedora® is a registered trademark of Red Hat, Inc., or its subsidiaries in the United States and other countries."
-LABEL org.opencontainers.image.source="https://github.com/ctsdownloads/evenkeel-os"
+LABEL org.opencontainers.image.source="https://github.com/ctsdownloads/EvenKeelOS"
 
 RUN bootc container lint

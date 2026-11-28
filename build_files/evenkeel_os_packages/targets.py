@@ -1,13 +1,12 @@
 """Installing into a box or onto the system."""
-import json
 import platform
 import shlex
 import shutil
-import subprocess
 
+import evenkeel_os_health as health
 from evenkeel_os_ui import _, N_, ask, notify, offer_restart, say
 from evenkeel_os_packages import (
-    after_restart, app_list, boxes, common, hwrules, install_file, installed, launchers, sources,
+    after_restart, app_list, boxes, common, hwrules, installed, launchers,
     update_notes, windows,
 )
 
@@ -56,7 +55,7 @@ def box_install(pkg, info, title, quiet=False, mode="install"):
     old = next((r for r in app_list.load() if r["where"] == box and r["package"] == pkg.name), {})
     # Updates: the package (or its install script, as Chrome's and VS Code's do) added a download source
     updates = update_notes.adds_source(pkg) or bool(set(update_notes.box_repos(box, pkg.kind)) - set(repos_before)) or \
-        bool(old.get("updates")) or pkg.name in sources.SOURCED
+        bool(old.get("updates")) or pkg.name in common.SOURCED
     entry = {"title": title, "package": pkg.name, "where": box, "apps": apps, "bins": bins,
              "rules": bool(old.get("rules")), "file": f, "version": pkg.evr, "updates": updates}
     if info.get("source_only"):
@@ -75,27 +74,19 @@ def box_install(pkg, info, title, quiet=False, mode="install"):
             extra = "\n\n" + _("The device rule wasn't added, so the device may not work.\n{details}").format(
                 details=out)
     if info["notes"]:
-        extra += "\n\n" + _("In the box, these won't work:") + "\n" + install_file.plain_list(info["notes"])
-    if apps:
-        where = _("Find it in Show Apps.")
-    elif bins:
-        where = _("It is a command-line tool, so it has no window in Show Apps.")
-    else:
-        where = _("It has no app of its own; other apps in the box use it.")
+        extra += "\n\n" + _("In the box, these won't work:") + "\n" + common.plain_list(info["notes"])
+    where = update_notes.where_to_find(apps, bins, _("It has no app of its own; other apps in the box use it."))
     done = {"reinstall": N_("{title} is reinstalled."), "update": N_("{title} is updated to version {version}."),
             "older": N_("{title} is now version {version}.")}.get(mode, N_("{title} is installed."))
     done = _(done).format(title=title, version=installed.plain_version(pkg.evr))
     notify(done)
-    say(done + " " + where + extra + "\n\n" + _(update_notes.UPDATES_YES if updates else update_notes.UPDATES_NO))
+    how = update_notes.updates_line(update_notes.UPDATES_FEDORA) if updates else _(update_notes.UPDATES_NO)
+    say(done + " " + where + extra + "\n\n" + how)
     return 0
 
 
 def staged_system():
-    r = subprocess.run(["rpm-ostree", "status", "--json"], capture_output=True, text=True)
-    try:
-        return any(d.get("staged") for d in json.loads(r.stdout)["deployments"])
-    except (ValueError, KeyError):
-        return False
+    return any(d.get("staged") for d in health.deployments() or [])
 
 
 def fedora_package_version(name):
@@ -117,6 +108,13 @@ def fedora_package_version(name):
         return ""
 
 
+def ready_note(printer, updates):
+    """What happens after the restart, and how the package keeps updating."""
+    after = _("After the restart, you will be asked to add your printer.") if printer else \
+        _("After the restart, you'll get a message when it's ready.")
+    return after + "\n\n" + update_notes.updates_line(updates)
+
+
 def install_from_fedora(pkg, title, printer, version, services=False):
     """Add the package to the system from Fedora's repos by name, so System Update keeps it up to date."""
     what = _("Adding {title} to the system from Fedora. This can take a few minutes.").format(title=title)
@@ -127,11 +125,7 @@ def install_from_fedora(pkg, title, printer, version, services=False):
     app_list.remember({"title": title, "package": pkg.name, "where": "system", "from_fedora": True,
                        "version": version})
     after_restart.add_pending({"title": title, "package": pkg.name, "printer": printer, "services": services})
-    after = _("After the restart, you will be asked to add your printer.") if printer else \
-        _("After the restart, you'll get a message when it's ready.")
-    notify(_("{title} is installed. Restart to use it.").format(title=title))
-    offer_restart(_("{title} is installed. Restart to start using it.").format(title=title),
-                  after + "\n\n" + _("Updates: {how}").format(how=_(update_notes.UPDATES_FEDORA)))
+    after_restart.offer(title, ready_note(printer, update_notes.UPDATES_FEDORA))
     return 0
 
 
@@ -160,23 +154,16 @@ def install_system(pkg, title, printer=False, update=False, services=False):
         started = _("Adding {title} to the system. A progress window shows it.").format(title=title)
     notify(started)
     if not windows.run_steps(what, [cmd]):
-        if update:
-            windows.failed(_("Updating {title} on the system").format(title=title))
-        else:
-            windows.failed(_("Adding {title} to the system").format(title=title))
+        windows.failed((_("Updating {title} on the system") if update else _("Adding {title} to the system"))
+                       .format(title=title))
         return 1
     app_list.remember({"title": title, "package": pkg.name, "nevra": pkg.nevra, "where": "system", "version": pkg.evr})
-    # checked once at the next login: is it really there, and for a printer driver, add the printer
     # this system ignores an install script turning on a service, so it is done after the restart
     after_restart.add_pending({"title": title, "package": pkg.name, "printer": printer and not update,
                                "version": pkg.evr, "services": services and not update})
-    after = _("After the restart, you will be asked to add your printer.") if printer and not update else \
-        _("After the restart, you'll get a message when it's ready.")
     if update:
         notify(_("{title} is updated. Restart to use the new version.").format(title=title))
         offer_restart(_("{title} is updated. Restart to use the new version.").format(title=title))
     else:
-        notify(_("{title} is installed. Restart to use it.").format(title=title))
-        offer_restart(_("{title} is installed. Restart to start using it.").format(title=title),
-                      after + "\n\n" + _("Updates: {how}").format(how=_(update_notes.UPDATES_SYSTEM)))
+        after_restart.offer(title, ready_note(printer, update_notes.UPDATES_SYSTEM))
     return 0

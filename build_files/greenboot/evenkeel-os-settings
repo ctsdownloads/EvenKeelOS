@@ -201,25 +201,18 @@ def start_counter(saved_time):
     env = grubenv()
     if env is None or not own_namespace():
         return
-    try:
-        if RETRIED.read_text().strip() == str(saved_time):
-            print("A repair already added a retry since the last good start: no more.")
-            return
-    except OSError:
-        pass
+    if RETRIED.is_file() and RETRIED.read_text().strip() == str(saved_time):
+        print("A repair already added a retry since the last good start: no more.")
+        return
     counter = next((v.split("=", 1)[1] for v in env if v.startswith("boot_counter=")), None)
     if counter not in (None, "0"):
         return
-    ro = "ro" in subprocess.run(["/usr/bin/findmnt", "-no", "OPTIONS", "/boot"], capture_output=True,
-                                text=True).stdout.strip().split(",")
-    if ro and subprocess.run(["/usr/bin/mount", "-o", "remount,rw", "/boot"]).returncode != 0:
+    if subprocess.run(["/usr/libexec/evenkeel-os-boot-writable", "/usr/bin/grub2-editenv", str(GRUBENV), "set",
+                       "boot_counter=1"]).returncode != 0:
+        print("The retry counter couldn't be started.")
         return
-    if subprocess.run(["/usr/bin/grub2-editenv", str(GRUBENV), "set", "boot_counter=1"]).returncode == 0:
-        RETRIED.parent.mkdir(parents=True, exist_ok=True)
-        RETRIED.write_text(f"{saved_time}\n")
-    # bind: read-only again here only, as greenboot does; a plain remount,ro would lock /boot under an update.
-    if ro:
-        subprocess.run(["/usr/bin/mount", "-o", "remount,bind,ro", "/boot"])
+    RETRIED.parent.mkdir(parents=True, exist_ok=True)
+    RETRIED.write_text(f"{saved_time}\n")
 
 
 def write_note(kind, saved_time, put):

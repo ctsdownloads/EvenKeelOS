@@ -1,8 +1,5 @@
 #!/usr/bin/python3 -I
-"""The part of the installer that changes the disk, as root through pkexec (live USB only).
-
-Reads the choices as JSON on standard input; writes one JSON progress line at a time on standard output.
-"""
+"""The part of the installer that changes the disk, as root through pkexec (live USB only)."""
 import ast
 import datetime
 import glob
@@ -31,8 +28,7 @@ GUIDE_HIDDEN = ".local/state/evenkeel-os/guide-hidden"
 
 
 class Stop(Exception):
-    """A step failed. Built from an English template (marked N_) and its values: str() is what the person is
-    shown, in their language; english is the same in English, for the log and the report."""
+    """A step failed; str() is the translated message, english is the same text for the log."""
 
     def __init__(self, template, **values):
         super().__init__(_(template).format(**values))
@@ -113,10 +109,9 @@ def free_disk(disk):
 
 
 def console_keymap(layout):
-    name = data.keymap_name(layout)
-    if not os.path.exists(f"{data.KEYMAPS}/{name}.map.gz"):
+    if not data.has_console_keymap(layout):
         raise Stop(N_("There is no start-up keyboard layout for {layout}."), layout=layout)
-    return name
+    return data.keymap_name(layout)
 
 
 def write(path, text):

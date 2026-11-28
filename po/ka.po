@@ -619,13 +619,6 @@ msgstr ""
 msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr "ჯერ ArtCraft-ის ხელმოწერა მოწმდება, და ის დღეში ერთხელ ახლდება."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"ერთხელ გეკითხებათ, პაროლიანი Wi-Fi ან სადენიანი ქსელი „სახლია“, „სამსახური“ "
-"თუ „საჯარო ადგილი“"
-
 msgid "At each login"
 msgstr "ყოველ შესვლისას"
 
@@ -1563,13 +1556,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS-ს UEFI სჭირდება. ჩართეთ UEFI BIOS-ში, შემდეგ კი ისევ ჩატვირთეთ "
 "კომპიუტერი USB-ფლეშკიდან."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS-ს სჭირდება მინიმუმ 20 გბ."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS საუკეთესოდ მუშაობს 8 გბ-ით ან მეტით, ამიტომ შეიძლება ნელა იმუშაოს."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3676,26 +3662,6 @@ msgstr "აპების სიის წაკითხვა ახალი
 msgid "Recommended"
 msgstr "რეკომენდებული"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"რეკომენდებულია: „ყუთის წაშლა“. ის დაახლოებით {size}-ს გაათავისუფლებს და "
-"თავისით აღდგება, როცა შემდეგ ჯერზე {apps}-ს დააყენებთ. ყუთში სხვა გზით "
-"დამატებული ყველაფერიც წაიშლება. თქვენს ფაილებს არაფერი ეხება."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"რეკომენდებულია: „ყუთის წაშლა“. ის დისკზე თავის ადგილს გაათავისუფლებს და "
-"თავისით აღდგება, როცა შემდეგ ჯერზე {apps}-ს დააყენებთ. ყუთში სხვა გზით "
-"დამატებული ყველაფერიც წაიშლება. თქვენს ფაილებს არაფერი ეხება."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3797,13 +3763,6 @@ msgstr "გსურთ მედიაკოდეკების წაშლ�
 
 msgid "Remove the test marker"
 msgstr "სატესტო მარკერის წაშლა"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"ჯერ ისინი წაშალეთ: გაუშვით  codecs remove , გადატვირთეთ, შემდეგ კვლავ აირჩიეთ"
-" „ყველაფერი“."
 
 msgid "Remove things the computer no longer needs"
 msgstr "იმ ელემენტების წაშლა, რომლებიც კომპიუტერს აღარ სჭირდება"
@@ -5987,9 +5946,6 @@ msgstr ""
 "ყოველდღიური შემოწმება პოულობს ახალ ვერსიებს, რომლებიც მომდევნო გადატვირთვისას"
 " ამოქმედდება."
 
-msgid "Updates: automatic, with System Update."
-msgstr "განახლებები: ავტომატური, „სისტემის განახლება“-ით."
-
 msgid "Updates: automatic."
 msgstr "განახლებები: ავტომატური."
 
@@ -6678,11 +6634,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage საცავის გასუფთავება"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "ამ სისტემის წინა ვერსიის კოდეკები (negativo17) ჯერ კიდევ დაყენებულია."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;კოდეკები;კოდეკი;ვიდეო;აუდიო;მედია;დაყენება;"
@@ -7124,16 +7075,6 @@ msgstr "{name} არ გაეშვა."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} საჯარო ადგილია"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} უკვე დაყენებულია Bazaar-იდან, აპების მაღაზიიდან.\n"
-"\n"
-"რეკომენდებულია: „გახსნა“."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8182,12 +8123,6 @@ msgstr "zip და sit ფაილების გახსნა"
 msgid "opening zip files"
 msgstr "ZIP ფაილების გახსნა"
 
-msgid "organising and developing photos"
-msgstr "ფოტოების დალაგება და დამუშავება"
-
-msgid "organising photos"
-msgstr "ფოტოების დალაგება"
-
 msgid "organizing music"
 msgstr "მუსიკის დალაგება"
 
@@ -8736,3 +8671,40 @@ msgstr "ჩამოტვირთვის წყაროების წა�
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Fedora 45-ზე გადასვლა"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "შრიფტები და ტექსტის ზომა EvenKeelOS-ის საკუთარს დაუბრუნდა."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "რეკომენდებულია: „ყუთის წაშლა“. ის თავისით აღდგება, როცა შემდეგ ჯერზე {apps}-ს დააყენებთ. ყუთში სხვა გზით დამატებული ყველაფერიც წაიშლება. თქვენს ფაილებს არაფერი ეხება."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "მისი წაშლა დაახლოებით {size}-ს გაათავისუფლებს."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "ერთხელ გეკითხებათ, პაროლიანი Wi-Fi ქსელი „სახლია“, „სამსახური“ თუ „საჯარო ადგილი“"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS-ს სჭირდება მინიმუმ {gb} გბ."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS საუკეთესოდ მუშაობს {gb} გბ-ით ან მეტით, ამიტომ შეიძლება ნელა იმუშაოს."
+
+msgid "organizing and developing photos"
+msgstr "ფოტოების დალაგება და დამუშავება"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title}-ს Fedora {version}-ისთვის ხელმოწერის გასაღები ჯერ არ აქვს."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} არ დაემატა, ამიტომ მისი ჩამოტვირთვის წყარო ისევ წაიშალა."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} არ წაიშალა."

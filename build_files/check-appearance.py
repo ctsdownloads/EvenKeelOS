@@ -1,9 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check: Make it yours' light and dark schedule and wallpaper slideshow, with a made-up gsettings.
-
-The sun times are checked against values worked out independently (within 6 minutes), and every time zone the
-installer offers in the regions it lists must have a city to work them out from.
-"""
+"""Build check: Make it yours' light and dark schedule and wallpaper slideshow, with a made-up gsettings."""
 import datetime
 import sys
 import tempfile
@@ -39,8 +35,7 @@ for zone, day, rise, sets in SUN:
         problems.append(f"{zone} on {day}: dark from/light from {got}, expected about {want}")
 if a.sun_times(78.2, 15.6, datetime.date(2026, 12, 15)) is not None:
     problems.append("the polar night has a sunrise")
-# Every name a computer can be set to, old ones too, except those with no place: Etc/GMT+5 and the like, and short
-# names like EST5EDT that the time zone database doesn't link to a city.
+# Skips Etc/GMT+5 style names and short names like EST5EDT, which the time zone database doesn't link to a city.
 linked = a.links("/usr/share/zoneinfo/tzdata.zi")
 
 

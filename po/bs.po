@@ -634,13 +634,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "Potpis ArtCrafta se prvo provjerava, a ArtCraft se ažurira jednom dnevno."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Jednom pita da li je Wi-Fi ili žična mreža s lozinkom Kućna mreža, Poslovna "
-"mreža ili Javna mreža"
-
 msgid "At each login"
 msgstr "Pri svakoj prijavi"
 
@@ -1580,12 +1573,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS zahtijeva UEFI. Uključite UEFI u BIOS-u, a zatim ponovo pokrenite "
 "računar s USB sticka."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS-u je potrebno najmanje 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "EvenKeelOS najbolje radi s 8 GB ili više, pa bi mogao biti spor."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3688,26 +3675,6 @@ msgstr "Čitanje liste aplikacija iz novog izvora za preuzimanje"
 msgid "Recommended"
 msgstr "Preporučeno"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Preporučeno: Izbriši kutiju. Oslobađa oko {size}, a sama se vraća kada "
-"sljedeći put instalirate {apps}. Sve što je u kutiju dodano na drugi način "
-"također se briše. Vaše datoteke ostaju netaknute."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Preporučeno: Izbriši kutiju. Oslobađa njen prostor na disku, a sama se vraća "
-"kada sljedeći put instalirate {apps}. Sve što je u kutiju dodano na drugi "
-"način također se briše. Vaše datoteke ostaju netaknute."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3808,13 +3775,6 @@ msgstr "Želite li ukloniti medijske kodeke?"
 
 msgid "Remove the test marker"
 msgstr "Ukloni oznaku za testiranje"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Prvo ih uklonite: pokrenite  codecs remove , ponovo pokrenite računar, a "
-"zatim ponovo odaberite Sve."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Ukloni stvari koje računaru više nisu potrebne"
@@ -6019,9 +5979,6 @@ msgstr ""
 " Dnevna provjera pronalazi nove verzije, koje se pokreću prilikom sljedećeg "
 "ponovnog pokretanja."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Ažuriranja: automatska, putem Ažuriranja sistema."
-
 msgid "Updates: automatic."
 msgstr "Ažuriranja: automatska."
 
@@ -6709,11 +6666,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "očisti prostor za pohranu"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "kodeci iz ranije verzije ovog sistema (negativo17) još su instalirani."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;kodeci;kodek;mediji;instaliraj;"
@@ -7145,16 +7097,6 @@ msgstr "{name} se nije pokrenuo."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} je javna mreža"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} je već instaliran iz Bazaara, trgovine aplikacijama.\n"
-"\n"
-"Preporučeno: Otvori."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8223,12 +8165,6 @@ msgstr "otvaranje ZIP i SIT datoteka"
 msgid "opening zip files"
 msgstr "otvaranje ZIP datoteka"
 
-msgid "organising and developing photos"
-msgstr "organizovanje i obrada fotografija"
-
-msgid "organising photos"
-msgstr "organizovanje fotografija"
-
 msgid "organizing music"
 msgstr "organizovanje muzike"
 
@@ -8777,3 +8713,40 @@ msgstr "Čitaj izvore preuzimanja u novom folderu Fedore 45"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Pređi na Fedoru 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Fontovi i veličina teksta vraćeni su na izvorne postavke sistema EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Preporučeno: Izbriši kutiju. Sama se vraća kada sljedeći put instalirate {apps}. Sve što je u kutiju dodano na drugi način također se briše. Vaše datoteke ostaju netaknute."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Brisanjem se oslobađa oko {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Jednom pita da li je Wi-Fi mreža s lozinkom Kućna mreža, Poslovna mreža ili Javna mreža"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS-u je potrebno najmanje {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS najbolje radi s {gb} GB ili više, pa bi mogao biti spor."
+
+msgid "organizing and developing photos"
+msgstr "organizovanje i obrada fotografija"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} još nema ključ za potpisivanje za Fedoru {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} nije dodan, pa je njegov izvor preuzimanja ponovo uklonjen."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} nije uklonjen."

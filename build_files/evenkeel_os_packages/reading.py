@@ -6,7 +6,7 @@ import re
 import subprocess
 import tarfile
 from pathlib import Path
-from evenkeel_os_ui import _, N_
+from evenkeel_os_ui import _, N_, load_program
 from evenkeel_os_packages import common, update_notes
 
 
@@ -21,6 +21,21 @@ class Package:
         self.scripts = ""         # install scripts, as one lowercase string
         self.vendor = ""          # rpm Vendor or deb Maintainer, to name the maker
         self.evr = ""             # rpm epoch:version-release, or the deb version
+
+
+# What a package needs that a box can't give, in words people see.
+NEEDS = {
+    "driver": N_("a driver (kernel module)"),
+    "firmware": N_("device firmware"),
+    "printer": N_("a printer driver"),
+    "scanner": N_("a scanner driver"),
+    "login": N_("login or security settings"),
+    "network": N_("a network or VPN plugin for the system"),
+    "service": N_("a background service that starts with the computer"),
+    "needed_service": N_("a background service the app needs, which cannot run in a box"),
+    "user_service": N_("a background service for your account (in a box it does not start)"),
+    "programrules": N_("a hardware rule that runs a program"),
+}
 
 
 def norm(p):
@@ -74,11 +89,14 @@ def read_rpm(pkg):
     pkg.nevra = f"{pkg.name}-{pkg.version}.{pkg.arch}"
     pkg.depends = q("--requires").lower()
     pkg.scripts = q("--scripts").lower()
-    proc = subprocess.Popen(["rpm2archive", "-n", "-"], stdin=open(pkg.path, "rb"), stdout=subprocess.PIPE,
-                            stderr=subprocess.DEVNULL)
-    read_tar(pkg, proc.stdout, "r|")
-    proc.stdout.close()
-    proc.wait()
+    with open(pkg.path, "rb") as f:
+        proc = subprocess.Popen(["rpm2archive", "-n", "-"], stdin=f, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        read_tar(pkg, proc.stdout, "r|")
+        proc.stdout.read()      # the archive's end padding, so rpm2archive can finish writing
+        proc.stdout.close()
+        problem = proc.stderr.read().decode(errors="replace").strip()
+        if proc.wait() != 0:
+            raise ValueError(problem or _("rpm could not read it"))
 
 
 def read_deb(pkg):
@@ -139,8 +157,6 @@ def read_package(path):
     return pkg
 
 
-# ---------------------------------------------------------------- what the package needs
-
 def desktop_entry(text):
     """(visible, name) for a .desktop file."""
     sect, fields = None, {}
@@ -156,16 +172,11 @@ def desktop_entry(text):
     return visible, fields.get("Name", "")
 
 
-RUNS_PROGRAM = re.compile(r"\bRUN\b(?!\{builtin\})|\bPROGRAM\b|IMPORT\{program\}")   # RUN{builtin} stays in udev
+# The hardware-rules helper's own test, so a rule offered here is one it takes.
+rule_runs_program = load_program(common.HWRULES, "hwrules").runs_program
 
 
-def rule_runs_program(text):
-    joined = re.sub(r"\\\n", " ", text)
-    return any(RUNS_PROGRAM.search(line) for line in joined.splitlines() if not line.lstrip().startswith("#"))
-
-
-# A printer description file, a printing filter (cups filter or backend, lpd filter, cupswrapper, printfilter) or a
-# cups driver file; docs and examples don't count. An install script line (not a comment) that adds a printer.
+# Printer description, filter or driver files, not docs or examples; ADDS_PRINTER matches an install script's lpadmin.
 PRINTER_FILE = re.compile(r"\.ppd(\.gz|\.bz2)?$|/cups/(lib/)?(filter|backend)/[^/]+$|/lpd/[^/]*filter[^/]*$|"
                           r"/cupswrapper/[^/]+$|/[^/]*printfilter[^/]*$|/(cups|ppds?)/.*\.drv(\.gz)?$", re.I)
 NOT_PRINTER = re.compile(r"/(doc|docs|examples?|samples?)/", re.I)
@@ -218,13 +229,14 @@ def classify(pkg):
          or re.match(r"/usr/lib(64)?/(x86_64-linux-gnu/)?security/", p))
     flag("network", lambda p: starts(p, "/usr/lib/NetworkManager/", "/usr/lib64/NetworkManager/",
                                      "/etc/NetworkManager/", "/usr/lib/firewalld/", "/etc/firewalld/"))
-    flag("service", lambda p: (starts(p, "/usr/lib/systemd/system/", "/etc/systemd/system/")
-                               and re.search(r"\.(service|socket|timer|path)$", p))
-         or starts(p, "/etc/init.d/", "/usr/share/dbus-1/system-services/", "/usr/share/dbus-1/system.d/",
-                   "/etc/dbus-1/system.d/"))
+
+    def system_unit(p):
+        return starts(p, "/usr/lib/systemd/system/", "/etc/systemd/system/") and re.search(
+            r"\.(service|socket|timer|path)$", p)
+    flag("service", lambda p: system_unit(p) or starts(p, "/etc/init.d/", "/usr/share/dbus-1/system-services/",
+                                                       "/usr/share/dbus-1/system.d/", "/etc/dbus-1/system.d/"))
     # Services the package's install script turns on are needed; preset ones are optional.
-    units = [os.path.basename(p) for p in files if (starts(p, "/usr/lib/systemd/system/", "/etc/systemd/system/")
-             and re.search(r"\.(service|socket|timer|path)$", p)) or p.startswith("/etc/init.d/")]
+    units = [os.path.basename(p) for p in files if system_unit(p) or p.startswith("/etc/init.d/")]
     user_units = [os.path.basename(p) for p in files
                   if p.startswith("/usr/lib/systemd/user/") and p.endswith(".service")]
     presets = "\n".join(t for p, t in pkg.texts.items() if "/systemd/system-preset/" in p)
@@ -257,30 +269,18 @@ def classify(pkg):
                                       "/etc/udev/hwdb.d/"))
     flag("admin", lambda p: starts(p, "/usr/share/polkit-1/", "/etc/polkit-1/"))
 
-    words = {
-        "driver": N_("a driver (kernel module)"),
-        "firmware": N_("device firmware"),
-        "printer": N_("a printer driver"),
-        "scanner": N_("a scanner driver"),
-        "login": N_("login or security settings"),
-        "network": N_("a network or VPN plugin for the system"),
-        "service": N_("a background service that starts with the computer"),
-        "needed_service": N_("a background service the app needs, which cannot run in a box"),
-        "user_service": N_("a background service for your account (in a box it does not start)"),
-        "programrules": N_("a hardware rule that runs a program"),
-    }
     if program_rules:
         found["programrules"] = True
-    blocking = [words[k] for k in ("driver", "firmware", "printer", "scanner", "login", "network") if k in found]
+    blocking = [NEEDS[k] for k in ("driver", "firmware", "printer", "scanner", "login", "network") if k in found]
     notes = []
     if "needed_service" in found:
-        blocking.append(words["needed_service"])
+        blocking.append(NEEDS["needed_service"])
     elif "service" in found:
-        (notes if apps else blocking).append(words["service"])
+        (notes if apps else blocking).append(NEEDS["service"])
     if "user_service" in found:
-        notes.append(words["user_service"])
+        notes.append(NEEDS["user_service"])
     if "programrules" in found:
-        (notes if apps else blocking).append(words["programrules"])
+        (notes if apps else blocking).append(NEEDS["programrules"])
     if "settings" in found:
         notes.append(N_("system settings (these will not apply)"))
     if "admin" in found:
@@ -297,8 +297,11 @@ def classify(pkg):
     source_only = bool(repo_files) and not blocking and \
         all(update_notes.REPO_FILE.match(p) or starts(p, *keys, *docs) for p in files)
     bins = sorted(p for p in files if re.match(r"/usr/bin/[^/]+$", p))[:10]
-    # One app: its own name; several: the package name.
-    title = next(iter(apps.values())) if len(apps) == 1 else pkg.name.capitalize() if apps else pkg.name
+    # One app: its own name; several: the package name, capitalized like an app's.
+    if len(apps) == 1:
+        title = next(iter(apps.values()))
+    else:
+        title = pkg.name.capitalize() if apps else pkg.name
     return {"apps": apps, "bins": bins, "safe_rules": safe_rules, "blocking": blocking, "notes": notes,
             "rules_only": rules_only, "source_only": source_only,
             "needs_root": bool(apps) and bool(root_programs or root_launch), "turns_on": script_on,

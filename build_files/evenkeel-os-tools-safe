@@ -5,17 +5,18 @@
   evenkeel-os-tools-safe disk-unlock on|off      (the disk password on standard input)
   evenkeel-os-tools-safe free-space
 """
-import importlib.machinery
-import importlib.util
 import os
 import subprocess
 import sys
 import time
 from pathlib import Path
 
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_health as health  # noqa: E402
+
 ADMIN = "/usr/libexec/evenkeel-os-tools-admin"
 FAILURES = Path("/var/lib/evenkeel-os/disk-password-wrong")    # the times of recent wrong disk passwords
-PAUSE = Path("/var/lib/evenkeel-os/updates-paused-until")      # read by evenkeel-os-updates-pause-check
+PAUSE = Path(health.PAUSE)
 PAUSE_DAYS = 3
 MAX_WRONG, WINDOW = 5, 3600
 
@@ -34,11 +35,7 @@ def disk_unlock(state):
     if len(wrong) >= MAX_WRONG:
         print("Too many wrong disk passwords. Try again in an hour.")
         return 4
-    try:
-        admin().disk_unlock(state)
-        rc = 0
-    except SystemExit as e:
-        rc = e.code if isinstance(e.code, int) else 1
+    rc = subprocess.run([ADMIN, "disk-unlock", state]).returncode     # the disk password goes through on stdin
     if rc == 3:             # wrong disk password
         FAILURES.parent.mkdir(parents=True, exist_ok=True)
         FAILURES.write_text(" ".join(str(t) for t in wrong + [time.time()]))
@@ -47,21 +44,13 @@ def disk_unlock(state):
     return rc
 
 
-def admin():
-    loader = importlib.machinery.SourceFileLoader("evenkeel_os_tools_admin", ADMIN)
-    spec = importlib.util.spec_from_loader(loader.name, loader)
-    module = importlib.util.module_from_spec(spec)
-    loader.exec_module(module)
-    return module
-
-
 def main(argv):
     if os.geteuid() != 0:
         print("This helper runs as root, through polkit.")
         return 1
     if argv[1:] == ["updates", "on"]:
         PAUSE.unlink(missing_ok=True)
-        return subprocess.run(["/usr/bin/systemctl", "enable", "--now", "uupd.timer"]).returncode
+        return subprocess.run([ADMIN, "updates", "on"]).returncode
     if argv[1:] == ["updates", "pause"]:
         PAUSE.parent.mkdir(parents=True, exist_ok=True)
         PAUSE.write_text(f"{int(time.time()) + PAUSE_DAYS * 86400}\n")
@@ -73,8 +62,9 @@ def main(argv):
         return disk_unlock(argv[2])
     if argv[1:] == ["free-space"]:
         rc = subprocess.run(["/usr/bin/rpm-ostree", "cleanup", "-bm"]).returncode
-        subprocess.run(["/usr/bin/flatpak", "uninstall", "--system", "--unused", "-y", "--noninteractive"])
-        return rc
+        flatpaks = subprocess.run(["/usr/bin/flatpak", "uninstall", "--system", "--unused", "-y",
+                                   "--noninteractive"]).returncode
+        return rc or flatpaks
     print(__doc__)
     return 2
 

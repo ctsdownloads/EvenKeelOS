@@ -1,8 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build test: every flatpak install and uninstall in our tools names the system or the person's own apps.
-
-Usage: check-flatpak-places.py DIR... (each file in each DIR: Python by its AST, shell scripts line by line)
-"""
+"""Build test: every flatpak install and uninstall names --system or --user."""
 import ast
 import re
 import sys
@@ -40,8 +37,8 @@ def shell_problems(path, text):
 
 bad = []
 for folder in sys.argv[1:]:
-    for path in sorted(p for p in Path(folder).iterdir() if p.is_file() and "evenkeel" in p.name or
-                       p.suffix == ".py" and p.parent.name == "evenkeel_os_packages"):
+    for path in sorted(p for p in Path(folder).iterdir() if (p.is_file() and "evenkeel" in p.name) or
+                       (p.suffix == ".py" and p.parent.name == "evenkeel_os_packages")):
         text = path.read_text(errors="replace")
         if "flatpak" not in text:
             continue

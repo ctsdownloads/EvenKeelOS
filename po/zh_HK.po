@@ -543,11 +543,6 @@ msgstr "目前無法連接 ArtCraft 的下載伺服器。請檢查互聯網連�
 msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr "系統會先檢查 ArtCraft 的簽名，並每日更新一次。"
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr "會詢問一次需要密碼的 Wi-Fi 或有線網絡是「家居」、「工作」還是「公共場所」"
-
 msgid "At each login"
 msgstr "每次登入時"
 
@@ -1372,12 +1367,6 @@ msgid ""
 "EvenKeelOS needs UEFI. Turn on UEFI in the BIOS, then start from the USB "
 "stick again."
 msgstr "EvenKeelOS 需要 UEFI。請在 BIOS 中開啟 UEFI，然後再從 USB 手指重新啟動。"
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS 需要最少 20 GB。"
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "EvenKeelOS 在 8 GB 或以上記憶體下運作最佳，因此可能會較慢。"
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3222,22 +3211,6 @@ msgstr "正在從新的下載來源讀取應用程式清單"
 msgid "Recommended"
 msgstr "建議"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"建議：「刪除容器」。這會釋放約 {size}，下次你安裝 {apps} 時，它會自動回來。以其他方式加到容器中的任何東西也會被刪除。你的檔案不會受到影響。"
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"建議：「刪除容器」。這會釋放它佔用的磁碟空間，下次你安裝 {apps} 時，它會自動回來。以其他方式加到容器中的任何東西也會被刪除。你的檔案不會受到影響。"
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3326,11 +3299,6 @@ msgstr "要移除媒體編解碼器嗎？"
 
 msgid "Remove the test marker"
 msgstr "移除測試標記"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr "請先移除它們：執行  codecs remove ，重新啟動，然後再次選擇「全部」。"
 
 msgid "Remove things the computer no longer needs"
 msgstr "移除電腦不再需要的東西"
@@ -5263,9 +5231,6 @@ msgid ""
 "new versions, which start at the next restart."
 msgstr "更新：自動進行，來自 {maker} 的專屬下載來源。每日檢查會尋找新版本，並會在下次重新啟動時開始使用。"
 
-msgid "Updates: automatic, with System Update."
-msgstr "更新：自動，透過「系統更新」。"
-
 msgid "Updates: automatic."
 msgstr "更新：自動。"
 
@@ -5888,11 +5853,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage 清理 儲存空間"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "來自此系統較早版本（negativo17）的編解碼器仍然安裝在電腦上。"
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr "codecs;codec;ffmpeg;h264;video;audio;media;install;編解碼器;影片;音訊;媒體;安裝;"
 
@@ -6304,16 +6264,6 @@ msgstr "{name} 未能啟動。"
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} 是公共場所"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} 已從應用程式商店 Bazaar 安裝。\n"
-"\n"
-"建議：「開啟」。"
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -7333,12 +7283,6 @@ msgstr "開啟 ZIP 和 SIT 檔案"
 msgid "opening zip files"
 msgstr "開啟 ZIP 檔案"
 
-msgid "organising and developing photos"
-msgstr "整理和沖曬相片"
-
-msgid "organising photos"
-msgstr "整理相片"
-
 msgid "organizing music"
 msgstr "整理音樂"
 
@@ -7887,3 +7831,40 @@ msgstr "從 Fedora 45 的新資料夾讀取下載來源"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "改用 Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "字型和文字大小已回復為 EvenKeelOS 的原狀。"
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "建議：「刪除容器」。下次你安裝 {apps} 時，它會自動回來。以其他方式加到容器中的任何東西也會被刪除。你的檔案不會受到影響。"
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "刪除它會釋放約 {size}。"
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "會詢問一次需要密碼的 Wi-Fi 網絡是「家居」、「工作」還是「公共場所」"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS 需要最少 {gb} GB。"
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS 在 {gb} GB 或以上記憶體下運作最佳，因此可能會較慢。"
+
+msgid "organizing and developing photos"
+msgstr "整理和沖曬相片"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} 暫時未有適用於 Fedora {version} 的簽署金鑰。"
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} 未有新增，因此已再次移除其下載來源。"
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} 未有移除。"

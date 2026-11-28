@@ -1,3 +1,4 @@
+#!/usr/bin/python3 -I
 """Build test: every power mode tuned-ppd switches to loads with tuned's bootloader unit turned off."""
 import configparser
 import sys

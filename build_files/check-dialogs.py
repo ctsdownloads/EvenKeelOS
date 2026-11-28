@@ -1,13 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check: tools started from Wheelhouse show their windows inside it.
-
-1. No tool runs zenity itself: every window goes through evenkeel_os_ui.DIALOGS or the scripts' $zenity, which
-   become evenkeel-os-dialog when Wheelhouse starts the tool.
-2. evenkeel-os-dialog answers like zenity (exit code and output) for each kind of window, against a stand-in for the
-   Wheelhouse window.
-
-Usage: check-dialogs.py BUILD_FILES_FOLDER DIALOG_PROGRAM
-"""
+"""Build check: tools started from Wheelhouse show their windows inside it."""
 import json
 import os
 import re
@@ -74,6 +66,7 @@ with tempfile.TemporaryDirectory() as tmp:
     def keep(req, _lines):
         seen.update(req)
         return {"button": "ok"}
+
     def progress(_req, lines):
         return {"button": "ok"} if lines == [{"line": "# Step one"}, {"line": "50"}, {"end": True}] else {}
     checks = [

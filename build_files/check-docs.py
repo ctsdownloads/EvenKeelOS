@@ -1,8 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build test: the README's contents list and every link in the README and guides are right.
-
-Run from the repository root:  python3 build_files/check-docs.py
-"""
+"""Build test: the README's contents list and every link in the README and guides are right."""
 import re
 import sys
 from pathlib import Path
@@ -69,7 +66,7 @@ for i in range(max(len(headings), len(listed))):
         errors.append(f"README.md table of contents, line {i + 1}: should be {want}, is {got}")
         break
 
-# ---------------------------------------------------------------- every link, in every page
+# Every link, in every page
 for page, (lines, page_anchors, _h) in pages.items():
     here = Path(page).parent
     for line in lines:
@@ -92,14 +89,14 @@ for page, (lines, page_anchors, _h) in pages.items():
             elif a and name in pages and a not in pages[name][1]:
                 errors.append(f"{page} links to a section that is not in {name}: #{a}")
 
-# ---------------------------------------------------------------- no guide left unlinked
+# No guide left unlinked
 linked = {str((Path("README.md").parent / t.partition("#")[0]).as_posix())
           for line in readme for t in re.findall(r"\]\(([^)]+)\)", line) if t.partition("#")[0]}
 for page in PAGES[1:]:
     if page not in linked:
         errors.append(f"{page} is not linked from README.md, so nobody will find it")
 
-# ---------------------------------------------------------------- the guide matches Wheelhouse's own text
+# The guide matches Wheelhouse's own text
 sys.path.insert(0, str(ROOT / "build_files"))
 import evenkeel_os_guide  # noqa: E402
 if (ROOT / "docs" / "guide.md").read_text() != evenkeel_os_guide.markdown():

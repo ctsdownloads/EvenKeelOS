@@ -655,13 +655,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "Seiceáiltear síniú ArtCraft ar dtús, agus nuashonraítear é uair amháin sa lá."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Fiafraíonn sé uair amháin an Baile, Obair nó Áit phoiblí é líonra Wi-Fi le "
-"focal faire nó líonra sreangaithe"
-
 msgid "At each login"
 msgstr "Ag gach logáil isteach"
 
@@ -1609,14 +1602,6 @@ msgid ""
 msgstr ""
 "Teastaíonn UEFI ó EvenKeelOS. Cas air UEFI sa BIOS, ansin tosaigh ón "
 "gcuimhneán USB arís."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "Teastaíonn 20 GB ar a laghad ó EvenKeelOS."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"Oibríonn EvenKeelOS ar an dóigh is fearr le 8 GB nó níos mó, mar sin "
-"d’fhéadfadh sé a bheith mall."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3753,28 +3738,6 @@ msgstr "Ag léamh liosta na n-aipeanna ón bhfoinse íoslódála nua"
 msgid "Recommended"
 msgstr "Molta"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Molta: Scrios an bosca. Saorfaidh sé thart ar {size}, agus tiocfaidh sé ar "
-"ais leis féin an chéad uair eile a shuiteálann tú {apps}. Scriostar freisin "
-"aon rud a cuireadh leis an mbosca ar bhealach eile. Ní bhaintear le do chuid "
-"comhad."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Molta: Scrios an bosca. Saorfaidh sé a spás diosca, agus tiocfaidh sé ar ais "
-"leis féin an chéad uair eile a shuiteálann tú {apps}. Scriostar freisin aon "
-"rud a cuireadh leis an mbosca ar bhealach eile. Ní bhaintear le do chuid "
-"comhad."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3875,13 +3838,6 @@ msgstr "An mian leat na codecanna meán a bhaint?"
 
 msgid "Remove the test marker"
 msgstr "Bain an marcóir tástála"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Bain iad ar dtús: rith  codecs remove , atosaigh, ansin roghnaigh Gach rud "
-"arís."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Bain rudaí nach dteastaíonn ón ríomhaire a thuilleadh"
@@ -6137,9 +6093,6 @@ msgstr ""
 "Nuashonruithe: uathoibríoch, ó fhoinse íoslódála {maker} féin. Aimsíonn "
 "seiceáil laethúil leaganacha nua, a thosaíonn ag an gcéad atosú eile."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Nuashonruithe: uathoibríoch, le Nuashonrú an Chórais."
-
 msgid "Updates: automatic."
 msgstr "Nuashonruithe: uathoibríoch."
 
@@ -6846,13 +6799,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "glan stóras clean storage"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"tá codecanna ó leagan níos luaithe den chóras seo (negativo17) fós "
-"suiteáilte."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecanna;codec;ffmpeg;h264;físeán;fuaim;meáin;suiteáil;video;audio;media;install;"
@@ -7300,16 +7246,6 @@ msgstr "Níor thosaigh {name}."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "Is Áit phoiblí é {name}"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"Tá {name} suiteáilte cheana féin ó Bazaar, an siopa aipeanna.\n"
-"\n"
-"Molta: Oscail é."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8384,12 +8320,6 @@ msgstr "comhaid zip agus sit a oscailt"
 msgid "opening zip files"
 msgstr "comhaid zip a oscailt"
 
-msgid "organising and developing photos"
-msgstr "grianghraif a eagrú agus a phróiseáil"
-
-msgid "organising photos"
-msgstr "grianghraif a eagrú"
-
 msgid "organizing music"
 msgstr "ceol a eagrú"
 
@@ -8939,3 +8869,40 @@ msgstr "Léigh foinsí íoslódála i bhfillteán nua Fedora 45"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Bog go Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Tá na clónna agus méid an téacs ar ais go dtí socruithe féin EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Molta: Scrios an bosca. Tiocfaidh sí ar ais léi féin an chéad uair eile a shuiteálann tú {apps}. Scriostar freisin aon rud a cuireadh leis an mbosca ar bhealach eile. Ní bhaintear le do chuid comhad."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Saorfaidh a scriosadh thart ar {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Fiafraíonn sé uair amháin an Baile, Obair nó Áit phoiblí é líonra Wi-Fi le focal faire"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "Teastaíonn {gb} GB ar a laghad ó EvenKeelOS."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "Oibríonn EvenKeelOS ar an dóigh is fearr le {gb} GB nó níos mó, mar sin d’fhéadfadh sé a bheith mall."
+
+msgid "organizing and developing photos"
+msgstr "grianghraif a eagrú agus a phróiseáil"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "Níl eochair shínithe ag {title} do Fedora {version} go fóill."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "Níor cuireadh {title} leis, mar sin baineadh a fhoinse íoslódála arís."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "Níor baineadh {title}."

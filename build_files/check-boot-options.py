@@ -1,10 +1,5 @@
 #!/usr/bin/python3 -I
-"""Build check for Boot options: rpm-ostree can make the changes, the common fixes are all allowed with no warning,
-risky settings get a warning however they're written, and settings the system sets itself, settings that run a
-program while starting, and text that isn't a setting are refused.
-
-Usage: check-boot-options.py   (in the image, after build.sh has installed Boot options)
-"""
+"""Build check for Boot options, run in the image after build.sh has installed them."""
 import subprocess
 import sys
 
@@ -16,7 +11,7 @@ r = subprocess.run(["rpm-ostree", "kargs", "--help"], capture_output=True, text=
 if r.returncode != 0 or not all(o in r.stdout for o in ("--append-if-missing", "--delete-if-present",
                                                         "--unchanged-exit-77")):
     problems.append("rpm-ostree kargs in this image can't add and take out settings the way Boot options needs")
-for settings, title, _ in bootopts.COMMON:
+for settings, title, _fixes in bootopts.COMMON:
     for s in settings:
         if bootopts.problem(s) or bootopts.risk(s):
             problems.append(f"the common fix {s} ({title}) is refused or warned about")

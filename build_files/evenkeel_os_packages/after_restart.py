@@ -2,11 +2,18 @@
 import json
 import subprocess
 
-from evenkeel_os_ui import _, ask, notify, say
-from evenkeel_os_packages import boxes, common, installed, launchers, login_apps, printers, targets, vpn
+from evenkeel_os_ui import _, ask, notify, offer_restart, say
+from evenkeel_os_packages import (boxes, common, installed, launchers, login_apps, printers, targets, update_notes,
+                                  vpn)
 
 
 PENDING = common.STATE.with_name("pending.json")
+
+
+def offer(title, rest):
+    """Say a package added to the system is in, and offer the restart that starts it; rest: what comes after."""
+    notify(_("{title} is installed. Restart to use it.").format(title=title))
+    offer_restart(_("{title} is installed. Restart to start using it.").format(title=title), rest)
 
 
 def pending():
@@ -24,24 +31,26 @@ def save_pending(entries):
         PENDING.unlink(missing_ok=True)
 
 
+def without(package):
+    return [e for e in pending() if e["package"] != package]
+
+
 def drop_pending(package):
-    save_pending([e for e in pending() if e["package"] != package])
+    save_pending(without(package))
 
 
 def add_pending(entry):
     """Check this package at the next login, in place of any earlier entry for it."""
-    save_pending([e for e in pending() if e["package"] != entry["package"]] + [entry])
+    save_pending(without(entry["package"]) + [entry])
 
 
 def where_line(package):
     """Where to find a package added to the system, from the files it installed."""
     r = subprocess.run(["rpm", "-ql", package], capture_output=True, text=True)
     files = r.stdout.splitlines() if r.returncode == 0 else []
-    if any(f.startswith("/usr/share/applications/") and f.endswith(".desktop") for f in files):
-        return _("Find it in Show Apps.")
-    if any(f.startswith(("/usr/bin/", "/usr/sbin/")) for f in files):
-        return _("It is a command-line tool, so it has no window in Show Apps.")
-    return _("It has no window of its own in Show Apps.")
+    return update_notes.where_to_find(
+        any(f.startswith("/usr/share/applications/") and f.endswith(".desktop") for f in files),
+        any(f.startswith(("/usr/bin/", "/usr/sbin/")) for f in files), _("It has no window of its own in Show Apps."))
 
 
 def boxes_missing_helpers():

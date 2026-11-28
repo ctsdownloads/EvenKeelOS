@@ -2,7 +2,7 @@
 <!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD polkit Policy Configuration 1.0//EN" "http://www.freedesktop.org/software/polkit/policyconfig-1.dtd">
 <policyconfig>
   <vendor>EvenKeelOS</vendor>
-  <vendor_url>https://github.com/ctsdownloads/evenkeel-os</vendor_url>
+  <vendor_url>https://github.com/ctsdownloads/EvenKeelOS</vendor_url>
 
   <!-- Get a VPN, and services for apps added to the system. Password every time. -->
   <action id="io.github.ctsdownloads.evenkeel-os.vpn">

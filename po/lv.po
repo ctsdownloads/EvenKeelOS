@@ -629,13 +629,6 @@ msgstr ""
 "Vispirms tiek pārbaudīts ArtCraft paraksts, un lietotne tiek atjaunināta "
 "reizi dienā."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Vienreiz pajautā, vai ar paroli aizsargāts Wi-Fi vai vadu tīkls ir “Mājas”, "
-"“Darbs” vai “Publiska vieta”"
-
 msgid "At each login"
 msgstr "Katrā ierakstīšanās reizē"
 
@@ -1581,14 +1574,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS nepieciešams UEFI. Ieslēdziet UEFI BIOS iestatījumos, pēc tam "
 "vēlreiz startējiet no USB zibatmiņas."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS ir nepieciešami vismaz 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS vislabāk darbojas ar 8 GB vai vairāk, tāpēc tas var darboties "
-"lēni."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3703,26 +3688,6 @@ msgstr "Notiek lietotņu saraksta nolasīšana no jaunā lejupielādes avota"
 msgid "Recommended"
 msgstr "Ieteicams"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Ieteicams: Dzēst konteineru. Tas atbrīvo aptuveni {size} un pats atgriezīsies"
-" nākamreiz, kad instalēsiet {apps}. Arī viss, kas konteineram pievienots citā"
-" veidā, tiek izdzēsts. Jūsu faili netiek skarti."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Ieteicams: Dzēst konteineru. Tas atbrīvo savu vietu diskā un pats "
-"atgriezīsies nākamreiz, kad instalēsiet {apps}. Arī viss, kas konteineram "
-"pievienots citā veidā, tiek izdzēsts. Jūsu faili netiek skarti."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3826,13 +3791,6 @@ msgstr "Vai noņemt multivides kodekus?"
 
 msgid "Remove the test marker"
 msgstr "Noņemt testa marķieri"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Vispirms tos noņemiet: izpildiet  codecs remove , pārstartējiet un tad "
-"vēlreiz izvēlieties “Viss”."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Noņemt lietas, kas datoram vairs nav vajadzīgas"
@@ -6033,9 +5991,6 @@ msgstr ""
 "Atjauninājumi: automātiski, no {maker} lejupielādes avota. Ikdienas pārbaude "
 "atrod jaunas versijas, kas tiek palaistas nākamajā pārstartēšanas reizē."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Atjauninājumi: automātiski, ar rīku “Sistēmas atjaunināšana”."
-
 msgid "Updates: automatic."
 msgstr "Atjauninājumi: automātiski."
 
@@ -6733,13 +6688,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "notīrīt krātuvi"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"kodeki no šīs sistēmas iepriekšējās versijas (negativo17) joprojām ir "
-"instalēti."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;kodeki;kodeks;ffmpeg;h264;video;audio;media;multivide;install;instalēt;"
@@ -7171,16 +7119,6 @@ msgstr "{name} netika palaists."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} ir “Publiska vieta”"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} jau ir instalēts no lietotņu veikala Bazaar.\n"
-"\n"
-"Ieteicams: Atvērt to."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8238,12 +8176,6 @@ msgstr "zip un sit failu atvēršana"
 msgid "opening zip files"
 msgstr "ZIP failu atvēršana"
 
-msgid "organising and developing photos"
-msgstr "fotoattēlu kārtošana un apstrāde"
-
-msgid "organising photos"
-msgstr "fotoattēlu kārtošana"
-
 msgid "organizing music"
 msgstr "mūzikas kārtošana"
 
@@ -8792,3 +8724,40 @@ msgstr "Lasīt lejupielādes avotus jaunajā Fedora 45 mapē"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Pāriet uz Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Fonti un teksta lielums ir atgriezti EvenKeelOS sākotnējos iestatījumos."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Ieteicams: Dzēst konteineru. Tas pats atgriezīsies nākamreiz, kad instalēsiet {apps}. Arī viss, kas konteineram pievienots citā veidā, tiek izdzēsts. Jūsu faili netiek skarti."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Dzēšana atbrīvo aptuveni {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Vienreiz pajautā, vai ar paroli aizsargāts Wi-Fi tīkls ir “Mājas”, “Darbs” vai “Publiska vieta”"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS ir nepieciešami vismaz {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS vislabāk darbojas ar {gb} GB vai vairāk, tāpēc tas var darboties lēni."
+
+msgid "organizing and developing photos"
+msgstr "fotoattēlu kārtošana un apstrāde"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "Lietotnei {title} vēl nav Fedora {version} paraksta atslēgas."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} netika pievienots, tāpēc tā lejupielādes avots atkal tika noņemts."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} netika noņemts."

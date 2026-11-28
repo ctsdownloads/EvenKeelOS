@@ -9,7 +9,7 @@ on:
       - '**.md'
       - 'docs/**'
   schedule:
-    - cron: '05 10 * * *'  # 10:05am UTC everyday
+    - cron: '05 10 * * *'
   push:
     branches:
       - main
@@ -27,7 +27,7 @@ env:
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"  # do not edit
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}-${{ inputs.brand_name}}-${{ inputs.stream_name }}
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
   cancel-in-progress: true
 
 jobs:
@@ -39,31 +39,29 @@ jobs:
       contents: read
       packages: write
       id-token: write
+    env:
+      # Only main publishes; pull requests never do.
+      PUBLISH: ${{ github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
 
     steps:
-      # These stage versions are pinned by https://github.com/renovatebot/renovate
+      # Dependabot keeps these pinned versions up to date.
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 60     # the last changes' titles, for the list of changes below
 
+      # Every shell script, found by its first line (a sourced one starts with "# shellcheck shell=bash").
       - name: Check root scripts
-        working-directory: build_files
         run: |
-          shellcheck -s bash -S warning evenkeel-os-codecs-setup evenkeel-os-codecs-admin evenkeel-os-codecs-lib.sh \
-            evenkeel-os-updates-pause-check evenkeel-os-flathub-apps greenboot/*.sh greenboot/evenkeel-os-boot-menu-repair \
-            greenboot/evenkeel-os-greenboot-arm greenboot/evenkeel-os-test-fail update-locked-versions.sh \
-            evenkeel-os-flatpak-languages evenkeel-os-bazaar-language evenkeel-os-language-follow app-texts.sh \
-            check-app-texts.sh \
-            install-app-translations.sh
+          git ls-files -z | while IFS= read -r -d '' f; do
+            if head -n1 "$f" | grep -qE '^(#!/(usr/)?bin/(env )?(ba)?sh|# shellcheck shell=bash)'; then printf '%s\0' "$f"; fi
+          done | xargs -0 shellcheck -x -s bash -S warning
+          cd build_files
           pipx run --spec bandit==1.9.4 bandit -q -ll evenkeel-os-tools-admin evenkeel-os-tools-safe evenkeel-os-hwrules \
             evenkeel-os-vpn evenkeel-os-app-updates check-root-helpers.py check-vpns.py greenboot/evenkeel-os-settings \
             check-settings-repair.py greenboot/evenkeel-os-settings-test evenkeel-os-cert-remove evenkeel-os-certs \
             check-locked-versions.py evenkeel-os-boot-options evenkeel_os_health.py greenboot/evenkeel-os-health \
             check-health.py
-          shellcheck -s bash -S warning ../boot_test/run-boot-test.sh ../boot_test/boot-check \
-            ../boot_test/boot-check-root ../boot_test/run-rollback-tests.sh ../boot_test/rollback-step \
-            ../boot_test/vm.sh
 
       - name: Maximize build space
         uses: ublue-os/remove-unwanted-software@695eb75bc387dbcd9685a8e72d23439d8686cba6
@@ -76,11 +74,10 @@ jobs:
         run: |
           just check
 
-      # Last 60 change titles go into the image for System Update's what's new. Upkeep by Dependabot, Renovate and
-      # the daily version check isn't listed.
+      # Last 60 change titles for System Update's what's new, leaving out bot and version-check upkeep.
       - name: List of changes
         run: |
-          git log -60 --format='%cs%x09%s' --perl-regexp --author='^(?!(dependabot|renovate|github-actions)\[bot\])' \
+          git log -60 --format='%cs%x09%s' --perl-regexp --author='^(?!(dependabot|github-actions)\[bot\])' \
             --invert-grep --grep='^Update locked versions' > build_files/changes.txt
 
       # A locked version of Dash to Panel, ArcMenu, Logo Menu, Bazaar or Ghostty with untranslated text stops the build.
@@ -106,40 +103,21 @@ jobs:
           path: build_files/windows-data
           key: windows-data-${{ github.run_id }}
 
-      - name: Image Name
-        id: image-name
+      # Registry addresses must be lowercase: https://github.com/macbre/push-to-ghcr/issues/12
+      - name: Image name and tag
         run: |
-          IMAGE_NAME=$(just image_name)
-
-          echo "IMAGE_NAME=${IMAGE_NAME}" >> $GITHUB_ENV
-
-      - name: Default Tag
-        id: gen-default-tag
-        run: |
-          DEFAULT_TAG=$(just generate-default-tag)
-
-          echo "DEFAULT_TAG=${DEFAULT_TAG}" >> $GITHUB_ENV
-
-      - name: Prepare environment
-        run: |
-          # Lowercase the image uri https://github.com/macbre/push-to-ghcr/issues/12
-          echo "IMAGE_REGISTRY=${IMAGE_REGISTRY,,}" >> ${GITHUB_ENV}
-          echo "IMAGE_NAME=${IMAGE_NAME,,}" >> ${GITHUB_ENV}
+          . ./image-template.env
+          { echo "IMAGE_REGISTRY=${IMAGE_REGISTRY,,}"; echo "IMAGE_NAME=${IMAGE_NAME,,}"
+            echo "DEFAULT_TAG=${DEFAULT_TAG}"; } >> "$GITHUB_ENV"
 
       - name: Build Image
-        id: build-image
         run: |
-          just build \
-            ${IMAGE_NAME} \
-            ${DEFAULT_TAG}
+          just build "${IMAGE_NAME}" "${DEFAULT_TAG}"
 
       # Smaller delta updates.
       - name: Rechunk with rpm-ostree
-        id: rechunk
         run: |
-          just ostree-rechunk \
-            ${IMAGE_NAME} \
-            ${DEFAULT_TAG}
+          just ostree-rechunk "${IMAGE_NAME}" "${DEFAULT_TAG}"
 
       # Start the new image in a virtual machine first; nothing is published unless it reaches the desktop.
       - name: Boot test
@@ -176,66 +154,49 @@ jobs:
       - name: Generate Build Tags
         id: gen-build-tags
         run: |
-          alias_tags="$(just generate-build-tags \
-                        ${IMAGE_NAME} \
-                        ${DEFAULT_TAG})"
-
-          echo "Tags for this Action..."
-          echo "${alias_tags}"
-          echo "alias_tags=${alias_tags}" >> $GITHUB_OUTPUT
+          echo "alias_tags=$(just generate-build-tags "${IMAGE_NAME}" "${DEFAULT_TAG}")" >> "$GITHUB_OUTPUT"
 
       - name: Tag Image
-        id: tag-images
         env:
           ALIAS_TAGS: ${{ steps.gen-build-tags.outputs.alias_tags }}
         run: |
-          just tag-images \
-            "${IMAGE_NAME}" \
-            "${DEFAULT_TAG}" \
-            "${ALIAS_TAGS}"
+          just tag-images "${IMAGE_NAME}" "${DEFAULT_TAG}" "${ALIAS_TAGS}"
 
-      # Only main publishes; pull requests never do.
       - name: Login to GitHub Container Registry
         uses: docker/login-action@8aa5831fb8d48d8f76594c7ddde61ae58019f550 # v4.8.0
-        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        if: env.PUBLISH == 'true'
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push To GHCR
-        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        if: env.PUBLISH == 'true'
         id: push-image
         env:
           ALIAS_TAGS: ${{ steps.gen-build-tags.outputs.alias_tags }}
         run: |
           set -euox pipefail
           for tag in ${ALIAS_TAGS}; do
-            podman push --digestfile=/tmp/digestfile ${IMAGE_NAME}:${tag} ${IMAGE_REGISTRY}/${IMAGE_NAME}:${tag}
+            podman push --digestfile=/tmp/digestfile "${IMAGE_NAME}:${tag}" "${IMAGE_REGISTRY}/${IMAGE_NAME}:${tag}"
           done
-
-          digest=$(< /tmp/digestfile)
-
-          echo "digest=${digest}" >> $GITHUB_OUTPUT
+          echo "digest=$(< /tmp/digestfile)" >> "$GITHUB_OUTPUT"
 
       - name: Install Cosign
         uses: sigstore/cosign-installer@756fe2d284c7292c4e9b62c8a28f1e5629c59532 # v4.1.3
-        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        if: env.PUBLISH == 'true'
         with:
-          # careful with major versions
           cosign-release: 'v3.1.2'
 
       - name: Sign container image
-        id: sign-image
-        if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        if: env.PUBLISH == 'true'
         env:
-          COSIGN_EXPERIMENTAL: false
           COSIGN_PRIVATE_KEY: ${{ secrets.SIGNING_SECRET }}
           DIGEST: ${{ steps.push-image.outputs.digest }}
         run: |
           # old bundle format: rpm-ostree can't read the new one (container-libs#388, rpm-ostree#5509)
-          cosign sign -y --new-bundle-format=false --use-signing-config=false --key env://COSIGN_PRIVATE_KEY ${IMAGE_REGISTRY}/${IMAGE_NAME}@${DIGEST}
-
+          cosign sign -y --new-bundle-format=false --use-signing-config=false --key env://COSIGN_PRIVATE_KEY \
+            "${IMAGE_REGISTRY}/${IMAGE_NAME}@${DIGEST}"
 
   # A failed main or daily build opens an issue assigned to the owner; the next good build closes it.
   alert:

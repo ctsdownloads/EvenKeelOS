@@ -638,13 +638,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "ArtCraftin allekirjoitus tarkistetaan ensin, ja se päivittyy kerran päivässä."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Kysyy kerran, onko salasanalla suojattu Wi-Fi- tai langallinen verkko Koti, "
-"Työ vai Julkinen paikka"
-
 msgid "At each login"
 msgstr "Jokaisella kirjautumiskerralla"
 
@@ -1581,14 +1574,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS tarvitsee UEFI:n. Ota UEFI käyttöön BIOS-asetuksissa ja käynnistä "
 "sitten uudelleen USB-tikulta."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS tarvitsee vähintään 20 Gt."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS toimii parhaiten vähintään 8 Gt:n muistilla, joten se voi olla "
-"hidas."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3695,26 +3680,6 @@ msgstr "Luetaan sovellusluetteloa uudesta latauslähteestä"
 msgid "Recommended"
 msgstr "Suositeltu"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Suositus: Poista laatikko. Se vapauttaa noin {size} ja palaa itsestään, kun "
-"seuraavan kerran asennat: {apps}. Myös kaikki muulla tavalla laatikkoon "
-"lisätty poistetaan. Tiedostoihisi ei kosketa."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Suositus: Poista laatikko. Se vapauttaa käyttämänsä levytilan ja palaa "
-"itsestään, kun seuraavan kerran asennat: {apps}. Myös kaikki muulla tavalla "
-"laatikkoon lisätty poistetaan. Tiedostoihisi ei kosketa."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3820,13 +3785,6 @@ msgstr "Poistetaanko mediakoodekit?"
 
 msgid "Remove the test marker"
 msgstr "Poista testimerkintä"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Poista ne ensin: suorita  codecs remove , käynnistä uudelleen ja valitse "
-"sitten uudelleen Kaikki."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Poista asiat, joita tietokone ei enää tarvitse"
@@ -6028,9 +5986,6 @@ msgstr ""
 "Päivittäinen tarkistus löytää uudet versiot, jotka otetaan käyttöön "
 "seuraavalla uudelleenkäynnistyksellä."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Päivitykset: automaattiset, Järjestelmäpäivityksen kautta."
-
 msgid "Updates: automatic."
 msgstr "Päivitykset: automaattiset."
 
@@ -6722,13 +6677,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "puhdista tallennustila"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"tämän järjestelmän aiemman version (negativo17) koodekkeja on yhä "
-"asennettuna."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;koodekit;koodekki;ääni;asenna;"
@@ -7161,16 +7109,6 @@ msgstr "{name} ei käynnistynyt."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} on julkinen paikka"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} on jo asennettu Bazaarista, sovelluskaupasta.\n"
-"\n"
-"Suositus: Avaa se."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8230,12 +8168,6 @@ msgstr "zip- ja sit-tiedostojen avaaminen"
 msgid "opening zip files"
 msgstr "zip-tiedostojen avaaminen"
 
-msgid "organising and developing photos"
-msgstr "valokuvien järjestäminen ja käsittely"
-
-msgid "organising photos"
-msgstr "valokuvien järjestäminen"
-
 msgid "organizing music"
 msgstr "musiikin järjestäminen"
 
@@ -8784,3 +8716,40 @@ msgstr "Lue latauslähteet Fedora 45:n uudesta kansiosta"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Siirry Fedora 45:een"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Fontit ja tekstin koko ovat taas EvenKeelOS:n omat."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Suositus: Poista laatikko. Se palaa itsestään, kun seuraavan kerran asennat: {apps}. Myös kaikki muulla tavalla laatikkoon lisätty poistetaan. Tiedostoihisi ei kosketa."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Sen poistaminen vapauttaa noin {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Kysyy kerran, onko salasanalla suojattu Wi-Fi-verkko Koti, Työ vai Julkinen paikka"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS tarvitsee vähintään {gb} Gt."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS toimii parhaiten vähintään {gb} Gt:n muistilla, joten se voi olla hidas."
+
+msgid "organizing and developing photos"
+msgstr "valokuvien järjestäminen ja käsittely"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "Kohteella {title} ei ole vielä allekirjoitusavainta Fedora {version} -versiolle."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "Kohdetta {title} ei lisätty, joten sen latauslähde poistettiin uudelleen."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "Kohdetta {title} ei poistettu."

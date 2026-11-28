@@ -2,6 +2,7 @@
 ARG BASE
 FROM ${BASE}
 COPY boot_test/boot-check /usr/libexec/evenkeel-os-boot-check
+COPY boot_test/check-lib.sh /usr/libexec/evenkeel-os-boot-check-lib.sh
 COPY boot_test/boot-check-root /usr/libexec/evenkeel-os-boot-check-root
 COPY boot_test/rollback-step /usr/libexec/evenkeel-os-rollback-step
 # A small package for the rollback tests to add the way Install Package File does.

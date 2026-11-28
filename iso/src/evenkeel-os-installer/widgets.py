@@ -112,7 +112,7 @@ class PasswordPair(Gtk.Box):
         except pwquality.PWQError as e:
             return 0, e.args[1] if len(e.args) > 1 else ""
 
-    def _changed(self, *_):
+    def _changed(self, *_args):
         self.refresh()
         self.on_change()
 

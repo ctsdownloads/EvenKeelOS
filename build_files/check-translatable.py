@@ -1,10 +1,5 @@
-#!/usr/bin/python3
-"""Fails when words that go on screen are written straight into a window instead of through _().
-
-Python: text given to a window, a button, a row or a message (label=, title=, set_label(), say(), ...), and a
-throwaway variable named _ where _() is used, which would hide the translation.
-Shell: text given to notify-send, zenity or evenkeel-os-dialog without $(gettext ...).
-"""
+#!/usr/bin/python3 -I
+"""Fails when words that go on screen are written straight into a window instead of through _()."""
 import ast
 import re
 import sys
@@ -15,7 +10,7 @@ KEYWORDS = {"label", "title", "subtitle", "heading", "body", "description", "too
             "text", "secondary_text", "ok", "cancel", "extra", "rest", "button_label"}
 METHODS = {"set_label", "set_title", "set_subtitle", "set_text", "set_markup", "set_tooltip_text",
            "set_placeholder_text", "set_description", "set_heading", "set_body", "set_button_label",
-           "say", "ask", "notify", "offer_restart", "choose", "add_toast", "add_response", "Toast"}
+           "say", "ask", "notify", "offer_restart", "choose", "add_toast", "add_response", "Toast", "toast"}
 WORDS = re.compile(r"[A-Za-z]{2,}[ .,:?!'…]")      # a word followed by a space or punctuation: a sentence
 SHELL = re.compile(r"""(notify-send|zenity|evenkeel-os-dialog|--text=|--title=)[^#\n]*?["'][A-Z][a-z]+[ .,]""")
 
@@ -98,4 +93,5 @@ def main():
     print("Every line of screen text can be translated.")
 
 
-main()
+if __name__ == "__main__":
+    main()

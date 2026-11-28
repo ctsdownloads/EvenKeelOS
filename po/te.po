@@ -635,13 +635,6 @@ msgstr ""
 "మొదట ArtCraft సంతకం తనిఖీ చేయబడుతుంది, మరియు అది రోజుకు ఒకసారి అప్‌డేట్ "
 "అవుతుంది."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"పాస్‌వర్డ్ ఉన్న Wi-Fi లేదా వైర్డ్ నెట్‌వర్క్ హోమ్, వర్క్ లేదా పబ్లిక్ "
-"ప్లేస్‌లో ఏదో ఒక్కసారి అడుగుతుంది"
-
 msgid "At each login"
 msgstr "ప్రతి లాగిన్ సమయంలో"
 
@@ -1588,14 +1581,6 @@ msgid ""
 msgstr ""
 "EvenKeelOSకు UEFI అవసరం. BIOSలో UEFIని ఆన్ చేసి, ఆ తర్వాత USB స్టిక్ నుంచి "
 "మళ్లీ ప్రారంభించండి."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOSకు కనీసం 20 GB కావాలి."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS 8 GB లేదా అంతకంటే ఎక్కువ ఉన్నప్పుడు ఉత్తమంగా పని చేస్తుంది, "
-"కాబట్టి ఇది నెమ్మదిగా ఉండవచ్చు."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3724,28 +3709,6 @@ msgstr "కొత్త డౌన్‌లోడ్ మూలం నుంచి
 msgid "Recommended"
 msgstr "సిఫార్సు చేయబడింది"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"సిఫార్సు: బాక్స్‌ను తొలగించండి. ఇది సుమారు {size} స్థలాన్ని ఖాళీ చేస్తుంది, "
-"మరియు మీరు {apps}ను మళ్లీ ఇన్‌స్టాల్ చేసినప్పుడు అది ఆటోమేటిక్‌గా తిరిగి "
-"వస్తుంది. బాక్స్‌కు వేరే మార్గంలో జోడించినవన్నీ కూడా తొలగించబడతాయి. మీ "
-"ఫైళ్లను ఏ మాత్రం తాకరు."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"సిఫార్సు: బాక్స్‌ను తొలగించండి. ఇది దాని డిస్క్ స్థలాన్ని ఖాళీ చేస్తుంది, "
-"మరియు మీరు {apps}ను మళ్లీ ఇన్‌స్టాల్ చేసినప్పుడు అది ఆటోమేటిక్‌గా తిరిగి "
-"వస్తుంది. బాక్స్‌కు వేరే మార్గంలో జోడించినవన్నీ కూడా తొలగించబడతాయి. మీ "
-"ఫైళ్లను ఏ మాత్రం తాకరు."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3849,13 +3812,6 @@ msgstr "మీడియా కోడెక్‌లను తీసివేయ�
 
 msgid "Remove the test marker"
 msgstr "పరీక్ష మార్కర్‌ను తీసివేయండి"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"మొదట వాటిని తీసివేయండి:  codecs remove  ను అమలు చేయండి, రీస్టార్ట్ చేయండి, "
-"ఆపై మళ్లీ \"అన్నీ\"ని ఎంచుకోండి."
 
 msgid "Remove things the computer no longer needs"
 msgstr "కంప్యూటర్‌కు ఇక అవసరం లేని వాటిని తీసివేయండి"
@@ -6076,9 +6032,6 @@ msgstr ""
 "అప్‌డేట్‌లు: ఆటోమేటిక్, {maker} సొంత డౌన్‌లోడ్ మూలం నుంచి. రోజువారీ తనిఖీ "
 "కొత్త వెర్షన్‌లను కనుగొంటుంది, అవి తదుపరి రీస్టార్ట్ సమయంలో ప్రారంభమవుతాయి."
 
-msgid "Updates: automatic, with System Update."
-msgstr "అప్‌డేట్‌లు: ఆటోమేటిక్, సిస్టమ్ అప్‌డేట్‌తో."
-
 msgid "Updates: automatic."
 msgstr "అప్‌డేట్‌లు: ఆటోమేటిక్."
 
@@ -6778,13 +6731,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage స్టోరేజీని శుభ్రం చేయి"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"ఈ సిస్టమ్ మునుపటి వెర్షన్ నుండి వచ్చిన కోడెక్‌లు (negativo17) ఇంకా ఇన్‌స్టాల్"
-" అయి ఉన్నాయి."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;కోడెక్‌లు;కోడెక్;వీడియో;ఆడియో;మీడియా;ఇన్‌స్టాల్;"
@@ -7229,16 +7175,6 @@ msgstr "{name} ప్రారంభం కాలేదు."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} ఒక పబ్లిక్ ప్లేస్"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} ఇప్పటికే యాప్ స్టోర్ అయిన Bazaar నుంచి ఇన్‌స్టాల్ చేయబడింది.\n"
-"\n"
-"సిఫార్సు: \"దీన్ని తెరవండి\"."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8296,12 +8232,6 @@ msgstr "zip మరియు sit ఫైళ్లను తెరవడం"
 msgid "opening zip files"
 msgstr "zip ఫైళ్లను తెరవడం"
 
-msgid "organising and developing photos"
-msgstr "ఫోటోలను నిర్వహించడం మరియు డెవలప్ చేయడం"
-
-msgid "organising photos"
-msgstr "ఫోటోలను నిర్వహించడం"
-
 msgid "organizing music"
 msgstr "సంగీతాన్ని నిర్వహించడం"
 
@@ -8850,3 +8780,40 @@ msgstr "Fedora 45 కొత్త ఫోల్డర్‌లో డౌన్‌
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Fedora 45కు మారండి"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "ఫాంట్‌లు మరియు టెక్స్ట్ సైజు EvenKeelOS సొంత రూపానికి తిరిగి వచ్చాయి."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "సిఫార్సు: బాక్స్‌ను తొలగించండి. మీరు {apps}ను మళ్లీ ఇన్‌స్టాల్ చేసినప్పుడు అది ఆటోమేటిక్‌గా తిరిగి వస్తుంది. బాక్స్‌కు వేరే మార్గంలో జోడించినవన్నీ కూడా తొలగించబడతాయి. మీ ఫైళ్లను ఏ మాత్రం తాకరు."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "దాన్ని తొలగిస్తే సుమారు {size} స్థలం ఖాళీ అవుతుంది."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "పాస్‌వర్డ్ ఉన్న Wi-Fi నెట్‌వర్క్ హోమ్, వర్క్ లేదా పబ్లిక్ ప్లేస్‌లో ఏదో ఒక్కసారి అడుగుతుంది"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOSకు కనీసం {gb} GB కావాలి."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS {gb} GB లేదా అంతకంటే ఎక్కువ ఉన్నప్పుడు ఉత్తమంగా పని చేస్తుంది, కాబట్టి ఇది నెమ్మదిగా ఉండవచ్చు."
+
+msgid "organizing and developing photos"
+msgstr "ఫోటోలను నిర్వహించడం మరియు డెవలప్ చేయడం"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title}కు Fedora {version} కోసం సైనింగ్ కీ ఇంకా లేదు."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} జోడించబడలేదు, కాబట్టి దాని డౌన్‌లోడ్ మూలం మళ్లీ తీసివేయబడింది."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} తీసివేయబడలేదు."

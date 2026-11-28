@@ -557,11 +557,6 @@ msgstr "지금은 ArtCraft의 다운로드에 접속할 수 없습니다. 인터
 msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr "먼저 ArtCraft의 서명을 확인하며, 앱은 하루에 한 번 업데이트됩니다."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr "비밀번호가 있는 와이파이 또는 유선 네트워크가 '집', '직장', '공공장소' 중 어디인지 한 번 물어봅니다"
-
 msgid "At each login"
 msgstr "로그인할 때마다"
 
@@ -1399,12 +1394,6 @@ msgid ""
 "EvenKeelOS needs UEFI. Turn on UEFI in the BIOS, then start from the USB "
 "stick again."
 msgstr "EvenKeelOS에는 UEFI가 필요합니다. BIOS에서 UEFI를 켠 다음 USB 메모리로 다시 시작하십시오."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS에는 최소 20GB가 필요합니다."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "EvenKeelOS는 8GB 이상일 때 가장 잘 작동하므로, 속도가 느릴 수 있습니다."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3285,24 +3274,6 @@ msgstr "새 다운로드 소스에서 앱 목록을 읽는 중"
 msgid "Recommended"
 msgstr "권장"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"권장: '상자 삭제'. 약 {size}을(를) 확보하며, 다음에 {apps}을(를) 설치하면 저절로 다시 만들어집니다. 다른 방법으로 "
-"상자에 추가한 것도 함께 삭제됩니다. 내 파일은 그대로입니다."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"권장: '상자 삭제'. 디스크 공간을 확보하며, 다음에 {apps}을(를) 설치하면 저절로 다시 만들어집니다. 다른 방법으로 상자에 추가한"
-" 것도 함께 삭제됩니다. 내 파일은 그대로입니다."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3394,11 +3365,6 @@ msgstr "미디어 코덱을 제거하시겠습니까?"
 
 msgid "Remove the test marker"
 msgstr "테스트 마커 제거"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr "먼저 제거하십시오:  codecs remove 를 실행하고 다시 시작한 다음, '모두'를 다시 선택하십시오."
 
 msgid "Remove things the computer no longer needs"
 msgstr "컴퓨터에 더 이상 필요 없는 것 제거"
@@ -5387,9 +5353,6 @@ msgid ""
 msgstr ""
 "업데이트: {maker} 자체 다운로드 소스에서 자동으로. 매일 확인하여 새 버전을 찾으며, 새 버전은 다음에 다시 시작할 때 시작됩니다."
 
-msgid "Updates: automatic, with System Update."
-msgstr "업데이트: 자동, '시스템 업데이트'로."
-
 msgid "Updates: automatic."
 msgstr "업데이트: 자동."
 
@@ -6026,11 +5989,6 @@ msgstr "chrome 크롬"
 msgid "clean storage"
 msgstr "clean storage 저장 공간 정리"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "이 시스템 이전 버전의 코덱(negativo17)이 아직 설치되어 있습니다."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr "codecs;codec;ffmpeg;h264;video;audio;media;install;코덱;동영상;오디오;미디어;설치;"
 
@@ -6450,16 +6408,6 @@ msgstr "{name}이(가) 시작되지 않았습니다."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name}은(는) 공공장소입니다"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name}은(는) 앱 스토어인 Bazaar에서 이미 설치되어 있습니다.\n"
-"\n"
-"권장: '열기'."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -7483,12 +7431,6 @@ msgstr "ZIP 및 SIT 파일 열기"
 msgid "opening zip files"
 msgstr "ZIP 파일 열기"
 
-msgid "organising and developing photos"
-msgstr "사진 정리 및 보정"
-
-msgid "organising photos"
-msgstr "사진 정리하기"
-
 msgid "organizing music"
 msgstr "음악 정리하기"
 
@@ -8037,3 +7979,40 @@ msgstr "Fedora 45의 새 폴더에서 다운로드 소스 읽기"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Fedora 45로 이동"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "글꼴과 텍스트 크기를 EvenKeelOS 기본값으로 되돌렸습니다."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "권장: '상자 삭제'. 다음에 {apps}을(를) 설치하면 저절로 다시 만들어집니다. 다른 방법으로 상자에 추가한 것도 함께 삭제됩니다. 내 파일은 그대로입니다."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "삭제하면 약 {size}을(를) 확보합니다."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "비밀번호가 있는 와이파이 네트워크가 '집', '직장', '공공장소' 중 어디인지 한 번 물어봅니다"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS에는 최소 {gb}GB가 필요합니다."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS는 {gb}GB 이상일 때 가장 잘 작동하므로, 속도가 느릴 수 있습니다."
+
+msgid "organizing and developing photos"
+msgstr "사진 정리 및 보정"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title}에는 아직 Fedora {version}용 서명 키가 없습니다."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title}을(를) 추가하지 못해 해당 다운로드 소스를 다시 제거했습니다."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title}을(를) 제거하지 않았습니다."

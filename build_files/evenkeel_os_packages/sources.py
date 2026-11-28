@@ -7,10 +7,9 @@ import shutil
 import subprocess
 
 from evenkeel_os_ui import _, ask, choose, say
-from evenkeel_os_packages import app_list, boxes, common, install_file, targets, windows
+from evenkeel_os_packages import app_list, boxes, common, targets, windows
 
 
-SOURCED = set()      # packages installed from a download source in this run: System Update keeps them current
 FROM_SOURCE = common.CACHE / "from-source"
 
 
@@ -28,15 +27,14 @@ def source_packages(kind, box, sources):
         arch = {"x86_64": "amd64", "aarch64": "arm64"}.get(platform.machine(), platform.machine())
         new = [f for f in apt_lists(box) if any(os.path.basename(f).startswith(m) for m in marks) and
                re.search(rf"_binary-({arch}|all)_Packages(\.\w+)?$", f)]
-        rows, name = [], None
+        rows = []
         if new:
             r = subprocess.run(boxes.in_box(box, "sh", "-c", "for f in " + " ".join(shlex.quote(f) for f in new) +
                                             "; do /usr/lib/apt/apt-helper cat-file \"$f\"; done | "
                                             "grep -E '^(Package|Description):'"), capture_output=True, text=True)
             for line in r.stdout.splitlines():
                 if line.startswith("Package:"):
-                    name = line.split(":", 1)[1].strip()
-                    rows.append([name, ""])
+                    rows.append([line.split(":", 1)[1].strip(), ""])
                 elif line.startswith("Description:") and rows and not rows[-1][1]:
                     rows[-1][1] = line.split(":", 1)[1].strip()
     seen, out = set(), []
@@ -54,8 +52,8 @@ def apt_lists(box):
     return r.stdout.split()
 
 
-def install_source(pkg, info):
-    """A package that only adds a download source: add it to the box, then pick an app from it."""
+def install_source(pkg, info, install):
+    """A package that only adds a download source: add it to the box, then pick an app from it and install() it."""
     box = common.BOXES[pkg.kind]
     names = [n for sid, n, on in info["sources"] if on] or [pkg.name]
     shown = "\n".join("  - " + n for n in names[:6])
@@ -93,7 +91,8 @@ def install_source(pkg, info):
         return 0
     name = apps[i][0]
     folder = FROM_SOURCE / pkg.kind
-    shutil.rmtree(folder, ignore_errors=True)
+    if folder.exists():
+        shutil.rmtree(folder)
     folder.mkdir(parents=True)
     cmd = ["dnf", "-q", "download", f"--destdir={folder}", name] if pkg.kind == "rpm" else \
         ["sh", "-c", f"cd {shlex.quote(str(folder))} && apt-get download {shlex.quote(name)}"]
@@ -106,5 +105,5 @@ def install_source(pkg, info):
     # keep the file where Repair can find it again, like any installed file
     keep = common.CACHE / files[0].name
     shutil.move(str(files[0]), keep)
-    SOURCED.add(name)
-    return install_file.install(str(keep))
+    common.SOURCED.add(name)
+    return install(str(keep))

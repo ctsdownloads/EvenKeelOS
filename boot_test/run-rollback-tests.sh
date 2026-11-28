@@ -1,27 +1,24 @@
 #!/usr/bin/bash
-# Rollback tests: each Test automatic rollback test run for real on the boot test's disk, as a person would.
-# Usage: boot_test/run-rollback-tests.sh   (after run-boot-test.sh; results in rollback-test-results/)
+# Runs each automatic rollback test for real on the boot test's disk, after run-boot-test.sh.
 set -uo pipefail
 
 OUT=${RUNNER_TEMP:-/tmp}/rollback-test-results
 HERE=$(dirname "$0")
 . "$HERE/vm.sh"
+# The names in a list assigned in a Python file: $1 the file, $2 the list (read the way the build check reads it).
+assigned() {
+  python3 -I - "$HERE/../build_files/check-rollback-tests.py" "$1" "$2" <<'PY'
+import importlib.util, sys
+spec = importlib.util.spec_from_file_location("check", sys.argv[1])
+check = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(check)
+print(*check.assigned(sys.argv[2], sys.argv[3]), sep="\n")
+PY
+}
 # Wheelhouse's tests, less the two a virtual machine has no chip for: Wi-Fi and Bluetooth.
-mapfile -t TESTS < <(python3 -I - "$HERE/../build_files/evenkeel-os-tools-admin" <<'PY'
-import ast, sys
-for n in ast.parse(open(sys.argv[1]).read()).body:
-    if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == "TEST_KINDS":
-        print("\n".join(k for k in ast.literal_eval(n.value) if k not in ("wifi", "bluetooth")))
-PY
-)
+mapfile -t TESTS < <(assigned "$HERE/../build_files/evenkeel-os-tools-admin" TEST_KINDS | grep -vxE 'wifi|bluetooth')
 # The tests that ask first before each restart: those checked after login (evenkeel-os-tools).
-mapfile -t ASKS < <(python3 -I - "$HERE/../build_files/evenkeel-os-tools" <<'PY'
-import ast, sys
-for n in ast.parse(open(sys.argv[1]).read()).body:
-    if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == "AFTER_LOGIN_TESTS":
-        print("\n".join(ast.literal_eval(n.value)))
-PY
-)
+mapfile -t ASKS < <(assigned "$HERE/../build_files/evenkeel-os-tools" AFTER_LOGIN_TESTS)
 WAIT=90             # seconds from staging to the restart: longer than rpm-ostreed's old 60-second idle exit
 TEST_TIME=1800      # seconds one test may take, all 3 starts
 STEP=/usr/libexec/evenkeel-os-rollback-step
@@ -37,8 +34,7 @@ why=""
 fail() { say "FAIL: $1"; failed=1; }
 step() { on sudo -n "$STEP" "$@"; }
 boot_id() { on cat /proc/sys/kernel/random/boot_id; }
-# Runs a step that restarts the computer, then waits for the new start (a different boot ID) to answer.
-# On failure $why says what went wrong (exit 255 is SSH cut off by the restart itself).
+# Exit 255 is SSH cut off by the restart itself; on failure $why says what went wrong.
 restart_by() {
   local before end out rc now
   before=$(boot_id) || { why="the computer didn't answer"; return 1; }
@@ -74,8 +70,7 @@ keep_on() {
     seen=$SECONDS
   fi
 }
-# Up, on no test copy, with greenboot done and a list of what works saved; "settled": saved by this start, so
-# nothing else asks rpm-ostreed anything afterwards (the control watches its idle exit).
+# "settled" means saved by this start, so nothing else asks rpm-ostreed afterwards (the control watches its idle exit).
 ready() {
   local end=$((SECONDS + 900)) rec=/var/lib/evenkeel-os/health-record.json saved
   saved="test -s $rec"
@@ -88,8 +83,7 @@ ready() {
   done
   return 1
 }
-# The window before an automatic restart (evenkeel-os-tools restart-question): its zenity's process ID, if open.
-# [z] and [p]: the pattern doesn't match the shell running pgrep.
+# [z] and [p] keep the pattern from matching the shell running pgrep.
 WINDOW='[z]enity --title=Automatic rollback --width=520 --question'
 window_pid() { on "pgrep -u tester -f -- '$WINDOW' | head -1"; }
 # Saves the open window's words to $1 and presses keys on it, as a person would (QEMU's keyboard).
@@ -287,7 +281,7 @@ say "Test: Keep, on a Boot options change that breaks printing"
 if keep_test; then say "PASS: Esc opened the window again, and Keep with the password kept the change."
 else fail "Keep: $why"; fi
 on "journalctl -b -u greenboot-healthcheck -o short --no-pager" > "$OUT/greenboot-keep.txt"
-vm_stop || true
+vm_stop
 if [ "$failed" = 0 ]; then say "Rollback tests passed: the 3 update checks, all $((${#TESTS[@]} + 1)) tests and Keep."
 else say "Rollback tests failed."; fi
 [ -n "${GITHUB_STEP_SUMMARY:-}" ] && tail -n 1 "$OUT/report.txt" >> "$GITHUB_STEP_SUMMARY"

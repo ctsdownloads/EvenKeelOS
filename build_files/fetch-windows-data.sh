@@ -1,6 +1,5 @@
 #!/usr/bin/bash
-# Downloads what Windows Program's list and tests need into DIR. A file that can't be downloaded keeps the copy
-# already in DIR (saved from the last build), so one site being down doesn't stop the build.
+# Downloads the Windows Program list data into DIR; a failed download keeps the copy already there.
 set -euo pipefail
 dir=$1
 mkdir -p "$dir"

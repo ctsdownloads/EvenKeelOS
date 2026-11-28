@@ -1,15 +1,12 @@
 #!/usr/bin/python3 -I
-"""Daily: stage newer versions of apps added to the system, from their own download sources.
-
-System Update looks for a new EvenKeelOS version, so an app from a company's own download source (a VPN) would
-otherwise wait for the next one. This asks the download sources directly, and runs the upgrade only when an app
-has a newer version. Like any system update, the new version starts at the next restart.
-"""
-import json
+"""Daily: stage newer versions of apps added from their own download sources, which System Update doesn't check."""
 import re
 import subprocess
 import sys
 from pathlib import Path
+
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+import evenkeel_os_health as health  # noqa: E402
 
 
 def busy():
@@ -19,8 +16,7 @@ def busy():
 
 def status():
     """(packages added by name to the running system, whether a new version waits for a restart)"""
-    r = subprocess.run(["rpm-ostree", "status", "--json"], capture_output=True, text=True)
-    ds = json.loads(r.stdout)["deployments"]
+    ds = health.deployments() or []
     booted = next(d for d in ds if d.get("booted"))
     return booted.get("requested-packages", []), any(d.get("staged") for d in ds)
 

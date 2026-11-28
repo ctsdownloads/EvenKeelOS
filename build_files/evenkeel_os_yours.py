@@ -7,11 +7,10 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Adw, Gio, GLib, Gtk, Pango  # noqa: E402
 import evenkeel_os_appearance as appearance  # noqa: E402
-from evenkeel_os_ui import _, N_, ngettext  # noqa: E402
+from evenkeel_os_ui import _, N_, ngettext, short_home, time_format  # noqa: E402
 
 TIMES = [f"{h:02d}:{m:02d}" for h in range(24) for m in (0, 30)]
-FONTS = (("font-name", N_("Menus and windows")), ("document-font-name", N_("Documents")),
-         ("monospace-font-name", N_("Code and terminal")))
+FONTS = tuple(zip(appearance.FONT_NAMES, (N_("Menus and windows"), N_("Documents"), N_("Code and terminal"))))
 
 
 def combo(title, names, selected):
@@ -29,12 +28,13 @@ class Yours:
         self.window = window
         self.state = appearance.load()
         self.ui = Gio.Settings(schema_id="org.gnome.desktop.interface")
+        self.time_format = time_format()
 
     def groups(self):
         return [self.schedule_group(), self.slideshow_group(), self.fonts_group()]
 
     def clock(self, t):
-        return t.strftime("%H:%M" if self.ui.get_string("clock-format") == "24h" else "%-I:%M %p")
+        return t.strftime(self.time_format)
 
     def fresh(self):
         """The settings as saved now: the timer may have moved on since this page opened."""
@@ -44,8 +44,6 @@ class Yours:
     def save_and_apply(self):
         appearance.apply(self.state)
         appearance.save(self.state)
-
-    # ------------------------------------------------------------ light and dark
 
     def schedule_group(self):
         g = Adw.PreferencesGroup(title=_("Light and dark"),
@@ -105,8 +103,6 @@ class Yours:
         self.save_and_apply()
         self.show_schedule()
 
-    # ------------------------------------------------------------ wallpaper slideshow
-
     def slideshow_group(self):
         g = Adw.PreferencesGroup(title=_("Wallpaper slideshow"),
                                  description=_("The wallpaper changes to the next picture in a folder of yours."))
@@ -128,10 +124,8 @@ class Yours:
     def show_folder(self):
         folder = self.state.get("folder", "")
         count = len(appearance.pictures(folder)) if folder else 0
-        home = GLib.get_home_dir()
-        where = "~" + folder[len(home):] if folder.startswith(home + "/") else folder
         self.folder.set_subtitle(ngettext("{where}, {count} picture", "{where}, {count} pictures", count).format(
-            where=where, count=count) if folder else _("None picked yet."))
+            where=short_home(folder), count=count) if folder else _("None picked yet."))
 
     def on_slides(self, row, _param):
         if row.get_active() and not self.fresh().get("folder"):
@@ -169,8 +163,6 @@ class Yours:
         self.state.pop("slot", None)
         self.save_and_apply()
 
-    # ------------------------------------------------------------ fonts and text size
-
     def fonts_group(self):
         g = Adw.PreferencesGroup(title=_("Fonts and text"))
         back = Gtk.Button(label=_("Back to the original"), valign=Gtk.Align.CENTER)
@@ -203,4 +195,4 @@ class Yours:
             self.ui.reset(key)
         for key, b in self.font_buttons.items():
             b.set_font_desc(Pango.FontDescription.from_string(self.ui.get_string(key)))
-        self.window.toast("Fonts and text size are back to EvenKeelOS's own.")
+        self.window.toast(_("Fonts and text size are back to EvenKeelOS's own."))

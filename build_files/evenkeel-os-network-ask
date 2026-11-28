@@ -22,7 +22,8 @@ def watch():
         try:
             monitor = subprocess.Popen(["nmcli", "monitor"], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
                                        text=True)
-        except OSError:
+        except OSError as e:
+            print(f"nmcli couldn't start, so new networks aren't asked about: {e}", file=sys.stderr)
             return
         while True:
             for n in net.networks():
@@ -59,12 +60,10 @@ def ask(uuid):
                                      "safety."), wrap=True, justify=Gtk.Justification.CENTER))
         rows = Gtk.ListBox(css_classes=["boxed-list"], selection_mode=Gtk.SelectionMode.NONE)
         group, checks = None, {}
-        for zone, about in ((net.HOME, _("Your own home network")),
-                            (net.WORK, _("An office. Nothing gets in, and your folders aren't shared.")),
-                            (net.PUBLIC, _("A café, hotel, airport, or anywhere else. Nothing gets in."))):
+        for zone, about in net.ABOUT.items():
             check = Gtk.CheckButton(group=group, active=zone == net.PUBLIC, valign=Gtk.Align.CENTER)
             group = group or check
-            row = Adw.ActionRow(title=_(net.PLACES[zone]), subtitle=about, activatable_widget=check)
+            row = Adw.ActionRow(title=_(net.PLACES[zone]), subtitle=_(about), activatable_widget=check)
             row.add_prefix(check)
             rows.append(row)
             checks[zone] = check

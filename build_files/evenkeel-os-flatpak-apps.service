@@ -1,4 +1,4 @@
-# Install the Flathub default apps; retries every 15 minutes, then stops for good.
+# Install the Flathub default apps; tries again every 15 minutes until they are in.
 [Unit]
 Description=Install the EvenKeelOS apps from Flathub
 Wants=network-online.target

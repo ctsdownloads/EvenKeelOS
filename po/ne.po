@@ -622,13 +622,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "पहिले ArtCraft को हस्ताक्षर जाँच गरिन्छ, र यो दिनमा एक पटक अपडेट हुन्छ।"
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"पासवर्ड भएको Wi-Fi वा तारयुक्त नेटवर्क घर, कार्यस्थल वा सार्वजनिक स्थानमध्ये "
-"कुन हो भनेर एक पटक सोध्छ"
-
 msgid "At each login"
 msgstr "प्रत्येक पटक लगइन गर्दा"
 
@@ -1558,14 +1551,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS लाई UEFI चाहिन्छ। BIOS मा UEFI चालू गर्नुहोस्, त्यसपछि फेरि USB "
 "स्टिकबाट सुरु गर्नुहोस्।"
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS लाई कम्तीमा 20 GB चाहिन्छ।"
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS ले 8 GB वा सोभन्दा बढीमा सबैभन्दा राम्रोसँग काम गर्छ, त्यसैले यो "
-"ढिलो हुन सक्छ।"
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3671,26 +3656,6 @@ msgstr "नयाँ डाउनलोड स्रोतबाट एपहर
 msgid "Recommended"
 msgstr "सिफारिस गरिएको"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"सिफारिस: बक्स मेटाउनुहोस्। यसले करिब {size} खाली गर्छ, र अर्को पटक तपाईंले "
-"{apps} स्थापना गर्दा यो आफैँ फेरि आउँछ। बक्समा अर्को तरिकाले थपिएका सबै "
-"कुराहरू पनि मेटिन्छन्। तपाईंका फाइलहरूमा कुनै असर पर्दैन।"
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"सिफारिस: बक्स मेटाउनुहोस्। यसले आफ्नो डिस्क स्पेस खाली गर्छ, र अर्को पटक "
-"तपाईंले {apps} स्थापना गर्दा यो आफैँ फेरि आउँछ। बक्समा अर्को तरिकाले थपिएका "
-"सबै कुराहरू पनि मेटिन्छन्। तपाईंका फाइलहरूमा कुनै असर पर्दैन।"
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3791,13 +3756,6 @@ msgstr "मिडिया कोडेकहरू हटाउने हो?"
 
 msgid "Remove the test marker"
 msgstr "परीक्षण मार्कर हटाउनुहोस्"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"पहिले तिनीहरू हटाउनुहोस्:  codecs remove  चलाउनुहोस्, रिस्टार्ट गर्नुहोस्, "
-"त्यसपछि फेरि ‘सबै कुरा’ छान्नुहोस्।"
 
 msgid "Remove things the computer no longer needs"
 msgstr "कम्प्युटरलाई अब चाहिँदैनन् भन्ने कुराहरू हटाउनुहोस्"
@@ -5988,9 +5946,6 @@ msgstr ""
 "अपडेटहरू: स्वचालित, {maker} को आफ्नै डाउनलोड स्रोतबाट। दैनिक जाँचले नयाँ "
 "संस्करणहरू फेला पार्छ, जुन अर्को पटक रिस्टार्ट गर्दा सुरु हुन्छन्।"
 
-msgid "Updates: automatic, with System Update."
-msgstr "अपडेटहरू: स्वचालित, सिस्टम अपडेटको साथ।"
-
 msgid "Updates: automatic."
 msgstr "अपडेटहरू: स्वचालित।"
 
@@ -6678,13 +6633,6 @@ msgstr "chrome क्रोम"
 msgid "clean storage"
 msgstr "clean storage सफा स्टोरेज ठाउँ खाली"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"यस सिस्टमको पुरानो संस्करण (negativo17) का कोडेकहरू अझै पनि स्थापना गरिएका "
-"छन्।"
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;कोडेक;भिडियो;अडियो;मिडिया;स्थापना;"
@@ -7127,16 +7075,6 @@ msgstr "{name} सुरु भएन।"
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} सार्वजनिक स्थान हो"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} पहिले नै एप स्टोर Bazaar बाट स्थापित गरिएको छ।\n"
-"\n"
-"सिफारिस: यसलाई खोल्नुहोस्।"
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8196,12 +8134,6 @@ msgstr "zip र sit फाइलहरू खोल्ने"
 msgid "opening zip files"
 msgstr "जिप फाइलहरू खोल्ने"
 
-msgid "organising and developing photos"
-msgstr "तस्बिरहरू मिलाउने र सम्पादन गर्ने"
-
-msgid "organising photos"
-msgstr "तस्बिरहरू मिलाउने"
-
 msgid "organizing music"
 msgstr "सङ्गीत व्यवस्थित गर्ने"
 
@@ -8750,3 +8682,40 @@ msgstr "डाउनलोड स्रोतहरू Fedora 45 को नय�
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Fedora 45 मा सर्नुहोस्"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "फन्टहरू र पाठको आकार EvenKeelOS को आफ्नै मूलमा फर्किए।"
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "सिफारिस: बक्स मेटाउनुहोस्। अर्को पटक तपाईंले {apps} स्थापना गर्दा यो आफैँ फेरि आउँछ। बक्समा अर्को तरिकाले थपिएका सबै कुराहरू पनि मेटिन्छन्। तपाईंका फाइलहरूमा कुनै असर पर्दैन।"
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "यसलाई मेटाउँदा करिब {size} खाली हुन्छ।"
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "पासवर्ड भएको Wi-Fi नेटवर्क घर, कार्यस्थल वा सार्वजनिक स्थानमध्ये कुन हो भनेर एक पटक सोध्छ"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS लाई कम्तीमा {gb} GB चाहिन्छ।"
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS ले {gb} GB वा सोभन्दा बढीमा सबैभन्दा राम्रोसँग काम गर्छ, त्यसैले यो ढिलो हुन सक्छ।"
+
+msgid "organizing and developing photos"
+msgstr "तस्बिरहरू मिलाउने र सम्पादन गर्ने"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} को लागि Fedora {version} को साइनिङ की अझै छैन।"
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} थपिएन, त्यसैले यसको डाउनलोड स्रोत फेरि हटाइयो।"
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} हटाइएन।"

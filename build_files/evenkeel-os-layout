@@ -37,4 +37,5 @@ def main():
     print(_("Layout set to {layout}. Log out and back in to finish.").format(layout=sys.argv[1]))
 
 
-main()
+if __name__ == "__main__":
+    main()

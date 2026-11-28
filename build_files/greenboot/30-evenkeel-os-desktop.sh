@@ -1,7 +1,5 @@
 #!/usr/bin/bash
-# While a new version is on trial, a login has to reach a working desktop: a login with no desktop after a minute,
-# or two logins that end within a minute (a login loop), fail the start. No verdict within 15 minutes passes.
-# Logins come from the login manager's journal records, so a login that ends within a second still counts.
+# On trial, a login must reach the desktop within a minute and not end within a minute twice; 15 minutes passes.
 vars=$(grub2-editenv /boot/grub2/grubenv list)
 # greenboot names the version on trial from when it's installed until it passes.
 grep -q '^greenboot_next_deployment_id=' <<<"$vars" || exit 0

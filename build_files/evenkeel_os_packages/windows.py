@@ -19,11 +19,13 @@ def mark_busy(text):
     BUSY.write_text(text)
 
 
-def run_steps(text, steps, cancel=False):
-    """Run (label, command) steps with a progress window; True if all worked. Output goes to the log."""
+def run_steps(text, steps, cancel=False, quiet=False):
+    """Run (label, command) steps with a progress window (quiet: none, as a login task does); True if all worked."""
+    steps = [st if isinstance(st, tuple) else (text, st) for st in steps]
+    if quiet:
+        return all(subprocess.run(cmd, capture_output=True).returncode == 0 for _label, cmd in steps)
     global CANCELLED
     CANCELLED = False
-    steps = [st if isinstance(st, tuple) else (text, st) for st in steps]
     common.CACHE.mkdir(parents=True, exist_ok=True)
     if common.LOG.exists() and common.LOG.stat().st_size > 2_000_000:     # keep the log from growing without end
         common.LOG.write_bytes(common.LOG.read_bytes()[-500_000:])
@@ -32,11 +34,7 @@ def run_steps(text, steps, cancel=False):
     mark_busy(text)
     bar = None
     if GUI:
-        mode = ["--pulsate"] if len(steps) == 1 else []
-        bar = subprocess.Popen([ui.DIALOGS, f"--title={ui.TITLE}", "--width=520",
-                                "--progress", *mode, "--auto-close",
-                                *([] if cancel else ["--no-cancel"]), f"--text={html.escape(text)}"],
-                               stdin=subprocess.PIPE, text=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        bar = ui.progress(text, pulsate=len(steps) == 1, cancel=cancel)
     else:
         print(text)
 

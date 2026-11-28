@@ -67,12 +67,11 @@ def wm_class_ok(text, path, box):
 
 def launchers_to_fix():
     """App grid entries made before evenkeel-os-box-run existed, or before the dock showed box apps' icons."""
-    apps_dir = common.HOME / ".local/share/applications"
     out = []
     for r in app_list.load():
-        if r["where"] in common.WHERE and r["where"].startswith("evenkeel-"):
+        if r["where"] in {b["name"] for b in common.BOXES.values()}:
             for a in r.get("apps", []):
-                f = apps_dir / f"{r['where']}-{os.path.basename(a)}"
+                f = common.launcher(r["where"], a)
                 if f.exists():
                     text = f.read_text()
                     if BOX_RUN not in text or not wm_class_ok(text, f, r["where"]):
@@ -82,22 +81,20 @@ def launchers_to_fix():
 
 def export(box, info):
     """Put the package's apps in the app grid, or its commands on the PATH. Returns what was exported."""
-    apps_dir = common.HOME / ".local/share/applications"
     done_apps, done_bins = [], []
     for path in info["apps"]:
         r = subprocess.run(boxes.in_box(box, "distrobox-export", "--app", path, "--export-label", "none"),
                            capture_output=True, text=True)
-        exported = apps_dir / f"{box}-{os.path.basename(path)}"
+        exported = common.launcher(box, path)
         if r.returncode == 0 and exported.exists():
             fix_launcher(exported, box)
             done_apps.append(path)
     if done_apps:
         icons_changed()
-    if not done_apps:
-        bindir = common.HOME / ".local/bin"
-        bindir.mkdir(parents=True, exist_ok=True)
+    else:
+        common.BIN_DIR.mkdir(parents=True, exist_ok=True)
         for b in info["bins"]:
-            r = subprocess.run(boxes.in_box(box, "distrobox-export", "--bin", b, "--export-path", str(bindir)),
+            r = subprocess.run(boxes.in_box(box, "distrobox-export", "--bin", b, "--export-path", str(common.BIN_DIR)),
                                capture_output=True, text=True)
             if r.returncode == 0:
                 done_bins.append(b)
@@ -113,10 +110,9 @@ def icons_changed():
 
 def unexport(entry):
     box = entry["where"]
-    apps_dir = common.HOME / ".local/share/applications"
     for path in entry.get("apps", []):        # quit the app first if it is running
         try:
-            m = re.search(r"--stop (\S+)", (apps_dir / f"{box}-{os.path.basename(path)}").read_text())
+            m = re.search(r"--stop (\S+)", common.launcher(box, path).read_text())
         except OSError:
             m = None
         if m and os.access(BOX_RUN, os.X_OK):
@@ -126,12 +122,12 @@ def unexport(entry):
     for path in entry.get("apps", []):
         if boxes.box_exists(box):
             subprocess.run(boxes.in_box(box, "distrobox-export", "--app", path, "--delete"), capture_output=True)
-        (apps_dir / f"{box}-{os.path.basename(path)}").unlink(missing_ok=True)
+        common.launcher(box, path).unlink(missing_ok=True)
     for b in entry.get("bins", []):
         if boxes.box_exists(box):
             subprocess.run(boxes.in_box(box, "distrobox-export", "--bin", b,
-                                        "--export-path", str(common.HOME / ".local/bin"), "--delete"),
+                                        "--export-path", str(common.BIN_DIR), "--delete"),
                            capture_output=True)
-        (common.HOME / ".local/bin" / os.path.basename(b)).unlink(missing_ok=True)
+        (common.BIN_DIR / os.path.basename(b)).unlink(missing_ok=True)
     if entry.get("apps"):
         icons_changed()

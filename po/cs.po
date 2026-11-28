@@ -625,13 +625,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "Nejprve se ověří podpis ArtCraftu. Aplikace se aktualizuje jednou denně."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Jednou se zeptá, zda je síť Wi-Fi s heslem nebo kabelová síť Domov, Práce, "
-"nebo Veřejné místo"
-
 msgid "At each login"
 msgstr "Při každém přihlášení"
 
@@ -1551,12 +1544,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS potřebuje UEFI. Zapněte UEFI v BIOSu a poté znovu spusťte systém "
 "z USB flash disku."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS potřebuje alespoň 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "EvenKeelOS funguje nejlépe s 8 GB nebo více, takže může běžet pomalu."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3631,26 +3618,6 @@ msgstr "Načítání seznamu aplikací z nového zdroje stahování"
 msgid "Recommended"
 msgstr "Doporučeno"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Doporučeno: Smazat kontejner. Uvolní asi {size} a sám se znovu vytvoří, až "
-"příště nainstalujete {apps}. Vše, co bylo do kontejneru přidáno jinak, se "
-"také smaže. Vašich souborů se to nedotkne."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Doporučeno: Smazat kontejner. Uvolní místo, které zabírá na disku, a sám se "
-"znovu vytvoří, až příště nainstalujete {apps}. Vše, co bylo do kontejneru "
-"přidáno jinak, se také smaže. Vašich souborů se to nedotkne."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3753,13 +3720,6 @@ msgstr "Odebrat kodeky pro média?"
 
 msgid "Remove the test marker"
 msgstr "Odebrat značku testu"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Nejprve je odeberte: spusťte  codecs remove , restartujte a pak znovu zvolte "
-"Vše."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Odebrat věci, které počítač už nepotřebuje"
@@ -5949,9 +5909,6 @@ msgstr ""
 "Aktualizace: automatické, z vlastního zdroje stahování společnosti {maker}. "
 "Denní kontrola najde nové verze, které se spustí při příštím restartu."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Aktualizace: automatické, přes Aktualizace systému."
-
 msgid "Updates: automatic."
 msgstr "Aktualizace: automatické."
 
@@ -6644,12 +6601,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "vyčistit úložiště"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"Pořád jsou nainstalované kodeky z dřívější verze tohoto systému (negativo17)."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;kodeky;kodek;média;instalovat;nainstalovat;"
@@ -7075,16 +7026,6 @@ msgstr "Nepodařilo se spustit: {name}."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} je Veřejné místo"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} je už nainstalováno z Bazaaru, obchodu s aplikacemi.\n"
-"\n"
-"Doporučeno: Otevřít."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8146,12 +8087,6 @@ msgstr "otevírání souborů ZIP a SIT"
 msgid "opening zip files"
 msgstr "otevírání souborů ZIP"
 
-msgid "organising and developing photos"
-msgstr "uspořádání a úprava fotek"
-
-msgid "organising photos"
-msgstr "uspořádání fotek"
-
 msgid "organizing music"
 msgstr "uspořádání hudby"
 
@@ -8700,3 +8635,40 @@ msgstr "Číst zdroje stahování v nové složce Fedory 45"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Přejít na Fedoru 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Písma a velikost textu jsou zpět na původních hodnotách EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Doporučeno: Smazat kontejner. Sám se znovu vytvoří, až příště nainstalujete {apps}. Vše, co bylo do kontejneru přidáno jinak, se také smaže. Vašich souborů se to nedotkne."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Jeho smazáním se uvolní asi {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Jednou se zeptá, zda je síť Wi-Fi s heslem Domov, Práce, nebo Veřejné místo"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS potřebuje alespoň {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS funguje nejlépe s {gb} GB nebo více, takže může běžet pomalu."
+
+msgid "organizing and developing photos"
+msgstr "uspořádání a úprava fotek"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} zatím nemá podpisový klíč pro Fedoru {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} nebyl přidán, proto byl jeho zdroj stahování znovu odebrán."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} nebyl odebrán."

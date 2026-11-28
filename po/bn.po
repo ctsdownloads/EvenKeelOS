@@ -625,13 +625,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "প্রথমে ArtCraft-এর স্বাক্ষরটি চেক করা হয়, এবং এটি দিনে একবার আপডেট হয়।"
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"একবার জিজ্ঞেস করে যে পাসওয়ার্ডযুক্ত Wi-Fi বা তারযুক্ত নেটওয়ার্কটি বাড়ি, "
-"কর্মস্থল নাকি পাবলিক স্থান"
-
 msgid "At each login"
 msgstr "প্রতিবার লগ ইন করার সময়"
 
@@ -1555,13 +1548,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS-এর জন্য UEFI প্রয়োজন। BIOS-এ UEFI চালু করুন, তারপর আবার USB স্টিক"
 " থেকে চালু করুন।"
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS-এর জন্য অন্তত 20 GB প্রয়োজন।"
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS 8 GB বা তার বেশি মেমরিতে সবচেয়ে ভালো চলে, তাই এটি ধীর হতে পারে।"
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3642,26 +3628,6 @@ msgstr "নতুন ডাউনলোড উৎস থেকে অ্যা�
 msgid "Recommended"
 msgstr "প্রস্তাবিত"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"পরামর্শ: বক্সটি মুছে ফেলুন। এতে প্রায় {size} জায়গা খালি হয়, এবং পরের বার "
-"আপনি {apps} ইনস্টল করলে এটি নিজে থেকেই ফিরে আসে। অন্যভাবে বক্সে যোগ করা যে "
-"কোনও কিছুও মুছে যাবে। আপনার ফাইলগুলিতে হাত দেওয়া হয় না।"
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"পরামর্শ: বক্সটি মুছে ফেলুন। এতে এর ডিস্কের জায়গা খালি হয়, এবং পরের বার আপনি"
-" {apps} ইনস্টল করলে এটি নিজে থেকেই ফিরে আসে। অন্যভাবে বক্সে যোগ করা যে কোনও "
-"কিছুও মুছে যাবে। আপনার ফাইলগুলিতে হাত দেওয়া হয় না।"
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3762,13 +3728,6 @@ msgstr "মিডিয়া কোডেকগুলি সরাবেন?"
 
 msgid "Remove the test marker"
 msgstr "টেস্ট মার্কার সরান"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"প্রথমে সেগুলি সরান:  codecs remove  চালান, রিস্টার্ট করুন, তারপর আবার "
-"‘সবকিছু’ বেছে নিন।"
 
 msgid "Remove things the computer no longer needs"
 msgstr "কম্পিউটারের আর প্রয়োজন নেই এমন জিনিসগুলি সরান"
@@ -5943,9 +5902,6 @@ msgstr ""
 "আপডেট: স্বয়ংক্রিয়, {maker}-এর নিজস্ব ডাউনলোড উৎস থেকে। প্রতিদিনের একটি "
 "যাচাই নতুন ভার্সন খুঁজে পায়, যা পরের বার রিস্টার্ট করলে চালু হয়।"
 
-msgid "Updates: automatic, with System Update."
-msgstr "আপডেট: স্বয়ংক্রিয়, সিস্টেম আপডেটের মাধ্যমে।"
-
 msgid "Updates: automatic."
 msgstr "আপডেট: স্বয়ংক্রিয়।"
 
@@ -6641,11 +6597,6 @@ msgstr "chrome ক্রোম"
 msgid "clean storage"
 msgstr "clean storage স্টোরেজ পরিষ্কার জায়গা খালি"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "এই সিস্টেমের আগের ভার্সনের (negativo17) কোডেকগুলি এখনও ইনস্টল করা আছে।"
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;কোডেক;ভিডিও;অডিও;মিডিয়া;ইনস্টল;"
@@ -7082,16 +7033,6 @@ msgstr "{name} চালু হয়নি।"
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} একটি পাবলিক স্থান"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} আগেই অ্যাপ স্টোর Bazaar থেকে ইনস্টল করা আছে।\n"
-"\n"
-"পরামর্শ: এটি খুলুন।"
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8148,12 +8089,6 @@ msgstr "zip এবং sit ফাইল খোলা"
 msgid "opening zip files"
 msgstr "zip ফাইল খোলা"
 
-msgid "organising and developing photos"
-msgstr "ফটো সাজানো এবং উন্নত করা"
-
-msgid "organising photos"
-msgstr "ফটো সাজানো"
-
 msgid "organizing music"
 msgstr "মিউজিক সাজানো"
 
@@ -8702,3 +8637,40 @@ msgstr "Fedora 45-এর নতুন ফোল্ডারে ডাউনল�
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Fedora 45-এ যান"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "ফন্ট এবং টেক্সটের সাইজ EvenKeelOS-এর নিজস্ব অবস্থায় ফিরে এসেছে।"
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "পরামর্শ: বক্সটি মুছে ফেলুন। পরের বার আপনি {apps} ইনস্টল করলে এটি নিজে থেকেই ফিরে আসে। অন্যভাবে বক্সে যোগ করা যে কোনও কিছুও মুছে যাবে। আপনার ফাইলগুলিতে হাত দেওয়া হয় না।"
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "এটি মুছলে প্রায় {size} জায়গা খালি হয়।"
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "একবার জিজ্ঞেস করে যে পাসওয়ার্ডযুক্ত Wi-Fi নেটওয়ার্কটি বাড়ি, কর্মস্থল নাকি পাবলিক স্থান"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS-এর জন্য অন্তত {gb} GB প্রয়োজন।"
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS {gb} GB বা তার বেশি মেমরিতে সবচেয়ে ভালো চলে, তাই এটি ধীর হতে পারে।"
+
+msgid "organizing and developing photos"
+msgstr "ফটো সাজানো এবং উন্নত করা"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "Fedora {version}-এর জন্য {title}-এর এখনও কোনো সাইনিং কী নেই।"
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} যোগ করা হয়নি, তাই এর ডাউনলোড সোর্স আবার সরিয়ে দেওয়া হয়েছে।"
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} সরানো হয়নি।"

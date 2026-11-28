@@ -628,13 +628,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "ArtCrafts signatur kontrolleres først, og den opdateres én gang om dagen."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Spørger én gang, om et Wi-Fi-netværk med adgangskode eller et kablet netværk "
-"er Hjem, Arbejde eller et Offentligt sted"
-
 msgid "At each login"
 msgstr "Ved hvert login"
 
@@ -1560,13 +1553,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS kræver UEFI. Slå UEFI til i BIOS, og start derefter igen fra USB-"
 "stikket."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS kræver mindst 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS fungerer bedst med 8 GB eller mere, så det kan være langsomt."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3644,26 +3630,6 @@ msgstr "Læser listen over apps fra den nye downloadkilde"
 msgid "Recommended"
 msgstr "Anbefalet"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Anbefalet: Slet boksen. Det frigør cirka {size} og vender automatisk tilbage,"
-" næste gang du installerer {apps}. Alt, der er føjet til boksen på en anden "
-"måde, bliver også slettet. Dine filer bliver ikke rørt."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Anbefalet: Slet boksen. Den frigør sin diskplads og kommer automatisk "
-"tilbage, næste gang du installerer {apps}. Alt, hvad der er føjet til boksen "
-"på en anden måde, bliver også slettet. Dine filer bliver ikke rørt."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3766,12 +3732,6 @@ msgstr "Vil du fjerne mediecodecs?"
 
 msgid "Remove the test marker"
 msgstr "Fjern testmarkøren"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Fjern dem først: Kør  codecs remove , genstart, og vælg derefter Alt igen."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Fjern ting, som computeren ikke længere har brug for"
@@ -5951,9 +5911,6 @@ msgstr ""
 "Opdateringer: automatiske, fra {maker}s egen downloadkilde. En daglig kontrol"
 " finder nye versioner, som starter ved næste genstart."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Opdateringer: automatiske, med Systemopdatering."
-
 msgid "Updates: automatic."
 msgstr "Opdateringer: automatiske."
 
@@ -6641,13 +6598,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "ryd op i lagerpladsen"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"codecs fra en tidligere version af dette system (negativo17) er stadig "
-"installeret."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;lyd;media;medier;install;installer;"
@@ -7070,16 +7020,6 @@ msgstr "{name} startede ikke."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} er et offentligt sted"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} er allerede installeret fra Bazaar, app-butikken.\n"
-"\n"
-"Anbefalet: Åbn det."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8137,12 +8077,6 @@ msgstr "åbning af ZIP- og SIT-filer"
 msgid "opening zip files"
 msgstr "åbning af zip-filer"
 
-msgid "organising and developing photos"
-msgstr "organisering og redigering af fotos"
-
-msgid "organising photos"
-msgstr "organisering af fotos"
-
 msgid "organizing music"
 msgstr "organisering af musik"
 
@@ -8691,3 +8625,40 @@ msgstr "Læs downloadkilder i Fedora 45's nye mappe"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Skift til Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Skrifttyper og tekststørrelse er tilbage til EvenKeelOS' egne."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Anbefalet: Slet boksen. Den vender automatisk tilbage, næste gang du installerer {apps}. Alt, der er føjet til boksen på en anden måde, bliver også slettet. Dine filer bliver ikke rørt."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Sletningen frigør cirka {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Spørger én gang, om et Wi-Fi-netværk med adgangskode er Hjem, Arbejde eller et Offentligt sted"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS kræver mindst {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS fungerer bedst med {gb} GB eller mere, så det kan være langsomt."
+
+msgid "organizing and developing photos"
+msgstr "organisering og redigering af fotos"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} har endnu ikke en signeringsnøgle til Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} blev ikke tilføjet, så dens downloadkilde blev fjernet igen."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} blev ikke fjernet."

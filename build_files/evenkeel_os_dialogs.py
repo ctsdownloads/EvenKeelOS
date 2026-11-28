@@ -1,12 +1,10 @@
-"""A tool's questions, messages, lists, password box and progress, shown inside the Wheelhouse window.
-
-Tools started from the window get EVENKEEL_OS_PANEL, the path of a socket here; evenkeel-os-dialog connects to it
-with one request per question and waits for the answer.
-"""
+"""A tool's questions, messages, lists, password box and progress, shown inside the Wheelhouse window."""
+import errno
 import json
 import os
 import shutil
 import socket
+import sys
 import tempfile
 import threading
 
@@ -29,8 +27,8 @@ def set_text(label, text, markup):
             Pango.parse_markup(text, -1, "\0")
             label.set_markup(text)
             return
-        except GLib.Error:
-            pass
+        except GLib.Error as e:
+            print(f"Wheelhouse: shown as plain text, the markup doesn't parse: {e.message}", file=sys.stderr)
     label.set_text(text)
 
 
@@ -54,15 +52,14 @@ class Request:
         try:
             self.f.write(json.dumps({"button": button, **extra}) + "\n")
             self.f.flush()
-        except (OSError, ValueError):
-            pass        # the tool already stopped
+        except (OSError, ValueError) as e:
+            print(f"Wheelhouse: the tool stopped before its answer: {e}", file=sys.stderr)
         try:
             self.conn.shutdown(socket.SHUT_RDWR)
-        except OSError:
-            pass
+        except OSError as e:
+            if e.errno != errno.ENOTCONN:      # not connected: the tool already closed its end
+                print(f"Wheelhouse: closing a tool's connection: {e}", file=sys.stderr)
         self.dialogs.done(self)
-
-    # ---------------------------------------------------------------- the view for this request
 
     def build(self, window):
         r, kind = self.req, self.kind
@@ -70,7 +67,7 @@ class Request:
                       margin_start=12, margin_end=12)
         head = Gtk.Box(spacing=14)
         head.append(Gtk.Image(icon_name=ICONS[kind], pixel_size=32, valign=Gtk.Align.START))
-        head.append(Gtk.Label(label=r.get("title") or "EvenKeelOS Wheelhouse", wrap=True, xalign=0, hexpand=True,
+        head.append(Gtk.Label(label=r.get("title") or _("EvenKeelOS Wheelhouse"), wrap=True, xalign=0, hexpand=True,
                               css_classes=["title-2"]))
         box.append(head)
         self.label = Gtk.Label(wrap=True, wrap_mode=Pango.WrapMode.WORD_CHAR, xalign=0, selectable=True,
@@ -118,7 +115,7 @@ class Request:
 
     def password_box(self):
         self.entry = Adw.PasswordEntryRow(title=_("Password"))
-        self.entry.connect("entry-activated", lambda *_: self.reply("ok", value=self.entry.get_text()))
+        self.entry.connect("entry-activated", lambda *_args: self.reply("ok", value=self.entry.get_text()))
         box = Gtk.ListBox(css_classes=["boxed-list"], selection_mode=Gtk.SelectionMode.NONE)
         box.append(self.entry)
         return box
@@ -162,8 +159,6 @@ class Request:
         target = {"password": getattr(self, "entry", None), "list": getattr(self, "rows", None)}.get(self.kind, self.ok)
         if target:
             target.grab_focus()
-
-    # ---------------------------------------------------------------- progress and files
 
     def on_pulse(self):
         self.bar.pulse()
@@ -255,14 +250,14 @@ class Dialogs:
         try:
             for line in f:
                 GLib.idle_add(request.progress, json.loads(line))
-        except (OSError, ValueError):
-            pass
+        except (OSError, ValueError) as e:
+            print(f"Wheelhouse: a tool's request ended early: {e}", file=sys.stderr)
         GLib.idle_add(request.reply, "cancel")      # the tool stopped, or the request was answered
         for closing in (f, conn):
             try:
                 closing.close()
-            except OSError:
-                pass
+            except OSError as e:
+                print(f"Wheelhouse: closing a tool's connection: {e}", file=sys.stderr)
 
     def add(self, request):
         self.open.append(request)
@@ -286,6 +281,5 @@ class Dialogs:
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=18, margin_top=72, valign=Gtk.Align.START)
         box.append(Adw.Spinner(width_request=32, height_request=32))
         box.append(Gtk.Label(label=_("{title}: working…").format(title=self.title) if self.title else _("Working…"),
-                             wrap=True,
-                             css_classes=["title-4"]))
+                             wrap=True, css_classes=["title-4"]))
         self.view.set_child(box)

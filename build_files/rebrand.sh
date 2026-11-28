@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 # Swap Fedora's branding for generic packages (Fedora trademark rules); fails on anything wrong.
 set -euo pipefail
 
@@ -48,10 +48,10 @@ VERSION="$fedora"
 PLATFORM_ID="platform:f$fedora"
 PRETTY_NAME="EvenKeelOS"
 ANSI_COLOR="0;36"
-HOME_URL="https://github.com/ctsdownloads/evenkeel-os"
-DOCUMENTATION_URL="https://github.com/ctsdownloads/evenkeel-os"
-SUPPORT_URL="https://github.com/ctsdownloads/evenkeel-os/issues"
-BUG_REPORT_URL="https://github.com/ctsdownloads/evenkeel-os/issues"
+HOME_URL="https://github.com/ctsdownloads/EvenKeelOS"
+DOCUMENTATION_URL="https://github.com/ctsdownloads/EvenKeelOS"
+SUPPORT_URL="https://github.com/ctsdownloads/EvenKeelOS/issues"
+BUG_REPORT_URL="https://github.com/ctsdownloads/EvenKeelOS/issues"
 OSREL
 ln -sf ../usr/lib/os-release /etc/os-release
 # The boot menu entry is named from /etc/system-release.

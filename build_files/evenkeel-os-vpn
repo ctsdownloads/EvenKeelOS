@@ -18,7 +18,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
-from evenkeel_os_ui import _  # noqa: E402
+import evenkeel_os_health as health  # noqa: E402
+from evenkeel_os_ui import PACKAGE_NAME, _, fail, first_line, save_json, write_file  # noqa: E402
 
 LIST = Path("/usr/share/evenkeel-os/vpns.json")
 KEYS = Path("/usr/share/evenkeel-os/vpn-keys")
@@ -27,14 +28,8 @@ UNITS = Path("/etc/systemd/system")
 GROUPS = Path("/etc/group")
 GSHADOW = Path("/etc/gshadow")
 ADDED = Path("/var/lib/evenkeel-os/vpn-added.json")     # groups and folders this helper made, so removal undoes them
-PKG = re.compile(r"^[A-Za-z0-9][A-Za-z0-9.+_-]{0,127}$")
 UNIT_DIRS = ("/usr/lib/systemd/system/", "/etc/systemd/system/")
 UNIT = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._@-]{0,127}\.(service|socket|timer|path)$")
-
-
-def fail(msg, code=1):
-    print(msg)
-    sys.exit(code)
 
 
 def load():
@@ -65,25 +60,15 @@ def repo_text(name, v, key):
 
 
 def ours(path, name):
-    try:
-        with open(path, encoding="utf-8", errors="replace") as f:
-            return f.readline() == marker(name)
-    except OSError:
-        return False
+    return first_line(path) == marker(name)
 
 
 def requested(booted=True):
     """Package names added to the running system (or, booted=False, to the version that starts next)."""
-    r = subprocess.run(["rpm-ostree", "status", "--json", *(["--booted"] if booted else [])], capture_output=True,
-                       text=True)
-    try:
-        d = json.loads(r.stdout)["deployments"][0]
-    except (ValueError, KeyError, IndexError):
+    ds = health.deployments(*(["--booted"] if booted else []))
+    if not ds:
         fail(_("Couldn't read the system's state."))
-    names = set(d.get("requested-packages", []))
-    for nevra in d.get("requested-local-packages", []):
-        names.add(re.sub(r"-[^-]+-[^-]+$", "", nevra))
-    return names
+    return health.requested(ds[0])
 
 
 def installed(package):
@@ -104,27 +89,22 @@ def added():
 def note_added(kind, item, keep=True):
     a = added()
     a[kind] = sorted(set(a.get(kind, [])) - {item} | ({item} if keep else set()))
-    ADDED.parent.mkdir(parents=True, exist_ok=True)
-    tmp = ADDED.with_name(f".{ADDED.name}.tmp")
-    tmp.write_text(json.dumps(a))
-    tmp.replace(ADDED)
+    save_json(ADDED, a)
 
 
 def install(name, v):
     key = key_for(v)
     if not key:
-        fail(f"{v['title']} has no signing key for Fedora {platform.freedesktop_os_release()['VERSION_ID']} yet.", 3)
+        fail(_("{title} has no signing key for Fedora {version} yet.").format(
+            title=v["title"], version=platform.freedesktop_os_release()["VERSION_ID"]), 3)
     path = repo_file(name)
     if path.exists() and not ours(path, name):
-        fail(f"{path} already exists and belongs to something else.")
-    tmp = path.with_name(f".{path.name}.tmp")
-    tmp.write_text(repo_text(name, v, key))
-    os.chmod(tmp, 0o644)
-    tmp.replace(path)
+        fail(_("{path} already exists and belongs to something else.").format(path=path))
+    write_file(path, repo_text(name, v, key))
     print(f"Added {path}", flush=True)
     if subprocess.run(["rpm-ostree", "install", "--idempotent", *v["packages"]]).returncode != 0:
         path.unlink(missing_ok=True)        # nothing was added, so its download source goes too
-        fail(f"{v['title']} was not added, so its download source was taken out again.")
+        fail(_("{title} was not added, so its download source was taken out again.").format(title=v["title"]))
 
 
 def turn_on(name, v):
@@ -161,8 +141,7 @@ def turn_on(name, v):
 
 
 def add_to_group(group):
-    """The person who asked joins the app's group. The app's group lives in the system image, where the
-    group-changing tools can't see it, so it is copied to /etc/group first."""
+    """The person who asked joins the app's group, copied to /etc/group first: groupmod can't see the image's."""
     try:
         user = pwd.getpwuid(int(os.environ["PKEXEC_UID"])).pw_name
         g = grp.getgrnam(group)
@@ -194,9 +173,10 @@ def remove(name, v):
             (UNITS / unit).unlink()
     systemctl("daemon-reload")
     # the version that starts next: an app installed and removed before a restart is only there
-    added = [p for p in v["packages"] if p in requested(booted=False)]
-    if added and subprocess.run(["rpm-ostree", "uninstall", *added]).returncode != 0:
-        fail(f"{v['title']} was not removed.")
+    next_start = requested(booted=False)
+    layered = [p for p in v["packages"] if p in next_start]
+    if layered and subprocess.run(["rpm-ostree", "uninstall", *layered]).returncode != 0:
+        fail(_("{title} was not removed.").format(title=v["title"]))
     if ours(repo_file(name), name):
         repo_file(name).unlink()
         print(f"Removed {repo_file(name)}")
@@ -204,7 +184,12 @@ def remove(name, v):
         remove_group(v["group"])
     for d in v.get("folders", []):
         if d["path"] in added().get("folders", []):
-            shutil.rmtree(d["path"], ignore_errors=True)
+            try:
+                if os.path.exists(d["path"]):
+                    shutil.rmtree(d["path"])
+            except OSError as e:        # kept on the list, so the next removal tries again
+                print(f"{d['path']} was not removed: {e}")
+                continue
             note_added("folders", d["path"], keep=False)
 
 
@@ -215,7 +200,8 @@ def remove_group(group):
             user = pwd.getpwuid(int(os.environ["PKEXEC_UID"])).pw_name
         except (KeyError, ValueError):
             return
-        subprocess.run(["/usr/bin/gpasswd", "-d", user, group], capture_output=True)
+        if subprocess.run(["/usr/bin/gpasswd", "-d", user, group], capture_output=True).returncode != 0:
+            print(f"{user} was not taken out of the {group} group.")
         return
     # groupdel keeps the file's locks and security label, which a rewrite here would lose
     if subprocess.run(["/usr/sbin/groupdel", group]).returncode != 0:
@@ -262,7 +248,7 @@ def services(package):
 def main(argv):
     if os.geteuid() != 0:
         fail("This helper runs through polkit (pkexec).")
-    if len(argv) == 3 and argv[1] == "services" and PKG.match(argv[2]):
+    if len(argv) == 3 and argv[1] == "services" and PACKAGE_NAME.fullmatch(argv[2]):
         services(argv[2])
         return 0
     if len(argv) == 3 and argv[1] in ("install", "turn-on", "remove"):

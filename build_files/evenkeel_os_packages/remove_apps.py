@@ -41,7 +41,8 @@ def remove():
         if ok and where == "artcraft":      # the sandbox setting made at install goes too
             subprocess.run(["flatpak", "override", "--user", "--reset", entry["package"]], capture_output=True)
     elif where == "system" and entry.get("vpn"):     # its services and download source go too
-        ok = windows.run_steps(_("Removing {title} from the system.").format(title=title), vpn.remove_steps(entry))
+        ok = windows.run_steps(_("Removing {title} from the system.").format(title=title),
+                               [["pkexec", vpn.HELPER, "remove", entry["vpn"]]])
     elif where == "system":
         ok = windows.run_steps(_("Removing {title} from the system.").format(title=title),
                                [["rpm-ostree", "uninstall", entry["package"]]])
@@ -76,16 +77,12 @@ def remove():
         label = _(common.BOXES[kind]["label"])
         mb = boxes.box_size(where)
         apps = _("an .rpm app") if kind == "rpm" else _("a .deb app")
+        again = _("Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything "
+                  "added to the box another way is deleted too. Your files are not touched.").format(apps=apps)
         if mb:
-            again = _("Recommended: Delete the box. It frees about {size}, and comes back by itself the next time "
-                      "you install {apps}. Anything added to the box another way is deleted too. Your files are not "
-                      "touched.")
-        else:
-            again = _("Recommended: Delete the box. It frees its disk space, and comes back by itself the next time "
-                      "you install {apps}. Anything added to the box another way is deleted too. Your files are not "
-                      "touched.")
+            again += " " + _("Deleting it frees about {size}.").format(size=human(mb))
         if ask(_("{title} is removed, and the {label} is now empty.").format(title=title, label=label) + "\n\n" +
-               again.format(size=human(mb or 0), apps=apps) + "\n\n" +
+               again + "\n\n" +
                _("Or Keep it: saves setup time if you'll install another {kind} app soon.")
                .format(kind=".rpm" if kind == "rpm" else ".deb"),
                ok=_("Delete the box"), cancel=_("Keep it")) == "ok":

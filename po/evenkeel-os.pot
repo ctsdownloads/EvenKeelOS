@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: EvenKeelOS\n"
 "Report-Msgid-Bugs-To: https://github.com/ctsdownloads/EvenKeelOS/issues\n"
-"POT-Creation-Date: 2026-11-27 19:00+0000\n"
+"POT-Creation-Date: 2026-11-28 08:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -571,8 +571,7 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 
 msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a "
-"Public place"
+"Asks once whether a password Wi-Fi network is Home, Work or a Public place"
 msgstr ""
 
 msgid "At each login"
@@ -1195,6 +1194,10 @@ msgstr ""
 msgid "Delete the box"
 msgstr ""
 
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr ""
+
 msgid "Deleting the settings."
 msgstr ""
 
@@ -1390,10 +1393,12 @@ msgid ""
 "stick again."
 msgstr ""
 
-msgid "EvenKeelOS needs at least 20 GB."
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
 msgstr ""
 
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
 msgstr ""
 
 msgid ""
@@ -1575,6 +1580,9 @@ msgid "Fonts and text"
 msgstr ""
 
 msgid "Fonts and text size"
+msgstr ""
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
 msgstr ""
 
 msgid ""
@@ -2640,6 +2648,7 @@ msgstr ""
 msgid "Off"
 msgstr ""
 
+#. Translators: {place} is a phrase such as "a Work network" or "a Public place".
 #, python-brace-format
 msgid "Off here: {name} is {place}."
 msgstr ""
@@ -3187,16 +3196,9 @@ msgstr ""
 
 #, python-brace-format
 msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
+"Recommended: Delete the box. It comes back by itself the next time you "
+"install {apps}. Anything added to the box another way is deleted too. Your "
+"files are not touched."
 msgstr ""
 
 msgid ""
@@ -3285,11 +3287,6 @@ msgid "Remove the media codecs?"
 msgstr ""
 
 msgid "Remove the test marker"
-msgstr ""
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
 msgstr ""
 
 msgid "Remove things the computer no longer needs"
@@ -3690,7 +3687,6 @@ msgstr ""
 msgid "Sharing starts by itself on a Home network."
 msgstr ""
 
-#. Translators: {place} is a phrase such as "a Work network" or "a Public place".
 msgid "Sharing waits for a Home network"
 msgstr ""
 
@@ -5146,9 +5142,6 @@ msgid ""
 "new versions, which start at the next restart."
 msgstr ""
 
-msgid "Updates: automatic, with System Update."
-msgstr ""
-
 msgid "Updates: automatic."
 msgstr ""
 
@@ -5807,11 +5800,6 @@ msgstr ""
 msgid "clipboard history"
 msgstr ""
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 
@@ -6174,10 +6162,7 @@ msgstr ""
 msgid "opening zip files"
 msgstr ""
 
-msgid "organising and developing photos"
-msgstr ""
-
-msgid "organising photos"
+msgid "organizing and developing photos"
 msgstr ""
 
 msgid "organizing music"
@@ -6588,6 +6573,7 @@ msgstr ""
 msgid "{about}. Open Wi-Fi is always a Public place."
 msgstr ""
 
+#. Translators: {place} is Home, Work or Public place.
 #, python-brace-format
 msgid ""
 "{about}. Open Wi-Fi, but set to {place}. Anyone can make a network with its "
@@ -6769,13 +6755,6 @@ msgstr ""
 msgid "{name} is a public place"
 msgstr ""
 
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-
 #. Translators: Home, Work and Public place are the names of kinds of network place; one whole sentence for each.
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -6855,14 +6834,17 @@ msgstr ""
 msgid "{name} is your work network"
 msgstr ""
 
+#. Translators: {place} is Home, Work or Public place.
 #, python-brace-format
 msgid "{name} is {place} from the next time it connects."
 msgstr ""
 
+#. Translators: {place} is Home, Work or Public place.
 #, python-brace-format
 msgid "{name} is {place} now."
 msgstr ""
 
+#. Translators: {place} is a phrase such as "a Work network" or "a Public place".
 #, python-brace-format
 msgid "{name} is {place}, so nothing is shared here."
 msgstr ""
@@ -7153,6 +7135,10 @@ msgid "{title} didn't open."
 msgstr ""
 
 #, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr ""
+
+#, python-brace-format
 msgid "{title} has no window to open. It is a tool other apps use."
 msgstr ""
 
@@ -7354,6 +7340,14 @@ msgid ""
 "{title} only lets your account use a device.\n"
 "\n"
 "Add it: needs your password."
+msgstr ""
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr ""
+
+#, python-brace-format
+msgid "{title} was not removed."
 msgstr ""
 
 #, python-brace-format

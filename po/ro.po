@@ -641,13 +641,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "Semnătura ArtCraft este verificată mai întâi și se actualizează o dată pe zi."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Întreabă o singură dată dacă o rețea Wi-Fi cu parolă sau o rețea prin cablu "
-"este Acasă, Serviciu sau Loc public"
-
 msgid "At each login"
 msgstr "La fiecare autentificare"
 
@@ -1582,14 +1575,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS are nevoie de UEFI. Activează UEFI în BIOS, apoi pornește din nou "
 "de pe stickul USB."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS are nevoie de cel puțin 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS funcționează cel mai bine cu 8 GB sau mai mult, așa că s-ar putea "
-"să fie lent."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3709,26 +3694,6 @@ msgstr "Se citește lista de aplicații din noua sursă de descărcare"
 msgid "Recommended"
 msgstr "Recomandat"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Recomandat: Șterge cutia. Eliberează aproximativ {size} și revine singură "
-"data viitoare când instalezi {apps}. Tot ce a fost adăugat în cutie în alt "
-"mod este șters și el. Fișierele tale nu sunt atinse."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Recomandat: Șterge cutia. Eliberează spațiul ocupat pe disc și revine singură"
-" data viitoare când instalezi {apps}. Tot ce a fost adăugat în cutie în alt "
-"mod este șters și el. Fișierele tale nu sunt atinse."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3833,13 +3798,6 @@ msgstr "Elimini codecurile media?"
 
 msgid "Remove the test marker"
 msgstr "Elimină marcajul de test"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Elimină-le mai întâi: rulează  codecs remove , repornește, apoi selectează "
-"din nou Totul."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Elimină ce nu mai trebuie calculatorului"
@@ -6049,9 +6007,6 @@ msgstr ""
 "verificare zilnică găsește versiunile noi, care se aplică la următoarea "
 "repornire."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Actualizări: automate, prin Actualizare de sistem."
-
 msgid "Updates: automatic."
 msgstr "Actualizări: automate."
 
@@ -6745,13 +6700,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage curățare spațiu stocare"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"codecurile dintr-o versiune anterioară a acestui sistem (negativo17) sunt "
-"încă instalate."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr "codecs;codec;ffmpeg;h264;video;audio;media;install;codecuri;instalare;"
 
@@ -7193,16 +7141,6 @@ msgstr "{name} nu a pornit."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} este un Loc public"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} este deja instalat din Bazaar, magazinul de aplicații.\n"
-"\n"
-"Recomandat: Deschide-l."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8266,12 +8204,6 @@ msgstr "deschiderea fișierelor zip și sit"
 msgid "opening zip files"
 msgstr "deschiderea fișierelor zip"
 
-msgid "organising and developing photos"
-msgstr "organizarea și prelucrarea fotografiilor"
-
-msgid "organising photos"
-msgstr "organizarea fotografiilor"
-
 msgid "organizing music"
 msgstr "organizarea muzicii"
 
@@ -8820,3 +8752,40 @@ msgstr "Citește sursele de descărcare din noul dosar Fedora 45"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Treci la Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Fonturile și mărimea textului au revenit la cele proprii EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Recomandat: Șterge cutia. Revine singură data viitoare când instalezi {apps}. Tot ce a fost adăugat în cutie în alt mod este șters și el. Fișierele tale nu sunt atinse."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Ștergerea ei eliberează aproximativ {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Întreabă o singură dată dacă o rețea Wi-Fi cu parolă este Acasă, Serviciu sau Loc public"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS are nevoie de cel puțin {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS funcționează cel mai bine cu {gb} GB sau mai mult, așa că s-ar putea să fie lent."
+
+msgid "organizing and developing photos"
+msgstr "organizarea și prelucrarea fotografiilor"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} nu are încă o cheie de semnare pentru Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} nu a fost adăugat, așa că sursa sa de descărcare a fost eliminată din nou."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} nu a fost eliminat."

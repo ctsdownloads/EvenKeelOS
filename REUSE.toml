@@ -1,7 +1,7 @@
 version = 1
 SPDX-PackageName = "EvenKeelOS"
 SPDX-PackageSupplier = "Matt Hartley <matt@matthartley.com>"
-SPDX-PackageDownloadLocation = "https://github.com/ctsdownloads/evenkeel-os"
+SPDX-PackageDownloadLocation = "https://github.com/ctsdownloads/EvenKeelOS"
 
 # Everything is GPL-3.0-or-later unless a rule below says otherwise.
 [[annotations]]
@@ -15,14 +15,11 @@ SPDX-License-Identifier = "GPL-3.0-or-later"
 path = [
     "Justfile",
     "Containerfile",
-    "artifacthub-repo.yml",
+    "build_files/rechunk.sh",
     "image-template.env",
     ".gitignore",
-    "disk_config/**",
     ".github/dependabot.yml",
-    ".github/renovate.json5",
     ".github/workflows/build.yml",
-    ".github/workflows/build-disk.yml",
 ]
 precedence = "override"
 SPDX-FileCopyrightText = ["Universal Blue contributors", "2026 Matt Hartley"]

@@ -1,17 +1,12 @@
-"""Boot options: kernel settings the computer starts with, changed in Wheelhouse.
-
-rpm-ostree changes them on the version that starts next (a waiting update keeps them), and every update after
-carries them forward. Each change makes a new version, so the one before stays as the fallback.
-"""
-import json
+"""Boot options: kernel settings the computer starts with, changed in Wheelhouse."""
 import re
-import subprocess
 from pathlib import Path
 
-from evenkeel_os_ui import _, N_
+import evenkeel_os_health as health
+from evenkeel_os_ui import _, N_, answer
 
 # The settings Wheelhouse added, so it can take them out; in /var, the same for every version.
-STATE = Path("/var/lib/evenkeel-os/boot-options.json")
+STATE = Path(health.BOOT_OPTIONS)
 MAX = 20
 SETTING = re.compile(r"^[A-Za-z0-9_][A-Za-z0-9_.-]{0,63}(=[A-Za-z0-9_.,:/+=@!-]{1,128})?$")
 
@@ -30,7 +25,7 @@ COMMON = [
     (("nvme_core.default_ps_max_latency_us=0",), N_("Drive freezes or disappears"),
      N_("Keeps the drive out of its deepest power saving")),
 ]
-COMMON_SETTINGS = {s for settings, _, _ in COMMON for s in settings}
+COMMON_SETTINGS = {s for settings, _title, _fixes in COMMON for s in settings}
 
 SECURITY = N_("It turns off or weakens a security protection.")
 NO_DESKTOP = N_("The computer would start without the desktop: a text screen or a rescue shell.")
@@ -127,7 +122,8 @@ def risk(setting):
 
 def merged(current, adding):
     """current with adding put in: a setting with the same name replaces the old one, and none is doubled."""
-    out = [s for s in current if name(s) not in {name(a) for a in adding}]
+    replaced = {name(a) for a in adding}
+    out = [s for s in current if name(s) not in replaced]
     for s in adding:
         if name(s) not in {name(x) for x in out}:
             out.append(s)
@@ -136,33 +132,20 @@ def merged(current, adding):
 
 def added():
     """The settings Wheelhouse added (and may take out)."""
-    try:
-        options = json.loads(STATE.read_text()).get("options", [])
-    except (OSError, ValueError, AttributeError):
-        return []
-    return [s for s in options if isinstance(s, str) and not problem(s)]
+    return [s for s in health.boot_options() if not problem(s)]
 
 
 def next_start():
-    """The settings the next start uses (a waiting version's, or this one's), or None when they can't be read.
-    rpm-ostree tells anyone this, with no password."""
-    try:
-        r = subprocess.run(["/usr/bin/rpm-ostree", "kargs"], capture_output=True, text=True, timeout=60)
-    except (OSError, subprocess.TimeoutExpired):
-        return None
-    return r.stdout.split() if r.returncode == 0 else None
+    """The settings the next start uses (a waiting version's, or this one's), or None when unreadable."""
+    r = answer(["/usr/bin/rpm-ostree", "kargs"], 60)
+    return r.stdout.split() if r and r.returncode == 0 else None
 
 
 def running():
     """The settings this start used."""
-    try:
-        return Path("/proc/cmdline").read_text().split()
-    except OSError:
-        return []
+    return health.read("/proc/cmdline").split()
 
 
 def same(next_settings, running_settings):
     """Whether the next start uses the settings this one did (the boot menu's own entries aside)."""
-    def own(settings):
-        return sorted(s for s in settings if name(s) not in ("boot_image", "initrd", "ostree"))
-    return own(next_settings) == own(running_settings)
+    return health.own_args(next_settings) == health.own_args(running_settings)

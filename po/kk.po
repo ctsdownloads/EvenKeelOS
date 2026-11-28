@@ -627,13 +627,6 @@ msgid "ArtCraft's signature is checked first, and it updates once a day."
 msgstr ""
 "Алдымен ArtCraft қолтаңбасы тексеріледі және ол күніне бір рет жаңартылады."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Пароль қойылған Wi-Fi немесе сымды желінің «Үй», «Жұмыс» не «Қоғамдық орын» "
-"екенін бір рет сұрайды"
-
 msgid "At each login"
 msgstr "Әр кірген сайын"
 
@@ -1570,14 +1563,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS үшін UEFI қажет. BIOS-та UEFI-ді қосыңыз, содан кейін USB "
 "флешкасынан қайта іске қосыңыз."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS үшін кем дегенде 20 ГБ қажет."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS 8 ГБ немесе одан көп жадпен жақсы жұмыс істейді, сондықтан баяу "
-"болуы мүмкін."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3692,26 +3677,6 @@ msgstr "Жаңа жүктеу көзінен қолданбалар тізімі
 msgid "Recommended"
 msgstr "Ұсынылады"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Ұсыныс: «Қорапты жою». Ол шамамен {size} босатады және келесі рет {apps} "
-"орнатқанда өздігінен қайта пайда болады. Қорапқа басқа жолмен қосылған "
-"нәрселер де жойылады. Файлдарыңызға тиіспейді."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Ұсыныс: «Қорапты жою». Ол дискідегі өз орнын босатады және келесі рет {apps} "
-"орнатқанда өздігінен қайта пайда болады. Қорапқа басқа жолмен қосылған "
-"нәрселер де жойылады. Файлдарыңызға тиіспейді."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3813,13 +3778,6 @@ msgstr "Медиа кодектерін жою керек пе?"
 
 msgid "Remove the test marker"
 msgstr "Сынақ белгісін жою"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Алдымен оларды жойыңыз:  codecs remove  командасын орындап, қайта іске "
-"қосыңыз, содан кейін «Барлығы» опциясын қайта таңдаңыз."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Компьютерге енді қажет емес нәрселерді жою"
@@ -6028,9 +5986,6 @@ msgstr ""
 "Жаңартулар: автоматты, {maker} компаниясының өз жүктеу көзінен. Күнделікті "
 "тексеру жаңа нұсқаларды табады, олар келесі қайта іске қосқанда басталады."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Жаңартулар: автоматты, «Жүйені жаңарту» арқылы."
-
 msgid "Updates: automatic."
 msgstr "Жаңартулар: автоматты."
 
@@ -6722,13 +6677,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage сақтау орнын тазалау"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"Бұл жүйенің бұрынғы нұсқасынан (negativo17) алынған кодектер әлі де "
-"орнатылған."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;кодектер;кодек;бейне;аудио;медиа;орнату;"
@@ -7172,16 +7120,6 @@ msgstr "{name} іске қосылмады."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} — қоғамдық орын"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} Bazaar қолданбалар дүкенінен орнатылып қойған.\n"
-"\n"
-"Ұсыныс: «Оны ашу»."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8236,12 +8174,6 @@ msgstr "zip және sit файлдарын ашу"
 msgid "opening zip files"
 msgstr "zip файлдарын ашу"
 
-msgid "organising and developing photos"
-msgstr "фотосуреттерді реттеу және өңдеу"
-
-msgid "organising photos"
-msgstr "фотосуреттерді реттеу"
-
 msgid "organizing music"
 msgstr "музыканы реттеу"
 
@@ -8790,3 +8722,40 @@ msgstr "Жүктеу көздерін Fedora 45-тің жаңа бумасына
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Fedora 45-ке көшу"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Қаріптер мен мәтін өлшемі EvenKeelOS-тың өз күйіне қайтарылды."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Ұсыныс: «Қорапты жою». Ол келесі рет {apps} орнатқанда өздігінен қайта пайда болады. Қорапқа басқа жолмен қосылған нәрселер де жойылады. Файлдарыңызға тиіспейді."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Оны жою шамамен {size} босатады."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Пароль қойылған Wi-Fi желісінің «Үй», «Жұмыс» не «Қоғамдық орын» екенін бір рет сұрайды"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS үшін кем дегенде {gb} ГБ қажет."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS {gb} ГБ немесе одан көп жадпен жақсы жұмыс істейді, сондықтан баяу болуы мүмкін."
+
+msgid "organizing and developing photos"
+msgstr "фотосуреттерді реттеу және өңдеу"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} үшін Fedora {version} қолтаңба кілті әлі жоқ."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} қосылмады, сондықтан оның жүктеп алу көзі қайта жойылды."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} жойылмады."

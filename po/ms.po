@@ -635,13 +635,6 @@ msgstr ""
 "Tandatangan ArtCraft disemak terlebih dahulu, dan ia dikemas kini sekali "
 "sehari."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Bertanya sekali sama ada rangkaian Wi-Fi berkata laluan atau rangkaian "
-"berwayar ialah Rumah, Tempat Kerja atau Tempat Awam"
-
 msgid "At each login"
 msgstr "Setiap kali log masuk"
 
@@ -1578,14 +1571,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS memerlukan UEFI. Hidupkan UEFI dalam BIOS, kemudian mulakan sekali"
 " lagi daripada pemacu kilat USB."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS memerlukan sekurang-kurangnya 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS berfungsi paling baik dengan 8 GB atau lebih, jadi ia mungkin "
-"lambat."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3707,28 +3692,6 @@ msgstr "Membaca senarai aplikasi daripada sumber muat turun baharu"
 msgid "Recommended"
 msgstr "Disyorkan"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Disyorkan: Hapuskan kotak. Ia membebaskan kira-kira {size}, dan akan muncul "
-"semula dengan sendirinya pada kali seterusnya anda memasang {apps}. Apa-apa "
-"sahaja yang ditambah ke dalam kotak melalui cara lain juga akan dihapuskan. "
-"Fail anda tidak disentuh."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Disyorkan: Hapuskan kotak. Ia membebaskan ruang cakeranya, dan akan muncul "
-"semula dengan sendirinya pada kali seterusnya anda memasang {apps}. Apa-apa "
-"sahaja yang ditambah ke dalam kotak melalui cara lain juga akan dihapuskan. "
-"Fail anda tidak disentuh."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3832,13 +3795,6 @@ msgstr "Buang kodek media?"
 
 msgid "Remove the test marker"
 msgstr "Buang penanda ujian"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Buang dahulu: jalankan  codecs remove , mulakan semula, kemudian pilih "
-"Semuanya sekali lagi."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Buang perkara yang sudah tidak diperlukan oleh komputer"
@@ -6051,9 +6007,6 @@ msgstr ""
 "harian mencari versi baharu, yang akan mula digunakan selepas komputer "
 "dimulakan semula seterusnya."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Kemas kini: automatik, melalui Kemas Kini Sistem."
-
 msgid "Updates: automatic."
 msgstr "Kemas kini: automatik."
 
@@ -6759,11 +6712,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage bersihkan storan"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "kodek daripada versi terdahulu sistem ini (negativo17) masih dipasang."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr "codecs;codec;ffmpeg;h264;video;audio;media;install;kodek;pasang;"
 
@@ -7209,16 +7157,6 @@ msgstr "{name} tidak bermula."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} ialah Tempat Awam"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} sudah dipasang daripada Bazaar, kedai aplikasi.\n"
-"\n"
-"Disyorkan: Bukanya."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8271,12 +8209,6 @@ msgstr "membuka fail zip dan sit"
 msgid "opening zip files"
 msgstr "membuka fail zip"
 
-msgid "organising and developing photos"
-msgstr "menyusun dan memproses foto"
-
-msgid "organising photos"
-msgstr "menyusun foto"
-
 msgid "organizing music"
 msgstr "menyusun muzik"
 
@@ -8825,3 +8757,40 @@ msgstr "Baca sumber muat turun dalam folder baharu Fedora 45"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Beralih kepada Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Fon dan saiz teks sudah kembali kepada asal EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Disyorkan: Hapuskan kotak. Kotak akan muncul semula dengan sendirinya pada kali seterusnya anda memasang {apps}. Apa-apa sahaja yang ditambah ke dalam kotak melalui cara lain juga akan dihapuskan. Fail anda tidak disentuh."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Menghapuskannya membebaskan kira-kira {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Bertanya sekali sama ada rangkaian Wi-Fi berkata laluan ialah Rumah, Tempat Kerja atau Tempat Awam"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS memerlukan sekurang-kurangnya {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS berfungsi paling baik dengan {gb} GB atau lebih, jadi ia mungkin lambat."
+
+msgid "organizing and developing photos"
+msgstr "menyusun dan memproses foto"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} belum mempunyai kunci penandatanganan untuk Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} tidak ditambah, jadi sumber muat turunnya dibuang semula."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} tidak dibuang."

@@ -1,7 +1,4 @@
-"""What works on this computer, saved after each good start; a new version on trial must keep all of it working.
-
-Each item lists what must still be there for its loss to count, so unplugged or switched-off hardware never counts.
-"""
+"""What works on this computer, saved after each good start; a new version on trial must keep all of it working."""
 import json
 import os
 import re
@@ -10,17 +7,19 @@ import sys
 import time
 from pathlib import Path
 
-from evenkeel_os_ui import _, N_
+import evenkeel_os_network as net
+from evenkeel_os_ui import _, N_, answer, write_file
 
 ROOT = Path("/")                       # the build checks point this at a made-up computer
 RECORD = "/var/lib/evenkeel-os/health-record.json"
 LOST = "/var/lib/evenkeel-os/health-lost"
 DISK_UNLOCK_ON = "/var/lib/evenkeel-os/disk-unlock-on"
+PAUSE = "/var/lib/evenkeel-os/updates-paused-until"   # after an undo; read by evenkeel-os-updates-pause-check
 BOOT_OPTIONS = "/var/lib/evenkeel-os/boot-options.json"
 SHARED_FOLDERS = "/etc/evenkeel-os/shared-folders.json"
 SHARES = "/etc/samba/evenkeel-shares.conf"     # the shares Samba is given (folders with a sharing password)
-TPM_PCRS = ("7", "14")                          # what automatic disk unlock is tied to (evenkeel-os-tools-admin)
-PLACES = ("evenkeel-public", "evenkeel-home", "evenkeel-work")    # evenkeel_os_network's zones (a build check)
+TPM_PCRS = ("7", "14")                          # what automatic disk unlock is tied to
+PLACES = (net.PUBLIC, net.HOME, net.WORK)
 # Real services the "A system service fails" test may break (each has the test drop-in); the first one running.
 TEST_SERVICES = ("ModemManager.service", "switcheroo-control.service")
 FORMAT = 2
@@ -30,8 +29,7 @@ WAIT = 120                              # seconds a trial start waits for slow d
 QUESTION = "/run/evenkeel-os/restart-question"
 KEEP = "/run/evenkeel-os/restart-keep"
 COUNTDOWN = 120                         # seconds a real problem waits for an answer (evenkeel-os-tools too)
-# Crash messages of the system core itself: a kind seen now but not at the last good start counts. An app's own
-# fault ("traps: app[pid] general protection fault"), GPU hangs (often one app's) and firmware restarts don't.
+# Only the system core's own crashes count: not an app's fault (traps: ...), GPU hangs or firmware restarts.
 CRASHES = {"kernel-bug": re.compile(r"\bBUG: |kernel BUG at "), "oops": re.compile(r"\bOops: "),
            "gpf": re.compile(r"^(?!traps: ).*general protection fault")}
 CRASH_NAMES = {"kernel-bug": N_("The system core reported a bug"),
@@ -47,20 +45,23 @@ def rel(p):
     return "/" + str(Path(p).relative_to(ROOT))
 
 
-def read(path, default=""):
+def text(path, default=""):
+    """A file's text, stripped; default when it can't be read."""
     try:
-        return P(path).read_text().strip()
+        return Path(path).read_text().strip()
     except (OSError, UnicodeDecodeError):
         return default
 
 
+def read(path, default=""):
+    """A file of this computer (under ROOT, which the build checks point at a made-up computer)."""
+    return text(P(path), default)
+
+
 def run(cmd, timeout=30):
     """(exit code, output); 127 when the program is missing or hangs."""
-    try:
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, env=dict(os.environ, LC_ALL="C"))
-    except (OSError, subprocess.TimeoutExpired):
-        return 127, ""
-    return r.returncode, r.stdout
+    r = answer(cmd, timeout, env=dict(os.environ, LC_ALL="C"))
+    return (r.returncode, r.stdout) if r else (127, "")
 
 
 def link_name(p):
@@ -71,10 +72,7 @@ def link_name(p):
 
 def attr(d, name):
     """A sysfs attribute of a device folder."""
-    try:
-        return (Path(d) / name).read_text().strip()
-    except (OSError, UnicodeDecodeError):
-        return ""
+    return text(Path(d) / name)
 
 
 def subsystem(d):
@@ -158,8 +156,8 @@ def hardware(prefix, name, devices):
         if a is None or removable(a):
             continue
         item = items.setdefault(f"{prefix}:{akey(a)}", {"name": name, "needs": [need(a)], "modules": []})
-        if module(dev) not in item["modules"]:
-            item["modules"].append(module(dev))
+        if (m := module(dev)) not in item["modules"]:
+            item["modules"].append(m)
     return items
 
 
@@ -286,7 +284,8 @@ def fingerprint():
                    "net.reactivated.Fprint.Manager", "GetDevices"])
     if rc != 0 or len(out.split()) < 2 or out.split()[1] == "0":
         return {}
-    readers = [d for i, d in usb_devices().items() if i in fprint_ids() and not removable(d)]
+    supported = fprint_ids()
+    readers = [d for i, d in usb_devices().items() if i in supported and not removable(d)]
     if not readers:
         return {}
     return {"fingerprint": {"name": N_("The fingerprint reader"), "needs": [need(d) for d in readers]}}
@@ -328,7 +327,7 @@ def software():
     works("dns", N_("Looking up website names (DNS)"), run(["resolvectl", "query", "--legend=no", "localhost"])[0] == 0,
           [enabled(["systemd-resolved.service"])])
     cmdline = read("/proc/cmdline").split()
-    if P(DISK_UNLOCK_ON).exists() and any(a.startswith("rd.luks.uuid=") for a in cmdline):
+    if P(DISK_UNLOCK_ON).exists() and luks_uuids():
         rc, log = run(["journalctl", "-b", "-o", "cat", "--no-pager", "-t", "systemd-cryptsetup"])
         # An unreadable journal says nothing either way, so it counts as working.
         works("disk-unlock", N_("Automatic disk unlock"),
@@ -391,7 +390,7 @@ def drivers():
 def services():
     """Services running now (long-running ones: a one-time job may fail offline, which never counts)."""
     _rc, out = run(["systemctl", "list-units", "--type=service", "--state=running", "--plain", "--no-legend",
-                  "--no-pager"])
+                    "--no-pager"])
     items = {}
     for line in out.splitlines():
         f = line.lstrip("\u25cf* ").split(None, 4)      # a failed unit can start with a dot
@@ -404,7 +403,7 @@ def services():
 
 def failed_services():
     _rc, out = run(["systemctl", "list-units", "--type=service", "--state=failed", "--plain", "--no-legend",
-                  "--no-pager"])
+                    "--no-pager"])
     return {w for line in out.splitlines() for w in line.split()[:2] if w.endswith(".service")}
 
 
@@ -462,32 +461,70 @@ def holds(n):
     return not status.isdigit() or bool(int(status) & present)
 
 
-# What a start that only changed boot options (Wheelhouse, Boot options) still checks: those may switch hardware or
-# SELinux off on purpose (nomodeset, module_blacklist=, selinux=0), so hardware items are left to that choice.
+# Boot options may switch hardware or SELinux off on purpose, so a start that only changed them checks just these.
 SOFTWARE_KEYS = {"service", "printing", "power-modes", "update-program", "flatpak", "firmware-updater", "firewall",
                  "network-places", "clock-sync", "dns", "boot-options", "shared-folders"}
 
 
+def has_tpm():
+    """Whether there is a security chip (TPM) that automatic disk unlock can use."""
+    return Path("/dev/tpmrm0").exists()
+
+
+def secure_boot_on(sysfs="/sys"):
+    """True, False, or None when it can't be told (the firmware's SecureBoot setting: 4 bytes of flags, then 1 or 0)."""
+    for f in Path(sysfs, "firmware/efi/efivars").glob("SecureBoot-*"):
+        try:
+            data = f.read_bytes()
+        except OSError:
+            return None
+        return len(data) >= 5 and data[4] == 1
+    return None
+
+
+def own_args(args):
+    """Boot options without the boot menu's own entries, sorted."""
+    return sorted(a for a in args if a.split("=", 1)[0] not in ("BOOT_IMAGE", "initrd", "ostree"))
+
+
 def own_kargs():
     """This start's boot options, without the boot menu's own entries."""
-    return sorted(a for a in read("/proc/cmdline").split()
-                  if a.split("=", 1)[0] not in ("BOOT_IMAGE", "initrd", "ostree"))
+    return own_args(read("/proc/cmdline").split())
 
 
 def options_only(record=None):
-    """Whether this start's boot options differ from the last good start's (Wheelhouse, Boot options, also with an
-    update waiting), or it's the previous version with other boot options; never for a rollback test copy."""
-    if "evenkeel_os.test_rollback=" in read("/proc/cmdline"):
+    """Whether this start only changed boot options from the last good start's; never for a rollback test copy."""
+    if running_test() is not None:
         return False
     if record and isinstance(record.get("kargs"), list) and record["kargs"] != own_kargs():
         return True
-    rc, out = run(["rpm-ostree", "status", "--json"], 120)
+    return same_system() is True
+
+
+def deployments(*flags, timeout=120):
+    """The system versions on disk, newest first (rpm-ostree status --json), or None when it can't say."""
+    rc, out = run(["rpm-ostree", "status", "--json", *flags], timeout)
     try:
-        ds = json.loads(out)["deployments"]
+        ds = json.loads(out)["deployments"] if rc == 0 else None
+    except (ValueError, KeyError, TypeError):
+        return None
+    return ds if isinstance(ds, list) else None
+
+
+def requested(deployment):
+    """The package names added to a system version, by name or from a file (listed as name-version-release.arch)."""
+    return set(deployment.get("requested-packages", [])) | \
+        {n.rsplit("-", 2)[0] for n in deployment.get("requested-local-packages", [])}
+
+
+def same_system(timeout=120):
+    """Whether the version running and the other one on disk are the same system; None when it can't be told."""
+    try:
+        ds = deployments(timeout=timeout)
         booted = next(d["checksum"] for d in ds if d.get("booted"))
         other = next(d["checksum"] for d in ds if not d.get("booted"))
-    except (ValueError, KeyError, TypeError, StopIteration):
-        return False
+    except (KeyError, TypeError, StopIteration):
+        return None
     return booted == other
 
 
@@ -549,8 +586,7 @@ def loadable(mod):
 
 
 def test_args(kind):
-    """The extra kernel arguments a rollback test needs here, or an exit code: 7 no list of what works saved yet,
-    8 this computer doesn't have the thing the test breaks, 9 none of its drivers can be blocked (built in)."""
+    """Kernel arguments a rollback test needs, or an exit code: 7 no saved list, 8 nothing to break, 9 built in."""
     if kind not in DRIVER_TESTS and kind not in SOFTWARE_TESTS and kind != "service":
         return []
     rec = load()
@@ -572,9 +608,7 @@ def test_args(kind):
         return [f"module_blacklist={','.join(dict.fromkeys(own + sorted(mods)))}"]
     if kind in SOFTWARE_TESTS:
         return [] if SOFTWARE_TESTS[kind] in rec["items"] else 8
-    if kind == "service":
-        return [] if any(f"service:{u}" in rec["items"] for u in TEST_SERVICES) else 8
-    return []
+    return [] if any(f"service:{u}" in rec["items"] for u in TEST_SERVICES) else 8
 
 
 def load(path=RECORD):
@@ -585,13 +619,8 @@ def load(path=RECORD):
     return r if isinstance(r, dict) and r.get("format") == FORMAT and isinstance(r.get("items"), dict) else None
 
 
-def write(path, text):
-    p = P(path)
-    p.parent.mkdir(parents=True, exist_ok=True)
-    tmp = p.with_name(p.name + ".tmp")
-    tmp.write_text(text)
-    tmp.chmod(0o644)
-    os.replace(tmp, p)
+def write(path, content):
+    write_file(P(path), content)
 
 
 def record(settle=240):
@@ -641,15 +670,20 @@ def compare(wait=None, path=RECORD, note=False):
 USAGE = "Usage: evenkeel-os-health trial | record [--now] | compare [--no-wait] [--record=FILE]"
 
 
+def grubenv():
+    """The boot menu's saved settings, as name=value words."""
+    return run(["grub2-editenv", "/boot/grub2/grubenv", "list"])[1].split()
+
+
 def on_trial():
     """A new version greenboot is trying (named in the boot menu's settings), not a fallback to the previous one."""
-    env = run(["grub2-editenv", "/boot/grub2/grubenv", "list"])[1].split()
+    env = grubenv()
     return any(v.startswith("greenboot_next_deployment_id=") for v in env) and "boot_counter=-1" not in env
 
 
 def last_start():
     """Whether greenboot goes back after this failure (its retries are used up) instead of trying again."""
-    for v in run(["grub2-editenv", "/boot/grub2/grubenv", "list"])[1].split():
+    for v in grubenv():
         if v.startswith("boot_counter="):
             try:
                 return int(v.split("=", 1)[1]) <= 0
@@ -658,18 +692,46 @@ def last_start():
     return False
 
 
+def luks_uuids():
+    """The encrypted disks named at startup (rd.luks.uuid=), without their luks- prefix."""
+    return [a.split("=", 1)[1].removeprefix("luks-") for a in read("/proc/cmdline").split()
+            if a.startswith("rd.luks.uuid=")]
+
+
+def running_test():
+    """The rollback test this start runs (its kernel argument), or None."""
+    return next((a.split("=", 1)[1] for a in read("/proc/cmdline").split()
+                 if a.startswith("evenkeel_os.test_rollback=")), None)
+
+
+# Switched on from /usr (build.sh), so deleting /etc can't switch it off; systemctl is-enabled only reads /etc.
+GREENBOOT_ON = "/usr/lib/systemd/system/multi-user.target.wants/greenboot-healthcheck.service"
+
+
+def test_refusal():
+    """Why a rollback or settings test can't start now: (exit code, reason, []), or (0, "", the system versions)."""
+    masked = run(["systemctl", "is-enabled", "greenboot-healthcheck.service"])[1].strip().startswith("masked")
+    if not P(GREENBOOT_ON).exists() or masked:
+        return 4, "Automatic rollback is not turned on in this version, or it was switched off (masked).", []
+    if "boot_counter" not in read("/boot/grub2/grub.cfg"):
+        return 4, "The boot menu has no rollback counter: this computer was installed before automatic rollback.", []
+    if running_test() is not None:
+        return 6, "This start is a test copy; take its test marker off first.", []
+    ds = deployments()
+    if ds is None:
+        return 1, "The system versions couldn't be read.", []
+    if any(d.get("staged") for d in ds):
+        return 5, "An update is waiting for a restart.", []
+    return 0, "", ds
+
+
 def trial_kind():
     """The test this start runs, "boot-options" for the same system with other boot options, or "update"."""
-    for a in read("/proc/cmdline").split():
-        if a.startswith("evenkeel_os.test_rollback="):
-            return a.split("=", 1)[1]
+    test = running_test()
+    if test:
+        return test
     # As 90-evenkeel-os-rolled-back.sh tells them apart: the running version and the other one on disk.
-    try:
-        ds = json.loads(run(["rpm-ostree", "status", "--json"], 60)[1])["deployments"]
-        sums = [d["checksum"] for d in ds if d.get("booted")] + [d["checksum"] for d in ds if not d.get("booted")][:1]
-    except (ValueError, KeyError, TypeError):
-        return "update"
-    return "boot-options" if len(sums) == 2 and sums[0] == sums[1] else "update"
+    return "boot-options" if same_system(60) else "update"
 
 
 def desktop_user():
@@ -689,8 +751,7 @@ def desktop_user():
 
 
 def question(cmd, name, cap):
-    """Runs the window and waits for it: its exit code (0 restart now, 3 keep), or 1 when it can't start, the person
-    logs out or it runs past cap seconds (None: no limit)."""
+    """Window exit code (0 restart, 3 keep); 1 if it can't start, on logout or after cap seconds (None: no limit)."""
     try:
         p = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except OSError:

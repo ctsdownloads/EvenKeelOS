@@ -1,40 +1,37 @@
-#!/bin/bash
-# Daily version check: writes the newest versions into locked-versions.txt and lists each change in the notes file.
-# Run from the repository root:  build_files/update-locked-versions.sh NOTES-FILE
+#!/usr/bin/bash
+# Daily version check: writes the newest versions into locked-versions.txt; run from the repo root with NOTES-FILE.
 set -euo pipefail
 
 lock=build_files/locked-versions.txt
 notes=$1
-fedora=$(sed -n 's|^FROM quay.io/fedora-ostree-desktops/silverblue:\([0-9][0-9]*\)$|\1|p' Containerfile)
-[ -n "$fedora" ] || { echo "ERROR: no Fedora version found in the Containerfile"; exit 1; }
+fedora=$(build_files/fedora-version.sh)
 
 # Newest version of each locked package, asked from Copr by Fedora's own package tool.
 declare -A newest
+newest_of() {    # the arguments go to dnf5 repoquery; each package's newest version-release goes into newest[]
+  local found name version
+  found=$(docker run --rm "quay.io/fedora/fedora:$fedora" dnf5 -q repoquery --latest-limit=1 --arch=x86_64,noarch \
+    --qf '%{name} %{version}-%{release}\n' "$@")
+  while read -r name version; do
+    [ -n "$name" ] && newest[$name]=$version
+  done <<< "$found"
+}
 mapfile -t projects < <(awk '$1 == "copr" {print $2}' "$lock" | sort -u)
 for project in "${projects[@]}"; do
   mapfile -t names < <(awk -v p="$project" '$1 == "copr" && $2 == p {print $3}' "$lock")
   url="https://download.copr.fedorainfracloud.org/results/$project/fedora-$fedora-x86_64/"
-  found=$(docker run --rm "quay.io/fedora/fedora:$fedora" dnf5 -q repoquery --disablerepo='*' \
-    --repofrompath="copr,$url" --enablerepo=copr --latest-limit=1 --arch=x86_64,noarch \
-    --qf '%{name} %{version}-%{release}\n' "${names[@]}")
-  while read -r name version; do
-    [ -n "$name" ] && newest[$name]=$version
-  done <<< "$found"
+  newest_of --disablerepo='*' --repofrompath="copr,$url" --enablerepo=copr "${names[@]}"
 done
 
 # Newest Fedora version of each locked Fedora package, and the GNOME version extensions must support.
 mapfile -t fedora_names < <(awk '$1 == "fedora" {print $3}' "$lock")
-found=$(docker run --rm "quay.io/fedora/fedora:$fedora" dnf5 -q repoquery --latest-limit=1 --arch=x86_64,noarch \
-  --qf '%{name} %{version}-%{release}\n' gnome-shell "${fedora_names[@]}")
-while read -r name version; do
-  [ -n "$name" ] && newest[$name]=$version
-done <<< "$found"
+newest_of gnome-shell "${fedora_names[@]}"
 gnome=${newest[gnome-shell]%%.*}
 
 : > "$notes"
 new_lock=$(mktemp)
 while IFS= read -r line; do
-  read -r kind source name version _ <<< "$line" || true
+  read -r kind source name version _ <<< "$line"
   case $kind in
     copr) new=${newest[$name]:-}; label=$name; link="https://copr.fedorainfracloud.org/coprs/$source/package/$name/" ;;
     fedora) new=${newest[$name]:-}; label=$name

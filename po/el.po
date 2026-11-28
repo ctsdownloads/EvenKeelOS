@@ -652,13 +652,6 @@ msgstr ""
 "Η υπογραφή του ArtCraft ελέγχεται πρώτα, και η εφαρμογή ενημερώνεται μία φορά"
 " την ημέρα."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Ρωτά μία φορά αν ένα δίκτυο Wi-Fi με κωδικό ή ένα ενσύρματο δίκτυο είναι "
-"Σπίτι, Εργασία ή Δημόσιος χώρος"
-
 msgid "At each login"
 msgstr "Σε κάθε σύνδεση"
 
@@ -1617,14 +1610,6 @@ msgid ""
 msgstr ""
 "Το EvenKeelOS χρειάζεται UEFI. Ενεργοποιήστε το UEFI στο BIOS και, στη "
 "συνέχεια, ξεκινήστε ξανά από το φλασάκι USB."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "Το EvenKeelOS χρειάζεται τουλάχιστον 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"Το EvenKeelOS λειτουργεί καλύτερα με 8 GB ή περισσότερα, οπότε μπορεί να "
-"είναι αργό."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3794,28 +3779,6 @@ msgstr "Ανάγνωση της λίστας εφαρμογών από τη νέ
 msgid "Recommended"
 msgstr "Συνιστάται"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Συνιστάται: Διαγραφή του κουτιού. Απελευθερώνει περίπου {size} και "
-"δημιουργείται ξανά αυτόματα την επόμενη φορά που θα εγκαταστήσετε {apps}. "
-"Οτιδήποτε προστέθηκε στο κουτί με άλλον τρόπο διαγράφεται επίσης. Τα αρχεία "
-"σας παραμένουν ανέπαφα."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Συνιστάται: Διαγραφή του κουτιού. Απελευθερώνει τον χώρο του στον δίσκο και "
-"δημιουργείται ξανά αυτόματα την επόμενη φορά που θα εγκαταστήσετε {apps}. "
-"Οτιδήποτε προστέθηκε στο κουτί με άλλον τρόπο διαγράφεται επίσης. Τα αρχεία "
-"σας παραμένουν ανέπαφα."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3923,13 +3886,6 @@ msgstr "Να αφαιρεθούν οι κωδικοποιητές πολυμέσ
 
 msgid "Remove the test marker"
 msgstr "Αφαίρεση του δείκτη δοκιμής"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Αφαιρέστε τους πρώτα: εκτελέστε την εντολή  codecs remove , κάντε "
-"επανεκκίνηση και, στη συνέχεια, επιλέξτε ξανά «Όλα»."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Αφαίρεση στοιχείων που δεν χρειάζεται πλέον ο υπολογιστής"
@@ -6202,9 +6158,6 @@ msgstr ""
 "καθημερινός έλεγχος βρίσκει νέες εκδόσεις, οι οποίες ισχύουν από την επόμενη "
 "επανεκκίνηση."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Ενημερώσεις: αυτόματες, με την Ενημέρωση συστήματος."
-
 msgid "Updates: automatic."
 msgstr "Ενημερώσεις: αυτόματες."
 
@@ -6920,13 +6873,6 @@ msgstr "Chrome"
 msgid "clean storage"
 msgstr "καθαρισμός αποθηκευτικός χώρος clean storage"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"κωδικοποιητές από παλαιότερη έκδοση αυτού του συστήματος (negativo17) είναι "
-"ακόμα εγκατεστημένοι."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "κωδικοποιητές;κωδικοποιητής;ffmpeg;h264;βίντεο;ήχος;πολυμέσα;εγκατάσταση;codecs;codec;video;audio;media;install;"
@@ -7376,16 +7322,6 @@ msgstr "Το {name} δεν ξεκίνησε."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "Το {name} είναι Δημόσιος χώρος"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"Το {name} είναι ήδη εγκατεστημένο από το Bazaar, το κατάστημα εφαρμογών.\n"
-"\n"
-"Συνιστάται: Άνοιγμα."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8463,12 +8399,6 @@ msgstr "άνοιγμα αρχείων zip και sit"
 msgid "opening zip files"
 msgstr "άνοιγμα αρχείων zip"
 
-msgid "organising and developing photos"
-msgstr "οργάνωση και επεξεργασία φωτογραφιών"
-
-msgid "organising photos"
-msgstr "τακτοποίηση φωτογραφιών"
-
 msgid "organizing music"
 msgstr "οργάνωση μουσικής"
 
@@ -9017,3 +8947,40 @@ msgstr "Ανάγνωση των πηγών λήψης στον νέο φάκελ
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Μετάβαση στο Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Οι γραμματοσειρές και το μέγεθος κειμένου επέστρεψαν σε αυτά του EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Συνιστάται: Διαγραφή του κουτιού. Δημιουργείται ξανά αυτόματα την επόμενη φορά που θα εγκαταστήσετε {apps}. Οτιδήποτε προστέθηκε στο κουτί με άλλον τρόπο διαγράφεται επίσης. Τα αρχεία σας παραμένουν ανέπαφα."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Η διαγραφή του απελευθερώνει περίπου {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Ρωτά μία φορά αν ένα δίκτυο Wi-Fi με κωδικό είναι Σπίτι, Εργασία ή Δημόσιος χώρος"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "Το EvenKeelOS χρειάζεται τουλάχιστον {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "Το EvenKeelOS λειτουργεί καλύτερα με {gb} GB ή περισσότερα, οπότε μπορεί να είναι αργό."
+
+msgid "organizing and developing photos"
+msgstr "οργάνωση και επεξεργασία φωτογραφιών"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "Το {title} δεν έχει ακόμα κλειδί υπογραφής για το Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "Το {title} δεν προστέθηκε, γι' αυτό η πηγή λήψης του αφαιρέθηκε ξανά."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "Το {title} δεν αφαιρέθηκε."

@@ -636,13 +636,6 @@ msgstr ""
 "Najpierw sprawdzany jest podpis ArtCraft, a aktualizacje są sprawdzane raz "
 "dziennie."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Pyta jeden raz, czy sieć Wi-Fi lub przewodowa chroniona hasłem jest typu Dom,"
-" Praca czy Miejsce publiczne"
-
 msgid "At each login"
 msgstr "Przy każdym logowaniu"
 
@@ -1587,14 +1580,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS wymaga UEFI. Włącz UEFI w BIOS-ie, a następnie uruchom ponownie z "
 "pamięci USB."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS potrzebuje co najmniej 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS działa najlepiej z 8 GB pamięci lub więcej, więc może działać "
-"wolno."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3717,27 +3702,6 @@ msgstr "Odczytywanie listy aplikacji z nowego źródła pobierania"
 msgid "Recommended"
 msgstr "Zalecane"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Zalecane: Usuń kontener. Zwolni to około {size}, a kontener sam wróci przy "
-"następnej instalacji {apps}. Wszystko, co dodano do kontenera w inny sposób, "
-"również zostanie usunięte. Twoje pliki pozostaną nienaruszone."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Zalecane: Usuń kontener. Zwolni to zajmowane przez niego miejsce na dysku, a "
-"kontener sam wróci przy następnej instalacji {apps}. Wszystko, co dodano do "
-"kontenera w inny sposób, również zostanie usunięte. Twoje pliki pozostaną "
-"nienaruszone."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3840,13 +3804,6 @@ msgstr "Usunąć kodeki multimedialne?"
 
 msgid "Remove the test marker"
 msgstr "Usuń znacznik testowy"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Najpierw je usuń: uruchom  codecs remove , uruchom ponownie komputer, a potem"
-" ponownie wybierz „Wszystko”."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Usuń rzeczy, których komputer już nie potrzebuje"
@@ -6084,9 +6041,6 @@ msgstr ""
 "kontrola wyszukuje nowe wersje, które uruchamiają się przy następnym ponownym"
 " uruchomieniu."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Aktualizacje: automatyczne, za pomocą Aktualizacji systemu."
-
 msgid "Updates: automatic."
 msgstr "Aktualizacje: automatyczne."
 
@@ -6792,13 +6746,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage wyczyść czyszczenie miejsce dysk pamięć"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"Nadal są zainstalowane kodeki z wcześniejszej wersji tego systemu "
-"(negativo17)."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;kodeki;kodek;wideo;dźwięk;multimedia;instaluj;"
@@ -7238,16 +7185,6 @@ msgstr "Nie udało się uruchomić: {name}."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} to miejsce publiczne"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} jest już zainstalowane z Bazaaru, sklepu z aplikacjami.\n"
-"\n"
-"Zalecane: Otwórz to."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8320,12 +8257,6 @@ msgstr "otwieranie plików ZIP i SIT"
 msgid "opening zip files"
 msgstr "otwieranie plików ZIP"
 
-msgid "organising and developing photos"
-msgstr "porządkowanie i wywoływanie zdjęć"
-
-msgid "organising photos"
-msgstr "porządkowanie zdjęć"
-
 msgid "organizing music"
 msgstr "porządkowanie muzyki"
 
@@ -8874,3 +8805,40 @@ msgstr "Czytaj źródła pobierania w nowym folderze Fedory 45"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Przejdź na Fedorę 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Czcionki i rozmiar tekstu wróciły do ustawień EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Zalecane: Usuń kontener. Kontener sam wróci przy następnej instalacji {apps}. Wszystko, co dodano do kontenera w inny sposób, również zostanie usunięte. Twoje pliki pozostaną nienaruszone."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Usunięcie go zwolni około {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Pyta jeden raz, czy sieć Wi-Fi chroniona hasłem jest typu Dom, Praca czy Miejsce publiczne"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS potrzebuje co najmniej {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS działa najlepiej z {gb} GB pamięci lub więcej, więc może działać wolno."
+
+msgid "organizing and developing photos"
+msgstr "porządkowanie i wywoływanie zdjęć"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} nie ma jeszcze klucza podpisu dla Fedory {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} nie zostało dodane, więc jego źródło pobierania zostało ponownie usunięte."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} nie zostało usunięte."

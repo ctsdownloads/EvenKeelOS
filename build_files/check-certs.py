@@ -1,12 +1,6 @@
 #!/usr/bin/python3 -I
-"""Build check: certificate alerts catch expired, soon-expiring and removed certificates, and nothing else.
-
-Runs evenkeel-os-certs against made-up certificates in a scratch folder, then against this image's own trusted list
-(its alerts are printed as warnings: a new install shows them on its first day).
-"""
+"""Build check: certificate alerts catch expired, soon-expiring and removed certificates, and nothing else."""
 import datetime
-import importlib.machinery
-import importlib.util
 import json
 import os
 import sys
@@ -18,18 +12,14 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives.serialization import Encoding
 
+sys.path.insert(0, "/usr/lib/evenkeel-os")
+from evenkeel_os_ui import load_program  # noqa: E402
+
 HELPER = Path(sys.argv[1] if len(sys.argv) > 1 else "/usr/libexec/evenkeel-os-certs")
 
 
 def die(msg):
     sys.exit(f"ERROR: certificate alerts: {msg}")
-
-
-def module():
-    loader = importlib.machinery.SourceFileLoader("certs", str(HELPER))
-    m = importlib.util.module_from_spec(importlib.util.spec_from_loader("certs", loader))
-    loader.exec_module(m)
-    return m
 
 
 def make(name, days_left):
@@ -45,8 +35,15 @@ def kinds(m):
     return {(a["name"], a["kind"], a["added"]) for a in json.loads(m.ALERTS.read_text())}
 
 
+def read_removed(m):
+    """The removed certificate's alert, marked as read; its fingerprint."""
+    gone = next(a["fingerprint"] for a in json.loads(m.ALERTS.read_text()) if a["kind"] == "removed")
+    m.seen(gone)
+    return gone
+
+
 def main():
-    m = module()
+    m = load_program(HELPER, "certs")
     real = m.TRUSTED
     with tempfile.TemporaryDirectory() as d:
         d = Path(d)
@@ -74,12 +71,11 @@ def main():
         m.check(False)
         if ("Mine removed", "removed", True) not in kinds(m):
             die("a removed certificate's alert goes away by itself before it's read")
-        gone = next(a["fingerprint"] for a in json.loads(m.ALERTS.read_text()) if a["kind"] == "removed")
-        m.seen(gone)
+        read_removed(m)
         m.check(False)
         if kinds(m) != want:
             die("a removed certificate's alert stays after it was read")
-        if m.seen("../../x") != 2 or m.trusted("a" * 64 + "\n") != 2:
+        if m.main(["", "seen", "../../x"]) != 2 or m.main(["", "trusted", "a" * 64 + "\n"]) != 2:
             die("a bad fingerprint isn't refused")
         fp = {a["name"]: a["fingerprint"] for a in json.loads(m.ALERTS.read_text())}
         if m.trusted(fp["Mine expired"]) != 0:
@@ -93,8 +89,7 @@ def main():
             die("a file with two certificates isn't counted as two")
         (m.ADDED / "old.pem").unlink()
         m.check(False)
-        gone = next(a["fingerprint"] for a in json.loads(m.ALERTS.read_text()) if a["kind"] == "removed")
-        m.seen(gone)
+        gone = read_removed(m)
         m.TRUSTED.write_bytes(fine.public_bytes(Encoding.PEM))
         if m.trusted(gone) != 1:
             die("a removed certificate is still reported as trusted")
@@ -108,14 +103,14 @@ def main():
             m.check(True)
             if m.NOTIFIED.exists() != want_saved:
                 die(f"a notification that exits {rc} is {'not ' if want_saved else ''}marked as shown")
-    m = module()
+    m = load_program(HELPER, "certs")
     with tempfile.TemporaryDirectory() as d:
         m.STATE = Path(d)
         m.ALERTS, m.KNOWN, m.NOTIFIED = m.STATE / "a.json", m.STATE / "k.json", m.STATE / "n.json"
         m.BUILT_IN = real
         m.check(False)
         alerts = json.loads(m.ALERTS.read_text())
-        if not m.certs(m.read(real)):
+        if not m.certs(real.read_bytes()):
             die(f"no certificates read from {real}")
         # Not a build failure: Fedora's list is Fedora's; people with this version see the alert, as they should.
         for a in alerts:

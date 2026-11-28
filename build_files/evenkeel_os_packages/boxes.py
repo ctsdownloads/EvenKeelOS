@@ -22,8 +22,8 @@ def image_size(image):
     """Download size of a box image in MB: 0 if it is already on this computer, None if it cannot be found out."""
     if subprocess.run(["podman", "image", "exists", image], capture_output=True).returncode == 0:
         return 0
-    reg, _, rest = image.partition("/")
-    repo, _, tag = rest.rpartition(":")
+    reg, _slash, rest = image.partition("/")
+    repo, _colon, tag = rest.rpartition(":")
     arch = {"x86_64": "amd64", "aarch64": "arm64"}.get(platform.machine(), platform.machine())
     lists = "application/vnd.oci.image.index.v1+json,application/vnd.docker.distribution.manifest.list.v2+json"
     single = "application/vnd.oci.image.manifest.v1+json,application/vnd.docker.distribution.manifest.v2+json"
@@ -42,7 +42,7 @@ def image_size(image):
             digest = next(m["digest"] for m in man["manifests"] if m.get("platform", {}).get("architecture") == arch)
             man = get(digest, single)
         return max(1, sum(layer["size"] for layer in man["layers"]) // 1_000_000)
-    except Exception:
+    except (OSError, ValueError, KeyError, TypeError, StopIteration):     # offline, or an answer it can't read
         return None
 
 
@@ -103,11 +103,6 @@ def delete_box(kind):
     return ok
 
 
-def box_words(kind):
-    distro = "Fedora" if kind == "rpm" else "Ubuntu"
-    return distro, ("a" if kind == "rpm" else "an"), common.BOXES[kind]["label"]
-
-
 def first_time(kind):
     """What setting up the box takes, said before anything is downloaded, and the download size."""
     size = image_size(common.BOXES[kind]["image"])
@@ -128,6 +123,11 @@ HELPER_CHECK = "command -v zenity >/dev/null && command -v notify-send >/dev/nul
 
 def helpers_mark(kind):
     return common.STATE.with_name(f"helpers-{common.BOXES[kind]['name']}")
+
+
+def helpers_added(kind):
+    helpers_mark(kind).parent.mkdir(parents=True, exist_ok=True)
+    helpers_mark(kind).touch()
 
 
 def helper_steps(kind):
@@ -152,26 +152,20 @@ def install_steps(kind, title, target, doing=N_("Installing {title}"), dnf_verb=
 
 def ensure_helpers(kind, quiet=False):
     """Make sure the box has the desktop helpers. Done once per box; remembered after that."""
-    mark = helpers_mark(kind)
     box = common.BOXES[kind]["name"]
-    if mark.exists() or not box_exists(box):
+    if helpers_mark(kind).exists() or not box_exists(box):
         return True
     if subprocess.run(in_box(box, "sh", "-c", HELPER_CHECK), capture_output=True).returncode != 0:
-        if quiet:
-            ok = all(subprocess.run(cmd, capture_output=True).returncode == 0 for label, cmd in helper_steps(kind))
-        else:
-            ok = windows.run_steps(_("Preparing the {label}.").format(label=_(common.BOXES[kind]["label"])),
-                                   helper_steps(kind))
-        if not ok:
+        if not windows.run_steps(_("Preparing the {label}.").format(label=_(common.BOXES[kind]["label"])),
+                                 helper_steps(kind), quiet=quiet):
             return False
-    mark.parent.mkdir(parents=True, exist_ok=True)
-    mark.touch()
+    helpers_added(kind)
     return True
 
 
 def setup_box(kind, size=None, again=False):
     """Make the box, with plain steps and a Cancel button. Cancel or failure leaves no half-made box."""
-    label = _(box_words(kind)[2])
+    label = _(common.BOXES[kind]["label"])
     box = common.BOXES[kind]
     steps = []
     if size != 0:
@@ -190,8 +184,7 @@ def setup_box(kind, size=None, again=False):
     # also as a notification, so it is seen even if the progress window opens behind another window
     notify(_("{heading} It takes a few minutes; a progress window shows each step.").format(heading=heading))
     if windows.run_steps(heading, steps, cancel=True):
-        helpers_mark(kind).parent.mkdir(parents=True, exist_ok=True)
-        helpers_mark(kind).touch()
+        helpers_added(kind)
         return True
     subprocess.run(["distrobox", "rm", "--force", box["name"]], capture_output=True)
     if windows.CANCELLED:
@@ -210,7 +203,7 @@ def box_works(name):
 
 def repair(kind, why="", confirm=True):
     """Make a broken box again from scratch and put back the apps that were installed in it."""
-    label = _(box_words(kind)[2])
+    label = _(common.BOXES[kind]["label"])
     box = common.BOXES[kind]["name"]
     inside = [r for r in app_list.load() if r["where"] == box]
     names = ", ".join(r["title"] for r in inside) or _("none")

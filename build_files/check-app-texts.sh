@@ -1,7 +1,5 @@
-#!/bin/bash
-# The outside apps' text at their locked versions is the text we translated (po/apps/APP.pot), and every
-# translation file is valid. Fails when a newer locked version brings new text: translate it, see
-# docs/building.md#translations. Needs curl, jq, rpm2cpio, cpio and gettext. Run from the repository root.
+#!/usr/bin/bash
+# From the repo root: fails when a locked app version brings untranslated text (docs/building.md#translations).
 set -euo pipefail
 export LC_ALL=C.UTF-8
 work=$(mktemp -d)

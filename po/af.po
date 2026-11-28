@@ -628,13 +628,6 @@ msgstr ""
 "ArtCraft se handtekening word eers nagegaan, en dit word een keer per dag "
 "bygewerk."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Vra een keer of 'n Wi-Fi- of bedrade netwerk met 'n wagwoord Tuis, Werk of 'n"
-" Openbare plek is"
-
 msgid "At each login"
 msgstr "By elke aanmelding"
 
@@ -1558,12 +1551,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS het UEFI nodig. Skakel UEFI in die BIOS aan, en begin dan weer "
 "vanaf die USB-stokkie."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS benodig ten minste 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr "EvenKeelOS werk die beste met 8 GB of meer, so dit kan stadig wees."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3657,26 +3644,6 @@ msgstr "Besig om die lys van toepassings vanaf die nuwe aflaaibron te lees"
 msgid "Recommended"
 msgstr "Aanbeveel"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Aanbeveel: Verwyder die boks. Dit maak sowat {size} vry, en kom vanself terug"
-" die volgende keer as u {apps} installeer. Enigiets wat op 'n ander manier by"
-" die boks gevoeg is, word ook verwyder. U lêers word nie geraak nie."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Aanbeveel: Verwyder die boks. Dit maak sy skyfspasie vry, en kom vanself "
-"terug die volgende keer as u {apps} installeer. Enigiets wat op 'n ander "
-"manier by die boks gevoeg is, word ook verwyder. U lêers word nie geraak nie."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3779,13 +3746,6 @@ msgstr "Verwyder die mediakodeks?"
 
 msgid "Remove the test marker"
 msgstr "Verwyder die toetsmerker"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Verwyder hulle eers: voer  codecs remove  uit, herbegin, en kies dan weer "
-"Alles."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Verwyder dinge wat die rekenaar nie meer nodig het nie"
@@ -5978,9 +5938,6 @@ msgstr ""
 "Bywerkings: outomaties, vanaf {maker} se eie aflaaibron. 'n Daaglikse "
 "kontrole vind nuwe weergawes, wat by die volgende herbegin begin."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Bywerkings: outomaties, met Stelselbywerking."
-
 msgid "Updates: automatic."
 msgstr "Bywerkings: outomaties."
 
@@ -6674,13 +6631,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage berging skoonmaak"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr ""
-"Kodeks van 'n vroeëre weergawe van hierdie stelsel (negativo17) is nog steeds"
-" geïnstalleer."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr ""
 "codecs;codec;ffmpeg;h264;video;audio;media;install;kodeks;kodek;klank;installeer;"
@@ -7122,16 +7072,6 @@ msgstr "{name} het nie begin nie."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} is 'n Openbare plek"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} is reeds vanaf Bazaar, die toepassingswinkel, geïnstalleer.\n"
-"\n"
-"Aanbeveel: Maak dit oop."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8191,12 +8131,6 @@ msgstr "zip- en sit-lêers oopmaak"
 msgid "opening zip files"
 msgstr "zip-lêers oopmaak"
 
-msgid "organising and developing photos"
-msgstr "foto's organiseer en ontwikkel"
-
-msgid "organising photos"
-msgstr "foto's organiseer"
-
 msgid "organizing music"
 msgstr "musiek organiseer"
 
@@ -8745,3 +8679,40 @@ msgstr "Lees aflaaibronne in Fedora 45 se nuwe gids"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Skuif na Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Lettertipes en teksgrootte is terug na EvenKeelOS se eie."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Aanbeveel: Verwyder die boks. Dit kom vanself terug die volgende keer as u {apps} installeer. Enigiets wat op 'n ander manier by die boks gevoeg is, word ook verwyder. U lêers word nie geraak nie."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Dit maak sowat {size} vry as dit verwyder word."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Vra een keer of 'n Wi-Fi-netwerk met 'n wagwoord Tuis, Werk of 'n Openbare plek is"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS benodig ten minste {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS werk die beste met {gb} GB of meer, so dit kan stadig wees."
+
+msgid "organizing and developing photos"
+msgstr "foto's organiseer en ontwikkel"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} het nog nie 'n handtekeningsleutel vir Fedora {version} nie."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} is nie bygevoeg nie, so die aflaaibron is weer verwyder."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} is nie verwyder nie."

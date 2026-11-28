@@ -5,7 +5,8 @@ were removed. Runs as the person logged in, needs no administrator rights, and c
   evenkeel-os-certs check            write the alerts to ~/.local/state/evenkeel-os/cert-alerts.json
   evenkeel-os-certs check --notify   the same, with a notification when the alerts changed
   evenkeel-os-certs seen FINGERPRINT a removed certificate's alert was read: drop it
-  evenkeel-os-certs trusted FINGERPRINT   exit 0 when that certificate is still trusted, 1 when it isn't
+  evenkeel-os-certs trusted FINGERPRINT   exit 0 when that certificate is still trusted, 1 when it isn't, 2 when
+                                     the trusted list can't be read
 """
 import datetime
 import hashlib
@@ -21,7 +22,7 @@ from cryptography import x509
 from cryptography.hazmat.primitives.serialization import Encoding
 
 sys.path.insert(0, "/usr/lib/evenkeel-os")
-from evenkeel_os_ui import _, ngettext  # noqa: E402
+from evenkeel_os_ui import _, ngettext, save_json  # noqa: E402
 
 TRUSTED = Path("/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem")    # what secure connections trust now
 BUILT_IN = Path("/usr/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem")    # this version's own list (ostree)
@@ -61,13 +62,6 @@ def describe(cert, file=""):
             "file": file}
 
 
-def read(path):
-    try:
-        return path.read_bytes()
-    except OSError:
-        return b""
-
-
 def added():
     """{fingerprint: description} of the certificates in ADDED (regular files only)."""
     out = {}
@@ -76,7 +70,10 @@ def added():
     except OSError:
         return out
     for p in files:
-        found = certs(read(p))
+        try:
+            found = certs(p.read_bytes())
+        except OSError:         # gone since the folder was listed, or not readable to this account
+            continue
         for c in found:
             d = describe(c, p.name)
             d["in_file"] = len(found)      # removing the file removes them all
@@ -91,19 +88,12 @@ def load(path, default):
         return default
 
 
-def save(path, data):
-    STATE.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_name(path.name + ".new")
-    tmp.write_text(json.dumps(data, indent=1))
-    os.replace(tmp, path)
-
-
 def trusted_now():
     """{fingerprint: description} trusted now (the system list and the added files), the added ones, built-in ones."""
     mine = added()
-    built_in = {describe(c)["fingerprint"] for c in certs(read(BUILT_IN))}
+    built_in = {describe(c)["fingerprint"] for c in certs(BUILT_IN.read_bytes())}
     trusted = {}
-    for c in certs(read(TRUSTED)):
+    for c in certs(TRUSTED.read_bytes()):
         d = describe(c)
         trusted[d["fingerprint"]] = d
     trusted.update(mine)
@@ -112,7 +102,11 @@ def trusted_now():
 
 def check(notify):
     now = datetime.datetime.now(datetime.timezone.utc)
-    trusted, mine, built_in = trusted_now()
+    try:
+        trusted, mine, built_in = trusted_now()
+    except OSError as e:
+        print(f"The trusted certificate list couldn't be read: {e}")
+        return 1
     alerts = []
     for fp, d in sorted(trusted.items(), key=lambda kv: kv[1]["ends"]):
         ends = datetime.datetime.fromisoformat(d["ends"])
@@ -129,12 +123,12 @@ def check(notify):
     for fp, d in known.items():
         if fp not in mine:
             alerts.append({**d, "kind": "removed", "added": True})
-    save(KNOWN, {**known, **mine})
-    save(ALERTS, alerts)
+    save_json(KNOWN, {**known, **mine})
+    save_json(ALERTS, alerts)
     if notify:
         keys = sorted(f"{a['kind']} {a['fingerprint']}" for a in alerts)
         if not alerts:
-            save(NOTIFIED, keys)
+            save_json(NOTIFIED, keys)
         elif keys != load(NOTIFIED, []) and os.path.exists(NOTIFY):
             n = len(alerts)
             text = ngettext("{n} security certificate expired, expire within 30 days or were removed. "
@@ -144,7 +138,7 @@ def check(notify):
             r = subprocess.run([NOTIFY, "--app-name=Wheelhouse", "--icon=security-high-symbolic",
                                 _("Certificate alert"), text], capture_output=True, text=True)
             if r.returncode == 0:       # marked as shown only once it was: tried again at the next check otherwise
-                save(NOTIFIED, keys)
+                save_json(NOTIFIED, keys)
             else:
                 print(f"The notification couldn't be shown: {r.stderr.strip()}")
     print(f"{len(trusted)} trusted certificates, {len(mine)} added here; {len(alerts)} alerts.")
@@ -152,30 +146,27 @@ def check(notify):
 
 
 def seen(fp):
-    if not FINGERPRINT.fullmatch(fp):
-        print(__doc__)
-        return 2
     known = load(KNOWN, {})
     known.pop(fp, None)
-    save(KNOWN, known)
-    save(ALERTS, [a for a in load(ALERTS, []) if not (a.get("kind") == "removed" and a.get("fingerprint") == fp)])
+    save_json(KNOWN, known)
+    save_json(ALERTS, [a for a in load(ALERTS, []) if not (a.get("kind") == "removed" and a.get("fingerprint") == fp)])
     return 0
 
 
 def trusted(fp):
-    if not FINGERPRINT.fullmatch(fp):
-        print(__doc__)
+    """0: trusted, 1: not trusted, 2: the trusted list couldn't be read."""
+    try:
+        return 0 if fp in trusted_now()[0] else 1
+    except OSError as e:
+        print(f"The trusted certificate list couldn't be read: {e}")
         return 2
-    return 0 if fp in trusted_now()[0] else 1
 
 
 def main(argv):
     if argv[1:] in (["check"], ["check", "--notify"]):
         return check(len(argv) == 3)
-    if len(argv) == 3 and argv[1] == "seen":
-        return seen(argv[2])
-    if len(argv) == 3 and argv[1] == "trusted":
-        return trusted(argv[2])
+    if len(argv) == 3 and argv[1] in ("seen", "trusted") and FINGERPRINT.fullmatch(argv[2]):
+        return (seen if argv[1] == "seen" else trusted)(argv[2])
     print(__doc__)
     return 2
 

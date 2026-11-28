@@ -627,13 +627,6 @@ msgstr ""
 "Tanda tangan ArtCraft diperiksa terlebih dahulu, dan diperbarui sekali "
 "sehari."
 
-msgid ""
-"Asks once whether a password Wi-Fi or wired network is Home, Work or a Public"
-" place"
-msgstr ""
-"Menanyakan sekali apakah jaringan Wi-Fi berkata sandi atau jaringan kabel "
-"termasuk Rumah, Kantor, atau Tempat umum"
-
 msgid "At each login"
 msgstr "Setiap kali masuk"
 
@@ -1567,14 +1560,6 @@ msgid ""
 msgstr ""
 "EvenKeelOS memerlukan UEFI. Aktifkan UEFI di BIOS, lalu mulai lagi dari "
 "flashdisk USB."
-
-msgid "EvenKeelOS needs at least 20 GB."
-msgstr "EvenKeelOS membutuhkan setidaknya 20 GB."
-
-msgid "EvenKeelOS works best with 8 GB or more, so it may be slow."
-msgstr ""
-"EvenKeelOS paling lancar dengan RAM 8 GB ke atas, jadi mungkin akan terasa "
-"lambat."
 
 msgid ""
 "Every EvenKeelOS tool in one place: updates, apps, VPNs, disk and startup, "
@@ -3672,28 +3657,6 @@ msgstr "Membaca daftar aplikasi dari sumber unduhan baru"
 msgid "Recommended"
 msgstr "Disarankan"
 
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees about {size}, and comes back by itself "
-"the next time you install {apps}. Anything added to the box another way is "
-"deleted too. Your files are not touched."
-msgstr ""
-"Disarankan: Hapus kotak. Ini mengosongkan sekitar {size}, dan kotak akan "
-"muncul kembali dengan sendirinya saat Anda menginstal {apps} lagi. Apa pun "
-"yang ditambahkan ke kotak dengan cara lain juga ikut dihapus. Berkas Anda "
-"tidak disentuh."
-
-#, python-brace-format
-msgid ""
-"Recommended: Delete the box. It frees its disk space, and comes back by "
-"itself the next time you install {apps}. Anything added to the box another "
-"way is deleted too. Your files are not touched."
-msgstr ""
-"Disarankan: Hapus kotak. Ini mengosongkan ruang disknya, dan kotak akan "
-"muncul kembali dengan sendirinya saat Anda menginstal {apps} lagi. Apa pun "
-"yang ditambahkan ke kotak dengan cara lain juga ikut dihapus. Berkas Anda "
-"tidak disentuh."
-
 msgid ""
 "Recommended: Go back now. The computer restarts on the version that worked "
 "before. Your files and apps aren't touched. If automatic updates are on, they"
@@ -3797,12 +3760,6 @@ msgstr "Hapus codec media?"
 
 msgid "Remove the test marker"
 msgstr "Hapus penanda uji"
-
-msgid ""
-"Remove them first: run  codecs remove , restart, then choose Everything "
-"again."
-msgstr ""
-"Hapus dulu: jalankan  codecs remove , mulai ulang, lalu pilih Semua lagi."
 
 msgid "Remove things the computer no longer needs"
 msgstr "Hapus hal-hal yang sudah tidak dibutuhkan komputer"
@@ -5982,9 +5939,6 @@ msgstr ""
 "harian menemukan versi baru, yang mulai digunakan saat komputer dimulai ulang"
 " berikutnya."
 
-msgid "Updates: automatic, with System Update."
-msgstr "Pembaruan: otomatis, dengan Pembaruan Sistem."
-
 msgid "Updates: automatic."
 msgstr "Pembaruan: otomatis."
 
@@ -6676,11 +6630,6 @@ msgstr "chrome"
 msgid "clean storage"
 msgstr "clean storage bersihkan penyimpanan"
 
-msgid ""
-"codecs from an earlier version of this system (negativo17) are still "
-"installed."
-msgstr "codec dari versi lama sistem ini (negativo17) masih terinstal."
-
 msgid "codecs;codec;ffmpeg;h264;video;audio;media;install;"
 msgstr "codecs;codec;ffmpeg;h264;video;audio;media;install;instal;pasang;"
 
@@ -7126,16 +7075,6 @@ msgstr "{name} tidak berhasil dijalankan."
 #, python-brace-format
 msgid "{name} is a public place"
 msgstr "{name} adalah Tempat umum"
-
-#, python-brace-format
-msgid ""
-"{name} is already installed from Bazaar, the app store.\n"
-"\n"
-"Recommended: Open it."
-msgstr ""
-"{name} sudah terinstal dari Bazaar, toko aplikasi.\n"
-"\n"
-"Disarankan: Buka."
 
 #, python-brace-format
 msgid "{name} is closed again on Home."
@@ -8186,12 +8125,6 @@ msgstr "membuka berkas zip dan sit"
 msgid "opening zip files"
 msgstr "membuka berkas zip"
 
-msgid "organising and developing photos"
-msgstr "menata dan memproses foto"
-
-msgid "organising photos"
-msgstr "menata foto"
-
 msgid "organizing music"
 msgstr "menata musik"
 
@@ -8740,3 +8673,40 @@ msgstr "Baca sumber unduhan di folder baru Fedora 45"
 #. Translators: a change in an update, listed under What is new
 msgid "Move to Fedora 45"
 msgstr "Pindah ke Fedora 45"
+
+msgid "Fonts and text size are back to EvenKeelOS's own."
+msgstr "Font dan ukuran teks sudah kembali ke bawaan EvenKeelOS."
+
+#, python-brace-format
+msgid "Recommended: Delete the box. It comes back by itself the next time you install {apps}. Anything added to the box another way is deleted too. Your files are not touched."
+msgstr "Disarankan: Hapus kotak. Kotak akan muncul kembali dengan sendirinya saat Anda menginstal {apps} lagi. Apa pun yang ditambahkan ke kotak dengan cara lain juga ikut dihapus. Berkas Anda tidak disentuh."
+
+#, python-brace-format
+msgid "Deleting it frees about {size}."
+msgstr "Menghapusnya mengosongkan sekitar {size}."
+
+msgid "Asks once whether a password Wi-Fi network is Home, Work or a Public place"
+msgstr "Menanyakan sekali apakah jaringan Wi-Fi berkata sandi termasuk Rumah, Kantor, atau Tempat umum"
+
+#, python-brace-format
+msgid "EvenKeelOS needs at least {gb} GB."
+msgstr "EvenKeelOS membutuhkan setidaknya {gb} GB."
+
+#, python-brace-format
+msgid "EvenKeelOS works best with {gb} GB or more, so it may be slow."
+msgstr "EvenKeelOS paling lancar dengan RAM {gb} GB ke atas, jadi mungkin akan terasa lambat."
+
+msgid "organizing and developing photos"
+msgstr "menata dan memproses foto"
+
+#, python-brace-format
+msgid "{title} has no signing key for Fedora {version} yet."
+msgstr "{title} belum memiliki kunci penandatanganan untuk Fedora {version}."
+
+#, python-brace-format
+msgid "{title} was not added, so its download source was taken out again."
+msgstr "{title} tidak jadi ditambahkan, jadi sumber unduhannya dihapus lagi."
+
+#, python-brace-format
+msgid "{title} was not removed."
+msgstr "{title} tidak dihapus."
